@@ -109,8 +109,9 @@
 - Referência: https://git-scm.com/downloads/linux
     - ```
         git --version
-        --> git version 2.43.0
       ```
+    - Saída --> git version 2.43.0
+    
 ## Vídeo 07 - Configurando o Git
  
 
