@@ -106,9 +106,15 @@
         apt update
         apt install git 
       ```
-
+- Referência: https://git-scm.com/downloads/linux
+    - ```
+        git --version
+        --> git version 2.43.0
+      ```
 ## Vídeo 07 - Configurando o Git
  
+
+
 ## Vídeo 08 - Autenticando via Token
  
 ## Vídeo 09 - Autenticando via Chave SSH
