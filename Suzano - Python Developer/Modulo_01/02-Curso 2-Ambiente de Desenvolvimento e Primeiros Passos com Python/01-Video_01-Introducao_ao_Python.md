@@ -3,7 +3,7 @@
 
 Neste vídeo o autor fala sobre a história da linguagem Python explorando as ideias do seu criador, detalhando sobre seus objetivos iniciais e aplicabilidade.
 
-Detalha também acerca das suas características:
+Detalha também acerca das características da linguagem:
 
 - Tipagem dinâmica e forte.
 - Multiplataforma e multiparadigma.
