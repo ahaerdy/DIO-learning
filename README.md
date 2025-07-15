@@ -1,104 +1,53 @@
-📚 Repositório de Estudos - Bootcamp Suzano Python Developer
-Este repositório reúne os exercícios, anotações e projetos desenvolvidos por mim, Arthur Haerdy Jr., ao longo do Bootcamp Suzano Python Developer, oferecido pela plataforma DIO em parceria com a Suzano.
+# dio-courses
 
-Trata-se de um processo contínuo de atualização de habilidades técnicas em Python, Inteligência Artificial, Microsoft Copilot, Azure, Git/GitHub e práticas ágeis, com foco em aplicações modernas e produtividade no desenvolvimento.
+Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma [DIO - Digital Innovation One](https://dio.me). Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
 
-👨‍💻 Sobre mim
-Sou Engenheiro Eletrônico e Administrador de Sistemas Linux, com sólida experiência em desenvolvimento de software, automação, infraestrutura e análise de dados. Minha trajetória profissional inclui empresas como Volkswagen do Brasil, Intelig Telecomunicações, instituições acadêmicas e projetos autônomos em web e sistemas embarcados.
+---
 
-Este repositório complementa meu currículo técnico e reflete meu compromisso com a prática constante e a evolução profissional.
+## Sobre Mim
 
-📄 Currículo completo (PDF) 🔗 LinkedIn 📧 arthur.haerdy@gmail.com
+Olá! Meu nome é Arthur Haerdy Jr., sou engenheiro eletricista e entusiasta de tecnologia e programação. Tenho investido meu tempo em aprimorar minhas habilidades por meio de cursos online, buscando sempre me atualizar e me preparar para os desafios do mercado atual.
 
-Cada diretório contém:
+A plataforma DIO tem sido um parceiro fundamental nesse percurso, oferecendo conteúdos ricos, práticos e de alta qualidade, que me permitem evoluir tanto tecnicamente quanto em projetos reais.
 
-✅ Exercícios resolvidos
+---
 
-✍️ Anotações e comentários explicativos
+## Sobre o Repositório
 
-💡 Projetos práticos implementados
+Este repositório está estruturado para acompanhar meu progresso nas formações e bootcamps da DIO, incluindo, mas não se limitando a:
 
-🔧 Códigos experimentais e testes
+- Bootcamp Suzano Python Developer
+- Formações de Front-End e Back-End
+- Cursos de tecnologias específicas como JavaScript, React, Python, entre outros
 
-🧱 Tecnologias e Tópicos Abordados
-Durante o Bootcamp, os principais conhecimentos praticados são:
+Cada curso ou formação possui sua própria pasta, onde organizo anotações, códigos-fonte, desafios, projetos e demais arquivos que auxiliam no aprendizado.
 
-Python 3+ e sintaxe básica
+A ideia é manter um registro transparente e atualizado do meu desenvolvimento, servindo tanto como fonte de consulta pessoal quanto para compartilhar experiências e conhecimentos com a comunidade.
 
-Git e GitHub para versionamento de código
+---
 
-Microsoft Copilot Studio para produtividade com IA
+## Como Utilizar este Repositório
 
-Azure e introdução à computação em nuvem
+Se você é um estudante da DIO, programador ou entusiasta da área, fique à vontade para explorar o conteúdo aqui armazenado. Sinta-se livre para clonar, estudar e até contribuir com sugestões e melhorias.
 
-Programação Orientada a Objetos (POO)
+---
 
-Coleções e estruturas de dados em Python
+## Contato
 
-Projetos práticos com IA e processamento de imagens
+Caso queira trocar ideias, compartilhar conhecimentos ou tirar dúvidas, me encontre nas redes sociais:
 
-Metodologias ágeis e organização de sprints
+- [LinkedIn](https://www.linkedin.com/in/arthur-haerdy-jr/)
+- [GitHub](https://github.com/ahaerdy)
 
-📚 Estrutura do Bootcamp
-O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. Abaixo está o progresso detalhado por módulo:
+---
 
-✅ Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos
-[x] Curso: Introdução ao Python com Suzano
+> “O aprendizado contínuo é a chave para o sucesso na carreira tecnológica.”
 
-[x] Curso: Ambiente de Desenvolvimento e Primeiros Passos com Python
+---
 
-[x] Curso: Conhecendo a Linguagem de Programação Python
+Agradeço sua visita e espero que este repositório possa inspirar e ajudar quem está na mesma jornada de evolução profissional.
 
-[x] Curso: Versionamento de Código com Git e GitHub
+---
 
-[x] Curso: Crie Um Portfólio Vencedor
+**Arthur Haerdy Jr.**
 
-[x] Desafio de Projeto: Contribuindo em um Projeto Open Source
-
-[x] Mentoria: Live de Lançamento
-
-🧠 Módulo 2: Sintaxe Básica com Python
-[x] Curso: Tipos de Operadores com Python
-
-[ ] Curso: Trabalhando com Coleções em Python
-
-[ ] Curso: Programação Orientada a Objetos com Python
-
-[ ] Curso: Produtividade com Microsoft Copilot Studio
-
-[ ] Curso: Integrando com Serviços de IA
-
-🏆 Certificados Obtidos
-Introdução ao Python com Suzano
-
-Ambiente de Desenvolvimento e Primeiros Passos com Python
-
-Conhecendo a Linguagem de Programação Python
-
-Versionamento de Código com Git e GitHub
-
-Crie Um Portfólio Vencedor
-
-Contribuindo em um Projeto Open Source
-
-🔗 Contribuições Open Source
-Issue criada: #65498
-
-Pull Request aceito: #65510
-
-Perfil adicionado: ahaerdy.md
-
-💬 Mentorias e Networking
-Mariana Coda – LinkedIn
-
-Roberto Andrade Mansur – LinkedIn
-
-Felipe Aguiar – LinkedIn
-
-🔄 Atualizações
-Este repositório será atualizado continuamente conforme o avanço nos módulos do Bootcamp e inclusão de novos projetos.
-
-Para clonar e acompanhar:
-
-bash
-git clone https://github.com/ahaerdy/suzano-python-developer.git
