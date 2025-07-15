@@ -6,7 +6,7 @@ Este repositório tem como objetivo documentar minha jornada de aprendizado atra
 
 ## Sobre Mim
 
-Olá! Meu nome é Arthur Haerdy Jr., sou engenheiro eletricista e entusiasta de tecnologia e programação. Tenho investido meu tempo em aprimorar minhas habilidades por meio de cursos online, buscando sempre me atualizar e me preparar para os desafios do mercado atual.
+Olá! Meu nome é Arthur Haerdy Jr., sou engenheiro eletrônico e entusiasta de tecnologia e programação. Tenho investido meu tempo em aprimorar minhas habilidades por meio de cursos online, buscando sempre me atualizar e me preparar para os desafios do mercado atual.
 
 A plataforma DIO tem sido um parceiro fundamental nesse percurso, oferecendo conteúdos ricos, práticos e de alta qualidade, que me permitem evoluir tanto tecnicamente quanto em projetos reais.
 
