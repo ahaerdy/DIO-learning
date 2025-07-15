@@ -82,9 +82,9 @@ Perfil adicionado: ahaerdy.md
 
 ## 💬 Mentorias e Networking
 
-Mariana Coda – LinkedIn
-Roberto Andrade Mansur – LinkedIn
-Felipe Aguiar – LinkedIn
+-  / [mariana-coda-45265914](https://www.linkedin.com/in/mariana-coda-45265914/) (HR Manager | Talent Management)
+-  / [roberto-andrade-mansur](https://www.linkedin.com/in/roberto-andrade-mansur/) (Executive Manager of Data, Engineering, Analytics, and AI)
+-  / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Tech Educator DIO)
 
 ## 🔄 Atualizações
 
