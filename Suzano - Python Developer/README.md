@@ -32,7 +32,7 @@ Este repositório complementa meu currículo técnico e reflete meu compromisso 
 
 O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. Abaixo está o progresso detalhado por módulo:
 
-### Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos
+### [Módulo 1](https://github.com/ahaerdy/dio-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_01/01-Curso%201-Introdu%C3%A7%C3%A3o%20ao%20Python%20com%20Suzano): Introdução ao Ambiente Python e Projetos Colaborativos
 
 - [x] Curso: Introdução ao Python com Suzano
 - [x] Curso: Ambiente de Desenvolvimento e Primeiros Passos com Python
