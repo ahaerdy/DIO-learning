@@ -1,3 +1,5 @@
+# Parte 1: Conhecendo a Linguagem
+
 ## Vídeo 01 - Tipos de Dados
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
@@ -166,6 +168,14 @@ Links úteis:
     - https://github.com/guicarvalho/trilha-python-dio
     - https://docs.python.org/3/library/functions.html#input
     - https://docs.python.org/3/library/functions.html#print
+
+# Parte 2: Materiais de apoio e Questionário
+
+São disponibilizados 4 arquivos em formato Powerpoint:
+
+- 01-Dio_Introducao_ao_Python.pptx
+- 02-Dio_Configuracao_do_ambiente_de_desenvolvimento.pptx
+- 03-Dio_Primeiro_programa.pptx
 
 ## Certificado: Conhecendo a Linguagem de Programação Python
 

@@ -1,3 +1,5 @@
+# Parte 1: Definindo o ambiente e primeiros passos com Python
+
 ## Video 01 - Introdução ao Python
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
@@ -39,7 +41,7 @@ Familiarização com o VSCode, edição e execução do primeiro programa.
 
 Link do vídeo: https://web.dio.me/track/suzano-python-developer/course/ambiente-de-desenvolvimento-e-primeiros-passos-com-python/learning/8b91a0c8-e506-4190-bc84-a0b6b04cb151?autoplay=1
 
-## Vídeo 04 - Materiais de Apoio
+# Parte 2: Materiais de apoio e Questionário
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
 - Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
@@ -49,8 +51,6 @@ São disponibilizados 3 arquivos em formato Powerpoint:
 - 01-Dio_Introducao_ao_Python.pptx
 - 02-Dio_Configuracao_do_ambiente_de_desenvolvimento.pptx
 - 03-Dio_Primeiro_programa.pptx
-
-Link dos materiais de apoio: https://academiapme-my.sharepoint.com/personal/kawan_dio_me/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fkawan%5Fdio%5Fme%2FDocuments%2FSlides%20dos%20Cursos%2FPython%20%2D%20M%C3%B3dulo%20I%20%2D%20Fundamentos%2FCurso%201&ga=1
 
 ## Certificado: Ambiente de Desenvolvimento e Primeiros Passos com Python
 
