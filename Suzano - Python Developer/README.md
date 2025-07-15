@@ -76,9 +76,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ## 🔗 Contribuições Open Source
 
-Issue criada: #65498
-Pull Request aceito: #65510
-Perfil adicionado: ahaerdy.md
+- Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
+    - Issue criada: #65498, Pull Request aceito: #65510, Perfil adicionado: ahaerdy.md
 
 ## 💬 Mentorias e Networking
 
