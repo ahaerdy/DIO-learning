@@ -80,8 +80,72 @@ print(preco)
 preco = 10 / 2
 print(preco)
 >>> 5.0
+
+preco = 10.30
+print(preco)
+>>> 10.3
+
+preco = int(preco)
+print(preco)
+>>> 10
+
+preco = 10
+print(preco)
+>>> 10
+
+print(preco / 2)
+>>> 5.0
+
+print(preco / 2)
+>>> 5
+
+preco = 10.50
+idade = 28
+
+print(str(preco))
+>>> 10.5
+
+print(str(idade))
+>>> 28
+
+texto = f"idade {idade} preco {preco}"
+print(texto)
+>>> idade 28 preco 10.5
+
+preco = "10.50"
+idade = "28"
+
+print(float(preco))
+>>> 10.50
+
+print(int(idade))
+>>> 28
+
+preco = "python"
+print(float(preco))
+
+>>>
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+	print(float(preco))
+ValueError: could not convert string to float: 'python'
 ```
 
+Links úteis: https://github.com/guicarvalho/trilha-python-dio
+
+## Vídeo 05 - Funções de entrada e saída
+
+- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
+- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+
+Objetivo geral: Aprender como receber e exibir informações para o usuário.
+
+- __Função input__: a função builtin input é utilizada quando queremos ler dados da entrada padrão (teclado). Ela recebe um argumento do tipo string, que é exibido para o usuário na saída padrão (tela). A função lê a entrada, converte para string e retorna o valor.
+
+```
+nome = input("Informe o seu nome: ")
+>>> Informe o seu nome: 
+```
 
 
 
