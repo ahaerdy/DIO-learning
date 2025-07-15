@@ -12,10 +12,10 @@ Este repositório complementa meu currículo técnico e reflete meu compromisso 
 
 ## Cada diretório contém:
 
-✅ Exercícios resolvidos
-✍️ Anotações e comentários explicativos
-💡 Projetos práticos implementados
-🔧 Códigos experimentais e testes
+- ✅ Exercícios resolvidos
+- ✍️ Anotações e comentários explicativos
+- 💡 Projetos práticos implementados
+- 🔧 Códigos experimentais e testes
 
 ## Tecnologias e Tópicos Abordados durante o Bootcamp, os principais conhecimentos praticados são:
 
