@@ -84,13 +84,29 @@
         - Publicar portfólios técnicos;
         - Automatizar processos (como testes e deploys com GitHub Actions).
 
+- Instalação, Configuração e Autenticação
+    - Instalando e configurando o Git, e autenticando o GitHub via Token e Chave SSH
 
 # Parte 2: Instalação, Configuração e Autenticação
- 
+
 ## Vídeo 05 - Instalando o Git no Windows
+
+- Acesse https://git-scm.com/download/win;
+- Faça o download do instalador e execute;
+- Aceite a licença e clique em “Next”, e siga configurando como desejar¹ e clicando em “Next”;
+- Finalize clicando em “Install”, e “Finish”.
+    - Em "Select Components“, deixe as opções “Git Bash Here” e “Git GUI Here” marcadas.
  
 ## Vídeo 06 - Instalando o Git no Linux (Ubuntu)
- 
+
+- Confira a doc.: https://git-scm.com/download/linux
+- Instale a última versão estável do Git:
+    - ```
+        add-apt-repository ppa:git-core/ppa
+        apt update
+        apt install git 
+      ```
+
 ## Vídeo 07 - Configurando o Git
  
 ## Vídeo 08 - Autenticando via Token
