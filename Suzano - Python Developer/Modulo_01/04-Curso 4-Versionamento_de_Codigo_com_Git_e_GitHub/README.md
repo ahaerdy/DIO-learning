@@ -30,7 +30,18 @@
 
 ## Vídeo 03 - O que é Git
 
-- 
+- Sistema de Controle de Versão Distribuído
+    - Gratuito e Open Source (Código Aberto);
+    - Ramificações (branching) e fusões (merging) eficientes;
+    - Leve e rápido.
+
+- Referência: https://git-scm.com/ (site oficial do Git)
+    - Principais recursos:
+        - 📥 Download do Git para Windows, macOS e Linux
+        - 📖 Documentação oficial com tutoriais e manuais
+        - 📚 Livro gratuito "Pro Git" (em português também)
+        - 🧭 Referência de comandos Git com exemplos
+        - 🌍 Comunidade e traduções
  
 ## Vídeo 04 - O que é Github
 
