@@ -36,7 +36,8 @@
     - Leve e rápido.
 
 - Referência: https://git-scm.com/ (site oficial do Git)
-    - Principais recursos:
+    - __Principais recursos__:
+
         - 📥 Download do Git para Windows, macOS e Linux
         - 📖 Documentação oficial com tutoriais e manuais
         - 📚 Livro gratuito "Pro Git" (em português também)
