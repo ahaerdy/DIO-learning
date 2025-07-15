@@ -107,9 +107,7 @@
         apt install git 
       ```
 - Referência: https://git-scm.com/downloads/linux
-    - ```
-        git --version
-      ```
+    - Comando: ``` git --version ```
     - Resultado: ``` git version 2.43.0 ```
 
 ## Vídeo 07 - Configurando o Git
