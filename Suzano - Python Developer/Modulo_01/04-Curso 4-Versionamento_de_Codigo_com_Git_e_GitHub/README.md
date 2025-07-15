@@ -2,9 +2,8 @@
 
 ## Vídeo 01 - Introdução ao Curso
 
-- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
-
+- Instrutor: Elidiana Andrade (Tech Education Analyst at DIO)
+- Contato Libkedin: https://www.linkedin.com/in/elidiana/
  
 ## Vídeo 02 - O que é Versionamento de Código
  

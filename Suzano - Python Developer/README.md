@@ -86,6 +86,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
 - / [allineantunnes](https://www.linkedin.com/in/allineantunnes/) (Aline Antunnes / DIO - Tech Education Analist)
 - / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/) (Guilherme Arthur de Carvalho / DIO - Python Consultant, Systems Analyst)
+- / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst))
 
 ## 🔄 Atualizações
 
