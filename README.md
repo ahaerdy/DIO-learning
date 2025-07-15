@@ -1,4 +1,4 @@
-# dio-courses
+# Repositório de Estudos - DIO
 
 Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma [DIO - Digital Innovation One](https://dio.me). Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
 
