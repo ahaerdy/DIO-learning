@@ -160,6 +160,22 @@
 # Parte 3: Primeiros Passos com Git e GitHub
  
 ## Vídeo 10 - Criando e Clonando Repositórios
+
+- Existem duas formas de obter um repositório Git na sua máquina:
+    - Transformando um diretório local que não está sob controle de versão, num repositório Git;
+    - Clonando um repositório Git existente.
+
+- Criando um Repositório Local
+    - Acesse a pasta que deseja transformar em um repositório Git  pelo terminal ou clique no atalho em “Git Bash Here
+    - Inicialize um repositório Git no diretório escolhido: 
+        ``` 
+           git init 
+        ```
+    - Conecte o repositório local com o repositório remoto:
+        ```
+           git remote add origin https://github.com/username/nome-do-repositorio.git
+        ```
+    - 
  
 ## Vídeo 11 - Salvando Alterações no Repositório Local
  
