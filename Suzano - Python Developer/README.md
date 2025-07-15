@@ -81,6 +81,7 @@ Pull Request aceito: #65510
 Perfil adicionado: ahaerdy.md
 
 ## 💬 Mentorias e Networking
+
 Mariana Coda – LinkedIn
 Roberto Andrade Mansur – LinkedIn
 Felipe Aguiar – LinkedIn
