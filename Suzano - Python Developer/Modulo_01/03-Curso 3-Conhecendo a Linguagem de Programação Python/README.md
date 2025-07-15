@@ -147,5 +147,27 @@ nome = input("Informe o seu nome: ")
 >>> Informe o seu nome: 
 ```
 
+- __Função print__: a função builtin print é utilizada quando queremos exibir dados na saída padrão (tela). Ela recebe um argumento obrigatório do tipo varargs de objetos e 4 argumentos opcionais (sep, end, file e flush). Todos os objetos são convertidos para string, separados por sep e terminados por end. A string final é exibida para o usuário.
 
+```
+nome = "Guilherme"
+sobrenome = "Carvalho"
+
+print(nome, sobrenome)
+print(nome, sobrenome, end="...\n")
+print(nome, sobrenome, sep="#")
+
+>>> Guilherme Carvalho
+>>> Guilherme Carvalho...
+>>> Guilherme#Carvalho
+```
+
+Links úteis:
+    - https://github.com/guicarvalho/trilha-python-dio
+    - https://docs.python.org/3/library/functions.html#input
+    - https://docs.python.org/3/library/functions.html#print
+
+## Certiicado: Conhecendo a Linguagem de Programação Python
+
+Link do certificado: https://hermes.dio.me/certificates/BRMRBL10.pdf
 
