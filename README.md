@@ -49,5 +49,3 @@ Agradeço sua visita e espero que este repositório possa inspirar e ajudar quem
 
 ---
 
-**Arthur Haerdy Jr.**
-
