@@ -86,7 +86,7 @@ Perfil adicionado: ahaerdy.md
 - / [roberto-andrade-mansur](https://www.linkedin.com/in/roberto-andrade-mansur/) (Executive Manager of Data, Engineering, Analytics, and AI)
 - / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Tech Educator DIO)
 - / [allineantunnes](https://www.linkedin.com/in/allineantunnes/) (Tech Education Analist-DIO)
-- / [Guilherme Arthur de Carvalho](https://www.linkedin.com/in/decarvalhogui/)
+- / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/) (Guilherme Arthur de Carvalho - Python Consultant | Systems Analyst)
 
 ## 🔄 Atualizações
 
