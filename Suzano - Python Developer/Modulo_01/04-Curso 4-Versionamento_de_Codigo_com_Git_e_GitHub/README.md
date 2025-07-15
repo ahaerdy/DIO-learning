@@ -127,11 +127,35 @@
        user.name= ...
        user.email= ...
     ```
+- Configurando seu nome de usuário e e-mail (globalmente):
+    ```
+       git config --global user.name "Nome Sobrenome"
+       git config --global user.email seuemail@email.com
+    ```
+- Configurando o nome da Branch Padrão:
+    ```
+       git config --global init.defaultBranch main
+    ```
+- Para gerar um Token, acesse sua conta no GitHub, e no menu superior direito clique em Settings > Developer settings > Tokens (classic) > Generate new token.
+
+- Você pode armazenar suas credenciais para reduzir o número de vezes que você deve digitar seu nome de usuário ou senha:
+    - Salvando no cache: ``` git config --global credential.helper cache ```
+    - Ou permanentemente: ``` git config --global credential.helper store ```
+    - Veja mais na doc.: https://git-scm.com/book/pt-br/v2/Git-Tools-Credential-Storage
 
 
 ## Vídeo 08 - Autenticando via Token
+
+- Para gerar um Token, acesse sua conta no GitHub, e no menu superior direito clique em Settings > Developer settings > Tokens (classic) > Generate new token.
+
+- Você pode armazenar suas credenciais para reduzir o número de vezes que você deve digitar seu nome de usuário ou senha:
+    - Salvando no cache: ``` git config --global credential.helper cache ```
+    - Ou permanentemente: ``` git config --global credential.helper store ```
+    - Veja mais na doc.: https://git-scm.com/book/pt-br/v2/Git-Tools-Credential-Storage
  
 ## Vídeo 09 - Autenticando via Chave SSH
+
+- Para adicionar uma Chave SSH, acesse sua conta no GitHub, e no menu superior direito clique em Settings > SSH and GPG keys > New SSH key.
 
 # Parte 3: Primeiros Passos com Git e GitHub
  
