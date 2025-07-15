@@ -66,7 +66,7 @@ Links úteis: https://github.com/guicarvalho/trilha-python-dio
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
 - Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
-Em alguns momentos é necessário será necessário converter o tipo de uma variável para manipular de forma diferente. Por exemplo: variáveis do tipo string, que armazenam números e precisamos fazer alguma operação matemática com esse valor.
+Em alguns momentos será necessário converter o tipo de uma variável para manipular de forma diferente. Por exemplo: variáveis do tipo string, que armazenam números e precisamos fazer alguma operação matemática com esse valor.
 
 ```
 preco = 10
