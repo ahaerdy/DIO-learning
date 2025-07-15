@@ -77,6 +77,14 @@
         - Salve os códigos de recuperação;
         - Autenticação ativada!
 
+- Referência: https://github.com/ (site oficial do Github)
+    - Plataforma de hospedagem de código-fonte e controle de versão baseada no sistema Git.
+    - __Principais recursos__:
+        - Armazenar projetos de software (código-fonte, documentação, scripts etc.); - Controlar versões dos arquivos (ver o histórico de alterações);
+        - Colaborar com outras pessoas desenvolvedoras (em equipes ou em projetos open source);
+        - Publicar portfólios técnicos;
+        - Automatizar processos (como testes e deploys com GitHub Actions).
+
 
 # Parte 2: Instalação, Configuração e Autenticação
  
