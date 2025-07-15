@@ -82,8 +82,8 @@ Perfil adicionado: ahaerdy.md
 
 ## 💬 Mentorias e Networking
 
-- / [mariana-coda-45265914](https://www.linkedin.com/in/mariana-coda-45265914/) (Mariana Coda - Suzano - HR Manager, Talent Management)
-- / [roberto-andrade-mansur](https://www.linkedin.com/in/roberto-andrade-mansur/) (Executive Manager of Data, Engineering, Analytics, and AI)
+- / [mariana-coda-45265914](https://www.linkedin.com/in/mariana-coda-45265914/) (Mariana Coda / Suzano - HR Manager, Talent Management)
+- / [roberto-andrade-mansur](https://www.linkedin.com/in/roberto-andrade-mansur/) (Roberto Andrade Mansur / Suzano - Executive Manager of Data, Engineering, Analytics, and AI)
 - / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Tech Educator DIO)
 - / [allineantunnes](https://www.linkedin.com/in/allineantunnes/) (Tech Education Analist-DIO)
 - / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/) (Guilherme Arthur de Carvalho - Python Consultant | Systems Analyst)
