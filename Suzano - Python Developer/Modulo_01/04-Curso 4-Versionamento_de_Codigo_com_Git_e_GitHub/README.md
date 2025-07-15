@@ -5,7 +5,7 @@
 - Instrutor: Elidiana Andrade (Tech Education Analyst at DIO)
 - Contato Libkedin: https://www.linkedin.com/in/elidiana/
  
-- A autora se apresenta e dá uma visão geral dos objetivos do curso:
+- A autora se apresenta e dá uma visão geral do curso:
     - Conheceer as ferramentas.
     - Instalar, configurar e autenticar
     - Primeiros passos com Git e Github
