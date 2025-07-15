@@ -43,15 +43,20 @@
 ### 📚 Recursos Úteis
 #### 🔗 Repositório
 
-    - [elidianaandrade/git-github-learning-quest](https://github.com/elidianaandrade/git-github-learning-quest) — Repositório com material de apoio gamificado.
-    
+- [elidianaandrade/git-github-learning-quest](https://github.com/elidianaandrade/git-github-learning-quest) — Repositório com material de apoio gamificado.
+
 #### 🖥️ Slide
-    - Versionamento de Código com Git e GitHub.pptx — Apresentação utilizada no curso.
+
+- Versionamento de Código com Git e GitHub.pptx — Apresentação utilizada no curso.
+
 #### 🌐 Links Úteis
-    - GitHub Quick Start — Repositório com link para aulas de Git e GitHub.
-    - GitBook: Formação GitHub Certification — Material textual sobre GitHub.
-    - Documentação do GitHub — Guia completo para uso do GitHub.
-    - GitHub Markdown — Guia específico para Markdown no GitHub.
+
+- [GitHub Quick Start](https://github.com/githubtraining/hellogitworld) — Repositório com link para aulas de Git e GitHub.
+- [GitBook](https://github.com/github/certification): Formação GitHub Certification — Material textual sobre GitHub.
+- [Documentação do GitHub](https://docs.github.com/pt) — Guia completo para uso do GitHub.
+- [GitHub Markdown](https://guides.github.com/features/mastering-markdown/) — Guia específico para Markdown no GitHub.
+
 #### 💡 Dicas
-    - Artigos/Fórum: você pode compartilhar conteúdos técnicos através de Artigos (visíveis globalmente na plataforma da DIO). Por outro lado, você também pode compartilhar suas conquistas e dúvidas usando os Fóruns (que são específicos para cada experiência educacional na DIO, como um Bootcamp por exemplo).
-    - Pesquise na Web: pode parecer óbvio, mas é importante frisar a importância das engines de busca no dia a dia de um profissional de TI. Caso não encontre o que procura dentro da DIO, pesquise sobre o assunto (conceito, dúvida, erro etc) na Internet
+
+- Artigos/Fórum: você pode compartilhar conteúdos técnicos através de Artigos (visíveis globalmente na plataforma da DIO). Por outro lado, você também pode compartilhar suas conquistas e dúvidas usando os Fóruns (que são específicos para cada experiência educacional na DIO, como um Bootcamp por exemplo).
+- Pesquise na Web: pode parecer óbvio, mas é importante frisar a importância das engines de busca no dia a dia de um profissional de TI. Caso não encontre o que procura dentro da DIO, pesquise sobre o assunto (conceito, dúvida, erro etc) na Internet
