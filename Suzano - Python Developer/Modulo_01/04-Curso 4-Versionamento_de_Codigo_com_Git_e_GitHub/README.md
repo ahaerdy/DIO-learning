@@ -56,6 +56,28 @@
  
 ## Vídeo 04 - O que é Github
 
+- Plataforma de hospedagem de código para controle de versão com Git, e colaboração.
+    - Comunidade ativa;
+    - Utilizado mundialmente;
+    - Mascote “Octocat”.
+        - É uma criatura híbrida entre um gato e um polvo (cat + octopus).
+        - Foi criado por Simon Oxley, um ilustrador japonês, e adotado pelo GitHub como símbolo da marca.
+        - Representa o espírito divertido e amigável do GitHub.
+        - É usado em material promocional, documentação, eventos, e como ícone da cultura open source.
+
+- Breve Histórico do GitHub:
+    - 2008: Desenvolvido por Chris Wanstrath, J. Hyett, Tom Preston-Werner e Scott Chacon.
+    - 2018: Vítima de um dos maiores ataques de DDoS (ataque distribuído de negação de serviço); Comprado pela Microsoft Corporation por US $ 7,5 bilhões.
+
+- Git ≠ GitHub (apresentação das diferenças)
+
+- Autenticação de Dois Fatores
+    - Acesse sua conta do GitHub e vá em Settings > Password and authentication > Two-factor authentication > Authenticator app
+        - Leia o QR Code através do aplicativo autenticador (ex.: Microsoft Authenticator) e insira o código no GitHub;
+        - Salve os códigos de recuperação;
+        - Autenticação ativada!
+
+
 # Parte 2: Instalação, Configuração e Autenticação
  
 ## Vídeo 05 - Instalando o Git no Windows
