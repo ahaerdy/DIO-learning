@@ -49,7 +49,23 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: Produtividade com Microsoft Copilot Studio
 - [ ] Curso: Integrando com Serviços de IA
 
-### 🏆 Certificados Obtidos
+### Módulo 3: Trabalhando com Coleções em Python
+
+- ...
+
+### Módulo 4: Programação Orientada a Objetos com Python
+
+- ...
+
+### Módulo 5: Produtividade com Microsoft Copilot Studio
+
+- ...
+
+### Módulo 6: Integrando com Serviços de IA
+
+- ...
+
+## 🏆 Certificados Obtidos
 
 - Introdução ao Python com Suzano
 - Ambiente de Desenvolvimento e Primeiros Passos com Python
@@ -58,22 +74,23 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - Crie Um Portfólio Vencedor
 - Contribuindo em um Projeto Open Source
 
-### 🔗 Contribuições Open Source
+## 🔗 Contribuições Open Source
 
 Issue criada: #65498
 Pull Request aceito: #65510
 Perfil adicionado: ahaerdy.md
 
-### 💬 Mentorias e Networking
+## 💬 Mentorias e Networking
 Mariana Coda – LinkedIn
 Roberto Andrade Mansur – LinkedIn
 Felipe Aguiar – LinkedIn
 
-### 🔄 Atualizações
+## 🔄 Atualizações
 
 Este repositório será atualizado continuamente conforme o avanço nos módulos do Bootcamp e inclusão de novos projetos.
 
 Para clonar e acompanhar:
 
-bash
+```bash
 git clone https://github.com/ahaerdy/suzano-python-developer.git
+```
