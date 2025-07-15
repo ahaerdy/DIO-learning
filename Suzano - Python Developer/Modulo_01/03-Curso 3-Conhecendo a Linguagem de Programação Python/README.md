@@ -173,9 +173,11 @@ Links úteis:
 
 São disponibilizados 4 arquivos em formato Powerpoint:
 
-- 01-Dio_Introducao_ao_Python.pptx
-- 02-Dio_Configuracao_do_ambiente_de_desenvolvimento.pptx
-- 03-Dio_Primeiro_programa.pptx
+- 04-Dio_Tipos_de_dados.pptx
+- 05-Dio_Modo_interativo.pptx
+- 06-Dio_Variaveis_e_constantes.pptx
+- 07-Dio_Conversao_de_tipos.pptx
+- 08-Dio_Funcoes_de_entrada_e_saida_input_print_.pptx
 
 ## Certificado: Conhecendo a Linguagem de Programação Python
 
