@@ -110,8 +110,8 @@
     - ```
         git --version
       ```
-    - Saída --> git version 2.43.0
-    
+    - Resultado: ``` git version 2.43.0 ```
+
 ## Vídeo 07 - Configurando o Git
  
 
