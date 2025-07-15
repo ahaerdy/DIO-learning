@@ -167,7 +167,7 @@ Links úteis:
     - https://docs.python.org/3/library/functions.html#input
     - https://docs.python.org/3/library/functions.html#print
 
-## Certiicado: Conhecendo a Linguagem de Programação Python
+## Certificado: Conhecendo a Linguagem de Programação Python
 
 Link do certificado: https://hermes.dio.me/certificates/BRMRBL10.pdf
 
