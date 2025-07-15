@@ -40,8 +40,6 @@
  
 ## Vídeo 16 - Dicas e Materiais de Apoio
 
-Nossos materiais complementares têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho.
-
 ### 📚 Recursos Úteis
 #### 🔗 Repositório
     - elidianaandrade/git-github-learning-quest — Repositório com material de apoio gamificado.
