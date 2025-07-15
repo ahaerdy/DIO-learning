@@ -1,5 +1,5 @@
-Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
+- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
 Familiarização com o VSCode, edição e execução do primeiro programa.
 

@@ -1,5 +1,5 @@
-Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
+- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
 Neste vídeo o autor ensina a baixar e configurar o interpretador Python no Linux e no Windows através do link http://www.python.org e seguindo os passos em https://python.org.br/instalacao-windows/. 
 
