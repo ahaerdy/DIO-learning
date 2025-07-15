@@ -13,6 +13,15 @@
 
 ## Vídeo 02 - O que é Versionamento de Código
  
+- Sistemas de controle de versão:
+    - Registrar o histórico de atualizações de um arquivo; 
+    - Gerenciar quais foram as alterações, a data, autor, etc.;
+    - Organizar, controlar e garantir a segurança.
+
+- Tipos de Sistemas de Controle de Versão:
+    - VCS Centralizado (CVCS) - Ex.: CVS, Subversion.
+    - VCS Distribuído (DVCS) - Ex: Git, Mercurial.
+
 ## Vídeo 03 - O que é Git
  
 ## Vídeo 04 - O que é Github
