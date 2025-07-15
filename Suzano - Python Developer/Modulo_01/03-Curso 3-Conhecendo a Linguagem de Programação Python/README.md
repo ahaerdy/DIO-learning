@@ -27,7 +27,7 @@ link do vídeo: https://web.dio.me/track/suzano-python-developer/course/conhecen
 - Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
 1. O autor ensina como usar o modo interativo do interpretador Python.
-    Existem duas formas de iniciar o modo interativo, chamando apenas o interpretador (python) ou executando o script com a flag -i (python -i app.py).
+    - Existem duas formas de iniciar o modo interativo, chamando apenas o interpretador (python) ou executando o script com a flag -i (python -i app.py).
 2. Explica os comandos dir e help
 
 -
