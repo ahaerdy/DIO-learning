@@ -37,7 +37,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Introdução ao Python com Suzano](https://github.com/ahaerdy/dio-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_01/01-Curso%201-Introdu%C3%A7%C3%A3o%20ao%20Python%20com%20Suzano)
 - [x] Curso: [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://github.com/ahaerdy/dio-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_01/02-Curso%202-Ambiente%20de%20Desenvolvimento%20e%20Primeiros%20Passos%20com%20Python)
 - [x] Curso: [Conhecendo a Linguagem de Programação Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_01/03-Curso%203-Conhecendo%20a%20Linguagem%20de%20Programa%C3%A7%C3%A3o%20Python)
-- [x] Curso: Versionamento de Código com Git e GitHub
+- [x] Curso: [Versionamento de Código com Git e GitHub](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_01/04-Curso%204-Versionamento_de_Codigo_com_Git_e_GitHub)
 - [x] Curso: Crie Um Portfólio Vencedor
 - [x] Desafio de Projeto: Contribuindo em um Projeto Open Source
 - [x] Mentoria: Live de Lançamento
