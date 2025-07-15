@@ -37,12 +37,11 @@
 
 - Referência: https://git-scm.com/ (site oficial do Git)
     - __Principais recursos__:
-
-        - 📥 Download do Git para Windows, macOS e Linux
-        - 📖 Documentação oficial com tutoriais e manuais
-        - 📚 Livro gratuito "Pro Git" (em português também)
-        - 🧭 Referência de comandos Git com exemplos
-        - 🌍 Comunidade e traduções
+        - Download do Git para Windows, macOS e Linux
+        - Documentação oficial com tutoriais e manuais
+        - Livro gratuito "Pro Git" (em português também)
+        - Referência de comandos Git com exemplos
+        - Comunidade e traduções
 
 - Breve histórico do Git
     - 2002: O projeto do núcleo (kernel) do Linux, que é open source, começa a utilizar o BitKeeper, um DVCS proprietário;
