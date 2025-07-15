@@ -22,7 +22,15 @@
     - VCS Centralizado (CVCS) - Ex.: CVS, Subversion.
     - VCS Distribuído (DVCS) - Ex: Git, Mercurial.
 
+- VCS Distribuído (DVCS)
+    - Clona o repositório completo, o que inclui o histórico de versões.
+    - Cada clone é como um backup;
+    - Possibilita um fluxo de trabalho flexível;
+    - Possibilidade de trabalhar sem conexão à rede.
+
 ## Vídeo 03 - O que é Git
+
+- 
  
 ## Vídeo 04 - O que é Github
 
