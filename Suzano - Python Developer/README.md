@@ -70,6 +70,7 @@ Roberto Andrade Mansur – LinkedIn
 Felipe Aguiar – LinkedIn
 
 ### 🔄 Atualizações
+
 Este repositório será atualizado continuamente conforme o avanço nos módulos do Bootcamp e inclusão de novos projetos.
 
 Para clonar e acompanhar:
