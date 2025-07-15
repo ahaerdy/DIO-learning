@@ -1,5 +1,5 @@
-Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
+- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
 Neste vídeo o autor fala sobre a história da linguagem Python explorando as ideias do seu criador, detalhando sobre seus objetivos iniciais e aplicabilidade.
 
