@@ -42,7 +42,7 @@
 
 ### 📚 Recursos Úteis
 #### 🔗 Repositório
-    - elidianaandrade/git-github-learning-quest — Repositório com material de apoio gamificado.
+    - [elidianaandrade/git-github-learning-quest](https://github.com/elidianaandrade/git-github-learning-quest) — Repositório com material de apoio gamificado.
 #### 🖥️ Slide
     - Versionamento de Código com Git e GitHub.pptx — Apresentação utilizada no curso.
 #### 🌐 Links Úteis
