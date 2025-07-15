@@ -51,19 +51,19 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 3: Trabalhando com Coleções em Python
 
-- ...
+- (... _em construção_)
 
 ### Módulo 4: Programação Orientada a Objetos com Python
 
-- ...
+- (... _em construção_)
 
 ### Módulo 5: Produtividade com Microsoft Copilot Studio
 
-- ...
+- (... _em construção_)
 
 ### Módulo 6: Integrando com Serviços de IA
 
-- ...
+- (... _em construção_)
 
 ## 🏆 Certificados Obtidos
 
