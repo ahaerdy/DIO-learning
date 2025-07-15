@@ -1,1 +1,0 @@
-Link do certificado: https://hermes.dio.me/certificates/T2JYMJOX.pdf
