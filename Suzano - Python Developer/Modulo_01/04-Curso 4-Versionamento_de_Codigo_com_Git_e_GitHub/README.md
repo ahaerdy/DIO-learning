@@ -110,8 +110,23 @@
     - Comando: ``` git --version ```
     - Resultado: ``` git version 2.43.0 ```
 
+- Instalando o Git no macOS
+    - Confira a doc.: https://git-scm.com/download/mac
+    - Instale o Homebrew: https://brew.sh/
+    - Instale o Git: ``` brew install git ```
+    
 ## Vídeo 07 - Configurando o Git
  
+- Comando: ``` git config --list ```
+- Resultado:
+    ```
+       credential.https://github.com.helper=
+       credential.https://github.com.helper=!/usr/bin/gh auth git-credential
+       credential.https://gist.github.com.helper=
+       credential.https://gist.github.com.helper=!/usr/bin/gh auth git-credential
+       user.name= ...
+       user.email= ...
+    ```
 
 
 ## Vídeo 08 - Autenticando via Token
