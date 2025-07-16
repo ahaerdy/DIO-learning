@@ -400,7 +400,13 @@ git merge teste
   <img src="imagens/image-13.png" alt="Diagrama Git">
 </p>
 
-- Podemos excluir a branch teste, já que não iremos mais utilizá-la.
+#### 10. Excluindo a branch `teste`, pois não iremos mais utilizá-la.
+
+```
+git branch
+git branch -d teste
+git branch
+```
 
 <p align="center">
   <img src="imagens/image-15.png" alt="Diagrama Git">
