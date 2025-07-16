@@ -288,6 +288,8 @@
   <img src="imagens/image-1.png" alt="Diagrama Git" width="480">
 </p>
 
+- Como ela trabalha de forma independente a partir do mesmo commit, nós ppodemos criar um novo commit a partir da branch teste.
+
 <p align="center">
   <img src="imagens/image-2.png" alt="Diagrama Git" width="480">
 </p>
