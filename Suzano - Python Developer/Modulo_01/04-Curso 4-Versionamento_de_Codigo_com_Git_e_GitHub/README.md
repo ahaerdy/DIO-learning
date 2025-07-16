@@ -216,9 +216,42 @@
 - Clique em “Create repository”, e pronto!
  
 ## Vídeo 11 - Salvando Alterações no Repositório Local
+
+- Como criar um commit
+    - Adicione o conteúdo que deseja inserir no commit:
+        ```
+        git add
+        ```
+    - Crie um commit e adicione uma mensagem descritiva:
+        ```
+        git commit -m "message"
+        ```
  
 ## Vídeo 12 - Desfazendo Alterações no Repositório Local
  
+- Como alterar a mensagem do último commit:
+    ```
+    git commit --amend
+    ```
+- Alterando a mensagem sem abrir o editor:
+    ```
+    git commit --amend –m"nova mensagem"
+    ```
+- Como desfazer um commit:
+    ```
+    git reset
+    ```
+    ```
+    git reset --soft
+    ```
+    ```
+    git reset --mixed
+    ```
+    ```
+    git reset --hard
+    ```
+
+
 ## Vídeo 13 - Enviando e Baixando Alterações com o Repositório Remoto
  
 ## Vídeo 14 - Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos
