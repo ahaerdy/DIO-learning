@@ -329,7 +329,7 @@ Perceba que a nossa branch teste está apontando para o mesmo commit da nossa br
   <img src="imagens/image-9.png" alt="Diagrama Git">
 </p>
 
-Agora nós vamos dar um novo commut dentro dessa branch teste. Perceba que agora a branch teste vai estar apontando para o `commit-3`.
+Agora nós vamos dar um novo commut dentro dessa branch teste. Perceba que agora a branch teste vai estar apontando para o `commit-3`, enquanto a branch main continua apontando para o `commit-2`.
 
 <p align="center">
   <img src="imagens/image-10.png" alt="Diagrama Git">
