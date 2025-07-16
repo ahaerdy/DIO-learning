@@ -303,59 +303,59 @@
   <img src="imagens/image-5.png" alt="Diagrama Git">
 </p>
 
-Branch apontando para o `commit-1`:
+- Branch apontando para o `commit-1`:
 
 <p align="center">
   <img src="imagens/image-6.png" alt="Diagrama Git">
 </p>
 
-Criando mais um commit:
+- Criando mais um commit:
 
 <p align="center">
   <img src="imagens/image-7.png" alt="Diagrama Git">
 </p>
 
-Dando um ```git log``` para verificar. Veja que o ponteiro alterou novamente e, agora, está apontando para o nosso `commit-2`.
+- Dando um ```git log``` para verificar. Veja que o ponteiro alterou novamente e, agora, está apontando para o nosso `commit-2`.
 
 <p align="center">
   <img src="imagens/image-8.png" alt="Diagrama Git">
 </p>
 
-Agora nós vamos criar a branch `teste`. E para isso nós vamos usar o comando ```git checkout -b teste``` que vai trocar da branch main para esta nova branch que estamos criando (teste).
+- Agora nós vamos criar a branch `teste`. E para isso nós vamos usar o comando ```git checkout -b teste``` que vai trocar da branch main para esta nova branch que estamos criando (teste).
 
-Perceba que a nossa branch teste está apontando para o mesmo commit da nossa branch main (que é o `commit-2`).
+- Perceba que a nossa branch teste está apontando para o mesmo commit da nossa branch main (que é o `commit-2`).
 
 <p align="center">
   <img src="imagens/image-9.png" alt="Diagrama Git">
 </p>
 
-Agora nós vamos dar um novo commit dentro dessa branch teste. Perceba que agora a branch teste vai estar apontando para o `commit-3`, enquanto a branch main continua apontando para o `commit-2`.
+- Agora nós vamos dar um novo commit dentro dessa branch teste. 
+- Perceba que agora a branch teste vai estar apontando para o `commit-3`, enquanto a branch main continua apontando para o `commit-2`.
 
 <p align="center">
   <img src="imagens/image-10.png" alt="Diagrama Git">
 </p>
 
-Retornando para a branch main.
+- Retornando para a branch main.
 
 <p align="center">
   <img src="imagens/image-11.png" alt="Diagrama Git">
 </p>
 
-O comando ```git branch -v``` irá listar o último commit de cada branch.
+- O comando ```git branch -v``` irá listar o último commit de cada branch.
 
 <p align="center">
   <img src="imagens/image-12.png" alt="Diagrama Git">
 </p>
 
-Caso desejemos que as alteraçòes que fizemos na branch teste apareça também na branch main, preciremos mesclá-las.
-
-Para isso nos vamos usar o comando ```git merge teste``` (teste será a branch que iremos mesclar com a branch main).
+- Caso desejemos que as alteraçòes que fizemos na branch teste apareça também na branch main, preciremos mesclá-las.
+- Para isso nos vamos usar o comando ```git merge teste``` (teste será a branch que iremos mesclar com a branch main).
 
 <p align="center">
   <img src="imagens/image-13.png" alt="Diagrama Git">
 </p>
 
-Podemos excluir a branch teste, já que não iremos mais utilizá-la.
+- Podemos excluir a branch teste, já que não iremos mais utilizá-la.
 
 <p align="center">
   <img src="imagens/image-15.png" alt="Diagrama Git">
@@ -371,7 +371,8 @@ Podemos excluir a branch teste, já que não iremos mais utilizá-la.
   <img src="imagens/image-17.png" alt="Diagrama Git">
 </p>
 
-Agora uma forma de clonar apenas uma branch em específica do repositório. Atentar para o parâmetro ```--single-branch```.
+- Agora uma forma de clonar apenas uma branch em específica do repositório. 
+- Atentar para o parâmetro ```--single-branch```.
 
 <p align="center">
   <img src="imagens/image-18.png" alt="Diagrama Git">
