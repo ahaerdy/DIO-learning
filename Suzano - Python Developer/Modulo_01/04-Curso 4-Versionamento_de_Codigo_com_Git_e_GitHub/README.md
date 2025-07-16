@@ -272,7 +272,7 @@
 - A partir desse momento a branch passa a apontar pra esse commit.
 
 <p align="center">
-  <img src="imagens/image-4.png" alt="Diagrama Git" width="480">
+  <img src="imagens/image-4.png" alt="Diagrama Git" width="400">
 </p>
 
 <p align="center">
