@@ -349,7 +349,7 @@ Veja que o ponteiro agora está apontando para o commit-2.
 ```
 git checkout -b teste
 ``` 
-Este comando vai mover ponteiro de _main_ para _teste_. Perceba que a branch teste está apontando para o mesmo commit da branch main (que é o `commit-2`).
+Este comando irá mover ponteiro de _main_ para _teste_. Perceba que a branch teste está apontando para o mesmo commit da branch main (que é o `commit-2`).
 
 <p align="center">
   <img src="imagens/image-9.png" alt="Diagrama Git">
