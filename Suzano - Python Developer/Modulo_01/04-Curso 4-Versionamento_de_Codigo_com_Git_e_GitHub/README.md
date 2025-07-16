@@ -385,3 +385,7 @@ Podemos excluir a branch teste, já que não iremos mais utilizá-la.
 
 - Artigos/Fórum: você pode compartilhar conteúdos técnicos através de Artigos (visíveis globalmente na plataforma da DIO). Por outro lado, você também pode compartilhar suas conquistas e dúvidas usando os Fóruns (que são específicos para cada experiência educacional na DIO, como um Bootcamp por exemplo).
 - Pesquise na Web: pode parecer óbvio, mas é importante frisar a importância das engines de busca no dia a dia de um profissional de TI. Caso não encontre o que procura dentro da DIO, pesquise sobre o assunto (conceito, dúvida, erro etc) na Internet
+
+# Certificado: Versionamento de Código com Git
+
+Link do certificado: https://hermes.dio.me/certificates/F10OC6FU.pdf

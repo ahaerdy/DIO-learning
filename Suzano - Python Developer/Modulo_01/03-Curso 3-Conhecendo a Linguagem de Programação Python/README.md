@@ -179,7 +179,7 @@ São disponibilizados 4 arquivos em formato Powerpoint:
 - 07-Dio_Conversao_de_tipos.pptx
 - 08-Dio_Funcoes_de_entrada_e_saida_input_print_.pptx
 
-## Certificado: Conhecendo a Linguagem de Programação Python
+# Certificado: Conhecendo a Linguagem de Programação Python
 
 Link do certificado: https://hermes.dio.me/certificates/BRMRBL10.pdf
 

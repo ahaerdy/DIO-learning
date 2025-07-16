@@ -52,6 +52,6 @@ São disponibilizados 3 arquivos em formato Powerpoint:
 - 02-Dio_Configuracao_do_ambiente_de_desenvolvimento.pptx
 - 03-Dio_Primeiro_programa.pptx
 
-## Certificado: Ambiente de Desenvolvimento e Primeiros Passos com Python
+# Certificado: Ambiente de Desenvolvimento e Primeiros Passos com Python
 
 Link do certificado: https://hermes.dio.me/certificates/CCAOJIT3.pdf
