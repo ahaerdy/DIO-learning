@@ -311,8 +311,8 @@ saldo is limite
 
 ### 🔎 Diferença entre is e ==
 
-== → compara valores (conteúdo).
-is → compara identidade de objeto (mesma referência em memória).
+- == → compara valores (conteúdo).
+- is → compara identidade de objeto (mesma referência em memória).
 
 ```
 a = [1, 2]
