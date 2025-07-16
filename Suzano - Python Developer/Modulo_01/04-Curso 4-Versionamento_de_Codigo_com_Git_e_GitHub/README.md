@@ -308,15 +308,15 @@ git add .
 git commit -m "commit-1"
 ```
 
-<details>
-    <summary>💻 Captura da imagem do terminal.</summary>
-    <p align="center">
-        <img src="imagens/image-5.png" alt="Diagrama Git">
-    </p>
-</details>
+<p align="center">
+    <img src="imagens/image-5.png" alt="Diagrama Git">
+</p>
 
-- Branch apontando para o `commit-1`:
+#### 2. Branch apontando para o `commit-1`:
 
+```
+git log
+```
 <p align="center">
   <img src="imagens/image-6.png" alt="Diagrama Git">
 </p>
