@@ -101,15 +101,15 @@
 
 - Confira a doc.: https://git-scm.com/download/linux
 - Instale a última versão estável do Git:
-    - ```
-        add-apt-repository ppa:git-core/ppa
-        apt update
-        apt install git 
-      ```
+    ```
+    add-apt-repository ppa:git-core/ppa
+    apt update
+    apt install git 
+    ```
 - Referência: https://git-scm.com/downloads/linux
     - Comando: 
         ``` 
-           git --version 
+        git --version 
         ```
     - Resultado: ``` git version 2.43.0 ```
 
@@ -118,38 +118,44 @@
     - Instale o Homebrew: https://brew.sh/
     - Instale o Git: 
         ``` 
-           brew install git 
+        brew install git 
         ```
     
 ## Vídeo 07 - Configurando o Git
  
 - Comando: 
     ``` 
-       git config --list 
+    git config --list 
     ```
 - Resultado:
     ```
-       credential.https://github.com.helper=
-       credential.https://github.com.helper=!/usr/bin/gh auth git-credential
-       credential.https://gist.github.com.helper=
-       credential.https://gist.github.com.helper=!/usr/bin/gh auth git-credential
-       user.name= ...
-       user.email= ...
+    credential.https://github.com.helper=
+    credential.https://github.com.helper=!/usr/bin/gh auth git-credential
+    credential.https://gist.github.com.helper=
+    credential.https://gist.github.com.helper=!/usr/bin/gh auth git-credential
+    user.name= ...
+    user.email= ...
     ```
 - Configurando seu nome de usuário e e-mail (globalmente):
     ```
-       git config --global user.name "Nome Sobrenome"
-       git config --global user.email seuemail@email.com
+    git config --global user.name "Nome Sobrenome"
+    git config --global user.email seuemail@email.com
     ```
 - Configurando o nome da Branch Padrão:
     ```
-       git config --global init.defaultBranch main
+    git config --global init.defaultBranch main
     ```
 - Para gerar um Token, acesse sua conta no GitHub, e no menu superior direito clique em Settings > Developer settings > Tokens (classic) > Generate new token.
 
 - Você pode armazenar suas credenciais para reduzir o número de vezes que você deve digitar seu nome de usuário ou senha:
-    - Salvando no cache: ``` git config --global credential.helper cache ```
-    - Ou permanentemente: ``` git config --global credential.helper store ```
+    - Salvando no cache: 
+        ``` 
+        git config --global credential.helper cache 
+        ```
+    - Ou permanentemente: 
+        ``` 
+        git config --global credential.helper store 
+        ```
     - Veja mais na doc.: https://git-scm.com/book/pt-br/v2/Git-Tools-Credential-Storage
 
 
@@ -160,11 +166,11 @@
 - Você pode armazenar suas credenciais para reduzir o número de vezes que você deve digitar seu nome de usuário ou senha:
     - Salvando no cache: 
         ``` 
-           git config --global credential.helper cache 
+        git config --global credential.helper cache 
         ```
     - Ou permanentemente: 
         ``` 
-           git config --global credential.helper store 
+        git config --global credential.helper store 
         ```
     - Veja mais na doc.: https://git-scm.com/book/pt-br/v2/Git-Tools-Credential-Storage
  
@@ -184,11 +190,11 @@
     - Acesse a pasta que deseja transformar em um repositório Git  pelo terminal ou clique no atalho em “Git Bash Here
     - Inicialize um repositório Git no diretório escolhido: 
         ``` 
-           git init 
+        git init 
         ```
     - Conecte o repositório local com o repositório remoto:
         ```
-           git remote add origin https://github.com/username/nome-do-repositorio.git
+        git remote add origin https://github.com/username/nome-do-repositorio.git
         ```
     - 
  
