@@ -33,11 +33,18 @@
 - Repositório no GitHub: https://github.com/digitalinnovationone/dio-lab-open-source
 - Documentação GitHub: https://docs.github.com/
 
+### Links complementares
+
+- Markdown: https://docs.github.com/pt/get-started/writing-on-github
+- Conventional Commits: https://github.com/conventional-commits/conventionalcommits.org 
+- GitHub Etiquetas: https://docs.github.com/pt/issues/using-labels-and-milestones-to-track-work/managing-labels
+- Visual Studio Code: https://code.visualstudio.com/download
+
+
 ### Apresentação do repositório do Lab no Github
 
 - Repositório do desafio: https://github.com/digitalinnovationone/dio-lab-open-source
 - Utilitários para o profile README: https://github.com/digitalinnovationone/dio-lab-open-source/tree/main/utils
-
 
 
 ## Vídeo 03 - Desenvolvendo uma Contribuição
