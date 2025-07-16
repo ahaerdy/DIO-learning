@@ -71,7 +71,7 @@
 - o [Guia de Contribuição](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/CONTRIBUTING.md) apresenta tudo o passo a passo de todo o processo.
 
 <details>
-  <summary>▶️ Clique para visualizar o Guia de Contribuição</summary>
+  <summary>⚠️ Guia de Contribuição - Clique para expandir ⚠️</summary>
 
 <h1>
     <a href="https://www.dio.me/">
