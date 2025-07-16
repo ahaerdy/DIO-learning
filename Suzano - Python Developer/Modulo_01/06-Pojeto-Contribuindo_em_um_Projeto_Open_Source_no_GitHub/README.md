@@ -5,6 +5,12 @@
 
 ## Vídeo 01 - Introdução ao Lab
 
+### Objetivo do Lab: aprender o básico sobre a contribuição no Github:
+   
+- O que são e como contribuir em Projetos Open Source
+- Desenvolver uma contribuição
+- Enviar uma contribuição
+- Dicas e matreriais de apoio
 
 
 ## Vídeo 02 - Formas de Contribuir num Projeto Open Source
