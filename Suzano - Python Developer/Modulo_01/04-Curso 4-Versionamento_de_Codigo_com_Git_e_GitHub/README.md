@@ -315,6 +315,11 @@ Criando mais um commit:
   <img src="imagens/image-7.png" alt="Diagrama Git">
 </p>
 
+Dando um ```git log``` para verificar. Veja que o ponteiro alterou novamente e, agora, está apontando para o nosso `commit-2`.
+
+<p align="center">
+  <img src="imagens/image-7.png" alt="Diagrama Git">
+</p>
 
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
