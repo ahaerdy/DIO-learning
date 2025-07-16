@@ -299,7 +299,7 @@
 
 ### Operações realizadas no terminal:
 
-#### 1. Gerando-se um novo commit (commit-1).
+#### 1. Gerando-se um novo commit (commit-1):
 
 ```
 git log
@@ -321,7 +321,13 @@ git log
   <img src="imagens/image-6.png" alt="Diagrama Git">
 </p>
 
-- Criando mais um commit:
+#### 3. Criando mais um commit:
+
+```
+echo "#commit-2-branch-main" > commit-2-branch-main.txt"
+git add .
+git commit -m "commit-2"
+```
 
 <p align="center">
   <img src="imagens/image-7.png" alt="Diagrama Git">
