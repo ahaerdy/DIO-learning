@@ -295,6 +295,13 @@
   <img src="imagens/image-2.png" alt="Diagrama Git" width="480">
 </p>
 
+- Observe que a branch main continua apontando para o `commit-2`.
+
+Operações realizadas no terminal:
+
+<p align="center">
+  <img src="imagens/image-5.png" alt="Diagrama Git" width="480">
+</p>
 
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
