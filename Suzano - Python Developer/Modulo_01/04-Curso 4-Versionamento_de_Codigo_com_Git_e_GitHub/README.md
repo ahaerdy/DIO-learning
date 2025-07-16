@@ -158,8 +158,14 @@
 - Para gerar um Token, acesse sua conta no GitHub, e no menu superior direito clique em Settings > Developer settings > Tokens (classic) > Generate new token.
 
 - Você pode armazenar suas credenciais para reduzir o número de vezes que você deve digitar seu nome de usuário ou senha:
-    - Salvando no cache: ``` git config --global credential.helper cache ```
-    - Ou permanentemente: ``` git config --global credential.helper store ```
+    - Salvando no cache: 
+        ``` 
+           git config --global credential.helper cache 
+        ```
+    - Ou permanentemente: 
+        ``` 
+           git config --global credential.helper store 
+        ```
     - Veja mais na doc.: https://git-scm.com/book/pt-br/v2/Git-Tools-Credential-Storage
  
 ## Vídeo 09 - Autenticando via Chave SSH
