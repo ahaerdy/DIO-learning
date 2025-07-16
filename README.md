@@ -38,6 +38,7 @@ Caso queira trocar ideias, compartilhar conhecimentos ou tirar dúvidas, me enco
 
 - [LinkedIn](https://www.linkedin.com/in/arthur-haerdy-jr/)
 - [GitHub](https://github.com/ahaerdy)
+- [DIO](https://web.dio.me/users/arthur_haerdy?tab=achievements)
 
 ---
 
