@@ -1,6 +1,11 @@
 # Parte 1 - Aulas
 
+- Instrutor: Elidiana Andrade (Tech Education Analyst at DIO)
+- Contato Libkedin: https://www.linkedin.com/in/elidiana/
+
 ## Vídeo 01 - Introdução ao Lab
+
+
 
 ## Vídeo 02 - Formas de Contribuir num Projeto Open Source
 
