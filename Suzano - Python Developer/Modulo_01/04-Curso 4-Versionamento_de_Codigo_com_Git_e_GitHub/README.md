@@ -269,8 +269,9 @@
 - Quando você cria uma nova Branch a partir de outra existente, a nova se inicia apontando para o mesmo commit da Branch que estava quando foi criada.
  
 commit 0 ← commit 1 ← commit 2 ← commit 3
-                            ↑          ↑
-                          main      teste
+                           ↑        ↑
+                         main     teste
+
 
 
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
