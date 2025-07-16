@@ -67,12 +67,15 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ## 🏆 Certificados Obtidos
 
+### Módulo 1
 - [Introdução ao Python com Suzano](https://hermes.dio.me/certificates/T2JYMJOX.pdf)
 - [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://hermes.dio.me/certificates/CCAOJIT3.pdf)
 - [Conhecendo a Linguagem de Programação Python](https://hermes.dio.me/certificates/BRMRBL10.pdf)
 - [Versionamento de Código com Git e GitHub](https://hermes.dio.me/certificates/F10OC6FU.pdf)
 - [Desafios de Projetos: Crie Um Portfólio Vencedor](https://hermes.dio.me/certificates/UILKVHSN.pdf)
 - [Contribuindo em um Projeto Open Source](https://hermes.dio.me/certificates/OC0JDME3.pdf)
+### Módulo 2
+-[Tipos de Operadores com Python](https://hermes.dio.me/certificates/EUCVFLQ4.pdf)
 
 ## 🔗 Contribuições Open Source
 
