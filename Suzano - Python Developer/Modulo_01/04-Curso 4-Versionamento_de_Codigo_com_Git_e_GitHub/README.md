@@ -355,7 +355,11 @@ Para isso nos vamos usar o comando ```git merge teste``` (teste será a branch q
   <img src="imagens/image-13.png" alt="Diagrama Git">
 </p>
 
+Podemos excluir a branch teste, já que não iremos mais utilizá-la.
 
+<p align="center">
+  <img src="imagens/image-15.png" alt="Diagrama Git">
+</p>
 
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
