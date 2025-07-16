@@ -1,4 +1,4 @@
-# Parte 1 - Vídeos
+# Parte 1 - Aulas
 
 ## Vídeo 01 - Introdução ao Lab
 
