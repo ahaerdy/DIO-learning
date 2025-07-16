@@ -198,7 +198,22 @@
     git remote add origin https://github.com/username/nome-do-repositorio.git
     ```
 
-### <mark>Clonando um Repositório</mark>
+### ⭐ <mark>Clonando um Repositório</mark>
+
+- Em “Code”, copie o código HTTPS ou SSH (a depender de como autenticou sua conta) do repositório no GitHub;
+- Abra o GitBash, insira o comando git clone e cole o conteúdo copiado para cloná-lo:
+    ```
+       git clone https://github.com/username/nome-do-repositorio
+    ```
+
+### Criando um Repositório Remoto
+
+- Acesse a sua conta do GitHub, clique no “+” no canto superior direito, e em “New repository”
+- Insira um nome (obrigatório), e a descrição (opcional);
+- Coloque uma breve descrição sobre o projeto, essa etapa é opcional;
+- Defina se o acesso será público ou privado;
+- Escolha como deseja inicializar seu repositório (se quiser vazio, deixe as opções desmarcadas)
+- Clique em “Create repository”, e pronto!
  
 ## Vídeo 11 - Salvando Alterações no Repositório Local
  
