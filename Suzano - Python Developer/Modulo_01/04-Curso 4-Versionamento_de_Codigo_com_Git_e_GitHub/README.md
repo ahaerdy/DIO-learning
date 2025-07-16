@@ -299,6 +299,8 @@
 
 ### Operações realizadas no terminal:
 
+1. Gerando-se um novo commit (commit-1).
+
 ```
 git log
 echo "#commit-1-branch-main" > commit-1-branch-main.txt"
