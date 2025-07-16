@@ -195,3 +195,6 @@ Profile README enviado para o projeto: [ahaerdy.md](https://github.com/ahaerdy/D
 
 - [Entendendo o Desafio](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/sobre_o_desafio/entendendo_o_desafio.md) (texto elaborado pela Prof. Elidiana).
 
+# Certificado: Contribuindo em um Projeto Open Source no GitHub
+
+Link do certificado: https://hermes.dio.me/certificates/OC0JDME3.pdf
