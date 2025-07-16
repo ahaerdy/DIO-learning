@@ -68,10 +68,10 @@
 - Após o  fork, cria-se um clone deste no repositório local.
 - Adiciona-se o repositório original como remote upstream para manter o repositório local atualizado
 
-- o [Guia de Contribuição](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/CONTRIBUTING.md) apresenta tudo o passo a passo de todo o processo.
+- o [Guia de Contribuição](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/CONTRIBUTING.md) apresenta o passo a passo de todo o processo.
 
 <details>
-  <summary>⚠️ Guia de Contribuição - Clique para expandir ⚠️</summary>
+  <summary>🟨🟨🟨 Guia de Contribuição - Clique para expandir 🟨🟨🟨</summary>
 
 <h1>
     <a href="https://www.dio.me/">
