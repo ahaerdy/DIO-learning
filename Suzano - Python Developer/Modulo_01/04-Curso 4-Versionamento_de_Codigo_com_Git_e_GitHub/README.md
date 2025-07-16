@@ -274,7 +274,9 @@
 
 ![alt text](imagens/image-2.png)
 
-
+<p align="center">
+  <img src="imagens/image.png" alt="Diagrama Git" width="400">
+</p>
 
 
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
