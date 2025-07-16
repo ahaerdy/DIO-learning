@@ -268,12 +268,13 @@
 - É um ponteiro móvel para um commit no histórico do repositório;
 - Quando você cria uma nova Branch a partir de outra existente, a nova se inicia apontando para o mesmo commit da Branch que estava quando foi criada.
  
-- Cria-se o primeiro commit chamado de `commit-0`.
-- A partir desse momento a branch passa a apontar pra esse commit.
+- Cria-se o primeiro commit chamado de `commit-0`. A partir desse momento a branch passa a apontar pra esse commit.
 
 <p align="center">
   <img src="imagens/image-4.png" alt="Diagrama Git" width="200">
 </p>
+
+- Em seguida nós geramos um novo commit (`commit-1`) e essa branch passa a apontar pra ele.
 
 <p align="center">
   <img src="imagens/image.png" alt="Diagrama Git" width="480">
