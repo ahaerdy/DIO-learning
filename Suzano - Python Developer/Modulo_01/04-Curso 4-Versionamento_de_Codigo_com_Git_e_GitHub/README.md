@@ -347,6 +347,16 @@ O comando ```git branch -v``` irá listar o último commit de cada branch.
   <img src="imagens/image-12.png" alt="Diagrama Git">
 </p>
 
+Caso desejemos que as alteraçòes que fizemos na branch teste apareça também na branch main, preciremos mesclá-las.
+
+Para isso nos vamos usar o comando ```git merge teste``` (teste será a branch que iremos mesclar com a branch main).
+
+<p align="center">
+  <img src="imagens/image-13.png" alt="Diagrama Git">
+</p>
+
+
+
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
 ## Vídeo 16 - Dicas e Materiais de Apoio
