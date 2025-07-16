@@ -189,10 +189,9 @@ Profile README enviado para o projeto: [ahaerdy.md](https://github.com/ahaerdy/D
 - Instrutor: Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - Contato: https://www.linkedin.com/in/falvojr/
 
-Dicas e insights do Prof. Venilton (detalhamento das etapas do projeto)
+- Dicas e insights do Prof. Venilton detalhando das etapas do projeto.
 
 # Parte 2 -Entendendo o Desafio 
 
-[Entendendo o Desafio](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/sobre_o_desafio/entendendo_o_desafio.md)
-
+[Entendendo o Desafio](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/sobre_o_desafio/entendendo_o_desafio.md) (texto elaborado pela Prof. Elidiana).
 
