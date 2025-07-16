@@ -422,7 +422,7 @@ git branch
   <img src="imagens/image-17.png" alt="Diagrama Git">
 </p>
 
-- Agora uma forma de clonar apenas uma branch em específica do repositório. 
+- Clonando apenas uma branch específica do repositório. 
 - Atentar para o parâmetro ```--single-branch```.
 
 <p align="center">
