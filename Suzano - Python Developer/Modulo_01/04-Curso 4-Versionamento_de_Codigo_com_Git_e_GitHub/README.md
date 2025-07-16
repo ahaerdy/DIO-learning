@@ -187,15 +187,17 @@
     - Clonando um repositório Git existente.
 
 ### Criando um Repositório Local
-    - Acesse a pasta que deseja transformar em um repositório Git  pelo terminal ou clique no atalho em “Git Bash Here
-    - Inicialize um repositório Git no diretório escolhido: 
-        ``` 
-        git init 
-        ```
-    - Conecte o repositório local com o repositório remoto:
-        ```
-        git remote add origin https://github.com/username/nome-do-repositorio.git
-        ```
+    
+- Acesse a pasta que deseja transformar em um repositório Git  pelo terminal ou clique no atalho em “Git Bash Here
+- Inicialize um repositório Git no diretório escolhido: 
+    ``` 
+    git init 
+    ```
+- Conecte o repositório local com o repositório remoto:
+    ```
+    git remote add origin https://github.com/username/nome-do-repositorio.git
+    ```
+
 ### <mark>Clonando um Repositório</mark>
  
 ## Vídeo 11 - Salvando Alterações no Repositório Local
