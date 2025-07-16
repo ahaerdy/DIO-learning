@@ -41,15 +41,32 @@
 - Visual Studio Code: https://code.visualstudio.com/download
 
 
-### Apresentação do repositório do Lab no Github
+### Apresentação do Repositório do Desafio
 
 - Repositório do desafio: https://github.com/digitalinnovationone/dio-lab-open-source
 - Utilitários para o profile README: https://github.com/digitalinnovationone/dio-lab-open-source/tree/main/utils
 
+### Criação de uma Issue (sugestão de melhoria)
+
+- Clicar em "Issues", depois em "New Issue" 
+- Abrirá um caixa de seleção com os templates.
+- Lista de templates de issue:
+    - Bug report (Crie um relatório para nos ajudar a melhorar)
+    - Community Challenge (Crie uma issue sobre o Desafio proposto à comunidade)
+    - Feature request (Sugira uma ideia para este repositório)
+    - Blank issue (Create a new issue from scratch)
+
+- Escolher "Feature request" e "Get Started"
+- Haverá um template com os campos a serem preenchidos.
+- O vídeo segue com as ações propostas pela instrutora.
+
 
 ## Vídeo 03 - Desenvolvendo uma Contribuição
 
-
+- Cria-se um fork do repositório original para efetuar uma contribuição.
+- O fork e necessário pois não temos permissão de enviar alterações no repositório original.
+- Após o  fork, cria-se um clone deste no repositório local.
+- Adiciona-se o repositório original como remote upstream para manter o repositório local atualizado
 
 ## Vídeo 04 - Enviando uma Contribuição
 
