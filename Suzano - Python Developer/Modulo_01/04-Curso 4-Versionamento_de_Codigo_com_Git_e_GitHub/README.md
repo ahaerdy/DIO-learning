@@ -335,6 +335,18 @@ Agora nós vamos dar um novo commut dentro dessa branch teste. Perceba que agora
   <img src="imagens/image-10.png" alt="Diagrama Git">
 </p>
 
+Retornando para a branch main.
+
+<p align="center">
+  <img src="imagens/image-11.png" alt="Diagrama Git">
+</p>
+
+O comando ```git branch -v``` irá listar o último commit de cada branch.
+
+<p align="center">
+  <img src="imagens/image-12.png" alt="Diagrama Git">
+</p>
+
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
 ## Vídeo 16 - Dicas e Materiais de Apoio
