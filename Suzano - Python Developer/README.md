@@ -71,7 +71,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://hermes.dio.me/certificates/CCAOJIT3.pdf)
 - [Conhecendo a Linguagem de Programação Python](https://hermes.dio.me/certificates/BRMRBL10.pdf)
 - [Versionamento de Código com Git e GitHub](https://hermes.dio.me/certificates/F10OC6FU.pdf)
-- Crie Um Portfólio Vencedor
+- [Desafios de Projetos: Crie Um Portfólio Vencedor](https://hermes.dio.me/certificates/UILKVHSN.pdf)
 - Contribuindo em um Projeto Open Source
 
 ## 🔗 Contribuições Open Source
