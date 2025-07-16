@@ -370,13 +370,21 @@ git log
   <img src="imagens/image-10.png" alt="Diagrama Git">
 </p>
 
-- Retornando para a branch main.
+#### 7. Retornando para a branch `main`.
+
+```
+git checkout main
+```
 
 <p align="center">
   <img src="imagens/image-11.png" alt="Diagrama Git">
 </p>
 
-- O comando ```git branch -v``` irá listar o último commit de cada branch.
+#### 8. O comando `git branch -v` irá listar o último commit de cada branch.
+
+```
+git branch -v
+```
 
 <p align="center">
   <img src="imagens/image-12.png" alt="Diagrama Git">
