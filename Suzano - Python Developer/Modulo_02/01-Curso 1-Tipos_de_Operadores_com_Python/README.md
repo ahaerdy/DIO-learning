@@ -74,10 +74,57 @@ https://github.com/guicarvalho/trilha-python-dio
 
 ## Vídeo 02 - Operadores de comparação
 
+### O que são operadores de comparação e como utilizá-los.
 
+- São operadores utilizados para comparar dois valores.
 
+### Igualdade
+
+```
+saldo = 450
+saque = 200
+
+print(saldo == saque)
+>>> False
+```
+
+### Diferença
+
+```
+saldo = 450
+saque = 200
+print(saldo != saque)
+>>> True
+```
+
+### Maior que / maior ou igual 
+
+```
+saldo = 450
+saque = 200
+print(saldo > saque)
+>>> True
+
+print(saldo >= saque)
+>>> True
+```
+
+### Menor que / menor ou igual 
+
+```
+saldo = 450
+saque = 200
+print(saldo < saque)
+>>> False
+
+print(saldo <= saque)
+>>> False
+```
 
 ## Vídeo 03 - Operadores de atribuição
+
+
+
 
 ## Vídeo 04 - Operadores Lógicos
 
