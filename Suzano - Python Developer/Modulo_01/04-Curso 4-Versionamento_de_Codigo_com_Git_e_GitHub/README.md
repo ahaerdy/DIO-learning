@@ -268,11 +268,11 @@
 - É um ponteiro móvel para um commit no histórico do repositório;
 - Quando você cria uma nova Branch a partir de outra existente, a nova se inicia apontando para o mesmo commit da Branch que estava quando foi criada.
  
-![alt text](image.png)
+![alt text](imagens/image.png)
 
-![alt text](image-1.png)
+![alt text](imagens/image-1.png)
 
-![alt text](image-2.png)
+![alt text](imagens/image-2.png)
 
 
 
