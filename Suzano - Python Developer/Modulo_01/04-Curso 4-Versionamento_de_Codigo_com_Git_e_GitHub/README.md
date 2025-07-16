@@ -251,11 +251,31 @@
     git reset --hard
     ```
 
-
 ## Vídeo 13 - Enviando e Baixando Alterações com o Repositório Remoto
+
+- Como enviar as alterações do repositório local para o remoto:
+    ```
+    git push
+    ```
+- “Puxar” as alterações do repositório remoto para o local (busca e mescla):
+    ```
+    git pull
+    ```
  
 ## Vídeo 14 - Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos
+
+- De maneira simplista, uma Branch (em tradução, “Ramo”), é uma ramificação do seu projeto.
+- É um ponteiro móvel para um commit no histórico do repositório;
+- Quando você cria uma nova Branch a partir de outra existente, a nova se inicia apontando para o mesmo commit da Branch que estava quando foi criada.
  
+commit 0  
+⬅️ commit 1  
+   ⬅️ commit 2 ← 🟩 **main**  
+            ⬅️ commit 3  
+                  ⬆️  
+                🟥 **teste**
+
+
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
 ## Vídeo 16 - Dicas e Materiais de Apoio
