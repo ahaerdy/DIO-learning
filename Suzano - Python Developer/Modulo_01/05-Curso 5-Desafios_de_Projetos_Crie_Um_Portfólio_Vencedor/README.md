@@ -46,5 +46,7 @@
 - O projeto, depois de submetido, aparece no perfil do usuário, na aba Projetos.
 - A aba Projetos conterá o portfólio técnico do usuário na plataforma da DIO.
 
+# Certificado: Desafios de Projetos: Crie Um Portfólio Vencedor
 
+Link do certificado: https://hermes.dio.me/certificates/UILKVHSN.pdf
 
