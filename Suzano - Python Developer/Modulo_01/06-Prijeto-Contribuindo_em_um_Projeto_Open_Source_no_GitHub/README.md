@@ -35,7 +35,7 @@
 
 ### Apresentação do repositório do Lab no Github
 
-- Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
+- Repositório do desafio: https://github.com/digitalinnovationone/dio-lab-open-source
 - Utilitários para o profile README: https://github.com/digitalinnovationone/dio-lab-open-source/tree/main/utils
 
 
