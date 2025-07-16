@@ -321,6 +321,11 @@ Dando um ```git log``` para verificar. Veja que o ponteiro alterou novamente e, 
   <img src="imagens/image-7.png" alt="Diagrama Git">
 </p>
 
+Agora nós vamos criar a branch `teste`. E para isso nós vamos usar o comando ```git checkout -b teste``` que vai trocar da branch main para esta nova branch que estamos criando (teste).
+
+<p align="center">
+  <img src="imagens/image-7.png" alt="Diagrama Git">
+</p>
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
 ## Vídeo 16 - Dicas e Materiais de Apoio
