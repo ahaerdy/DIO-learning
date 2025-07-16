@@ -2,7 +2,7 @@
 
 [Assista no Youtube](https://youtu.be/SWMVZoHGeBI)
 
-# Resunmo
+# Resumo
 
 Esta live marca o lançamento do programa **Bootcamp Suzano Python Developer**, uma iniciativa da DIO em parceria com a Suzano, oferecendo **10.000 bolsas de estudo gratuitas** para capacitação em tecnologia.
 
