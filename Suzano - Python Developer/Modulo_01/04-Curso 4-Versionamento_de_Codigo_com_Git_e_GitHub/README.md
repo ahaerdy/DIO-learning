@@ -297,7 +297,7 @@
 
 - Observe que a branch main continua apontando para o `commit-2`.
 
-Operações realizadas no terminal:
+### Operações realizadas no terminal:
 
 <p align="center">
   <img src="imagens/image-5.png" alt="Diagrama Git">
