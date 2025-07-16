@@ -107,17 +107,26 @@
         apt install git 
       ```
 - Referência: https://git-scm.com/downloads/linux
-    - Comando: ``` git --version ```
+    - Comando: 
+        ``` 
+           git --version 
+        ```
     - Resultado: ``` git version 2.43.0 ```
 
 - Instalando o Git no macOS
     - Confira a doc.: https://git-scm.com/download/mac
     - Instale o Homebrew: https://brew.sh/
-    - Instale o Git: ``` brew install git ```
+    - Instale o Git: 
+        ``` 
+           brew install git 
+        ```
     
 ## Vídeo 07 - Configurando o Git
  
-- Comando: ``` git config --list ```
+- Comando: 
+    ``` 
+       git config --list 
+    ```
 - Resultado:
     ```
        credential.https://github.com.helper=
