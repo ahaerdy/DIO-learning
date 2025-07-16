@@ -280,7 +280,7 @@
   <img src="imagens/image.png" alt="Diagrama Git" width="480">
 </p>
 
-- Em seguida criamos outro (`commit-2`) e assim sucessivamente. Lembrar do comando `git log` com a indicação HEAD do commit mais recente)
+- Em seguida criamos outro (`commit-2`) e assim sucessivamente (lembrar do comando `git log` com a indicação HEAD do commit mais recente)
 
 <p align="center">
   <img src="imagens/image-1.png" alt="Diagrama Git" width="480">
