@@ -268,14 +268,16 @@
 - É um ponteiro móvel para um commit no histórico do repositório;
 - Quando você cria uma nova Branch a partir de outra existente, a nova se inicia apontando para o mesmo commit da Branch que estava quando foi criada.
  
-![alt text](imagens/image.png)
-
-![alt text](imagens/image-1.png)
-
-![alt text](imagens/image-2.png)
+<p align="center">
+  <img src="imagens/image.png" alt="Diagrama Git" width="480">
+</p>
 
 <p align="center">
-  <img src="imagens/image.png" alt="Diagrama Git" width="400">
+  <img src="imagens/image-1.png" alt="Diagrama Git" width="480">
+</p>
+
+<p align="center">
+  <img src="imagens/image-2.png" alt="Diagrama Git" width="480">
 </p>
 
 
