@@ -357,7 +357,7 @@ Este comando irá mover ponteiro de `main` para `teste`. Perceba que a branch `t
 
 #### 6. Fazendo um novo commit dentro da branch `teste`.
 
-Repetindo os passos para o `commit-3`. Perceba que a branch `teste` está apontando para o `commit-3`, enquanto a branch main continua apontando para o `commit-2`.
+Repetindo os passos para o `commit-3`. Perceba que a branch `teste` estará apontando para o `commit-3`, enquanto a branch `main` continuará apontando para o `commit-2`.
 
 ```
 echo "#commit-3-branch-main" > commit-3-branch-main.txt"
