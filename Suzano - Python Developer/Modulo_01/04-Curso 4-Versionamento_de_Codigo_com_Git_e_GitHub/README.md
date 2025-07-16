@@ -318,7 +318,7 @@ Criando mais um commit:
 Dando um ```git log``` para verificar. Veja que o ponteiro alterou novamente e, agora, está apontando para o nosso `commit-2`.
 
 <p align="center">
-  <img src="imagens/image-7.png" alt="Diagrama Git">
+  <img src="imagens/image-8.png" alt="Diagrama Git">
 </p>
 
 Agora nós vamos criar a branch `teste`. E para isso nós vamos usar o comando ```git checkout -b teste``` que vai trocar da branch main para esta nova branch que estamos criando (teste).
@@ -326,7 +326,7 @@ Agora nós vamos criar a branch `teste`. E para isso nós vamos usar o comando `
 Perceba que a nossa branch teste está apontando para o mesmo commit da nossa branch main.
 
 <p align="center">
-  <img src="imagens/image-7.png" alt="Diagrama Git">
+  <img src="imagens/image-9.png" alt="Diagrama Git">
 </p>
 
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
