@@ -322,10 +322,42 @@ a == b      # True  (mesmo conteúdo)
 a is b      # False (objetos diferentes em memória)
 ```
 
-
 ## Vídeo 06 - Operadores de associação
+
+### O que são operadores de associação e como utilizá-los.
+
+- São operadores utilizados para verificar se um objeto está presente em uma sequência .
+
+### Exemplo
+
+```
+curso = "Curso de Python"
+frutas = ["laranja", "uva", "limão"]
+saques = [1500, 100]
+
+"Python" in curso
+>>> True
+
+"maçã" not in frutas
+>>> True
+
+200 in saques
+>>> False
+```
 
 # Parte 2 - Materiais de apoio e Questionário
 
 ## Materiais de apoio
+
+Disponibilizados os seguinte arquivos em formato MS Powerpoint:
+- 09-Dio_Operadores_aritmeticos.pptx
+- 10-Dio_Operadores_de_comparacao.pptx
+- 11-Dio_Operadores_de_atribuicao.pptx
+- 12-Dio_Operadores_logicos.pptx
+- 13-Dio_Operadores_de_identidade.pptx
+- 14-Dio_Operadores_de_associacao.pptx
+
+## Certificado: Tipos de Operadores com Python
+
+Link do certificado: https://hermes.dio.me/certificates/EUCVFLQ4.pdf
 
