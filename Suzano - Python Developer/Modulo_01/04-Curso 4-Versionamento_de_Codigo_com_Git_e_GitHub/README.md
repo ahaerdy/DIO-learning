@@ -300,7 +300,7 @@
 Operações realizadas no terminal:
 
 <p align="center">
-  <img src="imagens/image-5.png" alt="Diagrama Git" width="480">
+  <img src="imagens/image-5.png" alt="Diagrama Git">
 </p>
 
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
