@@ -204,6 +204,12 @@ print(saldo)
 
 ## Vídeo 04 - Operadores Lógicos
 
+### O que são operadores lógicos e como utilizá-los.
+
+- São operadores utilizados em conjunto com os operadores de comparação, para montar uma expressão lógica. Quando um operador de comparação é utilizado, o resultado retornado é um booleano, dessa forma podemos combinar operadores de comparação com os operadores lógicos, exemplo: ``` op_comparacao + op_logico + op_comparacao… N … ```
+
+### 
+
 ## Vídeo 05 - Operadores de identidade
 
 ## Vídeo 06 - Operadores de associação
