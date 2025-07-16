@@ -338,7 +338,7 @@ git commit -m "commit-2"
 ```
 git log
 ```
-Veja que o ponteiro agora está apontando para o commit-2.
+Veja que o ponteiro agora está apontando para o `commit-2`.
 
 <p align="center">
   <img src="imagens/image-8.png" alt="Diagrama Git">
