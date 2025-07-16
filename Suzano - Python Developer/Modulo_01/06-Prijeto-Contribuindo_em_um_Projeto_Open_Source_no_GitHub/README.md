@@ -171,6 +171,7 @@ Após criar o seu Pull Request, nossa automação irá validar a sua submissão.
 
 </details>
 
+Contribuição: 
 
 
 ## Vídeo 04 - Enviando uma Contribuição
