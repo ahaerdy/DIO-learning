@@ -371,7 +371,7 @@ Podemos excluir a branch teste, já que não iremos mais utilizá-la.
   <img src="imagens/image-17.png" alt="Diagrama Git">
 </p>
 
-Agora uma forma de clonar apenas um branch em específico do repositório. Atentar para o parâmetro --single-branch.
+Agora uma forma de clonar apenas uma branch em específica do repositório. Atentar para o parâmetro ``--single-branch```.
 
 <p align="center">
   <img src="imagens/image-18.png" alt="Diagrama Git">
