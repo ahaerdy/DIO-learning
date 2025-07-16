@@ -349,14 +349,22 @@ Veja que o ponteiro agora está apontando para o `commit-2`.
 ```
 git checkout -b teste
 ``` 
-Este comando irá mover ponteiro de _main_ para _teste_. Perceba que a branch teste está apontando para o mesmo commit da branch main (que é o `commit-2`).
+Este comando irá mover ponteiro de `main` para `teste`. Perceba que a branch `teste` está apontando para o mesmo commit da branch `main` (que é o `commit-2`).
 
 <p align="center">
   <img src="imagens/image-9.png" alt="Diagrama Git">
 </p>
 
-- Agora nós vamos dar um novo commit dentro dessa branch teste. 
-- Perceba que agora a branch teste vai estar apontando para o `commit-3`, enquanto a branch main continua apontando para o `commit-2`.
+#### 6. Fazendo um novo commit dentro da branch `teste`.
+
+Repetindo os passos para o `commit-3`. Perceba que a branch `teste` está apontando para o `commit-3`, enquanto a branch main continua apontando para o `commit-2`.
+
+```
+echo "#commit-3-branch-main" > commit-3-branch-main.txt"
+git add .
+git commit -m "commit-3"
+git log
+```
 
 <p align="center">
   <img src="imagens/image-10.png" alt="Diagrama Git">
