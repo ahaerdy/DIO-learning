@@ -364,11 +364,17 @@ Podemos excluir a branch teste, já que não iremos mais utilizá-la.
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
 - Comandos ```git fetch```e ```git merge```.
-- O comando ```git fetch``` baixa o arquivo no repo remoto para o local sem estar mesclando.
+- O comando ```git fetch``` baixa o arquivo no repositório remoto para o local sem estar mesclando.
 - Usar o comando ```git diff```para verificaar as diferenças.
 
 <p align="center">
   <img src="imagens/image-17.png" alt="Diagrama Git">
+</p>
+
+Agora uma forma de clonar apenas um branch em específico do repositório. Atentar para o parâmetro --single-branch.
+
+<p align="center">
+  <img src="imagens/image-18.png" alt="Diagrama Git">
 </p>
 
 ## Vídeo 16 - Dicas e Materiais de Apoio
