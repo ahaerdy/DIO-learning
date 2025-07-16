@@ -274,13 +274,13 @@
   <img src="imagens/image-4.png" alt="Diagrama Git" width="200">
 </p>
 
-- Em seguida nós geramos um novo commit (`commit-1`) e essa branch passa a apontar pra ele.
+- Em seguida nós gera-se um novo commit (`commit-1`) e essa branch passa a apontar pra ele.
 
 <p align="center">
   <img src="imagens/image.png" alt="Diagrama Git" width="480">
 </p>
 
-- Em seguida criamos outro (`commit-2`) e assim sucessivamente (lembrar do comando `git log` com a indicação HEAD do commit mais recente)
+- Cria-se mais um (`commit-2`) e assim sucessivamente (lembrar do comando `git log` com a indicação HEAD do commit mais recente)
 
 <p align="center">
   <img src="imagens/image-1.png" alt="Diagrama Git" width="480">
