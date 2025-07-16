@@ -299,6 +299,13 @@
 
 ### Operações realizadas no terminal:
 
+```
+git log
+echo "#commit-1-branch-main" > commit-1-branch-main.txt"
+git add .
+git commit -m "commit-1"
+```
+
 <details>
     <summary>Clique para ver o terminal com imagem</summary>
     <p align="center">
