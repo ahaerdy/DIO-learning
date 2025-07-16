@@ -2,6 +2,27 @@
 
 ## Vídeo 01 - Operadores aritméticos
 
+### O que são operadores aritméticos e como utilizá-los.
+
+- Os operadores aritméticos executam operações matemáticas, como adição, subtração com operandos.
+
+#### Adição, subtração e multiplicação
+
+```
+# Adição
+print(1 + 1)
+>>> 2
+
+# Subtração
+print(10 - 2)
+>>> 8
+
+# Multiplicação
+print(4 * 3)
+>>> 12
+```
+
+
 ## Vídeo 02 - Operadores de comparação
 
 ## Vídeo 03 - Operadores de atribuição
