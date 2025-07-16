@@ -41,8 +41,10 @@
 
 ## Vídeo 03 - A Importância dos Desafios de Projeto na Prática
 
-- O apresentador fala sobre o desafio de projeto "Contribuindo em um Projeto Open Source no GitHub" (que será visto no próximo curso).
-- Dentro do Lab sempre haverá uma aula textual.
+- O apresentador fala sobre o desafio de projeto "Contribuindo em um Projeto Open Source no GitHub" que será visto no próximo curso.
+- Dentro do Lab sempre haverá uma aula textual. Ela trará informações técnicas importantes para se entender o desafio proposto.
+- O projeto, depois de submetido, aparece no perfil do usuário, na aba Projetos.
+- A aba Projetos conterá o portfólio técnico do usuário na plataforma da DIO.
 
 
 
