@@ -8,15 +8,40 @@
 
 ## Vídeo 02 - PBL, Portfólio, Competências e Empregabilidade
 
+### Introdução
+
 - O apresentador fala sobre PBL a apresentação Baseada em Projetos ou, PBL (Projects Based Learning / Problem Based Learning).
 - Experiência que vai gerar uma experiência para o portfolio pessoal e profissional (demonstrando experiências técnicas e interpessoais).
-- Desafios de Projetos servem para:
-    - __Portfolio__: cada projeto concluído reforça suas **habilidades**, promove **networking** e dá **destaque** ao seu portfólio profissional.
-    - __Destaque__: ao finalizar seus projetos na DIO, você obtém uma **certificação de competências**, um diferencial importante para abrir portas no mercado de trabalho.
-    - __Oportunidades__: através da **Talent Match**, você tem acesso às melhores oportunidades de emprego no setor de tecnologia. Vamos ajudá-lo a construir a carreira dos seus sonho
+
+###  Desafios de Projetos servem para:
+
+#### __Portfolio__: cada projeto concluído reforça suas **habilidades**, promove **networking** e dá **destaque** ao seu portfólio profissional.
+
+#### __Destaque__: ao finalizar seus projetos na DIO, você obtém uma **certificação de competências**, um diferencial importante para abrir portas no mercado de trabalho.
+
+#### __Oportunidades__: através da **Talent Match**, você tem acesso às melhores oportunidades de emprego no setor de tecnologia. Vamos ajudá-lo a construir a carreira dos seus sonho
+
+### Desenvolvimento das Habilidades
+
+#### Hard Skills
+
+- Linguagens de Programação  
+- Arquiteturas de Sistema  
+- Banco de Dados  
+- Stacks de Desenvolvimento  
+- Ferramentas  
+
+#### Soft Skills
+
+- Trabalho em Equipe  
+- Pensamento Crítico  
+- Gerenciamento do Tempo  
+- Comunicação  
+- Liderança
 
 
 ## Vídeo 03 - A Importância dos Desafios de Projeto na Prática
+
 
 
 
