@@ -309,6 +309,13 @@ Branch apontando para o `commit-1`:
   <img src="imagens/image-6.png" alt="Diagrama Git">
 </p>
 
+Criando mais um commit:
+
+<p align="center">
+  <img src="imagens/image-7.png" alt="Diagrama Git">
+</p>
+
+
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
 ## Vídeo 16 - Dicas e Materiais de Apoio
