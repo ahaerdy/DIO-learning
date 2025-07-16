@@ -91,9 +91,3 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ## 🔄 Atualizações
 
 Este repositório será atualizado continuamente conforme o avanço nos módulos do Bootcamp e inclusão de novos projetos.
-
-Para clonar e acompanhar:
-
-```bash
-git clone https://github.com/ahaerdy/suzano-python-developer.git
-```
