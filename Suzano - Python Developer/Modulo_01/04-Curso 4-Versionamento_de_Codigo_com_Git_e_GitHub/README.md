@@ -281,6 +281,8 @@
 </p>
 
 - Cria-se mais um (`commit-2`) e assim sucessivamente (lembrar do comando `git log` com a indicação HEAD do commit mais recente)
+- Vamos supor que dentro da branch main decidimos testar um novo recurso. Para isso criamos uma nova branch que decidimos chamar de `teste`.
+- Quando criamos uma branch dentro de um commit já existente ela passa a apontar para o mesmo commit que já estava apontando.
 
 <p align="center">
   <img src="imagens/image-1.png" alt="Diagrama Git" width="480">
