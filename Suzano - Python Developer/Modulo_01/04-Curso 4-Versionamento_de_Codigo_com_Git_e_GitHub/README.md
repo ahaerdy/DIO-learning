@@ -323,10 +323,16 @@ Dando um ```git log``` para verificar. Veja que o ponteiro alterou novamente e, 
 
 Agora nós vamos criar a branch `teste`. E para isso nós vamos usar o comando ```git checkout -b teste``` que vai trocar da branch main para esta nova branch que estamos criando (teste).
 
-Perceba que a nossa branch teste está apontando para o mesmo commit da nossa branch main.
+Perceba que a nossa branch teste está apontando para o mesmo commit da nossa branch main (que é o `commit-2`).
 
 <p align="center">
   <img src="imagens/image-9.png" alt="Diagrama Git">
+</p>
+
+Agora nós vamos dar um novo commut dentro dessa branch teste. Perceba que agora a branch teste vai estar apontando para o `commit-3`.
+
+<p align="center">
+  <img src="imagens/image-10.png" alt="Diagrama Git">
 </p>
 
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
