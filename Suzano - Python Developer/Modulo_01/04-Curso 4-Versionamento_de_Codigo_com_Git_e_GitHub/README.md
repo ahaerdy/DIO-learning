@@ -299,7 +299,7 @@
 
 ### Operações realizadas no terminal:
 
-1. Gerando-se um novo commit (commit-1).
+#### 1. Gerando-se um novo commit (commit-1).
 
 ```
 git log
