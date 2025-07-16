@@ -307,7 +307,7 @@ git commit -m "commit-1"
 ```
 
 <details>
-    <summary>🖥️ Clique para ver o terminal com imagem</summary>
+    <summary>🟨🟨🟨 Clique para ver o terminal com imagem 🟨🟨🟨</summary>
     <p align="center">
         <img src="imagens/image-5.png" alt="Diagrama Git">
     </p>
