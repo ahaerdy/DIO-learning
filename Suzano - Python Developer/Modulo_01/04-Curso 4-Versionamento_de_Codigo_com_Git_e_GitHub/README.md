@@ -299,7 +299,7 @@
 
 ### Operações realizadas no terminal:
 
-#### ▶️ Gerando-se um novo commit (commit-1).
+#### 1. Gerando-se um novo commit (commit-1).
 
 ```
 git log
@@ -309,7 +309,7 @@ git commit -m "commit-1"
 ```
 
 <details>
-    <summary>💻 Clique para ver a imagem do terminal</summary>
+    <summary>💻 Captura da imagem do terminal.</summary>
     <p align="center">
         <img src="imagens/image-5.png" alt="Diagrama Git">
     </p>
