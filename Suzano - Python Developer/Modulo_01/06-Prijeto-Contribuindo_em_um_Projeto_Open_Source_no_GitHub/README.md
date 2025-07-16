@@ -171,7 +171,7 @@ Após criar o seu Pull Request, nossa automação irá validar a sua submissão.
 
 </details>
 
-Contribuição: [ahaerdy.md](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/contribuicao/ahaerdy.md)
+Profile README enviado para o projeto: [ahaerdy.md](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/contribuicao/ahaerdy.md)
 
 
 ## Vídeo 04 - Enviando uma Contribuição
