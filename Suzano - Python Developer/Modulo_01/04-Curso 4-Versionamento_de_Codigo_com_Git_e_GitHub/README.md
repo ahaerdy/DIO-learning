@@ -321,7 +321,7 @@ git log
   <img src="imagens/image-6.png" alt="Diagrama Git">
 </p>
 
-#### 3. Criando-se mais um commit:
+#### 3. Criando mais um commit:
 
 ```
 echo "#commit-2-branch-main" > commit-2-branch-main.txt"
@@ -338,18 +338,18 @@ git commit -m "commit-2"
 ```
 git log
 ```
+Veja que o ponteiro agora está apontando para o commit-2.
 
 <p align="center">
   <img src="imagens/image-8.png" alt="Diagrama Git">
 </p>
 
-Veja que o ponteiro agora está apontando para o commit-2.
-
 #### 5. Criando a branch teste:
 
-- Agora nós vamos criar a branch `teste`. E para isso nós vamos usar o comando ```git checkout -b teste``` que vai trocar da branch main para esta nova branch que estamos criando (teste).
-
-- Perceba que a nossa branch teste está apontando para o mesmo commit da nossa branch main (que é o `commit-2`).
+```
+git checkout -b teste
+``` 
+Este comando vai mover ponteiro de _main_ para _teste_. Perceba que a branch teste está apontando para o mesmo commit da branch main (que é o `commit-2`).
 
 <p align="center">
   <img src="imagens/image-9.png" alt="Diagrama Git">
