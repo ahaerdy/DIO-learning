@@ -1,6 +1,6 @@
 # Mentoria: Live de Lançamento do Bootcamp Suzano - Python Developer 
 
-[Assista no Youtube](https://youtu.be/SWMVZoHGeBI)
+▶️ [Assista no Youtube](https://youtu.be/SWMVZoHGeBI)
 
 # Resumo
 
