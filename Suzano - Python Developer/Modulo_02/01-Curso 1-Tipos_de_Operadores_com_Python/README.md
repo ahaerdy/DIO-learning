@@ -279,6 +279,50 @@ saldo >= saque and saque <= limite or conta_especial and saldo >= saque
 
 ## Vídeo 05 - Operadores de identidade
 
+### O que são operadores de identidade e como utilizá-los.
+
+- São operadores utilizados para comparar se os dois objetos testados ocupam a mesma posição na memória.
+
+### Exemplo
+
+```
+curso = "Curso de Python"
+nome_curso = curso
+saldo, limite = 200, 200
+
+curso is nome_curso
+>>> True
+
+curso is not nome_curso
+>>> False
+
+saldo is limite
+>>> True
+```
+
+⚠️ Explicando: 
+
+```
+saldo is limite
+>>> True
+```
+
+- True, porque 200 é um número pequeno (inteiro), e o Python geralmente reusa objetos pequenos imutáveis para economizar memória. Então saldo e limite provavelmente estão apontando para o mesmo objeto 200.
+
+### 🔎 Diferença entre is e ==
+
+== → compara valores (conteúdo).
+is → compara identidade de objeto (mesma referência em memória).
+
+```
+a = [1, 2]
+b = [1, 2]
+
+a == b      # True  (mesmo conteúdo)
+a is b      # False (objetos diferentes em memória)
+```
+
+
 ## Vídeo 06 - Operadores de associação
 
 # Parte 2 - Materiais de apoio e Questionário
