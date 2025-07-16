@@ -1,7 +1,7 @@
 ## Vídeo 01 - Apresentação
 
 - Instrutor: Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
--Contato: https://www.linkedin.com/in/falvojr/
+- Contato: https://www.linkedin.com/in/falvojr/
 
 - O apresentador fala da importância dos desafios de projeto na jornada de formação e de um portfólio vencedor. 
 - As empresas parceiras têm acesso a todos os desafios de projetos que finalizamos na plataforma DIO (o que pode ser um diferencial durante as entrevistas técnicas).
