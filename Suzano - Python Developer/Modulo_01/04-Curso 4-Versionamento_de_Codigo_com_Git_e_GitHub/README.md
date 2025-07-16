@@ -303,6 +303,12 @@ Operações realizadas no terminal:
   <img src="imagens/image-5.png" alt="Diagrama Git">
 </p>
 
+Branch apontando para o `commit-1`:
+
+<p align="center">
+  <img src="imagens/image-6.png" alt="Diagrama Git">
+</p>
+
 ## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
 ## Vídeo 16 - Dicas e Materiais de Apoio
