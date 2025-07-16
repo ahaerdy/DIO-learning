@@ -186,7 +186,7 @@
     - Transformando um diretório local que não está sob controle de versão, num repositório Git;
     - Clonando um repositório Git existente.
 
-- Criando um Repositório Local
+### Criando um Repositório Local
     - Acesse a pasta que deseja transformar em um repositório Git  pelo terminal ou clique no atalho em “Git Bash Here
     - Inicialize um repositório Git no diretório escolhido: 
         ``` 
@@ -196,7 +196,7 @@
         ```
         git remote add origin https://github.com/username/nome-do-repositorio.git
         ```
-- <mark>Clonando um Repositório</mark>
+### <mark>Clonando um Repositório</mark>
  
 ## Vídeo 11 - Salvando Alterações no Repositório Local
  
