@@ -299,9 +299,12 @@
 
 ### Operações realizadas no terminal:
 
-<p align="center">
-  <img src="imagens/image-5.png" alt="Diagrama Git">
-</p>
+<details>
+    <summary>Clique para ver o terminal com imagem</summary>
+    <p align="center">
+        <img src="imagens/image-5.png" alt="Diagrama Git">
+    </p>
+</details>
 
 - Branch apontando para o `commit-1`:
 
