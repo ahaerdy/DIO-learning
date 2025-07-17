@@ -94,7 +94,7 @@ def sacar(valor):  # início do bloco do método
 sacar(100)
 ```
 
-📤 Saída:
+### 📤 Saída:
 
 ```
 Valor sacado, retire seu dinheiro na boca do caixa.
