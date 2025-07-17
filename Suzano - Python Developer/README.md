@@ -45,10 +45,10 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 2: Sintaxe Básica com Python
 
 - [x] Curso: [Tipos de Operadores com Python](Modulo_02/01-Curso%201-Tipos_de_Operadores_com_Python/)
-- [ ] Curso: Trabalhando com Coleções em Python
-- [ ] Curso: Programação Orientada a Objetos com Python
-- [ ] Curso: Produtividade com Microsoft Copilot Studio
-- [ ] Curso: Integrando com Serviços de IA
+- [ ] Curso: Estruturas Condicionais e de Repetição em Python
+- [ ] Curso: Manipulando Strings com Python
+- [ ] Curso: Dominando Funções Python
+- [ ] Projeto: Criando um Sistema Bancário com Python
 
 ### Módulo 3: Trabalhando com Coleções em Python
 
