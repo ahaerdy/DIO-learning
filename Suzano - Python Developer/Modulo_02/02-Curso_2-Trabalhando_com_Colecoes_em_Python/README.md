@@ -76,8 +76,38 @@ def sacar(self, valor: float) -> None:
         self.saldo -= valor
 ```
 
+### Exemplo utilizado na aula
+
+```
+def sacar(valor):  # início do bloco do método
+
+    saldo=500
+
+    if saldo >= valor:  # início do bloco do if
+        print ("valor sacado, retire seu dinheiro na boca do caixa.")
+    
+    # fim do bloco do if
+    print("Obrigado por ser nosso cliente, tenha um bom dia!")
+
+# fim do bloco do método
+
+sacar(100)
+```
+
+Resultado:
+
+```
+Valor sacado, retire seu dinheiro na boca do caixa.
+Obrigado por ser nosso cliente, tenha um bom dia!
+```
+
+
+
 
 ## Vídeo 02 - Estruturas condicionais
+
+
+
 ## Vídeo 03 - Estruturas de Repetição
 
 # Parte 2 - Materiais de Apoio e Questionário
