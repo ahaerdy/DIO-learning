@@ -44,6 +44,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 2: Sintaxe Básica com Python
 - [x] Curso: [Tipos de Operadores com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_02/01-Curso%201-Tipos_de_Operadores_com_Python)
+- [x] Curso: [Modulo_02/01-Curso%201-Tipos_de_Operadores_com_Python|Tipos de Operadores com Python]
 - [ ] Curso: Trabalhando com Coleções em Python
 - [ ] Curso: Programação Orientada a Objetos com Python
 - [ ] Curso: Produtividade com Microsoft Copilot Studio
