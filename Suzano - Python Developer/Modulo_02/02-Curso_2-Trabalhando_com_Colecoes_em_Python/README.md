@@ -76,7 +76,7 @@ def sacar(self, valor: float) -> None:
         self.saldo -= valor
 ```
 
-### Exemplo utilizado na aula
+### 🧪 Exemplo utilizado na aula
 
 ```
 def sacar(valor):  # início do bloco do método
@@ -94,7 +94,7 @@ def sacar(valor):  # início do bloco do método
 sacar(100)
 ```
 
-Resultado:
+📤 Saída:
 
 ```
 Valor sacado, retire seu dinheiro na boca do caixa.
