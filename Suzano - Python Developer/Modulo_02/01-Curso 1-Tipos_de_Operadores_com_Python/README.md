@@ -357,7 +357,7 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 - 13-Dio_Operadores_de_identidade.pptx
 - 14-Dio_Operadores_de_associacao.pptx
 
-## Certificado: Tipos de Operadores com Python
-
-Link do certificado: https://hermes.dio.me/certificates/EUCVFLQ4.pdf
+# 15-Dio_Indentacao_e_blocos.pptx
+ 16-Dio_Estruturas_condicionais.pptx
+ 17-Dio_Estruturas_de_repeticao.pptx https://hermes.dio.me/certificates/EUCVFLQ4.pdf
 

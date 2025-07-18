@@ -366,4 +366,4 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
 # Certificado: Estruturas condicionais e de repetição
 
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/XVD62HUQ.pdf
