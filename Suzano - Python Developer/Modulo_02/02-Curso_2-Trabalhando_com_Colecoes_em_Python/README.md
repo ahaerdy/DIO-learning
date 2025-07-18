@@ -145,7 +145,7 @@ else:
 - Em alguns cenários queremos mais de dois desvios, para isso podemos utilizar a palavra reservada elif. O elif é composto por uma nova expressão lógica, que será testada e caso retorne verdadeiro o bloco de código do elif será executado. Não existe um número máximo de elifs que podemos utilizar, porém evite criar grandes estruturas condicionais, pois elas aumentam a complexidade do código. 
 
 
-### Exemoplo
+### Exemplo
 
 ```
 opcao = int(input("Informe uma opção: [1] Sacar \n[2] Extrato: "))
@@ -189,6 +189,42 @@ status = "Sucesso" if saldo >= saque else "Falha"
 
 print(f"{status} ao realizar o saque!")
 ```
+
+### Exemplo FINAL (utilizado em aula)
+
+```
+conta_normal = False
+conta_universitaria = False
+conta_especial = True
+
+saldo = 2000
+saque = 1500
+cheque_especial = 450
+
+if conta_normal:
+
+    if saldo >= saque:
+        print("Saque realizado com sucesso!")
+    elif saque <= (saldo + cheque_especial):
+        print("Saque realizado com uso do cheque especial!")
+    else:
+        print("Não foi possível realizar o saque, saldo insuficiente!")
+
+elif conta_universitaria:
+
+    if saldo >= saque:
+        print("Saque realizado com sucesso!")
+    else:
+        print("Saldo insuficiente!")
+
+elif conta_especial:
+    print("Conta especial selecionada!")
+
+else:
+    print("Sistema não reconheceu seu tipo de conta, entre em contato com o seu gerente.")
+
+```
+
 
 ## Vídeo 03 - Estruturas de Repetição
 
