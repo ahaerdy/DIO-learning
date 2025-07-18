@@ -178,19 +178,7 @@ elif conta_universitaria:
 		print("Saldo insuficiente!")
 ```
 
-### If ternário
-
-- O if ternário permite escrever uma condição em uma única linha. Ele é composto por três partes, a primeira parte é o retorno caso a expressão retorne verdadeiro, a segunda parte é a expressão lógica e a terceira parte é o retorno caso a expressão não seja atendida.
-
-### Exemplo
-
-```
-status = "Sucesso" if saldo >= saque else "Falha"
-
-print(f"{status} ao realizar o saque!")
-```
-
-### Exemplo FINAL (utilizado em aula)
+### OUTRO Exemplo (utilizado em aula)
 
 ```
 conta_normal = False
@@ -225,12 +213,156 @@ else:
 
 ```
 
+### If ternário
+
+- O if ternário permite escrever uma condição em uma única linha. Ele é composto por três partes, a primeira parte é o retorno caso a expressão retorne verdadeiro, a segunda parte é a expressão lógica e a terceira parte é o retorno caso a expressão não seja atendida.
+
+### Exemplo
+
+```
+status = "Sucesso" if saldo >= saque else "Falha"
+
+print(f"{status} ao realizar o saque!")
+```
 
 ## Vídeo 03 - Estruturas de Repetição
 
+### O que são estruturas de repetição?
+
+- São estruturas utilizadas para repetir um trecho de código um determinado número de vezes. Esse número pode ser conhecido previamente ou determinado através de uma expressão lógica.
+
+### Exemplo sem repetição
+
+```
+# Receba um número do teclado e exiba os 2 números seguintes
+
+a = int(input("Informe um número inteiro: "))
+print(a)
+
+a += 1
+print(a)
+
+a += 1
+print(a)
+```
+
+### Exemplo com repetição
+
+```
+# Receba um número do teclado e exiba os 2 números seguintes
+
+a = int(input("Informe um número inteiro: "))
+print(a)
+
+repita 2 vezes:
+    a += 1
+    print(a)
+```
+
+### Comando for
+
+- O comando for é usado para percorrer um objeto iterável. Faz sentido usar for quando sabemos o número exato de vezes que nosso bloco de código deve ser executado, ou quando queremos percorrer um objeto iterável.
+
+### for
+
+```
+texto = input("Informe um texto: ")
+VOGAIS = "AEIOU"
+
+for letra in texto:
+	if letra.upper() in VOGAIS:
+		print(letra, end="")
+
+print()  # adiciona uma quebra de linha
+```
+
+### for/else
+
+```
+texto = input("Informe um texto: ")
+VOGAIS = "AEIOU"
+
+for letra in texto:
+	if letra.upper() in VOGAIS:
+		print(letra, end="")
+else:
+    print()  # adiciona uma quebra de linha
+```
+
+### Função range
+
+- Range é uma função built-in do Python, ela é usada para produzir uma sequência de números inteiros a partir de um ínicio (inclusivo) para um fim (exclusivo). Se usarmos range(i, j) será produzido: i, i+1, i+2, i+3, ..., j-1.
+
+- Ela recebe 3 argumentos: stop (obrigatório), start (opcional) e step opcional.
+
+### range
+
+```
+# range(stop) -> range object
+# range(start, stop[, step]) -> range object
+
+list(range(4))
+>>> [0, 1, 2, 3]
+```
+
+### Utilizando range com for
+
+```
+for numero in range(0, 11):
+    print(numero, end=" ")
+
+>>> 0 1 2 3 4 5 6 7 8 9 10
+
+
+# exibindo a tabuada do 5
+for numero in range(0, 51, 5):
+    print(numero, end=" ")
+
+>>> 0 5 10 15 20 25 30 35 40 45 50
+```
+
+### Comando while
+
+- O comando while é usado para repetir um bloco de código várias vezes. Faz sentido usar while quando não sabemos o número exato de vezes que nosso bloco de código deve ser executado.
+
+### while
+
+```
+opcao = -1
+
+while opcao != 0:
+    opcao = int(input("[1] Sacar \n[2] Extrato \n[0] Sair \n: "))
+    
+    if opcao == 1:
+        print("Sacando...")
+    elif opcao == 2:
+        print("Exibindo o extrato...")
+```
+
+### while/else
+
+```
+opcao = -1
+
+while opcao != 0:
+    opcao = int(input("[1] Sacar \n[2] Extrato \n[0] Sair \n: "))
+    
+    if opcao == 1:
+        print("Sacando...")
+    elif opcao == 2:
+        print("Exibindo o extrato...")
+else:
+	print("Obrigado por usar nosso sistema bancário, até logo!")
+```
+
 # Parte 2 - Materiais de Apoio e Questionário
 
+## Materiais de apoio
 
+Disponibilizados os seguinte arquivos em formato MS Powerpoint:
+- 15-Dio_Indentacao_e_blocos.pptx
+- 16-Dio_Estruturas_condicionais.pptx
+- 17-Dio_Estruturas_de_repeticao.pptx
 
 # Certificado: Estruturas condicionais e de repetição
 
