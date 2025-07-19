@@ -119,9 +119,8 @@ print(f"Valor de PI: {PI:10.2f}")
 >>> "Valor de PI:       3.14"
 ```
 
-Interpretação (2a instrução):
-- A f-string f"Valor de PI: {PI:10.2f}":
-- {PI:10.2f} indica que:
+💡 Interpretação (2a instrução):
+- Na f-string f"Valor de PI: {PI:10.2f}" --> {PI:10.2f} indica que:
     - O número deve ser formatado com 10 caracteres de largura total, sendo 2 casas decimais.
     - O valor será alinhado à direita por padrão, preenchendo com espaços à esquerda se necessário.
     - O número 3.14 ocupa 4 caracteres (3, ., 1, 4), então os outros 6 espaços são preenchidos com espaços em branco à esquerda.
