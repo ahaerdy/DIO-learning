@@ -1,9 +1,9 @@
 # Parte 1: Conhecendo a Linguagem
 
-## Vídeo 01 - Tipos de Dados
-
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
 - Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+
+## Vídeo 01 - Tipos de Dados
 
 O autor apresenta os principais tipos de dados e porque devemos utilizá-los. Eles servem para definir as caracteristicas e comportamentos de um valor (objeto) para o interpretador. 
 
@@ -25,9 +25,6 @@ link do vídeo: https://web.dio.me/track/suzano-python-developer/course/conhecen
 
 ## Vídeo 02 - Modo Interativo
 
-- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
-
 1. O autor ensina como usar o modo interativo do interpretador Python.
     - Existem duas formas de iniciar o modo interativo, chamando apenas o interpretador (python) ou executando o script com a flag -i (python -i app.py).
 2. Explica os comandos dir e help
@@ -38,9 +35,6 @@ link do vídeo: https://web.dio.me/track/suzano-python-developer/course/conhecen
 - Referência: https://wiki.python.org.br/ModoInterativo
 
 ## Vídeo 03 - Variáveis e Constantes
-
-- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
 1. __Variáveis__: em linguagens de programação podemos definir valores que podem sofrer alterações no decorrer da execução do programa. Esses valores recebem o nome de variáveis, pois eles nascem com um valor e não necessariamente devem permanecer com o mesmo durante a execução do programa.
 
@@ -64,9 +58,6 @@ link do vídeo: https://web.dio.me/track/suzano-python-developer/course/conhecen
 Links úteis: https://github.com/guicarvalho/trilha-python-dio
 
 ## Vídeo 04 - Conversão de Tipos
-
-- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
 Em alguns momentos será necessário converter o tipo de uma variável para manipular de forma diferente. Por exemplo: variáveis do tipo string, que armazenam números onde precisaremos fazer alguma operação matemática com esse valor.
 

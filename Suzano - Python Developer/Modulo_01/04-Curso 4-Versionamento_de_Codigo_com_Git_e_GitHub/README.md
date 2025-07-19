@@ -1,10 +1,10 @@
 # Parte 1: Visão Geral do Curso e Ferramentas
 
-## Vídeo 01 - Introdução ao Curso
-
 - Instrutor: Elidiana Andrade (Tech Education Analyst at DIO)
 - Contato Libkedin: https://www.linkedin.com/in/elidiana/
- 
+
+## Vídeo 01 - Introdução ao Curso
+
 - A autora se apresenta e dá uma visão geral do curso:
     - Conhecer as ferramentas.
     - Instalar, configurar e autenticar
