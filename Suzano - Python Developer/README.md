@@ -34,13 +34,13 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos
 
-- [x] Curso: [Introdução ao Python com Suzano](Modulo_01/01-Curso%201-Introdu%C3%A7%C3%A3o%20ao%20Python%20com%20Suzano/)
+- [x] Curso: [Introdução ao Python com a Suzano](Modulo_01/01-Curso%201-Introdu%C3%A7%C3%A3o%20ao%20Python%20com%20Suzano/)
 - [x] Curso: [Ambiente de Desenvolvimento e Primeiros Passos com Python](Modulo_01/02-Curso%202-Ambiente%20de%20Desenvolvimento%20e%20Primeiros%20Passos%20com%20Python/)
 - [x] Curso: [Conhecendo a Linguagem de Programação Python](Modulo_01/03-Curso%203-Conhecendo%20a%20Linguagem%20de%20Programa%C3%A7%C3%A3o%20Python/)
 - [x] Curso: [Versionamento de Código com Git e GitHub](Modulo_01/04-Curso%204-Versionamento_de_Codigo_com_Git_e_GitHub/)
 - [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](Modulo_01/05-Curso%205-Desafios_de_Projetos_Crie_Um_Portf%C3%B3lio_Vencedor/)
-- [x] Projeto: [Contribuindo em um Projeto Open Source](Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/)
-- [x] Mentoria: [Live de Lançamento](Modulo_01/07-Mentoria-Live_de_Lan%C3%A7amento/) 
+- [x] Projeto: [Contribuindo em um Projeto Open Source no Github](Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/)
+- [x] Mentoria: [Live de Lançamento: Suzano Python Developer](Modulo_01/07-Mentoria-Live_de_Lan%C3%A7amento/) 
 
 ### Módulo 2: Sintaxe Básica com Python
 
@@ -77,6 +77,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Contribuindo em um Projeto Open Source](https://hermes.dio.me/certificates/OC0JDME3.pdf)
 ### Módulo 2
 - [Tipos de Operadores com Python](https://hermes.dio.me/certificates/EUCVFLQ4.pdf)
+- [Estruturas Condicionais e de Repetição em Python](https://hermes.dio.me/certificates/XVD62HUQ.pdf)
+
 
 ## 🔗 Contribuições Open Source
 
