@@ -5,7 +5,10 @@
 
 ## Video 01 - Conhecendo métodos úteis da classe string
 
+### Introdução
 
+- A classe String do Python é famosa por ser rica em métodos e possuir uma interface muito fácil de trabalhar.
+- Em algumas linguagens manipular sequências de caracteres não é um trabalho trivial, porém, em Python esse trabalho é muito simples.
 
 ## Video 02 - Interpolação de variáveis
 
