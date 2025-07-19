@@ -78,6 +78,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 2
 - [Tipos de Operadores com Python](https://hermes.dio.me/certificates/EUCVFLQ4.pdf)
 - [Estruturas Condicionais e de Repetição em Python](https://hermes.dio.me/certificates/XVD62HUQ.pdf)
+- [Manipulando Strings com Python](https://hermes.dio.me/certificates/5JWHA9TE.pdf)
 
 
 ## 🔗 Contribuições Open Source
