@@ -158,9 +158,32 @@ nome[::-1]
 >>> "ohlavraC ed ruhtrA emrehliuG"
 ```
 
-
-
 ## Video 04 - String múltiplas linhas
+
+### Introdução
+
+- Strings de múltiplas linhas são definidas informando 3 aspas simples ou duplas durante a atribuição. Elas podem ocupar várias linhas do código, e todos os espaços em branco são incluídos na string final. 
+
+### Strings triplas
+
+```
+nome = "Guilherme"
+
+mensagem = f"""
+Olá meu nome é {nome},
+Eu estou aprendendo Python
+"""
+>>> 
+
+Olá meu nome é Guilherme,
+Eu estou aprendendo Python
+```
+
+### Links Úteis
+
+- https://github.com/guicarvalho/trilha-python-dio
+- https://docs.python.org/pt-br/3/library/string.html
+- https://docs.python.org/pt-br/3/library/stdtypes.html#textseq
 
 # Parte 2 - Materiais de apoio e Questionário
 
