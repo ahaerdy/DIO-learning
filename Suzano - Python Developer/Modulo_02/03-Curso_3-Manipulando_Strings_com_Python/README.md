@@ -23,5 +23,5 @@ Disponibilizado o seguinte arquivo em formato MS Powerpoint:
 
 # Certificado: Manipulando Strings com Python
 
-Link do certificado:
+Link do certificado: 
 
