@@ -1,5 +1,9 @@
 # Parte 1 - Estruturas condicionais e de repetição
 
+- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
+- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+
+
 ## Vídeo 01 - Indentação e blocos
 
 ### Aprender como o interpretador Python utiliza a indentação do código para delimitar os blocos de comandos

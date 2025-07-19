@@ -1,5 +1,9 @@
 # Parte 1 - Tipos de Operadores
 
+- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
+- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+
+
 ## Vídeo 01 - Operadores aritméticos
 
 ### O que são operadores aritméticos e como utilizá-los.
@@ -355,9 +359,8 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 - 11-Dio_Operadores_de_atribuicao.pptx
 - 12-Dio_Operadores_logicos.pptx
 - 13-Dio_Operadores_de_identidade.pptx
-- 14-Dio_Operadores_de_associacao.pptx
 
-# 15-Dio_Indentacao_e_blocos.pptx
- 16-Dio_Estruturas_condicionais.pptx
- 17-Dio_Estruturas_de_repeticao.pptx https://hermes.dio.me/certificates/EUCVFLQ4.pdf
+# Certificado
+
+Link do certificado:  https://hermes.dio.me/certificates/EUCVFLQ4.pdf
 
