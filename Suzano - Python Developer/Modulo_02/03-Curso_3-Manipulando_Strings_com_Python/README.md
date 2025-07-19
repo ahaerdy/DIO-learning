@@ -125,8 +125,40 @@ print(f"Valor de PI: {PI:10.2f}")
     - O valor será alinhado à direita por padrão, preenchendo com espaços à esquerda se necessário.
     - O número 3.14 ocupa 4 caracteres (3, ., 1, 4), então os outros 6 espaços são preenchidos com espaços em branco à esquerda.
 
-
 ## Video 03 - Fatiamento de string
+
+### Introdução
+
+- Fatiamento de strings é uma técnica utilizada para retornar substrings (partes da string original), informando inicio (start), fim (stop) e passo (step): [start: stop[, step]].
+
+### Fatiamento
+
+```
+nome = "Guilherme Arthur de Carvalho"
+
+nome[0]
+>>> "G"
+
+nome[:9]
+>>> "Guilherme"
+
+nome[10:]
+>>> "Arthur de Carvalho"
+
+nome[10:16]
+>>> "Arthur"
+
+nome[10:16:2]
+>>> "Atu"
+
+nome[:]
+>>> "Guilherme Arthur de Carvalho"
+
+nome[::-1]
+>>> "ohlavraC ed ruhtrA emrehliuG"
+```
+
+
 
 ## Video 04 - String múltiplas linhas
 
