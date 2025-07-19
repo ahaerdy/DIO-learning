@@ -46,7 +46,7 @@ Caso queira trocar ideias, compartilhar conhecimentos ou tirar dúvidas, me enco
 
 ---
 
-Agradeço sua visita e espero que este repositório possa inspirar e ajudar quem está na mesma jornada de evolução profissional.
+Agradeço sua visita e espero que este repositório possa inspirar e ajudar quem está na mesma jornada de evolução profissional..
 
 ---
 
