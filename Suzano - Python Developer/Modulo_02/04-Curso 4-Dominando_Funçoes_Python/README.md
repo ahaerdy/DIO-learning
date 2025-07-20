@@ -88,35 +88,35 @@ exibir_poema("Zen of Python", "Beautiful is better than ugly.", autor="Tim Peter
 #### Análise
 
 - O código em Python exibido acima define uma função chamada exibir_poema que recebe três tipos de parâmetros:
-data_extenso: uma string representando a data (por exemplo, "Zen of Python").
+data_extenso: uma string representando data (isto é, os dados; por exemplo, "Zen of Python").
 - *args: argumentos posicionais, que serão tratados como partes do poema.
 - **kwargs: argumentos nomeados (chave-valor), usados como metadados (como autor, ano etc.).
 
 
-- Define a função exibir_poema.
+- Definindo a função exibir_poema:
 ```
 def exibir_poema(data_extenso, *args, **kwargs):
 ```
 
-- Une todos os argumentos posicionais (args) em um único texto, separando cada item com uma quebra de linha.
+- Unindo todos os argumentos posicionais (args) em um único texto, separando cada item com uma quebra de linha:
 ```
     texto = "\n".join(args)
 ```
 
-- Cria uma string formatada com os metadados, convertendo as chaves para Title Case (ex: "autor" vira "Autor") e unindo tudo com quebras de linha.
+- Criando uma string formatada com os metadados, convertendo as chaves para Title Case (ex: "autor" vira "Autor") e unindo tudo com quebras de linha:
 ```
     meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in kwargs.items()])
 ```
 
-- Monta a mensagem final com:
-    - a data no topo
+- Montando a mensagem final com:
+    - data (dados) no topo
     - o poema (texto)
     - os metadados no final, separados por linhas em branco
 ```
     mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
 ```
 
-- Exibe a mensagem completa no terminal.
+- Exibindo a mensagem completa no terminal:
 ```
     print(mensagem)
 ```
