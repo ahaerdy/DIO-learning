@@ -195,5 +195,5 @@ Disponibilizado o seguinte arquivo em formato MS Powerpoint:
 
 # Certificado: Manipulando Strings com Python
 
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/5JWHA9TE.pdf
 
