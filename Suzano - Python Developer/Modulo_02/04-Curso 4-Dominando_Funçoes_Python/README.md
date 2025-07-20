@@ -191,6 +191,8 @@ Ano: 1999
 
 - Este código é um formato simples e elegante para exibir poemas ou frases com metadados, utilizando recursos como *args, **kwargs, f-strings e join() para composição de texto.
 
+## Video 02 - Funções Python – Parte 02
+
 ### Parâmetros especiais
 
 - Por padrão, argumentos podem ser passados para uma função Python tanto por posição quanto explicitamente pelo nome. Para uma melhor legibilidade e desempenho, faz sentido restringir a maneira pelo qual argumentos possam ser passados, assim um desenvolvedor precisa apenas olhar para a definição da função para determinar se os itens são passados por posição, por posição e nome, ou por nome.
@@ -271,8 +273,6 @@ salario_bonus(500)  # 2500
 
 - https://github.com/digitalinnovationone/trilha-python-dio
 
-
-## Video 02 - Funções Python – Parte 02
 
 # Parte 2 - Materiais de apoio e Questionário
 
