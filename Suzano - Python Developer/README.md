@@ -99,3 +99,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ## 🔄 Atualizações
 
 Este repositório será atualizado continuamente conforme o avanço nos módulos do Bootcamp e inclusão de novos projetos.
+
+## Referências:
+
+- [Python - Documentação Oficial](https://docs.python.org/3/)
