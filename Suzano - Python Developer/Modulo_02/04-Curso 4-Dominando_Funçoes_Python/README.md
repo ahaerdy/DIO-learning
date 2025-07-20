@@ -115,9 +115,9 @@ exibir_poema("Zen of Python", "Beautiful is better than ugly.", autor="Tim Peter
 #### Análise
 
 - O código em Python exibido acima define uma função chamada exibir_poema que recebe três tipos de parâmetros:
-- data_extenso: uma string representando a data por extenso 
-- *args: argumentos posicionais, que serão tratados como partes do poema.
-- **kwargs: argumentos nomeados (chave-valor), usados como metadados (como autor, ano etc.).
+    - data_extenso: uma string representando a data por extenso 
+    - *args: argumentos posicionais, que serão tratados como partes do poema.
+    - **kwargs: argumentos nomeados (chave-valor), usados como metadados (como autor, ano etc.).
 
 
 - Definindo a função exibir_poema:
