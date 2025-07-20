@@ -82,13 +82,40 @@ def exibir_poema(data_extenso, *args, **kwargs):
     mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
     print(mensagem)
 
+
+exibir_poema(
+    "Sexta-feira, 26 de agosto de 2022",
+    "Zen of Python",
+    "Beautiful is better than ugly.",
+    "Explicit is better than implicit.",
+    "Simple is better than complex.",
+    "Complex is better than complicated.",
+    "Flat is better than nested.",
+    "Sparse is better than dense.",
+    "Readability counts.",
+    "Special cases aren't special enough to break the rules.",
+    "Although practicality beats purity.",
+    "Errors should never pass silently.",
+    "Unless explicitly silenced.",
+    "In the face of ambiguity, refuse the temptation to guess.",
+    "There should be one-- and preferably only one --obvious way to do it.",
+    "Although that way may not be obvious at first unless you're Dutch.",
+    "Now is better than never.",
+    "Although never is often better than *right* now.",
+    "If the implementation is hard to explain, it's a bad idea.",
+    "If the implementation is easy to explain, it may be a good idea.",
+    "Namespaces are one honking great idea -- let's do more of those!",
+    autor="Tim Peters",
+    ano=1999,
+)
+
 exibir_poema("Zen of Python", "Beautiful is better than ugly.", autor="Tim Peters", ano=1999)
 ```
 
 #### Análise
 
 - O código em Python exibido acima define uma função chamada exibir_poema que recebe três tipos de parâmetros:
-data_extenso: uma string representando data (isto é, os dados; por exemplo, "Zen of Python").
+- data_extenso: uma string representando a data por extenso 
 - *args: argumentos posicionais, que serão tratados como partes do poema.
 - **kwargs: argumentos nomeados (chave-valor), usados como metadados (como autor, ano etc.).
 
@@ -109,7 +136,7 @@ def exibir_poema(data_extenso, *args, **kwargs):
 ```
 
 - Montando a mensagem final com:
-    - data (dados) no topo
+    - data no topo
     - o poema (texto)
     - os metadados no final, separados por linhas em branco
 ```
@@ -133,9 +160,28 @@ exibir_poema("Zen of Python", "Beautiful is better than ugly.", autor="Tim Peter
 #### Saída esperada:
 
 ```
-Zen of Python
+Sexta-feira, 26 de agosto de 2022
 
+Zen of Python
 Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
 
 Autor: Tim Peters
 Ano: 1999
