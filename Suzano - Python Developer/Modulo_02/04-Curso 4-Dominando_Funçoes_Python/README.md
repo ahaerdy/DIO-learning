@@ -92,39 +92,34 @@ data_extenso: uma string representando a data (por exemplo, "Zen of Python").
 - *args: argumentos posicionais, que serão tratados como partes do poema.
 - **kwargs: argumentos nomeados (chave-valor), usados como metadados (como autor, ano etc.).
 
+
+- Define a função exibir_poema.
 ```
 def exibir_poema(data_extenso, *args, **kwargs):
 ```
 
-- Define a função exibir_poema.
-
+- Une todos os argumentos posicionais (args) em um único texto, separando cada item com uma quebra de linha.
 ```
     texto = "\n".join(args)
 ```
 
-- Une todos os argumentos posicionais (args) em um único texto, separando cada item com uma quebra de linha.
-
+- Cria uma string formatada com os metadados, convertendo as chaves para Title Case (ex: "autor" vira "Autor") e unindo tudo com quebras de linha.
 ```
     meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in kwargs.items()])
-```
-
-- Cria uma string formatada com os metadados, convertendo as chaves para Title Case (ex: "autor" vira "Autor") e unindo tudo com quebras de linha.
-
-```
-    mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
 ```
 
 - Monta a mensagem final com:
     - a data no topo
     - o poema (texto)
     - os metadados no final, separados por linhas em branco
+```
+    mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
+```
 
+- Exibe a mensagem completa no terminal.
 ```
     print(mensagem)
 ```
-
-- Exibe a mensagem completa no terminal.- 
-
 #### Chamada da função:
 
 ```
