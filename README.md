@@ -50,3 +50,6 @@ Agradeço sua visita e espero que este repositório possa inspirar e ajudar quem
     
 ---
 
+## Referências:
+
+- [Python - Documentação Oficial](https://docs.python.org/3/)
