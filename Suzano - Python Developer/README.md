@@ -47,7 +47,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Tipos de Operadores com Python](Modulo_02/01-Curso%201-Tipos_de_Operadores_com_Python/)
 - [ ] Curso: [Estruturas Condicionais e de Repetição em Python](Modulo_02/02-Curso_2-Trabalhando_com_Colecoes_em_Python/)
 - [ ] Curso: [Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python/?id=parte-1-dominando-strings-e-fatiamento)
-- [ ] Curso: [Dominando Funções Python]
+- [ ] Curso: [Dominando Funções Python](Modulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python#parte-1---dominando-fun%C3%A7%C3%B5es-python)
 - [ ] Projeto: Criando um Sistema Bancário com Python
 
 ### Módulo 3: Trabalhando com Coleções em Python
