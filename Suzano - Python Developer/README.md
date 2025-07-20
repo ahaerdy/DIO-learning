@@ -102,4 +102,4 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
 
 ## Referências:
 
-- [Python - Documentação Oficial](https://docs.python.org/3/)
+- [Python - Documentação Oficial](https://docs.python.org/pt-br/3/)
