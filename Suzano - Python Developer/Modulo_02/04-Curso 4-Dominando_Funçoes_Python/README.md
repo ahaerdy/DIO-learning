@@ -85,6 +85,71 @@ def exibir_poema(data_extenso, *args, **kwargs):
 exibir_poema("Zen of Python", "Beautiful is better than ugly.", autor="Tim Peters", ano=1999)
 ```
 
+#### Análise
+
+- O código em Python exibido acima define uma função chamada exibir_poema que recebe três tipos de parâmetros:
+data_extenso: uma string representando a data (por exemplo, "Zen of Python").
+- *args: argumentos posicionais, que serão tratados como partes do poema.
+- **kwargs: argumentos nomeados (chave-valor), usados como metadados (como autor, ano etc.).
+
+```
+def exibir_poema(data_extenso, *args, **kwargs):
+```
+
+- Define a função exibir_poema.
+
+```
+    texto = "\n".join(args)
+```
+
+- Une todos os argumentos posicionais (args) em um único texto, separando cada item com uma quebra de linha.
+
+```
+    meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in kwargs.items()])
+```
+
+- Cria uma string formatada com os metadados, convertendo as chaves para Title Case (ex: "autor" vira "Autor") e unindo tudo com quebras de linha.
+
+```
+    mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
+```
+
+- Monta a mensagem final com:
+    - a data no topo
+    - o poema (texto)
+    - os metadados no final, separados por linhas em branco
+
+```
+    print(mensagem)
+```
+
+- Exibe a mensagem completa no terminal.- 
+
+#### Chamada da função:
+
+```
+exibir_poema("Zen of Python", "Beautiful is better than ugly.", autor="Tim Peters", ano=1999)
+```
+
+- data_extenso: "Zen of Python"
+- *args: "Beautiful is better than ugly." (parte do poema)
+- **kwargs: autor="Tim Peters", ano=1999
+
+#### Saída esperada:
+
+```
+Zen of Python
+
+Beautiful is better than ugly.
+
+Autor: Tim Peters
+Ano: 1999
+```
+
+#### Conclusão:
+
+- Este código é um formato simples e elegante para exibir poemas ou frases com metadados, utilizando recursos como *args, **kwargs, f-strings e join() para composição de texto.
+
 ### Parâmetros especiais
 
 - Por padrão, argumentos podem ser passados para uma função Python tanto por posição quanto explicitamente pelo nome. Para uma melhor legibilidade e desempenho, faz sentido restringir a maneira pelo qual argumentos possam ser passados, assim um desenvolvedor precisa apenas olhar para a definição da função para determinar se os itens são passados por posição, por posição e nome, ou por nome.
