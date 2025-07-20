@@ -286,6 +286,6 @@ Disponibilizado o seguinte arquivo em formato MS Powerpoint:
 
 - 05-Dio_Funcoes.pptx
 
-# Certificado: Manipulando Strings com Python
+# Certificado: Dominando Funções Python
 
-Link do certificado:
+Link do certificado: https://hermes.dio.me/certificates/M4SVGNUZ.pdf
