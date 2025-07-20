@@ -106,3 +106,4 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
 - [Python Cheatsheet](https://www.pythoncheatsheet.org/)
 - [QuickRefMe - Python cheatsheet](https://quickref.me/python.html)
 - [Github: The Algorithms - Python](https://github.com/TheAlgorithms/Python)
+- [ Github: Awesome Python](https://github.com/vinta/awesome-python)
