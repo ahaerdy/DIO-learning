@@ -417,7 +417,7 @@ sorted(linguagens, key=lambda x: len(x), reverse=True)  # ["python", "csharp", "
 
 ● https://github.com/digitalinnovationone/trilha-python-dio
 
-# # Parte 2 - Materiais de apoio e Questionário
+# Parte 2 - Materiais de apoio e Questionário
 
 ## Materiais de apoio
 
@@ -425,7 +425,6 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
 - 01-Dio_Listas.pdf
 
-
-# Certificado
+# Certificado: Trabalhando com Listas em Python
 
 Link do certificado: https://hermes.dio.me/certificates/J3ZME80Z.pdf
