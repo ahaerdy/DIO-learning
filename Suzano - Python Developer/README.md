@@ -1,13 +1,14 @@
 # Repositório de Estudos - Bootcamp Suzano Python Developer
 
-<p align="center"> 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Bootcamp](https://img.shields.io/badge/Bootcamp-Suzano%20Python%20Developer-blue)
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![License](https://img.shields.io/github/license/ahaerdy/DIO-learning)
-![GitHub repo size](https://img.shields.io/github/repo-size/ahaerdy/DIO-learning)
-![Last commit](https://img.shields.io/github/last-commit/ahaerdy/DIO-learning)
-</align>
+<p align="center">
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" />
+  <img src="https://img.shields.io/badge/Bootcamp-Suzano%20Python%20Developer-blue" />
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
+  <img src="https://img.shields.io/github/license/ahaerdy/DIO-learning" />
+  <img src="https://img.shields.io/github/repo-size/ahaerdy/DIO-learning" />
+  <img src="https://img.shields.io/github/last-commit/ahaerdy/DIO-learning" />
+</p>
+
 
 Este repositório reúne os exercícios, anotações e projetos desenvolvidos por mim ao longo do Bootcamp Suzano Python Developer, oferecido pela plataforma DIO em parceria com a Suzano.
 
