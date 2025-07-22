@@ -265,9 +265,7 @@ numeros = [1, 30, 21, 2, 9, 65, 34]
 quadrado = [numero ** 2 for numero in numeros]
 ```
 
-
-
-
+## Vídeo 03 -  Métodos da classe list
 
 ### [].append
 
@@ -406,14 +404,6 @@ sorted(linguagens, key=lambda x: len(x), reverse=True)  # ["python", "csharp", "
 ### Links Úteis
 
 ● https://github.com/digitalinnovationone/trilha-python-dio
-
-
-
-## Vídeo 03 -  Métodos da classe list
-
-
-
-
 
 # # Parte 2 - Materiais de apoio e Questionário
 
