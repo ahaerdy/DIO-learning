@@ -107,7 +107,7 @@ lista[::-1] # ["n", "o", "h", "t", "y", "p"]
 ```
 
 <details>
-     <summary> <h3>🟨🟨🟨 Análise do código acima - Clique para expandir 🟨🟨🟨</h3></summary>
+     <summary> 🟨🟨🟨 <h3>Análise do código acima - Clique para expandir<h3> 🟨🟨🟨</summary>
 
 ---
 
