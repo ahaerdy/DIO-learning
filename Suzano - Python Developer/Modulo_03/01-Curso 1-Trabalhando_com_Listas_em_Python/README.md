@@ -2,9 +2,10 @@
 
 ## Vídeo 01 - Introdução
 
-- Informações sobre o repositório:
+- Informações sobre o repositório da trilha:
     - https://github.com/digitalinnovationone/trilha-python-dio
-- Explicação de como cloná-lo. Fork criado em: [Fork-trilha-python-dio](https://github.com/ahaerdy/Fork-trilha-python-dio)
+- Explicação de como cloná-lo. 
+- Fork criado em: [Fork-trilha-python-dio](https://github.com/ahaerdy/Fork-trilha-python-dio)
 
 ### Objetivo Geral
 
