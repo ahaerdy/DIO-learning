@@ -182,7 +182,7 @@ for indice, carro in enumerate(carros):
 <details>
      <summary> 🟨🟨🟨<h3>Análise do código acima - Clique para expandir<h3>🟨🟨🟨 </summary>
 
-#### carros = ["gol", "celta", "palio"]
+#### <b><font color="#000000"><span style="background:#d2cbff">carros = ["gol", "celta", "palio"]</span></font></be>
 - Cria uma lista chamada carros contendo 3 strings: "gol", "celta" e "palio".
 
 #### for indice, carro in enumerate(carros):
