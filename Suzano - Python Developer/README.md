@@ -63,6 +63,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 3: Trabalhando com Coleções em Python
 
 - [x] Curso: [Trabalhando com Listas em Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/01-Curso%201-Trabalhando_com_Listas_em_Python#parte-1---trabalhando-com-listas-em-python)
+- [x] Curso: [Conhecendo Tuplas em Python
+](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/02-Curso%2002-Conhecendo_Tuplas_em_Python#parte-1---conhecendo-tuplas-em-python)
 
 ### Módulo 4: Programação Orientada a Objetos com Python
 
