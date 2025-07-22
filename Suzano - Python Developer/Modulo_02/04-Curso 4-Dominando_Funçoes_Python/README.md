@@ -3,7 +3,7 @@
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
 - Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
-## Video 01 - Funções Python – Parte 01
+## 🟩 Vídeo 01 - Funções Python – Parte 01
 
 ### Objetivo Geral
 
@@ -191,7 +191,7 @@ Ano: 1999
 
 - Este código é um formato simples e elegante para exibir poemas ou frases com metadados, utilizando recursos como *args, **kwargs, f-strings e join() para composição de texto.
 
-## Video 02 - Funções Python – Parte 02
+## 🟩 Vídeo 02 - Funções Python – Parte 02
 
 ### Parâmetros especiais
 

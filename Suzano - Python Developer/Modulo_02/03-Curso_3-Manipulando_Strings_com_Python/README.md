@@ -3,7 +3,7 @@
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
 - Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
-## Video 01 - Conhecendo métodos úteis da classe string
+## 🟩 Vídeo 01 - Conhecendo métodos úteis da classe string
 
 ### Introdução
 
@@ -52,7 +52,7 @@ print(".".join(curso))
 >>> "P.y.t.h.o.n"
 ```
 
-## Video 02 - Interpolação de variáveis
+## 🟩 Vídeo 02 - Interpolação de variáveis
 
 ### Interpolação de variáveis
 
@@ -125,7 +125,7 @@ print(f"Valor de PI: {PI:10.2f}")
     - O valor será alinhado à direita por padrão, preenchendo com espaços à esquerda se necessário.
     - O número 3.14 ocupa 4 caracteres (3, ., 1, 4), então os outros 6 espaços são preenchidos com espaços em branco à esquerda.
 
-## Video 03 - Fatiamento de string
+## 🟩 Vídeo 03 - Fatiamento de string
 
 ### Introdução
 
@@ -158,7 +158,7 @@ nome[::-1]
 >>> "ohlavraC ed ruhtrA emrehliuG"
 ```
 
-## Video 04 - String múltiplas linhas
+## 🟩 Vídeo 04 - String múltiplas linhas
 
 ### Introdução
 
