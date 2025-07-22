@@ -106,6 +106,15 @@ lista[::] # ["p", "y", "t", "h", "o", "n"]
 lista[::-1] # ["n", "o", "h", "t", "y", "p"]
 ```
 
+### 💻 Resultado:
+
+```
+0: gol
+1: celta
+2: palio
+
+```
+
 <details>
      <summary> 🟨🟨🟨<h3>Análise do código acima - Clique para expandir<h3>🟨🟨🟨 </summary>
 
