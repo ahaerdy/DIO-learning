@@ -195,12 +195,14 @@ for indice, carro in enumerate(carros):
 
 #### ➡️ A função enumerate(carros) gera um iterador que retorna tuplas do tipo:
 
+```
 python
 Copiar
 Editar
 (0, "gol")
 (1, "celta")
 (2, "palio")
+```
 
 #### ➡️ Então, a cada iteração:
 
