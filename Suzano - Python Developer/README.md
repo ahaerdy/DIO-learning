@@ -52,7 +52,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 3: Trabalhando com Coleções em Python
 
-- [x] Curso: [Trabalhando com Listas em Python](Modulo_02/01-Curso%201-Trabalhando_com_Listas_em_Python/)
+- [x] Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso%201-Trabalhando_com_Listas_em_Python/)
 
 ### Módulo 4: Programação Orientada a Objetos com Python
 
