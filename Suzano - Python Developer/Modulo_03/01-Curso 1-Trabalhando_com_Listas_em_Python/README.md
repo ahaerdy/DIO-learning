@@ -179,6 +179,40 @@ for indice, carro in enumerate(carros):
     print(f"{indice}: {carro}")
 ```
 
+<details>
+     <summary> 🟨🟨🟨<h3>Análise do código acima - Clique para expandir<h3>🟨🟨🟨 </summary>
+
+#### carros = ["gol", "celta", "palio"]
+- Cria uma lista chamada carros contendo 3 strings: "gol", "celta" e "palio".
+
+#### for indice, carro in enumerate(carros):
+
+- Usa a função enumerate() para iterar sobre a lista, retornando:
+    - o índice do item (0, 1, 2...)
+    - o valor do item correspondente (carro da lista)
+
+#### A função enumerate(carros) gera um iterador que retorna tuplas do tipo:
+
+python
+Copiar
+Editar
+(0, "gol")
+(1, "celta")
+(2, "palio")
+
+#### Então, a cada iteração:
+
+- indice recebe 0, depois 1, depois 2
+- carro recebe "gol", depois "celta", depois "palio"
+
+#### print(f"{indice}: {carro}")
+
+- Usa f-strings (formatação moderna de strings em Python) para imprimir:
+    - O índice seguido de dois-pontos :
+    - O nome do carro
+
+</details>
+
 ### Compreensão de listas
 
 - A compreensão de lista oferece uma sintaxe mais curta quando você deseja: criar uma nova lista com base nos valores de uma lista existente (filtro) ou gerar uma nova lista aplicando alguma modificação nos elementos de uma lista existente.
