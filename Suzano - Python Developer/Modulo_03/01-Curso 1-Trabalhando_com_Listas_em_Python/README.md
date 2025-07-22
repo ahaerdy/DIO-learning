@@ -423,7 +423,7 @@ sorted(linguagens, key=lambda x: len(x), reverse=True)  # ["python", "csharp", "
 
 Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
-    - 01-Dio_Listas.pdf
+- 01-Dio_Listas.pdf
 
 
 # Certificado
