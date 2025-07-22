@@ -107,11 +107,11 @@ lista[::-1] # ["n", "o", "h", "t", "y", "p"]
 ```
 
 <details>
-     <summary> 🟨🟨🟨 Análise do código acima - Clique para expandir 🟨🟨🟨</summary>
+     <summary> <h3>🟨🟨🟨 Análise do código acima - Clique para expandir 🟨🟨🟨</h3></summary>
 
 ---
 
-<h2>➡️ 1. lista[2:] → ["t", "h", "o", "n"]</h2>
+<h3>➡️ 1. lista[2:] → ["t", "h", "o", "n"]</h3>
 - Começa do índice 2 até o final da lista.
 - Índice 2 = "t", então retorna: ["t", "h", "o", "n"].
 
