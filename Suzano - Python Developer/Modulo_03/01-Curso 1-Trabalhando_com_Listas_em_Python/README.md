@@ -1,13 +1,13 @@
 # Parte 1 - Trabalhando com Listas em Python
 
-## Vídeo 01 - Introdução
+## 🟩 Vídeo 01 - Introdução
 
 - Informações sobre o repositório da trilha:
     - https://github.com/digitalinnovationone/trilha-python-dio
 - Explicaçöes de como cloná-lo. 
 - Fork criado em: [Fork-trilha-python-dio](https://github.com/ahaerdy/Fork-trilha-python-dio)
 
-## Vídeo 02 -  Listas: Criação e acesso aos dados
+## 🟩 Vídeo 02 -  Listas: Criação e acesso aos dados
 
 ### Objetivo Geral
 
@@ -265,7 +265,7 @@ numeros = [1, 30, 21, 2, 9, 65, 34]
 quadrado = [numero ** 2 for numero in numeros]
 ```
 
-## Vídeo 03 -  Métodos da classe list
+## 🟩 Vídeo 03 -  Métodos da classe list
 
 ### [].append
 
