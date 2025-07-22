@@ -111,4 +111,4 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
 - [Python - Documentação Oficial](https://docs.python.org/pt-br/3/)
 - [Python Cheatsheet](https://www.pythoncheatsheet.org/)
 - [QuickRef.Me - Python cheatsheet](https://quickref.me/python.html)
-- [Github: Awesome Python](https://github.com/vinta/awesome-python)
+- ⭐️ [Github: Awesome Python](https://github.com/vinta/awesome-python)
