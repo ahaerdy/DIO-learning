@@ -183,7 +183,7 @@ for indice, carro in enumerate(carros):
 
 - A compreensão de lista oferece uma sintaxe mais curta quando você deseja: criar uma nova lista com base nos valores de uma lista existente (filtro) ou gerar uma nova lista aplicando alguma modificação nos elementos de uma lista existente.
 
-# Filtro Versão 1
+### Filtro Versão 1
 
 ```
 numeros = [1, 30, 21, 2, 9, 65, 34]
