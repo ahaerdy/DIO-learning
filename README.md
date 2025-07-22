@@ -1,5 +1,20 @@
 # DIO Learning
 
+<p align="center">
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" />
+  <img src="https://img.shields.io/badge/Bootcamps-DIO.me-blueviolet?logo=codeforces" />
+  <img src="https://img.shields.io/badge/Linguagem-Python%2C%20JS%2C%20HTML-orange?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/github/repo-size/ahaerdy/dio-learning" />
+  <img src="https://img.shields.io/github/last-commit/ahaerdy/dio-learning" />
+  <a href="https://web.dio.me/users/arthur_haerdy?tab=achievements">
+    <img src="https://img.shields.io/badge/DIO-arthur__haerdy-success?logo=tryhackme" />
+  </a>
+  <a href="https://www.linkedin.com/in/arthur-haerdy-jr/">
+    <img src="https://img.shields.io/badge/LinkedIn-Arthur%20Haerdy%20Jr.-0077B5?logo=linkedin" />
+  </a>
+</p>
+
+
 Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma [DIO - Digital Innovation One](https://dio.me). Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
 
 ---
