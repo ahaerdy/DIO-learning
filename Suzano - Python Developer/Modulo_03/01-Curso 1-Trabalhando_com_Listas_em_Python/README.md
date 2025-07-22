@@ -59,7 +59,7 @@ frutas[0] # maçã
 frutas[2] # uva
 ```
 
-### Índices negativos
+### 🟨🟨 Índices negativos 🟨🟨
 
 - Sequências suportam indexação negativa. A contagem começa em -1.
 
