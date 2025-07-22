@@ -423,7 +423,9 @@ sorted(linguagens, key=lambda x: len(x), reverse=True)  # ["python", "csharp", "
 
 Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
+    - 01-Dio_Listas.pdf
+
 
 # Certificado
 
-Link do certificado:  
+Link do certificado: https://hermes.dio.me/certificates/J3ZME80Z.pdf
