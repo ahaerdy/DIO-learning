@@ -21,13 +21,20 @@
 
 ```
 frutas = ["laranja", "maca", "uva"]
-frutas = []
-letras = list("python")
-numeros = list(range(10))
-carro = ["Ferrari", "F8", 4200000, 2020, 2900, "São Paulo", True]
-```
+print(frutas)
 
-➡️ Código para testes: [00_declarando_listas.py](https://github.com/ahaerdy/Fork-trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/01%20-%20Listas/00_declarando_listas.py)
+frutas = []
+print(frutas)
+
+letras = list("python")
+print(letras)
+
+numeros = list(range(10))
+print(numeros)
+
+carro = ["Ferrari", "F8", 4200000, 2020, 2900, "São Paulo", True]
+print(carro)
+```
 
 💻 Resultado:
 
