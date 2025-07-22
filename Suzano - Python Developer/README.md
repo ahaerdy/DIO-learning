@@ -82,6 +82,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Estruturas Condicionais e de Repetição em Python](https://hermes.dio.me/certificates/XVD62HUQ.pdf)
 - [Manipulando Strings com Python](https://hermes.dio.me/certificates/5JWHA9TE.pdf)
 - [Dominando Funções Python](https://hermes.dio.me/certificates/M4SVGNUZ.pdf)
+- Certificado do Módulo: [Sintaxe Básica com Python](https://hermes.dio.me/certificates/IAZTL9CE.pdf)
 
 ### Módulo 3
 - [Trabalhando com Listas em Python](https://hermes.dio.me/certificates/J3ZME80Z.pdf)
