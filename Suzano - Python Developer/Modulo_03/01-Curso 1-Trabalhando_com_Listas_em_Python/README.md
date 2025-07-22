@@ -2,6 +2,10 @@
 
 ## Vídeo 01 - Introdução
 
+- Informações sobre o repositório:
+    - https://github.com/digitalinnovationone/trilha-python-dio
+- Explicação de como cloná-lo.
+
 ### Objetivo Geral
 
 - Entender o funcionamento da estrutura de dados lista.
