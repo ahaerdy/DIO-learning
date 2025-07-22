@@ -109,37 +109,35 @@ lista[::-1] # ["n", "o", "h", "t", "y", "p"]
 <details>
      <summary>🟨🟨🟨 Análise do Código - Clique para expandir 🟨🟨🟨</summary>
 
-1. lista[2:] → ["t", "h", "o", "n"]
-Começa do índice 2 até o final da lista.
+➡️ 1. lista[2:] → ["t", "h", "o", "n"]
 
-Índice 2 = "t", então retorna: ["t", "h", "o", "n"].
+- Começa do índice 2 até o final da lista.
+- Índice 2 = "t", então retorna: ["t", "h", "o", "n"].
 
-2. lista[:2] → ["p", "y"]
-Vai do início da lista até o índice 2 (exclusivo).
+➡️ 2. lista[:2] → ["p", "y"]
 
-Índices 0 e 1: "p" e "y".
+- Vai do início da lista até o índice 2 (exclusivo).
+- Índices 0 e 1: "p" e "y".
 
-3. lista[1:3] → ["y", "t"]
-Vai do índice 1 até o 3 (exclusivo).
+➡️ 3. lista[1:3] → ["y", "t"]
 
-Índices 1 e 2: "y" e "t".
+- Vai do índice 1 até o 3 (exclusivo).
+- Índices 1 e 2: "y" e "t".
 
-4. lista[0:3:2] → ["p", "t"]
-Vai do índice 0 até 3 (exclusivo), com passo 2.
+➡️ 4. lista[0:3:2] → ["p", "t"]
 
-Índices visitados: 0 e 2 → "p" e "t".
+- Vai do índice 0 até 3 (exclusivo), com passo 2.
+- Índices visitados: 0 e 2 → "p" e "t".
 
-5. lista[::] → ["p", "y", "t", "h", "o", "n"]
-Slice completo: do início ao fim com passo 1.
+➡️ 5. lista[::] → ["p", "y", "t", "h", "o", "n"]
 
-Equivalente a copiar a lista inteira.
+- Slice completo: do início ao fim com passo 1.
+- Equivalente a copiar a lista inteira.
 
-6. lista[::-1] → ["n", "o", "h", "t", "y", "p"]
-Slice com passo negativo (-1) → inverte a lista.
+➡️ 6. lista[::-1] → ["n", "o", "h", "t", "y", "p"]
 
-Retorna a lista ao contrário.
-
-
+- Slice com passo negativo (-1) → inverte a lista.
+- Retorna a lista ao contrário.
 </details>
 
 ### Iterar listas
