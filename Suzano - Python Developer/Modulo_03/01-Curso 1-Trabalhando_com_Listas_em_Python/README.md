@@ -182,16 +182,16 @@ for indice, carro in enumerate(carros):
 <details>
      <summary> 🟨🟨🟨<h3>Análise do código acima - Clique para expandir<h3>🟨🟨🟨 </summary>
 
-#### <b><font color="#000000"><span style="background:#d2cbff">carros = ["gol", "celta", "palio"]</span></font></be>
+#### ➡️ carros = ["gol", "celta", "palio"]
 - Cria uma lista chamada carros contendo 3 strings: "gol", "celta" e "palio".
 
-#### for indice, carro in enumerate(carros):
+#### ➡️ for indice, carro in enumerate(carros):
 
 - Usa a função enumerate() para iterar sobre a lista, retornando:
     - o índice do item (0, 1, 2...)
     - o valor do item correspondente (carro da lista)
 
-#### A função enumerate(carros) gera um iterador que retorna tuplas do tipo:
+#### ➡️ A função enumerate(carros) gera um iterador que retorna tuplas do tipo:
 
 python
 Copiar
@@ -200,12 +200,12 @@ Editar
 (1, "celta")
 (2, "palio")
 
-#### Então, a cada iteração:
+#### ➡️ Então, a cada iteração:
 
 - indice recebe 0, depois 1, depois 2
 - carro recebe "gol", depois "celta", depois "palio"
 
-#### print(f"{indice}: {carro}")
+#### ➡️ print(f"{indice}: {carro}")
 
 - Usa f-strings (formatação moderna de strings em Python) para imprimir:
     - O índice seguido de dois-pontos :
