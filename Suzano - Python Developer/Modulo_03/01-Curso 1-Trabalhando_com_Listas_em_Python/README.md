@@ -7,6 +7,8 @@
 - Explicaçöes de como cloná-lo. 
 - Fork criado em: [Fork-trilha-python-dio](https://github.com/ahaerdy/Fork-trilha-python-dio)
 
+## Vídeo 02 -  Listas: Criação e acesso aos dados
+
 ### Objetivo Geral
 
 - Entender o funcionamento da estrutura de dados lista.
@@ -24,6 +26,8 @@ letras = list("python")
 numeros = list(range(10))
 carro = ["Ferrari", "F8", 4200000, 2020, 2900, "São Paulo", True]
 ```
+
+Código para testes: [00_declarando_listas.py](https://github.com/ahaerdy/Fork-trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/01%20-%20Listas/00_declarando_listas.py)
 
 ### Acesso direto
 
@@ -152,7 +156,8 @@ quadrado = [numero ** 2 for numero in numeros]
 ```
 
 
-## Vídeo 02 -  Listas: Criação e acesso aos dados
+
+
 
 ### [].append
 
