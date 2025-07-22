@@ -27,7 +27,7 @@ numeros = list(range(10))
 carro = ["Ferrari", "F8", 4200000, 2020, 2900, "São Paulo", True]
 ```
 
-Código para testes: [00_declarando_listas.py](https://github.com/ahaerdy/Fork-trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/01%20-%20Listas/00_declarando_listas.py)
+➡️ Código para testes: [00_declarando_listas.py](https://github.com/ahaerdy/Fork-trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/01%20-%20Listas/00_declarando_listas.py)
 
 ### Acesso direto
 
