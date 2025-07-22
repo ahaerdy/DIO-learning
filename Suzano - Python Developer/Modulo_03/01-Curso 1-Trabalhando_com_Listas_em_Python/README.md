@@ -29,6 +29,17 @@ carro = ["Ferrari", "F8", 4200000, 2020, 2900, "São Paulo", True]
 
 ➡️ Código para testes: [00_declarando_listas.py](https://github.com/ahaerdy/Fork-trilha-python-dio/blob/main/01%20-%20Estrutura%20de%20dados/01%20-%20Listas/00_declarando_listas.py)
 
+💻 Resultado:
+
+```
+['laranja', 'maca', 'uva']
+[]
+['p', 'y', 't', 'h', 'o', 'n']
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+['Ferrari', 'F8', 4200000, 2020, 2900, 'São Paulo', True]
+```
+
+
 ### Acesso direto
 
 - A lista é uma sequência, portanto podemos acessar seus dados utilizando índices. Contamos o índice de determinada sequência a partir do zero.
