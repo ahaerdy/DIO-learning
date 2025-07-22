@@ -75,12 +75,15 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Versionamento de Código com Git e GitHub](https://hermes.dio.me/certificates/F10OC6FU.pdf)
 - [Desafios de Projetos: Crie Um Portfólio Vencedor](https://hermes.dio.me/certificates/UILKVHSN.pdf)
 - [Contribuindo em um Projeto Open Source](https://hermes.dio.me/certificates/OC0JDME3.pdf)
+
 ### Módulo 2
 - [Tipos de Operadores com Python](https://hermes.dio.me/certificates/EUCVFLQ4.pdf)
 - [Estruturas Condicionais e de Repetição em Python](https://hermes.dio.me/certificates/XVD62HUQ.pdf)
 - [Manipulando Strings com Python](https://hermes.dio.me/certificates/5JWHA9TE.pdf)
 - [Dominando Funções Python](https://hermes.dio.me/certificates/M4SVGNUZ.pdf)
 
+### Módulo 3
+- [Trabalhando com Listas em Python](https://hermes.dio.me/certificates/J3ZME80Z.pdf)
 
 ## 🔗 Contribuições Open Source
 
