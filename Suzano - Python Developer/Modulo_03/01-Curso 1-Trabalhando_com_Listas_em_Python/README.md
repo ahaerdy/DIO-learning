@@ -108,6 +108,7 @@ lista[::-1] # ["n", "o", "h", "t", "y", "p"]
 
 <details>
      <summary>🟨🟨🟨 Análise do Código - Clique para expandir 🟨🟨🟨</summary>
+
 ---
 
 - ➡️ 1. lista[2:] → ["t", "h", "o", "n"]
@@ -119,26 +120,32 @@ lista[::-1] # ["n", "o", "h", "t", "y", "p"]
 
 - Vai do início da lista até o índice 2 (exclusivo).
 - Índices 0 e 1: "p" e "y".
+---
 
 ➡️ 3. lista[1:3] → ["y", "t"]
 
 - Vai do índice 1 até o 3 (exclusivo).
 - Índices 1 e 2: "y" e "t".
+---
 
 ➡️ 4. lista[0:3:2] → ["p", "t"]
 
 - Vai do índice 0 até 3 (exclusivo), com passo 2.
 - Índices visitados: 0 e 2 → "p" e "t".
+---
 
 ➡️ 5. lista[::] → ["p", "y", "t", "h", "o", "n"]
 
 - Slice completo: do início ao fim com passo 1.
 - Equivalente a copiar a lista inteira.
+---
 
 ➡️ 6. lista[::-1] → ["n", "o", "h", "t", "y", "p"]
 
 - Slice com passo negativo (-1) → inverte a lista.
 - Retorna a lista ao contrário.
+---
+
 </details>
 
 ### Iterar listas
