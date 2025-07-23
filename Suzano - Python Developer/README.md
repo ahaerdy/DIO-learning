@@ -124,3 +124,4 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
 - [Python Cheatsheet](https://www.pythoncheatsheet.org/)
 - [QuickRef.Me - Python cheatsheet](https://quickref.me/python.html)
 - ⭐️ [Github: Awesome Python](https://github.com/vinta/awesome-python)
+- [python-scripts](https://github.com/ahaerdy/python-scripts) (repositório pessoal)
