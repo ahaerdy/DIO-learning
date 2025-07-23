@@ -77,7 +77,7 @@ matriz[0][-1]    # 2
 ### Exemplo
 
 ```
-upla = ("p", "y", "t", "h", "o", "n",) 
+tupla = ("p", "y", "t", "h", "o", "n",) 
 
 tupla[2:]       # ("t", "h", "o", "n") 
 tupla[:2]       # ("p", "y") 
@@ -132,6 +132,8 @@ linguagens = ("python", "js", "c", "java", "csharp",)
 linguagens.index("java") # 3 
 linguagens.index("python") # 0
 ```
+
+### 🟨 Função (embutida)
 
 ### len
 
