@@ -133,7 +133,7 @@ linguagens.index("java") # 3
 linguagens.index("python") # 0
 ```
 
-### 🟨 Função (embutida)
+### 🟨 Função
 
 ### len
 
@@ -154,4 +154,4 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
 # Certificado: Conhecendo Tuplas em Python
 
-Link do certificado:
+Link do certificado: https://hermes.dio.me/certificates/OHCCW65H.pdf
