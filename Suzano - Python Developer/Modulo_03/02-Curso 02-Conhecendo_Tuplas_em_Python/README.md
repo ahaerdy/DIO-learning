@@ -148,7 +148,7 @@ len(linguagens) # 5
 
 Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
-- 
+- 02-Dio_Tuplas.pdf
 
 # Certificado: Conhecendo Tuplas em Python
 
