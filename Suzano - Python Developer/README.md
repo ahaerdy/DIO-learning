@@ -98,6 +98,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 3
 - [Trabalhando com Listas em Python](https://hermes.dio.me/certificates/J3ZME80Z.pdf)
+- [Conhecendo Tuplas em Python](https://hermes.dio.me/certificates/OHCCW65H.pdf)
 
 ## 🔗 Contribuições Open Source
 
