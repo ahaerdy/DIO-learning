@@ -67,7 +67,7 @@ for indice, carro in enumerate(carros):
 
 
 <p align="center">
-    <img src="image.png" alt="Diagrama" width="480">
+    <img src="image.png" alt="Diagrama" width="200">
 </p>
 
 
