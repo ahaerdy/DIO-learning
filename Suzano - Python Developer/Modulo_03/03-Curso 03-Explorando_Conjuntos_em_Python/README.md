@@ -22,14 +22,14 @@ set(("palio", "gol", "celta", "palio"))  # {"gol", "celta", "palio"}
 
 ## Acessando os dados
 
-- Conjuntos em Python não suportam indexação e nem fatiamento, caso queira acessar os seus valores é necessário converter o conjunto para 🔺lista.
+- Conjuntos em Python não suportam indexação e nem fatiamento, caso queira acessar os seus valores é necessário converter o conjunto para ➡️ lista.
 
 ## Exemplo
 
 ```
 numeros = {1, 2, 3, 2}
 
-numeros = list(numeros)  # Convertendo um conjunto para uma 🔺lista.
+numeros = list(numeros)  # Convertendo um conjunto para uma ➡️ lista.
 
 numeros[0]
 ```
