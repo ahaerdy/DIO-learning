@@ -72,7 +72,7 @@ conjunto_a.union(conjunto_b) # {1, 2, 3, 4}
 ```
 
 <p align="center">
-    <img src="image.png" alt="Diagrama" width="200">
+    <img src="images/image.png" alt="Diagrama" width="200">
 </p>
 
 ### {}.intersection
@@ -85,7 +85,7 @@ conjunto_a.intersection(conjunto_b) # {2, 3}
 ```
 
 <p align="center">
-    <img src="image-2.png" alt="Diagrama" width="200">
+    <img src="images/image-2.png" alt="Diagrama" width="200">
 </p>
 
 ### {}.difference
@@ -99,7 +99,7 @@ conjunto_b.difference(conjunto_a) # {4}
 ```
 
 <p align="center">
-    <img src="image-3.png" alt="Diagrama" width="200">
+    <img src="images/image-3.png" alt="Diagrama" width="200">
 </p>
 
 ### {}.symmetric_difference
@@ -112,7 +112,7 @@ conjunto_a.symmetric_difference(conjunto_b) # {1, 4}
 ```
 
 <p align="center">
-    <img src="image-4.png" alt="Diagrama" width="200">
+    <img src="images/image-4.png" alt="Diagrama" width="200">
 </p>
 
 ### {}.issubset
@@ -126,7 +126,7 @@ conjunto_b.issubset(conjunto_a) # False
 ```
 
 <p align="center">
-    <img src="image-5.png" alt="Diagrama" width="200">
+    <img src="images/image-5.png" alt="Diagrama" width="200">
 </p>
 
 ### {}.issuperset
@@ -140,7 +140,7 @@ conjunto_b.issuperset(conjunto_a)  # True
 ```
 
 <p align="center">
-    <img src="image-6.png" alt="Diagrama" width="200">
+    <img src="images/image-6.png" alt="Diagrama" width="200">
 </p>
 
 ### {}.isdisjoint
@@ -155,7 +155,7 @@ conjunto_a.isdisjoint(conjunto_c)  # False
 ```
 
 <p align="center">
-    <img src="image-7.png" alt="Diagrama" width="200">
+    <img src="images/image-7.png" alt="Diagrama" width="200">
 </p>
 
 ### {}.add
