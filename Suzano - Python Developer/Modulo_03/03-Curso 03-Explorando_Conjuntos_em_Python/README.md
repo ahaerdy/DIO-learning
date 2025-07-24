@@ -188,9 +188,54 @@ sorteio.copy()
 sorteio # {1, 23}
 ```
 
+### {}.discard
 
+```
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
 
+numeros # {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+numeros.discard(1)
+numeros.discard(45)
+numeros # {2, 3, 4, 5, 6, 7, 8, 9, 0}
+```
 
+### {}.pop
+
+```
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+numeros.pop() # 0
+numeros.pop() # 1
+numeros # {2, 3, 4, 5, 6, 7, 8, 9}
+```
+
+### {}.remove
+
+```
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+numeros.remove(0) # 0
+numeros # {1, 2, 3, 4, 5, 6, 7, 8, 9}
+```
+
+### len
+
+```
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+len(numeros) # 10
+```
+
+### in
+
+```
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+1 in numeros # True
+10 in numeros # False
+```
 
 # Parte 2 - Materiais de apoio e Questionário
 
