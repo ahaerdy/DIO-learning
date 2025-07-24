@@ -88,6 +88,21 @@ conjunto_a.intersection(conjunto_b) # {2, 3}
     <img src="image-2.png" alt="Diagrama" width="200">
 </p>
 
+### {}.difference
+
+```
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.difference(conjunto_b) # {1}
+conjunto_b.difference(conjunto_a) # {4}
+```
+
+<p align="center">
+    <img src="image-3.png" alt="Diagrama" width="200">
+</p>
+
+
 
 
 # Parte 2 - Materiais de apoio e Questionário
