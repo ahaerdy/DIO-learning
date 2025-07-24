@@ -244,6 +244,6 @@ numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
 Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 - 03-Dio_Conjuntos.pdf
 
-# Certificado: Conhecendo Tuplas em Python
+# Certificado: Explorando Conjuntos em Python
 
-Link do certificado:
+Link do certificado: https://hermes.dio.me/certificates/X8KEVLLA.pdf
