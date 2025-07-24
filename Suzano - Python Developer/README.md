@@ -132,3 +132,14 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
 ## Livros online:
 
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+
+## Outros
+
+- [APIs Públicas Gratuitas](https://github.com/public-apis/public-apis)
+- [Padrões de Commits](https://github.com/iuricode/padroes-de-commits)
+- [Guia Extenso de Programação](https://github.com/arthurspk/guiadevbrasil)
+- [App Ideas Collection](https://github.com/florinpop17/app-ideas)
+- Modelos de README:
+  -[README Model](https://github.com/shyoutarou/README-Model)
+  -[README Templates](https://github.com/Fernanda-Kipper/Readme-Templates)
+  -[Readme Template](https://github.com/iuricode/readme-template)
