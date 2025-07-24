@@ -141,5 +141,5 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
 - [App Ideas Collection](https://github.com/florinpop17/app-ideas)
 ### Modelos de README:
 -[README Model](https://github.com/shyoutarou/README-Model)
--[README Templates](https://github.com/Fernanda-Kipper/Readme-Templates  
+-[README Templates](https://github.com/Fernanda-Kipper/Readme-Templates)
 -[Readme Template](https://github.com/iuricode/readme-template)
