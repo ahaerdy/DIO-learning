@@ -64,7 +64,12 @@ for indice, carro in enumerate(carros):
 
 ### {}.union
 
+```
+conjunto_a = {1, 2}
+conjunto_b = {3, 4}
 
+conjunto_a.union(conjunto_b) # {1, 2, 3, 4}
+```
 
 <p align="center">
     <img src="image.png" alt="Diagrama" width="200">
