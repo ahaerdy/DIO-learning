@@ -133,7 +133,7 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
 
 - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
 
-## Outros
+## Outros:
 
 - [APIs Públicas Gratuitas](https://github.com/public-apis/public-apis)
 - [Padrões de Commits](https://github.com/iuricode/padroes-de-commits)
