@@ -102,7 +102,93 @@ conjunto_b.difference(conjunto_a) # {4}
     <img src="image-3.png" alt="Diagrama" width="200">
 </p>
 
-![equação](https://latex.codecogs.com/png.image?\dpi{110}e^{i\pi}+1=0)
+### {}.symmetric_difference
+
+```
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.symmetric_difference(conjunto_b) # {1, 4}
+```
+
+<p align="center">
+    <img src="image-4.png" alt="Diagrama" width="200">
+</p>
+
+### {}.issubset
+
+```
+conjunto_a = {1, 2, 3}
+conjunto_b = {4, 1, 2, 5, 6, 3}
+
+conjunto_a.issubset(conjunto_b) # True
+conjunto_b.issubset(conjunto_a) # False
+```
+
+<p align="center">
+    <img src="image-5.png" alt="Diagrama" width="200">
+</p>
+
+### {}.issuperset
+
+```
+conjunto_a = {1, 2, 3}
+conjunto_b = {4, 1, 2, 5, 6, 3}
+
+conjunto_a.issuperset(conjunto_b)  # False
+conjunto_b.issuperset(conjunto_a)  # True
+```
+
+<p align="center">
+    <img src="image-6.png" alt="Diagrama" width="200">
+</p>
+
+### {}.isdisjoint
+
+```
+conjunto_a = {1, 2, 3, 4, 5}
+conjunto_b = {6, 7, 8, 9}
+conjunto_c = {1, 0}
+
+conjunto_a.isdisjoint(conjunto_b)  # True
+conjunto_a.isdisjoint(conjunto_c)  # False
+```
+
+<p align="center">
+    <img src="image-7.png" alt="Diagrama" width="200">
+</p>
+
+### {}.add
+
+```
+sorteio = {1, 23}
+
+sorteio.add(25) # {1, 23, 25}
+sorteio.add(42) # {1, 23, 25, 42}
+sorteio.add(25) # {1, 23, 25, 42}
+```
+
+### {}.clear
+
+```
+sorteio = {1, 23}
+
+sorteio # {1,23}
+sorteio.clear()
+sorteio # {}
+```
+
+### {}.copy
+
+```
+sorteio = {1, 23}
+
+sorteio # {1, 23}
+sorteio.copy()
+sorteio # {1, 23}
+```
+
+
 
 
 
