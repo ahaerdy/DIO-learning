@@ -75,6 +75,20 @@ conjunto_a.union(conjunto_b) # {1, 2, 3, 4}
     <img src="image.png" alt="Diagrama" width="200">
 </p>
 
+### {}.intersection
+
+```
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.intersection(conjunto_b) # {2, 3}
+```
+
+<p align="center">
+    <img src="image-2.png" alt="Diagrama" width="200">
+</p>
+
+
 
 # Parte 2 - Materiais de apoio e Questionário
 
