@@ -64,7 +64,12 @@ for indice, carro in enumerate(carros):
 
 ### {}.union
 
-![alt text](image.png)
+
+
+<p align="center">
+    <img src="image.png" alt="Diagrama" width="480">
+</p>
+
 
 # Parte 2 - Materiais de apoio e Questionário
 
