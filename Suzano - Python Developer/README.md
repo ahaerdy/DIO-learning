@@ -143,3 +143,6 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
   - [README Model](https://github.com/shyoutarou/README-Model)
   - [README Templates](https://github.com/Fernanda-Kipper/Readme-Templates)
   - [Readme Template](https://github.com/iuricode/readme-template)
+- Desafios técnicos:
+  - [Front-end Challenges](https://github.com/felipefialho/frontend-challenges)
+  - [Backend Challenges](https://github.com/CollabCodeTech/backend-challenges)
