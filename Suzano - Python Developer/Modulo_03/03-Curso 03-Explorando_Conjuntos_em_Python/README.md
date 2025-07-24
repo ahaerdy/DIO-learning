@@ -102,6 +102,7 @@ conjunto_b.difference(conjunto_a) # {4}
     <img src="image-3.png" alt="Diagrama" width="200">
 </p>
 
+![equação](https://latex.codecogs.com/png.image?\dpi{110}e^{i\pi}+1=0)
 
 
 
