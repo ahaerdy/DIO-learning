@@ -29,7 +29,7 @@ set(("palio", "gol", "celta", "palio"))  # {"gol", "celta", "palio"}
 ```
 numeros = {1, 2, 3, 2}
 
-numeros = list(numeros)
+numeros = list(numeros)  # Convertendo um conjunto para uma 🔺lista.
 
 numeros[0]
 ```
