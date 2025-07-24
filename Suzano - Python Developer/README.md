@@ -127,3 +127,7 @@ Este repositório será atualizado continuamente conforme o avanço nos módulos
 - [QuickRef.Me - Python cheatsheet](https://quickref.me/python.html)
 - ⭐️ [Github: Awesome Python](https://github.com/vinta/awesome-python)
 - [python-scripts](https://github.com/ahaerdy/python-scripts) (projetos pessoais e testes)
+
+## Livros online:
+
+- [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
