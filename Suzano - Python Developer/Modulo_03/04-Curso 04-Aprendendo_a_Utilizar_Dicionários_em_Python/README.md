@@ -203,7 +203,7 @@ contatos.values()  # dict_values([{'nome': 'Guilherme', 'telefone': '3333-2221'}
 
 ### in
 
-#### O que o in faz?
+#### ➡️ O que o in faz?
 
 - A palavra-chave in é usada para verificar se um valor está contido em uma sequência ou coleção, como:
     - strings
@@ -230,7 +230,7 @@ contatos = {
 
 ### del
 
-#### del é uma instrução (ou comando) do Python
+#### ➡️ del é uma instrução (ou comando) do Python
 
 - Ela faz parte da sintaxe da linguagem, assim como if, for, while, return etc.
     - 💡 Ou seja: você não pode usá-la como del(), porque ela não é uma função — é uma palavra-chave reservada.
