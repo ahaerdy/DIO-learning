@@ -219,6 +219,11 @@ contatos = {
 
 ### del
 
+- del é uma instrução (ou comando) do Python
+- Ela faz parte da sintaxe da linguagem, assim como if, for, while, return etc.
+    - 💡 Ou seja: você não pode usá-la como del(), porque ela não é uma função — é uma palavra-chave reservada.
+
+
 ```
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
