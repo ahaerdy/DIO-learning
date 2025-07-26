@@ -54,6 +54,16 @@
     <img src="images/image-3.png" alt="" width="480">
 </p>
 
+### Trabalhando com tz sem bibliotecas externas
+
+- O Python permite fazer isso com o módulo datetime padrão, embora seja um pouco mais complexo do que usando bibliotecas como 'pytz'.
+
+#### Exemplo de código
+
+<p align="center">
+    <img src="images/image-4.png" alt="" width="480">
+</p>
+
 ## 🟩 Vídeo 02 - Manipulando datas com timedelta
 
 ## 🟩 Vídeo 03 - Formatando e convertendo datas com strftime e strptime
