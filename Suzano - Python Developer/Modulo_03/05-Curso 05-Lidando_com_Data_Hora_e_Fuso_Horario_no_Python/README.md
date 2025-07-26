@@ -519,7 +519,7 @@ main()
 ## 🟩 Vídeo 06 - Resolução do desafio
 
 - Etapa anterior do desafio
-- Observação: não foi parte desse Bootcamp (está sendo implementado nesse módulo a partir daquele ponto para fins didáticos - template do código fornecido).
+- 🟥 **Observação**: não foi parte desse Bootcamp (está sendo implementado nesse módulo a partir daquele ponto para FINS DIDÁTICOS - template do código fornecido).
 
 <p align="center">
     <img src="images/image-5.png" alt="" width="560">
