@@ -953,4 +953,4 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
 ## Certificado: Aprendendo a Utilizar Dicionários em Python
 
-Link do certificado: https://hermes.dio.me/certificates/UZPKD2UH.pdf
+Link do certificado: 
