@@ -42,6 +42,18 @@
     <img src="images/image-2.png" alt="" width="480">
 </p>
 
+### Trabalhando com timezones
+
+#### Introdução
+
+- Quando trabalhamos com data e hora, lidar com fusos horários é uma necessidade comum. Python facilita isso através do módulo 'pytz'.
+
+#### Exemplo de código
+
+<p align="center">
+    <img src="images/image-3.png" alt="" width="480">
+</p>
+
 ## 🟩 Vídeo 02 - Manipulando datas com timedelta
 
 ## 🟩 Vídeo 03 - Formatando e convertendo datas com strftime e strptime
