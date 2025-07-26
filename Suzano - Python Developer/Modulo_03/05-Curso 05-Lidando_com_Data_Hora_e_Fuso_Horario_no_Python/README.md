@@ -4,6 +4,19 @@
 
 ### Objetivo Geral
 
+- Aprender a trabalhar com datas, horas e fusos horários em Python, dominando o módulo 'datetime' para manipulações precisas.
+
+### Introdução ao módulo datetime
+
+#### O que é o módulo datetime?
+
+- O módulo 'datetime' em Python é usado para lidar com datas e horas. Ele possui várias classes úteis como date, time e timedelta.
+
+#### Exemplo de código
+
+<p align="center">
+    <img src="images/image-3.png" alt="Diagrama" width="200">
+</p>
 
 
 ## 🟩 Vídeo 02 - Manipulando datas com timedelta
