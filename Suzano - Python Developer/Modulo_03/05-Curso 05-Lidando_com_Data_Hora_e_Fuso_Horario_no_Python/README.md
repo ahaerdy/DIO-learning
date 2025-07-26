@@ -18,7 +18,7 @@
     <img src="images/image.png" alt="Diagrama" width="560">
 </p>
 
-## 🟩 Vídeo 02 - Manipulação de datas e horas
+## 🟩 Vídeo 02 - Manipulando datas com timedelta
 
 ### Introdução
 
@@ -59,7 +59,7 @@ else:
 O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15:05.077475
 ```
 
-### Conversão e formatação de datas e horas
+## 🟩 Vídeo 03 - Formatando e convertendo datas com strftime e strptime
 
 #### Introdução
 
@@ -95,7 +95,7 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
 
 
 
-## 🟩 Vídeo 03 - Formatando e convertendo datas com strftime e strptime
+
 
 ## 🟩 Vídeo 04 - Trabalhando com timezone
 
