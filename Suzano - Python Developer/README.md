@@ -103,6 +103,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Conhecendo Tuplas em Python](https://hermes.dio.me/certificates/OHCCW65H.pdf)
 - [Explorando Conjuntos em Python](https://hermes.dio.me/certificates/X8KEVLLA.pdf)
 - [Aprendendo a Utilizar Dicionários em Python](https://hermes.dio.me/certificates/UZPKD2UH.pdf)
+- [Lidando com Data, Hora e Fuso Horário no Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python#parte-1---lidando-com-data-hora-e-fuso-hor%C3%A1rio-no-python)
 
 ## 🔗 Contribuições Open Source
 
