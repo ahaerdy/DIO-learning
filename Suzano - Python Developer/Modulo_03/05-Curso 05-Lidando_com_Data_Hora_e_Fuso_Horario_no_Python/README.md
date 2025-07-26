@@ -510,9 +510,9 @@ main()
 
 ```
 </details>
-
 <details>
      <summary> 🟥🟥🟥 <h3>Algoritmo Versão 2 (template COM implementação) - Clique para expandir<h3>🟥🟥🟥 </summary>
+
 ```
 import textwrap
 from abc import ABC, abstractclassmethod, abstractproperty
@@ -933,7 +933,6 @@ def main():
 
 
 main()
-
 ```
 </details>
 
