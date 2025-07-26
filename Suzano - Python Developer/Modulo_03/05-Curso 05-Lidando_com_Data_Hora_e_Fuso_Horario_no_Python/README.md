@@ -18,6 +18,17 @@
     <img src="images/image.png" alt="Diagrama" width="480">
 </p>
 
+### Manipulação de datas e horas
+
+#### Introdução
+
+- Podemos criar e manipular objetos date, time e datetime de várias maneiras. Por exemplo, podemos adicionar e subtrair datas, verificar a diferença entre datas e muito mais.
+
+#### Exemplo de código
+
+<p align="center">
+    <img src="images/image-1.png" alt="" width="480">
+</p>
 
 ## 🟩 Vídeo 02 - Manipulando datas com timedelta
 
