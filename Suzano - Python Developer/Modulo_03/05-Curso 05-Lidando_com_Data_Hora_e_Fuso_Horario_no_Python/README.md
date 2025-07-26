@@ -18,19 +18,41 @@
     <img src="images/image.png" alt="Diagrama" width="560">
 </p>
 
-## 🟩 Vídeo 02 - Manipulando datas com timedelta
+## 🟩 Vídeo 02 - Manipulação de datas e horas
 
-### Manipulação de datas e horas
-
-#### Introdução
+### Introdução
 
 - Podemos criar e manipular objetos date, time e datetime de várias maneiras. Por exemplo, podemos adicionar e subtrair datas, verificar a diferença entre datas e muito mais.
 
-#### Exemplo de código
+### Exemplo de código
 
 <p align="center">
     <img src="images/image-1.png" alt="" width="560">
 </p>
+
+### Exercício feito em aula
+
+```
+from datetime import datetime, timedelta
+
+tipo_carro = "P"  # P, M, G
+tempo_pequeno = 30
+tempo_medio = 45
+tempo_grande = 60
+data_atual = datetime.now()
+
+if tipo_carro == "P":
+    data_estimada = data_atual + timedelta(minutes=tempo_pequeno)
+    print(f"O carro chegou: {data_atual} e ficará pronto às {data_estimada}")
+elif tipo_carro == "M":
+    data_estimada = data_atual + timedelta(minutes=tempo_medio)
+    print(f"O carro chegou: {data_atual} e ficará pronto às {data_estimada}")
+else:
+    data_estimada = data_atual + timedelta(minutes=tempo_grande)
+    print(f"O carro chegou: {data_atual} e ficará pronto às {data_estimada}")
+
+```
+
 
 ### Conversão e formatação de datas e horas
 
