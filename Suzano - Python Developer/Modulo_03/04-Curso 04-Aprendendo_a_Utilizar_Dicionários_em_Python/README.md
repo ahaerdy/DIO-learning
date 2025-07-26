@@ -256,6 +256,6 @@ contatos # {'guilherme@gmail.com': {'nome': 'Guilherme'}, 'giovanna@gmail.com': 
 Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 - 04-Dio_Dicionarios.pptx
 
-## Certificado: Explorando Conjuntos em Python
+## Certificado: Aprendendo a Utilizar Dicionários em Python
 
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/UZPKD2UH.pdf
