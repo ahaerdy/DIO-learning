@@ -518,13 +518,18 @@ main()
 
 ## 🟩 Vídeo 06 - Resolução do desafio
 
-- Etapa anterior do desafio:
+- Etapa anterior do desafio
+- Observação: não foi parte desse Bootcamp (está sendo implementado nesse módulo a partir daquele ponto para fins didáticos - template do código fornecido).
 
 <p align="center">
     <img src="images/image-5.png" alt="" width="560">
 </p>
 
-- Relembrando o que é um Decorador de Log:
+- Relembrando o que era um Decorador de Log:
+- Funções que desejávamos decorar:
+    - Depósito
+    - Saque
+    - Criação de Contas
 
 <p align="center">
     <img src="images/image-6.png" alt="" width="560">
