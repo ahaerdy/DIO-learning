@@ -1,5 +1,9 @@
 # Parte 1 - Lidando com Data, Hora e Fuso Horário no Python
 
+- Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
+- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Linktree: https://linktr.ee/decarvalhogui
+
 ## 🟩 Vídeo 01 - Trabalhando com objetos date, datetime e time
 
 ### Objetivo Geral
@@ -510,6 +514,10 @@ main()
 
 ```
 </details>
+
+
+## 🟩 Vídeo 06 - Resolução do desafio
+
 <details>
      <summary> 🟥🟥🟥 <h3>Algoritmo Versão 2 (template COM implementação) - Clique para expandir<h3>🟥🟥🟥 </summary>
 
@@ -935,9 +943,6 @@ def main():
 main()
 ```
 </details>
-
-
-## 🟩 Vídeo 06 - Resolução do desafio
 
 # Parte 3 - Materiais de apoio e Questionário
 
