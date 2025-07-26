@@ -30,6 +30,18 @@
     <img src="images/image-1.png" alt="" width="480">
 </p>
 
+### Conversão e formatação de datas e horas
+
+#### Introdução
+
+- Python também permite converter e formatar datas e horas. Para isso, usamos os métodos 'strftime' (string format time) e 'strptime' (string parse time).
+
+#### Exemplo de código
+
+<p align="center">
+    <img src="images/image-2.png" alt="" width="480">
+</p>
+
 ## 🟩 Vídeo 02 - Manipulando datas com timedelta
 
 ## 🟩 Vídeo 03 - Formatando e convertendo datas com strftime e strptime
