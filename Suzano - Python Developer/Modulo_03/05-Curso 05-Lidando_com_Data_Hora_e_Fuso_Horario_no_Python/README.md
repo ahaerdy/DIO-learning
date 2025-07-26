@@ -15,7 +15,7 @@
 #### Exemplo de código
 
 <p align="center">
-    <img src="images/image.png" alt="Diagrama" width="480">
+    <img src="images/image.png" alt="Diagrama" width="560">
 </p>
 
 ### Manipulação de datas e horas
@@ -27,7 +27,7 @@
 #### Exemplo de código
 
 <p align="center">
-    <img src="images/image-1.png" alt="" width="480">
+    <img src="images/image-1.png" alt="" width="560">
 </p>
 
 ### Conversão e formatação de datas e horas
@@ -39,7 +39,7 @@
 #### Exemplo de código
 
 <p align="center">
-    <img src="images/image-2.png" alt="" width="480">
+    <img src="images/image-2.png" alt="" width="560">
 </p>
 
 ### Trabalhando com timezones
@@ -51,7 +51,7 @@
 #### Exemplo de código
 
 <p align="center">
-    <img src="images/image-3.png" alt="" width="480">
+    <img src="images/image-3.png" alt="" width="560">
 </p>
 
 ### Trabalhando com tz sem bibliotecas externas
@@ -61,7 +61,7 @@
 #### Exemplo de código
 
 <p align="center">
-    <img src="images/image-4.png" alt="" width="480">
+    <img src="images/image-4.png" alt="" width="560">
 </p>
 
 ## 🟩 Vídeo 02 - Manipulando datas com timedelta
