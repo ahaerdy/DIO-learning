@@ -15,7 +15,7 @@
 #### Exemplo de código
 
 <p align="center">
-    <img src="images/image-3.png" alt="Diagrama" width="200">
+    <img src="images/image.png" alt="Diagrama" width="200">
 </p>
 
 
