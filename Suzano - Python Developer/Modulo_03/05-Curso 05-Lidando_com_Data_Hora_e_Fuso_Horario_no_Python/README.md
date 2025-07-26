@@ -18,6 +18,8 @@
     <img src="images/image.png" alt="Diagrama" width="560">
 </p>
 
+## 🟩 Vídeo 02 - Manipulando datas com timedelta
+
 ### Manipulação de datas e horas
 
 #### Introdução
@@ -64,7 +66,7 @@
     <img src="images/image-4.png" alt="" width="560">
 </p>
 
-## 🟩 Vídeo 02 - Manipulando datas com timedelta
+
 
 ## 🟩 Vídeo 03 - Formatando e convertendo datas com strftime e strptime
 
