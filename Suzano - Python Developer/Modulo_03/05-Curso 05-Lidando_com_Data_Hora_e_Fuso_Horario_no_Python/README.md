@@ -535,6 +535,13 @@ main()
     <img src="images/image-6.png" alt="" width="560">
 </p>
 
+- Gerador de Relatórios:
+
+<p align="center">
+    <img src="images/image-7.png" alt="" width="560">
+</p>
+
+
 <details>
      <summary> 🟥🟥🟥 <h3>Algoritmo Versão 2 (template COM implementação) - Clique para expandir<h3>🟥🟥🟥 </summary>
 
