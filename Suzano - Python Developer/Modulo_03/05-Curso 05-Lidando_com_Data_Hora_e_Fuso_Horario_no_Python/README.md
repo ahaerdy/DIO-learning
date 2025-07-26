@@ -93,12 +93,11 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
     <img src="images/image-4.png" alt="" width="560">
 </p>
 
-
 # Parte 2 - Hands-On - Lidando com Data, Hora e Fuso Horário no Python 
 
-## 🟩 Vídeo 01 - Explicação do desafio
+## 🟩 Vídeo 05 - Explicação do desafio
 
-## 🟩 Vídeo 02 - Resolução do desafio
+## 🟩 Vídeo 06 - Resolução do desafio
 
 # Parte 3 - Materiais de apoio e Questionário
 
