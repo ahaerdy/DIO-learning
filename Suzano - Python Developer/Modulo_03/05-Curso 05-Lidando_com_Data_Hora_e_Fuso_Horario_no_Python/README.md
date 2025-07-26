@@ -519,7 +519,7 @@ main()
 ## 🟩 Vídeo 06 - Resolução do desafio
 
 - Etapa anterior do desafio
-- 🔴 **Observação**: este algoritmo, no ponto em que se encontra, foi tratado nesse Bootcamp (está sendo apresentado neste módulo para FINS DIDÁTICOS - template do código apresentado no vídeo anterior).
+- 🔴 **Observação**: este algoritmo, no ponto em que se encontra, **NÃO** foi tratado nesse Bootcamp (está sendo apresentado neste módulo para FINS DIDÁTICOS - template do código apresentado no vídeo anterior).
 
 <p align="center">
     <img src="images/image-5.png" alt="" width="560">
