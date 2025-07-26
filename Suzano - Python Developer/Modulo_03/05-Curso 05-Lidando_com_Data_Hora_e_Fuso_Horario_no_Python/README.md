@@ -518,6 +518,10 @@ main()
 
 ## 🟩 Vídeo 06 - Resolução do desafio
 
+<p align="center">
+    <img src="images/image-5.png" alt="" width="480">
+</p>
+
 <details>
      <summary> 🟥🟥🟥 <h3>Algoritmo Versão 2 (template COM implementação) - Clique para expandir<h3>🟥🟥🟥 </summary>
 
