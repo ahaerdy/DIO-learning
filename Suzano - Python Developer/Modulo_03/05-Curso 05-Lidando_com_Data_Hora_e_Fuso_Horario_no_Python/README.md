@@ -519,7 +519,7 @@ main()
 ## 🟩 Vídeo 06 - Resolução do desafio
 
 <p align="center">
-    <img src="images/image-5.png" alt="" width="480">
+    <img src="images/image-5.png" alt="" width="560">
 </p>
 
 <details>
