@@ -67,6 +67,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/02-Curso%2002-Conhecendo_Tuplas_em_Python#parte-1---conhecendo-tuplas-em-python)
 - [x] Curso: [Explorando Conjuntos em Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/03-Curso%2003-Explorando_Conjuntos_em_Python#parte-1---explorando-conjuntos-em-python)
 - [x] Curso: [Aprendendo a Utilizar Dicionários em Python](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python/README.md#parte-1---aprendendo-a-utilizar-dicion%C3%A1rios-em-python)
+- [Lidando com Data, Hora e Fuso Horário no Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python#parte-1---lidando-com-data-hora-e-fuso-hor%C3%A1rio-no-python)
 
 ### Módulo 4: Programação Orientada a Objetos com Python
 
@@ -103,7 +104,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Conhecendo Tuplas em Python](https://hermes.dio.me/certificates/OHCCW65H.pdf)
 - [Explorando Conjuntos em Python](https://hermes.dio.me/certificates/X8KEVLLA.pdf)
 - [Aprendendo a Utilizar Dicionários em Python](https://hermes.dio.me/certificates/UZPKD2UH.pdf)
-- [Lidando com Data, Hora e Fuso Horário no Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python#parte-1---lidando-com-data-hora-e-fuso-hor%C3%A1rio-no-python)
+
 
 ## 🔗 Contribuições Open Source
 
