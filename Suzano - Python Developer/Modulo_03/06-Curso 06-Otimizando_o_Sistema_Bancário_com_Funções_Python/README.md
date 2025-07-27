@@ -461,7 +461,7 @@ main()
 
 ## Link do repositorio
 
-- [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python) (entregue ✓)
+- [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
 
 ## Certificado: Otimizando o Sistema Bancário com Funções Python
 
