@@ -93,6 +93,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Versionamento de Código com Git e GitHub](https://hermes.dio.me/certificates/F10OC6FU.pdf)
 - [Desafios de Projetos: Crie Um Portfólio Vencedor](https://hermes.dio.me/certificates/UILKVHSN.pdf)
 - [Contribuindo em um Projeto Open Source](https://hermes.dio.me/certificates/OC0JDME3.pdf)
+    - Projeto: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
+      - Descrição: Contribuindo com o Projeto Open Source no repositório dio-lab-open-source (no Github) incluindo o meu arquivo markdown na pasta community.
 - Certificado do Módulo: [Introdução ao Ambiente Python e Projetos Colaborativos](https://hermes.dio.me/certificates/IWXQDBPV.pdf) ✅
 
 ### Módulo 2
