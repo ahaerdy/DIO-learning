@@ -298,13 +298,13 @@ main()
 
 ## Análise Passo a Passo
 
-### 🖱 Função menu
+### 🔘 Função menu
 
 <p align="center">
     <img src="images/image-10.png" alt="" width="480">
 </p>
 
-- A função menu Usa textwrap.dedent para remover a indentação extra à esquerda. Existe apenas por organização visual do código Python. Isso garante que o menu seja exibido corretamente no terminal, sem espaços desnecessários no início das linhas.
+- A função menu usa `textwrap.dedent` para remover a indentação extra à esquerda. Existe apenas por organização visual do código Python. Isso garante que o menu seja exibido corretamente no terminal, sem espaços desnecessários no início das linhas.
 
 - A instrução `return input(textwrap.dedent(menu))` mostra o menu ao usuário e retorna o valor digitado como string.
 
