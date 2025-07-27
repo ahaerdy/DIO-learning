@@ -51,7 +51,7 @@
 <details>
      <summary> 🟨🟨🟨 <h3>Código BASE do projeto&nbsp<h3> 🟨🟨🟨</summary>
 
-```
+```python
 menu = """
 
 [d] Depositar
@@ -127,7 +127,7 @@ while True:
 <details>
      <summary> 🟥🟥🟥 <h3>Código SOLUÇÃO do projeto&nbsp<h3> 🟥🟥</summary>
 
-```
+```python
 import textwrap
 
 
@@ -429,7 +429,7 @@ main()
         ]
         ```
 
-### Função __criar_conta__
+### 🔘 Função __criar_conta__
 
 <p align="center">
     <img src="images/image-19.png" alt="" width="860">
@@ -451,10 +451,11 @@ main()
 
 - Se usuario for válido, então:
     - Exibe a mensagem “Conta criada com sucesso!”
-    - Retorna um dicionário com os dados da nova conta, contendo:
+    - Retorna um __DICIONÁRIO__ com os dados da nova conta, contendo:
         - agencia: constante, definida no início do código através da instrução `AGENCIA = "0001"`.
         - numero_conta: gerado automaticamnte pelo sistema, de forma incremental, através da instrução `numero_conta = len(contas) + 1`.
         - usuario: gerado através da função __criar_usuário__
+
 
 
 
