@@ -39,6 +39,10 @@
     <img src="images/image-7.png" alt="" width="560">
 </p>
 
+<p align="center">
+    <img src="images/image-8.png" alt="" width="560">
+</p>
+
 ### Arquivo utilizado neste módulo
 
 - Arquivo `desafio.py` do módulo de Fundamentos
