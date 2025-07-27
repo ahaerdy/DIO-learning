@@ -349,10 +349,16 @@ main()
 
 - O uso do asterisco (__*__) antes dos parâmetros obriga que todos os argumentos seguintes sejam passados por nome, o que define exatamente a chamada keyword-only.
 
-- Exemplo de chamada correta no código:
+- Leitura do valor do saque e chamada da função __saque__:
 
 <p align="center">
     <img src="images/image-13.png" alt="" width="480">
+</p>
+
+- Passagem dos argumentos __APENAS POR NOME__ (__keyword only__):
+
+<p align="center">
+    <img src="images/image-14.png" alt="" width="480">
 </p>
 
 
