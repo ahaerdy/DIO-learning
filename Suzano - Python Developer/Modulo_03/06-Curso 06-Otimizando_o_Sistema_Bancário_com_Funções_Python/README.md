@@ -402,7 +402,14 @@ main()
 
 - Não pode haver dois usuários com o mesmo CPF.
 
-- Detalhes do código:
+#### Função __filtrar_usuário__ (chamada por __criar_usuario__)
+
+<p align="center">
+    <img src="images/image-18.png" alt="" width="1080">
+</p>
+
+
+- Detalhes da função __criar_usuario__:
 
     - Armazena os usuários em uma lista chamada usuarios.
     - Cada usuário é um dicionário com nome, data_nascimento, cpf, endereco.
