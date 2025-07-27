@@ -311,7 +311,7 @@ main()
 ### 🔘 Função depositar
 
 <p align="center">
-    <img src="images/image-11.png" alt="" width="560">
+    <img src="images/image-11.png" alt="" width="640">
 </p>
 
 - A função depositar deve:
