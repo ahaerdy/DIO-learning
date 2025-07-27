@@ -392,7 +392,15 @@ main()
     <img src="images/image-17.png" alt="" width="1080">
 </p>
 
+- Cada usuário deve conter:
 
+    - nome
+    - data de nascimento
+    - CPF (apenas números)
+    - endereço no formato:
+        - logradouro, nro - bairro - cidade/sigla estado
+
+-Não pode haver dois usuários com o mesmo CPF.
 
 # Parte 2 - Entrega do Desafio
 
