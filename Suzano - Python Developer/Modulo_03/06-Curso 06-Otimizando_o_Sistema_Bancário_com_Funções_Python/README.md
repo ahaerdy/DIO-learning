@@ -380,8 +380,8 @@ main()
 
 - Essa assinatura significa:
 
-    - __saldo__ deve ser passado por posição (por causa da barra /)
-    - __extrato__ deve ser passado por nome (por causa do asterisco *)
+    - __saldo__ deve ser passado POR POSIÇÃO (por causa da barra /)
+    - __extrato__ deve ser passado POR NOME (por causa do asterisco *)
 
 - Exemplo de chamada correta no código:
 
