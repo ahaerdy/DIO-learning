@@ -50,7 +50,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Versionamento de Código com Git e GitHub](Modulo_01/04-Curso%204-Versionamento_de_Codigo_com_Git_e_GitHub/)
 - [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](Modulo_01/05-Curso%205-Desafios_de_Projetos_Crie_Um_Portf%C3%B3lio_Vencedor/)
 - [x] Projeto: [Contribuindo em um Projeto Open Source no Github](Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/)
-    - Repositório: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source) (incluindo o meu arquivo markdown na pasta community no repositório dio-lab-open-source - fork do repositório original)
+    - Repositório: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
+    - Descrição: incluindo o meu arquivo markdown na pasta community no repositório dio-lab-open-source
 - [x] Mentoria: [Live de Lançamento: Suzano Python Developer](Modulo_01/07-Mentoria-Live_de_Lan%C3%A7amento/) 
 
 ### Módulo 2: Sintaxe Básica com Python
@@ -60,7 +61,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python/?id=parte-1-dominando-strings-e-fatiamento)
 - [x] Curso: [Dominando Funções Python](Modulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python#parte-1---dominando-fun%C3%A7%C3%B5es-python)
 - [x] Projeto: [Criando um Sistema Bancário com Python](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python#descri%C3%A7%C3%A3o)
-  - Repositóro: [desafio.py] (https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py) 
+  - Repositóro: [desafio.py] (https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
+  - Descrição: arquivo do projeto.
 
 ### Módulo 3: Trabalhando com Coleções em Python
 
@@ -70,8 +72,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Explorando Conjuntos em Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/03-Curso%2003-Explorando_Conjuntos_em_Python#parte-1---explorando-conjuntos-em-python)
 - [x] Curso: [Aprendendo a Utilizar Dicionários em Python](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python/README.md#parte-1---aprendendo-a-utilizar-dicion%C3%A1rios-em-python)
 - [x] Curso: [Lidando com Data, Hora e Fuso Horário no Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python#parte-1---lidando-com-data-hora-e-fuso-hor%C3%A1rio-no-python)
-- Curso: [Otimizando o Sistema Bancário com Funções Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/06-Curso%2006-Otimizando_o_Sistema_Banc%C3%A1rio_com_Fun%C3%A7%C3%B5es_Python#parte-1---desafio---otimizando-o-sistema-banc%C3%A1rio-com-fun%C3%A7%C3%B5es-python)
-  - Repositório do projeto: 📚 [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
+- Projeto: [Otimizando o Sistema Bancário com Funções Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/06-Curso%2006-Otimizando_o_Sistema_Banc%C3%A1rio_com_Fun%C3%A7%C3%B5es_Python#parte-1---desafio---otimizando-o-sistema-banc%C3%A1rio-com-fun%C3%A7%C3%B5es-python)
+  - Repositório: [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
+  - Descrição: Sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python
 
 
 ### Módulo 4: Programação Orientada a Objetos com Python
