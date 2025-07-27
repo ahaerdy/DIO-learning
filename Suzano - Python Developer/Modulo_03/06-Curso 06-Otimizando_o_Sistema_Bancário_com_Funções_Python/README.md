@@ -364,7 +364,7 @@ main()
 ### 🔘 Função __exibir_extato__
 
 <p align="center">
-    <img src="images/image-15.png" alt="" width="480">
+    <img src="images/image-15.png" alt="" width="680">
 </p>
 
 
