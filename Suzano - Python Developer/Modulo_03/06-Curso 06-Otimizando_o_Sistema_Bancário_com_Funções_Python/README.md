@@ -452,8 +452,8 @@ main()
 - Se usuario for válido, então:
     - Exibe a mensagem “Conta criada com sucesso!”
     - Retorna um dicionário com os dados da nova conta, contendo:
-        - agencia (por exemplo "0001")
-        - numero_conta (gerado ou incrementado)
+        - agencia (constante, definida no início do código como AGENCIA = "0001")
+        - numero_conta (gerado automaticamnte pelo sistema de forma incremental através da instrução `numero_conta = len(contas) + 1`)
         - usuario (os dados do usuário, provavelmente um dicionário também)
 
 # Parte 2 - Entrega do Desafio
