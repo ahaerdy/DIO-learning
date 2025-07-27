@@ -352,7 +352,7 @@ main()
 - Exemplo de chamada correta no código:
 
 <p align="center">
-    <img src="images/image-13.png" alt="" width="640">
+    <img src="images/image-13.png" alt="" width="480">
 </p>
 
 
