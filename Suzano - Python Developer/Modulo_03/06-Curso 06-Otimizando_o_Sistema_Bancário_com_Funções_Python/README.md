@@ -392,7 +392,7 @@ main()
 ### 🔘 Função __criar_usuario__
 
 <p align="center">
-    <img src="images/image-17.png" alt="" width="640">
+    <img src="images/image-17.png" alt="" width="720">
 </p>
 
 
