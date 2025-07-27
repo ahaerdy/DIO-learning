@@ -122,7 +122,7 @@ while True:
 ```
 </details>
 
-## Vídeo 02 - Resolução do Desafio
+## Vídeo 02 - Solução do Desafio
 
 <details>
      <summary> 🟥🟥🟥 <h3>Código SOLUÇÃO do projeto&nbsp<h3> 🟥🟥</summary>
