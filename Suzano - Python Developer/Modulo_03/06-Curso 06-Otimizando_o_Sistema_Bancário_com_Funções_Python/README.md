@@ -321,15 +321,10 @@ main()
 
 - 🔴 O símbolo **/** indica que todos os argumentos antes dele só podem ser passados **POR POSIÇÃO**, ou seja, não podem ser nomeados na chamada da função.
 
-- Exemplo válido:
+- Exemplos:
 
 ```
     depositar(1000, 200, "") # ✅ Correto
-```
-
-- Exemplo inválido:
-
-```
     depositar(saldo=1000, valor=200, extrato="")  # 📛 Vai gerar erro
 ```
 
