@@ -52,7 +52,7 @@
 - Arquivo `desafio.py` do módulo de Fundamentos
 
 <details>
-     <summary> 🟨🟨🟨 <h3>Código base do projeto - Clique para expandir <h3> 🟨🟨🟨</summary>
+     <summary> 🟨🟨🟨 <h3>Código BASE do projeto <h3> 🟨🟨🟨</summary>
 
 ```
 menu = """
