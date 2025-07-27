@@ -69,6 +69,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Aprendendo a Utilizar Dicionários em Python](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python/README.md#parte-1---aprendendo-a-utilizar-dicion%C3%A1rios-em-python)
 - [x] Curso: [Lidando com Data, Hora e Fuso Horário no Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python#parte-1---lidando-com-data-hora-e-fuso-hor%C3%A1rio-no-python)
 - Curso: [Otimizando o Sistema Bancário com Funções Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/06-Curso%2006-Otimizando_o_Sistema_Banc%C3%A1rio_com_Fun%C3%A7%C3%B5es_Python#parte-1---desafio---otimizando-o-sistema-banc%C3%A1rio-com-fun%C3%A7%C3%B5es-python)
+  - Projeto (reopositório): 📚 [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
 
 
 ### Módulo 4: Programação Orientada a Objetos com Python
