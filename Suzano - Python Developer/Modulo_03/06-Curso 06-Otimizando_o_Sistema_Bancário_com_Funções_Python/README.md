@@ -28,9 +28,12 @@
 </p>
 
 <p align="center">
-    <img src="images/image-4.png" alt="" width="560">
+    <img src="images/image-5.png" alt="" width="560">
 </p>
 
+<p align="center">
+    <img src="images/image-6.png" alt="" width="560">
+</p>
 
 
 ### Arquivo utilizado neste módulo
