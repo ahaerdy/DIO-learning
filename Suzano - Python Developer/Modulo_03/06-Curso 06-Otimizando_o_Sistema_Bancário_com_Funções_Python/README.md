@@ -367,6 +367,17 @@ main()
     <img src="images/image-15.png" alt="" width="720">
 </p>
 
+- A função extrato deve receber os argumentos por posição e nome (positional only e keyword only).
+
+    - Argumento posicional: saldo
+    - Argumento nomeado (keyword only): extrato
+
+- Implementação no código:
+
+<p align="center">
+    <img src="images/image-16.png" alt="" width="720">
+</p>
+
 
 
 # Parte 2 - Entrega do Desafio
