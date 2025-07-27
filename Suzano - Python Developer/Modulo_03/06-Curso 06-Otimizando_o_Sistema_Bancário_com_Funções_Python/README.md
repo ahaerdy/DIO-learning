@@ -6,6 +6,12 @@
 
 ## 🟩 Vídeo 01 - Apresentação do Desafio
 
+![alt text](image.png)
+
+<p align="center">
+    <img src="images/image.png" alt="" width="560">
+</p>
+
 ### Arquivo utilizado neste módulo
 
 - Arquivo `desafio.py` do módulo de Fundamentos
