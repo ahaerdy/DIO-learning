@@ -16,7 +16,7 @@
 - Arquivo `desafio.py` do módulo de Fundamentos
 
 <details>
-     <summary> 🟩🟩🟩 <h3>Algoritmo - Clique para expandir<h3> 🟩🟩🟩 </summary>
+     <summary> 🟩🟩🟩 <h3>Algoritmo base do projeto - Clique para expandir<h3> 🟩🟩🟩 </summary>
 
 ```
 menu = """
