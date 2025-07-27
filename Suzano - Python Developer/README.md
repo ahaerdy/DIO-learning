@@ -61,7 +61,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python/?id=parte-1-dominando-strings-e-fatiamento)
 - [x] Curso: [Dominando Funções Python](Modulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python#parte-1---dominando-fun%C3%A7%C3%B5es-python)
 - [x] Projeto: [Criando um Sistema Bancário com Python](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python#descri%C3%A7%C3%A3o)
-  - Repositóro: [desafio.py] (https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
+  - Repositóro: [desafio.py](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
   - Descrição: arquivo do projeto.
 
 ### Módulo 3: Trabalhando com Coleções em Python
