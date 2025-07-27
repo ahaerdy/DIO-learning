@@ -334,6 +334,7 @@ main()
 ```
 
 - Foi criada uma codificação para a saída:
+
     - Três iguais "===" significam uma mensagem se SUCESSO.
     - Três arrobas "@@@" significam uma mensagem de FALHA.
 
