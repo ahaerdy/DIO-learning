@@ -333,6 +333,11 @@ main()
     - Três iguais "===" significam uma mensagem se SUCESSO.
     - Três arrobas "@@@" significam uma mensagem de FALHA.
 
+### 🔘 Função sacar
+
+<p align="center">
+    <img src="images/image-12.png" alt="" width="640">
+</p>
 
 
 
