@@ -308,7 +308,7 @@ main()
 
 - A instrução `return input(textwrap.dedent(menu))` mostra o menu ao usuário e retorna o valor digitado como string.
 
-### 🔘 Função depositar
+### 🔘 Função __depositar__
 
 <p align="center">
     <img src="images/image-11.png" alt="" width="640">
@@ -333,7 +333,7 @@ main()
     - Três iguais "===" significam uma mensagem se SUCESSO.
     - Três arrobas "@@@" significam uma mensagem de FALHA.
 
-### 🔘 Função sacar
+### 🔘 Função __sacar__
 
 <p align="center">
     <img src="images/image-12.png" alt="" width="640">
@@ -361,7 +361,13 @@ main()
     <img src="images/image-14.png" alt="" width="480">
 </p>
 
-### 🔘 Função __extato__
+### 🔘 Função __exibir_extato__
+
+<p align="center">
+    <img src="images/image-15.png" alt="" width="480">
+</p>
+
+
 
 # Parte 2 - Entrega do Desafio
 
