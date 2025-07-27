@@ -62,7 +62,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Dominando Funções Python](Modulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python#parte-1---dominando-fun%C3%A7%C3%B5es-python)
 - [x] Projeto: [Criando um Sistema Bancário com Python](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python#descri%C3%A7%C3%A3o)
   - Arquivo do projeto: [desafio.py](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
-  - Descrição: arquivo do projeto.
+  - Descrição: desenvolvimento de um sistema de operações bancárias simples em Python, sem uso de bibliotecas externas, explorando estruturas de controle, manipulação de strings, entrada de dados, validação de regras e aplicação de lógica para simular funcionalidades como saque, depósito e extrato.
 
 ### Módulo 3: Trabalhando com Coleções em Python
 
