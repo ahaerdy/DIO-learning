@@ -405,7 +405,7 @@ main()
 #### Função __filtrar_usuário__ (chamada por __criar_usuario__)
 
 <p align="center">
-    <img src="images/image-18.png" alt="" width="1080">
+    <img src="images/image-18.png" alt="" width="640">
 </p>
 
 
