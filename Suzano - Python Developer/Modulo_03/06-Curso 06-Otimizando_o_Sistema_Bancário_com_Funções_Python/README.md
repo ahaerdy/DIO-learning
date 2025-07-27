@@ -429,6 +429,23 @@ main()
         ]
         ```
 
+### Função __criar_conta__
+
+<p align="center">
+    <img src="images/image-19.png" alt="" width="860">
+</p>
+
+- Especificações:
+
+    - Armanezar contas em uma lista
+    - Uma conta deve ser composta por:
+        - Agência
+        - Nr. de conta
+        - Usuário
+    - O número da conta deve ser sequencial iniciando em 1
+    - O número da agência deve ser fixo (ex:"0001")
+    - O usuário pode ter mais de uma conta
+    - Uma conta pertence a somente um usuário
 
 
 
