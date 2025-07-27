@@ -6,7 +6,6 @@
 
 ## 🟩 Vídeo 01 - Apresentação do Desafio
 
-![alt text](image.png)
 
 <p align="center">
     <img src="images/image.png" alt="" width="560">
@@ -17,7 +16,7 @@
 - Arquivo `desafio.py` do módulo de Fundamentos
 
 <details>
-     <summary> 🟩🟩🟩 <h3>Algoritmo - Clique para expandir<h3>🟨🟨🟨 </summary>
+     <summary> 🟩🟩🟩 <h3>Algoritmo - Clique para expandir<h3> 🟩🟩🟩 </summary>
 
 ```
 menu = """
