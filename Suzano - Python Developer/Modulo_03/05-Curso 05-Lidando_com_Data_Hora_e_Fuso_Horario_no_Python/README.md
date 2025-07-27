@@ -112,7 +112,7 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
 ### Algoritmo do Desafio (apresentado na aula)
 
 <details>
-     <summary> 🟨🟨🟨<h3>Algoritmo Versão 1 (TEMPLATE) - Clique para expandir<h3>🟨🟨🟨 </summary>
+     <summary> 🟨🟨🟨<h3>Algoritmo Versão 1 (TEMPLATE)&nbsp<h3>🟨🟨🟨 </summary>
 
 ```
 import textwrap
@@ -548,7 +548,7 @@ main()
 </p>
 
 <details>
-     <summary> 🟥🟥🟥 <h3>Algoritmo Versão 2 (template COM implementação) - Clique para expandir<h3>🟥🟥🟥 </summary>
+     <summary> 🟥🟥🟥 <h3>Algoritmo Versão 2 (template COM implementação)&nbsp<h3>🟥🟥🟥 </summary>
 
 ```
 import textwrap
