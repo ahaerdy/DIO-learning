@@ -122,7 +122,7 @@ while True:
 ```
 </details>
 
-## Vídeo 02 - Resolução deo Desafio
+## Vídeo 02 - Resolução do Desafio
 
 <details>
      <summary> 🟥🟥🟥 <h3>Código SOLUÇÃO do projeto&nbsp<h3> 🟥🟥</summary>
@@ -293,7 +293,7 @@ main()
 ```
 </details>
 
-## Análise Passo a Passo
+## Análise Passo a Passo das Funções Implementadas
 
 ### 🔘 Função menu
 
@@ -457,12 +457,12 @@ main()
         - usuario: gerado através da função __criar_usuário__
 
 
-
-
 # Parte 2 - Entrega do Desafio
 
-## Materiais de apoio
+## Link do repositorio
+
+- [Análise Passo a Passo das Funções Implementadas](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python#)
 
 ## Certificado: Aprendendo a Utilizar Dicionários em Python
 
-Link do certificado: https://hermes.dio.me/certificates/AQA3RRPA.pdf
+Link do certificado: 
