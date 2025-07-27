@@ -298,7 +298,7 @@ main()
 
 ## Análise Passo a Passo
 
-### Função menu
+### 🖱 Função menu
 
 <p align="center">
     <img src="images/image-10.png" alt="" width="480">
