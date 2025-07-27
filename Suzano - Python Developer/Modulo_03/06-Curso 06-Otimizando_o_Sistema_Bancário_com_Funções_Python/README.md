@@ -378,7 +378,10 @@ main()
     <img src="images/image-16.png" alt="" width="480">
 </p>
 
+- Essa assinatura significa:
 
+    - __saldo__ deve ser passado por posição (por causa da barra /)
+    - __extrato__ deve ser passado por nome (por causa do asterisco *)
 
 # Parte 2 - Entrega do Desafio
 
