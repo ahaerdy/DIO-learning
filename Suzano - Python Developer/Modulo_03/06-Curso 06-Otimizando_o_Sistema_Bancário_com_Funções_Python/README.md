@@ -389,6 +389,13 @@ main()
     exibir_extrato(saldo, extrato=extrato)
 ```
 
+### 🔘 Função __criar_usuario__
+
+<p align="center">
+    <img src="images/image-17.png" alt="" width="640">
+</p>
+
+
 
 # Parte 2 - Entrega do Desafio
 
