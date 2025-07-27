@@ -461,8 +461,8 @@ main()
 
 ## Link do repositorio
 
-- [Análise Passo a Passo das Funções Implementadas](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python#)
+- [Análise Passo a Passo das Funções Implementadas](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python#) (entregue✓)
 
 ## Certificado: Aprendendo a Utilizar Dicionários em Python
 
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/EXCY5DYB.pdf
