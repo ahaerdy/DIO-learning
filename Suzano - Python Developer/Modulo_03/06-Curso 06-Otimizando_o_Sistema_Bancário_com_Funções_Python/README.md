@@ -408,14 +408,27 @@ main()
     <img src="images/image-18.png" alt="" width="860">
 </p>
 
+- A primeira coisa que a função __criar_usuário__ faz é pedir o CPF chamando, em seguida, a função __filtrar_usuário__ a fim de evitar a duplicidade
 
 - Detalhes da função __criar_usuario__:
 
-    - Armazena os usuários em uma lista chamada usuarios.
+    - Armazena os __usuários__ em uma lista chamada usuarios.
     - Cada usuário é um dicionário com nome, data_nascimento, cpf, endereco.
     - O CPF é verificado via filtrar_usuario, o que evita duplicidade.
     - O endereço é coletado exatamente no formato solicitado.
     - O CPF é inserido como string numérica, sem formatação.
+
+- 🟥 Observar que __usuarios__ está num formato de LISTA de DICIONÁRIOS.
+
+    - Exemplo:
+
+        ```
+        usuarios = [
+            {"nome": "João", "data_nascimento": "01-01-1990", "cpf": "12345678901", "endereco": "Rua A, 10 - Centro - São Paulo/SP"},
+            {"nome": "Maria", "data_nascimento": "15-06-1985", "cpf": "98765432100", "endereco": "Av B, 123 - Bairro B - Rio de Janeiro/RJ"},
+        ]
+        ```
+
 
 
 
