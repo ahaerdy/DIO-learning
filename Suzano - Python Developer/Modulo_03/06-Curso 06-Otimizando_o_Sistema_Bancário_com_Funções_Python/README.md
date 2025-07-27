@@ -452,7 +452,7 @@ main()
 - Se usuario for válido, então:
     - Exibe a mensagem “Conta criada com sucesso!”
     - Retorna um dicionário com os dados da nova conta, contendo:
-        -agencia (por exemplo "0001")
+        - agencia (por exemplo "0001")
         - numero_conta (gerado ou incrementado)
         - usuario (os dados do usuário, provavelmente um dicionário também)
 
