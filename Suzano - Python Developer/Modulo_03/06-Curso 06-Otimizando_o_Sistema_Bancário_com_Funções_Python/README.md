@@ -319,7 +319,7 @@ main()
     - Ter como argumentos: saldo, valor, extrato;
     - Retornar: saldo e extrato.
 
-- 🔴 O símbolo **/** indica que todos os argumentos antes dele só podem ser passados **por posição**, ou seja, não podem ser nomeados na chamada da função.
+- 🔴 O símbolo **/** indica que todos os argumentos antes dele só podem ser passados **POR POSIÇÃO**, ou seja, não podem ser nomeados na chamada da função.
 
 - Exemplo válido:
 
