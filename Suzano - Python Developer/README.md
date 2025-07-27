@@ -105,6 +105,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Explorando Conjuntos em Python](https://hermes.dio.me/certificates/X8KEVLLA.pdf)
 - [Aprendendo a Utilizar Dicionários em Python](https://hermes.dio.me/certificates/UZPKD2UH.pdf)
 - [Lidando com Data, Hora e Fuso Horário no Python](https://hermes.dio.me/certificates/AQA3RRPA.pdf)
+- [Otimizando o Sistema Bancário com Funções Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/06-Curso%2006-Otimizando_o_Sistema_Banc%C3%A1rio_com_Fun%C3%A7%C3%B5es_Python#parte-1---desafio---otimizando-o-sistema-banc%C3%A1rio-com-fun%C3%A7%C3%B5es-python)
 
 
 ## 🔗 Contribuições Open Source
