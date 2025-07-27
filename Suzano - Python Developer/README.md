@@ -74,7 +74,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Lidando com Data, Hora e Fuso Horário no Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python#parte-1---lidando-com-data-hora-e-fuso-hor%C3%A1rio-no-python)
 - Projeto: [Otimizando o Sistema Bancário com Funções Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/06-Curso%2006-Otimizando_o_Sistema_Banc%C3%A1rio_com_Fun%C3%A7%C3%B5es_Python#parte-1---desafio---otimizando-o-sistema-banc%C3%A1rio-com-fun%C3%A7%C3%B5es-python)
   - Repositório: [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
-  - Descrição: Sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python.
+  - Descrição: sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python.
 
 
 ### Módulo 4: Programação Orientada a Objetos com Python
