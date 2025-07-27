@@ -333,6 +333,11 @@ main()
     depositar(saldo=1000, valor=200, extrato="")  # 📛 Vai gerar erro
 ```
 
+- Foi criada uma codificação para a saída:
+    -Três iguais "===" significam uma mensagem se SUCESSO.
+    -Três arrobas "@@@" significam uma mensagem de FALHA.
+
+
 
 
 # Parte 2 - Entrega do Desafio
