@@ -339,7 +339,7 @@ main()
     <img src="images/image-12.png" alt="" width="640">
 </p>
 
-- De acordo com a proposta de projeto, a função saque deve receber os argumentos **APENAS POR NOME** (keyword only).
+- De acordo com a proposta de projeto, a função __saque__ deve receber os argumentos **APENAS POR NOME** (keyword only).
 
 - O código está de acordo com esse requisito:
 
@@ -347,7 +347,7 @@ main()
     def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
 ```
 
-- O uso do asterisco (*) antes dos parâmetros obriga que todos os argumentos seguintes sejam passados por nome, o que define exatamente a chamada keyword-only.
+- O uso do asterisco (__*__) antes dos parâmetros obriga que todos os argumentos seguintes sejam passados por nome, o que define exatamente a chamada keyword-only.
 
 - Exemplo de chamada correta no código:
 
