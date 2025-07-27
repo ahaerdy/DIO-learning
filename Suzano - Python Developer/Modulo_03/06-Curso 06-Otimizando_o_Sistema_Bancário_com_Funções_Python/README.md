@@ -383,6 +383,13 @@ main()
     - __saldo__ deve ser passado por posição (por causa da barra /)
     - __extrato__ deve ser passado por nome (por causa do asterisco *)
 
+- Exemplo de chamada correta no código:
+
+```
+    exibir_extrato(saldo, extrato=extrato)
+```
+
+
 # Parte 2 - Entrega do Desafio
 
 ## Materiais de apoio
