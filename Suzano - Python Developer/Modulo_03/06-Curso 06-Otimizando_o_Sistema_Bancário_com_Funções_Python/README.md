@@ -15,6 +15,13 @@
     <img src="images/image-1.png" alt="" width="560">
 </p>
 
+<p align="center">
+    <img src="images/image-2.png" alt="" width="560">
+</p>
+
+<p align="center">
+    <img src="images/image-3.png" alt="" width="560">
+</p>
 
 
 ### Arquivo utilizado neste módulo
