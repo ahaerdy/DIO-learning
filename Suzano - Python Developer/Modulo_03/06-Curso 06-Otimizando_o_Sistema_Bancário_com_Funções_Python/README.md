@@ -463,6 +463,6 @@ main()
 
 - [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python) (entregue ✓)
 
-## Certificado: Aprendendo a Utilizar Dicionários em Python
+## Certificado: Otimizando o Sistema Bancário com Funções Python
 
 Link do certificado: https://hermes.dio.me/certificates/EXCY5DYB.pdf
