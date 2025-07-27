@@ -128,8 +128,9 @@ while True:
 ## Vídeo 02 - Resolução deo Desafio
 
 <details>
-     <summary> 🟥🟥🟥 <h3>Código SOLUÇÃO do projeto&nbsp<h3> 🟥🟥🟥</summary>
+     <summary> 🟥🟥🟥 <h3>Código SOLUÇÃO do projeto&nbsp<h3> 🟥🟥</summary>
 
+```
 import textwrap
 
 
@@ -291,6 +292,8 @@ def main():
 
 
 main()
+
+```
 </details>
 
 Análise
