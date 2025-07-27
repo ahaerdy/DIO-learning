@@ -375,7 +375,7 @@ main()
 - Implementação no código:
 
 <p align="center">
-    <img src="images/image-16.png" alt="" width="560">
+    <img src="images/image-16.png" alt="" width="480">
 </p>
 
 
