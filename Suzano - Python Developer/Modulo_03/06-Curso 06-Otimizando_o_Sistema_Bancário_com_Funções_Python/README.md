@@ -400,7 +400,17 @@ main()
     - endereço no formato:
         - logradouro, nro - bairro - cidade/sigla estado
 
--Não pode haver dois usuários com o mesmo CPF.
+- Não pode haver dois usuários com o mesmo CPF.
+
+- Detalhes do código:
+
+    - Armazena os usuários em uma lista chamada usuarios.
+    - Cada usuário é um dicionário com nome, data_nascimento, cpf, endereco.
+    - O CPF é verificado via filtrar_usuario, o que evita duplicidade.
+    - O endereço é coletado exatamente no formato solicitado.
+    - O CPF é inserido como string numérica, sem formatação.
+
+
 
 # Parte 2 - Entrega do Desafio
 
