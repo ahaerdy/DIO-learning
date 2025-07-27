@@ -51,7 +51,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](Modulo_01/05-Curso%205-Desafios_de_Projetos_Crie_Um_Portf%C3%B3lio_Vencedor/)
 - [x] Projeto: [Contribuindo em um Projeto Open Source no Github](Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/)
     - Repositório: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
-    - Descrição: incluindo o meu arquivo markdown na pasta community no repositório dio-lab-open-source.
+    - Descrição: acrescentando o meu arquivo markdown na pasta community no repositório dio-lab-open-source.
 - [x] Mentoria: [Live de Lançamento: Suzano Python Developer](Modulo_01/07-Mentoria-Live_de_Lan%C3%A7amento/) 
 
 ### Módulo 2: Sintaxe Básica com Python
