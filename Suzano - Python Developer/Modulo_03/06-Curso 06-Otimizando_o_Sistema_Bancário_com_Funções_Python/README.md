@@ -301,7 +301,7 @@ main()
 ### 🔘 Função menu
 
 <p align="center">
-    <img src="images/image-10.png" alt="" width="480">
+    <img src="images/image-10.png" alt="" width="560">
 </p>
 
 - A função menu usa `textwrap.dedent` para remover a indentação extra à esquerda. Existe apenas por organização visual do código Python. Isso garante que o menu seja exibido corretamente no terminal, sem espaços desnecessários no início das linhas.
@@ -311,7 +311,7 @@ main()
 ### 🔘 Função depositar
 
 <p align="center">
-    <img src="images/image-11.png" alt="" width="480">
+    <img src="images/image-11.png" alt="" width="560">
 </p>
 
 - A função depositar deve:
@@ -324,13 +324,13 @@ main()
 - Exemplo válido:
 
 ```
-depositar(1000, 200, "") # ✅ Correto
+    depositar(1000, 200, "") # ✅ Correto
 ```
 
 - Exemplo inválido:
 
 ```
-depositar(saldo=1000, valor=200, extrato="")  # 📛 Vai gerar erro
+    depositar(saldo=1000, valor=200, extrato="")  # 📛 Vai gerar erro
 ```
 
 
