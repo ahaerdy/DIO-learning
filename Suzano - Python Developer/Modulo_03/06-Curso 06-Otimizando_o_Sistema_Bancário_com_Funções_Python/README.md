@@ -308,6 +308,31 @@ main()
 
 - A instrução `return input(textwrap.dedent(menu))` mostra o menu ao usuário e retorna o valor digitado como string.
 
+### 🔘 Função depositar
+
+<p align="center">
+    <img src="images/image-11.png" alt="" width="480">
+</p>
+
+- A função depositar deve:
+    - Receber argumentos apenas por posição (positional only);
+    - Ter como argumentos: saldo, valor, extrato;
+    - Retornar: saldo e extrato.
+
+- O símbolo / indica que todos os argumentos antes dele só podem ser passados por posição, ou seja, não podem ser nomeados na chamada da função.
+
+- Exemplo válido:
+
+```
+depositar(1000, 200, "") # ✅ Correto
+```
+
+- Exemplo inválido:
+
+```
+depositar(saldo=1000, valor=200, extrato="")  # 📛 Vai gerar erro
+```
+
 
 
 # Parte 2 - Entrega do Desafio
