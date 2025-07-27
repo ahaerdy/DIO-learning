@@ -11,12 +11,14 @@
     <img src="images/image.png" alt="" width="560">
 </p>
 
+
+
 ### Arquivo utilizado neste módulo
 
 - Arquivo `desafio.py` do módulo de Fundamentos
 
 <details>
-     <summary> 🟩🟩🟩 <h3>Algoritmo base do projeto - Clique para expandir<h3> 🟩🟩🟩 </summary>
+     <summary> 🟩🟩🟩 <h3>Código base do projeto - Clique para expandir<h3> 🟩🟩🟩 </summary>
 
 ```
 menu = """
