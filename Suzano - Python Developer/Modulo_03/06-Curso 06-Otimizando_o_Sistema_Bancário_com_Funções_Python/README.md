@@ -361,6 +361,7 @@ main()
     <img src="images/image-14.png" alt="" width="480">
 </p>
 
+### 🔘 Função __extato__
 
 # Parte 2 - Entrega do Desafio
 
