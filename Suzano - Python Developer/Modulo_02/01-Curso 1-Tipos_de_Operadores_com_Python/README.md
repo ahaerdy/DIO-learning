@@ -12,7 +12,7 @@
 
 #### Adição, subtração e multiplicação
 
-```
+```python
 # Adição
 print(1 + 1)
 >>> 2
@@ -55,7 +55,7 @@ A definição indica a seguinte ordem como a correta:
 - Multiplicações e divisões (da esquerda para a direita)
 - Somas e subtrações (da esquerda para a direita)
 
-```
+```python
 print(10 - 5 * 2)
 >>> 0
 
@@ -84,7 +84,7 @@ https://github.com/guicarvalho/trilha-python-dio
 
 ### Igualdade
 
-```
+```python
 saldo = 450
 saque = 200
 
@@ -94,7 +94,7 @@ print(saldo == saque)
 
 ### Diferença
 
-```
+```python
 saldo = 450
 saque = 200
 print(saldo != saque)
@@ -103,7 +103,7 @@ print(saldo != saque)
 
 ### Maior que / maior ou igual 
 
-```
+```python
 saldo = 450
 saque = 200
 print(saldo > saque)
@@ -115,7 +115,7 @@ print(saldo >= saque)
 
 ### Menor que / menor ou igual 
 
-```
+```python
 saldo = 450
 saque = 200
 print(saldo < saque)
@@ -133,7 +133,7 @@ print(saldo <= saque)
 
 ### Atribuição simples
 
-```
+```python
 saldo = 500
 
 print(saldo)
@@ -142,7 +142,7 @@ print(saldo)
 
 ### Atribuição com adição
 
-```
+```python
 saldo = 500
 saldo += 200
 
@@ -152,7 +152,7 @@ print(saldo)
 
 ### Atribuição com subtração
 
-```
+```python
 saldo = 500
 saldo -= 100
 
@@ -162,7 +162,7 @@ print(saldo)
 
 ### Atribuição com multiplicação
 
-```
+```python
 saldo = 500
 saldo *= 2
 
@@ -172,7 +172,7 @@ print(saldo)
 
 ### Atribuição com divisão
 
-```
+```python
 saldo = 500
 saldo /= 5
 
@@ -188,7 +188,7 @@ print(saldo)
 
 ### Atribuição com módulo
 
-```
+```python
 saldo = 500
 saldo %= 480
 
@@ -198,7 +198,7 @@ print(saldo)
 
 ### Atribuição com exponenciação
 
-```
+```python
 saldo = 80
 saldo **= 2
 
@@ -214,7 +214,7 @@ print(saldo)
 
 ### Exemplo
 
-```
+```python
 saldo = 1000
 saque = 200
 limite = 100
@@ -228,7 +228,7 @@ saque <= limite
 
 ### Operador E
 
-```
+```python
 saldo = 1000
 saque = 200
 limite = 100
@@ -239,7 +239,7 @@ saldo >= saque and saque <= limite
 
 ### Operador OU 
 
-```
+```python
 saldo = 1000
 saque = 200
 limite = 100
@@ -250,7 +250,7 @@ saldo >= saque or saque <= limite
 
 ### Operador Negação
 
-```
+```python
 contatos_emergencia = []
 
 not 1000 > 1500
@@ -268,7 +268,7 @@ not ""
 
 ### Parênteses
 
-```
+```python
 saldo = 1000
 saque = 250
 limite = 200
@@ -289,7 +289,7 @@ saldo >= saque and saque <= limite or conta_especial and saldo >= saque
 
 ### Exemplo
 
-```
+```python
 curso = "Curso de Python"
 nome_curso = curso
 saldo, limite = 200, 200
@@ -306,7 +306,7 @@ saldo is limite
 
 ### ⚠️ Explicando: 
 
-```
+```python
 saldo is limite
 >>> True
 ```
@@ -318,7 +318,7 @@ saldo is limite
 - == → compara valores (conteúdo).
 - is → compara identidade de objeto (mesma referência em memória).
 
-```
+```python
 a = [1, 2]
 b = [1, 2]
 
@@ -334,7 +334,7 @@ a is b      # False (objetos diferentes em memória)
 
 ### Exemplo
 
-```
+```python
 curso = "Curso de Python"
 frutas = ["laranja", "uva", "limão"]
 saques = [1500, 100]

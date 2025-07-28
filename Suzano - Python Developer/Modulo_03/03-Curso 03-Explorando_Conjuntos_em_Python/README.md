@@ -12,7 +12,7 @@
 
 ## Exemplo
 
-```
+```python
 set([1, 2, 3, 1, 3, 4])  # {1, 2, 3, 4}
 
 set("abacaxi")  # {"b", "a", "c", "x", "i"}
@@ -26,7 +26,7 @@ set(("palio", "gol", "celta", "palio"))  # {"gol", "celta", "palio"}
 
 ## Exemplo
 
-```
+```python
 numeros = {1, 2, 3, 2}
 
 numeros = list(numeros)  # Convertendo um conjunto para uma ➡️ lista.
@@ -40,7 +40,7 @@ numeros[0]
 
 ### Exemplo
 
-```
+```python
 carros = {"gol", "celta", "palio"}
 
 for carro in carros:
@@ -53,7 +53,7 @@ for carro in carros:
 
 ### Exemplo
 
-```
+```python
 carros = {"gol", "celta", "palio"}
 
 for indice, carro in enumerate(carros):
@@ -64,7 +64,7 @@ for indice, carro in enumerate(carros):
 
 ### {}.union
 
-```
+```python
 conjunto_a = {1, 2}
 conjunto_b = {3, 4}
 
@@ -77,7 +77,7 @@ conjunto_a.union(conjunto_b) # {1, 2, 3, 4}
 
 ### {}.intersection
 
-```
+```python
 conjunto_a = {1, 2, 3}
 conjunto_b = {2, 3, 4}
 
@@ -90,7 +90,7 @@ conjunto_a.intersection(conjunto_b) # {2, 3}
 
 ### {}.difference
 
-```
+```python
 conjunto_a = {1, 2, 3}
 conjunto_b = {2, 3, 4}
 
@@ -104,7 +104,7 @@ conjunto_b.difference(conjunto_a) # {4}
 
 ### {}.symmetric_difference
 
-```
+```python
 conjunto_a = {1, 2, 3}
 conjunto_b = {2, 3, 4}
 
@@ -117,7 +117,7 @@ conjunto_a.symmetric_difference(conjunto_b) # {1, 4}
 
 ### {}.issubset
 
-```
+```python
 conjunto_a = {1, 2, 3}
 conjunto_b = {4, 1, 2, 5, 6, 3}
 
@@ -131,7 +131,7 @@ conjunto_b.issubset(conjunto_a) # False
 
 ### {}.issuperset
 
-```
+```python
 conjunto_a = {1, 2, 3}
 conjunto_b = {4, 1, 2, 5, 6, 3}
 
@@ -145,7 +145,7 @@ conjunto_b.issuperset(conjunto_a)  # True
 
 ### {}.isdisjoint
 
-```
+```python
 conjunto_a = {1, 2, 3, 4, 5}
 conjunto_b = {6, 7, 8, 9}
 conjunto_c = {1, 0}
@@ -160,7 +160,7 @@ conjunto_a.isdisjoint(conjunto_c)  # False
 
 ### {}.add
 
-```
+```python
 sorteio = {1, 23}
 
 sorteio.add(25) # {1, 23, 25}
@@ -170,7 +170,7 @@ sorteio.add(25) # {1, 23, 25, 42}
 
 ### {}.clear
 
-```
+```python
 sorteio = {1, 23}
 
 sorteio # {1,23}
@@ -180,7 +180,7 @@ sorteio # {}
 
 ### {}.copy
 
-```
+```python
 sorteio = {1, 23}
 
 sorteio # {1, 23}
@@ -190,7 +190,7 @@ sorteio # {1, 23}
 
 ### {}.discard
 
-```
+```python
 numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
 
 numeros # {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
@@ -201,7 +201,7 @@ numeros # {2, 3, 4, 5, 6, 7, 8, 9, 0}
 
 ### {}.pop
 
-```
+```python
 numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
 
 numeros # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
@@ -212,7 +212,7 @@ numeros # {2, 3, 4, 5, 6, 7, 8, 9}
 
 ### {}.remove
 
-```
+```python
 numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
 
 numeros # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
@@ -222,7 +222,7 @@ numeros # {1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 ### len
 
-```
+```python
 numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
 
 len(numeros) # 10
@@ -230,7 +230,7 @@ len(numeros) # 10
 
 ### in
 
-```
+```python
 numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
 
 1 in numeros # True
