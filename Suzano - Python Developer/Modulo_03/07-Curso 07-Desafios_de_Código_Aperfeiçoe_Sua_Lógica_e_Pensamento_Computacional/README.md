@@ -69,6 +69,12 @@
     <img src="images/image-4.png" alt="" width="1024">
 </p>
 
+- Solução
+
+<p align="center">
+    <img src="images/image-10.png" alt="" width="1024">
+</p>
+
 ### TERCEIRO Desafio de Código: JavaScript
 
 - O JavaScript é menos verboso que os anteriores.
