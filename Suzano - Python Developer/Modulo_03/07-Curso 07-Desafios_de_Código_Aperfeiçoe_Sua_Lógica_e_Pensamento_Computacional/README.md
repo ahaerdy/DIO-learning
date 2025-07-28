@@ -1,7 +1,7 @@
 - Instrutor: Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - Contato: https://www.linkedin.com/in/falvojr/
 
-# Parte 1 - Lidando com Data, Hora e Fuso Horário no Python
+# Parte 1 - Desafios de Código - Aperfeiçoe Sua Lógica e Pensamento Computacional
 
 ## 🟩 Vídeo 01 - Introdução
 
