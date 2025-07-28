@@ -101,8 +101,6 @@
 
 #### Solução
 
-![alt text](image.png)
-
 <p align="center">
     <img src="images/image-11.png" alt="" width="1024">
 </p>
