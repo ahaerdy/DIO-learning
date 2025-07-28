@@ -62,4 +62,34 @@ resultado = calcular_saldo(transacoes)
 print(resultado)
 ```
 
+# Desafio 2 - Transações Acima de um Limite
 
+## Descrição
+
+- Você foi solicitado a criar um programa que analise uma lista de transações bancárias e filtre apenas aquelas que ultrapassam um valor limite. Seu programa deve retornar uma nova lista contendo somente as transações cujo valor absoluto (ignorar sinal negativo) seja maior que o limite informado.
+
+## Atenção:
+
+- As transações incluem tanto depósitos (positivos) quanto saques (negativos).
+- Valor absoluto é o critério para filtrar, então tanto 300 (depósito) quanto -150 (saque) serão considerados, já que ambos têm módulo maior que 100.
+
+## Entrada
+
+- Uma lista de valores representando as transações bancárias (ex.: [100, -50, 300, -150]).
+- Um valor limite (inteiro ou decimal) fornecido pelo usuário.
+
+## Saída
+
+- Uma nova lista com as transações que ultrapassam o limite, no formato: "Transações: [X, Y, Z]"
+
+## Exemplos
+
+- A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+<p align="center">
+    <img src="images/image-1.png" alt="" width="480">
+</p>
+
+> Atenção: É extremamente importante que as entradas e saídas sejam exatamente iguais às descritas na descrição do desafio de código.
+
+> Os desafios apresentados aqui têm como objetivo principal exercitar os conceitos aprendidos e proporcionar um primeiro contato com lógica de programação. Caso não tenha experiência em programação, utilize o template disponível e preencha com os conceitos aprendidos. Para resetar o template, basta clicar em “Restart Code”.
