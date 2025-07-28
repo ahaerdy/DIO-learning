@@ -79,6 +79,13 @@
     <img src="images/image-6.png" alt="" width="1024">
 </p>
 
+### QUARTO Desafio de Código: Python
+
+<p align="center">
+    <img src="images/image-7.png" alt="" width="1024">
+</p>
+
+
 
 ## 🟩 Vídeo 04 - Transcrições
 
