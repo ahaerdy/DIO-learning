@@ -49,6 +49,10 @@
     <img src="images/image-2.png" alt="" width="1024">
 </p>
 
+<p align="center">
+    <img src="images/image-3.png" alt="" width="560">
+</p>
+
 
 ## 🟩 Vídeo 04 - Transcrições
 
