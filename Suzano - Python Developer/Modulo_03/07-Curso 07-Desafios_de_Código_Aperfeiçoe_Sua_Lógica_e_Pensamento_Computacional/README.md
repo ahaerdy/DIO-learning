@@ -85,6 +85,11 @@
     <img src="images/image-7.png" alt="" width="1024">
 </p>
 
+- Solução
+
+<p align="center">
+    <img src="images/image-8.png" alt="" width="1024">
+</p>
 
 
 ## 🟩 Vídeo 04 - Transcrições
