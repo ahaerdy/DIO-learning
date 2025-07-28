@@ -71,6 +71,15 @@
     <img src="images/image-5.png" alt="" width="1024">
 </p>
 
+- Podemos aproveitar as formas de representar as condições do Java e do C#.
+- Substituindo `ValorImposto` por `aliquota` e `valorSalario` por `salario`.
+- Também nõa preciso colocar o F do ponto flutuante no valor.
+
+<p align="center">
+    <img src="images/image-6.png" alt="" width="1024">
+</p>
+
+
 ## 🟩 Vídeo 04 - Transcrições
 
 ## Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
