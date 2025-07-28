@@ -115,6 +115,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Aprendendo a Utilizar Dicionários em Python](https://hermes.dio.me/certificates/UZPKD2UH.pdf)
 - [Lidando com Data, Hora e Fuso Horário no Python](https://hermes.dio.me/certificates/AQA3RRPA.pdf)
 - [Otimizando o Sistema Bancário com Funções Python](https://hermes.dio.me/certificates/EXCY5DYB.pdf)
+- [Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional](https://hermes.dio.me/certificates/PGDMAIJT.pdf)
 
 ## 🔗 Contribuições Open Source
 
