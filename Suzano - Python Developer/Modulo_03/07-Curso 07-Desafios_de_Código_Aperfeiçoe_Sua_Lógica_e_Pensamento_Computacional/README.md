@@ -55,7 +55,7 @@
     <img src="images/image-3.png" alt="" width="560">
 </p>
 
-- Solução
+#### Solução
 
 <p align="center">
     <img src="images/image-9.png" alt="" width="1024">
@@ -69,7 +69,7 @@
     <img src="images/image-4.png" alt="" width="1024">
 </p>
 
-- Solução
+#### Solução
 
 <p align="center">
     <img src="images/image-10.png" alt="" width="1024">
@@ -87,7 +87,7 @@
 - Substituindo `ValorImposto` por `aliquota` e `valorSalario` por `salario`.
 - Também não preciso colocar o F do ponto flutuante no valor.
 
-- Solução
+#### Solução
 
 <p align="center">
     <img src="images/image-6.png" alt="" width="1024">
@@ -99,7 +99,7 @@
     <img src="images/image-7.png" alt="" width="1024">
 </p>
 
-- Solução
+#### Solução
 
 <p align="center">
     <img src="images/image-8.png" alt="" width="1024">
