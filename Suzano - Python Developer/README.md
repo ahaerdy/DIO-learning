@@ -76,6 +76,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
   - Repositório: [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
   - Descrição: sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python.
 - [x] Curso: [Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/07-Curso%2007-Desafios_de_C%C3%B3digo_Aperfei%C3%A7oe_Sua_L%C3%B3gica_e_Pensamento_Computacional#parte-1---desafios-de-c%C3%B3digo---aperfei%C3%A7oe-sua-l%C3%B3gica-e-pensamento-computacional)
+- [x] Desafio: [Gestão e Controle de Transações Bancárias](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/08-Curso%2008-Desafio_Gest%C3%A3o_e_Control_de_Transa%C3%A7%C3%B5es_Bancarias#desafio-1---registro-de-transa%C3%A7%C3%B5es-banc%C3%A1rias)
 
 ### Módulo 4: Programação Orientada a Objetos com Python
 
