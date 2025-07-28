@@ -43,7 +43,7 @@
     <img src="images/image-1.png" alt="" width="640">
 </p>
 
-### 1o Desafio de Código: JAVA
+### PRIMEIRO Desafio de Código: JAVA
 
 <p align="center">
     <img src="images/image-2.png" alt="" width="1024">
@@ -55,7 +55,9 @@
     <img src="images/image-3.png" alt="" width="560">
 </p>
 
-### 2o Desafio de Código: C#
+### SEGUNDO Desafio de Código: C#
+
+- Exatamente igual ao primeiro, mas em C#.
 
 <p align="center">
     <img src="images/image-4.png" alt="" width="1024">
