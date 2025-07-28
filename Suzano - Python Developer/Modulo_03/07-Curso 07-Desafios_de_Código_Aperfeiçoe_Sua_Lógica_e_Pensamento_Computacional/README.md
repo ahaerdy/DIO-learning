@@ -123,6 +123,7 @@
 # Parte 2 - Transcrições
 
 - Foram disponibilizados os seguintes arquivos em formato PDF:
+
     - Apresentacao.pdf
     - PBL_Lógica_e_Pensamento_Computacional.pdf.pdf
     - A_Linguagem_eh_So_Um_Detalhe-Como_Resolver_Desafios_de_Codigo.pdf
