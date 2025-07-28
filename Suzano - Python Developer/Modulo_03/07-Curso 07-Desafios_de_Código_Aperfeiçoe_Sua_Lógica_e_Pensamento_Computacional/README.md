@@ -35,9 +35,15 @@
     - Aqui, aprendemos juntos, interagindo, colaborando e compartilhando conhecimento.
     - Seja protagonista na comunidade tech mais vibrante do mundo!
 
-## 🟩 Vídeo 03 -
+## 🟩 Vídeo 03 - A Linguagem é Só Um Detalhe... Como Resolver Desafios de Código
 
-## 🟩 Vídeo 04 - 
+- O professor apresenta na tela 5 desafios de código, cada um numa linguagem de programação diferente.
+
+<p align="center">
+    <img src="images/image.png" alt="" width="560">
+</p>
+
+## 🟩 Vídeo 04 - Transcrições
 
 ## Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
 
