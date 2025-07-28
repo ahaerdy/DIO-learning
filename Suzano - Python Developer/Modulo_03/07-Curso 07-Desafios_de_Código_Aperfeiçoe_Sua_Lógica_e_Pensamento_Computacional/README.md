@@ -1,3 +1,6 @@
+- Instrutor: Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
+- Contato: https://www.linkedin.com/in/falvojr/
+
 ## 🟩 Vídeo 01 - Introdução
 
 ## 🟩 Vídeo 02 - PBL, Lógica e Pensamento Computacional
