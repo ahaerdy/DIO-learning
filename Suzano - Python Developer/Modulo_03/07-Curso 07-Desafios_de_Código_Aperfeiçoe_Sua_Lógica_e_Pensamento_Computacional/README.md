@@ -12,7 +12,14 @@
 
 - Explicação acerca da metodologia educacional.
 - PBL (Problem Based Learning) - uso de problemas reais para potencializar os esutdos.
-- Lógica de programação e o pensamento computacional - transformar problemas em soluções claras e ordenadas através de passos lógicos e algoritmos (ex: uma receita de bolo poderia ser tratada como um algoritmo pra fazer bolos).
+- Lógica de programação e o pensamento computacional - transformar problemas em soluções claras e ordenadas através de passos lógicos e algoritmos (ex: uma receita de bolo poderia ser tratada como um algoritmo pra fazer bolos). Sào ambas habilidades transversais.
+
+> **Lógica de programação** é como aprender um novo idioma, um que permite  
+> **transformar problemas em soluções claras e ordenadas através de passos lógicos e algoritmos**.
+>
+> Já o **pensamento computacional** é como ter um mapa que te ajuda a  
+> **encontrar caminhos para resolver desafios, projetar sistemas e compreender comportamentos**.
+
 
 
 ## 🟩 Vídeo 03 -
