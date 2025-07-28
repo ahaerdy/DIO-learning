@@ -10,6 +10,8 @@
 
 ## 🟩 Vídeo 02 - PBL, Lógica e Pensamento Computacional
 
+### PBL (Problem Based Learning)
+
 - Explicação acerca da metodologia educacional.
 - PBL (Problem Based Learning) - uso de problemas reais para potencializar os esutdos.
 
@@ -19,8 +21,9 @@
 
 - Já o pensamento computacional é como ter um mapa que te ajuda a encontrar caminhos para resolver desafios, projetar sistemas e compreender comportamentos.
 
-- Por Que Aprender Assim?
-    - Aprendizagem Ativa
+### Por Que Aprender Assim?
+    
+- Aprendizagem Ativa
     - Porque a melhor forma de aprender é fazendo.
     - É mais do que teoria; é se preparar para o mundo real, para as demandas e desafios do futuro.
 
