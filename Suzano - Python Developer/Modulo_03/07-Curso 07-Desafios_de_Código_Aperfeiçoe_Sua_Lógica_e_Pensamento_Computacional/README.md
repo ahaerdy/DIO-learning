@@ -43,7 +43,7 @@
     <img src="images/image-1.png" alt="" width="640">
 </p>
 
-### PRIMEIRO Desafio de Código: JAVA
+### PRIMEIRO Desafio de Código: Java
 
 <p align="center">
     <img src="images/image-2.png" alt="" width="1024">
@@ -63,7 +63,13 @@
     <img src="images/image-4.png" alt="" width="1024">
 </p>
 
+### TERCEIRO Desafio de Código: JavaScript
 
+- O JavaScript é menos verboso que os anteriores.
+
+<p align="center">
+    <img src="images/image-5.png" alt="" width="1024">
+</p>
 
 ## 🟩 Vídeo 04 - Transcrições
 
