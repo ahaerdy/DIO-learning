@@ -6,6 +6,6 @@
 
 ## 🟩 Vídeo 04 - 
 
-# Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
+## Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
 
 Link do certificado: 
