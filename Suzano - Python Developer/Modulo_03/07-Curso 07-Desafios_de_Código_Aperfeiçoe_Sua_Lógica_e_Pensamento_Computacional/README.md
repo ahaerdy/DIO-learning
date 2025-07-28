@@ -58,7 +58,7 @@
 ### 2o Desafio de Código: C#
 
 <p align="center">
-    <img src="images/image-3.png" alt="" width="560">
+    <img src="images/image-4.png" alt="" width="1024">
 </p>
 
 
