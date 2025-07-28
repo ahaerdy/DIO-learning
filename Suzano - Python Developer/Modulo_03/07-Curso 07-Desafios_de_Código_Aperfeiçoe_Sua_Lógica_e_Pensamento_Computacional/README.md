@@ -19,6 +19,19 @@
 
 - Já o pensamento computacional é como ter um mapa que te ajuda a encontrar caminhos para resolver desafios, projetar sistemas e compreender comportamentos.
 
+### Por Que Aprender Assim?
+#### 1. Aprendizagem Ativa
+- Porque a melhor forma de aprender é fazendo.
+É mais do que teoria; é se preparar para o mundo real, para as demandas e desafios do futuro.
+
+#### 2. Transformação Digital
+- A programação se tornou mais do que uma habilidade, é a linguagem do futuro!
+Dominar essa competência pode promover oportunidades incríveis!
+
+#### 3. Comunidade Protagonista
+-Aqui, aprendemos juntos, interagindo, colaborando e compartilhando conhecimento.
+Seja protagonista na comunidade tech mais vibrante do mundo!
+
 
 ## 🟩 Vídeo 03 -
 
