@@ -3,7 +3,17 @@
 
 ## 🟩 Vídeo 01 - Introdução
 
+- O instrutor explica o propósito dos desafios de código no aprendizado.
+- Cada problema é uma oportunidade de superar limites.
+- Compreender a engrenagem de uma lógica de programação e como aplicá-la nos desafios.
+- Tour por diversas linguagens e de como usá-las como ferramentas de uma lógica estruturada.
+
 ## 🟩 Vídeo 02 - PBL, Lógica e Pensamento Computacional
+
+- Explicação acerca da metodologia educacional.
+- PBL (Problem Based Learning) - uso de problemas reais para potencializar os esutdos.
+- Lógica de programação e o pensamento computacional - transformar problemas em soluções claras e ordenadas através de passos lógicos e algoritmos (ex: uma receita de bolo poderia ser tratada como um algoritmo pra fazer bolos).
+
 
 ## 🟩 Vídeo 03 -
 
