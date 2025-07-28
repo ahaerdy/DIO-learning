@@ -19,7 +19,7 @@
 
 ### Exemplo
 
-```
+```python
 frutas = ["laranja", "maca", "uva"]
 print(frutas)
 
@@ -38,7 +38,7 @@ print(carro)
 
 ### 💻 Resultado:
 
-```
+```python
 ['laranja', 'maca', 'uva']
 []
 ['p', 'y', 't', 'h', 'o', 'n']
@@ -53,7 +53,7 @@ print(carro)
 
 ### Exemplo
 
-```
+```python
 frutas = ["maçã", "laranja", "uva", "pera"]
 frutas[0] # maçã
 frutas[2] # uva
@@ -65,7 +65,7 @@ frutas[2] # uva
 
 ### Exemplo
 
-```
+```python
 frutas = ["maçã", "laranja", "uva", "pera"]
 frutas[-1] # pera
 frutas[-3] # laranja
@@ -77,7 +77,7 @@ frutas[-3] # laranja
 
 ### Exemplo (Matriz 3x3)
 
-```
+```python
 matriz = [
     [1, "a", 2],
     ["b", 3, 4],
@@ -96,7 +96,7 @@ matriz[-1][-1] # "c"
 
 ### Exemplo
 
-```
+```python
 lista = ["p", "y", "t", "h", "o", "n"]
 lista[2:] # ["t", "h", "o", "n"]
 lista[:2] # ["p", "y"]
@@ -159,7 +159,7 @@ lista[::-1] # ["n", "o", "h", "t", "y", "p"]
 
 ### Exemplo
 
-```
+```python
 carros = ["gol", "celta", "palio"]
 
 for carro in carros:
@@ -172,7 +172,7 @@ for carro in carros:
 
 ### Exemplo
 
-```
+```python
 carros = ["gol", "celta", "palio"]
 
 for indice, carro in enumerate(carros):
@@ -182,7 +182,7 @@ for indice, carro in enumerate(carros):
 ### 💻 Resultado:
 
 
-```
+```python
 0: gol
 1: celta
 2: palio
@@ -211,7 +211,7 @@ for indice, carro in enumerate(carros):
 
 #### ➡️ A função enumerate(carros) gera um iterador que retorna tuplas do tipo:
 
-```
+```python
 (0, "gol")
 (1, "celta")
 (2, "palio")
@@ -243,7 +243,7 @@ for indice, carro in enumerate(carros):
 
 ### Filtro Versão 1
 
-```
+```python
 numeros = [1, 30, 21, 2, 9, 65, 34]
 pares = []
 
@@ -254,7 +254,7 @@ for numero in numeros:
 
 ### Filtro versão 2
 
-```
+```python
 numeros = [1, 30, 21, 2, 9, 65, 34]
 
 pares = [numero for numero in numeros if numero % 2 == 0]
@@ -262,7 +262,7 @@ pares = [numero for numero in numeros if numero % 2 == 0]
 
 ### Modificando valores versão 1
 
-```
+```python
 numeros = [1, 30, 21, 2, 9, 65, 34]
 quadrado = []
 
@@ -272,7 +272,7 @@ for numero in numeros:
 
 ### Modificando valores versão 2
 
-```
+```python
 numeros = [1, 30, 21, 2, 9, 65, 34]
 quadrado = [numero ** 2 for numero in numeros]
 ```
@@ -281,7 +281,7 @@ quadrado = [numero ** 2 for numero in numeros]
 
 ### [].append
 
-```
+```python
 lista = []
 
 lista.append(1)
@@ -293,7 +293,7 @@ print(lista)  # [1, "Python", [40, 30, 20]]
 
 ### [].clear
 
-```
+```python
 lista = [1, "Python", [40, 30, 20]]
 
 print(lista) # [1, "Python", [40, 30, 20]]
@@ -305,7 +305,7 @@ print(lista) # []
 
 ### [].copy
 
-```
+```python
 lista = [1, "Python", [40, 30, 20]]
 
 lista.copy()
@@ -315,7 +315,7 @@ print(lista) # [1, "Python", [40, 30, 20]]
 
 ### [].count
 
-```
+```python
 cores = ["vermelho", "azul", "verde", "azul"]
 
 cores.count("vermelho") # 1
@@ -325,7 +325,7 @@ cores.count("verde") # 1
 
 ### [].extend
 
-```
+```python
 linguagens = ["python", "js", "c"]
 
 print(linguagens)  # ["python", "js", "c"]
@@ -337,7 +337,7 @@ print(linguagens)  # ["python", "js", "c", "java", "csharp"]
 
 ### [].index
 
-```
+```python
 linguagens = ["python", "js", "c", "java", "csharp"]
 
 linguagens.index("java") # 3
@@ -346,7 +346,7 @@ linguagens.index("python") # 0
 
 ### [].pop
 
-```
+```python
 linguagens = ["python", "js", "c", "java", "csharp"]
 
 linguagens.pop() # csharp
@@ -357,7 +357,7 @@ linguagens.pop(0) # python
 
 ### [].remove
 
-```
+```python
 linguagens = ["python", "js", "c", "java", "csharp"]
 
 linguagens.remove("c")
@@ -367,7 +367,7 @@ print(linguagens) # ["python", "js", "java", "csharp"]
 
 ### [].reverse
 
-```
+```python
 linguagens = ["python", "js", "c", "java", "csharp"]
 
 linguagens.reverse()

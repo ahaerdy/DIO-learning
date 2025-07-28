@@ -14,7 +14,7 @@
 
 ### Exemplo
 
-```
+```python
 frutas = ("laranja", "pera", "uva",) 
 
 letras = tuple("python") 
@@ -30,7 +30,7 @@ pais = ("Brasil",)
 
 ### Exemplo
 
-```
+```python
 frutas = ("maçã", "laranja", "uva", "pera",) 
 
 frutas[0] # maçã 
@@ -44,7 +44,7 @@ frutas[2] # uva
 
 ### Exemplo
 
-```
+```python
 frutas = ("maçã", "laranja", "uva", "pera",) 
 
 frutas[-1] # pera 
@@ -58,7 +58,7 @@ frutas[-3] # laranja
 
 ### Exemplo
 
-```
+```python
 matriz = ( 
     (1, "a", 2), ("b", 3, 4), 
     (6, 5, "c"), 
@@ -76,7 +76,7 @@ matriz[0][-1]    # 2
 
 ### Exemplo
 
-```
+```python
 tupla = ("p", "y", "t", "h", "o", "n",) 
 
 tupla[2:]       # ("t", "h", "o", "n") 
@@ -93,7 +93,7 @@ tupla[::-1]     # ("n", "o", "h", "t", "y", "p")
 
 ### Exemplo
 
-```
+```python
 carros = ("gol", "celta", "palio",) 
 
 for carro in carros: 
@@ -106,7 +106,7 @@ for carro in carros:
 
 ### Enumerate
 
-```
+```python
 carros = ("gol", "celta", "palio",) 
 
 for indice, carro in enumerate(carros): 
@@ -117,7 +117,7 @@ for indice, carro in enumerate(carros):
 
 ### ().count
 
-```
+```python
 cores = ("vermelho", "azul", "verde", "azul",) 
 
 cores.count("vermelho")     # 1 
@@ -126,7 +126,7 @@ cores.count("azul")         # 2 cores.count("verde") # 1
 
 ### ().index
 
-```
+```python
 linguagens = ("python", "js", "c", "java", "csharp",)
 
 linguagens.index("java") # 3 
@@ -137,7 +137,7 @@ linguagens.index("python") # 0
 
 ### len
 
-```
+```python
 linguagens = ("python", "js", "c", "java", "csharp",) 
 
 len(linguagens) # 5

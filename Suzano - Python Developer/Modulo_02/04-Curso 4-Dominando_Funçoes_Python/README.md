@@ -262,7 +262,7 @@ exibir_resultado(10, 10, somar)  # O resultado da operação 10 + 10 = 20
 
 ### Exemplo
 
-```
+```python
 salario = 2000
 
 def salario_bonus(bonus):

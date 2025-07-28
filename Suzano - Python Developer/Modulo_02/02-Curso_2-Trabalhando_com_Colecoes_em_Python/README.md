@@ -17,7 +17,7 @@
 
 #### Bloco em Java
 
-```
+```java
 void sacar(double valor) {  // início do bloco do método
 
     if (this.saldo >= valor) { // início do bloco do if
@@ -31,7 +31,7 @@ void sacar(double valor) {  // início do bloco do método
 
 #### Bloco em Java sem formatar
 
-```
+```java
 void sacar(double valor) {  // início do bloco do método
 if (this.saldo >= valor) {  // início do bloco do if
 this.saldo -= valor;
@@ -45,7 +45,7 @@ this.saldo -= valor;
 
 #### Bloco em Python
 
-```
+```python
 def sacar(self, valor: float) -> None:  # início do bloco do método
 
     if self.saldo >= valor:  # início do bloco do if
@@ -59,7 +59,7 @@ def sacar(self, valor: float) -> None:  # início do bloco do método
 
 #### ⚠️ Isso não funciona em Python!
 
-```
+```python
 def sacar(self, valor: float) -> None:  # início do bloco do método
 if self.saldo >= valor:  # início do bloco do if    
 self.saldo -= valor
@@ -69,7 +69,7 @@ self.saldo -= valor
 
 ### Qual versão é mais fácil de ler?
 
-```
+```python
 void sacar(double valor) {
 if (this.saldo >= valor) {
 this.saldo -= valor;}}
@@ -82,7 +82,7 @@ def sacar(self, valor: float) -> None:
 
 ### 🧪 Exemplo utilizado na aula
 
-```
+```python
 def sacar(valor):  # início do bloco do método
 
     saldo=500
@@ -100,7 +100,7 @@ sacar(100)
 
 ### 📤 Saída:
 
-```
+```python
 Valor sacado, retire seu dinheiro na boca do caixa.
 Obrigado por ser nosso cliente, tenha um bom dia!
 ```
@@ -117,7 +117,7 @@ Obrigado por ser nosso cliente, tenha um bom dia!
 
 ### Exemplo
 
-```
+```python
 saldo = 2000.0
 saque = float(input("Informe o valor do saque: "))
 
@@ -134,7 +134,7 @@ if saldo <= saque:
 
 ### Exemplo
 
-```
+```python
 saldo = 2000.0
 saque = float(input("Informe o valor do saque: "))
 
@@ -151,7 +151,7 @@ else:
 
 ### Exemplo
 
-```
+```python
 opcao = int(input("Informe uma opção: [1] Sacar \n[2] Extrato: "))
 
 if opcao == 1:
@@ -169,7 +169,7 @@ else:
 
 ### Exemplo
 
-```
+```python
 if conta_normal:
 	if saldo >= saque:
 		print("Saque realizado com sucesso!")
@@ -184,7 +184,7 @@ elif conta_universitaria:
 
 ### OUTRO Exemplo (utilizado em aula)
 
-```
+```python
 conta_normal = False
 conta_universitaria = False
 conta_especial = True
@@ -223,7 +223,7 @@ else:
 
 ### Exemplo
 
-```
+```python
 status = "Sucesso" if saldo >= saque else "Falha"
 
 print(f"{status} ao realizar o saque!")
@@ -237,7 +237,7 @@ print(f"{status} ao realizar o saque!")
 
 ### Exemplo sem repetição
 
-```
+```python
 # Receba um número do teclado e exiba os 2 números seguintes
 
 a = int(input("Informe um número inteiro: "))
@@ -252,7 +252,7 @@ print(a)
 
 ### Exemplo com repetição
 
-```
+```python
 # Receba um número do teclado e exiba os 2 números seguintes
 
 a = int(input("Informe um número inteiro: "))
@@ -269,7 +269,7 @@ repita 2 vezes:
 
 ### for
 
-```
+```python
 texto = input("Informe um texto: ")
 VOGAIS = "AEIOU"
 
@@ -282,7 +282,7 @@ print()  # adiciona uma quebra de linha
 
 ### for/else
 
-```
+```python
 texto = input("Informe um texto: ")
 VOGAIS = "AEIOU"
 
@@ -301,7 +301,7 @@ else:
 
 ### range
 
-```
+```python
 # range(stop) -> range object
 # range(start, stop[, step]) -> range object
 
@@ -311,7 +311,7 @@ list(range(4))
 
 ### Utilizando range com for
 
-```
+```python
 for numero in range(0, 11):
     print(numero, end=" ")
 
@@ -331,7 +331,7 @@ for numero in range(0, 51, 5):
 
 ### while
 
-```
+```python
 opcao = -1
 
 while opcao != 0:
@@ -345,7 +345,7 @@ while opcao != 0:
 
 ### while/else
 
-```
+```python
 opcao = -1
 
 while opcao != 0:

@@ -36,7 +36,7 @@
 
 ### Exercício feito em aula
 
-```
+```python
 from datetime import datetime, timedelta
 
 tipo_carro = "P"  # P, M, G
@@ -59,7 +59,7 @@ else:
 
 ### Saída:
 
-```
+```python
 O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15:05.077475
 ```
 
@@ -114,7 +114,7 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
 <details>
      <summary> 🟨🟨🟨<h3>Algoritmo Versão 1 (TEMPLATE)&nbsp<h3>🟨🟨🟨 </summary>
 
-```
+```python
 import textwrap
 from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
@@ -550,7 +550,7 @@ main()
 <details>
      <summary> 🟥🟥🟥 <h3>Algoritmo Versão 2 (template COM implementação)&nbsp<h3>🟥🟥🟥 </summary>
 
-```
+```python
 import textwrap
 from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime

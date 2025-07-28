@@ -12,7 +12,7 @@
 
 ### Exemplo
 
-```
+```python
 pessoa = {"nome": "Guilherme", "idade": 28}
 
 pessoa = dict(nome="Guilherme", idade=28)
@@ -26,7 +26,7 @@ pessoa["telefone"] = "3333-1234"  # {"nome": "Guilherme", "idade": 28, "telefone
 
 ### Exemplo
 
-```
+```python
 dados = {"nome": "Guilherme", "idade": 28, "telefone": "3333-1234"}
 
 dados["nome"]  # "Guilherme"
@@ -42,7 +42,7 @@ dados  # {"nome": "Maria", "idade": 18, "telefone": "9988-1781"}
 
 ### Dicionários aninhados
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
     "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
@@ -55,7 +55,7 @@ contatos["giovanna@gmail.com"]["telefone"]  # "3443-2121"
 
 ### Iterar dicionários
 
-```
+```python
 for chave in contatos:
     print(chave, contatos[chave])
 
@@ -72,7 +72,7 @@ for chave, valor in contatos.items():
 
 ### {}.clear
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
     "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
@@ -86,7 +86,7 @@ contatos  # {}
 
 ### {}.copy
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
 }
@@ -100,7 +100,7 @@ copia["guilherme@gmail.com"]  # {"nome": "Gui"}
 
 ### {}.fromkeys
 
-```
+```python
 dict.fromkeys(["nome", "telefone"])  # {"nome": None, "telefone": None}
 
 dict.fromkeys(["nome", "telefone"], "vazio")  # {"nome": "vazio", "telefone": "vazio"}
@@ -108,7 +108,7 @@ dict.fromkeys(["nome", "telefone"], "vazio")  # {"nome": "vazio", "telefone": "v
 
 ### {}.get
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
 }
@@ -122,7 +122,7 @@ contatos.get("guilherme@gmail.com", {})  # {"guilherme@gmail.com": {"nome": "Gui
 
 ### {}.items
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
 }
@@ -132,7 +132,7 @@ contatos.items()  # dict_items([('guilherme@gmail.com', {'nome': 'Guilherme', 't
 
 ### {}.keys
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
 }
@@ -142,7 +142,7 @@ contatos.keys()  # dict_keys(['guilherme@gmail.com'])
 
 ### {}.pop
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
 }
@@ -153,7 +153,7 @@ contatos.pop("guilherme@gmail.com", {})  # {}
 
 ### {}.popitem
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
 }
@@ -164,7 +164,7 @@ contatos.popitem()  # KeyError
 
 ### {}.setdefault
 
-```
+```python
 contato = {'nome': 'Guilherme', 'telefone': '3333-2221'}
 
 contato.setdefault("nome", "Giovanna")  # "Guilherme"
@@ -176,7 +176,7 @@ contato  # {'nome': 'Guilherme', 'telefone': '3333-2221', 'idade': 28}
 
 ### {}.update
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
 }
@@ -190,7 +190,7 @@ contatos  # {'guilherme@gmail.com': {'nome': 'Gui'}, 'giovanna@gmail.com': {'nom
 
 ### {}.values
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
     "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
@@ -214,7 +214,7 @@ contatos.values()  # dict_values([{'nome': 'Guilherme', 'telefone': '3333-2221'}
 
 - Ela retorna um valor booleano: True ou False.
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
     "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
@@ -235,7 +235,7 @@ contatos = {
 - Ela faz parte da sintaxe da linguagem, assim como if, for, while, return etc.
     - 💡 Ou seja: você não pode usá-la como del(), porque ela não é uma função — é uma palavra-chave reservada.
 
-```
+```python
 contatos = {
     "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
     "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
