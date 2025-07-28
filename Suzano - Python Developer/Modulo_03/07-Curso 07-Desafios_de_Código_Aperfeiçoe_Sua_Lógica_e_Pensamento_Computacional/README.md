@@ -46,7 +46,7 @@
 ### 1o Desafio - JAVA
 
 <p align="center">
-    <img src="images/image-2.png" alt="" width="640">
+    <img src="images/image-2.png" alt="" width="1024">
 </p>
 
 
