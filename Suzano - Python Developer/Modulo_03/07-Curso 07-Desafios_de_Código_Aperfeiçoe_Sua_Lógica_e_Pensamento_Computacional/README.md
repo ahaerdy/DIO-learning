@@ -55,6 +55,12 @@
     <img src="images/image-3.png" alt="" width="560">
 </p>
 
+- Solução
+
+<p align="center">
+    <img src="images/image-9.png" alt="" width="560">
+</p>
+
 ### SEGUNDO Desafio de Código: C#
 
 - Exatamente igual ao primeiro, mas em C#.
