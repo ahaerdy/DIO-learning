@@ -106,6 +106,18 @@
 </p>
 
 
+### QUINTO Desafio de Código: Kotlin
+
+<p align="center">
+    <img src="images/image-12.png" alt="" width="1024">
+</p>
+
+### Solução
+
+<p align="center">
+    <img src="images/image-13.png" alt="" width="1024">
+</p>
+
 ## 🟩 Vídeo 04 - Transcrições
 
 ## Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
