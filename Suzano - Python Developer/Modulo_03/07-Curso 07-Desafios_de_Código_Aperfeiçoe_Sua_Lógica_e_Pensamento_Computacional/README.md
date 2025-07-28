@@ -49,9 +49,18 @@
     <img src="images/image-2.png" alt="" width="1024">
 </p>
 
+- Detalhamento do desafio e explicação de como funciona a plataforma 
+
 <p align="center">
     <img src="images/image-3.png" alt="" width="560">
 </p>
+
+### 2o Desafio de Código: C#
+
+<p align="center">
+    <img src="images/image-3.png" alt="" width="560">
+</p>
+
 
 
 ## 🟩 Vídeo 04 - Transcrições
