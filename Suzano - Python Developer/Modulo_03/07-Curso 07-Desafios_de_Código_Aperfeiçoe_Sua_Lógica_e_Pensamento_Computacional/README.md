@@ -1,7 +1,11 @@
 ## 🟩 Vídeo 01 - Introdução
 
+## 🟩 Vídeo 02 - PBL, Lógica e Pensamento Computacional
 
+## 🟩 Vídeo 03 -
 
-# Certificado: Trabalhando com Listas em Python
+## 🟩 Vídeo 04 - 
 
-Link do certificado: https://hermes.dio.me/certificates/J3ZME80Z.pdf
+# Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
+
+Link do certificado: 
