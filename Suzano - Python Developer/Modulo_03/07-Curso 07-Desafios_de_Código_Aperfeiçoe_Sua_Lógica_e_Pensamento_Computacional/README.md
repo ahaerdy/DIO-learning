@@ -1,6 +1,8 @@
 - Instrutor: Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - Contato: https://www.linkedin.com/in/falvojr/
 
+# Parte 1 - Lidando com Data, Hora e Fuso Horário no Python
+
 ## 🟩 Vídeo 01 - Introdução
 
 - O instrutor explica o propósito dos desafios de código no aprendizado.
@@ -118,8 +120,13 @@
     <img src="images/image-14.png" alt="" width="1024">
 </p>
 
-## 🟩 Vídeo 04 - Transcrições
+# Parte 2 - Transcrições
+
+- Foram disponibilizados os seguintes arquivos em formato PDF:
+    - Apresentacao.pdf
+    - PBL_Lógica_e_Pensamento_Computacional.pdf.pdf
+    - A_Linguagem_eh_So_Um_Detalhe-Como_Resolver_Desafios_de_Codigo.pdf
 
 ## Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
 
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/PGDMAIJT.pdf
