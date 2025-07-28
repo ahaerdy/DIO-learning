@@ -85,7 +85,9 @@
 
 - Podemos aproveitar as formas de representar as condições do Java e do C#.
 - Substituindo `ValorImposto` por `aliquota` e `valorSalario` por `salario`.
-- Também nõa preciso colocar o F do ponto flutuante no valor.
+- Também não preciso colocar o F do ponto flutuante no valor.
+
+- Solução
 
 <p align="center">
     <img src="images/image-6.png" alt="" width="1024">
