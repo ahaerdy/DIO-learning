@@ -40,7 +40,7 @@
 - O professor apresenta na tela 5 desafios de código, cada um numa linguagem de programação diferente.
 
 <p align="center">
-    <img src="images/image.png" alt="" width="560">
+    <img src="images/image.png" alt="" width="640">
 </p>
 
 ## 🟩 Vídeo 04 - Transcrições
