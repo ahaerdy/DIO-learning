@@ -115,7 +115,7 @@
 ### Solução
 
 <p align="center">
-    <img src="images/image-13.png" alt="" width="1024">
+    <img src="images/image-14.png" alt="" width="1024">
 </p>
 
 ## 🟩 Vídeo 04 - Transcrições
