@@ -43,6 +43,13 @@
     <img src="images/image-1.png" alt="" width="640">
 </p>
 
+### 1o Desafio - JAVA
+
+<p align="center">
+    <img src="images/image-2.png" alt="" width="640">
+</p>
+
+
 ## 🟩 Vídeo 04 - Transcrições
 
 ## Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
