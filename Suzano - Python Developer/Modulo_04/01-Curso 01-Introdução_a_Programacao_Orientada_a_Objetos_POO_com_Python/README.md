@@ -142,6 +142,41 @@ c = Cachorro()
 del c
 ```
 
+### Exemplo utilizado na aula
+
+```python
+class Cachorro:
+    def __init__(self, nome, cor, acordado=True):
+        print("Inicializando a classe...")
+        self.nome = nome
+        self.cor = cor
+        self.acordado = acordado
+
+    def __del__(self):
+        print("Removendo a instância da classe.")
+
+    def falar(self):
+        print("auau")
+
+
+def criar_cachorro():
+    c = Cachorro("Zeus", "Branco e preto", False)
+    print(c.nome)
+
+
+c = Cachorro("Chappie", "amarelo")
+c.falar()
+
+print("Ola mundo")
+
+del c
+
+print("Ola mundo")
+print("Ola mundo")
+print("Ola mundo")
+
+# criar_cachorro()
+```
 
 # Parte 2 - Materiais de apoio e Questionário
 
@@ -149,8 +184,8 @@ del c
 
 Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
-- 
+- Programacao_Orientada_a_Objetos_Com_Python.pptx
 
-# Certificado: Trabalhando com Listas em Python
+# Certificado: Introdução à Programação Orientada a Objetos (POO) com Python
 
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/PMP6QAQI.pdf
