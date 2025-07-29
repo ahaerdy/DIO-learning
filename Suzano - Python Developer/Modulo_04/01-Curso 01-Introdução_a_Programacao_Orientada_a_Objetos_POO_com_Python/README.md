@@ -107,8 +107,6 @@ print(b2)
 b2.correr()
 ```
 
-
-
 ## 🟩 Vídeo 04 - Construtores e Destrutores
 
 ### Objetivo Geral
@@ -118,7 +116,6 @@ b2.correr()
 ### Método construtor
 
 - O método construtor sempre é executado quando uma nova instância da classe é criada. Nesse método inicializamos o estado do nosso objeto. Para declarar o método construtor da classe, criamos um método com o nome `__init__`.
-
 
 ### `__init__`
 
@@ -144,7 +141,6 @@ class Cachorro:
 c = Cachorro()
 del c
 ```
-
 
 
 # Parte 2 - Materiais de apoio e Questionário
