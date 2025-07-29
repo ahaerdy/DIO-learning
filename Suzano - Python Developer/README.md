@@ -80,7 +80,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 4: Programação Orientada a Objetos com Python
 
-- (... _em construção_)
+- [x] Curso:[Introdução à Programação Orientada a Objetos (POO) com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/01-Curso%2001-Introdu%C3%A7%C3%A3o_a_Programacao_Orientada_a_Objetos_POO_com_Python#parte-1----introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-orientada-a-objetos-poo-com-python)
 
 ### Módulo 5: Produtividade com Microsoft Copilot Studio
 
