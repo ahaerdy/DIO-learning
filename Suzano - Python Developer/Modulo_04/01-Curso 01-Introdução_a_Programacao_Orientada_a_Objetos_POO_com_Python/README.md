@@ -15,6 +15,12 @@
     - Solução 1: Usar um copo para beber água.
     - Solução 2: Usar uma garrafa para beber água.
 
+### Alguns paradigmas
+
+- Imperativo ou procedural
+- Funcional
+- Orientado a eventos
+
 ## 🟩 Vídeo 02 -  
 
 # Parte 2 - Materiais de apoio e Questionário
