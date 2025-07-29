@@ -5,7 +5,15 @@
 
 ## 🟩 Vídeo 01 - O que é Orientação a Objetos (OO)?
 
+### Paradigmas de programação
 
+- Um paradigma de programação é um estilo e programação. Não é uma linguagem (Python, Java, C, etc), e sim a forma como você soluciona os problemas através do código.
+
+### Exemplo
+
+Problema: Beber água
+Solução 1: Usar um copo para beber água.
+Solução 2: Usar uma garrafa para beber água.
 
 ## 🟩 Vídeo 02 -  
 
