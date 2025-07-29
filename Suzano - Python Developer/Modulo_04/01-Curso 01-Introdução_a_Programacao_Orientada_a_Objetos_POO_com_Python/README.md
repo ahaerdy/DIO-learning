@@ -11,7 +11,7 @@
 
 ### Exemplo
 
--Problema: Beber água
+- Problema: Beber água
     - Solução 1: Usar um copo para beber água.
     - Solução 2: Usar uma garrafa para beber água.
 
