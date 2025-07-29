@@ -118,6 +118,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional](https://hermes.dio.me/certificates/PGDMAIJT.pdf)
 - Certificado do Módulo: [Trabalhando com Coleções em Python](https://hermes.dio.me/certificates/SQGRHENJ.pdf) ✅
 
+### Módulo 3
+- [Introdução à Programação Orientada a Objetos (POO) com Python](https://hermes.dio.me/certificates/PMP6QAQI.pdf)
+
 ## 🔗 Contribuições Open Source
 
 - Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
