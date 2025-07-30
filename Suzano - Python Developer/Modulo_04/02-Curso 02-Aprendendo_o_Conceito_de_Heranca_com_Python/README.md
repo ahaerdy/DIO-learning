@@ -60,8 +60,6 @@ class C(A, B):
 
 ## 🟩 Vídeo 03 - Hands-on: Herança Simples
 
-### Herança Simples
-
 #### Diagrama 
 
 <p align="center">
@@ -158,8 +156,6 @@ print(caminhao)
 
 
 ## 🟩 Vídeo 04 - Hands-on: Herança Múltipla
-
-## Herança múltipla
 
 #### Diagrama 
 
