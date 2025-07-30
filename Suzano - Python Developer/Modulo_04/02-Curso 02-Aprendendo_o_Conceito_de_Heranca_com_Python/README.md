@@ -112,7 +112,7 @@ print(caminhao)
 
 #### 1. Definição da classe base Veiculo
 
--Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos do objeto.
+- Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos do objeto.
     - Método ligar_motor(): simplesmente imprime "Ligando o motor".
     - Método especial __str__():
         - Retorna uma string representando o objeto.
