@@ -265,10 +265,8 @@ print(ornitorrinco)
 
 ## Materiais de apoio
 
-Disponibilizados os seguinte arquivos em formato MS Powerpoint:
-
-- Programacao_Orientada_a_Objetos_Com_Python.pptx
+- O material de apoio desta aula não foi disponibilizado.
 
 ## Certificado: Introdução à Programação Orientada a Objetos (POO) com Python
 
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/IYESG1OU.pdf
