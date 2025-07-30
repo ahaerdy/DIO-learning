@@ -258,7 +258,7 @@ print(ornitorrinco)
 
 ## 📌 O que é MRO?
 
-- A ordem de resolução de métodos (__mro__) é a sequência que o Python segue para procurar métodos e atributos em uma hierarquia de herança — especialmente em casos de herança múltipla, como no seu exemplo.
+- A ordem de resolução de métodos (__MRO__) é a sequência que o Python segue para procurar métodos e atributos em uma hierarquia de herança — especialmente em casos de herança múltipla, como no exemplo.
 - É uma tupla de classes, da mais específica até a mais genérica, indicando a ordem exata em que Python vai procurar métodos (como __init__, __str__, etc).
 
 # Parte 2 - Materiais de apoio e Questionário
