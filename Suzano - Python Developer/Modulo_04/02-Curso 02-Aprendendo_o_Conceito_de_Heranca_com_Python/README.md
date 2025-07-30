@@ -230,7 +230,7 @@ print(ornitorrinco)
     ```
 - Logo, super() em Ornitorrinco chama Mamifero.__init__ com todos os argumentos cor_pelo, cor_bico, nro_patas
 - Mamifero.__init__ consome cor_pelo e chama super().__init__(cor_bico=cor_bico, nro_patas=nro_patas)
-- Agora super() em Mamifero chama Ave.__init__, que consome cor_bico e chama super().__init__(nro_patas=nro_patas)
+- Agora super() em Ornitorrinco chama Ave.__init__, que consome cor_bico e chama super().__init__(nro_patas=nro_patas)
 - super() em Ave é Animal.__init__, que consome nro_patas
 - Finalmente, Animal.__init__ define self.nro_patas
 - Isso mostra o uso da herança múltipla com super() e **kwargs, para que cada construtor consuma seus parâmetros e passe os restantes para a próxima classe.
