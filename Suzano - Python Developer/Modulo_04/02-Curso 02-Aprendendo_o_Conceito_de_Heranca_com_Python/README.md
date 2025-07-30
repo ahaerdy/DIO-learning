@@ -1,7 +1,7 @@
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
 - Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
-# Parte 1 -  Introdução à Programação Orientada a Objetos (POO) com Python
+# Parte 1 -  Aprendendo o Conceito de Herança com Python
 
 ## 🟩 Vídeo 01 - Herança em POO  
 
@@ -267,6 +267,5 @@ print(ornitorrinco)
 
 - O material de apoio desta aula não foi disponibilizado.
 
-## Certificado: Introdução à Programação Orientada a Objetos (POO) com Python
-
+## Certificado: Aprendendo o Conceito de Herança com Python
 Link do certificado: https://hermes.dio.me/certificates/IYESG1OU.pdf
