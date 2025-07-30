@@ -68,6 +68,8 @@ class C(A, B):
     <img src="images/image.png" alt="" width="560">
 </p>
 
+### Código (exemplo)
+
 ```python
 class Veiculo:
     def __init__(self, cor, placa, numero_rodas):
@@ -107,6 +109,47 @@ print(moto)
 print(carro)
 print(caminhao)
 ```
+
+### Análise
+
+1. Definição da classe base Veiculo
+Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos do objeto.
+
+Método ligar_motor(): simplesmente imprime "Ligando o motor".
+
+Método especial __str__():
+
+Retorna uma string representando o objeto.
+
+Usa self.__class__.__name__ para pegar o nome da classe (ex: Carro, Motocicleta).
+
+Usa um list comprehension para montar uma lista de chave=valor para todos os atributos do objeto (self.__dict__.items()).
+
+Junta tudo com vírgulas e retorna no formato:
+Classe: atributo1=valor1, atributo2=valor2, ...
+
+2. Classes filhas Motocicleta e Carro
+Herdam diretamente de Veiculo.
+
+Não acrescentam ou alteram nada (pass), então usam tudo da classe base.
+
+3. Classe filha Caminhao
+Sobrescreve o construtor para adicionar um atributo extra carregado.
+
+Usa super().__init__(...) para chamar o construtor da classe base e inicializar os atributos herdados.
+
+Define método esta_carregado() que imprime se o caminhão está carregado ou não, baseado no atributo carregado.
+
+4. Criação e impressão dos objetos
+Três objetos são criados:
+
+moto: Motocicleta preta, placa "abc-1234", 2 rodas.
+
+carro: Carro branco, placa "xde-0098", 4 rodas.
+
+caminhao: Caminhão roxo, placa "gfd-8712", 8 rodas, carregado (True).
+
+print(moto), print(carro), print(caminhao) chamam implicitamente o método __str__() definido em Veiculo.
 
 
 ## 🟩 Vídeo 04 - Hands-on: Herança Múltipla
