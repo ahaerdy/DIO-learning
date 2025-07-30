@@ -25,16 +25,41 @@ class B(A):
     pass
 ```
 
-
-
-
-![alt text](image.png) 
-
-![alt text](image-1.png)
-
-![alt text](image-2.png)
-
 ## 🟩 Vídeo 02 - Conceituando Herança Simples e Herança Múltipla
+
+### Herança simples
+
+- Quando uma classe filha herda apenas uma classe pai, ela é chamada de herança simples.
+
+### Exemplo
+
+```python
+class A:
+    pass
+
+class B(A):
+    pass
+```
+
+### Herança múltipla
+
+- Quando uma classe filha herda de várias classes pai, ela é chamada de herança múltipla.
+
+## Exemplo
+
+```python
+class A:
+    pass
+
+class B:
+    pass
+
+class C(A, B):
+    pass
+```
+
+
+
 
 ## 🟩 Vídeo 03 - Hands-on: Herança Simples
 
