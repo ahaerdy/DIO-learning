@@ -112,44 +112,50 @@ print(caminhao)
 
 ### Análise
 
-1. Definição da classe base Veiculo
+#### 1. Definição da classe base Veiculo
 Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos do objeto.
 
-Método ligar_motor(): simplesmente imprime "Ligando o motor".
+- Método ligar_motor(): simplesmente imprime "Ligando o motor".
+- Método especial __str__():
+    - Retorna uma string representando o objeto.
+    - Usa self.__class__.__name__ para pegar o nome da classe (ex: Carro, Motocicleta).
+    - Usa um list comprehension para montar uma lista de chave=valor para todos os atributos do objeto (self.__dict__.items()).
+    - Junta tudo com vírgulas e retorna no formato:
+        - Classe: atributo1=valor1, atributo2=valor2, ...
 
-Método especial __str__():
+#### 2. Classes filhas Motocicleta e Carro
 
-Retorna uma string representando o objeto.
+    - Herdam diretamente de Veiculo.
+    - Não acrescentam ou alteram nada (pass), então usam tudo da classe base.
 
-Usa self.__class__.__name__ para pegar o nome da classe (ex: Carro, Motocicleta).
+#### 3. Classe filha Caminhao
 
-Usa um list comprehension para montar uma lista de chave=valor para todos os atributos do objeto (self.__dict__.items()).
+    - Sobrescreve o construtor para adicionar um atributo extra carregado.
+    - Usa super().__init__(...) para chamar o construtor da classe base e inicializar os atributos herdados.
+    - Define método esta_carregado() que imprime se o caminhão está carregado ou não, baseado no atributo carregado.
 
-Junta tudo com vírgulas e retorna no formato:
-Classe: atributo1=valor1, atributo2=valor2, ...
+#### . Criação e impressão dos objetos
 
-2. Classes filhas Motocicleta e Carro
-Herdam diretamente de Veiculo.
+    - Três objetos são criados:
+        
+        - moto: Motocicleta preta, placa "abc-1234", 2 rodas.
+        - carro: Carro branco, placa "xde-0098", 4 rodas.
+        - caminhao: Caminhão roxo, placa "gfd-8712", 8 rodas, carregado (True).
+        - print(moto), print(carro), print(caminhao) chamam implicitamente o método __str__() definido em Veiculo.
 
-Não acrescentam ou alteram nada (pass), então usam tudo da classe base.
+#### 5. Exemplo da saída esperada
 
-3. Classe filha Caminhao
-Sobrescreve o construtor para adicionar um atributo extra carregado.
+    ```
+    Motocicleta: cor=preta, placa=abc-1234, numero_rodas=2
+    Carro: cor=branco, placa=xde-0098, numero_rodas=4
+    Caminhao: cor=roxo, placa=gfd-8712, numero_rodas=8, carregado=True
+    ```
+#### 6. Observações finais
 
-Usa super().__init__(...) para chamar o construtor da classe base e inicializar os atributos herdados.
-
-Define método esta_carregado() que imprime se o caminhão está carregado ou não, baseado no atributo carregado.
-
-4. Criação e impressão dos objetos
-Três objetos são criados:
-
-moto: Motocicleta preta, placa "abc-1234", 2 rodas.
-
-carro: Carro branco, placa "xde-0098", 4 rodas.
-
-caminhao: Caminhão roxo, placa "gfd-8712", 8 rodas, carregado (True).
-
-print(moto), print(carro), print(caminhao) chamam implicitamente o método __str__() definido em Veiculo.
+    - O método __str__() facilita a visualização do estado do objeto.
+    - A herança reutiliza código da classe base.
+    - O uso de super().__init__() no Caminhao é a forma de estender o construtor.
+    - O método esta_carregado() é um exemplo de funcionalidade específica da subclasse.
 
 
 ## 🟩 Vídeo 04 - Hands-on: Herança Múltipla
