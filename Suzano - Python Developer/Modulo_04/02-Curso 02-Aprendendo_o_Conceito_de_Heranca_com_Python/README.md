@@ -206,45 +206,45 @@ print(ornitorrinco)
 
 #### 1. Estrutura das classes e herança
 
-    - Animal é a superclasse base, que tem o atributo nro_patas e um método __str__ que imprime o nome da classe e todos os atributos do objeto.
-    - Mamifero e Ave herdam de Animal e adicionam atributos próprios (cor_pelo e cor_bico, respectivamente).
-    - Gato herda de Mamifero (uma herança simples).
-    - Ornitorrinco herda de dois lugares: Mamifero e Ave (herança múltipla), e define o seu próprio __init__.
+- Animal é a superclasse base, que tem o atributo nro_patas e um método __str__ que imprime o nome da classe e todos os atributos do objeto.
+- Mamifero e Ave herdam de Animal e adicionam atributos próprios (cor_pelo e cor_bico, respectivamente).
+- Gato herda de Mamifero (uma herança simples).
+- Ornitorrinco herda de dois lugares: Mamifero e Ave (herança múltipla), e define o seu próprio __init__.
 
 #### 2. Como o construtor __init__ é chamado
 
-    - Repare que Mamifero e Ave usam um padrão com **kw para aceitar argumentos extras e passar para super().__init__(**kw). Isso é fundamental para herança múltipla funcionar bem com super().
-    - Quando criamos o gato = Gato(nro_patas=4, cor_pelo="Preto"), o fluxo é:
-        - Gato.__init__ não existe, então vai para Mamifero.__init__(cor_pelo="Preto", nro_patas=4)
-        - Mamifero.__init__ define self.cor_pelo = cor_pelo, e chama super().__init__(nro_patas=4)
-        - super() em Mamifero aponta para Animal.__init__ (pois Mamifero herda direto de Animal)
-        - Animal.__init__(nro_patas=4) define o atributo self.nro_patas = 4
-    -Para o ornitorrinco (Ornitorrinco(nro_patas=2, cor_pelo="vermelho", cor_bico="laranja")), a chamada é:
-        - Ornitorrinco.__init__ chama super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)
-        - Como Ornitorrinco herda de Mamifero e Ave, a resolução de método (MRO) será:
-        ```
-            Ornitorrinco
-            Mamifero
-            Ave
-            Animal
-        ```
-    - Logo, super() em Ornitorrinco chama Mamifero.__init__ com todos os argumentos cor_pelo, cor_bico, nro_patas
-    - Mamifero.__init__ consome cor_pelo e chama super().__init__(cor_bico=cor_bico, nro_patas=nro_patas)
-    - Agora super() em Mamifero é Ave.__init__, que consome cor_bico e chama super().__init__(nro_patas=nro_patas)
-    - super() em Ave é Animal.__init__, que consome nro_patas
-    - Finalmente, Animal.__init__ define self.nro_patas
-    - Isso mostra o uso da herança múltipla com super() e **kwargs, para que cada construtor consuma seus parâmetros e passe os restantes para a próxima classe.
+- Repare que Mamifero e Ave usam um padrão com **kw para aceitar argumentos extras e passar para super().__init__(**kw). Isso é fundamental para herança múltipla funcionar bem com super().
+- Quando criamos o gato = Gato(nro_patas=4, cor_pelo="Preto"), o fluxo é:
+    - Gato.__init__ não existe, então vai para Mamifero.__init__(cor_pelo="Preto", nro_patas=4)
+    - Mamifero.__init__ define self.cor_pelo = cor_pelo, e chama super().__init__(nro_patas=4)
+    - super() em Mamifero aponta para Animal.__init__ (pois Mamifero herda direto de Animal)
+    - Animal.__init__(nro_patas=4) define o atributo self.nro_patas = 4
+-Para o ornitorrinco (Ornitorrinco(nro_patas=2, cor_pelo="vermelho", cor_bico="laranja")), a chamada é:
+    - Ornitorrinco.__init__ chama super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)
+    - Como Ornitorrinco herda de Mamifero e Ave, a resolução de método (MRO) será:
+    ```
+        Ornitorrinco
+        Mamifero
+        Ave
+        Animal
+    ```
+- Logo, super() em Ornitorrinco chama Mamifero.__init__ com todos os argumentos cor_pelo, cor_bico, nro_patas
+- Mamifero.__init__ consome cor_pelo e chama super().__init__(cor_bico=cor_bico, nro_patas=nro_patas)
+- Agora super() em Mamifero é Ave.__init__, que consome cor_bico e chama super().__init__(nro_patas=nro_patas)
+- super() em Ave é Animal.__init__, que consome nro_patas
+- Finalmente, Animal.__init__ define self.nro_patas
+- Isso mostra o uso da herança múltipla com super() e **kwargs, para que cada construtor consuma seus parâmetros e passe os restantes para a próxima classe.
 
 3. O que o print() mostra?
 
-    - O método __str__ de Animal mostra o nome da classe (self.__class__.__name__) e os atributos do objeto, por exemplo:
-    ```
-        print(gato)
-        # Saída: Gato: cor_pelo=Preto, nro_patas=4
+- O método __str__ de Animal mostra o nome da classe (self.__class__.__name__) e os atributos do objeto, por exemplo:
+```
+    print(gato)
+    # Saída: Gato: cor_pelo=Preto, nro_patas=4
 
-        print(ornitorrinco)
-        # Saída: Ornitorrinco: cor_pelo=vermelho, cor_bico=laranja, nro_patas=2
-    ```
+    print(ornitorrinco)
+    # Saída: Ornitorrinco: cor_pelo=vermelho, cor_bico=laranja, nro_patas=2
+```
 
 # Parte 2 - Materiais de apoio e Questionário
 
