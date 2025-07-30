@@ -64,7 +64,9 @@ class C(A, B):
 
 #### Diagrama 
 
-![alt text](image.png)
+<p align="center">
+    <img src="images/image.png" alt="" width="480">
+</p>
 
 ```python
 class Veiculo:
