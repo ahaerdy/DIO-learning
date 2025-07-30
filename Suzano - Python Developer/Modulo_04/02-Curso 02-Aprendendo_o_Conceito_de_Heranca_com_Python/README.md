@@ -62,6 +62,10 @@ class C(A, B):
 
 ### Herança Simples
 
+#### Diagrama 
+
+![alt text](image.png)
+
 ```python
 class Veiculo:
     def __init__(self, cor, placa, numero_rodas):
