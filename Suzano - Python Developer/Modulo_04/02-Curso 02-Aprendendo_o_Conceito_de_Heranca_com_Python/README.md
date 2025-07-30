@@ -9,7 +9,7 @@
 
 ![alt text](image-1.png)
 
-
+![alt text](image-2.png)
 
 ## 🟩 Vídeo 02 - Conceituando Herança Simples e Herança Múltipla
 
