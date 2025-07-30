@@ -125,37 +125,36 @@ Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos 
 
 #### 2. Classes filhas Motocicleta e Carro
 
-    - Herdam diretamente de Veiculo.
-    - Não acrescentam ou alteram nada (pass), então usam tudo da classe base.
+- Herdam diretamente de Veiculo.
+- Não acrescentam ou alteram nada (pass), então usam tudo da classe base.
 
 #### 3. Classe filha Caminhao
 
-    - Sobrescreve o construtor para adicionar um atributo extra carregado.
-    - Usa super().__init__(...) para chamar o construtor da classe base e inicializar os atributos herdados.
-    - Define método esta_carregado() que imprime se o caminhão está carregado ou não, baseado no atributo carregado.
+- Sobrescreve o construtor para adicionar um atributo extra carregado.
+- Usa super().__init__(...) para chamar o construtor da classe base e inicializar os atributos herdados.
+- Define método esta_carregado() que imprime se o caminhão está carregado ou não, baseado no atributo carregado.
 
 #### . Criação e impressão dos objetos
 
-    - Três objetos são criados:
-        
-        - moto: Motocicleta preta, placa "abc-1234", 2 rodas.
-        - carro: Carro branco, placa "xde-0098", 4 rodas.
-        - caminhao: Caminhão roxo, placa "gfd-8712", 8 rodas, carregado (True).
-        - print(moto), print(carro), print(caminhao) chamam implicitamente o método __str__() definido em Veiculo.
+- Três objetos são criados:
+    
+    - moto: Motocicleta preta, placa "abc-1234", 2 rodas.
+    - carro: Carro branco, placa "xde-0098", 4 rodas.
+    - caminhao: Caminhão roxo, placa "gfd-8712", 8 rodas, carregado (True).
+    - print(moto), print(carro), print(caminhao) chamam implicitamente o método __str__() definido em Veiculo.
 
 #### 5. Exemplo da saída esperada
 
-    
     Motocicleta: cor=preta, placa=abc-1234, numero_rodas=2
     Carro: cor=branco, placa=xde-0098, numero_rodas=4
     Caminhao: cor=roxo, placa=gfd-8712, numero_rodas=8, carregado=True
     
 #### 6. Observações finais
 
-    - O método __str__() facilita a visualização do estado do objeto.
-    - A herança reutiliza código da classe base.
-    - O uso de super().__init__() no Caminhao é a forma de estender o construtor.
-    - O método esta_carregado() é um exemplo de funcionalidade específica da subclasse.
+- O método __str__() facilita a visualização do estado do objeto.
+- A herança reutiliza código da classe base.
+- O uso de super().__init__() no Caminhao é a forma de estender o construtor.
+- O método esta_carregado() é um exemplo de funcionalidade específica da subclasse.
 
 
 ## 🟩 Vídeo 04 - Hands-on: Herança Múltipla
