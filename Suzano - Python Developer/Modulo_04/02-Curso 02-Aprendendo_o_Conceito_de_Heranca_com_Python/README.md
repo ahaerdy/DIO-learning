@@ -113,15 +113,15 @@ print(caminhao)
 ### Análise
 
 #### 1. Definição da classe base Veiculo
-Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos do objeto.
 
-- Método ligar_motor(): simplesmente imprime "Ligando o motor".
-- Método especial __str__():
-    - Retorna uma string representando o objeto.
-    - Usa self.__class__.__name__ para pegar o nome da classe (ex: Carro, Motocicleta).
-    - Usa um list comprehension para montar uma lista de chave=valor para todos os atributos do objeto (self.__dict__.items()).
-    - Junta tudo com vírgulas e retorna no formato:
-        - Classe: atributo1=valor1, atributo2=valor2, ...
+-Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos do objeto.
+    - Método ligar_motor(): simplesmente imprime "Ligando o motor".
+    - Método especial __str__():
+        - Retorna uma string representando o objeto.
+        - Usa self.__class__.__name__ para pegar o nome da classe (ex: Carro, Motocicleta).
+        - Usa um list comprehension para montar uma lista de chave=valor para todos os atributos do objeto (self.__dict__.items()).
+        - Junta tudo com vírgulas e retorna no formato:
+            - Classe: atributo1=valor1, atributo2=valor2, ...
 
 #### 2. Classes filhas Motocicleta e Carro
 
@@ -158,6 +158,58 @@ Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos 
 
 
 ## 🟩 Vídeo 04 - Hands-on: Herança Múltipla
+
+## Herança múltipla
+
+#### Diagrama 
+
+<p align="center">
+    <img src="images/image-2.png" alt="" width="560">
+</p>
+
+### Código (exemplo)
+
+```python
+class Animal:
+    def __init__(self, nro_patas):
+        self.nro_patas = nro_patas
+
+    def __str__(self):
+        return f"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}"
+
+
+class Mamifero(Animal):
+    def __init__(self, cor_pelo, **kw):
+        self.cor_pelo = cor_pelo
+        super().__init__(**kw)
+
+
+class Ave(Animal):
+    def __init__(self, cor_bico, **kw):
+        self.cor_bico = cor_bico
+        super().__init__(**kw)
+
+
+class Gato(Mamifero):
+    pass
+
+
+class Ornitorrinco(Mamifero, Ave):
+    def __init__(self, cor_bico, cor_pelo, nro_patas):
+        super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)
+
+
+gato = Gato(nro_patas=4, cor_pelo="Preto")
+print(gato)
+
+ornitorrinco = Ornitorrinco(nro_patas=2, cor_pelo="vermelho", cor_bico="laranja")
+print(ornitorrinco)
+```
+
+### Análise
+
+
+
 
 # Parte 2 - Materiais de apoio e Questionário
 
