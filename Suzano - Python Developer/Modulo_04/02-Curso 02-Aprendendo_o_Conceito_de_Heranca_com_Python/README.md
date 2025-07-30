@@ -221,7 +221,7 @@ print(ornitorrinco)
     - Animal.__init__(nro_patas=4) define o atributo self.nro_patas = 4
 -Para o ornitorrinco (Ornitorrinco(nro_patas=2, cor_pelo="vermelho", cor_bico="laranja")), a chamada é:
     - Ornitorrinco.__init__ chama super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)
-    - Como Ornitorrinco herda de Mamifero e Ave, a resolução de método (MRO) será:
+    - Como Ornitorrinco herda de Mamifero e Ave, a ordem de resolução de método (MRO) será:
     ```
         Ornitorrinco
         Mamifero
