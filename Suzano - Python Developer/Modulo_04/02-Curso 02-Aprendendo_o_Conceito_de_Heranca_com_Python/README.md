@@ -145,11 +145,11 @@ Construtor (__init__): recebe cor, placa e numero_rodas e atribui aos atributos 
 
 #### 5. Exemplo da saída esperada
 
-    ```
+    
     Motocicleta: cor=preta, placa=abc-1234, numero_rodas=2
     Carro: cor=branco, placa=xde-0098, numero_rodas=4
     Caminhao: cor=roxo, placa=gfd-8712, numero_rodas=8, carregado=True
-    ```
+    
 #### 6. Observações finais
 
     - O método __str__() facilita a visualização do estado do objeto.
