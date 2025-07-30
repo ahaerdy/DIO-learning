@@ -193,6 +193,7 @@ class Gato(Mamifero):
 class Ornitorrinco(Mamifero, Ave):
     def __init__(self, cor_bico, cor_pelo, nro_patas):
         super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)
+        # print(Ornitorrinco.__mro__)
 
 
 gato = Gato(nro_patas=4, cor_pelo="Preto")
@@ -222,12 +223,16 @@ print(ornitorrinco)
 -Para o ornitorrinco (Ornitorrinco(nro_patas=2, cor_pelo="vermelho", cor_bico="laranja")), a chamada é:
     - Ornitorrinco.__init__ chama super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)
     - Como Ornitorrinco herda de Mamifero e Ave, a ordem de resolução de método (MRO) será:
-    ```
-        Ornitorrinco
-        Mamifero
-        Ave
-        Animal
-    ```
+        ```
+            Ornitorrinco
+            Mamifero
+            Ave
+            Animal
+        ```
+    - Saída de `print(Ornitorrinco.__mro__)`:
+        ```python
+            (<class '__main__.Ornitorrinco'>, <class '__main__.Mamifero'>, <class '__main__.Ave'>, <class '__main__.Animal'>, <class 'object'>)
+        ```
 - Logo, super() em Ornitorrinco chama Mamifero.__init__ com todos os argumentos cor_pelo, cor_bico, nro_patas
 - Mamifero.__init__ consome cor_pelo e chama super().__init__(cor_bico=cor_bico, nro_patas=nro_patas)
 - Agora super() em Mamifero é Ave.__init__, que consome cor_bico e chama super().__init__(nro_patas=nro_patas)
