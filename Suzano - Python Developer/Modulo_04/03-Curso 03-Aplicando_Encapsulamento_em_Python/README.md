@@ -146,7 +146,7 @@ print(foo.x)        # => -1
 - Cria um objeto da classe Foo.
 - Chama o método `__init__` com x = 10.
 - Atribui: `self._x` = 10
-- Resultado: foo._x == 10
+- Resultado: `foo._x` == 10
 
 #### 2️⃣ print(foo.x)
 - Chama o getter @property x:
@@ -176,7 +176,7 @@ print(foo.x)        # => -1
 - `self._x` = 10 → `_x` = 10
 - `value` = 10 → `_value` = 10
 - Calcula: `self._x` = 10 + 10 = 20
-- Resultado: foo._x == 20
+- Resultado: `foo._x` == 20
 
 
 
