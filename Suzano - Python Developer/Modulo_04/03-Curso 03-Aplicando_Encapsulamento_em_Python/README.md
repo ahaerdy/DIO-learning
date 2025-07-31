@@ -156,6 +156,27 @@ print(foo.x)        # => -1
     return self._x or 0
   ```
 
+- self._x é 10, que é "truthy" → retorna 10.
+- Resultado impresso
+
+  ```
+  10
+  ```
+
+#### 3️⃣ foo.x = 10
+- Chama o setter @x.setter:
+
+  ```python
+  def x(self, value):
+    _x = self._x or 0
+    _value = value or 0
+    self._x = _x - _value
+  ```
+
+- self._x = 10 → _x = 10
+- value = 10 → _value = 10
+- Calcula: self._x = 10 + 10 = 20
+- Resultado: foo._x == 20
 
 
 
