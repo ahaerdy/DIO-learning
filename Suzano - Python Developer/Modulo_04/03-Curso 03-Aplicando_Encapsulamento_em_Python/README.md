@@ -124,10 +124,10 @@ print(foo.x)
 return self._x or 0
 ```
 
-- Agora `self._x == 0`, e 0 é "Falso" → retorna 0.
+- Agora `self._x == 20`, que é "Verdadeiro" → retorna 20.
 - Resultado impresso:
   ```
-  0
+  20
   ```
 
 #### 5️⃣ del foo.x
