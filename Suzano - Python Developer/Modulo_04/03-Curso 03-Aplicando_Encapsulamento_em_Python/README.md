@@ -178,8 +178,42 @@ print(foo.x)        # => -1
 - Calcula: `self._x` = 10 + 10 = 20
 - Resultado: `foo._x` == 20
 
+#### 4️⃣ print(foo.x)
+- Chama novamente o getter:
 
+```python
+return self._x or 0
+```
 
+- Agora `self._x == 0`, e 0 é "Falso" → retorna 0.
+- Resultado impresso:
+  ```
+  0
+  ```
+
+#### 5️⃣ del foo.x
+- Chama o deleter `@x.deleter`:
+
+```python
+def x(self):
+    self._x = -1
+```
+
+- Atribui `self._x` = -1
+- Resultado: `foo._x` == -1
+
+#### 6️⃣ print(foo.x)
+- Chama o getter mais uma vez:
+
+```python
+return self._x or 0
+```
+
+- `self._x` == -1 → que é "Verdadeiro", então retorna -1
+- Resultado impresso:
+  ```
+  -1
+  ```
 
 # Parte 2 - Materiais de apoio e Questionário
 
