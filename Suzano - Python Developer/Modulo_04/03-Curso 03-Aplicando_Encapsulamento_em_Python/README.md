@@ -221,5 +221,5 @@ return self._x or 0
 
 - O material de apoio desta aula não foi disponibilizado.
 
-## Certificado: Aprendendo o Conceito de Herança com Python
-Link do certificado: https://hermes.dio.me/certificates/IYESG1OU.pdf
+## Certificado: Aplicando Encapsulamento em Python
+Link do certificado: 
