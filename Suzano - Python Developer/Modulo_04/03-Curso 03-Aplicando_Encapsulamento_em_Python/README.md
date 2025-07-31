@@ -170,7 +170,7 @@ print(foo.x)        # => -1
   def x(self, value):
     _x = self._x or 0
     _value = value or 0
-    self._x = _x - _value
+    self._x = _x + _value
   ```
 
 - self._x = 10 → _x = 10
