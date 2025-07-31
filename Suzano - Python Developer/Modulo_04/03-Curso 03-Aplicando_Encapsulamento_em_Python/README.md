@@ -144,8 +144,8 @@ print(foo.x)        # => -1
 
 #### 1️⃣ foo = Foo(10)
 - Cria um objeto da classe Foo.
-- Chama o método __init__ com x = 10.
-- Atribui: self._x = 10
+- Chama o método `__init__` com x = 10.
+- Atribui: `self._x` = 10
 - Resultado: foo._x == 10
 
 #### 2️⃣ print(foo.x)
@@ -156,7 +156,7 @@ print(foo.x)        # => -1
     return self._x or 0
   ```
 
-- self._x é 10, que é "Verdadeiro" → retorna 10.
+- `self._x` é 10, que é "Verdadeiro" → retorna 10.
 - Resultado impresso
 
   ```
@@ -173,9 +173,9 @@ print(foo.x)        # => -1
     self._x = _x + _value
   ```
 
-- self._x = 10 → _x = 10
-- value = 10 → _value = 10
-- Calcula: self._x = 10 + 10 = 20
+- `self._x` = 10 → `_x` = 10
+- `value` = 10 → `_value` = 10
+- Calcula: `self._x` = 10 + 10 = 20
 - Resultado: foo._x == 20
 
 
