@@ -56,17 +56,17 @@ class Foo:
     def __init__(self, x=None):
         self._x = x
 
-    @property                   # Uso do decorador (neste caso property)
-    def x(self):                # que é uma função que executa antes da função x
+    @property                   
+    def x(self):                
         return self._x or 0
 
-    @x.setter                   # Aferindo o processo de inserção do atributo x
+    @x.setter                   
     def x(self, value):
         _x = self._x or 0
         _value = value or 0
         self._x = _x + _value
 
-    @x.deleter                  # Aferindo o processo de deleção do atributo x
+    @x.deleter                 
     def x(self):
         self._x = -1
 
