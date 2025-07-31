@@ -24,14 +24,14 @@
 
 - Todos os recursos são públicos, a menos que o nome inicie com underline. Ou seja, o interpretador Python não irá garantir a proteção do recurso, mas por ser uma convenção amplamente adotada na comunidade, quando encontramos uma variável e/ou método com nome iniciado por underline, sabemos que não deveríamos manipular o seu valor diretamente, ou invocar o método fora do escopo da classe.
 
-### Exemplo
+### Exemplo (códifo Python para representar o diagrama de classe anterior)
 
 ```python
 class Conta:
     def __init__(self, saldo=0):    # método __init__ construtor da classe Conta
         self._saldo = saldo     # o atributo saldo começa com underline, para indicar que é privado
                                 # e ele recebe o valor de saldo
-                                
+
     # os métodos depositar e sacar são públicos
 
     def depositar(self, valor):     
@@ -41,9 +41,13 @@ class Conta:
         pass
 ```
 
-
+- Se eu quisesse tornar o depositar em método privado eu colocaria o underline 1a frente do nome para converncioanr que ele não poderia ser chamado externamente.
 
 ## 🟩 Vídeo 03 - Propriedades
+
+### Para que servem?
+
+- Com o `property()` do Python, você pode criar atributos gerenciados em suas classes. Você pode usar atributos gerenciados, também conhecidos como propriedades, quando precisar modificar sua implementação interna sem alterar a API pública da classe.
 
 # Parte 2 - Materiais de apoio e Questionário
 
