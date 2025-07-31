@@ -79,67 +79,6 @@ del foo.x
 print(foo.x)
 ```
 
-### Análise do código
-
-#### Classe Foo
-
-```python
-class Foo:
-    def __init__(self, x=None):
-        self._x = x
-```
-
-- O atributo privado `_x` é inicializado com o valor passado ou `None`.
-
-#### Getter com `@property`
-
-```python
-    @property
-    def x(self):
-        return self._x or 0
-```
-
-- Sempre que foo.x for acessado:
-    - Se self._x for falso (como None, 0, '', etc), retornará 0.
-    - Caso contrário, retornará self._x.
-
-#### Setter com `@x.setter`
-
-```python
-    @x.setter
-    def x(self, value):
-        _x = self._x or 0
-        _value = value or 0
-        self._x = _x + _value
-```
-
-- Ao fazer foo.x = valor, ele não define diretamente o valor recebido.
-- Em vez disso, ele incrementa _x com o valor recebido e atualiza self._x.
-- Se self._x ou value forem `None`, considera-se 0.
-
-#### Deleter com `@x.deleter`
-
-```python
-    @x.deleter
-    def x(self):
-        self._x = -1
-```
-
-- Ao chamar del foo.x, self._x passa a valer -1.
-
-### Teste
-
-```
-foo = Foo(10)       # self._x = 10
-print(foo.x)        # => 10
-
-foo.x = 10          # self._x = 10 + 10 => 20
-print(foo.x)        # => 20
-
-del foo.x           # self._x = -1
-print(foo.x)        # => -1
-```
-
 ### 🟥🟥🟥 Passo a Passo da execução do código
 
 #### 1️⃣ foo = Foo(10)
