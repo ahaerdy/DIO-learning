@@ -41,7 +41,7 @@ class Conta:
         pass
 ```
 
-- Se eu quisesse tornar o depositar em método privado eu colocaria o underline 1a frente do nome para converncioanr que ele não poderia ser chamado externamente.
+- Se eu quisesse tornar o depositar em método privado eu colocaria o underline 1a frente do nome para converncioanrhttps://hermes.dio.me/certificates/ZSXJMW71.pdf que ele não poderia ser chamado externamente.
 
 ## 🟩 Vídeo 03 - Propriedades
 
@@ -192,7 +192,7 @@ c.saldo = -500  # agora isso lança um erro
 
 #### 📌 Como o `@property` ajuda na proteção?
 
-- Encapsula o acesso ao atributo real (geralmente com prefixo _).
+- Encapsula o acesso ao atributo real (geralmente com prefixo `_`).
 - Permite interpor regras ou validações antes de ler, escrever ou apagar.
 - Oculta a implementação interna sem alterar como o atributo é acessado.
 - Impede alterações diretas sem passar pela lógica de verificação.
@@ -204,4 +204,4 @@ c.saldo = -500  # agora isso lança um erro
 - O material de apoio desta aula não foi disponibilizado.
 
 ## Certificado: Aplicando Encapsulamento em Python
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/ZSXJMW71.pdf
