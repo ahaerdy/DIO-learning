@@ -82,7 +82,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 - [x] Curso: [Introdução à Programação Orientada a Objetos (POO) com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/01-Curso%2001-Introdu%C3%A7%C3%A3o_a_Programacao_Orientada_a_Objetos_POO_com_Python#parte-1----introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-orientada-a-objetos-poo-com-python)
 - [x] Curso: [Aprendendo o Conceito de Herança com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/02-Curso%2002-Aprendendo_o_Conceito_de_Heranca_com_Python#parte-1----introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-orientada-a-objetos-poo-com-python)
-- [x] Curso: [Aprendendo o Conceito de Herança com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/03-Curso%2003-Aplicando_Encapsulamento_em_Python#parte-1----aprendendo-o-conceito-de-heran%C3%A7a-com-python)
+- [x] Curso: [Aplicando Encapsulamento em Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/03-Curso%2003-Aplicando_Encapsulamento_em_Python#parte-1----aprendendo-o-conceito-de-heran%C3%A7a-com-python)
 
 ### Módulo 5: Produtividade com Microsoft Copilot Studio
 
