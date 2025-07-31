@@ -140,6 +140,14 @@ del foo.x           # self._x = -1
 print(foo.x)        # => -1
 ```
 
+### 🟥🟥🟥 Passo a Passo da execução do código
+
+#### 1️⃣ foo = Foo(10)
+- Cria um objeto da classe Foo.
+- Chama o método __init__ com x = 10.
+- Atribui: self._x = 10
+- Resultado: foo._x == 10
+
 
 
 
