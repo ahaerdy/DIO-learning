@@ -156,7 +156,7 @@ print(foo.x)        # => -1
     return self._x or 0
   ```
 
-- self._x é 10, que é "truthy" → retorna 10.
+- self._x é 10, que é "Verdadeiro" → retorna 10.
 - Resultado impresso
 
   ```
