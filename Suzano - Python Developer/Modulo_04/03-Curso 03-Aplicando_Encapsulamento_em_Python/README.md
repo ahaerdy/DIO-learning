@@ -57,14 +57,14 @@ class Foo:
         self._x = x
 
     @property                   # Uso do decorador (neste caso property)
-    def x(self):                # que é uma função que executa antes da função
+    def x(self):                # que é uma função que executa antes da função x
         return self._x or 0
 
     @x.setter                   # Aferindo o processo de inserção do atributo x
     def x(self, value):
         _x = self._x or 0
         _value = value or 0
-        self._x = _x - _value
+        self._x = _x + _value
 
     @x.deleter                  # Aferindo o processo de deleção do atributo x
     def x(self):
@@ -110,11 +110,11 @@ class Foo:
     def x(self, value):
         _x = self._x or 0
         _value = value or 0
-        self._x = _x - _value
+        self._x = _x + _value
 ```
 
 - Ao fazer foo.x = valor, ele não define diretamente o valor recebido.
-- Em vez disso, ele subtrai value de _x e atualiza self._x.
+- Em vez disso, ele value value a _x e atualiza self._x.
 - Se self._x ou value forem None, considera-se 0.
 
 #### Deleter com `@x.deleter`
@@ -133,8 +133,8 @@ class Foo:
 foo = Foo(10)       # self._x = 10
 print(foo.x)        # => 10
 
-foo.x = 10          # self._x = 10 - 10 => 0
-print(foo.x)        # => 0
+foo.x = 10          # self._x = 10 + 10 => 20
+print(foo.x)        # => 20
 
 del foo.x           # self._x = -1
 print(foo.x)        # => -1
