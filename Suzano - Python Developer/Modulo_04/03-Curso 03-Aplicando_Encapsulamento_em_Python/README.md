@@ -89,7 +89,7 @@ class Foo:
         self._x = x
 ```
 
-- O atributo privado _x é inicializado com o valor passado ou `None`.
+- O atributo privado `_x` é inicializado com o valor passado ou `None`.
 
 #### Getter com `@property`
 
@@ -114,8 +114,8 @@ class Foo:
 ```
 
 - Ao fazer foo.x = valor, ele não define diretamente o valor recebido.
-- Em vez disso, ele value value a _x e atualiza self._x.
-- Se self._x ou value forem None, considera-se 0.
+- Em vez disso, ele incrementa _x com o valor recebido e atualiza self._x.
+- Se self._x ou value forem `None`, considera-se 0.
 
 #### Deleter com `@x.deleter`
 
