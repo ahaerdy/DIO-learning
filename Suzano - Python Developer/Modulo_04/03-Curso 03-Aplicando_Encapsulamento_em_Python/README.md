@@ -156,7 +156,7 @@ return self._x or 0
 
 ### 🟨🟨🟨 `@property` (aprofundando)
 
-- O @property não "protege" no sentido de segurança absoluta, mas ele encapsula e controla o acesso ao dado interno, o que ajuda a manter a integridade do objeto.
+- O `@property` não "protege" no sentido de segurança absoluta, mas ele encapsula e controla o acesso ao dado interno, o que ajuda a manter a integridade do objeto.
 
 #### 🔓 Sem @property: acesso direto ao atributo interno
 
@@ -169,7 +169,7 @@ c = Conta(100)
 c.saldo = -500  # ops! saldo negativo? nada impede.
 ```
 
-#### 🔐 Com @property: controle no acesso
+#### 🔐 Com `@property`: controle no acesso
 
 ```python
 class Conta:
@@ -190,7 +190,7 @@ c = Conta(100)
 c.saldo = -500  # agora isso lança um erro
 ```
 
-#### 📌 Como o @property ajuda na proteção?
+#### 📌 Como o ``@property ajuda na proteção?
 
 - Encapsula o acesso ao atributo real (geralmente com prefixo _).
 - Permite interpor regras ou validações antes de ler, escrever ou apagar.
