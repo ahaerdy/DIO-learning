@@ -148,6 +148,15 @@ print(foo.x)        # => -1
 - Atribui: self._x = 10
 - Resultado: foo._x == 10
 
+#### 2️⃣ print(foo.x)
+- Chama o getter @property x:
+ 
+  ```python
+  def x(self):
+    return self._x or 0
+  ```
+
+
 
 
 
