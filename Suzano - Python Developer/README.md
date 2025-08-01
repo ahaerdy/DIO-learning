@@ -125,6 +125,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Introdução à Programação Orientada a Objetos (POO) com Python](https://hermes.dio.me/certificates/PMP6QAQI.pdf)
 - [Aprendendo o Conceito de Herança com Python](https://hermes.dio.me/certificates/IYESG1OU.pdf)
 - [Aplicando Encapsulamento em Python](https://hermes.dio.me/certificates/ZSXJMW71.pdf)
+- [Conhecendo Polimorfismo em Python](https://hermes.dio.me/certificates/OBIHTKZH.pdf)
 
 ## 🔗 Contribuições Open Source
 
