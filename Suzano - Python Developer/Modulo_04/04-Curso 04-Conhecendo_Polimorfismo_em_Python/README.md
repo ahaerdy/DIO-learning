@@ -115,4 +115,4 @@ plano_de_voo(Avestruz())
 - O material de apoio desta aula não foi disponibilizado.
 
 ## Certificado: Conhecendo Polimorfismo em Python
-Link do certificado: 
+Link do certificado: https://hermes.dio.me/certificates/OBIHTKZH.pdf
