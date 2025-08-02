@@ -420,7 +420,7 @@ print(controle.marca)
 - Agora o objeto é da classe ControleArCondicionado.
 - Executa os métodos e imprime a marca: "LG".
 
-####  Conclusão
+### Conclusão
 
 - Esse algoritmo demonstra perfeitamente o uso de interfaces com classes abstratas em Python:
 
