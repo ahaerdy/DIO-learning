@@ -84,6 +84,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Aprendendo o Conceito de Herança com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/02-Curso%2002-Aprendendo_o_Conceito_de_Heranca_com_Python#parte-1----introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-orientada-a-objetos-poo-com-python)
 - [x] Curso: [Aplicando Encapsulamento em Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/03-Curso%2003-Aplicando_Encapsulamento_em_Python#parte-1----aprendendo-o-conceito-de-heran%C3%A7a-com-python)
 - [x] Curso: [Conhecendo Polimorfismo em Python](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_04/04-Curso%2004-Conhecendo_Polimorfismo_em_Python/README.md#parte-1----conhecendo-polimorfismo-em-python)
+- [x] Curso: [Interfaces e Classes Abstratas com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/05-Curso%2005-Interfaces_e_Classes_Abstratas_com_Python#parte-1----ampliando-o-conhecimento-em-pooconhecendo-polimorfismo-em-python)
 
 ### Módulo 5: Produtividade com Microsoft Copilot Studio
 
@@ -126,6 +127,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Aprendendo o Conceito de Herança com Python](https://hermes.dio.me/certificates/IYESG1OU.pdf)
 - [Aplicando Encapsulamento em Python](https://hermes.dio.me/certificates/ZSXJMW71.pdf)
 - [Conhecendo Polimorfismo em Python](https://hermes.dio.me/certificates/OBIHTKZH.pdf)
+- [Interfaces e Classes Abstratas com Python](https://hermes.dio.me/certificates/BHZ9MWI7.pdf)
 
 ## 🔗 Contribuições Open Source
 
