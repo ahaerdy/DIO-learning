@@ -211,8 +211,8 @@ Pessoa.e_maior_idade(28)  # True
 | `e_maior_idade`            | Método estático     | Avalia se uma idade é maior que 18          |
 
 
-> **Preciso ter acesso ao contexto da classe** ➡️ crio um método de classe  
-> **Não preciso de contexto nem da classe, nem da instância do objeto** ➡️ crio um método estático
+- ✅ Se **preciso do contexto da classe** ➡️ uso `@classmethod` (método de classe)
+- ✅ Se **não preciso nem de classe nem de instância** ➡️ uso `@staticmethod` (método estático)
 
 
 ## 🟩 Vídeo 03 - O que são Interfaces
