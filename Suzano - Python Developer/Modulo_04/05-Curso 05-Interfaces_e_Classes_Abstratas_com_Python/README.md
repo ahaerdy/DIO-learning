@@ -435,5 +435,5 @@ print(controle.marca)
 
 - O material de apoio desta aula não foi disponibilizado.
 
-## Certificado: Conhecendo Polimorfismo em Python
-Link do certificado: https://hermes.dio.me/certificates/OBIHTKZH.pdf
+## Certificado: Interfaces e Classes Abstratas com Python
+Link do certificado: https://hermes.dio.me/certificates/BHZ9MWI7.pdf
