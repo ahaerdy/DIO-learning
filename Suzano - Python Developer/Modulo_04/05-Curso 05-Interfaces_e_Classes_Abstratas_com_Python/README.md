@@ -295,6 +295,138 @@ controle.desligar()
 print(controle.marca)
 ```
 
+### 🟥🟥🟥 Passo a Passo da execução do código
+
+#### 1️⃣ Importações
+
+```python
+from abc import ABC, abstractmethod, abstractproperty
+```
+
+- `ABC`: Classe base para definir uma classe abstrata.
+- `abstractmethod`: Decorador que marca um método como abstrato, ou seja, deve ser implementado pelas subclasses.
+- ``abstractproperty`: Decorador legado para propriedades abstratas (hoje usamos `@property` + `@abstractmethod`).
+
+#### 2️⃣ Definição da Interface: `ControleRemoto`
+
+```python
+class ControleRemoto(ABC):
+```
+
+- Essa é a interface (classe abstrata) que define o "contrato" para qualquer controle remoto.
+- Herda de ABC, então não pode ser instanciada diretamente.
+
+##### Métodos abstratos:
+
+```python
+@abstractmethod
+def ligar(self):
+    pass
+
+@abstractmethod
+def desligar(self):
+    pass
+```
+
+- São métodos obrigatórios para qualquer classe que herde de `ControleRemoto`.
+
+##### Propriedade abstrata:
+
+```python
+@property
+@abstractproperty
+def marca(self):
+    pass
+```
+
+- Define que toda subclasse deve ter uma propriedade chamada marca.
+
+#### 3️⃣ Implementação concreta: `ControleTV`
+
+```python
+class ControleTV(ControleRemoto):
+```
+
+- Herda de ControleRemoto e implementa todos os métodos e propriedades exigidos.
+
+##### Métodos:
+
+```python
+def ligar(self):
+    print("Ligando a TV...")
+    print("Ligada!")
+
+def desligar(self):
+    print("Desligando a TV...")
+    print("Desligada!")
+```
+
+##### Propriedade:
+
+```python
+@property
+def marca(self):
+    return "Philco"
+```
+
+#### 4️⃣ Outra implementação: `ControleArCondicionado`
+
+```python
+class ControleArCondicionado(ControleRemoto):
+```
+
+- Também herda de `ControleRemoto` e implementa os métodos e a propriedade.
+
+##### Métodos:
+
+```python
+def ligar(self):
+    print("Ligando o Ar Condicionado...")
+    print("Ligado!")
+
+def desligar(self):
+    print("Desligando o Ar Condicionado...")
+    print("Desligado!")
+```
+
+##### Propriedade:
+
+```python
+@property
+def marca(self):
+    return "LG"
+```
+
+#### 5️⃣ Execução do código
+
+```python
+controle = ControleTV()
+controle.ligar()
+controle.desligar()
+print(controle.marca)
+```
+
+- Cria um objeto da classe ControleTV.
+- Chama os métodos ligar e desligar.
+- Imprime a marca: "Philco".
+
+```python
+controle = ControleArCondicionado()
+controle.ligar()
+controle.desligar()
+print(controle.marca)
+```
+
+- Agora o objeto é da classe ControleArCondicionado.
+- Executa os métodos e imprime a marca: "LG".
+
+####  Conclusão
+
+- Esse algoritmo demonstra perfeitamente o uso de interfaces com classes abstratas em Python:
+
+    - Define um contrato com métodos e propriedades obrigatórias.
+    - Garante que todas as subclasses implementem esse contrato.
+    - Permite polimorfismo: diferentes controles com comportamentos específicos, mas mesma interface.
 
 
 # Parte 2 - Materiais de apoio e Questionário
