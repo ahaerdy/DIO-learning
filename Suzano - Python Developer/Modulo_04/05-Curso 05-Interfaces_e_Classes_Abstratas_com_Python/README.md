@@ -216,6 +216,18 @@ Pessoa.e_maior_idade(28)  # True
 
 ## 🟩 Vídeo 03 - O que são Interfaces
 
+### Objetivo Geral
+
+- Aprender o conceito de contrato e como podemos utilizar classes abstratas em Python para implementá-los.
+
+### Importante!
+
+- Interfaces definem o que uma classe deve fazer e não como.
+
+### Python tem interface?
+
+- O conceito de interface é definir um contrato, onde são declarados os métodos (o que deve ser feito) e suas respectivas assinaturas. Em Python utilizamos classes abstratas para criar contratos. Classes abstratas não podem ser instanciadas.
+
 ## 🟩 Vídeo 04 - Classes Abstratas
 
 
