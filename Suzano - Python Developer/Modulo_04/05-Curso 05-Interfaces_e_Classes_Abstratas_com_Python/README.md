@@ -136,6 +136,82 @@ print(p.nome, p.idade)
   Guilherme 28
   ```
 
+### Novo Código
+
+```python
+class Pessoa:
+    def __init__(self, nome=None, idade=None):
+        self.nome = nome
+        self.idade = idade
+
+    @classmethod
+    def criar_de_data_nascimento(cls, ano, mes, dia, nome):
+        idade = 2022 - ano
+        return cls(nome, idade)
+
+    @staticmethod
+    def e_maior_idade(idade):
+        return idade > 18
+
+# p = Pessoa("Guilherme", 28)
+# print(p.nome, p.idade)
+
+p = Pessoa.criar_de_data_nascimento(1994, 3, 21, "Guilherme")
+print(p.nome, p.idade)
+
+Pessoa.e_maior_idade(18)
+Pessoa.e_maior_idade(28)
+```
+
+- Esse novo trecho de código é uma extensão do anterior, adicionando um método estático para verificar se uma pessoa é maior de idade. 
+
+#### Método Estático e_maior_idade
+
+```python
+@staticmethod
+def e_maior_idade(idade):
+    return idade > 18
+```
+
+- Esse método:
+    - É estático: não acessa nem a instância (self) nem a classe (cls);
+    - Recebe um valor de idade e retorna True se for maior que 18.
+
+- Exemplos:
+  ```python
+  Pessoa.e_maior_idade(18)  # False
+  Pessoa.e_maior_idade(28)  # True
+  ```
+
+#### Criação e Impressão
+  
+```python
+p = Pessoa.criar_de_data_nascimento(1994, 3, 21, "Guilherme")
+print(p.nome, p.idade)
+```
+
+- Cria um objeto Pessoa com nome = "Guilherme" e idade = 2022 - 1994 = 28;
+- Imprime: Guilherme 28
+
+#### Uso do Método Estático
+
+```python
+Pessoa.e_maior_idade(18)  # False
+Pessoa.e_maior_idade(28)  # True
+```
+
+- Essas chamadas verificam se os valores informados representam uma pessoa maior de idade.
+
+#### Conclusão
+
+| Elemento                   | Tipo                | Finalidade                                  |
+| -------------------------- | ------------------- | ------------------------------------------- |
+| `__init__`                 | Método de instância | Cria o objeto com nome e idade              |
+| `criar_de_data_nascimento` | Método de classe    | Cria o objeto com base no ano de nascimento |
+| `e_maior_idade`            | Método estático     | Avalia se uma idade é maior que 18          |
+
+
+
 ## 🟩 Vídeo 03 - O que são Interfaces
 
 ## 🟩 Vídeo 04 - Classes Abstratas
