@@ -214,6 +214,12 @@ Pessoa.e_maior_idade(28)  # True
 - ✅ Se **preciso do contexto da classe** ➡️ uso `@classmethod` (método de classe)
 - ✅ Se **não preciso nem de classe nem de instância** ➡️ uso `@staticmethod` (método estático)
 
+<div style="border: 1px solid #ccc; padding: 10px; border-radius: 6px; background-color: #f9f9f9;">
+  <p><strong>✅ Preciso ter acesso ao contexto da classe</strong> ➡️ crio um <code>@classmethod</code></p>
+  <p><strong>✅ Não preciso de contexto nem da classe, nem da instância do objeto</strong> ➡️ crio um <code>@staticmethod</code></p>
+</div>
+
+
 
 ## 🟩 Vídeo 03 - O que são Interfaces
 
