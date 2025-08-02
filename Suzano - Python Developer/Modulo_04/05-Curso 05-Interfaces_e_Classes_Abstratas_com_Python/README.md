@@ -1,7 +1,7 @@
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
 - Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
 
-# Parte 1 -  Ampliando o conhecimento em POOConhecendo Polimorfismo em Python
+# Parte 1 -  Ampliando o conhecimento em POO
 
 ## 🟩 Vídeo 01 - Variáveis de classe e Variáveis de instância
 
