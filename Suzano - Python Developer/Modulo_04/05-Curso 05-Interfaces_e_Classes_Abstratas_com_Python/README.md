@@ -74,8 +74,65 @@ p = Pessoa.criar_de_data_nascimento(1994, 3, 21, "Guilherme")
 print(p.nome, p.idade)
 ```
 
-### 
+### 1️⃣ Definição da Classe `Pessoa`
 
+```python
+class Pessoa:
+```
+
+- Aqui está sendo definida a classe Pessoa, que modela um objeto com nome e idade.
+
+### 2️⃣ Método `__init__`
+
+```python
+def __init__(self, nome=None, idade=None):
+    self.nome = nome
+    self.idade = idade
+```
+
+- Esse é o construtor da classe. Ele é chamado quando uma nova instância da classe Pessoa é criada.
+    - Parâmetros: nome e idade (ambos opcionais, valor padrão None)
+    - Atribui os valores recebidos aos atributos self.nome e self.idade.
+
+### 3️⃣ Método de Classe `criar_de_data_nascimento`
+
+```python
+@classmethod
+def criar_de_data_nascimento(cls, ano, mes, dia, nome):
+    idade = 2022 - ano
+    return cls(nome, idade)
+```
+
+- A anotação `@classmethod` indica que este método pertence à classe, não à instância.
+- `cls` é uma referência à classe (como `self` é à instância).
+- O método recebe uma data de nascimento (ano, mês, dia) e o nome.
+- Calcula a idade como 2022 - ano 
+
+### 4️⃣ Criação da Instância Usando o Método de Classe
+
+```python
+p = Pessoa.criar_de_data_nascimento(1994, 3, 21, "Guilherme")
+```
+
+- Aqui, cria-se uma instância da classe Pessoa a partir de uma data de nascimento:
+
+    - 1994 → ano de nascimento
+    - 3 → mês
+    - 21 → dia
+    - "Guilherme" → nome
+
+- Calcula-se a idade como 2022 - 1994 = 28, e retorna-se Pessoa("Guilherme", 28).
+
+### 5️⃣ Impressão
+
+```python
+print(p.nome, p.idade)
+```
+
+- Exibe:
+  ```
+  Guilherme 28
+  ```
 
 ## 🟩 Vídeo 03 - O que são Interfaces
 
