@@ -212,7 +212,7 @@ Pessoa.e_maior_idade(28)  # True
 
 
 - ✅ Se **preciso do contexto da classe** ⇒ uso `@classmethod` (método de classe)
-- ✅ Se **não preciso nem de classe nem de instância** ⇒ uso `@staticmethod` (método estático)
+- ✅ Se **não preciso nem de classe, nem de instância** ⇒ uso `@staticmethod` (método estático)
 
 ## 🟩 Vídeo 03 - O que são Interfaces
 
