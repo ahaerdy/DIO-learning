@@ -74,7 +74,9 @@ p = Pessoa.criar_de_data_nascimento(1994, 3, 21, "Guilherme")
 print(p.nome, p.idade)
 ```
 
-### 1️⃣ Definição da Classe `Pessoa`
+### 🟥🟥🟥 Passo a Passo da execução do código
+
+#### 1️⃣ Definição da Classe `Pessoa`
 
 ```python
 class Pessoa:
@@ -82,7 +84,7 @@ class Pessoa:
 
 - Aqui está sendo definida a classe Pessoa, que modela um objeto com nome e idade.
 
-### 2️⃣ Método `__init__`
+#### 2️⃣ Método `__init__`
 
 ```python
 def __init__(self, nome=None, idade=None):
@@ -94,7 +96,7 @@ def __init__(self, nome=None, idade=None):
     - Parâmetros: nome e idade (ambos opcionais, valor padrão None)
     - Atribui os valores recebidos aos atributos self.nome e self.idade.
 
-### 3️⃣ Método de Classe `criar_de_data_nascimento`
+#### 3️⃣ Método de Classe `criar_de_data_nascimento`
 
 ```python
 @classmethod
@@ -108,7 +110,7 @@ def criar_de_data_nascimento(cls, ano, mes, dia, nome):
 - O método recebe uma data de nascimento (ano, mês, dia) e o nome.
 - Calcula a idade como 2022 - ano 
 
-### 4️⃣ Criação da Instância Usando o Método de Classe
+#### 4️⃣ Criação da Instância Usando o Método de Classe
 
 ```python
 p = Pessoa.criar_de_data_nascimento(1994, 3, 21, "Guilherme")
@@ -123,7 +125,7 @@ p = Pessoa.criar_de_data_nascimento(1994, 3, 21, "Guilherme")
 
 - Calcula-se a idade como 2022 - 1994 = 28, e retorna-se Pessoa("Guilherme", 28).
 
-### 5️⃣ Impressão
+#### 5️⃣ Impressão
 
 ```python
 print(p.nome, p.idade)
