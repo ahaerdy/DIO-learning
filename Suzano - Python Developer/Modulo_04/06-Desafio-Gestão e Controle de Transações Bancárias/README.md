@@ -9,6 +9,7 @@
 
 <details>
      <summary> 🟨🟨🟨 <h3>Modelo para o desafio&nbsp<h3>🟨🟨🟨 </summary>
+     
 ```python
 from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
