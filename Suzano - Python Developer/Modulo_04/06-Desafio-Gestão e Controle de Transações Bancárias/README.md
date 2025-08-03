@@ -7,9 +7,14 @@
     <img src="images/image.png" alt="" width="720">
 </p>
 
+<p align="center">
+    <img src="images/image-1.png" alt="" width="720">
+</p>
+
+
 <details>
      <summary> 🟨🟨🟨 <h3>Modelo para o desafio&nbsp<h3>🟨🟨🟨 </summary>
-     
+
 ```python
 from abc import ABC, abstractclassmethod, abstractproperty
 from datetime import datetime
