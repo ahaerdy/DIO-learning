@@ -9,6 +9,9 @@
     <img src="images/image.png" alt="" width="720">
 </p>
 
+- Desafio
+    - Atualizar a implementação do sistema bancário, para armazenar os dados de clientes e contas bancárias em objetos ao invés de dicionários.
+
 <details>
      <summary> 🟨🟨🟨 <h3>Modelo para a PARTE 1 do desafio&nbsp<h3>🟨🟨🟨 </summary>
 
@@ -199,6 +202,9 @@ class Deposito(Transacao):
 <p align="center">
     <img src="images/image-2.png" alt="" width="720">
 </p>
+
+- Desafio extra
+    - Após concluir a modelagem das classes e a criação dos métodos, atualizar os métodos que tratam as opções do menu, para funcionarem com as classes modeladas.
 
 <details>
      <summary> 🟨🟨🟨 <h3>Modelo para a PARTE 2 do desafio&nbsp<h3>🟨🟨🟨 </summary>
