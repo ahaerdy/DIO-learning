@@ -85,6 +85,10 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Aplicando Encapsulamento em Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/03-Curso%2003-Aplicando_Encapsulamento_em_Python#parte-1----aprendendo-o-conceito-de-heran%C3%A7a-com-python)
 - [x] Curso: [Conhecendo Polimorfismo em Python](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_04/04-Curso%2004-Conhecendo_Polimorfismo_em_Python/README.md#parte-1----conhecendo-polimorfismo-em-python)
 - [x] Curso: [Interfaces e Classes Abstratas com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/05-Curso%2005-Interfaces_e_Classes_Abstratas_com_Python#parte-1----ampliando-o-conhecimento-em-pooconhecendo-polimorfismo-em-python)
+- [x] Projeto: [Modelando o Sistema Bancário em POO com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/06-Desafio-Gest%C3%A3o%20e%20Controle%20de%20Transa%C3%A7%C3%B5es%20Banc%C3%A1rias#-v%C3%ADdeo-01---resolu%C3%A7%C3%A3o-do-desafio--parte-1)
+  - Repositório: [DIO-projeto-sistema-bancario-em-poo-com-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python/tree/main#)
+  - Descrição: Projeto em Python que implementa um sistema bancário utilizando Programação Orientada a Objetos (POO), com classes abstratas, herança e encapsulamento. Atividade prática dos vídeos 01 e 02 do curso “Modelando o Sistema Bancário em POO com Python” da plataforma DIO.
+
 
 ### Módulo 5: Produtividade com Microsoft Copilot Studio
 
