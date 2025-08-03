@@ -9,17 +9,6 @@
     <img src="images/image.png" alt="" width="720">
 </p>
 
-### Detalhamento
-
-- Na classe `Cliente` recebi o argumento `endereco`
-- `contas` eu inicializo como um array vazio.
-- Mapeei o método `realizar_transacao` (que recebe `conta` e `transacao`) e o `adicionar_conta` (que recebe somente `conta` e  adiciona ao nosso array de contas).
-
-<p align="center">
-    <img src="images/image-1.png" alt="" width="1024">
-</p>
-
-
 <details>
      <summary> 🟨🟨🟨 <h3>Modelo para o desafio&nbsp<h3>🟨🟨🟨 </summary>
 
