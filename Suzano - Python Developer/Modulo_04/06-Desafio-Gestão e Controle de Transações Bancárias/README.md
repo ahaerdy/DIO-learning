@@ -202,6 +202,5 @@ class Deposito(Transacao):
 
 
 
-
 ## Certificado: Interfaces e Classes Abstratas com Python
 Link do certificado: https://hermes.dio.me/certificates/BHZ9MWI7.pdf
