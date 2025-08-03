@@ -3,9 +3,18 @@
 
 ## 🟩 Vídeo 01 - Resolução do Desafio – Parte 1
 
+### Especificação
+
 <p align="center">
     <img src="images/image.png" alt="" width="720">
 </p>
+
+### Detalhamento
+
+- Na classe `Cliente` recebi o argumento `endereco`
+- O `contas` eu inseri como vazio (não inseri no construtor). 
+- Começo sem `contas`.
+- Mapeei o método `realizar_transacao` (que recebe `conta` e `transacao`) e o `adicionar_conta` (que recebe somente `conta` e  adiciona ao nosso array de contas).
 
 <p align="center">
     <img src="images/image-1.png" alt="" width="1024">
