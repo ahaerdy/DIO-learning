@@ -12,8 +12,7 @@
 ### Detalhamento
 
 - Na classe `Cliente` recebi o argumento `endereco`
-- O `contas` eu inseri como vazio (não inseri no construtor). 
-- Começo sem `contas`.
+- `contas` eu inicializo como um array vazio.
 - Mapeei o método `realizar_transacao` (que recebe `conta` e `transacao`) e o `adicionar_conta` (que recebe somente `conta` e  adiciona ao nosso array de contas).
 
 <p align="center">
