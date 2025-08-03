@@ -557,6 +557,10 @@ main()
 
 </details>
 
+## Link do repositório (projeto entregue)
+
+- [DIO-projeto-sistema-bancario-em-poo-com-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python/tree/main#)
+
 ## Certificado: Modelando o Sistema Bancário em POO com Python
 
 Link do certificado: https://hermes.dio.me/certificates/CZOEUYNC.pdf
