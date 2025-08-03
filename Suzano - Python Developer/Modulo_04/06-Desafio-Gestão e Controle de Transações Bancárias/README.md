@@ -189,6 +189,8 @@ class Deposito(Transacao):
             conta.historico.adicionar_transacao(self)
 ```
 
+</details>
+
 
 ## 🟩 Vídeo 02 - Resolução do Desafio – Parte 2
 
