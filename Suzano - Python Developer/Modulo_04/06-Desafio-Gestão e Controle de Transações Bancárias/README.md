@@ -3,7 +3,7 @@
 
 ## 🟩 Vídeo 01 - Resolução do Desafio – Parte 1
 
-### Especificação
+### Especificação - Parte 1 do Desafio
 
 <p align="center">
     <img src="images/image.png" alt="" width="720">
@@ -191,6 +191,12 @@ class Deposito(Transacao):
 
 
 ## 🟩 Vídeo 02 - Resolução do Desafio – Parte 2
+
+### Especificação - Parte 2 do Desafio
+
+<p align="center">
+    <img src="images/image-2.png" alt="" width="720">
+</p>
 
 ## 🟩 Vídeo 03 - Entendendo o Desafio
 
