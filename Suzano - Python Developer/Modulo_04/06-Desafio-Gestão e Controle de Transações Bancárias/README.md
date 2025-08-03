@@ -557,9 +557,6 @@ main()
 
 </details>
 
-## 🟩 Vídeo 03 - Entendendo o Desafio
+## Certificado: Modelando o Sistema Bancário em POO com Python
 
-
-
-## Certificado: Interfaces e Classes Abstratas com Python
-Link do certificado: https://hermes.dio.me/certificates/BHZ9MWI7.pdf
+Link do certificado: https://hermes.dio.me/certificates/CZOEUYNC.pdf
