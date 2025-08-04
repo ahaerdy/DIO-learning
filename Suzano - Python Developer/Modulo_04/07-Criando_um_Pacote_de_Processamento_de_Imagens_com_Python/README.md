@@ -37,15 +37,15 @@
 - **Setuptools**: pacote usado em setup.py para gerar as distribuições
 - **Twine**: pacote usado para subir as distribuições no repositório Pypi
 
-## 🟩 Vídeo 01 - Parte 2
+## 🟩 Vídeo 02 - Parte 2
 
-## 🟩 Vídeo 01 - Parte 3
+## 🟩 Vídeo 03 - Parte 3
 
-## 🟩 Vídeo 01 - Parte 4
+## 🟩 Vídeo 04 - Parte 4
 
-## 🟩 Vídeo 01 - Parte 5
+## 🟩 Vídeo 05 - Parte 5
 
-## 🟩 Vídeo 01 - Parte 6
+## 🟩 Vídeo 06 - Parte 6
 
-## 🟩 Vídeo 01 - Parte 7
+## 🟩 Vídeo 07 - Parte 7
 
