@@ -57,6 +57,12 @@
     <img src="images/image-3.png" alt="" width="840">
 </p>
 
+### Estrutura de pacote com vários módulos
+
+<p align="center">
+    <img src="images/image-4.png" alt="" width="840">
+</p>
+
 ## 🟩 Vídeo 03 - Parte 3
 
 ## 🟩 Vídeo 04 - Parte 4
