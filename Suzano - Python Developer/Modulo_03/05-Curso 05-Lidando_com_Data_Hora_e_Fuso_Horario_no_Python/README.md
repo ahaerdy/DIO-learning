@@ -1,7 +1,7 @@
 # Parte 1 - Lidando com Data, Hora e Fuso Horário no Python
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 - Linktree: https://linktr.ee/decarvalhogui
 
 ## 🟩 Vídeo 01 - Trabalhando com objetos date, datetime e time

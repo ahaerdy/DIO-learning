@@ -1,7 +1,7 @@
 # Parte 1 - Dominando Funções Python
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 
 ## 🟩 Vídeo 01 - Funções Python – Parte 01
 

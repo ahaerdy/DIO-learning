@@ -1,7 +1,7 @@
 # Parte 1: Definindo o ambiente e primeiros passos com Python
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 
 ## 🟩 Vídeo 01 - Introdução ao Python
 
