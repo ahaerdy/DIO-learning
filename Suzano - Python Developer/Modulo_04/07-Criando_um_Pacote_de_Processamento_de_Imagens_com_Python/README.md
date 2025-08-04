@@ -105,6 +105,13 @@
     <img src="images/image-10.png" alt="" width="1024">
 </p>
 
+- Mostrando em mais detalhes o que esse pacote faz:
+    - Aqui tem um exemplo de resultado na saída.
+    - Este é um exemplo que tem deentro de `combinatio.py`.
+    - Em `combination.py` uma das operações que voc6e pode fazer é o matching de histogramas.
+    - Em match de histogramas basicamente a ideia é você passar duas imagens, onde a primeira é uma imagem de referência e a segunda é uma de referência de histograma. 
+    - A terceira gerada é o matching de histograma da segunda, com o conteúdo da primeira.
+
 ## 🟩 Vídeo 03 - Parte 3
 
 ## 🟩 Vídeo 04 - Parte 4
