@@ -80,6 +80,12 @@
     <img src="images/image-6.png" alt="" width="840">
 </p>
 
+### Passos para criar o projeto
+
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+
 ## 🟩 Vídeo 03 - Parte 3
 
 ## 🟩 Vídeo 04 - Parte 4
