@@ -51,6 +51,12 @@
     <img src="images/image-2.png" alt="" width="840">
 </p>
 
+### Estrutura de pacote simples
+
+<p align="center">
+    <img src="images/image-3.png" alt="" width="840">
+</p>
+
 ## 🟩 Vídeo 03 - Parte 3
 
 ## 🟩 Vídeo 04 - Parte 4
