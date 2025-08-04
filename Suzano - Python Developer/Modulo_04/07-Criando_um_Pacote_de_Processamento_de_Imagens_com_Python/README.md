@@ -99,6 +99,12 @@
     <img src="images/image-9.png" alt="" width="840">
 </p>
 
+### Arquivos do projeto image-processing
+
+<p align="center">
+    <img src="images/image-10.png" alt="" width="1024">
+</p>
+
 ## 🟩 Vídeo 03 - Parte 3
 
 ## 🟩 Vídeo 04 - Parte 4
