@@ -40,7 +40,7 @@
 ### Passos
 
 ![<p align="center">
-    <img src="images/image.png" alt="" width="640">
+    <img src="images/image.png" alt="" width="840">
 </p>](image.png)
 
 ## 🟩 Vídeo 02 - Parte 2
