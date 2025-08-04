@@ -39,9 +39,9 @@
 
 ### Passos
 
-![<p align="center">
+<p align="center">
     <img src="images/image.png" alt="" width="840">
-</p>](image.png)
+</p>
 
 ## 🟩 Vídeo 02 - Parte 2
 
