@@ -70,9 +70,15 @@
     <img src="images/image-5.png" alt="" width="840">
 </p>
 
-- Repositórios:
+- Repositórios com os templates:
     - https://github.com/tiemi/simple-package-template
     - https://github.com/tiemi/package-template
+
+### Passos
+
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 03 - Parte 3
 
