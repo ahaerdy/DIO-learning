@@ -148,7 +148,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/) (Guilherme Arthur de Carvalho / DIO - Python Consultant, Systems Analyst)
 - / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst))
 - / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton FalvoJr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
-- / [karinakato(https://www.linkedin.com/in/karinakato/) (Karina Kato / Machine Learning Engineer)
+- / [karinakato](https://www.linkedin.com/in/karinakato/) (Karina Kato / Machine Learning Engineer)
 
 ## 🔄 Atualizações
 
