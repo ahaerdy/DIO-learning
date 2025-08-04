@@ -73,6 +73,7 @@
 - Repositórios com os templates:
     - https://github.com/tiemi/simple-package-template
     - https://github.com/tiemi/package-template
+    - https://github.com/tiemi/image-processing-package
 
 ### Passos
 
@@ -91,6 +92,9 @@
 <p align="center">
     <img src="images/image-8.png" alt="" width="840">
 </p>
+
+- `image-processing-package` gerado a partir do `package-template`
+
 
 ## 🟩 Vídeo 03 - Parte 3
 
