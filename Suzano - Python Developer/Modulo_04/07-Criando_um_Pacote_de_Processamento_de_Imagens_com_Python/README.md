@@ -95,6 +95,9 @@
 
 - `image-processing-package` gerado a partir do `package-template`
 
+<p align="center">
+    <img src="images/image-9.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 03 - Parte 3
 
