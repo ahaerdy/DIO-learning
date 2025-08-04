@@ -106,6 +106,7 @@
 </p>
 
 - Mostrando em mais detalhes o que esse pacote faz:
+
     - Aqui tem um exemplo de resultado na saída.
     - Este é um exemplo que tem deentro de `combinatio.py`.
     - Em `combination.py` uma das operações que voc6e pode fazer é o matching de histogramas.
