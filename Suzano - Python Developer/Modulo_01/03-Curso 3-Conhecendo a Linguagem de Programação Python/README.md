@@ -1,7 +1,7 @@
 # Parte 1: Conhecendo a Linguagem
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 
 ## Vídeo 01 - Tipos de Dados
 
@@ -129,7 +129,7 @@ Links úteis: https://github.com/guicarvalho/trilha-python-dio
 ## Vídeo 05 - Funções de entrada e saída
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 
 Objetivo geral: Aprender como receber e exibir informações para o usuário.
 

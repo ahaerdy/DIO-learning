@@ -1,5 +1,5 @@
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 
 # Parte 1 -  Aprendendo o Conceito de Herança com Python
 

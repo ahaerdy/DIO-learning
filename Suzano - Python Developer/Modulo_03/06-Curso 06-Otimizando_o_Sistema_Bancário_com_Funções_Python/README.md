@@ -1,7 +1,7 @@
 # Parte 1 - Desafio - Otimizando o Sistema Bancário com Funções Python
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 - Linktree: https://linktr.ee/decarvalhogui
 
 ## 🟩 Vídeo 01 - Apresentação do Desafio

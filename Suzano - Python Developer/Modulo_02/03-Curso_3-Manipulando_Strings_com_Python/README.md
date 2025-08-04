@@ -1,7 +1,7 @@
 # Parte 1 - Dominando Strings e Fatiamento
 
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Libkedin: https://www.linkedin.com/in/decarvalhogui/
+- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 
 ## 🟩 Vídeo 01 - Conhecendo métodos úteis da classe string
 
