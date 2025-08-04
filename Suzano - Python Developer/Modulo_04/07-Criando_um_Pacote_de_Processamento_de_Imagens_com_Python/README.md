@@ -93,7 +93,7 @@
     <img src="images/image-8.png" alt="" width="840">
 </p>
 
-- `image-processing-package` gerado a partir do `package-template`
+- `image-processing-package` ➡️ gerado a partir do `package-template`
 
 <p align="center">
     <img src="images/image-9.png" alt="" width="840">
