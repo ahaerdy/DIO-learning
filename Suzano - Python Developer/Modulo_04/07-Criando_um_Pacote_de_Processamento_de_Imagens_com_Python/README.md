@@ -113,6 +113,12 @@
     - Em match de histogramas basicamente a ideia é você passar duas imagens, onde a primeira é uma imagem de referência e a segunda é uma de referência de histograma. 
     - A terceira gerada é o matching de histograma da segunda, com o conteúdo da primeira.
 
+### Arquivos do projeto image-processing
+
+<p align="center">
+    <img src="images/image-11.png" alt="" width="1024">
+</p>
+
 ## 🟩 Vídeo 03 - Parte 3
 
 ## 🟩 Vídeo 04 - Parte 4
