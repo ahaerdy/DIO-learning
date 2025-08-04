@@ -43,7 +43,13 @@
     <img src="images/image.png" alt="" width="840">
 </p>
 
-## 🟩 Vídeo 02 - Parte 2
+## 🟩 Vídeo 02 - Parte 2 - Criar o projeto e gerar as distribuições
+
+### Exemplos de estruturas
+
+<p align="center">
+    <img src="images/image-2.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 03 - Parte 3
 
