@@ -145,8 +145,10 @@
 
 ### Arquivo setup.py
 
+- É o arquivo principal de configuração.
 - Usado para especificar como o pacote deve ser construído.
-- Documentação: https://setuptools.readthedocs.io/en/latest/setuptools.html
+- Documentação (caso sejam necessárias configurações extras):
+    - https://setuptools.readthedocs.io/en/latest/setuptools.html
 
 <p align="center">
     <img src="images/image-13.png" alt="" width="1024">
