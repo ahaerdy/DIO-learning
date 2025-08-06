@@ -132,6 +132,13 @@
 
 ## 🟩 Vídeo 03 - Parte 3 - Arquivos do projeto image-processing
 
+### Apresentado a estrutura REAL dos arquivos do projeto
+
+<p align="center">
+    <img src="images/image-17.png" alt="" width="1024">
+</p>
+
+
 ### Arquivo setup.py
 
 - Usado para especificar como o pacote deve ser construído.
