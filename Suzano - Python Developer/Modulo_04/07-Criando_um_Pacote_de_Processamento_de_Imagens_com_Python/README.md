@@ -125,7 +125,53 @@
     <img src="images/image-12.png" alt="" width="1024">
 </p>
 
+- Verificação de similaridade (a imagem resultante mostra a diferença).
+- Para tanto, as imagens são, antes, convertidas em tons de cinza.
+- O nível de similaridade é quantizado (entre 0 e 1).
+- No processamento em questão o resultado foi 0.95.
+
 ## 🟩 Vídeo 03 - Parte 3
+
+### Arquivo setup.py
+
+- Usado para especificar como o pacote deve ser construído.
+- Documentação: https://setuptools.readthedocs.io/en/latest/setuptools.html
+
+<p align="center">
+    <img src="images/image-13.png" alt="" width="1024">
+</p>
+
+### Arquivo requirements.txt
+
+- Usado para passar as dependências que devem ser instaladas com o seu pacote. Opcionalmente, podem ser especificadas as versões.
+
+### Arquivo README.md
+
+- Será exibido como documentação na página do Pypi do seu pacote. Foi usado markdown.
+
+### Arquivo README.md
+
+<p align="center">
+    <img src="images/image-14.png" alt="" width="1024">
+</p>
+
+### Passos
+
+<p align="center">
+    <img src="images/image-15.png" alt="" width="1024">
+</p>
+
+### Distribuições
+
+- Para subir o pacote, criar uma distribuição binária ou distribuição de código fonte. 
+As versões mais recentes do pip instalam primeiramente a binária e usam a distribuição de código fonte, apenas se necessário. 
+- De qualquer forma, iremos criar ambas distribuições.
+
+### Passos para gerar as distribuições
+
+<p align="center">
+    <img src="images/image-16.png" alt="" width="1024">
+</p>
 
 ## 🟩 Vídeo 04 - Parte 4
 
