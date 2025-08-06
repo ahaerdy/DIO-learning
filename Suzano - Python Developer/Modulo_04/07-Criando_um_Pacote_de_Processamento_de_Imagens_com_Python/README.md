@@ -150,6 +150,7 @@
 - Documentação (caso sejam necessárias configurações extras):
     - https://setuptools.readthedocs.io/en/latest/setuptools.html
 - Através do parâmetro `packages` você vai especificar todos os módulos e submódulos do seu projeto. A função `find_modules()`é usada para encontrá-los automaticamente.
+- O parâmetro `install_requires` deve ser utilizado se o seu pacote tiver dependência de outros pacotes.
 
 <p align="center">
     <img src="images/image-13.png" alt="" width="1024">
@@ -158,6 +159,10 @@
 ### Arquivo requirements.txt
 
 - Usado para passar as dependências que devem ser instaladas com o seu pacote. Opcionalmente, podem ser especificadas as versões.
+
+<p align="center">
+    <img src="images/image-18.png" alt="" width="1024">
+</p>
 
 ### Arquivo README.md
 
