@@ -149,6 +149,7 @@
 - Usado para especificar como o pacote deve ser construído.
 - Documentação (caso sejam necessárias configurações extras):
     - https://setuptools.readthedocs.io/en/latest/setuptools.html
+- Através do parâmetro `packages` você vai especificar todos os módulos e submódulos do seu projeto. A função `find_modules()`é usada para encontrá-los automaticamente.
 
 <p align="center">
     <img src="images/image-13.png" alt="" width="1024">
