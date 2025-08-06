@@ -130,7 +130,7 @@
 - O nível de similaridade é quantizado (entre 0 e 1).
 - No processamento em questão o resultado foi 0.95.
 
-## 🟩 Vídeo 03 - Parte 3
+## 🟩 Vídeo 03 - Parte 3 - Arquivos do projeto image-processing
 
 ### Arquivo setup.py
 
