@@ -132,12 +132,16 @@
 
 ## 🟩 Vídeo 03 - Parte 3 - Arquivos do projeto image-processing
 
-### Apresentado a estrutura REAL dos arquivos do projeto
+### Apresentado a estrutura REAL dos arquivos do pacote
 
 <p align="center">
     <img src="images/image-17.png" alt="" width="1024">
 </p>
 
+
+## 🟩 Vídeo 04 - Parte 4 -  Arquivos do pacote
+
+- Aqui explicamos como configurar cada um dos arquivos do pacote (e se devemos usar todos).
 
 ### Arquivo setup.py
 
@@ -179,8 +183,6 @@ As versões mais recentes do pip instalam primeiramente a binária e usam a dist
 <p align="center">
     <img src="images/image-16.png" alt="" width="1024">
 </p>
-
-## 🟩 Vídeo 04 - Parte 4
 
 ## 🟩 Vídeo 05 - Parte 5
 
