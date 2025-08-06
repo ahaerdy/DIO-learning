@@ -132,7 +132,7 @@
 
 ## 🟩 Vídeo 03 - Parte 3 - Arquivos do projeto image-processing
 
-### Apresentado a estrutura REAL dos arquivos do pacote
+### Apresentando detalhes dos arquivos do pacote
 
 <p align="center">
     <img src="images/image-17.png" alt="" width="1024">
@@ -141,7 +141,7 @@
 
 ## 🟩 Vídeo 04 - Parte 4 -  Arquivos do pacote
 
-- Aqui explicamos como configurar cada um dos arquivos do pacote (e se devemos usar todos).
+- Aqui explicamos detalhes dos arquivos de configuração (e se devemos usar todos).
 
 ### Arquivo setup.py
 
