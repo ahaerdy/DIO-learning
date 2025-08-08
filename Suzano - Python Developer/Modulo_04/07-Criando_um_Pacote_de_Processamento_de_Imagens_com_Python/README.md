@@ -187,6 +187,10 @@
 - As versões mais recentes do pip instalam primeiramente a binária e usam a distribuição de código fonte, apenas se necessário. 
 - De qualquer forma, iremos criar ambas distribuições.
 
+<p align="center">
+    <img src="images/image-19.png" alt="" width="1024">
+</p>
+
 ### Passos para gerar as distribuições
 
 <p align="center">
