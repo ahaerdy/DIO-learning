@@ -290,7 +290,7 @@ pip install –-index-url https://test.pypi.org/simple/ image-processing
 
 ### Comando para publicar no Pypi
 
-```python
+```bash
 python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 ```
 
