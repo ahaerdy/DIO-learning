@@ -201,7 +201,7 @@
 
 #### Primeiramente:
 
-```python
+```bash
 python -m pip install --upgrade pip         # Upgrade do pip, bom fazer antes de subir.
 python -m pip install --user twine          # Instalando o twine, ferramenta que vai nos
                                             # auxiliar a subir as distribuições
@@ -216,7 +216,7 @@ python -m pip install --user setuptools
 
 #### Em seguida:
 
-```python
+```bash
 python setup.py sdist bdist_wheel
 ```
 
@@ -259,7 +259,7 @@ python setup.py sdist bdist_wheel
 
 ### Comando para publicar no Test Pypi
 
-```python
+```bash
 python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
 
