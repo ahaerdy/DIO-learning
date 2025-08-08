@@ -257,5 +257,12 @@ python setup.py sdist bdist_wheel
     <img src="images/image-24.png" alt="" width="1024">
 </p>
 
+### Comando para publicar no Test Pypi
+
+```python
+python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+
+
 ## 🟩 Vídeo 07 - Parte 7
 
