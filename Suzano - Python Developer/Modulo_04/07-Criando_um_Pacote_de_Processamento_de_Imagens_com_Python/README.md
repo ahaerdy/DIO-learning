@@ -208,6 +208,12 @@ python -m pip install --user twine          # Instalando o twine, ferramenta que
 python -m pip install --user setuptools     
 ```
 
+- Esses comandos fazem o seguinte:
+
+    - Atualizam o pip para a versão mais recente.
+    - Instalam o Twine, uma ferramenta para publicar pacotes Python.
+    - Instalam o Setuptools, que ajuda na criação e distribuição de pacotes Python.
+
 #### Em seguida:
 
 ```python
@@ -215,6 +221,7 @@ python setup.py sdist bdist_wheel
 ```
 
 - Esse comando é usado para gerar distribuições do seu pacote Python:
+    
     - sdist: cria um pacote fonte (um arquivo .tar.gz).
     - bdist_wheel: cria um pacote binário no formato .whl (Wheel), que é mais rápido de instalar.
 
