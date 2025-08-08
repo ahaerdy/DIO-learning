@@ -281,7 +281,11 @@ pip install –-index-url https://test.pypi.org/simple/ image-processing
     <img src="images/image-27.png" alt="" width="1024">
 </p>
 
+- Procedendo 1a instalação:
 
+<p align="center">
+    <img src="images/image-28.png" alt="" width="1024">
+</p>
 
 ## 🟩 Vídeo 07 - Parte 7
 
