@@ -312,6 +312,8 @@ python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 python -m pip install package_name
 ```
 
+- Fazendo a instalação ...
+
 <p align="center">
     <img src="images/image-31.png" alt="" width="1024">
 </p>
