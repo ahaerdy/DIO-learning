@@ -236,9 +236,11 @@ python setup.py sdist bdist_wheel
 
 ### Passos para Subir o Pacote
 
-- Passos do 1 ao 4 (para criar a conta no Test PyPi, é uma boa prática)
+- Passos do 1 ao 4 são opcionais mas muito recomendados 
+- São relativos à criação da conta no Test PyPi (uma boa prática)
 - As contas no Teste Pypi e PyPi são separadas.
 - Recomenda-se usar a mesma senha para facilitar.
+- Se preferir, pode ir para os passos 5, 6 e 7 diretamente (mas é recomendado testar o pacote localmente)
 
 <p align="center">
     <img src="images/image-23.png" alt="" width="1024">
@@ -246,8 +248,14 @@ python setup.py sdist bdist_wheel
 
 ### Criando contas no Pypi
 
-- https://pypi.org/account/register
-- https://pypi.org/account/register
+- https://pypi.org/account/register/
+- https://test.pypi.org/account/register/
+
+- É demonstrado como criar as contas ... 👇
+
+<p align="center">
+    <img src="images/image-24.png" alt="" width="1024">
+</p>
 
 ## 🟩 Vídeo 07 - Parte 7
 
