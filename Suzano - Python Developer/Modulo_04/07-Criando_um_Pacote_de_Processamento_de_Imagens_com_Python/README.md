@@ -199,15 +199,25 @@
 
 ### Comandos de Instalação
 
+#### Primeiramente:
+
 ```python
-python -m pip install --upgrade pip
-python -m pip install --user twine
-python -m pip install --user setuptools
+python -m pip install --upgrade pip         # Upgrade do pip, bom fazer antes de subir.
+python -m pip install --user twine          # Instalando o twine, ferramenta que vai nos
+                                            # auxiliar a subir as distribuições
+python -m pip install --user setuptools     
 ```
 
-<p align="center">
-    <img src="images/image-20.png" alt="" width="560">
-</p>
+#### Em seguida:
+
+```python
+python setup.py sdist bdist_wheel
+```
+
+- Esse comando é usado para gerar distribuições do seu pacote Python:
+    - sdist: cria um pacote fonte (um arquivo .tar.gz).
+    - bdist_wheel: cria um pacote binário no formato .whl (Wheel), que é mais rápido de instalar.
+
 
 ## 🟩 Vídeo 06 - Parte 6
 
