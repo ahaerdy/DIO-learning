@@ -237,10 +237,6 @@ python setup.py sdist bdist_wheel
 ### Passos para Subir o Pacote
 
 <p align="center">
-    <img src="images/image-22.png" alt="" width="1024">
-</p>
-
-<p align="center">
     <img src="images/image-23.png" alt="" width="1024">
 </p>
 
