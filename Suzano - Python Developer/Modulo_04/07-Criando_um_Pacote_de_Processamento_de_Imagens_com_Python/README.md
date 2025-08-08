@@ -159,6 +159,7 @@
 ### Arquivo requirements.txt
 
 - Usado para passar as dependências que devem ser instaladas com o seu pacote. Opcionalmente, podem ser especificadas as versões.
+- Ele identifica os requisitos do seu pacote (não do seu projeto).
 
 <p align="center">
     <img src="images/image-18.png" alt="" width="1024">
@@ -167,8 +168,6 @@
 ### Arquivo README.md
 
 - Será exibido como documentação na página do Pypi do seu pacote. Foi usado markdown.
-
-### Arquivo README.md
 
 <p align="center">
     <img src="images/image-14.png" alt="" width="1024">
@@ -180,10 +179,12 @@
     <img src="images/image-15.png" alt="" width="1024">
 </p>
 
+## 🟩 Vídeo 05 - Parte 5 - Distribuições
+
 ### Distribuições
 
 - Para subir o pacote, criar uma distribuição binária ou distribuição de código fonte. 
-As versões mais recentes do pip instalam primeiramente a binária e usam a distribuição de código fonte, apenas se necessário. 
+- As versões mais recentes do pip instalam primeiramente a binária e usam a distribuição de código fonte, apenas se necessário. 
 - De qualquer forma, iremos criar ambas distribuições.
 
 ### Passos para gerar as distribuições
@@ -192,9 +193,9 @@ As versões mais recentes do pip instalam primeiramente a binária e usam a dist
     <img src="images/image-16.png" alt="" width="1024">
 </p>
 
-## 🟩 Vídeo 05 - Parte 5
-
 ## 🟩 Vídeo 06 - Parte 6
+
+
 
 ## 🟩 Vídeo 07 - Parte 7
 
