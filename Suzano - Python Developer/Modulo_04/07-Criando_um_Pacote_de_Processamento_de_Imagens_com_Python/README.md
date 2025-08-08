@@ -288,5 +288,12 @@ pip install –-index-url https://test.pypi.org/simple/ image-processing
     <img src="images/image-28.png" alt="" width="1024">
 </p>
 
+### Comando para publicar no Pypi
+
+```python
+python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
+```
+
+
 ## 🟩 Vídeo 07 - Parte 7
 
