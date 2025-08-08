@@ -194,13 +194,13 @@
 ### Passos para gerar as distribuições
 
 <p align="center">
-    <img src="images/image-20.png" alt="" width="1024">
+    <img src="images/image-16.png" alt="" width="1024">
 </p>
 
 ### Comandos de Instalação
 
 <p align="center">
-    <img src="images/image-16.png" alt="" width="1024">
+    <img src="images/image-20.png" alt="" width="1024">
 </p>
 
 ## 🟩 Vídeo 06 - Parte 6
