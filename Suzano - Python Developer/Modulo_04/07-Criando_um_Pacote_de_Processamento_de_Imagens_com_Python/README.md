@@ -230,15 +230,15 @@ python setup.py sdist bdist_wheel
 
 ### Passos
 
-- Passos do 1 ao 4 (para criar a conta no Test PyPi, é uma boa prática)
-- As contas no Teste Pypi e PyPi são separadas.
-- Recomenda-se usar a mesma senha para facilitar.
-
 <p align="center">
     <img src="images/image-21.png" alt="" width="1024">
 </p>
 
 ### Passos para Subir o Pacote
+
+- Passos do 1 ao 4 (para criar a conta no Test PyPi, é uma boa prática)
+- As contas no Teste Pypi e PyPi são separadas.
+- Recomenda-se usar a mesma senha para facilitar.
 
 <p align="center">
     <img src="images/image-23.png" alt="" width="1024">
