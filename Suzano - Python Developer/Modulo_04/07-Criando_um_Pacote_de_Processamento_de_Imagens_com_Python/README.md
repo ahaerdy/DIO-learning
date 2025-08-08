@@ -263,11 +263,25 @@ python setup.py sdist bdist_wheel
 python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
 
-- A instrutora mostra o pacote do image-processo no repositorio (depois do upload)
+- A instrutora mostra o pacote do image-processo no repositorio (depois do upload):
 
 <p align="center">
     <img src="images/image-26.png" alt="" width="1024">
 </p>
+
+### Comando para instalar o pacote de teste
+
+```python
+pip install –-index-url https://test.pypi.org/simple/ image-processing
+```
+
+- A instrutora executa o comando de instalação acima:
+
+<p align="center">
+    <img src="images/image-27.png" alt="" width="1024">
+</p>
+
+
 
 ## 🟩 Vídeo 07 - Parte 7
 
