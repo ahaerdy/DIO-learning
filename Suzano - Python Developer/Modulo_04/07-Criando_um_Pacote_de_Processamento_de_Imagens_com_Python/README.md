@@ -226,7 +226,13 @@ python setup.py sdist bdist_wheel
     - bdist_wheel: cria um pacote binário no formato .whl (Wheel), que é mais rápido de instalar.
 
 
-## 🟩 Vídeo 06 - Parte 6
+## 🟩 Vídeo 06 - Parte 6 - Publicando o Pacote
+
+### Passos
+
+<p align="center">
+    <img src="images/image-21.png" alt="" width="1024">
+</p>
 
 
 
