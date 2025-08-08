@@ -294,6 +294,19 @@ pip install –-index-url https://test.pypi.org/simple/ image-processing
 python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 ```
 
+- Exxecutando o comando ...
+
+<p align="center">
+    <img src="images/image-29.png" alt="" width="1024">
+</p>
+
+- Verificando se o pacote subiu ...
+
+<p align="center">
+    <img src="images/image-30.png" alt="" width="1024">
+</p>
+
+
 
 ## 🟩 Vídeo 07 - Parte 7
 
