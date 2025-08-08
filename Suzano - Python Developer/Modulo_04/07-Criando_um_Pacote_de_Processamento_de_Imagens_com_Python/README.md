@@ -199,6 +199,12 @@
 
 ### Comandos de Instalação
 
+```python
+python -m pip install --upgrade pip
+python -m pip install --user twine
+python -m pip install --user setuptools
+```
+
 <p align="center">
     <img src="images/image-20.png" alt="" width="560">
 </p>
