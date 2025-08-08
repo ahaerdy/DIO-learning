@@ -251,7 +251,7 @@ python setup.py sdist bdist_wheel
 - https://pypi.org/account/register/
 - https://test.pypi.org/account/register/
 
-- É demonstrado como criar as contas ... 👇
+- É demonstrada a criação as contas (tela de abertura no test.pypi)... 👇
 
 <p align="center">
     <img src="images/image-24.png" alt="" width="1024">
