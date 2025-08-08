@@ -306,6 +306,11 @@ python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
     <img src="images/image-30.png" alt="" width="1024">
 </p>
 
+### Comando para instalar o pacote
+
+```python
+python -m pip install package_name
+```
 
 
 ## 🟩 Vídeo 07 - Parte 7
