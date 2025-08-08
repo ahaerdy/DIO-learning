@@ -282,6 +282,7 @@ pip install –-index-url https://test.pypi.org/simple/ image-processing
 </p>
 
 - Procedendo 1a instalação:
+    - Lembrando que dentro do requirements.txt estão sendo passadas as dependências.
 
 <p align="center">
     <img src="images/image-28.png" alt="" width="1024">
