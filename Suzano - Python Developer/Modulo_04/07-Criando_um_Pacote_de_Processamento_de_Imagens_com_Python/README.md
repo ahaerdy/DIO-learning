@@ -234,7 +234,20 @@ python setup.py sdist bdist_wheel
     <img src="images/image-21.png" alt="" width="1024">
 </p>
 
+### Passos para Subir o Pacote
 
+<p align="center">
+    <img src="images/image-22.png" alt="" width="1024">
+</p>
+
+<p align="center">
+    <img src="images/image-23.png" alt="" width="1024">
+</p>
+
+### Criando contas no Pypi
+
+- https://pypi.org/account/register
+- https://pypi.org/account/register
 
 ## 🟩 Vídeo 07 - Parte 7
 
