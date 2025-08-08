@@ -263,9 +263,7 @@ python setup.py sdist bdist_wheel
 python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 ```
 
-#### A instrutora mostra o pacote do image-processo no repositorio (depois do uploat)
-
-
+- A instrutora mostra o pacote do image-processo no repositorio (depois do upload)
 
 <p align="center">
     <img src="images/image-26.png" alt="" width="1024">
