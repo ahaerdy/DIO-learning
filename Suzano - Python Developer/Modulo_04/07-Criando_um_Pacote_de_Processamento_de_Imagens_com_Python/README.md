@@ -341,10 +341,6 @@ python -m pip install package_name
 ### Exercício prático
 
 <p align="center">
-    <img src="images/image-36.png" alt="" width="840">
-</p>
-
-<p align="center">
     <img src="images/image-37.png" alt="" width="840">
 </p>
 
