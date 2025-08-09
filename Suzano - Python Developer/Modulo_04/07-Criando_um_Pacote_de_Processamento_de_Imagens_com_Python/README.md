@@ -320,3 +320,8 @@ python -m pip install package_name
 
 ## 🟩 Vídeo 07 - Parte 7
 
+### Resumo
+
+<p align="center">
+    <img src="images/image-32.png" alt="" width="1024">
+</p>
