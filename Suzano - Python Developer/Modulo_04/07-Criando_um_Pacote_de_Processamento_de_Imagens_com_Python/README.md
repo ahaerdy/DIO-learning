@@ -352,6 +352,6 @@ python -m pip install package_name
 - Aqui a instrutora mostra que o pacote image_processing está funcionando e que os alunos podem testá-lo depois que terminarem.
 
 <p align="center">
-    <img src="images/image-39.png" alt="" width="840">
+    <img src="images/image-39.png" alt="" width="1024">
 </p>
 
