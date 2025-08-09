@@ -326,3 +326,14 @@ python -m pip install package_name
     <img src="images/image-32.png" alt="" width="840">
 </p>
 
+<p align="center">
+    <img src="images/image-33.png" alt="" width="840">
+</p>
+
+<p align="center">
+    <img src="images/image-34.png" alt="" width="840">
+</p>
+
+<p align="center">
+    <img src="images/image-35.png" alt="" width="840">
+</p>
