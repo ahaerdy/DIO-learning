@@ -323,5 +323,6 @@ python -m pip install package_name
 ### Resumo
 
 <p align="center">
-    <img src="images/image-32.png" alt="" width="1024">
+    <img src="images/image-32.png" alt="" width="840">
 </p>
+
