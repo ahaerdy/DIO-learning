@@ -337,3 +337,7 @@ python -m pip install package_name
 <p align="center">
     <img src="images/image-35.png" alt="" width="840">
 </p>
+
+<p align="center">
+    <img src="images/image-36.png" alt="" width="840">
+</p>
