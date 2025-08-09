@@ -350,8 +350,19 @@ python -m pip install package_name
 </p>
 
 - Aqui a instrutora mostra que o pacote image_processing está funcionando e que os alunos podem testá-lo depois que terminarem.
+- Chamando os submódulos.
 
 <p align="center">
     <img src="images/image-39.png" alt="" width="1024">
+</p>
+
+- Eu já tenho um conjunto de imagens que vou querer ler.
+
+<p align="center">
+    <img src="images/image-40.png" alt="" width="1024">
+</p>
+
+<p align="center">
+    <img src="images/image-41.png" alt="" width="1024">
 </p>
 
