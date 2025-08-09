@@ -318,7 +318,7 @@ python -m pip install package_name
     <img src="images/image-31.png" alt="" width="1024">
 </p>
 
-## 🟩 Vídeo 07 - Parte 7
+## 🟩 Vídeo 07 - Parte 7 - Resumo e Exercício Prático
 
 ### Resumo
 
@@ -333,7 +333,6 @@ python -m pip install package_name
 <p align="center">
     <img src="images/image-34.png" alt="" width="840">
 </p>
-
 
 ### Exercício prático
 
