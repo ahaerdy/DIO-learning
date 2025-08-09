@@ -390,3 +390,9 @@ python -m pip install package_name
 <p align="center">
     <img src="images/image-45.png" alt="" width="1024">
 </p>
+
+### Repositórios Disponíveis
+
+<p align="center">
+    <img src="images/image-46.png" alt="" width="1024">
+</p>
