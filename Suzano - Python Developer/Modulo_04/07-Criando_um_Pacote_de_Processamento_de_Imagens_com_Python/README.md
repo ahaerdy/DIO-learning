@@ -372,4 +372,12 @@ python -m pip install package_name
     <img src="images/image-42.png" alt="" width="1024">
 </p>
 
+- Fazendo um matching de histograma com as duas imagens.
 
+<p align="center">
+    <img src="images/image-43.png" alt="" width="1024">
+</p>
+
+<p align="center">
+    <img src="images/image-44.png" alt="" width="1024">
+</p>
