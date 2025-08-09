@@ -381,3 +381,12 @@ python -m pip install package_name
 <p align="center">
     <img src="images/image-44.png" alt="" width="1024">
 </p>
+
+### Para o exercício prático
+
+- Peguem do repositório o simple paclage template.
+- É aquele com menos hierarquia, só pra testarem se entenderam bem esses conceitos de criação de pacotes.
+
+<p align="center">
+    <img src="images/image-45.png" alt="" width="1024">
+</p>
