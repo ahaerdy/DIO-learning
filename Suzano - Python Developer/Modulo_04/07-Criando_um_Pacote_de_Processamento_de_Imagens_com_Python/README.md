@@ -366,3 +366,10 @@ python -m pip install package_name
     <img src="images/image-41.png" alt="" width="1024">
 </p>
 
+- Duas imagens sendo plotadas.
+
+<p align="center">
+    <img src="images/image-42.png" alt="" width="1024">
+</p>
+
+
