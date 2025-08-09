@@ -384,7 +384,7 @@ python -m pip install package_name
 
 ### Para o exercício prático
 
-- Peguem do repositório o simple paclage template.
+- Peguem do repositório o simple-package-template.
 - É aquele com menos hierarquia, só pra testarem se entenderam bem esses conceitos de criação de pacotes.
 
 <p align="center">
