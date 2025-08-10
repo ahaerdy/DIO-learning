@@ -642,7 +642,7 @@ if __name__ == "__main__":
 - Upload bem sucedido ✅
 
 <p align="center">
-    <img src="images/image-51.png" alt="" width="560">
+    <img src="images/image-51.png" alt="" width="1024">
 </p>
 
 ### 7️⃣ Instalar pacote usando PyPI
