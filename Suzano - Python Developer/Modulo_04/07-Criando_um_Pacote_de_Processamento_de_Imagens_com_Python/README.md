@@ -381,7 +381,7 @@ python -m pip install package_name
     <img src="images/image-44.png" alt="" width="1024">
 </p>
 
-### 🟥🟥🟥 Código testado (que funcionou)
+### 🟥🟥🟥 Código que funcionou (testado)
 
 ```python
 #!/usr/bin/env python3ZZ
