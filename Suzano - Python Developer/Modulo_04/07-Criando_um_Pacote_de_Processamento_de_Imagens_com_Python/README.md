@@ -474,7 +474,7 @@ twine upload --repository testpypi dist/*
 
 
 <details>
-    <summary> 🟨🟨🟨 Saída do comando `twine` (expandir) </summary>
+    <summary> 🟨🟨🟨 Saída do comando `twine` (clicar para expandir) </summary>
 
 ```bash
 INFO     Using configuration from /home/arthur/.pypirc                                                                                                
