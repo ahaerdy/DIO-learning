@@ -627,8 +627,7 @@ if __name__ == "__main__":
     <img src="images/image-50.png" alt="" width="560">
 </p>
 
-▶️ Teste bem sucedido ✅
+### 5️⃣ Criar conta no PyPI ✅
 
-### 5️⃣ Criar conta no PyPI
 ### 6️⃣ Publicar no PyPI
 ### 7️⃣ Instalar pacote usando PyPI
