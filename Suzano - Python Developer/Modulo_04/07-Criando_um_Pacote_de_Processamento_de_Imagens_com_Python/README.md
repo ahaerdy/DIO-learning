@@ -236,7 +236,7 @@ python setup.py sdist bdist_wheel
 ### Passos para Subir o Pacote
 
 - Passos do 1 ao 4 são opcionais mas muito recomendados 
-- São relativos à criação da conta no Test PyPi (uma boa prática)
+- São relativos à criação da conta no Test PyPI (uma boa prática)
 - As contas no Teste Pypi e PyPi são separadas.
 - Recomenda-se usar a mesma senha para facilitar.
 - Se preferir, pode ir para os passos 5, 6 e 7 diretamente (mas é recomendado testar o pacote localmente)
@@ -256,7 +256,7 @@ python setup.py sdist bdist_wheel
     <img src="images/image-24.png" alt="" width="1024">
 </p>
 
-### Comando para publicar no Test Pypi
+### Comando para publicar no Test PypI
 
 ```bash
 python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
@@ -472,7 +472,7 @@ twine upload --repository testpypi dist/*
 - Respositório deste projeto (com os arquivos de configuração):
     - https://github.com/ahaerdy/processamento-imagens-ahaerdy
 
-- **Observação**: antes de subir o projeto torna-se necessário criar um token e gerar o arquivo `$HOME/.pypirc` no formato abaixo:
+- **Observação-1**: antes de subir o projeto torna-se necessário criar um token e gerar o arquivo `$HOME/.pypirc` no formato abaixo:
 
 ```bash
 [testpypi]
@@ -533,13 +533,33 @@ https://test.pypi.org/project/processamento-imagens-ahaerdy/0.0.1/
 
 </details>
 
-- O projeto subiu para o Test Pypi
+- O projeto subiu para o Test PypI:
 
 <p align="center">
     <img src="images/image-47.png" alt="" width="1024">
 </p>
 
+
 ### 3️⃣ Instalar pacote usando Test PyPI
+
+```bash
+pip install --index-url https://test.pypi.org/simple/ processamento-imagens-ahaerdy
+```
+
+- Saida:
+
+```bash
+Looking in indexes: https://test.pypi.org/simple/
+Collecting processamento-imagens-ahaerdy
+  Downloading https://test-files.pythonhosted.org/packages/da/27/aa9536254f9ab6b482d3e35f973328b564ee2feddb024fea6cf38b0124c2/processamento_imagens_ahaerdy-0.0.1-py3-none-any.whl.metadata (1.1 kB)
+Requirement already satisfied: Pillow>=10.0.0 in ./venv/lib/python3.12/site-packages (from processamento-imagens-ahaerdy) (11.3.0)
+Downloading https://test-files.pythonhosted.org/packages/da/27/aa9536254f9ab6b482d3e35f973328b564ee2feddb024fea6cf38b0124c2/processamento_imagens_ahaerdy-0.0.1-py3-none-any.whl (3.5 kB)
+Installing collected packages: processamento-imagens-ahaerdy
+Successfully installed processamento-imagens-ahaerdy-0.0.1
+```
+
+
+
 ### 4️⃣ Testar pacote
 ### 5️⃣ Criar conta no PyPI
 ### 6️⃣ Publicar no PyPI
