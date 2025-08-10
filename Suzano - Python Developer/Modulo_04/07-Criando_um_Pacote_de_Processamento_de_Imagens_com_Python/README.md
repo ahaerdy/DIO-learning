@@ -424,7 +424,7 @@ plot.plot_image(matched_image)
     <img src="images/image-46.png" alt="" width="1024">
 </p>
 
-## Exercício Prático (Desafio de Projeto)
+## 🟥🟥🟥 Exercício Prático (Desafio de Projeto)
 
 ### 1️⃣ Criar conta no Test PyPI ✅
 
