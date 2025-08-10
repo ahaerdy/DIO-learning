@@ -472,6 +472,15 @@ twine upload --repository testpypi dist/*
 - Respositório deste projeto (com os arquivos de configuração):
     - https://github.com/ahaerdy/processamento-imagens-ahaerdy
 
+- **Observação**: antes de subir o projeto torna-se necessário criar um token e gerar o arquivo `$HOME/.pypirc` no formato abaixo:
+
+```bash
+[testpypi]
+  username = __token__
+  password = pypi-XXXXX...
+```
+
+- **Observação-2**: o nome do projeto não pode coincidir com outro já existente (por isso foi utilizado `processamento-imagens-ahaerdy`).
 
 <details>
     <summary> 🟨🟨🟨 Saída do comando `twine` (clicar para expandir) </summary>
