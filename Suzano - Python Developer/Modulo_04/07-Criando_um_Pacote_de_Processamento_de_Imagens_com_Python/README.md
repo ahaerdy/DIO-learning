@@ -627,7 +627,7 @@ if __name__ == "__main__":
     <img src="images/image-50.png" alt="" width="560">
 </p>
 
-### ▶️ Teste do pacote `processamento-imagens-ahaerdy` bem sucedido ✅
+▶️ Teste do pacote `processamento-imagens-ahaerdy` bem sucedido ✅
 
 ### 5️⃣ Criar conta no PyPI
 ### 6️⃣ Publicar no PyPI
