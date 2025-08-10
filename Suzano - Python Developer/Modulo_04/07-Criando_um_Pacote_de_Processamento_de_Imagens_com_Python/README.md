@@ -469,7 +469,12 @@ python setup.py sdist bdist_wheel
 twine upload --repository testpypi dist/*
 ```
 
-Resultado:...
+- Respositório deste projeto (com os arquivos de configuração):
+    - https://github.com/ahaerdy/processamento-imagens-ahaerdy
+
+
+<details>
+    <summary> Resultado (expandir) </summary>
 
 ```bash
 INFO     Using configuration from /home/arthur/.pypirc                                                                                                
@@ -517,7 +522,7 @@ View at:
 https://test.pypi.org/project/processamento-imagens-ahaerdy/0.0.1/
 ```
 
-
+</details>
 
 
 
