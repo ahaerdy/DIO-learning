@@ -558,7 +558,17 @@ Installing collected packages: processamento-imagens-ahaerdy
 Successfully installed processamento-imagens-ahaerdy-0.0.1
 ```
 
+- Verificando:
 
+```bash
+pip list | grep processamento-imagens-ahaerdy
+```
+
+- Saída: 
+
+```bash
+processamento-imagens-ahaerdy 0.0.1
+```
 
 ### 4️⃣ Testar pacote
 ### 5️⃣ Criar conta no PyPI
