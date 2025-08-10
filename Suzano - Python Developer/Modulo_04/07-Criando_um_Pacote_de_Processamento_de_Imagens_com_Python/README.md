@@ -381,6 +381,34 @@ python -m pip install package_name
     <img src="images/image-44.png" alt="" width="1024">
 </p>
 
+### 🟥🟥🟥 Código testado (que funcionou)
+
+```python
+#!/usr/bin/env python3ZZ
+
+# Importação dos módulos do pacote image_processing
+from image_processing.utils import io, plot
+from image_processing.processing import combination, transformation
+
+# Leitura das imagens
+image1 = io.read_image('green_forest.jpg')
+image2 = io.read_image('autumn_forest.jpg')
+
+# Exibição das imagens
+plot.plot_image(image1)
+plot.plot_image(image2)
+
+from skimage.exposure import match_histograms
+
+# Substitua multichannel=True por channel_axis=-1
+matched_image = match_histograms(image1, image2, channel_axis=-1)
+
+# Exibição do resultado
+
+plot.plot_image(matched_image)
+```
+
+
 ### Para o exercício prático
 
 - Peguem do repositório o simple-package-template.
