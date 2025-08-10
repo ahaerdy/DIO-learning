@@ -427,7 +427,7 @@ plot.plot_image(matched_image)
 
 ### 1️⃣ Criar conta no Test PyPI ✅
 
-- link: https://test.pypi.org/
+- no link: https://test.pypi.org/
 
 ### 2️⃣ Publicar no Test PyPI
 
@@ -629,5 +629,21 @@ if __name__ == "__main__":
 
 ### 5️⃣ Criar conta no PyPI ✅
 
+- no link: https://pypi.org/
+
 ### 6️⃣ Publicar no PyPI
+
+- O comando `python setup.py ...` já foi executado na etapa de testes
+- Gerar novo token para o projeto no PyPI
+- Subir os arquivos para o repositorio do PypI
+    ```bash
+    twine upload --verbose --repository testpypi dist/*
+    ```
+- Upload bem sucedido ✅
+
+<p align="center">
+    <img src="images/image-51.png" alt="" width="560">
+</p>
+
 ### 7️⃣ Instalar pacote usando PyPI
+
