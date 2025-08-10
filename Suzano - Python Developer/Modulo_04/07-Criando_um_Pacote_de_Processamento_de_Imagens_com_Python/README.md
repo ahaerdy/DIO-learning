@@ -441,8 +441,8 @@ plot.plot_image(matched_image)
 
 ```bash
 python -m pip install --upgrade pip         
-python -m pip install --user twine          
-python -m pip install --user setuptools     
+python -m pip install twine          
+python -m pip install setuptools     
 ```
 
 - Esses comandos fazem o seguinte:
