@@ -426,13 +426,15 @@ plot.plot_image(matched_image)
 
 ## Exercício Prático (Desafio de Projeto)
 
-### 1️⃣ Criar conta no Test PyPI
+### 1️⃣ Criar conta no Test PyPI ✅
 
 - link: https://test.pypi.org/
 
 
-
 ### 2️⃣ Publicar no Test PyPI
+
+
+
 ### 3️⃣ Instalar pacote usando Test PyPI
 ### 4️⃣ Testar pacote
 ### 5️⃣ Criar conta no PyPI
