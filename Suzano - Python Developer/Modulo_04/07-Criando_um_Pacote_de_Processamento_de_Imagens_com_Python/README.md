@@ -430,12 +430,11 @@ plot.plot_image(matched_image)
 
 - link: https://test.pypi.org/
 
+### 2️⃣ Publicar no Test PyPI
+
 - O que é "Publicar no Test PyPI"?
     - TestPyPI é uma instância separada e de testes da Python Package Index (PyPI), usada especificamente para você praticar o processo de publicação sem afetar o repositório oficial.
-    - A ideia é validar todo o fluxo — geração dos pacotes, envio, instalação — antes de ir para o ambiente real da PyPI
-
-
-### 2️⃣ Publicar no Test PyPI
+    - A ideia é validar todo o fluxo — geração dos pacotes, envio, instalação — antes de ir para o ambiente real da PyPI.
 
 
 
