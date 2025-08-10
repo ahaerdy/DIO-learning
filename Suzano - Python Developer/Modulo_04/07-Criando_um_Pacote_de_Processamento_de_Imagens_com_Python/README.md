@@ -108,7 +108,7 @@
 - Mostrando em mais detalhes o que esse pacote faz:
 
     - Aqui tem um exemplo de resultado na saída.
-    - Este é um exemplo que tem dentro de `combinatio.py`.
+    - Este é um exemplo que tem dentro de `combination.py`.
     - Em `combination.py` uma das operações que voc6e pode fazer é o matching de histogramas.
     - Em match de histogramas basicamente a ideia é você passar duas imagens, onde a primeira é uma imagem de referência e a segunda é uma de referência de histograma. 
     - A terceira gerada é o matching de histograma da segunda, com o conteúdo da primeira.
