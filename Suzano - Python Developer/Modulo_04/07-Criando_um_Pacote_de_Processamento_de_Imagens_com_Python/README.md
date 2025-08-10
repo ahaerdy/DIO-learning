@@ -202,9 +202,8 @@
 #### Primeiramente:
 
 ```bash
-python -m pip install --upgrade pip         # Upgrade do pip, bom fazer antes de subir.
-python -m pip install --user twine          # Instalando o twine, ferramenta que vai nos
-                                            # auxiliar a subir as distribuições
+python -m pip install --upgrade pip         
+python -m pip install --user twine          
 python -m pip install --user setuptools     
 ```
 
@@ -436,6 +435,32 @@ plot.plot_image(matched_image)
     - TestPyPI é uma instância separada e de testes da Python Package Index (PyPI), usada especificamente para você praticar o processo de publicação sem afetar o repositório oficial.
     - A ideia é validar todo o fluxo — geração dos pacotes, envio, instalação — antes de ir para o ambiente real da PyPI.
 
+#### Passos:
+
+- Primeiramente, executar os comandos:
+
+```bash
+python -m pip install --upgrade pip         
+python -m pip install --user twine          
+python -m pip install --user setuptools     
+```
+
+- Esses comandos fazem o seguinte:
+
+    - Atualizam o pip para a versão mais recente.
+    - Instalam o Twine, uma ferramenta para publicar pacotes Python.
+    - Instalam o Setuptools, que ajuda na criação e distribuição de pacotes Python.
+
+Em seguida:
+
+```bash
+python setup.py sdist bdist_wheel
+```
+
+- Esse comando é usado para gerar distribuições do seu pacote Python:
+    
+    - sdist: cria um pacote fonte (um arquivo .tar.gz).
+    - bdist_wheel: cria um pacote binário no formato .whl (Wheel), que é mais rápido de instalar.
 
 
 ### 3️⃣ Instalar pacote usando Test PyPI
