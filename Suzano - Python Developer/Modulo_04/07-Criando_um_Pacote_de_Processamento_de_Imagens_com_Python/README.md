@@ -661,6 +661,9 @@ Requirement already satisfied: processamento-imagens-ahaerdy in ./venv/lib/pytho
 Requirement already satisfied: Pillow>=10.0.0 in ./venv/lib/python3.12/site-packages (from processamento-imagens-ahaerdy) (11.3.0)
 ```
 
+## Certificado: Criando um Pacote de Processamento de Imagens com Python
+
+Link: https://hermes.dio.me/certificates/5FHX8ELU.pdf
 
 
 

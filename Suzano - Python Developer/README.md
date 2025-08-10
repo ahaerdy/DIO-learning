@@ -136,6 +136,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Conhecendo Polimorfismo em Python](https://hermes.dio.me/certificates/OBIHTKZH.pdf)
 - [Interfaces e Classes Abstratas com Python](https://hermes.dio.me/certificates/BHZ9MWI7.pdf)
 - [Modelando o Sistema Bancário em POO com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
+- [Criando um Pacote de Processamento de Imagens com Python](https://hermes.dio.me/certificates/5FHX8ELU.pdf)
 
 ## 🔗 Contribuições Open Source
 
