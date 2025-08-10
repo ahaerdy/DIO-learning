@@ -184,7 +184,7 @@
 ### Distribuições
 
 - Para subir o pacote, criar uma distribuição binária ou distribuição de código fonte. 
-- As versões mais recentes do pip instalam primeiramente a binária e usam a distribuição de código fonte, apenas se necessário. 
+- As versões mais recentes do pip instalam primeiramente a binária e usam a distribuição de código fonte apenas se necessário. 
 - De qualquer forma, iremos criar ambas distribuições.
 
 <p align="center">
