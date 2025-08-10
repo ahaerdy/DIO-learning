@@ -647,3 +647,20 @@ if __name__ == "__main__":
 
 ### 7️⃣ Instalar pacote usando PyPI
 
+- Comando:
+
+```bash
+pip install --index-url https://pypi.org/simple/ processamento-imagens-ahaerdy
+```
+
+- Saída (o instalador reconheceu o pacote já instalado):
+
+```bash
+Looking in indexes: https://pypi.org/simple/
+Requirement already satisfied: processamento-imagens-ahaerdy in ./venv/lib/python3.12/site-packages (0.0.1)
+Requirement already satisfied: Pillow>=10.0.0 in ./venv/lib/python3.12/site-packages (from processamento-imagens-ahaerdy) (11.3.0)
+```
+
+
+
+
