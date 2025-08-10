@@ -463,10 +463,58 @@ python setup.py sdist bdist_wheel
     - bdist_wheel: cria um pacote binário no formato .whl (Wheel), que é mais rápido de instalar.
 
 - Depois de rodar este comando, foram criadas as pasta `dist/` e `build/` no seu projeto.
-- O próxomo passo será enviar o pacote para o Test PyPI com o twine.
+- O próximo passo é enviar o pacote para o Test PyPI com o twine.:
 
 ```bash
 twine upload --repository testpypi dist/*
+```
+
+Resultado:...
+
+```bash
+INFO     Using configuration from /home/arthur/.pypirc                                                                                                
+Uploading distributions to https://test.pypi.org/legacy/
+INFO     dist/processamento_imagens_ahaerdy-0.0.1-py3-none-any.whl (3.4 KB)                                                                           
+INFO     dist/processamento_imagens_ahaerdy-0.0.1.tar.gz (2.6 KB)                                                                                     
+INFO     username set by command options                                                                                                              
+INFO     password set from config file                                                                                                                
+INFO     username: __token__                                                                                                                          
+INFO     password: <hidden>                                                                                                                           
+Uploading processamento_imagens_ahaerdy-0.0.1-py3-none-any.whl
+100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 kB • 00:00 • ?
+INFO     Response from https://test.pypi.org/legacy/:                                                                                                 
+         200 OK                                                                                                                                       
+INFO     <html>                                                                                                                                       
+          <head>                                                                                                                                      
+           <title>200 OK</title>                                                                                                                      
+          </head>                                                                                                                                     
+          <body>                                                                                                                                      
+           <h1>200 OK</h1>                                                                                                                            
+           <br/><br/>                                                                                                                                 
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+          </body>                                                                                                                                     
+         </html>                                                                                                                                      
+Uploading processamento_imagens_ahaerdy-0.0.1.tar.gz
+100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.5/6.5 kB • 00:00 • ?
+INFO     Response from https://test.pypi.org/legacy/:                                                                                                 
+         200 OK                                                                                                                                       
+INFO     <html>                                                                                                                                       
+          <head>                                                                                                                                      
+           <title>200 OK</title>                                                                                                                      
+          </head>                                                                                                                                     
+          <body>                                                                                                                                      
+           <h1>200 OK</h1>                                                                                                                            
+           <br/><br/>                                                                                                                                 
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+          </body>                                                                                                                                     
+         </html>                                                                                                                                      
+
+View at:
+https://test.pypi.org/project/processamento-imagens-ahaerdy/0.0.1/
 ```
 
 
