@@ -524,7 +524,11 @@ https://test.pypi.org/project/processamento-imagens-ahaerdy/0.0.1/
 
 </details>
 
+- O projeto subiu para o Test Pypi
 
+<p align="center">
+    <img src="images/image-47.png" alt="" width="1024">
+</p>
 
 ### 3️⃣ Instalar pacote usando Test PyPI
 ### 4️⃣ Testar pacote
