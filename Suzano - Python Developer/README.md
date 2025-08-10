@@ -88,6 +88,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Projeto: [Modelando o Sistema Bancário em POO com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/06-Desafio-Gest%C3%A3o%20e%20Controle%20de%20Transa%C3%A7%C3%B5es%20Banc%C3%A1rias#-v%C3%ADdeo-01---resolu%C3%A7%C3%A3o-do-desafio--parte-1)
   - Repositório: [DIO-projeto-sistema-bancario-em-poo-com-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python/tree/main#)
   - Descrição: Projeto em Python que implementa um sistema bancário utilizando Programação Orientada a Objetos (POO), com classes abstratas, herança e encapsulamento. Atividade prática dos vídeos 01 e 02 do curso “Modelando o Sistema Bancário em POO com Python” da plataforma DIO.
+- [ ] Projeto: [Criando um Pacote de Processamento de Imagens com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/07-Criando_um_Pacote_de_Processamento_de_Imagens_com_Python)
+  - Repositório: [processamento-imagens-ahaerdy](https://github.com/ahaerdy/processamento-imagens-ahaerdy)
+  - Descrição: Projeto de um pacote Python para processamento de imagens, implementando funções para aplicar filtros (preto e branco) e transformações (redimensionamento), utilizando a biblioteca Pillow. O pacote foi desenvolvido com setuptools para publicação no Test PyPI e no PyPI, incluindo scripts de teste para validação funcional das funcionalidades implementadas.
 
 
 ### Módulo 5: Produtividade com Microsoft Copilot Studio
