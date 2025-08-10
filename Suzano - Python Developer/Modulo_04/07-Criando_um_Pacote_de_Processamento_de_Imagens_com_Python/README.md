@@ -462,6 +462,16 @@ python setup.py sdist bdist_wheel
     - sdist: cria um pacote fonte (um arquivo .tar.gz).
     - bdist_wheel: cria um pacote binário no formato .whl (Wheel), que é mais rápido de instalar.
 
+- Depois de rodar este comando, foram criadas as pasta `dist/` e `build/` no seu projeto.
+- O próxomo passo será enviar o pacote para o Test PyPI com o twine.
+
+```bash
+twine upload --repository testpypi dist/*
+```
+
+
+
+
 
 ### 3️⃣ Instalar pacote usando Test PyPI
 ### 4️⃣ Testar pacote
