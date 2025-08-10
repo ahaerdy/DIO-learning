@@ -615,17 +615,19 @@ if __name__ == "__main__":
 
 #### Arquivos de saída
 
-- `green_forest_pb.jpg` (em preto e branco)
+- `green_forest_pb.jpg` (imagem em preto e branco)
 
 <p align="center">
     <img src="images/image-49.png" alt="" width="560">
 </p>
 
-- `green_forest_redim.jpg` (redimensionada)
+- `green_forest_redim.jpg` (imagem redimensionada)
 
 <p align="center">
     <img src="images/image-50.png" alt="" width="560">
 </p>
+
+### Teste do pacote `processamento-imagens-ahaerdy` bem sucedido ✅
 
 ### 5️⃣ Criar conta no PyPI
 ### 6️⃣ Publicar no PyPI
