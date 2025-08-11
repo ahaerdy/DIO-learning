@@ -132,3 +132,49 @@ conta.extrato()
 - Atenção: É extremamente importante que as entradas e saídas sejam exatamente iguais às descritas na descrição do desafio de código.
 
 > Os desafios apresentados aqui têm como objetivo principal exercitar os conceitos aprendidos e proporcionar um primeiro contato com lógica de programação. Caso não tenha experiência em programação, utilize o template disponível e preencha com os conceitos aprendidos. Para resetar o template, basta clicar em “`Restart Code`”.
+
+## Solução
+
+```python
+''' 
+Para ler e escrever dados em Python, utilizamos as seguintes funções: 
+- input: lê UMA linha com dado(s) de Entrada do usuário;
+- print: imprime um texto de Saída (Output), pulando linha.  
+'''
+
+class ContaBancaria:
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self.saldo = saldo
+
+#TODO: Implemente a classe SistemaBancario:
+class SistemaBancario:
+    # TODO: Inicialize a lista de contas:
+    def __init__(self):
+      self.contas = []
+
+
+    # TODO: Crie uma nova conta e adicione à lista de contas:
+    def criar_conta(self, titular, saldo):
+      conta = ContaBancaria(titular, saldo)
+      self.contas.append(conta)
+
+    # TODO: Liste todas as contas no formato "Titular: R$ Saldo":
+    def listar_contas(self):
+      saida = []
+      for conta in self.contas:
+          saida.append(f"{conta.titular}: R$ {conta.saldo}")
+      print(", ".join(saida))
+
+#TODO: Crie uma instância de SistemaBancario:
+sistema = SistemaBancario()
+
+while True:
+    entrada = input().strip()
+    if entrada.upper() == "FIM":  
+        break
+    titular, saldo = entrada.split(", ")
+    sistema.criar_conta(titular, int(saldo))
+
+sistema.listar_contas()
+```
