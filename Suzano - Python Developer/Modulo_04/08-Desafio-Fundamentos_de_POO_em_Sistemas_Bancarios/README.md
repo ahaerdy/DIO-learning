@@ -11,8 +11,16 @@
     - Atributos:
         - titular (nome do dono da conta).
         - saldo (saldo inicial, que começa com 0 por padrão).
-        
+
     - Métodos:
         - depositar(valor): adiciona o valor informado ao saldo.
         - sacar(valor): subtrai o valor informado do saldo, se houver saldo suficiente. Caso contrário, exiba a mensagem "Saque não permitido".
         - saldo_atual(): retorna o saldo atual da conta.
+
+## Entrada
+
+1.  Nome do titular (string).
+2.  Sequência de valores representando operações de depósito e saque:
+
+    - Valores positivos representam depósitos.
+    - Valores negativos representam saques.
