@@ -96,3 +96,36 @@ for valor in transacoes:
 
 conta.extrato()
 ```
+
+# Desafio 2 - Sistema de Múltipas Contas bancárias
+
+## Descrição
+
+- Implemente um sistema que gerencie várias contas bancárias. Cada conta será representada como uma instância da classe ContaBancaria criada no desafio anterior. O sistema deve permitir que você crie contas para diferentes titulares e liste todas as contas cadastradas ao final da execução.
+
+## Requisitos
+
+- O sistema deve permitir:
+  
+    - Criar contas:  Ao criar uma conta, forneça o nome do titular e o saldo inicial no formato "Titular, SaldoInicial".
+    - Listar contas:  Ao digitar o comando especial "FIM", o sistema deverá listar todas as contas cadastradas no formato especificado.
+
+## Entrada
+
+- O sistema deve permitir:
+
+    - Criação de contas no formato: "Titular, SaldoInicial".
+    - Um comando especial "FIM" será usado para encerrar o processo de entrada e listar as contas.
+
+## Saída
+
+- Liste todas as contas cadastradas no formato: "Titular: X, Saldo: R$ Y"
+
+## Exemplos
+
+- A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+<p align="center">
+    <img src="images/image-2.png" alt="" width="480">
+</p>
+
