@@ -42,3 +42,57 @@
 
 > Os desafios apresentados aqui têm como objetivo principal exercitar os conceitos aprendidos e proporcionar um primeiro contato com lógica de programação. Caso não tenha experiência em programação, utilize o template disponível e preencha com os conceitos aprendidos. Para resetar o template, basta clicar em “Restart Code”.
 
+## Solução
+
+```python
+'''
+Para ler e escrever dados em Python, utilizamos as seguintes funções:
+- input: lê UMA linha com dado(s) de Entrada do usuário;
+- print: imprime um texto de Saída (Output), pulando linha.
+'''
+
+class ContaBancaria:
+    # TODO: Inicialize a conta bancária com o nome do titular, saldo 0 e  liste para armazenar as operações realizadas:
+    def __init__(self, titular):
+      self.titular = titular
+      self.saldo = 0
+      self.operacoes = []
+
+    # TODO: Implemente o método para realizar um depósito, adicione o valor ao saldo e registre a operação:
+    def depositar(self, valor):
+      self.saldo += valor
+      self.operacoes.append("0" if valor == 0 else f"+{valor}")
+
+    # TODO: Implemente o método para realizar um saque:
+    def sacar(self, valor):
+        saque = abs(valor)
+        # TODO: Verifique se há saldo suficiente para o saque
+        if self.saldo >= saque:
+            # TODO: Subtraia o valor do saldo (valor já é negativo)
+            self.saldo -= saque
+            self.operacoes.append(f"-{saque}")
+        else:
+            # TODO: Registre a operação e retorne a  mensagem de saque negado
+            self.operacoes.append("Saque não permitido")
+
+    # TODO: Crie o método para exibir o extrato da conta e junte as operações no formato correto:
+    def extrato(self):
+        print(f"Operações: {', '.join(self.operacoes)}; Saldo: {self.saldo}")
+
+
+nome_titular = input().strip()
+conta = ContaBancaria(nome_titular)
+
+entrada_transacoes = input().strip()
+transacoes = [int(valor) for valor in entrada_transacoes.split(",")]
+
+for valor in transacoes:
+    if valor > 0:
+        conta.depositar(valor)
+    elif valor<0:
+        conta.sacar(valor)
+    else:
+        conta.depositar(0)  # garante que vai aparecer "0" e não "-0"
+
+conta.extrato()
+```
