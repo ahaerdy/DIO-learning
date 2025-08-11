@@ -91,7 +91,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Projeto: [Criando um Pacote de Processamento de Imagens com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/07-Criando_um_Pacote_de_Processamento_de_Imagens_com_Python)
   - Repositório: [processamento-imagens-ahaerdy](https://github.com/ahaerdy/processamento-imagens-ahaerdy)
   - Descrição: Projeto de um pacote Python para processamento de imagens, implementando funções para aplicar filtros (preto e branco) e transformações (redimensionamento), utilizando a biblioteca Pillow. O pacote foi desenvolvido com setuptools para publicação no Test PyPI e no PyPI, incluindo scripts de teste para validação das funcionalidades implementadas.
-
+- [x] Desafio: [Fundamentos de POO em Sistemas Bancários](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_03/08-Curso%2008-Desafio_Gest%C3%A3o_e_Control_de_Transa%C3%A7%C3%B5es_Bancarias#desafio-1---registro-de-transa%C3%A7%C3%B5es-banc%C3%A1rias)
 
 ### Módulo 5: Produtividade com Microsoft Copilot Studio
 
@@ -137,6 +137,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Interfaces e Classes Abstratas com Python](https://hermes.dio.me/certificates/BHZ9MWI7.pdf)
 - [Modelando o Sistema Bancário em POO com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
 - [Criando um Pacote de Processamento de Imagens com Python](https://hermes.dio.me/certificates/5FHX8ELU.pdf)
+- Certificado do Módulo: [Programação Orientada a Objetos com Python](https://hermes.dio.me/certificates/HGW24O21.pdf) ✅
 
 ## 🔗 Contribuições Open Source
 
