@@ -24,3 +24,13 @@
 
     - Valores positivos representam depósitos.
     - Valores negativos representam saques.
+
+## Saída
+
+- Exiba as operações realizadas e o saldo final no formato:  
+    - "Operações: +500, -200; Saldo: 300" 
+
+## Exemplos
+
+- A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
