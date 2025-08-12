@@ -154,7 +154,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst))
 - / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton FalvoJr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - / [karinakato](https://www.linkedin.com/in/karinakato/) (Karina Kato / Machine Learning Engineer)
-- / [renatoromao](https://www.linkedin.com/in/renatoromao) (Renato Romão de Souza (Subject Matter Expert Power Platform / Copilot Microsoft)
+- / [renatoromao](https://www.linkedin.com/in/renatoromao) (Renato Romão de Souza / Microsoft MVP, MCT, Especialista em Copilot & IA)
 
 ## 🔄 Atualizações
 
