@@ -100,18 +100,7 @@
 
 ### Arquitetura
 
-- **Authored Topics**  
-  Organizações controlam seus tópicos críticos ao desenhar processos e fluxos específicos.
-
-- **Generated Responses**  
-  A IA generativa responde em escala a perguntas duplicadas ou menos complexas.
-
-- **Escalation**  
-  Se o Copilot não conseguir lidar com a conversa, ela será escalada para um assistente humano.
-
----
-
-### Copilot Studio Dialog Management
+### Copilot Studio Dialog Management (ESTÁGIOS)
 
 #### 1. **Authored Topics**
 Tópicos criados manualmente por especialistas ou administradores da organização para garantir controle e precisão.
@@ -126,8 +115,6 @@ Tópicos criados manualmente por especialistas ou administradores da organizaç�
   - Propõe frases, intenções e fluxos com base em exemplos fornecidos.  
   - Acelera o processo de criação e reduz erros humanos.
 
----
-
 #### 2. **Generated Responses**
 Respostas criadas dinamicamente por modelos de IA, especialmente úteis para perguntas comuns ou menos críticas.
 
@@ -141,8 +128,6 @@ Respostas criadas dinamicamente por modelos de IA, especialmente úteis para per
   - Usados para interpretar perguntas abertas e fornecer respostas relevantes.  
   - Aprendem com interações anteriores para melhorar continuamente.
 
----
-
 #### 3. **Escalation**
 Quando a IA não consegue resolver a solicitação, a conversa é encaminhada para um humano.
 
@@ -150,4 +135,5 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
   Suporte humano disponível em múltiplos canais (chat, e-mail, telefone, etc.).  
   - Garante continuidade da conversa, independentemente do canal.  
   - Preserva o histórico e o contexto para que o atendente humano possa agir com eficiência.
+
 
