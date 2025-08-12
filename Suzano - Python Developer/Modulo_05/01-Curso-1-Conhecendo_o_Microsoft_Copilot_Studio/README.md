@@ -69,4 +69,27 @@
     <img src="images/image-2.png" alt="" width="1024">
 </p>
 
+### Ciclo de Aplicação com Copilot Studio
+
+1. **Create an agent**  
+   Você inicia criando um agente personalizado, que será o núcleo da sua aplicação de IA.
+
+2. **Chat over knowledge**  
+   O agente pode conversar com base em dados e documentos que você fornece, respondendo perguntas com base nesse conhecimento.
+
+3. **Create specific topics**  
+   Você define tópicos específicos para guiar as conversas e estruturar o comportamento do agente.
+
+4. **Actions & Plugins**  
+   Integrações com ações externas e plugins permitem que o agente execute tarefas, como buscar dados ou acionar sistemas.
+
+5. **Multiple channels**  
+   O agente pode ser publicado em diversos canais, como Microsoft Teams, sites, aplicativos e mais.
+
+6. **Monitor and Improve**  
+   Você acompanha o desempenho do agente e faz ajustes com base em métricas e feedback dos usuários.
+
+7. **Extend with Azure**  
+   Recursos avançados do Azure podem ser integrados para ampliar as capacidades do agente, como usar serviços cognitivos ou automações complexas.
+
 
