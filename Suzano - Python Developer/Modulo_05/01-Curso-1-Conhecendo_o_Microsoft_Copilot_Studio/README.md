@@ -192,11 +192,19 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
 
 ## 🟩 Vídeo 10 - A importância da IA
 
-<p align="center">
-    <img src="images/image-6.png" alt="" width="1024">
-</p>
+### A importância da IA
+
+- **Eficiência**: Fazer tarefas repetitivas  
+- **Gestão da Informação**: Organizar e buscar informações rapidamente  
+- **Serviço ao Cliente**: Permitir um suporte 24/7  
+- **Análise de dados**: Analisar grande quantidade de dados para providenciar insights  
+- **Assistente pessoal**: Gerenciar vários aspectos da sua vida pessoal
 
 ## 🟩 Vídeo 11 - Licenciamento
+
+<p align="center">
+    <img src="images/image-7.png" alt="" width="1024">
+</p>
 
 ## 🟩 Vídeo 12 - Tipos de Copilot
 
