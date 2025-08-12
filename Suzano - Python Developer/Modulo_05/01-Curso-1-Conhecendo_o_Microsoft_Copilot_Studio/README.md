@@ -92,4 +92,9 @@
 7. **Extend with Azure**  
    Recursos avançados do Azure podem ser integrados para ampliar as capacidades do agente, como usar serviços cognitivos ou automações complexas.
 
+## 🟩 Vídeo 07 - Arquitetura
+
+<p align="center">
+    <img src="images/image-3.png" alt="" width="1024">
+</p>
 
