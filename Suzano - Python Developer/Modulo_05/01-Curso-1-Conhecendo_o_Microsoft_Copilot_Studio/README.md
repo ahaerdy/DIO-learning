@@ -136,4 +136,4 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
   - Garante continuidade da conversa, independentemente do canal.  
   - Preserva o histórico e o contexto para que o atendente humano possa agir com eficiência.
 
-
+## 🟩 Vídeo 08 - Microsoft Power Plataform
