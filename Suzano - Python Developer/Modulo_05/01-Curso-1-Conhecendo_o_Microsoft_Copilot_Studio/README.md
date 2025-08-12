@@ -55,11 +55,18 @@
 
 # Parte 2 - Materiais de apoio e Questionário
 
-## 🟩 Vídeo 01 - Microsoft Copilot Studio
+## 🟩 Vídeo 05 - Microsoft Copilot Studio
+
+- Ferramenta lançada em 2019 com o intuito de facilitar a criação de chatbots (inicialmente eram somente chatbots, não eram agentes nem copilotos).
 
 <p align="center">
     <img src="images/image.png" alt="" width="1024">
 </p>
 
+## 🟩 Vídeo 06 - Ciclo
+
+<p align="center">
+    <img src="images/image-2.png" alt="" width="1024">
+</p>
 
 
