@@ -208,4 +208,8 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
 
 ## 🟩 Vídeo 12 - Tipos de Copilot
 
+<p align="center">
+    <img src="images/image-8.png" alt="" width="1024">
+</p>
+
 ## 🟩 Vídeo 13 - Próximos Passos
