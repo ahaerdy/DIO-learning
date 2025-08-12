@@ -213,3 +213,36 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
 </p>
 
 ## 🟩 Vídeo 13 - Próximos Passos
+
+### Links Úteis
+
+- **Microsoft Learn**  
+  https://learn.microsoft.com/pt-br/microsoft-copilot-studio
+
+- **Romão's Learn**  
+  https://romaoos.com.br/learn
+
+
+## Materiais de Apoio
+
+Curso: **Conhecendo o Microsoft Copilot Studio**
+
+### Recursos Adicionais
+
+- [Microsoft Copilot Studio](https://www.microsoft.com/pt-br/microsoft-copilot/microsoft-copilot-studio)
+- [Documentação do Microsoft Copilot Studio](https://learn.microsoft.com/pt-br/microsoft-copilot-studio/)
+- [Microsoft Power Platform](https://www.microsoft.com/pt-br/power-platform)
+
+### Dicas e Links Úteis
+
+- **Artigos e Fórum da DIO**  
+  Compartilhe conhecimento e dúvidas por meio de artigos e fóruns específicos de cada experiência educacional, como Bootcamps.
+
+- **Rooms**  
+  Participe de salas de bate-papo em tempo real para interagir com outros participantes, compartilhar dúvidas, dicas e trechos de código.
+
+- **Exploração na Web**  
+  Utilize buscadores para aprofundar o conhecimento em temas específicos. Sites como StackOverflow são ótimos para encontrar soluções e expandir a compreensão.
+
+Aproveite esses materiais complementares para explorar o potencial da tecnologia e se destacar nas suas iniciativas!
+
