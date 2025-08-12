@@ -183,3 +183,10 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
 - **Power Fx**  
   Linguagem de fórmula de baixo código usada em Power Apps.  
   - Inspirada no Excel, facilita a criação de lógica personalizada nos aplicativos.
+
+## 🟩 Vídeo 09 - Conectores
+
+<p align="center">
+    <img src="images/image-5.png" alt="" width="1024">
+</p>
+
