@@ -111,7 +111,7 @@
 
 ---
 
-### 🧠 Copilot Studio Dialog Management
+### Copilot Studio Dialog Management
 
 #### 1. **Authored Topics**
 Tópicos criados manualmente por especialistas ou administradores da organização para garantir controle e precisão.
@@ -150,3 +150,4 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
   Suporte humano disponível em múltiplos canais (chat, e-mail, telefone, etc.).  
   - Garante continuidade da conversa, independentemente do canal.  
   - Preserva o histórico e o contexto para que o atendente humano possa agir com eficiência.
+
