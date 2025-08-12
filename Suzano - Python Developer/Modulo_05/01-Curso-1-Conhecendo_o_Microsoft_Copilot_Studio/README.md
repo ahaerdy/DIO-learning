@@ -53,7 +53,7 @@
 - ✓ Tipos de Copilot disponíveis
 
 
-# Parte 2 - Materiais de apoio e Questionário
+# Parte 2 - Conhecendo o Microsoft Copilot Studio
 
 ## 🟩 Vídeo 05 - Microsoft Copilot Studio
 
