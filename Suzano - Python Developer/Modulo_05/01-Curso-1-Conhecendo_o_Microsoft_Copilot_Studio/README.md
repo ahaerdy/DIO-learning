@@ -2,7 +2,7 @@
 - Instrutor: Renato Romão de Souza (Microsoft MVP, MCT, Especialista em Copilot & IA).
 - Contato Linkedin: https://www.linkedin.com/in/renatoromao
 
-# Parte 1 -  Introdução à Programação Orientada a Objetos (POO) com Python
+# Parte 1 -  Introdução
 
 ## 🟩 Vídeo 01 - Introdução
 
@@ -246,3 +246,6 @@ Curso: **Conhecendo o Microsoft Copilot Studio**
 
 Aproveite esses materiais complementares para explorar o potencial da tecnologia e se destacar nas suas iniciativas!
 
+# Certificado: Conhecendo o Microsoft Copilot Studio
+
+Link: https://hermes.dio.me/certificates/RNJH5GJM.pdf
