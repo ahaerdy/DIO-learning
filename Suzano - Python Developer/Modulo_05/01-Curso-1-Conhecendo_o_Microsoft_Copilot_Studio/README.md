@@ -57,4 +57,9 @@
 
 ## 🟩 Vídeo 01 - Microsoft Copilot Studio
 
-...
+<p align="center">
+    <img src="images/image.png" alt="" width="1024">
+</p>
+
+
+
