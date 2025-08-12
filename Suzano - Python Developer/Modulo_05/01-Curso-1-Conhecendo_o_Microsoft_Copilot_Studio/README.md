@@ -141,3 +141,45 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
 <p align="center">
     <img src="images/image-4.png" alt="" width="1024">
 </p>
+
+### Microsoft Power Platform
+
+#### Ferramentas Principais
+
+- **Power Apps**  
+  Ferramenta para desenvolvimento de aplicativos personalizados sem necessidade de codificação avançada.  
+  - Ideal para criar soluções internas sob medida para processos de negócio.
+
+- **Power Automate**  
+  Plataforma de automação de processos.  
+  - Permite criar fluxos que conectam sistemas e automatizam tarefas repetitivas.
+
+- **Power BI**  
+  Ferramenta de análise de dados e criação de dashboards interativos.  
+  - Ajuda na tomada de decisões com base em dados visuais e relatórios dinâmicos.
+
+- **Copilot Studio**  
+  Ambiente para criação de agentes inteligentes com IA generativa.  
+  - Permite desenvolver copilotos personalizados que interagem com usuários e sistemas.
+
+- **Power Pages**  
+  Solução para criação de sites externos com segurança e integração com dados corporativos.  
+  - Ideal para portais de clientes, formulários públicos e páginas de autoatendimento.
+
+#### Componentes de Suporte
+
+- **Data Connectors**  
+  Conectores que permitem integrar a Power Platform com centenas de fontes de dados.  
+  - Inclui serviços como SharePoint, SQL Server, Dynamics 365, entre outros.
+
+- **AI Builder**  
+  Ferramenta para incorporar modelos de IA em aplicativos e fluxos.  
+  - Reconhecimento de imagem, previsão, classificação de texto e mais.
+
+- **Microsoft Dataverse**  
+  Plataforma de armazenamento de dados estruturados.  
+  - Permite modelar, gerenciar e proteger dados usados por aplicativos da Power Platform.
+
+- **Power Fx**  
+  Linguagem de fórmula de baixo código usada em Power Apps.  
+  - Inspirada no Excel, facilita a criação de lógica personalizada nos aplicativos.
