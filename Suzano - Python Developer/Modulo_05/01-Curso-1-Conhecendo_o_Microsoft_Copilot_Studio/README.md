@@ -13,7 +13,7 @@
 - @renatooromao  
 - LinkedIn: /in/renatoromao/
 
-### Sobre mim
+### Sobre o palestrante
 
 - São Paulo, Brazil  
 - 5x Microsoft MVP – Business Applications  
