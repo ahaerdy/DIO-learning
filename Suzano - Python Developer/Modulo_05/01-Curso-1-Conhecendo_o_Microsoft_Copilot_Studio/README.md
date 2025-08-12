@@ -137,3 +137,7 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
   - Preserva o histórico e o contexto para que o atendente humano possa agir com eficiência.
 
 ## 🟩 Vídeo 08 - Microsoft Power Plataform
+
+<p align="center">
+    <img src="images/image-4.png" alt="" width="1024">
+</p>
