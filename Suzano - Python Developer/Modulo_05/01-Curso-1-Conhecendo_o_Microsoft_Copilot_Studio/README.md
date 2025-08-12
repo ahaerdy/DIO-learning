@@ -98,3 +98,55 @@
     <img src="images/image-3.png" alt="" width="1024">
 </p>
 
+### Arquitetura
+
+- **Authored Topics**  
+  Organizações controlam seus tópicos críticos ao desenhar processos e fluxos específicos.
+
+- **Generated Responses**  
+  A IA generativa responde em escala a perguntas duplicadas ou menos complexas.
+
+- **Escalation**  
+  Se o Copilot não conseguir lidar com a conversa, ela será escalada para um assistente humano.
+
+---
+
+### 🧠 Copilot Studio Dialog Management
+
+#### 1. **Authored Topics**
+Tópicos criados manualmente por especialistas ou administradores da organização para garantir controle e precisão.
+
+- **Unified Authoring Canvas**  
+  Interface unificada para criar, editar e organizar tópicos de conversa.  
+  - Permite que autores definam fluxos de diálogo, regras de negócio e respostas específicas.  
+  - Facilita a colaboração entre equipes e mantém consistência na experiência do usuário.
+
+- **Copilot-assisted Authoring**  
+  O Copilot ajuda na criação de tópicos com sugestões inteligentes.  
+  - Propõe frases, intenções e fluxos com base em exemplos fornecidos.  
+  - Acelera o processo de criação e reduz erros humanos.
+
+---
+
+#### 2. **Generated Responses**
+Respostas criadas dinamicamente por modelos de IA, especialmente úteis para perguntas comuns ou menos críticas.
+
+- **Generative Answers / Actions**  
+  Respostas e ações geradas em tempo real com base em grandes volumes de dados.  
+  - Ideal para perguntas frequentes, dúvidas genéricas ou tarefas simples.  
+  - Pode sugerir ações como abrir um ticket, enviar um e-mail ou buscar informações.
+
+- **GPT Models**  
+  Modelos de linguagem avançados (como os da família GPT) que entendem contexto e geram respostas naturais.  
+  - Usados para interpretar perguntas abertas e fornecer respostas relevantes.  
+  - Aprendem com interações anteriores para melhorar continuamente.
+
+---
+
+#### 3. **Escalation**
+Quando a IA não consegue resolver a solicitação, a conversa é encaminhada para um humano.
+
+- **Omni-channel**  
+  Suporte humano disponível em múltiplos canais (chat, e-mail, telefone, etc.).  
+  - Garante continuidade da conversa, independentemente do canal.  
+  - Preserva o histórico e o contexto para que o atendente humano possa agir com eficiência.
