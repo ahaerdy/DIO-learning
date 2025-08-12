@@ -190,3 +190,14 @@ Quando a IA não consegue resolver a solicitação, a conversa é encaminhada pa
     <img src="images/image-5.png" alt="" width="1024">
 </p>
 
+## 🟩 Vídeo 10 - A importância da IA
+
+<p align="center">
+    <img src="images/image-6.png" alt="" width="1024">
+</p>
+
+## 🟩 Vídeo 11 - Licenciamento
+
+## 🟩 Vídeo 12 - Tipos de Copilot
+
+## 🟩 Vídeo 13 - Próximos Passos
