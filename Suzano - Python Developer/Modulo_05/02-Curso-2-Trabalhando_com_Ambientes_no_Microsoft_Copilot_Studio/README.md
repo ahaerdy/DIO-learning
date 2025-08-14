@@ -18,9 +18,13 @@
 
 ### A primeira é usando `www.copilotstudio.microsoft.com`
 
+- ... e lá de dentro do cenário do Copilot Studio temos o acesso aos ambientes da Power Platform
+
 <p align="center">
-    <img src="images/image-3.png" alt="" width="820">
+    <img src="images/image-3.png" alt="" width="1024">
 </p>
+
+### A segunda é usando ``
 
 ## 🟩 Vídeo 03 - Criando um novo ambiente
 
