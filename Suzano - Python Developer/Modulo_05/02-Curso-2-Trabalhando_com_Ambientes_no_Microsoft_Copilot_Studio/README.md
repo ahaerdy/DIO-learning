@@ -8,6 +8,10 @@
     <img src="images/image.png" alt="" width="820">
 </p>
 
+<p align="center">
+    <img src="images/image=2.png" alt="" width="820">
+</p>
+
 ## 🟩 Vídeo 01 - Introdução
 
 ## 🟩 Vídeo 02 - Ambientes na Power Plataform
