@@ -34,7 +34,7 @@
 
 - Você acesso através do Power Automate a manipular seus ambientes do Power Platform
 
-### Todos os ambientes vão ficar na parte superior direira
+### Todos os ambientes vão ficar na parte superior direira, onde você vai poder manipular e trocar os ambientes de acordo com aquilo que você está mexendo
 
 <p align="center">
     <img src="images/image-5.png" alt="" width="1024">
