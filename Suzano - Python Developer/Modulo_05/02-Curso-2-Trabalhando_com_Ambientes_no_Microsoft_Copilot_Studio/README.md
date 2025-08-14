@@ -24,7 +24,12 @@
     <img src="images/image-3.png" alt="" width="1024">
 </p>
 
-### A segunda é usando ``
+### Segunda opção: `www.make.powerapps.com`
+
+<p align="center">
+    <img src="images/image-4.png" alt="" width="1024">
+</p>
+
 
 ## 🟩 Vídeo 03 - Criando um novo ambiente
 
