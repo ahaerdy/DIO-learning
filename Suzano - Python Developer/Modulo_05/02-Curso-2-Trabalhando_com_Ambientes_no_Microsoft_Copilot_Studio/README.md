@@ -40,15 +40,17 @@
     <img src="images/image-5.png" alt="" width="1024">
 </p>
 
-### Através do linl `www.admin.powerplatform.microsoft.com` nós conseguimos administrar todos os ambientes.
+### Através do link `www.admin.powerplatform.microsoft.com` nós conseguimos administrar todos os ambientes.
 
 <p align="center">
     <img src="images/image-6.png" alt="" width="1024">
 </p>
 
-
 ## 🟩 Vídeo 03 - Criando um novo ambiente
 
+<p align="center">
+    <img src="images/image-7.png" alt="" width="1024">
+</p>
 ## 🟩 Vídeo 04 - Soluções
 
 ## 🟩 Vídeo 05 - Criando uma nova Solução
