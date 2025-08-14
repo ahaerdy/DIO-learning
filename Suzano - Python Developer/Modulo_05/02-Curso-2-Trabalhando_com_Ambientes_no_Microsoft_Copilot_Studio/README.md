@@ -7,9 +7,9 @@
 <p align="center">
     <img src="images/image.png" alt="" width="820">
 </p>
-![alt text](image.png)
+
 <p align="center">
-    <img src="images/image=2.png" alt="" width="820">
+    <img src="images/image-2.png" alt="" width="820">
 </p>
 
 ## 🟩 Vídeo 01 - Introdução
