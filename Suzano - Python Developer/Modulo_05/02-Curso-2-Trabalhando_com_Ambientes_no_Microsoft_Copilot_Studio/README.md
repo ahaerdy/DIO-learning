@@ -30,6 +30,11 @@
     <img src="images/image-4.png" alt="" width="1024">
 </p>
 
+### Terceira opção: `www.make.powerautomate.com`
+
+- Você acesso através do Power Automate a manipular seus ambientes do Power Platform
+
+
 
 ## 🟩 Vídeo 03 - Criando um novo ambiente
 
