@@ -12,9 +12,15 @@
     <img src="images/image-2.png" alt="" width="820">
 </p>
 
-## 🟩 Vídeo 01 - Introdução
-
 ## 🟩 Vídeo 02 - Ambientes na Power Plataform
+
+- Pra começar a usar os ambientes da Power Plataform temos duas opções:
+
+### A primeira é usando `www.copilotstudio.microsoft.com`
+
+<p align="center">
+    <img src="images/image-3.png" alt="" width="820">
+</p>
 
 ## 🟩 Vídeo 03 - Criando um novo ambiente
 
