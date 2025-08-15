@@ -61,6 +61,11 @@
 <p align="center">
     <img src="images/image-8.png" alt="" width="1024">
 </p>
+
 ## 🟩 Vídeo 05 - Criando uma nova Solução
+
+<p align="center">
+    <img src="images/image-9.png" alt="" width="1024">
+</p>
 
 ## 🟩 Vídeo 06 - Power Platform Pipelines
