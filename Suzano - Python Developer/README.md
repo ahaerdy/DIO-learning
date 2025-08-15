@@ -96,6 +96,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 5: Produtividade com Microsoft Copilot Studio
 
 - [x] Curso: [Conhecendo o Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/01-Curso-1-Conhecendo_o_Microsoft_Copilot_Studio#parte-1----introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-orientada-a-objetos-poo-com-python)
+- [x] Curso: [Trabalhando com Ambientes no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/02-Curso-2-Trabalhando_com_Ambientes_no_Microsoft_Copilot_Studio#parte-1----introdu%C3%A7%C3%A3o)
 
 ### Módulo 6: Integrando com Serviços de IA
 
@@ -142,6 +143,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 5
 - [Conhecendo o Microsoft Copilot Studio](https://hermes.dio.me/certificates/RNJH5GJM.pdf)
 ## 🔗 Contribuições Open Source
+- [Trabalhando com Ambientes no Microsoft Copilot Studio](https://hermes.dio.me/certificates/HF5YIG5U.pdf)
 
 - Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
     - Issue criada: #65498, Pull Request aceito: #65510, Perfil adicionado: ahaerdy.md
