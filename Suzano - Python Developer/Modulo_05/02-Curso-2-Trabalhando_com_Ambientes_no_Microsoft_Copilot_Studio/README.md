@@ -54,9 +54,9 @@
 
 ## 🟩 Vídeo 04 - Soluções
 
-- Soluções são pastas organizadoras que temos dentro de cada ambbiente.
-- Fazendo uma analogia com pastas do Windows, Ambientes são usuários e Solutions são pastas (dos usuários).
-- Solutions conseguem ser facilmente movidas de um ambiente para outro.
+- `Soluções` são pastas organizadoras que temos dentro de cada `Ambiente.
+- Fazendo uma analogia com pastas do Windows, `ambientes` são usuários e `Solutions` são pastas (dos usuários).
+- `Solutions` conseguem ser facilmente movidas de um `ambiente` para outro.
 
 <p align="center">
     <img src="images/image-8.png" alt="" width="1024">
