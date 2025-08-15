@@ -68,4 +68,11 @@
     <img src="images/image-9.png" alt="" width="1024">
 </p>
 
+### O que pode ser criado
+
+<p align="center">
+    <img src="images/image-10.png" alt="" width="1024">
+</p>
+
 ## 🟩 Vídeo 06 - Power Platform Pipelines
+
