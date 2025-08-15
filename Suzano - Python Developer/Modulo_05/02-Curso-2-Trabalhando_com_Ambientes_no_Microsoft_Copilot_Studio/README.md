@@ -76,7 +76,7 @@
 
 ## 🟩 Vídeo 06 - Power Platform Pipelines
 
-- Pipelines representam formas de executar comandos e mover coisas de um lugar pro outro. 
+- Pipelines representam formas de executar comandos e mover coisas de um lugar pro outro sem você ter que saber a parte de código por trás.
 
 <p align="center">
     <img src="images/image-11.png" alt="" width="1024">
