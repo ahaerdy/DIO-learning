@@ -73,10 +73,22 @@
     <img src="images/image-13.png" alt="" width="840">
 </p>
 
-O Agente é necessário para ele não começar a "alucinar¨, começar a falar coisas que não fazem sentido.
+- O Agente é necessário para ele não começar a "alucinar¨, começar a falar coisas que não fazem sentido.
 
 <p align="center">
     <img src="images/image-14.png" alt="" width="840">
+</p>
+
+- A base de conhecimento está conectada ao US Travel Website que é o site de viagens do governo dos EUA.
+
+<p align="center">
+    <img src="images/image-15.png" alt="" width="840">
+</p>
+
+- Alterando o idioma.
+
+<p align="center">
+    <img src="images/image-16.png" alt="" width="840">
 </p>
 
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
