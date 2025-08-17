@@ -97,6 +97,8 @@
     <img src="images/image-18.png" alt="" width="840">
 </p>
 
+- Posso visualizar todos os tópicos:
+
 <p align="center">
     <img src="images/image-17.png" alt="" width="840">
 </p>
