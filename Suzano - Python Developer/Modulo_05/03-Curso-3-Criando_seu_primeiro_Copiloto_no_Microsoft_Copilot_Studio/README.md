@@ -16,6 +16,11 @@
 
 ## 🟩 Vídeo 02 - Conteúdo Programático
 
+<p align="center">
+    <img src="images/image-2.png" alt="" width="840">
+</p>
+
+
 ## 🟩 Vídeo 03 - Conectar e Criar uma conta no Microsoft 365
 
 ## 🟩 Vídeo 04 - Criar um Copilot baseado em modelo
