@@ -73,6 +73,10 @@
     <img src="images/image-13.png" alt="" width="840">
 </p>
 
+<p align="center">
+    <img src="images/image-14.png" alt="" width="840">
+</p>
+
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
 
 ## 🟩 Vídeo 06 - Criar um Copilot em branco
