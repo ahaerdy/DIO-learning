@@ -4,6 +4,8 @@
 
 # Parte 1 -  Introdução
 
+## 🟩 Vídeo 01 - Introdução
+
 <p align="center">
     <img src="images/image.png" alt="" width="820">
 </p>
