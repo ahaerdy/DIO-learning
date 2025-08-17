@@ -67,6 +67,7 @@
 ### Para testes, vamos considerar qu estamos criando uma AGENTE para uma agência de viagens.
 
 - A descrição é um prompt.
+- O prompt é necessário para garantir que A IA responda de acordo como o que está sendo configurado.
 
 <p align="center">
     <img src="images/image-13.png" alt="" width="840">
