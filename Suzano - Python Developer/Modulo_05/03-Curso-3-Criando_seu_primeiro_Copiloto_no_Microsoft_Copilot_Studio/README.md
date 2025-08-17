@@ -7,7 +7,7 @@
 ### 🧭 Etapas do Desafio 
 
 <p align="center">
-    <img src="images/image.png" alt="" width="480">
+    <img src="images/image.png" alt="" width="840">
 </p>
 
 
