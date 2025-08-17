@@ -73,6 +73,8 @@
     <img src="images/image-13.png" alt="" width="840">
 </p>
 
+O Agente é necessário para ele não começar a "alucinar¨, começar a falar coisas que não fazem sentido.
+
 <p align="center">
     <img src="images/image-14.png" alt="" width="840">
 </p>
