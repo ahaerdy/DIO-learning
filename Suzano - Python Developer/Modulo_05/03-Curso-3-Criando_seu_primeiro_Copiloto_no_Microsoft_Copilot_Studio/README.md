@@ -6,13 +6,11 @@
 
 ### 🧭 Etapas do Desafio 
 
-1. Conectar/Criar uma conta no Microsoft 365 - 🔗 [Acesse aqui](https://copilotstudio.microsoft.com) 
+<p align="center">
+    <img src="images/image.png" alt="" width="480">
+</p>
 
-2. Criar um Copilot baseado em modelo Escolha o modelo de **Viagens** ou **"Safe Travels"** 
 
-3. Criar um Copilot baseado em descrição com IA Use uma descrição detalhada para gerar um Copilot com ajuda da inteligência artificial. 
-
-4. Criar um Copilot em branco Comece do zero e personalize completamente seu Copilot.
 
 ## 🟩 Vídeo 02 - Conteúdo Programático
 
