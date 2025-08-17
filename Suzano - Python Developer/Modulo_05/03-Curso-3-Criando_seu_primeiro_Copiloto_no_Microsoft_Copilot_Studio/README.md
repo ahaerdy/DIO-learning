@@ -30,6 +30,12 @@
     <img src="images/image-4.png" alt="" width="840">
 </p>
 
+### Pesquisar Copilot Studio
+
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
+</p>
+
 ## 🟩 Vídeo 04 - Criar um Copilot baseado em modelo
 
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
