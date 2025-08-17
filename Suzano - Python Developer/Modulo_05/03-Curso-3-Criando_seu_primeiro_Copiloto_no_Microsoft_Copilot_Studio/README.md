@@ -20,6 +20,9 @@
     <img src="images/image-2.png" alt="" width="840">
 </p>
 
+<p align="center">
+    <img src="images/image-3.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 03 - Conectar e Criar uma conta no Microsoft 365
 
