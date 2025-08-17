@@ -26,6 +26,10 @@
 
 ## 🟩 Vídeo 03 - Conectar e Criar uma conta no Microsoft 365
 
+<p align="center">
+    <img src="images/image-4.png" alt="" width="840">
+</p>
+
 ## 🟩 Vídeo 04 - Criar um Copilot baseado em modelo
 
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
