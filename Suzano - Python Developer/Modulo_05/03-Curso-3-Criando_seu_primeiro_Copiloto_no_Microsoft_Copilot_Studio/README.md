@@ -36,6 +36,23 @@
     <img src="images/image-5.png" alt="" width="840">
 </p>
 
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+
+<p align="center">
+    <img src="images/image-8.png" alt="" width="840">
+</p>
+
+<p align="center">
+    <img src="images/image-9.png" alt="" width="840">
+</p>
+
+
 ## 🟩 Vídeo 04 - Criar um Copilot baseado em modelo
 
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
