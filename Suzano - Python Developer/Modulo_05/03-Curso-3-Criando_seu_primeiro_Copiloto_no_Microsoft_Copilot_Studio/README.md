@@ -64,10 +64,12 @@
     <img src="images/image-11.png" alt="" width="840">
 </p>
 
-### Para testes, vamos considerar qu estamos criando uma agência de viagens.
+### Para testes, vamos considerar qu estamos criando uma AGENTE para uma agência de viagens.
+
+- A descrição é um prompt.
 
 <p align="center">
-    <img src="images/image-12.png" alt="" width="840">
+    <img src="images/image-13.png" alt="" width="840">
 </p>
 
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
