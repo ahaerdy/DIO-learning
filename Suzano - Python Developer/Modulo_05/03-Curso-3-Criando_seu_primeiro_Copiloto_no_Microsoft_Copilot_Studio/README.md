@@ -11,9 +11,7 @@
 </p>
 
 - Criar uma conta gratuita no Microsft 365, através deste [link](https://copilot.microsoft.com/chats/v1Ed4quJJ6RGC3asffb1H#:~:text=Criar%20uma%20conta%20gratuita%20no,.).
-
 - Com ela você terá permissão de criar uma conta no Copilot Studio.
-
 - Acessar o link https://copilotstudio.microsoft.com para criar conta do Copilot Studio.
 
 ## 🟩 Vídeo 02 - Conteúdo Programático
