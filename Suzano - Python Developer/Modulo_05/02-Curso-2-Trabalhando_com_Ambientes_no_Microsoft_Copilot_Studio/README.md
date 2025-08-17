@@ -2,7 +2,7 @@
 - Instrutor: Renato Romão de Souza (Microsoft MVP, MCT, Especialista em Copilot & IA).
 - Contato Linkedin: https://www.linkedin.com/in/renatoromao
 
-# Parte 1 -  Introdução
+# Parte 1 -  Introdução 
 
 ## 🟩 Vídeo 01 - Introdução
 
