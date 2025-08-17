@@ -52,8 +52,23 @@
     <img src="images/image-9.png" alt="" width="840">
 </p>
 
-
 ## 🟩 Vídeo 04 - Criar um Copilot baseado em modelo
+
+<p align="center">
+    <img src="images/image-10.png" alt="" width="840">
+</p>
+
+### O símbolo do avião indica o Agende de Viagens (Safe Travel) - que é um modelo.
+
+<p align="center">
+    <img src="images/image-11.png" alt="" width="840">
+</p>
+
+### Para testes, vamos considerar qu estamos criando uma agência de viagens.
+
+<p align="center">
+    <img src="images/image-12.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
 
