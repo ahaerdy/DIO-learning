@@ -163,8 +163,7 @@
 - Pergunta: o que é o agente?
 
 <p align="center">
-    <img src="images/image-30.png" alt="" width="840">
+    <img src="images/image-31.png" alt="" width="840">
 </p>
-
 
 ## 🟩 Vídeo 07 - Entendendo o Desafio
