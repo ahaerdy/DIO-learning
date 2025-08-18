@@ -166,4 +166,8 @@
     <img src="images/image-31.png" alt="" width="840">
 </p>
 
-## 🟩 Vídeo 07 - Entendendo o Desafio
+## Entendendo o Desafio
+
+<p align="center">
+    <img src="images/image-32.png" alt="" width="840">
+</p>
