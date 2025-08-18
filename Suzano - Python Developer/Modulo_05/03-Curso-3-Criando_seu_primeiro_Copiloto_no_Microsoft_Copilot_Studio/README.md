@@ -113,15 +113,14 @@
 
 - Posso escolher o ambiente que usamos para fazer a criação na aula anterior. 
 
-<p align="center">
-    <img src="images/image-20.png" alt="" width="840">
-</p>
+
 
 - Descrição do agente.
 
 <p align="center">
-    <img src="images/image-21.png" alt="" width="840">
+    <img src="images/image-22.png" alt="" width="840">
 </p>
+
 
 
 ## 🟩 Vídeo 06 - Criar um Copilot em branco
