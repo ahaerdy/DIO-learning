@@ -118,7 +118,7 @@
 - Descrição do agente.
 
 <p align="center">
-    <img src="images/image-22.png" alt="" width="840">
+    <img src="images/image-22.png" alt="" width="640">
 </p>
 
 
