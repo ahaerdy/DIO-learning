@@ -97,7 +97,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 - [x] Curso: [Conhecendo o Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/01-Curso-1-Conhecendo_o_Microsoft_Copilot_Studio#parte-1----introdu%C3%A7%C3%A3o-%C3%A0-programa%C3%A7%C3%A3o-orientada-a-objetos-poo-com-python)
 - [x] Curso: [Trabalhando com Ambientes no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/02-Curso-2-Trabalhando_com_Ambientes_no_Microsoft_Copilot_Studio#parte-1----introdu%C3%A7%C3%A3o)
-- [x] Curso: [Criando seu primeiro Copiloto no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/03-Curso-3-Criando_seu_primeiro_Copiloto_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---etapas-do-desafio)
+- [x] Desafio: [Criando seu primeiro Copiloto no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/03-Curso-3-Criando_seu_primeiro_Copiloto_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---etapas-do-desafio)
+  - Descrição: Desenvolvimento de copiloto no Microsoft Copilot Studio como parte do Bootcamp Suzano Python Developer. O projeto documenta a criação de um agente conversacional, incluindo configuração de ambiente, estruturação de tópicos, integração com base de conhecimento, publicação e monitoramento.
+  - Repositório: [DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio.](https://github.com/ahaerdy/DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio)
 
 ### Módulo 6: Integrando com Serviços de IA
 
