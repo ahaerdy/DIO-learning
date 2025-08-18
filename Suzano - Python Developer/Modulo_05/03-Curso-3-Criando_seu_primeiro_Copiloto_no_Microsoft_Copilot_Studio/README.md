@@ -105,6 +105,19 @@
 
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
 
+- Para criam um copiloto vamos acessar o `www.copilotstudio.microsoft.com`onde você vai ter acesso a todos os seus copilotos.
+
+<p align="center">
+    <img src="images/image-19.png" alt="" width="840">
+</p>
+
+- Posso escolher o ambiente que usamos para fazer a criação na aula anterior. 
+
+<p align="center">
+    <img src="images/image-20.png" alt="" width="840">
+</p>
+
+
 ## 🟩 Vídeo 06 - Criar um Copilot em branco
 
 ## 🟩 Vídeo 07 - Entendendo o Desafio
