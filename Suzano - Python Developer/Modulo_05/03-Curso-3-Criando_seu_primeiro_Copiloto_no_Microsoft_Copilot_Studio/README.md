@@ -129,7 +129,12 @@
     <img src="images/image-24.png" alt="" width="840">
 </p>
 
-
 ## 🟩 Vídeo 06 - Criar um Copilot em branco
+
+- Temos um agente já disponível no ambiente que criamos.
+
+<p align="center">
+    <img src="images/image-25.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 07 - Entendendo o Desafio
