@@ -137,4 +137,10 @@
     <img src="images/image-25.png" alt="" width="840">
 </p>
 
+- Mas agora vamos criar um agente "em branco".
+
+<p align="center">
+    <img src="images/image-27.png" alt="" width="840">
+</p>
+
 ## 🟩 Vídeo 07 - Entendendo o Desafio
