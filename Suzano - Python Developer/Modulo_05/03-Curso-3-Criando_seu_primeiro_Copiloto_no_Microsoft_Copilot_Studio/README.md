@@ -166,7 +166,7 @@
 
 ## Entrega do Projeto
 
-Repositório de entrega do projeto: https://github.com/ahaerdy/DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio
+Repositório de entrega do projeto: [DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio.](https://github.com/ahaerdy/DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio)
 Descrição: Desenvolvimento de copiloto no Microsoft Copilot Studio como parte do Bootcamp Suzano Python Developer. O projeto documenta a criação de um agente conversacional, incluindo configuração de ambiente, estruturação de tópicos, integração com base de conhecimento, publicação e monitoramento.
 
 ## Certificado: Criando seu primeiro Copiloto no Microsoft Copilot Studio
