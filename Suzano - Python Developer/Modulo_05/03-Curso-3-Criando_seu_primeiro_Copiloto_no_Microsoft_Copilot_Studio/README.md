@@ -105,7 +105,7 @@
 
 ## 🟩 Vídeo 05 - Criar um Copilot baseado em descrição com IA
 
-- Para criam um copiloto vamos acessar o `www.copilotstudio.microsoft.com`onde você vai ter acesso a todos os seus copilotos.
+- Para cria um copiloto vamos acessar o `www.copilotstudio.microsoft.com`onde você vai ter acesso a todos os seus copilotos.
 
 <p align="center">
     <img src="images/image-19.png" alt="" width="840">
@@ -115,6 +115,12 @@
 
 <p align="center">
     <img src="images/image-20.png" alt="" width="840">
+</p>
+
+- Descrição do agente.
+
+<p align="center">
+    <img src="images/image-21.png" alt="" width="840">
 </p>
 
 
