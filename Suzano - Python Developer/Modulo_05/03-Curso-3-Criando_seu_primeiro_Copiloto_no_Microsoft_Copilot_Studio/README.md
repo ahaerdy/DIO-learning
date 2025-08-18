@@ -156,4 +156,15 @@
     <img src="images/image-29.png" alt="" width="840">
 </p>
 
+- Em seguida, clicar em criar para gerar a arquitetura do nosso copilot
+- Este ponto é importante (devmos aguardar).
+- O sistema irá treinar antes de disponibilizar o agente.
+
+- Pergunta: o que é o agente?
+
+<p align="center">
+    <img src="images/image-30.png" alt="" width="840">
+</p>
+
+
 ## 🟩 Vídeo 07 - Entendendo o Desafio
