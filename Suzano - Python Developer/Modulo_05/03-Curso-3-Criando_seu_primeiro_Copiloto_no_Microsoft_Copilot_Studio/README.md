@@ -138,9 +138,22 @@
 </p>
 
 - Mas agora vamos criar um agente "em branco".
+- Recomenda-se criar a estrutura de conhecimento ("Knowledge") depois.
 
 <p align="center">
     <img src="images/image-27.png" alt="" width="840">
+</p>
+
+- Opções avançada
+
+<p align="center">
+    <img src="images/image-28.png" alt="" width="840">
+</p>
+
+- Onde é possível selecionar a solução já criada
+
+<p align="center">
+    <img src="images/image-29.png" alt="" width="840">
 </p>
 
 ## 🟩 Vídeo 07 - Entendendo o Desafio
