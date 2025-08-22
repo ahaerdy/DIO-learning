@@ -1,8 +1,8 @@
 
-- Instrutor: Renato Romão de Souza (Microsoft MVP, MCT, Especialista em Copilot & IA).
-- Contato Linkedin: https://www.linkedin.com/in/renatoromao
+###Instrutor: Renato Romão de Souza (Microsoft MVP, MCT, Especialista em Copilot & IA).
+###Contato Linkedin: https://www.linkedin.com/in/renatoromao
 
-## 🟩 Vídeo 01 - Tópicos
+## 🟩 Vídeo 01 ###Tópicos
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -19,10 +19,10 @@
 </details>
 
 
-## 🟩 Vídeo 02 - Principais conceitos de um tópico
+## 🟩 Vídeo 02 ###Principais conceitos de um tópico
 
-- Como eu faço pra acessar os tópicos?
-- Eu posso vir dentro de um agente ...
+### Como eu faço pra acessar os tópicos?
+### Eu posso vir dentro de um agente ...
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -31,7 +31,7 @@
 </p>
 </details>
 
-- ... e seleciono o agente que eu quero alterar.
+### ... e seleciono o agente que eu quero alterar.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -40,7 +40,7 @@
 </p>
 </details>
 
-- Vou na parte de tópicos ...
+### Vou na parte de tópicos ...
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -49,7 +49,7 @@
 </p>
 </details>
 
-- ... e dentro dos toṕicos eu consigo ver os tópicos customizamdo, os tópicos de sistema ...
+### ... e dentro dos toṕicos eu consigo ver os tópicos customizamdo, os tópicos de sistema ...
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -58,10 +58,10 @@
 </p>
 </details>
 
-- Você vai conseguir acessar um ou outro (ou todos de uma vez).
-- Pra facilitar é recomendável usar o filtro.
+### Você vai conseguir acessar um ou outro (ou todos de uma vez).
+### Pra facilitar é recomendável usar o filtro.
 
-- Também é possível usar a busca ...
+### Também é possível usar a busca ...
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -70,7 +70,7 @@
 </p>
 </details>
 
-- Em todos os tópicos é possível ver os detalhes.
+### Em todos os tópicos é possível ver os detalhes.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -79,7 +79,7 @@
 </p>
 </details>
 
-- Dentro dos detalhes vamos conseguir acessar as informações de nome (nome interno), nome de exibição, ... 
+### Dentro dos detalhes vamos conseguir acessar as informações de nome (nome interno), nome de exibição, ... 
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -88,7 +88,7 @@
 </p>
 </details>
 
-- Consegue adicionar variáveis de entrada ...
+### Consegue adicionar variáveis de entrada ...
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -97,7 +97,7 @@
 </p>
 </details>
 
-- ... e de saída.
+### ... e de saída.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -106,9 +106,9 @@
 </p>
 </details>
 
-- Além disso é possível fzer uma cópia e deletar tópicos.
-- Somente tópicos customizados podem ser deletados.
-- Os tópicos de sistema eu não consigo deletar ou fazer cópia.
+### Além disso é possível fzer uma cópia e deletar tópicos.
+### Somente tópicos customizados podem ser deletados.
+### Os tópicos de sistema eu não consigo deletar ou fazer cópia.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -117,8 +117,8 @@
 </p>
 </details>
 
-- É possível habilitar e desabilitar ambos.
-- Além disso temos uma coluna que mostra os erros.
+### É possível habilitar e desabilitar ambos.
+### Além disso temos uma coluna que mostra os erros.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -127,8 +127,8 @@
 </p>
 </details>
 
-- Além disso, dentro do nosso tópico a gente tem o nosso gatilho por padrão ...
-- ... e podemos adicionar frases de gatilho (com 5 ou 6 frases que ele acaba recomendando).
+### Além disso, dentro do nosso tópico a gente tem o nosso gatilho por padrão ...
+### ... e podemos adicionar frases de gatilho (com 5 ou 6 frases que ele acaba recomendando).
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -137,7 +137,7 @@
 </p>
 </details>
 
-- Na frase avançada você pode habilitar pra ele fazer o mapeamento ...
+### Na frase avançada você pode habilitar pra ele fazer o mapeamento ...
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -146,9 +146,9 @@
 </p>
 </details>
 
-- Na etapa de reconhecimento eu quero que ele identifique a frase e as condições (condição-A, condição-B etc).
-- Um condição baseada numa variável (se for do depto. financeiro, p.exemplo).
-- Pode-se definir também a prioridade (com base num número).
+### Na etapa de reconhecimento eu quero que ele identifique a frase e as condições (condição-A, condição-B etc).
+### Um condição baseada numa variável (se for do depto. financeiro, p.exemplo).
+### Pode-se definir também a prioridade (com base num número).
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -157,7 +157,7 @@
 </p>
 </details>
 
-- Há um painel de analytics (para acompanhar o índice de satisfação em um tópico, por exemplo).
+###Há um painel de analytics (para acompanhar o índice de satisfação em um tópico, por exemplo).
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -166,8 +166,8 @@
 </p>
 </details>
 
-- Uma funcionalidade importante é o editor de código.
-- Utiliza o formato YAML.
+###Uma funcionalidade importante é o editor de código.
+###Utiliza o formato YAML.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -176,7 +176,7 @@
 </p>
 </details>
 
-- Há o recurso do minimap para visualizar sua estrutura se ela estiver muito grande.
+###Há o recurso do minimap para visualizar sua estrutura se ela estiver muito grande.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -186,7 +186,7 @@
 </details>
 
 
-## 🟩 Vídeo 03 - Criando um tópico com descrição
+## 🟩 Vídeo 03 ###Criando um tópico com descrição
 
 ### Prompt utilizado neste aula.
 
@@ -201,8 +201,8 @@
 </details>
 
 
-## 🟩 Vídeo 04 - Modelos de prompts para criação de tópicos
+## 🟩 Vídeo 04 ###Modelos de prompts para criação de tópicos
 
 
-## 🟩 Vídeo 05 - Melhores práticas do tópico
+## 🟩 Vídeo 05 ###Melhores práticas do tópico
 
