@@ -107,7 +107,8 @@
 </details>
 
 - Além disso é possível fzer uma cópia e deletar tópicos.
-- Somente tópicos customizados podem ser deletados (os de sistema, não).
+- Somente tópicos customizados podem ser deletados.
+- Os tópicos de sistema eu não consigo deletar ou fazer cópia.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -123,6 +124,18 @@
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-13.png" alt="" width="840">
+</p>
+</details>
+
+- Além disso, dentro do nosso tópico a gente tem o nosso gatilho por padrão ...
+- ... e podemos adicionar frases de gatilho (com 5 ou 6 frases que ele acaba recomendando).
+
+![alt text](image-1.png)
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-14.png" alt="" width="840">
 </p>
 </details>
 
