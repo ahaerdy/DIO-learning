@@ -106,6 +106,25 @@
 </p>
 </details>
 
+- Além disso é possível fzer uma cópia e deletar tópicos.
+- Somente tópicos customizados podem ser deletados (os de sistema, não).
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-12.png" alt="" width="840">
+</p>
+</details>
+
+- É possível habilitar e desabilitar ambos.
+- Além disso temos uma coluna que mostra os erros.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-13.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
 
