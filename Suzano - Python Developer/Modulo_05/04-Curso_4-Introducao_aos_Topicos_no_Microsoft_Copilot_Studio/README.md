@@ -88,6 +88,15 @@
 </p>
 </details>
 
+- Consegue adicionar variáveis ...
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-10.png" alt="" width="840">
+</p>
+</details>
+
 
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
