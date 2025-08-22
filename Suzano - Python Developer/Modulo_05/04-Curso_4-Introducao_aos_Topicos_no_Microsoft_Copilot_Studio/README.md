@@ -88,7 +88,7 @@
 </p>
 </details>
 
-- Consegue adicionar variáveis ...
+- Consegue adicionar variáveis de entrada ...
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -97,6 +97,14 @@
 </p>
 </details>
 
+- ... e de saída.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-11.png" alt="" width="840">
+</p>
+</details>
 
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
