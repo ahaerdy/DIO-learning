@@ -79,6 +79,18 @@
 </p>
 </details>
 
+- Dentro dos detalhes vamos conseguir acessar as informações de nome (nome interno), nome de exibição, ... 
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-9
+    .png" alt="" width="840">
+</p>
+</details>
+
+
+
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
 
 
