@@ -31,7 +31,7 @@
 </p>
 </details>
 
-- e seleciono o agente que eu quero alterar.
+- ... e seleciono o agente que eu quero alterar.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -40,6 +40,44 @@
 </p>
 </details>
 
+- Vou na parte de tópicos ...
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
+</p>
+</details>
+
+- ... e dentro dos toṕicos eu consigo ver os tópicos customizamdo, os tópicos de sistema ...
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+</details>
+
+- Você vai conseguir acessar um ou outro (ou todos de uma vez).
+- Pra facilitar é recomendável usar o filtro.
+
+- Também é possível usar a busca ...
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+</details>
+
+- Em todos os tópicos é possível ver os detalhes.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-8.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
 
