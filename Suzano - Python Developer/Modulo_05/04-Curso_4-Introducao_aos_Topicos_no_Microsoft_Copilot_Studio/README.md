@@ -229,12 +229,14 @@
 </p>
 </details>
 
-- Company Website Copilot
+- Exemplo de Prompt --> Company Website Copilot
+
+![alt text](image.png)
 
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
-    <img src="images/image-24.png" alt="" width="840">
+    <img src="images/image-25.png" alt="" width="840">
 </p>
 </details>
 
