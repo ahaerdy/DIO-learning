@@ -21,6 +21,25 @@
 
 ## 🟩 Vídeo 02 - Principais conceitos de um tópico
 
+- Como eu faço pra acessar os tópicos?
+- Eu posso vir dentro de um agente ...
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-3png" alt="" width="840">
+</p>
+</details>
+
+- e seleciono o agente que eu quero alterar.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-3png" alt="" width="840">
+</p>
+</details>
+
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
 
