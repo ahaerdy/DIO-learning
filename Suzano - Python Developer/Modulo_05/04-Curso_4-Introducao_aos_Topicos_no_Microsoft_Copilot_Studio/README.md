@@ -229,5 +229,24 @@
 </p>
 </details>
 
+- Company Website Copilot
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-24.png" alt="" width="840">
+</p>
+</details>
+
+O Company Website Copilot é uma proposta da Microsoft para criar um assistente virtual inteligente que atua diretamente em sites corporativos. Ele é desenvolvido com ferramentas da Power Platform, especialmente o Copilot Studio, e tem como objetivo melhorar a experiência dos visitantes de um site empresarial.
+
+O que esse copiloto faz?
+Ele responde perguntas comuns que um visitante pode ter sobre a empresa, como:
+
+✅ O que a empresa faz?
+📍 Onde ela está localizada?
+📞 Como entrar em contato?
+🕒 Quais são os horários de funcionamento?
+
 ## 🟩 Vídeo 05 - Melhores práticas do tópico
 
