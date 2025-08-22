@@ -176,8 +176,26 @@
 </p>
 </details>
 
+- Há o recurso do minimap para visualizar sua estrutura se ela estiver muito grande.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-19.png" alt="" width="840">
+</p>
+</details>
+
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
+
+- Prompt utilizado neste aula.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-20.png" alt="" width="840">
+</p>
+</details>
 
 
 ## 🟩 Vídeo 04 - Modelos de prompts para criação de tópicos
