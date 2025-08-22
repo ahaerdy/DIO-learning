@@ -192,7 +192,6 @@
 
 > Por favor busque para mim [Numero] de opções de atividades no [Destino] para pessoas que estão conhecendo pela primeira vez. Por favor retorne uma lista enumerada com emojis no nome de cada atividade e uma breve descrição.
 
-
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
@@ -200,6 +199,7 @@
 </p>
 </details>
 
+- A ideia ẽ criar um prompt de dicas de viagens e ele vai automaticamente buscar as variáveis `Numero` e `Destino`.
 
 ## 🟩 Vídeo 04 ###Modelos de prompts para criação de tópicos
 
