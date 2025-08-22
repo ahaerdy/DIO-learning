@@ -220,5 +220,14 @@
 </p>
 </details>
 
+- Acessando o site.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-23.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 05 - Melhores práticas do tópico
 
