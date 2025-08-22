@@ -188,7 +188,10 @@
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
 
-- Prompt utilizado neste aula.
+### Prompt utilizado neste aula.
+
+> Por favor busque para mim [Numero] de opções de atividades no [Destino] para pessoas que estão conhecendo pela primeira vez. Por favor retorne uma lista enumerada com emojis no nome de cada atividade e uma breve descrição.
+
 
 <details>
 <summary> Slide da aula🔻</summary>
