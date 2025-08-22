@@ -130,14 +130,32 @@
 - Além disso, dentro do nosso tópico a gente tem o nosso gatilho por padrão ...
 - ... e podemos adicionar frases de gatilho (com 5 ou 6 frases que ele acaba recomendando).
 
-![alt text](image-1.png)
-
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-14.png" alt="" width="840">
 </p>
 </details>
+
+- Na frase avançada você pode habilitar pra ele fazer o mapeamento ...
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-15.png" alt="" width="840">
+</p>
+</details>
+
+- Na etapa de reconhecimento eu quero que ele reconheça a frase e as condições (condição-A, condição-B etc).
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-16.png" alt="" width="840">
+</p>
+</details>
+
+
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
 
