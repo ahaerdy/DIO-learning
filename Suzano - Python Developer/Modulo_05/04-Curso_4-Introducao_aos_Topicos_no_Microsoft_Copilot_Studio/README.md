@@ -11,6 +11,13 @@
 </p>
 </details>
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-2.png" alt="" width="840">
+</p>
+</details>
+
 
 ## 🟩 Vídeo 02 - Principais conceitos de um tópico
 
