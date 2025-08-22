@@ -199,7 +199,17 @@
 </p>
 </details>
 
-- A ideia ẽ criar um prompt de dicas de viagens e ele vai automaticamente buscar as variáveis `Numero` e `Destino`.
+- A ideia é criar um prompt de dicas de viagens.
+- O agente vai automaticamente buscar as variáveis `Numero` e `Destino` para complementar no prompt.
+
+- Criando o prompt.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-21.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 04 ###Modelos de prompts para criação de tópicos
 
