@@ -27,7 +27,7 @@
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
-    <img src="images/image-3png" alt="" width="840">
+    <img src="images/image-3.png" alt="" width="840">
 </p>
 </details>
 
@@ -36,7 +36,7 @@
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
-    <img src="images/image-3png" alt="" width="840">
+    <img src="images/image-4.png" alt="" width="840">
 </p>
 </details>
 
