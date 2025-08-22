@@ -1,8 +1,8 @@
 
-###Instrutor: Renato Romão de Souza (Microsoft MVP, MCT, Especialista em Copilot & IA).
-###Contato Linkedin: https://www.linkedin.com/in/renatoromao
+- Instrutor: Renato Romão de Souza (Microsoft MVP, MCT, Especialista em Copilot & IA).
+- Contato Linkedin: https://www.linkedin.com/in/renatoromao
 
-## 🟩 Vídeo 01 ###Tópicos
+## 🟩 Vídeo 01 - Tópicos
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -19,7 +19,7 @@
 </details>
 
 
-## 🟩 Vídeo 02 ###Principais conceitos de um tópico
+## 🟩 Vídeo 02 - Principais conceitos de um tópico
 
 - Como eu faço pra acessar os tópicos?
 - Eu posso vir dentro de um agente ...
@@ -186,7 +186,7 @@
 </details>
 
 
-## 🟩 Vídeo 03 ###Criando um tópico com descrição
+## 🟩 Vídeo 03 - Criando um tópico com descrição
 
 - Prompt utilizado neste aula.
 
@@ -211,8 +211,9 @@
 </p>
 </details>
 
-## 🟩 Vídeo 04 ###Modelos de prompts para criação de tópicos
+## 🟩 Vídeo 04 - Modelos de prompts para criação de tópicos
 
 
-## 🟩 Vídeo 05 ###Melhores práticas do tópico
+
+## 🟩 Vídeo 05 - Melhores práticas do tópico
 
