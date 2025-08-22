@@ -230,8 +230,7 @@
 </details>
 
 - Exemplo de Prompt --> Company Website Copilot
-
-![alt text](image.png)
+- Você pode simplesmente copiar o prompt e colar no painel do Copilot Studio.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -240,15 +239,36 @@
 </p>
 </details>
 
-- O Company Website Copilot é uma proposta da Microsoft para criar um assistente virtual inteligente que atua diretamente em sites corporativos. Ele é desenvolvido com ferramentas da Power Platform, especialmente o Copilot Studio, e tem como objetivo melhorar a experiência dos visitantes de um site empresarial.
+- Você pode simplesmente copiar o prompt e colar no painel do Copilot Studio.
 
-- O que esse copiloto faz?
-- Ele responde perguntas comuns que um visitante pode ter sobre a empresa, como:
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-26.png" alt="" width="840">
+</p>
+</details>
 
-    - ✅ O que a empresa faz?
-    -📍 Onde ela está localizada?
-    - 📞 Como entrar em contato?
-    - 🕒 Quais são os horários de funcionamento?
+- Contribuições no Github
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-27.png" alt="" width="840">
+</p>
+</details>
+
 
 ## 🟩 Vídeo 05 - Melhores práticas do tópico
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-28.png" alt="" width="840">
+</p>
+</details>
+
+- Melhores práticas do tópico
+    - Ter de 5–10 frases dentro de um gatilho
+    - Ter nomes claros e não repetitivos
+    - Ter frases de gatilho que não conflitem entre outros tópicos
+    - Ter em mente quando dividir os tópicos ou copilá-los diferentes
