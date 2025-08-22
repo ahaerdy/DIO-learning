@@ -146,7 +146,9 @@
 </p>
 </details>
 
-- Na etapa de reconhecimento eu quero que ele reconheça a frase e as condições (condição-A, condição-B etc).
+- Na etapa de reconhecimento eu quero que ele identifique a frase e as condições (condição-A, condição-B etc).
+- Um condição baseada numa variável (se for do depto. financeiro, p.exemplo).
+- Pode-se definir também a prioridade (com base num número).
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -155,6 +157,24 @@
 </p>
 </details>
 
+- Há um painel de analytics (para acompanhar o índice de satisfação em um tópico, por exemplo).
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-17.png" alt="" width="840">
+</p>
+</details>
+
+- Uma funcionalidade importante é o editor de código.
+- Utiliza o formato YAML.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-18.png" alt="" width="840">
+</p>
+</details>
 
 
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
