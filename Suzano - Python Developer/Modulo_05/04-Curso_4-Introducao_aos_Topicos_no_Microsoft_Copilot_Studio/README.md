@@ -18,7 +18,6 @@
 </p>
 </details>
 
-
 ## 🟩 Vídeo 02 - Principais conceitos de um tópico
 
 - Como eu faço pra acessar os tópicos?
@@ -185,7 +184,6 @@
 </p>
 </details>
 
-
 ## 🟩 Vídeo 03 - Criando um tópico com descrição
 
 - Prompt utilizado neste aula.
@@ -213,7 +211,14 @@
 
 ## 🟩 Vídeo 04 - Modelos de prompts para criação de tópicos
 
+- Modelos de Prompts ✓ https://aka.ms/power-prompts
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-22.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 05 - Melhores práticas do tópico
 
