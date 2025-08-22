@@ -238,15 +238,15 @@
 </p>
 </details>
 
-O Company Website Copilot é uma proposta da Microsoft para criar um assistente virtual inteligente que atua diretamente em sites corporativos. Ele é desenvolvido com ferramentas da Power Platform, especialmente o Copilot Studio, e tem como objetivo melhorar a experiência dos visitantes de um site empresarial.
+- O Company Website Copilot é uma proposta da Microsoft para criar um assistente virtual inteligente que atua diretamente em sites corporativos. Ele é desenvolvido com ferramentas da Power Platform, especialmente o Copilot Studio, e tem como objetivo melhorar a experiência dos visitantes de um site empresarial.
 
-O que esse copiloto faz?
-Ele responde perguntas comuns que um visitante pode ter sobre a empresa, como:
+- O que esse copiloto faz?
+- Ele responde perguntas comuns que um visitante pode ter sobre a empresa, como:
 
-✅ O que a empresa faz?
-📍 Onde ela está localizada?
-📞 Como entrar em contato?
-🕒 Quais são os horários de funcionamento?
+    - ✅ O que a empresa faz?
+    -📍 Onde ela está localizada?
+    - 📞 Como entrar em contato?
+    - 🕒 Quais são os horários de funcionamento?
 
 ## 🟩 Vídeo 05 - Melhores práticas do tópico
 
