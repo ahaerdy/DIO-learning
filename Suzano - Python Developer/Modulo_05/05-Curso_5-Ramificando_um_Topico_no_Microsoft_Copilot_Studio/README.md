@@ -87,7 +87,7 @@
 </p>
 </details>
 
-- Além disso, posso chamar uma ação
+- Além disso, posso chamar uma ação ...
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -96,6 +96,14 @@
 </p>
 </details>
 
+- Na parte avançada posso chamar uma parte "generativa" de respostas.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-10.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 03 - Criando uma Condição
 
