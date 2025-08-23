@@ -204,3 +204,51 @@
     <img src="images/image-21.png" alt="" width="840">
 </p>
 </details>
+
+- Se você quiser encerrar com uma pesquisa de satisfação, a Microsoft já tem esse padrão.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-22.png" alt="" width="840">
+</p>
+</details>
+
+- Testando.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-23.png" alt="" width="840">
+</p>
+</details>
+
+## Materiais de Apoio
+
+Este documento tem como objetivo fornecer informações adicionais para enriquecer sua jornada de aprendizado no curso **"Trabalhando com Ambientes no Microsoft Copilot Studio"**. Aqui você encontrará links úteis, slides, repositórios, páginas oficiais e dicas para se destacar na DIO e no mercado de trabalho.
+
+### Recursos Adicionais
+
+Aprofunde seus conhecimentos com os seguintes materiais:
+
+- [Microsoft Copilot Studio](https://www.microsoft.com/pt-br/microsoft-copilot/microsoft-copilot-studio)
+- [Trabalhar com ambientes do Power Platform no Copilot Studio](https://learn.microsoft.com/pt-br/microsoft-copilot-studio/environments-first-run-experience)
+
+### Dicas e Links Úteis
+
+Explore formas de se desenvolver e se destacar na DIO e no mercado:
+
+- **Artigos e Fórum da DIO**  
+  Compartilhe conhecimento e dúvidas por meio de artigos e fóruns específicos para cada experiência educacional, como Bootcamps.
+
+- **Rooms**  
+  Participe de salas de bate-papo em tempo real para interagir com outros participantes dos Bootcamps, compartilhando dúvidas, dicas e trechos de código.
+
+- **Exploração na Web**  
+  Use buscadores para aprofundar temas específicos. Páginas como o StackOverflow são ótimos recursos para encontrar soluções e expandir seu entendimento.
+
+**Continue aproveitando as oportunidades de aprendizado, buscando mais conhecimento e compartilhando suas descobertas com a comunidade!**
+
+# Certificado: Introdução aos Tópicos no Microsoft Copilot Studio
+
+- Link:
