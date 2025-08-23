@@ -158,4 +158,14 @@
 </p>
 </details>
 
+- Ex.: se a var2 for igual a campo eu quero encerrar a conversa.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-16.png" alt="" width="840">
+</p>
+</details>
+
+
 ## 🟩 Vídeo 06 - Encerrando a Conversa e o Tópico Atual
