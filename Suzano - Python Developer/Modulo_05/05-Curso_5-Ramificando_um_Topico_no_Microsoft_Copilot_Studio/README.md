@@ -77,6 +77,8 @@
 - Independentemente do tipo de pergunta ele sempre vai salvar a resposta em uma variável.
 - Como eu posso usar essa variável para fazer uma ramificação?
 - Posso adicionar uma nova ação dentro do nosso Copilot Studio ...
+    - Enviar uma mensagem, fazer uma pergunta, etc ...
+    - A parte de gerenciamento de tópicos é muito importante para a ramificação ..
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -85,6 +87,14 @@
 </p>
 </details>
 
+- Além disso, posso chamar uma ação
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-9.png" alt="" width="840">
+</p>
+</details>
 
 
 ## 🟩 Vídeo 03 - Criando uma Condição
