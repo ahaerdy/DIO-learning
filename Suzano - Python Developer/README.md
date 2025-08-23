@@ -100,6 +100,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Desafio: [Criando seu primeiro Copiloto no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/03-Curso-3-Criando_seu_primeiro_Copiloto_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---etapas-do-desafio)
   - Descrição: Desenvolvimento de copiloto no Microsoft Copilot Studio. O projeto documenta a criação de um agente conversacional, incluindo configuração de ambiente, estruturação de tópicos, integração com base de conhecimento, publicação e monitoramento.
   - Repositório: [DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio.](https://github.com/ahaerdy/DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio)
+- [x] Curso: [Introdução aos Tópicos no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/04-Curso_4-Introducao_aos_Topicos_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---t%C3%B3picos)
 
 ### Módulo 6: Integrando com Serviços de IA
 
@@ -148,6 +149,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ## 🔗 Contribuições Open Source
 - [Trabalhando com Ambientes no Microsoft Copilot Studio](https://hermes.dio.me/certificates/HF5YIG5U.pdf)
 - [Criando seu primeiro Copiloto no Microsoft Copilot Studio](https://hermes.dio.me/certificates/TGLHKPOO.pdf)
+- [Introdução aos Tópicos no Microsoft Copilot Studio](https://hermes.dio.me/certificates/0W3DNPX9.pdf)
 
 - Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
     - Issue criada: #65498, Pull Request aceito: #65510, Perfil adicionado: ahaerdy.md
