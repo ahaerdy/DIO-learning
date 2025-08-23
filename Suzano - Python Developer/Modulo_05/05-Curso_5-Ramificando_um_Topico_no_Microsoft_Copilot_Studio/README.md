@@ -97,6 +97,8 @@
 </details>
 
 - Na parte avançada posso chamar uma parte "generativa" de respostas.
+- Consigo fazer uma chamada HTTP para algum serviço.
+- Fazer um log de atividades dentro de um painel que desejarmos monitorar.
 
 <details>
 <summary> Slide da aula🔻</summary>
