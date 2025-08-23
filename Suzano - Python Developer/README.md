@@ -101,6 +101,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
   - Descrição: Desenvolvimento de copiloto no Microsoft Copilot Studio. O projeto documenta a criação de um agente conversacional, incluindo configuração de ambiente, estruturação de tópicos, integração com base de conhecimento, publicação e monitoramento.
   - Repositório: [DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio.](https://github.com/ahaerdy/DIO-criando-o-primeiro-copiloto-no-microsoft-copilot-studio)
 - [x] Curso: [Introdução aos Tópicos no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/04-Curso_4-Introducao_aos_Topicos_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---t%C3%B3picos)
+- [x] Curso: [Ramificando um Tópico no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/05-Curso_5-Ramificando_um_Topico_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---introdu%C3%A7%C3%A3o)
 
 ### Módulo 6: Integrando com Serviços de IA
 
@@ -149,6 +150,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Trabalhando com Ambientes no Microsoft Copilot Studio](https://hermes.dio.me/certificates/HF5YIG5U.pdf)
 - [Criando seu primeiro Copiloto no Microsoft Copilot Studio](https://hermes.dio.me/certificates/TGLHKPOO.pdf)
 - [Introdução aos Tópicos no Microsoft Copilot Studio](https://hermes.dio.me/certificates/0W3DNPX9.pdf)
+- [Ramificando um Tópico no Microsoft Copilot Studio](https://hermes.dio.me/certificates/GIKZFLYY.pdf)
 
 ## 🔗 Contribuições Open Source
 
