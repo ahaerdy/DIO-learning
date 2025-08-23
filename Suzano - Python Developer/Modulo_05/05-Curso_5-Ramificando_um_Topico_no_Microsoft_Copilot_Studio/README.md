@@ -127,8 +127,35 @@
 </p>
 </details>
 
+- Testando o Agente com as novas condições.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-13.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 04 - Redirecionando o Fluxo da Conversa para um Passo Específico
 
+- Redirecionando para um passo específico.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-14.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 05 - Transferindo o Controle da Conversa para um Novo Tópico
+
+- Ramificando mais através de outras condições.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-15.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 06 - Encerrando a Conversa e o Tópico Atual
