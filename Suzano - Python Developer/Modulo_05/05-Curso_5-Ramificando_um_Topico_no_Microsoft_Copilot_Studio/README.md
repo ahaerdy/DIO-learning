@@ -74,6 +74,19 @@
 </p>
 </details>
 
+- Independentemente do tipo de pergunta ele sempre vai salvar a resposta em uma variável.
+- Como eu posso usar essa variável para fazer uma ramificação?
+- Posso adicionar uma nova ação dentro do nosso Copilot Studio ...
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-8.png" alt="" width="840">
+</p>
+</details>
+
+
+
 ## 🟩 Vídeo 03 - Criando uma Condição
 
 ## 🟩 Vídeo 04 - Redirecionando o Fluxo da Conversa para um Passo Específico
