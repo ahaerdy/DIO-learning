@@ -36,12 +36,22 @@
 - Em que situações, neste caso, seria conveniente ramificar?
 - Começo com o mês.
 - Em que mês voc6e pretende viajar? Janeiro, fevereiro, março ...
-- Aqui se remove a mensagem linear (comum a todos os meses)
+- Aqui se remove a mensagem linear (comum a todos os meses) ...
 
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-4.png" alt="" width="840">
+</p>
+</details>
+
+- ... e se insere uma outra pergunta:
+    - Qual tipo de viagem você está procurando?
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
 </p>
 </details>
 
