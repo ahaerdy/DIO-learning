@@ -249,6 +249,6 @@ Explore formas de se desenvolver e se destacar na DIO e no mercado:
 
 **Continue aproveitando as oportunidades de aprendizado, buscando mais conhecimento e compartilhando suas descobertas com a comunidade!**
 
-# Certificado: Introdução aos Tópicos no Microsoft Copilot Studio
+# Certificado: Ramificando um Tópico no Microsoft Copilot Studio
 
-- Link:
+- Link: https://hermes.dio.me/certificates/GIKZFLYY.pdf
