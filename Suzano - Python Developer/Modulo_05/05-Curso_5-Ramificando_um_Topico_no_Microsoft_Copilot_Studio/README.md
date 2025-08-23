@@ -12,6 +12,18 @@
 
 ## 🟩 Vídeo 02 - Quando Ramificar um Tópico?
 
+- Retornando ao tópico de "Viagens Planejadas" anteriormente criado.
+- Tenho um gatilho que vai disparar
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-2.png" alt="" width="840">
+</p>
+</details>
+
+
+
 ## 🟩 Vídeo 03 - Criando uma Condição
 
 ## 🟩 Vídeo 04 - Redirecionando o Fluxo da Conversa para um Passo Específico
