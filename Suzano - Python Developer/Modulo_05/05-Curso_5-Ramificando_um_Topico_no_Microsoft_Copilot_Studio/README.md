@@ -118,6 +118,15 @@
 </p>
 </details>
 
+- É possível definir relações condicionais.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-12.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 04 - Redirecionando o Fluxo da Conversa para um Passo Específico
 
 ## 🟩 Vídeo 05 - Transferindo o Controle da Conversa para um Novo Tópico
