@@ -146,10 +146,11 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 5
 - [Conhecendo o Microsoft Copilot Studio](https://hermes.dio.me/certificates/RNJH5GJM.pdf)
-## 🔗 Contribuições Open Source
 - [Trabalhando com Ambientes no Microsoft Copilot Studio](https://hermes.dio.me/certificates/HF5YIG5U.pdf)
 - [Criando seu primeiro Copiloto no Microsoft Copilot Studio](https://hermes.dio.me/certificates/TGLHKPOO.pdf)
 - [Introdução aos Tópicos no Microsoft Copilot Studio](https://hermes.dio.me/certificates/0W3DNPX9.pdf)
+
+## 🔗 Contribuições Open Source
 
 - Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
     - Issue criada: #65498, Pull Request aceito: #65510, Perfil adicionado: ahaerdy.md
