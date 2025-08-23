@@ -176,4 +176,31 @@
 </p>
 </details>
 
+- A estrutura já começa a ficar mais complexa.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-19.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 06 - Encerrando a Conversa e o Tópico Atual
+
+- Quando encerramos a conversa enviamos o sistema é redirecionado para o Analitics.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-20.png" alt="" width="840">
+</p>
+</details>
+
+- Isso dá alguns insights de que o usuário não abandonou a conversa e isso vai melhorar a sua pesquisa de satisfação.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-21.png" alt="" width="840">
+</p>
+</details>
