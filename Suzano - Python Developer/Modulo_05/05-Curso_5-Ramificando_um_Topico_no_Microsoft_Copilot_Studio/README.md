@@ -55,6 +55,25 @@
 </p>
 </details>
 
+- Posso adicionar opões:
+    - Praia, Campo
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+</details>
+
+- Por padrão, quando eu adiciono uma questão, ele automaticamente já adiciona as minhas condições.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 03 - Criando uma Condição
 
 ## 🟩 Vídeo 04 - Redirecionando o Fluxo da Conversa para um Passo Específico
