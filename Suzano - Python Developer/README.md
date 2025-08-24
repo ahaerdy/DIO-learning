@@ -152,6 +152,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Criando seu primeiro Copiloto no Microsoft Copilot Studio](https://hermes.dio.me/certificates/TGLHKPOO.pdf)
 - [Introdução aos Tópicos no Microsoft Copilot Studio](https://hermes.dio.me/certificates/0W3DNPX9.pdf)
 - [Ramificando um Tópico no Microsoft Copilot Studio](https://hermes.dio.me/certificates/GIKZFLYY.pdf)
+- [Trabalhando com Tópicos de Fallback do Sistema no Microsoft Copilot Studio](https://hermes.dio.me/certificates/K0CKGTFP.pdf)
 
 ## 🔗 Contribuições Open Source
 
