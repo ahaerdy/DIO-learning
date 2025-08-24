@@ -24,6 +24,30 @@
 </p>
 </details>
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-4.png" alt="" width="840">
+</p>
+</details>
+
+- É possível Escalonar, caso o usuário deseje falar com um ser humano.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
+</p>
+</details>
+
+- Conversational Boosting é o tópico responsável por Inteligência Artificial (resposta generativa) dentro do Copilot Studio.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+</details>
 
 ## Materiais de Apoio
 
