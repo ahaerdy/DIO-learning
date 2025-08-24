@@ -12,6 +12,15 @@
 
 ## 🟩 Vídeo 02 - 
 
+- O tópico de Fallback já está disponível por default em sistema.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-2.png" alt="" width="840">
+</p>
+</details>
+
 
 ## Materiais de Apoio
 
