@@ -13,11 +13,14 @@
 ## 🟩 Vídeo 02 - 
 
 - O tópico de Fallback já está disponível por default em sistema.
+- Na sua descrição está esctiro:
+
+> Esse tópico do sistema é disparado quando o enunciado do usuário não corresponde aos tópicos existentes.
 
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
-    <img src="images/image-2.png" alt="" width="840">
+    <img src="images/image-3.png" alt="" width="840">
 </p>
 </details>
 
