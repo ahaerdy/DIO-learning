@@ -1,7 +1,7 @@
 - Instrutor: Renato Romão de Souza (Microsoft MVP, MCT, Especialista em Copilot & IA).
 - Contato Linkedin: https://www.linkedin.com/in/renatoromao
 
-## 🟩 Vídeo 01 - 
+## 🟩 Vídeo 01 - Como configurar uma falha no Copilot?
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -10,7 +10,7 @@
 </p>
 </details>
 
-## 🟩 Vídeo 02 - 
+## 🟩 Vídeo 02 - Trabalhando com Tópicos de Fallback do Sistema no Microsoft Copilot Studio
 
 - O tópico de Fallback já está disponível por default em sistema.
 - Na sua descrição está esctiro:
@@ -77,4 +77,4 @@ Explore formas de se desenvolver e se destacar na DIO e no mercado:
 
 # Certificado: Trabalhando com Tópicos de Fallback do Sistema no Microsoft Copilot Studio
 
-- Link: 
+- Link: https://hermes.dio.me/certificates/K0CKGTFP.pdf
