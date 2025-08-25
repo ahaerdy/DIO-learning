@@ -96,6 +96,17 @@
 </p>
 </details>
 
+### Uso de Expressões Regulares
+
+Link: https://learn.microsoft.com/pt-br/dotnet/standard/base-types/regular-expressions
+
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 03 - Como usar uma entidade existente
 
