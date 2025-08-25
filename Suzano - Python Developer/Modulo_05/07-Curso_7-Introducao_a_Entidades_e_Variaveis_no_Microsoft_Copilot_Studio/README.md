@@ -167,7 +167,28 @@
 </p>
 </details>
 
+### Retornando ao nosso Tópico "Dicas de Viagem"
+
+- Verifique que ele ja utiliza algumas dessas entidades, como Cidade (City), por exemplo, onde perguntamos sobre o destino.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-14.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 04 - Diferença entre entidade e tipos de perguntas
+
+- Quando tivermos modelos de informações que são padronizadas eu sempre vou usar as Entidades.
+- Caso contrário, ao invés de usar uma pergunta simples, nós temos a opção de usar "Adaptive Cards", que podem facilitar a forma de obter as informações.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-15.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 05 - O que são variáveis
 
