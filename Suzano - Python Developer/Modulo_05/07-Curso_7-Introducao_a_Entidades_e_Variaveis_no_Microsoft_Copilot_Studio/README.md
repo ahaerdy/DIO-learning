@@ -118,9 +118,47 @@
 </p>
 </details>
 
+### Resumo
 
+- As entidades podem facilitar as entradas do usuário sem a necessidade de usar a parte de Resposta Generativa ou AI Builder dentro do Copilot Studio para reconhecer informações já mapeadas.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-9.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 03 - Como usar uma entidade existente
+
+### Dentro do Copilot Studio ir em "Settings" (Configurações)
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-10.png" alt="" width="840">
+</p>
+</details>
+
+### Depois, ir em "Entidades"
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-11.png" alt="" width="840">
+</p>
+</details>
+
+- Aqui você vai encontrar uma série de Entidades já definidas.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-12.png" alt="" width="840">
+</p>
+</details>
+
+
 
 ## 🟩 Vídeo 04 - Diferença entre entidade e tipos de perguntas
 
