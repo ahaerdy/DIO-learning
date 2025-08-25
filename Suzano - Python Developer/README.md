@@ -103,6 +103,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Introdução aos Tópicos no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/04-Curso_4-Introducao_aos_Topicos_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---t%C3%B3picos)
 - [x] Curso: [Ramificando um Tópico no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/05-Curso_5-Ramificando_um_Topico_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---introdu%C3%A7%C3%A3o)
 - [x] Curso: [Trabalhando com Tópicos de Fallback do Sistema no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/06-Curso_6-Trabalhando_com_Topicos_de_Fallback_do_Sistema_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01--)
+- [x] Curso: [Introdução a Entidades e Variáveis no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/07-Curso_7-Introducao_a_Entidades_e_Variaveis_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---conte%C3%BAdo-program%C3%A1tico)
 
 ### Módulo 6: Integrando com Serviços de IA
 
@@ -153,6 +154,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Introdução aos Tópicos no Microsoft Copilot Studio](https://hermes.dio.me/certificates/0W3DNPX9.pdf)
 - [Ramificando um Tópico no Microsoft Copilot Studio](https://hermes.dio.me/certificates/GIKZFLYY.pdf)
 - [Trabalhando com Tópicos de Fallback do Sistema no Microsoft Copilot Studio](https://hermes.dio.me/certificates/K0CKGTFP.pdf)
+- [Introdução a Entidades e Variáveis no Microsoft Copilot Studio](https://hermes.dio.me/certificates/3YQQCK1B.pdf)
 
 ## 🔗 Contribuições Open Source
 
