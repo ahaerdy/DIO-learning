@@ -200,6 +200,34 @@
 
 - Também pode usar variáveis para criar expressões lógicas que direcionam dinamicamente o usuário por diferentes caminhos de conversa.
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-16.png" alt="" width="840">
+</p>
+</details>
+
+### Tipos de variáveis ✅
+
+- Tópico  
+    - Variáveis de tópico são específicas de um tópico de conversa. Elas armazenam informações temporárias enquanto o usuário está dentro daquele tópico. Por exemplo, se o tópico é sobre agendar uma reunião, a variável pode guardar a data escolhida. Assim que o usuário sai do tópico, essas variáveis geralmente são descartadas.
+
+- Variáveis globais  
+    - Variáveis globais estão disponíveis em qualquer parte do copiloto, independentemente do tópico. Elas são úteis para guardar informações que precisam ser acessadas em múltiplos fluxos, como o nome do usuário, idioma preferido ou status de autenticação. São persistentes durante toda a sessão.
+
+- Variáveis de sistema  
+    - Essas são variáveis pré-definidas pelo Copilot Studio e fornecem informações internas sobre o estado da conversa ou do usuário. Exemplos incluem user.name, conversation.id ou dialog.lastTurn. Você não precisa criá-las — elas já existem e ajudam a controlar o fluxo ou tomar decisões com base no contexto.
+
+- Variáveis de ambiente
+    - Variáveis de ambiente são definidas fora do copiloto, geralmente na configuração do ambiente onde ele está sendo executado. Elas são úteis para armazenar dados como URLs de APIs, chaves de acesso ou configurações específicas de produção vs. teste. Servem como parâmetros globais que não mudam com a conversa.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-17.png" alt="" width="840">
+</p>
+</details>
+
 
 <details>
 <summary> Slide da aula🔻</summary>
