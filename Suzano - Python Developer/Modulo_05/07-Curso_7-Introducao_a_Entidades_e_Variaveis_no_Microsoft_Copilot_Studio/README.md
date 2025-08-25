@@ -229,9 +229,3 @@
 </details>
 
 
-<details>
-<summary> Slide da aula🔻</summary>
-<p align="center">
-    <img src="images/image-16.png" alt="" width="840">
-</p>
-</details>
