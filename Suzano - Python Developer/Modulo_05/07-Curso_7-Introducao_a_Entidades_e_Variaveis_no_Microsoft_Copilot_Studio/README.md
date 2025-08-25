@@ -64,6 +64,21 @@
   - Closed list
   - Regular expression (Regex)
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
+</p>
+</details>
+
+### Exemplos de Entidades Pré-definidas
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+</details>
 
 <details>
 <summary> Slide da aula🔻</summary>
