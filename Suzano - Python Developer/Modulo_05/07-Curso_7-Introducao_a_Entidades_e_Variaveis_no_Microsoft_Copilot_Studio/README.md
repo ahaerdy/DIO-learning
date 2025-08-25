@@ -182,6 +182,8 @@
 
 - Quando tivermos modelos de informações que são padronizadas eu sempre vou usar as Entidades.
 - Caso contrário, ao invés de usar uma pergunta simples, nós temos a opção de usar "Adaptive Cards", que podem facilitar a forma de obter as informações.
+- Em alguns casos os tipos de pergunta podem facilitar e melhorar a experiência do nosso usuário.
+- As Entidades servem parar capturar e ignorar parte das entradas do nosso usuário.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -192,3 +194,16 @@
 
 ## 🟩 Vídeo 05 - O que são variáveis
 
+### Variáveis
+
+- As variáveis servem para salvar respostas do usuário e reutilizar seu conteúdo posteriormente na conversa.
+
+- Também pode usar variáveis para criar expressões lógicas que direcionam dinamicamente o usuário por diferentes caminhos de conversa.
+
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-16.png" alt="" width="840">
+</p>
+</details>
