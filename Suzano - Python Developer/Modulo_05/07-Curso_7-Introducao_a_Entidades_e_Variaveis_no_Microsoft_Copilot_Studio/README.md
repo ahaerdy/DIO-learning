@@ -73,17 +73,26 @@
 
 ### Exemplos de Entidades Pré-definidas
 
-<details>
-<summary> Slide da aula🔻</summary>
-<p align="center">
-    <img src="images/image-6.png" alt="" width="840">
-</p>
-</details>
+- Age  
+  - Descrição: Idade de uma pessoa, lugar ou coisa...  
+  - Método: Prebuilt
+
+- Boolean  
+  - Descrição: Respostas positivas ou negativas, e...  
+  - Método: Prebuilt
+
+- City  
+  - Descrição: Nomes de cidades, extraídos como string  
+  - Método: Prebuilt
+
+- Color  
+  - Descrição: Cores primárias e tonalidades na c...  
+  - Método: Prebuilt
 
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
-    <img src="images/image-5.png" alt="" width="840">
+    <img src="images/image-6.png" alt="" width="840">
 </p>
 </details>
 
