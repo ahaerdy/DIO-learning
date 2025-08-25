@@ -98,8 +98,9 @@
 
 ### Uso de Expressões Regulares
 
-Link: https://learn.microsoft.com/pt-br/dotnet/standard/base-types/regular-expressions
-
+#### Expressões regulares do .NET – Microsoft Learn
+- Link: https://learn.microsoft.com/pt-br/dotnet/standard/base-types/regular-expressions
+- A página Expressões regulares do .NET – Microsoft Learn oferece uma visão abrangente sobre o uso de expressões regulares na plataforma .NET. Aqui estão os principais conteúdos abordados:
 
 <details>
 <summary> Slide da aula🔻</summary>
