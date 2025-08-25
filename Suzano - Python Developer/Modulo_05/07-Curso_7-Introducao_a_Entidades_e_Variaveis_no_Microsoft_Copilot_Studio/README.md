@@ -53,6 +53,26 @@
 </p>
 </details>
 
+### Tipos de entidades
+
+- Entidades predefinidas:
+  - Idade
+  - Verdadeiro e Falso
+  - etc...
+
+- Entidades personalizadas:
+  - Closed list
+  - Regular expression (Regex)
+
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
+</p>
+</details>
+
+
 ## 🟩 Vídeo 03 - Como usar uma entidade existente
 
 ## 🟩 Vídeo 04 - Diferença entre entidade e tipos de perguntas
