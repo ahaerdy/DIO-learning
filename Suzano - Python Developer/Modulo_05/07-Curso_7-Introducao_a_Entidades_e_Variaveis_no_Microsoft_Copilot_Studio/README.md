@@ -158,7 +158,14 @@
 </p>
 </details>
 
+- Selecionando "Cidades" a título de exemplo.
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-13.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 04 - Diferença entre entidade e tipos de perguntas
 
