@@ -18,11 +18,23 @@
 
 - Uma **entidade** pode ser considerada uma **unidade de informação** que representa um **certo tipo de assunto**.
 
-
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-2.png" alt="" width="840">
+</p>
+</details>
+
+### Preenchimento de slot
+
+- O preenchimento de slot é um conceito de reconhecimento de linguagem natural que significa salvar uma entidade extraída para um objeto.
+
+- No entanto, no Copilot Studio, o preenchimento do slot significa colocar o valor da entidade extraída em uma variável.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-3.png" alt="" width="840">
 </p>
 </details>
 
