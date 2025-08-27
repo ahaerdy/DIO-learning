@@ -57,6 +57,15 @@
 </p>
 </details>
 
+- Quando estamos criando, surgem algumas recomendações da Microsoft.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 03 - Como Utilizar uma Entidade
 
 ## 🟩 Vídeo 04 - Inserindo Expressões Regulares
