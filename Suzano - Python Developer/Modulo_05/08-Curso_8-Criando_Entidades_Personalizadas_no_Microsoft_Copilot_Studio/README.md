@@ -112,9 +112,10 @@
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
-    <img src="images/image-10.png" alt="" width="840">
+    <img src="images/image-11.png" alt="" width="840">
 </p>
 </details>
+
 
 
 ## 🟩 Vídeo 04 - Inserindo Expressões Regulares
