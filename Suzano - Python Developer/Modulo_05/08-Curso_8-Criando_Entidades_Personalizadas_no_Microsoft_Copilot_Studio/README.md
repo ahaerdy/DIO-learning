@@ -149,6 +149,13 @@
 
 ## 🟩 Vídeo 05 - Melhores práticas de uma entidade
 
+### Melhores práticas
+
+- Definir um nome claro  
+- Descrever a sua entidade para outros darem a manutenção no futuro  
+- Definir sinônimos para garantir o mapeamento  
+- Usar Regex sempre que possível para identificar padrões
+
 
 ## Materiais de Apoio
 
@@ -176,6 +183,6 @@ Explore formas de se desenvolver e se destacar na DIO e no mercado:
 
 **Continue aproveitando as oportunidades de aprendizado, buscando mais conhecimento e compartilhando suas descobertas com a comunidade!**
 
-# Certificado: Introdução a Entidades e Variáveis no Microsoft Copilot Studio
+# Certificado: Criando Entidades Personalizadas no Microsoft Copilot Studio
 
-- Link: 
+- Link: https://hermes.dio.me/certificates/DDUO2CJY.pdf
