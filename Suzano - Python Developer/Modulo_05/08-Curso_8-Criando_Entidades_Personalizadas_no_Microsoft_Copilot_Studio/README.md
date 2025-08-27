@@ -29,6 +29,15 @@
 </p>
 </details>
 
+- É possĩvel criar uma nova Entidade ou registrar uma Entidade externa.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-3.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 03 - Como Utilizar uma Entidade
 
 ## 🟩 Vídeo 04 - Inserindo Expressões Regulares
