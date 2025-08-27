@@ -3,9 +3,31 @@
 
 ## 🟩 Vídeo 01 - Conteúdo Programático
 
+### Conteúdo Programático
+
+- Criando uma nova entidade  
+- Melhores práticas de uma entidade
 
 
 ## 🟩 Vídeo 02 - Criando uma Nova Entidade
+
+- Para criar uma nova Entidade, ir em Configurações (ou Settings).
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image.png" alt="" width="840">
+</p>
+</details>
+
+- Em seguida selecionar Entities, para criar as Entiades.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-2.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 03 - Como Utilizar uma Entidade
 
