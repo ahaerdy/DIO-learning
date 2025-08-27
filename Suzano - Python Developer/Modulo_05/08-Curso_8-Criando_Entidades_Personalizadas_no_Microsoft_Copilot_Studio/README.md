@@ -58,6 +58,7 @@
 </details>
 
 - Quando estamos criando, surgem algumas recomendações da Microsoft.
+- Existem dois métodos: listas fechadas e expressões regulares.
 
 <details>
 <summary> Slide da aula🔻</summary>
