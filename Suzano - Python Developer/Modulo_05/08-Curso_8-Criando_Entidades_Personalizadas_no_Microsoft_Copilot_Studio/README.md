@@ -116,7 +116,6 @@
 </p>
 </details>
 
-![alt text](image.png)
 
 ## 🟩 Vídeo 04 - Inserindo Expressões Regulares
 
