@@ -116,6 +116,23 @@
 </p>
 </details>
 
+- Vou adicionar à nossa mensagem, o tipo de viagem, para conseguir fazer omapeamento.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-12.png" alt="" width="840">
+</p>
+</details>
+
+- Fazendo-se o teste.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-13.png" alt="" width="840">
+</p>
+</details>
 
 
 ## 🟩 Vídeo 04 - Inserindo Expressões Regulares
