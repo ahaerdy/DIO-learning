@@ -30,11 +30,23 @@
 </details>
 
 - É possĩvel criar uma nova Entidade ou registrar uma Entidade externa.
+- Link de Referência
+    - https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling
 
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-3.png" alt="" width="840">
+</p>
+</details>
+
+- Link de Referência
+    - https://learn.microsoft.com/en-us/microsoft-copilot-studio/advanced-entities-slot-filling
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-4.png" alt="" width="840">
 </p>
 </details>
 
