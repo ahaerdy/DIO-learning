@@ -71,7 +71,7 @@
 - Você vai ver que vai precisar definir um nome pra sua entidade (ex: Tipos de Viagem)
 - A descrição é opcional, mas é recomendado utilizar (futuramente para dar manutenção).
     - Ex: Esta entidade é responsável por definir e encontrar os tipos de viagem existentes para os usuários.
-- Existe uma funcionalidade muito interessante, que é o "Smart Matching".
+- Existe uma funcionalidade muito interessante, que é o "Smart Matching" (recomanda-se habilitar).
     
     - A opção de correspondência inteligente ("Smart matching") permite que o agente compreenda melhor a linguagem natural. Isso pode ajudar a identificar erros de ortografia, variações gramaticais e palavras com significados semelhantes.
 
@@ -84,7 +84,38 @@
 </p>
 </details>
 
+- Em seguida definimos a lista de termos (carro, barco, etc).
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-8.png" alt="" width="840">
+</p>
+</details>
+
+- Temos a opção, também, de editar a lista de sinônimos.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-9.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 03 - Como Utilizar uma Entidade
+
+- Demonstrando como utilizar essas opções.
+- Entrar em "Dicas de Viagem".
+- Inserindo uma pergunta: "Qual o tipo de viagem desejada?"
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-10.png" alt="" width="840">
+</p>
+</details>
+
+![alt text](image.png)
 
 ## 🟩 Vídeo 04 - Inserindo Expressões Regulares
 
