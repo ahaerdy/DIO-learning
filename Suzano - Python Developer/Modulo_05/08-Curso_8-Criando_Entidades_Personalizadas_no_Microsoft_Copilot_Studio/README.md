@@ -137,6 +137,16 @@
 
 ## 🟩 Vídeo 04 - Inserindo Expressões Regulares
 
+- Aqui selecionamos o método de Expressões Regulares.
+- A Microsoft disponibiliza alguns exemplos.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-14.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 05 - Melhores práticas de uma entidade
 
 
