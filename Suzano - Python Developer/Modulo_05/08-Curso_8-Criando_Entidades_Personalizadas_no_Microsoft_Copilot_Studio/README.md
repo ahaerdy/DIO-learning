@@ -67,6 +67,23 @@
 </p>
 </details>
 
+- Primeiro vamos criar uma lista fechada.
+- Você vai ver que vai precisar definir um nome pra sua entidade (ex: Tipos de Viagem)
+- A descrição é opcional, mas é recomendado utilizar (futuramente para dar manutenção).
+    - Ex: Esta entidade é responsável por definir e encontrar os tipos de viagem existentes para os usuários.
+- Existe uma funcionalidade muito interessante, que é o "Smart Matching".
+    
+    - A opção de correspondência inteligente ("Smart matching") permite que o agente compreenda melhor a linguagem natural. Isso pode ajudar a identificar erros de ortografia, variações gramaticais e palavras com significados semelhantes.
+
+    - Se o agente não estiver reconhecendo palavras relacionadas o suficiente, você pode aprimorar ainda mais sua compreensão adicionando sinônimos aos itens da lista.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 03 - Como Utilizar uma Entidade
 
 ## 🟩 Vídeo 04 - Inserindo Expressões Regulares
