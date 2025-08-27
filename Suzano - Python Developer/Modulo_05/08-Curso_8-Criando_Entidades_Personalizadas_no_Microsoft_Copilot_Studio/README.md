@@ -107,6 +107,7 @@
 - Demonstrando como utilizar essas opções.
 - Entrar em "Dicas de Viagem".
 - Inserindo uma pergunta: "Qual o tipo de viagem desejada?"
+    - Eu seleciono quais opções esstarão disponíveis para meu usuário.
 
 <details>
 <summary> Slide da aula🔻</summary>
