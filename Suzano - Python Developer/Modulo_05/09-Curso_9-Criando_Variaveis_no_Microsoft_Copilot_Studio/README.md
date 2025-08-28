@@ -31,6 +31,15 @@
 </p>
 </details>
 
+- Uma pergunta, alguma informação que precisamos extrair do nosso usuário, acaba se tornando uma variável.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-3.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 02 - Entendendo o Uso de Variável de Tópico ou Global
  
 ## 🟩 Vídeo 03 - Testando o Uso de Variáveis
