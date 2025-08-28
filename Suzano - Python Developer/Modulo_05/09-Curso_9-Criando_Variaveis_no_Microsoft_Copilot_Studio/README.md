@@ -86,7 +86,7 @@
 </p>
 </details>
 
-- Quando definimos como variável global, qualquer outro tópico dentro DESSE Copilot vai me permitir usar as mesmas variáveis.
+- Quando definimos como variável global, qualquer outro tópico dentro DESSE Copilot vai me permitir usar as mesmas variáveis (bem como sobreescrever seus varlores).
 
 <details>
 <summary> Slide da aula🔻</summary>
