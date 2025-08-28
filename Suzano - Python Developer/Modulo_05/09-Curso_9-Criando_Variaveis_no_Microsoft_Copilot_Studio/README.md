@@ -4,7 +4,21 @@
 # Parte 01 - Como definir uma variável
  
 ## 🟩 Vídeo 01 - Como Definir uma Variável
- 
+
+### Conteúdo Programático
+
+- Como definir uma variável?  
+- Tipos de variáveis existentes  
+- Trabalhando com fórmulas e variáveis
+
+### Dentro do Copilot, ir em Tópicos
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image.png" alt="" width="840">
+</p>
+</details>
 ## 🟩 Vídeo 02 - Entendendo o Uso de Variável de Tópico ou Global
  
 ## 🟩 Vídeo 03 - Testando o Uso de Variáveis
