@@ -1,0 +1,34 @@
+- Instrutor: Renato Romão de Souza (Microsoft MVP, MCT, Especialista em Copilot & IA).
+- Contato Linkedin: https://www.linkedin.com/in/renatoromao
+
+# Parte 01 - Como definir uma variável
+ 
+## 🟩 Vídeo 01 - Como Definir uma Variável
+ 
+## 🟩 Vídeo 02 - Entendendo o Uso de Variável de Tópico ou Global
+ 
+## 🟩 Vídeo 03 - Testando o Uso de Variáveis
+ 
+## 🟩 Vídeo 04 - Gerenciando Variáveis
+ 
+## 🟩 Vídeo 05 - Trabalhando com Cartões Adaptáveis
+
+# Parte 02 - Tipos de variáveis existentes
+ 
+## 🟩 Vídeo 06 - Variáveis de Tópico e Variáveis Globais
+ 
+## 🟩 Vídeo 07 - Variáveis de Sistema
+ 
+## 🟩 Vídeo 08 - Variáveis de Ambiente
+
+# Parte 03 - Trabalhando com fórmulas e variáveis
+ 
+## 🟩 Vídeo 09 - Exemplos de Casos Reais
+ 
+## 🟩 Vídeo 10 - Criando Fórmula para Comparar Datas
+ 
+## 🟩 Vídeo 11 - Ajustando a Fórmula para Validação Condicional
+ 
+## 🟩 Vídeo 12 - Criando Fórmula para Calcular Preço
+ 
+## 🟩 Vídeo 13 - Criando Fórmula para Salvar o Histórico da Conversa
