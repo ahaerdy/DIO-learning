@@ -44,11 +44,22 @@
 ### Se cliacar em "Save respose as" ...
 
 - O Copilot mostra automaticamente o nome, seu tipo, onde estão suas referências e algumas outras informações de uso.
+- Eu consigo fazer uma série de configurações dentro de uma variável, que é simplesmente uma pergunta.
 
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-4.png" alt="" width="840">
+</p>
+</details>
+
+- A primeira boa prática é dar um nome adequado à variável.
+    - Ex: locLinklugarinspiracao ("loc" de local)
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
 </p>
 </details>
 
