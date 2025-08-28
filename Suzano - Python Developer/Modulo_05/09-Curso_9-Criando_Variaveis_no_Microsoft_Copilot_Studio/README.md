@@ -32,11 +32,23 @@
 </details>
 
 - Uma pergunta, alguma informação que precisamos extrair do nosso usuário, acaba se tornando uma variável.
+- O Copilot extrai uma informação do usuário e envia de volta para o chatbot de forma que, se o desenvolvedor quiser usar aquela variável, ele pode. Caso contrário é uma informação descartável.
 
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-3.png" alt="" width="840">
+</p>
+</details>
+
+### Se cliacar em "Save respose as" ...
+
+- O Copilot mostra automaticamente o nome, seu tipo, onde estão suas referências e algumas outras informações de uso.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-4.png" alt="" width="840">
 </p>
 </details>
 
