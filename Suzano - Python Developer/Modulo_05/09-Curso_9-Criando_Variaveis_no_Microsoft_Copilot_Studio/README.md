@@ -65,6 +65,36 @@
 
 ## 🟩 Vídeo 02 - Entendendo o Uso de Variável de Tópico ou Global
  
+- Toda variável tem um tipo que, por padrão, é string.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+</details>
+
+- Eu consigo ver onde a variável está sendo utilizada (todas as referências).
+- Também consigo definir se são variáveis de Tópico ou Globais.
+    - É o motivo de ter colocado "loc" (de local) seguido do nome da variável.
+- Por padrão ele vai sempre se limitar ao escopo de Tópico
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+</details>
+
+- Quando definimos como variável global, qualquer outro tópico dentro DESSE Copilot vai me permitir usar as mesmas variáveis.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-8.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 03 - Testando o Uso de Variáveis
  
 ## 🟩 Vídeo 04 - Gerenciando Variáveis
