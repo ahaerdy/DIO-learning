@@ -96,10 +96,68 @@
 </details>
 
 ## 🟩 Vídeo 03 - Testando o Uso de Variáveis
- 
+
+### Testando com pergunta
+
+    - Conselhos para viajar?
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-9.png" alt="" width="840">
+</p>
+</details>
+
+- O Copilot pergunta:
+    - Qual o link para a sua inspiração
+    -Copia-se o próprio link desta página
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-11.png" alt="" width="840">
+</p>
+</details>
+
+- A variável por padrão foi definida.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-12.png" alt="" width="840">
+</p>
+</details>
+
+- Pode-se visualizar em "variables" também.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-13.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 04 - Gerenciando Variáveis
  
+- Dentro de "Variable Management" tenho as opções de definir uma variável, fazer o parse de um valor e limpar todas as variáveis.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-14.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 05 - Trabalhando com Cartões Adaptáveis
+
+### Outra opção é trabalhar com cartões adaptáveis
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-15.png" alt="" width="840">
+</p>
+</details>
 
 # Parte 02 - Tipos de variáveis existentes
  
