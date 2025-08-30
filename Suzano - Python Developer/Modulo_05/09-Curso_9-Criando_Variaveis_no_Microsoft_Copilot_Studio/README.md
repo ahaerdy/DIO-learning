@@ -214,6 +214,15 @@
 
 ## 🟩 Vídeo 08 - Variáveis de Ambiente
 
+- Além disso, nós temos também as variáveis de ambiente.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-22.png" alt="" width="840">
+</p>
+</details>
+
 # Parte 03 - Trabalhando com fórmulas e variáveis
  
 ## 🟩 Vídeo 09 - Exemplos de Casos Reais
