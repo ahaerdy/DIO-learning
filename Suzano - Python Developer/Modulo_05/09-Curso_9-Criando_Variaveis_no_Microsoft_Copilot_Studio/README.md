@@ -223,12 +223,21 @@
 </p>
 </details>
 
-- Adicionando uma variável.
+- Adicionando uma variável (ex: site do Sharepoint).
 
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
-    <img src="images/image-23.png" alt="" width="840">
+    <img src="images/image-24.png" alt="" width="840">
+</p>
+</details>
+
+- Utilizando a variável.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-25.png" alt="" width="840">
 </p>
 </details>
 
