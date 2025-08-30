@@ -159,12 +159,41 @@
 </p>
 </details>
 
+### Propriedades dos Cartões Adaptáveis em formato JSON
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-16.png" alt="" width="840">
+</p>
+</details>
+
+
 # Parte 02 - Tipos de variáveis existentes
  
 ## 🟩 Vídeo 06 - Variáveis de Tópico e Variáveis Globais
  
+- No exemplo em questão é usada uma variável Global e local (de Tõpico).
+- É possĩvel identificar pela sua formatação.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-17.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 07 - Variáveis de Sistema
  
+- Há uma série de variáveis de sistema disponíveis para utilização.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-18.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 08 - Variáveis de Ambiente
 
 # Parte 03 - Trabalhando com fórmulas e variáveis
