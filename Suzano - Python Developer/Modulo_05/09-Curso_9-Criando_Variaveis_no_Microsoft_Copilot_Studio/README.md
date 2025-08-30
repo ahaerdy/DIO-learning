@@ -194,6 +194,24 @@
 </p>
 </details>
 
+- Dentro da documentação da Microsoft as variáveis estão disciminadas.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-19.png" alt="" width="840">
+</p>
+</details>
+
+- AS principais são as variáveis relacionadas ao sistema.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-21.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 08 - Variáveis de Ambiente
 
 # Parte 03 - Trabalhando com fórmulas e variáveis
