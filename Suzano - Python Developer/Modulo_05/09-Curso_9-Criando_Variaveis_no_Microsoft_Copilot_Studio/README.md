@@ -245,7 +245,7 @@
  
 ## 🟩 Vídeo 09 - Exemplos de Casos Reais
  
-## Exemplos de casos reais
+### Exemplos de casos reais
 
 - Comparar duas datas para férias  
 - Customizar o nome do usuário  
@@ -263,6 +263,17 @@
  
 ## 🟩 Vídeo 10 - Criando Fórmula para Comparar Datas
  
+### criando variáveis e testando.
+
+- Vardatainicio e vardatatermino
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-27.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 11 - Ajustando a Fórmula para Validação Condicional
  
 ## 🟩 Vídeo 12 - Criando Fórmula para Calcular Preço
