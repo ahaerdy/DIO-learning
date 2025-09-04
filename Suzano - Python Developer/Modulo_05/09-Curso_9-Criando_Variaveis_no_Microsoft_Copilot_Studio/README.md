@@ -245,6 +245,22 @@
  
 ## 🟩 Vídeo 09 - Exemplos de Casos Reais
  
+## Exemplos de casos reais
+
+- Comparar duas datas para férias  
+- Customizar o nome do usuário  
+- Verificar se uma data está dentro do período  
+- Calcular preço com imposto  
+- Verificar se tem um produto no estoque  
+- Calcular a média de preço  
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-26.png" alt="" width="840">
+</p>
+</details>
+ 
 ## 🟩 Vídeo 10 - Criando Fórmula para Comparar Datas
  
 ## 🟩 Vídeo 11 - Ajustando a Fórmula para Validação Condicional
