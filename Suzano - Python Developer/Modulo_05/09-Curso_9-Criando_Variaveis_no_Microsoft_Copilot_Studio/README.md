@@ -258,14 +258,14 @@
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-26.png" alt="" width="840">
-</p>
+</tp>
 </details>
  
 ## 🟩 Vídeo 10 - Criando Fórmula para Comparar Datas
  
 ### criando variáveis e testando.
 
-- Vardatainicio e vardatatermino
+- VarEatainicio e vardatatermino
 
 <details>
 <summary> Slide da aula🔻</summary>
