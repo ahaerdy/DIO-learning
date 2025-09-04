@@ -274,6 +274,24 @@
 </p>
 </details>
 
+### Utilizando o MIcrosoft PowerFX
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-28.png" alt="" width="840">
+</p>
+</details>
+
+- Lembrando que a MicroSoft sempre tem documentação
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-29.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 11 - Ajustando a Fórmula para Validação Condicional
  
 ## 🟩 Vídeo 12 - Criando Fórmula para Calcular Preço
