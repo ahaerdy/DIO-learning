@@ -373,5 +373,5 @@ Explore formas de se desenvolver e se destacar na DIO e no mercado:
 
 # Certificado: Criando Variáveis no Microsoft Copilot Studio
 
-- Link:
+- Link: https://hermes.dio.me/certificates/IW8DLESC.pdf
 
