@@ -304,6 +304,25 @@
 </p>
 </details>
 
+- Estabelecendo condições com base nesse resultado.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-31.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 12 - Criando Fórmula para Calcular Preço
  
+- Criando variável de ambiente Taxa do Imposto 
+    - Com valor atual igual a 11%.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-33.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 13 - Criando Fórmula para Salvar o Histórico da Conversa
