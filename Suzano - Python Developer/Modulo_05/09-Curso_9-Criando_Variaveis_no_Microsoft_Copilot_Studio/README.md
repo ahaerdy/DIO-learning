@@ -325,4 +325,25 @@
 </p>
 </details>
 
+- Entrando com a fórmula para cálculo do preço com imposto.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-35.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 13 - Criando Fórmula para Salvar o Histórico da Conversa
+
+- Você pode usar uma variável para armazenar o histórico da conversa utilizando uma fórmula
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-36.png" alt="" width="840">
+</p>
+</details>
+
+
+
