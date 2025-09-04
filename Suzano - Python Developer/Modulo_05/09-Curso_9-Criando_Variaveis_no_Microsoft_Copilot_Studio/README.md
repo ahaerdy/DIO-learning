@@ -265,7 +265,7 @@
  
 ### criando variáveis e testando.
 
-- VarEatainicio e vardatatermino
+- VarDataInicio e VarDataTermino
 
 <details>
 <summary> Slide da aula🔻</summary>
