@@ -294,6 +294,15 @@
 
 ## 🟩 Vídeo 11 - Ajustando a Fórmula para Validação Condicional
  
+- Fórmula para cálculo de diferença em dias entre datas.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-30.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 12 - Criando Fórmula para Calcular Preço
  
 ## 🟩 Vídeo 13 - Criando Fórmula para Salvar o Histórico da Conversa
