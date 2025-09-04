@@ -295,6 +295,7 @@
 ## 🟩 Vídeo 11 - Ajustando a Fórmula para Validação Condicional
  
 - Fórmula para cálculo de diferença em dias entre datas.
+- Depois compara: se resultado for maior que zero, retorna verdadeiro.
 
 <details>
 <summary> Slide da aula🔻</summary>
