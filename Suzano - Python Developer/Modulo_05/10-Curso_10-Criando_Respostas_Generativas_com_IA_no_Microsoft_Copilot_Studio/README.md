@@ -22,6 +22,21 @@
 
 ## 🟩 Vídeo 02 - O que é Resposta Generativa?
 
+### Respostas Generativas
+
+#### **Habilite conversa de múltiplas interações usando suas próprias fontes de conhecimento internas e externas e sites**
+
+- Agentes podem fazer milhares de perguntas ao bot em segundos  
+- Você pode até fornecer uma API ou outro chatbot externo para o chat generativo
+
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-2.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 03 - Como encontrar essa configuração no Copilot Studio?
 
 ## 🟩 Vídeo 04 - Conceitos importantes de GenAI no Copilot
