@@ -29,13 +29,28 @@
 - Agentes podem fazer milhares de perguntas ao bot em segundos  
 - Você pode até fornecer uma API ou outro chatbot externo para o chat generativo
 
-
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
     <img src="images/image-2.png" alt="" width="840">
 </p>
 </details>
+
+### Carregamento de Arquivos
+
+**Documentos baseados em texto são hospedados e indexados para uso com Respostas Generativas**
+
+- Suporte a diversos formatos: Word, Excel, PowerPoint, PDF, TXT, HTML, CSV, XML, EPUB, RTF, JSON e outros  
+- Controle disponível em nível de nó  
+- Arquivos são carregados com segurança para o Dataverse
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-3.png" alt="" width="840">
+</p>
+</details>
+
 
 ## 🟩 Vídeo 03 - Como encontrar essa configuração no Copilot Studio?
 
