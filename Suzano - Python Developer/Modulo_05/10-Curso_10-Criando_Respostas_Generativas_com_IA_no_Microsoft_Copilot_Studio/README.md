@@ -142,3 +142,54 @@
 </p>
 </details>
 
+- O painel e suas opções.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-12.png" alt="" width="840">
+</p>
+</details>
+
+# Painel "Add knowledge" no Copilot Studio
+
+O painel **"Add knowledge"** permite configurar as fontes de informação que alimentam um agente virtual criado no Copilot Studio. Ele é essencial para tornar o agente mais inteligente, contextualizado e útil nas interações com os usuários.
+
+## Fontes de conhecimento disponíveis
+
+### 1. Public websites
+- Permite adicionar sites públicos como fonte de dados em tempo real.
+- Ideal para informações abertas como notícias, conteúdo institucional ou dados de mercado.
+
+### 2. SharePoint
+- Integra dados internos de forma segura.
+- Recomendado para empresas que usam SharePoint como repositório de documentos, políticas, FAQs, etc.
+
+### 3. Dataverse (preview)
+- Permite personalizar e usar tabelas estruturadas de dados.
+- Útil para conectar o agente a bases organizadas como cadastros, inventários ou registros internos.
+
+## Upload de arquivos
+
+Além das fontes acima, é possível carregar arquivos diretamente para o Dataverse. Os tipos de arquivos suportados incluem:
+
+- Imagens
+- Áudio
+- Vídeo
+- Executáveis
+- Documentos estruturados (PDF, DOCX, CSV, etc.)
+
+Esses arquivos são armazenados com segurança e indexados para que o agente possa utilizá-los como base de conhecimento.
+
+## Elementos da interface
+
+- **Abas Featured e Advanced**: ajudam a filtrar e selecionar os tipos de fonte mais adequados.
+- **Área de drag-and-drop**: facilita o envio de arquivos.
+- **Barra de busca**: permite localizar rapidamente fontes já adicionadas.
+
+## Finalidade
+
+Esse painel é o núcleo da inteligência contextual do agente. Quanto mais bem alimentado com fontes confiáveis e organizadas, mais relevante e preciso será nas respostas.
+
+
+
