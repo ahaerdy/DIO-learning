@@ -51,8 +51,34 @@
 </p>
 </details>
 
+### Ações e Plugins
+
+**Adicione plugins para permitir que seu agente converse com suas APIs**
+
+- Adicione plugins com base em mais de 1000 conectores pré-criados ou crie seus próprios para APIs personalizadas.  
+  Ou combine ambos para executar fluxos de trabalho complexos.
+
+- A conversa é gerada automaticamente para preencher os dados necessários para executar os plugins.
+
+- Chame um plugin diretamente a partir de um Tópico ou use o novo recurso de Ações Generativas para escolher o melhor plugin para a conversa do seu agente com um plugin.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-4.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 03 - Como encontrar essa configuração no Copilot Studio?
+
+### Conversational boosting
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 04 - Conceitos importantes de GenAI no Copilot
 
