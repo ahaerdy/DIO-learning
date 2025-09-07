@@ -73,6 +73,8 @@
 
 ### Conversational boosting
 
+- Toda a vez que o Copilot não reconhecer uma conversa de tópicos parametrizados pelo usuário ou de tópicos de sistema, ele sempre vai tentar utilizar a inteligência artificial.
+
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
