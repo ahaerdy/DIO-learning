@@ -106,6 +106,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Introdução a Entidades e Variáveis no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/07-Curso_7-Introducao_a_Entidades_e_Variaveis_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---conte%C3%BAdo-program%C3%A1tico)
 - [x] Curso: [Criando Entidades Personalizadas no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/08-Curso_8-Criando_Entidades_Personalizadas_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---conte%C3%BAdo-program%C3%A1tico)
 - [x] Curso: [Criando Variáveis no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/09-Curso_9-Criando_Variaveis_no_Microsoft_Copilot_Studio#parte-01---como-definir-uma-vari%C3%A1vel)
+- [x] Curso: [Criando Respostas Generativas com IA no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/10-Curso_10-Criando_Respostas_Generativas_com_IA_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---conte%C3%BAdo-program%C3%A1tico)
 
 ### Módulo 6: Integrando com Serviços de IA
 
@@ -159,6 +160,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Introdução a Entidades e Variáveis no Microsoft Copilot Studio](https://hermes.dio.me/certificates/3YQQCK1B.pdf)
 - [Criando Entidades Personalizadas no Microsoft Copilot Studio](https://hermes.dio.me/certificates/DDUO2CJY.pdf)
 - [Criando Variáveis no Microsoft Copilot Studio](https://hermes.dio.me/certificates/IW8DLESC.pdf)
+- [Criando Respostas Generativas com IA no Microsoft Copilot Studio](https://hermes.dio.me/certificates/5UMQPPTL.pdf)
 
 ## 🔗 Contribuições Open Source
 
