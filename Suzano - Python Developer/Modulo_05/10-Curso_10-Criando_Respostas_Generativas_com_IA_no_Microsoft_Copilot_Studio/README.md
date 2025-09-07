@@ -84,6 +84,61 @@
 
 ## 🟩 Vídeo 04 - Conceitos importantes de GenAI no Copilot
 
+### Balanceamento de Conteúdo
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+</details>
+
+- É possível escolher o grau de moderação para um tópico específico
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+</details>
+
+- É possível desabilitar o acesso ao conteúdo da web para a IA.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-8.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 05 - Como definir as melhoras configurações para resposta apropriada?
 
+- Selecionar como melhor prática apenas as bases de conhecimento de que você já dispõe.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-9.png" alt="" width="840">
+</p>
+</details>
+
+- Se não estiver sendo suficiente usar os meus documentos, arquivos, tabelas, é possúvel adicionar uma conexão com o Azure OpenAI Services.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-10.png" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 06 - O que são Knowledge Souces?
+
+- São bases de conhecimento. É possível treinar uma modelo usando seus próprios dados.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-11.png" alt="" width="840">
+</p>
+</details>
+
