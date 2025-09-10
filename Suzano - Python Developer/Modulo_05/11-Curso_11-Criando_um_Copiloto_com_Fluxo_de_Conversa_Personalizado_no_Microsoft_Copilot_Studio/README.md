@@ -159,7 +159,36 @@ Você pode buscar **"Agente da DIO"** na seção de documentação oficial da Mi
 </p>
 </details>
 
-- Escolho usar frases generativas.
+- Escolho usar respostas generativas.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-9.png" alt="" width="840">
+</p>
+</details>
+
+- A resposta generativa é baseada na resposta do usuário.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-10.png" alt="" width="840">
+</p>
+</details>
+
+- Mensagem final: "Tópico de AI encerrado".
+- Salvo como "AI Builder Topics".
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-11.png" alt="" width="840">
+</p>
+</details>
+
+- Testando: ...
+> estou aprendendo mais sobre AI Builder, o que voce sabe e pode compartilhar?
 
 
 
