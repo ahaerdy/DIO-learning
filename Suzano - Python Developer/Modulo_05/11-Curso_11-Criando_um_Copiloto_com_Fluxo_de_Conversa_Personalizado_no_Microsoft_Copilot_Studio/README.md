@@ -110,19 +110,19 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 
 ### Agente da DIO – Visão Geral
 
-**Seu agente está pronto! Próximos passos:**
-- ✅ Adicione tópicos para que seu agente possa executar ações  
-- ✅ Adicione autenticação para que seu agente forneça respostas corretas  
-- ✅ Publique seu agente para que outros possam utilizá-lo
+- **Seu agente está pronto! Próximos passos:**
+    - ✅ Adicione tópicos para que seu agente possa executar ações  
+    - ✅ Adicione autenticação para que seu agente forneça respostas corretas  
+    - ✅ Publique seu agente para que outros possam utilizá-lo
 
-**Nome do agente:**  
-Agente da DIO
+-**Nome do agente:**  
+    - Agente da DIO
 
-**Descrição do agente:**  
-Você pode buscar conteúdos de Copilot Studio dentro da documentação oficial da Microsoft, sendo que este agente se chama **"Agente da DIO"**.  
-O idioma está em português do Brasil.  
-O nome **"Agente da DIO"** é válido e tem um bom formato com o idioma em português, para retomar a pergunta e a resposta com o usuário final.  
-Você pode buscar **"Agente da DIO"** na seção de documentação oficial da Microsoft, com exemplos de como retomar a pergunta ou a solicitação com o usuário final.
+- **Descrição do agente:**  
+    - Você pode buscar conteúdos de Copilot Studio dentro da documentação oficial da Microsoft, sendo que este agente se chama **"Agente da DIO"**.  
+    - O idioma está em português do Brasil.  
+    - O nome **"Agente da DIO"** é válido e tem um bom formato com o idioma em português, para retomar a pergunta e a resposta com o usuário final.  
+    - Você pode buscar **"Agente da DIO"** na seção de documentação oficial da Microsoft, com exemplos de como retomar a pergunta ou a solicitação com o usuário final.
 
 **Resposta do bot (teste):**  
 > Você pode buscar conteúdos de Copilot Studio dentro da documentação oficial da Microsoft, sendo que este agente se chama "Agente da DIO".
