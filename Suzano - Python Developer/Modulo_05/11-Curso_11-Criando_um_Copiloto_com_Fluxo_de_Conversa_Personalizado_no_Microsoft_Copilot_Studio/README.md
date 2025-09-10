@@ -127,6 +127,31 @@ Você pode buscar **"Agente da DIO"** na seção de documentação oficial da Mi
 **Resposta do bot (teste):**  
 > Você pode buscar conteúdos de Copilot Studio dentro da documentação oficial da Microsoft, sendo que este agente se chama "Agente da DIO".
 
+### Procedimento para customização de tópico
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+</details>
+
+### Adicionando um novo tópico em branco
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-7.png" alt="" width="840">
+</p>
+</details>
+
+### Customizando frases de gatilho
+
+-Consultas sobre AI Builder
+    - ✅ buscar informações de ai builder   
+    - ✅ o que é ai builder  
+    - ✅ onde encontro informações da ferramenta de
+
 
 ## 🟩 Vídeo 04 - Personalizar uma mensagem de erro de tópico
 
