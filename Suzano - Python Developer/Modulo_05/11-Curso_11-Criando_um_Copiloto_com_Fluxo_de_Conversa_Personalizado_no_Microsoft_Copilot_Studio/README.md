@@ -147,7 +147,7 @@ Você pode buscar **"Agente da DIO"** na seção de documentação oficial da Mi
 
 ### Customizando frases de gatilho
 
--Consultas sobre AI Builder
+- Consultas sobre AI Builder
     - ✅ buscar informações de ai builder   
     - ✅ o que é ai builder  
     - ✅ onde encontro informações da ferramenta de
