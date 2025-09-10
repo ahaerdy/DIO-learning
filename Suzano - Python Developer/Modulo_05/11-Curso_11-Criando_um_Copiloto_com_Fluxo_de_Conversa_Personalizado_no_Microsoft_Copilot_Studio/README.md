@@ -56,8 +56,9 @@ Link para início do projeto:
 <p align="center">
     <img src="images/image-2.png" alt="" width="840">
 </p>
-> Essa imagem mostra a seção “Agents” do Microsoft Copilot Studio, onde são gerenciados agentes inteligentes criados para automatizar tarefas e interações. A interface exibe uma lista com quatro agentes, incluindo detalhes como nome, tipo, data da última modificação, publicação e proprietário. Entre eles estão o “DIO Copilot” e o “Copilot Microsoft 365”, com diferentes níveis de personalização e autoria. Essa etapa do curso corresponde à visualização e organização dos agentes existentes, preparando o terreno para a criação de um novo copilot em branco, totalmente adaptado às necessidades do usuário.
 </details>
+
+Essa imagem ilustra a seção “Agents” do Microsoft Copilot Studio, onde são gerenciados agentes inteligentes criados para automatizar tarefas e interações. A interface exibe uma lista com quatro agentes, incluindo detalhes como nome, tipo, data da última modificação, publicação e proprietário. Entre eles estão o “DIO Copilot” e o “Copilot Microsoft 365”, com diferentes níveis de personalização e autoria. Essa etapa do curso corresponde à visualização e organização dos agentes existentes, preparando o terreno para a criação de um novo copilot em branco, totalmente adaptado às necessidades do usuário.
 
 - Clicando em "New Agent" criamos um novo agente.
 - Na parte de idioma é recomendado usar o inglês.
@@ -67,8 +68,9 @@ Link para início do projeto:
 <p align="center">
     <img src="images/image-3.png" alt="" width="840">
 </p>
-> Essa imagem mostra a etapa de personalização de um agente dentro do Microsoft Copilot Studio. O usuário está configurando um agente do zero, definindo elementos como nome, ícone, descrição e instruções de comportamento. A interface orienta o preenchimento com dicas sobre como descrever a função do agente, seu público-alvo e o tom que ele deve adotar. Essa fase do curso é essencial para moldar a identidade e o propósito do copilot, garantindo que ele atenda às necessidades específicas do projeto ou da organização.
 </details>
+
+- Essa imagem mostra a etapa de personalização de um agente dentro do Microsoft Copilot Studio. O usuário está configurando um agente do zero, definindo elementos como nome, ícone, descrição e instruções de comportamento. A interface orienta o preenchimento com dicas sobre como descrever a função do agente, seu público-alvo e o tom que ele deve adotar. Essa fase do curso é essencial para moldar a identidade e o propósito do copilot, garantindo que ele atenda às necessidades específicas do projeto ou da organização.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -79,14 +81,19 @@ Link para início do projeto:
 
 ### Configuração do agente "Agente da DIO" no Copilot Studio
 
-Na etapa exibida, o aluno preencheu os campos de nome, ícone, descrição e instruções para configurar um agente personalizado chamado "Agente da DIO" dentro do ambiente do Copilot Studio.
+Na etapa, são preenchidos os campos de nome, ícone, descrição e instruções para configurar um agente personalizado chamado "Agente da DIO" dentro do ambiente do Copilot Studio.
 
 #### O que foi preenchido:
 
 - **Nome do agente:** *Agente da DIO* — um nome que identifica claramente a função e o contexto do bot.
 - **Ícone:** opção de personalização visual, com a recomendação de usar arquivos PNG com menos de 1 MB.
 - **Descrição:** define o propósito do agente: buscar conteúdos relacionados ao Copilot Studio na documentação oficial da Microsoft, especialmente no Microsoft Learn.
-- **Instruções:** orientações detalhadas sobre o comportamento do agente, incluindo seu papel, tom de resposta e foco exclusivo em fornecer informações relevantes da documentação oficial.
+- **Instruções:** 
+ - VOCÊ é o agente chamado “Agente da DIO” e sua tarefa é buscar conteúdos em Copilot Studio dentro da documentação oficial da Microsoft, como o Microsoft Learn.
+ - Responda sempre apenas para a pergunta ou situação que deve considerar
+ - Busque a melhor resposta na documentação
+ - Retornar a resposta apropriada e amigável de tom formal
+ - Retornar uma ou mais citações da documentação
 
 #### Finalidade no contexto do curso:
 
