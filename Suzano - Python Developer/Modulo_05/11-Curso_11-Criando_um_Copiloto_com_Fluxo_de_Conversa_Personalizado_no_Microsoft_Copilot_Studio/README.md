@@ -190,6 +190,21 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 - Testando: ...
     > estou aprendendo mais sobre AI Builder, o que voce sabe e pode compartilhar?
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-12.png" alt="" width="840">
+</p>
+</details>
+
+- Ele retornou as informações ...
+### Introdução ao AI Builder
+
+> Claro, ficarei feliz em ajudar!  
+>  O **AI Builder** é uma funcionalidade do **Microsoft Power Platform** que permite adicionar inteligência artificial aos seus aplicativos e fluxos de trabalho **sem a necessidade de ser um especialista em IA**.  
+> Ele oferece uma variedade de **modelos pré-construídos** que podem ser facilmente integrados e personalizados para atender às suas necessidades específicas.
+> **Aqui estão alguns pontos importantes sobre o AI Builder:** ...
+
 
 
 ## 🟩 Vídeo 04 - Personalizar uma mensagem de erro de tópico
