@@ -124,8 +124,8 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
     - O nome **"Agente da DIO"** é válido e tem um bom formato com o idioma em português, para retomar a pergunta e a resposta com o usuário final.  
     - Você pode buscar **"Agente da DIO"** na seção de documentação oficial da Microsoft, com exemplos de como retomar a pergunta ou a solicitação com o usuário final.
 
-**Resposta do bot (teste):**  
-> Você pode buscar conteúdos de Copilot Studio dentro da documentação oficial da Microsoft, sendo que este agente se chama "Agente da DIO".
+- **Resposta do bot (teste):**  
+    > Você pode buscar conteúdos de Copilot Studio dentro da documentação oficial da Microsoft, sendo que este agente se chama "Agente da DIO".
 
 ### Procedimento para customização de tópico
 
@@ -188,7 +188,7 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 </details>
 
 - Testando: ...
-> estou aprendendo mais sobre AI Builder, o que voce sabe e pode compartilhar?
+    > estou aprendendo mais sobre AI Builder, o que voce sabe e pode compartilhar?
 
 
 
