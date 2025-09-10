@@ -152,6 +152,16 @@ Você pode buscar **"Agente da DIO"** na seção de documentação oficial da Mi
     - ✅ o que é ai builder  
     - ✅ onde encontro informações da ferramenta de
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-8.png" alt="" width="840">
+</p>
+</details>
+
+- Escolho usar frases generativas.
+
+
 
 ## 🟩 Vídeo 04 - Personalizar uma mensagem de erro de tópico
 
