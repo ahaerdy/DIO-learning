@@ -89,18 +89,44 @@ Na etapa, são preenchidos os campos de nome, ícone, descrição e instruções
 - **Ícone:** opção de personalização visual, com a recomendação de usar arquivos PNG com menos de 1 MB.
 - **Descrição:** define o propósito do agente: buscar conteúdos relacionados ao Copilot Studio na documentação oficial da Microsoft, especialmente no Microsoft Learn.
 - **Instruções:** 
- - VOCÊ é o agente chamado “Agente da DIO” e sua tarefa é buscar conteúdos em Copilot Studio dentro da documentação oficial da Microsoft, como o Microsoft Learn.
- - Responda sempre apenas para a pergunta ou situação que deve considerar
- - Busque a melhor resposta na documentação
- - Retornar a resposta apropriada e amigável de tom formal
- - Retornar uma ou mais citações da documentação
+    - VOCÊ é o agente chamado “Agente da DIO” e sua tarefa é buscar conteúdos em Copilot Studio dentro da documentação oficial da Microsoft, como o Microsoft Learn.
+    - Responda sempre apenas para a pergunta ou situação que deve considerar
+    - Busque a melhor resposta na documentação
+    - Retornar a resposta apropriada e amigável de tom formal
+    - Retornar uma ou mais citações da documentação
 
 #### Finalidade no contexto do curso:
 
 Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e contextualizado, capaz de responder com precisão a perguntas sobre o Copilot Studio. Ao definir claramente o papel do agente, o aluno aprende a estruturar bots com intenção, escopo e linguagem adequada, o que é essencial para desenvolver soluções úteis e confiáveis em ambientes corporativos ou educacionais. Além disso, essa configuração prepara o agente para interagir com usuários de forma coerente, respeitando o propósito definido e garantindo consistência nas respostas.
 
-
 ## 🟩 Vídeo 03 - Customizar um tópico
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
+</p>
+</details>
+
+### Agente da DIO – Visão Geral
+
+**Seu agente está pronto! Próximos passos:**
+- ✅ Adicione tópicos para que seu agente possa executar ações  
+- ✅ Adicione autenticação para que seu agente forneça respostas corretas  
+- ✅ Publique seu agente para que outros possam utilizá-lo
+
+**Nome do agente:**  
+Agente da DIO
+
+**Descrição do agente:**  
+Você pode buscar conteúdos de Copilot Studio dentro da documentação oficial da Microsoft, sendo que este agente se chama **"Agente da DIO"**.  
+O idioma está em português do Brasil.  
+O nome **"Agente da DIO"** é válido e tem um bom formato com o idioma em português, para retomar a pergunta e a resposta com o usuário final.  
+Você pode buscar **"Agente da DIO"** na seção de documentação oficial da Microsoft, com exemplos de como retomar a pergunta ou a solicitação com o usuário final.
+
+**Resposta do bot (teste):**  
+> Você pode buscar conteúdos de Copilot Studio dentro da documentação oficial da Microsoft, sendo que este agente se chama "Agente da DIO".
+
 
 ## 🟩 Vídeo 04 - Personalizar uma mensagem de erro de tópico
 
