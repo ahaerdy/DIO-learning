@@ -248,8 +248,27 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 </p>
 </details>
 
+- Dentro do Fallback é "tudo que acontecer aqui de falhar, ele vai cair dentro desse tópico"
 
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-17.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 05 - Aumentar e diminuir a qualidade da resposta com GenAI
+
+- O primeiro ponto que podemos configurar é dentro dos tópicos.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-18.png" alt="" width="840">
+</p>
+</details>
+
+- No Conversational Boosting eu posso clicar no "Edit" do "Data Source" que são as bases de conhecimento.
+- Posso selecionar as bases de conhecimento que existem dentro do meu agente.
 
 ## 🟩 Vídeo 06 - Entendendo o Desafio
