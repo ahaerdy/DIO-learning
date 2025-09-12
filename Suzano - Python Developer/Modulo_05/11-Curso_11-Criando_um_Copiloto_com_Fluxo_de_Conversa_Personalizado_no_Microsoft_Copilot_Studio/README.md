@@ -320,3 +320,11 @@ C) Crie um repositório no GitHub.
 D) Envie em "Entregar Projeto", o link do seu repositório no GitHub.
 
 E) Documentação do Microsoft Copilot Studio: https://learn.microsoft.com/pt-br/microsoft-copilot-studio/
+
+## Projeto entregue
+
+Link: https://github.com/ahaerdy/DIO-criando-um-copilo-com-fluxo-de-conversa-personalizado-no-microsoft-copilot-studio#
+
+## Certificado: Criando um Copiloto com Fluxo de Conversa Personalizado no Microsoft Copilot Studio
+
+Link: https://hermes.dio.me/certificates/VNAWCUWE.pdf
