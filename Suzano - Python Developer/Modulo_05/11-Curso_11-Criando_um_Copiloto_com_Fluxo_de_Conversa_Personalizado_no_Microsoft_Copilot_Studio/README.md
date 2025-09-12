@@ -197,7 +197,7 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 </p>
 </details>
 
-- Ele retornou as informações ...
+- Ele retornou as informações (em negrito, customizado, etc) inclusive com documentações da Microsoft.
 
 > Claro, ficarei feliz em ajudar!  
 >
@@ -207,9 +207,48 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 >
 > **Aqui estão alguns pontos importantes sobre o AI Builder:** ...
 
-
+- Esse padrão utiliza instruções do chatbot.
+- Caso se queira customizar ainda mais o prompt em "Data Source".
 
 ## 🟩 Vídeo 04 - Personalizar uma mensagem de erro de tópico
+
+- A primeira opção é fazer uso do Conversational Boosting, que é "qualquer coisa que ele nào consiga compreender, vai cair dentro deste tópico"
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-13.png" alt="" width="840">
+</p>
+</details>
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-14.png" alt="" width="840">
+</p>
+</details>
+
+- Em seguida, ele vai usar respostas generativas. 
+- Se a resposta estiver em branco, ele vai encerrar.
+- Caso contrário vai para a outra parte da conversação.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-15.png" alt="" width="840">
+</p>
+</details>
+
+- A outra opção que você tem é dentro do Fallback.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-16.png" alt="" width="840">
+</p>
+</details>
+
+
 
 ## 🟩 Vídeo 05 - Aumentar e diminuir a qualidade da resposta com GenAI
 
