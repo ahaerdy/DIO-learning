@@ -165,7 +165,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Criando Variáveis no Microsoft Copilot Studio](https://hermes.dio.me/certificates/IW8DLESC.pdf)
 - [Criando Respostas Generativas com IA no Microsoft Copilot Studio](https://hermes.dio.me/certificates/5UMQPPTL.pdf)
 - [Criando um Copiloto com Fluxo de Conversa Personalizado no Microsoft Copilot Studio](https://hermes.dio.me/certificates/VNAWCUWE.pdf)
-- Certificado do Módulo: [Produtividade com Microsoft Copilot Studio](https://hermes.dio.me/certificates/4PKCPS31.pdf)
+- Certificado do Módulo: [Produtividade com Microsoft Copilot Studio](https://hermes.dio.me/certificates/4PKCPS31.pdf) ✅
 
 ## 🔗 Contribuições Open Source
 
