@@ -260,6 +260,8 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 ## 🟩 Vídeo 05 - Aumentar e diminuir a qualidade da resposta com GenAI
 
 - O primeiro ponto que podemos configurar é dentro dos tópicos.
+- No Conversational Boosting eu posso clicar no "Edit" do "Data Source" que são as bases de conhecimento.
+- Posso selecionar as bases de conhecimento que existem dentro do meu agente.
 
 <details>
 <summary> Slide da aula🔻</summary>
@@ -268,7 +270,13 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 </p>
 </details>
 
-- No Conversational Boosting eu posso clicar no "Edit" do "Data Source" que são as bases de conhecimento.
-- Posso selecionar as bases de conhecimento que existem dentro do meu agente.
+- Classic Data: essa opção quando ela está selecionada, ela usa o conhecimento do GPT.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-19.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 06 - Entendendo o Desafio
