@@ -279,4 +279,44 @@ Essa etapa tem como objetivo ensinar o aluno a criar um agente funcional e conte
 </p>
 </details>
 
-## 🟩 Vídeo 06 - Entendendo o Desafio
+- Além disso, é possivel criar o seu prompt, conforme visto em aulas anteriores (em Content Moderation Level)
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-20.png" alt="" width="840">
+</p>
+</details>
+
+- Uma outra forma de aumentar e diminuir a qualidade da resposta com GenAI é entrar em Settings
+- E escolher a opção Generative AI
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-21.png" alt="" width="840">
+</p>
+</details>
+
+- Onde temos a opção de configurar ser mais criativa ou mais precisa.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-22.png" alt="" width="840">
+</p>
+</details>
+
+## 🟩 Entendendo o Desafio
+
+O objetivo deste desafio é criar um Copilot com Fluxo de Conversa Personalizado no Microsoft Copilot Studio.
+
+A) Explore a demonstração apresentada no conteúdo prático e faça um resumo do que aprendeu neste conteúdo.
+
+B) Em seguida armazene em um repositório no GitHub e compartilhe o link na entrega do desafio.
+
+C) Crie um repositório no GitHub.
+
+D) Envie em "Entregar Projeto", o link do seu repositório no GitHub.
+
+E) Documentação do Microsoft Copilot Studio: https://learn.microsoft.com/pt-br/microsoft-copilot-studio/
