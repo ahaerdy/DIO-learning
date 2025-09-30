@@ -94,6 +94,17 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
 </p>
 </details>
 
+### Representação por Tokens
+
+- A frase agora é representada com os tokens: [1 2 3 4 5 6 7 3 8].
+- Observe que “um” é tokenizado como 3 apenas uma vez.
+- Da mesma forma, a frase “Eu ouvi um gato” poderia ser representada com as fichas [1 2 3 8].
+
+
+### Etapa dois: inserções
+
+- ☐ As relações entre tokens são capturadas como vetores, conhecidos como inserções.
+
 
 ## 🟩 Vídeo 07 - 
 
