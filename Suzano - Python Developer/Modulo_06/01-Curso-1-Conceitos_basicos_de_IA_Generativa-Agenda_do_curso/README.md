@@ -77,8 +77,21 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
 </details>
 
 
+## 🟩 Vídeo 06 - Modelos de linguagem grande: Tokenização
 
-## 🟩 Vídeo 06 - 
+### Modelos de linguagem grandes - tokenização
+
+#### Etapa um: tokenização
+
+- A primeira etapa no treinamento de um modelo de transformador é decompor o texto de treinamento em tokens.
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image-2.png" alt="" width="840">
+</p>
+</details>
+
 
 ## 🟩 Vídeo 07 - 
 
