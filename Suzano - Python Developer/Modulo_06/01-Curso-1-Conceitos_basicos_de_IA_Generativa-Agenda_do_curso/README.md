@@ -27,7 +27,20 @@ IA: imita o comportamento humano usando aprendizado de máquina para interagir c
 IA generativa: cria conteúdo original, como IA gerativa que foi incorporada a aplicativos de chat.  
 Os aplicativos de IA gerativa usam entrada em linguagem natural e retornam respostas apropriadas em uma variedade de formatos:
 
-## 🟩 Vídeo 03 - 
+## 🟩 Vídeo 03 - Modelos de linguagem grandes
+
+### Modelos de linguagem grandes
+
+Os aplicativos de IA generativa são alimentados por LLMs (modelos de linguagem grandes),  
+que são um tipo especializado de modelo de machine learning que você pode usar para executar tarefas de PLN (processamento de linguagem natural), incluindo:
+
+### Tarefas de PLN com Modelos de Linguagem Grandes
+
+- [ ] Determinar sentimento ou classificar de outra forma o texto em idioma natural.  
+- [ ] Resumir um texto.  
+- [ ] Comparar várias fontes de texto quanto à similaridade semântica.  
+- [ ] Geração de nova linguagem natural.
+
 
 ## 🟩 Vídeo 04 - 
 
