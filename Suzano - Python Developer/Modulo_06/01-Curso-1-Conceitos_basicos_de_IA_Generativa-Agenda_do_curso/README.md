@@ -42,9 +42,26 @@ que são um tipo especializado de modelo de machine learning que você pode usar
 - [ ] Geração de nova linguagem natural.
 
 
-## 🟩 Vídeo 04 - 
+## 🟩 Vídeo 04 - Modelos de linguagem grandes: Transformador parte 1
 
-## 🟩 Vídeo 05 - 
+### Modelos de linguagem grandes - transformador
+
+A arquitetura do modelo do transformador consiste em dois componentes principais, ou blocos.
+
+### Componentes da Arquitetura Transformadora
+
+- Um bloco *codificador* que cria representações semânticas do vocabulário de treinamento.  
+- Um bloco *decodificador* que gera novas sequências de linguagem.
+
+
+## 🟩 Vídeo 05 - Modelos de linguagem grandes: Transformador parte2
+
+### Modelos de linguagem grandes - transformador
+
+- O texto é tokenizado para que cada palavra ou frase seja representada por um token numérico exclusivo.  
+- Inserções (valores de vetor com várias dimensões) são atribuídas aos tokens.
+
+
 
 ## 🟩 Vídeo 06 - 
 
