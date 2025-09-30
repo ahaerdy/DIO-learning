@@ -85,6 +85,8 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
 
 - A primeira etapa no treinamento de um modelo de transformador é decompor o texto de treinamento em tokens.
 
+**Frase de exemplo:** *Eu ouvi um cachorro latir alto para um gato.*
+
 <details>
 <summary> Slide da aula🔻</summary>
 <p align="center">
