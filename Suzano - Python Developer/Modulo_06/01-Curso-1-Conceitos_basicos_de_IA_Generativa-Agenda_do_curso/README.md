@@ -1,7 +1,15 @@
 - Instrutor:
 - Contato Linkedin: 
 
-## 🟩 Vídeo 01 - 
+## 🟩 Vídeo 01 - Conceitos básicos de IA Generativa - Agenda do curso
+
+### Agenda
+
+- [ ] Conceitos básicos de IA generativa  
+- [ ] Conceitos básicos do Serviço OpenAI do Azure  
+- [ ] Explore a IA Generativa Responsável
+
+
 
 ## 🟩 Vídeo 02 - 
 
