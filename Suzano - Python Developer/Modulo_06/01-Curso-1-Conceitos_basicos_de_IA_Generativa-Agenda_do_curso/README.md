@@ -167,6 +167,10 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
     <img src="images/image-5.png" alt="" width="840">
 </p>
 
+<p align="center">
+    <img src="images/image-6.png" alt="" width="840">
+</p>
+
 ## 🟩 Vídeo 11 - 
 
 ## Certificado
