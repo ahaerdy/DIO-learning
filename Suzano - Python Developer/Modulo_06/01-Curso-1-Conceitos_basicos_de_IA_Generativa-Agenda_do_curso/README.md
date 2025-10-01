@@ -105,8 +105,15 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
 
 - ☐ As relações entre tokens são capturadas como vetores, conhecidos como inserções.
 
+## 🟩 Vídeo 07 - Modelos de linguagem grandes: Inserções
 
-## 🟩 Vídeo 07 - 
+### Etapa dois: inserções
+
+☐ As relações entre tokens são capturadas como vetores, conhecidos como inserções.
+
+<p align="center">
+    <img src="images/image-3.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 08 - 
 
