@@ -145,7 +145,15 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
 
 - Os copilotos são frequentemente integrados a outros aplicativos e fornecem uma maneira para os usuários obterem ajuda com tarefas comuns a partir de um modelo generativo de IA.
 
+- Os desenvolvedores podem criar copilotos que enviam prompts para grandes modelos de linguagem e geram conteúdo para uso em aplicativos.
 
+- Os usuários empresariais podem usar copilotos para aumentar sua produtividade e criatividade com conteúdo gerado por IA.
+
+#### Cenário de Copiloto dentro da apresentaçãO
+
+<p align="center">
+    <img src="images/image-4.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 10 - 
 
