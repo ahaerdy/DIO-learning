@@ -155,7 +155,18 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
     <img src="images/image-4.png" alt="" width="840">
 </p>
 
-## 🟩 Vídeo 10 - 
+## 🟩 Vídeo 10 - Conceitos básicos de IA Generativa - Engenharia de prompts
+
+### Aprimorar as respostas de IA generativa com a engenharia de prompts
+
+- O termo engenharia de prompt descreve o processo de aprimoramento de prompts.
+
+- Os desenvolvedores que projetam aplicativos e consumidores que usam aplicativos podem aprimorar a qualidade das respostas da IA gerativa usando linguagem direta, mensagens do sistema, exemplos e/ou dados de fundamentação.
+
+| Descrição                                                                 | Exemplo                                                                 |
+|---------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| Você pode obter conclusões mais úteis sendo explícito sobre o tipo de resposta que deseja. | “Crie uma lista de 10 coisas para fazer em Edimburgo durante o mês de agosto”. |
+
 
 ## 🟩 Vídeo 11 - 
 
