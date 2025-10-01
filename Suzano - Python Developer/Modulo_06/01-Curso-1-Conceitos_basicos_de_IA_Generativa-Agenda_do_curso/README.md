@@ -163,10 +163,9 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
 
 - Os desenvolvedores que projetam aplicativos e consumidores que usam aplicativos podem aprimorar a qualidade das respostas da IA gerativa usando linguagem direta, mensagens do sistema, exemplos e/ou dados de fundamentação.
 
-| Descrição                                                                 | Exemplo                                                                 |
-|---------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| Você pode obter conclusões mais úteis sendo explícito sobre o tipo de resposta que deseja. | “Crie uma lista de 10 coisas para fazer em Edimburgo durante o mês de agosto”. |
-
+<p align="center">
+    <img src="images/image-5.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 11 - 
 
