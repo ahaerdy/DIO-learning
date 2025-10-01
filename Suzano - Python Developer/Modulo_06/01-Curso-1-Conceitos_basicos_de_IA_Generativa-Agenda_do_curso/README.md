@@ -179,6 +179,48 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
     <img src="images/image-8.png" alt="" width="840">
 </p>
 
-## 🟩 Vídeo 11 - 
+## 🟩 Vídeo 11 - Revisão e Encerramento - Fundamentos da IA Generativa
+
+- Comentários de encerramento.
+
+## Transcrições e Material de Apoio
+
+### Transcrições
+
+- [Conceitos básicos de IA Generativa - Agenda do curso.pdf](https://hermes.dio.me/files/assets/b99f37a3-db2a-4669-8ed8-3ba8fece0af0.pdf)  
+- [O que é IA Generativa.pdf](https://hermes.dio.me/files/assets/00b16425-e623-46ba-a198-2856613d14f4.pdf)  
+- [Modelos de linguagem grandes.pdf](https://hermes.dio.me/files/assets/afe8ff25-ed4b-4713-a255-14c76450e5f0.pdf)  
+- [Modelos de linguagem grandes: Transformador parte 1.pdf](https://hermes.dio.me/files/assets/15ecadd8-ccdb-475c-b3a7-7606b0150412.pdf)  
+- [Modelos de linguagem grandes: Transformador parte 2.pdf](https://hermes.dio.me/files/assets/7a680bc3-99b1-40ad-b1f6-37ccf0e9d4a1.pdf)  
+- [Modelos de linguagem grande: Tokenização.pdf](https://hermes.dio.me/files/assets/09b78597-2e13-4d14-bda1-7040d419067f.pdf)  
+- [Modelos de linguagem grandes: Inserções.pdf](https://hermes.dio.me/files/assets/df5ed34c-58e4-4e01-a8e1-55c1a0d31d93.pdf)  
+- [Modelos de linguagem grandes: Atenção.pdf](https://hermes.dio.me/files/assets/386f3a26-c395-478b-8315-740d4655cf3a.pdf)  
+- [Conceitos básicos de IA Generativas – Copilotos.pdf](https://hermes.dio.me/files/assets/1bdf0a94-02a7-47c2-be91-b66380bd33bb.pdf)  
+- [Conceitos básicos de IA Generativa - Engenharia de prompts.pdf](https://hermes.dio.me/files/assets/bf1e3480-b745-4f8a-ad71-a822e695119b.pdf)  
+
+---
+
+### Materiais Complementares
+
+Nossos materiais complementares e de apoio têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
+
+---
+
+### Slides
+
+- [Módulo 5 - IA Generativa.pptx](https://academiapme-my.sharepoint.com/:p:/g/personal/nubia_dio_me/Ef88qA-boB1GuImGg67P-IQBAQP0mfwtVB0RjBnabfvdPw?e=PwuezC)
+
+---
+
+### Dicas/Links Úteis
+
+- **Artigos/Fórum**: Compartilhe conteúdos técnicos através de Artigos (visíveis globalmente na plataforma da DIO) ou suas conquistas e dúvidas nos Fóruns (específicos para cada experiência educacional como Bootcamps);
+
+- **Rooms**: Se estiver inscrito(a) em uma experiência educacional na DIO, você terá acesso ao Rooms — ferramenta de bate-papo em tempo real para interação entre participantes, com suporte a imagens e trechos de código;
+
+- **Pesquise na Web**: Use motores de busca para investigar conceitos, dúvidas ou erros. Muitas vezes, você encontrará soluções valiosas em sites como o StackOverflow 😎
+
+
+
 
 ## Certificado
