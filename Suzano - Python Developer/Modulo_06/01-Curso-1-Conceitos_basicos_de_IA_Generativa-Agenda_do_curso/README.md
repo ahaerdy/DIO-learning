@@ -116,8 +116,11 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
 </p>
 
 #### que isso representa?
+
 - Proximidade semântica: Palavras com significados semelhantes (como “Cachorro” e “Latir”) estão próximas no espaço vetorial.
+
 -Representação matemática de linguagem: Ao transformar palavras em vetores, modelos de PLN conseguem realizar tarefas como tradução, classificação de texto, geração de texto, etc.
+
 -Contextualização: A imagem parece ser uma continuação da etapa anterior (“Etapa dois: inserções”), ilustrando como as relações entre tokens são capturadas visualmente.
 
 ## 🟩 Vídeo 08 - 
