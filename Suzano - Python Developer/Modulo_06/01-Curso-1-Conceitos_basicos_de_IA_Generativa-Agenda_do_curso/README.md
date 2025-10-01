@@ -115,7 +115,7 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
     <img src="images/image-3.png" alt="" width="840">
 </p>
 
-#### que isso representa?
+#### O que isso representa?
 
 - Proximidade semântica: Palavras com significados semelhantes (como “Cachorro” e “Latir”) estão próximas no espaço vetorial.
 
@@ -123,9 +123,29 @@ A arquitetura do modelo do transformador consiste em dois componentes principais
 
 - Contextualização: A imagem parece ser uma continuação da etapa anterior (“Etapa dois: inserções”), ilustrando como as relações entre tokens são capturadas visualmente.
 
-## 🟩 Vídeo 08 - 
+## 🟩 Vídeo 08 - Modelos de linguagem grandes: Atenção
 
-## 🟩 Vídeo 09 - 
+### Terceiro passo: atenção
+
+☐ Capture a força das relações entre tokens usando a técnica de atenção.
+
+### Exemplo
+
+- Meta: prever o token após "cachorro".
+- Represente "Ouvi um cachorro" como vetores.
+- Atribua mais peso a "ouvi" e "cachorro".
+
+- Vários tokens possíveis podem vir depois de cachorro.
+- O token mais provável é adicionado à sequência, nesse caso, "latir".
+
+
+## 🟩 Vídeo 09 - Conceitos básicos de IA Generativas – Copilotos
+
+### Copilotos
+
+- Os copilotos são frequentemente integrados a outros aplicativos e fornecem uma maneira para os usuários obterem ajuda com tarefas comuns a partir de um modelo generativo de IA.
+
+
 
 ## 🟩 Vídeo 10 - 
 
