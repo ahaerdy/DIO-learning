@@ -9,6 +9,16 @@
 Head of Cloud and Cybersecurity  
 @baptista.valeria
 
+### Sobre mim
+
+- Desde 2008 trabalhando na área Tech  
+- Ciências da Computação - ULBRA  
+- MBA em Cloud Computing – XP Educação  
+- Pós em Docência para o Ensino Superior - UniRitter  
+- Fundadora da comunidade técnica Canal da Cloud  
+- MCT Microsoft, palestrante e mentora de carreira  
+- @canaldacloud
+
 
 ## 🟩 Vídeo 02 - 
 
