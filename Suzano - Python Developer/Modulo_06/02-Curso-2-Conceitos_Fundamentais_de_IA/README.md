@@ -105,6 +105,11 @@ Head of Cloud and Cybersecurity
     <img src="images/image.png" alt="" width="640">
 </p>
 
+- A imagem apresenta um fluxo de trabalho típico de mineração de conhecimento utilizando serviços da Microsoft Azure, dividido em três etapas principais: ingerir, enriquecer e explorar. Na fase de ingestão, documentos são processados por meio de reconhecimento de texto impresso e sanitização de palavras-chave técnicas, preparando os dados brutos para análise.
+
+- Na etapa de enriquecimento, são aplicadas habilidades cognitivas como extração de frases-chave, definição de formatos, correspondência com vocabulários em larga escala e organização dos dados com a ferramenta "Shaper Skill". Essas ações tornam o conteúdo mais estruturado e semântico, facilitando sua interpretação por sistemas de busca e análise.
+
+- Por fim, os dados enriquecidos são direcionados para um índice de busca e uma biblioteca de referência pesquisável. Isso permite que usuários explorem o conhecimento extraído de forma eficiente, transformando grandes volumes de documentos em informações acessíveis e úteis para tomada de decisão, pesquisa ou automação de processos.
 
 ## 🟩 Vídeo 08 - 
 
