@@ -76,8 +76,13 @@ Head of Cloud and Cybersecurity
 - Capacidades da IA para interpretar o mundo visualmente por meio de câmeras, vídeos e imagens.
 
 
+## 🟩 Vídeo 05 - Cargas de Trabalho comuns de IA: Processamento de linguagem natural
 
-## 🟩 Vídeo 05 - 
+### Processamento de linguagem natural
+
+- Capacidades da IA para que um computador interprete a linguagem escrita ou falada e responda adequadamente.
+
+
 
 ## 🟩 Vídeo 06 - 
 
