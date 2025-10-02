@@ -69,8 +69,13 @@ Head of Cloud and Cybersecurity
 - Modelos preditivos baseados em dados e estatísticas.
 
 
+## 🟩 Vídeo 04 - Cargas de Trabalho comuns de IA: Visão Computacional
 
-## 🟩 Vídeo 04 - 
+### Visão Computacional
+
+- Capacidades da IA para interpretar o mundo visualmente por meio de câmeras, vídeos e imagens.
+
+
 
 ## 🟩 Vídeo 05 - 
 
