@@ -31,12 +31,44 @@ Head of Cloud and Cybersecurity
 - Interesse em casos de uso para aplicativos de IA e modelos de machine learning.  
 - Disposição para aprender por meio da exploração prática.
 
+### Conteúdo Programático
+
+- Visão geral da IA  
+- Visão Computacional  
+- Processamento de linguagem natural  
+- Inteligência de Documentos e Mineração de Conhecimento  
+- IA generativa
+
+### Agenda
+
+- Conceitos fundamentais de IA  
+- Fundamentos do aprendizado de máquina  
+- Fundamentos dos serviços de IA do Azure
+
+### Objetivos de Aprendizado
+
+- Explique o que é IA e compreenda a importância da IA responsável.  
+- Compreenda os diferentes tipos de modelos de aprendizado de máquina.  
+- Identifique os serviços de IA disponíveis no Azure e para que são utilizados.
 
 
+## 🟩 Vídeo 02 - Cargas de Trabalho comuns de IA: O que é Inteligência Artificial
 
-## 🟩 Vídeo 02 - 
+### O que é Inteligência Artificial?
 
-## 🟩 Vídeo 03 - 
+- Prever resultados e reconhecer padrões com base em dados históricos.
+- Extrair informações de fontes para obter conhecimento.
+- Compreender a linguagem e participar de conversas.
+- Reconhecer eventos anormais e tomar decisões.
+- Interpretando informações visuais.
+
+## 🟩 Vídeo 03 - Cargas de Trabalho comuns de IA: Machine Learning
+
+### Machine Learning
+
+- Modelos preditivos baseados em dados e estatísticas.
+
+
 
 ## 🟩 Vídeo 04 - 
 
