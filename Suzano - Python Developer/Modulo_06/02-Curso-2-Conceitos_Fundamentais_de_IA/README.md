@@ -90,7 +90,23 @@ Head of Cloud and Cybersecurity
 - Capacidades de IA que lidam com o gerenciamento, processamento e uso de grandes volumes de dados encontrados em formulários e documentos.
 
 
-## 🟩 Vídeo 07 - 
+## 🟩 Vídeo 07 - Cargas de Trabalho comuns de IA: Mineração de conhecimento
+
+### Mineração de conhecimento
+
+- Capacidades da IA para extrair informações de grandes volumes de dados muitas vezes não estruturados para criar um armazenamento de conhecimento pesquisável.
+
+- A mineração vai trabalhar em 3 etapas distintas:
+    - Ingerir
+    - Enriquecer
+    - Explorar
+
+<details>
+<summary> Slide da aula🔻</summary>
+<p align="center">
+    <img src="images/image.png" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 08 - 
 
