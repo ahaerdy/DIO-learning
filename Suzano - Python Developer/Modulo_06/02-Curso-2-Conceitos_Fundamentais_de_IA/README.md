@@ -19,6 +19,20 @@ Head of Cloud and Cybersecurity
 - MCT Microsoft, palestrante e mentora de carreira  
 - @canaldacloud
 
+### Objetivo Geral
+
+- A Inteligência Artificial definirá a próxima geração de soluções de software.  
+- Este curso apresenta a IA e os serviços da Microsoft que podem ser usados para criar soluções de IA.  
+- Você poderá identificar e descrever os principais conceitos de IA e os principais serviços de IA e machine learning no Microsoft Azure.
+
+### Pré-requisitos
+
+- Experiência com computadores e com a Internet.  
+- Interesse em casos de uso para aplicativos de IA e modelos de machine learning.  
+- Disposição para aprender por meio da exploração prática.
+
+
+
 
 ## 🟩 Vídeo 02 - 
 
