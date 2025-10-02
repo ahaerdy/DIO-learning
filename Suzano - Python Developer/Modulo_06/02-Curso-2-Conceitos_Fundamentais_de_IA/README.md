@@ -83,8 +83,12 @@ Head of Cloud and Cybersecurity
 - Capacidades da IA para que um computador interprete a linguagem escrita ou falada e responda adequadamente.
 
 
+## 🟩 Vídeo 06 - Cargas de Trabalho comuns de IA: Inteligência de Documentos
 
-## 🟩 Vídeo 06 - 
+### Inteligência de Documentos
+
+- Capacidades de IA que lidam com o gerenciamento, processamento e uso de grandes volumes de dados encontrados em formulários e documentos.
+
 
 ## 🟩 Vídeo 07 - 
 
