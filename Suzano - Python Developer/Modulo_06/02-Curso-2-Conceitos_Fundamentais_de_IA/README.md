@@ -101,12 +101,10 @@ Head of Cloud and Cybersecurity
     - Enriquecer
     - Explorar
 
-<details>
-<summary> Slide da aula🔻</summary>
 <p align="center">
-    <img src="images/image.png" alt="" width="840">
+    <img src="images/image.png" alt="" width="640">
 </p>
-</details>
+
 
 ## 🟩 Vídeo 08 - 
 
