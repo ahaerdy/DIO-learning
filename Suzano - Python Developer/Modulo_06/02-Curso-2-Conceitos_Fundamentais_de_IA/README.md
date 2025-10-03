@@ -186,5 +186,14 @@ Esses dois conceitos são o núcleo da IA responsável. Ao redor deles, estão d
 | Os usuários devem confiar em um sistema complexo | Uma ferramenta financeira baseada em IA faz recomendações de investimento – em que se baseiam? |
 
 
-## 🟩 Vídeo 13 - 
+## 🟩 Vídeo 13 - Cargas de Trabalho comuns de IA: Responsabilidade
+
+### Responsabilidade
+
+| Desafio ou Risco                                      | Exemplo                                                                                                      |
+|--------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| Quem é responsável pelas decisões baseadas na IA?     | Uma pessoa inocente é condenada por um crime com base em provas de reconhecimento facial – quem é o responsável? |
+
+
+
 
