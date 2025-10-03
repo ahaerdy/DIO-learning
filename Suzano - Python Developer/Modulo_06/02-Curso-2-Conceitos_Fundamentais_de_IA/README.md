@@ -162,8 +162,14 @@ Esses dois conceitos são o núcleo da IA responsável. Ao redor deles, estão d
 | Erros podem causar danos.        | Um veículo autônomo sofre uma falha no sistema e causa uma colisão.    |
 
 
+## 🟩 Vídeo 11 - Cargas de Trabalho comuns de IA: Privacidade e segurança
 
-## 🟩 Vídeo 11 - 
+### Privacidade e segurança
+
+| Privacidade e segurança       | Desafio ou Risco                          | Exemplo                                                                                      |
+|-------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------|
+| Privacidade e segurança       | Dados privados podem ser expostos.        | Um bot de diagnóstico médico é treinado usando dados confidenciais de pacientes, que são armazenados de forma insegura. |
+
 
 ## 🟩 Vídeo 12 - 
 
