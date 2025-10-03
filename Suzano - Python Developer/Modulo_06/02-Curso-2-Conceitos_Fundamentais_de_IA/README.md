@@ -171,8 +171,14 @@ Esses dois conceitos são o núcleo da IA responsável. Ao redor deles, estão d
 | Dados privados podem ser expostos.        | Um bot de diagnóstico médico é treinado usando dados confidenciais de pacientes, que são armazenados de forma insegura. |
 
 
+## 🟩 Vídeo 12 - Cargas de Trabalho comuns de IA: Inclusão e Transparência
 
-## 🟩 Vídeo 12 - 
+### Inclusão
+
+| Desafio ou Risco                              | Exemplo                                                                                      |
+|-----------------------------------------------|----------------------------------------------------------------------------------------------|
+| As soluções podem não funcionar para todos.   | Um aplicativo preditivo não fornece saída de áudio para usuários com deficiência visual.     |
+
 
 ## 🟩 Vídeo 13 - 
 
