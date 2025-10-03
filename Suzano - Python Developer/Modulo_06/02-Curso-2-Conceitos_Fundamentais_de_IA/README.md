@@ -153,7 +153,15 @@ Esses dois conceitos são o núcleo da IA responsável. Ao redor deles, estão d
 | O preconceito pode afetar os resultados.      | Um modelo de aprovação de empréstimos que discrimina por gênero devido ao preconceito nos dados com os quais foi treinado. |
 
 
-## 🟩 Vídeo 10 - 
+## 🟩 Vídeo 10 - Cargas de Trabalho comuns de IA: Confiabilidade e segurança
+
+### Confiabilidade e segurança
+
+| Desafio ou Risco                 | Exemplo                                                                 |
+|----------------------------------|-------------------------------------------------------------------------|
+| Erros podem causar danos.        | Um veículo autônomo sofre uma falha no sistema e causa uma colisão.    |
+
+
 
 ## 🟩 Vídeo 11 - 
 
