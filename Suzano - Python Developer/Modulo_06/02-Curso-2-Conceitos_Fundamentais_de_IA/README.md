@@ -179,6 +179,12 @@ Esses dois conceitos são o núcleo da IA responsável. Ao redor deles, estão d
 |-----------------------------------------------|----------------------------------------------------------------------------------------------|
 | As soluções podem não funcionar para todos.   | Um aplicativo preditivo não fornece saída de áudio para usuários com deficiência visual.     |
 
+### Transparência
+
+| Desafio ou Risco                                 | Exemplo                                                                                      |
+|--------------------------------------------------|----------------------------------------------------------------------------------------------|
+| Os usuários devem confiar em um sistema complexo | Uma ferramenta financeira baseada em IA faz recomendações de investimento – em que se baseiam? |
+
 
 ## 🟩 Vídeo 13 - 
 
