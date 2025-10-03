@@ -111,9 +111,19 @@ Head of Cloud and Cybersecurity
 
 - Por fim, os dados enriquecidos são direcionados para um índice de busca e uma biblioteca de referência pesquisável. Isso permite que usuários explorem o conhecimento extraído de forma eficiente, transformando grandes volumes de documentos em informações acessíveis e úteis para tomada de decisão, pesquisa ou automação de processos.
 
-## 🟩 Vídeo 08 - 
+## 🟩 Vídeo 08 - Cargas de Trabalho comuns de IA: IA Generativa
 
-## 🟩 Vídeo 09 - 
+### IA Generativa
+
+- Recursos de IA que criam conteúdo original em vários formatos, incluindo linguagem natural, imagem, código e muito mais.
+
+- ChatGPT como exemplo de IA Generativa.
+
+## 🟩 Vídeo 09 - Cargas de Trabalho comuns de IA: Imparcialidade
+
+<p align="center">
+    <img src="images/image-2.png" alt="" width="640">
+</p>
 
 ## 🟩 Vídeo 10 - 
 
