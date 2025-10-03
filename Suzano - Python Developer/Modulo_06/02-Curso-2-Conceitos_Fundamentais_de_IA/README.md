@@ -146,7 +146,11 @@ Esses dois conceitos são o núcleo da IA responsável. Ao redor deles, estão d
 | **Responsabilidade**        | Deve haver supervisão humana e prestação de contas.       |
 
 
+### Imparcialidade
 
+| Desafio ou Risco                              | Exemplo                                                                                   |
+|-----------------------------------------------|-------------------------------------------------------------------------------------------|
+| O preconceito pode afetar os resultados.      | Um modelo de aprovação de empréstimos que discrimina por gênero devido ao preconceito nos dados com os quais foi treinado. |
 
 
 ## 🟩 Vídeo 10 - 
