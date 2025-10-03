@@ -125,6 +125,30 @@ Head of Cloud and Cybersecurity
     <img src="images/image-2.png" alt="" width="640">
 </p>
 
+### Princípios de IA Responsável
+
+A imagem apresenta os **Princípios de IA Responsável**, conforme definidos pela Microsoft, e organiza visualmente os fundamentos éticos e explicáveis que devem orientar o desenvolvimento e uso da inteligência artificial.
+
+Ela é composta por dois círculos centrais sobrepostos, rotulados como:
+
+- **Ética (Ethical)**
+- **Explicável (Explainable)**
+
+Esses dois conceitos são o núcleo da IA responsável. Ao redor deles, estão distribuídos **seis princípios fundamentais**, cada um conectado a um ou ambos os círculos:
+
+| Princípio                   | Significado geral                                          |
+|-----------------------------|------------------------------------------------------------|
+| **Inclusividade**           | A IA deve atender a diferentes perfis e necessidades.     |
+| **Equidade**                | Evitar discriminação e viés nos sistemas de IA.           |
+| **Transparência**           | Explicar como e por que a IA toma decisões.               |
+| **Privacidade e segurança** | Proteger dados e garantir confidencialidade.              |
+| **Confiabilidade e segurança** | A IA deve funcionar de forma segura e previsível.     |
+| **Responsabilidade**        | Deve haver supervisão humana e prestação de contas.       |
+
+
+
+
+
 ## 🟩 Vídeo 10 - 
 
 ## 🟩 Vídeo 11 - 
