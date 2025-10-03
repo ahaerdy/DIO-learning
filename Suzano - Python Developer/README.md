@@ -114,6 +114,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 6: Integrando com Serviços de IA
 
 - [x] Curso: [Fundamentos da IA Generativa](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/01-Curso-1-Conceitos_basicos_de_IA_Generativa-Agenda_do_curso#-v%C3%ADdeo-01---conceitos-b%C3%A1sicos-de-ia-generativa---agenda-do-curso)
+- [x] Curso: [Conceitos Fundamentais de IA](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/02-Curso-2-Conceitos_Fundamentais_de_IA#-v%C3%ADdeo-01---apresenta%C3%A7%C3%A3o-do-curso-e-instrutora)
 
 ## 🏆 Certificados Obtidos
 
@@ -169,6 +170,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 6
 - [Fundamentos da IA Generativa](https://hermes.dio.me/certificates/JFLUSUHJ.pdf)
+- [Conceitos Fundamentais de IA](https://hermes.dio.me/certificates/AZZN4DOE.pdf)
 
 ## 🔗 Contribuições Open Source
 
