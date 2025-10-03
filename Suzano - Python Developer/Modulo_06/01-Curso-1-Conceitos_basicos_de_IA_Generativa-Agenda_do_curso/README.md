@@ -221,6 +221,6 @@ Nossos materiais complementares e de apoio têm como objetivo apresentar informa
 - **Pesquise na Web**: Use motores de busca para investigar conceitos, dúvidas ou erros. Muitas vezes, você encontrará soluções valiosas em sites como o StackOverflow 😎
 
 
-# Certificado: Fundamentos da IA Generativa
+# Certificado: Conceitos Fundamentais de IA
 
-Link: https://hermes.dio.me/certificates/JFLUSUHJ.pdf
+Link: https://hermes.dio.me/certificates/AZZN4DOE.pdf
