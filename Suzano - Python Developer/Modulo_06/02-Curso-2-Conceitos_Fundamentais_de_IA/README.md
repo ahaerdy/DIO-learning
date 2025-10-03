@@ -166,7 +166,7 @@ Esses dois conceitos são o núcleo da IA responsável. Ao redor deles, estão d
 
 ### Privacidade e segurança
 
-| Privacidade e segurança       | Desafio ou Risco                          | Exemplo                                                                                      |
+|        | Desafio ou Risco                          | Exemplo                                                                                      |
 |-------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------|
 | Privacidade e segurança       | Dados privados podem ser expostos.        | Um bot de diagnóstico médico é treinado usando dados confidenciais de pacientes, que são armazenados de forma insegura. |
 
