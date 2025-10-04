@@ -9,10 +9,6 @@
 
 ## Aprendizado de Máquina
 
-A imagem apresenta um infográfico dividido em duas etapas principais do processo de aprendizado de máquina: **Treinamento** e **Inferência**.
-
----
-
 ### Treinamento
 
 Nesta fase, o modelo aprende a partir de dados rotulados.
