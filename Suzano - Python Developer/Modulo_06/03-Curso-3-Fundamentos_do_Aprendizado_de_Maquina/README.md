@@ -115,6 +115,6 @@ Por fim, disponibilizamos alguns links úteis para que você possa se desenvolve
 - **Pesquise na Web**:  
   Pode parecer óbvio, mas é importante frisar a importância das engines de busca no dia-a-dia de um profissional de TI. Caso não encontre o que procura dentro da DIO, pesquise sobre o assunto (conceito, dúvida, erro etc) na Internet (dê um Google), pois na maioria das vezes você será levado à páginas incríveis como o StackOverflow que salvarão o seu dia 😎
 
-# Certificado: 
+# Certificado: Fundamentos do Aprendizado de Máquina
 
-Link:
+Link: https://hermes.dio.me/certificates/PQV1ATXW.pdf
