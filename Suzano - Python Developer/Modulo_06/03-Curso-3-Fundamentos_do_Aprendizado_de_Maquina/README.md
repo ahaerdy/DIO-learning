@@ -33,6 +33,13 @@ Compreender essas diferenças é essencial para escolher a técnica adequada con
     <img src="images/image-3.png" alt="" width="640">
 </p>
 
+O processo de treinamento e avaliação de um modelo de aprendizado de máquina segue uma sequência lógica e iterativa. Tudo começa com os dados de treinamento, que são exemplos históricos contendo características e rótulos conhecidos. Esses dados são usados para alimentar um algoritmo, que aprende a relação entre entradas e saídas e encapsula esse conhecimento em um modelo matemático, representado como uma função do tipo y = f(x).
+
+Com o modelo treinado, é possível realizar previsões utilizando dados de validação — ou seja, dados que também possuem rótulos, mas que não foram usados durante o treinamento. Isso permite verificar se o modelo está generalizando corretamente. A etapa final consiste em avaliar o modelo, comparando os rótulos previstos com os reais. Se houver divergências significativas, ajustes são necessários, seja nos dados, no algoritmo ou nos parâmetros utilizados.
+
+Esse ciclo de treinamento, previsão e avaliação é contínuo. À medida que novos dados são gerados, o modelo pode ser reavaliado e refinado para manter sua precisão. Em cenários como previsão de vendas com base em temperatura, é importante considerar dados atualizados e tendências futuras. Já em classificações estáticas, como espécies de animais, dados históricos podem ser suficientes. A escolha da abordagem e dos dados utilizados impacta diretamente na assertividade do modelo e na qualidade das decisões tomadas com base nele.
+
+
 ## 🟩 Vídeo 03 - 
 
 
