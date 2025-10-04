@@ -73,4 +73,48 @@ Esse processo ocorre em múltiplas camadas, chamadas de camadas ocultas, que ref
 Esse tipo de arquitetura é utilizado em aprendizado profundo, permitindo que o sistema aprenda padrões complexos e tome decisões com base em dados reais. A escolha das características de entrada e o ajuste dos pesos são fundamentais para que a rede neural consiga distinguir corretamente entre classes semelhantes, como diferentes espécies de pinguins, mesmo quando compartilham traços visuais comuns. Essa abordagem é amplamente aplicada em tarefas de reconhecimento de imagem, diagnóstico médico, recomendação de conteúdo e outras áreas da inteligência artificial.
 
 
-## 🟩 Vídeo 04 - 
+## 🟩 Vídeo 04 - Revisão e Encerramento do Módulo
+
+### Links Úteis
+
+- [Documentação Oficial](https://learn.microsoft.com/en-us/training/paths/get-started-with-artificial-intelligence-on-azure/)
+
+
+### Acesse
+
+- [https://aka.ms/ai900-auto-ml](https://aka.ms/ai900-auto-ml)
+- [https://aka.ms/ai900-azure-ai-services](https://aka.ms/ai900-azure-ai-services)
+- [https://ml.azure.com/?azure-portal=true](https://ml.azure.com/?azure-portal=true)
+- [https://contentsafety.cognitive.azure.com/?azure-portal=true](https://contentsafety.cognitive.azure.com/?azure-portal=true)
+
+
+## Material de Apoio e Links Úteis
+
+### Materiais Complementares
+
+Nossos materiais complementares e de apoio têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
+
+---
+
+### Slides
+
+- [Módulo 1 - IA Overview.pptx](https://academiapme-my.sharepoint.com/:p:/g/personal/nubia_dio_me/EVdP5BFHxrJKgBBzFiK_UQMBWv4NAKXaMp4qkZyl27LaWw?rtime=RkLm3oYC3kg)
+
+---
+
+### Dicas/Links Úteis
+
+Por fim, disponibilizamos alguns links úteis para que você possa se desenvolver ainda mais através de referências oficiais das tecnologias, páginas de documentação e/ou fóruns de discussão relevantes. Nesse contexto, seguem algumas sugestões:
+
+- **Artigos/Fórum**:  
+  Você pode compartilhar conteúdos técnicos através de Artigos (visíveis globalmente na plataforma da DIO). Por outro lado, você também pode compartilhar suas conquistas e dúvidas usando os Fóruns (que são específicos para cada experiência educacional na DIO, como um Bootcamp por exemplo);
+
+- **Rooms**:  
+  Caso você esteja inscrito(a) em uma experiência educacional na DIO (como um Bootcamp, por exemplo), você terá acesso ao Rooms. O Rooms é uma ferramenta de bate-papo em tempo real onde todos os inscritos podem interagir, compartilhando dúvidas e dicas (que podem conter imagens e snippets de código-fonte);
+
+- **Pesquise na Web**:  
+  Pode parecer óbvio, mas é importante frisar a importância das engines de busca no dia-a-dia de um profissional de TI. Caso não encontre o que procura dentro da DIO, pesquise sobre o assunto (conceito, dúvida, erro etc) na Internet (dê um Google), pois na maioria das vezes você será levado à páginas incríveis como o StackOverflow que salvarão o seu dia 😎
+
+# Certificado: 
+
+Link:
