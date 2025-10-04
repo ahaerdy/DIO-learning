@@ -66,5 +66,11 @@ Esse conceito é fundamental para o aprendizado profundo, onde múltiplas camada
     <img src="images/image-4.png" alt="" width="640">
 </p>
 
+Uma rede neural artificial é composta por camadas de neurônios que processam informações de forma semelhante ao cérebro humano. Cada neurônio recebe valores de entrada, como características numéricas extraídas de um objeto — por exemplo, medidas de um pinguim — e aplica um peso a cada valor. Esses sinais ponderados passam por funções de ativação, que determinam se a informação será transmitida para os próximos neurônios da rede.
+
+Esse processo ocorre em múltiplas camadas, chamadas de camadas ocultas, que refinam progressivamente a interpretação dos dados. Ao final, a rede gera uma saída, que no caso de uma classificação multiclasse, corresponde a probabilidades associadas a diferentes categorias. A classe com maior probabilidade é considerada a previsão final do modelo.
+
+Esse tipo de arquitetura é utilizado em aprendizado profundo, permitindo que o sistema aprenda padrões complexos e tome decisões com base em dados reais. A escolha das características de entrada e o ajuste dos pesos são fundamentais para que a rede neural consiga distinguir corretamente entre classes semelhantes, como diferentes espécies de pinguins, mesmo quando compartilham traços visuais comuns. Essa abordagem é amplamente aplicada em tarefas de reconhecimento de imagem, diagnóstico médico, recomendação de conteúdo e outras áreas da inteligência artificial.
+
 
 ## 🟩 Vídeo 04 - 
