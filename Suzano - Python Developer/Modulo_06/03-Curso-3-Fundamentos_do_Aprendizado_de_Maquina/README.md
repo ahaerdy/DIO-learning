@@ -40,7 +40,31 @@ Com o modelo treinado, é possível realizar previsões utilizando dados de vali
 Esse ciclo de treinamento, previsão e avaliação é contínuo. À medida que novos dados são gerados, o modelo pode ser reavaliado e refinado para manter sua precisão. Em cenários como previsão de vendas com base em temperatura, é importante considerar dados atualizados e tendências futuras. Já em classificações estáticas, como espécies de animais, dados históricos podem ser suficientes. A escolha da abordagem e dos dados utilizados impacta diretamente na assertividade do modelo e na qualidade das decisões tomadas com base nele.
 
 
-## 🟩 Vídeo 03 - 
+## 🟩 Vídeo 03 - Aprendizado profundo
+
+### Funcionamento dos Neurônios
+
+- Neurônios disparam em resposta a estímulos eletroquímicos.
+- Quando disparado, o sinal é passado para neurônios conectados.
+
+O funcionamento dos neurônios é baseado em estímulos eletroquímicos que provocam disparos de sinal. Quando um neurônio é ativado, ele transmite esse sinal para os neurônios aos quais está conectado, criando uma rede de comunicação entre células nervosas. Esse mecanismo é essencial para o processamento de informações no cérebro e está na base de funções como percepção, memória e tomada de decisão.
+
+Esse princípio biológico inspira o desenvolvimento de redes neurais artificiais, utilizadas em sistemas de inteligência artificial. Assim como os neurônios biológicos, os neurônios artificiais recebem entradas, processam sinais e geram saídas, permitindo que modelos computacionais aprendam padrões e realizem previsões. A analogia entre os dois tipos de neurônios ajuda a compreender como algoritmos podem simular aspectos do raciocínio humano.
+
+### Funcionamento dos Neurônios em Redes Neurais
+
+- Cada neurônio é uma função que opera com um valor de entrada (x) e um peso (w)
+- A função é envolvida em uma função de ativação que determina se a saída deve ser transmitida.
+
+Em redes neurais artificiais, cada neurônio funciona como uma unidade de processamento que recebe um valor de entrada (x) e o multiplica por um peso (w). Esse produto representa a importância daquele sinal para o neurônio. Em seguida, o resultado é passado por uma função de ativação, que decide se o sinal deve ser transmitido para os próximos neurônios da rede.
+
+Esse mecanismo simula o comportamento dos neurônios biológicos, que disparam sinais quando atingem um determinado limiar de estímulo. Na prática, a função de ativação introduz não-linearidade ao modelo, permitindo que a rede aprenda padrões complexos e tome decisões mais sofisticadas. O conjunto de neurônios conectados forma camadas, e o aprendizado ocorre ajustando os pesos com base nos erros das previsões, até que o modelo consiga generalizar corretamente os dados de entrada.
+
+Esse conceito é fundamental para o aprendizado profundo, onde múltiplas camadas de neurônios artificiais são utilizadas para extrair representações cada vez mais abstratas dos dados, aproximando o funcionamento da rede ao modo como o cérebro humano processa informações.
+
+<p align="center">
+    <img src="images/image-4.png" alt="" width="640">
+</p>
 
 
 ## 🟩 Vídeo 04 - 
