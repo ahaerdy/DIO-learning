@@ -27,9 +27,11 @@ Por outro lado, o aprendizado não supervisionado trabalha com dados sem rótulo
 Compreender essas diferenças é essencial para escolher a técnica adequada conforme o tipo de problema e os dados disponíveis.
 
 
+## 🟩 Vídeo 02 - Treinamento e avaliação de modelo
 
-## 🟩 Vídeo 02 - 
-
+<p align="center">
+    <img src="images/image-3.png" alt="" width="640">
+</p>
 
 ## 🟩 Vídeo 03 - 
 
