@@ -7,7 +7,7 @@
     <img src="images/image.png" alt="" width="640">
 </p>
 
-## Explicação da Figura: Aprendizado de Máquina
+## Aprendizado de Máquina
 
 A imagem apresenta um infográfico dividido em duas etapas principais do processo de aprendizado de máquina: **Treinamento** e **Inferência**.
 
