@@ -183,6 +183,9 @@ A geração de respostas a perguntas é uma das aplicações mais práticas do p
 
 ## 🟩 Vídeo 04 - Processamento de linguagem natural e IA conversacional no Azure - Fala
 
+<p align="center">
+    <img src="images/image-8.png" alt="" width="320">
+</p>
 
 
 
