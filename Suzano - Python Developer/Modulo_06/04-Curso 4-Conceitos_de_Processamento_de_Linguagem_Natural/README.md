@@ -96,7 +96,27 @@ O reconhecimento de entidades nomeadas é apenas uma das muitas capacidades do N
     <img src="images/image-4.png" alt="" width="640">
 </p>
 
+#### Detecção de Informações Sensíveis com NLP
 
+##### Aplicações do Processamento de Linguagem Natural
+
+O uso de inteligência artificial aplicada à linguagem natural tem se expandido com ferramentas como o Language Studio da Microsoft, que permitem realizar tarefas complexas sem necessidade de programação. Entre essas tarefas, destaca-se a detecção de informações sensíveis, como dados pessoais e de saúde, que são fundamentais para garantir segurança e conformidade em ambientes digitais.
+
+##### Identificação de PII e PHI
+
+A tecnologia de NLP permite identificar automaticamente elementos como URLs, números de telefone, e-mails e nomes de organizações em textos comuns. Por exemplo, ao analisar uma frase simples que contém um site, um telefone e um e-mail, o sistema consegue classificar cada item com alto grau de confiança, atribuindo rótulos como “PhoneNumber”, “Email” e “Organization”. Essa categorização é essencial para proteger dados pessoais e evitar vazamentos de informações confidenciais.
+
+##### Utilidade em Contextos Reais
+
+A transcrição destaca como esse tipo de análise pode ser aplicado em mensagens automáticas, como respostas de ausência em e-mails, onde dados de contato são compartilhados. O sistema consegue extrair e classificar essas informações, permitindo que sejam tratadas com os cuidados necessários. Além disso, essa funcionalidade pode ser integrada a processos de auditoria, atendimento ao cliente e gestão documental, tornando o uso da linguagem natural mais seguro e eficiente.
+
+##### Conclusão
+
+A detecção de PII e PHI é uma das aplicações mais relevantes do processamento de linguagem natural, especialmente em ambientes que lidam com grandes volumes de dados. Com ferramentas acessíveis e automatizadas, é possível garantir que informações sensíveis sejam corretamente identificadas e protegidas, promovendo mais responsabilidade no uso da linguagem digital.
+
+<p align="center">
+    <img src="images/image-5.png" alt="" width="640">
+</p>
 
 ## 🟩 Vídeo 04 - 
 
