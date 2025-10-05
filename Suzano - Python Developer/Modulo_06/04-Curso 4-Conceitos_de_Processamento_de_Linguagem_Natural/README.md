@@ -140,6 +140,27 @@ A capacidade de identificar o idioma de um texto com precisão é um componente 
     <img src="images/image-6.png" alt="" width="480">
 </p>
 
+#### Análise de Sentimentos com NLP
+
+##### Interpretação de Emoções em Texto
+
+A análise de sentimentos é uma das funcionalidades mais impactantes do processamento de linguagem natural, permitindo que sistemas identifiquem emoções expressas em textos. A aplicação dessa técnica é especialmente útil em contextos comerciais, como avaliação de serviços e produtos, onde o feedback dos usuários pode ser automaticamente classificado como positivo, neutro ou negativo.
+
+##### Avaliação de Sentenças e Opiniões
+
+No exemplo analisado, a frase “The food and service were unacceptable” foi processada e classificada como negativa com 99% de confiança. O sistema identificou os termos “food” e “service” como alvos da opinião, e “unacceptable” como avaliação negativa, com 100% de certeza. Essa estrutura permite compreender não apenas o tom geral da mensagem, mas também os elementos específicos que geraram insatisfação.
+
+##### Aplicações Estratégicas
+
+A transcrição destaca como essa tecnologia pode ser usada para mapear a qualidade de serviços em larga escala. Em vez de ler milhares de comentários manualmente, empresas podem utilizar ferramentas como o Language Studio para automatizar essa análise, identificando padrões de satisfação ou insatisfação com rapidez e precisão. Isso contribui diretamente para decisões estratégicas, ajustes operacionais e melhoria da experiência do cliente.
+
+##### Conclusão
+
+A análise de sentimentos transforma opiniões subjetivas em dados objetivos, permitindo que organizações compreendam melhor o comportamento e as expectativas de seus públicos. Com o apoio de ferramentas acessíveis e inteligentes, essa abordagem se torna essencial para quem busca eficiência e profundidade na interpretação de textos.
+
+<p align="center">
+    <img src="images/image-7.png" alt="" width="480">
+</p>
 
 
 ## 🟩 Vídeo 04 - 
