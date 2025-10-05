@@ -43,7 +43,7 @@ Em resumo, o PLN é uma engrenagem essencial para transformar texto em inteligê
 <p align="center">
     <img src="images/image-2.png" alt="" width="640">
 </p>
-
+.
 
 
 ## 🟩 Vídeo 04 - 
