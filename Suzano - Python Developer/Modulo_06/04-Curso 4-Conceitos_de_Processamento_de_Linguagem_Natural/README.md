@@ -115,7 +115,7 @@ A transcrição destaca como esse tipo de análise pode ser aplicado em mensagen
 A detecção de PII e PHI é uma das aplicações mais relevantes do processamento de linguagem natural, especialmente em ambientes que lidam com grandes volumes de dados. Com ferramentas acessíveis e automatizadas, é possível garantir que informações sensíveis sejam corretamente identificadas e protegidas, promovendo mais responsabilidade no uso da linguagem digital.
 
 <p align="center">
-    <img src="images/image-5.png" alt="" width="640">
+    <img src="images/image-5.png" alt="" width="480">
 </p>
 
 ## 🟩 Vídeo 04 - 
