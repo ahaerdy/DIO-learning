@@ -38,8 +38,7 @@ Por fim, a **IA conversacional** representa um avanço significativo na interaç
 Em resumo, o PLN é uma engrenagem essencial para transformar texto em inteligência. Ele permite que sistemas compreendam, analisem e interajam com linguagem humana de forma cada vez mais sofisticada e útil.
 
 
-
-## 🟩 Vídeo 03 - 
+## 🟩 Vídeo 03 - Processamento de linguagem natural e IA conversacional no Azure - Análise de sentimento e respostas a perguntas
 
 
 ## 🟩 Vídeo 04 - 
