@@ -161,6 +161,7 @@ A análise de sentimentos transforma opiniões subjetivas em dados objetivos, pe
 <p align="center">
     <img src="images/image-7.png" alt="" width="480">
 </p>
+.
 
 
 ## 🟩 Vídeo 04 - 
