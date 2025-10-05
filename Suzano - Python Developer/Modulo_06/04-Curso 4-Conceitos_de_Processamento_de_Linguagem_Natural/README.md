@@ -70,6 +70,10 @@ A IA conversacional, por meio de bots treinados, permite que sistemas respondam 
 
 As ferramentas de NLP disponíveis no Azure Language Studio oferecem uma gama de funcionalidades que tornam possível extrair valor de grandes volumes de texto. Desde a categorização de informações até a interação inteligente com usuários, essas soluções são fundamentais para automatizar processos e melhorar a eficiência em diversos setores.
 
+<p align="center">
+    <img src="images/image-3.png" alt="" width="640">
+</p>
+
 
 
 ## 🟩 Vídeo 04 - 
