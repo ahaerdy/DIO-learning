@@ -118,6 +118,30 @@ A detecção de PII e PHI é uma das aplicações mais relevantes do processamen
     <img src="images/image-5.png" alt="" width="480">
 </p>
 
+#### Detecção de Idioma com Processamento de Linguagem Natural
+
+##### Reconhecimento Automático de Idiomas
+
+A detecção de idioma é uma das funcionalidades fundamentais do processamento de linguagem natural (NLP), especialmente em ambientes onde há grande diversidade linguística. A tecnologia permite identificar automaticamente o idioma de um texto com alta precisão, como demonstrado na análise de uma frase simples — “This document is in English” — que foi corretamente classificada como inglês com 99% de confiança.
+
+##### Aplicações Práticas
+
+Esse tipo de reconhecimento é essencial em sistemas que lidam com textos não estruturados, como e-mails, mensagens em redes sociais ou interações com chatbots. A transcrição destaca que, ao trabalhar com dados em múltiplos idiomas, é importante que a máquina consiga não apenas identificar a língua, mas também adaptar a tradução e interpretação conforme variações regionais e culturais.
+
+##### Integração com Ferramentas Inteligentes
+
+Ferramentas como o Language Studio da Microsoft facilitam esse processo, permitindo que usuários sem conhecimento técnico apliquem recursos avançados de NLP. A detecção de idioma pode ser integrada a sistemas de tradução automática, análise de sentimentos e compreensão de texto, tornando a comunicação mais eficiente e acessível em contextos globais.
+
+##### Conclusão
+
+A capacidade de identificar o idioma de um texto com precisão é um componente essencial para aplicações modernas de inteligência artificial. Ela permite que sistemas compreendam melhor o conteúdo, personalizem respostas e ofereçam suporte multilíngue de forma automatizada e inteligente.
+
+<p align="center">
+    <img src="images/image-6.png" alt="" width="480">
+</p>
+
+
+
 ## 🟩 Vídeo 04 - 
 
 
