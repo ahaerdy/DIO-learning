@@ -159,9 +159,27 @@ A transcrição destaca como essa tecnologia pode ser usada para mapear a qualid
 A análise de sentimentos transforma opiniões subjetivas em dados objetivos, permitindo que organizações compreendam melhor o comportamento e as expectativas de seus públicos. Com o apoio de ferramentas acessíveis e inteligentes, essa abordagem se torna essencial para quem busca eficiência e profundidade na interpretação de textos.
 
 <p align="center">
-    <img src="images/image-7.png" alt="" width="480">
+    <img src="images/image-7.png" alt="" width="320">
 </p>
-.
+
+#### Respostas Automatizadas com IA Conversacional
+
+##### Compreensão de Perguntas em Linguagem Natural
+
+A inteligência artificial aplicada à linguagem natural permite que sistemas compreendam perguntas feitas por usuários de forma espontânea e respondam com clareza e contexto. A imagem exemplifica essa funcionalidade ao apresentar uma pergunta comum — “Onde posso carregar meu laptop?” — e duas formas de resposta geradas automaticamente: uma curta e objetiva, e outra mais detalhada e empática.
+
+##### Variação de Respostas e Experiência do Usuário
+
+A resposta curta oferece uma instrução direta sobre o uso de tomadas disponíveis em áreas com sofás. Já a resposta longa reconhece a ausência de carregadores disponíveis, mas orienta o usuário sobre como utilizar os recursos existentes. Essa variação é importante para adaptar o nível de detalhamento conforme o perfil do usuário ou o canal de atendimento, contribuindo para uma experiência mais personalizada.
+
+##### Aplicação em Interfaces de Atendimento
+
+Segundo a transcrição, esse tipo de resposta é comum em sistemas de atendimento automatizado, como chatbots. A capacidade de gerar múltiplas respostas para uma mesma pergunta, com diferentes graus de formalidade e profundidade, é essencial para tornar o atendimento mais natural e eficiente. Além disso, a IA conversacional pode ser treinada para lidar com diferentes idiomas e estilos de escrita, ampliando sua aplicabilidade em ambientes diversos.
+
+##### Conclusão
+
+A geração de respostas a perguntas é uma das aplicações mais práticas do processamento de linguagem natural. Ao combinar compreensão semântica com estratégias de comunicação, sistemas como o Language Studio conseguem oferecer interações mais humanas e funcionais, mesmo em contextos automatizados.
+
 
 
 ## 🟩 Vídeo 04 - 
