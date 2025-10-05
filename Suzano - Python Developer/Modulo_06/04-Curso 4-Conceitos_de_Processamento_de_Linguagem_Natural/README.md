@@ -74,6 +74,28 @@ As ferramentas de NLP disponíveis no Azure Language Studio oferecem uma gama de
     <img src="images/image-3.png" alt="" width="640">
 </p>
 
+#### Reconhecimento de Entidades Nomeadas e Aplicações em NLP
+
+##### Fundamentos do Processamento de Linguagem Natural
+
+O processamento de linguagem natural (NLP) é uma tecnologia essencial para que sistemas de inteligência artificial compreendam e extraiam informações relevantes de textos. Ferramentas como o Language Studio, da Microsoft, permitem aplicar esses recursos de forma acessível, mesmo para quem não tem experiência em programação.
+
+##### Reconhecimento de Entidades Nomeadas
+
+Uma das funcionalidades mais importantes do NLP é o reconhecimento de entidades nomeadas (NER), que identifica elementos como eventos, locais e datas em frases comuns. Por exemplo, ao analisar a frase "I had a wonderful trip to Seattle last week", o sistema reconhece "trip" como evento, "Seattle" como localização e "last week" como referência temporal, atribuindo níveis de confiança a cada identificação. Esse tipo de categorização é útil para entender contextos, rotinas e padrões de comportamento a partir de dados públicos.
+
+##### Aplicações Práticas
+
+A partir dessas entidades, é possível realizar análises de mercado, prever tendências de turismo, identificar padrões em redes sociais e até alimentar sistemas de recomendação. A transcrição destaca como essas informações podem ser usadas para entender hábitos de consumo, movimentações geográficas e até sentimentos expressos em textos. Tudo isso contribui para decisões mais estratégicas e automatizadas em diversos setores.
+
+##### Conclusão
+
+O reconhecimento de entidades nomeadas é apenas uma das muitas capacidades do NLP, mas representa um ponto de partida poderoso para transformar linguagem natural em dados estruturados e acionáveis. Com ferramentas como o Language Studio, essas análises se tornam mais acessíveis e eficazes no cotidiano de empresas e pesquisadores.
+
+<p align="center">
+    <img src="images/image-4.png" alt="" width="640">
+</p>
+
 
 
 ## 🟩 Vídeo 04 - 
