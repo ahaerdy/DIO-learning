@@ -43,7 +43,33 @@ Em resumo, o PLN é uma engrenagem essencial para transformar texto em inteligê
 <p align="center">
     <img src="images/image-2.png" alt="" width="640">
 </p>
-.
+
+#### Aplicações de Processamento de Linguagem Natural com Azure
+
+##### Visão Geral do NLP e IA Conversacional
+
+O processamento de linguagem natural (NLP) é uma das bases da inteligência artificial moderna, permitindo que sistemas compreendam, analisem e interajam com a linguagem humana. No contexto da plataforma Microsoft Azure, esse recurso é acessado por meio do Language Studio, uma ferramenta que facilita a implementação de soluções de NLP sem a necessidade de escrever código.
+
+##### Reconhecimento de Entidades e Detecção de Informações Sensíveis
+
+Entre as funcionalidades disponíveis, destaca-se o reconhecimento de entidades nomeadas, que permite identificar elementos como nomes de pessoas, locais, datas e eventos em textos. Esse recurso é útil para categorizar informações e entender contextos específicos. Além disso, há mecanismos para detectar dados pessoais identificáveis (PII), como e-mails, telefones e endereços, o que é essencial para garantir segurança e conformidade em aplicações que lidam com dados sensíveis.
+
+##### Identificação de Idioma e Tradução
+
+Outro recurso importante é a detecção automática de idioma, que permite reconhecer em qual língua um texto foi escrito. Isso viabiliza traduções em tempo real e facilita a comunicação entre equipes multiculturais, especialmente em ambientes corporativos internacionais.
+
+##### Análise de Sentimentos e Mineração de Opinião
+
+A análise de sentimentos é uma funcionalidade que interpreta emoções expressas em textos, classificando opiniões como positivas, negativas ou neutras. Essa técnica é amplamente utilizada por empresas para avaliar feedbacks de clientes, entender a recepção de produtos e ajustar estratégias de mercado com base em dados reais.
+
+##### Respostas a Perguntas e IA Conversacional
+
+A IA conversacional, por meio de bots treinados, permite que sistemas respondam perguntas de forma natural e contextualizada. Esses bots são cada vez mais comuns em serviços de atendimento ao cliente, oferecendo respostas rápidas e precisas sem intervenção humana direta. A qualidade da experiência depende do treinamento adequado e da cobertura de múltiplos cenários de interação.
+
+##### Conclusão
+
+As ferramentas de NLP disponíveis no Azure Language Studio oferecem uma gama de funcionalidades que tornam possível extrair valor de grandes volumes de texto. Desde a categorização de informações até a interação inteligente com usuários, essas soluções são fundamentais para automatizar processos e melhorar a eficiência em diversos setores.
+
 
 
 ## 🟩 Vídeo 04 - 
