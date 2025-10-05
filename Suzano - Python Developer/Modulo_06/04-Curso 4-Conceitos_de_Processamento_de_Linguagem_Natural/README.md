@@ -181,8 +181,9 @@ Segundo a transcrição, esse tipo de resposta é comum em sistemas de atendimen
 A geração de respostas a perguntas é uma das aplicações mais práticas do processamento de linguagem natural. Ao combinar compreensão semântica com estratégias de comunicação, sistemas como o Language Studio conseguem oferecer interações mais humanas e funcionais, mesmo em contextos automatizados.
 
 
+## 🟩 Vídeo 04 - Processamento de linguagem natural e IA conversacional no Azure - Fala
 
-## 🟩 Vídeo 04 - 
+
 
 
 ## 🟩 Vídeo 05 - 
