@@ -116,6 +116,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Fundamentos da IA Generativa](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/01-Curso-1-Conceitos_basicos_de_IA_Generativa-Agenda_do_curso#-v%C3%ADdeo-01---conceitos-b%C3%A1sicos-de-ia-generativa---agenda-do-curso)
 - [x] Curso: [Conceitos Fundamentais de IA](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/02-Curso-2-Conceitos_Fundamentais_de_IA#-v%C3%ADdeo-01---apresenta%C3%A7%C3%A3o-do-curso-e-instrutora)
 - [x] Curso: [Fundamentos do Aprendizado de Máquina](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/03-Curso-3-Fundamentos_do_Aprendizado_de_Maquina#-v%C3%ADdeo-01---tipos-de-aprendizado-de-m%C3%A1quina)
+- [x] Curso: [Conceitos de Processamento de Linguagem Natural](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/04-Curso%204-Conceitos_de_Processamento_de_Linguagem_Natural#-v%C3%ADdeo-01---conceitos-de-processamento-de-linguagem-natural)
+
 
 ## 🏆 Certificados Obtidos
 
@@ -173,7 +175,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Fundamentos da IA Generativa](https://hermes.dio.me/certificates/JFLUSUHJ.pdf)
 - [Conceitos Fundamentais de IA](https://hermes.dio.me/certificates/AZZN4DOE.pdf)
 - [Fundamentos do Aprendizado de Máquina](https://hermes.dio.me/certificates/PQV1ATXW.pdf)
-
+- [Conceitos de Processamento de Linguagem Natural](https://hermes.dio.me/certificates/8BVTH5W6.pdf)
 
 ## 🔗 Contribuições Open Source
 
