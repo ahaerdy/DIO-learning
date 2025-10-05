@@ -40,6 +40,11 @@ Em resumo, o PLN é uma engrenagem essencial para transformar texto em inteligê
 
 ## 🟩 Vídeo 03 - Processamento de linguagem natural e IA conversacional no Azure - Análise de sentimento e respostas a perguntas
 
+<p align="center">
+    <img src="images/image-2.png" alt="" width="640">
+</p>
+
+
 
 ## 🟩 Vídeo 04 - 
 
