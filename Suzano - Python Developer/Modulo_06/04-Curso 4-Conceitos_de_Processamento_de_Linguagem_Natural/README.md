@@ -206,7 +206,11 @@ O Speech Studio da Microsoft é destacado como a plataforma que centraliza essas
 A combinação entre texto e fala, mediada por inteligência artificial, representa um avanço significativo na forma como interagimos com sistemas digitais. Seja para tornar aplicações mais acessíveis, personalizadas ou eficientes, os recursos de fala são hoje elementos essenciais em soluções modernas de comunicação.
 
 
-## 🟩 Vídeo 05 - 
+## 🟩 Vídeo 05 - Processamento de linguagem natural e IA conversacional no Azure - Tradução
+
+<p align="center">
+    <img src="images/image-9.png" alt="" width="320">
+</p>
 
 
 ## 🟩 Vídeo 06 - 
