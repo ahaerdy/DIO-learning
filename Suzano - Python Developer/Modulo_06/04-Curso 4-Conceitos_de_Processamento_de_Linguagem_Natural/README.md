@@ -187,6 +187,23 @@ A geração de respostas a perguntas é uma das aplicações mais práticas do p
     <img src="images/image-8.png" alt="" width="320">
 </p>
 
+#### Funcionalidades de Processamento de Fala com Inteligência Artificial
+
+##### Recursos de Conversão entre Texto e Fala
+
+O uso de inteligência artificial para processar fala tem se tornado cada vez mais comum em aplicações cotidianas. A imagem apresenta três funcionalidades centrais: **texto para fala**, **fala para texto** e **tradução de fala**. Esses recursos permitem que sistemas convertam texto escrito em áudio, reconheçam e transcrevam falas humanas, e traduzam conteúdos falados entre diferentes idiomas.
+
+##### Aplicações Práticas e Inclusivas
+
+Segundo a transcrição, essas funcionalidades não se limitam a cenários de acessibilidade. Elas são amplamente utilizadas em aplicativos de aprendizado de idiomas, assistentes virtuais, sistemas de atendimento automatizado e ferramentas de criação de conteúdo. Por exemplo, em ambientes de call center, a transcrição de chamadas permite armazenar e analisar grandes volumes de dados de forma eficiente. Já em aplicativos educacionais, o reconhecimento de fala ajuda a avaliar a pronúncia de usuários em tempo real.
+
+##### Integração com o Estúdio de Fala
+
+O Speech Studio da Microsoft é destacado como a plataforma que centraliza essas funcionalidades, permitindo que desenvolvedores integrem facilmente recursos de voz em suas aplicações. Além da conversão e tradução, o estúdio oferece suporte para criação de legendas, ditados, agentes de voz e análise de chamadas, ampliando o potencial de uso da fala como interface de interação.
+
+##### Conclusão
+
+A combinação entre texto e fala, mediada por inteligência artificial, representa um avanço significativo na forma como interagimos com sistemas digitais. Seja para tornar aplicações mais acessíveis, personalizadas ou eficientes, os recursos de fala são hoje elementos essenciais em soluções modernas de comunicação.
 
 
 ## 🟩 Vídeo 05 - 
