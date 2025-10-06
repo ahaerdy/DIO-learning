@@ -65,9 +65,30 @@ O uso de bots permite a criação de um funil de atendimento, onde questões sim
     <img src="images/image-4.png" alt="" width="640">
 </p>
 
+#### Azure Bot Service: Plataforma Inteligente para Atendimento Multicanal
+
+##### Visão geral e evolução
+
+O Serviço de Bot do Azure é uma solução baseada em nuvem que permite o desenvolvimento e gerenciamento de bots inteligentes, voltados para o atendimento automatizado de usuários. Ao longo dos anos, essa tecnologia evoluiu significativamente, saindo de sistemas simples baseados em listas de opções para plataformas robustas que integram inteligência artificial e compreensão de linguagem natural.
+
+##### Integração com IA e base de conhecimento
+
+A principal força do serviço está na sua capacidade de interpretar mensagens dos usuários por meio de palavras-chave e frases-chave, utilizando modelos de IA Language. Isso permite que o bot compreenda até mesmo textos com erros ou linguagem coloquial, oferecendo respostas relevantes com base em uma base de dados constantemente atualizada. A qualidade do atendimento depende diretamente da manutenção e testes frequentes dessa base de conhecimento.
+
+##### Conectividade multicanal
+
+O diagrama apresentado reforça a capacidade do Azure Bot Service de se conectar com diversos canais de comunicação, como web chat, e-mail, voz e até plataformas como Microsoft Teams. Essa flexibilidade garante que o usuário possa interagir com o bot por meio do canal mais conveniente, enquanto o sistema centralizado processa e responde de forma eficiente.
+
+##### Aplicações práticas e escalabilidade
+
+A adoção de bots permite a criação de funis de atendimento, onde questões simples são resolvidas automaticamente, liberando os atendentes humanos para demandas mais complexas. Além disso, é possível terceirizar o atendimento e distribuir scripts personalizados para diferentes marcas, otimizando recursos e ampliando a capacidade de resposta. Essa abordagem melhora a experiência do usuário e fortalece a confiança no serviço prestado.
 
 
-## 🟩 Vídeo 03 - 
+## 🟩 Vídeo 03 - Links úteis
+
+<p align="center">
+    <img src="images/image-5.png" alt="" width="640">
+</p>
 
 ## 🟩 Vídeo 04 - 
 
