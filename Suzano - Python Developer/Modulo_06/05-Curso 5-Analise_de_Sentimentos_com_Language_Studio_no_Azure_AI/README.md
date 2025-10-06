@@ -43,6 +43,27 @@ Ao aplicar essas análises em grande volume, é possível obter insights valioso
     <img src="images/image-3.png" alt="" width="640">
 </p>
 
+#### Serviço de Bot do Azure: Integração Inteligente com Múltiplos Canais
+
+##### Evolução e propósito dos bots
+
+O serviço de bot do Azure representa uma evolução significativa na forma como empresas interagem com seus usuários. Inicialmente limitados a respostas estáticas baseadas em listas de opções, os bots modernos utilizam inteligência artificial e computação em nuvem para oferecer respostas contextualizadas e precisas. Essa transformação permite que o atendimento seja mais ágil, personalizado e escalável.
+
+##### Arquitetura e canais de comunicação
+
+O diagrama apresentado ilustra como o bot centraliza interações vindas de diferentes canais — como web chat, e-mail e suporte por voz — conectando-se diretamente aos serviços em nuvem da Microsoft. Essa arquitetura garante alta disponibilidade e flexibilidade, permitindo que o usuário acesse o suporte por meio do canal de sua preferência, seja em sites, aplicativos, Microsoft Teams ou atendimento telefônico.
+
+##### Inteligência artificial e base de conhecimento
+
+A eficácia do bot depende diretamente da qualidade da base de dados utilizada. A IA integrada é capaz de interpretar linguagem natural, mesmo com erros ou variações coloquiais, identificando palavras-chave e frases relevantes para oferecer respostas adequadas. A manutenção contínua dessa base, com testes e atualizações, é essencial para garantir que novas demandas e produtos sejam contemplados.
+
+##### Aplicações práticas e escalabilidade
+
+O uso de bots permite a criação de um funil de atendimento, onde questões simples são resolvidas automaticamente, liberando os atendentes humanos para casos mais complexos. Além disso, é possível terceirizar o atendimento e distribuir scripts personalizados para diferentes marcas, otimizando recursos e ampliando a capacidade de resposta. Essa abordagem melhora a experiência do usuário e fortalece a confiança no serviço prestado.
+
+<p align="center">
+    <img src="images/image-4.png" alt="" width="640">
+</p>
 
 
 
