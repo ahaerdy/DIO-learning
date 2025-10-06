@@ -37,10 +37,10 @@ Além da análise textual, o Language Studio possibilita a criação de bases de
 
 Ao aplicar essas análises em grande volume, é possível obter insights valiosos sobre sentimentos, origens e comportamentos de usuários. Isso é especialmente útil em contextos com muitos dados e poucos recursos humanos para análise manual. O uso de inteligência artificial nesse cenário transforma grandes repositórios de informação em conhecimento acionável.
 
+## 🟩 Vídeo 02 - Serviço de bot do Azure
 
 
 
-## 🟩 Vídeo 02 - 
 
 ## 🟩 Vídeo 03 - 
 
