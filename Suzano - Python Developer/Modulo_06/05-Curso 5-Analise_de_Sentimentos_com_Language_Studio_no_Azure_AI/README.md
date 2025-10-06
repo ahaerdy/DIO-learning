@@ -8,10 +8,6 @@
     <img src="images/image.png" alt="" width="640">
 </p>
 
-<p align="center">
-    <img src="images/image-2.png" alt="" width="640">
-</p>
-
 #### Processamento de Linguagem Natural com o Language Studio
 
 ##### Introdução à plataforma
@@ -35,9 +31,11 @@ Além da análise textual, o Language Studio possibilita a criação de bases de
 
 ##### Aplicações práticas e escalabilidade
 
-A transcrição destaca que, ao aplicar essas análises em grande volume, é possível obter insights valiosos sobre sentimentos, origens e comportamentos de usuários. Isso é especialmente útil em contextos com muitos dados e poucos recursos humanos para análise manual. O uso de inteligência artificial nesse cenário transforma grandes repositórios de informação em conhecimento acionável.
+Ao aplicar essas análises em grande volume, é possível obter insights valiosos sobre sentimentos, origens e comportamentos de usuários. Isso é especialmente útil em contextos com muitos dados e poucos recursos humanos para análise manual. O uso de inteligência artificial nesse cenário transforma grandes repositórios de informação em conhecimento acionável.
 
-
+<p align="center">
+    <img src="images/image-2.png" alt="" width="640">
+</p>
 
 
 ## 🟩 Vídeo 02 - 
