@@ -90,6 +90,26 @@ A adoção de bots permite a criação de funis de atendimento, onde questões s
     <img src="images/image-5.png" alt="" width="640">
 </p>
 
+#### Laboratório de Fala e Análise de Texto com Language Studio
+
+##### Introdução ao módulo prático
+
+O laboratório do módulo 3 propõe uma imersão prática nas ferramentas de inteligência artificial da Microsoft voltadas para linguagem, com foco no estúdio de fala e no Language Studio. A proposta é que os participantes explorem recursos de análise de texto e voz, aplicando conceitos discutidos em aula em um ambiente real de experimentação.
+
+##### Recursos disponíveis
+
+Para facilitar a execução das atividades, foram disponibilizados dois links oficiais da Microsoft com documentação detalhada:
+
+- [Documentação de Fala (Speech)](https://aka.ms/ai900-speech)  
+- [Documentação de Análise de Texto](https://aka.ms/ai900-text-analysis)
+
+Esses materiais oferecem o passo a passo necessário para configurar e testar os serviços, permitindo que os alunos repliquem os experimentos em seus próprios ambientes.
+
+##### Aplicação prática e integração
+
+Durante o laboratório, os participantes terão a oportunidade de compreender como os serviços de fala e análise de texto se integram ao Language Studio, utilizando inteligência artificial para extrair informações relevantes de mensagens, como idioma, sentimento, entidades e frases-chave. Essa prática reforça a importância de ferramentas automatizadas na interpretação de dados linguísticos, especialmente em contextos de atendimento ao cliente e análise de feedback.
+
+
 ## 🟩 Vídeo 04 - 
 
 ## 🟩 Vídeo 05 - 
