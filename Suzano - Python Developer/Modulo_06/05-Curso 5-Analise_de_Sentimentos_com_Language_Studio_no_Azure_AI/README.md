@@ -39,6 +39,10 @@ Ao aplicar essas análises em grande volume, é possível obter insights valioso
 
 ## 🟩 Vídeo 02 - Serviço de bot do Azure
 
+<p align="center">
+    <img src="images/image-3.png" alt="" width="640">
+</p>
+
 
 
 
