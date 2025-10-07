@@ -117,6 +117,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Conceitos Fundamentais de IA](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/02-Curso-2-Conceitos_Fundamentais_de_IA#-v%C3%ADdeo-01---apresenta%C3%A7%C3%A3o-do-curso-e-instrutora)
 - [x] Curso: [Fundamentos do Aprendizado de Máquina](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/03-Curso-3-Fundamentos_do_Aprendizado_de_Maquina#-v%C3%ADdeo-01---tipos-de-aprendizado-de-m%C3%A1quina)
 - [x] Curso: [Conceitos de Processamento de Linguagem Natural](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/04-Curso%204-Conceitos_de_Processamento_de_Linguagem_Natural#-v%C3%ADdeo-01---conceitos-de-processamento-de-linguagem-natural)
+- [x] Desafio: [Análise de Sentimentos com Language Studio no Azure AI](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_06/05-Curso%205-Analise_de_Sentimentos_com_Language_Studio_no_Azure_AI#-v%C3%ADdeo-01---an%C3%A1lise-de-texto-e-resposta-a-perguntas)
+  - Descrição: Anotações e práticas sobre o uso do Azure AI Language Studio para análise de sentimentos em textos, aplicando técnicas de Processamento de Linguagem Natural (PLN) para identificar emoções e opiniões em dados textuais.
+  - Repositório: [DIO-fundamentos-da-ia-generativa](https://github.com/ahaerdy/DIO-fundamentos-da-ia-generativa)
 
 
 ## 🏆 Certificados Obtidos
@@ -176,6 +179,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Conceitos Fundamentais de IA](https://hermes.dio.me/certificates/AZZN4DOE.pdf)
 - [Fundamentos do Aprendizado de Máquina](https://hermes.dio.me/certificates/PQV1ATXW.pdf)
 - [Conceitos de Processamento de Linguagem Natural](https://hermes.dio.me/certificates/8BVTH5W6.pdf)
+- [Análise de Sentimentos com Language Studio no Azure AI](https://hermes.dio.me/certificates/ESVUH9RE.pdf)
 
 ## 🔗 Contribuições Open Source
 
