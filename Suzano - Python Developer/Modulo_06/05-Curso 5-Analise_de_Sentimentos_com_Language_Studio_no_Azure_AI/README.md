@@ -228,7 +228,12 @@ Outra funcionalidade destacada é a análise de chamadas em ambientes de atendim
 A interface do Speech Studio apresenta uma navegação clara por etapas, com categorias específicas como legendagem de vídeos, análise de call center, transcrição de reuniões e legendagem em tempo real. Essa estrutura facilita o acesso às funcionalidades conforme o objetivo do usuário, promovendo uma experiência prática e direcionada para diferentes cenários de aplicação da inteligência artificial em fala.
 
 
-## 🟩 Vídeo 05 - 
+## 🟩 Vídeo 05 - Conhecendo o Language Studio
+
+<p align="center">
+    <img src="images/image-14.png" alt="" width="640">
+</p>
+
 
 ## 🟩 Vídeo 06 - 
 
