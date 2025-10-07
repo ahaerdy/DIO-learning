@@ -287,3 +287,9 @@ Após concluir todas as etapas, clique no botão **"Entregar Projeto"**.
 - [GitBook: Formação GitHub Certification](https://aline-antunes.gitbook.io/formacao-fundamentos-github) - Material textual sobre GitHub
 - [Documentação do GitHub](https://docs.github.com/) - Guia completo para uso do GitHub 
 - [GitHub Markdown](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) - Guia específico para Markdown no GitHub 
+
+Link do projeto entregue: [DIO-fundamentos-da-ia-generativa](https://github.com/ahaerdy/DIO-fundamentos-da-ia-generativa)
+
+# Certificado: Análise de Sentimentos com Language Studio no Azure Al
+
+Link: https://hermes.dio.me/certificates/ESVUH9RE.pdf
