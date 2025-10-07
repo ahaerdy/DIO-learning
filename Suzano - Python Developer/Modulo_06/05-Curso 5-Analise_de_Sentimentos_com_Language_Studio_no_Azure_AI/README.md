@@ -110,7 +110,7 @@ Esses materiais oferecem o passo a passo necessário para configurar e testar os
 Durante o laboratório, os participantes terão a oportunidade de compreender como os serviços de fala e análise de texto se integram ao Language Studio, utilizando inteligência artificial para extrair informações relevantes de mensagens, como idioma, sentimento, entidades e frases-chave. Essa prática reforça a importância de ferramentas automatizadas na interpretação de dados linguísticos, especialmente em contextos de atendimento ao cliente e análise de feedback.
 
 
-## 🟩 Vídeo 04 - 
+## 🟩 Vídeo 04 - Conhecendo o Estudio de fala 
 
 ## 🟩 Vídeo 05 - 
 
