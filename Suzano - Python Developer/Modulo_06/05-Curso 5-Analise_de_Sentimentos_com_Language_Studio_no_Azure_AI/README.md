@@ -213,6 +213,19 @@ O Speech Studio permite testar a conversão de fala em texto em tempo real, seja
     <img src="images/image-13.png" alt="" width="640">
 </p>
 
+#### Aplicações de Conversão de Fala em Texto com Azure Speech Studio
+
+##### Legendas Automatizadas para Vídeos
+
+O Azure Speech Studio oferece uma solução eficiente para adicionar legendas a vídeos por meio da conversão automática de fala em texto. O serviço reconhece o áudio presente no conteúdo audiovisual, gera a transcrição correspondente e sincroniza essa transcrição com o vídeo. O usuário pode personalizar o estilo das legendas e escolher o idioma da transcrição, tornando a ferramenta útil para acessibilidade, tradução e distribuição de conteúdo em múltiplos idiomas.
+
+##### Transcrição e Análise de Call Centers
+
+Outra funcionalidade destacada é a análise de chamadas em ambientes de atendimento ao cliente. Ao enviar arquivos de áudio de interações telefônicas, o sistema extrai informações relevantes como sentimentos, interrupções e identificação dos falantes. Esses dados são organizados em um painel interativo, permitindo que empresas obtenham insights valiosos para melhorar a qualidade do serviço, treinar equipes e otimizar processos de comunicação.
+
+##### Navegação por Etapas e Casos de Uso
+
+A interface do Speech Studio apresenta uma navegação clara por etapas, com categorias específicas como legendagem de vídeos, análise de call center, transcrição de reuniões e legendagem em tempo real. Essa estrutura facilita o acesso às funcionalidades conforme o objetivo do usuário, promovendo uma experiência prática e direcionada para diferentes cenários de aplicação da inteligência artificial em fala.
 
 
 ## 🟩 Vídeo 05 - 
