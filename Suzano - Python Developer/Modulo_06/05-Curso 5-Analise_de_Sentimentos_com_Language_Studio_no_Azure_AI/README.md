@@ -209,6 +209,10 @@ Após a configuração do recurso, o usuário é direcionado para o início ráp
 
 O Speech Studio permite testar a conversão de fala em texto em tempo real, seja por gravação direta com microfone ou pelo upload de arquivos de áudio. O resultado da transcrição é exibido instantaneamente, com detalhes como nome do arquivo, idioma selecionado, tipo de modelo e licença. Há também a opção de visualizar os dados em formato JSON, útil para desenvolvedores que desejam integrar os resultados em aplicações externas.
 
+<p align="center">
+    <img src="images/image-13.png" alt="" width="640">
+</p>
+
 
 
 ## 🟩 Vídeo 05 - 
