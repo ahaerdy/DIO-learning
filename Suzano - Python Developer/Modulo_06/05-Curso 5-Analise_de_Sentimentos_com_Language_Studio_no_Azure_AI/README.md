@@ -236,9 +236,9 @@ A interface do Speech Studio apresenta uma navegação clara por etapas, com cat
 
 A instrutora guia os participantes por um laboratório prático no Language Studio do Microsoft Azure, demonstrando como aplicar inteligência artificial para análise de sentimentos e classificação de texto. Ela explica que o serviço utiliza técnicas de Processamento de Linguagem Natural para interpretar mensagens e opiniões em larga escala.
 
-No exemplo apresentado, ela simula o cenário de uma rede de hotéis que coleta comentários dos clientes. Ao invés de ler manualmente milhares de avaliações, a empresa utiliza o Language Studio para identificar automaticamente os pontos positivos e negativos de cada texto.
+No exemplo apresentado, é simulado o cenário de uma rede de hotéis que coleta comentários dos clientes. Ao invés de ler manualmente milhares de avaliações, a empresa utiliza o Language Studio para identificar automaticamente os pontos positivos e negativos de cada texto.
 
-A instrutora acessa o portal do Azure, cria um recurso de linguagem com plano gratuito e valida os dados da assinatura. Em seguida, ela vincula esse recurso ao Language Studio e inicia um projeto de classificação de texto. Ela escolhe o idioma inglês e insere um comentário de exemplo sobre um hotel.
+A instrutora acessa o portal do Azure, cria um recurso de linguagem com plano gratuito e valida os dados da assinatura. Em seguida, vincula esse recurso ao Language Studio e inicia um projeto de classificação de texto. Ela escolhe o idioma inglês e insere um comentário de exemplo sobre um hotel.
 
 <p align="center">
     <img src="images/image-15.png" alt="" width="640">
@@ -246,11 +246,44 @@ A instrutora acessa o portal do Azure, cria um recurso de linguagem com plano gr
 
 O sistema analisa o texto e apresenta os resultados em porcentagens: 96% negativo, 3% neutro e 0% positivo. Ele destaca palavras-chave como “serviço ruim”, “hotel antigo” e “internet não funcionou”, revelando os principais motivos da insatisfação. A análise se divide por sentenças, permitindo uma leitura detalhada do sentimento em cada trecho.
 
-Ela ressalta que a ferramenta suporta múltiplos idiomas, sendo ideal para empresas multinacionais. Também menciona a integração com GitHub, onde os usuários acessam exemplos de código e informações sobre cobrança por hora.
+Ressalte-se que a ferramenta suporta múltiplos idiomas, sendo ideal para empresas multinacionais. O sistema integra-se com o GitHub, onde os usuários podem acessar exemplos de código e informações sobre cobrança por hora.
 
 Por fim, a instrutora incentiva os participantes a testarem a funcionalidade com dados reais, mostrando como a análise automatizada agrega valor às decisões estratégicas e à experiência do cliente.
 
 
-## 🟩 Vídeo 06 - 
+## 🟩 Entendendo o Desafio
 
-## 🟩 Vídeo 07 - 
+Este desafio propõe que você construa um perfil de destaque explorando os conceitos apresentados em aula. A ideia é aplicar os conhecimentos adquiridos para demonstrar sua compreensão por meio de uma solução prática.
+
+### Descrição do Desafio
+
+Você realizará um laboratório para praticar e aprofundar o uso das ferramentas **Azure Speech Studio** e **Language Studio**, com foco em análise de fala e linguagem. O objetivo é desenvolver habilidades práticas e aplicá-las em cenários reais. Para isso, será necessário criar um repositório no GitHub contendo a solução proposta e sua documentação.
+
+### Objetivos de Aprendizagem
+
+- Compreender os conceitos de análise de fala e texto.
+- Documentar a solução proposta e sua implementação.
+- Criar um repositório no GitHub para compartilhar a solução documentada.
+
+### Entrega do Desafio
+
+1. Assista a todas as aulas e siga as recomendações importantes para o sucesso do seu projeto.
+2. Crie um repositório público no GitHub contendo:
+   - Um arquivo `README.md` detalhado.
+   - As imagens do projeto organizadas na pasta `/images`.
+
+Após concluir todas as etapas, clique no botão **"Entregar Projeto"**.
+
+### Recursos Úteis
+
+#### Documentações Oficiais
+
+- [Explore Speech Studio – Laboratório no Microsoft Learning](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/09-speech.html)
+- [Analyze text with Language Studio – Laboratório no Microsoft Learning](https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/06-text-analysis.html)
+
+#### Materiais Complementares sobre GitHub
+
+- [GitHub Quick Start](https://github.com/digitalinnovationone/github-quickstart) - Repositório com Link para Aulas de Git e GitHub 
+- [GitBook: Formação GitHub Certification](https://aline-antunes.gitbook.io/formacao-fundamentos-github) - Material textual sobre GitHub
+- [Documentação do GitHub](https://docs.github.com/) - Guia completo para uso do GitHub 
+- [GitHub Markdown](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) - Guia específico para Markdown no GitHub 
