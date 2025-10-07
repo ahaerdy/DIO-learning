@@ -173,6 +173,32 @@ A criação e ativação de recursos no Speech Studio permite o uso de funcional
     <img src="images/image-11.png" alt="" width="640">
 </p>
 
+#### Recursos e Funcionalidades do Microsoft Azure Speech Studio
+
+##### Módulos de Conversão de Fala em Texto
+
+O Speech Studio do Azure oferece uma variedade de módulos voltados à conversão de fala em texto, com suporte para mais de 100 idiomas e dialetos. O usuário pode optar por modelos pré-treinados para situações comuns ou criar modelos personalizados para vocabulários específicos e sotaques regionais. Além disso, há suporte para processamento em lote, permitindo a transcrição de múltiplos arquivos de áudio simultaneamente.
+
+##### Integração com OpenAI e Modelo Whisper
+
+Entre os recursos disponíveis, destaca-se a integração com o modelo Whisper da OpenAI, que permite transcrições precisas em diversos idiomas e sotaques. Essa funcionalidade amplia a capacidade de reconhecimento de fala, tornando o serviço mais robusto e adaptável a diferentes contextos linguísticos.
+
+##### Testes em Tempo Real e Interface Interativa
+
+A interface do Speech Studio permite testar recursos de fala em tempo real sem necessidade de escrever código. O usuário pode gravar diretamente com o microfone ou carregar arquivos de áudio, visualizando instantaneamente os resultados da transcrição. O painel de resultados exibe informações como nome do arquivo, idioma, tipo de modelo e licença, além de permitir a visualização em formato JSON.
+
+##### Experiência Guiada e Configuração de Recursos
+
+Durante a criação de um novo recurso de fala, o usuário define parâmetros como nome, assinatura, região, grupo de recursos e modelo de preço. A interface orienta o processo com links para regiões suportadas e detalhes tarifários, facilitando a configuração inicial. Recursos já criados são listados com informações detalhadas, permitindo o gerenciamento eficiente dos serviços cognitivos.
+
+##### Aplicações Práticas e Potencial de Uso
+
+As funcionalidades do Speech Studio são ideais para aplicações em acessibilidade, atendimento automatizado, tradução simultânea e análise de chamadas. Com suporte a personalização e integração com repositórios externos, como GitHub, a plataforma se mostra versátil para desenvolvedores e profissionais de negócios que desejam incorporar inteligência artificial em soluções de comunicação.
+
+<p align="center">
+    <img src="images/image-12.png" alt="" width="640">
+</p>
+
 ## 🟩 Vídeo 05 - 
 
 ## 🟩 Vídeo 06 - 
