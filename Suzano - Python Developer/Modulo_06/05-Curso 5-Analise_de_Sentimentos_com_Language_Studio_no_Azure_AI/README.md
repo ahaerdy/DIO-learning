@@ -240,6 +240,10 @@ No exemplo apresentado, ela simula o cenário de uma rede de hotéis que coleta 
 
 A instrutora acessa o portal do Azure, cria um recurso de linguagem com plano gratuito e valida os dados da assinatura. Em seguida, ela vincula esse recurso ao Language Studio e inicia um projeto de classificação de texto. Ela escolhe o idioma inglês e insere um comentário de exemplo sobre um hotel.
 
+<p align="center">
+    <img src="images/image-15.png" alt="" width="640">
+</p>
+
 O sistema analisa o texto e apresenta os resultados em porcentagens: 96% negativo, 3% neutro e 0% positivo. Ele destaca palavras-chave como “serviço ruim”, “hotel antigo” e “internet não funcionou”, revelando os principais motivos da insatisfação. A análise se divide por sentenças, permitindo uma leitura detalhada do sentimento em cada trecho.
 
 Ela ressalta que a ferramenta suporta múltiplos idiomas, sendo ideal para empresas multinacionais. Também menciona a integração com GitHub, onde os usuários acessam exemplos de código e informações sobre cobrança por hora.
