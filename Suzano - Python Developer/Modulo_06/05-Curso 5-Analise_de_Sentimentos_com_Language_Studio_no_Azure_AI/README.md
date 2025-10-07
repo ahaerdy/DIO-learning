@@ -116,6 +116,33 @@ Durante o laboratório, os participantes terão a oportunidade de compreender co
     <img src="images/image-6.png" alt="" width="640">
 </p>
 
+#### Exploração do Azure AI Studio e Estúdio de Fala
+
+##### Visão Geral da Interface
+
+A imagem fornecida apresenta a interface inicial do Azure AI Studio, em português, destacando a ausência de projetos recentes e sugerindo funcionalidades para início rápido. Entre elas estão a legenda de vídeo com IA, transcrição e análise pós-chamada, e o uso de avatares em chats ao vivo. Essas opções ilustram o potencial do estúdio para aplicações práticas em diversos contextos de comunicação e atendimento.
+
+##### Introdução ao Estúdio de Fala
+
+A transcrição complementa essa visão ao detalhar o uso do Estúdio de Fala, acessado via sph.microsoft.com. Após autenticação com a mesma conta do portal Azure, o usuário pode criar recursos personalizados, configurar assinaturas e selecionar regiões para ativação do serviço. O estúdio permite tanto a conversão de áudio em texto quanto a geração de voz a partir de texto, ampliando as possibilidades de automação e acessibilidade.
+
+##### Aplicações Práticas e Demonstração
+
+Durante o laboratório, é demonstrado o uso da funcionalidade de **conversão de fala em texto em tempo real**, onde um arquivo de áudio em inglês é importado e transcrito automaticamente. O sistema reconhece o idioma e inicia a reprodução e transcrição simultânea, evidenciando sua utilidade em cenários como reuniões multilíngues, legendagem de vídeos e atendimento em call centers.
+
+##### Integração com GitHub e Exemplos de Código
+
+O portal oferece integração com GitHub, fornecendo exemplos de código, documentação e instruções para criação de repositórios. Isso facilita a implementação técnica por desenvolvedores e profissionais de pré-venda ou pós-venda que desejam incorporar IA em suas soluções.
+
+##### Considerações sobre Custo e Responsabilidade
+
+A transcrição destaca a importância de avaliar os custos dos serviços, que são cobrados por hora e variam conforme o tipo de funcionalidade — como tradução de fala ou reconhecimento de locutor. Também é enfatizado o uso responsável da IA, considerando o impacto social e ético das aplicações desenvolvidas.
+
+##### Conclusão
+
+A combinação entre a interface intuitiva do Azure AI Studio e os recursos avançados do Estúdio de Fala oferece uma plataforma robusta para projetos de inteligência artificial voltados à comunicação. Seja para automatizar atendimentos, melhorar a acessibilidade ou integrar funcionalidades em tempo real, o ambiente é ideal para explorar soluções inovadoras com responsabilidade e eficiência.
+
+
 ## 🟩 Vídeo 05 - 
 
 ## 🟩 Vídeo 06 - 
