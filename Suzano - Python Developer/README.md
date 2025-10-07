@@ -109,7 +109,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Criando Respostas Generativas com IA no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/10-Curso_10-Criando_Respostas_Generativas_com_IA_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---conte%C3%BAdo-program%C3%A1tico)
 - [x] Desafio: [Criando um Copiloto com Fluxo de Conversa Personalizado no Microsoft Copilot Studio](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_05/11-Curso_11-Criando_um_Copiloto_com_Fluxo_de_Conversa_Personalizado_no_Microsoft_Copilot_Studio#-v%C3%ADdeo-01---apresenta%C3%A7%C3%A3o-do-desafio)
   - Descrição: Criação de agente conversacional personalizado no Microsoft Copilot Studio como parte do Bootcamp Suzano Python Developer. O projeto contempla a configuração de um copiloto com fluxo de conversa orientado por tópicos, integração com fontes confiáveis de conhecimento, personalização de mensagens de erro, ajustes de estilo de resposta com GenAI e testes de interação para validação da experiência conversacional.
-  - Repositório: [DIO-criando-um-copilo-com-fluxo-de-conversa-personalizado-no-microsoft-copilot-studio](https://github.com/ahaerdy/DIO-criando-um-copilo-com-fluxo-de-conversa-personalizado-no-microsoft-copilot-studio#)
+  - Repositório: [DIO-criando-um-copiloto-com-fluxo-de-conversa-personalizado-no-microsoft-copilot-studio](https://github.com/ahaerdy/DIO-criando-um-copilo-com-fluxo-de-conversa-personalizado-no-microsoft-copilot-studio#)
 
 ### Módulo 6: Integrando com Serviços de IA
 
