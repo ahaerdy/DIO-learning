@@ -191,10 +191,6 @@ A interface do Speech Studio permite testar recursos de fala em tempo real sem n
 
 Durante a criação de um novo recurso de fala, o usuário define parâmetros como nome, assinatura, região, grupo de recursos e modelo de preço. A interface orienta o processo com links para regiões suportadas e detalhes tarifários, facilitando a configuração inicial. Recursos já criados são listados com informações detalhadas, permitindo o gerenciamento eficiente dos serviços cognitivos.
 
-##### Aplicações Práticas e Potencial de Uso
-
-As funcionalidades do Speech Studio são ideais para aplicações em acessibilidade, atendimento automatizado, tradução simultânea e análise de chamadas. Com suporte a personalização e integração com repositórios externos, como GitHub, a plataforma se mostra versátil para desenvolvedores e profissionais de negócios que desejam incorporar inteligência artificial em soluções de comunicação.
-
 <p align="center">
     <img src="images/image-12.png" alt="" width="640">
 </p>
@@ -213,9 +209,6 @@ Após a configuração do recurso, o usuário é direcionado para o início ráp
 
 O Speech Studio permite testar a conversão de fala em texto em tempo real, seja por gravação direta com microfone ou pelo upload de arquivos de áudio. O resultado da transcrição é exibido instantaneamente, com detalhes como nome do arquivo, idioma selecionado, tipo de modelo e licença. Há também a opção de visualizar os dados em formato JSON, útil para desenvolvedores que desejam integrar os resultados em aplicações externas.
 
-##### Aplicações e Potencial de Uso
-
-Essas funcionalidades são ideais para empresas que buscam automatizar atendimentos, transcrever reuniões multilíngues ou criar assistentes virtuais personalizados. A interface clara e os recursos integrados tornam o Speech Studio uma plataforma poderosa para explorar soluções de inteligência artificial voltadas à fala.
 
 
 ## 🟩 Vídeo 05 - 
