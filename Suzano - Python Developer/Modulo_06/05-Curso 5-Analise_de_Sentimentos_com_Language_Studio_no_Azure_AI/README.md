@@ -147,6 +147,31 @@ Essas funcionalidades demonstram o potencial do Azure AI Studio como plataforma 
     <img src="images/image-8.png" alt="" width="640">
 </p>
 
+#### Configuração e Criação de Recursos no Speech Studio do Azure
+
+##### Gerenciamento de Recursos Cognitivos
+
+A interface do Speech Studio apresenta a seção de configurações, onde é possível visualizar os detalhes da assinatura vinculada à conta, como o nome da assinatura, o ID e o diretório do Azure. Nessa área, o usuário também encontra uma tabela com os recursos cognitivos já criados, incluindo nome, tipo, região, modelo de preço e data de criação. Todos os recursos listados estão configurados na região "Leste dos EUA" com o modelo de preço "Padrão S0", evidenciando uma padronização para testes e uso inicial.
+
+##### Criação de Novo Recurso de Fala
+
+Ao acessar o formulário "Criar um recurso Fala", o usuário pode configurar um novo serviço de reconhecimento ou síntese de fala. O processo exige a definição de um nome para o recurso, a seleção da assinatura ativa, a escolha da região de hospedagem e do grupo de recursos. Também é possível criar um novo grupo diretamente pela interface. O modelo de preço pode ser ajustado conforme a necessidade, com links disponíveis para consulta das regiões suportadas e dos detalhes tarifários.
+
+##### Considerações Técnicas e Operacionais
+
+A criação e ativação de recursos no Speech Studio permite o uso de funcionalidades como conversão de fala em texto em tempo real, geração de voz a partir de texto e integração com aplicações externas. Esses recursos são fundamentais para soluções que envolvem acessibilidade, automação de atendimento, tradução simultânea e análise de chamadas. A interface clara e segmentada facilita o gerenciamento e a expansão dos serviços, promovendo agilidade na implementação de projetos com inteligência artificial aplicada à fala.
+
+<p align="center">
+    <img src="images/image-9.png" alt="" width="640">
+</p>
+
+<p align="center">
+    <img src="images/image-10.png" alt="" width="640">
+</p>
+
+<p align="center">
+    <img src="images/image-11.png" alt="" width="640">
+</p>
 
 ## 🟩 Vídeo 05 - 
 
