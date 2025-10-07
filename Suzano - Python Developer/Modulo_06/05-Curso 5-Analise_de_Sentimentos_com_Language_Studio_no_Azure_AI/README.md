@@ -234,27 +234,17 @@ A interface do Speech Studio apresenta uma navegação clara por etapas, com cat
     <img src="images/image-14.png" alt="" width="640">
 </p>
 
-#### Visão Geral do Portal Azure e Aplicações com Language Studio
+A instrutora guia os participantes por um laboratório prático no Language Studio do Microsoft Azure, demonstrando como aplicar inteligência artificial para análise de sentimentos e classificação de texto. Ela explica que o serviço utiliza técnicas de Processamento de Linguagem Natural para interpretar mensagens e opiniões em larga escala.
 
-##### Interface de Serviços e Recursos Recentes
+No exemplo apresentado, ela simula o cenário de uma rede de hotéis que coleta comentários dos clientes. Ao invés de ler manualmente milhares de avaliações, a empresa utiliza o Language Studio para identificar automaticamente os pontos positivos e negativos de cada texto.
 
-O painel principal do portal Microsoft Azure apresenta uma navegação centralizada para os principais serviços de nuvem, como criação de recursos, grupos de recursos, máquinas virtuais, bancos de dados SQL e serviços de inteligência artificial. A seção de recursos recentes exibe atividades recentes, incluindo grupos de recursos e instâncias de Machine Learning, permitindo acesso rápido ao histórico de trabalho e à continuidade dos projetos.
+A instrutora acessa o portal do Azure, cria um recurso de linguagem com plano gratuito e valida os dados da assinatura. Em seguida, ela vincula esse recurso ao Language Studio e inicia um projeto de classificação de texto. Ela escolhe o idioma inglês e insere um comentário de exemplo sobre um hotel.
 
-##### Aplicações de Processamento de Linguagem Natural
+O sistema analisa o texto e apresenta os resultados em porcentagens: 96% negativo, 3% neutro e 0% positivo. Ele destaca palavras-chave como “serviço ruim”, “hotel antigo” e “internet não funcionou”, revelando os principais motivos da insatisfação. A análise se divide por sentenças, permitindo uma leitura detalhada do sentimento em cada trecho.
 
-O Language Studio do Azure oferece funcionalidades avançadas para análise de sentimentos e classificação de texto, com base em técnicas de Processamento de Linguagem Natural (PLN). A ferramenta é ideal para empresas que lidam com grandes volumes de comentários e avaliações, como redes de hotéis, companhias aéreas ou plataformas de serviços. A análise automática permite identificar padrões de opinião, pontos positivos e negativos, e extrair palavras-chave relevantes para tomada de decisão.
+Ela ressalta que a ferramenta suporta múltiplos idiomas, sendo ideal para empresas multinacionais. Também menciona a integração com GitHub, onde os usuários acessam exemplos de código e informações sobre cobrança por hora.
 
-##### Configuração de Recursos Cognitivos
-
-A criação de um recurso de linguagem no Azure segue um fluxo intuitivo, com seleção de assinatura, definição de região, escolha do plano de preços e associação a um grupo de recursos. Após o deploy, o serviço é vinculado ao Language Studio, onde é possível iniciar projetos como classificação de sentimentos, análise de opiniões e extração de insights semânticos.
-
-##### Aplicações Multilíngues e Escalabilidade
-
-O sistema suporta múltiplos idiomas, ampliando sua aplicabilidade em empresas multinacionais. A análise pode ser feita em larga escala, processando milhares de comentários simultaneamente, o que torna a solução eficiente para monitoramento de reputação, avaliação de campanhas e melhoria contínua de serviços com base na percepção dos clientes.
-
-##### Responsabilidade e Integração Técnica
-
-Além da usabilidade prática, o Azure oferece integração com GitHub para acesso a exemplos de código e SDKs, além de orientações sobre cobrança por hora e boas práticas de uso responsável da inteligência artificial. A plataforma permite testes rápidos e demonstrações eficazes, agregando valor estratégico às equipes de negócio e tecnologia.
+Por fim, a instrutora incentiva os participantes a testarem a funcionalidade com dados reais, mostrando como a análise automatizada agrega valor às decisões estratégicas e à experiência do cliente.
 
 
 ## 🟩 Vídeo 06 - 
