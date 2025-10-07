@@ -199,6 +199,25 @@ As funcionalidades do Speech Studio são ideais para aplicações em acessibilid
     <img src="images/image-12.png" alt="" width="640">
 </p>
 
+#### Configuração e Testes no Microsoft Azure Speech Studio
+
+##### Seleção de Recursos Cognitivos
+
+A interface do Speech Studio orienta o usuário na configuração inicial dos serviços de fala, começando pela seleção de um recurso cognitivo já existente. É possível escolher o recurso desejado, visualizar sua chave de acesso e definir a região de operação, como "eastus". O ponto de extremidade é exibido diretamente na tela, permitindo integração rápida com APIs externas.
+
+##### Guia de Início Rápido e Exemplos de Código
+
+Após a configuração do recurso, o usuário é direcionado para o início rápido, com acesso a exemplos de código hospedados no GitHub. Essa etapa facilita a implementação prática, oferecendo modelos prontos para diferentes linguagens e cenários de uso.
+
+##### Testes Interativos e Resultados em Tempo Real
+
+O Speech Studio permite testar a conversão de fala em texto em tempo real, seja por gravação direta com microfone ou pelo upload de arquivos de áudio. O resultado da transcrição é exibido instantaneamente, com detalhes como nome do arquivo, idioma selecionado, tipo de modelo e licença. Há também a opção de visualizar os dados em formato JSON, útil para desenvolvedores que desejam integrar os resultados em aplicações externas.
+
+##### Aplicações e Potencial de Uso
+
+Essas funcionalidades são ideais para empresas que buscam automatizar atendimentos, transcrever reuniões multilíngues ou criar assistentes virtuais personalizados. A interface clara e os recursos integrados tornam o Speech Studio uma plataforma poderosa para explorar soluções de inteligência artificial voltadas à fala.
+
+
 ## 🟩 Vídeo 05 - 
 
 ## 🟩 Vídeo 06 - 
