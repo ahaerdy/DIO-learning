@@ -112,6 +112,10 @@ Durante o laboratório, os participantes terão a oportunidade de compreender co
 
 ## 🟩 Vídeo 04 - Conhecendo o Estudio de fala 
 
+<p align="center">
+    <img src="images/image-6.png" alt="" width="640">
+</p>
+
 ## 🟩 Vídeo 05 - 
 
 ## 🟩 Vídeo 06 - 
