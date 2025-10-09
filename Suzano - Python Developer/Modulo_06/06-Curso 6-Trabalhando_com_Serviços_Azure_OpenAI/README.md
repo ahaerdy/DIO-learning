@@ -4,8 +4,10 @@
 ## 🟩 Vídeo 01 - 
 
 <p align="center">
-    <img src="images/image-2.png" alt="" width="640">
+    <img src="images/image.png" alt="" width="640">
 </p>
+
+
 
 ## 🟩 Vídeo 02 - 
 
