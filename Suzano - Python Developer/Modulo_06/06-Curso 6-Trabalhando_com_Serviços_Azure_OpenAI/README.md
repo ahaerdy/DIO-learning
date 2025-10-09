@@ -169,7 +169,7 @@ A interface do estúdio é intuitiva e permite que profissionais implantem solu�
 </p>
 
 <p align="center">
-    <img src="images/image-14.png" alt="" width="640">
+    <img src="images/image-15.png" alt="" width="640">
 </p>
 
 
