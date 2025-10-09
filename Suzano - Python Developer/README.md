@@ -181,11 +181,11 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Conceitos de Processamento de Linguagem Natural](https://hermes.dio.me/certificates/8BVTH5W6.pdf)
 - [Análise de Sentimentos com Language Studio no Azure AI](https://hermes.dio.me/certificates/ESVUH9RE.pdf)
 - [Trabalhando com Serviços Azure OpenAI](https://hermes.dio.me/certificates/TDU2Y2DR.pdf)
-- Certificado do Módulo: [Integrando com Serviços de IA](https://hermes.dio.me/certificates/5YYECA98.pdf)
+- Certificado do Módulo: [Integrando com Serviços de IA](https://hermes.dio.me/certificates/5YYECA98.pdf) ✅
 
 ### Conclusão: 
 
-- 🎓Certificado de conclusão: [Suzano - Python Developer](https://hermes.dio.me/certificates/T98VICO2.pdf)
+- 🎓Certificado de conclusão: [Suzano - Python Developer](https://hermes.dio.me/certificates/T98VICO2.pdf) ✅
 
 
 ## 🔗 Contribuições Open Source
