@@ -61,7 +61,7 @@ Entre os modelos oferecidos estão o GPT-4, GPT-3.5, modelos de inserção e o D
 A escolha entre os modelos depende de fatores como custo, velocidade e complexidade da tarefa. A parceria entre Microsoft e OpenAI permite que empresas explorem soluções inovadoras com inteligência artificial, sempre considerando a melhor estratégia de implementação e uso responsável dos recursos disponíveis.
 
 <p align="center">
-    <img src="images/image-3png" alt="" width="640">
+    <img src="images/image-3.png" alt="" width="640">
 </p>
 
 ## 🟩 Vídeo 02 - 
