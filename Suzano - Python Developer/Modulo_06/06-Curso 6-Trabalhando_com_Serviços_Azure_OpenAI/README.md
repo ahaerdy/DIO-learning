@@ -1,7 +1,7 @@
 - Instrutor: Valéria Baptista (Head of Cloud and Cybersecurity | Professora e Mentora em Tecnologia)
 - Contato Linkedin: / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/) 
 
-## 🟩 Vídeo 01 - Trabalhando com Serviços Azure OpenAI
+## 🟩 Vídeo 01 - O que é o OpenAI do Azure
 
 <p align="center">
     <img src="images/image.png" alt="" width="640">
@@ -133,7 +133,11 @@ O Azure OpenAI dá suporte a diversos modelos de linguagem (LLMs), cada um com c
 **DALL-E (visualização)** é uma série de modelos em pré-visualização que geram imagens originais a partir de descrições em linguagem natural, ideal para aplicações criativas.
 
 
-## 🟩 Vídeo 02 - 
+## 🟩 Vídeo 02 - Como usar o OpenAI do Azure
+
+<p align="center">
+    <img src="images/image-10.png" alt="" width="640">
+</p>
 
 
 
