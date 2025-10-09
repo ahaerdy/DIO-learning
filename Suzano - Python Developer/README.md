@@ -182,7 +182,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Análise de Sentimentos com Language Studio no Azure AI](https://hermes.dio.me/certificates/ESVUH9RE.pdf)
 - [Trabalhando com Serviços Azure OpenAI](https://hermes.dio.me/certificates/TDU2Y2DR.pdf)
 - Certificado do Módulo: [Integrando com Serviços de IA](https://hermes.dio.me/certificates/5YYECA98.pdf)
-### Conclusão do Bootcamp: 
+
+### Conclusão: 
 
 - 🎓Certificado de conclusão: [Suzano - Python Developer](https://hermes.dio.me/certificates/T98VICO2.pdf)
 
