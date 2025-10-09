@@ -64,6 +64,14 @@ A escolha entre os modelos depende de fatores como custo, velocidade e complexid
     <img src="images/image-3.png" alt="" width="640">
 </p>
 
+<p align="center">
+    <img src="images/image-4.png" alt="" width="640">
+</p>
+
+<p align="center">
+    <img src="images/image-5.png" alt="" width="640">
+</p>
+
 ## 🟩 Vídeo 02 - 
 
 
