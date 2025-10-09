@@ -106,6 +106,33 @@ Os usuários podem interagir com os modelos por meio de diferentes interfaces, c
     <img src="images/image-9.png" alt="" width="640">
 </p>
 
+#### Azure OpenAI: Modelos, Segurança e Ferramentas de Desenvolvimento
+
+##### Visão Geral do Serviço
+
+O Azure OpenAI é uma solução de nuvem da Microsoft que permite a implantação, personalização e hospedagem de modelos de linguagem de grande escala. Ele combina a infraestrutura segura do Azure com os modelos avançados da OpenAI, oferecendo recursos de inteligência artificial generativa com escalabilidade e controle.
+
+##### Segurança e Governança
+
+A plataforma incorpora ferramentas integradas para detectar e mitigar casos de uso prejudiciais, promovendo a implementação responsável da IA. Além disso, oferece segurança corporativa com RBAC (controle de acesso baseado em função) e redes privadas, garantindo que apenas usuários autorizados tenham acesso aos dados e recursos.
+
+##### Ferramentas de Desenvolvimento
+
+Os desenvolvedores podem interagir com os modelos por meio de três métodos principais: o Estúdio de IA do Azure, APIs REST e SDKs com suporte via CLI. Essa variedade de interfaces permite flexibilidade na criação, teste e gerenciamento de soluções baseadas em IA.
+
+##### Modelos Disponíveis
+
+O Azure OpenAI dá suporte a diversos modelos de linguagem (LLMs), cada um com características específicas:
+
+**GPT-4** é um conjunto de modelos que aprimoram o GPT-3.5, com capacidade de compreender e gerar linguagem e código naturais.
+
+**GPT-3.5** melhora o GPT-3 e também é capaz de lidar com linguagem e código, sendo otimizado para interações em formato de chat.
+
+**Incorporações** são modelos que convertem texto em vetores numéricos, facilitando a análise de similaridade textual.
+
+**DALL-E (visualização)** é uma série de modelos em pré-visualização que geram imagens originais a partir de descrições em linguagem natural, ideal para aplicações criativas.
+
+
 ## 🟩 Vídeo 02 - 
 
 
