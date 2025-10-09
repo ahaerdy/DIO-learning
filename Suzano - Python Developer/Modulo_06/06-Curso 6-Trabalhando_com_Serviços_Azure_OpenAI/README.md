@@ -164,6 +164,14 @@ A interface do estúdio é intuitiva e permite que profissionais implantem solu�
 
 ## 🟩 Vídeo 03 - Funcionalidade de linguagem natural do OpenAI do Azure
 
+<p align="center">
+    <img src="images/image-13.png" alt="" width="640">
+</p>
+
+<p align="center">
+    <img src="images/image-14.png" alt="" width="640">
+</p>
+
 
 
 ## 🟩 Vídeo 04 - 
