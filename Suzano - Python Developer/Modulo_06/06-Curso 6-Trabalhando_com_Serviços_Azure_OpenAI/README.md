@@ -162,8 +162,7 @@ Alimentado por modelos generativos otimizados para diversas tarefas, o estúdio 
 A interface do estúdio é intuitiva e permite que profissionais implantem soluções de IA sem a necessidade de dominar todos os aspectos técnicos. Com funcionalidades pré-configuradas e opções de personalização, o processo se assemelha à montagem de soluções com componentes prontos, tornando a experiência mais acessível e eficiente.
 
 
-
-## 🟩 Vídeo 03 - 
+## 🟩 Vídeo 03 - Funcionalidade de linguagem natural do OpenAI do Azure
 
 
 
