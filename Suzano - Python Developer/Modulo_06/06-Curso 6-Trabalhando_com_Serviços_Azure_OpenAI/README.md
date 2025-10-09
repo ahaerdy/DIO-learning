@@ -147,6 +147,22 @@ O Azure OpenAI dá suporte a diversos modelos de linguagem (LLMs), cada um com c
     <img src="images/image-12.png" alt="" width="640">
 </p>
 
+#### Estúdio Azure OpenAI: Implantação Ágil de Modelos Generativos
+
+##### Ambiente de Desenvolvimento
+
+O Estúdio Azure OpenAI é uma plataforma acessível via navegador que permite criar e implantar modelos de inteligência artificial voltados para aplicativos de software. Ele oferece um ambiente visual e interativo, com recursos como playgrounds de chat e preenchimento, facilitando testes e ajustes em tempo real.
+
+##### Modelos e Tarefas
+
+Alimentado por modelos generativos otimizados para diversas tarefas, o estúdio suporta aplicações como geração de texto, preenchimento de código, análise semântica e criação de imagens. Os modelos já vêm treinados e prontos para uso, bastando ao usuário personalizar conforme suas necessidades específicas.
+
+##### Facilidade de Uso
+
+A interface do estúdio é intuitiva e permite que profissionais implantem soluções de IA sem a necessidade de dominar todos os aspectos técnicos. Com funcionalidades pré-configuradas e opções de personalização, o processo se assemelha à montagem de soluções com componentes prontos, tornando a experiência mais acessível e eficiente.
+
+
+
 ## 🟩 Vídeo 03 - 
 
 
