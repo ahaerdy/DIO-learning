@@ -38,7 +38,31 @@ Com suporte a ambientes como o Azure AI Studio e o playground interativo, os usu
     <img src="images/image-2.png" alt="" width="640">
 </p>
 
+#### Azure OpenAI: Fundamentos e Aplicações
 
+##### Visão Geral do Serviço
+
+O Azure OpenAI é uma solução de nuvem desenvolvida pela Microsoft que permite a implantação, personalização e hospedagem de modelos de linguagem de grande escala. Integrado à plataforma Azure, o serviço oferece acesso seguro e escalável aos modelos mais avançados da OpenAI, com foco em inteligência artificial generativa.
+
+##### Componentes Centrais
+
+O serviço é composto por modelos de IA generativa predefinidos e funcionalidades de personalização. Essa combinação permite que empresas adaptem os modelos às suas necessidades específicas, garantindo respostas rápidas e precisas em diversos contextos. A flexibilidade de uso inclui acesso via portal, código ou APIs REST, com suporte a ambientes como o Azure AI Studio e playgrounds interativos.
+
+##### Segurança e Governança
+
+A segurança é garantida por mecanismos como o controle de acesso baseado em função (RBAC), que define permissões específicas para cada usuário. Isso assegura que os dados sejam acessados apenas por quem tem autorização, mitigando riscos e promovendo o uso responsável da IA.
+
+##### Modelos Disponíveis
+
+Entre os modelos oferecidos estão o GPT-4, GPT-3.5, modelos de inserção e o DALL·E. O GPT-4 representa a última geração de modelos generativos, com alta capacidade de compreensão e geração de linguagem natural. O GPT-3.5 é otimizado para interações em formato de chat. Os modelos de inserção convertem texto em vetores numéricos, úteis para análise semântica e comparação textual. Já o DALL·E é voltado para geração de imagens a partir de descrições em linguagem natural, estando disponível em versão prévia.
+
+##### Estratégia e Aplicação
+
+A escolha entre os modelos depende de fatores como custo, velocidade e complexidade da tarefa. A parceria entre Microsoft e OpenAI permite que empresas explorem soluções inovadoras com inteligência artificial, sempre considerando a melhor estratégia de implementação e uso responsável dos recursos disponíveis.
+
+<p align="center">
+    <img src="images/image-3png" alt="" width="640">
+</p>
 
 ## 🟩 Vídeo 02 - 
 
