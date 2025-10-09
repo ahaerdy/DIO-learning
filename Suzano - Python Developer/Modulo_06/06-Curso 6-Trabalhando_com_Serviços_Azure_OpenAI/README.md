@@ -94,7 +94,17 @@ Os usuários podem interagir com os modelos por meio de diferentes interfaces, c
     <img src="images/image-6.png" alt="" width="640">
 </p>
 
+<p align="center">
+    <img src="images/image-7.png" alt="" width="640">
+</p>
 
+<p align="center">
+    <img src="images/image-8.png" alt="" width="640">
+</p>
+
+<p align="center">
+    <img src="images/image-9.png" alt="" width="640">
+</p>
 
 ## 🟩 Vídeo 02 - 
 
