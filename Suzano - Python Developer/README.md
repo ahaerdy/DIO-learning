@@ -183,7 +183,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Trabalhando com Serviços Azure OpenAI](https://hermes.dio.me/certificates/TDU2Y2DR.pdf)
 - Certificado do Módulo: [Integrando com Serviços de IA](https://hermes.dio.me/certificates/5YYECA98.pdf)
 
-### 🎓Cerificado de Conclusão do Bootcamp: [Suzano - Python Developer](https://hermes.dio.me/certificates/T98VICO2.pdf)
+- 🎓Cerificado de Conclusão do Bootcamp: [Suzano - Python Developer](https://hermes.dio.me/certificates/T98VICO2.pdf)
+
 
 ## 🔗 Contribuições Open Source
 
