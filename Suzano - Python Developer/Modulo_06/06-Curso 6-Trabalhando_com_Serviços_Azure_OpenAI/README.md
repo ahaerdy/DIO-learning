@@ -183,10 +183,68 @@ A interface do estúdio é intuitiva e permite que profissionais implantem solu�
 <p align="center">
     <img src="images/image-18.png" alt="" width="640">
 </p>
+
 </p>
 <p align="center">
     <img src="images/image-19.png" alt="" width="640">
 </p>
 
-## 🟩 Vídeo 04 - 
+#### Aplicações de Linguagem Natural e Geração de Conteúdo com Azure OpenAI
+
+##### Compreensão e Criação de Linguagem Natural
+
+Os modelos GPT (transformadores pré-treinados generativos) são altamente eficazes na interpretação e geração de linguagem natural. Essa capacidade permite que sistemas como o ChatGPT atuem como interfaces conversacionais inteligentes, combinando front-end interativo com back-end baseado em IA generativa. A partir de prompts simples, como uma lista de ingredientes, o modelo é capaz de produzir instruções completas e coerentes, como receitas culinárias detalhadas.
+
+##### Geração de Código e Suporte ao Desenvolvimento
+
+Além da linguagem natural, os modelos GPT também traduzem trechos de texto ou código em scripts funcionais. Essa funcionalidade é amplificada com ferramentas como o GitHub Copilot, que atua como um programador de pares, sugerindo e validando trechos de código em ambientes como o Visual Studio Code. A IA pode inclusive gerar testes automatizados, como unit tests em Python, otimizando o fluxo de desenvolvimento.
+
+##### Criação e Edição de Imagens
+
+A IA generativa também se estende à produção visual. Com modelos como DALL·E, é possível gerar imagens originais a partir de descrições em linguagem natural, incluindo variações estilísticas e edições específicas. Isso permite desde a criação de personagens fictícios até composições inusitadas, como elefantes com hambúrgueres, com alto nível de realismo e personalização.
+
+##### Impacto e Realismo
+
+A sofisticação desses modelos é tamanha que já se observa a criação de personas digitais hiper-realistas, capazes de gerar engajamento e receita em redes sociais. A linha entre o real e o artificial torna-se cada vez mais tênue, exigindo reflexão sobre autenticidade e ética no uso da inteligência artificial.
+
+
+## 🟩 Vídeo 04 - Revisão e Encerramento do Módulo
+
+</p>
+<p align="center">
+    <img src="images/image-20.png" alt="" width="640">
+</p>
+
+
+# Material de Apoio e Links Úteis
+
+### Materiais Complementares
+
+Nossos materiais complementares e de apoio têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
+
+---
+
+### Slides
+
+- [Módulo 5 - IA Generativa.pptx](https://academiapme-my.sharepoint.com/:p:/g/personal/nubia_dio_me/Ef88qA-boB1GuImGg67P-IQBAQP0mfwtVB0RjBnabfvdPw?e=PwuezC)
+
+---
+
+### Dicas/Links Úteis
+
+Por fim, disponibilizamos alguns links úteis para que você possa se desenvolver ainda mais através de referências oficiais das tecnologias, páginas de documentação e/ou fóruns de discussão relevantes. Nesse contexto, seguem algumas sugestões:
+
+- **Artigos/Fórum**:  
+  Você pode compartilhar conteúdos técnicos através de Artigos (visíveis globalmente na plataforma da DIO). Por outro lado, você também pode compartilhar suas conquistas e dúvidas usando os Fóruns (que são específicos para cada experiência educacional na DIO, como um Bootcamp por exemplo);
+
+- **Rooms**:  
+  Caso você esteja inscrito(a) em uma experiência educacional na DIO (como um Bootcamp, por exemplo), você terá acesso ao Rooms. O Rooms é uma ferramenta de bate-papo em tempo real onde todos os inscritos podem interagir, compartilhando dúvidas e dicas (que podem conter imagens e snippets de código-fonte);
+
+- **Pesquise na Web**:  
+  Pode parecer óbvio, mas é importante frisar a importância das engines de busca no dia-a-dia de um profissional de TI. Caso não encontre o que procura dentro da DIO, pesquise sobre o assunto (conceito, dúvida, erro etc) na Internet (dê um Google), pois na maioria das vezes você será levado à páginas incríveis como o StackOverflow que salvarão o seu dia 😎
+
+# Certificado: Trabalhando com Serviços Azure OpenAl
+
+Link: https://hermes.dio.me/certificates/TDU2Y2DR.pdf
+
 
