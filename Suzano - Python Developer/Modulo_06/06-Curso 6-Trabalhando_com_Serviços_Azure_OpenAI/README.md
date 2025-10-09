@@ -72,6 +72,30 @@ A escolha entre os modelos depende de fatores como custo, velocidade e complexid
     <img src="images/image-5.png" alt="" width="640">
 </p>
 
+#### Azure OpenAI: Solução Inteligente e Segura para IA Generativa
+
+##### Visão Geral do Serviço
+
+O Azure OpenAI é uma solução de nuvem da Microsoft que permite a implantação e personalização de modelos de linguagem de grande escala. Integrado à infraestrutura do Azure, o serviço oferece acesso aos modelos mais avançados da OpenAI com escalabilidade, segurança e flexibilidade para diferentes cenários empresariais.
+
+##### Inteligência Artificial com Responsabilidade
+
+O serviço incorpora ferramentas integradas para detectar e mitigar casos de uso prejudiciais, garantindo que a inteligência artificial seja implementada com responsabilidade. Essa abordagem é essencial para proteger usuários e organizações contra riscos éticos e operacionais, promovendo o uso seguro da tecnologia.
+
+##### Segurança Corporativa
+
+A segurança é reforçada por mecanismos como o RBAC (Role-Based Access Control), que define permissões de acesso com base em funções. Além disso, o uso de redes privadas contribui para a proteção dos dados e a integridade das operações, criando um ambiente confiável para o desenvolvimento de soluções com IA.
+
+##### Métodos de Desenvolvimento
+
+Os usuários podem interagir com os modelos por meio de diferentes interfaces, como o Estúdio de IA do Azure, APIs REST e SDKs com suporte via CLI. Essa diversidade de ferramentas permite que desenvolvedores escolham o método mais adequado ao seu fluxo de trabalho, seja via portal gráfico ou por código.
+
+<p align="center">
+    <img src="images/image-6.png" alt="" width="640">
+</p>
+
+
+
 ## 🟩 Vídeo 02 - 
 
 
