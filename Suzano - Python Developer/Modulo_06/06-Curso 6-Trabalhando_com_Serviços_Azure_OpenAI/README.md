@@ -210,11 +210,7 @@ A sofisticação desses modelos é tamanha que já se observa a criação de per
 
 ## 🟩 Vídeo 04 - Revisão e Encerramento do Módulo
 
-</p>
-<p align="center">
-    <img src="images/image-20.png" alt="" width="640">
-</p>
-
+Encerramento.
 
 # Material de Apoio e Links Úteis
 
