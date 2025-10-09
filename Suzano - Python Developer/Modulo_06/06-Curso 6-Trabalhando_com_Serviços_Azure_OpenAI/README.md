@@ -139,7 +139,9 @@ O Azure OpenAI dá suporte a diversos modelos de linguagem (LLMs), cada um com c
     <img src="images/image-10.png" alt="" width="640">
 </p>
 
-
+<p align="center">
+    <img src="images/image-11.png" alt="" width="640">
+</p>
 
 ## 🟩 Vídeo 03 - 
 
