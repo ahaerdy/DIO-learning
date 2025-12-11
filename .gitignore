@@ -1,0 +1,6 @@
+# Ignorar todos os arquivos .webm
+*.webm
+
+# (Opcional) Ignorar webm em subpastas específicas
+# pasta/arquivos/*.webm
+
