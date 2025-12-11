@@ -56,6 +56,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 ### 📌 Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos  
 Atividades iniciais configurando ambiente, IDEs, versionamento e primeiros códigos em Python.
 
+- [ ] Curso: [Introdução a Engenharia de Dados com Python]()
+
 ### 📌 Módulo 2: Sintaxe Básica com Python  
 Conceitos fundamentais da linguagem Python e estruturação de scripts.
 
