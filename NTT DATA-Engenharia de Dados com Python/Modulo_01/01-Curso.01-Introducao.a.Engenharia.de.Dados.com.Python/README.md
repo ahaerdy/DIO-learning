@@ -11,4 +11,4 @@ Além do conteúdo programático, o vídeo explica recursos da plataforma como m
 
 # Certificado: Introdução ao Python com Suzano
 
-Link do certificado: https://hermes.dio.me/certificates/T2JYMJOX.pdf
+Link do certificado: https://hermes.dio.me/certificates/WSVITF8R.pdf
