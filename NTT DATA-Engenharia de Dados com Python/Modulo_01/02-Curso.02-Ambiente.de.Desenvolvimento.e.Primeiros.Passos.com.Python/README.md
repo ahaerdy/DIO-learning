@@ -1,5 +1,5 @@
-- Instrutor:  Elidiana Andrade (DIO - Tech Education Analyst)
-- Contato Linkedin: / [elidiana](https://www.linkedin.com/in/elidiana/)
+- Instrutor:  Guilherme Arthur de Carvalho (DIO - Python Consultant, Systems Analyst)
+- Contato Linkedin: / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/)
 
 ## 🟩 Vídeo 01 - Introdução ao Python
 
