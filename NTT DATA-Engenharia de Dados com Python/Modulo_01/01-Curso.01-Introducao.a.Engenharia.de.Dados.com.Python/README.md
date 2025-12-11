@@ -13,7 +13,5 @@ Além do conteúdo programático, o vídeo explica recursos da plataforma como m
 
 # Certificado: Introdução ao Python com Suzano
 
-Link do certificado: https://hermes.dio.me/certificates/WSVITF8R.pdf
-
-[Certificado pdf](000-Midia_e_Anexos/Introducao.a.Engenharia.de.Dados.com.Python.pdf)
-...
+- Link do certificado: https://hermes.dio.me/certificates/WSVITF8R.pdf
+- Certificado em pdf: [Introducão à Engenharia de Dados com Python](000-Midia_e_Anexos/Introducao.a.Engenharia.de.Dados.com.Python.pdf)
