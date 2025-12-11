@@ -17,8 +17,7 @@ O conteúdo abrange desde fundamentos de Python até **tratamento de dados e con
 
 ## 👨‍💻 Sobre Mim
 
-Sou **Arthur Haerdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Linux com experiência em automação, desenvolvimento e análise de dados.  
-Este repositório complementa meu currículo técnico e destaca minha jornada de aprendizado em dados e análise avançada.
+Sou **Arthur Haerdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Linux com experiência em automação, desenvolvimento e análise de dados. Este repositório complementa meu currículo técnico e destaca minha jornada de aprendizado em dados e análise avançada.
 
 ---
 
