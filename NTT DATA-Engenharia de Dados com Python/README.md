@@ -1,7 +1,7 @@
 # 📊 Repositório de Estudos – Bootcamp NTT DATA **Engenharia de Dados com Python**
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-concluído-green" />
+  <img src="https://img.shields.io/badge/status-em andamento-orange" />
   <img src="https://img.shields.io/badge/Bootcamp-NTT%20DATA%20Engenharia%20de%20Dados-blue" />
   <img src="https://img.shields.io/badge/Python%203.10+-blue?logo=python" />
   <img src="https://img.shields.io/github/license/ahaerdy/DIO-learning" />
