@@ -55,7 +55,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### 📌 Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos  
 
-- [ ] Curso: [Introdução a Engenharia de Dados com Python]()
+- [ ] Curso: [Introdução a Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/01-Curso.01-Introducao.a.Engenharia.de.Dados.com.Python#-v%C3%ADdeo-01---introdu%C3%A7%C3%A3o-a-engenharia-de-dados-com-python)
 
 ### 📌 Módulo 2: Sintaxe Básica com Python  
 
