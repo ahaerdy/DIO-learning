@@ -14,3 +14,5 @@ Além do conteúdo programático, o vídeo explica recursos da plataforma como m
 # Certificado: Introdução ao Python com Suzano
 
 Link do certificado: https://hermes.dio.me/certificates/WSVITF8R.pdf
+Arquivo em pdf: [[01-Projetos/03-Github/DIO-learning/NTT DATA-Engenharia de Dados com Python/Modulo_01/01-Curso.01-Introducao.a.Engenharia.de.Dados.com.Python/000-Midia_e_Anexos/Introducao.a.Engenharia.de.Dados.com.Python.pdf|Introducao.a.Engenharia.de.Dados.com.Python.pdf]]
+...
