@@ -54,33 +54,32 @@ Durante o Bootcamp, pratiquei e desenvolvi habilidades em:
 O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### 📌 Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos  
-Atividades iniciais configurando ambiente, IDEs, versionamento e primeiros códigos em Python.
 
 - [ ] Curso: [Introdução a Engenharia de Dados com Python]()
 
 ### 📌 Módulo 2: Sintaxe Básica com Python  
-Conceitos fundamentais da linguagem Python e estruturação de scripts.
+
 
 ### 📌 Módulo 3: Trabalhando com Coleções em Python  
-Listas, tuplas, dicionários e manipulação de coleções de dados.
+
 
 ### 📌 Módulo 4: Programação Orientada a Objetos com Python  
-Classes, objetos e estrutura de código orientado a objetos.
+
 
 ### 📌 Módulo 5: Fundamentos de Power BI  
-Introdução ao Power BI e criação de relatórios básicos.
+
 
 ### 📌 Módulo 6: Visualização de Dados e Relatórios com Power BI  
-Técnicas de visualização, filtros, gráficos e dashboards.
+
 
 ### 📌 Módulo 7: Processamento de Dados com Power BI  
-Transformação de dados com Power BI e modelagem básica.
+
 
 ### 📌 Módulo 8: Modelagem de Dados com Power BI  
-Estruturas de dados avançadas, relações e otimização de modelos.
+
 
 ### 📌 Módulo 9: Data Analytics & Storytelling com Power BI  
-Análise de dados e criação de narrativas com dashboards.
+
 
 ---
 
