@@ -15,5 +15,5 @@ Além do conteúdo programático, o vídeo explica recursos da plataforma como m
 
 Link do certificado: https://hermes.dio.me/certificates/WSVITF8R.pdf
 
-Arquivo em pdf: [[000-Midia_e_Anexos/Introducao.a.Engenharia.de.Dados.com.Python.pdf|Introducao.a.Engenharia.de.Dados.com.Python.pdf]]
+Arquivo em pdf: [[000-Midia_e_Anexos/Introducao.a.Engenharia.de.Dados.com.Python.pdf]]
 ...
