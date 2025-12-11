@@ -121,7 +121,6 @@ Alguns materiais que foram úteis durante o bootcamp:
 
 Participei de mentorias, eventos e atividades colaborativas com a comunidade da DIO e profissionais da NTT DATA.
 
-*(Caso deseje, adicione aqui nomes, links e agradecimentos.)*
 
 ---
 
