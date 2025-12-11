@@ -97,22 +97,11 @@ Cada projeto está em sua respectiva pasta, normalmente acompanhado de um README
 
 ---
 
-## 🎓 Certificados Obtidos
+## 🏆 Certificados Obtidos
 
-| Módulo                                      | Certificado |
-|---------------------------------------------|-------------|
-| Introdução ao Ambiente Python               | 🏅          |
-| Sintaxe Básica com Python                   | 🏅          |
-| Trabalhando com Coleções em Python          | 🏅          |
-| Programação Orientada a Objetos com Python  | 🏅          |
-| Fundamentos de Power BI                     | 🏅          |
-| Visualização de Dados em Power BI           | 🏅          |
-| Processamento de Dados com Power BI         | 🏅          |
-| Modelagem de Dados com Power BI             | 🏅          |
-| Data Analytics & Storytelling com Power BI  | 🏅          |
-| 🎓 Certificado Final do Bootcamp            | 🏆          |
+### Módulo 1
 
-*(Adicione aqui os links ou imagens dos certificados quando desejar.)*
+- [Introdução a Engenharia de Dados com Python](https://hermes.dio.me/certificates/WSVITF8R.pdf)
 
 ---
 
