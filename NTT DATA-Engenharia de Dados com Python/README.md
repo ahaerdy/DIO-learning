@@ -11,7 +11,7 @@
 
 Este repositório reúne os **exercícios, projetos e anotações** desenvolvidos por mim durante o **Bootcamp NTT DATA – Engenharia de Dados com Python**, oferecido pela plataforma **DIO** em parceria com a **NTT DATA Brasil**.
 
-O conteúdo abrange desde fundamentos de Python até **tratamento de dados e construção de dashboards com Power BI**, com foco prático e projetos que fortalecem o portfólio profissional..
+O conteúdo abrange desde fundamentos de Python até **tratamento de dados e construção de dashboards com Power BI**, com foco prático e projetos que fortalecem o portfólio profissional.
 
 ---
 
