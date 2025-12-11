@@ -1,5 +1,5 @@
-- Instrutor: Venilton FalvoJr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO  
-- Contato Linkedin: / [falvojr](https://www.linkedin.com/in/falvojr/)
+- Instrutor:  Elidiana Andrade (DIO - Tech Education Analyst)
+- Contato Linkedin: / [elidiana](https://www.linkedin.com/in/elidiana/)
 
 ## 🟩 Vídeo 01 - Introdução a Engenharia de Dados com Python
 
