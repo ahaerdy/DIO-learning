@@ -23,6 +23,17 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 • Construir sistemas com qualidade.  <br> 
 • Netflix, Games e Futebol.  <br> 
 • @guicarvalho (Linkedin e Github)  <br> 
+<h3>Objetivo Geral</h3>
+Conhecer um pouco sobre a história da linguagem, explorando as ideias de seu criador.<br>
+Responder perguntas como: Onde eu devo usar Python?<br>
+<h3>Pré-requisitos</h3>
+• Gostar de história.<br>
+<h3>Percurso</h3>
+<h4>Etapa 1</h4>
+Oi, eu sou o Python!<br>
+<h4>Etapa 2</h4>
+Onde eu devo usar essa linguagem?<br>
+
 </details>
 
 
