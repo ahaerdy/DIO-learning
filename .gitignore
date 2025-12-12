@@ -1,5 +1,8 @@
 # Ignorar todos os arquivos .webm
 *.webm
+*.mkv
+*.mp4
+*.mp3
 
 # (Opcional) Ignorar webm em subpastas específicas
 # pasta/arquivos/*.webm
