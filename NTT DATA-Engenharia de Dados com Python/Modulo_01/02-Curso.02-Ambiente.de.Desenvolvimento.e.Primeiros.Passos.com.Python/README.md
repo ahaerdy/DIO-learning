@@ -14,10 +14,15 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 <details>
   <summary>Conteúdo dos slides 🔻</summary>
   <h3>Introdução ao Python</h3>
-  <p><strong>Guilherme Arthur de Carvalho</strong><br>
+<strong>Guilherme Arthur de Carvalho</strong><br>
   Analista de sistemas<br>
-  @decarvalhogui</p>
-  <br>
+  @decarvalhogui<br>
+  <h3>Sobre Mim</h3>
+• +9 desenvolvedor backend (Python e Java) <br> 
+• De paraquedas... total!  <br> 
+• Construir sistemas com qualidade.  <br> 
+• Netflix, Games e Futebol.  <br> 
+• @guicarvalho (Linkedin e Github)  <br> 
 </details>
 
 
