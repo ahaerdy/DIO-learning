@@ -3,6 +3,8 @@
 
 ## 🟩 Vídeo 01 - Introdução ao Python
 
+![[bootcamp-ntt-data_modulo_01-Curso_02-Video_02.webm.mkv|vid-60]]
+
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente-de-desenvolvimento-e-primeiros-passos-com-python/learning/1ecc1827-27d0-4395-8bd2-7738e44ae5b3?autoplay=1
 
 ## 🟩 Vídeo 02 - Configuração do ambiente de desenvolvimento
