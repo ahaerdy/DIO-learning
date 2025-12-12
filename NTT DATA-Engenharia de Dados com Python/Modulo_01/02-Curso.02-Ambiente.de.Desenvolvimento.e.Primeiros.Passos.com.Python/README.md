@@ -98,12 +98,6 @@ O vídeo apresenta um guia passo a passo para a configuração de um ambiente de
     <img src="000-Midia_e_Anexos/Pasted image 20251212141013.png" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/Pasted image 20251212141037.png" alt="" width="840">
-</p>
-<p align="center">
-    <img src="000-Midia_e_Anexos/Pasted image 20251212141101.png" alt="" width="840">
-</p>
-<p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251212141101.png" alt="" width="840">
 </p>
 <p align="center">
