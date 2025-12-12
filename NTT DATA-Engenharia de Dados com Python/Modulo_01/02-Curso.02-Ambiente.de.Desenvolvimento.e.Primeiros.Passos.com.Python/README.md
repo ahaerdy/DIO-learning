@@ -148,16 +148,24 @@ O vídeo introduz os fundamentos da programação em Python, focando na criaçã
 <p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251212150517.png" alt="" width="840">
 </p>
-
-## Familiarização com o VSCode, edição e execução do primeiro programa.
-
-> print ("Hello, world!")
-
 <p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251212150545.png" alt="" width="840">
 </p>
-
 </details>
+
+## Familiarização com o VSCode, edição e execução do primeiro programa.
+
+```python
+   print ("Olá, mundo!")
+```
+
+Saída:
+```bash
+   Olá, mundo!
+```
+
+
+
 
 # Parte 2: Materiais de apoio e Questionário
 
