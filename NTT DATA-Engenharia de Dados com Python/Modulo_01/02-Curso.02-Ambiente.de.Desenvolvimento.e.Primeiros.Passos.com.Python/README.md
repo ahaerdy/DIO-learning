@@ -18,7 +18,7 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 <details>
   <summary>Conteúdo dos slides 🔻</summary>
 <p align="center">
-    <img src="000-Midia_e_Anexos/Pasted image 20251212114651.png" alt="" width="840">
+    <img src="000-Midia_e_Anexos/Pastedimage20251212114651.png" alt="" width="840">
 </p>
   <h3>Introdução ao Python</h3>
 <strong>Guilherme Arthur de Carvalho</strong><br>
