@@ -113,8 +113,21 @@ O vídeo apresenta um guia passo a passo para a configuração de um ambiente de
 
 ## 🟩 Vídeo 03 - Primeiro programa
 
-Link do Vídeo: 
+![[bootcamp-ntt-data_modulo_01-Curso_02-Video_03.mkv|vid-60]]
 
+Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente-de-desenvolvimento-e-primeiros-passos-com-python/learning/8b91a0c8-e506-4190-bc84-a0b6b04cb151?autoplay=1
+
+O vídeo introduz os fundamentos da programação em Python, focando na criação do **primeiro programa** da linguagem. O instrutor **estabelece uma analogia** entre escrever um programa e seguir uma receita de bolo, onde ambos envolvem uma **sequência de instruções** para alcançar um resultado desejado. Para começar a programar, são **apresentados os pré-requisitos** (interpretador Python 3 e VS Code) e a **necessidade de um arquivo** com a extensão `.py`. A aula demonstra **como criar um arquivo** no VS Code e utiliza o **comando `print()`** para exibir uma mensagem simples de "Olá Mundo" na tela, cumprindo o objetivo de criar e executar o primeiro programa.
+
+<details>
+  <summary>Conteúdo dos slides 🔻</summary>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212145450.png" alt="" width="840">
+</p>
+
+
+
+</details>
 
 # Parte 2: Materiais de apoio e Questionário
 
