@@ -29,11 +29,10 @@ Responder perguntas como: Onde eu devo usar Python?<br>
 <h3>Pré-requisitos</h3>
 • Gostar de história.<br>
 <h3>Percurso</h3>
-    <h4>Etapa 1</h4>
-    Oi, eu sou o Python!<br>
-    <h4>Etapa 2</h4>
-    Onde eu devo usar essa linguagem?<br>
-
+- Etapa 1 - Oi, eu sou o Python!<br>
+- Etapa 2 - Onde eu devo usar essa linguagem?<br>
+<h3>A origem</h3>
+Python nasceu em 1989 como um hobby, do programador Guido Van Rossum. A ideia inicial era dar continuidade a linguagem ABC, que era desenvolvida no Centro de Pesquisa Holandês (CWI).
 </details>
 
 
