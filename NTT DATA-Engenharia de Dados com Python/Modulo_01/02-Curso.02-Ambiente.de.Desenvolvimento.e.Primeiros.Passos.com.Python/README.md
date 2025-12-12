@@ -124,8 +124,15 @@ O vídeo introduz os fundamentos da programação em Python, focando na criaçã
 <p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251212145450.png" alt="" width="840">
 </p>
-
-
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212150030.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212150109.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212150109.png" alt="" width="840">
+</p>
 
 </details>
 
