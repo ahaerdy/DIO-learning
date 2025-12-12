@@ -12,7 +12,7 @@ Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente
 O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Python**. Ele se apresenta com **9 anos de experiência em back-end** e compartilha sua jornada não planejada na computação, enfatizando a importância de **construir sistemas com qualidade**. A aula se propõe a **explorar a história do Python**, detalhando sua criação em **1989** por **Guido Van Rossum** como um hobby, e as **metas iniciais** de ser uma linguagem **fácil, intuitiva e de código aberto**. O instrutor também traça a **linha do tempo do Python**, discutindo marcos como o lançamento das versões **1.0, 2.0 e 3.0**, ressaltando a **quebra de retrocompatibilidade** na transição para a versão 3. Por fim, Carvalho destaca a **versatilidade do Python** em diversos campos e desaconselha seu uso para **desenvolvimento mobile**.
 
 <p align="center">
-    <img src="Midia_e_Anexos/Pasted image 20251212114651.png" alt="" width="840">
+    <img src="Midia_e_Anexos/Pastedimage20251212114651.png" alt="" width="840">
 </p>
 
 <details>
