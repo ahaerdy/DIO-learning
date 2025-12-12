@@ -79,9 +79,42 @@ O vídeo apresenta um guia passo a passo para a configuração de um ambiente de
 <p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251212140716.png" alt="" width="840">
 </p>
-
-
-
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212140811.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212140841.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212140907.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212140937.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212140937.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212141013.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212141037.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212141101.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212141101.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212141136.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212141202.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212141228.png" alt="" width="840">
+</p>
 </details>
 
 ## 🟩 Vídeo 03 - Primeiro programa
