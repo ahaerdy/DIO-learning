@@ -40,12 +40,31 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 <p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251212131741.png" alt="" width="840">
 </p>
-
-![[Pasted image 20251212131741.png]]
-
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212131829.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212131853.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212131918.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212131943.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212132007.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212132030.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212132054.png" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212132121.png" alt="" width="840">
+</p>
 </details>
-
-
 
 ## 🟩 Vídeo 02 - Configuração do ambiente de desenvolvimento
 
