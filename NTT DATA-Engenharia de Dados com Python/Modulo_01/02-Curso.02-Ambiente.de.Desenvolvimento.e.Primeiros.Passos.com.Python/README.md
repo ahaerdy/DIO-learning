@@ -1,6 +1,8 @@
 - Instrutor:  Guilherme Arthur de Carvalho (DIO - Python Consultant, Systems Analyst)
 - Contato Linkedin: / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/)
 
+# Parte 1: Definindo o ambiente e primeiros passos com Python
+
 ## 🟩 Vídeo 01 - Introdução ao Python
 
 ![[bootcamp-ntt-data_modulo_01-Curso_02-Video_02.webm.mkv|vid-60]]
@@ -17,9 +19,16 @@ Link do Vídeo:
 
 Link do Vídeo: 
 
+
+# Parte 2: Materiais de apoio e Questionário
+
 ## Material de Apoio
 
+São disponibilizados 3 arquivos em formato Powerpoint:
 
+- 01-Dio_Introducao_ao_Python.pptx
+- 02-Dio_Configuracao_do_ambiente_de_desenvolvimento.pptx
+- 03-Dio_Primeiro_programa.pptx
 
 # Certificado:
 
