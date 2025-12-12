@@ -33,6 +33,14 @@ Responder perguntas como: Onde eu devo usar Python?<br>
 - Etapa 2 - Onde eu devo usar essa linguagem?<br>
 <h3>A origem</h3>
 Python nasceu em 1989 como um hobby, do programador Guido Van Rossum. A ideia inicial era dar continuidade a linguagem ABC, que era desenvolvida no Centro de Pesquisa Holandês (CWI).
+<h3>Os objetivos</h3>
+-Python foi influenciada por ABC, que era uma linguagem pensada para iniciantes, devido a sua facilidade de aprendizagem e utilização.<br>
+-Os objetivos de Van Rossum para a linguagem Python eram:<br>
+	- Uma linguagem fácil e intuitiva.<br>
+	- Código aberto, para que todos possam contribuir.<br>
+	- Código tão inteligível quanto Inglês.<br>
+	- Adequada para tarefas diárias, e produtiva!<br>
+
 </details>
 
 
