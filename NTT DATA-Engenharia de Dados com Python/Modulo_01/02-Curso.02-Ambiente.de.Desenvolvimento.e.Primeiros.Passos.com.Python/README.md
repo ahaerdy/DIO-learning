@@ -19,6 +19,9 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 <p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251212115930.png" alt="" width="840">
 </p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212120021.png" alt="" width="840">
+</p>
 
 </details>
 
