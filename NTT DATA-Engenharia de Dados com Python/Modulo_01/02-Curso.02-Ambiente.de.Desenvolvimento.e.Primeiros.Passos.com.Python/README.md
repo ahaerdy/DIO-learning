@@ -5,7 +5,7 @@
 
 ## 🟩 Vídeo 01 - Introdução ao Python
 
-![[bootcamp-ntt-data_modulo_01-Curso_02-Video_02.webm.mkv|vid-60]]
+![[bootcamp-ntt-data_modulo_01-Curso_02-Video_01.mkv|vid-60]]
 
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente-de-desenvolvimento-e-primeiros-passos-com-python/learning/1ecc1827-27d0-4395-8bd2-7738e44ae5b3?autoplay=1
 
@@ -68,7 +68,13 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 
 ## 🟩 Vídeo 02 - Configuração do ambiente de desenvolvimento
 
-Link do Vídeo: 
+![[bootcamp-ntt-data_modulo_01-Curso_02-Video_02.mkv|vid-60]]
+
+Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente-de-desenvolvimento-e-primeiros-passos-com-python/learning/033f4df5-0f29-441d-9a9e-1becdd451832?autoplay=1
+
+O vídeo apresenta um guia passo a passo para a configuração de um ambiente de desenvolvimento Python. O objetivo principal é orientar o usuário na instalação do Python 3 em diferentes sistemas operacionais, como Linux, macOS e Windows, e na subsequente configuração de uma IDE ou editor de código. O conteúdo enfatiza o uso do VS Code como editor recomendado, destacando sua gratuidade, suporte a múltiplas tecnologias e modularidade através de plugins. Finalmente, o tutorial detalha a instalação das extensões essenciais do Python no VS Code para iniciar a programação.
+
+
 
 ## 🟩 Vídeo 03 - Primeiro programa
 
