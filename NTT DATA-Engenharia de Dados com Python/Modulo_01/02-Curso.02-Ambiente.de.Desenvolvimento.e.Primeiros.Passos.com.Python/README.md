@@ -16,33 +16,9 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 <p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251212115754.png" alt="" width="840">
 </p>
-  <h3>Introdução ao Python</h3>
-<strong>Guilherme Arthur de Carvalho</strong><br>
-  Analista de sistemas<br>
-  @decarvalhogui<br>
-  <h3>Sobre Mim</h3>
-• +9 desenvolvedor backend (Python e Java) <br> 
-• De paraquedas... total!  <br> 
-• Construir sistemas com qualidade.  <br> 
-• Netflix, Games e Futebol.  <br> 
-• @guicarvalho (Linkedin e Github)  <br> 
-<h3>Objetivo Geral</h3>
-Conhecer um pouco sobre a história da linguagem, explorando as ideias de seu criador.<br>
-Responder perguntas como: Onde eu devo usar Python?<br>
-<h3>Pré-requisitos</h3>
-• Gostar de história.<br>
-<h3>Percurso</h3>
-- Etapa 1 - Oi, eu sou o Python!<br>
-- Etapa 2 - Onde eu devo usar essa linguagem?<br>
-<h3>A origem</h3>
-Python nasceu em 1989 como um hobby, do programador Guido Van Rossum. A ideia inicial era dar continuidade a linguagem ABC, que era desenvolvida no Centro de Pesquisa Holandês (CWI).
-<h3>Os objetivos</h3>
--Python foi influenciada por ABC, que era uma linguagem pensada para iniciantes, devido a sua facilidade de aprendizagem e utilização.<br>
--Os objetivos de Van Rossum para a linguagem Python eram:<br>
-	- Uma linguagem fácil e intuitiva.<br>
-	- Código aberto, para que todos possam contribuir.<br>
-	- Código tão inteligível quanto Inglês.<br>
-	- Adequada para tarefas diárias, e produtiva!<br>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212115930.png" alt="" width="840">
+</p>
 
 </details>
 
