@@ -29,10 +29,10 @@ Responder perguntas como: Onde eu devo usar Python?<br>
 <h3>Pré-requisitos</h3>
 • Gostar de história.<br>
 <h3>Percurso</h3>
-<h4>Etapa 1</h4>
-Oi, eu sou o Python!<br>
-<h4>Etapa 2</h4>
-Onde eu devo usar essa linguagem?<br>
+    <h4>Etapa 1</h4>
+    Oi, eu sou o Python!<br>
+    <h4>Etapa 2</h4>
+    Onde eu devo usar essa linguagem?<br>
 
 </details>
 
