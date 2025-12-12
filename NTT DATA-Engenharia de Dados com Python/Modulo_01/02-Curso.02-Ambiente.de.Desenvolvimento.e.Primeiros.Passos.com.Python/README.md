@@ -13,11 +13,13 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 
 <details>
 <summary> Conteúdo dos slides 🔻</summary>
+
 ### Introdução ao Python
 
 **Guilherme Arthur de Carvalho**  
 Analista de sistemas  
 @decarvalhogui
+
 </details>
 
 
