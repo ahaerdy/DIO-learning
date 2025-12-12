@@ -74,7 +74,15 @@ Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente
 
 O vídeo apresenta um guia passo a passo para a configuração de um ambiente de desenvolvimento Python. O objetivo principal é orientar o usuário na instalação do Python 3 em diferentes sistemas operacionais, como Linux, macOS e Windows, e na subsequente configuração de uma IDE ou editor de código. O conteúdo enfatiza o uso do VS Code como editor recomendado, destacando sua gratuidade, suporte a múltiplas tecnologias e modularidade através de plugins. Finalmente, o tutorial detalha a instalação das extensões essenciais do Python no VS Code para iniciar a programação.
 
+<details>
+  <summary>Conteúdo dos slides 🔻</summary>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251212140716.png" alt="" width="840">
+</p>
 
+
+
+</details>
 
 ## 🟩 Vídeo 03 - Primeiro programa
 
