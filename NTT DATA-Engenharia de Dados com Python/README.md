@@ -53,33 +53,33 @@ Durante o Bootcamp, pratiquei e desenvolvi habilidades em:
 
 O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
-### 📌 Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos  
+### Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos  
 
 - [x] Curso: [Introdução a Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/01-Curso.01-Introducao.a.Engenharia.de.Dados.com.Python#-v%C3%ADdeo-01---introdu%C3%A7%C3%A3o-a-engenharia-de-dados-com-python)
 - [x] Curso: [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/02-Curso.02-Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python)
 - [x] Curso: [Conhecendo a Linguagem de Programação Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/03-Curso.03-Conhecendo.a.Linguagem.de.Programacao.Python)
-### 📌 Módulo 2: Sintaxe Básica com Python  
+### Módulo 2: Sintaxe Básica com Python  
 
 
-### 📌 Módulo 3: Trabalhando com Coleções em Python  
+### Módulo 3: Trabalhando com Coleções em Python  
 
 
-### 📌 Módulo 4: Programação Orientada a Objetos com Python  
+### Módulo 4: Programação Orientada a Objetos com Python  
 
 
-### 📌 Módulo 5: Fundamentos de Power BI  
+### Módulo 5: Fundamentos de Power BI  
 
 
-### 📌 Módulo 6: Visualização de Dados e Relatórios com Power BI  
+### Módulo 6: Visualização de Dados e Relatórios com Power BI  
 
 
-### 📌 Módulo 7: Processamento de Dados com Power BI  
+### Módulo 7: Processamento de Dados com Power BI  
 
 
-### 📌 Módulo 8: Modelagem de Dados com Power BI  
+### Módulo 8: Modelagem de Dados com Power BI  
 
 
-### 📌 Módulo 9: Data Analytics & Storytelling com Power BI  
+### Módulo 9: Data Analytics & Storytelling com Power BI  
 
 
 ---
