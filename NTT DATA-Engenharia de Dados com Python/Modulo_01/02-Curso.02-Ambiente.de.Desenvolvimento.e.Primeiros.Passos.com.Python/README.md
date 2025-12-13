@@ -111,6 +111,14 @@ O vídeo apresenta um guia passo a passo para a configuração de um ambiente de
 </p>
 </details>
 
+### Anotações
+
+O autor ensina a baixar e configurar o interpretador Python no Linux e no Windows através do link http://www.python.org e seguindo os passos em https://python.org.br/instalacao-windows/.
+
+As IDEs sugeridas são VSCode (utilizada no curso) ou PyCharm.
+
+Convite para a Comunidade DIO no Discord (https://discord.com/invite/gFKWUdTkaj).
+
 ## 🟩 Vídeo 03 - Primeiro programa
 
 ![[bootcamp-ntt-data_modulo_01-Curso_02-Video_03.mkv|vid-60]]
@@ -153,8 +161,11 @@ O vídeo introduz os fundamentos da programação em Python, focando na criaçã
 </p>
 </details>
 
-## Familiarização com o VSCode, edição e execução do primeiro programa.
+## Anotações
 
+Familiarização com o VSCode, edição e execução do primeiro programa.
+
+Código:
 ```python
    print ("Olá, mundo!")
 ```
@@ -173,7 +184,7 @@ Saída:
 
 São disponibilizados 3 arquivos em formato Powerpoint:
 
-- [[01-Dio.Introducao.ao.Python.pptx]]
+- [01-Dio.Introducao.ao.Python.pptx](000-Midia_e_Anexos/01-Dio.Introducao.ao.Python.pptx)
 - [[02-Dio.Configuracao.do.ambiente.de.desenvolvimento.pptx]]
 - [[03-Dio.Primeiro.programa.pptx]]
 
