@@ -14,58 +14,58 @@ O vídeo fornece uma aula detalhada sobre os **tipos de dados** essenciais da li
 <details>
   <summary>Conteúdo dos slides 🔻</summary>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-01.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-01.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-02.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-02.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-03.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-03.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-04.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-04.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-05.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-05.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-06.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-06.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-07.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-07.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-08.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-08.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-09.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-09.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-10.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-10.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-12.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-12.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-13.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-13.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-14.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-14.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-15.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-15.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-16.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-16.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-17.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-17.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-18.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-18.jpg" alt="" width="840">
 </p>
 </details>
 
@@ -81,55 +81,49 @@ O material instrucional concentra-se em apresentar o **modo interativo do interp
 <details>
   <summary>Conteúdo dos slides 🔻</summary>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-01.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-01.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-02.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-02.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-03.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-03.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-04.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-04.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-05.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-05.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-06.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-06.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-07.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-07.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-08.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-08.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-09.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-09.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-10.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-10.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-11.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-12.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-13.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-12.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-14.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-13.jpg" alt="" width="840">
-</p>
-<p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-14.jpg" alt="" width="840">
-</p>
-<p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-15.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-slide-15.jpg" alt="" width="840">
 </p>
 </details>
 
@@ -163,7 +157,7 @@ O material é uma aula em áudio que se concentra nas **funções de entrada e s
 
 São disponibilizados 3 arquivos em formato Powerpoint:
 
-- [[04-Dio.Tipos.de.dados.pptx]]
+- [[05-Dio.Modo.interativo.pptx]]
 - [[05-Dio.Modo.interativo.pptx]]
 - [[06-Dio.Variaveis.e.constantes.pptx]]
 - [[07-Dio.Conversao.de.tipos.pptx]]
