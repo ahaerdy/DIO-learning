@@ -14,58 +14,58 @@ O vídeo fornece uma aula detalhada sobre os **tipos de dados** essenciais da li
 <details>
   <summary>Conteúdo dos slides 🔻</summary>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-01.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-01.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-02.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-02.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-03.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-03.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-04.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-04.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-05.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-05.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-06.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-06.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-07.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-07.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-08.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-08.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-09.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-09.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-10.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-10.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-11.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-12.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-12.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-13.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-13.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-14.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-14.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-15.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-15.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-16.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-16.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-17.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-17.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-18.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-18.jpg" alt="" width="840">
 </p>
 </details>
 
@@ -77,6 +77,61 @@ O vídeo fornece uma aula detalhada sobre os **tipos de dados** essenciais da li
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/0c44b229-a31e-4b20-874c-57adaed64fb1?autoplay=1
 
 O material instrucional concentra-se em apresentar o **modo interativo do interpretador Python**, um recurso que permite aos desenvolvedores escrever código e visualizar o resultado instantaneamente, simplificando testes e depuração rápida. É explicado que esse modo pode ser iniciado de duas maneiras: chamando apenas o interpretador (`python`) ou executando um script com a *flag* `-i`. Além disso, a aula detalha duas funções nativas essenciais para a inspeção de objetos: a função **`dir()`**, que retorna nomes no escopo local ou a lista de atributos válidos de um objeto, e a função **`help()`**, que acessa o sistema de ajuda integrado para fornecer documentação detalhada sobre módulos, funções, classes e métodos, servindo como uma ferramenta de referência *offline* complementar.
+
+<details>
+  <summary>Conteúdo dos slides 🔻</summary>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-01.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-02.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-03.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-04.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-05.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-06.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-07.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-08.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-09.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-10.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-12.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-13.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-14.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/05-Dio.Modo.interativo-15.jpg" alt="" width="840">
+</p>
+</details>
 
 ## 🟩 Vídeo 03 - Variáveis e constantes
 
