@@ -5,7 +5,7 @@
 
 ## 🟩 Vídeo 01 - Tipos de Dados
 
-![[bootcamp-ntt-data_modulo_01-Curso_03-Video_01.mkv.webm|vid-60]]
+![[bootcamp-ntt-data_modulo_01-Curso_03-Video_01.webm|vid-60]]
 
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/81ce773a-b004-43b8-bdc1-1f150df40f96?autoplay=1
 
@@ -19,6 +19,8 @@ Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecen
 </details>
 
 ## 🟩 Vídeo 02 - Modo interativo
+
+![[bootcamp-ntt-data_modulo_01-Curso_03-Video_02.webm|vid-60]]
 
 ## 🟩 Vídeo 03 - Variáveis e constantes
 
