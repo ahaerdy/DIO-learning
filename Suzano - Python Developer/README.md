@@ -4,13 +4,10 @@
   <img src="https://img.shields.io/badge/status-finalizado-green" />
   <img src="https://img.shields.io/badge/Bootcamp-Suzano%20Python%20Developer-blue" />
   <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
-  <img src="https://img.shields.io/badge/SQL-Intermedi%C3%A1rio-blue?logo=postgresql" />
-  <img src="https://img.shields.io/badge/Power%20BI-Data%20Visualization-yellow?logo=powerbi" />
   <img src="https://img.shields.io/github/license/ahaerdy/DIO-learning" />
   <img src="https://img.shields.io/github/repo-size/ahaerdy/DIO-learning" />
   <img src="https://img.shields.io/github/last-commit/ahaerdy/DIO-learning" />
 </p>
-
 
 
 Este repositório reúne os exercícios, anotações e projetos desenvolvidos por mim ao longo do Bootcamp Suzano Python Developer, oferecido pela plataforma DIO em parceria com a Suzano.

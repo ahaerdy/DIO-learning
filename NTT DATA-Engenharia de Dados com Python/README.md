@@ -1,13 +1,16 @@
 # 📊 Repositório de Estudos – Bootcamp NTT DATA **Engenharia de Dados com Python**
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-em andamento-orange" />
+  <img src="https://img.shields.io/badge/status-em%20andamento-orange" />
   <img src="https://img.shields.io/badge/Bootcamp-NTT%20DATA%20Engenharia%20de%20Dados-blue" />
-  <img src="https://img.shields.io/badge/Python%203.10+-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
+  <img src="https://img.shields.io/badge/SQL-Data%20Querying-blue?logo=postgresql" />
+  <img src="https://img.shields.io/badge/Power%20BI-Business%20Intelligence-yellow?logo=powerbi" />
   <img src="https://img.shields.io/github/license/ahaerdy/DIO-learning" />
   <img src="https://img.shields.io/github/repo-size/ahaerdy/DIO-learning" />
   <img src="https://img.shields.io/github/last-commit/ahaerdy/DIO-learning" />
 </p>
+
 
 Este repositório reúne os **exercícios, projetos e anotações** desenvolvidos por mim durante o **Bootcamp NTT DATA – Engenharia de Dados com Python**, oferecido pela plataforma **DIO** em parceria com a **NTT DATA Brasil**.
 
