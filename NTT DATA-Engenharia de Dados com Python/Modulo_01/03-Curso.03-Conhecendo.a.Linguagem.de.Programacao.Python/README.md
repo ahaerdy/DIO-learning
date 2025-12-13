@@ -14,58 +14,61 @@ O vídeo fornece uma aula detalhada sobre os **tipos de dados** essenciais da li
 <details>
   <summary>Conteúdo dos slides 🔻</summary>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-01.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-01.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-02.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-02.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-03.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-03.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-04.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-04.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-05.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-05.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-06.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-06.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-07.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-07.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-08.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-08.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-09.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-09.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-10.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-10.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-11.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-11.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-12.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-12.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-13.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-13.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-14.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-14.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-15.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-15.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-16.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-16.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-17.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-17.jpg" alt="" width="840">
 </p>
 <p align="center">
-    <img src="000-Midia_e_Anexos/05-Dio.Modo.interativo/05-Dio.Modo.interativo-18.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-18.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-19.jpg" alt="" width="840">
 </p>
 </details>
 
@@ -135,6 +138,67 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecen
 
 O instrutor explica que **variáveis armazenam valores que podem mudar** durante a execução do programa, ilustrando com o exemplo de um saldo bancário que diminui após um saque. Em contraste, **constantes são valores que nascem e permanecem inalterados**; contudo, o texto ressalta que Python não possui uma palavra-chave reservada para constantes, dependendo de uma **convenção de nomenclatura, utilizando letras maiúsculas e *snake case***, para indicar que um valor não deve ser modificado. Além disso, a aula enfatiza a importância das **boas práticas de programação**, como a **escolha de nomes sugestivos para as variáveis** e o uso consistente do *snake case*.
 
+<details>
+  <summary>Conteúdo dos slides 🔻</summary>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-01.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-02.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-03.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-04.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-05.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-06.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-07.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-08.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-09.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-10.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-11.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-12.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-13.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-14.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-15.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-16.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-17.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-18.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes/06-Dio.Variaveis.e.constantes-slide-19.jpg" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 04 - Conversão de tipos
 
 ![[bootcamp-ntt-data_modulo_01-Curso_03-Video_04.webm|vid-60]]
@@ -143,6 +207,61 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecen
 
 O material consiste em uma **aula instrutiva** sobre conversão de tipos de variáveis em Python, com foco em como transformar dados entre **string**, **numérico** (inteiro e ponto flutuante), e **booleano**. O instrutor demonstra a necessidade dessas conversões, como quando se tenta realizar **operações matemáticas** com números armazenados como strings, e explica o uso dos **construtores de tipo** (`int()`, `float()`, `str()`) para realizar essas mudanças. Além disso, o conteúdo aborda o comportamento da **divisão** em Python, diferenciando o retorno de um float (com uma barra) de um inteiro (com duas barras, para divisão inteira), e alerta para o fato de que a conversão só é possível se a **string for um número válido**. A última parte da aula é dedicada a **exemplos práticos** no VS Code, confirmando os tipos convertidos.
 
+<details>
+  <summary>Conteúdo dos slides 🔻</summary>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-01.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-02.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-03.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-04.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-05.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-06.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-07.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-08.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-09.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-10.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-11.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-12.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-13.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-14.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-15.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-16.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-17.jpg" alt="" width="840">
+</p>
+</details>
+
 ## 🟩 Vídeo 05 - Funções de entrada e saída
 
 ![[bootcamp-ntt-data_modulo_01-Curso_03-Video_05.webm|vid-60]]
@@ -150,6 +269,55 @@ O material consiste em uma **aula instrutiva** sobre conversão de tipos de vari
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/ac9d2a60-2a1d-482f-bd22-38a8325d4998?autoplay=1
 
 O material é uma aula em áudio que se concentra nas **funções de entrada e saída (input e output)** em Python, com o objetivo de **receber e exibir informações para o usuário**. O instrutor detalha o uso da função **`input()`** para **ler dados do teclado** e a função **`print()`** para **exibir dados na tela**, explicando que ambas são **funções built-in** da linguagem. São fornecidos exemplos práticos e demonstrações no **VS Code**, explorando variações como a **atribuição de valores a variáveis** e a **modificação dos parâmetros** como separador (`sep`) e terminador (`end`) na função `print()`. A lição conclui destacando como essas funções permitem a **interação com o usuário** para criar **programas mais completos** e sugere a **consulta à documentação oficial** do Python para mais detalhes.
+
+<details>
+  <summary>Conteúdo dos slides 🔻</summary>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-01.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-02.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-03.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-04.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-05.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-06.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-07.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-08.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-09.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-10.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-11.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-12.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-13.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-14.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print/08-Dio.Funcoes.de.entrada.e.saida.input.print.-slide-15.jpg" alt="" width="840">
+</p>
+</details>
 
 # Parte 2: Materiais de apoio e Questionário
 
