@@ -323,9 +323,9 @@ O material é uma aula em áudio que se concentra nas **funções de entrada e s
 
 ## Material de Apoio
 
-São disponibilizados 5 arquivos em formato Powerpoint:
+São disponibilizados 4 arquivos em formato Powerpoint:
 
-- [[05-Dio.Modo.interativo.pptx]]
+- [[04-Dio.Tipos.de.dados.pptx]]
 - [[05-Dio.Modo.interativo.pptx]]
 - [[06-Dio.Variaveis.e.constantes.pptx]]
 - [[07-Dio.Conversao.de.tipos.pptx]]
