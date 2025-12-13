@@ -332,5 +332,5 @@ São disponibilizados 3 arquivos em formato Powerpoint:
 
 # Certificado: 
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/BRMRBL10.pdf
+- Certificado em pdf: [Conhecendo.a.Linguagem.de.Programacao.Python.pdf](000-Midia_e_Anexos/Certificado-Conhecendo.a.Linguagem.de.Programacao.Python.pdf)
