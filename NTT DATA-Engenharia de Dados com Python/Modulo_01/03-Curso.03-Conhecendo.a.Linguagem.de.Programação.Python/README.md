@@ -26,8 +26,13 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecen
 
 O material instrucional concentra-se em apresentar o **modo interativo do interpretador Python**, um recurso que permite aos desenvolvedores escrever código e visualizar o resultado instantaneamente, simplificando testes e depuração rápida. É explicado que esse modo pode ser iniciado de duas maneiras: chamando apenas o interpretador (`python`) ou executando um script com a *flag* `-i`. Além disso, a aula detalha duas funções nativas essenciais para a inspeção de objetos: a função **`dir()`**, que retorna nomes no escopo local ou a lista de atributos válidos de um objeto, e a função **`help()`**, que acessa o sistema de ajuda integrado para fornecer documentação detalhada sobre módulos, funções, classes e métodos, servindo como uma ferramenta de referência *offline* complementar.
 
-
 ## 🟩 Vídeo 03 - Variáveis e constantes
+
+![[bootcamp-ntt-data_modulo_01-Curso_03-Video_03.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/ed872b9c-1c41-4b22-a786-876ded7c2bc4?autoplay=1
+
+O instrutor explica que **variáveis armazenam valores que podem mudar** durante a execução do programa, ilustrando com o exemplo de um saldo bancário que diminui após um saque. Em contraste, **constantes são valores que nascem e permanecem inalterados**; contudo, o texto ressalta que Python não possui uma palavra-chave reservada para constantes, dependendo de uma **convenção de nomenclatura, utilizando letras maiúsculas e *snake case***, para indicar que um valor não deve ser modificado. Além disso, a aula enfatiza a importância das **boas práticas de programação**, como a **escolha de nomes sugestivos para as variáveis** e o uso consistente do *snake case*.
 
 ## 🟩 Vídeo 04 - Conversão de tipos
 
