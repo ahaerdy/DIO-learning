@@ -72,6 +72,20 @@ O vídeo fornece uma aula detalhada sobre os **tipos de dados** essenciais da li
 </p>
 </details>
 
+### Anotações 
+
+O instrutor apresenta os principais tipos de dados e porque devemos utilizá-los. Eles servem para definir as caracteristicas e comportamentos de um valor (objeto) para o interpretador. Os tipos built-in apresewntados foram:
+
+| Categoria  | Tipos                                |
+|------------|---------------------------------------|
+| Texto      | `str`                                 |
+| Numérico   | `int`, `float`, `complex`             |
+| Sequência  | `list`, `tuple`, `range`              |
+| Mapa       | `dict`                                |
+| Coleção    | `set`, `frozenset`                    |
+| Booleano   | `bool`                                |
+| Binário    | `bytes`, `bytearray`, `memoryview`    |
+
 
 ## 🟩 Vídeo 02 - Modo interativo
 
