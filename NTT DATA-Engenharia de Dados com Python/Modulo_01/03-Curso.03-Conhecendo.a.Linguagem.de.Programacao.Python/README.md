@@ -14,9 +14,61 @@ O vídeo fornece uma aula detalhada sobre os **tipos de dados** essenciais da li
 <details>
   <summary>Conteúdo dos slides 🔻</summary>
 <p align="center">
-    <img src="000-Midia_e_Anexos/Pasted image 20251212132121.png" alt="" width="840">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-01.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-02.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-03.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-04.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-05.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-06.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-07.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-08.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-09.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-10.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-11.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-12.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-13.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-14.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-15.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-16.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-17.jpg" alt="" width="840">
+</p>
+<p align="center">
+    <img src="000-Midia_e_Anexos/04-Dio.Tipos.de.dados/04-Dio.Tipos.de.dados-slide-18.jpg" alt="" width="840">
 </p>
 </details>
+
 
 ## 🟩 Vídeo 02 - Modo interativo
 
