@@ -20,7 +20,7 @@ Sou **Arthur Haerdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Li
 
 Este repositório complementa meu currículo técnico e reflete meu compromisso com a prática constante e a evolução profissional em tecnologias modernas de desenvolvimento web.
 
-## Cada diretório contém:
+## Conteúdo do Repositório
 
 - ✅ Exercícios resolvidos
 - ✍️ Anotações e comentários explicativos

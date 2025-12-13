@@ -81,22 +81,10 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 9: Data Analytics & Storytelling com Power BI  
 
+## 🔗 Contribuições Open Source
 
----
-
-## 🏆 Projetos e Desafios Práticos
-
-Durante o bootcamp, desenvolvi projetos aplicados, como:
-
-- Dashboards interativos com **Power BI**
-- Relatórios gerenciais com análises de dados
-- Limpeza e transformação de dados
-- Integração entre Python e dados reais
-- Projetos versionados utilizando Git/GitHub
-
-Cada projeto está em sua respectiva pasta, normalmente acompanhado de um README próprio.
-
----
+- Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
+    - Issue criada: #65498, Pull Request aceito: #65510, Perfil adicionado: ahaerdy.md
 
 ## 🏆 Certificados Obtidos
 
@@ -106,24 +94,23 @@ Cada projeto está em sua respectiva pasta, normalmente acompanhado de um README
 - [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://hermes.dio.me/certificates/CCAOJIT3.pdf)
 - [Conhecendo a Linguagem de Programação Python](https://hermes.dio.me/certificates/BRMRBL10.pdf)
 
----
+## 🔗 Contribuições Open Source
 
-## ⚙️ Ferramentas e Referências
+- Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
+    - Issue criada: #65498, Pull Request aceito: #65510, Perfil adicionado: ahaerdy.md
 
-Alguns materiais que foram úteis durante o bootcamp:
+## 💬 Mentorias e Networking
 
-- 🐍 [Python – Documentação Oficial](https://docs.python.org/pt-br/3/)
-- 📊 Power BI – Guias e documentação oficial
-- 💻 Git & GitHub – Versionamento e boas práticas
-- 📚 Cheatsheets de Python, SQL e Power BI
-- 🔗 Coleções públicas de APIs e datasets
-
----
-
-## 🤝 Contribuições e Networking
-
-Participei de mentorias, eventos e atividades colaborativas com a comunidade da DIO e profissionais da NTT DATA.
-
+- / [mariana-coda-45265914](https://www.linkedin.com/in/mariana-coda-45265914/) (Mariana Coda / Suzano - HR Manager, Talent Management)
+- / [roberto-andrade-mansur](https://www.linkedin.com/in/roberto-andrade-mansur/) (Roberto Andrade Mansur / Suzano - Executive Manager of Data, Engineering, Analytics, and AI)
+- / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
+- / [allineantunnes](https://www.linkedin.com/in/allineantunnes/) (Aline Antunnes / DIO - Tech Education Analist)
+- / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/) (Guilherme Arthur de Carvalho / DIO - Python Consultant, Systems Analyst)
+- / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst))
+- / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton FalvoJr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
+- / [karinakato](https://www.linkedin.com/in/karinakato/) (Karina Kato / Machine Learning Engineer)
+- / [renatoromao](https://www.linkedin.com/in/renatoromao) (Renato Romão de Souza / Microsoft MVP, MCT, Especialista em Copilot & IA)
+- / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/) (Valéria Baptista / Head of Cloud and Cybersecurity | Professora e Mentora em Tecnologia)
 
 ---
 
