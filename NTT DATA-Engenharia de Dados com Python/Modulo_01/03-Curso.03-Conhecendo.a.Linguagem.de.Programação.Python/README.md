@@ -10,7 +10,6 @@
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/81ce773a-b004-43b8-bdc1-1f150df40f96?autoplay=1
 
 
-
 <details>
   <summary>Conteúdo dos slides 🔻</summary>
 <p align="center">
