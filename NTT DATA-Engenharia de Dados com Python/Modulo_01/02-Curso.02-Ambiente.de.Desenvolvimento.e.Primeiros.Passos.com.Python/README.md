@@ -181,4 +181,4 @@ São disponibilizados 3 arquivos em formato Powerpoint:
 # Certificado: Ambiente de Desenvolvimento e Primeiros Passos com Python
 
 - Link na plataforma: https://hermes.dio.me/certificates/CCAOJIT3.pdf
-- Certificado em pdf: [[Certificado-Modulo_01-Curso_2-Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python.pdf]]
+- Certificado em pdf: [Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python.pdf](000-Midia_e_Anexos/Certificado-Modulo_01-Curso_2-Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python.pdf)
