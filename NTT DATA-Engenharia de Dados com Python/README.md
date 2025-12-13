@@ -103,6 +103,8 @@ Cada projeto está em sua respectiva pasta, normalmente acompanhado de um README
 ### Módulo 1
 
 - [Introdução a Engenharia de Dados com Python](https://hermes.dio.me/certificates/WSVITF8R.pdf)
+- [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://hermes.dio.me/certificates/CCAOJIT3.pdf)
+- [Conhecendo a Linguagem de Programação Python](https://hermes.dio.me/certificates/BRMRBL10.pdf)
 
 ---
 
