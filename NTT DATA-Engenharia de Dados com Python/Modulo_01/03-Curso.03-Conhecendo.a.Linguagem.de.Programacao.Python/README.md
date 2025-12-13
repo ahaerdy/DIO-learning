@@ -144,6 +144,18 @@ O material instrucional concentra-se em apresentar o **modo interativo do interp
 </p>
 </details>
 
+### Anotações
+
+
+1. O autor ensina como usar o modo interativo do interpretador Python.
+    - Existem duas formas de iniciar o modo interativo, chamando apenas o interpretador (python) ou executando o script com a flag -i (python -i app.py).
+2. Explica os comandos dir e help
+    - dir: sem argumentos, retorna a lista de nomes no escopo local atual. Com um argumento, retorna uma lista de atributos válidos para o objeto. 
+    - help: Invoca o sistema de ajuda integrado. É possível fazer buscas em modo interativo ou informar por parâmetro qual o nome do módulo, função, classe, método ou variável.
+
+- Links úteis: https://github.com/guicarvalho/trilha-python-dio
+- Referência: https://wiki.python.org.br/ModoInterativo
+
 ## 🟩 Vídeo 03 - Variáveis e constantes
 
 ![[bootcamp-ntt-data_modulo_01-Curso_03-Video_03.webm|vid-60]]
@@ -213,6 +225,29 @@ O instrutor explica que **variáveis armazenam valores que podem mudar** durante
 </p>
 </details>
 
+### Anotações
+
+1. __Variáveis__: em linguagens de programação podemos definir valores que podem sofrer alterações no decorrer da execução do programa. Esses valores recebem o nome de variáveis, pois eles nascem com um valor e não necessariamente devem permanecer com o mesmo durante a execução do programa.
+
+2. __Alterando__ os valores: não precisamos definir o tipo de dados da variável, o Python faz isso automaticamente para nós. Por isso não podemos simplesmente criar uma variável sem atribuir um valor. Para alterar o valor da variável basta fazer uma atribuição de um novo valor.
+
+3. __Constantes__: assim como as variáveis, constantes são utilizadas para armazenar valores. Uma constante nasce com um valor e permanece com ele até o final da execução do programa, ou seja, o valor é imutável.
+
+4. __Python não tem constantes__
+    - Não existe uma palavra reservada para informar ao interpretador que o valor é constante. Em algumas linguagens por exemplo: Java e C utilizamos final e const, respectivamente para declarar uma constante.
+    - Em Python usamos a convenção que diz ao programador  que a variável é uma constante. Para fazer isso, você deve criar a variável com o nome todo em letras maíusculas: 
+        - BS_PATH = '/home/guilherme/Documents/python_course/'
+        - DEBUG = True
+        - STATES = ['SP','RJ','MG']
+        - AMOUNT = 30.2
+
+5. __Boas práticas__
+    - O padrão de nomes deve ser snake case.
+    - Escolher nomes sugestivos.
+    - Nome de constantes todo em maiúsculo.
+
+Links úteis: https://github.com/guicarvalho/trilha-python-dio
+
 ## 🟩 Vídeo 04 - Conversão de tipos
 
 ![[bootcamp-ntt-data_modulo_01-Curso_03-Video_04.webm|vid-60]]
@@ -275,6 +310,76 @@ O material consiste em uma **aula instrutiva** sobre conversão de tipos de vari
     <img src="000-Midia_e_Anexos/07-Dio.Conversao.de.tipos/07-Dio.Conversao.de.tipos-slide-17.jpg" alt="" width="840">
 </p>
 </details>
+
+### Anotações
+
+Em alguns momentos será necessário converter o tipo de uma variável para manipular de forma diferente. Por exemplo: variáveis do tipo string, que armazenam números onde precisaremos fazer alguma operação matemática com esse valor.
+
+```
+preco = 10
+print(preco)
+>>> 10
+
+preco = float(preco)
+print(preco)
+>>> 10.0
+
+preco = 10 / 2
+print(preco)
+>>> 5.0
+
+preco = 10.30
+print(preco)
+>>> 10.3
+
+preco = int(preco)
+print(preco)
+>>> 10
+
+preco = 10
+print(preco)
+>>> 10
+
+print(preco / 2)
+>>> 5.0
+
+print(preco / 2)
+>>> 5
+
+preco = 10.50
+idade = 28
+
+print(str(preco))
+>>> 10.5
+
+print(str(idade))
+>>> 28
+
+texto = f"idade {idade} preco {preco}"
+print(texto)
+>>> idade 28 preco 10.5
+
+preco = "10.50"
+idade = "28"
+
+print(float(preco))
+>>> 10.50
+
+print(int(idade))
+>>> 28
+
+preco = "python"
+print(float(preco))
+
+>>>
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+	print(float(preco))
+ValueError: could not convert string to float: 'python'
+```
+
+Links úteis: https://github.com/guicarvalho/trilha-python-dio
+
 
 ## 🟩 Vídeo 05 - Funções de entrada e saída
 
