@@ -1,7 +1,7 @@
 # Repositório de Estudos - Bootcamp Suzano Python Developer
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" />
+  <img src="https://img.shields.io/badge/status-finalizado-green" />
   <img src="https://img.shields.io/badge/Bootcamp-Suzano%20Python%20Developer-blue" />
   <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
   <img src="https://img.shields.io/github/license/ahaerdy/DIO-learning" />
