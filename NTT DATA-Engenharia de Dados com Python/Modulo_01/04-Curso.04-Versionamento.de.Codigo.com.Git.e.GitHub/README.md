@@ -341,11 +341,11 @@ O material apresentado é um **guia prático e detalhado** sobre o uso de comand
 
 ## 🟩Vídeo 13 - Enviando e Baixando Alterações com o Repositório Remoto
 
-
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_13.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/dd17c56e-2327-493c-942a-358a49a26549?autoplay=1
 
-
+O vídeo concentra-se em fluxos de trabalho essenciais do Git, demonstrando como **sincronizar um repositório local com um remoto no GitHub**. A explicação começa com o processo de **envio de alterações locais (commits) para o repositório remoto**, utilizando comandos como `git status`, `git add` e `git commit`, e estabelecendo a conexão remota com `git remote add`. Posteriormente, o tutorial abrange as diferentes maneiras de **editar arquivos diretamente no repositório remoto do GitHub**, incluindo a edição via interface web e a utilização do editor web integrado (acessível pela tecla ponto). Finalmente, o instrutor demonstra como **baixar essas alterações remotas para o repositório local** usando o comando `git pull`, garantindo que ambos os ambientes permaneçam atualizados.
 
 ### Anotações
 
@@ -359,6 +359,14 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versiona
     ```
  
 ## 🟩Vídeo 14 - Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos
+
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_14.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/2c7fd2b1-e7c4-4947-9b07-ffcbfb4bd689?autoplay=1
+
+O vídeo apresenta um guia detalhado sobre como trabalhar com **branches** no Git, começando com a explicação de que uma branch é uma **ramificação independente** de um projeto que permite o teste de novos recursos sem afetar a **branch principal (main)**. O autor demonstra os comandos **git log**, **git checkout -b**, **git branch -v** e **git merge** para criar, rastrear, alternar entre, e mesclar branches, enfatizando a importância das branches para a **colaboração em equipe** e a manutenção de um ambiente de desenvolvimento estável. A segunda parte do material foca em como resolver **conflitos de merge**, uma situação comum que ocorre quando há **alterações concorrentes** na mesma linha de código em diferentes branches, mostrando como o Git sinaliza o conflito e como o usuário pode escolher quais alterações manter antes de **comitar** e **enviar (push)** as mudanças resolvidas.
+
+### Anotações
 
 - De maneira simplista, uma Branch (em tradução, “Ramo”), é uma ramificação do seu projeto.
 - É um ponteiro móvel para um commit no histórico do repositório;
@@ -393,9 +401,9 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versiona
 
 - Observe que a branch main continua apontando para o `commit-2`.
 
-### Operações realizadas no terminal:
+#### Operações realizadas no terminal:
 
-#### 1. Gerando-se um novo commit (commit-1):
+##### 1. Gerando-se um novo commit (commit-1):
 
 ```
 git log
@@ -408,7 +416,7 @@ git commit -m "commit-1"
     <img src="imagens/image-5.png" alt="Diagrama Git">
 </p>
 
-#### 2. Branch apontando para o `commit-1`:
+##### 2. Branch apontando para o `commit-1`:
 
 ```
 git log
@@ -417,7 +425,7 @@ git log
   <img src="imagens/image-6.png" alt="Diagrama Git">
 </p>
 
-#### 3. Criando mais um commit:
+##### 3. Criando mais um commit:
 
 ```
 echo "#commit-2-branch-main" > commit-2-branch-main.txt"
@@ -429,7 +437,7 @@ git commit -m "commit-2"
   <img src="imagens/image-7.png" alt="Diagrama Git">
 </p>
 
-#### 4. Verificação:
+##### 4. Verificação:
 
 ```
 git log
@@ -440,7 +448,7 @@ Veja que o ponteiro agora está apontando para o `commit-2`.
   <img src="imagens/image-8.png" alt="Diagrama Git">
 </p>
 
-#### 5. Criando a branch teste:
+##### 5. Criando a branch teste:
 
 ```
 git checkout -b teste
@@ -451,7 +459,7 @@ Este comando irá mover ponteiro de `main` para `teste`. Perceba que a branch `t
   <img src="imagens/image-9.png" alt="Diagrama Git">
 </p>
 
-#### 6. Fazendo um novo commit dentro da branch `teste`.
+##### 6. Fazendo um novo commit dentro da branch `teste`.
 
 Repetindo os passos para o `commit-3`. Perceba que a branch `teste` estará apontando para o `commit-3`, enquanto a branch `main` continuará apontando para o `commit-2`.
 
@@ -466,7 +474,7 @@ git log
   <img src="imagens/image-10.png" alt="Diagrama Git">
 </p>
 
-#### 7. Retornando para a branch `main`.
+##### 7. Retornando para a branch `main`.
 
 ```
 git checkout main
@@ -476,7 +484,7 @@ git checkout main
   <img src="imagens/image-11.png" alt="Diagrama Git">
 </p>
 
-#### 8. O comando `git branch -v` irá listar o último commit de cada branch.
+##### 8. O comando `git branch -v` irá listar o último commit de cada branch.
 
 ```
 git branch -v
@@ -486,7 +494,7 @@ git branch -v
   <img src="imagens/image-12.png" alt="Diagrama Git">
 </p>
 
-#### 9. Mesclando (MERGE) as alterações feitas na branch `teste` com a `main`.
+##### 9. Mesclando (MERGE) as alterações feitas na branch `teste` com a `main`.
 
 ```
 git merge teste
@@ -496,7 +504,7 @@ git merge teste
   <img src="imagens/image-13.png" alt="Diagrama Git">
 </p>
 
-#### 10. Excluindo a branch `teste`, pois não iremos mais utilizá-la.
+##### 10. Excluindo a branch `teste`, pois não iremos mais utilizá-la.
 
 ```
 git branch
@@ -509,7 +517,15 @@ git branch
 </p>
 
 ## 🟩Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
- 
+
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_15.webm|vid-60]]
+
+ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/80018fab-daac-4917-8527-a6be2e0c3cf0?autoplay=1
+
+O vídeo demonstra comandos avançados do Git para gerenciamento de código e repositórios. O conteúdo principal foca primeiramente na explicação do comando `git fetch`, contrastando-o com o `git pull` ao mostrar como **baixar alterações de um repositório remoto sem mesclá-las imediatamente** ao repositório local. Em seguida, o instrutor detalha como usar `git clone` com as opções `--branch` e `--single-branch` para **clonar seletivamente apenas uma ramificação específica** de um repositório. Por fim, o tutorial aborda o comando `git stash` como uma ferramenta essencial para **arquivar modificações temporariamente** sem realizar um commit, permitindo a mudança para outra branch antes de aplicar as alterações arquivadas novamente.
+
+### Anotações
+
 - Comandos ```git fetch```e ```git merge```.
 - O comando ```git fetch``` baixa o arquivo no repositório remoto para o local sem estar mesclando.
 - Usar o comando ```git diff```para verificaar as diferenças.
@@ -526,6 +542,10 @@ git branch
 </p>
 
 ## 🟩 Vídeo 16 - Dicas e Materiais de Apoio
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/b2ceffed-9d18-4369-a038-e72be0953455?autoplay=1
+
+
 
 ### 📚 Recursos Úteis
 #### 🔗 Repositório
