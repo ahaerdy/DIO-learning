@@ -162,7 +162,15 @@ O vídeo fornece um **tutorial prático** sobre como instalar a ferramenta Git e
         ```
     
 ## 🟩 Vídeo 07 - Configurando o Git
- 
+
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_07.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/f9b294d2-f8ca-4364-9031-1e897721b3e2?autoplay=1
+
+O vídeo detalha as **configurações iniciais do Git**, utilizando o terminal Git Bash. O instrutor **guia o ouvinte** através do processo de **abertura e personalização do terminal**, incluindo a **alteração do tema** e a **melhoria da visualização**. O foco principal é a **configuração das variáveis** de **nome de usuário** e **e-mail** de forma **global** (para todos os repositórios), explicando o uso do comando `git config --global user.name` e `git config --global user.email`. O áudio também aborda a **alteração da branch padrão** para "main" e **como listar** as configurações globais, incentivando a **consulta à documentação oficial** para mais opções de customização.
+
+### Anotações
+
 - Comando: 
     ``` 
     git config --list 
@@ -201,6 +209,14 @@ O vídeo fornece um **tutorial prático** sobre como instalar a ferramenta Git e
 
 ## 🟩 Vídeo 08 - Autenticando via Token
 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_08.webm|vid-60]]
+
+Link do vídeo:  https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/3d13d85f-2508-4396-9657-4643d3302c79?autoplay=1
+
+O vídeo explica detalhadamente o processo de **autenticação de operações Git com o GitHub**, focando na transição do uso de senhas para **tokens de acesso pessoal** por razões de segurança, destacando que o GitHub não aceita mais a autenticação por senha desde 2021. É demonstrado como **gerar um novo token** no GitHub, configurando seu escopo e validade, e como utilizá-lo para clonar um repositório privado no terminal, substituindo a senha. Além disso, a fonte cobre a importância e o método de **armazenamento dessas credenciais** de forma permanente ou temporária localmente, usando o `credential.helper` com as opções `store` ou `cache`, e mostra como **verificar e gerenciar** essas configurações e tokens.
+
+### Anotações
+
 - Para gerar um Token, acesse sua conta no GitHub, e no menu superior direito clique em Settings > Developer settings > Tokens (classic) > Generate new token.
 
 - Você pode armazenar suas credenciais para reduzir o número de vezes que você deve digitar seu nome de usuário ou senha:
@@ -216,7 +232,15 @@ O vídeo fornece um **tutorial prático** sobre como instalar a ferramenta Git e
  
 ## 🟩 Vídeo 09 - Autenticando via Chave SSH
 
-- Para adicionar uma Chave SSH, acesse sua conta no GitHub, e no menu superior direito clique em Settings > SSH and GPG keys > New SSH key.
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_09.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/a53b7d6e-d7a2-40de-a8f9-cc30b42fc93d?autoplay=1
+
+O vídeo fornece um guia detalhado sobre como autenticar operações no **GitHub** usando **chaves SSH**, que são fundamentais para uma conexão segura e criptografada entre o computador local e o servidor remoto. Ele explica que o protocolo Secure Shell (SSH) utiliza um **par de chaves**—uma privada, que age como uma senha e fica no computador, e uma pública, que é inserida no GitHub para a autenticação. O passo a passo abrange desde a **verificação da existência de chaves SSH** na máquina, passando pela geração de um novo par de chaves usando o algoritmo ED25519, até a adição da chave privada ao **SSH Agent** para armazenamento seguro. Por fim, o tutorial instrui sobre a adição da **chave pública** à conta do GitHub e demonstra o sucesso da configuração ao clonar um repositório privado via SSH.
+
+### Anotações
+
+- Para adicionar uma Chave SSH, acesse sua conta no GitHub, clique na imagem do usuário, escolha  Settings > SSH and GPG keys > New SSH key.
 
 # Parte 3: Primeiros Passos com Git e GitHub
  
