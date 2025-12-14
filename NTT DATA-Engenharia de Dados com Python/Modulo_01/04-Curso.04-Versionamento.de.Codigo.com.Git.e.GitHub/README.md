@@ -289,7 +289,13 @@ O vídeo é um guia prático para iniciantes e usuários intermediários do Git 
  
 ## 🟩Vídeo 11 - Salvando Alterações no Repositório Local
 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_11.webm|vid-60]]
+
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/599dd3dd-d189-474f-a55c-22f37b4472da?autoplay=1
+
+O vídeo apresenta uma **aula prática sobre como salvar alterações em um repositório Git local**, concentrando-se nos comandos essenciais e melhores práticas. O instrutor demonstra a **inicialização de um repositório** e a criação de um arquivo `README.md` usando a **sintaxe Markdown**, mostrando exemplos de como estruturar este arquivo no GitHub. A lição então foca no uso do comando `git status` para monitorar o estado dos arquivos, explicando a diferença entre **arquivos rastreados e não rastreados**. Finalmente, o processo de **adicionar arquivos à área de preparação** (`git add`) e **confirmar as mudanças** (`git commit -m`) é detalhado, incluindo a utilização do `git log` para visualizar o histórico de *commits*. A aula também explora casos especiais, como a **ignorância de diretórios vazios** pelo Git e a função do arquivo `.gitignore`.
+
+### Anotações
 
 - Como criar um commit
     - Adicione o conteúdo que deseja inserir no commit:
@@ -302,7 +308,15 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versiona
         ```
  
 ## 🟩 Vídeo 12 - Desfazendo Alterações no Repositório Local
- 
+
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_12.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/3f9f2336-6fd5-44cb-ba39-d1a4f6448023?autoplay=1
+
+O material apresentado é um **guia prático e detalhado** sobre o uso de comandos Git, com foco em desfazer alterações e gerenciar o histórico de *commits* antes de enviar para um repositório remoto. Ele **instrui o usuário** sobre como restaurar arquivos modificados, alterar a mensagem do último *commit* e utilizar o comando `git reset` nas opções *soft*, *mixed* e *hard* para retroceder o histórico. A segunda parte do conteúdo **demonstra a conexão** de um repositório local com o GitHub, explicando como enviar (*push*) e receber (*pull*) alterações, além de **mostrar métodos de edição** de arquivos diretamente na interface web do GitHub e no *web editor* (VS Code online). O objetivo principal é garantir que as revisões e correções sejam feitas localmente para **evitar conflitos** ao trabalhar em equipe.
+
+### Anotações
+
 - Como alterar a mensagem do último commit:
     ```
     git commit --amend
@@ -326,6 +340,14 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versiona
     ```
 
 ## 🟩Vídeo 13 - Enviando e Baixando Alterações com o Repositório Remoto
+
+
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/dd17c56e-2327-493c-942a-358a49a26549?autoplay=1
+
+
+
+### Anotações
 
 - Como enviar as alterações do repositório local para o remoto:
     ```
