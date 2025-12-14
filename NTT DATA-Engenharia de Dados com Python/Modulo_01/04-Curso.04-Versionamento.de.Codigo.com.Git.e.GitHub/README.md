@@ -289,6 +289,8 @@ O vídeo é um guia prático para iniciantes e usuários intermediários do Git 
  
 ## 🟩Vídeo 11 - Salvando Alterações no Repositório Local
 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/599dd3dd-d189-474f-a55c-22f37b4472da?autoplay=1
+
 - Como criar um commit
     - Adicione o conteúdo que deseja inserir no commit:
         ```
