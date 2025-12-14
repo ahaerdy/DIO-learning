@@ -573,4 +573,5 @@ O vídeo trata da finalização de curso, onde a instrutora, **Ligiana Andrade**
 
 # Certificado: Versionamento de Código com Git
 
-Link do certificado: https://hermes.dio.me/certificates/F10OC6FU.pdf
+- Link do certificado: https://hermes.dio.me/certificates/F10OC6FU.pdf
+- Certificado em pdf: [[Certificado-Versionamento.de.Codigo.com.Git..pdf]]
