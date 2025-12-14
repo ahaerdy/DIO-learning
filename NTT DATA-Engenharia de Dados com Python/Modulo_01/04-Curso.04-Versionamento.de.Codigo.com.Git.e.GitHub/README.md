@@ -131,6 +131,14 @@ O vídeo explica o processo de **instalação e configuração do Git** no siste
  
 ## 🟩 Vídeo 06 - Instalando o Git no Linux (Ubuntu)
 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_06.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/5e5fe1c6-59d6-4003-b4a1-e9799c7755ec?autoplay=1
+
+O vídeo fornece um **tutorial prático** sobre como instalar a ferramenta Git em um sistema operacional Linux, especificamente usando a distribuição Ubuntu. O instrutor detalha uma sequência de **comandos necessários** para a instalação, começando pela adição de um PPA (Personal Package Archive) para garantir a versão mais estável do Git. Em seguida, o processo exige a **atualização dos pacotes** do sistema e, por fim, a **execução do comando de instalação** propriamente dito. O áudio conclui mostrando como **verificar a versão instalada** do Git, confirmando que a **instalação foi bem-sucedida** e concluída na máquina do usuário.
+
+### Anotações
+
 - Confira a doc.: https://git-scm.com/download/linux
 - Instale a última versão estável do Git:
     ```
