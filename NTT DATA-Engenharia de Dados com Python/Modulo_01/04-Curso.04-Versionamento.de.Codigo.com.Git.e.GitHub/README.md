@@ -543,6 +543,8 @@ O vídeo demonstra comandos avançados do Git para gerenciamento de código e re
 
 ## 🟩 Vídeo 16 - Dicas e Materiais de Apoio
 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_16.webm|vid-60]]
+
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/b2ceffed-9d18-4369-a038-e72be0953455?autoplay=1
 
 O vídeo trata da finalização de curso, onde a instrutora, **Ligiana Andrade**, parabeniza o ouvinte por ter chegado ao fim e expressa a esperança de que ele esteja confiante para criar repositórios no **GitHub**. A principal finalidade é apresentar **materiais de apoio** e dicas para que os alunos possam dar prosseguimento aos estudos. Para isso, ela detalha um **repositório específico** que criou, chamado "curso kit gitub", que contém tópicos vistos e links utilitários, além de referências. O áudio também fornece uma lista extensa de **links adicionais**, abrangendo desde documentação oficial e a palestra de Linus Torvalds sobre o Git até ferramentas como o GitHub Desktop e uma inteligência artificial para comandos Git. Por fim, a instrutora encoraja a **conexão em redes sociais** e a criação de artigos para compartilhar o conhecimento adquirido.
