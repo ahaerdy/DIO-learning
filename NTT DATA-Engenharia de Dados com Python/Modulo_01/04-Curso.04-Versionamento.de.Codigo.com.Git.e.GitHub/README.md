@@ -12,7 +12,15 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versiona
 A instrutora, Lidiana (ou Eli),  se apresenta no início de um curso intitulado "Versionamento de Código com Git e GitHub", explicando sua trajetória profissional como desenvolvedora Front-End e sua transição de carreira, que se iniciou na área de arquitetura. Ela compartilha detalhes pessoais, como seus hobbies (jogos, filmes, cosplays) e seu trabalho de compartilhar conhecimento em plataformas e canais, incluindo um com seu namorado, especializado em Back-End. A principal motivação da instrutora é a democratização da educação tecnológica, citando Carl Sagan sobre a dependência da sociedade em ciência e tecnologia. Finalmente, ela descreve o objetivo geral do curso, que é introduzir o versionamento de código com Git e GitHub, e detalha o percurso e os pré-requisitos para os alunos.
 
 ## 🟩 Vídeo 02 - O que é Versionamento de Código
- 
+
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_02.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/68183181-bc0a-4b66-a877-42dd42b5bc9c?autoplay=1
+
+**Visão geral** sobre **controle de versão de código**, introduzindo o conceito e as ferramentas relacionadas. Inicialmente, a narradora utiliza uma **analogia** de dois amigos desenvolvendo um aplicativo para ilustrar as **dificuldades** do versionamento manual, como desorganização e problemas de mesclagem. A explicação evolui para apresentar os **sistemas de controle de versão** como a solução para esses problemas, destacando seus benefícios em **organização, armazenamento eficiente e segurança**. Por fim, diferencia-se entre **sistemas de controle de versão centralizados e distribuídos**, citando o **Git** como um exemplo deste último, que oferece maior flexibilidade e redundância.
+
+### Anotações
+
 - Sistemas de controle de versão:
     - Registrar o histórico de atualizações de um arquivo; 
     - Gerenciar quais foram as alterações, a data, autor, etc.;
@@ -29,6 +37,8 @@ A instrutora, Lidiana (ou Eli),  se apresenta no início de um curso intitulado 
     - Possibilidade de trabalhar sem conexão à rede.
 
 ## 🟩 Vídeo 03 - O que é Git
+
+
 
 - Sistema de Controle de Versão Distribuído
     - Gratuito e Open Source (Código Aberto);
