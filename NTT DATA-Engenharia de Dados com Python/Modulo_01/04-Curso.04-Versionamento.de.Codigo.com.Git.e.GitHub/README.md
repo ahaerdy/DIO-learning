@@ -38,7 +38,13 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versiona
 
 ## 🟩 Vídeo 03 - O que é Git
 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_03.webm|vid-60]]
 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/a7e0b074-3907-4ca8-a74f-8378ffb8f458?autoplay=1
+
+O vídeo fornece uma introdução abrangente ao **Git**, descrevendo-o como um **sistema de controle de versão distribuído** que se destaca por ser gratuito, de código aberto, e possuir ramificações e fusões eficientes. A **história do Git** é brevemente detalhada, mencionando sua criação por Linus Torvalds após conflitos com o sistema proprietário BitKeeper, que era usado no projeto Linux. Além disso, a fonte enfatiza a importância de os desenvolvedores consultarem a **documentação oficial do Git** para aprendizado, que servirá de base para o curso. Finalmente, é apresentado um **fluxo de trabalho básico do Git**, explicando comandos essenciais como `git clone` para copiar repositórios, `git commit` para salvar alterações, `git pull` para atualizar o repositório local a partir do remoto, e `git push` para enviar alterações ao servidor.
+
+### Anotações
 
 - Sistema de Controle de Versão Distribuído
     - Gratuito e Open Source (Código Aberto);
@@ -64,6 +70,9 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versiona
     - git push → “empurra” as alterações do repositório local para o remoto.
  
 ## 🟩 Vídeo 04 - O que é Github
+
+
+
 
 - Plataforma de hospedagem de código para controle de versão com Git, e colaboração.
     - Comunidade ativa;
