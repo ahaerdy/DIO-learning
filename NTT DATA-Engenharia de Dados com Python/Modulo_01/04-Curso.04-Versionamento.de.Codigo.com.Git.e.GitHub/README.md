@@ -3,15 +3,15 @@
 
 # Parte 1: Visão Geral do Curso e Ferramentas
 
-## Vídeo 01 - Introdução ao Curso
+## 🟩 Vídeo 01 - Introdução ao Curso
 
-- A autora se apresenta e dá uma visão geral do curso:
-    - Conhecer as ferramentas.
-    - Instalar, configurar e autenticar
-    - Primeiros passos com Git e Github
-    - Dicas e materiais de apoio 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_01.webm|vid-60]]
 
-## Vídeo 02 - O que é Versionamento de Código
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/f3cbaa66-efbd-4c25-842e-2069c188c066?autoplay=1
+
+A instrutora, Lidiana (ou Eli),  se apresenta no início de um curso intitulado "Versionamento de Código com Git e GitHub", explicando sua trajetória profissional como desenvolvedora Front-End e sua transição de carreira, que se iniciou na área de arquitetura. Ela compartilha detalhes pessoais, como seus hobbies (jogos, filmes, cosplays) e seu trabalho de compartilhar conhecimento em plataformas e canais, incluindo um com seu namorado, especializado em Back-End. A principal motivação da instrutora é a democratização da educação tecnológica, citando Carl Sagan sobre a dependência da sociedade em ciência e tecnologia. Finalmente, ela descreve o objetivo geral do curso, que é introduzir o versionamento de código com Git e GitHub, e detalha o percurso e os pré-requisitos para os alunos.
+
+## 🟩 Vídeo 02 - O que é Versionamento de Código
  
 - Sistemas de controle de versão:
     - Registrar o histórico de atualizações de um arquivo; 
@@ -28,7 +28,7 @@
     - Possibilita um fluxo de trabalho flexível;
     - Possibilidade de trabalhar sem conexão à rede.
 
-## Vídeo 03 - O que é Git
+## 🟩 Vídeo 03 - O que é Git
 
 - Sistema de Controle de Versão Distribuído
     - Gratuito e Open Source (Código Aberto);
@@ -53,7 +53,7 @@
     - git pull → “puxa” as alterações do repositório remoto para o local (busca e mescla).
     - git push → “empurra” as alterações do repositório local para o remoto.
  
-## Vídeo 04 - O que é Github
+## 🟩 Vídeo 04 - O que é Github
 
 - Plataforma de hospedagem de código para controle de versão com Git, e colaboração.
     - Comunidade ativa;
@@ -89,7 +89,7 @@
 
 # Parte 2: Instalação, Configuração e Autenticação
 
-## Vídeo 05 - Instalando o Git no Windows
+## 🟩Vídeo 05 - Instalando o Git no Windows
 
 - Acesse https://git-scm.com/download/win;
 - Faça o download do instalador e execute;
@@ -97,7 +97,7 @@
 - Finalize clicando em “Install”, e “Finish”.
     - Em "Select Components“, deixe as opções “Git Bash Here” e “Git GUI Here” marcadas.
  
-## Vídeo 06 - Instalando o Git no Linux (Ubuntu)
+## 🟩 Vídeo 06 - Instalando o Git no Linux (Ubuntu)
 
 - Confira a doc.: https://git-scm.com/download/linux
 - Instale a última versão estável do Git:
@@ -121,7 +121,7 @@
         brew install git 
         ```
     
-## Vídeo 07 - Configurando o Git
+## 🟩 Vídeo 07 - Configurando o Git
  
 - Comando: 
     ``` 
@@ -159,7 +159,7 @@
     - Veja mais na doc.: https://git-scm.com/book/pt-br/v2/Git-Tools-Credential-Storage
 
 
-## Vídeo 08 - Autenticando via Token
+## 🟩 Vídeo 08 - Autenticando via Token
 
 - Para gerar um Token, acesse sua conta no GitHub, e no menu superior direito clique em Settings > Developer settings > Tokens (classic) > Generate new token.
 
@@ -174,13 +174,13 @@
         ```
     - Veja mais na doc.: https://git-scm.com/book/pt-br/v2/Git-Tools-Credential-Storage
  
-## Vídeo 09 - Autenticando via Chave SSH
+## 🟩 Vídeo 09 - Autenticando via Chave SSH
 
 - Para adicionar uma Chave SSH, acesse sua conta no GitHub, e no menu superior direito clique em Settings > SSH and GPG keys > New SSH key.
 
 # Parte 3: Primeiros Passos com Git e GitHub
  
-## Vídeo 10 - Criando e Clonando Repositórios
+## 🟩Vídeo 10 - Criando e Clonando Repositórios
 
 - Existem duas formas de obter um repositório Git na sua máquina:
     - Transformando um diretório local que não está sob controle de versão, num repositório Git;
@@ -215,7 +215,7 @@
 - Escolha como deseja inicializar seu repositório (se quiser vazio, deixe as opções desmarcadas)
 - Clique em “Create repository”, e pronto!
  
-## Vídeo 11 - Salvando Alterações no Repositório Local
+## 🟩Vídeo 11 - Salvando Alterações no Repositório Local
 
 - Como criar um commit
     - Adicione o conteúdo que deseja inserir no commit:
@@ -227,7 +227,7 @@
         git commit -m "message"
         ```
  
-## Vídeo 12 - Desfazendo Alterações no Repositório Local
+## 🟩 Vídeo 12 - Desfazendo Alterações no Repositório Local
  
 - Como alterar a mensagem do último commit:
     ```
@@ -251,7 +251,7 @@
     git reset --hard
     ```
 
-## Vídeo 13 - Enviando e Baixando Alterações com o Repositório Remoto
+## 🟩Vídeo 13 - Enviando e Baixando Alterações com o Repositório Remoto
 
 - Como enviar as alterações do repositório local para o remoto:
     ```
@@ -262,7 +262,7 @@
     git pull
     ```
  
-## Vídeo 14 - Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos
+## 🟩Vídeo 14 - Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos
 
 - De maneira simplista, uma Branch (em tradução, “Ramo”), é uma ramificação do seu projeto.
 - É um ponteiro móvel para um commit no histórico do repositório;
@@ -412,7 +412,7 @@ git branch
   <img src="imagens/image-15.png" alt="Diagrama Git">
 </p>
 
-## Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
+## 🟩Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
  
 - Comandos ```git fetch```e ```git merge```.
 - O comando ```git fetch``` baixa o arquivo no repositório remoto para o local sem estar mesclando.
@@ -429,7 +429,7 @@ git branch
   <img src="imagens/image-18.png" alt="Diagrama Git">
 </p>
 
-## Vídeo 16 - Dicas e Materiais de Apoio
+## 🟩 Vídeo 16 - Dicas e Materiais de Apoio
 
 ### 📚 Recursos Úteis
 #### 🔗 Repositório
