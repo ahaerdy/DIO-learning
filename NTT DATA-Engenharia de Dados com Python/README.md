@@ -86,11 +86,6 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 9: Data Analytics & Storytelling com Power BI  
 
-## 🔗 Contribuições Open Source
-
-- Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
-    - Issue criada: #65498, Pull Request aceito: #65510, Perfil adicionado: ahaerdy.md
-
 ## 🏆 Certificados Obtidos
 
 ### Módulo 1
