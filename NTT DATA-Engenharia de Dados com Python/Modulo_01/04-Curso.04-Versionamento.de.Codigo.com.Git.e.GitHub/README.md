@@ -115,6 +115,14 @@ O vídeo fornece uma **introdução abrangente ao GitHub**, distinguindo-o do Gi
 
 ## 🟩Vídeo 05 - Instalando o Git no Windows
 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_05.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/c8d73362-9038-4259-af4c-30dcc5551afe?autoplay=1
+
+O vídeo explica o processo de **instalação e configuração do Git** no sistema operacional Windows. O locutor guia o ouvinte **passo a passo** através do processo de download a partir da página oficial do Git, selecionando a versão apropriada para Windows 64 bits. Durante a instalação, são detalhadas as **opções de configuração**, como a escolha dos componentes a serem instalados, a definição de um editor de texto padrão (preferencialmente Vin) e a nomeação do **branch inicial (main)** para novos repositórios. A ênfase é dada à importância de manter as configurações padrão na maioria das etapas e garantir a integração com o Windows Explorer. Ao final, o sucesso da instalação é confirmado pela **disponibilidade do Git Bash** e das novas opções de menu de contexto.
+
+### Anotações
+
 - Acesse https://git-scm.com/download/win;
 - Faça o download do instalador e execute;
 - Aceite a licença e clique em “Next”, e siga configurando como desejar¹ e clicando em “Next”;
