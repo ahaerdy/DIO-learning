@@ -184,7 +184,7 @@ Saída:
 
 São disponibilizados 3 arquivos em formato Powerpoint:
 
-- [01-Dio.Introducao.ao.Python.pptx](000-Midia_e_Anexos/01-Dio.Introducao.ao.Python.pptx)
+- [[01-Dio.Introducao.ao.Python.pptx]]
 - [[02-Dio.Configuracao.do.ambiente.de.desenvolvimento.pptx]]
 - [[03-Dio.Primeiro.programa.pptx]]
 
