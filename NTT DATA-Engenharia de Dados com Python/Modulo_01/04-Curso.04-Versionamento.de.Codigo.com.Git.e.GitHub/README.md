@@ -71,8 +71,13 @@ O vídeo fornece uma introdução abrangente ao **Git**, descrevendo-o como um *
  
 ## 🟩 Vídeo 04 - O que é Github
 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_04.webm|vid-60]]
 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/b86569c8-84af-438d-83ae-eb2a728bb291?autoplay=1
 
+O vídeo fornece uma **introdução abrangente ao GitHub**, distinguindo-o do Git ao explicar que o Git é um sistema de controle de versão distribuído, enquanto o GitHub é uma **plataforma de hospedagem e ambiente colaborativo** que utiliza o Git. Ele detalha a **história da plataforma**, mencionando sua criação em 2008 e a compra pela Microsoft em 2018, e descreve o processo passo a passo para **criar uma conta no GitHub** e **configurar um perfil**. Além disso, o material **orienta o usuário sobre como navegar nas configurações** e, crucialmente, como **ativar a autenticação de dois fatores** (2FA), enfatizando sua importância para a segurança da conta.
+
+### Anotações
 
 - Plataforma de hospedagem de código para controle de versão com Git, e colaboração.
     - Comunidade ativa;
