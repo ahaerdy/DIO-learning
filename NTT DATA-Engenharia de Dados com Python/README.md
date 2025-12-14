@@ -1,4 +1,4 @@
-# Repositório de Estudos – Bootcamp NTT DATA **Engenharia de Dados com Python**
+# Repositório de Estudos – Bootcamp NTT DATA - **Engenharia de Dados com Python**
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-em%20andamento-orange" />
