@@ -246,11 +246,19 @@ O vídeo fornece um guia detalhado sobre como autenticar operações no **GitHub
  
 ## 🟩Vídeo 10 - Criando e Clonando Repositórios
 
+![[bootcamp-ntt-data_modulo_01-Curso_04-Video_10.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/a377a00b-461c-4ab0-8258-3addd2fef14c?autoplay=1
+
+O vídeo é um guia prático para iniciantes e usuários intermediários do Git e GitHub, focando principalmente na **criação e clonagem de repositórios**. A explicação detalha as duas formas de obter um repositório Git localmente: usando o comando **`git init`** para inicializar um novo diretório e o comando **`git clone`** para copiar um repositório existente. O material também compara as configurações de arquivos **`.git/config`** em repositórios criados localmente versus aqueles clonados de um servidor remoto, destacando a adição do **`remote "origin"`** em repositórios clonados. Finalmente, o guia instrui sobre como **vincular um repositório local a um remoto** usando **`git remote add`** e revisa o processo de **criação de repositórios no GitHub**, incluindo opções de inicialização como `README.md` e `.gitignore`.
+
+### Anotações
+
 - Existem duas formas de obter um repositório Git na sua máquina:
     - Transformando um diretório local que não está sob controle de versão, num repositório Git;
     - Clonando um repositório Git existente.
 
-### Criando um Repositório Local
+#### Criando um Repositório Local
     
 - Acesse a pasta que deseja transformar em um repositório Git  pelo terminal ou clique no atalho em “Git Bash Here
 - Inicialize um repositório Git no diretório escolhido: 
@@ -262,7 +270,7 @@ O vídeo fornece um guia detalhado sobre como autenticar operações no **GitHub
     git remote add origin https://github.com/username/nome-do-repositorio.git
     ```
 
-### ⭐ <mark>Clonando um Repositório</mark>
+#### ⭐ <mark>Clonando um Repositório</mark>
 
 - Em “Code”, copie o código HTTPS ou SSH (a depender de como autenticou sua conta) do repositório no GitHub;
 - Abra o GitBash, insira o comando git clone e cole o conteúdo copiado para cloná-lo:
@@ -270,7 +278,7 @@ O vídeo fornece um guia detalhado sobre como autenticar operações no **GitHub
        git clone https://github.com/username/nome-do-repositorio
     ```
 
-### Criando um Repositório Remoto
+#### Criando um Repositório Remoto
 
 - Acesse a sua conta do GitHub, clique no “+” no canto superior direito, e em “New repository”
 - Insira um nome (obrigatório), e a descrição (opcional);
