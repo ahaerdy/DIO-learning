@@ -93,6 +93,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Introdução a Engenharia de Dados com Python](https://hermes.dio.me/certificates/WSVITF8R.pdf)
 - [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://hermes.dio.me/certificates/CCAOJIT3.pdf)
 - [Conhecendo a Linguagem de Programação Python](https://hermes.dio.me/certificates/BRMRBL10.pdf)
+- [Desafios de Projetos: Crie Um Portfólio Vencedor](https://hermes.dio.me/certificates/BRMRBL10.pdf)
 
 ## 🔗 Contribuições Open Source
 
