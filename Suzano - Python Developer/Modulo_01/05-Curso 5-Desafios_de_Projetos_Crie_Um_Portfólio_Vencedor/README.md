@@ -15,11 +15,11 @@
 
 ###  Desafios de Projetos servem para:
 
-#### __Portfolio__: cada projeto concluído reforça suas **habilidades**, promove **networking** e dá **destaque** ao seu portfólio profissional.
+__Portfolio__: cada projeto concluído reforça suas **habilidades**, promove **networking** e dá **destaque** ao seu portfólio profissional.
 
-#### __Destaque__: ao finalizar seus projetos na DIO, você obtém uma **certificação de competências**, um diferencial importante para abrir portas no mercado de trabalho.
+__Destaque__: ao finalizar seus projetos na DIO, você obtém uma **certificação de competências**, um diferencial importante para abrir portas no mercado de trabalho.
 
-#### __Oportunidades__: através da **Talent Match**, você tem acesso às melhores oportunidades de emprego no setor de tecnologia. Vamos ajudá-lo a construir a carreira dos seus sonho
+__Oportunidades__: através da **Talent Match**, você tem acesso às melhores oportunidades de emprego no setor de tecnologia. Vamos ajudá-lo a construir a carreira dos seus sonho
 
 ### Desenvolvimento das Habilidades
 
