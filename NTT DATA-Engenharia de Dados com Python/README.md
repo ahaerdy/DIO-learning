@@ -62,7 +62,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/02-Curso.02-Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python)
 - [x] Curso: [Conhecendo a Linguagem de Programação Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/03-Curso.03-Conhecendo.a.Linguagem.de.Programacao.Python)
 - [x] Curso: [Versionamento de Código com Git e GitHub](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/04-Curso.04-Versionamento.de.Codigo.com.Git.e.GitHub) 
-      
+- [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/05-Curso.5-Desafios.de.Projetos-Crie.Um.Portfolio.Vencedor)  
 ### Módulo 2: Sintaxe Básica com Python  
 
 
