@@ -20,9 +20,13 @@ O vídeo, explica a importância da **Aprendizagem Baseada em Projetos (PBL)**, 
 
 ## 🟩 Vídeo 03 - A Importância dos Desafios de Projeto na Prática
 
+![[bootcamp-ntt-data_modulo_01-Curso_05-Video_03.webm|vid-60]]
+
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/desafios-de-projetos-crie-um-portfolio-vencedor/learning/c10a0846-ed32-4f39-b2ee-29df9b93ec31?autoplay=1
+
+O instrutor **explica detalhadamente a funcionalidade e a importância dos "desafios de projeto" ou "labs"** na plataforma de educação tecnológica DIO. Esses desafios são **experiências educacionais práticas** projetadas para que os estudantes criem um **portfólio técnico robusto**, utilizando ferramentas como o GitHub ou GitLab para versionamento e exposição de código. O objetivo central é **preparar os usuários para o mercado de trabalho**, tornando seus projetos visíveis para empresas parceiras através de um perfil na DIO. O conteúdo descreve a **estrutura dos desafios**, que inclui videoaulas e descrições textuais, e orienta sobre o processo de **fazer um "fork" (cópia) de um projeto** e submeter o link do repositório finalizado. Enfatiza-se que a **autoria e a qualidade do projeto são cruciais** para evitar desclassificação e garantir que o estudante consiga discutir tecnicamente seu trabalho em entrevistas.
 
 # Certificado: 
 
 - Link na plataforma: https://hermes.dio.me/certificates/BRMRBL10.pdf
-- Certificado em pdf: [Conhecendo.a.Linguagem.de.Programacao.Python.pdf](000-Midia_e_Anexos/Certificado-Conhecendo.a.Linguagem.de.Programacao.Python.pdf)
+- Certificado em pdf: [[Certificado-Desafios.de.Projetos.Crie.Um.Portfolio.Vencedor..pdf]]
