@@ -1,8 +1,6 @@
 - Instrutor:  
 - Contato Linkedin: 
 
-# Parte 1: O que é o TypeScript
-
 ## 🟩 Vídeo 01 - Spoiler do Projeto Final
 
 
