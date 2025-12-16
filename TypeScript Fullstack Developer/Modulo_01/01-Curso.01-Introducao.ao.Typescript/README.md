@@ -13,6 +13,8 @@ A instrutora **Natalie Souza**, desenvolvedora no Itaú, se apresenta e introduz
 
 ## 🟩 Vídeo 02 - Conhecendo o Typescript
 
+
+
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/a8aab96a-40fd-4601-bfbb-a387614fda39?autoplay=1
 
 ### Anotações
@@ -71,7 +73,7 @@ Assim, ao passar os argumentos 'Nath' e 'Souza', o operador + concatena os dois 
 
 - Esse comportamento é chamado de sobrecarga implícita do operador +, pois o programador não define manualmente como o operador deve agir; o motor do JavaScript decide automaticamente com base nos tipos envolvidos, aplicando coerção de tipos (type coercion).
 
-</details>
+O Javascript Original não tem o controle de tipos. 
 
 
 # Parte 2: Fundamentos e sintaxe
