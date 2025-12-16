@@ -60,7 +60,7 @@ O vídeo discute o **módulo final de uma formação em JavaScript Developer**. 
 
 ![[formacao_javascript_developer-modulo_01-Curso_01-Video_07.webm|vid-60]]
 
-L![[formacao_javascript_developer-modulo_01-Curso_01-Video_07.webm]]ink do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/apresentacao-da-formacao-javascript-developer/learning/2d8a6895-8771-4a0a-9c15-00fa6747b228?autoplay=1
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/apresentacao-da-formacao-javascript-developer/learning/2d8a6895-8771-4a0a-9c15-00fa6747b228?autoplay=1
 
 O vídeo apresenta uma discussão detalhada sobre a **configuração do ambiente de desenvolvimento** necessário para um curso de JavaScript, enfatizando a necessidade de poucas instalações para iniciantes. Os instrutores recomendam o **Node.js** como requisito principal e obrigatório, mencionando sua fácil instalação via "Next, next, next". A segunda ferramenta sugerida, mas não obrigatória, é o editor de texto **Visual Studio Code (VS Code)**, sendo um padrão da indústria; contudo, qualquer IDE preferida pelo aluno pode ser utilizada. Além disso, é destacado que **nenhuma extensão específica do VS Code é necessária** para os projetos do curso. Por fim, os palestrantes incentivam a comunidade a **utilizar fóruns e salas de bate-papo** para colaboração e compartilhamento de conhecimento, ressaltando a importância das *soft skills* no desenvolvimento profissional.
 
