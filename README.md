@@ -33,8 +33,8 @@ Este repositório está estruturado para acompanhar meu progresso nas formaçõe
 
 - [Bootcamp Suzano Python Developer](https://github.com/ahaerdy/dio-learning/tree/main/Suzano%20-%20Python%20Developer)
 - [Bootcamp NTT DATA - Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python#-reposit%C3%B3rio-de-estudos--bootcamp-ntt-data-engenharia-de-dados-com-python)
-- [JavaScript Developer](https://github.com/ahaerdy/DIO-learning/tree/main/Javascript%20Developer)
-- [TypeScript Fullstack Developer](https://github.com/ahaerdy/DIO-learning/tree/main/TypeScript%20Fullstack%20Developer)
+- [Formação JavaScript Developer](https://github.com/ahaerdy/DIO-learning/tree/main/Javascript%20Developer)
+- [Formação TypeScript Fullstack Developer](https://github.com/ahaerdy/DIO-learning/tree/main/TypeScript%20Fullstack%20Developer)
 
 Cada curso ou formação possui sua própria pasta, onde organizo anotações, códigos-fonte, desafios, projetos e demais arquivos que auxiliam no aprendizado.
 
