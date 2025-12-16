@@ -1,4 +1,4 @@
-# 📘 Repositório de Estudos – Formação **TypeScript Fullstack Developer**
+# 📘 Repositório de Estudos – **TypeScript Fullstack Developer**
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-em%20andamento-orange" />
