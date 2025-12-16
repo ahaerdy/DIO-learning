@@ -21,7 +21,7 @@ A formação aborda aspectos fundamentais e avançados da linguagem **JavaScript
 
 Sou **Arthur Haerdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Linux, com experiência em desenvolvimento de software, automação, infraestrutura e análise de dados.
 
-Este repositório faz parte da minha estratégia de **aprendizado contínuo** e **consolidação de portfólio**, documentando de forma estruturada minha evolução no desenvolvimento com JavaScript.
+Este repositório faz parte da minha estratégia de **aprendizado contínuo** e **consolidação de portfólio**, documentando de forma estruturada minha evolução no desenvolvimento com JavaScript moderno.
 
 ---
 
