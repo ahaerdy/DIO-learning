@@ -60,7 +60,6 @@ Assim, ao passar os argumentos 'Nath' e 'Souza', o operador + concatena os dois 
 
 <details>
 <summary> O que significa "comportamento de sobrecarga implícita" </summary>
-
 Em linguagens de programação, **sobrecarga** ocorre quando um mesmo operador ou função pode assumir comportamentos diferentes dependendo do tipo dos operandos ou argumentos.
 
 No caso específico do **JavaScript**, não existe uma sobrecarga explícita definida pelo programador (como em C++ ou Java). O que acontece é um **comportamento implícito** do operador `+`:
@@ -73,7 +72,6 @@ No caso específico do **JavaScript**, não existe uma sobrecarga explícita def
   - Exemplo: `'Idade: ' + 30` → `'Idade: 30'`
 
 Esse comportamento é chamado de **sobrecarga implícita do operador `+`**, pois o programador não define manualmente como o operador deve agir; o motor do JavaScript decide automaticamente com base nos tipos envolvidos, aplicando **coerção de tipos** (type coercion).
-
 </details>
 
 
