@@ -61,36 +61,38 @@ A formação é composta por cursos e desafios organizados em módulos sequencia
 
 > ⚠️ **Observação:** Os links abaixo serão preenchidos conforme o avanço na formação.
 
-### Módulo 1: Fundamentos de JavaScript
+### Módulo 1: Aprenda a Programar do Zero com JavaScript
 
-- [ ] Curso: Introdução à Lógica de Programação
-- [ ] Curso: JavaScript Básico
-- [ ] Curso: Variáveis, Tipos e Operadores
-- [ ] Curso: Estruturas Condicionais e Repetição
+- [ ] Curso: Apresentação da Formação JavaScript Developer
+- [ ] Curso: Primeiros Passos Com JavaScript
+- [ ] Curso: Conhecendo Funções JavaScript
+- [ ] Curso: Criando Objetos e Classes em JavaScript
+- [ ] Curso: Arrays e Estruturas de Repetição em JavaScript
+- [ ] Curso: Importação e Exportação com JavaScript
+- [ ] Curso: Consolide Seu Conhecimento com Desafios de Código JavaScript
+- [ ] Curso: Desafios de Código - Formação JavaScript Developer
+- [ ] Curso: Materiais Complementares - Aprenda a Programar do Zero com JavaScript
 
-### Módulo 2: JavaScript Intermediário
+### Módulo 2: JavaScript para Web: Fundamentos de HTML, CSS e APIs na Prática
+- [ ] Curso: Introdução ao Desenvolvimento Web com JavaScript
+- [ ] Curso: Criando um Projeto com HTML/CSS para Listagem de Pokémon
+- [ ] Curso: Dominando o Protocolo HTTP e Integrando com a PokeAPI
+- [ ] Curso: Construindo uma Pokédex com JavaScript
+- [ ] Curso: Materiais Complementares - JavaScript para Web: Fundamentos de HTML, CSS e APIs na Prática
 
-- [ ] Curso: Funções, Escopo e Arrays
-- [ ] Curso: Objetos e Métodos
-- [ ] Curso: Manipulação do DOM
+### Módulo 3: Dominando Conceitos Avançados em JavaScript
 
-### Módulo 3: JavaScript Avançado
+- [ ] Curso: Aprendendo Variáveis, Escopo e Tipos de dados no JavaScript
+- [ ] Curso: Orientação a Protótipo com JavaScript
+- [ ] Curso: Funções e Manipulação de Listas com JavaScript
+- [ ] Curso: Promises e Assincronismo com JavaScript
+- [ ] Curso: Materiais Complementares - Dominando Conceitos Avançados em JavaScript
 
-- [ ] Curso: Programação Assíncrona (Promises / Async)
-- [ ] Curso: Consumo de APIs
-- [ ] Curso: Projeto Prático Frontend
-
-### Módulo 4: Backend com Node.js
-
-- [ ] Curso: Introdução ao Node.js
-- [ ] Curso: APIs com Express
-- [ ] Desafio de Projeto Backend
-
-### Módulo 5: Projeto Final
-
-- [ ] Desafio: Projeto Final Fullstack
-
----
+### Módulo 4: Currículo Online com HTML, CSS e JavaScript: Da Prototipação ao Deploy
+- [ ] Curso: Criando e Estilizando uma Página de Portfólio Profissional com CSS e JavaScript
+- [ ] Curso: Publicando Seu Portfólio Profissional no GitHub Pages
+- [ ] Curso: Materiais Complementares: Currículo Online com HTML, CSS e JavaScript: Da Prototipação ao Deploy
+- [ ] Curso: Avalie a Formação de JavaScript Developer
 
 ## 🏆 Certificados Obtidos
 
