@@ -69,7 +69,7 @@ A formação é composta por cursos e desafios organizados em módulos sequencia
 
 ### Módulo 1: Aprenda a Programar do Zero com JavaScript
 
-* [ ] Curso: [Apresentação da Formação JavaScript Developer](https://web.dio.me/track/formacao-javascript-developer/course/apresentacao-da-formacao-javascript-developer/learning/20a12c6f-789b-4799-9feb-9556f6f659a2?autoplay=1)
+* [ ] Curso: [Apresentação da Formação JavaScript Developer](https://github.com/ahaerdy/DIO-learning/tree/main/Javascript%20Developer/Modulo_01/01-Curso_01-Introducao.a.Logica.de.Programacao)
 * [ ] Curso: Primeiros Passos Com JavaScript
 * [ ] Curso: Conhecendo Funções JavaScript
 * [ ] Curso: Criando Objetos e Classes em JavaScript
