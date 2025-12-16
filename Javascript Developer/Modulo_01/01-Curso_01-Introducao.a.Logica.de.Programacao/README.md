@@ -16,7 +16,7 @@ A fonte apresenta um trecho de áudio que serve como um **spoiler** para a forma
 
 ## 🟩 Vídeo 02 - Apresentação
 
-![[formacao_javascript_developer-modulo_01-Curso_01-Video_02.webm]]
+![[formacao_javascript_developer-modulo_01-Curso_01-Video_02.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/apresentacao-da-formacao-javascript-developer/learning/f5d78b39-c5bd-4e4c-b825-d8db85543df6?autoplay=1
 
