@@ -1,0 +1,54 @@
+- Instrutor:  Nathally Souza (Software Engineer | Startup Founder | Javascript, Typescript, Cloud, Frontend, Backend)
+- Contato Linkedin: / [nathsouza](https://www.linkedin.com/in/nathsouza/)
+
+# Parte 1: O que é o TypeScript
+
+## 🟩 Vídeo 01 - Introdução
+
+![[bootcamp-typescript_fullstack__modulo_01-Curso_01-Video_01.webm|vid-60]]
+
+Link do vídeo:https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/88a53e9c-b178-42ff-8278-85ea34126c30?autoplay=1
+
+
+
+## 🟩 Vídeo 02 - Conhecendo o Typescript
+
+
+
+Link do vídeo:
+
+
+# Parte 2: Fundamentos e sintaxe
+
+## 🟩 Vídeo 01 - Variáveis e tipos
+
+Link do vídeo: 
+
+## 🟩 Vídeo 02 - Objetos e interfaces
+
+Link do vídeo:
+
+## 🟩 Vídeo 03 - Decisões e repetições
+
+Link do vídeo:
+
+## 🟩 Vídeo 04 - Estruturas de Repetição
+
+Link do vídeo:
+
+## 🟩 Vídeo 05 - Array
+
+Link do vídeo:
+
+## 🟩 Vídeo 06 - Manipulando Arrays
+
+Link do vídeo:
+
+# Parte 3: Materiais de Apoio e Questionário
+
+
+
+# Certificado: 
+
+- Link na plataforma: 
+- Certificado em pdf: 
