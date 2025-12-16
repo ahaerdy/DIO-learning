@@ -31,18 +31,6 @@ Consolidar o aprendizado em JavaScript por meio de prática contínua, desafios 
 
 ---
 
-## 📁 Conteúdo do Repositório
-
-Cada diretório deste repositório poderá conter, conforme o módulo:
-
-* 📌 **Anotações teóricas**
-* 🧪 **Exercícios práticos**
-* 🧩 **Desafios de código**
-* 🚀 **Projetos**
-* 📄 **README específicos por módulo/curso**
-
----
-
 ## 🛠️ Tecnologias e Conceitos Abordados
 
 Durante a formação, os principais tópicos estudados incluem:
