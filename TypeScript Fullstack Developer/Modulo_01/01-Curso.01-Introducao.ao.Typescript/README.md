@@ -1,5 +1,5 @@
-- Instrutor:  Elidiana Andrade (DIO - Tech Education Analyst)
-- Contato Linkedin: / [elidiana](https://www.linkedin.com/in/elidiana/)
+- Instrutor:  Nathally Souza (Software Engineer | Startup Founder | Javascript, Typescript, Cloud, Frontend, Backend)
+- Contato Linkedin: / [nathsouza](https://www.linkedin.com/in/nathsouza/)
 
 # Parte 1: O que é o TypeScript
 
