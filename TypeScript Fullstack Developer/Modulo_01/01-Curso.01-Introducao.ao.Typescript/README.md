@@ -5,7 +5,7 @@
 
 ## 🟩 Vídeo 01 - Introdução
 
-![[bootcamp-typescript_fullstack__modulo_01-Curso_01-Video_01.webm|vid-60]]
+![[formacao_typescript_fullstack-modulo_01-Curso_01-Video_01.webm|vid-60]]
 
 Link do vídeo:https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/88a53e9c-b178-42ff-8278-85ea34126c30?autoplay=1
 
@@ -13,9 +13,11 @@ A instrutora **Natalie Souza**, desenvolvedora no Itaú, se apresenta e introduz
 
 ## 🟩 Vídeo 02 - Conhecendo o Typescript
 
-
+![[formacao_typescript_fullstack-modulo_01-Curso_01-Video_02.webm]]
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/a8aab96a-40fd-4601-bfbb-a387614fda39?autoplay=1
+
+O material fornece uma introdução detalhada ao **TypeScript**, explicando que ele é uma linguagem de programação e um superset do **JavaScript** que adiciona uma camada de tipagem. O instrutor demonstra a necessidade do TypeScript ao mostrar as limitações do JavaScript puro no controle de tipos, ilustrando como o JavaScript pode concatenar strings em vez de somar números. Em seguida, o vídeo orienta os alunos através da **configuração completa do ambiente**, incluindo a instalação do Node.js, a instalação global e local do TypeScript, e a inicialização de um projeto. Finalmente, a instrução mostra como o TypeScript oferece um **feedback rápido de erros** de tipagem diretamente no VS Code, um recurso que **aumenta a produtividade** ao evitar a necessidade de transpilar o código manualmente após cada mudança, especialmente com a ajuda de ferramentas como o TS Node dev.
 
 ### Anotações
 
