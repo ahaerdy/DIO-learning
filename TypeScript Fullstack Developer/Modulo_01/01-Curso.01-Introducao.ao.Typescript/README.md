@@ -51,28 +51,26 @@ Resultado:
 NathSouza
 ```
 
-Explicação técnica: no JavaScript, o operador + possui comportamento sobrecarga implícita:
+Explicação técnica: no JavaScript, o operador + possui comportamento SOBRECARGA IMPLÍCITA:
 
 - Quando aplicado a valores numéricos, realiza a adição aritmética.
 - Quando aplicado a valores do tipo string, realiza a concatenação.
 
 Assim, ao passar os argumentos 'Nath' e 'Souza', o operador + concatena os dois valores, produzindo a saída NathSouza.
 
-<details>
-<summary> O que significa "comportamento de sobrecarga implícita" </summary>
-Em linguagens de programação, **sobrecarga** ocorre quando um mesmo operador ou função pode assumir comportamentos diferentes dependendo do tipo dos operandos ou argumentos.
+##### O que significa "comportamento de sobrecarga implícita" 
+- Em linguagens de programação, sobrecarga ocorre quando um mesmo operador ou função pode assumir comportamentos diferentes dependendo do tipo dos operandos ou argumentos. 
+- No caso específico do JavaScript, não existe uma sobrecarga explícita definida pelo programador (como em C++ ou Java). O que acontece é um comportamento implícito do operador +:
+  
+	- Operandos numéricos→ o operador realiza adição aritmética.
+		- Exemplo: 2 + 2 → 4
+	- Operandos do tipo string→ o operador realiza concatenação de strings.
+		- Exemplo: 'Nath' + 'Souza' → 'NathSouza'
+	- Operandos mistos (string + número) → o número é convertido implicitamente em string, e ocorre concatenação.
+		- Exemplo: 'Idade: ' + 30 → 'Idade: 30'
 
-No caso específico do **JavaScript**, não existe uma sobrecarga explícita definida pelo programador (como em C++ ou Java). O que acontece é um **comportamento implícito** do operador `+`:
+- Esse comportamento é chamado de sobrecarga implícita do operador +, pois o programador não define manualmente como o operador deve agir; o motor do JavaScript decide automaticamente com base nos tipos envolvidos, aplicando coerção de tipos (type coercion).
 
-- **Operandos numéricos** → o operador realiza **adição aritmética**.
-  - Exemplo: `2 + 2` → `4`
-- **Operandos do tipo string** → o operador realiza **concatenação de strings**.
-  - Exemplo: `'Nath' + 'Souza'` → `'NathSouza'`
-- **Operandos mistos (string + número)** → o número é convertido implicitamente em string, e ocorre concatenação.
-  - Exemplo: `'Idade: ' + 30` → `'Idade: 30'`
-
-Esse comportamento é chamado de **sobrecarga implícita do operador `+`**, pois o programador não define manualmente como o operador deve agir; o motor do JavaScript decide automaticamente com base nos tipos envolvidos, aplicando **coerção de tipos** (type coercion).
-</details>
 
 
 # Parte 2: Fundamentos e sintaxe
