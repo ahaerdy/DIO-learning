@@ -6,9 +6,9 @@
   <img src="https://img.shields.io/badge/JavaScript-ES6%2B-yellow?logo=javascript" />
   <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-blue" />
   <img src="https://img.shields.io/badge/Node.js-Backend-green?logo=node.js" />
-  <img src="https://img.shields.io/github/license/SEU_USUARIO/SEU_REPOSITORIO" />
-  <img src="https://img.shields.io/github/repo-size/SEU_USUARIO/SEU_REPOSITORIO" />
-  <img src="https://img.shields.io/github/last-commit/SEU_USUARIO/SEU_REPOSITORIO" />
+  <img src="https://img.shields.io/github/license/ahaerdy/SEU_REPOSITORIO" />
+  <img src="https://img.shields.io/github/repo-size/ahaerdy/SEU_REPOSITORIO" />
+  <img src="https://img.shields.io/github/last-commit/ahaerdy/SEU_REPOSITORIO" />
 </p>
 
 Este repositório reúne os **exercícios, projetos práticos e anotações** desenvolvidos por mim durante a **Formação JavaScript Developer**, oferecida pela plataforma **DIO (Digital Innovation One)**.
