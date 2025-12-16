@@ -1,5 +1,9 @@
-- Instrutor:  
-- Contato Linkedin: 
+- Instrutores:  
+	- Renan Johannsen de Paula (Software Engineer Lead)
+		- Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
+	- Venilton FalvoJr (Doutor em Engenharia de Software, Education Tech Lead na DIO) 
+		- Contato Linkedin: / [falvojr](https://www.linkedin.com/in/falvojr/)
+
 
 ## 🟩 Vídeo 01 - Spoiler do Projeto Final
 
