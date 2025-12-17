@@ -80,14 +80,44 @@ Esse exemplo evidencia a natureza imutável das constantes em JavaScript: ao dec
 
 ## 🟩 Vídeo 03 - Diferenças entre Variáveis e Tipos de Operadores
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_03.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/efa6a6f6-3fa3-409a-8e64-23af101e6d3a?autoplay=1
+
+O vídeo é uma aula de programação que **explica o uso de variáveis e constantes** no código. O instrutor demonstra como **declarar, imprimir e reatribuir** valores a variáveis, mostrando que elas podem ter seus valores alterados. Em contraste, é **apresentado o conceito de `const`**, destacando que tentar reatribuir um valor a uma constante resulta em um erro de programação. Além disso, a aula **introduz operadores de atribuição e operadores matemáticos básicos**, como adição, subtração, multiplicação e divisão. O objetivo é ensinar como **realizar operações aritméticas** e armazenar os resultados em variáveis para exibição.
+
+### Anotações
+
+Código exemplo:
+
+```javascript
+let variavel = 10+10;
+console.log("variavel =",variavel);
+
+variavel = 10-10;
+console.log("variavel =",variavel);
+
+variavel = 10*10;
+console.log("variavel =",variavel);
+
+variavel = 10/10;
+console.log("variavel =",variavel);
+```
+
+Saída:
+
+```javascript
+variavel = 20
+variavel = 0
+variavel = 100
+variavel = 1
+```
 
 
 ## 🟩 Vídeo 04 - Exercício - Cálculo de Valor de Uma Viagem
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/f8a28b03-7979-4273-8fd5-24b763fbee11?autoplay=1
 
 
 ## 🟩 Vídeo 05 - Resolução Guiada do Exercício - Parte 1
