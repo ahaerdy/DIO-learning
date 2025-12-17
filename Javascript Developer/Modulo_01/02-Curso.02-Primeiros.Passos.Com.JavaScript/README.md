@@ -1,4 +1,4 @@
-## Instrutor:
+## Instrutor
 
 - Renan Johannsen de Paula (Software Engineer Lead)
 - Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
@@ -118,6 +118,7 @@ variavel = 1
 
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/f8a28b03-7979-4273-8fd5-24b763fbee11?autoplay=1
+
 
 
 ## 🟩 Vídeo 05 - Resolução Guiada do Exercício - Parte 1
