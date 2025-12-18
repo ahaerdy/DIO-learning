@@ -116,15 +116,33 @@ variavel = 1
 
 ## 🟩 Vídeo 04 - Exercício - Cálculo de Valor de Uma Viagem
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/f8a28b03-7979-4273-8fd5-24b763fbee11?autoplay=1
 
+O vídeo apresenta uma discussão sobre a **introdução de desafios práticos** após o aprendizado inicial de programação. O primeiro desafio sugerido é a **criação de um código para resolver uma fórmula aritmética** simples. Em seguida, o foco se volta para um segundo e mais detalhado exercício que exige a elaboração de um programa capaz de **calcular o custo total de uma viagem**. Para isso, os participantes devem considerar três variáveis essenciais: o **preço médio do combustível**, o **consumo médio do veículo por quilômetro** e a **distância total a ser percorrida**. O objetivo final é que o programa **imprima no console o valor exato, em reais, a ser gasto** na viagem.
+
+### Anotações
+
+```plaintext
+Faça um programa para calcular o valor de uma viagem.
+
+Você lerá 3 variáveis. Sendo elas:
+1 - [Preço do combustível];
+2 - Gasto médio do combustível do carro por KM;
+3 - Distância em KM da viagem;
+
+Imprima no console o valor que será gasto de combustível para realizar esta viagem.
+```
 
 
 ## 🟩 Vídeo 05 - Resolução Guiada do Exercício - Parte 1
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/f8a28b03-7979-4273-8fd5-24b763fbee11?autoplay=1
+
+O foco principal da lição é a **declaração de constantes e variáveis** para armazenar o preço do combustível, a média de consumo do carro e a distância da viagem, utilizando a convenção **camel case** e o ponto como separador decimal. Ao longo da discussão, eles **calculam os litros consumidos** e o **valor total gasto** na viagem, enfatizando a importância do raciocínio lógico e da correta atribuição de nomes para as variáveis para que o código seja legível.
+
 
 
 ## 🟩 Vídeo 06 - Resolução Guiada do Exercício - Parte 2
