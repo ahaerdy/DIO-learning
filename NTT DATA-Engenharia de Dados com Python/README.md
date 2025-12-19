@@ -26,7 +26,7 @@ Este repositório complementa meu currículo técnico e reflete meu compromisso 
 
 ---
 
-## 📁 Conteúdo do Repositório
+## Conteúdo do Repositório
 
 Cada diretório contém:
 
@@ -38,7 +38,7 @@ Cada diretório contém:
 
 ---
 
-## 🛠️ Tecnologias e Conceitos Abordados
+## Tecnologias e Conceitos Abordados
 
 Durante o Bootcamp, pratiquei e desenvolvi habilidades em:
 
@@ -52,7 +52,7 @@ Durante o Bootcamp, pratiquei e desenvolvi habilidades em:
 
 ---
 
-## 📚 Estrutura do Bootcamp
+## Estrutura do Bootcamp
 
 O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
