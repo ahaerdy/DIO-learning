@@ -64,7 +64,6 @@ O vídeo consiste em um guia prático sobre como realizar contribuições em pro
     - Community Challenge (Crie uma issue sobre o Desafio proposto à comunidade)
     - Feature request (Sugira uma ideia para este repositório)
     - Blank issue (Create a new issue from scratch)
-
 - Escolher "Feature request" e "Get Started"
 - Haverá um template com os campos a serem preenchidos.
 - O vídeo segue com as ações propostas pela instrutora.
