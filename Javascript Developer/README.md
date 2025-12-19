@@ -47,8 +47,6 @@ Durante a formação, os principais tópicos estudados incluem:
 
 A formação é composta por cursos e desafios organizados em módulos sequenciais.
 
-> ⚠️ **Observação:** Os links abaixo serão preenchidos conforme o avanço na formação.
-
 ### Módulo 1: Aprenda a Programar do Zero com JavaScript
 
 * [ ] Curso: [Apresentação da Formação JavaScript Developer](https://github.com/ahaerdy/DIO-learning/tree/main/Javascript%20Developer/Modulo_01/01-Curso_01-Introducao.a.Logica.de.Programacao)
