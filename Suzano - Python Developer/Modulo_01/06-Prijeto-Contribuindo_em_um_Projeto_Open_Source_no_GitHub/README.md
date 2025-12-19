@@ -1,7 +1,11 @@
-# Parte 1 - Aulas
+## Instrutores
 
-- Instrutor: Elidiana Andrade (Tech Education Analyst at DIO)
-- Contato Linkedin: https://www.linkedin.com/in/elidiana/
+- Elidiana Andrade (Tech Education Analyst at DIO)
+	- Contato Linkedin: https://www.linkedin.com/in/elidiana/
+- Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
+	- Contato Linkedin: https://www.linkedin.com/in/falvojr/
+
+# Parte 1 - Aulas
 
 ## Vídeo 01 - Introdução ao Lab
 
@@ -193,8 +197,9 @@ Profile README enviado para o projeto: [ahaerdy.md](https://github.com/ahaerdy/D
 
 # Parte 2 -Entendendo o Desafio 
 
-- [Entendendo o Desafio](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/sobre_o_desafio/entendendo_o_desafio.md) (texto elaborado pela Prof. Elidiana).
+- [Entendendo o Desafio](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/sobre_o_desafio/entendendo_o_desafio.md) (roteiro elaborado pela instrutora Elidiana).
 
 # Certificado: Contribuindo em um Projeto Open Source no GitHub
 
 Link do certificado: https://hermes.dio.me/certificates/OC0JDME3.pdf
+Certificado em pdf: ![[Certificado-Contribuindo.em.um.Projeto.Open.Source.no.GitHub.pdf]]
