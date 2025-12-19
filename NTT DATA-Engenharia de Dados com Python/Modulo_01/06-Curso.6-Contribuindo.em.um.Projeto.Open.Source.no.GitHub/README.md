@@ -87,16 +87,18 @@ O vídeo detalha o procedimento prático para realizar uma **contribuição em u
 
 ## 🟩 Vídeo 05 - Dicas e Materiais de Apoio
 
-
+![[bootcamp-ntt-data_modulo_01-Curso_06-Video_05.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/9e6f7eb2-86cc-4a66-b31c-80d3d774667d
 
+O material fornece orientações essenciais para desenvolvedores que desejam **fortalecer seu portfólio profissional** por meio da colaboração em projetos de código aberto. A instrutora enfatiza a importância de participar ativamente da **comunidade DIO** e de seguir rigorosamente as **documentações e padrões de commit** ao contribuir. O conteúdo detalha métodos práticos para manipular arquivos diretamente na interface do **GitHub**, incluindo o uso do editor web acionado pela tecla de atalho do ponto. Além das técnicas operacionais, o recurso destaca como o trabalho em equipe demonstra **habilidades comportamentais** valiosas para o mercado de trabalho. Por fim, são disponibilizados diversos links de apoio que abrangem desde guias de **Markdown** até ferramentas para a personalização de perfis e READMEs.
 
 
 ## 🟩 Vídeo 06 - Resumão e Explicação Sobre a Automação dos PRs
 
 
-Link do vídeo: 
+
+Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/32153d6a-91fe-42d0-9b18-0d2be2e35197
 
 
 ## 🟩 Vídeo 07 - Entendendo o Desafio
