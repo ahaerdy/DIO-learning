@@ -25,13 +25,7 @@ Este repositório faz parte da minha estratégia de **aprendizado contínuo** e 
 
 ---
 
-## 🎯 Objetivo do Repositório
-
-Consolidar o aprendizado em JavaScript por meio de prática contínua, desafios de código e projetos aplicados, servindo como material de estudo, consulta futura e evidência prática de evolução técnica.
-
----
-
-## 🛠️ Tecnologias e Conceitos Abordados
+##  Tecnologias e Conceitos Abordados
 
 Durante a formação, os principais tópicos estudados incluem:
 
@@ -49,7 +43,7 @@ Durante a formação, os principais tópicos estudados incluem:
 
 ---
 
-## 📚 Estrutura da Formação
+##  Estrutura da Formação
 
 A formação é composta por cursos e desafios organizados em módulos sequenciais.
 
