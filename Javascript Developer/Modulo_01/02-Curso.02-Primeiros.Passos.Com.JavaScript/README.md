@@ -368,8 +368,59 @@ O uso de `===`  torna a intenção do algoritmo explícita, evita surpresas e é
 
 ## 🟩 Vídeo 10 - Estrutura Condicional Com If e Else
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_10.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/ea8cea3f-1833-46ac-bfb1-bd622bacd3cc?autoplay=1
+
+O vídeo explica detalhadamente como o **operador "if"** valida uma condição lógica para decidir se um bloco de código deve ser executado ou ignorado. Os participantes demonstram o uso da **exclamação para negar** valores booleanos, transformando afirmações verdadeiras em falsas. Além disso, a conversa evolui para a introdução do **comando "else"**, que serve como uma alternativa automática quando a condição inicial não é atendida. Para ilustrar esses conceitos técnicos, são utilizados exemplos práticos simples, como a verificação de **números pares, ímpares** ou divisíveis por cinco.
+
+### Anotações
+
+Código:
+```javascript
+const numero = 0;
+const numeroPar = (numero % 2) === 0;
+
+if (numeroPar) {
+    console.log('Par');
+} else {
+    console.log('Impar');
+}
+```
+
+#### O que o código faz
+
+1. `const numero = 0;`  
+   Define a constante `numero` com o valor **0**.
+
+2. `const numeroPar = (numero % 2) === 0;`  
+   Verifica se o número é par:  
+   - `numero % 2` calcula o resto da divisão por 2.  
+   - Se o resto for `0`, o número é par.  
+   - A comparação usa `===` para garantir que o tipo e o valor sejam iguais.
+
+3. `if (numeroPar) { ... } else { ... }`  
+   - Se `numeroPar` for `true`, imprime `'Par'`.  
+   - Caso contrário, imprime `'Impar'`.
+
+#### Saída esperada
+
+Como `0 % 2 === 0`, o valor de `numeroPar` será `true`.  
+Portanto, o console exibirá:
+
+```
+Par
+```
+
+#### Observação
+
+- O uso de `===` é recomendado para evitar coerção de tipos inesperada.
+- O código está em português, tornando-o acessível para falantes da língua.
+
+```javascript
+// Resultado final:
+Par
+```
 
 
 ## 🟩 Vídeo 11 - Estrutura Condicional com Else If
