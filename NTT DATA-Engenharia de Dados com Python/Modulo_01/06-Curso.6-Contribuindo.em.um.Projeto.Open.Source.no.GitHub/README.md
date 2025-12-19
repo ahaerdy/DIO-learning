@@ -44,8 +44,6 @@ Link do vídeo:
 Link do vídeo: 
 
 
-Entendendo o Desafio..
-
 ##  Materiais de Apoio
 
 ### Materiais Complementares
