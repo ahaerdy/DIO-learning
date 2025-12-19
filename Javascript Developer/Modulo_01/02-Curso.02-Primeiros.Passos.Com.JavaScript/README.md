@@ -172,6 +172,8 @@ Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/p
 
 Os participantes discutem e demonstram um conceito de programação focado em **arredondamento de números de ponto flutuante**. A conversa começa com um cálculo hipotético do custo de combustível para uma longa viagem, que resulta em um número não inteiro, **R$ 762** e alguma fração. Para resolver o problema de números quebrados, eles introduzem o método **`.toFixed()`**, que é usado para **converter a variável em texto** e limitar a quantidade de casas decimais a dois, o que é apropriado para centavos. O diálogo é conduzido em um formato de aula interativa, onde o objetivo é um aprendizado **dinâmico e colaborativo**, resolvendo as dúvidas de um dos participantes em tempo real.
 
+### Anotações
+
 Código:
 
 ```javascript
@@ -197,19 +199,110 @@ Saída:
 ## 🟩 Vídeo 01 - Conceito de Boolean e Condicionais
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/22b0eb2b-f250-4101-9bd5-a0becb5e2bf8?autoplay=1
+
+**Aula técnica** focada nos fundamentos da **programação e lógica de algoritmos**. O instrutor inicia revisando conceitos anteriores, como a **declaração de variáveis** utilizando "let" e "const", além do uso de **operadores aritméticos**. O foco principal da lição é a introdução às **estruturas condicionais**, explicando como o sistema toma decisões baseadas em critérios específicos. Para ilustrar esse processo, o texto detalha o funcionamento dos **dados do tipo booleano**, que representam valores de verdadeiro ou falso. Por fim, são apresentados os **operadores de comparação**, como maior ou menor, essenciais para validar situações dentro de um código.
 
 
 ## 🟩 Vídeo 02 - Exemplo com Resto de Divisão
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/ee712118-2f95-4d8b-93bf-1f1d3d053fb8?autoplay=1
+
+O vídeo explica a **lógica de programação** utilizada para identificar **números pares e ímpares**. Os interlocutores demonstram como o **operador de resto da divisão**, representado pelo símbolo de porcentagem, é essencial para verificar se um valor é múltiplo de outro. Através de exemplos práticos em código, o texto ilustra que, se o resultado dessa operação for zero, o número é classificado como par. Além disso, a conversa aborda a importância da **precedência matemática** ao utilizar parênteses em expressões complexas. Por fim, explica-se que essas validações resultam em **tipos booleanos**, que assumem apenas os valores verdadeiro ou falso. Esta lição serve como uma introdução fundamental ao uso de **condicionais** e operadores aritméticos no desenvolvimento de software.
+
+### Anotações
+
+Código:
+
+```javascript
+const numero = 11;
+
+const numeroPar = (numero % 2) === 0;
+
+console.log(numeroPar);
+```
+
+Saída:
+
+```shell
+false
+```
 
 
 ## 🟩 Vídeo 03 - Tipos de Operadores de Igualdade
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/840d6b09-3655-42ec-a923-90550e8a1802?autoplay=1
+
+O vídeo explica as distinções fundamentais entre os operadores de comparação na linguagem **JavaScript**, focando especialmente na diferença entre o uso de **dois e três sinais de igual**. O autor esclarece que, enquanto um único sinal serve para **atribuição de valores**, o uso de dois sinais realiza uma **conversão implícita de tipos**, permitindo que um número seja considerado igual a um texto. No entanto, a recomendação principal é a utilização de **três sinais de igual**, pois esse operador exige que tanto o **valor quanto o tipo** dos dados sejam idênticos. Essa abordagem mais rigorosa evita erros lógicos ao impedir comparações inconsistentes entre categorias diferentes de informação. Em suma, o conteúdo defende a **tipagem precisa** para garantir a integridade e a clareza do código desenvolvido.
+
+### Anotações
+
+Código:
+
+```javascript
+const numero = 2;
+
+const numeroPar = (numero % 2) == '0';
+
+console.log(numeroPar);
+```
+
+#### Passo a passo:
+
+- `const numero = 2;`  
+
+  Define a constante `numero` com valor **2**.
+
+- `const numeroPar = (numero % 2) == '0';`  
+ 
+  Calcula o resto da divisão de `numero` por 2.  
+  
+  - Para números pares, o resultado é **0**.  
+  - Aqui ocorre uma comparação com a **string `'0'`**, e não com o número **0**.  
+  - Em JavaScript, essa comparação resulta em `false` porque o tipo não é adequado.
+
+- `console.log(numeroPar);`  
+  Exibe o valor da variável `numeroPar`.
+
+Saída:
+```javascript
+false
+```
+
+####  Correção recomendada
+
+```javascript
+const numeroPar = (numero % 2) == 0;
+```
+
+Assim, o resultado seria `true` para números pares como `2`, `4`, `6` etc.
+
+Diferença entre `==` e `===`
+- `==` → compara valores com **coerção de tipo** (tenta converter os tipos antes de comparar).  
+- `===` → compara valores **sem coerção de tipo**, ou seja, exige que os tipos sejam iguais.
+
+### O que acontece aqui
+- `numero % 2` resulta em `0` (tipo **number**).  
+- `'0'` é uma string (tipo **string**).  
+- Com `===`, o JavaScript verifica **valor e tipo**.  
+- Como `0` (number) não é igual a `'0'` (string), o resultado é:
+
+```javascript
+false
+```
+
+### Correção recomendada
+Para verificar corretamente se o número é par, compare com o número `0`:
+
+```javascript
+const numeroPar = (numero % 2) === 0;
+
+console.log(numeroPar); // true
+```
+
+Assim, a saída será `true` quando o número for par.
 
 
 ## 🟩 Vídeo 04 - Estrutura Condicional Com If e Else
