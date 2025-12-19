@@ -249,60 +249,121 @@ const numeroPar = (numero % 2) == '0';
 console.log(numeroPar);
 ```
 
-#### Passo a passo:
 
-- `const numero = 2;`  
+#### Interpretação do código JavaScript e diferença entre == e ===
 
-  Define a constante `numero` com valor **2**.
-
-- `const numeroPar = (numero % 2) == '0';`  
- 
-  Calcula o resto da divisão de `numero` por 2.  
-  
-  - Para números pares, o resultado é **0**.  
-  - Aqui ocorre uma comparação com a **string `'0'`**, e não com o número **0**.  
-  - Em JavaScript, essa comparação resulta em `false` porque o tipo não é adequado.
-
-- `console.log(numeroPar);`  
-  Exibe o valor da variável `numeroPar`.
-
-Saída:
-```javascript
-false
-```
-
-####  Correção recomendada
+##### Código analisado
 
 ```javascript
-const numeroPar = (numero % 2) == 0;
-```
+const numero = 2;
 
-Assim, o resultado seria `true` para números pares como `2`, `4`, `6` etc.
+const numeroPar = (numero % 2) == '0';
 
-Diferença entre `==` e `===`
-- `==` → compara valores com **coerção de tipo** (tenta converter os tipos antes de comparar).  
-- `===` → compara valores **sem coerção de tipo**, ou seja, exige que os tipos sejam iguais.
+console.log(numeroPar);
+````
 
-### O que acontece aqui
-- `numero % 2` resulta em `0` (tipo **number**).  
-- `'0'` é uma string (tipo **string**).  
-- Com `===`, o JavaScript verifica **valor e tipo**.  
-- Como `0` (number) não é igual a `'0'` (string), o resultado é:
+##### Passo a passo
+
+Como o operador == é usado, o JavaScript realiza **coerção de tipo automática**.
+
+###### Coerção de tipo (type coercion)
+
+O operador == tenta converter os operandos para um tipo comum antes da comparação:
 
 ```javascript
-false
+'0' → 0
 ```
 
-### Correção recomendada
-Para verificar corretamente se o número é par, compare com o número `0`:
+Logo, a comparação se torna:
+
+```javascript
+0 == 0 // true
+```
+
+Portanto:
+
+```javascript
+numeroPar === true
+```
+
+```javascript
+console.log(numeroPar);
+```
+
+Saída no console:
+
+```text
+true
+```
+
+O resultado está correto (2 é par), porém **por um motivo implícito e perigoso**.
+
+#### Diferença entre == e ===
+
+##### == — igualdade frouxa (loose equality)
+
+* Compara apenas o **valor**
+* **Converte tipos automaticamente**
+* Pode gerar resultados inesperados
+
+Exemplos:
+
+```javascript
+0 == '0'          // true
+false == 0        // true
+null == undefined // true
+```
+
+##### `===` — igualdade estrita (strict equality)
+
+* Compara **valor e tipo**
+* **Não faz coerção de tipo**
+* Comportamento previsível e seguro
+
+Exemplos:
+
+```javascript
+0 === '0'          // false
+false === 0        // false
+null === undefined // false
+```
+
+#### Problema específico no algoritmo
+
+Neste trecho:
+
+```javascript
+(numero % 2) == '0'
+```
+
+Temos:
+
+* Lado esquerdo: `number`
+* Lado direito: `string`
+
+O algoritmo **depende da coerção automática do JavaScript** para funcionar corretamente.
+⚠️ Isso pode gerar bugs sutis se o código for alterado, reutilizado ou expandido.
+
+#### Forma correta e recomendada
 
 ```javascript
 const numeroPar = (numero % 2) === 0;
-
-console.log(numeroPar); // true
 ```
 
-Assim, a saída será `true` quando o número for par.
+Vantagens:
+
+* Ambos os operandos são do tipo `number`
+* Nenhuma conversão implícita
+* Código mais claro, seguro e profissional
+
+## Conclusão
+
+O código original funciona **por coincidência**, graças à coerção automática do operador `==`.
+O uso de `===` torna a intenção do algoritmo explícita, evita surpresas e é a prática recomendada em JavaScript moderno.
+
+```
+```
+
 
 
 ## 🟩 Vídeo 04 - Estrutura Condicional Com If e Else
