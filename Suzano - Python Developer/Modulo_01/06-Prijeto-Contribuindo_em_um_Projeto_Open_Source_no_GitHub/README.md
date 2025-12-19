@@ -202,4 +202,3 @@ Profile README enviado para o projeto: [ahaerdy.md](https://github.com/ahaerdy/D
 # Certificado: Contribuindo em um Projeto Open Source no GitHub
 
 Link do certificado: https://hermes.dio.me/certificates/OC0JDME3.pdf
-Certificado em pdf: ![[Certificado-Contribuindo.em.um.Projeto.Open.Source.no.GitHub.pdf]]
