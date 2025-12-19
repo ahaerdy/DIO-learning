@@ -5,13 +5,20 @@
 
 ## 🟩 Vídeo 01 - Introdução ao Lab
 
+![[bootcamp-ntt-data_modulo_01-Curso_06-Video_01.webm|vid-60]]
+
 Link do vídeo:  https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/913f26fd-1018-4643-b59a-6356ea77dc2e?back=/track/engenharia-dados-python
+
+O vídeo consiste em um guia prático sobre como participar de projetos de **código aberto** utilizando a plataforma **GitHub**. A fonte define o conceito de **Open Source**, destacando a liberdade de uso e modificação, além de detalhar formas de contribuição, como o relato de problemas e a atualização de documentações. Através de um exemplo real em um repositório educativo, demonstra-se como abrir e gerenciar **Issues** utilizando modelos personalizados e etiquetas organizacionais. O conteúdo ensina a aplicar boas práticas, como a padronização de mensagens de **commit** para o fechamento automático de tarefas pendentes. Por fim, o material introduz o conceito de **Pull Requests** como o próximo passo para enviar melhorias diretamente ao código principal de um projeto.
 
 
 ## 🟩 Vídeo 02 - Formas de Contribuir num Projeto Open Source
 
 
-Link do vídeo: 
+
+Link do vídeo:  https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/55390e77-8893-4a65-ac62-c8bea564528d?back=/track/engenharia-dados-python
+
+
 
 
 ## 🟩 Vídeo 03 - Desenvolvendo uma Contribuição
