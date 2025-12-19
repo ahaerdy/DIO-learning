@@ -78,11 +78,11 @@ Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-pro
 O tutorial detalha o processo técnico para realizar contribuições em projetos de **código aberto** no GitHub, utilizando como exemplo um desafio da plataforma **DIO**. O procedimento inicia com a criação de um **fork** e o clone do repositório para o ambiente local, estabelecendo conexões entre os repositórios **origin** e **upstream** para manter o código sincronizado. A instrutora demonstra como criar uma **branch específica** e desenvolver um arquivo de perfil em **Markdown**, utilizando ferramentas como o VS Code e comandos de terminal. As etapas finais abrangem a adição das mudanças à **staging area**, a criação de um **commit** seguindo convenções de mensagens e o envio dos dados via **push**. O conteúdo serve como um guia prático para que desenvolvedores pratiquem o fluxo de trabalho colaborativo e personalizem suas apresentações na comunidade.
 
 ### Anotações
+
 - Cria-se um fork do repositório original para efetuar uma contribuição.
 - O fork e necessário pois não temos permissão de enviar alterações no repositório original.
 - Após o  fork, cria-se um clone deste no repositório local.
 - Adiciona-se o repositório original como remote upstream para manter o repositório local atualizado
-
 - o [Guia de Contribuição](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/CONTRIBUTING.md) apresenta o passo a passo de todo o processo.
 
 <details>
