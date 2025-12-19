@@ -344,7 +344,7 @@ Temos:
 - O algoritmo **depende da coerção automática do JavaScript** para funcionar corretamente.
 - ⚠️ Isso pode gerar bugs sutis se o código for alterado, reutilizado ou expandido.
 
-#### Forma correta e recomendada
+#### Forma correta e recomendada ✅
 
 ```javascript
 const numeroPar = (numero % 2) === 0;
