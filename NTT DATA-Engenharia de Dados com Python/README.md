@@ -63,7 +63,10 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Conhecendo a Linguagem de Programação Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/03-Curso.03-Conhecendo.a.Linguagem.de.Programacao.Python)
 - [x] Curso: [Versionamento de Código com Git e GitHub](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/04-Curso.04-Versionamento.de.Codigo.com.Git.e.GitHub) 
 - [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/05-Curso.5-Desafios.de.Projetos-Crie.Um.Portfolio.Vencedor)  
-- [ ] Curso: [Contribuindo em um Projeto Open Source no GitHub](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/06-Curso.6-Contribuindo.em.um.Projeto.Open.Source.no.GitHub)
+- [x] Curso: [Contribuindo em um Projeto Open Source no GitHub](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/06-Curso.6-Contribuindo.em.um.Projeto.Open.Source.no.GitHub)
+- [x] Projeto: [Contribuindo em um Projeto Open Source no Github](Modulo_01/06-Prijeto-Contribuindo_em_um_Projeto_Open_Source_no_GitHub/)
+    - Repositório: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
+    - Descrição: acrescentando o meu arquivo markdown na pasta community no repositório dio-lab-open-source.
 
 ### Módulo 2: Sintaxe Básica com Python  
 
