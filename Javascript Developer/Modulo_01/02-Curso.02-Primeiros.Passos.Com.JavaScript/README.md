@@ -341,8 +341,8 @@ Temos:
 * Lado esquerdo: `number`
 * Lado direito: `string`
 
-O algoritmo **depende da coerção automática do JavaScript** para funcionar corretamente.
-⚠️ Isso pode gerar bugs sutis se o código for alterado, reutilizado ou expandido.
+- O algoritmo **depende da coerção automática do JavaScript** para funcionar corretamente.
+- ⚠️ Isso pode gerar bugs sutis se o código for alterado, reutilizado ou expandido.
 
 #### Forma correta e recomendada
 
