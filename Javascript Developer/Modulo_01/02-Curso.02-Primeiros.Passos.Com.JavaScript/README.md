@@ -359,7 +359,7 @@ Vantagens:
 #### Conclusão
 
 O código original funciona **por coincidência** (‼️)  graças à coerção automática do operador `==`.
-O uso de `===` torna a intenção do algoritmo explícita, evita surpresas e é a prática recomendada em JavaScript moderno.
+O uso de `===`  torna a intenção do algoritmo explícita, evita surpresas e é a prática recomendada em JavaScript moderno.
 
 
 ## 🟩 Vídeo 04 - Estrutura Condicional Com If e Else
