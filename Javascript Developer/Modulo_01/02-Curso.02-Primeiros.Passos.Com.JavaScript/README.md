@@ -138,6 +138,7 @@ Imprima no console o valor que será gasto de combustível para realizar esta vi
 
 ## 🟩 Vídeo 05 - Resolução Guiada do Exercício - Parte 1
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_05.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/f8a28b03-7979-4273-8fd5-24b763fbee11?autoplay=1
 
@@ -166,7 +167,7 @@ Saída:
 
 ## 🟩 Vídeo 06 - Resolução Guiada do Exercício - Parte 2
 
-
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_06.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/db11445e-9fb3-4255-a4a7-20fce7a1a0cc?autoplay=1
 
@@ -196,16 +197,18 @@ Saída:
 
 # Parte 2 - Estruturas Condicionais
 
-## 🟩 Vídeo 01 - Conceito de Boolean e Condicionais
+## 🟩 Vídeo 07 - Conceito de Boolean e Condicionais
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_07.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/22b0eb2b-f250-4101-9bd5-a0becb5e2bf8?autoplay=1
 
 **Aula técnica** focada nos fundamentos da **programação e lógica de algoritmos**. O instrutor inicia revisando conceitos anteriores, como a **declaração de variáveis** utilizando "let" e "const", além do uso de **operadores aritméticos**. O foco principal da lição é a introdução às **estruturas condicionais**, explicando como o sistema toma decisões baseadas em critérios específicos. Para ilustrar esse processo, o texto detalha o funcionamento dos **dados do tipo booleano**, que representam valores de verdadeiro ou falso. Por fim, são apresentados os **operadores de comparação**, como maior ou menor, essenciais para validar situações dentro de um código.
 
 
-## 🟩 Vídeo 02 - Exemplo com Resto de Divisão
+## 🟩 Vídeo 08 - Exemplo com Resto de Divisão
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_08.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/ee712118-2f95-4d8b-93bf-1f1d3d053fb8?autoplay=1
 
@@ -230,8 +233,9 @@ false
 ```
 
 
-## 🟩 Vídeo 03 - Tipos de Operadores de Igualdade
+## 🟩 Vídeo 09 - Tipos de Operadores de Igualdade
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_09.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/840d6b09-3655-42ec-a923-90550e8a1802?autoplay=1
 
@@ -362,30 +366,30 @@ O código original funciona **por coincidência** (‼️)  graças à coerção
 O uso de `===`  torna a intenção do algoritmo explícita, evita surpresas e é a prática recomendada em JavaScript moderno.
 
 
-## 🟩 Vídeo 04 - Estrutura Condicional Com If e Else
+## 🟩 Vídeo 10 - Estrutura Condicional Com If e Else
+
+
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/ea8cea3f-1833-46ac-bfb1-bd622bacd3cc?autoplay=1
+
+
+## 🟩 Vídeo 11 - Estrutura Condicional com Else If
+
+
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/9560b66d-953b-44f7-ba80-feba07976c47?autoplay=1
+
+
+## 🟩 Vídeo 12 - Revisão e Dicas de Boas Práticas
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 05 - Estrutura Condicional com Else If
+## 🟩 Vídeo 13 - Exercício - Incremento do Cálculo de Valor de Uma Viagem
 
 
 Link do vídeo: 
 
-
-## 🟩 Vídeo 06 - Revisão e Dicas de Boas Práticas
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - Exercício - Incremento do Cálculo de Valor de Uma Viagem
-
-
-Link do vídeo: 
-
-## 🟩 Vídeo 08 - Resolução Guiada do Exercício
+## 🟩 Vídeo 14 - Resolução Guiada do Exercício
 
 
 Link do vídeo: 
@@ -393,37 +397,37 @@ Link do vídeo:
 
 # Parte 3 - Praticando com Variáveis, Operadores e Estruturas Condicionais
 
-## 🟩 Vídeo 01 - Exercício 1 - Média de Notas
+## 🟩 Vídeo 15 - Exercício 1 - Média de Notas
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - Resolução Guiada do Exercício 1
+## 🟩 Vídeo 16 - Resolução Guiada do Exercício 1
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - Exercício 2 - Cálculo do IMC
+## 🟩 Vídeo 17 - Exercício 2 - Cálculo do IMC
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - Resolução Guiada do Exercício 2
+## 🟩 Vídeo 18 - Resolução Guiada do Exercício 2
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 05 - Exercício 3 - Valor Pago de um Produto
+## 🟩 Vídeo 19 - Exercício 3 - Valor Pago de um Produto
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 06 - Resolução Guiada do Exercício 3
+## 🟩 Vídeo 20 - Resolução Guiada do Exercício 3
 
 
 Link do vídeo: 
