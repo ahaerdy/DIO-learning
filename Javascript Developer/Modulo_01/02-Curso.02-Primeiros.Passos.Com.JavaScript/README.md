@@ -318,7 +318,7 @@ false == 0        // true
 null == undefined // true
 ```
 
-##### `===` — igualdade estrita (strict equality)
+##### === — igualdade estrita (strict equality)
 
 * Compara **valor e tipo**
 * **Não faz coerção de tipo**
@@ -362,8 +362,8 @@ Vantagens:
 
 #### Conclusão
 
-O código original funciona **por coincidência** (‼️)  graças à coerção automática do operador `==`.
-O uso de `===`  torna a intenção do algoritmo explícita, evita surpresas e é a prática recomendada em JavaScript moderno.
+O código original funciona **por coincidência** (‼️)  graças à coerção automática do operador ==.
+O uso de ===  torna a intenção do algoritmo explícita, evita surpresas e é a prática recomendada em JavaScript moderno.
 
 
 ## 🟩 Vídeo 10 - Estrutura Condicional Com If e Else
@@ -397,7 +397,7 @@ if (numeroPar) {
    Verifica se o número é par:  
    - `numero % 2` calcula o resto da divisão por 2.  
    - Se o resto for `0`, o número é par.  
-   - A comparação usa `===` para garantir que o tipo e o valor sejam iguais.
+   - A comparação usa === para garantir que o tipo e o valor sejam iguais.
 
 3. `if (numeroPar) { ... } else { ... }`  
    - Se `numeroPar` for `true`, imprime `'Par'`.  
@@ -414,7 +414,7 @@ Par
 
 #### Observação
 
-- O uso de `===` é recomendado para evitar coerção de tipos inesperada.
+- O uso de === é recomendado para evitar coerção de tipos inesperada.
 - O código está em português, tornando-o acessível para falantes da língua.
 
 ```javascript
@@ -495,19 +495,174 @@ Sim
 
 ## 🟩 Vídeo 12 - Revisão e Dicas de Boas Práticas
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_12.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/169bfa8f-e391-4b21-aeb7-45112a9f5f71?autoplay=1
+
+O instrutor explica como esses valores binários, representando **verdadeiro ou falso**, podem armazenar resultados de operações lógicas, como verificar se um número é divisível por outro. Um ponto central da discussão é a importância da **legibilidade do código**, sugerindo que nomear variáveis de forma clara torna a lógica mais compreensível do que inserir condições complexas diretamente nos comandos. O diálogo também aborda **convenções de nomenclatura**, recomendando o uso de prefixos como "is" ou "é" para indicar que a variável representa um estado ou pergunta. Por fim, o conteúdo enfatiza que escrever um **código limpo** facilita a manutenção e o entendimento mental do fluxo de execução pelo programador.
 
 
 ## 🟩 Vídeo 13 - Exercício - Incremento do Cálculo de Valor de Uma Viagem
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_13.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: [[formacao_javascript_developer-modulo_01-Curso_02-Video_13.webm]]vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/4bc658d5-9f54-4e27-817b-bfecf3fb218f?autoplay=1
+
+O vídeo apresenta um **desafio de programação** que expande um exercício anterior sobre o cálculo de **custos de viagem**. O objetivo principal é implementar uma **estrutura condicional** para lidar com veículos do tipo **flex**, que podem ser abastecidos com diferentes tipos de energia. O sistema agora deve processar **cinco variáveis** distintas, incluindo os preços específicos do **etanol e da gasolina**. Dependendo do combustível escolhido pelo usuário, o programa deve aplicar o valor correspondente para realizar o cálculo final. Ao concluir a lógica, o resultado do **gasto total** da jornada deve ser exibido no console para o usuário.
+
+### Anotações
+
+Desafio:
+```javascript
+Faça um programa para calcular o valor de uma viagem.
+
+Você terá 3 variáveis. Sendo elas:
+
+1. Preço do etanol;
+2. Preço da gasolina;
+3. O tipo de combustível que está no seu carro;
+4. Gasto médio de combustível do carro por KM;
+5. Distância em KM da viagem;
+
+Imprima no console o valor que será gasto para realizar esta viagem.
+```
+
 
 ## 🟩 Vídeo 14 - Resolução Guiada do Exercício
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_14.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/a3bcf4ad-8356-41ea-83a5-5063fd6ae41a?autoplay=1
+
+O vídeo apresenta um **tutorial prático de programação** focado no desenvolvimento de um sistema para **calcular gastos de viagem**. Dois interlocutores discutem a implementação de uma **lógica condicional** para lidar com diferentes tipos de combustíveis, como **etanol e gasolina**. Eles detalham o uso de variáveis para armazenar preços, distância e consumo médio, explicando como as estruturas de **controle de fluxo**, como o *if* e o *else*, definem o cálculo correto. Durante o diálogo, são abordados conceitos técnicos fundamentais como **escopo de variáveis**, manipulação de strings e a importância da formatação do código. O objetivo final é aprimorar um programa básico para que ele identifique automaticamente qual valor aplicar com base na escolha do usuário.
+
+### Anotações
+
+Código:
+```javascript
+const precoEtanol = 5.79;
+const precoGasolina = 6.66;
+const kmPorLitros = 10;
+const distanciaEmKm = 100;
+const tipoCombustivel = 'Etanol';
+
+const litrosConsumidos = distanciaEmKm / kmPorLitros;
+
+if (tipoCombustivel === 'Etanol') {
+    const valorGasto = litrosConsumidos * precoEtanol;
+    console.log(valorGasto.toFixed(2));
+} else {
+    const valorGasto = litrosConsumidos * precoGasolina;
+    console.log(valorGasto.toFixed(2));
+}
+```
+
+Saída:
+```shell
+57.90
+```
+
+
+#### Explicação passo a passo do programa – Cálculo do valor de uma viagem
+
+Este programa em JavaScript tem como objetivo calcular o valor total gasto em combustível em uma viagem, considerando a distância percorrida, o consumo médio do veículo, o tipo de combustível utilizado e o preço correspondente.
+
+#### Declaração dos preços dos combustíveis
+
+```javascript
+const precoEtanol = 5.79;
+const precoGasolina = 6.66;
+```
+
+São declaradas duas constantes que armazenam o preço por litro de cada combustível.
+Utiliza-se `const` porque esses valores não sofrem alteração durante a execução do programa.
+
+#### Definição do consumo médio do veículo
+
+```javascript
+const kmPorLitros = 10;
+```
+
+Essa variável indica que o veículo percorre 10 quilômetros para cada litro de combustível consumido.
+
+#### Definição da distância da viagem
+
+```javascript
+const distanciaEmKm = 100;
+```
+
+Representa a distância total da viagem, em quilômetros.
+
+#### Definição do tipo de combustível
+
+```javascript
+const tipoCombustivel = 'Etanol';
+```
+
+Indica qual combustível está sendo utilizado no veículo.
+O valor é uma string e pode ser `'Etanol'` ou `'Gasolina'`.
+Essa variável será usada como critério na estrutura condicional.
+
+#### Cálculo da quantidade de litros consumidos
+
+```javascript
+const litrosConsumidos = distanciaEmKm / kmPorLitros;
+```
+
+Aqui é calculada a quantidade total de litros necessários para realizar a viagem.
+
+Exemplo prático:
+Se o carro faz 10 km por litro e a viagem tem 100 km, serão consumidos 10 litros.
+
+Esse cálculo é feito antes do `if` porque ele independe do tipo de combustível.
+
+#### Estrutura condicional para escolha do combustível
+
+```javascript
+if (tipoCombustivel === 'Etanol') {
+```
+
+O programa verifica se o tipo de combustível informado é etanol.
+O operador === é utilizado para realizar uma comparação estrita, avaliando valor e tipo.
+
+Se a condição for verdadeira, o código dentro do bloco `if` será executado.
+
+#### Cálculo do valor gasto com etanol
+
+```javascript
+const valorGasto = litrosConsumidos * precoEtanol;
+console.log(valorGasto.toFixed(2));
+```
+
+Caso o combustível seja etanol, o programa multiplica a quantidade de litros consumidos pelo preço do etanol.
+O método `toFixed(2)` é usado para formatar o valor com duas casas decimais antes de exibi-lo no console.
+
+#### Cálculo do valor gasto com gasolina
+
+```javascript
+} else {
+    const valorGasto = litrosConsumidos * precoGasolina;
+    console.log(valorGasto.toFixed(2));
+}
+```
+
+Se o combustível não for etanol, o programa assume que é gasolina.
+O cálculo segue a mesma lógica, alterando apenas o preço utilizado na multiplicação.
+
+#### Observação importante sobre escopo de variáveis
+
+A variável `valorGasto` é declarada dentro dos blocos `if` e `else`.
+Por estar em escopo de bloco, ela só existe dentro das chaves onde foi definida.
+
+Se o `console.log` estivesse fora desses blocos, ocorreria o erro `valorGasto is not defined`.
+Por isso, a exibição do resultado precisa estar dentro de cada condição.
+
+#### Conclusão
+
+O programa demonstra conceitos fundamentais de JavaScript, como declaração de constantes, operações matemáticas, estruturas condicionais, uso de strings para controle de fluxo, escopo de variáveis e formatação numérica.
+
+A lógica central das condicionais é executar diferentes trechos de código com base em uma condição, neste caso, o tipo de combustível utilizado na viagem.
+
 
 
 # Parte 3 - Praticando com Variáveis, Operadores e Estruturas Condicionais
@@ -515,7 +670,8 @@ Link do vídeo:
 ## 🟩 Vídeo 15 - Exercício 1 - Média de Notas
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/557eff5c-1262-452d-88a7-351ff91828d1?autoplay=1
+
 
 
 ## 🟩 Vídeo 16 - Resolução Guiada do Exercício 1
