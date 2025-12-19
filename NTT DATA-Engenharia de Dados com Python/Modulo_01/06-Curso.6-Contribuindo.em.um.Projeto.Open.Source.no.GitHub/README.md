@@ -9,34 +9,89 @@
 
 Link do vídeo:  https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/913f26fd-1018-4643-b59a-6356ea77dc2e?back=/track/engenharia-dados-python
 
-O vídeo consiste em um guia prático sobre como participar de projetos de **código aberto** utilizando a plataforma **GitHub**. A fonte define o conceito de **Open Source**, destacando a liberdade de uso e modificação, além de detalhar formas de contribuição, como o relato de problemas e a atualização de documentações. Através de um exemplo real em um repositório educativo, demonstra-se como abrir e gerenciar **Issues** utilizando modelos personalizados e etiquetas organizacionais. O conteúdo ensina a aplicar boas práticas, como a padronização de mensagens de **commit** para o fechamento automático de tarefas pendentes. Por fim, o material introduz o conceito de **Pull Requests** como o próximo passo para enviar melhorias diretamente ao código principal de um projeto.
+Esta fonte apresenta um **laboratório prático** conduzido pela desenvolvedora Lidiana, com o objetivo de ensinar o **básico sobre contribuições em projetos de código aberto**. A instrutora orienta os participantes através de um processo simplificado no **GitHub**, visando aumentar a confiança de iniciantes para realizarem sua primeira colaboração. O conteúdo abrange desde a **teoria fundamental** até o desenvolvimento e envio de uma contribuição real, finalizando com **recursos de apoio** para estudos contínuos. Embora existam pré-requisitos sobre o uso de ferramentas de versionamento, a facilitadora revisa conceitos essenciais para garantir a **acessibilidade do aprendizado**. Assim, o material serve como um **guia introdutório** para quem deseja ingressar no ecossistema de desenvolvimento colaborativo.
+
 
 
 ## 🟩 Vídeo 02 - Formas de Contribuir num Projeto Open Source
 
+![[bootcamp-ntt-data_modulo_01-Curso_06-Video_02.webm|vid-60]]
+
+Link do vídeo:  https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/8e9e1f35-5571-40c4-863f-2279ba388aeb?back=/track/engenharia-dados-python
+
+O vídeo consiste em um guia prático sobre como realizar contribuições em projetos de **código aberto** utilizando a plataforma **GitHub**. A fonte explica que softwares open source oferecem liberdade para uso e modificação, destacando a importância de verificar as **licenças** antes de colaborar. O conteúdo detalha procedimentos essenciais, como a abertura de **issues** para relatar bugs ou sugerir melhorias e o uso de **templates** para padronizar comunicações. Além disso, demonstra o processo de edição de arquivos, a aplicação de **commits** vinculados a problemas específicos e a organização de fluxos de trabalho. Por fim, o material introduz o conceito de **Pull Requests** como o caminho definitivo para integrar novas funcionalidades ao repositório original.
+
+### Anotações
+
+#### O que é um Projeto Open Source?
+
+- É um projeto de Código Aberto, livre para ser utilizado, modificado e distribuído. Alguns exemplos são: 
+    - [Linux](https://github.com/torvalds/linux), sob a licença GNU General Public License (GPL);
+    - [Roadmaps DIO](https://github.com/digitalinnovationone/roadmaps), sob a licença MIT License (MIT). 
+
+#### Formas de Contribuir em um Projeto Open Source
+
+- Relatar algum problema ou bug;
+- Sugerir melhorias ou adição de novos recursos;
+- Escrever ou atualizar a documentação;
+- Contribuir com o código;
+- Divulgar e/ou doar.
+
+#### Links úteis
+
+- Repositório no GitHub: https://github.com/digitalinnovationone/dio-lab-open-source
+- Documentação GitHub: https://docs.github.com/
+
+#### Links complementares
+
+- Markdown: https://docs.github.com/pt/get-started/writing-on-github
+- Conventional Commits: https://github.com/conventional-commits/conventionalcommits.org 
+- GitHub Etiquetas: https://docs.github.com/pt/issues/using-labels-and-milestones-to-track-work/managing-labels
+- Visual Studio Code: https://code.visualstudio.com/download
 
 
-Link do vídeo:  https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/55390e77-8893-4a65-ac62-c8bea564528d?back=/track/engenharia-dados-python
+#### Apresentação do Repositório do Desafio
 
+- Repositório do desafio: https://github.com/digitalinnovationone/dio-lab-open-source
+- Utilitários para o profile README: https://github.com/digitalinnovationone/dio-lab-open-source/tree/main/utils
 
+#### Criação de uma Issue (sugestão de melhoria)
+
+- Clicar em "Issues", depois em "New Issue" 
+- Abrirá um caixa de seleção com os templates.
+- Lista de templates de issue:
+    - Bug report (Crie um relatório para nos ajudar a melhorar)
+    - Community Challenge (Crie uma issue sobre o Desafio proposto à comunidade)
+    - Feature request (Sugira uma ideia para este repositório)
+    - Blank issue (Create a new issue from scratch)
+
+- Escolher "Feature request" e "Get Started"
+- Haverá um template com os campos a serem preenchidos.
+- O vídeo segue com as ações propostas pela instrutora.
 
 
 ## 🟩 Vídeo 03 - Desenvolvendo uma Contribuição
 
+![[bootcamp-ntt-data_modulo_01-Curso_06-Video_03.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/4945958e-0c25-4a04-9d86-29cc7ea82b6a
 
+O tutorial detalha o processo técnico para realizar contribuições em projetos de **código aberto** no GitHub, utilizando como exemplo um desafio da plataforma **DIO**. O procedimento inicia com a criação de um **fork** e o clone do repositório para o ambiente local, estabelecendo conexões entre os repositórios **origin** e **upstream** para manter o código sincronizado. A instrutora demonstra como criar uma **branch específica** e desenvolver um arquivo de perfil em **Markdown**, utilizando ferramentas como o VS Code e comandos de terminal. As etapas finais abrangem a adição das mudanças à **staging area**, a criação de um **commit** seguindo convenções de mensagens e o envio dos dados via **push**. O conteúdo serve como um guia prático para que desenvolvedores pratiquem o fluxo de trabalho colaborativo e personalizem suas apresentações na comunidade.
 
 ## 🟩 Vídeo 04 - Exercício - Enviando uma Contribuição
 
+![[bootcamp-ntt-data_modulo_01-Curso_06-Video_04.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/4945958e-0c25-4a04-9d86-29cc7ea82b6a?back=/track/engenharia-dados-python
 
+O vídeo detalha o procedimento prático para realizar uma **contribuição em um projeto de código aberto** via GitHub. O autor demonstra como **abrir um pull request**, preencher corretamente o **template de descrição** e selecionar as categorias de alteração realizadas. O conteúdo explica o processo de **revisão e aceitação do código**, mostrando como o repositório original incorpora as mudanças após a verificação de conflitos. Além disso, destaca-se a importância de **sincronizar o repositório local** com as atualizações feitas no projeto principal. Por fim, o guia incentiva a **interação com a comunidade** por meio de desafios práticos e melhorias contínuas na documentação.
 
 ## 🟩 Vídeo 05 - Dicas e Materiais de Apoio
 
 
-Link do vídeo: 
+
+Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/9e6f7eb2-86cc-4a66-b31c-80d3d774667d
+
 
 
 ## 🟩 Vídeo 06 - Resumão e Explicação Sobre a Automação dos PRs
