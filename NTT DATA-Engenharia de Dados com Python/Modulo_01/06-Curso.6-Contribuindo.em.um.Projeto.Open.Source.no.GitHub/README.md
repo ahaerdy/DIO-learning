@@ -259,37 +259,6 @@ Atenção: Antes de criar uma nova discussão, verifique se sua dúvida já foi 
 
 Bons estudos 😉
 
-##  Materiais de Apoio
-
-### Materiais Complementares
-
-Nossos materiais complementares e de apoio têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho.
-
-#### Dúvidas sobre como funciona o Node?
-
-Assista esse curso com o expert Felipe Aguiar: [Clique aqui](https://web.dio.me/lives/como-criar-e-publicar-seu-primeiro-servidor-com-nodejs-getting-started-7)
-
-#### Dicas / Links Úteis
-
-Disponibilizamos alguns links úteis para que você possa se desenvolver ainda mais através de referências oficiais das tecnologias, páginas de documentação e/ou fóruns de discussão relevantes. Nesse contexto, seguem algumas sugestões:
-
-##### Artigos / Fórum
-
-- Compartilhe conteúdos técnicos através de **Artigos** (visíveis globalmente na plataforma da DIO).
-- Compartilhe conquistas e dúvidas nos **Fóruns**, específicos para cada experiência educacional (como Bootcamps).
-
-##### Rooms
-
-- Se estiver inscrito(a) em uma experiência educacional na DIO (como um Bootcamp), você terá acesso ao **Rooms**.
-- O Rooms é uma ferramenta de bate-papo em tempo real onde todos os inscritos podem interagir, compartilhando dúvidas e dicas (inclusive com imagens e trechos de código).
-
-##### Pesquise na Web
-
-- Pode parecer óbvio, mas é importante frisar a importância das **ferramentas de busca** no dia a dia de um profissional de TI.
-- Se não encontrar o que procura dentro da DIO, pesquise na Internet (dê um Google).
-- Muitas vezes você será levado a páginas incríveis como o **StackOverflow**, que podem salvar o seu dia.
-
-
 # Certificado: Contribuindo em um Projeto Open Source no GitHub
 
 - Link na plataforma: https://hermes.dio.me/certificates/OC0JDME3.pdf
