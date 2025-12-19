@@ -40,7 +40,7 @@ console.log("pi =",pi);
 
 Saída:
 
-```javascript
+```shell
 variável = 10
 variável = 20
 pi = 3.14159
@@ -60,7 +60,7 @@ pi = 3.19;
 
 Saida: 
 
-```javascript
+```shell
 TypeError: Assignment to constant variable.
     at Object.<anonymous> (/home/arthur/Downloads/Cursos.DIO/Javascript/aula.js:5:4)
     at Module._compile (node:internal/modules/cjs/loader:1760:14)
@@ -106,7 +106,7 @@ console.log("variavel =",variavel);
 
 Saída:
 
-```javascript
+```shell
 variavel = 20
 variavel = 0
 variavel = 100
@@ -124,7 +124,7 @@ O vídeo apresenta uma discussão sobre a **introdução de desafios práticos**
 
 ### Anotações
 
-```plaintext
+```markdown
 Faça um programa para calcular o valor de uma viagem.
 
 Você lerá 3 variáveis. Sendo elas:
@@ -143,12 +143,52 @@ Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/pr
 
 O foco principal da lição é a **declaração de constantes e variáveis** para armazenar o preço do combustível, a média de consumo do carro e a distância da viagem, utilizando a convenção **camel case** e o ponto como separador decimal. Ao longo da discussão, eles **calculam os litros consumidos** e o **valor total gasto** na viagem, enfatizando a importância do raciocínio lógico e da correta atribuição de nomes para as variáveis para que o código seja legível.
 
+### Anotações
+
+Código:
+
+```javascript
+const precoCombustivel = 5.79;
+const kmPorLitros = 10;
+const distanciaEmKm = 100;
+
+const litrosConsumidos = distanciaEmKm / kmPorLitros;
+const valorGasto = litrosConsumidos * precoCombustivel;
+console.log(valorGasto);
+```
+
+Saída:
+
+```shell
+57.9
+```
 
 
 ## 🟩 Vídeo 06 - Resolução Guiada do Exercício - Parte 2
 
 
-Link do vídeo: 
+
+Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/db11445e-9fb3-4255-a4a7-20fce7a1a0cc?autoplay=1
+
+Os participantes discutem e demonstram um conceito de programação focado em **arredondamento de números de ponto flutuante**. A conversa começa com um cálculo hipotético do custo de combustível para uma longa viagem, que resulta em um número não inteiro, **R$ 762** e alguma fração. Para resolver o problema de números quebrados, eles introduzem o método **`.toFixed()`**, que é usado para **converter a variável em texto** e limitar a quantidade de casas decimais a dois, o que é apropriado para centavos. O diálogo é conduzido em um formato de aula interativa, onde o objetivo é um aprendizado **dinâmico e colaborativo**, resolvendo as dúvidas de um dos participantes em tempo real.
+
+Código:
+
+```javascript
+const precoCombustivel = 5.79;
+const kmPorLitros = 12;
+const distanciaEmKm = 1580;
+
+const litrosConsumidos = distanciaEmKm / kmPorLitros;
+const valorGasto = litrosConsumidos * precoCombustivel;
+console.log(valorGasto.toFixed(2));
+```
+
+Saída:
+
+```shell
+762.35
+```
 
 
 
