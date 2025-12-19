@@ -5,6 +5,8 @@
 - Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
 	- Contato Linkedin: https://www.linkedin.com/in/falvojr/
 
+# Parte 1 - Aulas
+
 ## 🟩 Vídeo 01 - Introdução ao Lab
 
 ![[bootcamp-ntt-data_modulo_01-Curso_06-Video_01.webm|vid-60]]
@@ -210,16 +212,52 @@ O material fornece orientações essenciais para desenvolvedores que desejam **f
 
 ## 🟩 Vídeo 06 - Resumão e Explicação Sobre a Automação dos PRs
 
-
+![[bootcamp-ntt-data_modulo_01-Curso_06-Video_06.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/32153d6a-91fe-42d0-9b18-0d2be2e35197
 
+O v/ideo fornece um guia prático para participantes da plataforma **DIO** sobre como contribuir corretamente para um repositório de **código aberto** no GitHub. O instrutor detalha o processo de realizar um **fork**, criar uma **branch** específica e enviar um **pull request** contendo um perfil pessoal na pasta da comunidade. A explicação enfatiza o uso de **automações via GitHub Actions**, que validam instantaneamente se o nome do arquivo corresponde ao nome de usuário para evitar erros comuns. O objetivo é facilitar a entrega do desafio de projeto, oferecendo uma alternativa simplificada através da **interface gráfica do GitHub** para quem ainda não domina comandos de linha. Por fim, destaca-se como essas ferramentas de **integração contínua** ajudam a gerenciar grandes volumes de colaborações de forma eficiente e organizada.
 
-## 🟩 Vídeo 07 - Entendendo o Desafio
+# Parte 2 -Entendendo o Desafio 
 
+Link: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/c333b076-7300-4939-b3ca-b5e0103e01d0 (roteiro elaborado pela instrutora Elidiana).
 
-Link do vídeo: 
+### Anotações
 
+Entendendo o Desafio
+- O objetivo deste desafio é entender e praticar o processo de contribuição em projetos Open Source, utilizando o GitHub como plataforma de colaboração.
+
+O que fazer?
+- Escolha um projeto Open Source no qual contribuir, pode ser o projeto apresentado na aula, um projeto seu ou de terceiros.
+
+Faça uma contribuição no projeto, como:
+- Melhorias na documentação.
+- Adição de funcionalidades.
+- Correção de bugs.
+- Criação ou aprimoramento de testes, etc..
+- Caso seja a sua primeira contribuição no GitHub, indicamos contribuir no repositório [digitalinnovationone/dio-lab-open-source](https://github.com/digitalinnovationone/dio-lab-open-source) trabalhado neste lab, e que foi criado especialmente para você ter a sua primeira experiência.
+
+Para contribuir com seu Profile README, basta dar um "fork" no repositório [digitalinnovationone/dio-lab-open-source](https://github.com/digitalinnovationone/dio-lab-open-source), criando uma cópia no seu GitHub pessoal. Com isso, basta adicionar o seu Profile README e abrir um Pull Request  (PR) solicitando a atualização do repositório original da DIO.
+
+O PR não precisa ser aceito para você entregar este Lab, basta enviar a URL do seu "fork" na entrega do projeto na plataforma da DIO. Por exemplo, a URL https://github.com/falvojr/dio-lab-open-source é o "fork" feito pelo usuário do GitHub "falvojr". Confira instruções mais detalhadas sobre a contribuição neste repositório em [CONTRIBUTING.md](https://github.com/digitalinnovationone/dio-lab-open-source/blob/main/CONTRIBUTING.md).
+ 
+Orientações para Entrega
+-Suba as alterações no seu fork do repositório.
+-Envie em "Entregar Projeto", o link do seu fork no GitHub, destacando as contribuições realizadas no campo descrição.
+
+Materiais de Apoio
+Slides: Contribuindo em um Projeto Open Source no GitHub.pptx
+Documentação do GitHub: Como Criar um PR (Documentação Oficial do GitHub)
+Repositório apresentado na aula: https://github.com/digitalinnovationone/dio-lab-open-source
+
+Obs.: Embora nas aulas esteja hospedado na conta elidianaandrade, atualmente o repositório foi transferido para [digitalinnovationone](https://github.com/digitalinnovationone/dio-lab-open-source.
+ 
+Fórum do Repositório
+- GitHub Discussions é um fórum de comunicação colaborativo dentro do GitHub. Caso tenha dúvidas, você pode abrir uma discussão, dentro de uma categoria apropriada, na aba "Discussions" do repositório do projeto.
+
+Atenção: Antes de criar uma nova discussão, verifique se sua dúvida já foi respondida em discussões anteriores. Use a barra de pesquisa para encontrar tópicos relevantes. Para mais informações, acesse: https://github.com/digitalinnovationone/dio-lab-open-source/discussions/30390
+
+Bons estudos 😉
 
 ##  Materiais de Apoio
 
@@ -252,7 +290,7 @@ Disponibilizamos alguns links úteis para que você possa se desenvolver ainda m
 - Muitas vezes você será levado a páginas incríveis como o **StackOverflow**, que podem salvar o seu dia.
 
 
-# Certificado: 
+# Certificado: Contribuindo em um Projeto Open Source no GitHub
 
-- Link na plataforma: 
+- Link na plataforma: https://hermes.dio.me/certificates/OC0JDME3.pdf
 - Certificado em pdf: 
