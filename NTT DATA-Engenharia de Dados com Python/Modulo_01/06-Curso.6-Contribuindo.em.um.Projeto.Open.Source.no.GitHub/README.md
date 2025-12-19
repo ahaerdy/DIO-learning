@@ -1,7 +1,9 @@
-## Instrutor:
+## Instrutores
 
-- Instrutor: Elidiana Andrade (Tech Education Analyst at DIO)
-- Contato Linkedin: https://www.linkedin.com/in/elidiana/
+- Elidiana Andrade (Tech Education Analyst at DIO)
+	- Contato Linkedin: https://www.linkedin.com/in/elidiana/
+- Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
+	- Contato Linkedin: https://www.linkedin.com/in/falvojr/
 
 ## 🟩 Vídeo 01 - Introdução ao Lab
 
