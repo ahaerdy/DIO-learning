@@ -425,8 +425,72 @@ Par
 
 ## 🟩 Vídeo 11 - Estrutura Condicional com Else If
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_11.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/9560b66d-953b-44f7-ba80-feba07976c47?autoplay=1
+
+
+O material apresenta uma explicação didática sobre a implementação de **estruturas condicionais** em programação, utilizando exemplos práticos para demonstrar o controle de fluxo. O instrutor detalha como utilizar o **if**, o **else if** e o **else** para tratar diferentes cenários, como a validação de números inválidos que fogem de um intervalo específico. É enfatizada a importância de encadear as condições corretamente para evitar que o código execute comandos indesejados simultaneamente. Além disso, o texto destaca que essa **lógica de decisão** é universal, sendo aplicada de forma semelhante em diversas linguagens de programação. Por fim, discute-se a possibilidade de incluir múltiplas verificações, alertando que, embora funcional, o excesso de condições pode prejudicar a **legibilidade do código**.
+
+### Anotações
+
+Código:
+```javascript
+const numero = 5;
+const numeroDivisivelPor5 = (numero % 5) === 0;
+
+if (numero === 0) {
+    console.log('O número é inválido');
+} else if (numeroDivisivelPor5) {
+    console.log('Sim');
+} else {
+    console.log('Não');
+}
+```
+
+Saida:
+```shell
+Sim
+```
+
+#### O que o código faz
+
+1. **Define o número**
+   ```javascript
+   const numero = 5;
+   ```
+   A constante `numero` recebe o valor **5**.
+
+2. **Verifica se é divisível por 5**
+   ```javascript
+   const numeroDivisivelPor5 = (numero % 5) === 0;
+   ```
+   - Calcula o resto da divisão de `numero` por 5.
+   - Se o resto for `0`, significa que o número é divisível por 5.
+   - O resultado da comparação é armazenado em `numeroDivisivelPor5` como um valor booleano (`true` ou `false`).
+
+3. **Estrutura condicional**
+   ```javascript
+   if (numero === 0) {
+       console.log('O número é inválido');
+   } else if (numeroDivisivelPor5) {
+       console.log('Sim');
+   } else {
+       console.log('Não');
+   }
+   ```
+   - Se `numero` for igual a `0`, imprime `'O número é inválido'`.
+   - Se for divisível por 5, imprime `'Sim'`.
+   - Caso contrário, imprime `'Não'`.
+
+####  Saída esperada
+
+Como `numero` é `5`, e `5 % 5 === 0`, a variável `numeroDivisivelPor5` será `true`.  
+Portanto, o console exibirá:
+
+```
+Sim
+```
 
 
 ## 🟩 Vídeo 12 - Revisão e Dicas de Boas Práticas
