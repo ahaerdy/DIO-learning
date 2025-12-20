@@ -66,7 +66,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Projeto: [Contribuindo em um Projeto Open Source no GitHub](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/06-Projeto-Contribuindo.em.um.Projeto.Open.Source.no.GitHub)
     - Repositório: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
     - Descrição: acrescentando o meu arquivo markdown na pasta community no repositório dio-lab-open-source.
-- [x] Mentoria: [Live de Lançamento: Bootcamp NTT DATA - Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/07-Mentoria-Live.de.Lan%C3%A7amento)
+- [x] Mentoria: [Live de Lançamento: Bootcamp NTT DATA - Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/07-Mentoria-Live.de.Lancamento)
+      
 ### Módulo 2: Sintaxe Básica com Python  
 
 
