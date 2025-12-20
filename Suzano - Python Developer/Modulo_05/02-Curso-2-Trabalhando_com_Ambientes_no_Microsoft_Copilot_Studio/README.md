@@ -34,7 +34,7 @@
 
 ### Terceira opção: `www.make.powerautomate.com`
 
-- Você acesso através do Power Automate a manipular seus ambientes do Power Platform
+- Acesso através do Power Automate para manipular seus ambientes do Power Platform
 
 ### Todos os ambientes vão ficar na parte superior direira, onde você vai poder manipular e trocar os ambientes de acordo com aquilo que você está mexendo
 
