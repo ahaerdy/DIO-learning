@@ -7,7 +7,9 @@
 
 ## Vídeo 01 - Operadores aritméticos
 
-Link do vídeo:
+![[bootcamp-ntt-data_modulo_02-Curso_01-Video_01.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/6df69727-d6c2-4956-b81b-2f3c21427c11?autoplay=1
 
 ### Anotações
 
@@ -83,7 +85,9 @@ https://github.com/guicarvalho/trilha-python-dio
 
 ## Vídeo 02 - Operadores de comparação
 
-Link do vídeo:
+
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/cfa81a73-1936-484f-8143-f145469f995a?autoplay=1
 
 ### Anotações
 
