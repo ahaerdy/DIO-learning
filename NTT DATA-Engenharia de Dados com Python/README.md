@@ -107,8 +107,6 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ## 💬 Mentorias e Networking
 
-- / [mariana-coda-45265914](https://www.linkedin.com/in/mariana-coda-45265914/) (Mariana Coda / Suzano - HR Manager, Talent Management)
-- / [roberto-andrade-mansur](https://www.linkedin.com/in/roberto-andrade-mansur/) (Roberto Andrade Mansur / Suzano - Executive Manager of Data, Engineering, Analytics, and AI)
 - / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
 - / [allineantunnes](https://www.linkedin.com/in/allineantunnes/) (Aline Antunnes / DIO - Tech Education Analist)
 - / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/) (Guilherme Arthur de Carvalho / DIO - Python Consultant, Systems Analyst)
