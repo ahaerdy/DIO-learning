@@ -866,7 +866,7 @@ https://github.com/digitalinnovationone/javascript-developer-m1*
 
 * No contexto deste conteúdo, a(s) pasta(s) "01 - variaveis e operadores" e "02 - condicionais" possui(em) todo o código-fonte desenvolvido durante as aulas.
 
-# Certificado: Apresentação da Formação JavaScript Developer
+# Certificado: Primeiros Passos Com JavaScript
 
-- Link na plataforma: https://hermes.dio.me/certificates/YJFBQTUO.pdf
-- Certificado em pdf: [[Certificado-Apresentacao.da.Formacao.JavaScript.Developer.pdf]]
+- Link na plataforma: https://hermes.dio.me/certificates/OLXNS1XS.pdf
+- Certificado em pdf: [[Certificado-Primeiros.Passos.Com.JavaScript.pdf]]
