@@ -825,8 +825,34 @@ Código Condição de pagamento:
 
 ## 🟩 Vídeo 20 - Resolução Guiada do Exercício 3
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_20.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/20925914-dac9-4da5-8075-9903977af731?autoplay=1
+
+O vídeo apresenta uma **aula prática de programação** focada na construção de um **algoritmo de cálculo de preços** baseado em diferentes condições de pagamento. O instrutor orienta o aluno a utilizar a **abstração de dados**, substituindo nomes extensos por códigos numéricos para simplificar a lógica do código. Durante o diálogo, eles definem regras para aplicar **descontos em pagamentos à vista** e acréscimo de **juros em parcelamentos longos**. O exercício demonstra como converter situações do cotidiano em **estruturas condicionais**, utilizando variáveis como o preço de etiqueta e a forma de pagamento selecionada. Ao final, o conteúdo enfatiza a importância de desenvolver o **raciocínio lógico** para automatizar processos de forma eficiente.
+
+### Anotações
+
+Código:
+```javascript
+const precoEtiqueta = 100;
+const formaDePagamento = 1;
+
+if (formaDePagamento === 1) {
+    console.log(precoEtiqueta - (precoEtiqueta * 0.1));
+} else if (formaDePagamento === 2) {
+    console.log(precoEtiqueta - (precoEtiqueta * 0.15));
+} else if (formaDePagamento === 3) {
+    console.log(precoEtiqueta);
+} else {
+    console.log(precoEtiqueta + (precoEtiqueta * 0.1));
+}
+```
+
+Saída:
+```shell
+90
+```
 
 
 ##  Materiais de Apoio
