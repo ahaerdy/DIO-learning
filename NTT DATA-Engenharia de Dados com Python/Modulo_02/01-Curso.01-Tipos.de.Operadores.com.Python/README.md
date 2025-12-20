@@ -85,7 +85,7 @@ https://github.com/guicarvalho/trilha-python-dio
 
 ## Vídeo 02 - Operadores de comparação
 
-
+![[bootcamp-ntt-data_modulo_02-Curso_01-Video_02.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/cfa81a73-1936-484f-8143-f145469f995a?autoplay=1
 
@@ -140,7 +140,9 @@ print(saldo <= saque)
 
 ## Vídeo 03 - Operadores de atribuição
 
-Link do vídeo:
+![[bootcamp-ntt-data_modulo_02-Curso_01-Video_03.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/fdc7a723-ffaf-4366-870f-90b8197b1ccd?autoplay=1
 
 ### Anotações
 
@@ -225,7 +227,9 @@ print(saldo)
 
 ## Vídeo 04 - Operadores Lógicos
 
-Link do vídeo:
+
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/41df67fd-70a9-4bb1-b87f-34b129996013?autoplay=1
 
 ### Anotações
 
