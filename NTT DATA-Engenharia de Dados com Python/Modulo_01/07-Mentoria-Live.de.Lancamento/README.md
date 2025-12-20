@@ -4,6 +4,12 @@
 
 ▶️ [Assista no Youtube](https://www.youtube.com/watch?v=dEZ6KLh10B4)
 
+<br>
+<p align="center">
+    <img src="000-Midia_e_Anexos/Pasted image 20251220132948.png" alt="" width="840">
+</p>
+<br>
+
 # Resumo
 
 O vídeo apresenta uma imersão profunda sobre a importância da tecnologia e da educação na transformação de carreiras, destacando o papel da startup brasileira Dio em parceria com a NTT Data para fomentar o desenvolvimento de profissionais na área de dados. O evento é o lançamento de um bootcamp de Engenharia de Dados com Python, que oferece mais de 10.000 bolsas de estudo, com inscrições abertas até 22 de setembro e conclusão até 31 de outubro.
