@@ -667,35 +667,160 @@ A lógica central das condicionais é executar diferentes trechos de código com
 
 # Parte 3 - Praticando com Variáveis, Operadores e Estruturas Condicionais
 
-## 🟩 Vídeo 15 - Exercício 1 - Média de Notas
+## 🟩 Vídeo 1 - Exercício 1 - Média de Notas
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_15.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/557eff5c-1262-452d-88a7-351ff91828d1?autoplay=1
 
+O objetivo central é orientar os alunos no desenvolvimento de um **algoritmo acadêmico** para calcular a média aritmética simples de três notas semestrais. O exercício exige que o sistema classifique o desempenho do estudante em categorias de **reprovação, recuperação ou aprovação**, baseando-se em faixas numéricas específicas. Os professores incentivam uma abordagem lógica, sugerindo que os programadores dividam o problema em etapas de **entrada, processamento e saída de dados**. Por fim, a dinâmica busca ensinar como transformar requisitos teóricos em uma **solução funcional de software**.
 
+### Anotações
+
+Desafio:
+```shell
+1) Faça um algoritmo que dado as 3 notas tiradas por um aluno em um semestre da faculdade calcule e imprima a sua média e a sua classificação conforme a tabela abaixo.
+
+Média = (nota 1 + nota 2 + nota 3) / 3;
+
+Classificação:
+- Média menor que 5, reprovação;
+- Média entre 5 e 7, recuperação;
+- Média acima de 7, passou de semestre;
+```
 
 ## 🟩 Vídeo 16 - Resolução Guiada do Exercício 1
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_16.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/2b484f80-9d91-496d-a51a-592c0b2784a8?autoplay=1
+
+O vídeo trata de um algoritmo simples em **JavaScript** para calcular a média escolar. A conversa detalha o processo de **declaração de variáveis**, a importância da **precedência dos operadores matemáticos** e a lógica de **estruturas condicionais** para determinar o status do aluno. Através da prática, os interlocutores exploram como aplicar regras de negócio para classificar resultados entre reprovação, recuperação e aprovação. O diálogo enfatiza que a **sintaxe da programação** pode ser esquecida sem uso constante, reforçando a necessidade de exercícios contínuos para a fixação do aprendizado. Por fim, a interação demonstra a execução do código via **Node.js**, validando os resultados obtidos no terminal.
+
+### Anotações
+
+Desafio:
+```shell
+1) Faça um algoritmo que dado as 3 notas tiradas por um aluno em um semestre da faculdade calcule e imprima a sua média e a sua classificação conforme a tabela abaixo.
+
+Média = (nota 1 + nota 2 + nota 3) / 3;
+
+Classificação:
+- Média menor que 5, reprovação;
+- Média entre 5 e 7, recuperação;
+- Média acima de 7, passou de semestre;
+```
+
+Código:
+```javascript
+const nota1 = 7;
+const nota2 = 7;
+const nota3 = 8;
+const media = (nota1 + nota2 + nota3) / 3;
+console.log(media.toFixed(2));
+
+if (media < 5) {
+    console.log('Reprovação');
+} else if (media >= 5 && media <= 7) {
+    console.log('Recuperação');
+} else {
+    console.log('Passou de semestre');
+}
+```
+
+Saída:
+```shell
+7.33
+Passou de semestre
+```
 
 
 ## 🟩 Vídeo 17 - Exercício 2 - Cálculo do IMC
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_17.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/2b484f80-9d91-496d-a51a-592c0b2784a8?autoplay=1
+
+Os instrutores explicam que o exercício utiliza a **fórmula matemática do peso dividido pela altura ao quadrado** para determinar o índice de massa corporal de um adulto. Além do cálculo, o desafio proposto exige que os alunos classifiquem o resultado final em categorias como **peso normal, sobrepeso ou obesidade**, seguindo as diretrizes da Organização Mundial da Saúde. A fonte destaca a importância de comparar diferentes **lógicas de programação** para chegar ao mesmo objetivo prático. O diálogo encoraja os estudantes a praticarem a resolução de problemas por meio de **pair programming** antes de conferirem o resultado final.
+
+### Anotações
+
+Desafio:
+```shell
+2) O IMC - Índice de Massa Corporal é um critério da Organização Mundial de Saúde para dar uma indicação sobre a condição de peso de uma pessoa adulta.
+
+Formula do IMC:
+IMC = peso / (altura * altura)
+
+Elabore um algoritmo que dado o peso e a altura de um adulto mostre sua condição de acordo com a tabela abaixo.
+
+IMC em adultos Condição:
+- Abaixo de 18.5 Abaixo do peso;
+- Entre 18.5 e 25 Peso normal;
+- Entre 25 e 30 Acima do peso;
+- Entre 30 e 40 Obeso;
+- Acima de 40 Obesidade Grave;
+```
 
 
 ## 🟩 Vídeo 18 - Resolução Guiada do Exercício 2
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_18.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/6469f29b-e3c5-4f34-8012-150229babe53?autoplay=1
+
+O vídeo apresenta um algoritmo para o cálculo do **Índice de Massa Corporal (IMC)** utilizando a linguagem JavaScript. Durante a conversa, o instrutor orienta o aluno sobre como receber **dados de entrada**, realizar operações matemáticas e utilizar a biblioteca **Math.pow** para potências. A explicação aborda convenções de nomenclatura, como o uso de **letras maiúsculas para constantes**, e introduz conceitos de **estruturas condicionais** para classificar os resultados. O exercício prático demonstra como o código reage a diferentes valores de **peso e altura**, simulando cenários reais de saúde. Ao final, a interação reforça que a **prática constante** e a repetição são fundamentais para a fluidez no desenvolvimento de algoritmos.
+
+### Anotações
+
+Código:
+```javascript
+const peso = 70;
+const altura = 1.70;
+const imc = peso / Math.pow(altura, 2);
+console.log(imc.toFixed(2));
+
+if (imc < 18.5) {
+    console.log('Abaixo do peso');
+} else if (imc >= 18.5 && imc < 25) {
+    console.log('Peso normal');
+} else if (imc >= 25 && imc < 30) {
+    console.log('Acima do peso');
+} else if (imc >= 30 && imc < 40) {
+    console.log('Obeso');
+} else {
+    console.log('Obsedidade Grave');
+}
+```
+
+Saída:
+```javascript
+24.22
+Peso normal
+```
 
 
 ## 🟩 Vídeo 19 - Exercício 3 - Valor Pago de um Produto
 
+![[formacao_javascript_developer-modulo_01-Curso_02-Video_19.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/b5e101ce-9f6b-48af-af4d-51f43177ff9f?autoplay=1
+
+Este conteúdo apresenta um **exercício de lógica de programação** focado no desenvolvimento de um **algoritmo de vendas**. O objetivo principal é calcular o **valor final de um produto** baseando-se no preço de etiqueta e em diferentes **métodos de pagamento**. Pagamentos à vista oferecem **descontos variados**, sendo o maior benefício concedido para transações via **Pix ou dinheiro**. Por outro lado, o parcelamento em até duas vezes mantém o **preço original**, enquanto prazos maiores aplicam um **acréscimo de juros**. A fonte utiliza uma linguagem didática para explicar como as condicionais influenciam o resultado financeiro da compra.
+
+### Anotações
+
+Desafio:
+```shell
+3) Elabore um algoritmo que calcule o que deve ser pago por um produto, considerando o preço normal de etiqueta e a escolha da condição de pagamento.
+Utilize os códigos da tabela a seguir para ler qual a condição de pagamento escolhida e efetuar o cálculo adequado.
+
+Código Condição de pagamento:
+- À vista Débito, recebe 10% de desconto;
+- À vista no Dinheiro ou PIX, recebe 15% de desconto;
+- Em duas vezes, preço normal de etiqueta sem juros;
+- Acima de duas vezes, preço normal de etiqueta mais juros de 10%;
+```
 
 
 ## 🟩 Vídeo 20 - Resolução Guiada do Exercício 3
