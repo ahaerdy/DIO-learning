@@ -57,7 +57,14 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: [Introdução ao JavaScript]
 - [ ] Curso: [Sintaxe Básica em JavaScript]
 - [ ] Curso: [Sintaxe e Operadores JavaScript]
-- [ ] 
+- [ ] Curso: [Variáveis e Tipos com JavaScript]
+- [ ] Curso: [Dominando Funções em JavaScript]
+- [ ] Curso: [Debugging e Error Handling com JavaScript]
+- [ ] Curso: [Fundamentos de JavaScript Assíncrono]
+- [ ] C urso: [Orientação a Objetos com JavaScript]
+- [ ] Curso: [Manipulando a D.O.M. com JavaScript]
+- [ ] Curso: [Desafios TQI - JavaScript]
+- [ ] Desafio de Projeto: [Desenvolvendo um Jogo da Memória]
 
 ### Módulo 4: JavaScript para Interatividade Web
 
