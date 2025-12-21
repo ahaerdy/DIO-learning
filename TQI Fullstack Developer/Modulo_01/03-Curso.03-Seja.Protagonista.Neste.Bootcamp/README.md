@@ -98,5 +98,5 @@ Encerramento da quarta parte de um guia sobre **bootcamps de programação**. O 
 
 # Certificado: Seja Protagonista Neste Bootcamp
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/4MEN8CYF.pdf
+- Certificado em pdf: [[Certificado-Seja.Protagonista.Neste.Bootcamp.pdf]]
