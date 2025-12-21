@@ -118,8 +118,13 @@ Código:
 No JavaScript, funções são cidadãs de primeira classe (ou seja, podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções). No código:
 
 ```javascript
-const imc = calcularImc(peso, altura);
-console.log(classificarImc(imc));
+(function () {
+    const peso = 75;
+    const altura = 1.75;
+
+    const imc = calcularImc(peso, altura);
+    console.log(classificarImc(imc));
+})();
 ```
 
 Essa estrutura é chamada de `IIFE` (`Immediately Invoked Function Expression`). Ela é composta por:
