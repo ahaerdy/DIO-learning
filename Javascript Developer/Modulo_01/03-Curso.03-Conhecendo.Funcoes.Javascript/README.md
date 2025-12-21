@@ -7,8 +7,32 @@
 
 ## 🟩 Vídeo 01 - Conceito Básico Sobre Funções
 
+![[formacao_javascript_developer-modulo_01-Curso_03-Video_01.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/85b3ec82-438b-4a29-974a-c4af7e12d9d0?autoplay=1
+
+O conteúdo explica que funções são **blocos de código reutilizáveis** que podem ser invocados a qualquer momento, evitando a repetição desnecessária de instruções. São detalhados elementos essenciais como a **sintaxe de declaração**, o uso de **parâmetros** para tornar o código dinâmico e a diferença entre procedimentos simples e funções que possuem um **valor de retorno**. Através de exemplos práticos, como o cálculo de juros e potências, demonstra-se como essa estrutura organiza e facilita a resolução de problemas lógicos. O diálogo reforça a importância das funções para a criação de programas mais **eficientes e modulares**.
+
+### Anotações
+
+Código:
+```javascript
+function incrementarJuros(valor, percentualJuros) {
+    const valorDeAcrecimo = (percentualJuros / 100) * valor;
+    return valor + valorDeAcrecimo;
+}
+
+console.log(incrementarJuros(100, 10));
+console.log(incrementarJuros(100, 15));
+console.log(incrementarJuros(100, 20));
+```
+
+Saída:
+```shell
+110
+115
+120
+```
 
 
 ## 🟩 Vídeo 02 - Como Organizar as Funções
