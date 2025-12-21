@@ -37,7 +37,7 @@ Cada diretório contém:
 
 O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. Abaixo está a estrutura geral dos módulos:
 
-### Módulo 1: Introdução ao Desenvolvimento Web
+### Módulo 1: Conteúdo de abertura
 
 - [ ] Curso: [Boas-vindas ao TQI Fullstack Developer]
 - [ ] Curso: [Aula inaugural - TQI Fullstack Developer]
@@ -46,12 +46,12 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: [Introdução ao Git e ao GitHub]
 - [ ] Curso: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso]
 
-### Módulo 2: Ambiente de Desenvolvimento e Versionamento de Código
+### Módulo 2: HTML/CSS3
 
 - [ ] Curso: [Introdução a Criação de Websites com HTML5 e CSS3]
 - [ ] Curso: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions]
 
-### Módulo 3: Estilização Avançada com HTML e CSS
+### Módulo 3: Javascript
 
 - [ ] Curso: [Instalação e Configuração do Visual Studio Code]
 - [ ] Curso: [Introdução ao JavaScript]
@@ -66,17 +66,16 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: [Desafios TQI - JavaScript]
 - [ ] Desafio de Projeto: [Desenvolvendo um Jogo da Memória]
 
-### Módulo 4: JavaScript para Interatividade Web
+### Módulo 4: ReactJS
 
-### Módulo 5: Desenvolvimento Front-end com React
+### Módulo 5: SQL
 
-### Módulo 6: Desenvolvimento Back-end com Java e Programação Orientada a Objetos
+### Módulo 6: Java
 
-### Módulo 7: Padrões de Projeto e Boas Práticas em Java
+### Módulo 7: Spring Framework
 
-### Módulo 8: Testes, Qualidade de Software e APIs REST
+### Módulo 8: QA
 
-### Módulo 9: Mentorias, Carreira e Encerramento do Bootcamp
 
 ## 🏆 Certificados Obtidos
 
