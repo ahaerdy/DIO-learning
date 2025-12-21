@@ -39,7 +39,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 1: Conteúdo de abertura
 
-- [ ] Curso: [Boas-vindas ao TQI Fullstack Developer]
+- [ ] Curso: [Boas-vindas ao TQI Fullstack Developer](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer/Modulo_01/01-Curso.01-Boas-vindas.ao.TQI.Fullstack.Developer)
 - [ ] Curso: [Aula inaugural - TQI Fullstack Developer]
 - [ ] Curso: [Seja Protagonista Neste Bootcamp]
 - [ ] Curso: [Introdução à Programação e Pensamento Computacional]
