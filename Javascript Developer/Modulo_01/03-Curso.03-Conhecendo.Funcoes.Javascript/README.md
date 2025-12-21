@@ -113,7 +113,7 @@ Código:
 })();
 ```
 
-#### ⚡Função Imediatamente Invocada (IIFE)
+#### ⚡Função Imediatamente Invocada (`IIFE`)
 
 No JavaScript, funções são cidadãs de primeira classe — ou seja, podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções. No código:
 
@@ -122,7 +122,7 @@ const imc = calcularImc(peso, altura);
 console.log(classificarImc(imc));
 ```
 
-Essa estrutura é chamada de IIFE (Immediately Invoked Function Expression). Ela é composta por:
+Essa estrutura é chamada de `IIFE` (`Immediately Invoked Function Expression`). Ela é composta por:
 
 - Uma função anônima (sem nome)
 - Envolvida por parênteses para transformá-la em uma expressão
