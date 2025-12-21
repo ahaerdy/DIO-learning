@@ -240,36 +240,17 @@ Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/co
 
 ##  Materiais de Apoio
 
-### Materiais Complementares
+Nossos materiais complementares e de apoio têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
 
-Nossos materiais complementares e de apoio têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho.
+Repositório Git
 
-#### Dúvidas sobre como funciona o Node?
+O Git é um conceito essencial no mercado de trabalho atualmente, por isso sempre reforçamos sua importância em nossa metodologia educacional. Por isso, todo código-fonte desenvolvido durante este conteúdo foi versionado no seguinte endereço para que você possa consultá-lo a qualquer momento:
 
-Assista esse curso com o expert Felipe Aguiar: [Clique aqui](https://web.dio.me/lives/como-criar-e-publicar-seu-primeiro-servidor-com-nodejs-getting-started-7)
+https://github.com/digitalinnovationone/javascript-developer-m1*
 
-#### Dicas / Links Úteis
+* No contexto deste conteúdo, a(s) pasta(s) "01 - variaveis e operadores" e "02 - condicionais" possui(em) todo o código-fonte desenvolvido durante as aulas.
 
-Disponibilizamos alguns links úteis para que você possa se desenvolver ainda mais através de referências oficiais das tecnologias, páginas de documentação e/ou fóruns de discussão relevantes. Nesse contexto, seguem algumas sugestões:
+# Certificado: Conhecendo Funções JavaScript
 
-##### Artigos / Fórum
-
-- Compartilhe conteúdos técnicos através de **Artigos** (visíveis globalmente na plataforma da DIO).
-- Compartilhe conquistas e dúvidas nos **Fóruns**, específicos para cada experiência educacional (como Bootcamps).
-
-##### Rooms
-
-- Se estiver inscrito(a) em uma experiência educacional na DIO (como um Bootcamp), você terá acesso ao **Rooms**.
-- O Rooms é uma ferramenta de bate-papo em tempo real onde todos os inscritos podem interagir, compartilhando dúvidas e dicas (inclusive com imagens e trechos de código).
-
-##### Pesquise na Web
-
-- Pode parecer óbvio, mas é importante frisar a importância das **ferramentas de busca** no dia a dia de um profissional de TI.
-- Se não encontrar o que procura dentro da DIO, pesquise na Internet (dê um Google).
-- Muitas vezes você será levado a páginas incríveis como o **StackOverflow**, que podem salvar o seu dia.
-
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/MQNEERSU.pdf
+- Certificado em pdf: [[Cerificado-Conhecendo.Funcoes.JavaScript.pdf]]
