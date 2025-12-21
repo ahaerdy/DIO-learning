@@ -36,7 +36,6 @@ Este repositório complementa meu currículo técnico e reflete meu compromisso 
 - Programação Orientada a Objetos (POO)
 - Coleções e estruturas de dados em Python
 - Projetos práticos com IA e processamento de imagens
-- Metodologias ágeis e organização de sprints
 
 ## Estrutura do Bootcamp
 
