@@ -39,23 +39,23 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 1: Introdução ao Desenvolvimento Web
 
-- [ ] Curso: [Boas-vindas ao TQI Fullstack Developer]()
-- [ ] Curso: [Aula inaugural - TQI Fullstack Developer]()
-- [ ] Curso: [Seja Protagonista Neste Bootcamp]()
-- [ ] Curso: [Introdução à Programação e Pensamento Computacional]()
-- [ ] Curso: [Introdução ao Git e ao GitHub]()
-- [ ] Curso: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso]()
+- [ ] Curso: [Boas-vindas ao TQI Fullstack Developer]
+- [ ] Curso: [Aula inaugural - TQI Fullstack Developer]
+- [ ] Curso: [Seja Protagonista Neste Bootcamp]
+- [ ] Curso: [Introdução à Programação e Pensamento Computacional]
+- [ ] Curso: [Introdução ao Git e ao GitHub]
+- [ ] Curso: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso]
 
 ### Módulo 2: Ambiente de Desenvolvimento e Versionamento de Código
 
-- [ ] Curso: [Introdução a Criação de Websites com HTML5 e CSS3]()
-- [ ] Curso: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions]()
+- [ ] Curso: [Introdução a Criação de Websites com HTML5 e CSS3]
+- [ ] Curso: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions]
 
 ### Módulo 3: Estilização Avançada com HTML e CSS
 
-- [ ] Curso: [Instalação e Configuração do Visual Studio Code]()
-- [ ] Curso: [Introdução ao JavaScript]()
-- [ ] Curso: [Sintaxe Básica em JavaScript]()
+- [ ] Curso: [Instalação e Configuração do Visual Studio Code]
+- [ ] Curso: [Introdução ao JavaScript]
+- [ ] Curso: [Sintaxe Básica em JavaScript]
 - [ ] Curso: [Sintaxe e Operadores JavaScript]
 - [ ] 
 
