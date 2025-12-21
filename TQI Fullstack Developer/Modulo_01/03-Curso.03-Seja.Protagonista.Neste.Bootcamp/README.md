@@ -72,15 +72,16 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-pro
 
 ## 🟩 Vídeo 08 - Desafios de Projeto
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_08.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/2c65b03a-dbae-4ce1-8fb5-3e465e74e65a?autoplay=1
 
-
+O vídeo discute a importância fundamental dos **desafios de projeto** dentro da jornada de aprendizado da plataforma **DIO**. O autor explica que essas atividades práticas visam a construção de um **portfólio consistente** no **GitHub**, permitindo que desenvolvedores demonstrem sua **evolução técnica** de forma visível para o mercado. Ao criar soluções reais, os estudantes aumentam sua **empregabilidade** e visibilidade diante de recrutadores, superando muitas vezes a relevância de um currículo tradicional. O conteúdo também aborda a mecânica de compartilhamento de **código-fonte** e a colaboração entre desenvolvedores em ambientes profissionais. Por fim, o material incentiva a dedicação total a esses exercícios para garantir um diferencial competitivo em **processos seletivos**.
 
 ## 🟩 Vídeo 09 - Desafios de Projeto - Entendendo na Prática
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/1e99dbe1-29c5-4701-b5bd-1164ee643257?autoplay=1
 
 
 # Parte 5 - Dicas Finais e Conclusão
