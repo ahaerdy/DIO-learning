@@ -1,4 +1,5 @@
-Repositório de Estudos – Bootcamp TQI Fullstack Developer
+# Repositório de Estudos – Bootcamp TQI Fullstack Developer
+
 <p align="center"> <img src="https://img.shields.io/badge/status-em%20andamento-orange" /> <img src="https://img.shields.io/badge/Bootcamp-TQI%20Fullstack%20Developer-blue" /> <img src="https://img.shields.io/badge/HTML5-Markup-orange?logo=html5" /> <img src="https://img.shields.io/badge/CSS3-Styles-blue?logo=css3" /> <img src="https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript" /> <img src="https://img.shields.io/badge/React-Frontend-blue?logo=react" /> <img src="https://img.shields.io/badge/Java-Backend-red?logo=openjdk" /> <img src="https://img.shields.io/badge/Git-GitHub-black?logo=github" /> <img src="https://img.shields.io/github/license/ahaerdy/DIO-learning" /> <img src="https://img.shields.io/github/repo-size/ahaerdy/DIO-learning" /> <img src="https://img.shields.io/github/last-commit/ahaerdy/DIO-learning" /> </p>
 
 Este repositório reúne os exercícios, projetos e anotações desenvolvidos por mim durante o Bootcamp TQI Fullstack Developer, oferecido pela plataforma DIO em parceria com a TQI.
