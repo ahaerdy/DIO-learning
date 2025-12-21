@@ -43,6 +43,15 @@ Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/co
 
 Este vídeo detalha uma aula de programação focada na **organização de código** através do uso de **funções**. O instrutor explica a importância de centralizar a lógica principal em uma função denominada **main**, em vez de escrever comandos soltos no arquivo. Para ilustrar o conceito, ele propõe a criação de **funções auxiliares** que executam tarefas específicas, como o cálculo de juros ou do IMC. Essa abordagem visa aumentar a **legibilidade** e a estruturação lógica dos projetos à medida que se tornam mais complexos. Ao final, o professor orienta o aluno a **refatorar exercícios anteriores** para praticar essa nova metodologia de desenvolvimento.
 
+
+## 🟩 Vídeo 03 - Exemplo Prático com Funções
+
+![[formacao_javascript_developer-modulo_01-Curso_03-Video_03.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/37228bab-a45f-413b-b998-d2d7c4941805?autoplay=1
+
+O vídeo transcrito detalha um processo de **refatoração de código** voltado para o cálculo do **Índice de Massa Corporal (IMC)**. O instrutor demonstra como decompor um script linear em **funções específicas**, isolando a lógica de cálculo da lógica de classificação diagnóstica. Essa técnica visa aumentar a **legibilidade e a manutenibilidade**, permitindo que cada trecho de código possua uma **responsabilidade única**. Ao final, é introduzida a criação de uma **função principal (main)** para organizar o fluxo do programa de maneira profissional. O objetivo central é ensinar como reduzir a **complexidade do software** através da modularização.
+
 ### Anotações
 
 Código:
@@ -82,17 +91,52 @@ Peso normal
 ```
 
 
-## 🟩 Vídeo 03 - Exemplo Prático com Funções
-
-
-Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/37228bab-a45f-413b-b998-d2d7c4941805?autoplay=1
-
-
-
 ## 🟩 Vídeo 04 - Exercício - Funções Invocadas Imediatamente
 
+![[formacao_javascript_developer-modulo_01-Curso_03-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/7b488e2c-943b-42cb-a863-9ad9323c1731?autoplay=1
+
+O vídeo explica que no **JavaScript** as funções são tratadas como **valores ou objetos**, permitindo que sejam atribuídas a variáveis e manipuladas como números ou textos. O autor demonstra como essa flexibilidade possibilita a **reatribuição de lógica** e a passagem de funções como argumentos. Um conceito central abordado é a **função imediatamente invocada**, que utiliza parênteses para declarar e executar um código de forma instantânea. Essa técnica é útil para criar **funções anônimas** que isolam o escopo e executam uma única vez, organizando o fluxo principal do programa. O conteúdo foca em estabelecer uma **estrutura padrão** para o desenvolvimento de códigos, priorizando a execução imediata do bloco principal.
+
+### Anotações
+
+Código:
+```javascript
+// Main
+(function () {
+    const peso = 75;
+    const altura = 1.75;
+
+    const imc = calcularImc(peso, altura);
+    console.log(classificarImc(imc));
+})();
+```
+
+#### ⚡Função Imediatamente Invocada (IIFE)
+
+No JavaScript, funções são cidadãs de primeira classe — ou seja, podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções. No código:
+
+```javascript
+const imc = calcularImc(peso, altura);
+console.log(classificarImc(imc));
+```
+
+Essa estrutura é chamada de IIFE (Immediately Invoked Function Expression). Ela é composta por:
+
+- Uma função anônima (sem nome)
+- Envolvida por parênteses para transformá-la em uma expressão
+- Seguido por () para invocá-la imediatamente
+
+Isso garante que o bloco seja executado assim que definido, sem depender de chamadas externas. É uma técnica usada para:
+
+- Isolar escopo (evitar que variáveis como peso e altura vazem para o escopo global)
+- Organizar o fluxo principal do programa
+- Criar uma estrutura padrão para scripts que precisam rodar imediatamente
+
+#### Estrutura padrão e organização
+
+Ao encapsular o código principal em uma IIFE, o autor estabelece uma estrutura limpa e segura para iniciar o programa. Isso é especialmente útil em projetos maiores, onde o isolamento de escopo evita conflitos e facilita a manutenção.
 
 
 # Parte 2 - Praticando com Funções
@@ -100,7 +144,7 @@ Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/co
 ## 🟩 Vídeo 01 - Exercício Guiado 1 - Função escrevaMeuNome
 
 
-Link do vídeo:  
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/6e321d99-6f80-4808-9689-2a054f428be6?autoplay=1
 
 
 ## 🟩 Vídeo 02 - Exercício Guiado 2 - Função verificarIdade
