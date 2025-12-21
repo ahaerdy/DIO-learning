@@ -1,4 +1,4 @@
-## Instrutor:
+## Instrutor
 
 - Venilton FalvoJr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - Contato Linkedin: / [falvojr](https://www.linkedin.com/in/falvojr/)
@@ -80,17 +80,21 @@ O vídeo discute a importância fundamental dos **desafios de projeto** dentro d
 
 ## 🟩 Vídeo 09 - Desafios de Projeto - Entendendo na Prática
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_09.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/1e99dbe1-29c5-4701-b5bd-1164ee643257?autoplay=1
 
+O vídeo detalha o funcionamento prático dos **desafios de projeto** na plataforma DIO, destacando como os alunos podem transformar videoaulas em **portfólios reais** no GitHub. O autor explica que os estudantes devem **replicar ou aprimorar** códigos de referência fornecidos por especialistas, utilizando ferramentas essenciais como **Git e GitHub** para organizar seus repositórios. Uma estratégia sugerida é o uso do **fork**, que permite criar uma cópia direta do trabalho original para aplicar evoluções técnicas personalizadas enquanto mantém a fonte original como referência. No momento da entrega, é fundamental enviar a **URL completa do repositório** e incluir descrições detalhadas, pois essas submissões são visíveis para **empresas em processos seletivos**. Assim, o processo é apresentado como uma oportunidade valiosa para demonstrar **competência técnica** e cuidado com a documentação em um ambiente profissional.
 
 # Parte 5 - Dicas Finais e Conclusão
 
 ## 🟩 Vídeo 10 - Dicas Finais e Conclusão
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_10.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/ad02c292-5f57-4753-b199-a52c4cc68730?autoplay=1
 
+Encerramento da quarta parte de um guia sobre **bootcamps de programação**. O texto enfatiza a importância de os estudantes firmarem um **compromisso com o aprendizado** e participarem ativamente da **comunidade e fóruns** para ganhar visibilidade. É explicado que a conclusão desses cursos coloca o **perfil do aluno em destaque** perante empresas parceiras, aumentando as chances de contratação. O orador recomenda manter o **currículo sempre atualizado** e focar na qualidade técnica dos desafios práticos entregues. Por fim, são listados recursos de suporte, como a **central de ajuda e sessões de codificação ao vivo**, para enriquecer a jornada profissional do desenvolvedor.
 
 # Certificado: Seja Protagonista Neste Bootcamp
 
