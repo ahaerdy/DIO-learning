@@ -35,35 +35,46 @@ A trilha de aprendizado é composta por **cursos teóricos** que estabelecem a b
 
 ## 🟩 Vídeo 04 - Bootcamp DIO - Conhecendo Nossa Plataforma
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/c7ff66f0-a9b6-4afd-a702-b516672df905?autoplay=1
 
+O vídeo apresenta um guia detalhado sobre o funcionamento da plataforma **DIO**, focando na navegação e na metodologia pedagógica de seus **bootcamps**. O autor destaca a importância da **comunidade**, incentivando os estudantes a utilizarem os **fóruns e salas virtuais** para trocar conhecimentos e fortalecer o networking. A estrutura educacional é composta por quatro pilares essenciais: **cursos, mentorias, desafios de código e desafios de projeto**, organizados de forma estratégica para o aprendizado progressivo. Além disso, o conteúdo ressalta a relevância dos **questionários de avaliação** para o ranqueamento final e o desenvolvimento do protagonismo do desenvolvedor. O objetivo central é orientar o aluno sobre como aproveitar ao máximo os recursos tecnológicos e humanos disponíveis para concluir sua jornada com sucesso.
 
 # Parte 3 - Desafios de Código
 
 ## 🟩 Vídeo 05 - Desafios de Código
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_05.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/cb8c9096-ee70-4f2f-8794-044b00e876ec?autoplay=1
 
+O vídeo consiste em uma introdução didática sobre a relevância dos **desafios de código** no aprimoramento de desenvolvedores de software. O conteúdo enfatiza que a prática constante fortalece o **raciocínio lógico** e o **pensamento computacional**, elementos cruciais para solucionar problemas tecnológicos complexos no cotidiano profissional. O autor argumenta que a **senioridade** de um programador é definida por sua capacidade de superar obstáculos inéditos através da experiência acumulada. Para facilitar o aprendizado, o material propõe uma abordagem **mão na massa**, desmistificando conceitos técnicos como **entradas e saídas** de dados. Por fim, a lição incentiva os estudantes a iniciarem a **codificação na prática** como o método mais eficaz para consolidar o entendimento técnico.
 
 ## 🟩 Vídeo 06 - Desafios de Código - Entendendo na Prática com Java
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_06.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/00df16bd-68c0-42e3-b6cd-8f7adf143426?autoplay=1
+
+O vídeo descreve o funcionamento dos **desafios de código** em um ambiente de aprendizado, utilizando a linguagem **Java** para demonstrar como solucionar problemas de programação. O instrutor detalha a estrutura básica desses exercícios, enfatizando a importância de compreender as **entradas de dados**, o processamento lógico e a geração de **saídas esperadas**. Além disso, o conteúdo explica o sistema de **testes automatizados** e a mecânica de **corações**, que serve para incentivar o foco e evitar tentativas aleatórias de acerto. O objetivo central é desenvolver o **raciocínio lógico** dos estudantes, independentemente da linguagem utilizada, preparando-os para desafios técnicos mais complexos. Por fim, reforça-se que a dinâmica de resolução é uma ferramenta essencial para a evolução constante durante um **bootcamp**.
 
 
 ## 🟩 Vídeo 07 - Desafios de Código - Entendendo na Prática com JavaScript
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_07.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/7bae349e-a158-4c18-8f31-f703cdecf89d?autoplay=1
+
+ O instrutor utiliza um exemplo em **JavaScript** para demonstrar que, embora cada sintaxe possua funções específicas para entrada e saída de dados, o foco deve permanecer na evolução do **raciocínio lógico**. Durante a explicação, ele detalha como interpretar instruções de sistemas de ensino, preencher lacunas de lógica e adaptar o código seguindo **boas práticas** de desenvolvimento. O conteúdo enfatiza que a finalidade dessas atividades é aumentar a **capacidade analítica** do aluno diante de problemas computacionais complexos. Por fim, o autor incentiva a utilização de **fóruns e suporte** técnico caso surjam dúvidas técnicas ou dificuldades durante a jornada de aprendizado nos bootcamps.
 
 # Parte 4 - Desafios de Projeto
 
 ## 🟩 Vídeo 08 - Desafios de Projeto
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/2c65b03a-dbae-4ce1-8fb5-3e465e74e65a?autoplay=1
+
 
 
 ## 🟩 Vídeo 09 - Desafios de Projeto - Entendendo na Prática
