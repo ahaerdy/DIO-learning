@@ -115,7 +115,7 @@ Código:
 
 #### ⚡Função Imediatamente Invocada (`IIFE`)
 
-No JavaScript, funções são cidadãs de primeira classe — ou seja, podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções. No código:
+No JavaScript, funções são cidadãs de primeira classe (ou seja, podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções). No código:
 
 ```javascript
 const imc = calcularImc(peso, altura);
