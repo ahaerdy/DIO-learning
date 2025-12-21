@@ -12,7 +12,6 @@ Sou **Arthur Haerdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Li
 
 Este repositório complementa meu currículo técnico e reflete meu compromisso com a prática constante e a evolução profissional em tecnologias modernas de desenvolvimento web.
 
----
 ## Conteúdo do Repositório
 
 Cada diretório contém:
@@ -22,7 +21,6 @@ Cada diretório contém:
 - Experimentos de código para validação de ideias e testes de implementação
 - Recursos de estudo complementares utilizados durante a formação
   
-  ---
 ## Tecnologias e Tópicos Abordados durante o Bootcamp, os principais conhecimentos praticados são:
 
 - HTML5 e CSS3 para estruturação e estilização de interfaces web
@@ -33,8 +31,7 @@ Cada diretório contém:
 - Fundamentos de APIs REST e arquitetura cliente-servidor
 - Boas práticas de desenvolvimento, incluindo Clean Code e princípios SOLID
 - Testes unitários e noções de qualidade de software (QA)
-  
-  ---
+
 ## Estrutura do Bootcamp — TQI Fullstack Developer
 
 O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. Abaixo está a estrutura geral dos módulos:
