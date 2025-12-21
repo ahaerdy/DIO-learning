@@ -88,9 +88,9 @@ A formação é composta por cursos e desafios organizados em módulos sequencia
 
 Os certificados serão adicionados à medida que os cursos forem concluídos.
 
-* [ ] Curso: Apresentação da Formação JavaScript Developer – (link)
-* [ ] Curso: Primeiros Passos Com JavaScript – (link)
-
+* [ ] Curso: [Apresentação da Formação JavaScript Developer](https://hermes.dio.me/certificates/YJFBQTUO.pdf)
+* [ ] Curso: [Primeiros Passos Com JavaScript](https://hermes.dio.me/certificates/OLXNS1XS.pdf)
+* [ ] Curso: [Conhecendo Funções JavaScript](https://hermes.dio.me/certificates/MQNEERSU.pdf)
 ---
 
 ## 🔗 Projetos em Destaque
