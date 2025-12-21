@@ -1,4 +1,4 @@
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Boas-vindas ao TQI Fullstack Developer
 
 ![[bootcamp_tqi_fullstack-modulo_01-Curso_01-Video_01.webm|vid-60]]
 
