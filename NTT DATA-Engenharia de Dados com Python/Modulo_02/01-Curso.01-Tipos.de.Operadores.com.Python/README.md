@@ -227,7 +227,7 @@ print(saldo)
 
 ## Vídeo 04 - Operadores Lógicos
 
-
+![[bootcamp-ntt-data_modulo_02-Curso_01-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/41df67fd-70a9-4bb1-b87f-34b129996013?autoplay=1
 
@@ -308,7 +308,7 @@ saldo >= saque and saque <= limite or conta_especial and saldo >= saque
 
 ## Vídeo 05 - Operadores de identidade
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/e4027b9f-edd1-43e9-8211-01c0090d81ff?autoplay=1
 
 ### Anotações
 
