@@ -37,19 +37,62 @@ Saída:
 
 ## 🟩 Vídeo 02 - Como Organizar as Funções
 
+![[formacao_javascript_developer-modulo_01-Curso_03-Video_02.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/65fe8c0e-9250-4b41-8f96-291ddd0a0b70?autoplay=1
+
+Este vídeo detalha uma aula de programação focada na **organização de código** através do uso de **funções**. O instrutor explica a importância de centralizar a lógica principal em uma função denominada **main**, em vez de escrever comandos soltos no arquivo. Para ilustrar o conceito, ele propõe a criação de **funções auxiliares** que executam tarefas específicas, como o cálculo de juros ou do IMC. Essa abordagem visa aumentar a **legibilidade** e a estruturação lógica dos projetos à medida que se tornam mais complexos. Ao final, o professor orienta o aluno a **refatorar exercícios anteriores** para praticar essa nova metodologia de desenvolvimento.
+
+### Anotações
+
+Código:
+```javascript
+function calcularImc(peso, altura) {
+    return peso / Math.pow(altura, 2);
+}
+
+function classificarImc(imc) {
+    if (imc < 18.5) {
+        return 'Abaixo do peso';
+    } else if (imc >= 18.5 && imc < 25) {
+        return 'Peso normal';
+    } else if (imc >= 25 && imc < 30) {
+        return 'Acima do peso';
+    } else if (imc >= 30 && imc < 40) {
+        return 'Obeso';
+    } else {
+        return 'Obsedidade Grave';
+    }
+}
+
+function main() {
+  const peso = 75;
+  const altura = 1.75;
+
+  const imc = calcularImc(peso, altura);
+  console.log(classificarImc(imc));
+}
+
+main();
+```
+
+Saída:
+```shell
+Peso normal
+```
+
 
 ## 🟩 Vídeo 03 - Exemplo Prático com Funções
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/37228bab-a45f-413b-b998-d2d7c4941805?autoplay=1
+
 
 
 ## 🟩 Vídeo 04 - Exercício - Funções Invocadas Imediatamente
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/7b488e2c-943b-42cb-a863-9ad9323c1731?autoplay=1
 
 
 # Parte 2 - Praticando com Funções
