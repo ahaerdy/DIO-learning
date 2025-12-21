@@ -1,4 +1,4 @@
-## Instrutor:
+# Instrutor:
 
 - Renan Johannsen de Paula (Software Engineer Lead)
 - Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
@@ -8,14 +8,13 @@
 ## 🟩 Vídeo 01 - Conceito Básico Sobre Funções
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/85b3ec82-438b-4a29-974a-c4af7e12d9d0?autoplay=1
 
 
 ## 🟩 Vídeo 02 - Como Organizar as Funções
 
 
-Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/primeiros-passos-com-javascript/learning/88232320-2521-4813-8e05-84f7c6ec0196?autoplay=1
-
+Link do vídeo: 
 
 ## 🟩 Vídeo 03 - Exemplo Prático com Funções
 
