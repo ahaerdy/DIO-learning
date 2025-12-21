@@ -148,26 +148,94 @@ Ao encapsular o código principal em uma IIFE, o autor estabelece uma estrutura 
 
 ## 🟩 Vídeo 01 - Exercício Guiado 1 - Função escrevaMeuNome
 
+![[formacao_javascript_developer-modulo_01-Curso_03-Video_05.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/6e321d99-6f80-4808-9689-2a054f428be6?autoplay=1
+
+Durante o exercício, o tutor explica a importância de utilizar **nomes semânticos e verbos** para definir as funções, facilitando a leitura do código. Eles trabalham conceitos fundamentais como a **passagem de parâmetros**, a concatenação de strings e a correção de erros comuns, como esquecer as aspas em textos. Ao final, o aluno consegue **invocar a função** com sucesso, demonstrando como o mesmo bloco de código pode ser reutilizado para exibir diferentes resultados.
+
+### Anotações
+
+Código:
+```javascript
+function escrevaMeuNome(nome) {
+    console.log('Meu nome é ' + nome);
+}
+escrevaMeuNome('Vitor');
+escrevaMeuNome('Renan');
+```
+
+Saída:
+```shell
+Meu nome é Vitor
+Meu nome é Renan
+```
 
 
 ## 🟩 Vídeo 02 - Exercício Guiado 2 - Função verificarIdade
 
+![[formacao_javascript_developer-modulo_01-Curso_03-Video_06.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/e444cb4e-81a4-4c21-8fb0-5a612a09ce90?autoplay=1
+
+Durante a conversa, os interlocutores desenvolvem uma **função computacional** capaz de determinar se um indivíduo é **maior ou menor de idade**. O processo detalha a importância de utilizar **parâmetros e estruturas condicionais** para processar informações de forma automatizada. Ao final, a fonte enfatiza o conceito de **encapsulamento**, explicando que funções funcionam como pequenos programas independentes que podem ser **reutilizados a qualquer momento**. Essa abordagem didática demonstra como transformar um problema lógico em um **algoritmo funcional e organizado**.
+
+### Anotações
+
+Código:
+```javascript
+function verificarIdade(idade) {
+  if (idade >= 18) {
+    console.log('Maior');
+  } else {
+    console.log('Menor');
+  }
+}
+
+verificarIdade(11);
+```
+
+Saída:
+```shell
+Menor
+```
+
 
 
 ## 🟩 Vídeo 03 - Exercício Guiado 3 - Invocando Função Dentro de Outra Função
 
+![[formacao_javascript_developer-modulo_01-Curso_03-Video_07.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/6374516c-0434-4a60-bade-2e112486b06c?autoplay=1
+
+Os interlocutores exploram a diferença técnica entre **exibir um valor** no console e **retornar um dado** para que ele seja processado por outras partes do código. Durante a explicação, destaca-se que uma função pode ser tratada como uma **variável comum**, podendo ser passada como parâmetro ou invocada dentro de contextos maiores. O tutor demonstra como a ausência de um **retorno explícito** gera resultados indefinidos ao tentar concatenar textos. Por fim, a conversa evolui para a estratégia de **decompor problemas complexos** em pequenas funções reutilizáveis e organizadas.
+
+### Anotações
+
+Código:
+```javascript
+function verificarIdade(idade) {
+  if (idade >= 18) {
+    console.log('Maior');
+  } else {
+    console.log('Menor');
+  }
+}
+
+verificarIdade(11);
+```
+
+Saída:
+```shell
+Menor
+```
 
 
 ## 🟩 Vídeo 04 - Exercício Guiado 4 - Funções Para Calcular Preço
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/conhecendo-funcoes-javascript/learning/9b5bdb20-57a7-4c18-8d36-4077cd7761b1?autoplay=1
+
 
 
 ##  Materiais de Apoio
