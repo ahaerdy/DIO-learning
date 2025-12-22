@@ -92,14 +92,18 @@ O vídeo apresenta um estudo de caso sobre o jogo de **adivinhação de números
 
 ## 🟩 Vídeo 11 - O que é lógica?
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_11.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/a42945cf-43f3-425c-b96c-f10c7ab3c4a0?autoplay=1
 
+O vídeo define a lógica como um **pensamento estruturado** que organiza instruções de forma assertiva para que um computador possa executar tarefas que humanos realizam intuitivamente. Através do exemplo cotidiano de preparar um café, a autora ilustra como o **planejamento de ações** coordenadas é necessário para atingir um objetivo final. Além disso, a transcrição ressalta que aprender a programar promove o **pensamento computacional**, ensinando o indivíduo a raciocinar de maneira mais objetiva e eficaz. Por fim, a lição enfatiza que a lógica serve como a base intelectual que viabiliza a **criação de programas** e a superação de desafios técnicos.
 
 ## 🟩 Vídeo 12 - Técnicas de lógica de programação
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/02cd9c33-806c-4a3d-b8ba-932ed7ad5ee8?autoplay=1
+
+
 
 
 # Parte 3 - Fundamentos de algoritmos
