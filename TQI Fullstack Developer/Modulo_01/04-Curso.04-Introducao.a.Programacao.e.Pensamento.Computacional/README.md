@@ -7,14 +7,17 @@
 
 ## 🟩 Vídeo 01 - Apresentação
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_01.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/285a4323-c6b0-4233-988e-4a2954065de3?autoplay=1
 
+A instrutora **Juliana Mascarinhas** apresenta o curso "Primeiros Passos para começar a programar", voltado a iniciantes que buscam ingressar no mercado de **TI**. A palestrante detalha sua **trajetória acadêmica e profissional**, destacando sua experiência como mestre em **modelagem computacional** e especialista em **ciência de dados** e redes. O conteúdo programático foca no desenvolvimento do **pensamento computacional** e na lógica de programação como ferramentas essenciais para a resolução de problemas. Ao longo das aulas, os alunos exploram fundamentos de **algoritmos**, a evolução das linguagens e a prática inicial com **Portugal**. A formação enfatiza a natureza dinâmica e interdisciplinar da computação, preparando o estudante para as diversas vertentes da tecnologia.
 
 ## 🟩 Vídeo 02 - Introdução
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/4e8b890d-eacf-4a02-a728-0c66e14de20f?autoplay=1
+
 
 
 ## 🟩 Vídeo 03 - Habilidade complementares
