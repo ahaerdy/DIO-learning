@@ -794,25 +794,122 @@ O vídeo destaca que esse padrão representa um primeiro contato com a **program
 
 Esse modelo torna o código mais organizado, previsível e fácil de manter, além de evitar duplicação e inconsistências na criação de objetos.
 
-
-
 ## 🟩 Vídeo 07 - Funções Recebendo Objetos
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_07.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/ef839bd6-21ee-4667-b036-efbd284ed952?autoplay=1
+
+O instrutor explica como o construtor atua como um **contrato obrigatório** que define as propriedades necessárias, como nome e idade, no momento em que um novo **objeto é instanciado**. Além de apenas armazenar dados, o texto demonstra que o construtor pode ser utilizado para **processar informações automaticamente**, como calcular o ano de nascimento a partir da idade fornecida. Através de exemplos práticos, a conversa ilustra como a **instanciação** cria ocorrências únicas de um objeto seguindo regras pré-definidas. Por fim, o diálogo reforça que essa estrutura permite a criação de **códigos mais organizados** e coerentes dentro do desenvolvimento de software.
+
+### Anotações
+
+Código:
+```javascript
+class Pessoa {
+  nome;
+  idade;
+  anoDeNascimento;
+
+  constructor(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+    this.anoDeNascimento = 2022 - idade;
+  }
+
+  descrever() {
+    console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+  }
+}
+
+function compararPessoas(p1, p2) {
+    if (p1.idade > p2.idade) {
+        console.log(`${p1.nome} é mais velho(a) que ${p2.nome}`);
+    } else if (p2.idade > p1.idade) {
+        console.log(`${p2.nome} é mais velho(a) que ${p1.nome}`);
+    } else {
+        console.log(`${p1.nome} e ${p2.nome} tem a mesma idade`);
+    }
+}
+
+const vitor = new Pessoa('Vitor', 25);
+const renan = new Pessoa('Renan', 30);
+
+compararPessoas(vitor, renan);
+```
+
+Saída:
+```shell
+Renan é mais velho(a) que Vitor
+```
+
+##### Definição da Classe `Pessoa`
+
+A classe `Pessoa` representa um modelo para criar objetos que descrevem pessoas com três atributos principais: `nome`, `idade` e `anoDeNascimento`.
+
+O método `constructor` é automaticamente chamado sempre que uma nova instância da classe é criada com o operador `new`. No vídeo, isso é explicado como o momento em que o objeto é instanciado e o construtor é acionado. O construtor exige dois parâmetros obrigatórios: `nome` e `idade`, reforçando a ideia de que esses dados são essenciais para definir uma pessoa.
+
+Além disso, o atributo `anoDeNascimento` é calculado dentro do construtor como uma dedução: subtrai-se a idade do ano de referência (2022), como mostrado no vídeo. Isso demonstra como o construtor pode preparar atributos derivados com base nos dados recebidos.
+
+##### Método `descrever`
+
+O método `descrever` é uma função interna da classe que imprime no console uma frase com o nome e a idade da pessoa. Ele utiliza template literals para interpolar os valores diretamente na string. Esse tipo de método é útil para encapsular comportamentos que pertencem ao objeto, como também foi comentado no vídeo.
+
+##### Função `compararPessoas`
+
+A função `compararPessoas` recebe dois objetos do tipo `Pessoa` e compara suas idades. Ela imprime no console quem é mais velho ou se ambos têm a mesma idade. Essa lógica condicional exemplifica como objetos podem ser comparados entre si com base em seus atributos, reforçando o conceito de instâncias distintas criadas a partir de uma mesma estrutura (classe).
+
+##### Instanciação e Execução
+
+Duas instâncias da classe `Pessoa` são criadas: `vitor` e `renan`, com idades diferentes. Isso mostra como a classe serve como um "contrato" para criar múltiplos objetos com a mesma estrutura, mas com dados únicos — como mencionado no vídeo com a analogia da planta da casa.
+
+Por fim, a função `compararPessoas` é chamada com os dois objetos, e o resultado da comparação é exibido no console.
 
 # Parte 3 - Praticando com Objetos e Classes
 
 ## 🟩 Vídeo 08 - Exercício Guiado - Criando a Classe Carro
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_08.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/b37a8a14-0612-4654-99c2-33b2bd655dba?autoplay=1
+
+O vídeo apresenta o desafio de código e o início da criação da classe.
+
+### Anotações
+
+Desafio:
+```shell
+/*
+1 - Crie uma classe para representar carros.
+Os carros possuem uma marca, uma cor e um gasto médio de combustível por kilômetro rodado.
+Crie um método que dado a quantidade de quilômetros e o preço do combustível nos dê o valor
+gasto em reais para realizar este percurso.
+*/
+```
+
+
+Código (criando a classe carro):
+```javascript
+class Carro {
+  marca;
+  cor;
+  gastoMedioPorKm;
+
+  constructor(marca, cor, gastoMedioPorKm) {
+    this.marca = marca;
+    this.cor = cor;
+    this.gastoMedioPorKm = gastoMedioPorKm;
+  }
+}
+```
 
 
 ## 🟩 Vídeo 09 - Exercício Guiado - Criando a Instância
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/c4d39f42-dfe0-4272-9069-c23bbfad66b0?autoplay=1
+
+
 
 
 ## 🟩 Vídeo 10 - Exercício Guiado - Criando o Método calcularGastoDePercurso
