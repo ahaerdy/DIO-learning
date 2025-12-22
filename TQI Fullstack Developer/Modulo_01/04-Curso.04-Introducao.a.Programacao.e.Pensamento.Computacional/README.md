@@ -23,6 +23,7 @@ O vídeo explora o **pensamento computacional** como uma habilidade universal pa
 
 ## 🟩 Vídeo 03 - Habilidade complementares
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_03.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/db997538-a1c9-466c-b6f7-763ad108f46c?autoplay=1
 
@@ -30,21 +31,27 @@ O vídeo apresenta as **habilidades complementares** fundamentais para a resolu�
 
 ## 🟩 Vídeo 04 - Exercício - Pilares: Decomposição
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/99810200-b396-453d-8567-84e3808d4ba8?autoplay=1
 
+A **decomposição** é apresentada como um pilar fundamental do **pensamento computacional**, consistindo em fragmentar problemas complexos em partes menores e mais simples de gerenciar. O processo envolve as etapas de **análise**, para segmentar o contexto, e **síntese**, para recombinar as soluções de forma coerente e funcional. A execução dessas tarefas menores pode ocorrer de maneira **sequencial**, quando há dependência entre as etapas, ou em **paralelo**, visando ganhar eficiência e tempo. Exemplos práticos, como o preparo de uma receita, a montagem de uma bicicleta ou o desenvolvimento de um aplicativo, ilustram como essa técnica organiza o raciocínio. O texto enfatiza que a habilidade deve ser **treinada constantemente** para otimizar processos e evitar redundâncias. Por fim, destaca-se que essa abordagem facilita a manutenção e a clareza em projetos técnicos e intelectuais.
 
 ## 🟩 Vídeo 05 - Pilares: Padrões
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_05.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/2b4a6c63-54b9-4edc-a31a-d9049583b2b8?autoplay=1
 
+O vídeo aborda o **reconhecimento de padrões**, identificando-o como um dos pilares essenciais para o processamento de informações e a resolução de problemas. A autora explica que essa técnica se baseia na identificação de **modelos de referência** e na detecção de **similaridades e diferenças** entre objetos ou contextos. Enquanto seres humanos realizam essa tarefa de forma **intuitiva e subjetiva**, os computadores dependem de uma abordagem **objetiva e lógica**, baseada em atributos extraídos para classificar dados. São apresentados exemplos práticos, como a **compressão de arquivos**, o reconhecimento de fala e a identificação de placas de veículos. Por fim, destaca-se a relevância desse conceito em áreas tecnológicas avançadas, incluindo **Inteligência Artificial** e Ciência de Dados.
 
 ## 🟩 Vídeo 06 - Pilares: Abstração
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_06.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/67574727-3ee2-467b-921d-4379f7eae382?autoplay=1
 
+O conteúdo explica o conceito de **abstração** como um processo intelectual que consiste em isolar elementos essenciais da realidade para transportá-los ao campo das ideias. Através da **generalização**, é possível ignorar detalhes irrelevantes para um contexto específico, permitindo a criação de **modelos e classes** que organizam objetos similares. O texto demonstra que essa técnica é fundamental na **computação**, sendo aplicada em estruturas de dados, algoritmos de busca e arquiteturas de rede para simplificar sistemas complexos. Além disso, a prática de identificar padrões comuns facilita a **resolução de problemas** e torna as soluções mais versáteis e reutilizáveis em diferentes cenários. Em última análise, abstrair significa transformar um caso concreto em uma representação lógica focada apenas no que é estritamente **necessário para um objetivo**.
 
 ## 🟩 Vídeo 07 - Pilares: Algoritmos
 
