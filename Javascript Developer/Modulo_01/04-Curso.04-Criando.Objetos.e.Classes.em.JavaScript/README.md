@@ -1043,43 +1043,195 @@ o método é executado considerando as características específicas de cada car
 O exemplo ilustra claramente a abordagem orientada a objetos discutida no vídeo: o cálculo do gasto não é uma função genérica solta no código, mas um comportamento natural do próprio carro. Isso torna o código mais organizado, intuitivo e fácil de expandir, permitindo adicionar novos carros ou novos comportamentos sem duplicar lógica.
 
 
-
 ## 🟩 Vídeo 11 - Resumo do Exercício Guiado
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_11.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/c58fed57-7409-469b-b9ca-e491131f5829?autoplay=1
 
-
+ O autor utiliza a analogia de um **carro** para explicar como definir **atributos**, como marca e consumo, e **métodos**, como o cálculo de gastos em trajetos. Através dessa **abstração**, demonstra-se que é possível criar múltiplas instâncias de objetos sem a necessidade de reescrever lógica redundante. A conversa enfatiza que essa metodologia promove a **reutilização de código** e a economia de tempo em comparação ao modelo puramente funcional. Por fim, destaca-se que a transição para esse paradigma exige uma mudança na **mentalidade do programador** para enxergar entidades como estruturas organizadas.
 
 ## 🟩 Vídeo 12 - Exercício Guiado - Criando a Classe Pessoa
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_12.mkv|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/9760a4b4-8641-4a01-8973-e1ee2affa90d?autoplay=1
+
+O desafio proposto consiste em desenvolver uma **classe** que armazene informações básicas como **nome, peso e altura**. Além desses atributos, os participantes discutem a implementação de um **método** específico capaz de calcular e retornar o **Índice de Massa Corporal (IMC)**. A conversa aborda a importância do uso de **construtores** para garantir que os dados sejam inseridos obrigatoriamente no momento da criação do objeto. Por fim, o exercício sugere a **instanciação** de um exemplo prático para validar a funcionalidade do código desenvolvido.
+
+### Anotações
+
+Desafio: 
+```text
+2) Crie uma classe para representar pessoas.  
+   
+Para cada pessoa teremos os atributos nome, peso e altura.  
+As pessoas devem ter a capacidade de dizer o valor do seu IMC (IMC = peso / (altura * altura));  
+Instancie uma pessoa chamada José que tenha 70kg de peso e 1,75 de altura e peça ao José para dizer o valor do seu IMC;
+```
+
+Codigo:
+```javascript
+class Pessoa {
+    nome;
+    peso;
+    altura;
+
+    constructor(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+    }
+}
+```
 
 
 ## 🟩 Vídeo 13 - Exercício Guiado - Criando o Método calcularImc
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_13.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/100d8f1a-0ca8-478f-8a3e-872af0ea21d5?autoplay=1
+
+Os interlocutores discutem a implementação de um **método para calcular o IMC**, decidindo que essa função deve residir dentro da própria classe por ser um atributo intrínseco ao objeto. Um ponto central da conversa é a compreensão de que o método não requer parâmetros externos, pois deve acessar o **peso e a altura** diretamente através da palavra-chave **"this"**. Além da lógica estrutural, os participantes debatem detalhes práticos, como a nomeação da função e a sintaxe matemática para elevar a altura ao quadrado. Por fim, enfatiza-se a necessidade imperativa de utilizar o comando de **retorno** para que o resultado do processamento seja devidamente aproveitado pelo sistema.
+
+### Anotações
+
+Código:
+```javascript
+class Pessoa {
+    nome;
+    peso;
+    altura;
+
+    constructor(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+    }
+    
+    calcularImc(){
+		  return this.peso / (this.altura * this.altura)
+	 }
+}
+```
 
 
 ## 🟩 Vídeo 14 - Exercício Guiado - Criando a Instância
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_14.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/3f2b7743-e8ac-44b1-afbf-fb33eb999acf?autoplay=1
 
+Os interlocutores demonstram como criar uma **classe** chamada "Pessoa" e instanciar diferentes **objetos**, como José, Renan e Vittor, atribuindo-lhes atributos de **peso e altura**. Durante a interação, eles exploram a diferença entre variáveis e strings, além da importância de usar o comando **new** para gerar novas instâncias. O objetivo central é calcular o **Índice de Massa Corporal (IMC)** através da invocação de um **método** específico definido dentro da classe. Ao final, o grupo valida o código via **console.log**, celebrando o sucesso da execução e a funcionalidade do sistema desenvolvido.
+
+### Anotações
+
+Código:
+```javascript
+class Pessoa {
+    nome;
+    peso;
+    altura;
+
+    constructor(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+    }
+    
+    calcularImc(){
+		  return this.peso / (this.altura * this.altura)
+	 }
+}
+
+const jose = new Pessoa('jose', 70, 1.75);
+console.log(jose.calcularImc());
+const renan = new Pessoa('renan', 63, 1.75);
+console.log(renan.calcularImc());
+const vitor = new Pessoa('vitor', 60, 1.69);
+console.log(vitor.calcularImc().toFixed(2));
+```
+
+Saída:
+```shell
+22.86
+20.57
+21.01
+```
 
 ## 🟩 Vídeo 15 - Exercício Guiado - Criando o Método classificarImc
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_15.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/fc696676-29c9-44a3-8de1-1f9f64f8e535?autoplay=1
 
+O instrutor orienta o aluno a invocar uma função de cálculo interna para obter o valor necessário, utilizando **variáveis e condicionais** para determinar categorias como obesidade ou peso normal. A conversa enfatiza a importância de usar **instruções de retorno (return)** em vez de apenas exibir dados, permitindo que a informação seja reutilizada em outras partes do código. Além disso, a fonte demonstra conceitos fundamentais como **instanciação de objetos**, diferenciação entre funções e métodos e a manipulação de **atributos** de forma dinâmica. O objetivo final é consolidar o entendimento prático de como estruturar objetos que representem entidades do mundo real de maneira funcional e organizada.
 
+### Anotações
+
+Código:
+```javascript
+class Pessoa {
+    nome;
+    peso;
+    altura;
+
+    constructor(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+    }
+    
+    calcularImc(){
+		  return this.peso / (this.altura * this.altura)
+	 }
+	 
+	 classificarImc() {
+		  const imc = this.calcularImc();
+		  if (imc < 18.5) {
+		    return ('Abaixo do peso');
+		  } else if (imc >= 18.5 && imc < 25) {
+		    return ('Peso normal');
+		  } else if (imc >= 25 && imc < 30) {
+		    return ('Acima do peso');
+		  } else if (imc >= 30 && imc < 40) {
+		    return ('Obeso');
+		  } else {
+		    return ('Obsedidade Grave');
+		  }
+	}
+}
+
+const jose = new Pessoa('jose', 70, 1.75);
+console.log(jose.classificarImc());
+
+const renan = new Pessoa('renan', 63, 1.75);
+console.log(renan.classificarImc());
+
+const vitor = new Pessoa('vitor', 60, 1.69);
+console.log(vitor.classificarImc());
+```
+
+Saída:
+```shell
+Peso normal
+Peso normal
+Peso normal
+```
 
 ##  Materiais de Apoio
 
+Nossos materiais complementares e de apoio têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
 
-# Certificado: 
+Repositório Git
 
-- Link na plataforma: 
-- Certificado em pdf: 
+O Git é um conceito essencial no mercado de trabalho atualmente, por isso sempre reforçamos sua importância em nossa metodologia educacional. Por isso, todo código-fonte desenvolvido durante este conteúdo foi versionado no seguinte endereço para que você possa consultá-lo a qualquer momento:
+
+https://github.com/digitalinnovationone/javascript-developer-m1*
+
+* No contexto deste conteúdo, a(s) pasta(s) "01 - variaveis e operadores" e "02 - condicionais" possui(em) todo o código-fonte desenvolvido durante as aulas.
+
+# Certificado: Criando Objetos e Classes em JavaScript
+
+- Link na plataforma: https://hermes.dio.me/certificates/PXXL8OFX.pdf
+- Certificado em pdf: [[Certificado-Criando.Objetos.e.Classes.em.JavaScript..pdf]]
