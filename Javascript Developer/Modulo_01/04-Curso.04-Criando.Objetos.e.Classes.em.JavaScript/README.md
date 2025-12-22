@@ -1049,10 +1049,12 @@ O exemplo ilustra claramente a abordagem orientada a objetos discutida no vídeo
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/c58fed57-7409-469b-b9ca-e491131f5829?autoplay=1
 
+
+
 ## 🟩 Vídeo 12 - Exercício Guiado - Criando a Classe Pessoa
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/9760a4b4-8641-4a01-8973-e1ee2affa90d?autoplay=1
 
 
 ## 🟩 Vídeo 13 - Exercício Guiado - Criando o Método calcularImc
