@@ -451,6 +451,7 @@ Isso faz dos objetos uma das estruturas mais versáteis e fundamentais do JavaSc
 
 ## 🟩 Vídeo 04 - Exercício - Acessando Dinamicamente Valores de um Objeto
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/856c81da-ab0d-4e8d-9409-1235b5b0213a?autoplay=1
 
@@ -616,68 +617,235 @@ Ambas as formas são válidas e úteis - a escolha depende do contexto e das nec
 
 # Parte 2 - Entendendo Classes
 
-## 🟩 Vídeo 01 - Como Criar Classes e Instâncias
+## 🟩 Vídeo 05 - Como Criar Classes e Instâncias
+
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_05.webm|vid-60]]
+
+Link do vídeo:  https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/2d585f3d-072b-470f-9eb5-54b66e4ab3bf?autoplay=1
+
+O vídeo apresenta o conceito fundamental de **orientação a objetos** na programação, focando na transição de objetos literais para o uso de **classes**. O autor explica que uma **classe** funciona como um **modelo ou definição** que estabelece as características e comportamentos que um objeto deve possuir. Em contrapartida, as **instâncias** são as ocorrências reais e específicas criadas a partir desse molde, como exemplificado pelos personagens Vítor e Renan. Essa abordagem é defendida como uma solução eficiente para **evitar a repetição de código**, garantindo que múltiplos objetos sigam o mesmo padrão estrutural. Ao final, o diálogo ressalta que essa organização permite maior **dinamismo e padronização** no desenvolvimento de software.
+
+### Anotações
+
+Código:
+```javascript
+class Pessoa {
+  nome;
+  idade;
+
+  descrever() {
+    console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+  }
+}
+
+const vitor = new Pessoa();
+vitor.nome = 'Vitor J Guerra';
+vitor.idade = 25;
+
+const renan = new Pessoa();
+renan.nome = 'Renan J Paula';
+renan.idade = 30;
+
+vitor.descrever();
+renan.descrever();
+```
+
+Saída:
+```shell
+Meu nome é Vitor J Guerra e minha idade é 25
+Meu nome é Renan J Paula e minha idade é 3
+```
+
+#### Explicação do código de classes em JavaScript
+
+##### Contexto geral
+O código apresentado exemplifica o uso de **classes** em JavaScript como uma forma de criar um modelo reutilizável para representar pessoas. No vídeo, é explicado que essa abordagem surge para evitar a repetição de código que acontece quando se usam apenas objetos literais, tornando a solução mais organizada, reutilizável e alinhada com a programação orientada a objetos.
+
+##### Definição da classe Pessoa
+A palavra-chave `class` é utilizada para declarar a classe `Pessoa`. Essa classe funciona como um **modelo**, ou seja, uma definição de como uma pessoa deve ser representada no código.
+
+Dentro da classe são definidos:
+- `nome`: uma propriedade que armazenará o nome da pessoa.
+- `idade`: uma propriedade que armazenará a idade da pessoa.
+- `descrever()`: um método responsável por exibir no console uma descrição da pessoa.
+
+Na sintaxe de classes, o método é declarado diretamente pelo nome, sem a necessidade da palavra-chave `function`. O uso de `this` dentro do método faz referência à instância específica que está chamando o método, permitindo acessar corretamente `nome` e `idade`.
+
+##### Criação de instâncias da classe
+Após a definição da classe, o código cria novas pessoas utilizando o operador `new`. Esse processo é chamado de **instanciação**.
+
+Quando se escreve:
+`const vitor = new Pessoa();`
+
+Está sendo criada uma instância da classe `Pessoa`. Nesse momento, o objeto existe, mas ainda não possui valores atribuídos às suas propriedades. Em seguida, o código define:
+- `vitor.nome`
+- `vitor.idade`
+
+O mesmo processo é repetido para a criação da instância `renan`. Ambas seguem exatamente o mesmo modelo definido pela classe, mudando apenas os valores atribuídos.
+
+##### Classe versus instância
+Conforme explicado no vídeo, a **classe** representa a definição do que algo deve ser, enquanto a **instância** representa uma ocorrência concreta dessa definição. A classe `Pessoa` descreve como toda pessoa deve se comportar e quais dados ela possui. Já `vitor` e `renan` são pessoas específicas criadas a partir desse modelo.
+
+Essa separação evita duplicação de código e garante consistência, pois todas as pessoas seguem a mesma estrutura.
+
+##### Uso dos métodos das instâncias
+Ao final do código, os métodos são chamados:
+`vitor.descrever();`
+`renan.descrever();`
+
+Cada chamada executa o método `descrever()` no contexto da instância correspondente. Isso faz com que o texto exibido no console utilize corretamente os valores de `nome` e `idade` de cada pessoa, demonstrando como o mesmo método pode ser reutilizado por diferentes instâncias.
+
+##### Conceito de orientação a objetos
+O exemplo introduz os fundamentos da **programação orientada a objetos**, destacando a ideia de modelar o código a partir de entidades do mundo real. O vídeo reforça que, embora existam muitos conceitos envolvidos nesse paradigma, o ponto principal neste momento é compreender a diferença entre classe e instância e como isso ajuda a criar código mais organizado, reutilizável e escalável.
 
 
-Link do vídeo:  
+## 🟩 Vídeo 06 - Criando Instâncias Com Constructor
+
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_06.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/61572044-e4b7-4f3e-994b-3dfecc9ab1de?autoplay=1
+
+O vídeo apresenta uma introdução didática aos conceitos de **Programação Orientada a Objetos**, focando especificamente no papel do **método construtor**. O instrutor explica como essa função é executada automaticamente no momento da **instanciação**, permitindo que atributos obrigatórios sejam definidos logo na criação do objeto. Além de padronizar a entrada de dados, o texto demonstra como o construtor pode ser usado para realizar **cálculos automáticos**, como deduzir o ano de nascimento a partir da idade informada. Essa abordagem estabelece uma espécie de **contrato de definição**, garantindo que cada nova ocorrência do objeto possua todas as propriedades necessárias. O conteúdo destaca, de forma prática, como transformar definições abstratas em **instâncias concretas e funcionais** dentro do código.
+
+### Anotações
+
+Código:
+```javascript
+class Pessoa {
+    nome;
+    idade;
+    anoDeNascimento;
+
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+        this.anoDeNascimento = 2022 - idade;
+    }
+
+    descrever() {
+        console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+    }
+}
+
+const vitor = new Pessoa('Vitor', 25);
+const renan = new Pessoa('Renan', 30);
+
+console.log(vitor);
+```
+
+Saída:
+```shell
+Pessoa { nome: 'Vitor', idade: 25, anoDeNascimento: 1997 }
+```
+
+#### Explicação do código com classe, construtor e atributos derivados em JavaScript
+
+##### Contexto geral
+O código apresentado aprofunda o uso de **classes em JavaScript**, introduzindo o conceito de **constructor**. No vídeo, a explicação evolui da simples definição de um modelo para a ideia de obrigar certos dados no momento da criação do objeto, reforçando a noção de contrato entre a classe e suas instâncias.
+
+##### Definição da classe Pessoa
+A classe `Pessoa` define o modelo que representa uma pessoa no sistema. Ela estabelece quais informações e comportamentos todas as pessoas devem possuir.
+
+São declarados três atributos:
+- `nome`, que representa o nome da pessoa  
+- `idade`, que representa a idade  
+- `anoDeNascimento`, que será calculado automaticamente  
+
+Esses atributos definem a estrutura básica que toda instância da classe seguirá.
+
+##### Papel do constructor
+O método `constructor(nome, idade)` é executado **automaticamente sempre que uma nova instância da classe é criada** usando a palavra-chave `new`.
+
+No vídeo, o construtor é apresentado como um mecanismo que garante que certos dados sejam obrigatórios. Ao exigir `nome` e `idade` como parâmetros, o código impede a criação de uma pessoa incompleta.
+
+Dentro do construtor:
+- `this.nome` recebe o valor passado como parâmetro  
+- `this.idade` recebe a idade informada  
+- `this.anoDeNascimento` é calculado dinamicamente com base na idade  
+
+Esse cálculo demonstra que o construtor pode não apenas copiar valores, mas também **preparar novos atributos derivados**, criando informações adicionais a partir dos dados recebidos.
+
+##### Uso de this e escopo da instância
+A palavra-chave `this` representa a instância específica que está sendo criada naquele momento. No vídeo, isso é explicado como a forma de diferenciar cada pessoa criada a partir da mesma classe.
+
+Assim, cada instância de `Pessoa` terá seus próprios valores de nome, idade e ano de nascimento, mesmo que todas sigam o mesmo modelo.
+
+##### Método descrever
+O método `descrever()` é responsável por exibir no console uma frase com o nome e a idade da pessoa.
+
+Esse método não precisa da palavra-chave `function` por estar dentro da definição da classe. Ao ser chamado por uma instância, ele utiliza `this.nome` e `this.idade` para acessar os dados daquela pessoa específica.
+
+##### Instanciação de objetos
+As linhas:
+`const vitor = new Pessoa('Vitor', 25);`  
+`const renan = new Pessoa('Renan', 30);`
+
+criam duas instâncias distintas da classe `Pessoa`. Cada chamada ao `new` executa o construtor, garantindo que ambas as pessoas sejam criadas já com nome, idade e ano de nascimento corretamente definidos.
+
+Isso ilustra o conceito apresentado no vídeo de que **classe é a definição** e **instância é a ocorrência concreta dessa definição**.
+
+##### Inspeção do objeto no console
+O comando `console.log(vitor)` imprime a instância criada no console, permitindo visualizar todos os atributos do objeto, incluindo o `anoDeNascimento`, que não foi passado diretamente, mas foi calculado no construtor.
+
+Esse ponto reforça a ideia de que o construtor pode enriquecer o objeto no momento da criação, preparando dados que não existiriam se o objeto fosse criado de forma literal.
+
+##### Orientação a objetos e contrato
+O vídeo destaca que esse padrão representa um primeiro contato com a **programação orientada a objetos**. A classe funciona como um contrato que define como o objeto deve ser criado e quais dados são obrigatórios, enquanto as instâncias representam ocorrências reais que seguem esse contrato.
+
+Esse modelo torna o código mais organizado, previsível e fácil de manter, além de evitar duplicação e inconsistências na criação de objetos.
 
 
-## 🟩 Vídeo 02 - Criando Instâncias Com Constructor
+
+## 🟩 Vídeo 07 - Funções Recebendo Objetos
 
 
-Link do vídeo: 
-
-
-## 🟩 Vídeo 03 - Funções Recebendo Objetos
-
-
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/ef839bd6-21ee-4667-b036-efbd284ed952?autoplay=1
 
 # Parte 3 - Praticando com Objetos e Classes
 
-## 🟩 Vídeo 01 - Exercício Guiado - Criando a Classe Carro
+## 🟩 Vídeo 08 - Exercício Guiado - Criando a Classe Carro
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - Exercício Guiado - Criando a Instância
+## 🟩 Vídeo 09 - Exercício Guiado - Criando a Instância
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - Exercício Guiado - Criando o Método calcularGastoDePercurso
+## 🟩 Vídeo 10 - Exercício Guiado - Criando o Método calcularGastoDePercurso
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - Resumo do Exercício Guiado
+## 🟩 Vídeo 11 - Resumo do Exercício Guiado
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 05 - Exercício Guiado - Criando a Classe Pessoa
+## 🟩 Vídeo 12 - Exercício Guiado - Criando a Classe Pessoa
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 06 - Exercício Guiado - Criando o Método calcularImc
+## 🟩 Vídeo 13 - Exercício Guiado - Criando o Método calcularImc
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 07 - Exercício Guiado - Criando a Instância
+## 🟩 Vídeo 14 - Exercício Guiado - Criando a Instância
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 08 - Exercício Guiado - Criando o Método classificarImc
+## 🟩 Vídeo 15 - Exercício Guiado - Criando o Método classificarImc
 
 
 Link do vídeo: 
