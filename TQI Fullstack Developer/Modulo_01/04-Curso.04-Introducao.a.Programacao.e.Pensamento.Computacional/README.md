@@ -26,12 +26,12 @@ O vídeo explora o **pensamento computacional** como uma habilidade universal pa
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/db997538-a1c9-466c-b6f7-763ad108f46c?autoplay=1
 
-
+O vídeo apresenta as **habilidades complementares** fundamentais para a resolução de problemas, destacando o **raciocínio lógico** e o **aperfeiçoamento**. O autor define o raciocínio lógico como uma estrutura de pensamento que pode ser dividida em **indução, dedução e abdução**, sendo uma competência que exige prática constante para se tornar intuitiva. A instrutora também discute a importância de **refinar soluções** para otimizar recursos e melhorar a eficiência de processos. No contexto da programação, enfatiza-se a necessidade de escrever **códigos limpos e legíveis**, facilitando a manutenção e o trabalho em equipe. Por fim, utiliza exemplos práticos para demonstrar como a **segmentação de problemas** complexos permite encontrar conclusões claras e estruturadas.
 
 ## 🟩 Vídeo 04 - Exercício - Pilares: Decomposição
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/99810200-b396-453d-8567-84e3808d4ba8?autoplay=1
 
 
 ## 🟩 Vídeo 05 - Pilares: Padrões
