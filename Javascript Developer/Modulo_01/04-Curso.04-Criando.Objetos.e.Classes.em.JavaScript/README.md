@@ -3,7 +3,7 @@
 - Renan Johannsen de Paula (Software Engineer Lead)
 - Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
 
-# Parte 1 - xxxxxxxxxxxxxxx
+# Parte 1 - Entendendo Objetos
 
 ## 🟩 Vídeo 01 - Estrutura Básica de Um Objeto
 
