@@ -43,7 +43,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: [Aula inaugural - TQI Fullstack Developer](Modulo_01/02-Curso.02-Aula.inaugural-TQI.Fullstack.Developer)
 - [ ] Curso: [Seja Protagonista Neste Bootcamp](Modulo_01/03-Curso.03-Seja.Protagonista.Neste.Bootcamp)
 - [ ] Curso: [Introdução à Programação e Pensamento Computacional](Modulo_01/04-Curso.04-Introducao.a.Programacao.e.Pensamento.Computacional)
-- [ ] Curso: [IntroduMódulo 1: Conteúdo de aberturação ao Git e ao GitHub]
+- [ ] Curso: [Introdução ao Git e ao GitHub]
 - [ ] Curso: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso]
 
 ### Módulo 2: HTML/CSS3
