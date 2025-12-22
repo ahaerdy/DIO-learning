@@ -39,10 +39,10 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 1: Conteúdo de abertura
 
-- [ ] Curso: [Boas-vindas ao TQI Fullstack Developer](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer/Modulo_01/01-Curso.01-Boas-vindas.ao.TQI.Fullstack.Developer)
-- [ ] Curso: [Aula inaugural - TQI Fullstack Developer](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer/Modulo_01/02-Curso.02-Aula.inaugural-TQI.Fullstack.Developer)
-- [ ] Curso: [Seja Protagonista Neste Bootcamp](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer/Modulo_01/03-Curso.03-Seja.Protagonista.Neste.Bootcamp)
-- [ ] Curso: [Introdução à Programação e Pensamento Computacional]
+- [ ] Curso: [Boas-vindas ao TQI Fullstack Developer](Modulo_01/01-Curso.01-Boas-vindas.ao.TQI.Fullstack.Developer)
+- [ ] Curso: [Aula inaugural - TQI Fullstack Developer](Modulo_01/02-Curso.02-Aula.inaugural-TQI.Fullstack.Developer)
+- [ ] Curso: [Seja Protagonista Neste Bootcamp](Modulo_01/03-Curso.03-Seja.Protagonista.Neste.Bootcamp)
+- [ ] Curso: [Introdução à Programação e Pensamento Computacional](Modulo_01/04-Curso.04-Introducao.a.Programacao.e.Pensamento.Computacional)
 - [ ] Curso: [IntroduMódulo 1: Conteúdo de aberturação ao Git e ao GitHub]
 - [ ] Curso: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso]
 
