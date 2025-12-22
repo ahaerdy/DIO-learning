@@ -73,26 +73,30 @@ O vídeo apresenta um **estudo de caso** prático que demonstra como os pilares 
 
 ## 🟩 Vídeo 09 - Estudo de caso aplicado: Soma de um intervalo
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_09.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/d2830647-b96e-44fb-9901-efa2dc3a647d?autoplay=1
 
+O vídeo apresenta um estudo de caso prático sobre como o **pensamento computacional** pode otimizar a resolução de problemas matemáticos, especificamente a **soma de um intervalo** numérico. Em vez de utilizar uma abordagem exaustiva e ineficiente, a autora demonstra como a **decomposição** e o **reconhecimento de padrões** revelam somas constantes ao combinar os extremos do intervalo. Através da **abstração**, essa observação é convertida em uma fórmula generalista que simplifica drasticamente o esforço de cálculo necessário. O processo culmina na criação de um **algoritmo** lógico, que automatiza a tarefa ao processar variáveis de entrada para gerar resultados rápidos. Essa metodologia destaca como técnicas de programação podem transformar desafios complexos em soluções elegantes e de **alta performance**.
 
 
 ## 🟩 Vídeo 10 - Estudo de caso aplicado: Adivinhe um número
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_10.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/d162fd52-f672-48f8-ad48-cce3cac8e67f?autoplay=1
 
+O vídeo apresenta um estudo de caso sobre o jogo de **adivinhação de números** para ilustrar a aplicação do **pensamento computacional**. O palestrante contrasta a ineficiência de uma busca sequencial com a agilidade da **busca binária**, que utiliza a divisão sucessiva de uma lista ordenada para encontrar um alvo. Para implementar essa técnica, é fundamental que os dados estejam **organizados**, permitindo que o algoritmo descarte metade das opções a cada tentativa. Além da parte técnica, o conteúdo enfatiza que a melhor forma de internalizar esse raciocínio é através do **debate e da explicação das decisões** tomadas durante a resolução de problemas. Ao encorajar alunos a justificarem seus métodos, cria-se uma base sólida para a **otimização de processos**. O material serve como uma transição teórica para o início do aprendizado em **lógica de programação**.
 
 # Parte 2 - Introdução à lógica de programação
 
-## 🟩 Vídeo 01 - O que é lógica?
+## 🟩 Vídeo 11 - O que é lógica?
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/a42945cf-43f3-425c-b96c-f10c7ab3c4a0?autoplay=1
 
 
-## 🟩 Vídeo 02 - Técnicas de lógica de programação
+## 🟩 Vídeo 12 - Técnicas de lógica de programação
 
 
 Link do vídeo: 
@@ -100,36 +104,36 @@ Link do vídeo:
 
 # Parte 3 - Fundamentos de algoritmos
 
-## 🟩 Vídeo 01 - Tipologia e variáveis
+## 🟩 Vídeo 13 - Tipologia e variáveis
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - Instruções primitivas
+## 🟩 Vídeo 14 - Instruções primitivas
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - Estruturas condicionais e operadores
+## 🟩 Vídeo 15 - Estruturas condicionais e operadores
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - Estruturas de repetição
+## 🟩 Vídeo 16 - Estruturas de repetição
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 05 - Vetores e matrizes
+## 🟩 Vídeo 17 - Vetores e matrizes
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 06 - O que são funções?
+## 🟩 Vídeo 18 - O que são funções?
 
 
 Link do vídeo: 
@@ -143,39 +147,39 @@ Link do vídeo:
 
 # Parte 4 - Linguagens de programação
 
-## 🟩 Vídeo 01 - Introdução à linguagens de programação
+## 🟩 Vídeo 19 - Introdução à linguagens de programação
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 02 - Como um computador entende o programa?
+## 🟩 Vídeo 20 - Como um computador entende o programa?
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 03 - Características de um programa
+## 🟩 Vídeo 21 - Características de um programa
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 04 - Análises de código
+## 🟩 Vídeo 22 - Análises de código
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 05 - Paradigmas de programação
+## 🟩 Vídeo 23 - Paradigmas de programação
 
 
 Link do vídeo:  
 
 # Parte 5 - Primeiro contato com a programação
 
-## 🟩 Vídeo 01 - Algoritmos em portugol
+## 🟩 Vídeo 24 - Algoritmos em portugol
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 02 - Considerações finais
+## 🟩 Vídeo 25 - Considerações finais
 
 
 Link do vídeo:  
