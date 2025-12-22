@@ -385,12 +385,11 @@ else:
 
 ##  Materiais de Apoio
 
-## Materiais de apoio
-
 Disponibilizados os seguinte arquivos em formato MS Powerpoint:
-- 15-Dio_Indentacao_e_blocos.pptx
-- 16-Dio_Estruturas_condicionais.pptx
-- 17-Dio_Estruturas_de_repeticao.pptx
+
+- [[15-Dio.Indentacao.e.blocos.pptx]]
+- [[16-Dio.Estruturas.condicionais.pptx]]
+- [[17-Dio.Estruturas.de.repeticao.pptx]]
 
 # Certificado: 
 
