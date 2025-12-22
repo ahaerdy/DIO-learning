@@ -71,7 +71,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 ### Módulo 2: Sintaxe Básica com Python  
 
 - [ ] Curso: [Tipos de Operadores com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_02/01-Curso.01-Tipos.de.Operadores.com.Python)
-- [ ] Curso: [Estruturas Condicionais e de Repetição em Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_02/02-Curso.02-Estruturas.Condicionais.e.de.Repeti%C3%A7%C3%A3o.em.Python)
+- [ ] Curso: [Estruturas Condicionais e de Repetição em Python]()
 - [ ] Curso: Manipulando Strings com Python
 - [ ] Curso: Dominando Funções Python
 - [ ] Projeto: [Criando um Sistema Bancário com Python]()
