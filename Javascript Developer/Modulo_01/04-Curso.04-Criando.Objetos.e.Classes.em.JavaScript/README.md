@@ -454,6 +454,164 @@ Isso faz dos objetos uma das estruturas mais versáteis e fundamentais do JavaSc
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/856c81da-ab0d-4e8d-9409-1235b5b0213a?autoplay=1
 
+O vídeo apresenta os conceitos fundamentais dos **objetos literais** em JavaScript, destacando sua natureza flexível e dinâmica. O instrutor explica que esses objetos funcionam como coleções de **chave e valor**, permitindo a inclusão ou remoção constante de dados. Um ponto central da aula é a demonstração da **notação de colchetes**, que possibilita o acesso a atributos por meio de **strings** em vez de referências diretas. Essa técnica é valorizada por permitir que o código manipule propriedades cujos nomes podem ser recebidos como **parâmetros variáveis**. Ao final, reforça-se que essa abordagem amplia as possibilidades de programação ao tratar informações de forma menos rígida. O conteúdo foca em ensinar como o **dinamismo** na manipulação de dados torna o desenvolvimento mais poderoso e versátil.
+
+### Anotações
+
+Código:
+```javascript
+const pessoa = {
+  nome: 'Vitor J Guerra',
+  idade: 25,
+
+  descrever: function () {
+    console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+  }
+};
+
+pessoa['nome'] = 'teste';
+pessoa.nome = 'teste';
+```
+
+#### Acesso Dinâmico a Propriedades em Objetos JavaScript
+
+O vídeo apresenta uma funcionalidade poderosa dos objetos em JavaScript: a capacidade de acessar propriedades de forma **dinâmica** usando a notação de colchetes. Vamos analisar o código fornecido e compreender como essa abordagem difere do acesso direto.
+
+##### O Objeto Inicial
+
+O código começa com o objeto `pessoa` já conhecido:
+
+```javascript
+const pessoa = {
+  nome: 'Vitor J Guerra',
+  idade: 25,
+  descrever: function () {
+    console.log(`Meu nome é ${this.nome} e minha idade é ${this.idade}`);
+  }
+};
+```
+
+Até aqui, temos um objeto com duas propriedades de dados e um método.
+
+##### Acesso Direto vs Acesso Dinâmico
+
+Existem duas formas de acessar propriedades de objetos em JavaScript, e o vídeo demonstra ambas:
+
+**Acesso Direto (Notação de Ponto)**
+
+É a forma que vimos até agora:
+
+```javascript
+pessoa.nome = 'teste';
+```
+
+Nesta sintaxe, você precisa conhecer e escrever explicitamente o nome da propriedade no código. É uma forma **estática** de acesso - você está codificando diretamente qual propriedade deseja acessar.
+
+**Acesso Dinâmico (Notação de Colchetes)**
+
+O código demonstra uma forma alternativa:
+
+```javascript
+pessoa['nome'] = 'teste';
+```
+
+Aqui, usamos colchetes e passamos o nome da propriedade como uma **string**. As duas linhas do código produzem exatamente o mesmo resultado - ambas alteram a propriedade `nome` para o valor `'teste'`.
+
+##### A Diferença Fundamental
+
+A grande diferença entre essas abordagens está na **flexibilidade**. Com a notação de colchetes, o nome da propriedade pode vir de uma variável, de um parâmetro de função, ou de qualquer expressão que resulte em uma string.
+
+O vídeo menciona um exemplo onde uma variável armazena o nome da propriedade:
+
+```javascript
+const atributo = 'idade';
+console.log(pessoa[atributo]); // Imprime: 25
+```
+
+Neste caso, não estamos acessando diretamente `pessoa.idade`. Em vez disso, estamos:
+
+**Definindo uma variável** `atributo` com o valor `'idade'` (uma string)
+
+**Usando essa variável** dentro dos colchetes para acessar dinamicamente a propriedade correspondente
+
+**O JavaScript lê o valor** da variável `atributo`, encontra a string `'idade'`, e então busca a propriedade com esse nome no objeto
+
+Se mudássemos o valor da variável `atributo` para `'nome'`, o mesmo código acessaria a propriedade `nome` em vez de `idade`.
+
+##### Por Que Isso é Útil
+
+Conforme explicado no vídeo, o acesso dinâmico abre **possibilidades infinitas**. Imagine situações onde:
+
+**Você não sabe antecipadamente** qual propriedade precisará acessar - isso pode depender de entrada do usuário, dados vindos de uma API, ou lógica complexa do programa.
+
+**Você precisa iterar** por várias propriedades de forma programática, sem escrever código repetitivo para cada uma.
+
+**Você está construindo funcionalidades genéricas** que funcionam com diferentes objetos e propriedades.
+
+Por exemplo, você poderia criar uma função que recebe o nome de uma propriedade como parâmetro:
+
+```javascript
+function obterValor(objeto, nomePropriedade) {
+  return objeto[nomePropriedade];
+}
+
+console.log(obterValor(pessoa, 'nome'));  // 'Vitor J Guerra'
+console.log(obterValor(pessoa, 'idade')); // 25
+```
+
+Isso seria impossível com a notação de ponto, pois você não pode usar variáveis diretamente com ela.
+
+##### Modificando Propriedades Dinamicamente
+
+Da mesma forma que podemos ler propriedades dinamicamente, também podemos modificá-las:
+
+```javascript
+const atributo = 'nome';
+pessoa[atributo] = 'teste';
+```
+
+Isso é equivalente a `pessoa.nome = 'teste'`, mas permite que o nome da propriedade seja determinado em tempo de execução.
+
+##### Comparação das Sintaxes
+
+Vamos comparar as duas abordagens lado a lado:
+
+**Notação de Ponto (Acesso Direto):**
+```javascript
+pessoa.nome = 'teste';
+```
+- Simples e direta
+- Requer conhecer o nome da propriedade em tempo de codificação
+- Mais legível para casos simples
+
+**Notação de Colchetes (Acesso Dinâmico):**
+```javascript
+pessoa['nome'] = 'teste';
+// ou
+const atributo = 'nome';
+pessoa[atributo] = 'teste';
+```
+- Permite usar variáveis e expressões
+- O nome da propriedade pode vir de qualquer fonte
+- Essencial para código genérico e reutilizável
+
+##### Analogia da Estante de Livros
+
+Para facilitar o entendimento, pense em uma **estante de livros**:
+
+**Acesso direto** (`pessoa.nome`) é como ir direto à prateleira que você já sabe que tem o rótulo "História". Você conhece a localização exata e vai diretamente até ela.
+
+**Acesso dinâmico** (`pessoa[atributo]`) é como ter um papel nas mãos onde alguém pode escrever o nome de qualquer categoria. Você lê o que está escrito no papel e só então vai até a prateleira correspondente, não importa qual seja ela. O papel pode ter "História", "Ficção", "Biografia" - você não sabe até ler.
+
+##### O Básico dos Objetos
+
+O vídeo conclui reforçando o conceito fundamental: um objeto em JavaScript é declarado com chaves `{ }` e contém uma **coleção de chave e valor**. Essa estrutura pode ser acessada de duas formas:
+
+**Diretamente**, quando você conhece o nome da propriedade no momento da escrita do código
+
+**Dinamicamente**, quando o nome da propriedade precisa ser determinado durante a execução do programa
+
+Ambas as formas são válidas e úteis - a escolha depende do contexto e das necessidades do seu código. O acesso dinâmico adiciona uma camada extra de flexibilidade que é essencial para código mais avançado e reutilizável.
 
 
 # Parte 2 - Entendendo Classes
