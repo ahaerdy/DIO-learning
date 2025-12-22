@@ -55,14 +55,19 @@ O conteúdo explica o conceito de **abstração** como um processo intelectual q
 
 ## 🟩 Vídeo 07 - Pilares: Algoritmos
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_07.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/1dceb589-b220-4953-9833-44d1317157f1?autoplay=1
+
+O vídeo apresenta o conceito fundamental de **algoritmos**, definindo-os como sequências lógicas de **instruções passo a passo** necessárias para que um computador execute tarefas. O autor utiliza analogias cotidianas, como preparar um sanduíche ou trocar uma lâmpada, para demonstrar que a lógica de programação baseia-se na **organização de dados de entrada, processamento e saída**. São exploradas três ferramentas principais para a estruturação desses processos: a **narrativa** em linguagem natural, o **fluxograma** com representações gráficas e o **pseudocódigo**, que serve como transição para a programação real. O conteúdo enfatiza que um bom algoritmo deve ser compreensível tanto por seres humanos quanto por máquinas, exigindo uma análise prévia e cuidadosa do problema a ser resolvido. Por fim, o material ilustra como essas instruções evoluem de simples descrições para estruturas complexas que permitem a **tomada de decisões** e a automação de resultados.
 
 
 ## 🟩 Vídeo 08 - Estudo de caso conceitual: perdido
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/5937e874-d9ed-484e-a66c-5bd1b3f4c7cf?autoplay=1
+
+
 
 
 ## 🟩 Vídeo 09 - Estudo de caso aplicado: Soma de um intervalo
