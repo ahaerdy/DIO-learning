@@ -1,7 +1,7 @@
 ## Instrutor:
 
-- Renan Johannsen de Paula (Software Engineer Lead)
-- Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
+- Juliana Mascarenhas (ech Education Specialist / Sócia (Content Creator) @SimplificandoRedes / Me Modelagem Computacional / Cientista de dados)
+- Contato Linkedin: / [juliana-mascarenhas-ds](https://www.linkedin.com/in/juliana-mascarenhas-ds/)
 
 # Parte 1 - Pensamento computacional
 
@@ -167,7 +167,7 @@ Link do vídeo:
 Link do vídeo:  
 
 
-# Certificado: 
+# Certificado: Introdução à Programação e Pensamento Computacional
 
 - Link na plataforma: 
 - Certificado em pdf: 
