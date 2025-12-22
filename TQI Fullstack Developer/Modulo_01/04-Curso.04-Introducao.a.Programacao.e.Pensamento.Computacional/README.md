@@ -15,15 +15,17 @@ A instrutora **Juliana Mascarinhas** apresenta o curso "Primeiros Passos para co
 
 ## 🟩 Vídeo 02 - Introdução
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_02.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/4e8b890d-eacf-4a02-a728-0c66e14de20f?autoplay=1
 
-
+O vídeo explora o **pensamento computacional** como uma habilidade universal para a resolução de problemas, transcendendo o uso de computadores. O conteúdo detalha os quatro pilares fundamentais: **decomposição**, **reconhecimento de padrões**, **abstração** e **design de algoritmos**, ilustrando-os com exemplos práticos que variam de receitas de bolo a investimentos financeiros. A autora enfatiza que essa metodologia promove um raciocínio sistemático e eficiente, permitindo que seres humanos estruturem soluções que podem ser automatizadas por máquinas. Além das etapas técnicas, o texto destaca competências complementares como **criatividade** e **raciocínio lógico**, aplicáveis em diversas áreas do conhecimento como biologia, engenharia e literatura. Por fim, a aula reforça a importância do **refinamento contínuo** das soluções para otimizar processos e alcançar resultados mais precisos em qualquer contexto.
 
 ## 🟩 Vídeo 03 - Habilidade complementares
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/db997538-a1c9-466c-b6f7-763ad108f46c?autoplay=1
+
 
 
 ## 🟩 Vídeo 04 - Exercício - Pilares: Decomposição
