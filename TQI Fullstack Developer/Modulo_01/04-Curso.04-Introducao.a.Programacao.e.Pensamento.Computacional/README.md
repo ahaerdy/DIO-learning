@@ -64,16 +64,18 @@ O vídeo apresenta o conceito fundamental de **algoritmos**, definindo-os como s
 
 ## 🟩 Vídeo 08 - Estudo de caso conceitual: perdido
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_08.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/5937e874-d9ed-484e-a66c-5bd1b3f4c7cf?autoplay=1
 
-
+O vídeo apresenta um **estudo de caso** prático que demonstra como os pilares do **pensamento computacional** podem ser aplicados em situações do cotidiano, como a **sobrevivência na floresta**. O autor utiliza a **decomposição** para dividir o desafio em metas menores, como a busca por água, comida e abrigo. Através do **reconhecimento de padrões**, identifica-se que o fogo é um recurso essencial comum a várias tarefas, enquanto a **abstração** é empregada na criação de mapas mentais focados apenas em pontos cruciais. Por fim, a elaboração de um **algoritmo** define instruções passo a passo para o preparo de alimentos, ilustrando dependências e processos paralelos. O objetivo central é provar que essa **metodologia estruturada** de resolução de problemas ultrapassa os limites da tecnologia, sendo útil para maximizar a eficiência em qualquer cenário complexo.
 
 
 ## 🟩 Vídeo 09 - Estudo de caso aplicado: Soma de um intervalo
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/d2830647-b96e-44fb-9901-efa2dc3a647d?autoplay=1
+
 
 
 ## 🟩 Vídeo 10 - Estudo de caso aplicado: Adivinhe um número
