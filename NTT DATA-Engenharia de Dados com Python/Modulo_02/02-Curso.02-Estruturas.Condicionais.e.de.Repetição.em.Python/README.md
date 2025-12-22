@@ -7,8 +7,11 @@
 
 ## 🟩 Vídeo 01 - Indentação e blocos
 
+![[bootcamp-ntt-data_modulo_02-Curso_02-Video_01.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/engenharia-dados-python/course/estruturas-condicionais-e-de-repeticao-em-python/learning/f9b78902-9c92-4a12-b411-9b78a56b15d1?autoplay=1
+
+O vídeo explica como o **Python** utiliza a **identação** obrigatória para estruturar blocos de comandos, diferenciando-se de linguagens como Java ou C que usam chaves. O autor ressalta que o recuo de espaços não serve apenas à estética, mas é uma **regra sintática** essencial para o interpretador identificar o início e o fim de funções ou estruturas condicionais. Através de exemplos práticos de transações bancárias, demonstra-se que o código Python se torna naturalmente mais **legível** e organizado devido a essa exigência. O conteúdo enfatiza que a falta de formatação adequada impede o funcionamento do programa, tornando a linguagem mais intrusiva porém mais **manutenível**. Por fim, incentiva-se a prática da convenção de quatro espaços para garantir a correta hierarquia entre os blocos de código.
 
 ### Anotações
 
@@ -114,13 +117,12 @@ Obrigado por ser nosso cliente, tenha um bom dia!
 ## 🟩 Vídeo 02 - Estruturas condicionais
 
 
-Link do vídeo: 
-
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/estruturas-condicionais-e-de-repeticao-em-python/learning/fae4234b-5e28-432b-9fd2-495bc75e28ed?autoplay=1
 
 ## 🟩 Vídeo 03 - Estruturas de Repetição
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/estruturas-condicionais-e-de-repeticao-em-python/learning/08d2c695-d00c-4e10-b698-057323c08d9f?autoplay=1
 
 
 ##  Materiais de Apoio
