@@ -906,23 +906,148 @@ class Carro {
 
 ## 🟩 Vídeo 09 - Exercício Guiado - Criando a Instância
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_09.mkv|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/c4d39f42-dfe0-4272-9069-c23bbfad66b0?autoplay=1
 
+Através da prática, os interlocutores demonstram como instanciar um objeto utilizando a palavra reservada **new** para criar uma representação de um veículo. Durante a aula, eles definem atributos específicos como **marca, cor e eficiência de combustível**, exemplificando como inserir lógica matemática diretamente nos argumentos do construtor. A conversa destaca a importância de diferenciar a estrutura da **classe** da criação real do objeto no código. Ao final, o sucesso da implementação é validado por meio de um comando de saída que exibe os dados do **carro** processados no console.
 
+### Anotações
 
+Código:
+```javascript
+class Carro {
+  marca;
+  cor;
+  gastoMedioPorKm;
+
+  constructor(marca, cor, gastoMedioPorKm) {
+    this.marca = marca;
+    this.cor = cor;
+    this.gastoMedioPorKm = gastoMedioPorKm;
+  }
+
+}
+ 
+const uno = new Carro('Fiat', 'Prata', 1 / 12);
+console.log(uno);
+```
+
+Saída:
+```shell
+Carro {
+  marca: 'Fiat',
+  cor: 'Prata',
+  gastoMedioPorKm: 0.08333333333333333
+}
+```
 
 ## 🟩 Vídeo 10 - Exercício Guiado - Criando o Método calcularGastoDePercurso
 
+![[formacao_javascript_developer-modulo_01-Curso_04-Video_10.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/c58fed57-7409-469b-b9ca-e491131f5829?autoplay=1
+
+Os interlocutores desenvolvem uma lógica em que o objeto **carro** utiliza atributos próprios, como o **gasto médio por quilômetro**, combinados a parâmetros externos, como **distância** e **preço do combustível**. A explicação enfatiza a diferença técnica entre uma função comum e um método interno, destacando a importância da palavra-chave **this** para acessar dados do próprio objeto. Ao final, o código é testado comparando a eficiência de dois veículos distintos, o **Uno** e o **Palio**, validando o funcionamento do sistema através de exemplos práticos.
+
+### Anotações
+
+Código:
+```javascript
+class Carro {
+  marca;
+  cor;
+  gastoMedioPorKm;
+
+  constructor(marca, cor, gastoMedioPorKm) {
+    this.marca = marca;
+    this.cor = cor;
+    this.gastoMedioPorKm = gastoMedioPorKm;
+  }
+  
+  calcularGastoDePercurso(distanciaEmKm, precoCombustivel) {
+    return distanciaEmKm * this.gastoMedioPorKm * precoCombustivel;
+  }
+}
+ 
+const uno = new Carro('Fiat', 'Prata', 1 / 12);
+console.log(uno.calcularGastoDePercurso(70, 5).toFixed(2));
+
+const palio = new Carro('Fiat', 'Preto', 1 / 10);
+console.log(palio.calcularGastoDePercurso(70, 5).toFixed(2));
+```
+
+Saída:
+```shell
+29.17
+35.00
+```
+
+#### Explicação do código orientado a objetos com a classe Carro
+
+##### Contexto geral
+O código apresentado demonstra a aplicação de **programação orientada a objetos** em JavaScript para resolver um problema prático: calcular o custo, em reais, de um percurso com base nas características de um carro. No vídeo, a ideia central é mostrar como um comportamento que antes poderia ser implementado como uma função isolada passa a fazer parte do próprio objeto, tornando o modelo mais coerente e reutilizável.
+
+##### Definição da classe Carro
+A classe `Carro` funciona como um **modelo** que define como todo carro deve ser representado no sistema. Ela estabelece quais informações são necessárias e quais ações um carro pode realizar.
+
+Os atributos definidos são:
+- `marca`, que identifica o fabricante do carro  
+- `cor`, que representa a cor do veículo  
+- `gastoMedioPorKm`, que indica quanto combustível o carro consome para percorrer um quilômetro  
+
+Esses atributos caracterizam o carro e servem de base para os cálculos realizados posteriormente.
+
+##### Função do constructor
+O método `constructor(marca, cor, gastoMedioPorKm)` é executado automaticamente sempre que um novo carro é criado com a palavra-chave `new`.
+
+No vídeo, o construtor é explicado como um ponto obrigatório de inicialização do objeto. Ele garante que todo carro seja criado já com marca, cor e gasto médio definidos, evitando objetos incompletos.
+
+Dentro do construtor, o uso de `this` associa os valores recebidos como parâmetros aos atributos da instância que está sendo criada.
+
+##### Método calcularGastoDePercurso
+O método `calcularGastoDePercurso(distanciaEmKm, precoCombustivel)` representa uma **ação do próprio carro**. No vídeo, isso é comparado a um painel de controle do veículo, que consegue informar quanto será gasto em uma viagem com base em suas características.
+
+Esse método recebe dois parâmetros externos:
+- a distância do percurso em quilômetros  
+- o preço do combustível  
+
+O cálculo é feito multiplicando:
+- a distância percorrida  
+- o gasto médio por quilômetro do carro, acessado com `this.gastoMedioPorKm`  
+- o preço do combustível  
+
+O resultado é retornado com `return`, permitindo que o valor seja utilizado ou exibido fora do método.
+
+##### Uso de atributos e parâmetros
+Um ponto enfatizado no vídeo é a diferença entre atributos do objeto e parâmetros do método. O `this` é usado apenas para acessar dados que pertencem ao carro, como o gasto médio por quilômetro. Já a distância e o preço do combustível são informações temporárias, passadas como parâmetros, e não fazem parte do estado permanente do objeto.
+
+##### Instanciação dos objetos
+As linhas:
+`const uno = new Carro('Fiat', 'Prata', 1 / 12);`  
+`const palio = new Carro('Fiat', 'Preto', 1 / 10);`
+
+criam duas instâncias diferentes da classe `Carro`. Ambas seguem o mesmo modelo, mas possuem valores distintos de consumo, o que impacta diretamente no resultado do cálculo do percurso.
+
+Isso reforça o conceito apresentado no vídeo de que **a classe define o modelo** e **as instâncias representam ocorrências concretas desse modelo**.
+
+##### Execução do cálculo e formatação do resultado
+Ao chamar:
+`uno.calcularGastoDePercurso(70, 5)`  
+e  
+`palio.calcularGastoDePercurso(70, 5)`
+
+o método é executado considerando as características específicas de cada carro. O uso de `toFixed(2)` formata o valor retornado para duas casas decimais, facilitando a leitura do custo em reais.
+
+##### Conceito de orientação a objetos aplicado
+O exemplo ilustra claramente a abordagem orientada a objetos discutida no vídeo: o cálculo do gasto não é uma função genérica solta no código, mas um comportamento natural do próprio carro. Isso torna o código mais organizado, intuitivo e fácil de expandir, permitindo adicionar novos carros ou novos comportamentos sem duplicar lógica.
+
 
 
 ## 🟩 Vídeo 11 - Resumo do Exercício Guiado
 
 
-Link do vídeo: 
-
+Link do vídeo: https://web.dio.me/track/formacao-javascript-developer/course/criando-objetos-e-classes-em-javascript/learning/c58fed57-7409-469b-b9ca-e491131f5829?autoplay=1
 
 ## 🟩 Vídeo 12 - Exercício Guiado - Criando a Classe Pessoa
 
