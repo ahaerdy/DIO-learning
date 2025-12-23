@@ -28,7 +28,7 @@ Esta fonte consiste em uma aula técnica que ensina **comandos básicos de termi
 ## 🟩 Vídeo 03 - Realizando a instalação do GIT
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/014fe14a-dc5a-41ec-9965-755a79694f27?autoplay=1
 
 
 
@@ -37,7 +37,7 @@ Link do vídeo:
 ## 🟩 Vídeo 04 - Tópicos fundamentais para entender o funcionamento do Git
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/0f9c0907-c8dd-4cf4-b9f5-05f5dd486875?autoplay=1
 
 
 ## 🟩 Vídeo 05 - Objetos internos do Git
