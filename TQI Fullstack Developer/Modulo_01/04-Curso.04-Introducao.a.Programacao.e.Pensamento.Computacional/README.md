@@ -204,15 +204,18 @@ O vídeo descreve as três etapas fundamentais que o **compilador** utiliza para
 
 ## 🟩 Vídeo 24 - Paradigmas de programação
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_24.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/d98fc25b-6c73-4131-a3b5-9bc02004c477?autoplay=1
+
+O vídeo apresenta um panorama detalhado sobre **paradigmas de programação**, definindo-os como conjuntos de regras e diretrizes utilizados para solucionar problemas computacionais. O autor destaca o **paradigma estruturado**, exemplificado pela linguagem C, que foca na execução sequencial de instruções e é ideal para o aprendizado de lógica e algoritmos de alta performance. Em contrapartida, a **programação orientada a objetos (POO)** é explorada como um modelo que simula o mundo real através de **objetos, atributos e métodos**, promovendo o reuso de código. São explicados conceitos centrais da POO, como **classes, herança e encapsulamento**, demonstrando como cada entidade de software organiza seus estados e comportamentos. Por fim, a fonte orienta que a escolha entre esses modelos depende da **complexidade do problema** e da necessidade de desempenho ou abstração no desenvolvimento.
 
 # Parte 5 - Primeiro contato com a programação
 
 ## 🟩 Vídeo 25 - Algoritmos em portugol
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/75f378a9-0abf-4c18-b713-d3722dc19731?autoplay=1
 
 ## 🟩 Vídeo 26 - Considerações finais
 
