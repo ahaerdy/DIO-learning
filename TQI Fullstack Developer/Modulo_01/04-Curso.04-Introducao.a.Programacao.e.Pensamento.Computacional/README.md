@@ -158,7 +158,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
 
 
 
-## 🟩 Vídeo 07 - Instruções de entrada/saída
+## 🟩 Vídeo 19 - Instruções de entrada/saída
 
 
 Link do vídeo: 
@@ -166,39 +166,39 @@ Link do vídeo:
 
 # Parte 4 - Linguagens de programação
 
-## 🟩 Vídeo 19 - Introdução à linguagens de programação
+## 🟩 Vídeo 20 - Introdução à linguagens de programação
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 20 - Como um computador entende o programa?
+## 🟩 Vídeo 21 - Como um computador entende o programa?
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 21 - Características de um programa
+## 🟩 Vídeo 22 - Características de um programa
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 22 - Análises de código
+## 🟩 Vídeo 23 - Análises de código
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 23 - Paradigmas de programação
+## 🟩 Vídeo 24 - Paradigmas de programação
 
 
 Link do vídeo:  
 
 # Parte 5 - Primeiro contato com a programação
 
-## 🟩 Vídeo 24 - Algoritmos em portugol
+## 🟩 Vídeo 25 - Algoritmos em portugol
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 25 - Considerações finais
+## 🟩 Vídeo 26 - Considerações finais
 
 
 Link do vídeo:  
