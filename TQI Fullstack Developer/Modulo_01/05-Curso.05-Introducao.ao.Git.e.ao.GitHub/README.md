@@ -49,13 +49,85 @@ Esta fonte consiste em uma aula técnica que explora o **funcionamento interno d
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/02d99abe-e83c-4800-9100-a4258119a781?autoplay=1
 
+O vídeo explica os fundamentos técnicos que tornam o **Git** um sistema de versionamento **seguro** e **distribuído**, focando em seus três objetos principais. As **blobs** armazenam o conteúdo bruto dos arquivos e seus metadados, enquanto as **trees** organizam a estrutura de diretórios e nomes. Os **commits** consolidam essas informações, vinculando o estado do projeto a autores, mensagens e registros temporais por meio de identificadores únicos. Toda essa arquitetura é protegida pela criptografia **SHA-1**, que gera um código específico para cada alteração, garantindo que qualquer modificação mínima invalide o histórico anterior. Essa interdependência assegura a integridade total dos dados, permitindo que cada cópia do repositório funcione como um backup **confiável** e autêntico do projeto original.
 
+### Anotações
 
+#### Objetos Fundamentais do Git
+
+O Git baseia seu funcionamento em três tipos básicos de objetos responsáveis pelo versionamento do código: **blobs**, **trees** e **commits**. Entender esses componentes é essencial para compreender por que o Git é um sistema distribuído e seguro.
+
+![[vlcsnap-2025-12-23-13h56m32s682.jpg|w60]]
+
+#### Blobs (Binary Large Objects)
+
+O primeiro objeto fundamental é a **blob**. No Git, as blobs são usadas para armazenar o conteúdo dos arquivos. Para gerar um identificador único para esse conteúdo, o Git utiliza a função `hash-object`, que retorna um **SHA-1** (um identificador de 40 caracteres).
+
+![[vlcsnap-2025-12-23-13h56m58s772.jpg|w60]]
+
+```bash
+echo 'conteudo' | git hash-object --stdin
+> fc31e91b26cf85a55e072476de7f263c89260eb1
+
+echo -e 'conteudo' | openssl sha1
+> 65b0d0dda479cc03cce59528e28961e498155f5c
+```
+
+Como demonstrado acima, o hash gerado pelo Git difere de um hash SHA-1 comum aplicado apenas à string. Isso ocorre porque o Git adiciona metadados ao objeto antes de realizar a criptografia.
+
+#### Estrutura Interna de uma Blob
+
+Uma blob não contém apenas o texto ou binário do arquivo; ela inclui um cabeçalho com o tipo do objeto, o tamanho do conteúdo, um caractere nulo (`\0`) e, finalmente, o conteúdo de fato.
+
+![[vlcsnap-2025-12-23-13h59m32s279.jpg|w60]]
+
+```bash
+echo 'conteudo' | git hash-object --stdin
+> fc31e91b26cf85a55e072476de7f263c89260eb1
+
+echo -e 'blob 9\0conteudo' | openssl sha1
+> fc31e91b26cf85a55e072476de7f263c89260eb1
+```
+
+Ao incluirmos manualmente os metadados no comando `openssl`, o hash gerado torna-se idêntico ao do Git.
+
+#### Árvores (Trees)
+
+Enquanto as blobs armazenam o conteúdo, as **trees** (árvores) organizam esses conteúdos, funcionando como diretórios. Uma tree armazena referências para blobs ou para outras trees (permitindo recursividade/pastas dentro de pastas) e, crucialmente, é nela que o **nome do arquivo** fica guardado.
+
+![[vlcsnap-2025-12-23-14h01m08s404.jpg|w60]]
+
+Diferente da blob, que só conhece o conteúdo, a tree é responsável por montar a estrutura de onde os arquivos estão localizados no sistema operacional.
+
+![[vlcsnap-2025-12-23-14h04m01s796.jpg|w60]]
+
+Como as trees também possuem hashes baseados em seus metadados e referências, qualquer alteração mínima em um arquivo (blob) alterará o hash da tree que o contém, criando uma reação em cadeia que garante a integridade dos dados.
+
+#### Commits
+
+O **commit** é o objeto que une todas as informações e dá sentido às alterações. Ele aponta para uma tree específica e contém metadados vitais: o commit "pai" (referência ao estado anterior), o autor, a mensagem explicativa e o *timestamp* (data e hora).
+
+![[vlcsnap-2025-12-23-14h04m38s073.jpg|w60]]
+
+A geração do SHA-1 do commit é baseada em todas essas informações. Portanto, se você mudar uma vírgula em um arquivo, o hash da blob muda, o que altera o hash da tree e, consequentemente, gera um hash de commit totalmente novo.
+
+#### Integridade e o Sistema Distribuído
+
+A relação hierárquica entre esses objetos (Commit -> Tree -> Blob) é o que torna o Git extremamente seguro e confiável.
+
+![[vlcsnap-2025-12-23-14h08m08s986.jpg|w60]]
+
+Por causa dessa estrutura, é praticamente impossível alterar o histórico de um código de forma maliciosa sem que isso quebre a cadeia de hashes e fique evidente.
+
+![[vlcsnap-2025-12-23-14h08m52s927.jpg|w60]]
+
+Isso permite que o Git seja um sistema distribuído: como cada colaborador possui uma cópia local completa com todos esses objetos e hashes íntegros, qualquer máquina pode servir como um backup de segurança caso o servidor central (como o GitHub) falhe.
 
 ## 🟩 Vídeo 06 - Chave SSH e Token
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/7410b862-1989-421a-a48d-500db5857f53?autoplay=1
+
 
 
 # Parte 4 - Primeiros comandos com Git
