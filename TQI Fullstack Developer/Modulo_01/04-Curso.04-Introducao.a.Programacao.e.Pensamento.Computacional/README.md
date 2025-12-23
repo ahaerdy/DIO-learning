@@ -214,21 +214,34 @@ O vídeo apresenta um panorama detalhado sobre **paradigmas de programação**, 
 
 ## 🟩 Vídeo 25 - Algoritmos em portugol
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_25.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/75f378a9-0abf-4c18-b713-d3722dc19731?autoplay=1
 
+O vídeo apresenta o **Portugal Studio**, uma ferramenta baseada em **pseudocódigo** ideal para quem está iniciando no aprendizado de **lógica de programação**. A instrutora demonstra como criar algoritmos simples, como o **cálculo de médias** e a **soma de intervalos**, utilizando uma sintaxe próxima da linguagem natural. O foco principal é permitir que o estudante desenvolva o **raciocínio computacional** sem se preocupar com as barreiras técnicas de linguagens mais complexas. Além disso, o material destaca conceitos fundamentais como a **reutilização de código** por meio de funções e a importância de praticar a escrita para fixar o conhecimento. A fonte incentiva a **exploração autônoma** de exemplos práticos e bibliotecas disponíveis na plataforma para consolidar os fundamentos da computação.
+
 ## 🟩 Vídeo 26 - Considerações finais
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_26.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/914a66ae-3d88-4314-b4ad-cddbe53d98eb?autoplay=1
+
+O autor encerra o curso incentivando os alunos a **aprofundarem seus conhecimentos** por meio de uma lista diversificada de **referências bibliográficas** e materiais complementares. Ele destaca a importância de consultar **livros acadêmicos, artigos técnicos e videoaulas** sobre tópicos como algoritmos, lógica de programação e arquitetura de computadores. Além disso, recomenda o uso do **Portugol** para facilitar o aprendizado inicial, permitindo que o estudante foque na lógica antes de se preocupar com a sintaxe complexa das linguagens. O instrutor reforça que o aprendizado deve ser contínuo e sugere a utilização de **fóruns e comunidades digitais** para a resolução de dúvidas e troca de experiências. Por fim, a mensagem central é que os alunos devem ser proativos, revisitando o conteúdo das aulas e **explorando fontes externas** para consolidar sua formação técnica.
 
 ## 🟩 Materiais de apoio
 
 
-Link do vídeo:  
+Link: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/615bad8f-5364-48c5-9644-287eda951232?autoplay=1  
+
+A apresentação completa utilizada durante o curso está disponível [AQUI](https://drive.google.com/file/d/1vemC6G790JNte1882V53DAKEawJzVIWL/view?usp=sharing.)  
+Com isso, você terá acesso a todos os slides e links explorados durante as aulas.
+
+**Bons estudos!**
+
+Material em formato pdf: [[Primeiros passo atualizado.pdf]]
 
 
 # Certificado: Introdução à Programação e Pensamento Computacional
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/RTIMPTWK.pdf
+- Certificado em pdf: [[Certificado-Introducao.a.Programacao.e.Pensamento.Computacional.pdf]]
