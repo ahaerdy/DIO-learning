@@ -1,7 +1,7 @@
 ## Instrutor:
 
-- Renan Johannsen de Paula (Software Engineer Lead)
-- Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
+- ROtávio Reis Perkles (Desenvolvedor Full-stack Sênior (Python - Java) / Líder técnico)
+- Contato Linkedin: / [operkles](https://www.linkedin.com/in/operkles/)
 
 # Parte 1 - Introdução ao Git
 
@@ -27,10 +27,11 @@ Esta fonte consiste em uma aula técnica que ensina **comandos básicos de termi
 
 ## 🟩 Vídeo 03 - Realizando a instalação do GIT
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_05-Video_03.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/014fe14a-dc5a-41ec-9965-755a79694f27?autoplay=1
 
-
+Este guia tutorial ensina como realizar a **instalação do Git** nos sistemas operacionais **Windows, Linux e macOS**, enfatizando a importância de manter o software atualizado. O autor destaca que versões a partir da **2.30** trazem mudanças críticas, como a transição para o **Git Credential Manager Core** e a nova nomenclatura da branch padrão para **"main"**. No **Windows**, o processo é feito via instalador oficial, garantindo que ferramentas como o **Git Bash** sejam integradas ao sistema. Para usuários de **Linux**, a recomendação é utilizar repositórios **PPA** para obter a versão mais recente, enquanto no **macOS** sugere-se o gerenciador de pacotes **Homebrew**. O objetivo central é padronizar o ambiente de desenvolvimento para evitar erros de compatibilidade e permissão durante o uso de repositórios remotos.
 
 # Parte 3 - Entendendo como o Git funciona por baixo dos panos
 
