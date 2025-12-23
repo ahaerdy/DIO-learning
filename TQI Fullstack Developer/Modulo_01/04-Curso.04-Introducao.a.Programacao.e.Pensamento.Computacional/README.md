@@ -191,12 +191,15 @@ O vídeo explica os mecanismos fundamentais que permitem aos computadores proces
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/4cd5d576-3600-48d0-8d15-5de15ce74030?autoplay=1
 
+O vídeo aborda os pilares fundamentais para o desenvolvimento de softwares de alta qualidade, destacando que programar exige seguir diretrizes estratégicas. O autor detalha quatro critérios essenciais: **legibilidade**, que foca na clareza do código; **redigibilidade**, que trata da facilidade de escrita e abstração; **confiabilidade**, garantindo que o programa execute funções sem falhas; e **custo**, relacionado à eficiência no uso de recursos computacionais. Além disso, a fonte enfatiza a importância de práticas como o **tratamento de exceções**, o **reuso de código** e a escolha de estruturas adequadas ao contexto tecnológico. Por fim, discute-se como fatores externos, como o **suporte da comunidade**, a **disponibilidade de ferramentas** e a **adoção pelo mercado**, influenciam o sucesso de uma linguagem de programação.
 
 
 ## 🟩 Vídeo 23 - Análises de código
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/ba40e77c-f368-4081-aa91-198d0fcad761?autoplay=1
+
+
 
 ## 🟩 Vídeo 24 - Paradigmas de programação
 
