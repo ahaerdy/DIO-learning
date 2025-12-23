@@ -100,36 +100,43 @@ O vídeo define a lógica como um **pensamento estruturado** que organiza instru
 
 ## 🟩 Vídeo 12 - Técnicas de lógica de programação
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_12.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/02cd9c33-806c-4a3d-b8ba-932ed7ad5ee8?autoplay=1
 
-
-
+O vídeo apresenta as principais **estratégias de lógica** aplicadas ao desenvolvimento de sistemas, utilizando analogias do cotidiano para facilitar a compreensão. A **técnica linear** é descrita como uma sequência rígida e unidimensional de etapas, exemplificada pela rotina simples de preparar um café. Já a **técnica estruturada** introduz maior complexidade ao permitir escolhas e condições, organizando os elementos de forma hierárquica para melhorar a manutenção do código. Por fim, o autor detalha a **técnica modular**, que propõe a decomposição de problemas em partes independentes e especializadas, otimizando a resolução de erros e a organização processual. O objetivo central é demonstrar como esses modelos teóricos fundamentam a criação de **algoritmos eficientes** e organizados.
 
 # Parte 3 - Fundamentos de algoritmos
 
 ## 🟩 Vídeo 13 - Tipologia e variáveis
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_13.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/02cd9c33-806c-4a3d-b8ba-932ed7ad5ee8?autoplay=1
 
+O vídeo detalha como o computador processa informações através da interação entre **dados brutos e instruções** específicas. São apresentados os **tipos primitivos de dados**, incluindo categorias numéricas, caracteres e a lógica booleana de verdadeiro ou falso. O texto explica o conceito de **variáveis como espaços mutáveis** na memória, diferenciando-as das **constantes**, que mantêm valores fixos. Por fim, o autor oferece diretrizes sobre **boas práticas para nomeação** dessas estruturas e define o papel funcional que desempenham em um software.
 
 ## 🟩 Vídeo 14 - Instruções primitivas
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_14.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/3d286dca-9664-4f4a-860d-a65b53417368?autoplay=1
 
+O vídeo aborda o funcionamento das **instruções primitivas** e como elas definem as ações executadas sobre os **dados** em uma linguagem de programação. O autor explica que essas operações utilizam **variáveis, constantes e operadores**, que podem ser classificados como **unários ou binários** dependendo da lógica aplicada. Além disso, destaca-se a importância da **ordem de prioridade** matemática e da **sintaxe específica** de cada linguagem para o processamento correto das informações. O conteúdo também detalha o fluxo fundamental de **entrada, processamento e saída**, exemplificando como um algoritmo organiza tarefas sequenciais. Por fim, a explicação demonstra como as instruções manipulam a **memória do computador** para transformar dados brutos em resultados úteis.
 
 ## 🟩 Vídeo 15 - Estruturas condicionais e operadores
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_15.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/e73d46f7-bd95-41e2-9c7d-7f542eed6174?autoplay=1
+
+O vídeo apresenta os fundamentos das **estruturas condicionais** na lógica de programação, explicando como algoritmos tomam decisões baseadas em requisitos satisfeitos. A autora diferencia os modelos **simples, compostos e encadeados**, detalhando como o fluxo do sistema reage quando uma hipótese é verdadeira ou resulta em uma exceção. Para construir essas verificações, são introduzidos **operadores relacionais**, como maior ou igual, que permitem comparar valores de forma objetiva. Adicionalmente, o material aborda a **álgebra booleana**, destacando o papel dos operadores lógicos **E, OU e NÃO** na combinação de múltiplas cláusulas. Por fim, utilizam-se exemplos práticos, como médias escolares e diagramas, para ilustrar como essas regras controlam o comportamento de um software.
 
 
 ## 🟩 Vídeo 16 - Estruturas de repetição
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/f7ec52e3-ef94-4638-94de-8546af6662e8?autoplay=1
 
 
 ## 🟩 Vídeo 17 - Vetores e matrizes
