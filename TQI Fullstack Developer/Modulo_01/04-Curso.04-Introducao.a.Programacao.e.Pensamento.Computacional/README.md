@@ -171,15 +171,17 @@ O vídeo aborda o conceito fundamental de **instruções de entrada e saída**, 
 
 ## 🟩 Vídeo 20 - Introdução à linguagens de programação
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_20.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/f6007c8b-3963-4178-841c-d4c0c76c9c8a?autoplay=1
 
+Esta fonte consiste em uma aula expositiva que traça a **evolução histórica da computação**, desde o surgimento do ábaco até o desenvolvimento dos sistemas modernos. O conteúdo destaca figuras fundamentais como **Ada Lovelace** e **Alan Turing**, explicando como a progressão do **hardware** sempre ditou os limites para as inovações de **software**. Além de revisar o surgimento de dispositivos icônicos e sistemas operacionais, o texto detalha a transição das linguagens de máquina para as linguagens de **alto nível**. Por fim, a explicação aborda a natureza dos **problemas computacionais**, classificando-os em busca, decisão ou otimização, e define o papel técnico das linguagens de programação.
 
 
 ## 🟩 Vídeo 21 - Como um computador entende o programa?
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/16d6178c-a502-4e53-af73-dd7374fe223a?autoplay=1
 
 ## 🟩 Vídeo 22 - Características de um programa
 
