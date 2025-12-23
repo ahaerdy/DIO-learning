@@ -196,15 +196,16 @@ O vídeo aborda os pilares fundamentais para o desenvolvimento de softwares de a
 
 ## 🟩 Vídeo 23 - Análises de código
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_23.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/ba40e77c-f368-4081-aa91-198d0fcad761?autoplay=1
 
-
+O vídeo descreve as três etapas fundamentais que o **compilador** utiliza para processar e compreender o código-fonte de um programa. Inicialmente, ocorre a **análise léxica**, que funciona como um scanner para identificar caracteres relevantes, transformá-los em **tokens** e descartar elementos inúteis como espaços e comentários. Em seguida, a **análise sintática** verifica se a estrutura e a forma do código respeitam as normas gramaticais específicas da linguagem utilizada. Por fim, o processo atinge a **análise semântica**, que valida a **lógica e o significado** das instruções para garantir que o programa execute a função pretendida. O autor ressalta que falhas de sentido são muito mais complexas de corrigir do que erros formais, pois exigem uma investigação profunda da **estratégia de programação**.
 
 ## 🟩 Vídeo 24 - Paradigmas de programação
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/d98fc25b-6c73-4131-a3b5-9bc02004c477?autoplay=1
 
 # Parte 5 - Primeiro contato com a programação
 
