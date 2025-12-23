@@ -160,9 +160,11 @@ O vídeo aborda o conceito de **funções na programação**, destacando sua ori
 
 ## 🟩 Vídeo 19 - Instruções de entrada/saída
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_19.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/d3797bdc-8058-4d87-bfae-038952533413?autoplay=1
 
+O vídeo aborda o conceito fundamental de **instruções de entrada e saída**, explicando como ocorre o fluxo de informações entre o usuário e o ambiente computacional. A **entrada de dados** é definida como a inserção de informações do mundo real por meio de interfaces físicas ou digitais, enquanto a **saída** representa a materialização de resultados processados. O autor detalha que essas operações podem ocorrer de forma **programada ou por interrupção**, variando conforme a interação com periféricos ou condições lógicas do algoritmo. Além disso, a fonte discute a importância do **tratamento de erros**, diferenciando falhas de sintaxe de problemas lógicos que exigem depuração cuidadosa. Por fim, destaca-se que o formato dos dados pode variar amplamente, indo de **arquivos binários até bancos de dados**, dependendo da finalidade do processamento.
 
 
 # Parte 4 - Linguagens de programação
@@ -170,7 +172,9 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
 ## 🟩 Vídeo 20 - Introdução à linguagens de programação
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/f6007c8b-3963-4178-841c-d4c0c76c9c8a?autoplay=1
+
+
 
 ## 🟩 Vídeo 21 - Como um computador entende o programa?
 
