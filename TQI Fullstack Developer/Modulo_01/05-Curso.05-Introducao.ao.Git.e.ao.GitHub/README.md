@@ -46,6 +46,7 @@ Esta fonte consiste em uma aula técnica que explora o **funcionamento interno d
 
 ## 🟩 Vídeo 05 - Objetos internos do Git
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_05-Video_05.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/02d99abe-e83c-4800-9100-a4258119a781?autoplay=1
 
@@ -157,9 +158,11 @@ Em um cenário onde o servidor central (como o GitHub) sofra uma falha crítica,
 
 ## 🟩 Vídeo 06 - Chave SSH e Token
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_05-Video_06.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/7410b862-1989-421a-a48d-500db5857f53?autoplay=1
 
+Esta aula apresenta as novas diretrizes de autenticação do **GitHub**, focando na transição das senhas tradicionais para métodos mais robustos como **chaves SSH** e **tokens de acesso**. O instrutor detalha o processo técnico para gerar um par de chaves, explicando como configurar a **chave pública** na plataforma e inicializar o agente no terminal para conexões automáticas. O conteúdo abrange instruções específicas para ambientes **Windows**, **Linux** e **macOS**, demonstrando como clonar repositórios de forma segura. Adicionalmente, o vídeo ensina a criar **tokens pessoais**, essenciais para autenticação via HTTPS nas versões mais recentes do Git. O objetivo central é capacitar o aluno a estabelecer uma comunicação confiável entre a máquina local e a nuvem, garantindo a integridade do código.
 
 
 # Parte 4 - Primeiros comandos com Git
@@ -167,7 +170,154 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
 ## 🟩 Vídeo 07 - Iniciando o Git e criando um commit
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/12607816-1128-4906-9645-cbe0f7fcc72b?autoplay=1
+
+Esta fonte consiste em uma transcrição de aula prática focada nos **primeiros passos com o Git**, orientando o aluno desde a criação de diretórios até o registro de alterações. O instrutor demonstra comandos essenciais como **git init**, **git add** e **git commit**, explicando a importância de configurar a identidade do autor antes de versionar o código. Além da parte técnica do terminal, o conteúdo introduz o formato **Markdown**, ensinando como estruturar textos de forma simples para criar um arquivo de receitas. O material enfatiza a familiarização com o **fluxo de trabalho inicial**, preparando o estudante para entender a teoria por trás do funcionamento interno da ferramenta em lições futuras. Com uma abordagem direta, o texto busca desmistificar o uso da **linha de comando** e a gestão de repositórios ocultos.
+
+### Anotações
+
+#### Primeiros Comandos com Git
+
+Nesta aula prática, exploramos os comandos fundamentais para iniciar o versionamento de um projeto. O foco inicial é a familiarização com o terminal e o fluxo básico de trabalho do Git, que será detalhado teoricamente em aulas posteriores.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h35m22s814.jpg" alt="" width="840">
+  </p>
+
+Os objetivos principais desta etapa incluem a inicialização de um repositório, o início do rastreamento de arquivos e a criação do primeiro ponto na história do projeto, conhecido como commit.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h35m28s113.jpg" alt="" width="840">
+  </p>
+
+#### Comandos Básicos de Inicialização
+
+Para realizar essas tarefas, utilizamos três comandos essenciais. No terminal, todos os comandos do Git devem ser precedidos pela palavra `git`, indicando que estamos chamando o programa específico.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h36m16s449.jpg" alt="" width="840">
+  </p>
+
+*   **git init**: Inicializa um novo repositório Git em um diretório.
+*   **git add**: Prepara os arquivos para serem incluídos no próximo commit (inicia o versionamento).
+*   **git commit**: Grava as alterações no repositório de forma permanente.
+
+#### Criando um Repositório na Prática
+
+O processo começa com a criação de um diretório para o projeto. No exemplo, utilizamos uma pasta chamada `workspace` e criamos dentro dela o diretório `livro-receitas`.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h38m52s473.jpg" alt="" width="840">
+  </p>
+
+Após navegar até a pasta do projeto via terminal, executamos o comando de inicialização.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h40m01s245.jpg" alt="" width="840">
+  </p>
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace
+$ cd livro-receitas/
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas
+$ git init
+Initialized empty Git repository in C:/workspace/livro-receitas/.git/
+```
+
+A execução do `git init` cria uma pasta oculta chamada `.git`. Esta pasta é o "coração" do repositório, onde o Git armazena todos os objetos, históricos e configurações gerenciais. Para visualizá-la no terminal, é necessário usar o comando `ls -a`.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h40m56s390.jpg" alt="" width="840">
+  </p>
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ cd .git/
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas/.git (GIT_DIR!)
+$ ls
+config  description  HEAD  hooks/  info/  objects/  refs/
+```
+
+#### Configuração de Identidade
+
+Antes de realizar o primeiro commit, é obrigatório configurar a identidade do autor. O Git exige um nome de usuário e um e-mail para atrelar essas informações a cada commit realizado.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h45m15s912.jpg" alt="" width="840">
+  </p>
+
+Utilizamos o comando `git config --global` para definir essas informações globalmente no sistema.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h46m19s466.jpg" alt="" width="840">
+  </p>
+
+```bash
+$ git config --global user.email "otaviocha@gmail.com"
+```
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h47m12s323.jpg" alt="" width="840">
+  </p>
+
+```bash
+$ git config --global user.name "Perkles"
+```
+
+> **Nota:** Na aula, houve uma menção a `user.nickname`, mas o comando correto para configurar o nome é `user.name`.
+
+#### Introdução ao Markdown
+
+Para o nosso primeiro arquivo, utilizamos o formato Markdown (`.md`). O Markdown é uma linguagem de marcação leve que permite estruturar textos de forma simples, sendo facilmente convertida para HTML.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h47m23s431.jpg" alt="" width="840">
+  </p>
+
+A estrutura do Markdown utiliza símbolos intuitivos para formatação:
+*   **Hashtags (#)**: Definem títulos (H1 a H6).
+*   **Estrelas (**)**: Definem negrito.
+*   **Underlines (_)**: Definem itálico.
+*   **Sinal de menos (-)**: Cria listas não ordenadas.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h47m31s670.jpg" alt="" width="840">
+  </p>
+
+No exemplo prático, criamos um arquivo `strogonoff.md` e utilizamos o editor Typora para estruturar a receita com títulos, listas e emojis.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h49m24s879.jpg" alt="" width="840">
+  </p>
+
+Editores como o Typora oferecem guias de ajuda que facilitam a inserção de elementos mais complexos, como tabelas, citações e checklists.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h49m43s681.jpg" alt="" width="840">
+  </p>
+
+#### O Primeiro Commit
+
+Com o arquivo criado e salvo, voltamos ao terminal para realizar o commit. Este processo envolve dois passos: adicionar o arquivo à área de preparação (*staging area*) e efetivar o commit com uma mensagem descritiva.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-18h51m17s015.jpg" alt="" width="840">
+  </p>
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git add *
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "commit inicial"
+[master (root-commit) 94958ac] commit inicial
+ 1 file changed, 21 insertions(+)
+ create mode 100644 strogonoff.md
+```
+
+Ao finalizar, o Git fornece um resumo da operação, incluindo o identificador único do commit (SHA-1 parcial) e as estatísticas de alterações no arquivo. Com isso, concluímos o ciclo básico de inicialização e versionamento.
 
 
 # Parte 5 - Ciclo de vida dos arquivos no Git
@@ -175,7 +325,7 @@ Link do vídeo:
 ## 🟩 Vídeo 08 - Passo a passo no ciclo de vida
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/54cd3040-b3d1-4e91-aea3-e3b031367774?autoplay=1
 
 
 # Parte 6 - Introdução ao GitHub
