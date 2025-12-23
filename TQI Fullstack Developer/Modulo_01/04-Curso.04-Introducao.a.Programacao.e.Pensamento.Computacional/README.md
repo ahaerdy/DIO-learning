@@ -180,13 +180,18 @@ Esta fonte consiste em uma aula expositiva que traça a **evolução histórica 
 
 ## 🟩 Vídeo 21 - Como um computador entende o programa?
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_21.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/16d6178c-a502-4e53-af73-dd7374fe223a?autoplay=1
+
+O vídeo explica os mecanismos fundamentais que permitem aos computadores processarem instruções escritas em **linguagens de programação de alto nível**. O autor diferencia a **compilação**, que traduz o código fonte em um **programa objeto** de baixo nível para execução rápida, da **interpretação**, que executa as linhas de comando diretamente, priorizando a **flexibilidade** em vez da velocidade. Além disso, o conteúdo detalha as etapas de análise interna do compilador, como as verificações **léxicas e sintáticas**, e introduz o conceito de **transpilação**, onde um código é convertido entre linguagens de nível similar. Exemplos práticos como **Java, Python e TypeScript** são utilizados para ilustrar como cada método lida com a tradução para a **linguagem de máquina**. Em suma, a fonte oferece um panorama técnico sobre a transformação de textos legíveis por humanos em processos executáveis pelo **hardware**.
 
 ## 🟩 Vídeo 22 - Características de um programa
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/4cd5d576-3600-48d0-8d15-5de15ce74030?autoplay=1
+
+
 
 ## 🟩 Vídeo 23 - Análises de código
 
