@@ -135,19 +135,27 @@ O vídeo apresenta os fundamentos das **estruturas condicionais** na lógica de 
 
 ## 🟩 Vídeo 16 - Estruturas de repetição
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_16.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/f7ec52e3-ef94-4638-94de-8546af6662e8?autoplay=1
 
+O vídeo aborda o funcionamento das **estruturas de repetição** na programação, também conhecidas como **laços ou loops**, que permitem executar um bloco de código múltiplas vezes. O autor destaca que o uso dessas ferramentas promove a **redução de linhas**, facilita a compreensão do sistema e evita **erros de digitação** causados pela repetição manual. São explicados os três principais modelos: o **enquanto (while)**, que testa uma condição no início; o **repita (until)**, que realiza o teste ao final; e o **para (for)**, utilizado quando o número de iterações é previamente definido. Para ilustrar esses conceitos técnicos, a fonte utiliza exemplos práticos do cotidiano, como o ato de **cortar grama** ou folhear um livro em busca de um artigo. Por fim, menciona-se a possibilidade de **aninhamento**, onde uma estrutura de controle é inserida dentro de outra para resolver problemas complexos.
 
 ## 🟩 Vídeo 17 - Vetores e matrizes
 
-Link do vídeo: 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_04-Video_17.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/79b460ce-a6f9-4170-a7cc-1113ec0eedc1?autoplay=1
+
+O vídeo aborda os **fundamentos de algoritmos**, focando especificamente nas estruturas de dados conhecidas como **vetores e matrizes**. O autor explica que um **vetor** funciona como um contêiner unidimensional de tamanho fixo, enquanto uma **matriz** organiza as informações de forma tabular em **linhas e colunas**. Ao utilizar o exemplo prático de notas escolares, a explicação demonstra como essas estruturas agrupam dados de forma **contígua na memória**, facilitando o acesso via **índices**. O uso dessas ferramentas é defendido como uma forma de **otimizar o código**, reduzindo a quantidade de variáveis individuais e melhorando a legibilidade. Por fim, menciona-se que a escolha da estrutura adequada, seja ela simples ou **abstrata**, é essencial para resolver problemas de programação com maior **eficiência**.
 
 
 ## 🟩 Vídeo 18 - O que são funções?
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/27de7267-e2f2-4e81-a65d-588f49ff2dc9?autoplay=1
+
+
 
 
 ## 🟩 Vídeo 07 - Instruções de entrada/saída
