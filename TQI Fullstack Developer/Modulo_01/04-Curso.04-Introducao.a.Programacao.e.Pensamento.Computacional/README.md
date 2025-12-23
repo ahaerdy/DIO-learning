@@ -155,13 +155,14 @@ O vídeo aborda os **fundamentos de algoritmos**, focando especificamente nas es
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/27de7267-e2f2-4e81-a65d-588f49ff2dc9?autoplay=1
 
-
+O vídeo aborda o conceito de **funções na programação**, destacando sua origem teórica na **matemática** e sua importância fundamental para o desenvolvimento de softwares organizados. Essas estruturas, também chamadas de **sub-rotinas ou métodos**, funcionam como blocos de instruções específicos que permitem a **modularização do código**, tornando-o mais limpo e fácil de ler. A principal vantagem apresentada é a **reutilização de código**, que evita repetições desnecessárias e simplifica drasticamente a **manutenção do sistema** ao centralizar tarefas em um único ponto. O autor detalha que uma função possui uma **assinatura própria**, composta por nome e parâmetros, processando dados de entrada para retornar um resultado esperado. Por fim, o uso de **variáveis locais** é mencionado como uma forma eficiente de gerenciar a memória, já que esses dados são descartados após a execução da tarefa.
 
 
 ## 🟩 Vídeo 19 - Instruções de entrada/saída
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-programacao-e-pensamento-computacional/learning/d3797bdc-8058-4d87-bfae-038952533413?autoplay=1
+
 
 
 # Parte 4 - Linguagens de programação
