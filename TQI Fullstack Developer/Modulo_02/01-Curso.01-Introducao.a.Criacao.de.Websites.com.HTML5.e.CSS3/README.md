@@ -1,4 +1,4 @@
-## Instrutor:
+## Instrutor
 
 - Renan Johannsen de Paula (Software Engineer Lead)
 - Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
@@ -268,6 +268,7 @@ Esta fonte discute a transição fundamental do uso genérico de **divs** para a
 
 ## 🟩 Vídeo 03- Semântica - Parte 2
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_03.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/cd186102-3c5e-4b94-a631-0071076d40a6?autoplay=1
 
@@ -363,31 +364,192 @@ O instrutor conclui mencionando que na próxima aula serão abordados os tópico
 
 ## 🟩 Vídeo 04 - Tags para textos
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_04.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/e48e8a0f-5940-4cdd-9923-979c31c241f7?autoplay=1
 
-
-## 🟩 Vídeo 02 - Tags para links
-
-
-Link do vídeo: 
+O áudio apresenta os fundamentos da **estruturação de documentos na web**, destacando que o compartilhamento de informações textuais permanece como o pilar central da internet. O conteúdo detalha como os **títulos de hierarquia H1 a H6** organizam visualmente as seções de uma página para facilitar a navegação. Para o desenvolvimento de conteúdos mais extensos, a fonte descreve a importância fundamental da **tag de parágrafo**, conhecida como elemento P. Além de organizar blocos de texto, essa funcionalidade é versátil por permitir a inclusão de **mídias diversas**, como imagens, códigos e vídeos. Assim, a explicação reforça que a evolução tecnológica manteve a **essência do HTML** na organização lógica de documentos digitais.
 
 
-## 🟩 Vídeo 03 - Exercício prático
+## 🟩 Vídeo 05 - Tags para links
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_05.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/7b6afe7e-d962-4241-bf47-d76ed6935347?autoplay=1
 
+O vídeo explica o funcionamento da **tag HTML de âncora**, essencial para a conectividade e navegação entre diferentes páginas da rede. O autor destaca o atributo **href**, que define o destino do link, podendo direcionar o usuário para **sites externos**, endereços de **e-mail** ou números de **telefone**. Além disso, é abordado o uso do atributo **target** com o valor **_blank**, permitindo que o conteúdo seja acessado em uma **nova aba** do navegador. A fonte também orienta sobre a aplicação prática desses elementos em **postagens de blog** ou exercícios de codificação. No geral, as instruções detalham como criar **hiperlinks funcionais** e dinâmicos para melhorar a experiência do usuário na web.
 
-## 🟩 Vídeo 04 - Como usar textos e links em HTML
+### Anotações
 
+#### O Elemento Âncora (A) e sua Importância na Web
 
-Link do vídeo: 
+O elemento `<a>` (âncora) é um componente extremamente necessário e interessante na web, pois é responsável por interligar diversos conteúdos. Este elemento funciona como uma ponte ou portal entre páginas, sites e diferentes tipos de recursos na internet.
+
+#### Principais Atributos do Elemento A
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-10h37m47s569.jpg" alt="" width="840">
+</p>
+
+```html
+<a>Link</a>
+
+<a href="linkedin.com/in/vilaboim">LinkedIn</a>
+<a href="mailto:lucas@vilaboim.com">E-mail</a>
+
+<a target="_blank">Link</a>
+```
+
+O elemento `<a>` possui diversos atributos, mas a aula foca nos dois principais: **href** e **target**.
+
+#### O Atributo href (Hyperlink Reference)
+
+O atributo `href` é o hiperlink que indica para onde a âncora está apontando. Ele pode referenciar:
+
+- **Páginas internas**: páginas dentro do próprio site
+- **Sites externos**: endereços de outros sites na web
+- **E-mails**: usando o prefixo `mailto:` antes do endereço de email
+- **Telefones**: usando o prefixo `tel:` antes do número
+
+Exemplos práticos mostrados:
+- `href="linkedin.com/in/vilaboim"` - direciona para um perfil do LinkedIn
+- `href="mailto:lucas@vilaboim.com"` - abre o cliente de e-mail padrão com o destinatário já preenchido
+
+#### O Atributo target
+
+O atributo `target` serve para indicar como o link será aberto. O valor apresentado na aula é `_blank`, que instrui o navegador a abrir o link em uma **nova aba**, mantendo a página original aberta.
+
+Esta funcionalidade é especialmente útil quando você deseja que o usuário explore um link externo sem perder a navegação atual no seu site.
+
+#### Aplicação Prática
+
+Para o exercício proposto, será adicionado texto a uma postagem com diversos links incorporados, demonstrando na prática como o elemento `<a>` interliga conteúdos e cria a navegação característica da web.
+
+## 🟩 Vídeo 06 - Exercício prático
+
+![[bootcamp_tqi_fullstack-modulo_02-Video_06.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/b8233675-5187-40d6-b60c-c6a36ddc18a8?autoplay=1
+
+O vídeo fornece um tutorial técnico sobre a estruturação de elementos básicos em uma página **HTML**. O instrutor demonstra inicialmente como inserir **parágrafos de texto** fictício dentro de um artigo para preencher o conteúdo visual. Em seguida, o foco muda para a criação de **hiperlinks**, detalhando como configurar o atributo para que as páginas abram em **novas abas** do navegador. O material também explora funcionalidades específicas de links, como os prefixos necessários para disparar o envio de **e-mails** e a realização de **chamadas telefônicas**. Por fim, o conteúdo antecipa que as próximas lições abordarão a manipulação de imagens para continuar a evolução do projeto web.
+
+### Anotações
+
+#### Adicionando Texto ao Post com o Elemento P
+
+O primeiro passo para trabalhar com textos na página é adicionar conteúdo aos posts. Dentro do elemento `<article>`, logo abaixo do `<header>`, é inserido um elemento `<p>` (parágrafo). Para este exemplo, o instrutor utiliza um texto fictício do site **lipsum.com**, que é um gerador de texto placeholder comumente usado em desenvolvimento web.
+
+Após colar o texto dentro do elemento `<p>`, ele já aparece renderizado no navegador, demonstrando como o HTML processa e exibe automaticamente o conteúdo textual.
+
+#### Criando um Link para Perfil no LinkedIn
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-10h56m18s017.jpg" alt="" width="840">
+</p>
+
+```html
+<h1>Lucas Vilaboim</h1>
+</header>
+<section>
+  <header>
+    <h2>Posts</h2>
+  </header>
+  <article>
+    <header>
+      <h3>Post #1</h3>
+    </header>
+    <p>
+      Lorem ipsum dolor sit amet, <a href="https://www.linkedin.com/in/vilaboim/"
+      target="_blank">consectetur adipiscing</a> elit. Quisque tristique risus
+      diam, ac interdum augue ornare et. Curabitur in nisl quis diam vestibulum
+      viverra. Morbi et augue eget ante hendrerit euismod at eget justo. Duis
+      fringilla erat at velit semper mattis nec sed erat. Nulla facilisis ultrices
+      eros, non pharetra arcu convallis non. Vestibulum quis purus tortor. Nunc
+      dignissim hendrerit orci. Nunc efficitur libero vitae ornare aliquet. Duis
+      euismod ligula eget tellus sollicitudin, sit amet auctor ex malesuada.
+      Aliquam a rutrum metus, at feugiat mi. Pellentesque tempor varius nibh, non
+      porta mauris iaculis aliquet. Nulla facilisi.
+    </p>
+  </article>
+</section>
+```
+
+Para adicionar um link, o processo envolve selecionar uma parte do texto, removê-la temporariamente, adicionar o elemento `<a>`, e colar o texto dentro dele. O atributo `href` é então adicionado com o endereço do perfil do LinkedIn. 
+
+O código mostra o link apontando para `https://www.linkedin.com/in/vilaboim/` com o atributo `target="_blank"`, que instrui o navegador a abrir o link em uma nova aba. Esta é uma prática recomendada para links externos, pois mantém o site original aberto enquanto o usuário explora o conteúdo externo.
+
+#### Visualizando o Link no Navegador
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-10h56m23s349.jpg" alt="" width="840">
+</p>
+
+No navegador, o link aparece com a aparência padrão de hiperlink (sublinhado e em cor diferente). Inicialmente, quando clicado sem o atributo `target="_blank"`, o link abre na mesma aba. No entanto, após adicionar este atributo, o comportamento muda: o link passa a abrir em uma nova aba do navegador, preservando a página original.
+
+A página mostra a estrutura completa renderizada: o cabeçalho "Lucas Vilaboim" com o `<h1>`, a seção "Posts" com `<h2>`, o título do post "Post #1" com `<h3>`, e o parágrafo contendo o link funcional para "consectetur adipiscing".
+
+#### Adicionando Link para E-mail com mailto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-10h56m54s743.jpg" alt="" width="840">
+</p>
+
+```html
+<h1>Lucas Vilaboim</h1>
+</header>
+<section>
+  <header>
+    <h2>Posts</h2>
+  </header>
+  <article>
+    <header>
+      <h3>Post #1</h3>
+    </header>
+    <p>
+      Lorem ipsum dolor sit amet, <a href="https://www.linkedin.com/in/vilaboim/"
+      target="_blank">consectetur adipiscing</a> elit. Quisque tristique risus
+      diam, ac <a href="mailto:lucas@email.com">interdum augue</a> ornare et.
+      Curabitur in nisl quis diam vestibulum viverra. Morbi et augue eget ante
+      hendrerit euismod at eget justo. Duis fringilla erat at velit semper mattis
+      nec sed erat. Nulla facilisis ultrices eros, non pharetra arcu convallis non.
+      Vestibulum quis purus tortor. Nunc dignissim hendrerit orci. Nunc efficitur
+      libero vitae ornare aliquet. Duis euismod ligula eget tellus sollicitudin,
+      sit amet auctor ex malesuada. Aliquam a rutrum metus, at feugiat mi.
+      Pellentesque tempor varius nibh, non porta mauris iaculis aliquet. Nulla
+      facilisi.
+    </p>
+  </article>
+</section>
+```
+
+O segundo tipo de link demonstrado é o link para e-mail. O processo é similar ao anterior, mas o atributo `href` recebe um prefixo especial: `mailto:`. Este prefixo instrui o navegador a tratar o link de forma diferente de um endereço web comum.
+
+No código, o link é criado com `href="mailto:lucas@email.com"`, envolvendo o texto "interdum augue". Quando este tipo de link é clicado, em vez de navegar para uma página web, o navegador abre o cliente de e-mail padrão do usuário (ou o webmail, caso não haja cliente configurado) com o destinatário já preenchido.
+
+#### Comportamento dos Links de E-mail no Navegador
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-10h56m58s011.jpg" alt="" width="840">
+</p>
+
+Visualmente no navegador, o link de e-mail tem a mesma aparência de um link comum, mas seu comportamento é completamente diferente. Ao clicar nele, o sistema operacional interpreta o protocolo `mailto:` e abre o aplicativo de e-mail configurado.
+
+No caso do instrutor, como não há cliente de e-mail instalado localmente, o navegador abre a interface web do Gmail automaticamente. Este comportamento demonstra a versatilidade dos links HTML para diferentes tipos de comunicação além da simples navegação entre páginas.
+
+#### O Prefixo tel: para Telefones
+
+A aula também menciona um prefixo similar ao `mailto:`, que é o `tel:`. Este funciona de maneira análoga, mas para números de telefone. Quando um usuário clica em um link com `tel:` em um dispositivo móvel, o sistema operacional oferece a opção de realizar uma chamada telefônica para o número especificado.
+
+Este recurso é especialmente útil em sites responsivos que serão acessados por smartphones, facilitando a interação do usuário ao permitir que ele inicie uma chamada diretamente ao tocar no número.
+
+#### Próximos Passos
+
+A aula conclui informando que a página continuará evoluindo nas próximas lições, e que o próximo tópico será sobre **imagens**, expandindo ainda mais as possibilidades de criação de conteúdo rico em HTML.
 
 
 # Parte 4 - Como inserir imagens em seu site
 
-## 🟩 Vídeo 01 - Tag img
+## 🟩 Vídeo 07 - Tag img
 
 
 Link do vídeo:  
