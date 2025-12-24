@@ -3,21 +3,21 @@
 - Renan Johannsen de Paula (Software Engineer Lead)
 - Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
 
-# Parte 1 - xxxxxxxxxxxxxxx
+# Parte 1 - Introdução ao curso de HTML
 
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Estrutura básica
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - Material de apoio
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 03 - Introdução ao curso de HTML
 
 
 Link do vídeo: 
@@ -29,169 +29,165 @@ Link do vídeo:
 Link do vídeo: 
 
 
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 05 - xxxxx
 
 
-Link do vídeo: 
+# Parte 2 - Entendendo o que é semântica
 
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-# Parte 2 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Semântica - Parte 1
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - Semântica - Parte 2
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 03 - Entendendo o que é semântica
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+# Parte 3 - Como usar textos e links em HTML
 
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-# Parte 3 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - Exxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Tags para textos
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - Tags para links
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 03 - Exercício prático
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 04 - Como usar textos e links em HTML
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
+# Parte 4 - xxxxxxxxxxxxxxxxx
+
+## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
 
 
-Link do vídeo: 
+Link do vídeo:  
 
 
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
 
 
-Link do vídeo: 
+Link do vídeo:  
 
 
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
 
 
-Link do vídeo: 
+Link do vídeo:  
 
 
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
+# Parte 5 - xxxxxxxxxxxxxxxxx
+
+## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
 
 
-Link do vídeo: 
+Link do vídeo:  
+
+## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
 
 
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
+Link do vídeo:  
+
+## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
 
 
-Link do vídeo: 
+Link do vídeo:  
+
+## 🟩 Vídeo 04 - xxxxxxxxxxxxxxxxx
 
 
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
+Link do vídeo:  
 
 
-Link do vídeo: 
+# Parte 6 - xxxxxxxxxxxxxxxxx
+
+## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
 
 
-##  Materiais de Apoio
+Link do vídeo:  
+
+## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
 
 
+Link do vídeo:  
+
+## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 04 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+
+# Parte 7 - xxxxxxxxxxxxxxxxx
+
+## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 04 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+
+# Parte 8 - xxxxxxxxxxxxxxxxx
+
+## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 04 - xxxxxxxxxxxxxxxxx
+
+
+Link do vídeo:  
 # Certificado: 
 
 - Link na plataforma: 
