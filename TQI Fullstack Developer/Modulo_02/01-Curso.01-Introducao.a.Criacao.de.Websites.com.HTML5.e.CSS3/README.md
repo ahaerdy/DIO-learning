@@ -1279,14 +1279,190 @@ Usamos o `font-style` para tornar um texto itálico, na maioria das vezes você 
 
 ## 🟩 Vídeo 13 - Estilizando elementos
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_13.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/6ca1d02e-480b-4eea-b0d0-c78135dff209?autoplay=1
 
+O conteúdo explica como utilizar propriedades essenciais de **CSS** para aprimorar o **design visual** de sites por meio da estilização de elementos. O autor detalha o funcionamento de **margens e preenchimentos**, ensinando como configurar espaçamentos individuais ou combinados para organizar o layout. Além disso, o texto aborda a customização de **bordas e cores de fundo**, destacando o uso de códigos hexadecimais e atalhos de sintaxe para facilitar o código. Um ponto central é a aplicação do **border-radius**, que permite criar cantos arredondados ou transformar figuras quadradas em círculos perfeitos. Por fim, as instruções focam em **boas práticas**, como a padronização da direção das margens para manter a consistência visual do projeto.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h03m23s265.jpg" alt="" width="840">
+</p>
+
+Nesta introdução à estilização de elementos com CSS3, o foco inicial é compreender como manipular as propriedades de espaçamento e aparência visual para tornar o site mais atraente. O aprendizado abordará propriedades fundamentais como **padding**, **margin**, **background** e **border**, permitindo um controle refinado sobre o layout e o design dos componentes da página.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h03m32s127.jpg" alt="" width="840">
+</p>
+
+A forma mais básica de aplicar **padding** (preenchimento interno) ou **margin** (margem externa) é utilizando um único valor. Quando declarado dessa maneira, o navegador aplica a mesma medida para os quatro lados do elemento simultaneamente.
+
+```css
+.post {
+  padding: 10px;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h03m46s197.jpg" alt="" width="840">
+</p>
+
+Uma segunda forma de definir espaçamentos é utilizando dois valores. Nesta sintaxe, o primeiro valor (10px) é aplicado ao **eixo Y** (superior e inferior), enquanto o segundo valor (5px) é aplicado ao **eixo X** (esquerda e direita).
+
+```css
+.post {
+  padding: 10px 5px;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h04m07s418.pgh" alt="" width="840">
+</p>
+
+É possível especificar um valor para cada lado individualmente em uma única linha, seguindo sempre a ordem horária: **topo, direita, inferior e esquerda**. Uma regra importante de sintaxe é que, quando o valor for zero, não há necessidade de especificar a unidade (como px ou %).
+
+```css
+.post {
+  padding: 15px 10px 5px 0;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h04m32s337.jpg" alt="" width="840">
+</p>
+
+Caso seja necessário alterar apenas um lado específico ou se preferir um código mais explícito, podemos utilizar as propriedades direcionais. Esta abordagem é útil quando a maioria dos lados mantém um padrão e apenas um deles precisa de um ajuste pontual.
+
+```css
+.post {
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 0;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h04m58s290.jpg" alt="" width="840">
+</p>
+
+A propriedade **background** funciona como um atalho para diversas outras subpropriedades. Além da cor de fundo (`background-color`), ela permite definir uma imagem de fundo (`background-image`) e controlar o seu posicionamento (`background-position`) dentro do elemento.
+
+```css
+.post {
+  background-color: green;
+  background-image: url("bg.png");
+  background-position: top;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h05m26s524.jpg" alt="" width="840">
+</p>
+
+Existem diferentes maneiras de definir cores no CSS. Podemos usar o nome da cor em inglês, o código hexadecimal (ex: `#008800`) ou utilizar a propriedade reduzida `background` para definir apenas a cor, simplificando a escrita do código.
+
+```css
+.post {
+  background-color: green;
+  background-color: #008800;
+  background: #008000;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h05m53s132.jpg" alt="" width="840">
+</p>
+
+A propriedade **border** exige três valores fundamentais: **largura** (medida em pixels, centímetros, etc.), **estilo** (sólido, pontilhado ou tracejado) e **cor**. É possível definir uma borda geral e, logo em seguida, sobrescrever lados específicos — como o topo ou a direita — com estilos e cores diferentes.
+
+```css
+.post {
+  border: 3px solid blue;
+  border-top: 2px dotted green;
+  border-right: 4px dashed pink;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h06m56s344.jpg" alt="" width="840">
+</p>
+
+Para um controle total sobre o contorno de um elemento, podemos separar a estilização de cada lado individualmente. Utilizando as extensões `-top`, `-right`, `-bottom` e `-left`, aplicamos o conjunto de largura, estilo e cor apenas para a face desejada.
+
+```css
+.post {
+  border-top: 2px dotted green;
+  border-right: 4px dashed pink;
+  border-bottom: 1px solid purple;
+  border-left: 4px dotted cyan;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h07m18s388.jpg" alt="" width="840">
+</p>
+
+Além do atalho `border`, podemos utilizar propriedades específicas para cada aspecto da borda em todo o elemento: `border-width` para a espessura, `border-color` para a tonalidade e `border-style` para o tipo de traço. O resultado visual de ambas as abordagens abaixo é idêntico.
+
+```css
+/* Usando atalho */
+.post {
+  border: 3px solid #505050;
+}
+
+/* Usando propriedades específicas */
+.post {
+  border-width: 3px;
+  border-color: #505050;
+  border-style: solid;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h07m46s285.jpg" alt="" width="840">
+</p>
+
+É possível atingir um nível máximo de especificidade combinando o lado do elemento com o aspecto técnico. Por exemplo, para alterar apenas as características da borda superior, utilizamos `border-top-width`, `border-top-color` e `border-top-style`.
+
+```css
+.post {
+  border-top-width: 3px;
+  border-top-color: blue;
+  border-top-style: solid;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h08m16s902.jpg" alt="" width="840">
+</p>
+
+A propriedade **border-radius** é utilizada para arredondar os cantos dos elementos. Se um único valor for passado, todos os cantos são afetados. Para transformar um elemento perfeitamente quadrado em um círculo, utiliza-se o valor de **50%**. Também é possível definir valores diferentes para cada canto seguindo a sequência padrão de quatro valores.
+
+```css
+border-radius: 10px;
+border-radius: 50%;
+border-radius: 10% 20%;
+border-radius: 10% 20% 15% 22%;
+
+```
 
 ## 🟩 Vídeo 14 - Estilizando textos
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/e076c538-b160-4e5e-bdae-eb66bdc542cf?autoplay=1
 
 ## 🟩 Vídeo 15 - Estilizando listas
 
