@@ -757,12 +757,83 @@ A estrutura de uma lista depende da relevância da sequência dos itens apresent
 Para aplicar os conceitos aprendidos, realizaremos um exercício prático focado na organização de informações do site. O objetivo é adicionar uma lista de contatos estruturada diretamente no rodapé (footer) da página, utilizando as tags de lista para garantir a semântica correta do documento.
 
 
-## 🟩 Vídeo 02 - Exercício prático
+## 🟩 Vídeo 10 - Exercício prático
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_10.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/e4fd6cd4-c680-4df9-9018-cf120bc429a8?autoplay=1
 
-## 🟩 Vídeo 03 - Como organizar listas com HTML
+O vídeo apresenta um tutorial prático sobre a **criação de uma seção de contatos** para o rodapé de uma página web utilizando **HTML**. O instrutor demonstra como estruturar uma **lista não ordenada** contendo links externos para e-mail, LinkedIn e GitHub. Durante a explicação, destaca-se a importância do atributo **href** para direcionar o usuário e do atributo **target** para abrir as páginas em abas distintas. Além disso, o conteúdo diferencia visualmente as **listas numeradas** das listas com marcadores simples. Por fim, o autor esclarece que a **aparência estética** do site será refinada posteriormente por meio de estudos em **CSS3**.
+
+### Anotações
+
+#### Implementação de Lista Não Ordenada no Rodapé
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-15h15m03s296.jpg" alt="" width="840">
+</p>
+
+Para adicionar uma lista de contatos no rodapé da página onde a ordem dos itens não é prioritária, utiliza-se a tag `<ul>` (unordered list). Dentro desta lista, cada item é definido pela tag `<li>`. Para tornar os contatos funcionais, inserimos o elemento `<a>` com o atributo `href` apontando para o e-mail ou perfis em redes sociais, além do atributo `target="_blank"` para garantir que os links externos abram em uma nova aba do navegador.
+
+```html
+<footer>
+  <ul>
+    <li>
+      <a href="mailto:lucas@vilaboim.com">lucas@vilaboim.com</a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/vilaboim/" target="_blank">LinkedIn</a>
+    </li>
+    <li>
+      <a href="https://github.com/vilaboim" target="_blank">Github</a>
+    </li>
+  </ul>
+</footer>
+
+```
+
+#### Renderização Padrão da Lista Não Ordenada
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-15h15m08s029.jpg" alt="" width="840">
+</p>
+
+Ao visualizar o resultado no navegador sem a aplicação de estilos CSS personalizados, a lista não ordenada é representada com marcadores padrão (bolinhas) antes de cada item. Essa formatação visual sinaliza ao usuário que se trata de um agrupamento de itens relacionados, mas sem uma hierarquia sequencial obrigatória.
+
+#### Transição para Lista Ordenada
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-15h15m29s479.jpg" alt="" width="840">
+</p>
+
+Para transformar a estrutura em uma lista onde a sequência dos elementos é relevante, substitui-se a tag de abertura e fechamento `<ul>` pela tag `<ol>` (ordered list). Os itens internos permanecem envoltos pela tag `<li>`, mantendo a semântica de "item de lista".
+
+```html
+<footer>
+  <ol>
+    <li>
+      <a href="mailto:lucas@vilaboim.com">lucas@vilaboim.com</a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/vilaboim/" target="_blank">LinkedIn</a>
+    </li>
+    <li>
+      <a href="https://github.com/vilaboim" target="_blank">Github</a>
+    </li>
+  </ol>
+</footer>
+
+```
+
+#### Exibição Numérica da Lista Ordenada
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-15h15m32s446.jpg" alt="" width="840">
+</p>
+
+Com a alteração para `<ol>`, o navegador altera automaticamente a representação visual dos itens. Em vez dos marcadores circulares, os itens passam a ser precedidos por números (1, 2, 3...), indicando explicitamente a ordem da lista de contatos apresentada no rodapé.
+
+## 🟩 Vídeo 11 - Como organizar listas com HTML
 
 
 Link do vídeo:  
