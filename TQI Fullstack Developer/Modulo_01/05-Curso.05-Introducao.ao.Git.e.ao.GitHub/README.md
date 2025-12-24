@@ -1,6 +1,6 @@
-## Instrutor:
+## Instrutor
 
-- ROtávio Reis Perkles (Desenvolvedor Full-stack Sênior (Python - Java) / Líder técnico)
+- Otávio Reis Perkles (Desenvolvedor Full-stack Sênior (Python - Java) / Líder técnico)
 - Contato Linkedin: / [operkles](https://www.linkedin.com/in/operkles/)
 
 # Parte 1 - Introdução ao Git
@@ -611,13 +611,16 @@ Changes to be committed:
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/00c82124-1594-49e8-9f82-4d8c85aa5a48?autoplay=1
 
+Esta fonte consiste em uma aula técnica detalhando a **integração entre o Git local e o GitHub**, orientando o usuário desde a criação de uma conta até o envio do código para a nuvem. O instrutor enfatiza a importância de **sincronizar as credenciais de e-mail e nome de usuário** em ambas as plataformas para garantir a correta identificação da autoria nos registros. Através de comandos práticos, demonstra-se como **vincular um repositório remoto**, realizar o primeiro envio de arquivos e navegar pela interface visual do GitHub. Além disso, o texto explora funcionalidades como o arquivo **README para documentação** e a visualização gráfica do histórico de alterações. Por fim, o conteúdo destaca o papel do GitHub como uma **rede social colaborativa** essencial para o fluxo de trabalho de desenvolvedores modernos.
 
 # Parte 7 - Resolvendo conflitos
 
 ## 🟩 Vídeo 10 - Como os conflitos acontecem no GitHub e como resolvê-los
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/4895182a-ae5a-44e3-8f12-daa9861ab035?autoplay=1
+
+
 
 
 ##  Materiais de Apoio
