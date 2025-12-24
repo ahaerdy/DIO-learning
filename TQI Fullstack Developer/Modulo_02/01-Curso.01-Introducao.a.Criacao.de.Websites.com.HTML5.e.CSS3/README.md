@@ -1644,25 +1644,36 @@ ul {
 
 ## 🟩 Vídeo 16 - Propriedades de dimensões e alinhamento
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_16.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/f06120a8-be53-4c52-a2c7-e6ef6eceaedc?autoplay=1
 
-## 🟩 Vídeo 02 - Dimensão e alinhamento
+O conteúdo explora como controlar as **dimensões de elementos**, diferenciando o uso de medidas fixas em **pixels** de valores flexíveis em **porcentagem**. O autor destaca a importância de propriedades como **max-width** para criar layouts que se adaptam a diferentes tamanhos de tela, garantindo a **responsividade** do design. Além disso, são apresentadas técnicas de **alinhamento horizontal** através da margem automática e métodos para formatar a **orientação de textos**. Por fim, o material demonstra a aplicação prática desses conceitos para evitar que imagens ultrapassem seus contêineres e para centralizar o conteúdo principal de um site.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-18h58m19s235.jpg" alt="" width="840">
+</p>
+
+Nesta aula introdutória, exploramos como as propriedades de **dimensão e alinhamento** são fundamentais para a construção de layouts no CSS3. O objetivo é compreender como controlar o espaço ocupado pelos elementos e como posicioná-los adequadamente na interface.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-18h58m27s813.jpg" alt="" width="840">
+</p>
+
+As principais propriedades para manipulação de dimensões e posicionamento incluem:
+
+* **Width e Height**: Utilizadas para definir, respectivamente, a largura e a altura de um elemento, podendo utilizar valores fixos (como pixels) ou relativos (como porcentagem).
+* **Max-width e Max-height**: Definem os limites máximos de largura e altura, permitindo que o elemento se ajuste de forma fluida dependendo da situação.
+* **Margin**: Além de criar espaçamento entre elementos, o valor `auto` é frequentemente empregado para alinhar contêineres automaticamente.
+* **Text align**: Específica para o alinhamento de textos, permitindo valores como `left` (esquerda), `right` (direita), `center` (centro) e `justify` (justificado).
 
 
-Link do vídeo:  
+# Certificado: Introdução a Criação de Websites com HTML5 e CSS3
 
-## 🟩 Vídeo 03 - Dimensão e alinhamento
+- Link na plataforma: https://hermes.dio.me/certificates/ZRF1FTA7.pdf
+- Certificado em pdf: [[certificado-Introducao.a.Criacao.de.Websites.com.HTML5.e.CSS3.pdf]]
 
-
-Link do vídeo:  
-
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
-
----
 
 
