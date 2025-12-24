@@ -1,4 +1,4 @@
-## Instrutor:
+## Instrutor
 
 - Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - Contato Linkedin: / [falvojr](https://www.linkedin.com/in/falvojr/)
