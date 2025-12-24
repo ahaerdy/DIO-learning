@@ -54,7 +54,7 @@ Com isso, você terá acesso a todos os slides e links apresentados durante as a
 Bons estudos 😉
 
 
-# Certificado: 
+# Certificado: Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/V6ZHUM61.pdf
+- Certificado em pdf: [[Certificado-Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso.pdf]]
