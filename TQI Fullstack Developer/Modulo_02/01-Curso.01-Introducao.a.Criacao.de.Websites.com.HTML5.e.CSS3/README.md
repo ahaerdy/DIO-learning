@@ -259,16 +259,17 @@ A semântica permite descrever melhor o conteúdo. Agora um bloco de texto pode 
 
 ## 🟩 Vídeo 02 - Semântica - Parte 1
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_02.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/3922c73b-3452-467d-80f3-b11eb9cb911e?autoplay=1
 
-
+Esta fonte discute a transição fundamental do uso genérico de **divs** para a implementação de **HTML semântico** a partir da versão 5 da linguagem. O autor explica que elementos modernos como **header**, **section** e **footer** foram criados para fornecer uma estrutura lógica e clara que define o papel de cada parte do conteúdo. O texto também detalha a importância das **tags de título**, que variam de **H1 a H6**, como ferramentas essenciais para estabelecer uma **hierarquia de informações** em uma página web. É ressaltada a diretriz técnica de manter apenas um **H1** por documento para garantir a organização correta. Por fim, o conteúdo propõe uma **atividade prática** para aplicar esses novos conceitos na evolução de um projeto de codificação anterior.
 
 
 ## 🟩 Vídeo 02 - Semântica - Parte 2
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/cd186102-3c5e-4b94-a631-0071076d40a6?autoplay=1
 
 
 ## 🟩 Vídeo 03 - Entendendo o que é semântica
