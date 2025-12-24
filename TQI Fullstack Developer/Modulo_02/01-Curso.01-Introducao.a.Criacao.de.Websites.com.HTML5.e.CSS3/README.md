@@ -838,13 +838,279 @@ Com a alteração para `<ol>`, o navegador altera automaticamente a representaç
 
 ## 🟩 Vídeo 11 - Introdução ao CSS3
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_11.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/8e2d15ba-fb35-4a23-aa3f-2f0f860c44cd?autoplay=1
 
-## 🟩 Vídeo 02 - Conceitos básicos
+Esta fonte apresenta uma aula introdutória focada nos fundamentos do **CSS3**, detalhando como essa linguagem é essencial para a **estilização de páginas web**. O conteúdo explica a estrutura básica de uma **regra CSS**, composta por **seletores, propriedades e valores** que definem a aparência de elementos HTML. O instrutor demonstra a diferença prática entre **seletores de tipo, IDs e classes**, ressaltando que identificadores únicos devem ser usados com moderação em comparação às classes reutilizáveis. Além da teoria, o material ensina como **vincular um arquivo externo** de estilos ao documento principal e aplicar modificações de **cor, tamanho de fonte e formatação** de texto. Por fim, o exemplo prático ilustra como essas técnicas transformam o visual padrão do navegador em um **layout personalizado e organizado**.
+
+### Anotações
+
+#### Introdução ao CSS 3
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h00m59s859.jpg" alt="" width="840">
+</p>
+
+Início do módulo dedicado ao aprendizado da linguagem de estilo CSS 3, apresentando a continuidade do curso de desenvolvimento web focado em Front-End.
+
+#### Objetivos da Aula
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h01m13s951.jpg" alt="" width="840">
+</p>
+
+A aula estabelece três metas principais: compreender a definição e o funcionamento dos seletores, dominar os conceitos básicos da linguagem e conhecer os principais seletores utilizados no cotidiano do desenvolvimento.
+
+#### Requisitos Básicos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h01m20s953.jpg" alt="" width="840">
+</p>
+
+Para acompanhar o conteúdo de CSS 3, é fundamental possuir um editor de texto e um navegador de internet instalados, além de ter concluído a etapa anterior de introdução ao HTML 5.
+
+#### Definição e Histórico
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h01m33s936.jpg" alt="" width="840">
+</p>
+
+O CSS (Cascading Style Sheets) surgiu em 1996 como uma resposta à necessidade de formatar e estilizar visualmente as páginas web após a consolidação do HTML como estrutura de conteúdo.
+
+#### Anatomia de uma Regra CSS
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h01m51s106.jpg" alt="" width="840">
+</p>
+
+Uma regra CSS é composta por um seletor (que aponta para um elemento ou grupo de elementos HTML) e um bloco de declarações entre chaves. Cada declaração consiste em uma propriedade seguida de seu respectivo valor.
+
+```css
+a, p, h1, h3 {
+  color: blue;
+  font-size: 14px;
+}
+
+```
+
+#### Seletores de ID e Classe no HTML
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h02m21s642.jpg" alt="" width="840">
+</p>
+
+Diferente do seletor de tipo que afeta todos os elementos da mesma tag, o uso de IDs e classes permite criar regras específicas para elementos individuais ou grupos personalizados dentro do HTML.
+
+```html
+<header id="header" class="header"></header>
+<header class="header"></header>
+
+```
+
+#### Sintaxe de Seletores no CSS
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h03m24s781.jpg" alt="" width="840">
+</p>
+
+No arquivo de estilos, a sintaxe diferencia IDs e classes por seus prefixos: as classes são precedidas por um ponto (`.`), enquanto os IDs são identificados por uma cerquilha (`#`). Vale ressaltar que um ID deve ser único dentro de uma mesma página.
+
+```css
+.header {
+  padding: 10px;
+}
+
+#header {
+  padding: 15px;
+}
+
+```
+
+#### Vinculando a Folha de Estilo Externa
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h03m51s131.jpg" alt="" width="840">
+</p>
+
+Para que as regras CSS sejam aplicadas, é necessário criar um arquivo externo (ex: `style.css`) e vinculá-lo ao documento HTML através da tag `<link>` inserida dentro do elemento `<head>`.
+
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Lucas Vilaboim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+```
+
+#### Organização de IDs e Classes nos Títulos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h05m24s718.jpg" alt="" width="840">
+</p>
+
+Na prática do projeto, atribui-se um ID ao título principal (`H1`) para garantir sua unicidade, enquanto classes são aplicadas aos títulos de seção (`H2`) e de postagem (`H3`) para permitir uma estilização consistente em múltiplos elementos.
+
+```html
+<h1 id="title">Lucas Vilaboim</h1>
+<h2 class="subtitle">Posts</h2>
+<h3 class="post_title">Post #1</h3>
+
+```
+
+#### Aplicando Regras Combinadas e Específicas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h06m15s390.jpg" alt="" width="840">
+</p>
+
+É possível agrupar seletores diferentes em uma única regra para compartilhar propriedades, como a cor. Adicionalmente, regras específicas podem ser criadas para ajustar detalhes individuais, como o tamanho e o estilo da fonte de uma classe específica.
+
+```css
+#title, .subtitle, .post_title {
+  color: blue;
+}
+
+.post_title {
+  font-size: 16px;
+  font-style: italic;
+}
+
+```
+
+#### Validação Visual no Navegador
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h06m51s722.jpg" alt="" width="840">
+</p>
+
+O resultado das alterações pode ser verificado diretamente no navegador. Utilizando as ferramentas de desenvolvedor (Inspetor de Elementos), confirma-se que os títulos assumiram a cor azul e que as propriedades de fonte específicas foram aplicadas com sucesso.
 
 
-Link do vídeo:  
+
+## 🟩 Vídeo 12 - Conceitos básicos
+
+![[bootcamp_tqi_fullstack-modulo_02-Video_12.webm|vid-60]]
+
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/c76466b1-8d11-481a-809d-b184535f6072?autoplay=1
+
+O texto explica o conceito fundamental do **Box Model** no desenvolvimento web, que descreve como o navegador visualiza cada elemento HTML como uma **caixa retangular**. Essa estrutura é composta por quatro camadas essenciais: o **conteúdo** central, o **preenchimento** interno, a **borda** e a **margem** externa. Através do uso de **CSS**, é possível modificar as propriedades visuais de cada uma dessas partes, como cores, larguras e distanciamentos. O autor demonstra na prática como essas alterações afetam o **layout**, utilizando exemplos de códigos para aplicar fundos coloridos e bordas sólidas. Por fim, o conteúdo destaca que ferramentas de inspeção do navegador permitem visualizar essas divisões de forma clara para facilitar a **estilização** de um site.
+
+### Anotações
+
+#### O Conceito de Box Model
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h20m01s238.jpg" alt="" width="840">
+</p>
+
+Início do estudo sobre o **Box Model**, um dos conceitos fundamentais do CSS 3. O modelo estabelece que cada elemento HTML é tratado pelo navegador como um bloco retangular, definindo como o conteúdo e o espaço ao seu redor são processados.
+
+#### Componentes do Box Model
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h20m16s039.jpg" alt="" width="840">
+</p>
+
+O Box Model é composto por quatro camadas distintas que envolvem o conteúdo:
+
+* **Content**: O conteúdo real do elemento (texto, imagem, etc.).
+* **Padding**: O espaço interno entre o conteúdo e a borda.
+* **Border**: A linha que envolve o padding e o conteúdo.
+* **Margin**: O espaço externo que separa o bloco de outros elementos vizinhos.
+
+#### Exercício Prático de Visualização
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h20m48s590.jpg" alt="" width="840">
+</p>
+
+Para facilitar a compreensão e a visualização de cada parte do modelo, será realizado um exercício prático aplicando cores e bordas a diferentes elementos da página.
+
+#### Estilização de Fundo do Body e Postagens
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h21m24s127.jpg" alt="" width="840">
+</p>
+
+A primeira etapa consiste em aplicar cores de fundo para distinguir os blocos. Define-se um tom de cinza para o `body` e a cor branca para a classe `.post`, permitindo enxergar claramente os limites do conteúdo.
+
+```css
+body {
+  background: #ccc;
+}
+
+#title, .subtitle, .post_title {
+  color: blue;
+}
+
+.post_title {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.post {
+  background: #FFF;
+}
+
+```
+
+#### Visualização Inicial dos Blocos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h21m29s394.jpg" alt="" width="840">
+</p>
+
+Após a aplicação das cores de fundo, o navegador renderiza o conteúdo evidenciando o contraste entre o fundo da página e a área ocupada pela postagem, validando a aplicação das regras de estilo iniciais.
+
+#### Aplicação de Padding e Borda
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h21m52s043.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, adiciona-se o **padding** de 10 pixels para criar um respiro entre o texto e a borda do bloco. Em seguida, aplica-se uma **borda** sólida de 3 pixels na cor preta para delimitar visualmente o fim do elemento.
+
+```css
+.post {
+  background: #FFF;
+  padding: 10px;
+  border: 3px solid #000;
+}
+
+```
+
+#### Inserção de Margem Externa
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h22m17s618.jpg" alt="" width="840">
+</p>
+
+A propriedade **margin** é aplicada para gerar um espaçamento de 10 pixels no lado externo do bloco. Esse ajuste garante que o elemento não fique colado nas extremidades da página ou em outros elementos adjacentes.
+
+```css
+.post {
+  background: #FFF;
+  padding: 10px;
+  border: 3px solid #000;
+  margin: 10px;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h22m44s207.jpg" alt="" width="840">
+</p>
+
+#### Inspeção do Box Model no Navegador
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-16h23m06s179.jpg" alt="" width="840">
+</p>
+
+Utilizando as ferramentas de desenvolvedor do navegador, é possível visualizar o diagrama técnico do Box Model para o elemento selecionado. As cores representam fielmente cada camada: **azul** para o conteúdo, **verde** para o padding, **marrom/amarelo** para a borda e **laranja** para a margem externa.
+
 
 ## 🟩 Vídeo 03 - Material de apoio
 
