@@ -44,7 +44,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: [Seja Protagonista Neste Bootcamp](Modulo_01/03-Curso.03-Seja.Protagonista.Neste.Bootcamp)
 - [ ] Curso: [Introdução à Programação e Pensamento Computacional](Modulo_01/04-Curso.04-Introducao.a.Programacao.e.Pensamento.Computacional)
 - [ ] Curso: [Introdução ao Git e ao GitHub](Modulo_01/05-Curso.05-Introducao.ao.Git.e.ao.GitHub)
-- [ ] Curso: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso]
+- [ ] Projeto: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso](Modulo_01/06-Desafio-Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso)
+	- Repositório: [DIO Learning](https://github.com/ahaerdy/DIO-learning)
+    - Descrição: Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma DIO - Digital Innovation One. Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
 
 ### Módulo 2: HTML/CSS3
 
