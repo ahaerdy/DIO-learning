@@ -50,7 +50,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 2: HTML/CSS3
 
-- [ ] Curso: [Introdução a Criação de Websites com HTML5 e CSS3]
+- [ ] Curso: [Introdução a Criação de Websites com HTML5 e CSS3](Modulo_02/01-Curso.01-Introducao.a.Criacao.de.Websites.com.HTML5.e.CSS3)
 - [ ] Curso: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions]
 
 ### Módulo 3: Javascript
