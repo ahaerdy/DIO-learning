@@ -620,13 +620,9 @@ Esta fonte consiste em uma aula técnica detalhando a **integração entre o Git
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/4895182a-ae5a-44e3-8f12-daa9861ab035?autoplay=1
 
+O vídeo explica o conceito e a resolução de **conflitos de merge** no **Git**, destacando que eles ocorrem quando duas pessoas editam a **mesma linha** de um arquivo simultaneamente. O autor detalha o fluxo de trabalho necessário para corrigir o problema, que envolve realizar um **git pull** para baixar as alterações remotas e editar o código manualmente para decidir qual versão manter. Além da parte técnica, o conteúdo aborda comandos fundamentais como **git clone** para copiar repositórios do **GitHub** e **git commit** para registrar mudanças locais. O objetivo central é desmistificar o processo de versionamento distribuído, mostrando que conflitos são situações comuns e gerenciáveis na carreira de um desenvolvedor. A explicação encerra reforçando que, ao compreender esses mecanismos, o profissional adquire a **proficiência mínima** para colaborar em projetos de software de forma eficiente.
 
+# Certificado: Introdução ao Git e ao GitHub
 
-
-##  Materiais de Apoio
-
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/H5WFFBGL.pdf
+- Certificado em pdf: [[Certificado-Introducao.ao.Git.e.ao.GitHub.pdf]]
