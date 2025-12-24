@@ -39,12 +39,12 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 1: Conteúdo de abertura
 
-- [ ] Curso: [Boas-vindas ao TQI Fullstack Developer](Modulo_01/01-Curso.01-Boas-vindas.ao.TQI.Fullstack.Developer)
-- [ ] Mentoria: [Aula inaugural - TQI Fullstack Developer](Modulo_01/02-Curso.02-Aula.inaugural-TQI.Fullstack.Developer)
-- [ ] Curso: [Seja Protagonista Neste Bootcamp](Modulo_01/03-Curso.03-Seja.Protagonista.Neste.Bootcamp)
-- [ ] Curso: [Introdução à Programação e Pensamento Computacional](Modulo_01/04-Curso.04-Introducao.a.Programacao.e.Pensamento.Computacional)
-- [ ] Curso: [Introdução ao Git e ao GitHub](Modulo_01/05-Curso.05-Introducao.ao.Git.e.ao.GitHub)
-- [ ] Projeto: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso](Modulo_01/06-Desafio-Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso)
+- [x] Curso: [Boas-vindas ao TQI Fullstack Developer](Modulo_01/01-Curso.01-Boas-vindas.ao.TQI.Fullstack.Developer)
+- [x] Mentoria: [Aula inaugural - TQI Fullstack Developer](Modulo_01/02-Curso.02-Aula.inaugural-TQI.Fullstack.Developer)
+- [x] Curso: [Seja Protagonista Neste Bootcamp](Modulo_01/03-Curso.03-Seja.Protagonista.Neste.Bootcamp)
+- [x] Curso: [Introdução à Programação e Pensamento Computacional](Modulo_01/04-Curso.04-Introducao.a.Programacao.e.Pensamento.Computacional)
+- [x] Curso: [Introdução ao Git e ao GitHub](Modulo_01/05-Curso.05-Introducao.ao.Git.e.ao.GitHub)
+- [x] Projeto: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso](Modulo_01/06-Desafio-Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso)
 	- Repositório: [DIO Learning](https://github.com/ahaerdy/DIO-learning)
     - Descrição: Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma DIO - Digital Innovation One. Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
 
