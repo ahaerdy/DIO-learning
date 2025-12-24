@@ -78,116 +78,113 @@ Link do vídeo:
 Link do vídeo: 
 
 
-# Parte 4 - xxxxxxxxxxxxxxxxx
+# Parte 4 - Como inserir imagens em seu site
 
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Tag img
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - Exercício prático
 
 
 Link do vídeo:  
 
 
-# Parte 5 - xxxxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 03 - Como inserir imagens em seu site
 
 
 Link do vídeo:  
 
 
-# Parte 6 - xxxxxxxxxxxxxxxxx
+# Parte 5 - Como organizar listas com HTML
 
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Tags li, ul e ol
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - Exercício prático
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 03 - Como organizar listas com HTML
 
 
 Link do vídeo:  
 
-
-# Parte 7 - xxxxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 04 - Como organizar listas com HTML
 
 
 Link do vídeo:  
 
 
-# Parte 8 - xxxxxxxxxxxxxxxxx
+# Parte 6 - Introdução e conceitos básicos do CSS3
 
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Introdução ao CSS3
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - Conceitos básicos
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxxxx
+## 🟩 Vídeo 03 - Material de apoio
 
 
 Link do vídeo:  
+
+## 🟩 Vídeo 04 - Introdução e conceitos básicos do CSS3
+
+
+Link do vídeo:  
+
+
+# Parte 7 - Estilizando elementos, textos e listas
+
+## 🟩 Vídeo 01 - Estilizando elementos
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 02 - Estilizando textos
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 03 - Estilizando listas
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 04 - Estilizando elementos, textos e listas
+
+
+Link do vídeo:  
+
+
+# Parte 8 - Dimensão e alinhamento
+
+## 🟩 Vídeo 01 - Propriedades de dimensões e alinhamento
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 02 - Dimensão e alinhamento
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 03 - Dimensão e alinhamento
+
+
+Link do vídeo:  
+
+
 # Certificado: 
 
 - Link na plataforma: 
