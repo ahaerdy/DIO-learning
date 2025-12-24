@@ -1461,26 +1461,191 @@ border-radius: 10% 20% 15% 22%;
 
 ## 🟩 Vídeo 14 - Estilizando textos
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_14.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/e076c538-b160-4e5e-bdae-eb66bdc542cf?autoplay=1
 
+O material fornecido explora as diversas possibilidades de **estilização de textos** utilizando propriedades de CSS para melhorar a interface de páginas web. O conteúdo detalha como alterar a **família tipográfica**, o **tamanho da fonte** e a inclinação visual por meio do **estilo itálico**. Além disso, o autor explica como ajustar a **espessura dos caracteres** e utilizar transformações para alternar entre letras **maiúsculas e minúsculas**. A lição também aborda o uso de **decorações gráficas**, como sublinhados ou tachados, para dar ênfase a links e títulos. Por fim, o guia demonstra a aplicação prática dessas técnicas para tornar o design de um site mais **legível e atraente**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h25m03s184.jpg" alt="" width="840">
+</p>
+
+Nesta introdução à estilização de textos com CSS3, abordamos a importância de manter a legibilidade e o design, visto que o compartilhamento de informações textuais é a base da web. O foco inicial está no uso de propriedades que alteram a identidade visual dos caracteres e como garantir que essas fontes sejam exibidas corretamente em diferentes dispositivos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h25m15s702.jpg" alt="" width="840">
+</p>
+
+A propriedade **`font-family`** define a fonte que será aplicada ao elemento. É possível utilizar as chamadas *web safe fonts*, que são fontes nativas presentes na maioria dos sistemas operacionais (como Verdana e Arial). No código, podemos definir uma única fonte ou uma lista separada por vírgulas; nesta segunda opção, a fonte subsequente serve como um **backup** caso a primeira não seja carregada no navegador do usuário.
+
+```css
+#title {
+  font-family: Verdana;
+}
+
+.post_title {
+  font-family: Verdana, Arial;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h25m55s444.jpg" alt="" width="840">
+</p>
+
+Para controlar a dimensão do texto, utilizamos a propriedade **`font-size`**. Embora existam diversas unidades de medida no CSS, o uso de pixels (px) é uma forma comum e direta de garantir que o título e os subtítulos tenham o destaque hierárquico adequado na página.
+
+```css
+#title {
+  font-size: 30px;
+}
+
+.post_title {
+  font-size: 18px;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h26m05s350.jpg" alt="" width="840">
+</p>
+
+A propriedade **`font-style`** altera a inclinação da fonte. O valor `normal` mantém o desenho original da letra, enquanto o valor `italic` inclina o texto. É importante certificar-se de que a fonte escolhida possui suporte nativo ao itálico para evitar que o navegador force uma inclinação artificial (oblique), que pode comprometer a estética.
+
+```css
+#title {
+  font-style: normal;
+}
+
+.subtitle {
+  font-style: italic;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h26m34s429.jpg" alt="" width="840">
+</p>
+
+O **`font-weight`** controla a espessura ou "peso" dos caracteres. Para a maioria das fontes padrão, utilizamos as palavras-chave `normal` para o peso padrão e `bold` para aplicar o negrito, destacando informações importantes no layout.
+
+```css
+#title {
+  font-weight: normal;
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h27m02s985.jpg" alt="" width="840">
+</p>
+
+A propriedade **`text-transform`** permite modificar a capitalização do texto sem alterar o conteúdo original no HTML.
+
+* **uppercase**: Transforma todo o texto em letras maiúsculas (caixa alta).
+* **lowercase**: Transforma todo o texto em letras minúsculas (caixa baixa).
+* **capitalize**: Transforma a primeira letra de cada palavra em maiúscula.
+
+```css
+#title {
+  text-transform: uppercase;
+}
+
+.subtitle {
+  text-transform: lowercase;
+}
+
+.post_title {
+  text-transform: capitalize;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-17h27m24s909.jpg" alt="" width="840">
+</p>
+
+A propriedade **`text-decoration`** é utilizada para adicionar linhas decorativas ao texto. O valor `underline` insere uma linha abaixo, `overline` insere uma linha acima, e o `line-through` cria uma linha que cruza o centro do texto (muito comum para indicar itens riscados ou estilizar links).
+
+```css
+#title {
+  text-decoration: underline;
+}
+
+.subtitle {
+  text-decoration: overline;
+}
+
+.post_title {
+  text-decoration: line-through;
+}
+
+```
+
 ## 🟩 Vídeo 15 - Estilizando listas
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_15.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/016bfd2e-31f5-4bd8-8b33-4127b0064a9b?autoplay=1
 
-## 🟩 Vídeo 16 - Estilizando elementos, textos e listas
+O vídeo é uma aula técnica sobre a **estilização de listas** em HTML e CSS, focando na manipulação de marcadores e layout. O instrutor detalha o uso da propriedade **list-style-type** para converter símbolos em quadrados, algarismos romanos ou até emojis, além de demonstrar como inserir **imagens personalizadas** como marcadores. Durante a demonstração prática, explica-se a importância de remover o preenchimento padrão do navegador para garantir um **alinhamento visual** preciso com o restante do conteúdo. O material também aborda o conceito de **cascata no CSS**, ensinando como selecionar elementos específicos, como âncoras dentro de listas, para modificar cores e remover decorações de texto indesejadas. No geral, o conteúdo serve como um guia para transformar listas brutas em componentes de interface **esteticamente refinados** e organizados.
 
+### Anotações
 
-Link do vídeo:  
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-18h26m34s854.jpg" alt="" width="840">
+</p>
+
+Nesta aula sobre **Estilização de Listas** no CSS3, aprendemos que o HTML5 suporta tanto listas não ordenadas (`<ul>`) quanto listas ordenadas (`<ol>`). O principal recurso para modificar visualmente os marcadores desses elementos é a propriedade **`list-style-type`**, que oferece diversas opções de estilização para ambos os tipos de lista.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-18h26m42s535.jpg" alt="" width="840">
+</p>
+
+A propriedade **`list-style-type`** permite uma grande variedade de marcadores. É possível definir símbolos geométricos para listas não ordenadas, como o quadrado (**`square`**), ou alterar a sequência de listas ordenadas para formatos específicos, como o algarismo romano maiúsculo (**`upper-roman`**). Além disso, o CSS3 permite o uso de caracteres unicode para exibir símbolos personalizados, como emojis, diretamente como marcadores de lista.
+
+```css
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+ul {
+  list-style-type: "\1F44D";
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-18h27m25s005.jpg" alt="" width="840">
+</p>
+
+Para uma personalização ainda mais avançada, podemos utilizar a propriedade **`list-style-image`**. Esta propriedade permite substituir os marcadores padrão por imagens externas, bastando referenciar o caminho do arquivo através da função `url()`. Isso possibilita alinhar a identidade visual da lista com o design específico do projeto, utilizando ícones personalizados (como o arquivo `rocket.png` do exemplo) no lugar dos marcadores convencionais.
+
+```css
+ul {
+  list-style-image: url("rocket.png");
+}
+
+```
 
 
 # Parte 8 - Dimensão e alinhamento
 
-## 🟩 Vídeo 01 - Propriedades de dimensões e alinhamento
+## 🟩 Vídeo 16 - Propriedades de dimensões e alinhamento
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/f06120a8-be53-4c52-a2c7-e6ef6eceaedc?autoplay=1
 
 ## 🟩 Vídeo 02 - Dimensão e alinhamento
 
