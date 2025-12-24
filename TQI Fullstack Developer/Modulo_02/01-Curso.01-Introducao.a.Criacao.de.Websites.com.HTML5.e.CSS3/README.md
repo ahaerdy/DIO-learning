@@ -551,14 +551,46 @@ A aula conclui informando que a página continuará evoluindo nas próximas liç
 
 ## 🟩 Vídeo 07 - Tag img
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_07.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/8e1edc74-dde3-42f0-b307-c28822ad8bcb?autoplay=1
+
+O texto descreve o funcionamento básico da **tag de imagem** no desenvolvimento web, destacando que ela é um elemento que **não requer fechamento**. O autor explica que o atributo **src** é indispensável, pois define a origem do arquivo, seja ele **local ou externo**. Além disso, enfatiza-se a importância fundamental do atributo **alt** para promover a **acessibilidade digital**. Essa descrição alternativa garante que usuários de **leitores de tela** compreendam o conteúdo visual e fornece contexto caso o carregamento falhe. Portanto, o foco central é ensinar as **boas práticas** para a implementação correta de elementos visuais em sites.
+
+### Anotações
+
+#### Introdução ao Elemento de Imagem no HTML
+
+A web é composta por diversos tipos de mídia, e as imagens desempenham um papel fundamental na representação visual de conteúdo. Para inserir imagens em uma página, utilizamos a tag `<img>`. Diferente de muitos outros elementos HTML que possuem tags de abertura e fechamento, a tag de imagem é um elemento que não possui tag de fechamento.
+
+#### Atributos Essenciais e Acessibilidade
+
+O elemento de imagem é simples, mas depende de atributos específicos para funcionar corretamente e garantir uma boa experiência ao usuário.
+
+<p align="center">
+ <img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-11h51m34s279.jpg" alt="" width="840">
+</p>
+
+```html
+<img>
+
+<img src="img/avatar.jpg">
+
+<img alt="Foto de Lucas Vilaboim">
+
+```
+
+O funcionamento desses atributos pode ser comparado a um porta-retratos digital:
+
+* **Atributo `src` (Source):** Este atributo é obrigatório e define o caminho de origem da imagem. Ele indica ao navegador onde o arquivo está guardado, podendo ser um caminho interno (dentro do próprio site) ou externo (um link de outro lugar na web).
+* **Atributo `alt` (Alternative Text):** Embora não seja tecnicamente obrigatório para a renderização, seu uso é altamente recomendado para a acessibilidade. Ele serve como uma "etiqueta escrita atrás da foto":
+* **Fallback visual:** Exibe uma descrição textual caso a imagem não carregue por problemas de conexão ou erro no caminho.
+* **Acessibilidade:** É lido por leitores de tela para informar a usuários com deficiência visual o que a imagem representa.
+
+## 🟩 Vídeo 08 - Exercício prático
 
 
-## 🟩 Vídeo 02 - Exercício prático
-
-
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/770e86ac-5bb8-426b-a003-5ecdb18c14a7?autoplay=1
 
 
 ## 🟩 Vídeo 03 - Como inserir imagens em seu site
