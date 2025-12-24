@@ -1274,30 +1274,26 @@ O `font-size` nos ajuda a mudar o tamanho do texto, existem algumas unidades de 
 
 Usamos o `font-style` para tornar um texto itálico, na maioria das vezes você usará apenas o valor italic para ele, mas se precisar tirar o itálico de um texto você pode usar o valor normal.
 
-## 🟩 Vídeo 12 - Introdução e conceitos básicos do CSS3
-
-
-Link do vídeo:  
-
 
 # Parte 7 - Estilizando elementos, textos e listas
 
-## 🟩 Vídeo 01 - Estilizando elementos
+## 🟩 Vídeo 13 - Estilizando elementos
+
+
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/6ca1d02e-480b-4eea-b0d0-c78135dff209?autoplay=1
+
+
+## 🟩 Vídeo 14 - Estilizando textos
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 02 - Estilizando textos
+## 🟩 Vídeo 15 - Estilizando listas
 
 
 Link do vídeo:  
 
-## 🟩 Vídeo 03 - Estilizando listas
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 04 - Estilizando elementos, textos e listas
+## 🟩 Vídeo 16 - Estilizando elementos, textos e listas
 
 
 Link do vídeo:  
