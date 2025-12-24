@@ -589,27 +589,178 @@ O funcionamento desses atributos pode ser comparado a um porta-retratos digital:
 
 ## 🟩 Vídeo 08 - Exercício prático
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_08.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/770e86ac-5bb8-426b-a003-5ecdb18c14a7?autoplay=1
 
+O tutorial ensina como **inserir e otimizar imagens** em uma página web utilizando a linguagem **HTML**. O instrutor demonstra a aplicação prática da tag de imagem tanto no **cabeçalho** quanto no corpo de uma **postagem**, enfatizando a importância de organizar os arquivos em pastas ou via URLs externas. Um ponto central da aula é o uso correto do **atributo alt**, que garante **acessibilidade** para leitores de tela e fornece descrições textuais caso o arquivo falhe ao carregar. Além das técnicas de codificação, o conteúdo sugere o uso de ferramentas externas para a **compressão e otimização** de arquivos visuais, visando melhorar o desempenho do site. Por fim, o autor antecipa que o módulo seguinte focará na criação de **listas**, preparando o aluno para o encerramento do curso básico.
 
-## 🟩 Vídeo 03 - Como inserir imagens em seu site
+### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h40m28s516.jpg" alt="" width="840">
+</p>
 
-Link do vídeo:  
+Nesta etapa, daremos início a um exercício prático focado na manipulação de elementos visuais em uma página web. O objetivo principal é aprender a inserir e gerenciar imagens em dois locais estratégicos: no **cabeçalho (header)** da página e dentro de uma **postagem (article)**.
 
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h40m41s493.jpg" alt="" width="840">
+</p>
+
+Antes de realizar a codificação, é necessário preparar os arquivos de imagem que serão utilizados. Para este exemplo, foram selecionadas duas imagens:
+
+* Uma ilustração pessoal com dimensões de **100x100 pixels** para o perfil.
+* Uma imagem temática para ilustrar o corpo da postagem.
+
+As imagens devem estar localizadas no mesmo diretório do arquivo HTML para facilitar a referência via caminho relativo, conforme observado na estrutura de pastas do editor.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h40m50s273.jpg" alt="" width="840">
+</p>
+
+Para a imagem da postagem, uma boa prática é buscar recursos em bancos de imagens gratuitos. Neste caso, a escolha recaiu sobre uma fotografia que remete a código e tecnologia. É fundamental garantir que os nomes dos arquivos (como `postagem-1.jpg`) sejam simples e sem espaços para evitar erros de carregamento no navegador.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h40m54s929.jpg" alt="" width="840">
+</p>
+
+Uma fonte recomendada para obter imagens de alta qualidade é o site **Unsplash**. Ao realizar buscas por termos como "HTML Code", é possível encontrar diversas opções profissionais que podem ser utilizadas nos projetos sem a necessidade de atribuições complexas de direitos autorais, enriquecendo o aspecto visual do blog ou site.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h42m16s486.jpg" alt="" width="840">
+</p>
+
+A inserção da primeira imagem é feita dentro do elemento `<header>` principal, posicionada antes do título `<h1>`. Utilizamos a tag `<img>` com o atributo `src` apontando para o nome do arquivo. Além disso, incluímos o atributo `alt` (texto alternativo), que é essencial para a acessibilidade, permitindo que leitores de tela descrevam o conteúdo para usuários com deficiência visual.
+
+```html
+<header>
+  <img src="lucas-vilaboim.jpg" alt="Ilustração do rosto do Lucas Vilaboim">
+  <h1>Lucas Vilaboim</h1>
+</header>
+
+```
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h42m25s167.jpg" alt="" width="840">
+</p>
+
+O atributo `alt` possui uma função dupla. Além da acessibilidade, ele atua como um "plano de reserva". Caso o caminho da imagem esteja incorreto ou o arquivo seja removido do servidor, o navegador exibirá um ícone de imagem quebrada acompanhado do texto definido no `alt`, garantindo que o contexto da informação não seja totalmente perdido para o visitante.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h42m54s121.jpg" alt="" width="840">
+</p>
+
+Para a segunda imagem, o processo é semelhante, mas o posicionamento será dentro do cabeçalho do artigo (`<article>`), logo após o título da postagem (`<h3>`). Isso cria uma hierarquia visual onde o leitor primeiro identifica o tema do texto e imediatamente visualiza uma imagem relacionada.
+
+```html
+<article>
+  <header>
+    <h3>Post #1</h3>
+    <img src="postagem-1.jpg">
+  </header>
+</article>
+
+```
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h42m57s249.jpg" alt="" width="840">
+</p>
+
+Ao atualizar a página no navegador, podemos observar o resultado da renderização. A imagem da postagem aparece integrada ao fluxo do texto. É importante notar que, sem a definição de estilos CSS, a imagem ocupará seu tamanho original em pixels, o que pode exigir ajustes futuros para se adequar perfeitamente ao layout.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h43m20s002.jpg" alt="" width="840">
+</p>
+
+Finalizamos a marcação da postagem adicionando uma descrição detalhada ao atributo `alt` da imagem do artigo. Quanto mais específica for a descrição, melhor será a experiência para quem utiliza tecnologias assistivas.
+
+```html
+<img src="postagem-1.jpg" alt="Editor de texto contendo código HTML">
+
+```
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h43m49s808.jpg" alt="" width="840">
+</p>
+
+Uma dica fundamental para o desenvolvimento web é a otimização de performance. Antes de subir imagens para um site real, recomenda-se a utilização de ferramentas como o **TinyPNG**. Esse serviço remove metadados desnecessários e comprime os arquivos (PNG ou JPEG) sem perda perceptível de qualidade, o que reduz o tempo de carregamento da página e economiza largura de banda do usuário.
 
 # Parte 5 - Como organizar listas com HTML
 
-## 🟩 Vídeo 01 - Tags li, ul e ol
+## 🟩 Vídeo 09 - Tags li, ul e ol
 
+![[bootcamp_tqi_fullstack-modulo_02-Video_09.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/28e36d51-00f1-483f-a569-05b52de642ca?autoplay=1
+
+Esta fonte explica como utilizar elementos fundamentais de **HTML** para organizar informações de forma estruturada. O texto detalha a diferença entre as tags **UL**, usada para coleções sem ordem específica, e **OL**, aplicada quando a sequência dos itens é relevante. Além disso, introduz o componente **LI** como a unidade básica necessária para listar cada entrada individualmente. O objetivo prático demonstrado é a criação de uma **lista de contatos** que será integrada ao rodapé de uma página web. Essa abordagem didática facilita o agrupamento de dados através de **marcações semânticas** apropriadas para o desenvolvimento de sites.
+
+### Anotações
+
+#### Introdução às Listas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h59m05s621.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, iniciamos o estudo dos elementos fundamentais para a criação de listas no HTML5: `<ul>`, `<ol>` e `<li>`. As listas são utilizadas para agrupar coleções de itens relacionados de forma organizada, como uma lista de ingredientes ou uma relação de informações de contato.
+
+#### Diferenciação entre Listas Ordenadas e Não Ordenadas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h59m20s840.jpg" alt="" width="840">
+</p>
+
+A estrutura de uma lista depende da relevância da sequência dos itens apresentados:
+
+* **`<ul>` (Unordered List):** Representa uma lista não ordenada, onde a posição dos itens não altera o sentido do conteúdo. Geralmente é renderizada com marcadores (bullets).
+* **`<ol>` (Ordered List):** Representa uma lista ordenada, utilizada quando a sequência é importante. Os itens são identificados por números, letras ou algarismos romanos.
+* **`<li>` (List Item):** É o elemento utilizado para definir cada item individual dentro de uma lista, seja ela ordenada ou não.
+
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 3</li>
+</ol>
+
+```
+
+#### Exercício Prático: Lista de Contatos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-14h59m43s418.jpg" alt="" width="840">
+</p>
+
+Para aplicar os conceitos aprendidos, realizaremos um exercício prático focado na organização de informações do site. O objetivo é adicionar uma lista de contatos estruturada diretamente no rodapé (footer) da página, utilizando as tags de lista para garantir a semântica correta do documento.
+
 
 ## 🟩 Vídeo 02 - Exercício prático
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/e4fd6cd4-c680-4df9-9018-cf120bc429a8?autoplay=1
 
 ## 🟩 Vídeo 03 - Como organizar listas com HTML
 
@@ -690,3 +841,7 @@ Link do vídeo:
 
 - Link na plataforma: 
 - Certificado em pdf: 
+
+---
+
+
