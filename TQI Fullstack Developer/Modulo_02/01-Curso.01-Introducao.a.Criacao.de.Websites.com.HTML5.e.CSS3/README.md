@@ -266,21 +266,102 @@ Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introdu
 Esta fonte discute a transição fundamental do uso genérico de **divs** para a implementação de **HTML semântico** a partir da versão 5 da linguagem. O autor explica que elementos modernos como **header**, **section** e **footer** foram criados para fornecer uma estrutura lógica e clara que define o papel de cada parte do conteúdo. O texto também detalha a importância das **tags de título**, que variam de **H1 a H6**, como ferramentas essenciais para estabelecer uma **hierarquia de informações** em uma página web. É ressaltada a diretriz técnica de manter apenas um **H1** por documento para garantir a organização correta. Por fim, o conteúdo propõe uma **atividade prática** para aplicar esses novos conceitos na evolução de um projeto de codificação anterior.
 
 
-## 🟩 Vídeo 02 - Semântica - Parte 2
+## 🟩 Vídeo 03- Semântica - Parte 2
 
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/cd186102-3c5e-4b94-a631-0071076d40a6?autoplay=1
 
+Esta fonte consiste em uma transcrição de áudio que ensina como **estruturar uma página web** utilizando a semântica do **HTML5**. O conteúdo demonstra a organização hierárquica de um site através da implementação de **cabeçalhos, seções e artigos** específicos. O instrutor explica a importância de utilizar **diferentes níveis de títulos**, do H1 ao H3, para definir a relevância de cada informação. Além disso, o material detalha a inclusão de um **rodapé** destinado a futuras informações de contato. Por fim, o tutorial ressalta como o **navegador interpreta visualmente** essas tags antes de qualquer estilização personalizada.
 
-## 🟩 Vídeo 03 - Entendendo o que é semântica
+### Anotações
+
+#### Evolução da Estrutura do Site com Elementos Semânticos
+
+Nesta aula, o foco é evoluir a estrutura de um site HTML adicionando elementos semânticos que organizam o conteúdo de forma hierárquica e significativa. O instrutor Lucas Vilaboim demonstra como construir uma página web utilizando as tags apropriadas do HTML5.
+
+#### Adicionando o Cabeçalho Principal da Página
+
+O primeiro passo é adicionar um elemento `<header>` que representa o cabeçalho principal da página. Dentro deste header, é inserido um `<h1>` com o nome do autor, que funciona como o título principal do site. É importante destacar que deve existir apenas um `<h1>` por página, representando o título mais importante do conteúdo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-10h12m18s368.jpg" alt="" width="840">
+</p>
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lucas Vilaboim</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lucas Vilaboim</h1>
+    </header>
+    <section>
+      <header>
+        <h2>Posts</h2>
+      </header>
+      <article>
+        <header>
+          <h3>Post #1</h3>
+        </header>
+      </article>
+    </section>
+    <footer></footer>
+  </body>
+</html>
+```
+
+A estrutura mostra claramente a hierarquia dos elementos: o `<header>` principal contém o `<h1>`, seguido por uma `<section>` que agrupa o conteúdo de posts, e um `<footer>` ao final.
+
+#### Criando a Seção de Conteúdo
+
+Após o cabeçalho principal, é criada uma seção de conteúdo usando a tag `<section>`, que é um elemento genérico para agrupar conteúdo relacionado. Dentro desta section, adiciona-se outro `<header>` contendo um `<h2>` com o texto "Posts", indicando que esta seção destina-se à listagem de postagens.
+
+Esta abordagem demonstra que é possível ter múltiplos elementos `<header>` em uma página, cada um contextualizando diferentes seções do conteúdo. A hierarquia de títulos (`h1`, `h2`, `h3`) mantém a estrutura semântica adequada.
+
+#### Adicionando Articles e Estrutura de Posts
+
+Dentro da `<section>`, é inserido um elemento `<article>`, que representa um conteúdo independente e autocontido. Cada article possui seu próprio `<header>` contendo um `<h3>` com o título do post (por exemplo, "Post #1").
+
+A utilização de `<article>` é apropriada para posts, artigos, notícias ou qualquer conteúdo que faça sentido de forma independente. A estrutura hierárquica dos headings (`h1` → `h2` → `h3`) mantém a semântica e acessibilidade do documento.
+
+#### Adicionando o Rodapé
+
+Por último, fora da `<section>`, é adicionado um elemento `<footer>` que representará as informações de contato e outros dados complementares da página. O instrutor menciona que este conteúdo será desenvolvido mais adiante.
+
+O `<footer>` é um elemento semântico que geralmente contém informações sobre o autor, links de navegação secundários, informações de copyright ou dados de contato.
+
+#### Recapitulação da Estrutura HTML
+
+O instrutor faz uma recapitulação completa da estrutura criada:
+
+- **Header principal**: contém o `<h1>` único da página com o título do conteúdo
+- **Section**: representa a lista de posts com seu próprio header e `<h2>`
+- **Article**: dentro da section, contém outro header com `<h3>` para o nome do post
+- **Footer**: elemento para representar a lista de contatos
+
+Esta organização segue as boas práticas de HTML semântico, facilitando a compreensão do conteúdo tanto para desenvolvedores quanto para tecnologias assistivas.
+
+#### Visualização no Navegador
 
 
-Link do vídeo: 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-24-10h19m05s736.jpg" alt="" width="840">
+</p>
 
+O instrutor mostra como a página é renderizada no navegador, destacando que o próprio navegador aplica estilos diferentes para cada tamanho de título (`h1`, `h2`, `h3`). Estes estilos padrão podem ser personalizados posteriormente com CSS.
+
+A hierarquia visual criada automaticamente pelo navegador ajuda a entender a estrutura do documento, com o `<h1>` em tamanho maior, seguido pelo `<h2>` e `<h3>` em tamanhos progressivamente menores.
+
+#### Próximos Passos
+
+O instrutor conclui mencionando que na próxima aula serão abordados os tópicos de **textos e links**, expandindo ainda mais as possibilidades de estruturação e interatividade do conteúdo HTML.
 
 # Parte 3 - Como usar textos e links em HTML
 
-## 🟩 Vídeo 01 - Tags para textos
+## 🟩 Vídeo 04 - Tags para textos
 
 
 Link do vídeo:  
