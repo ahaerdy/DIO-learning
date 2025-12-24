@@ -169,6 +169,7 @@ Esta aula apresenta as novas diretrizes de autenticação do **GitHub**, focando
 
 ## 🟩 Vídeo 07 - Iniciando o Git e criando um commit
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_05-Video_07.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/12607816-1128-4906-9645-cbe0f7fcc72b?autoplay=1
 
@@ -324,8 +325,283 @@ Ao finalizar, o Git fornece um resumo da operação, incluindo o identificador �
 
 ## 🟩 Vídeo 08 - Passo a passo no ciclo de vida
 
+![[bootcamp_tqi_fullstack-modulo_01-Curso_05-Video_08.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/54cd3040-b3d1-4e91-aea3-e3b031367774?autoplay=1
+
+Esta fonte explica o **ciclo de vida dos arquivos** e o uso da terminologia correta dentro do sistema **Git**. O conteúdo detalha a transição entre estados, diferenciando arquivos **untracked** (não rastreados) de arquivos **tracked** (rastreados), que se subdividem em **unmodified**, **modified** e **staged**. Através de uma analogia com os bastidores de um teatro, o autor descreve a **staging area** como o local de preparação antes de consolidar as mudanças em um **commit**. O texto também ensina comandos essenciais como `git status`, `git add` e `git commit`, demonstrando como eles organizam o **repositório local**. Por fim, introduz a distinção entre o ambiente de desenvolvimento na máquina do usuário e o **repositório remoto**, preparando o terreno para o uso do **GitHub**.
+
+### Anotações
+
+#### O Conceito de Repositório e o Início do Ciclo de Vida
+
+A aula inicia estabelecendo a terminologia correta, diferenciando **repositório** de **diretório**. O comando `git init` é o responsável por transformar um diretório comum em um repositório Git, criando a pasta oculta `.git` e iniciando o rastreamento de arquivos. Este é o ponto de partida para entender o ciclo de vida dos arquivos.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-20h58m44s223.jpg" alt="" width="840">
+   </p>
+
+O comando `git init` é a ação fundamental que estabelece o conceito de repositório, permitindo que o Git comece a gerenciar as versões do projeto.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-20h58m54s703.jpg" alt="" width="840">
+   </p>
+
+#### Os Quatro Estados Fundamentais dos Arquivos
+
+O Git classifica os arquivos em quatro estados principais, sendo dois grupos: **Untracked** (não rastreados) e **Tracked** (rastreados). O grupo rastreado se subdivide em **Unmodified**, **Modified** e **Staged**.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-20h59m38s123.jpg" alt="" width="840">
+   </p>
+
+- **Untracked:** Arquivos recém-criados que o Git ainda não monitora.
+- **Unmodified:** Arquivos rastreados que não sofreram alterações desde o último *commit*.
+- **Modified:** Arquivos rastreados que foram alterados.
+- **Staged:** Arquivos modificados ou novos que foram selecionados para fazer parte do próximo *commit* (a "área de preparação" ou *backstage*).
+
+#### O Fluxo de Transição e o Papel do Commit
+
+A transição entre os estados é cíclica e controlada por comandos. Um arquivo **Untracked** passa a ser **Staged** (rastreado) ao ser adicionado.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h01m26s246.jpg" alt="" width="840">
+   </p>
+
+Um arquivo **Unmodified** se torna **Modified** quando o Git detecta alterações em seu conteúdo (comparando o *checksum*).
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h02m02s567.jpg" alt="" width="840">
+   </p>
+
+O comando `git add` move um arquivo **Modified** para o estado **Staged**, preparando-o para o *commit*.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h02m42s299.jpg" alt="" width="840">
+   </p>
+
+A remoção de um arquivo **Unmodified** o move de volta para **Untracked**.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h02m53s083.jpg" alt="" width="840">
+   </p>
+
+O **Commit** é a ação que finaliza o ciclo, criando um *snapshot* (foto) do código e movendo os arquivos da área **Staged** de volta para **Unmodified**.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h03m18s541.jpg" alt="" width="840">
+   </p>
+
+#### Estrutura Distribuída: Local e Remoto
+
+O Git é um sistema de controle de versão distribuído. Isso significa que ele opera em dois ambientes principais: o **Servidor** (onde fica o **Remote Repository**, como o GitHub) e o **Ambiente de Desenvolvimento** (sua máquina local).
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h05m19s629.jpg" alt="" width="840">
+   </p>
+
+O ambiente de desenvolvimento local é composto por três áreas: o **Working Directory** (onde você edita os arquivos), a **Staging Area** (área de preparação) e o **Local Repository** (onde os *commits* são armazenados).
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h07m04s970.jpg" alt="" width="840">
+   </p>
+
+O `git add` move do **Working Directory** para a **Staging Area**, e o `git commit` move da **Staging Area** para o **Local Repository**. O **Remote Repository** só é atualizado com comandos como `git push`.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h07m35s847.jpg" alt="" width="840">
+   </p>
+
+#### Demonstração Prática: Movendo Arquivos e Pastas
+
+A prática demonstra o ciclo de vida ao mover um arquivo rastreado (`strogonoff.md`) para uma nova pasta (`receitas`). O `git status` é a ferramenta essencial para monitorar o estado dos arquivos.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h11m16s136.jpg" alt="" width="840">
+   </p>
+
+O terminal mostra a criação da pasta e a movimentação do arquivo:
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+strogonoff.md
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ mkdir receitas
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+receitas/  strogonoff.md
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ mv strogonoff.md ./receitas/
+```
+
+Após a movimentação, o `git status` revela que o Git detectou duas mudanças: o arquivo original foi **deletado** e a nova pasta (`receitas/`) está **Untracked**.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h14m17s195.jpg" alt="" width="840">
+   </p>
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+receitas/
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+
+        deleted:    strogonoff.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        receitas/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git add strogonoff.md receitas/
+```
+
+#### Commit de Renomeação e Limpeza da Árvore
+
+O comando `git add` é usado para mover as mudanças para a área **Staged**. O Git é inteligente o suficiente para reconhecer que a exclusão e a nova adição na pasta `receitas` representam, na verdade, uma **renomeação** do arquivo.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h15m26s129.jpg" alt="" width="840">
+   </p>
+
+O `git status` agora mostra a mudança como `renamed`. O `git commit` finaliza a operação.
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git add strogonoff.md receitas/
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    strogonoff.md -> receitas/strogonoff.md
+
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "cria pasta receitas, move arquivo para receitas"
+```
+
+A imagem a seguir mostra o resultado do *commit*, incluindo o identificador SHA-1 gerado.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h15m29s762.jpg" alt="" width="840">
+   </p>
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "cria pasta receitas, move arquivo para receitas"
+[master 7ab11e7] cria pasta receitas, move arquivo para receitas
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename strogonoff.md => receitas/strogonoff.md (100%)
+```
+
+Após o *commit*, o `git status` confirma que a **working tree** está limpa, e os arquivos voltaram ao estado **Unmodified**.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h15m50s271.jpg" alt="" width="840">
+   </p>
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+```
+
+#### Adicionando um Novo Arquivo (README.md)
+
+Para finalizar a prática, um novo arquivo, `README.md`, é criado para servir como índice do livro de receitas.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h17m08s515.jpg" alt="" width="840">
+   </p>
+
+O `git status` confirma que o `README.md` está **Untracked**, pois é um arquivo novo e diferente do último *snapshot*.
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+receitas/
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ echo > README.md
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+README.md  receitas/
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+O arquivo é editado (visualização da edição no editor de texto).
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h18m20s749.jpg" alt="" width="840">
+   </p>
+
+A tela do terminal é limpa, e o arquivo permanece **Untracked** até o `git add`.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h18m46s459.jpg" alt="" width="840">
+   </p>
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+O comando `git add *` (ou `git add .`) é usado para adicionar todas as modificações pendentes ao **Staged**.
+
+  <p align="center">
+    <img src="000-Midia_e_Anexos/vlcsnap-2025-12-23-21h19m25s562.jpg" alt="" width="840">
+   </p>
+
+O `git status` final confirma que o novo arquivo está pronto para ser comitado, completando o ciclo de vida dos arquivos no Git.
+
+```bash
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+README.md  receitas/
+
+Otavio@perkles-desktop MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+```
+
 
 
 # Parte 6 - Introdução ao GitHub
@@ -333,7 +609,7 @@ Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introdu
 ## 🟩 Vídeo 09 - Trabalhando com o GitHub
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-git-e-ao-github/learning/00c82124-1594-49e8-9f82-4d8c85aa5a48?autoplay=1
 
 
 # Parte 7 - Resolvendo conflitos
