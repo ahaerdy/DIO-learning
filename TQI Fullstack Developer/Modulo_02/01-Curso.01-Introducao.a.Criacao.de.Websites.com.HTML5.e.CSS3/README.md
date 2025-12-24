@@ -833,23 +833,13 @@ Para transformar a estrutura em uma lista onde a sequência dos elementos é rel
 
 Com a alteração para `<ol>`, o navegador altera automaticamente a representação visual dos itens. Em vez dos marcadores circulares, os itens passam a ser precedidos por números (1, 2, 3...), indicando explicitamente a ordem da lista de contatos apresentada no rodapé.
 
-## 🟩 Vídeo 11 - Como organizar listas com HTML
-
-
-Link do vídeo:  
-
-## 🟩 Vídeo 04 - Como organizar listas com HTML
-
-
-Link do vídeo:  
-
 
 # Parte 6 - Introdução e conceitos básicos do CSS3
 
-## 🟩 Vídeo 01 - Introdução ao CSS3
+## 🟩 Vídeo 11 - Introdução ao CSS3
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-criacao-de-websites-com-html5-e-css3/learning/8e2d15ba-fb35-4a23-aa3f-2f0f860c44cd?autoplay=1
 
 ## 🟩 Vídeo 02 - Conceitos básicos
 
