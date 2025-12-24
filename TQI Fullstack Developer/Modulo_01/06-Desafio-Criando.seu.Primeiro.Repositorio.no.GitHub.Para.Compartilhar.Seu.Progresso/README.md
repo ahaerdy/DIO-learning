@@ -14,10 +14,20 @@ O especialista em tecnologia **Venilton**, da plataforma **DIO**, apresenta um d
 
 ## 🟩 Vídeo 02 - Git e Github: Relembrando algumas coisinhas
 
+![[bootcamp_tqi_fullstack-modulo_01-Desafio_07-Video_02.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/lab/criando-seu-primeiro-repositorio-no-github-para-compartilhar-seu-progresso/learning/e714fb1c-4990-4c47-99a5-d97703e40b4d?back=/track/tqi-fullstack-developer
 
 O conteúdo apresenta um guia prático sobre a utilização do **Git e GitHub** para a organização de portfólios e projetos de estudo. O autor detalha o processo de **criação de um repositório**, destacando a importância de mantê-lo público e configurar arquivos essenciais como o **README**, utilizando a linguagem Markdown para documentação. A explicação abrange o fluxo de trabalho fundamental, incluindo a **clonagem do repositório** para a máquina local e a edição de arquivos em ambiente próprio. São demonstrados comandos técnicos vitais, como o **git add, commit e push**, necessários para sincronizar as alterações locais com o servidor remoto. Por fim, o material incentiva os estudantes a estruturarem seus aprendizados de forma autônoma, consolidando o uso dessas ferramentas no **gerenciamento de código** e progressão educacional.
+
+
+## 🟩 Vídeo 03 - Desafio de projeto
+
+![[bootcamp_tqi_fullstack-modulo_01-Desafio_07-Video_03.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/lab/criando-seu-primeiro-repositorio-no-github-para-compartilhar-seu-progresso/learning/a1134ba9-3c54-4650-a24a-6964a182d919?back=/track/tqi-fullstack-developer
+
+Esta fonte fornece orientações para um **desafio prático** focado na criação do **primeiro repositório no GitHub**. O objetivo principal é incentivar estudantes a **perderem o medo** da tecnologia e começarem a organizar seus materiais de estudo de forma pública. O autor destaca que manter um **portfólio atualizado** é essencial, pois empresas utilizam essas plataformas para avaliar a **evolução técnica** de novos talentos. Além disso, o texto ressalta a **versatilidade do Git** para além do software e a importância da **interação com a comunidade** para receber feedbacks. Por fim, reforça-se que os alunos podem contar com **fóruns e comunidades online** para sanar dúvidas durante o processo de aprendizado.
 
 
 ## 🟧 Desafio de projeto
@@ -37,12 +47,11 @@ Pré-requisitos:
 
 A apresentação utilizada neste conteúdo está disponível [AQUI](https://drive.google.com/file/d/1IZu0qohv1JOmxjEra1lknDiiStU68bl4/view?usp=sharing)
 
-- Arquivo em formato Powerpoint: [[Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso.pptx]]
+- Arquivo: [[Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso.pptx]]
 
 Com isso, você terá acesso a todos os slides e links apresentados durante as aulas.
 
 Bons estudos 😉
-
 
 
 # Certificado: 
