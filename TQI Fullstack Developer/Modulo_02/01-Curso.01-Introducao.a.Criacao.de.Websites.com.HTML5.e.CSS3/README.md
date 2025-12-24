@@ -1,7 +1,7 @@
 ## Instrutor
 
-- Renan Johannsen de Paula (Software Engineer Lead)
-- Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
+- Lucas Vilaboim (Senior Frontend Engineer with 15+ Years of Experience | JavaScript | TypeScript | React | Vue)
+- Contato Linkedin: / [vilaboim](https://www.linkedin.com/in/vilaboim/)
 
 # Parte 1 - Introdução ao curso de HTML
 
