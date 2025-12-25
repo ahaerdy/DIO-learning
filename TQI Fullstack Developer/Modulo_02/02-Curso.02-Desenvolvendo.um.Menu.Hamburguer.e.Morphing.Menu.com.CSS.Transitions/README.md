@@ -374,11 +374,308 @@ body {
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/3674cd8b-668e-4661-8566-85e16a48d74d?back=/track/tqi-fullstack-developer
 
+Esta fonte apresenta um tutorial prático sobre como criar um **menu hambúrguer animado** utilizando exclusivamente **HTML e CSS**, sem a necessidade de JavaScript. O instrutor demonstra a construção de uma estrutura baseada em um **checkbox e label**, onde o estado de "marcado" do input dispara as transições visuais. Através de propriedades como **transform, rotate e opacity**, os três traços horizontais do menu são convertidos suavemente em um ícone de fechar (X). O conteúdo enfatiza o uso da técnica **transition com easing**, garantindo que o movimento seja fluido e visualmente atraente para interfaces móveis. Por fim, o autor destaca que este é um recurso **simples e eficiente** para iniciantes consolidarem conhecimentos em posicionamento absoluto e seletores de estado.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h05m32s985.jpg" alt="" width="840">
+</p>
+
+Este trecho mostra a estrutura inicial do arquivo **index.html**, onde são definidos o `wrapper`, o `checkbox-wrapper`, o `input` do tipo `checkbox` e o `label` com três divs internas (`trace`). Essa configuração é a base para criar o menu hambúrguer que será animado.
+
+```html
+<div class="wrapper">
+  <div class="checkbox-wrapper">
+    <input type="checkbox" id="toggle">
+    <label class="checkbox" for="toggle">
+      <div class="trace"></div>
+      <div class="trace"></div>
+      <div class="trace"></div>
+    </label>
+  </div>
+</div>
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h05m46s351.jpg" alt="" width="840">
+</p>
+
+Aqui vemos o mesmo arquivo HTML aberto no navegador, reforçando a importância da ordem dos elementos: o `input` deve vir antes do `label` para que o seletor CSS `:checked + label` funcione corretamente. O label contém os três traços que compõem o ícone do menu.
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h09m30s538.jpg" alt="" width="840">
+</p>
+
+Este slide mostra o início do arquivo **style.css**, onde são aplicados estilos globais e definidos os parâmetros básicos do `wrapper`. O objetivo é centralizar o conteúdo na tela e aplicar o fundo colorido.
+
+```css
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background-color: rgb(221, 161, 171);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h10m08s034.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o CSS define as dimensões e o comportamento do `label.checkbox`. Ele é configurado com altura e largura fixas, `position: relative` e `cursor: pointer`, permitindo que os traços internos sejam posicionados de forma absoluta.
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h10m13s556.jpg" alt="" width="840">
+</p>
+
+O código mostra a estilização dos traços (`.trace`). Cada traço é uma barra branca com bordas arredondadas e transição suave, o que permitirá a animação posterior.
+
+```css
+.checkbox .trace {
+  width: 90px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  border-radius: 4px;
+  transition: 0.5s ease-in-out;
+}
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h11m50s663.jpg" alt="" width="840">
+</p>
+
+Aqui são aplicados os seletores `nth-child` para posicionar cada traço verticalmente dentro do botão. Isso cria o visual clássico do menu hambúrguer.
+
+```css
+.checkbox .trace:nth-child(1) {
+  top: 26px;
+}
+
+.checkbox .trace:nth-child(2) {
+  top: 46px;
+}
+
+.checkbox .trace:nth-child(3) {
+  top: 66px;
+}
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h14m57s290.jpg" alt="" width="840">
+</p>
+
+Este trecho mostra a ocultação do `input` original (`display: none`), já que o label será o elemento visível e interativo. A lógica CSS usará o estado `:checked` do input para animar os traços.
+
+```css
+#toggle {
+  display: none;
+}
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h17m27s548.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a regra para o **primeiro traço** quando o checkbox está marcado. Ele rotaciona 45 graus e se reposiciona para formar parte do "X".
+
+```css
+#toggle:checked + .checkbox .trace:nth-child(1) {
+  transform: rotate(45deg);
+  top: 47px;
+}
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h17m34s508.jpg" alt="" width="840">
+</p>
+
+Este bloco mostra a animação do **segundo traço**. Ele é deslocado para fora da tela, reduzido e ocultado, desaparecendo para que apenas os dois traços restantes formem o "X".
+
+```css
+#toggle:checked + .checkbox .trace:nth-child(2) {
+  transform: translateX(-100px);
+  width: 30px;
+  visibility: hidden;
+  opacity: 0;
+}
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h17m36s188.jpg" alt="" width="840">
+</p>
+
+Aqui está a regra para o **terceiro traço**. Ele rotaciona -45 graus e ajusta sua posição para completar o ícone de fechamento.
+
+```css
+#toggle:checked + .checkbox .trace:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 48px;
+}
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h17m36s806.jpg" alt="" width="840">
+</p>
+
+Este slide reforça a transição suave aplicada anteriormente. O efeito `ease-in-out` garante que os movimentos de rotação e desaparecimento dos traços sejam fluidos e elegantes.
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-25-08h17m40s476.jpg" alt="" width="840">
+</p>
+
+O resultado final é o menu hambúrguer que se transforma em um "X" ao ser clicado, utilizando apenas HTML e CSS. Esse exemplo demonstra como o seletor `:checked` pode ser usado para criar interações sem JavaScript.
+
+#### ▶️ Código HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="checkbox-wrapper">
+      <input type="checkbox" id="toggle">
+      <label class="checkbox" for="toggle">
+        <div class="trace"></div>
+        <div class="trace"></div>
+        <div class="trace"></div>
+      </label>
+    </div>
+  </div>
+
+</body>
+</html>
+
+```
+
+#### ▶️ Código CSS
+
+```css
+/* Reset básico: remove margens e espaçamentos padrão
+   e define o box-sizing para facilitar cálculos de layout */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Wrapper principal: ocupa toda a tela e centraliza o conteúdo */
+.wrapper {
+  background-color: rgb(221, 161, 171); /* cor de fundo */
+  width: 100%;                          /* largura total */
+  height: 100vh;                        /* altura da viewport */
+  display: flex;                        /* ativa flexbox */
+  justify-content: center;              /* centraliza horizontalmente */
+  align-items: center;                  /* centraliza verticalmente */
+}
+
+/* Label que funciona como botão do menu hambúrguer */
+.checkbox {
+  height: 100px;        /* altura do botão */
+  width: 100px;         /* largura do botão */
+  display: flex;        /* flexbox para alinhar traços */
+  justify-content: center;
+  position: relative;   /* necessário para posicionar traços absolutos */
+  cursor: pointer;      /* cursor de mão ao passar por cima */
+}
+
+/* Estilo dos traços do menu hambúrguer */
+.checkbox .trace {
+  width: 90px;                  /* largura da barra */
+  height: 8px;                  /* espessura da barra */
+  background-color: white;      /* cor branca */
+  position: absolute;           /* posicionamento relativo ao pai */
+  border-radius: 4px;           /* bordas arredondadas */
+  transition: 0.5s ease-in-out; /* animação suave */
+}
+
+/* Posição vertical de cada traço */
+.checkbox .trace:nth-child(1) {
+  top: 26px; /* primeiro traço */
+}
+
+.checkbox .trace:nth-child(2) {
+  top: 46px; /* segundo traço */
+}
+
+.checkbox .trace:nth-child(3) {
+  top: 66px; /* terceiro traço */
+}
+
+/* Esconde o input original, já que o label será o botão visível */
+#toggle {
+  display: none;
+}
+
+/* Animação do primeiro traço quando o checkbox está marcado */
+#toggle:checked + .checkbox .trace:nth-child(1) {
+  transform: rotate(45deg);
+```
+
 
 ## 🟩 Vídeo 04 - Parte 4
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/f9f0ec19-f126-48ba-b520-d13f8fad23e3
 
 
 ## 🟩 Vídeo 05 - Parte 5
