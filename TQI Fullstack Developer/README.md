@@ -51,7 +51,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 2: HTML/CSS3
 
 - [x] Curso: [Introdução a Criação de Websites com HTML5 e CSS3](Modulo_02/01-Curso.01-Introducao.a.Criacao.de.Websites.com.HTML5.e.CSS3)
-- [ ] Projeto: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions](Modulo_02/02-Curso.02-Desenvolvendo.um.Menu.Hamburguer.e.Morphing.Menu.com.CSS.Transitions)
+- [x] Projeto: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions](Modulo_02/02-Curso.02-Desenvolvendo.um.Menu.Hamburguer.e.Morphing.Menu.com.CSS.Transitions)
+	- Repositório: [DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css](https://github.com/ahahttps://github.com/ahaerdy/DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css)
+    - Descrição: Este repositório contém o projeto desenvolvido durante o curso “Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions”, ministrado por Gabriela Pinheiro na plataforma DIO (Digital Innovation One). O projeto tem como objetivo consolidar conceitos de estruturação HTML, estilização com CSS, animações, transições e responsividade, sem utilização de JavaScript.
 
 ### Módulo 3: Javascript
 
