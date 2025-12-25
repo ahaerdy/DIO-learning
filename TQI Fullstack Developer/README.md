@@ -57,7 +57,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 3: Javascript
 
-- [ ] Curso: [Instalação e Configuração do Visual Studio Code]
+- [ ] Curso: [Instalação e Configuração do Visual Studio Code](Modulo_03/01-Curso.01-Instalacao.e.Configuracao.do.Visual.Studio.Code)
 - [ ] Curso: [Introdução ao JavaScript]
 - [ ] Curso: [Sintaxe Básica em JavaScript]
 - [ ] Curso: [Sintaxe e Operadores JavaScript]
