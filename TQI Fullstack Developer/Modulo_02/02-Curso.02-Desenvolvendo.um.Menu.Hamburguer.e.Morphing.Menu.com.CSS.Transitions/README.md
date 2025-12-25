@@ -372,7 +372,7 @@ body {
 ## 🟩 Vídeo 03 - Parte 3
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/3674cd8b-668e-4661-8566-85e16a48d74d?back=/track/tqi-fullstack-developer
 
 
 ## 🟩 Vídeo 04 - Parte 4
