@@ -970,17 +970,442 @@ O autor descreve a criação de uma estrutura de **cards interativos** que integ
 
 ## 🟩 Vídeo 10 - Parte 10
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_10.webm|vid-60]]
 
-Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/2794b12a-e29a-4ce3-b6f1-305041053ea6
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/2794b12a-e29a-4ce3-b6f1-305041053ea6
+
+O instrutor detalha a aplicação de **propriedades de layout**, como Flexbox, para organizar elementos de forma responsiva e harmoniosa dentro de um contêiner principal. São explicadas técnicas avançadas de **efeitos visuais**, incluindo o uso de filtros de escala de cinza, posicionamento absoluto para elementos decorativos e ajustes de tipografia. O conteúdo destaca a criação de **animações de transição** disparadas pelo cursor do mouse, que alteram a visibilidade e o tamanho de textos e bordas. Por fim, o autor sugere **aplicações práticas** para esse design, como a exibição de portfólios ou projetos, visando uma experiência de usuário atraente e dinâmica.
+
+
 
 ## 🟩 Vídeo 11 - Parte 11
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_11.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/f603de0e-dacf-4518-986c-f6efed4db851
 
+Encerramento do projeto.
 
+### Anotações
 
-##  Materiais de Apoio
+#### Desktop - Tela inicial
+<p align="center">
+  <img src="000-Midia_e_Anexos/Pasted image 20251225132146.png" alt="" width="840">
+</p>
+
+#### Desktop - Portfolio / Social Media
+<p align="center">
+  <img src="000-Midia_e_Anexos/Pasted image 20251225132428.png" alt="" width="840">
+</p>
+
+#### Mobile - Tela inicial
+<p align="center">
+  <img src="000-Midia_e_Anexos/Pasted image 20251225132559.png" alt="" width="300">
+</p>
+
+#### Mobile - Portfolio / Social Media
+<p align="center">
+  <img src="000-Midia_e_Anexos/Pasted image 20251225132743.png" alt="" width="300">
+</p>
+
+#### ▶️ Código HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="header">
+            <div class="checkbox-container">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="toggle">
+                    <label class="checkbox" for="toggle">
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                        <div class="trace"></div>
+                    </label>
+                    <div class="menu"></div>
+                    <nav class="menu-items">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="#">Projetos</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <h1>Gabriela Pinheiro</h1>
+        <h2>Front-end Developer</h2>
+        <div class="social-media">
+            <a href="#">Linkedin</a>
+            <a href="#">Github</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card-container">
+            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+             consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+             consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+            </div>
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>Github</h2>
+                    <p>Veja meus projetos!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>Linkedin</h2>
+                    <p>Vem ver minha carreira profissional!</p>
+                </div>
+            </div>
+            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+             consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+             consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+             consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio nihil, culpa repudiandae atque facilis eveniet neque
+             consequuntur quas dolorem aliquam maiores nulla ullam optio fugit voluptatibus soluta? Nulla, ipsum.
+            </div>
+            <div class="card">
+                <div class="card-wrapper">
+                    <h2>Instagram</h2>
+                    <p>Ou mais do meu dia-a-dia ;)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        Feito por Gabriela Pinheiro 
+    </footer>
+</body>
+</html>
+```
+
+#### ▶️ Código CSS
+```css
+/* Importa a fonte "Amatic SC" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+/* Estilo global do body */
+body {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    color: #ffffff; /* Texto branco */
+    font-family: 'amatic sc', sans-serif; /* Fonte personalizada */
+}
+
+/* HEADER */
+.header-wrapper {
+    height: 100vh; /* Altura igual à viewport */
+    width: 100vw;  /* Largura igual à viewport */
+    background: linear-gradient(-45deg, #050404, #2E1C2B, #4A1942, #893168); /* Gradiente animado */
+    background-size: 400% 400%; /* Expansão para animação */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    animation: backgroundTransition 8s ease-in-out infinite; /* Animação do fundo */
+    position: relative;
+}
+
+/* Estilo para títulos */
+h1, h2 {
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 4px; /* Espaçamento entre letras */
+}
+
+/* Ícones de redes sociais */
+.social-media {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.social-media a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #ffffff; /* Texto branco */
+    font-size: 24px;
+    padding: 1rem 4rem;
+    border: 1px solid #ffffff;
+    min-width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97); /* Transição suave */
+}
+
+/* Efeito hover nos links */
+a:hover {
+    color: #2E1C2B;
+    background-color: #ffffff;
+}
+
+/* Animação do gradiente de fundo */
+@keyframes backgroundTransition {
+    0% { background-position: 0% 80%; }
+    50% { background-position: 80% 100%; }
+    100% { background-position: 0% 90%; }
+}
+
+/* MENU HAMBURGUER */
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+/* Traços do menu hambúrguer */
+.checkbox .trace {
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) { top: 26px; transform: rotate(0); }
+.checkbox .trace:nth-child(2) { top: 46px; transform: rotate(0); }
+.checkbox .trace:nth-child(3) { top: 66px; transform: rotate(0); }
+
+#toggle { display: none; }
+
+/* MENU */
+.menu {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px white;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-items {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-items ul { list-style-type: none; }
+
+.menu-items ul li a {
+    margin: 10px 0;
+    color: #2E1C2B;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+/* ANIMAÇÃO DO MENU */
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: #2E1C2B;
+    top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translateX(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #2E1C2B;
+    top: 48px;
+}
+
+#toggle:checked + .checkbox { background-color: white; }
+
+#toggle:checked ~ .menu {
+    box-shadow: 0px 0px 0px 100vmax white;
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu-items {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* CARDS */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.card {
+    height: 300px;
+    width: 400px;
+    margin: 3rem 0 0 0;
+    background-image: url('./room.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(0.5);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-text {
+    width: 40%;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: rgb(109, 109, 109);
+}
+
+.card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    display: block;
+    border: 1px solid white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card-wrapper h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.card-wrapper p {
+    font-size: 0;
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* Efeitos hover nos cards */
+.card:hover { filter: unset; }
+
+.card:hover > .card-wrapper::before {
+    height: 250px;
+    width: 350px;
+    opacity: 1;
+}
+
+.card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #2E1C2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 800px) {
+    .social-media { flex-direction: column; }
+    .container { margin-top: 0; }
+    .card-container { flex-direction: column; }
+
+    .container .card-container:nth-child(1),
+    .container .card-container:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .card { height: 250px; width: 250px; }
+
+    .card-text {
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .card:hover > .card-wrapper::before {
+        height: 190px;
+        width: 190px;
+    }
+}
+
+```
 
 
 # Certificado: 
