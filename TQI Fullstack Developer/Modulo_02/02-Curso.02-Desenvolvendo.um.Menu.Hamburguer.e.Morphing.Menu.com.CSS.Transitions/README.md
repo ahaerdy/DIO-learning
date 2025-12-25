@@ -1,7 +1,7 @@
 ## Instrutor:
 
-- Lucas Vilaboim (Senior Frontend Engineer with 15+ Years of Experience | JavaScript | TypeScript | React | Vue)
-- Contato Linkedin: / [vilaboim](https://www.linkedin.com/in/vilaboim/)
+- Gabriela Pinheiro (Software Engineer @ Caju | React.js | Next.js | Typescript | Flutter | ex-Uber)
+- Contato Linkedin: / [gabrielapinheiro129](https://www.linkedin.com/in/gabrielapinheiro129/)
 
 ## 🟩 Vídeo 01 - Parte 1
 
@@ -17,7 +17,7 @@ A instrutora expressa entusiasmo ao receber os alunos para uma jornada de aprend
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/189ea5d2-a2ab-4808-bd56-8280567fd1e2
 
-O instrutor detalha a criação de uma estrutura visual moderna, focando especialmente no uso de **transitions** para suavizar a mudança entre diferentes estados de um elemento. O conteúdo explica como aplicar filtros de **escala de cinza**, posicionar imagens de fundo com a propriedade **cover** e centralizar conteúdos em um contêiner principal. Além disso, o tutorial demonstra a manipulação de **pseudo-elementos** para criar efeitos de bordas que se expandem e textos que surgem dinamicamente durante o **hover**. O objetivo final é ensinar como construir um componente visual elegante para **portfólios**, priorizando a fluidez das animações no navegador.
+A instrutora detalha a criação de uma estrutura visual moderna, focando especialmente no uso de **transitions** para suavizar a mudança entre diferentes estados de um elemento. O conteúdo explica como aplicar filtros de **escala de cinza**, posicionar imagens de fundo com a propriedade **cover** e centralizar conteúdos em um contêiner principal. Além disso, o tutorial demonstra a manipulação de **pseudo-elementos** para criar efeitos de bordas que se expandem e textos que surgem dinamicamente durante o **hover**. O objetivo final é ensinar como construir um componente visual elegante para **portfólios**, priorizando a fluidez das animações no navegador.
 
 ### Anotações
 
