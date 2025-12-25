@@ -941,25 +941,31 @@ body {
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/fc2046c3-9a37-4f52-b559-c3b231f994c8
 
-Proposta do  projeto principal, com demonstrações no desktop e no mobile de como será resultado.
+Proposta do  projeto principal, com demonstrações no desktop e no mobile do resultado final.
 
 ## 🟩 Vídeo 07 - Parte 7
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_07.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/6287bdc5-7b6b-4279-9a31-b75d6ae67382
 
-
+O vídeo apresenta um **tutorial técnico** focado no desenvolvimento de uma **landing page** moderna utilizando **HTML e CSS**. O instrutor detalha a construção da estrutura do **header**, organizando elementos como um **menu hambúrguer**, links de navegação e ícones de redes sociais. A explicação prioriza a criação de **animações fluidas**, destacando especialmente um **fundo gradiente dinâmico** configurado com a regra **keyframes**. Além da codificação, o conteúdo incentiva a personalização estética por parte do aluno, sugerindo o uso de ferramentas como **JavaScript ou React** para expandir as funcionalidades. O objetivo central é demonstrar como técnicas simples de **estilização visual** podem resultar em um design de interface sofisticado e atraente.
 
 
 ## 🟩 Vídeo 08 - Parte 8
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_08.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/cd352ae4-e3b7-4f96-9bba-83e6497d8c15
+
+ O autor explica passo a passo como configurar elementos visuais, como o **checkbox** e os traços que formam o ícone, detalhando propriedades de **transição** e **posicionamento absoluto**. Um ponto central do conteúdo é a criação de um **efeito de bolha**, que se expande para preencher a tela através da manipulação estratégica da propriedade **box-shadow**. Além da técnica, o instrutor ressalta como essas **animações fluidas** valorizam o portfólio de um desenvolvedor front-end, tornando-o mais atrativo para recrutadores. O guia encerra ajustando detalhes de **opacidade** e tempo de resposta para garantir uma experiência visual elegante e profissional.
 
 ## 🟩 Vídeo 09 - Parte 9
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/73b8bed8-ef44-4292-a0a9-3219bc93a812
+
+
 
 ## 🟩 Vídeo 10 - Parte 10
 
