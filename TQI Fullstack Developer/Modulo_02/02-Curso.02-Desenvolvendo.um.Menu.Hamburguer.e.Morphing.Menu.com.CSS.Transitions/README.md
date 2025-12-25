@@ -371,6 +371,7 @@ body {
 
 ## 🟩 Vídeo 03 - Parte 3
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_03.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/3674cd8b-668e-4661-8566-85e16a48d74d?back=/track/tqi-fullstack-developer
 
@@ -674,20 +675,270 @@ O resultado final é o menu hambúrguer que se transforma em um "X" ao ser clica
 
 ## 🟩 Vídeo 04 - Parte 4
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/f9f0ec19-f126-48ba-b520-d13f8fad23e3
+
+Esta fonte consiste em uma aula técnica sobre **animações avançadas em CSS**, focada na transição do uso básico de `transitions` para o controle detalhado via **keyframes**. O instrutor orienta a construção prática de uma **landing page de portfólio**, demonstrando como configurar uma estrutura HTML simples e estilizá-la com fontes personalizadas. O destaque do tutorial é a criação de um **background com gradiente animado**, que altera suas cores de forma fluida sem a necessidade de JavaScript. Através da propriedade `background-size` e do posicionamento estratégico em diferentes **porcentagens da linha do tempo**, o autor ensina a gerar efeitos visuais dinâmicos e harmônicos. Além disso, o conteúdo explora o uso de funções de tempo complexas, como **cubic-bezier**, para refinar a interatividade dos botões e links sociais.
+
+### Anotações
+
+Resultado na tela:
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/Pasted image 20251225100340.png" alt="" width="840">
+</p>
+
+
+#### ▶️ Código HTML
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="wrapper">
+        <h1>Gabriela Pinheiro</h1>
+        <h2>Front-end Developer</h2>
+        <div class="social-media">
+            <a href="#">Linkedin</a>
+            <a href="#">Github</a>
+        </div>
+    </main>
+</body>
+```
+
+#### ▶️ Código CSS
+```css
+/* Importa a fonte "Amatic SC" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+/* Estilo global do body */
+body {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    color: #ffffff; /* Define cor do texto como branco */
+    font-family: 'amatic sc', sans-serif; /* Aplica a fonte importada */
+}
+
+/* Container principal que ocupa toda a tela */
+.wrapper {
+    height: 100vh; /* Altura igual à altura da janela */
+    width: 100vw;  /* Largura igual à largura da janela */
+    background: linear-gradient(-45deg, #5e0878, #085078, #4ca59b, #1fa194); /* Gradiente de fundo */
+    background-size: 400% 400%; /* Expande o gradiente para permitir animação */
+    display: flex; /* Ativa flexbox */
+    flex-direction: column; /* Organiza elementos em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    animation: backgroundTransition 8s ease-in-out infinite; /* Animação contínua do fundo */
+}
+
+/* Estilo para títulos h1 */
+h1 {
+    text-transform: uppercase; /* Converte texto para maiúsculas */
+    letter-spacing: 4px; /* Espaçamento entre letras */
+}
+
+/* Estilo para títulos h2 */
+h2 {
+    text-transform: uppercase; /* Converte texto para maiúsculas */
+    letter-spacing: 4px; /* Espaçamento entre letras */
+}
+
+/* Container para ícones de redes sociais */
+.social-media {
+    margin-top: 1rem; /* Espaçamento superior */
+    display: flex; /* Organiza ícones em linha */
+}
+
+/* Estilo para links */
+a {
+    text-decoration: none; /* Remove sublinhado padrão */
+    color: #ffffff; /* Texto branco */
+    font-size: 24px; /* Tamanho da fonte */
+    padding: 1rem 4rem; /* Espaçamento interno (vertical e horizontal) */
+    border: 1px solid #ffffff; /* Borda branca */
+    min-width: 4rem; /* Largura mínima */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97); /* Transição suave personalizada */
+}
+
+/* Efeito hover nos links */
+a:hover {
+    color: #085078; /* Texto muda para azul */
+    background-color: #ffffff; /* Fundo branco */
+}
+
+/* Animação do gradiente de fundo */
+@keyframes backgroundTransition {
+    0% {
+        background-position:  0% 80%; /* Posição inicial */
+    }
+    50% {
+        background-position: 80% 100%; /* Posição intermediária */
+    }
+    100% {
+        background-position: 0% 90%; /* Posição final */
+    }
+}
+```
 
 
 ## 🟩 Vídeo 05 - Parte 5
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_05.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/6bd13b76-1905-4b6b-8ccb-f3fc81681d9e
+
+Esta fonte apresenta um **tutorial técnico em vídeo** focado no desenvolvimento de uma interface visual utilizando exclusivamente **CSS e HTML**. O autor demonstra como construir um **ícone de chat flutuante** com animações integradas que simulam uma pessoa digitando. Durante a explicação, são detalhadas técnicas para a criação de **formas geométricas**, como triângulos e círculos, sem a necessidade de imagens externas ou arquivos SVG. O instrutor enfatiza o uso de **Keyframes e Animation Delay** para sincronizar o movimento das bolinhas internas e o balanço do ícone. Ao final, o conteúdo destaca como essas ferramentas de estilização podem conferir **dinamismo e interatividade** a projetos de desenvolvimento web modernos.
+
+### Anotações
+
+Saída na tela:
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/Pasted image 20251225103245.png" alt="" width="840">
+</p>
+
+
+#### ▶️ Código HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="chatbot">
+            <div class="chatbot__loading"></div>
+            <div class="chatbot__loading"></div>
+            <div class="chatbot__loading"></div>
+        </div>
+    </main>
+</body>
+</html>
+```
+
+#### ▶️ Código CSS
+
+```css
+/* Estilo global do body */
+body {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    font-family: sans-serif; /* Define fonte simples e legível */
+}
+
+/* Container principal que ocupa toda a tela */
+.wrapper {
+    height: 100vh; /* Altura igual à altura da janela */
+    width: 100vw;  /* Largura igual à largura da janela */
+    background-color: rgb(53, 53, 53); /* Fundo cinza escuro */
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Caixa que representa o chatbot */
+.chatbot {
+    height: 4rem; /* Altura da caixa */
+    width: 8rem;  /* Largura da caixa */
+    border-radius: 36px; /* Bordas arredondadas */
+    border: 4px solid #949494; /* Borda cinza */
+    padding: 0 1rem; /* Espaçamento interno lateral */
+    box-sizing: border-box; /* Inclui borda e padding no cálculo total */
+    display: flex; /* Flexbox para alinhar elementos internos */
+    justify-content: space-evenly; /* Espaçamento uniforme entre elementos */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    position: relative; /* Necessário para posicionar pseudo-elementos */
+    transform: translateY(0); /* Posição inicial */
+    animation: chatTranslate 2s ease-in-out infinite; /* Animação de movimento vertical */
+}
+
+/* Triângulo abaixo da caixa, simulando balão de fala */
+.chatbot::before {
+    content: ''; /* Cria elemento vazio */
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -1.3rem; /* Posiciona abaixo da caixa */
+    left: 2rem; /* Ajusta posição horizontal */
+    border-left: 2px solid transparent; /* Lado esquerdo transparente */
+    border-right: 17px solid transparent; /* Lado direito transparente */
+    border-top: 17px solid #949494; /* Triângulo apontando para baixo */
+}
+
+/* Bolinhas de carregamento dentro do chatbot */
+.chatbot__loading {
+    height: 10px; /* Altura da bolinha */
+    width: 10px;  /* Largura da bolinha */
+    border-radius: 50%; /* Forma circular */
+    background-color: #949494; /* Cor cinza */
+    transform: scale(1); /* Tamanho inicial */
+}
+
+/* Primeira bolinha com animação de pulsar */
+.chatbot__loading:nth-child(1) {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Segunda bolinha com atraso na animação */
+.chatbot__loading:nth-child(2) {
+    animation: pulse 1.5s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+/* Terceira bolinha com maior atraso */
+.chatbot__loading:nth-child(3) {
+    animation: pulse 1.5s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+/* Animação de pulsar (aumenta e diminui o tamanho das bolinhas) */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Tamanho normal */
+    }
+    50% {
+        transform: scale(1.5); /* Cresce */
+    }
+    100% {
+        transform: scale(1); /* Volta ao normal */
+    }
+}
+
+/* Animação de movimento vertical da caixa do chatbot */
+@keyframes chatTranslate {
+    0% {
+        transform: translateY(0); /* Posição inicial */
+    }
+    50% {
+        transform: translateY(15px); /* Move para baixo */
+    }
+    100% {
+        transform: translateY(0); /* Volta para cima */
+    }
+}
+
+```
 
 
 ## 🟩 Vídeo 06 - Parte 6
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/fc2046c3-9a37-4f52-b559-c3b231f994c8
 
 
 ## 🟩 Vídeo 07 - Parte 7
