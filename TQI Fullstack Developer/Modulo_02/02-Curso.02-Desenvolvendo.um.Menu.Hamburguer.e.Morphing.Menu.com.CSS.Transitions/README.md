@@ -937,21 +937,24 @@ body {
 
 ## 🟩 Vídeo 06 - Parte 6
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_06|vid-60.webm]]
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/fc2046c3-9a37-4f52-b559-c3b231f994c8
 
-
+Proposta do  projeto principal, com demonstrações no desktop e no mobile de como será resultado.
 
 ## 🟩 Vídeo 07 - Parte 7
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/6287bdc5-7b6b-4279-9a31-b75d6ae67382
+
+
 
 
 ## 🟩 Vídeo 08 - Parte 8
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/cd352ae4-e3b7-4f96-9bba-83e6497d8c15
 
 ## 🟩 Vídeo 09 - Parte 9
 
