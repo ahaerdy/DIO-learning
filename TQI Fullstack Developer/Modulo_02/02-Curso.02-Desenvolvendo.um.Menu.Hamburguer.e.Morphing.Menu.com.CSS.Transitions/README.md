@@ -941,10 +941,33 @@ body {
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/fc2046c3-9a37-4f52-b559-c3b231f994c8
 
 
+
 ## 🟩 Vídeo 07 - Parte 7
 
 
 Link do vídeo:  
+
+
+## 🟩 Vídeo 08 - Parte 8
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 09 - Parte 9
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 10 - Parte 10
+
+
+Link do vídeo:  
+
+## 🟩 Vídeo 11 - Parte 11
+
+
+Link do vídeo:  
+
 
 
 ##  Materiais de Apoio
