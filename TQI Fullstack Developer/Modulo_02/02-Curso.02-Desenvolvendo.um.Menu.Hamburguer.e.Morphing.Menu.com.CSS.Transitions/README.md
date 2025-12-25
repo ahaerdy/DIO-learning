@@ -241,7 +241,7 @@ Finalizando a animação, ao passar o mouse, o pseudoelemento `::before` expande
 
 ```
 
-#### Código HTML
+#### ▶️ Código HTML
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -264,7 +264,7 @@ Finalizando a animação, ao passar o mouse, o pseudoelemento `::before` expande
 </html>
 ```
 
-#### Código CSS
+#### ▶️ Código CSS
 ```css
 /* Configuração básica do corpo da página */
 body {
