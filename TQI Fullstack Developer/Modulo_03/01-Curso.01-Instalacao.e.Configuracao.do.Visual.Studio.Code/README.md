@@ -36,6 +36,7 @@ O conteúdo explica como utilizar o **explorador de arquivos**, realizar buscas 
 
 ## 🟩 Vídeo 04 - Extensões e temas
 
+![[bootcamp_tqi_fullstack-modulo_03-Video_04.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/instalacao-e-configuracao-do-visual-studio-code/learning/74d483e2-1c81-4993-ac89-f2ceae8a39d1?autoplay=1
 
@@ -45,12 +46,14 @@ O vídeo apresenta as diversas funcionalidades da aba de **extensões do VS Code
 
 ## 🟩 Vídeo 05 - Terminal e Git
 
+![[bootcamp_tqi_fullstack-modulo_03-Video_05.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/instalacao-e-configuracao-do-visual-studio-code/learning/57cbbabb-3479-4994-8be6-63bedf905b6a?autoplay=1
 
+O conteúdo destaca a importância de configurar o **PATH** do sistema para permitir a abertura de diretórios e arquivos usando o atalho de texto **code**. Além disso, o autor demonstra a **integração com o Git**, mostrando como monitorar alterações, trocar de branches e inicializar repositórios sem sair do editor. O objetivo central é evidenciar como essas funcionalidades aumentam a **produtividade** e a fluidez do trabalho no desenvolvimento web. Por fim, o texto reforça que a versatilidade dessas ferramentas auxiliares consolidou o VS Code como um dos ambientes de programação mais populares do mercado.
 
 
 # Certificado: Instalação e Configuração do Visual Studio Code
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/N6B6SQCK.pdf
+- Certificado em pdf: [[Certificado-Instalacao.e.Configuracao.do.Visual.Studio.Code.pdf]]
