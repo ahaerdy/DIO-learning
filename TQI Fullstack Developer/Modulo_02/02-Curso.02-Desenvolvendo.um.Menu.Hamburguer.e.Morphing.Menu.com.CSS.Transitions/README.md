@@ -962,15 +962,16 @@ Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morph
 
 ## 🟩 Vídeo 09 - Parte 9
 
+![[bootcamp_tqi_fullstack-modulo_02-Curso_02-Video_09.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/73b8bed8-ef44-4292-a0a9-3219bc93a812
 
-
+O autor descreve a criação de uma estrutura de **cards interativos** que integram links para redes sociais, como LinkedIn e Instagram, organizados dentro de um contêiner principal. A explicação foca na estilização visual, detalhando propriedades como **display flex**, espaçamentos e dimensões para garantir um layout responsivo e organizado. Além disso, o conteúdo enfatiza a implementação de **animações e efeitos de hover**, utilizando transições suaves para alterar a visibilidade de textos e bordas. Por fim, o tutorial demonstra como aplicar **filtros de imagem** e contrastes tipográficos para criar uma interface de usuário moderna e atraente.
 
 ## 🟩 Vídeo 10 - Parte 10
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/lab/desenvolvendo-um-menu-hamburguer-e-morphing-menu-com-css-transitions/learning/2794b12a-e29a-4ce3-b6f1-305041053ea6
 
 ## 🟩 Vídeo 11 - Parte 11
 
