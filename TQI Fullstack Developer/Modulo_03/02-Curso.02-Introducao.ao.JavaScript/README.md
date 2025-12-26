@@ -449,6 +449,7 @@ Exemplo final da saída do console utilizando técnicas avançadas de formataç�
 
 ## 🟩 Vídeo 06 - Estrutura de projeto
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_06.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/29e2461c-fa18-47c3-b4fa-900cf1fcc1f5?autoplay=1
 
@@ -519,6 +520,7 @@ O código estrutural gerado para o arquivo de teste é o seguinte:
 
 ## 🟩 Vídeo 07 - Inserindo javascript numa página HTML
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_07.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/29e2461c-fa18-47c3-b4fa-900cf1fcc1f5?autoplay=1
 
@@ -526,30 +528,127 @@ O instrutor demonstra a utilização da tag **link** para importar o **CSS**, ex
 
 ### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h26m37s367.jpg" alt="" width="840">
+</p>
 
+Nesta etapa da aula, o objetivo é realizar a integração prática entre as tecnologias web. Para visualizar as mudanças acontecendo na tela, será demonstrado como **inserir o JavaScript no HTML**, utilizando também o CSS como um elemento visual de confirmação. A estratégia consiste em configurar uma cor específica para os textos, garantindo que a folha de estilo foi carregada corretamente antes de avançar para a importação dos scripts.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h26m46s054.jpg" alt="" width="840">
+</p>
+
+No arquivo de estilos, é definida uma regra básica para o corpo da página. O objetivo é alterar a cor de todos os textos para cinza, servindo como um "teste de sucesso" para a importação do arquivo CSS no documento principal.
+
+```css
+body {
+  color: grey;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h26m57s261.jpg" alt="" width="840">
+</p>
+
+Para o JavaScript, é criado um comando simples de saída no console. Este código permitirá verificar, através das ferramentas de desenvolvedor do navegador, se o arquivo externo foi lido e executado corretamente após a sua importação no HTML.
+
+```javascript
+console.log("hello world");
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h27m25s982.jpg" alt="" width="840">
+</p>
+
+No arquivo `index.html`, a importação dos recursos externos é realizada dentro da tag `<head>`.
+
+* **CSS:** Utiliza-se a tag `<link>` com o atributo `rel="stylesheet"` para indicar que se trata de uma folha de estilo, e o atributo `href` apontando para o caminho do arquivo (`assets/css/styles.css`).
+* **JavaScript:** Utiliza-se a tag `<script>` com o atributo `src` indicando a localização do arquivo (`assets/js/scripts.js`).
+
+Embora em projetos maiores seja comum recomendar a inserção do script ao final do `<body>` para evitar problemas de renderização de elementos que ainda não foram carregados, para este exemplo simples a chamada no topo do documento é funcional.
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="assets/js/scripts.js"></script>
+  <title>teste</title>
+</head>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h27m33s335.jpg" alt="" width="840">
+</p>
+
+Para finalizar a estrutura e testar a visualização, o conteúdo visível é inserido dentro da tag `<body>`. Ao abrir o arquivo no navegador, o texto "Olá, mundo!" deverá aparecer com a formatação cinza definida no CSS. Ao acessar o console do navegador (atalho **Ctrl + Shift + I**), a mensagem configurada no JavaScript também será exibida, confirmando que ambos os arquivos foram importados com sucesso.
+
+```html
+<body>
+  <h1>Olá, mundo!</h1>
+</body>
+
+```
 
 ## 🟩 Vídeo 08 - Interagindo com os elementos do DOM
 
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/b3f92afb-7547-48ac-a072-ef0ff7baf80d?autoplay=1
 
-## 🟩 Vídeo 04 - Javascript em uma página da web
+Esta fonte explica o conceito de **DOM (Document Object Model)** como a representação estrutural de uma página web dentro do navegador. O autor descreve a organização dos elementos em uma **árvore de dependências**, onde tags HTML e textos são tratados como nós que podem ser acessados via JavaScript. Através de um exemplo prático no console do navegador, demonstra-se como **selecionar elementos específicos** e alterar suas propriedades visuais, como a cor de um título. O conteúdo serve como uma introdução técnica para a **manipulação dinâmica de páginas**, preparando o estudante para a criação de projetos interativos. Por fim, destaca-se que o domínio dessas técnicas permite o **controle total sobre o comportamento** e o estilo dos componentes de uma interface digital.
 
+### Anotações
 
-Link do vídeo: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-19h00m48s471.jpg" alt="" width="840">
+</p>
 
-## 🟩 Vídeo 05 - Slides
+Nesta etapa da aula, iniciamos a exploração dos elementos que compõem o **DOM (Document Object Model)**. O objetivo é compreender como o JavaScript interage com os componentes de uma página web, visualizando o documento como um conjunto de objetos acessíveis e manipuláveis pelo navegador.
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-19h00m54s962.jpg" alt="" width="840">
+</p>
 
-Link do vídeo: 
+O **DOM (Document Object Model)** pode ser visualizado como uma estrutura de árvore que representa a hierarquia de elementos dentro da janela do navegador. No topo dessa hierarquia está o objeto **Window**, que contém informações de **History** (histórico de rotas), **Location** (localização) e o **Document**.
 
+O **Document** encapsula o código HTML da página. A estrutura organiza os elementos de forma hierárquica:
+
+* **Elementos Pais e Filhos:** No exemplo apresentado, a partir do documento temos tags como **Heading Level 1** (H1) e **Paragraph** (P).
+* **Nós de Texto (Text Nodes):** São o conteúdo textual contido dentro das tags, como o texto "Olá, mundo!" dentro de um H1.
+* **Elementos Irmãos:** Se um parágrafo for criado fora da tag H1, eles são considerados irmãos na árvore de dependências, pois compartilham o mesmo nível hierárquico abaixo do objeto Document.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-19h01m10s983.jpg" alt="" width="840">
+</p>
+
+Para manipular os elementos na prática, utilizamos o **Console** do navegador (acessado via `Ctrl + Shift + I`). Através do objeto `document`, é possível selecionar elementos específicos, armazená-los em variáveis e alterar suas propriedades, como o estilo CSS.
+
+No exemplo demonstrado, o comando `document.getElementsByTagName('h1')` retorna uma **HTML Collection**. Como as listas em JavaScript iniciam no **índice zero**, selecionamos o primeiro elemento para aplicar uma mudança de cor:
+
+```javascript
+// Selecionando o elemento H1 pelo índice 0 da coleção
+var heading1 = document.getElementsByTagName('h1')[0]
+
+// Verificando o conteúdo da variável
+heading1
+
+// Alterando a cor do elemento para vermelho via propriedade style
+heading1.style.color = 'red'
+
+```
+
+Essa interação permite que o JavaScript modifique dinamicamente o comportamento e a aparência do HTML em tempo real.
 
 # Parte 5 - Colocando em prática
 
 ## 🟩 Vídeo 01 - Criando um contador
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/ec2c12f8-f2d6-461b-9ddf-f6955957997f?autoplay=1
 
 
 ## 🟩 Vídeo 02 - Desafio: To-do list
