@@ -7,6 +7,7 @@
 
 ## 🟩 Vídeo 01 - Apresentação do curso
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_01.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/ecf563b8-92b8-4061-95f3-66e32b1014cf?autoplay=1
 
@@ -60,6 +61,7 @@ Durante todo o processo, a interação é incentivada através do fórum do curs
 
 ## 🟩 Vídeo 02 - História, Evolução e Aplicações
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_02.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/2b53ae76-660e-4c80-9004-3eaee89f5169?autoplay=1
 
@@ -117,30 +119,118 @@ O JavaScript expandiu seu alcance para além dos navegadores web, sendo utilizad
 
 
 
-## 🟩 Vídeo 03 - Slides 1
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 04 - Slides 2
-
-
-Link do vídeo: 
-
-
 # Parte 2 - Recursos básicos da linguagem
 
-## 🟩 Vídeo 01 - Manipulando um arquivo
+## 🟩 Vídeo 03 - Manipulando um arquivo
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_03.webm|vid-60]]
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/12029bc1-1f35-4815-a310-9c402ed88d6a?autoplay=1
+
+Esta fonte consiste em uma aula introdutória sobre os fundamentos da linguagem **JavaScript** utilizando o editor **VS Code**. O instrutor explica como organizar arquivos e ensina métodos para inserir **comentários** no código, tanto em linhas únicas quanto em múltiplos blocos. A lição diferencia conceitos de **variáveis** e **constantes**, utilizando exemplos matemáticos e de compras para ilustrar como valores podem ou não ser alterados. Além disso, o conteúdo enfatiza **boas práticas**, sugerindo nomes claros para elementos e o uso de letras maiúsculas para identificar constantes. O tutorial também destaca **atalhos de teclado** úteis que otimizam a produtividade durante o desenvolvimento de sistemas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-15h53m50s329.jpg" alt="" width="840">
+</p>
+
+Nesta introdução, iniciamos o estudo dos **recursos básicos do JavaScript**. O foco inicial está em compreender as fundações da linguagem para permitir o desenvolvimento de scripts funcionais e organizados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-15h53m58s228.jpg" alt="" width="840">
+</p>
+
+Os objetivos centrais desta etapa são:
+
+1. Familiarização com a **sintaxe** da linguagem.
+2. Compreensão da diferença prática entre **variáveis e constantes**.
+3. Capacidade de inserir **comentários** para documentar e organizar o código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-15h54m08s172.jpg" alt="" width="840">
+</p>
+
+Nesta primeira etapa prática, avançamos para a **manipulação de arquivos**. Para trabalhar com JavaScript, os arquivos devem ser salvos com a extensão **.js**, o que permite que o ambiente de desenvolvimento e o navegador identifiquem corretamente o conteúdo como código JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-15h55m55s382.jpg" alt="" width="840">
+</p>
+
+Exemplo de uso de **comentários de várias linhas**. Ao utilizar a sintaxe `/*` para abrir e `*/` para fechar, todo o conteúdo entre esses delimitadores é ignorado pelo motor de execução do JavaScript. É uma ferramenta essencial para desativar blocos de código ou escrever explicações extensas.
+
+```javascript
+/* var
+y = 0;
+var
+x = 1; */
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-15h56m05s445.jpg" alt="" width="840">
+</p>
+
+Neste ponto, observa-se que, assim que fechamos o bloco de comentário e mudamos de linha, o código volta a ser lido normalmente. Abaixo do bloco comentado, uma nova variável `z` é declarada, demonstrando que apenas o que está dentro dos delimitadores permanece inativo.
+
+```javascript
+/* var
+y = 0;
+var
+x = 1; */
+
+var z = 2;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-15h56m44s226.jpg" alt="" width="840">
+</p>
+
+Apresentação dos **comentários de linha única**. Ao utilizar **duas barras para a direita (//)**, o JavaScript ignora tudo o que vier após elas naquela mesma linha. Diferente do bloco anterior, este formato é ideal para anotações rápidas ou para desativar instruções específicas individualmente.
+
+```javascript
+// var y = 0;
+// var x = 1;
+
+// var z = 2;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-15h59m25s120.jpg" alt="" width="840">
+</p>
+
+Exemplo prático de manipulação de **variáveis**. As variáveis são espaços na memória onde os valores podem ser alterados ao longo do tempo. No exemplo abaixo, a variável `preco` é inicialmente definida como 2, mas depois recebe um novo valor resultante da subtração de um desconto.
+
+```javascript
+var preco = 2;
+var desconto = 0.2;
+
+preco = preco - desconto;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-16h00m30s479.jpg" alt="" width="840">
+</p>
+
+Introdução ao conceito de **constantes** utilizando a palavra-chave `const`. Diferente das variáveis, o valor de uma constante não pode ser alterado após sua atribuição inicial. Uma boa prática de programação é declarar constantes em **letras maiúsculas** para facilitar a distinção visual. Para obter um resultado dinâmico baseado em uma constante, utiliza-se uma nova variável (como `total`) para armazenar o cálculo.
+
+```javascript
+// var preco = 2;
+var desconto = 0.2;
+
+const PRECO = 2;
+var total = PRECO - desconto;
+
+```
 
 
 ## 🟩 Vídeo 02 - Funções
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/7b57c877-07fc-4c32-9032-554835a533c0?autoplay=1
 
 
 ## 🟩 Vídeo 03 - Recursos básicos da linguagem
