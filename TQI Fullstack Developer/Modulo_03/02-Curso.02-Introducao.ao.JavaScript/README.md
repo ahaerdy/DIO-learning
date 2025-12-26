@@ -227,19 +227,66 @@ var total = PRECO - desconto;
 ```
 
 
-## 🟩 Vídeo 02 - Funções
+## 🟩 Vídeo 04 - Funções
 
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/7b57c877-07fc-4c32-9032-554835a533c0?autoplay=1
 
+O instrutor detalha o uso da palavra-chave **function**, a importância dos **parâmetros** entre parênteses e a lógica por trás de operações básicas como a **soma de valores**. Além disso, o texto diferencia o uso do comando **return**, necessário para manipular resultados posteriormente, do **console.log**, utilizado majoritariamente para **depuração e visualização** imediata. É enfatizado que uma função só executa sua tarefa quando é explicitamente **chamada no programa**, podendo ou não exigir dados externos para funcionar. Por fim, o conteúdo busca familiarizar o estudante com a **escrita do código** antes de avançar para atividades práticas e demonstrações em tempo real.
 
-## 🟩 Vídeo 03 - Recursos básicos da linguagem
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-16h18m34s701.jpg" alt="" width="840">
+</p>
+
+Esta imagem marca o início da aula sobre **funções no JavaScript**. O conteúdo introduz como a lógica de funções na programação se assemelha aos conceitos matemáticos, focando na sintaxe de declaração e na manipulação de arquivos para a construção de scripts.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-16h20m25s307.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é apresentada a estrutura básica de uma declaração de função em JavaScript. A sintaxe utiliza a palavra-chave `function`, seguida por um nome identificador e parênteses, onde são definidos os **parâmetros** ou atributos que a função irá processar.
+
+```javascript
+function soma(a, b) {
+  console.log(a + b);
+  return a + b;
+}
+
+```
+
+A explicação diferencia o uso do **console.log** do **return**:
+
+* **console.log**: É utilizado principalmente para **debugar** o código, permitindo visualizar um valor no console para conferir se a função está sendo executada corretamente.
+* **return**: É empregado quando o resultado da função precisa ser enviado de volta para quem a chamou, permitindo que esse valor seja manipulado posteriormente por outras funções ou partes do programa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-16h21m30s281.jpg" alt="" width="840">
+</p>
+
+Após declarar o que a função faz, é necessário **invocá-la** para que ela seja de fato executada. A imagem demonstra como chamar a função pelo seu nome, passando os valores (argumentos) que substituirão as variáveis definidas nos parâmetros.
+
+```javascript
+function soma(a, b) {
+  return a + b; // 8
+}
+
+soma(3, 5);
+
+```
+
+Neste exemplo, ao chamar `soma(3, 5)`, o número 3 é atribuído à variável `a` e o 5 à variável `b`. A função processa a soma e retorna o valor 8. É reforçado que uma função pode ou não receber parâmetros, dependendo da necessidade de manipular dados externos. Caso o desenvolvedor apenas declare a função mas não a chame no código, ela não realizará nenhuma ação.
+
+# Parte 3 - Console
+
+## 🟩 Vídeo 05 - Executando um arquivo .js
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - Slides
+## 🟩 Vídeo 06 - Console
 
 
 Link do vídeo: 
