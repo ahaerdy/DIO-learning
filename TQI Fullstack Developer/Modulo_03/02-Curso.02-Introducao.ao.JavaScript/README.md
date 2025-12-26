@@ -756,10 +756,6 @@ function decrement() {
 	count--;
 	CURRENT_NUMBER.innerHTML = count;
 }
-
-function test() {
-	kdowkdpo;
-}
 ```
 
 #### Saída no Navegador
