@@ -740,7 +740,7 @@ button {
 }
 ```
 
-#### ▶️ Código JS - scripts.js
+#### ▶️ Código Javascript - scripts.js
 
 ```javascript
 let count = 0;
