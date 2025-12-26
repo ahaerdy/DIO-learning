@@ -229,6 +229,7 @@ var total = PRECO - desconto;
 
 ## 🟩 Vídeo 04 - Funções
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/7b57c877-07fc-4c32-9032-554835a533c0?autoplay=1
 
@@ -282,54 +283,255 @@ Neste exemplo, ao chamar `soma(3, 5)`, o número 3 é atribuído à variável `a
 
 ## 🟩 Vídeo 05 - Executando um arquivo .js
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_05.webm|vid-60]]
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/f4ff0c4f-60a1-4d79-8925-0a34b60837bc?autoplay=1
+
+Esta fonte apresenta uma aula prática sobre o **uso do console no desenvolvimento com JavaScript**, destacando sua importância para a **depuração de códigos**. O material explica como acessar essa ferramenta diretamente nos **navegadores web** para realizar testes rápidos e manipular elementos da interface. Além disso, o texto detalha o processo de instalação do **Node.js**, permitindo que o desenvolvedor execute scripts e visualize resultados através do **terminal do computador**. Exemplos práticos demonstram como declarar variáveis, criar funções para filtrar números pares e utilizar o comando **console.log** para exibir mensagens. Por fim, o conteúdo reforça que o console é essencial tanto para o **desenvolvimento front-end** quanto para aplicações no **servidor**.
+
+### Anotações
+
+Este é o material didático da aula sobre o **Console** em JavaScript, detalhando o uso da ferramenta no navegador e no ambiente Node.js.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h10m50s222.jpg" alt="" width="840">
+</p>
+
+Esta imagem marca o início da **Aula 3**, que é inteiramente dedicada ao **Console**. O console é apresentado como uma ferramenta fundamental para desenvolvedores JavaScript, permitindo a visualização de saídas, depuração de código e interação direta com o ambiente de execução .
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h11m03s434.jpg" alt="" width="840">
+</p>
+
+O slide apresenta os dois objetivos principais desta aula:
+
+1. 
+**Aprender a utilizar o console em uma página web**: Focado no desenvolvimento voltado para o cliente (frontend) .
 
 
-## 🟩 Vídeo 06 - Console
+2. 
+**Aprender a utilizar o console no terminal**: Voltado para o uso do Node.js e execução de scripts no lado do servidor ou ambiente de desenvolvimento.
 
 
-Link do vídeo: 
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h11m20s595.jpg" alt="" width="840">
+</p>
 
-# Parte 3 - Console
+Início da primeira etapa da aula, focada especificamente no uso do console dentro de uma página web. O console do navegador é uma parte integrante das ferramentas de desenvolvedor (DevTools) e permite interagir com o código JavaScript que está rodando em tempo real no browser .
 
-## 🟩 Vídeo 01 - Executando um arquivo .js
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h11m59s284.jpg" alt="" width="840">
+</p>
 
+Para abrir o console no navegador, utiliza-se a ferramenta de "Inspecionar" (acessada pelo botão direito do mouse ou pelo atalho **Ctrl + Shift + I** no Windows). A imagem mostra a interface inicial de um navegador antes da abertura das ferramentas de desenvolvedor .
 
-Link do vídeo:  
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h16m43s757.jpg" alt="" width="840">
+</p>
 
+Dentro da aba **Console**, é possível interagir diretamente com o JavaScript. O exemplo visual mostra a declaração de uma variável, a verificação de seu valor e a realização de operações matemáticas simples diretamente na linha de comando do console .
 
-## 🟩 Vídeo 02 - Console
+```javascript
+var a = 0;
+a
+// 0
+a + 1
+// 1
 
+```
 
-Link do vídeo: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h20m00s858.jpg" alt="" width="840">
+</p>
 
+Para executar JavaScript fora do navegador, é necessário o **Node.js**. A imagem demonstra a busca pelo site oficial do Node.js, onde a ferramenta pode ser baixada para diferentes sistemas operacionais .
 
-## 🟩 Vídeo 03 - Slides
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h20m16s219.jpg" alt="" width="840">
+</p>
 
+No site oficial, recomenda-se baixar a versão **LTS (Long Term Support)**, que é a versão estável e com suporte garantido por mais tempo, ideal para a maioria dos desenvolvedores e projetos em produção .
 
-Link do vídeo: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h21m04s883.jpg" alt="" width="840">
+</p>
+
+A página de downloads oferece instaladores para Windows (.msi), macOS e Linux. Durante a instalação no Windows, é fundamental garantir que a opção de **adicionar ao PATH** esteja ativa, permitindo que o comando `node` seja reconhecido pelo terminal em qualquer diretório .
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h25m04s266.jpg" alt="" width="840">
+</p>
+
+Com o Node.js instalado, utiliza-se o VS Code para escrever o código e o terminal integrado para executá-lo. O comando `console.log()` é usado para imprimir mensagens. Para rodar o script, navega-se até a pasta do arquivo e executa-se o comando `node` seguido do nome do arquivo .
+
+**Arquivo `teste.js`:**
+
+```javascript
+console.log("Hello world!");
+
+```
+
+**Comandos no Terminal:**
+
+```bash
+ls
+node teste.js
+# Hello world!
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h26m43s769.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a implementação de uma lógica mais complexa: uma função para filtrar números pares em um array. Aqui, o console é essencial para verificar se a lógica de repetição (`for`) e a condição (`if`) estão funcionando conforme o esperado.
+
+```javascript
+function returnEvenValues (array) {
+  let evenNums = [];
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] % 2 === 0) {
+      evenNums.push(array[i]);
+    }
+  }
+  console.log(evenNums);
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h26m59s182.jpg" alt="" width="840">
+</p>
+
+Após definir a função, ela deve ser invocada passando um array de números como argumento. Somente ao chamar a função e executar o arquivo via terminal o console exibirá o resultado filtrado.
+
+*Conteúdo de código não identificado com segurança a partir do material disponível.*
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h28m17s885.jpg" alt="" width="840">
+</p>
+
+É possível personalizar as mensagens no `console.log` concatenando strings com variáveis. Isso torna os resultados exibidos no terminal muito mais fáceis de compreender.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h28m38s619.jpg" alt="" width="840">
+</p>
+
+Demonstração do terminal exibindo a saída formatada da função. Para repetir a última execução do terminal sem precisar digitar novamente, basta utilizar a **seta para cima** no teclado e pressionar Enter.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h29m06s680.jpg" alt="" width="840">
+</p>
+
+O uso do `console.log` não se limita ao resultado final. Ele pode ser inserido dentro de blocos condicionais, como o `else`, para informar ao usuário quando um número específico não atende ao critério de ser par.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h29m13s742.jpg" alt="" width="840">
+</p>
+
+Exibição no terminal do comportamento do script após a adição do bloco `else`. O console mostra mensagens indicando os números que foram identificados como pares durante o processamento do array.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h30m27s982.jpg" alt="" width="840">
+</p>
+
+Além de textos simples, o objeto `console` possui métodos para formatar dados de maneira mais visual, como a criação de tabelas para exibir arrays ou objetos de forma estruturada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-17h30m35s723.jpg" alt="" width="840">
+</p>
+
+Exemplo final da saída do console utilizando técnicas avançadas de formatação para facilitar a depuração. Dominar essas variações do console é um passo importante para quem deseja avançar em frameworks modernos como React ou Angular.
 
 
 # Parte 4 - Javascript em uma página da web
 
-## 🟩 Vídeo 01 - Estrutura de projeto
+## 🟩 Vídeo 06 - Estrutura de projeto
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/29e2461c-fa18-47c3-b4fa-900cf1fcc1f5?autoplay=1
+
+Esta fonte apresenta os fundamentos para organizar um **projeto de desenvolvimento web** utilizando as linguagens **HTML, CSS e JavaScript**. O conteúdo ensina como configurar o ambiente de trabalho no **VS Code**, destacando a importância de nomear o arquivo principal como **index.html** para servir de ponto de entrada do sistema. É explicada a criação de uma estrutura de **arquitetura de pastas**, sugerindo o uso de um diretório chamado **assets** para armazenar arquivos complementares e recursos visuais de forma ordenada. O tutorial também demonstra a utilização de ferramentas como o **EMET** para gerar automaticamente o código base necessário para a construção de páginas. Por fim, o autor enfatiza que manter uma **organização lógica** é essencial para a escalabilidade e manutenção de projetos iniciantes.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h02m57s973.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o uso do **JavaScript em páginas da web**. O foco inicial é apresentar como a linguagem se integra ao ambiente do navegador para criar interatividade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h03m04s940.jpg" alt="" width="840">
+</p>
+
+Os objetivos estabelecidos para esta sessão de aprendizado são:
+
+* 
+**Familiarização com a estrutura de projeto**: Compreender como organizar arquivos básicos de desenvolvimento.
 
 
-## 🟩 Vídeo 02 - Inserindo javascript numa página HTML
+* 
+**Interação com o DOM**: Aprender os fundamentos para manipular elementos HTML através do JavaScript.
 
 
-Link do vídeo: 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h03m20s309.jpg" alt="" width="840">
+</p>
+
+A primeira etapa da aula foca na **Estrutura de Projeto**. Nesta fase, é demonstrado como configurar o ambiente de trabalho inicial utilizando o editor de código para organizar os arquivos que compõem uma aplicação web simples.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-18h06m20s318.jpg" alt="" width="840">
+</p>
+
+Nesta demonstração prática no **VS Code**, é criado o arquivo `index.html`, que funciona como o índice ou porta de entrada principal do projeto. Utilizando o recurso **EMET**, gera-se automaticamente a estrutura base do HTML5.
+
+Além do arquivo principal, introduz-se o conceito de **arquitetura de pastas** para organizar os recursos do projeto através da pasta `assets`. Esta pasta é subdividida para separar diferentes tipos de arquivos:
+
+* 
+**css**: Destinada aos arquivos de estilo, como o `styles.css`.
 
 
-## 🟩 Vídeo 03 - Interagindo com os elementos do DOM
+* 
+**js**: Destinada aos scripts JavaScript, como o `scripts.js`.
 
 
-Link do vídeo: 
+
+O código estrutural gerado para o arquivo de teste é o seguinte:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teste</title>
+</head>
+<body></body>
+</html>
+
+```
+
+
+## 🟩 Vídeo 07 - Inserindo javascript numa página HTML
+
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/29e2461c-fa18-47c3-b4fa-900cf1fcc1f5?autoplay=1
+
+O instrutor demonstra a utilização da tag **link** para importar o **CSS**, explicando a importância de definir corretamente a relação do arquivo e o seu caminho de origem. Em seguida, o processo é repetido para o **JavaScript** através da tag **script**, incluindo uma breve discussão sobre a **ordem de carregamento** dos elementos na página. Para validar a configuração, o autor ensina a abrir o arquivo no **navegador** e utilizar as ferramentas de desenvolvedor para inspecionar os resultados. Através da mudança de cor do texto e de mensagens no console, confirma-se que a **comunicação entre os arquivos** foi estabelecida com sucesso.
+
+### Anotações
+
+
+
+## 🟩 Vídeo 08 - Interagindo com os elementos do DOM
+
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/b3f92afb-7547-48ac-a072-ef0ff7baf80d?autoplay=1
 
 ## 🟩 Vídeo 04 - Javascript em uma página da web
 
