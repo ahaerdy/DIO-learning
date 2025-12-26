@@ -645,16 +645,133 @@ Essa interação permite que o JavaScript modifique dinamicamente o comportament
 
 # Parte 5 - Colocando em prática
 
-## 🟩 Vídeo 01 - Criando um contador
+## 🟩 Vídeo 09 - Criando um contador
 
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/ec2c12f8-f2d6-461b-9ddf-f6955957997f?autoplay=1
 
+Esta fonte consiste em uma aula prática de um curso de **introdução ao JavaScript**, focada na criação de um **contador interativo**. O instrutor orienta os alunos a utilizarem uma estrutura base de **HTML e CSS** disponível no GitHub para, em seguida, implementar a lógica de programação no **VS Code**. O conteúdo explica como manipular o **DOM** através do método `getElementById` e como capturar interações do usuário com **eventos de clique**. Durante a demonstração, são criadas funções de **incremento e decremento** que alteram dinamicamente o valor exibido na tela. Ao final, o professor propõe desafios para aprofundar o aprendizado, como o uso de **adEventListener** e a implementação de **condicionais** para limitar números ou alterar cores.
+
+### Anotações
+
+#### Introdução ao Javascript
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-19h38m19s670.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, iniciamos uma **atividade prática** focada na criação de um projeto do zero: um **contador**. O objetivo central é desenvolver um **componente dinâmico**, permitindo que o usuário interaja diretamente com os elementos da tela através da lógica programada em JavaScript. Para isso, utilizaremos o ambiente do VS Code e aproveitaremos estruturas de HTML e CSS para focar no desenvolvimento das funcionalidades.
+
+#### Objetivos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-19h38m36s697.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais desta aula prática são:
+
+1. **Criar seu primeiro componente dinâmico:** Desenvolver a capacidade de manipular elementos da página em tempo real conforme a interação do usuário.
+2. **Introdução a eventos:** Compreender as propriedades do JavaScript que permitem capturar ações do usuário no navegador, uma habilidade fundamental para o desenvolvimento web moderno.
+
+O projeto prático servirá para aplicar conceitos de manipulação do DOM e lógica de incremento e decremento de valores.
+
+#### ▶️ Código HTML - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css" />
+    <title>Contador</title>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Este é o meu primeiro projeto Javascript.</p>
+    <div id="counter">
+        <button name="subtrair" onclick="decrement()">-</button>
+        <span id="currentNumber">0</span>
+        <button name="adicionar" onclick="increment()">+</button>
+    </div>
+    <script src="assets/scripts.js"></script>
+</body>
+</html>
+```
+
+#### ▶️ Código CSS - styles.css
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(177, 225, 255);
+}
+
+button {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid lightcoral;
+    background-color: rgb(241, 214, 214);
+    color: lightcoral;
+    font-size: 16pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+#counter {
+    display: flex;
+}
+
+#currentNumber {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    font-size: 16pt;
+}
+```
+
+#### ▶️ Código JS - scripts.js
+
+```javascript
+let count = 0;
+
+const CURRENT_NUMBER = document.getElementById('currentNumber');
+
+function increment() {
+	count++;
+	CURRENT_NUMBER.innerHTML = count;
+}
+
+function decrement() {
+	count--;
+	CURRENT_NUMBER.innerHTML = count;
+}
+
+function test() {
+	kdowkdpo;
+}
+```
+
+#### Saída no Navegador
+
+<p align="center">
+<img src="000-Midia_e_Anexos/Pasted image 20251226194501.png" alt="" width="840">
+</p>
 
 ## 🟩 Vídeo 02 - Desafio: To-do list
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/7967cb7d-8ddd-4dae-80a1-845986f5dfc1?autoplay=1
 
 
 ## 🟩 Vídeo 03 - Colocando em prática
