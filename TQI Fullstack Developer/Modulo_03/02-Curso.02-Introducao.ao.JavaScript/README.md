@@ -63,6 +63,59 @@ Durante todo o processo, a interação é incentivada através do fórum do curs
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/2b53ae76-660e-4c80-9004-3eaee89f5169?autoplay=1
 
+Esta fonte introduz o **JavaScript**, descrevendo-o como uma **linguagem interpretada** e altamente flexível que opera em tempo real sem a necessidade de compilação prévia. O texto detalha a evolução da tecnologia através do padrão **ECMAScript**, destacando como a versão de 2015 trouxe melhorias cruciais, como a orientação a objetos e novas sintaxes para desenvolvedores. Além de ser o pilar fundamental para a **interatividade na web**, a linguagem é apresentada como uma ferramenta **multiparadigma** capaz de criar soluções diversas. O conteúdo enfatiza que o alcance do JavaScript vai muito além dos navegadores, abrangendo o desenvolvimento de **aplicativos móveis**, sistemas para **internet das coisas** e até jogos. Por fim, o material incentiva a exploração da vasta **comunidade ativa** para o aprendizado contínuo dessa tecnologia versátil.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-11h01m11s729.jpg" alt="" width="840">
+</p>
+
+Esta aula inicial apresenta os fundamentos do JavaScript, abordando sua história, evoluções e as variadas possibilidades de aplicação da linguagem. O aprendizado foca em entender como o JavaScript se tornou uma ferramenta versátil que vai além de uma única utilidade no desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-11h01m39s275.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais desta introdução são compreender a trajetória histórica da linguagem, identificar suas atualizações mais relevantes ao longo do tempo e explorar como ela é aplicada em cenários do mundo real.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-11h01m51s755.jpg" alt="" width="840">
+</p>
+
+O JavaScript é definido como uma linguagem interpretada, executada em tempo real pelo navegador sem a necessidade de uma compilação prévia, como ocorre em linguagens como C++. Entre suas características fundamentais, destaca-se por ser baseada em protótipos — que servem de base para estruturas de dados e funções comuns — e por ser multiparadigma, permitindo o uso de orientação a objetos, programação funcional ou estruturada. É considerada a linguagem oficial da web, utilizada em aplicações *client-side* e seguindo rigorosamente o padrão ECMAScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-11h06m26s639.jpg" alt="" width="840">
+</p>
+
+A segunda etapa da aula foca na evolução do JavaScript, detalhando como a linguagem se transformou desde sua criação oficial em 1995 até a adoção de padrões formais que guiam seu desenvolvimento contínuo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-11h06m33s510.jpg" alt="" width="840">
+</p>
+
+A linha do tempo da evolução mostra marcos importantes, como o início do padrão ECMAScript 1 em 1997. Versões subsequentes trouxeram melhorias críticas: o ECMAScript 3 (1999) introduziu expressões regulares e o bloco `try/catch` para tratamento de erros; o ECMAScript 5 (2009) adicionou suporte ao JSON e novas funções para manipulação de Arrays. Em 2015, o ECMAScript 6 (ES6) representou uma atualização massiva na linguagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-11h08m11s469.jpg" alt="" width="840">
+</p>
+
+A atualização do ES6 trouxe recursos que facilitaram significativamente o desenvolvimento, como a introdução de classes para uma sintaxe de orientação a objetos mais familiar, a função `super`, as *Arrow Functions* e novas formas de declaração de variáveis. A compatibilidade desses recursos é monitorada pela comunidade ativa, garantindo que as melhorias na concatenação de strings e outras funcionalidades sejam bem implementadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-11h10m32s447.jpg" alt="" width="840">
+</p>
+
+A etapa final da introdução explora as diversas aplicações práticas da linguagem no mercado atual, demonstrando sua flexibilidade para diferentes plataformas e dispositivos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-11h10m41s368.jpg" alt="" width="840">
+</p>
+
+O JavaScript expandiu seu alcance para além dos navegadores web, sendo utilizado hoje no desenvolvimento de aplicações para dispositivos móveis (*Mobile*), relógios inteligentes (*Smartwatches*) e até jogos. Além disso, a linguagem permite criar rotinas para Internet das Coisas (IoT), como Alexa e Google Home, e desenvolver aplicações no lado do servidor (*back-end*) por meio do Node.js, possibilitando a criação de APIs robustas.
+
+
 
 ## 🟩 Vídeo 03 - Slides 1
 
