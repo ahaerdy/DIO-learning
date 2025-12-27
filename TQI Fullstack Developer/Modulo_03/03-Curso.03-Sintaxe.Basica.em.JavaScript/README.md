@@ -672,10 +672,292 @@ Com a desestruturação de objetos, tudo isso pode ser feito em uma linha. Ao co
 
 # Parte 5 - Estruturas condicionais
 
-## 🟩 Vídeo 04 - Estruturas condicionais
+## 🟩 Vídeo 05 - Estruturas condicionais
+
+![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_05.webm|vid-60]]
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/1713d23b-810f-40db-b102-d18d7d37e9dd?autoplay=1
 
+Esta fonte consiste em uma **transcrição detalhada** de uma aula técnica focada em **sintaxe básica de JavaScript**, especificamente sobre **estruturas condicionais e de repetição**. O material utiliza a analogia de um **placar de futebol** para ensinar como criar lógicas de decisão usando as palavras reservadas **if, else if e else**, além de apresentar o **operador ternário** e o **switch case**. O instrutor demonstra a aplicação prática desses conceitos em um ambiente de desenvolvimento, explicando como organizar o código em **HTML e JavaScript**. A segunda parte do conteúdo aborda a automação de tarefas através de laços como **for, for in, for of, while e do while**, detalhando suas diferenças e comportamentos. Por fim, o texto reforça a importância de evitar **loops infinitos** e incentiva o uso de boas práticas de programação.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h24m51s726.jpg" alt="" width="840">
+</p>
+
+Este primeiro slide apresenta a abertura da aula sobre **estruturas condicionais em JavaScript**, destacando o tema central que será desenvolvido: como utilizar instruções de decisão e repetição para controlar o fluxo de execução de programas.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h25m09s079.jpg" alt="" width="840">
+</p>
+
+Aqui são mostrados os **objetivos da aula**: compreender o que são estruturas condicionais, explorar as estruturas de decisão e, em seguida, as estruturas de repetição. O foco é dar ao aluno uma visão prática de como essas instruções funcionam no código.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h25m32s211.jpg" alt="" width="840">
+</p>
+
+Este slide introduz o conceito de **estruturas condicionais**. A ideia é que o programa só execute determinadas tarefas quando uma condição for satisfeita, como em jogos que atualizam o placar apenas quando há pontuação.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h25m54s899.jpg" alt="" width="840">
+</p>
+
+O slide apresenta o uso da palavra reservada **if**. O exemplo mostra como verificar se um jogador marcou ponto:
+
+```javascript
+var jogador1 = 0;
+var jogador2 = 0;
+
+if (jogador1 > 0) {
+  console.log('jogador1 marcou ponto');
+}
+```
+
+A leitura é direta: se `jogador1` tiver valor maior que zero, imprime a mensagem no console.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h26m12s826.jpg" alt="" width="840">
+</p>
+
+Este slide mostra o uso do **else**, que define o que acontece quando a condição não é atendida:
+
+```javascript
+var jogador1 = 1;
+var jogador2 = 0;
+
+if (jogador1 > 0) {
+  console.log('jogador1 marcou ponto');
+} else {
+  console.log('ninguém marcou ponto');
+}
+```
+
+Assim, o programa cobre os dois cenários possíveis.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h26m18s587.jpg" alt="" width="840">
+</p>
+
+Aqui é apresentado o **else if**, usado quando há mais de uma condição a ser verificada:
+
+```javascript
+var jogador1 = 1;
+var jogador2 = 0;
+
+if (jogador1 > 0) {
+  console.log('jogador1 marcou ponto');
+} else if (jogador2 > 0) {
+  console.log('jogador2 marcou ponto');
+} else {
+  console.log('ninguém marcou ponto');
+}
+```
+
+Dessa forma, o código avalia múltiplas possibilidades de pontuação.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h26m27s014.jpg" alt="" width="840">
+</p>
+
+Este slide mostra o conceito de **ninho de ifs** (aninhamento). É possível colocar um `if` dentro de outro para validar condições adicionais:
+
+```javascript
+if (jogador1 != -1) {
+  if (jogador1 > 0) {
+    console.log('jogador1 marcou ponto');
+  } else {
+    console.log('ninguém marcou ponto');
+  }
+} else {
+  console.log('jogador inválido');
+}
+```
+
+Isso permite verificar a validade do jogador antes de avaliar o placar.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h26m31s297.jpg" alt="" width="840">
+</p>
+
+Aqui é apresentado o **if ternário**, que condensa a verificação em uma única linha:
+
+```javascript
+jogador1 > 0 
+  ? console.log('marcou ponto') 
+  : console.log('não marcou ponto');
+```
+
+O operador `?` indica a instrução se a condição for verdadeira, e `:` indica a instrução se for falsa.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h26m45s188.jpg" alt="" width="840">
+</p>
+
+Este slide introduz o **switch/case**, usado para verificar múltiplos casos de uma variável:
+
+```javascript
+switch (placar) {
+  case 1:
+    console.log('jogador1 ganhou');
+    break;
+  case 2:
+    console.log('jogador2 ganhou');
+    break;
+  default:
+    console.log('ninguém ganhou');
+}
+```
+
+Cada caso deve terminar com `break` para evitar execução contínua.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h26m56s998.jpg" alt="" width="840">
+</p>
+
+O slide apresenta os **laços de repetição**, que executam instruções até que uma condição seja atingida. São eles: `for`, `for/in`, `for/of`, `while` e `do/while`.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h27m00s327.jpg" alt="" width="840">
+</p>
+
+Aqui temos o exemplo do **for**, que repete instruções até que a condição seja falsa:
+
+```javascript
+var array = ['valor1', 'valor2', 'valor3', 'valor4'];
+
+for (let i = 0; i < array.length; i++) {
+  console.log(i);
+}
+```
+
+O índice `i` é incrementado até percorrer todo o array.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h27m10s270.jpg" alt="" width="840">
+</p>
+
+Este slide mostra o **for/in**, que percorre propriedades de arrays ou objetos:
+
+```javascript
+var array = ['valor1', 'valor2', 'valor3', 'valor4'];
+
+for (let i in array) {
+  console.log(i);
+}
+```
+
+No caso de arrays, imprime os índices como strings.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h27m16s990.jpg" alt="" width="840">
+</p>
+
+Aqui é apresentado o **for/of**, que percorre diretamente os valores de um array:
+
+```javascript
+var array = ['valor1', 'valor2', 'valor3', 'valor4'];
+
+for (let i of array) {
+  console.log(i);
+}
+```
+
+Diferente do `for/in`, imprime os valores armazenados em cada índice.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h27m22s916.jpg" alt="" width="840">
+</p>
+
+Este slide explica que o **for/of não funciona diretamente com objetos**, pois suas propriedades variam. Se aplicado a uma propriedade específica, imprime cada caractere separadamente, mostrando que objetos não são iteráveis dessa forma.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h27m28s040.jpg" alt="" width="840">
+</p>
+
+Aqui temos o exemplo do **while**, que executa enquanto a condição for verdadeira:
+
+```javascript
+var a = 0;
+while (a < 10) {
+  a++;
+  console.log(a);
+}
+```
+
+A verificação acontece antes da execução, garantindo que o loop só rode enquanto `a` for menor que 10.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h27m31s999.jpg" alt="" width="840">
+</p>
+
+Este slide mostra o **do/while**, que executa primeiro e verifica depois:
+
+```javascript
+var a = 0;
+do {
+  a++;
+  console.log(a);
+} while (a < 10);
+```
+
+Assim, o código garante pelo menos uma execução antes de checar a condição.
+
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-13h27m35s581.jpg" alt="" width="840">
+</p>
+
+Estruturas condicionais – https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals  
+Laços de repetição – https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration
 
 
 # Certificado: 
