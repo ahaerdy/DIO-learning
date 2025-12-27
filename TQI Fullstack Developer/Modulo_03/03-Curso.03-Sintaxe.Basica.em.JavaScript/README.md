@@ -551,7 +551,9 @@ console.log(nao); // Retorna false
 
 ## 🟩 Vídeo 04 - Vetores e Objetos
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/aeb705a9-74ea-4e50-901b-44c899c17b6a?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
