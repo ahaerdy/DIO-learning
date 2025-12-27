@@ -639,7 +639,7 @@ O JavaScript disponibiliza métodos nativos para a manipulação de arrays. Algu
 
 #### Duas formas de atribuição de propriedades a objetos
 
- ##### Forma expandida (multilinha)
+ ##### Forma estruturada  (multilinha)
 
 ```javascript
 var xicara = {
@@ -650,17 +650,16 @@ var xicara = {
 
 ```
 
-Cada propriedade fica em uma linha separada. Muito mais legível, especialmente quando o objeto tem várias propriedades ou valores complexos. Facilita manutenção e leitura por outros desenvolvedores.
+Cada propriedade fica em uma linha separada de forma estruturada. Muito mais legível, especialmente quando o objeto tem várias propriedades ou valores complexos. Facilita manutenção e leitura por outros desenvolvedores.
 
-##### Forma compacta (linha única)
+##### Forma compacta (linha única) - desestruturação
 
 ```javascript
 var xicara = {cor: 'azul', tamanho: 'p', funcao: tomarCafe()}
 
 ```
 
-Tudo está em uma única linha. É mais concisa, mas pode ser menos legível, especialmente se o objeto tiver muitas propriedades. 
-Usada com frequência em exemplos simples ou em código mais enxuto.
+Com a desestruturação de objetos, tudo isso pode ser feito em uma linha. Ao colocar cada variável entre chaves {}, o JavaScript criará novas variáveis a partir de cada propriedade com o mesmo nome. É uma forma mais concisa, mas pode ser menos legível, especialmente se o objeto tiver muitas propriedades.  Usada com frequência em exemplos simples ou em código mais enxuto.
 
  
 <p align="center">
