@@ -553,7 +553,204 @@ console.log(nao); // Retorna false
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/aeb705a9-74ea-4e50-901b-44c899c17b6a?autoplay=1
 
+Esta fonte apresenta uma aula introdutória sobre **sintaxe básica em JavaScript**, focada especificamente no estudo de **vetores (arrays) e objetos**. O conteúdo explica que **arrays** funcionam como listas indexadas capazes de armazenar diversos tipos de dados, demonstrando métodos nativos de manipulação como **push, pop, shift e splice**. Em seguida, o material define **objetos** como estruturas que guardam propriedades e valores, comparando-os a itens do mundo real para facilitar a compreensão. A aula também ensina como acessar essas informações e detalha o processo de **desestruturação**, que permite extrair dados de forma eficiente. Por fim, o texto reforça a prática através de exemplos de **código no console** e sugere recursos adicionais para o aprofundamento nos temas abordados.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h20m55s549.jpg" alt="" width="840">
+</p>
+
+Esta é a tela de abertura da terceira aula do curso de sintaxe básica em JavaScript. O foco desta unidade é o estudo de **vetores (arrays)** e **objetos**, abordando desde a definição e sintaxe básica até a manipulação e desestruturação desses dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h21m16s953.jpg" alt="" width="840">
+</p>
+
+Início da primeira etapa da aula, que introduz o conceito de vetores. Nesta fase, o objetivo é compreender o que são essas estruturas e como elas funcionam como coleções de dados dentro do JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h21m48s352.jpg" alt="" width="840">
+</p>
+
+A declaração de um array em JavaScript é feita utilizando palavras reservadas como `let` seguidas pelo nome da variável. Os valores são inseridos entre colchetes e podem ser de diversos tipos, como strings, números e booleanos.
+
+```javascript
+let array = ['string', 1, true];
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h22m00s378.jpg" alt="" width="840">
+</p>
+
+Para a correta utilização de arrays, deve-se observar as seguintes regras:
+
+* **Colchetes**: O array deve ser declarado entre `[]`.
+* **Tipagem Flexível**: Podem guardar qualquer valor, inclusive outros arrays.
+* **Índices**: O acesso aos valores é feito por números inteiros, começando sempre pelo **zero** (primeiro índice).
+* **Separação**: Cada item dentro do array é separado por vírgula.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h45m52s303.jpg" alt="" width="840">
+</p>
+
+Exemplo prático de criação de um array mais complexo no editor de código. Note que o array principal contém valores simples e outros arrays aninhados, demonstrando a versatilidade da estrutura.
+
+```javascript
+let array = ['string', 1, true, ['array1'], ['array2'], ['array3'], ['array4']];
+console.log(array);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h45m59s547.jpg" alt="" width="840">
+</p>
+
+Ao visualizar o array no console do navegador, é possível observar sua estrutura detalhada. O sistema indica o tamanho total (neste caso, 7 índices) e permite expandir os itens para visualizar o conteúdo de cada posição, incluindo os arrays internos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h47m16s426.jpg" alt="" width="840">
+</p>
+
+O JavaScript disponibiliza métodos nativos para a manipulação de arrays. Alguns dos principais são:
+
+* **forEach()**: Itera sobre o array, executando uma função para cada índice.
+* **push()**: Adiciona um novo item ao final do array.
+* **pop()**: Remove o último item do array.
+* **shift()**: Remove o primeiro item do array.
+* **unshift()**: Adiciona um item no início do array.
+* **indexOf()**: Localiza e retorna o índice de um valor específico.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h47m37s520.jpg" alt="" width="840">
+</p>
+
+Outros métodos importantes para manipulação avançada incluem:
+
+* **splice()**: Permite remover ou substituir itens baseando-se em seus índices.
+* **slice()**: Captura uma parte de um array já existente e a retorna como um novo array, sem alterar o original.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h47m53s094.jpg" alt="" width="840">
+</p>
+
+A aplicação do método `forEach` requer a passagem de uma função como parâmetro. Esta função pode receber o item e o índice atual, permitindo executar instruções personalizadas para cada elemento do array.
+
+```javascript
+array.forEach(function(item, index){
+    console.log(item, index);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m03s926.jpg" alt="" width="840">
+</p>
+
+Demonstração prática dos métodos `push` e `pop`. Enquanto o `push` aumenta o tamanho do array ao inserir dados no final, o `pop` reduz o tamanho ao descartar o último elemento.
+
+```javascript
+// Adicionando um item ao final
+array.push('novo item');
+console.log(array);
+
+// Removendo o último item
+array.pop();
+console.log(array);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m08s692.jpg" alt="" width="840">
+</p>
+
+Uso dos métodos `shift`, `unshift` e `indexOf`. O `shift` e o `unshift` atuam na extremidade inicial da lista. O `indexOf` é fundamental para descobrir em qual posição numérica um determinado valor está armazenado.
+
+```javascript
+// Remove do início
+array.shift();
+
+// Adiciona no início
+array.unshift('novo item no início');
+
+// Retorna o índice de um valor
+console.log(array.indexOf(true));
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m32s876.jpg" alt="" width="840">
+</p>
+
+Implementação de `splice` e `slice`. O `splice` pode ser usado para apagar um intervalo de índices, enquanto o `slice` é útil para "fatiar" o array e extrair apenas a parte desejada para uma nova variável.
+
+```javascript
+// Splice: do índice 0 até o 3, apaga os valores
+array.splice(0, 3);
+console.log(array);
+
+// Slice: cria um novo array com os 3 primeiros índices
+let novoArray = array.slice(0, 3);
+console.log(novoArray);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m36s368.jpg" alt="" width="840">
+</p>
+
+Objetos são estruturas de dados que organizam informações através de **propriedades e valores**, definindo características de um elemento. Eles devem ser declarados entre chaves `{}`. Por exemplo, uma xícara pode ser um objeto com as propriedades `cor: azul`, `tamanho: P` e `função: tomar café`.
+
+Exemplo de um objeto complexo declarado em código. Assim como os arrays, objetos podem conter diversos tipos de dados, inclusive outros objetos aninhados (objeto interno) e arrays como valores de propriedades.
+
+```javascript
+let object = {
+    string: 'string',
+    number: 1,
+    boolean: true,
+    array: [array],
+    objectInterno: { objeto: 'objeto interno' }
+};
+
+// Acessando uma propriedade específica
+console.log(object.objectInterno);
+
+```
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m39s255.jpg" alt="" width="840">
+</p>
+
+```javascript
+var xicara = {cor: 'azul', tamanho: 'p', funcao: tomarCafe()}
+```
+
+Aqui é criado um objeto chamado xicara com três propriedades:
+- cor: 'azul'
+- tamanho: 'p'
+- funcao: resultado da chamada da função tomarCafe() (presume-se que essa função esteja definida em outro lugar do código).
+
+Essa linha usa desestruturação de objeto para extrair os valores das propriedades cor, tamanho e funcao do objeto xicara.
+
+Em vez de fazer:
+
+```javascript
+var cor = xicara.cor;
+var tamanho = xicara.tamanho;
+var funcao = xicara.funcao;
+```
+
+você faz tudo em uma única linha.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m41s110.jpg" alt="" width="840">
+</p>
+
+- [Arrays – developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)  
+- [Objetos – developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects)  
+- [Desestruturação – digitalocean.com/community/tutorials/understanding-destructuring-rest-parameters-and-spread-syntax-in-javascript-pt](https://www.digitalocean.com/community/tutorials/understanding-destructuring-rest-parameters-and-spread-syntax-in-javascript-pt)
 
 ##  Materiais de Apoio
 
