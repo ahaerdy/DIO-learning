@@ -927,7 +927,7 @@ function addTask(description) {
 #### Saída no Navegador
 
 <p align="center">
-<img src="000-Midia_e_Anexos/Pasted image 20251226212408.png" alt="" width="500">
+<img src="000-Midia_e_Anexos/Pasted image 20251226212855.png" alt="" width="500">
 </p>
 
 
