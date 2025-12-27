@@ -935,34 +935,76 @@ function addTask(description) {
 
 ## 🟩 Vídeo 11 - Frameworks
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_11.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/d4b3697c-5145-4591-84bf-544c6864e87d?autoplay=1
 
+Esta fonte consiste na transcrição da aula final de um curso introdutório de **JavaScript**, focada especificamente na preparação para o **mercado de trabalho**. O instrutor enfatiza que, embora o domínio da linguagem pura seja fundamental, as empresas raramente exigem apenas o conhecimento básico, priorizando candidatos que dominam ferramentas auxiliares. Por isso, o conteúdo destaca a importância de aprender **frameworks e bibliotecas** populares, como **React, Angular e Vue.js**, para otimizar o tempo de desenvolvimento. O material encoraja os alunos a explorarem essas tecnologias por meio de **projetos pessoais** para entender as particularidades e vantagens de cada uma. Em suma, o texto serve como um guia estratégico para quem deseja transicionar do aprendizado acadêmico para uma **carreira profissional** em tecnologia.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-21h39m37s687.jpg" alt="" width="840">
+</p>
+
+Nesta aula de introdução ao **mercado de trabalho** voltado para o desenvolvimento de software, o foco principal é preparar o estudante para as realidades profissionais da área. O objetivo é estabelecer uma base sólida sobre como o conhecimento técnico se traduz em oportunidades de carreira, enfatizando que este é o encerramento do curso de introdução ao JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-21h40m19s806.jpg" alt="" width="840">
+</p>
+
+Os tópicos centrais desta etapa do aprendizado estão divididos em dois objetivos fundamentais:
+
+1. **Entender as exigências do mercado de trabalho**: Compreender quais habilidades e tecnologias são mais solicitadas pelas empresas atualmente.
+2. **Saber onde encontrar oportunidades**: Identificar os canais e plataformas onde as vagas de tecnologia são disponibilizadas para novos desenvolvedores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-21h40m35s666.jpg" alt="" width="840">
+</p>
+
+No ecossistema JavaScript, o mercado raramente exige apenas a linguagem pura (conhecida como **Vanilla JavaScript**). Para aumentar a produtividade e rapidez no desenvolvimento, as empresas utilizam **frameworks e bibliotecas** que oferecem funcionalidades prontas e otimizadas. Os principais nomes que dominam o mercado e devem ser priorizados para estudo são:
+
+* **React**: Embora tecnicamente seja uma biblioteca, é amplamente utilizado como base para aplicações robustas.
+* **Vue.js**: Extremamente popular e forte no mercado atual devido à sua fluidez.
+* **Angular**: Um framework completo para o desenvolvimento de aplicações complexas.
+* **jQuery**: Uma biblioteca mais antiga que, apesar de estar perdendo popularidade, ainda é encontrada em muitos projetos legados no mercado.
+
+A recomendação é focar inicialmente no JavaScript puro para construir uma base sólida, facilitando o aprendizado posterior de qualquer uma dessas ferramentas para a criação de projetos pessoais e profissionais.
 
 
+## 🟩 Vídeo 12 - Mercado de trabalho
 
-## 🟩 Vídeo 02 - Mercado de trabalho
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_12.webm|vid-60]]
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/57c3e4b8-66fc-4934-ab50-1523a9d49cdc?autoplay=1
+
+O vídeo detalha diversas **plataformas fundamentais** que auxiliam a rotina e o crescimento profissional de um desenvolvedor de software. O autor destaca sites de **documentação e suporte técnico**, como o Stack Overflow e o W3C, essenciais para solucionar erros e aprender novas linguagens. Além disso, a fonte enfatiza a importância de construir um **portfólio no GitHub** e manter um **perfil ativo no LinkedIn** para atrair recrutadores em um mercado aquecido. O uso estratégico do **YouTube, Twitter e comunidades digitais** também é sugerido como forma de networking e atualização constante sobre tendências tecnológicas. Em suma, o conteúdo serve como um guia prático sobre como utilizar ferramentas gratuitas para **consolidar a carreira** e se conectar com a comunidade de programação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-22h11m13s391.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos o **mercado de trabalho** e a rotina de um desenvolvedor, focando em plataformas fundamentais para o aprendizado e consulta técnica. Entre os recursos essenciais, destacam-se a **documentação do Mozilla (MDN)**, que oferece exemplos práticos e conteúdo detalhado, e o **W3C**, responsável pelos padrões globais de HTML, CSS e JavaScript. Além disso, a **Digital Innovation One (DIO)** é apresentada como uma plataforma que viabiliza o acesso gratuito ao conhecimento, certificações e conexões diretas com empresas por meio de programas de aceleração, incentivando o estudo contínuo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-22h11m19s061.jpg" alt="" width="840">
+</p>
+
+O ecossistema de desenvolvimento web conta com ferramentas indispensáveis para a resolução de problemas e visibilidade profissional:
+
+* **Stack Overflow**: Principal fórum de suporte onde desenvolvedores compartilham soluções para erros técnicos.
+* **YouTube**: Fonte de conteúdo educacional com especialistas da comunidade brasileira.
+* **GitHub**: Funciona como uma vitrine para projetos pessoais, tornando o domínio de ferramentas de versionamento como o **Git** um requisito básico para o mercado.
+* **LinkedIn**: Plataforma crucial para networking e acompanhamento de tendências, onde manter o perfil atualizado com tecnologias específicas atrai o olhar de recrutadores.
+* **Twitter**: Espaço onde criadores de bibliotecas JavaScript e profissionais influentes compartilham dicas técnicas e insights sobre o dia a dia da carreira.
+
+A integração entre o aprendizado técnico e essas redes fortalece o networking e a presença do desenvolvedor no mercado. Para suporte adicional, a comunidade utiliza o **Discord** e fóruns específicos para conectar estudantes e profissionais.
 
 
-Link do vídeo: 
+# Certificado: Introdução ao JavaScript
 
 
-## 🟩 Vídeo 03 - Mercado de trabalho
-
-
-Link do vídeo: 
-
-## 🟩 Vídeo 04 - Slides
-
-
-Link do vídeo: 
-
-
-
-##  Materiais de Apoio
-
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/W0CKIMQX.pdf
+- Certificado em pdf: [[Certificado-Introducao.ao.JavaScript.pdf]]
