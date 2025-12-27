@@ -931,29 +931,14 @@ function addTask(description) {
 </p>
 
 
-
-## 🟩 Vídeo 03 - Colocando em prática
-
-
-Link do vídeo: 
-
-## 🟩 Vídeo 04 - Slides
-
-
-Link do vídeo: 
-
-## 🟩 Vídeo 05 - Github
-
-
-Link do vídeo: 
-
-
 # Parte 6 - Mercado de Trabalho
 
-## 🟩 Vídeo 01 - Frameworks
+## 🟩 Vídeo 11 - Frameworks
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/d4b3697c-5145-4591-84bf-544c6864e87d?autoplay=1
+
+
 
 
 ## 🟩 Vídeo 02 - Mercado de trabalho
