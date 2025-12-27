@@ -613,6 +613,10 @@ Ao visualizar o array no console do navegador, é possível observar sua estrutu
 <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h47m16s426.jpg" alt="" width="840">
 </p>
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h47m37s520.jpg" alt="" width="840">
+</p>
+
 O JavaScript disponibiliza métodos nativos para a manipulação de arrays. Alguns dos principais são:
 
 * **forEach()**: Itera sobre o array, executando uma função para cada índice.
@@ -621,129 +625,44 @@ O JavaScript disponibiliza métodos nativos para a manipulação de arrays. Algu
 * **shift()**: Remove o primeiro item do array.
 * **unshift()**: Adiciona um item no início do array.
 * **indexOf()**: Localiza e retorna o índice de um valor específico.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h47m37s520.jpg" alt="" width="840">
-</p>
-
-Outros métodos importantes para manipulação avançada incluem:
-
-* **splice()**: Permite remover ou substituir itens baseando-se em seus índices.
-* **slice()**: Captura uma parte de um array já existente e a retorna como um novo array, sem alterar o original.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h47m53s094.jpg" alt="" width="840">
-</p>
-
-A aplicação do método `forEach` requer a passagem de uma função como parâmetro. Esta função pode receber o item e o índice atual, permitindo executar instruções personalizadas para cada elemento do array.
-
-```javascript
-array.forEach(function(item, index){
-    console.log(item, index);
-});
-
-```
+* **splice()**.  Altera o array original, enquanto slice() cria uma cópia parcial.
+* **slice()**.  Cria uma cópia parcial.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m03s926.jpg" alt="" width="840">
 </p>
 
-Demonstração prática dos métodos `push` e `pop`. Enquanto o `push` aumenta o tamanho do array ao inserir dados no final, o `pop` reduz o tamanho ao descartar o último elemento.
-
-```javascript
-// Adicionando um item ao final
-array.push('novo item');
-console.log(array);
-
-// Removendo o último item
-array.pop();
-console.log(array);
-
-```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m08s692.jpg" alt="" width="840">
 </p>
 
-Uso dos métodos `shift`, `unshift` e `indexOf`. O `shift` e o `unshift` atuam na extremidade inicial da lista. O `indexOf` é fundamental para descobrir em qual posição numérica um determinado valor está armazenado.
+#### Duas formas de atribuição de propriedades a objetos
+
+ ##### Forma expandida (multilinha)
 
 ```javascript
-// Remove do início
-array.shift();
-
-// Adiciona no início
-array.unshift('novo item no início');
-
-// Retorna o índice de um valor
-console.log(array.indexOf(true));
+var xicara = {
+  cor: 'azul',
+  tamanho: 'p',
+  funcao: tomarCafe()
+}
 
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m32s876.jpg" alt="" width="840">
-</p>
+Cada propriedade fica em uma linha separada. Muito mais legível, especialmente quando o objeto tem várias propriedades ou valores complexos. Facilita manutenção e leitura por outros desenvolvedores.
 
-Implementação de `splice` e `slice`. O `splice` pode ser usado para apagar um intervalo de índices, enquanto o `slice` é útil para "fatiar" o array e extrair apenas a parte desejada para uma nova variável.
-
-```javascript
-// Splice: do índice 0 até o 3, apaga os valores
-array.splice(0, 3);
-console.log(array);
-
-// Slice: cria um novo array com os 3 primeiros índices
-let novoArray = array.slice(0, 3);
-console.log(novoArray);
-
-```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m36s368.jpg" alt="" width="840">
-</p>
-
-Objetos são estruturas de dados que organizam informações através de **propriedades e valores**, definindo características de um elemento. Eles devem ser declarados entre chaves `{}`. Por exemplo, uma xícara pode ser um objeto com as propriedades `cor: azul`, `tamanho: P` e `função: tomar café`.
-
-Exemplo de um objeto complexo declarado em código. Assim como os arrays, objetos podem conter diversos tipos de dados, inclusive outros objetos aninhados (objeto interno) e arrays como valores de propriedades.
-
-```javascript
-let object = {
-    string: 'string',
-    number: 1,
-    boolean: true,
-    array: [array],
-    objectInterno: { objeto: 'objeto interno' }
-};
-
-// Acessando uma propriedade específica
-console.log(object.objectInterno);
-
-```
-
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m39s255.jpg" alt="" width="840">
-</p>
+##### Forma compacta (linha única)
 
 ```javascript
 var xicara = {cor: 'azul', tamanho: 'p', funcao: tomarCafe()}
+
 ```
 
-Aqui é criado um objeto chamado xicara com três propriedades:
-- cor: 'azul'
-- tamanho: 'p'
-- funcao: resultado da chamada da função tomarCafe() (presume-se que essa função esteja definida em outro lugar do código).
+Tudo está em uma única linha. É mais concisa, mas pode ser menos legível, especialmente se o objeto tiver muitas propriedades. 
+Usada com frequência em exemplos simples ou em código mais enxuto.
 
-Essa linha usa desestruturação de objeto para extrair os valores das propriedades cor, tamanho e funcao do objeto xicara.
-
-Em vez de fazer:
-
-```javascript
-var cor = xicara.cor;
-var tamanho = xicara.tamanho;
-var funcao = xicara.funcao;
-```
-
-você faz tudo em uma única linha.
-
+ 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-11h48m41s110.jpg" alt="" width="840">
 </p>
