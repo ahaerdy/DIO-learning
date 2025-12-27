@@ -960,7 +960,331 @@ Estruturas condicionais – https://developer.mozilla.org/pt-BR/docs/Learn/JavaS
 Laços de repetição – https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration
 
 
-# Certificado: 
+# Parte 6 - Funções e suas particularidades
 
-- Link na plataforma: 
-- Certificado em pdf: 
+## 🟩 Vídeo 06 - Funções e suas particularidades
+
+![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_06.webm|vid-60]]
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/bf0beb3c-efec-41f1-b080-f992df7dee71?autoplay=1
+
+O instrutor define esses elementos como blocos de comandos essenciais para a execução de tarefas e detalha a **sintaxe correta** para declará-los e utilizá-los no código. A lição demonstra, de forma prática, como configurar arquivos **HTML e JavaScript** para exibir mensagens no console do navegador. Além da estrutura básica, o conteúdo explora o uso de **parâmetros**, explicando como essas variáveis de estado permitem a passagem de valores dinâmicos durante a execução. Por fim, os alunos são incentivados a praticar e a utilizar **canais de suporte**, como fóruns e comunidades online, para sanar dúvidas sobre o tema.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h12m29s801.jpg" alt="" width="840">
+</p>
+
+Esta aula inicia o estudo sobre funções dentro do curso de sintaxe básica em JavaScript. O foco principal é explorar as particularidades dessa estrutura, compreendendo como elas organizam e executam lógica no desenvolvimento de software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h12m44s433.jpg" alt="" width="840">
+</p>
+
+Os objetivos estabelecidos para esta etapa do aprendizado são divididos em três pontos fundamentais:
+
+1. Compreender a definição teórica do que são funções;
+2. Aprender os métodos práticos de declaração de funções;
+3. Explorar o uso de funções que recebem parâmetros.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h12m50s637.jpg" alt="" width="840">
+</p>
+
+A primeira etapa da aula foca especificamente em definir o conceito de funções, estabelecendo a base necessária para entender como esses blocos de código operam na sintaxe do JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h12m53s765.jpg" alt="" width="840">
+</p>
+
+Funções são definidas como blocos de comandos e instruções projetados para a execução de tarefas específicas. A estrutura básica de uma função consiste na declaração seguida pela sua chamada para execução:
+
+```javascript
+function nomeDaFuncao() {
+    ${instrucao};
+}
+
+nomeDaFuncao();
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h14m10s444.jpg" alt="" width="840">
+</p>
+
+No ambiente de desenvolvimento, a criação de uma função envolve definir uma instrução interna, como a exibição de dados. No exemplo prático, a função realiza uma impressão no console do navegador:
+
+```javascript
+function funcao() {
+    console.log("Tudo certo joveni");
+}
+
+funcao();
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h14m37s782.jpg" alt="" width="840">
+</p>
+
+Para declarar uma função, utiliza-se a palavra reservada `function`. Os elementos sintáticos possuem papéis específicos:
+
+* **Parênteses `()**`: Indicam que o objeto é do tipo função.
+* **Chaves `{}**`: Delimitam o bloco de instrução onde o código a ser executado é inserido.
+
+```javascript
+function funcao() {
+    console.log("mensagem");
+}
+
+funcao();
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h15m08s578.jpg" alt="" width="840">
+</p>
+
+A segunda etapa da aula introduz o conceito de funções que trabalham com parâmetros, permitindo que as funções sejam mais dinâmicas e reutilizáveis.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h15m14s211.jpg" alt="" width="840">
+</p>
+
+Parâmetros funcionam como variáveis internas declaradas entre os parênteses da função. A atribuição de valores a esses parâmetros ocorre no momento da chamada da função, permitindo que as instruções internas processem dados externos:
+
+```javascript
+function nomeDaFuncao(parametro) {
+    ${instrucao};
+}
+
+nomeDaFuncao(valorDoParametro);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h16m14s884.jpg" alt="" width="840">
+</p>
+
+Demonstração prática de uma função que recebe múltiplos parâmetros. Ao chamar a função, os valores são passados na ordem definida na declaração, resultando na exibição combinada das informações no console:
+
+```javascript
+function mensagem(primeiro, segundo) {
+    console.log(primeiro, segundo);
+}
+
+mensagem('Tudo certo', 'jovem');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-27-14h19m28s841.jpg" alt="" width="840">
+</p>
+
+Para aprofundamento nos conceitos de funções em JavaScript, recomenda-se a consulta à documentação oficial da Mozilla Developer Network (MDN). O guia oferece detalhes técnicos adicionais sobre o comportamento e as possibilidades de uso dessas estruturas.
+
+# Parte 7 - Aprofundando em funções
+
+## 🟩 Vídeo 06 - Aprofundando em funções
+
+![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_07.webm|vid-60]]
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/428b5ad6-af86-46b0-a8c4-06e2e9b6fe79?autoplay=1
+
+Esta fonte apresenta a conclusão de um curso sobre a **sintaxe básica de JavaScript**, focando no aprofundamento de **funções** e na aplicação prática do conhecimento. O conteúdo detalha as diferenças entre **funções declarativas**, **expressões de funções** e **arrow functions**, explicando as regras de nomeação e estrutura de cada uma. Na segunda parte, o instrutor demonstra a construção de uma **calculadora funcional** capaz de realizar operações aritméticas como soma, divisão e potenciação. Durante o processo, são explorados métodos nativos como **Number**, **prompt** e **alert**, além de estruturas de controle como **if/else** e **switch case**. O material finaliza ensinando a validar entradas de dados e a criar um sistema de repetição para manter a aplicação rodando.
+
+### Anotações 
+
+
+#### ▶️ Projeto Calculadora - Código HTML (index.html)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="calculadora.js"></script>
+</body>
+</html>
+```
+
+#### ▶️ Projeto Calculadora - Código JavaScript (calculadora.js)
+
+```javascript
+// criando uma calculadora
+function calculadora() {
+
+    // definindo as operações e pegando valor de entrada do usuário
+    // usamos "\n" para fazer uma quebra de linha
+    const operacao = Number(prompt('Escolha uma opção:\n 1 - soma (+)\n 2 - subtração (-)\n 3 - multiplicação (*)\n 4 - divisão real (/)\n 5 - divisão inteira (%)\n 6 - potenciação (**)'));
+    
+    // verificando se a operação é válida
+    if (!operacao ||  operacao >= 7) {
+        alert('erro - operação inválida');
+        calculadora();
+    } else {
+
+        // definindo variáveis
+        // todas as entradas devem ser do tipo number
+        let n1 = Number(prompt('Insira o primeiro valor:'));
+        let n2 = Number(prompt('Insira o segundo valor:'));
+        let resultado;
+
+        // verificando se as variáveis são válidas
+        if (!n1 || !n2) {
+            alert('erro - parâmetros inválidos');
+            calculadora();
+        } else {
+
+            // definindo as funções
+            function soma() {
+                resultado = n1 + n2;
+
+                // mostrando o resultado usando template strings
+                alert(`${n1} + ${n2} = ${resultado}`);
+                novaOperacao();
+            }
+
+            function subtracao() {
+                resultado = n1 - n2;
+                alert(`${n1} - ${n2} = ${resultado}`);
+                novaOperacao();
+            }
+
+            function multiplicacao() {
+                resultado = n1 * n2;
+                alert(`${n1} * ${n2} = ${resultado}`);
+                novaOperacao();
+            }
+
+            function divisaoReal() {
+                resultado = n1 / n2;
+                alert(`${n1} / ${n2} = ${resultado}`);
+                novaOperacao();
+            }
+
+            function divisaoInteira() {
+                resultado = n1 % n2;
+                alert(`O resto da divisão entre ${n1} e ${n2} é igual a ${resultado}`);
+                novaOperacao();
+            }
+
+            function potenciacao() {
+                resultado = n1 ** n2;
+                alert(`${n1} elevado à ${n2}ª potência é ${resultado}`);
+                novaOperacao();
+            }
+
+            // nova operação
+            function novaOperacao() {
+                let opcao = prompt('Deseja fazer outra operação?\n 1 - Sim\n 2 - Não');
+
+                if (opcao == 1) {
+                    calculadora();
+                } else if (opcao == 2) {
+                    alert('Até mais!');
+                } else {
+                    alert('Digite uma opção válida!');
+                    novaOperacao();
+                }
+            }
+        }
+    } 
+
+    /* // escolhendo operação
+    // usand if && else
+    if (operacao == 1) {
+        soma();
+    } else if (operacao == 2) {
+        subtracao();
+    } else if (operacao == 3) {
+        multiplicacao();
+    } else if (operacao == 4) {
+        divisaoReal();
+    } else if (operacao == 5) {
+        divisaoInteira();
+    } else if (operacao == 6) {
+        potenciacao();
+    } */
+
+     // usando switch case
+    switch (operacao) {
+        case 1:
+            soma();
+            break;
+        case 2:
+            subtracao();
+            break;
+        case 3:
+            multiplicacao();
+            break;
+        case 4:
+            divisaoReal();
+            break;
+        case 5:
+            divisaoInteira();
+            break;
+        case 6:
+            potenciacao();
+            break;
+    }
+}
+
+calculadora(); 
+```
+
+ #### ✍️ Tipos de Funçào em JavaScript
+
+```javascript
+// tipos de função
+
+// função declarativa
+// deve ser declarada usando a palavra reservada function seguida do nome da funçao, parênteses "()" e chaves "{}"
+// deve ser nomeada obrigatioriamente
+
+function nomeDaFuncao() {
+    alert('Sou uma função declarativa!');
+}
+
+// devemos chamar a função para ver o resultado
+// chamando a função
+nomeDaFuncao(); 
+
+
+// expressão de função
+// são funções atribuídas à expressões
+// a nomeação é opcional
+
+// com nomeação
+var funcao = function funcao() {
+    alert('Sou uma expressão de função nomeada!');
+} 
+
+// sem nomeação
+var funcao = function() {
+    alert('Sou uma expressão de função não nomeada!')
+}
+
+
+// arrow Function
+// função de expressão de sintaxe curta
+// sempre anônima, não pode ser nomeada
+// deve ser declarada com parênteses "()", seguido de "=>" e depois chaves "{}"
+var funcao = () => {
+    alert('Sou uma função anônima!')
+};
+
+funcao(); 
+```
+
+
+# Certificado: Sintaxe Básica em JavaScript
+
+- Link na plataforma: https://hermes.dio.me/certificates/BVELTNLG.pdf
+- Certificado em pdf: [[Certificado-Sintaxe.Basica.em.JavaScript.pdf]]
