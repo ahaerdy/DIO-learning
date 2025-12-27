@@ -670,7 +670,12 @@ Com a desestruturação de objetos, tudo isso pode ser feito em uma linha. Ao co
 - [Objetos – developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects)  
 - [Desestruturação – digitalocean.com/community/tutorials/understanding-destructuring-rest-parameters-and-spread-syntax-in-javascript-pt](https://www.digitalocean.com/community/tutorials/understanding-destructuring-rest-parameters-and-spread-syntax-in-javascript-pt)
 
-##  Materiais de Apoio
+# Parte 5 - Estruturas condicionais
+
+## 🟩 Vídeo 04 - Estruturas condicionais
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/1713d23b-810f-40db-b102-d18d7d37e9dd?autoplay=1
+
 
 
 # Certificado: 
