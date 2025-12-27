@@ -776,6 +776,160 @@ O video apresenta um **novo desafio de programação** focado no desenvolvimento
 
 ### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-21h11m11s107.jpg" alt="" width="840">
+</p>
+
+Nesta etapa do curso de Introdução ao JavaScript, é apresentado um novo desafio prático: a criação de uma **To-do list** (lista de tarefas). Este projeto visa consolidar os conhecimentos adquiridos anteriormente com o projeto do contador, incentivando a exploração de repositórios no GitHub para entender a estrutura de diferentes aplicações. O desafio está localizado dentro de um repositório que contém tanto a pasta do contador quanto a pasta específica da To-do list.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-26-21h11m50s224.jpg" alt="" width="840">
+</p>
+
+O projeto consiste em desenvolver uma interface funcional baseada em instruções específicas detalhadas no arquivo `README.md` do repositório. A aplicação deve permitir que o usuário adicione tarefas a uma lista e interaja com elas.
+
+**Instruções do Desafio:** 
+
+1. 
+**Criação de Interface:** Desenvolver um campo de input de texto e um botão para adicionar a tarefa à lista.
+
+
+2. 
+**Dinamismo:** Ao pressionar o botão, o texto digitado deve ser renderizado na lista acompanhado de um checkbox.
+
+
+3. 
+**Estilização e Lógica:** Quando o usuário marcar o checkbox, o item correspondente deve exibir um efeito visual de texto riscado, o que pode ser implementado facilmente utilizando CSS.
+
+
+
+O objetivo é que o aluno pratique a manipulação de eventos, o uso de condicionais e a alteração dinâmica de estilos na página conforme as ações do usuário.
+
+#### ▶️ Código HTML - index.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css" />
+    <title>To-do list</title>
+</head>
+<body>
+    <h1>To-do list</h1>
+    <div id="list">
+        <form id="task-form">
+            <input id="task-input" name="tarefa" type="text" placeholder="Digite aqui sua tarefa" />
+            <button type="submit">Adicionar</button>
+        </form>
+        <div id="tasks"></div>
+    </div>
+    <script src="assets/scripts.js"></script>
+</body>
+</html>
+```
+
+
+#### ▶️ Código CSS - styles.css
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  border: 1px solid rgb(105, 197, 255);
+  border-radius: 5px;
+  background-color: rgb(227, 248, 255);
+  color: rgb(105, 197, 255);
+  text-align: center;
+  padding: 5px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+#tasks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+:checked + label {
+  text-decoration: line-through;
+  color: grey;
+}
+```
+
+
+#### ▶️ Código JavaScript - scripts.js
+
+```javascript
+const form = document.getElementById('task-form');
+const taskList = document.getElementById('tasks');
+
+form.onsubmit = function (e) {
+	e.preventDefault();
+	const inputField = document.getElementById('task-input');
+	addTask(inputField.value);
+	form.reset();
+};
+
+function addTask(description) {
+	const taskContainer = document.createElement('div');
+	const newTask = document.createElement('input');
+	const taskLabel = document.createElement('label');
+	const taskDescriptionNode = document.createTextNode(description);
+
+	newTask.setAttribute('type', 'checkbox');
+	newTask.setAttribute('name', description);
+	newTask.setAttribute('id', description);
+
+	taskLabel.setAttribute('for', description);
+	taskLabel.appendChild(taskDescriptionNode);
+
+	taskContainer.classList.add('task-item');
+	taskContainer.appendChild(newTask);
+	taskContainer.appendChild(taskLabel);
+
+	taskList.appendChild(taskContainer);
+}
+```
+
+#### exemplo.png
+
+<details>
+<summary> Clique para expandir </summary>
+<p align="center">
+<img src="000-Midia_e_Anexos/exemplo.png" alt="" width="500">
+</p>
+</details>
+
+#### Saída no Navegador
+
+<p align="center">
+<img src="000-Midia_e_Anexos/Pasted image 20251226212408.png" alt="" width="500">
+</p>
+
 
 
 ## 🟩 Vídeo 03 - Colocando em prática
