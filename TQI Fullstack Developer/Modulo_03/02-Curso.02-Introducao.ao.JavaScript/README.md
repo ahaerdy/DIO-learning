@@ -596,6 +596,7 @@ Para finalizar a estrutura e testar a visualização, o conteúdo visível é in
 
 ## 🟩 Vídeo 08 - Interagindo com os elementos do DOM
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_08.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/b3f92afb-7547-48ac-a072-ef0ff7baf80d?autoplay=1
 
@@ -647,6 +648,7 @@ Essa interação permite que o JavaScript modifique dinamicamente o comportament
 
 ## 🟩 Vídeo 09 - Criando um contador
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_09.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/ec2c12f8-f2d6-461b-9ddf-f6955957997f?autoplay=1
 
@@ -764,10 +766,16 @@ function decrement() {
 <img src="000-Midia_e_Anexos/Pasted image 20251226194501.png" alt="" width="840">
 </p>
 
-## 🟩 Vídeo 02 - Desafio: To-do list
+## 🟩 Vídeo 10 - Desafio: To-do list
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_10.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/7967cb7d-8ddd-4dae-80a1-845986f5dfc1?autoplay=1
+
+O video apresenta um **novo desafio de programação** focado no desenvolvimento de uma **lista de tarefas** utilizando **JavaScript**. A instrutora orienta os alunos a criarem uma interface onde seja possível **adicionar itens** e marcar tarefas como concluídas através de um **checkbox**. Ela incentiva a autonomia, sugerindo que os estudantes tentem resolver o problema sozinhos antes de consultarem o código de referência no **GitHub**. Além disso, destaca-se a importância de praticar conceitos como **manipulação de eventos** e estilos dinâmicos com **CSS**. Por fim, a mentora reforça a disponibilidade de suporte técnico via **Discord** e fóruns para auxiliar no processo de aprendizagem.
+
+### Anotações
+
 
 
 ## 🟩 Vídeo 03 - Colocando em prática
