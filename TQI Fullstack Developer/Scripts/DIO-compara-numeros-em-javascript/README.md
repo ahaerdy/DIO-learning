@@ -60,28 +60,17 @@ Calcula a soma dos números e compara o resultado com os valores 10 e 20.
 
 Essa separação melhora a legibilidade, manutenção e clareza do código.
 
-▶️ Exemplo de execução
-javascript
-Copiar código
-console.log(comparaNumeros(10, 10));
-Saída esperada:
-text
-Copiar código
-Os números 10 e 10 são iguais. Sua soma é 20, que é maior do que 10 e menor do que 20.
 📚 Contexto educacional
-Curso: Sintaxe e Operadores JavaScript
 
-Plataforma: Digital Innovation One (DIO)
-
-Bootcamp: TQI Fullstack Developer
+- Curso: Sintaxe e Operadores JavaScript
+- Plataforma: Digital Innovation One (DIO)
+- Bootcamp: TQI Fullstack Developer
 
 Este repositório foi criado como material de estudo autoral, com o objetivo de consolidar o aprendizado e servir como referência futura sobre os fundamentos da linguagem JavaScript.
 
 🚀 Possíveis evoluções
-Validar tipos de entrada
 
-Adaptar a função para entrada dinâmica (prompt ou formulário)
-
-Criar testes automatizados
-
-Integrar com uma interface HTML simples
+- Validar tipos de entrada
+- Adaptar a função para entrada dinâmica (prompt ou formulário)
+- Criar testes automatizados
+- Integrar com uma interface HTML simples
