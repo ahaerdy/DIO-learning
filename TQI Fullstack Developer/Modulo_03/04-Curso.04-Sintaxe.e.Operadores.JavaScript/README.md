@@ -214,23 +214,14 @@ A atividade prática deste módulo está hospedada no GitHub, no repositório **
 
 O enunciado da atividade propõe a criação de uma função JavaScript que opere com dois números recebidos como parâmetros. O objetivo é exercitar a sintaxe da linguagem e o uso de operadores lógicos e aritméticos através dos seguintes requisitos:
 
-* 
-**Comparação**: Verificar se os dois números informados são iguais entre si.
-
-* 
-**Soma e Intervalo**: Calcular a soma dos dois números e validar se esse resultado é maior que 10 ou menor que 20.
-
-* 
-**Saída**: Retornar uma string formatada contendo os números, a confirmação de igualdade e a relação da soma com os valores 10 e 20.
-
+* **Comparação**: Verificar se os dois números informados são iguais entre si.
+* **Soma e Intervalo**: Calcular a soma dos dois números e validar se esse resultado é maior que 10 ou menor que 20.
+* **Saída**: Retornar uma string formatada contendo os números, a confirmação de igualdade e a relação da soma com os valores 10 e 20.
 
 **Exemplo Prático:**
 
-* 
-**Input**: 1, 2 
-
-* 
-**Output**: "Os números 1 e 2 não são iguais. Sua soma é 3, que é menor que 10 e menor que 20".
+* **Input**: 1, 2 
+* **Output**: "Os números 1 e 2 não são iguais. Sua soma é 3, que é menor que 10 e menor que 20".
 
 Para auxiliar no desenvolvimento, o repositório disponibiliza um arquivo de solução chamado `comparaNumeros.js`.
 
