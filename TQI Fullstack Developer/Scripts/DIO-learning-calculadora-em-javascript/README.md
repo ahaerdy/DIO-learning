@@ -1,7 +1,5 @@
 # Projeto Calculadora em JavaScript  
 
-## Sintaxe Básica em JavaScript — Bootcamp TQI Fullstack Developer (DIO)
-
 Este repositório apresenta um **projeto prático de calculadora em JavaScript**, desenvolvido como atividade final do curso **“Sintaxe Básica em JavaScript”**, pertencente ao **Módulo III – JavaScript** do **Bootcamp TQI Fullstack Developer**, na plataforma **Digital Innovation One (DIO)**.
 
 O projeto consolida conceitos fundamentais da linguagem, com ênfase em **funções**, **estruturas de controle**, **interação com o usuário** e **validação de dados**, servindo como exercício introdutório para lógica de programação em JavaScript puro (Vanilla JS).
