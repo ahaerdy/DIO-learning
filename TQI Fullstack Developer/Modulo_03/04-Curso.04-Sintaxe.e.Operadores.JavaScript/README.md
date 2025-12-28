@@ -191,16 +191,17 @@ Se a condição for verdadeira, a primeira expressão é executada; caso contrá
 
 # Parte 3 - Atividade prática
 
-## 🟩 Vídeo 01 - Exxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Explicando a atividade
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/be1eafaa-2817-41eb-b4d5-8c63d7b11c9e?autoplay=1
 
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+
+## 🟩 Vídeo 02 - Atividade prática
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/1adc777c-443e-49d9-9795-2cee3d0f48a7?autoplay=1
 
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
