@@ -1,6 +1,6 @@
 # To-do list
 
-O objetivo deste projeto é criar uma simples lista de tarefas em JavaScript como projeto prático do curso  [Introducao.ao.JavaScript](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer/Modulo_03/02-Curso.02-Introducao.ao.JavaScript).
+O objetivo deste projeto é criar uma simples lista de tarefas em JavaScript (exercício prático do curso  [Introducao.ao.JavaScript](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer/Modulo_03/02-Curso.02-Introducao.ao.JavaScript)).
 
 ## Instruções
 
