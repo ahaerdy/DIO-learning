@@ -395,10 +395,7 @@ function criaSegundaFrase(num1, num2) {
 console.log(comparaNumeros(10, 10));
 ```
 
+# Certificado: Sintaxe e Operadores JavaScript
 
-
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/AJJTPTOO.pdf
+- Certificado em pdf: [[Certificado-Sintaxe.e.Operadores.JavaScript.pdf]]
