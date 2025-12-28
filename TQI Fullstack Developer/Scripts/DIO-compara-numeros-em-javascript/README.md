@@ -7,7 +7,7 @@ O projeto tem como objetivo aplicar, de forma prática, conceitos fundamentais d
 
 ---
 
-## 🎯 Objetivo do projeto
+## Objetivo do projeto
 
 Desenvolver uma função capaz de:
 
@@ -19,7 +19,7 @@ Desenvolver uma função capaz de:
 
 ---
 
-## 🧠 Conceitos trabalhados
+## Conceitos trabalhados
 
 - Funções em JavaScript
 - Operadores aritméticos (`+`)
@@ -31,7 +31,7 @@ Desenvolver uma função capaz de:
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **JavaScript (ES6+)**
 
@@ -39,7 +39,7 @@ O projeto foi desenvolvido utilizando apenas JavaScript puro (*Vanilla JS*), com
 
 ---
 
-## 📂 Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 .
@@ -47,28 +47,17 @@ O projeto foi desenvolvido utilizando apenas JavaScript puro (*Vanilla JS*), com
 ```
 
 🔍 Funcionamento da lógica
-O código é estruturado em funções menores e bem definidas:
-
-comparaNumeros(num1, num2)
-Função principal, responsável por orquestrar a comparação e retornar a frase final.
-
-criaPrimeiraFrase(num1, num2)
-Verifica se os dois números são iguais ou não.
-
-criaSegundaFrase(num1, num2)
-Calcula a soma dos números e compara o resultado com os valores 10 e 20.
+- comparaNumeros(num1, num2): dunção principal, responsável por orquestrar a comparação e retornar a frase final.
+- criaPrimeiraFrase(num1, num2): verifica se os dois números são iguais ou não.
+- criaSegundaFrase(num1, num2): calcula a soma dos números e compara o resultado com os valores 10 e 20.
 
 Essa separação melhora a legibilidade, manutenção e clareza do código.
 
-📚 Contexto educacional
-
-- Curso: Sintaxe e Operadores JavaScript
-- Plataforma: Digital Innovation One (DIO)
-- Bootcamp: TQI Fullstack Developer
+## 📚 Contexto educacional
 
 Este repositório foi criado como material de estudo autoral, com o objetivo de consolidar o aprendizado e servir como referência futura sobre os fundamentos da linguagem JavaScript.
 
-🚀 Possíveis evoluções
+## Possíveis evoluções
 
 - Validar tipos de entrada
 - Adaptar a função para entrada dinâmica (prompt ou formulário)
