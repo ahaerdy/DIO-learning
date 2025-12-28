@@ -1,5 +1,4 @@
 # Comparação de Números em JavaScript  
-📘 Sintaxe e Operadores JavaScript — Bootcamp TQI Fullstack Developer (DIO)
 
 Este repositório apresenta o **projeto final do curso “Sintaxe e Operadores JavaScript”**, pertencente ao **Módulo III – JavaScript** do **Bootcamp TQI Fullstack Developer**, realizado na plataforma **Digital Innovation One (DIO)**.
 
