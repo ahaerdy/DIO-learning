@@ -1239,7 +1239,7 @@ function calculadora() {
 calculadora(); 
 ```
 
- #### ✍️ Tipos de Funçào em JavaScript
+ #### ✍️ Tipos de Função em JavaScript
 
 ```javascript
 // tipos de função
