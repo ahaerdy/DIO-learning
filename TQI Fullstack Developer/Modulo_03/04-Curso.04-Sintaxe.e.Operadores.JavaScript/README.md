@@ -196,12 +196,204 @@ Se a condição for verdadeira, a primeira expressão é executada; caso contrá
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/be1eafaa-2817-41eb-b4d5-8c63d7b11c9e?autoplay=1
 
+O vídeo apresenta uma **atividade prática** voltada para estudantes de **JavaScript**, focada especificamente em **sintaxe e operadores**. A instrutora orienta os alunos a criarem uma **função** que compare dois números para verificar se são idênticos e analise se a soma deles ultrapassa os limites de **10 e 20**. O enunciado detalhado e o código de referência estão hospedados em um repositório no **GitHub**, servindo como base para o exercício. Os participantes são incentivados a tentar resolver o desafio de forma **independente** antes de consultarem a resolução oficial. Além do material de apoio, o curso oferece suporte através de um **fórum** e de uma comunidade no **Discord**. Por fim, a próxima etapa pedagógica consistirá em um vídeo explicativo com a demonstração da solução passo a passo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-09h01m55s369.jpg" alt="" width="840">
+</p>
+
+A atividade prática deste módulo está hospedada no GitHub, no repositório **basecamp-javascript** da conta **stebsnusch**. O projeto funciona como uma coletânea de exercícios organizados por diretórios temáticos, abrangendo desde a introdução à linguagem até conceitos de orientação a objetos e JavaScript assíncrono. Para realizar o exercício proposto, o aluno deve navegar até a pasta específica denominada **sintaxe e operadores**.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-09h02m04s892.jpg" alt="" width="840">
+</p>
+
+O enunciado da atividade propõe a criação de uma função JavaScript que opere com dois números recebidos como parâmetros. O objetivo é exercitar a sintaxe da linguagem e o uso de operadores lógicos e aritméticos através dos seguintes requisitos:
+
+* 
+**Comparação**: Verificar se os dois números informados são iguais entre si.
+
+* 
+**Soma e Intervalo**: Calcular a soma dos dois números e validar se esse resultado é maior que 10 ou menor que 20.
+
+* 
+**Saída**: Retornar uma string formatada contendo os números, a confirmação de igualdade e a relação da soma com os valores 10 e 20.
+
+
+**Exemplo Prático:**
+
+* 
+**Input**: 1, 2 
+
+* 
+**Output**: "Os números 1 e 2 não são iguais. Sua soma é 3, que é menor que 10 e menor que 20".
+
+Para auxiliar no desenvolvimento, o repositório disponibiliza um arquivo de solução chamado `comparaNumeros.js`.
 
 
 ## 🟩 Vídeo 02 - Atividade prática
 
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/1adc777c-443e-49d9-9795-2cee3d0f48a7?autoplay=1
+
+O material consiste em uma aula prática de programação focada na criação de uma função em **JavaScript** para comparar dois números e validar suas somas. A instrutora utiliza o **VS Code** para demonstrar como empregar **operadores aritméticos, relacionais e lógicos**, além de introduzir conceitos como o **if ternário** e **template literals**. O objetivo central é ensinar o aluno a estruturar um código modularizado, dividindo a lógica em **funções auxiliares** para melhorar a organização e a legibilidade. Além da implementação técnica, o conteúdo ressalta a importância de realizar **validações de dados** para evitar erros quando parâmetros são omitidos ou inválidos. O vídeo encerra incentivando a experimentação com outros operadores e o uso de comunidades de suporte para o aprendizado contínuo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-09h52m49s990.jpg" alt="" width="840">
+</p>
+
+O ambiente de desenvolvimento no Visual Studio Code é apresentado com o enunciado do exercício de JavaScript sobre Sintaxe e Operadores. O desafio proposto requer a criação de uma função que receba dois números como parâmetros para verificar se são iguais, calcular sua soma e comparar se o resultado é maior ou menor que os valores 10 e 20. A solução deve retornar uma string formatada contendo todas essas informações, exigindo o uso de operadores lógicos e condicionais. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-09h56m54s432.jpg" alt="" width="840">
+</p>
+
+Para resolver o problema de forma organizada, iniciamos com a criação de uma função auxiliar chamada `criaPrimeiraFrase`. Esta função foca na primeira parte do requisito: a verificação de igualdade. Utilizamos uma variável `saoIguais` que é inicializada como uma string vazia; caso os números sejam diferentes (verificado pelo operador de desigualdade), a variável recebe o valor "não". O retorno é a primeira metade da frase esperada. 
+
+```javascript
+function criaPrimeiraFrase(num1, num2) {
+	let saoIguais = '';
+
+	if (num1 !== num2) {
+		saoIguais = 'não';
+	}
+
+	return `Os números ${num1} e ${num2} ${saoIguais} são iguais.`;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-10h00m10s347.jpg" alt="" width="840">
+</p>
+
+A implementação prossegue com a função `criaSegundaFrase`, responsável pelo processamento da soma e das comparações de magnitude. Nela, a soma dos parâmetros é calculada e armazenada. Para manter o código limpo, variáveis de resultado para os limites 10 e 20 são inicializadas com o valor padrão "menor". Através de condicionais simples, esses valores são alterados para "maior" caso a soma ultrapasse os respectivos limites. 
+
+```javascript
+function criaSegundaFrase(num1, num2) {
+	const soma = num1 + num2;
+	let resultado10 = 'menor';
+	let resultado20 = 'menor';
+
+	const compara10 = soma > 10;
+	const compara20 = soma > 20;
+
+	if (compara10) {
+		resultado10 = 'maior';
+	}
+
+	if (compara20) {
+		resultado20 = 'maior';
+	}
+
+	return `Sua soma é ${soma}, que é ${resultado10} que 10 e ${resultado20} que 20.`;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-10h01m28s709.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, consolidamos a lógica na função principal `comparaNumeros`. Ela atua como uma integradora, invocando as duas funções auxiliares desenvolvidas anteriormente e armazenando seus retornos. O resultado final da função principal é a concatenação das duas partes da resposta utilizando *template literals*, o que garante que a frase completa seja exibida corretamente conforme o exemplo do enunciado. 
+
+```javascript
+function comparaNumeros(num1, num2) {
+	const primeiraFrase = criaPrimeiraFrase(num1, num2);
+	const segundaFrase = criaSegundaFrase(num1, num2);
+
+	return `${primeiraFrase} ${segundaFrase}`;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-10h02m03s740.jpg" alt="" width="840">
+</p>
+
+A execução do código é validada no terminal através do Node.js. Ao testar a função com os valores 1 e 2, o programa processa a lógica de que os números não são iguais e que sua soma (3) é menor que 10 e também menor que 20. A saída no terminal confirma que a formatação da string e as condicionais de valor estão funcionando conforme o esperado para este cenário. 
+
+```bash
+$ node teste.js
+Os números 1 e 2 não são iguais. Sua soma é 3, que é menor que 10 e menor que 20.
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-10h02m23s403.jpg" alt="" width="840">
+</p>
+
+Um segundo teste é realizado no terminal, desta vez utilizando os valores 20 e 20. Este cenário demonstra a versatilidade do código: ele identifica corretamente que os números são iguais e que a soma (40) é agora maior que 10 e maior que 20. O terminal exibe a frase atualizada, validando que as variáveis de comparação de magnitude foram alteradas de seus valores iniciais "menor" para "maior". 
+
+```bash
+$ node teste.js
+Os números 20 e 20 são iguais. Sua soma é 40, que é maior que 10 e maior que 20.
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-10h03m32s838.jpg" alt="" width="840">
+</p>
+
+A etapa final do desenvolvimento foca na robustez do código através da validação de parâmetros. É inserida uma verificação no início da função `comparaNumeros` para garantir que ambos os argumentos foram enviados pelo usuário. Sem essa checagem, a função poderia retornar erros ou valores indefinidos (`undefined` ou `NaN`). O teste no terminal mostra que, ao tentar executar a função sem parâmetros, o sistema agora solicita corretamente a definição dos dois números. 
+
+```javascript
+function comparaNumeros(num1, num2) {
+	if (!num1 || !num2) return 'Defina dois números!';
+
+	const primeiraFrase = criaPrimeiraFrase(num1, num2);
+	const segundaFrase = criaSegundaFrase(num1, num2);
+
+	return `${primeiraFrase} ${segundaFrase}`;
+}
+
+```
+
+#### ▶️ Código JavaScript (comparaNumeros.js)
+
+```javascript
+function comparaNumeros(num1, num2) {
+	const primeiraFrase = criaPrimeiraFrase(num1, num2);
+	const segundaFrase = criaSegundaFrase(num1, num2);
+
+	return `${primeiraFrase} ${segundaFrase}`;
+}
+
+function criaPrimeiraFrase(num1, num2) {
+	let primeiraFrase = `Os números ${num1} e ${num2}`;
+	let simNao = 'não';
+
+	if (num1 === num2) {
+		simNao = '';
+	}
+
+	return `${primeiraFrase} ${simNao} são iguais.`;
+}
+
+function criaSegundaFrase(num1, num2) {
+	const soma = num1 + num2;
+	let comparaDez = 'menor';
+	let comparaVinte = 'menor';
+
+	if (soma > 10) {
+		comparaDez = 'maior';
+	}
+
+	if (soma > 20) {
+		comparaVinte = 'maior';
+	}
+
+	return `Sua soma é ${soma}, que é ${comparaDez} do que 10 e ${comparaVinte} do que 20.`;
+}
+
+console.log(comparaNumeros(10, 10));
+```
 
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
