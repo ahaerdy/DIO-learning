@@ -4,6 +4,10 @@
 *.mp4
 *.mp3
 
+secrets.json
+*.env
+
+
 # (Opcional) Ignorar webm em subpastas específicas
 # pasta/arquivos/*.webm
 
