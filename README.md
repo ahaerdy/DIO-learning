@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" />
   <img src="https://img.shields.io/badge/Bootcamps-DIO.me-blueviolet?logo=codeforces" />
-  <img src="https://img.shields.io/badge/Linguagem-Python%2C%20JS%2C%20HTML-orange?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linguagens-Python%2C%20JS%2C%20HTML-orange?logo=python&logoColor=white" />
   <img src="https://img.shields.io/github/repo-size/ahaerdy/dio-learning" />
   <img src="https://img.shields.io/github/last-commit/ahaerdy/dio-learning" />
   <a href="https://web.dio.me/users/arthur_haerdy?tab=achievements">
