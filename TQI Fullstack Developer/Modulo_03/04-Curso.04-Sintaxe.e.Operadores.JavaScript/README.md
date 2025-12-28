@@ -396,55 +396,6 @@ console.log(comparaNumeros(10, 10));
 ```
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-##  Materiais de Apoio
 
 
 # Certificado: 
