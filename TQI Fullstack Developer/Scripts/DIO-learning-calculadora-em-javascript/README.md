@@ -49,33 +49,19 @@ Não há uso de bibliotecas externas ou frameworks, com o objetivo de reforçar 
 ## 📌 Conceitos trabalhados
 
 🔹 Tipos de funções em JavaScript
-
-🔹O projeto explora e exemplifica:
-
-🔹Funções declarativas
-
-🔹Expressões de função (nomeadas e anônimas)
-
-🔹Arrow functions
-
+🔹O projeto explora e exemplifica
+	🔹Funções declarativas
+	🔹Expressões de função (nomeadas e anônimas)
+	🔹Arrow functions
 🔹Demonstrando diferenças de sintaxe, uso e contexto.
-
-🔹 Estruturas de controle - if / else para validação de dados
-
+🔹Estruturas de controle - if / else para validação de dados
 🔹switch case para seleção de operações matemáticas
-
 🔹 Funções nativas 
 - Number() para conversão de tipos
 - prompt() para entrada de dados
 - alert() para saída de informações
 
 📚 Contexto educacional
-
-Este projeto foi desenvolvido com base no conteúdo apresentado no curso:
-- Curso: Sintaxe Básica em JavaScript
-	- Instrutora: Diana Pontes
-	- Plataforma: Digital Innovation One (DIO)
-	- Bootcamp: TQI Fullstack Developer
 
 O código foi organizado neste repositório como material de estudo autoral, com finalidade educacional e de consolidação do aprendizado.
 
