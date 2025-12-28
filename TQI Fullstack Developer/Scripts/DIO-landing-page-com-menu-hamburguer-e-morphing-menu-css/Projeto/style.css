@@ -1,0 +1,582 @@
+/*
+  Importa a fonte "Amatic SC" do Google Fonts.
+  Essa fonte será utilizada principalmente nos títulos e textos do header,
+  garantindo uma identidade visual leve e estilizada.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+/* ================= ESTILO GLOBAL ================= */
+
+/*
+  Estilo base aplicado a todo o corpo da página.
+*/
+body {
+    /* Remove margens padrão do navegador */
+    margin: 0;
+
+    /* Remove espaçamentos internos padrão */
+    padding: 0;
+
+    /* Define a cor padrão do texto */
+    color: #ffffff;
+
+    /* Define a fonte padrão do projeto */
+    font-family: 'amatic sc', sans-serif;
+}
+
+/* ================= HEADER / HERO ================= */
+
+/*
+  Container principal do header.
+  Funciona como hero section ocupando toda a viewport.
+*/
+.header-wrapper {
+    /* Altura total da tela */
+    height: 100vh;
+
+    /* Largura total da tela */
+    width: 100vw;
+
+    /*
+      Gradiente linear animado.
+      O ângulo negativo cria um efeito visual mais dinâmico.
+    */
+    background: linear-gradient(
+        -45deg,
+        #050404,
+        #2E1C2B,
+        #4A1942,
+        #893168
+    );
+
+    /*
+      Background maior que o container para permitir
+      o deslocamento do gradiente durante a animação.
+    */
+    background-size: 400% 400%;
+
+    /* Centralização do conteúdo usando Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Animação contínua do fundo */
+    animation: backgroundTransition 8s ease-in-out infinite;
+
+    /*
+      Permite posicionamento absoluto de elementos internos,
+      como o menu hamburguer.
+    */
+    position: relative;
+}
+
+/* ================= TÍTULOS ================= */
+
+/*
+  Estilo aplicado ao título principal.
+*/
+h1 {
+    /* Transforma o texto em maiúsculas */
+    text-transform: uppercase;
+
+    /* Espaçamento entre letras */
+    letter-spacing: 4px;
+}
+
+/*
+  Estilo aplicado ao subtítulo.
+*/
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+/* ================= REDES SOCIAIS ================= */
+
+/*
+  Container dos links sociais.
+*/
+.social-media {
+    /* Espaçamento superior */
+    margin-top: 1rem;
+
+    /* Exibe os links lado a lado */
+    display: flex;
+}
+
+/*
+  Estilo base dos links sociais.
+*/
+.social-media a {
+    /* Remove sublinhado padrão */
+    text-decoration: none;
+
+    /* Cor do texto */
+    color: #ffffff;
+
+    /* Tamanho da fonte */
+    font-size: 24px;
+
+    /* Espaçamento interno */
+    padding: 1rem 4rem;
+
+    /* Borda branca */
+    border: 1px solid #ffffff;
+
+    /*
+      Define largura mínima para manter
+      consistência visual entre os links.
+    */
+    min-width: 4rem;
+
+    /* Centraliza o texto internamente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*
+      Transição suave com curva personalizada
+      para hover.
+    */
+    transition: .5s cubic-bezier(
+        0.55,
+        0.025,
+        0.675,
+        0.97
+    );
+}
+
+/*
+  Efeito hover aplicado aos links.
+*/
+a:hover {
+    /* Altera a cor do texto */
+    color: #2E1C2B;
+
+    /* Aplica fundo branco */
+    background-color: #ffffff;
+}
+
+/* ================= ANIMAÇÃO DO FUNDO ================= */
+
+/*
+  Define a animação responsável pelo movimento do gradiente.
+*/
+@keyframes backgroundTransition {
+    0% {
+        background-position: 0% 80%;
+    }
+
+    50% {
+        background-position: 80% 100%;
+    }
+
+    100% {
+        background-position: 0% 90%;
+    }
+}
+
+/* ================= MENU HAMBURGUER ================= */
+
+/*
+  Container auxiliar para centralização do menu.
+*/
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+  Botão visual do menu hamburguer (label).
+*/
+.checkbox {
+    /* Dimensões do botão */
+    height: 100px;
+    width: 100px;
+
+    /* Posiciona no canto superior direito */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* Centraliza os traços */
+    display: flex;
+    justify-content: center;
+
+    /* Indica que o elemento é clicável */
+    cursor: pointer;
+
+    /* Mantém o menu acima de outros elementos */
+    z-index: 9999;
+
+    /* Transição suave ao alterar estado */
+    transition: 400ms ease-in-out 0s;
+}
+
+/*
+  Traços que formam o ícone hamburguer.
+*/
+.checkbox .trace {
+    /* Largura da linha */
+    width: 50px;
+
+    /* Altura fina para aparência de linha */
+    height: 2px;
+
+    /* Cor branca */
+    background-color: white;
+
+    /* Permite posicionamento independente */
+    position: absolute;
+
+    /* Bordas arredondadas */
+    border-radius: 4px;
+
+    /* Transição para animações */
+    transition: 0.5s ease-in-out;
+}
+
+/* Posicionamento inicial de cada traço */
+.checkbox .trace:nth-child(1) {
+    top: 26px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2) {
+    top: 46px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3) {
+    top: 66px;
+    transform: rotate(0);
+}
+
+/*
+  Checkbox invisível que controla o estado do menu.
+*/
+#toggle {
+    display: none;
+}
+
+/* ================= FUNDO DO MENU ================= */
+
+/*
+  Elemento responsável pelo efeito de expansão circular.
+*/
+.menu {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background: transparent;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+    /*
+      Box-shadow inicial invisível.
+      Será expandido quando o menu for ativado.
+    */
+    box-shadow: 0px 0px 0px 0px white;
+
+    /* Mantém o fundo atrás dos elementos principais */
+    z-index: -1;
+
+    transition: 400ms ease-in-out 0s;
+}
+
+/*
+  Container dos itens do menu.
+*/
+.menu-items {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Ocupa toda a tela */
+    width: 100%;
+    height: 100vh;
+
+    /* Centraliza os links */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Controla sobreposição */
+    z-index: 2;
+
+    /* Inicialmente invisível */
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 400ms ease-in-out 0s;
+}
+
+/*
+  Remove marcadores da lista.
+*/
+.menu-items ul {
+    list-style-type: none;
+}
+
+/*
+  Estilo dos links do menu.
+*/
+.menu-items ul li a {
+    margin: 10px 0;
+    color: #2E1C2B;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+/* ================= ANIMAÇÕES DO MENU ================= */
+
+/*
+  Primeiro traço gira formando metade do "X".
+*/
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    background-color: #2E1C2B;
+    top: 47px;
+}
+
+/*
+  Segundo traço desaparece.
+*/
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform: translateX(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/*
+  Terceiro traço gira em sentido oposto.
+*/
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #2E1C2B;
+    top: 48px;
+}
+
+/*
+  Altera o fundo do botão quando ativo.
+*/
+#toggle:checked + .checkbox {
+    background-color: white;
+}
+
+/*
+  Expande o fundo circular do menu.
+*/
+#toggle:checked ~ .menu {
+    box-shadow: 0px 0px 0px 100vmax white;
+    z-index: 1;
+}
+
+/*
+  Torna os itens do menu visíveis.
+*/
+#toggle:checked ~ .menu-items {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ================= CARDS ================= */
+
+/*
+  Container geral dos cards.
+*/
+.container {
+    width: 100%;
+    height: auto;
+
+    /* Organiza os cards verticalmente */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin: 3rem 0;
+}
+
+/*
+  Container individual de cada card.
+*/
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+/*
+  Estilo visual do card.
+*/
+.card {
+    height: 300px;
+    width: 400px;
+    margin: 3rem 0 0 0;
+
+    /* Imagem de fundo */
+    background-image: url('./room.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Centraliza o conteúdo interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Efeito visual inicial */
+    filter: grayscale(0.5);
+
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/*
+  Texto descritivo do card.
+*/
+.card-text {
+    width: 40%;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    color: rgb(109, 109, 109);
+}
+
+/*
+  Conteúdo central do card.
+*/
+.card-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/*
+  Elemento decorativo exibido no hover.
+*/
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    display: block;
+    border: 1px solid white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/*
+  Título do card.
+*/
+.card-wrapper h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.3s;
+}
+
+/*
+  Texto oculto exibido no hover.
+*/
+.card-wrapper p {
+    font-size: 0;
+    visibility: hidden;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* Remove o filtro no hover */
+.card:hover {
+    filter: unset;
+}
+
+/* Expande o elemento decorativo */
+.card:hover > .card-wrapper::before {
+    height: 250px;
+    width: 350px;
+    opacity: 1;
+}
+
+/* Exibe o texto adicional */
+.card:hover > .card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
+
+/* ================= FOOTER ================= */
+
+/*
+  Rodapé da página.
+*/
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #2E1C2B;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+/*
+  Ajustes para telas menores que 800px.
+*/
+@media (max-width: 800px) {
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        margin-top: 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    /*
+      Inverte a ordem dos cards 1 e 3
+      para manter coerência visual no mobile.
+    */
+    .container .card-container:nth-child(1),
+    .container .card-container:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .card {
+        height: 250px;
+        width: 250px;
+    }
+
+    .card-text {
+        width: 90%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .card:hover > .card-wrapper::before {
+        height: 190px;
+        width: 190px;
+    }
+}
