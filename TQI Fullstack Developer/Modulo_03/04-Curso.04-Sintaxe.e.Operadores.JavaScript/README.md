@@ -10,7 +10,7 @@
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/6e83ba51-9a4d-4c0f-9537-f23e9aa7458a?autoplay=1
 
-O v[ideo] apresenta a **introdução de um curso de JavaScript** focado no ensino de **sintaxe e operadores** essenciais para a manipulação de dados. A instrutora **Stephanie**, uma engenheira de software experiente, compartilha sua trajetória profissional e disponibiliza seus contatos para facilitar o **networking entre os alunos**. O conteúdo programático é dividido em uma **parte teórica** sobre o funcionamento dos comandos e uma subsequente **atividade prática** para consolidar o aprendizado. Para auxiliar no progresso dos estudantes, a mentora destaca a existência de **fóruns e comunidades no Discord** como espaços de suporte técnico. Essas ferramentas visam promover a **troca de conhecimentos** e a resolução conjunta de exercícios durante toda a jornada educacional.
+O vídeo apresenta a **introdução de um curso de JavaScript** focado no ensino de **sintaxe e operadores** essenciais para a manipulação de dados. A instrutora **Stephanie**, uma engenheira de software experiente, compartilha sua trajetória profissional e disponibiliza seus contatos para facilitar o **networking entre os alunos**. O conteúdo programático é dividido em uma **parte teórica** sobre o funcionamento dos comandos e uma subsequente **atividade prática** para consolidar o aprendizado. Para auxiliar no progresso dos estudantes, a mentora destaca a existência de **fóruns e comunidades no Discord** como espaços de suporte técnico. Essas ferramentas visam promover a **troca de conhecimentos** e a resolução conjunta de exercícios durante toda a jornada educacional.
 
 ### Anotações
 
