@@ -35,7 +35,7 @@ Além disso, o sistema:
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **HTML5** — estrutura básica da aplicação
 - **JavaScript (ES6)** — lógica de programação e interação com o usuário
