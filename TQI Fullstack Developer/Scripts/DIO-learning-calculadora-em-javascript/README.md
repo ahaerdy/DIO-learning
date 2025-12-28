@@ -44,7 +44,7 @@ Não há uso de bibliotecas externas ou frameworks, com o objetivo de reforçar 
 
 ---
 
-## 📌 Conceitos trabalhados
+## Conceitos trabalhados
 
 🔹 Tipos de funções em JavaScript
 🔹O projeto explora e exemplifica
