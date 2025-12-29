@@ -354,7 +354,67 @@ Esta distinção é fundamental para entender como a linguagem gerencia a memór
 
 # Parte 2 - Tipos
 
-## 🟩 Vídeo 05 - Strings
+## 🟩 Vídeo 05 - Estrutura de dados
+
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_05.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/4145f810-f3f5-4519-9593-36eddebe75f4?autoplay=1
+
+Esta fonte consiste em uma transcrição de aula focada nas **estruturas de dados e sistemas de tipos** da linguagem JavaScript. O autor explica que o JavaScript possui **tipagem dinâmica e fraca**, permitindo que o tipo de uma variável mude durante a execução sem a necessidade de declarações prévias rígidas. Para ilustrar o conceito, o material demonstra o uso do operador **typeof** e mostra como uma variável pode transitar de texto para número rapidamente. O conteúdo também classifica os dados em dois grupos principais: **tipos primitivos**, como strings e números, e **tipos não primitivos**, como objetos e arrays. Por fim, destaca-se que, embora primitivos não possuam métodos próprios, o JavaScript realiza **conversões automáticas** para permitir operações complexas quando necessário.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-19h17m47s989.jpg" alt="" width="840">
+</p>
+
+Esta segunda aula aborda os **tipos de dados** em JavaScript. Após a introdução sobre variáveis e constantes, o foco agora volta-se para a natureza dos valores atribuídos a essas estruturas, explorando como a linguagem lida com diferentes categorias de informação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-19h17m57s400.jpg" alt="" width="840">
+</p>
+
+O objetivo central é apresentar as principais **estruturas de dados** do JavaScript. Além de identificar cada tipo, o aprendizado inclui a compreensão dos métodos fundamentais que podem ser executados em cada uma dessas estruturas para manipular os dados de forma eficiente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-19h18m10s186.jpg" alt="" width="840">
+</p>
+
+Diferente de linguagens como Java, que possuem tipagem forte, o JavaScript é uma linguagem de **tipagem dinâmica e fraca**. Isso significa que não é necessário especificar o tipo de dado (como número inteiro, decimal ou string) no momento da declaração. A linguagem identifica o tipo automaticamente com base no valor atribuído, permitindo maior flexibilidade durante o desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-19h18m18s048.jpg" alt="" width="840">
+</p>
+
+A tipagem dinâmica permite que uma mesma variável mude de tipo durante a execução do programa. No exemplo realizado no **console do Google Chrome**, utilizamos o operador `typeof` para verificar essa característica:
+
+```javascript
+let um = "um";
+typeof um
+// "string"
+
+um = 1;
+typeof um
+// "number"
+
+```
+
+Como demonstrado, ao atribuir o texto `"um"`, a variável é identificada como `string`. Ao reatribuir o valor numérico `1`, ela passa a ser do tipo `number`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-19h18m26s208.jpg" alt="" width="840">
+</p>
+
+As estruturas de dados no JavaScript são divididas em dois grupos principais:
+
+* **Primitive Types (Tipos Primitivos):** Incluem `numbers`, `strings`, `boolean` (true/false), `null` e `undefined`. Por padrão, esses tipos são escritos com letras minúsculas e não possuem métodos internos próprios, embora o JavaScript possa realizar conversões automáticas para objetos quando necessário.
+* **Composite/Non-Primitive Types (Tipos Compostos):** Englobam `objects` e `arrays`, que são estruturas mais complexas capazes de armazenar coleções de dados e funcionalidades.
+
+
+## 🟩 Vídeo 06 - Strings
 
 <video width="60%" controls>
 <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_06.webm" type="video/webm">
@@ -575,8 +635,8 @@ validation.toString()
 ## 🟩 Vídeo 09 - Arrays
 
 <video width="60%" controls>
-<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_09.webm" type="video/webm">
-  Seu navegador não suporta vídeo HTML5.
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_09.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
 </video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/fcdd1211-5c7c-4745-bfbb-c04d97b1a028?autoplay=1
@@ -669,24 +729,355 @@ true
 
 Estes métodos facilitam a análise de dados sem a necessidade de construir loops manuais complexos para verificações simples.
 
-## 🟩 Vídeo 09 - Objetos
+## 🟩 Vídeo 10 - Objetos
 
 <video width="60%" controls>
-<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_09.webm" type="video/webm">
-  Seu navegador não suporta vídeo HTML5.
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_10.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
 </video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/5d10e230-21b3-41f2-9d4d-8e988505d3cd?autoplay=1
 
+O vídeo fornece uma introdução detalhada sobre a estrutura de **objetos no JavaScript**, explicando que eles funcionam como coleções de **chave e valor**. A transcrição demonstra como **declarar variáveis** de objeto utilizando chaves e como **adicionar propriedades** dinamicamente usando a notação de ponto ou colchetes. São destacados métodos essenciais da API global, como o uso de **Object.keys** e **Object.values** para extrair informações específicas da estrutura. Além disso, o conteúdo diferencia a criação de chaves literais do uso de **variáveis externas** para nomear atributos, uma técnica útil em algoritmos complexos. Por fim, o material ressalta que compreender essa organização de dados é **fundamental para o aprendizado** futuro de orientação a objetos na linguagem.
 
-## 🟩 Vídeo 10 - Empty, undefined e null
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h56m44s347.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, iniciamos o estudo sobre **Objetos** no JavaScript. Um objeto é uma estrutura fundamental que permite agrupar variáveis e tipos de dados de forma organizada. Ele funciona como uma **estrutura do tipo chave-valor**, onde cada informação (valor) é acessada por meio de um identificador único (chave). Em outras linguagens e contextos de computação, essa mesma lógica de organização pode ser encontrada sob nomes como dicionário de dados, *hash table* ou *hash map*.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h56m49s921.jpg" alt="" width="840">
+</p>
+
+Para declarar um objeto, utilizamos chaves `{}`. No exemplo visual, vemos a estrutura interna onde `name` e `age` são as **Keys** (chaves), enquanto `'John'` e `20` são os **Values** (valores). Note que, dentro do objeto, utilizamos dois pontos `:` para atribuir o valor à chave e vírgulas para separar as diferentes propriedades.
+
+```javascript
+let person = {
+  name: 'John',
+  age: 20
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h56m57s133.jpg" alt="" width="840">
+</p>
+
+Ao verificar o tipo de dado de um objeto no console através do comando `typeof`, o JavaScript retorna a string `"object"`. É possível preencher ou modificar um objeto dinamicamente após sua criação. No exemplo, uma chave `name` é definida para o objeto `obj` com o valor "julia". Ao consultar o objeto novamente, ele passa a exibir a nova estrutura atualizada.
+
+```javascript
+> typeof obj
+<<< "object"
+
+> obj.name = "julia"
+<<< "julia"
+
+> obj
+{name: "julia"}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h57m20s929.jpg" alt="" width="840">
+</p>
+
+Os objetos permitem a adição de múltiplas propriedades de diferentes tipos, como strings e números. Além disso, o JavaScript oferece formas flexíveis de manipulação, permitindo adicionar novas chaves a qualquer momento, como demonstrado com a inclusão da chave `mom`. Quando visualizamos o objeto completo no console, ele exibe todas as propriedades cadastradas, como nome, idade, endereço e número de irmãos, consolidando a visão de dicionário de dados.
+
+```javascript
+> person.mom = "marta"
+<< "marta"
+
+> person
+{name: "Julia", age: 20, adress: "Rua 2", numberOfSiblings: 3, nameOfMom: "Maria", mom: "marta"}
+
+```
+
+
+## 🟩 Vídeo 11 - Empty, undefined e null
 
 <video width="60%" controls>
-<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_10.webm" type="video/webm">
-  Seu navegador não suporta vídeo HTML5.
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_11.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/16b92494-ab87-46b7-a72d-0f9aaba2f764?autoplay=1
+
+Esta fonte explica as distinções fundamentais entre os valores **empty**, **undefined** e **null** dentro da lógica de programação em **JavaScript**. O texto esclarece que, embora todos esses estados sejam tratados como **falsy** em contextos booleanos, eles representam situações diferentes: o **empty** ocorre em variáveis inicializadas mas sem conteúdo, o **null** é uma ausência de valor atribuída propositalmente e o **undefined** indica que algo nem sequer foi definido. A explicação utiliza exemplos práticos no console para demonstrar como o motor da linguagem identifica cada um desses tipos. Além disso, o autor aborda o conceito de **falsy values**, ensinando como realizar verificações lógicas eficientes para evitar erros de referência. O material conclui incentivando o uso de comunidades de desenvolvedores e estudos complementares sobre **estruturas de dados** para consolidar o aprendizado prático.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h52m39s734.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos os conceitos de **Empty (vazio)**, **Undefined (indefinido)** e **Null (nulo)** em JavaScript. Embora todos esses valores retornem `false` quando tratados como booleanos (sendo considerados *falsy values*), eles possuem significados distintos no ciclo de vida de uma variável e na estrutura de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h52m47s376.jpg" alt="" width="840">
+</p>
+
+Uma analogia visual facilita a compreensão dessas diferenças utilizando uma caixa de cookies:
+
+* **Empty (Vazio):** A variável foi declarada e inicializada, mas não contém dados. É como uma caixa de cookies aberta e pronta, mas sem nenhum cookie dentro. Exemplos comuns incluem uma string vazia (`""`) ou um array vazio (`[]`).
+* **Null (Nulo):** É uma atribuição intencional. Você define que a variável não possui valor de propósito. Na analogia, é como se houvesse uma indicação explícita de que não existem cookies.
+* **Undefined (Indefinido):** O valor não existe ou a variável nem sequer foi declarada. É como se a própria caixa de cookies não estivesse lá ou não tivesse sido sequer pensada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h52m57s051.jpg" alt="" width="840">
+</p>
+
+Ao testar esses conceitos no console, observamos o comportamento do motor JavaScript ao lidar com variáveis não inicializadas:
+
+```javascript
+> typeof abacaxi
+"undefined"
+
+> let abacaxi
+undefined
+
+> typeof abacaxi
+"undefined"
+
+```
+
+Quando tentamos verificar o tipo de uma variável que não foi declarada ou que foi declarada usando `let` mas não recebeu atribuição, o JavaScript retorna `"undefined"`. Isso confirma que o espaço na memória foi reservado (no caso do `let`), mas o valor permanece indefinido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h53m04s633.jpg" alt="" width="840">
+</p>
+
+Ao evoluirmos a manipulação da variável, podemos transformar um estado `undefined` em **Null**:
+
+```javascript
+> let abacaxi = ""
+undefined
+
+> abacaxi
+""
+
+> typeof abacaxi
+"string"
+
+> abacaxi = null
+null
+
+> typeof abacaxi
+"object"
+
+```
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h52m39s734.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos os conceitos de **Empty (vazio)**, **Undefined (indefinido)** e **Null (nulo)** em JavaScript. Embora todos esses valores retornem `false` quando tratados como booleanos (sendo considerados *falsy values*), eles possuem significados distintos no ciclo de vida de uma variável e na estrutura de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h52m47s376.jpg" alt="" width="840">
+</p>
+
+Uma analogia visual facilita a compreensão dessas diferenças utilizando uma caixa de cookies:
+
+* **Empty (Vazio):** A variável foi declarada e inicializada, mas não contém dados. É como uma caixa de cookies aberta e pronta, mas sem nenhum cookie dentro. Exemplos comuns incluem uma string vazia (`""`) ou um array vazio (`[]`).
+* **Null (Nulo):** É uma atribuição intencional. Você define que a variável não possui valor de propósito. Na analogia, é como se houvesse uma indicação explícita de que não existem cookies.
+* **Undefined (Indefinido):** O valor não existe ou a variável nem sequer foi declarada. É como se a própria caixa de cookies não estivesse lá ou não tivesse sido sequer pensada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h52m57s051.jpg" alt="" width="840">
+</p>
+
+Ao testar esses conceitos no console, observamos o comportamento do motor JavaScript ao lidar com variáveis não inicializadas:
+
+```javascript
+> typeof abacaxi
+"undefined"
+
+> let abacaxi
+undefined
+
+> typeof abacaxi
+"undefined"
+
+```
+
+Quando tentamos verificar o tipo de uma variável que não foi declarada ou que foi declarada usando `let` mas não recebeu atribuição, o JavaScript retorna `"undefined"`. Isso confirma que o espaço na memória foi reservado (no caso do `let`), mas o valor permanece indefinido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h53m04s633.jpg" alt="" width="840">
+</p>
+
+Ao evoluirmos a manipulação da variável, podemos transformar um estado `undefined` em um valor **Empty** e, posteriormente, em **Null**:
+
+```javascript
+> let abacaxi = ""
+undefined
+
+> abacaxi
+""
+
+> typeof abacaxi
+"string"
+
+> abacaxi = null
+null
+
+> typeof abacaxi
+"object"
+
+```
+
+Note que ao atribuir `""`, a variável passa a ser do tipo `string` (está vazia, mas definida). Ao atribuir `null`, o operador `typeof` retorna `"object"`. Este é um comportamento conhecido do JavaScript, onde o nulo é tratado tecnicamente como um objeto que representa a ausência de valor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-17h53m12s704.jpg" alt="" width="840">
+</p>
+
+Neste exemplo, testamos as variáveis em contextos lógicos e condicionais:
+
+```javascript
+> abacaxi === false
+false
+
+> let fruta = abacaxi
+undefined
+
+> fruta
+null
+
+> !abacaxi
+true
+
+```
+
+# Parte 3 - Atividade Prática
+
+## 🟩 Vídeo 12 - Verificar palíndromo
+
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_12.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/e27b9c78-efcc-4481-a692-df6d1b6c7c48?autoplay=1
+
+O material consiste em uma aula prática de encerramento sobre **variáveis e tipos** em JavaScript, focada na resolução de desafios de lógica de programação. A instrutora explica detalhadamente como identificar um **palíndromo**, que são palavras ou frases lidas da mesma forma em ambos os sentidos. Duas abordagens distintas são apresentadas: uma solução simplificada utilizando **métodos nativos** como split, reverse e join, e uma técnica mais complexa que utiliza um **laço de repetição for**. Durante a explicação, são abordadas validações de dados para evitar erros com valores nulos ou indefinidos. O conteúdo enfatiza a importância de compreender a **lógica de índices** e caracteres dentro de uma string para resolver problemas comuns em entrevistas técnicas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-18h41m09s227.jpg" alt="" width="840">
+</p>
+
+Esta etapa final do curso de Variáveis e Tipos é focada em atividades práticas para consolidar o conhecimento adquirido. O objetivo principal é exercitar os conceitos através da resolução de problemas reais de programação utilizando JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-18h41m22s182.jpg" alt="" width="840">
+</p>
+
+A primeira etapa prática consiste em criar um algoritmo para verificar se uma palavra é um palíndromo. O desafio propõe que a verificação seja implementada de duas maneiras distintas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-18h41m29s800.jpg" alt="" width="840">
+</p>
+
+Um palíndromo é definido como uma frase ou palavra que mantém a mesma leitura tanto da esquerda para a direita quanto da direita para a esquerda. Um exemplo clássico é a frase "Roma me tem amor", que lida de trás para frente resulta no mesmo conteúdo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-18h42m22s232.jpg" alt="" width="840">
+</p>
+
+A primeira solução utiliza métodos encadeados para manipular a string. O processo consiste em:
+
+1. **Verificação inicial**: Checar se a string existe (não é nula, vazia ou undefined).
+2. **Split**: Divide a string em um array de caracteres.
+3. **Reverse**: Inverte a ordem dos elementos do array.
+4. **Join**: Reagrupa os caracteres em uma nova string.
+5. **Comparação**: Verifica se a string original é idêntica à versão invertida.
+
+```javascript
+//solução 1
+function verificaPalindromo (string) {
+  if (!string) return;
+
+  return string.split("").reverse().join("") === string;
+}
+
+console.log(verificaPalindromo("ovo"));
+
+```
+
+Ao executar o código com a entrada "ovo", o terminal retorna `true`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-18h42m26s766.jpg" alt="" width="840">
+</p>
+
+Para validar a robustez da solução, o código é testado com uma entrada que não é um palíndromo, como a palavra "gato". Neste caso, a comparação entre a string original e a invertida resulta em `false` no terminal.
+
+```javascript
+//solução 1
+function verificaPalindromo (string) {
+  if (!string) return;
+
+  return string.split("").reverse().join("") === string;
+}
+
+console.log(verificaPalindromo("gato"));
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-18h44m21s266.jpg" alt="" width="840">
+</p>
+
+A segunda solução utiliza um laço de repetição `for` para comparar os caracteres das extremidades em direção ao centro da palavra. Esta abordagem é performática pois percorre apenas metade da string (`string.length / 2`). Em cada iteração, o caractere no índice `i` é comparado com o caractere na posição correspondente do final da string.
+
+```javascript
+function verificaPalindromo2(string) {
+  if (!string) return "string inexistente";
+
+  for (let i = 0; i < string.length / 2; i++) {
+    if (string[i] !== string[string.length - 1 - i]) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-18h44m26s075.jpg" alt="" width="840">
+</p>
+
+Ao testar a segunda solução no VS Code, a lógica de comparação de índices garante que se qualquer par de caracteres não for idêntico, a função retorna imediatamente `false`. Se o loop terminar sem encontrar divergências, a palavra é confirmada como um palíndromo (`true`).
+
+```javascript
+console.log(verificaPalindromo2("gato"));
+// Saída: false
+
+```
+
+
+### Vídeo 13 - Substituir números pares
+
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_13.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/4cd0a19a-b615-4335-b988-e61777251db8?autoplay=1
+
+Esta fonte consiste na transcrição de uma aula técnica que ensina como **manipular arrays** utilizando a linguagem **JavaScript**. O instrutor detalha a criação de uma função capaz de identificar **números pares** em uma lista e substituí-los pelo valor **zero**, ignorando números que já possuem esse valor. O conteúdo destaca a importância de realizar **validações de entrada**, orientando o aluno a retornar o valor **-1** caso o dado recebido seja vazio, nulo ou indefinido. Durante a explicação, são explorados conceitos fundamentais como **laços de repetição**, operadores aritméticos de resto e **interpolação de strings** para exibir resultados no console. Por fim, o autor incentiva a consulta a documentações oficiais e o compartilhamento de códigos no **GitHub** para fortalecer o aprendizado prático.
+
+### Anotações
+
+
 
 
 
