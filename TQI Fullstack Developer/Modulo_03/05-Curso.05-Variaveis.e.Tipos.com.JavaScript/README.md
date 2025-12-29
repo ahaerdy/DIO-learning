@@ -275,58 +275,21 @@ const FIRST_NAME;
 * **Erro de Referência**: Tentar usar uma constante antes de declará-la resultará em erro, pois o JavaScript não "sobe" a declaração para você.
 * **Sintaxe**: A falta de um valor inicial em uma declaração `const` gera um `SyntaxError` imediato.
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+# Parte 2 - Tipos
+
+## 🟩 Vídeo 01 - Estrutura de dados
 
 <video width="60%" controls>
 <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_04.webm" type="video/webm">
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/b32c229e-ddb1-4eb4-8cd9-68ba2c649e06?autoplay=1
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/4145f810-f3f5-4519-9593-36eddebe75f4?autoplay=1
+
+### Anotações
 
 
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
 
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-# Parte 2 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
 
 
 ## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
