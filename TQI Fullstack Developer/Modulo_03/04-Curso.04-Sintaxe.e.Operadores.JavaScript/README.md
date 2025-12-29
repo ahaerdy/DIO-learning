@@ -64,7 +64,10 @@ Além das aulas, o suporte ao aprendizado inclui o **fórum do curso** e a **com
 
 ## 🟩 Vídeo 02 - Operadores
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_02.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_02.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/73fbee4f-25f8-456e-a83c-bf111cf68df5?autoplay=1
 
@@ -110,8 +113,6 @@ Detalhamento dos operadores de atribuição. Embora o sinal de igual (`=`) seja 
 | `/=` | `x /= y` | `x = x / y` |
 | `%=` | `x %= y` | `x = x % y` |
 
-
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-08h11m56s381.jpg" alt="" width="840">
 </p>
@@ -135,8 +136,6 @@ Apresentação dos operadores aritméticos disponíveis no JavaScript. Além das
 | `++` | Incrementar |
 | `--` | Decrementar |
 
-
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-08h13m16s945.jpg" alt="" width="840">
 </p>
@@ -159,8 +158,6 @@ O slide detalha os operadores de comparação, com ênfase na diferença entre a
 | `<` | Menor que |
 | `>=` | Maior ou igual |
 | `<=` | Menor ou igual |
-
-
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2025-12-28-08h15m50s338.jpg" alt="" width="840">
@@ -198,7 +195,10 @@ Se a condição for verdadeira, a primeira expressão é executada; caso contrá
 
 ## 🟩 Vídeo 03 - Explicando a atividade
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_03.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_03.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/be1eafaa-2817-41eb-b4d5-8c63d7b11c9e?autoplay=1
 

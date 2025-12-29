@@ -7,7 +7,10 @@
 
 ## 🟩 Vídeo 01 - Slide - Apresentação do curso
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_01.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_01.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/780c7e66-bc21-401f-b3ea-c844898b3614?autoplay=1
 
@@ -17,7 +20,10 @@ Esta fonte apresenta a **introdução de um curso de JavaScript** focado em sint
 
 ## 🟩 Vídeo 02 - O que danado é JavaScript?
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_02.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_02.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/7577db55-f648-48b4-8392-7a9b7b106d85?autoplay=1
 
@@ -203,7 +209,10 @@ alert("Tudo certo, jovem");
 
 ## 🟩 Vídeo 03 - Entendendo variáveis e seus valores
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_03.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_03.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/1559e7d6-698b-4da6-9d11-ce0f73dcc736?autoplay=1
 
@@ -548,8 +557,12 @@ console.log(nao); // Retorna false
 
 # Parte 4 - Vetores e Objetos
 
-
 ## 🟩 Vídeo 04 - Vetores e Objetos
+
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_04.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/aeb705a9-74ea-4e50-901b-44c899c17b6a?autoplay=1
 
@@ -674,7 +687,10 @@ Com a desestruturação de objetos, tudo isso pode ser feito em uma linha. Ao co
 
 ## 🟩 Vídeo 05 - Estruturas condicionais
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_05.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_05.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/1713d23b-810f-40db-b102-d18d7d37e9dd?autoplay=1
 
@@ -964,7 +980,10 @@ Laços de repetição – https://developer.mozilla.org/pt-BR/docs/Web/JavaScrip
 
 ## 🟩 Vídeo 06 - Funções e suas particularidades
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_06.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_06.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/bf0beb3c-efec-41f1-b080-f992df7dee71?autoplay=1
 
@@ -1086,9 +1105,12 @@ Para aprofundamento nos conceitos de funções em JavaScript, recomenda-se a con
 
 # Parte 7 - Aprofundando em funções
 
-## 🟩 Vídeo 06 - Aprofundando em funções
+## 🟩 Vídeo 07 - Aprofundando em funções
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_07.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.03-Video_07.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-basica-em-javascript/learning/428b5ad6-af86-46b0-a8c4-06e2e9b6fe79?autoplay=1
 

@@ -7,7 +7,10 @@
 
 ## 🟩 Vídeo 01 - Apresentação do curso
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_01.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_01.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/ecf563b8-92b8-4061-95f3-66e32b1014cf?autoplay=1
 
@@ -61,7 +64,10 @@ Durante todo o processo, a interação é incentivada através do fórum do curs
 
 ## 🟩 Vídeo 02 - História, Evolução e Aplicações
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_02.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_02.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/2b53ae76-660e-4c80-9004-3eaee89f5169?autoplay=1
 
@@ -118,12 +124,14 @@ A etapa final da introdução explora as diversas aplicações práticas da ling
 O JavaScript expandiu seu alcance para além dos navegadores web, sendo utilizado hoje no desenvolvimento de aplicações para dispositivos móveis (*Mobile*), relógios inteligentes (*Smartwatches*) e até jogos. Além disso, a linguagem permite criar rotinas para Internet das Coisas (IoT), como Alexa e Google Home, e desenvolver aplicações no lado do servidor (*back-end*) por meio do Node.js, possibilitando a criação de APIs robustas.
 
 
-
 # Parte 2 - Recursos básicos da linguagem
 
 ## 🟩 Vídeo 03 - Manipulando um arquivo
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_03.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_03.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/12029bc1-1f35-4815-a310-9c402ed88d6a?autoplay=1
 
@@ -226,10 +234,12 @@ var total = PRECO - desconto;
 
 ```
 
-
 ## 🟩 Vídeo 04 - Funções
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_04.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_04.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/7b57c877-07fc-4c32-9032-554835a533c0?autoplay=1
 
@@ -283,7 +293,10 @@ Neste exemplo, ao chamar `soma(3, 5)`, o número 3 é atribuído à variável `a
 
 ## 🟩 Vídeo 05 - Executando um arquivo .js
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_05.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_05.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/f4ff0c4f-60a1-4d79-8925-0a34b60837bc?autoplay=1
 
@@ -449,7 +462,10 @@ Exemplo final da saída do console utilizando técnicas avançadas de formataç�
 
 ## 🟩 Vídeo 06 - Estrutura de projeto
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_06.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_06.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/29e2461c-fa18-47c3-b4fa-900cf1fcc1f5?autoplay=1
 
@@ -520,7 +536,10 @@ O código estrutural gerado para o arquivo de teste é o seguinte:
 
 ## 🟩 Vídeo 07 - Inserindo javascript numa página HTML
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_07.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_07.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/29e2461c-fa18-47c3-b4fa-900cf1fcc1f5?autoplay=1
 
@@ -596,7 +615,10 @@ Para finalizar a estrutura e testar a visualização, o conteúdo visível é in
 
 ## 🟩 Vídeo 08 - Interagindo com os elementos do DOM
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_08.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_08.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/b3f92afb-7547-48ac-a072-ef0ff7baf80d?autoplay=1
 
@@ -648,7 +670,10 @@ Essa interação permite que o JavaScript modifique dinamicamente o comportament
 
 ## 🟩 Vídeo 09 - Criando um contador
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_09.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_09.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/ec2c12f8-f2d6-461b-9ddf-f6955957997f?autoplay=1
 
@@ -768,7 +793,10 @@ function decrement() {
 
 ## 🟩 Vídeo 10 - Desafio: To-do list
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_10.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_10.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/7967cb7d-8ddd-4dae-80a1-845986f5dfc1?autoplay=1
 
@@ -790,16 +818,13 @@ O projeto consiste em desenvolver uma interface funcional baseada em instruçõe
 
 **Instruções do Desafio:** 
 
-1. 
-**Criação de Interface:** Desenvolver um campo de input de texto e um botão para adicionar a tarefa à lista.
+1. **Criação de Interface:** Desenvolver um campo de input de texto e um botão para adicionar a tarefa à lista.
 
 
-2. 
-**Dinamismo:** Ao pressionar o botão, o texto digitado deve ser renderizado na lista acompanhado de um checkbox.
+2. **Dinamismo:** Ao pressionar o botão, o texto digitado deve ser renderizado na lista acompanhado de um checkbox.
 
 
-3. 
-**Estilização e Lógica:** Quando o usuário marcar o checkbox, o item correspondente deve exibir um efeito visual de texto riscado, o que pode ser implementado facilmente utilizando CSS.
+3. **Estilização e Lógica:** Quando o usuário marcar o checkbox, o item correspondente deve exibir um efeito visual de texto riscado, o que pode ser implementado facilmente utilizando CSS.
 
 
 
@@ -935,7 +960,10 @@ function addTask(description) {
 
 ## 🟩 Vídeo 11 - Frameworks
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_11.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_11.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/d4b3697c-5145-4591-84bf-544c6864e87d?autoplay=1
 
@@ -974,7 +1002,10 @@ A recomendação é focar inicialmente no JavaScript puro para construir uma bas
 
 ## 🟩 Vídeo 12 - Mercado de trabalho
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_12.webm|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.02-Video_12.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-javascript/learning/57c3e4b8-66fc-4934-ab50-1523a9d49cdc?autoplay=1
 

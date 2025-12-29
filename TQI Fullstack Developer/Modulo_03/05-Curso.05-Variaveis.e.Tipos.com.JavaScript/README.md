@@ -1,7 +1,7 @@
 ## Instrutor
 
-- Renan Johannsen de Paula (Software Engineer Lead)
-- Contato Linkedin: / [renanjpaula](https://www.linkedin.com/in/renanjpaula/)
+- Stephany Nusch (Software Engineer at Microsoft)
+- Contato Linkedin: / [stephanynusch](https://www.linkedin.com/in/stephanynusch/)
 
 # Parte 1 - xxxxxxxxxxxxxxx
 
