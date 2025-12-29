@@ -275,9 +275,7 @@ const FIRST_NAME;
 * **Erro de Referência**: Tentar usar uma constante antes de declará-la resultará em erro, pois o JavaScript não "sobe" a declaração para você.
 * **Sintaxe**: A falta de um valor inicial em uma declaração `const` gera um `SyntaxError` imediato.
 
-# Parte 2 - Tipos
-
-## 🟩 Vídeo 04 - Estrutura de dados
+## 🟩 Vídeo 04 - let, var e const
 
 <video width="60%" controls>
 <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_04.webm" type="video/webm">
@@ -354,10 +352,12 @@ Os tipos de dados no JavaScript são organizados em dois grandes grupos principa
 
 Esta distinção é fundamental para entender como a linguagem gerencia a memória e como os dados interagem entre si.
 
+# Parte 2 - Tipos
+
 ## 🟩 Vídeo 05 - Strings
 
 <video width="60%" controls>
-<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_05.webm" type="video/webm">
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_06.webm" type="video/webm">
   Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -401,14 +401,16 @@ As strings possuem métodos e propriedades fundamentais para a manipulação de 
 * **Formatação e Busca**: Métodos como `.replace()` para trocar termos, e `.includes()`, `.startsWith()` ou `.endsWith()` para verificação de conteúdo.
 * **Index de letras**: Localização de posições específicas dentro do texto.
 
-## 🟩 Vídeo 06 - Numbers
+## 🟩 Vídeo 07 - Numbers
 
 <video width="60%" controls>
-<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_06.webm" type="video/webm">
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_07.webm" type="video/webm">
   Seu navegador não suporta vídeo HTML5.
 </video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/d98efdcf-9d22-421e-bc83-6c26b8940014?autoplay=1
+
+
 
 O vídeo apresenta os fundamentos da manipulação de **números no JavaScript**, destacando que valores numéricos são declarados **sem aspas** para permitir operações matemáticas. O autor explica o uso de **operadores aritméticos básicos** e a importância do **operador de módulo** para encontrar o resto de divisões, técnica essencial para identificar números pares ou ímpares. Além disso, a fonte introduz o **objeto Math**, demonstrando funções práticas para **arredondar valores** e acessar constantes matemáticas. É esclarecido que a exibição de **porcentagens** exige a **concatenação** de números com strings, pois o símbolo de porcentagem isolado possui função lógica no código. Por fim, o conteúdo enfatiza a **conversão entre tipos de dados** e a natureza imutável das variáveis durante operações simples, a menos que haja uma nova atribuição.
 
@@ -492,25 +494,180 @@ Math.ceil(fiveByThree)
 
 ```
 
-## 🟩 Vídeo 07 - Booleans
-
-<video width="60%" controls>
-<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_07.webm" type="video/webm">
-  Seu navegador não suporta vídeo HTML5.
-</video>
-
-Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/f808462a-8c0f-41be-acfb-2b128d830b70?autoplay=1
-
-
-## 🟩 Vídeo 08 - Arrays
+## 🟩 Vídeo 08 - Booleans
 
 <video width="60%" controls>
 <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_08.webm" type="video/webm">
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/f808462a-8c0f-41be-acfb-2b128d830b70?autoplay=1
 
+O vídeo explica de maneira prática o funcionamento dos **valores booleanos**, destacando que esse tipo de dado aceita apenas os estados **verdadeiro ou falso**. O instrutor demonstra como **comparações matemáticas**, como verificar igualdades ou grandezas numéricas, resultam automaticamente nessas respostas binárias dentro da programação. É mencionado que os booleanos possuem **objetos próprios** e podem ser convertidos para outros formatos, como textos. Além disso, o conteúdo detalha o uso do **operador de exclamação**, que serve para **inverter o valor** atual de uma variável lógica. Esse recurso é fundamental para criar **estruturas condicionais** que dependem da negação de um estado para executar determinada tarefa. Em resumo, a fonte apresenta a simplicidade e a utilidade essencial dessa estrutura de dados nas **validações lógicas**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h19m25s466.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula sobre **variáveis e tipos**, introduzimos o conceito de **valores booleanos**. Este tipo de dado é fundamental na programação para o controle de fluxo e tomada de decisões, sendo caracterizado por sua simplicidade lógica.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h19m32s041.jpg" alt="" width="840">
+</p>
+
+Um **valor booleano** admite apenas dois estados possíveis: **verdadeiro (true)** ou **falso (false)**. Visualmente, podemos associar esses valores a símbolos de validação, como um checkmark para confirmações positivas e um "X" para negativas. Sempre que uma operação solicita uma verificação lógica, o retorno será invariavelmente um desses dois estados.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h19m42s402.jpg" alt="" width="840">
+</p>
+
+Na prática, utilizamos **condicionais e comparadores** para gerar esses valores. Ao atribuir uma comparação a uma variável, como a variável `validation`, o sistema avalia a expressão e armazena o resultado booleano correspondente. Por exemplo, ao testar se um número é maior ou igual a outro, a estrutura de dados processa a pergunta e retorna a resposta lógica.
+
+```javascript
+// Exemplos de comparações booleanas no console
+validation = 3 == 0
+// retorna false
+
+validation = 3 == 3
+// retorna true
+
+validation = 3 > 4
+// retorna false
+
+validation = 3 > 2
+// retorna true
+
+validation = 3 >= 2
+// retorna true
+
+```
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h19m49s993.jpg" alt="" width="840">
+</p>
+
+Além das comparações diretas, os booleanos possuem métodos próprios, como a conversão para string através do `.toString()`. Outro recurso essencial é o operador de **negação (exclamação `!`)**. Ao utilizar o símbolo de exclamação antes de uma variável ou valor booleano, o sistema inverte o seu estado: o que era verdadeiro torna-se falso, e o que era falso torna-se verdadeiro.
+
+```javascript
+// Conversão e inversão de valores
+validation.toString()
+// retorna "true" (como string)
+
+!validation
+// retorna false (o contrário de true)
+
+!true
+// retorna false
+
+!false
+// retorna true
+
+```
+
+## 🟩 Vídeo 09 - Arrays
+
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_09.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/fcdd1211-5c7c-4745-bfbb-c04d97b1a028?autoplay=1
+
+O vídeo consiste em uma aula introdutória sobre **arrays em JavaScript**, explorando como essas **listas de dados** funcionam na prática da programação. O autor detalha a sintaxe para criar vetores e explica o conceito de **índice**, destacando que a contagem de elementos sempre se inicia pelo zero. Diversos métodos fundamentais são apresentados para **manipular elementos**, como o acréscimo e a remoção de itens tanto no início quanto no final da lista. Além disso, a fonte aborda a **iterabilidade dos arrays**, demonstrando como percorrer a estrutura através de loops e verificar condições específicas. Por fim, incentiva-se a pesquisa autônoma sobre funções mais avançadas, reafirmando que essa é uma das **estruturas de dados** mais versáteis para o desenvolvimento de projetos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h42m33s790.jpg" alt="" width="840">
+</p>
+
+Nesta introdução, abordamos o conceito de **Arrays**, também conhecidos no meio acadêmico como **vetores**. Arrays são estruturas de dados fundamentais que funcionam como listas iteráveis de elementos. Duas características essenciais são apresentadas: a propriedade **length**, que indica o tamanho da lista (quantidade de itens), e o **index** (índice), que determina a posição de cada elemento. É importante notar que, em JavaScript, a contagem dos índices sempre se inicia em **zero**, seguindo a mesma lógica aplicada às strings.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h42m40s486.jpg" alt="" width="840">
+</p>
+
+O diagrama visualiza a estrutura de um array de 10 elementos. Podemos observar a distinção entre o valor do elemento e sua posição na memória:
+
+* **First Index**: O primeiro elemento está localizado no índice `0`.
+* **Indices**: Representados numericamente de `0` a `9`.
+* **Array length**: O comprimento total é `10`, evidenciando que o último índice é sempre o valor do tamanho menos um.
+* **Element at index 8**: Um destaque para um item específico posicionado na nona posição da lista.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h42m46s839.jpg" alt="" width="840">
+</p>
+
+Para manipular arrays, utilizamos métodos específicos de inserção e remoção. O método **push** adiciona um novo elemento ao final da lista, retornando o novo tamanho do array. Já o método **pop** realiza a operação inversa, removendo o último elemento da lista. Abaixo, a aplicação prática desses comandos no console:
+
+```javascript
+> array.push(3)
+1
+> array
+[3]
+> array.push(2)
+2
+> array
+(2) [3, 2]
+> array.pop()
+< 2
+> array
+[3]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h42m54s228.jpg" alt="" width="840">
+</p>
+
+Além da manipulação nas extremidades finais, o JavaScript oferece o método **unshift** para adicionar elementos no início do array. Outro conceito crucial é a **iterabilidade**, que permite realizar operações em cada elemento individualmente. Utilizando uma estrutura de repetição como o loop `for`, podemos percorrer todo o array e acessar seus valores através do índice:
+
+```javascript
+> array
+(2) [2, 5]
+> array.unshift(1)
+3
+> array
+(3) [1, 2, 5]
+> for(let i=0; i < array.length; i++) {
+    console.log(array[i])
+  }
+1
+2
+5
+undefined
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h43m03s469.jpg" alt="" width="840">
+</p>
+
+Existem métodos avançados para realizar buscas e validações dentro de um array:
+
+* **includes**: Verifica se um determinado elemento existe na lista, retornando um booleano (`true` ou `false`).
+* **every**: Checa se todos os itens da lista satisfazem uma condição específica.
+* **some**: Verifica se ao menos um dos itens atende ao critério estabelecido.
+
+```javascript
+> array.includes (3)
+false
+> array.every (item => item === 5)
+false
+> array.some (item => item === 5)
+true
+
+```
+
+Estes métodos facilitam a análise de dados sem a necessidade de construir loops manuais complexos para verificações simples.
 
 ## 🟩 Vídeo 09 - Objetos
 
@@ -519,7 +676,7 @@ Link do vídeo:
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/5d10e230-21b3-41f2-9d4d-8e988505d3cd?autoplay=1
 
 
 ## 🟩 Vídeo 10 - Empty, undefined e null
