@@ -277,7 +277,7 @@ const FIRST_NAME;
 
 # Parte 2 - Tipos
 
-## 🟩 Vídeo 01 - Estrutura de dados
+## 🟩 Vídeo 04 - Estrutura de dados
 
 <video width="60%" controls>
 <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_04.webm" type="video/webm">
@@ -286,129 +286,154 @@ const FIRST_NAME;
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/4145f810-f3f5-4519-9593-36eddebe75f4?autoplay=1
 
+O instrutor explica que a linguagem possui **tipagem dinâmica e fraca**, o que permite alterar o tipo de uma variável durante a execução do código sem restrições rígidas. Através de exemplos práticos no console, demonstra-se o uso do operador **typeof** para identificar se um dado é, por exemplo, um número ou uma string. O conteúdo também diferencia os **tipos primitivos**, como números e booleanos, dos **tipos não primitivos**, como objetos e arrays. Por fim, destaca-se como o JavaScript lida internamente com a conversão de valores para permitir o uso de **métodos e operações** específicas em cada estrutura.
+
 ### Anotações
 
+#### Aula 2: Tipos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-14h33m39s583.jpg" alt="" width="840">
+</p>
+
+Nesta segunda aula, o foco é o estudo dos **tipos de dados** em JavaScript. Após a introdução sobre variáveis e constantes e como atribuir valores a elas, exploraremos as características e categorias dos valores que essas variáveis podem armazenar.
+
+#### Objetivos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-14h34m09s683.jpg" alt="" width="840">
+</p>
+
+O objetivo principal deste encontro é apresentar as **principais estruturas de dados** presentes no ecossistema JavaScript. Além de identificar cada tipo, aprenderemos sobre os métodos fundamentais que podem ser executados em cada uma dessas estruturas para manipular as informações.
+
+#### Estruturas de Dados e Tipagem
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-14h34m38s557.jpg" alt="" width="840">
+</p>
+
+Diferente de linguagens como Java, que é fortemente tipada, o JavaScript é uma linguagem de **tipagem dinâmica e fraca**. Isso significa que a linguagem lida com os tipos de dados de forma flexível, permitindo maior agilidade no desenvolvimento, embora exija atenção do desenvolvedor para evitar comportamentos inesperados.
+
+#### Dinâmica da Tipagem
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-14h38m17s330.jpg" alt="" width="840">
+</p>
+
+A característica de **tipagem dinâmica** no JavaScript significa que não é necessário especificar o tipo de dado (como inteiro, decimal ou lista) no momento em que uma variável é declarada. O interpretador da linguagem identifica o tipo automaticamente com base no valor atribuído, e esse tipo pode ser modificado conforme o programa é executado.
+
+#### Demonstração Prática: Operador typeof
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-14h39m41s937.jpg" alt="" width="840">
+</p>
+
+Podemos observar a tipagem dinâmica em ação utilizando o console. Ao declarar uma variável e atribuir a ela um texto (string), o JavaScript a identifica como tal. Se reatribuirmos um número a essa mesma variável, o seu tipo muda automaticamente. O operador `typeof` é a ferramenta utilizada para verificar o tipo atual de qualquer dado.
+
+```javascript
+let um = "um";
+console.log(typeof um); 
+// Saída: "string"
+
+um = 1;
+console.log(typeof um); 
+// Saída: "number"
+
+```
+
+#### Categorias de Dados em JavaScript
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-14h40m20s259.jpg" alt="" width="840">
+</p>
+
+Os tipos de dados no JavaScript são organizados em dois grandes grupos principais:
+
+* **Tipos Primitivos:** Incluem `numbers`, `strings`, `boolean` (true/false), `null` e `undefined`. Uma característica importante é que tipos primitivos não possuem métodos internos próprios (embora o JavaScript possa convertê-los temporariamente em objetos para permitir operações).
+* **Tipos Compostos (Não Primitivos):** Englobam estruturas mais complexas como `objects` (objetos) e `arrays` (listas).
+
+Esta distinção é fundamental para entender como a linguagem gerencia a memória e como os dados interagem entre si.
+
+## 🟩 Vídeo 05 - Strings
+
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_05.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/b4937ea1-bb50-4e07-822d-e6810f5e65c9?autoplay=1
+
+O vídeo apresenta uma introdução detalhada sobre **strings**, definindo-as como a estrutura de dados utilizada para manipular **textos e caracteres** em JavaScript. O autor explica que esses valores podem ser declarados com aspas ou crases, destacando a **interpolação de variáveis** e a facilidade de criar quebras de linha com as **template strings**. É discutida a diferença técnica entre o **tipo primitivo** e o **objeto string**, ressaltando que, embora o primeiro seja mais performático, o JavaScript permite acessar métodos de objeto em ambos. Diversas funcionalidades práticas são demonstradas, como a **concatenação**, o uso da propriedade **length** para medir o tamanho e o acesso a caracteres individuais através de **índices**. Por fim, a fonte enumera métodos essenciais para o tratamento de dados, incluindo o **split** para segmentação, o **replace** para substituições e o **includes** para buscas internas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-15h47m44s112.jpg" alt="" width="840">
+</p>
+
+As **strings** são a primeira estrutura de dados apresentada, fundamentais para lidar com textos e frases. Elas permitem trabalhar diretamente com caracteres individuais. No desenvolvimento, as strings são categorizadas dentro do estudo de **Variáveis e Tipos**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-15h48m07s819.jpg" alt="" width="840">
+</p>
+
+A declaração de strings no JavaScript pode ser feita utilizando **aspas simples, duplas ou crases**. O uso de crases introduz as **template strings**, que facilitam a **interpolação** de variáveis e a quebra de linhas sem comandos complexos.
+
+```javascript
+[cite_start]const DIO = 'Digital Innovation One'; [cite: 13]
+[cite_start]let firstName = 'João'; [cite: 14]
+[cite_start]let lastName = 'Luiz'; [cite: 15]
+[cite_start]let fullName = `Nome completo: ${firstName} ${lastName}`; [cite: 16]
+
+```
+
+Diferente dos tipos primitivos, quando uma string é declarada como um **objeto** (ex: `new String("valor")`), ela ganha acesso a diversas propriedades no seu protótipo, embora o JavaScript converta automaticamente tipos primitivos em objetos temporários para realizar operações.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-15h50m12s004.jpg" alt="" width="840">
+</p>
+
+As strings possuem métodos e propriedades fundamentais para a manipulação de dados textuais:
+
+* **Concatenação**: União de duas ou mais strings usando o método `.concat()` ou o operador `+`.
+* **Propriedade length**: Retorna o tamanho total da string.
+* **Iterabilidade**: Permite acessar caracteres por meio de índices, começando sempre do zero.
+* **Formatação e Busca**: Métodos como `.replace()` para trocar termos, e `.includes()`, `.startsWith()` ou `.endsWith()` para verificação de conteúdo.
+* **Index de letras**: Localização de posições específicas dentro do texto.
+
+## 🟩 Vídeo 06 - Numbers
+
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_06.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/d98efdcf-9d22-421e-bc83-6c26b8940014?autoplay=1
 
 
-
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 07 - Booleans
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 08 - Arrays
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 11 - Objetos
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 12 - Empty, undefined e null
 
 
 Link do vídeo: 
 
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-# Parte 3 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - Exxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-##  Materiais de Apoio
 
 
 # Certificado: 
