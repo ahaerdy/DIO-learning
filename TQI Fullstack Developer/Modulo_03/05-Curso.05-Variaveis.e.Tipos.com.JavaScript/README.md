@@ -410,27 +410,124 @@ As strings possuem métodos e propriedades fundamentais para a manipulação de 
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/d98efdcf-9d22-421e-bc83-6c26b8940014?autoplay=1
 
+O vídeo apresenta os fundamentos da manipulação de **números no JavaScript**, destacando que valores numéricos são declarados **sem aspas** para permitir operações matemáticas. O autor explica o uso de **operadores aritméticos básicos** e a importância do **operador de módulo** para encontrar o resto de divisões, técnica essencial para identificar números pares ou ímpares. Além disso, a fonte introduz o **objeto Math**, demonstrando funções práticas para **arredondar valores** e acessar constantes matemáticas. É esclarecido que a exibição de **porcentagens** exige a **concatenação** de números com strings, pois o símbolo de porcentagem isolado possui função lógica no código. Por fim, o conteúdo enfatiza a **conversão entre tipos de dados** e a natureza imutável das variáveis durante operações simples, a menos que haja uma nova atribuição.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h08m43s340.jpg" alt="" width="840">
+</p>
+
+Esta etapa da aula introduz o conceito de **Numbers** (números) dentro do estudo de variáveis e tipos. Os números são apresentados como tipos de dados fundamentais e básicos na programação, servindo como ponto de partida para a compreensão de como o computador processa informações quantitativas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h08m50s503.jpg" alt="" width="840">
+</p>
+
+No desenvolvimento, os números podem ser classificados em dois grupos principais: **inteiros** ou **decimais**. Diferente das strings, os valores numéricos devem ser declarados de forma direta, sem o uso de aspas, para que o sistema reconheça sua natureza matemática e permita a realização de operações aritméticas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h09m00s994.jpg" alt="" width="840">
+</p>
+
+Através do console, é possível observar a aplicação prática da aritmética básica. Ao realizar operações como soma (`+`) ou divisão (`/`) com uma variável, o sistema retorna um novo valor resultante, mas mantém o valor original da variável intacto, a menos que uma nova atribuição seja realizada.
+
+```javascript
+let num = 100
+// undefined
+100 + 3
+// 103
+100 / 5
+// 20
+num
+// 100
+num / 3
+// 33.333333333333336
+num
+// 100
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h09m31s052.jpg" alt="" width="840">
+</p>
+
+Além das quatro operações fundamentais, utiliza-se o operador de **módulo** (`%`), que extrai o resto de uma divisão, sendo útil para identificar se um número é par ou ímpar. O JavaScript também disponibiliza o objeto **Math**, que fornece propriedades matemáticas constantes, como o valor de **PI**.
+
+```javascript
+num * 5
+// 500
+num % 2
+// 0
+let num2 = 101
+// 101
+num2 % 2
+// 1
+typeof Math
+// "object"
+Math.PI
+// 3.141592653589793
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-29-16h09m38s682.jpg" alt="" width="840">
+</p>
+
+Para o controle de precisão em números decimais, o objeto `Math` oferece métodos de arredondamento específicos: o **Math.floor**, que arredonda o valor para baixo (piso), e o **Math.ceil**, que arredonda para cima (teto/topo). Esses métodos permitem transformar resultados de divisões complexas em números inteiros conforme a necessidade da lógica programacional.
+
+```javascript
+typeof Math
+// "object"
+Math.PI
+// 3.141592653589793
+let fiveByThree = 5 / 3
+// undefined
+fiveByThree
+// 1.6666666666666667
+Math.floor(fiveByThree)
+// 1
+Math.ceil(fiveByThree)
+// 2
+
+```
 
 ## 🟩 Vídeo 07 - Booleans
 
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_07.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-e-tipos-com-javascript/learning/f808462a-8c0f-41be-acfb-2b128d830b70?autoplay=1
 
 
 ## 🟩 Vídeo 08 - Arrays
 
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_08.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 11 - Objetos
+## 🟩 Vídeo 09 - Objetos
 
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_09.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 12 - Empty, undefined e null
+## 🟩 Vídeo 10 - Empty, undefined e null
 
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.05-Video_10.webm" type="video/webm">
+  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
