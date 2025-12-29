@@ -61,7 +61,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: [Introdução ao JavaScript](Modulo_03/02-Curso.02-Introducao.ao.JavaScript)
 - [ ] Curso: [Sintaxe Básica em JavaScript](Modulo_03/03-Curso.03-Sintaxe.Basica.em.JavaScript)
 - [ ] Curso: [Sintaxe e Operadores JavaScript](Modulo_03/04-Curso.04-Sintaxe.e.Operadores.JavaScript)
-- [ ] Curso: [Variáveis e Tipos com JavaScript]
+- [ ] Curso: [Variáveis e Tipos com JavaScript](Modulo_03/05-Curso.05-Variaveis.e.Tipos.com.JavaScript)
 - [ ] Curso: [Dominando Funções em JavaScript]
 - [ ] Curso: [Debugging e Error Handling com JavaScript]
 - [ ] Curso: [Fundamentos de JavaScript Assíncrono]
