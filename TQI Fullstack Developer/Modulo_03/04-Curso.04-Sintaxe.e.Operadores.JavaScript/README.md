@@ -7,6 +7,7 @@
 
 ## 🟩 Vídeo 01 - Apresentação do curso
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_01.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/6e83ba51-9a4d-4c0f-9537-f23e9aa7458a?autoplay=1
 
@@ -60,6 +61,7 @@ Além das aulas, o suporte ao aprendizado inclui o **fórum do curso** e a **com
 
 ## 🟩 Vídeo 02 - Operadores
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_02.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/73fbee4f-25f8-456e-a83c-bf111cf68df5?autoplay=1
 
@@ -191,8 +193,9 @@ Se a condição for verdadeira, a primeira expressão é executada; caso contrá
 
 # Parte 3 - Atividade prática
 
-## 🟩 Vídeo 01 - Explicando a atividade
+## 🟩 Vídeo 03 - Explicando a atividade
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_03.webm|vid-60]]
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/be1eafaa-2817-41eb-b4d5-8c63d7b11c9e?autoplay=1
 
@@ -226,8 +229,9 @@ O enunciado da atividade propõe a criação de uma função JavaScript que oper
 Para auxiliar no desenvolvimento, o repositório disponibiliza um arquivo de solução chamado `comparaNumeros.js`.
 
 
-## 🟩 Vídeo 02 - Atividade prática
+## 🟩 Vídeo 04 - Atividade prática
 
+![[bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_04.webm|vid-60]]
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/sintaxe-e-operadores-javascript/learning/1adc777c-443e-49d9-9795-2cee3d0f48a7?autoplay=1
 
