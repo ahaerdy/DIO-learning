@@ -7,8 +7,6 @@
 
 ## 🟩 Vídeo 01 - Apresentação do curso
 
-![[bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_01.webm|vid-60]]
-
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.04-Video_01.webm" type="video/webm">
   Seu navegador não suporta vídeo HTML5.

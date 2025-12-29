@@ -1,6 +1,12 @@
 # Aula Inaugural
 
-![[TQI.Fullstack.Developer.Aula.Inaugural-DIO.720p,.h264,.youtube..mp4|vid-60]]
+<video width="60%" controls>
+<source src="000-Midia_e_Anexos/TQI.Fullstack.Developer.Aula.Inaugural-DIO.720p,.h264,.youtube..mp4" type="video/mp4">
+  Seu navegador não suporta vídeo HTML5.
+</video>
+
+<br>
+<br>
 
 ▶️ [Assista no Youtube](https://youtu.be/OhHMkrzKU6U)
 
