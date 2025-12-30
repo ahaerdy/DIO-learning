@@ -396,6 +396,57 @@ length: 4
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/5da6e77a-f49b-45e5-a55f-f379e5a01ce0?autoplay=1
 
+Esta fonte explica técnicas fundamentais de **manipulação de dados** em programação, focando especificamente no uso de **JavaScript**. A instrutora detalha o funcionamento do **operador spread**, que serve para expandir os elementos de uma lista e enviá-los de forma individual para uma função. Em contrapartida, o texto apresenta o **parâmetro rest**, utilizado para agrupar diversos argumentos independentes em um único conjunto durante a declaração de funções. Além disso, o conteúdo aborda a **desestruturação de objetos**, um método prático para extrair e renomear apenas as propriedades específicas de que o desenvolvedor necessita. Essas ferramentas são apresentadas como **padrões de mercado** essenciais para otimizar o código e facilitar o tratamento de estruturas complexas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h03m30s349.jpg" alt="" width="840">
+</p>
+
+Esta etapa da aula introduz o tratamento de estruturas de dados fundamentais em JavaScript: **Arrays** e **Objetos**. O objetivo é explorar técnicas modernas de manipulação que permitem lidar com coleções de dados de forma mais eficiente e legível, preparando a base para os conceitos de *Spread*, *Rest* e *Destructuring*.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h03m42s861.jpg" alt="" width="840">
+</p>
+
+A técnica de **Spread** (espalhar) é utilizada para lidar separadamente com elementos de um array. Ao utilizar a sintaxe de reticências (`...`) antes do nome da variável ao chamar uma função, o que era um único argumento (o array) se torna uma série de elementos independentes passados como parâmetros individuais.
+
+```javascript
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h03m51s092.jpg" alt="" width="840">
+</p>
+
+O operador **Rest** funciona de maneira oposta ao Spread. Ele é utilizado no momento da **declaração** da função para combinar diversos argumentos passados individualmente em um único array. Isso permite que a função receba um número indefinido de parâmetros e os manipule como uma coleção.
+
+```javascript
+function confereTamanho(...args) {
+  console.log(args.length)
+}
+
+confereTamanho() // 0
+confereTamanho(1, 2) // 2
+confereTamanho(3, 4, 5) // 3
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h03m57s101.jpg" alt="" width="840">
+</p>
+
+A técnica de **Object Destructuring** (desestruturação de objeto) permite filtrar e extrair apenas os dados de interesse de dentro de um objeto. Através do uso de chaves `{}` na passagem de parâmetros, é possível acessar propriedades diretas ou até realizar desestruturações aninhadas (como buscar dados dentro de `fullName`) e renomear variáv      
+
+
 
 ## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
 
