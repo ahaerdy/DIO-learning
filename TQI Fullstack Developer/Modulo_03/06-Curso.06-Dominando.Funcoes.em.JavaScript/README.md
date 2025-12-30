@@ -446,18 +446,28 @@ confereTamanho(3, 4, 5) // 3
 
 A técnica de **Object Destructuring** (desestruturação de objeto) permite filtrar e extrair apenas os dados de interesse de dentro de um objeto. Através do uso de chaves `{}` na passagem de parâmetros, é possível acessar propriedades diretas ou até realizar desestruturações aninhadas (como buscar dados dentro de `fullName`) e renomear variáv      
 
+# Parte 3 - Loops
+
+## 🟩 Vídeo 06 - If/else e Switch
+
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_06.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/b42a2926-2274-44df-9158-815a75d5af8c?autoplay=1
+
+Este vídeo apresenta conceitos fundamentais sobre **estruturas de controle** em **JavaScript**, enfatizando a importância de dominar a lógica de programação para o desenvolvimento cotidiano. O instrutor detalha o funcionamento do **if/else**, explicando como validar condições e oferecendo dicas de **clean code**, como o uso de variáveis para tornar as condicionais mais legíveis. A aula também explora técnicas para otimizar o código através do uso estratégico da instrução **return** e do aninhamento de múltiplas verificações. Por fim, o conteúdo introduz o **switch case**, destacando sua utilidade em cenários com muitas opções e ressaltando que essa estrutura realiza comparações estritas de **tipo e valor**.
+
+### Anotações
 
 
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
 
 
 ## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/4fd60705-f260-4e80-8dcc-ebe40fc6cb98?autoplay=1
 
 
 ## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
