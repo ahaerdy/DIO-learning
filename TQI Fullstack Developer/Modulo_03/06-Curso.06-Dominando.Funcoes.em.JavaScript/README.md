@@ -268,7 +268,7 @@ console.log(resultSoma); // 3
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/1af71d8f-7d70-4802-9f1e-ce396f1729ef?autoplay=1
 
-...
+
 
 
 ## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
