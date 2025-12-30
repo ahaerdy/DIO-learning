@@ -262,7 +262,7 @@ console.log(resultSoma); // 3
 ## 🟩 Vídeo 04 - Exercício - Valores padrão e Objeto "arguments"
 
 <video width="60%" controls>
-	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_03.webm" type="video/webm">
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_04.webm" type="video/webm">
 	  Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -273,8 +273,12 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
 
 ## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
 
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_05.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/5da6e77a-f49b-45e5-a55f-f379e5a01ce0?autoplay=1
 
 
 ## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
