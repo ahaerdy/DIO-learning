@@ -1238,6 +1238,49 @@ Devido a essas limitações, recomenda-se o uso de funções comuns ao criar mé
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/0a54c71b-949d-4157-8509-6dbe68492dae?autoplay=1
 
+O vídeo apresenta um guia prático em vídeo focado na aplicação de conceitos fundamentais de **JavaScript** através de dois exercícios principais. A primeira atividade ensina a criar uma função para **filtrar alunos aprovados**, destacando a importância de decompor problemas e utilizar técnicas como **iteração**, manipulação de arrays e **desestruturação de objetos**. Na segunda parte, o tutorial demonstra o gerenciamento do contexto de execução ao manipular a palavra-chave **this**. Através de uma função de cálculo de idade, a instrutora exemplifica de forma clara as diferenças sintáticas entre os métodos **call** e **apply**. Por fim, o conteúdo incentiva o aprendizado contínuo por meio da prática em projetos pessoais e do engajamento com comunidades de desenvolvedores.
+
+### Anotações
+
+#### ▶️ Código em JavaScript (alunosAprovados.js)
+
+```javascript
+const alunos = [
+	{
+		nome: 'João',
+		nota: 5,
+		turma: '1B',
+	},
+	{
+		nome: 'Sofia',
+		nota: 9,
+		turma: '1B',
+	},
+	{
+		nome: 'Paulo',
+		nota: 6,
+		turma: '2C',
+	},
+];
+
+function alunosAprovados(alunos, media) {
+	let aprovados = [];
+
+	for (let i = 0; i < alunos.length; i++) {
+		let { nota, nome } = alunos[i];
+
+		if (nota >= media) {
+			aprovados.push(nome);
+		}
+	}
+
+	return aprovados;
+}
+
+console.log(alunosAprovados(alunos, 5));
+```
+
+
 
 
 
