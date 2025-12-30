@@ -259,7 +259,7 @@ console.log(resultSoma); // 3
 
 # Parte 2 - Parâmetros
 
-## 🟩 Vídeo 04 - Exercício - Valores padrão e Objeto "arguments"
+## 🟩 Vídeo 04 - Valores padrão e Objeto "arguments"
 
 <video width="60%" controls>
 	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_04.webm" type="video/webm">
@@ -387,7 +387,7 @@ length: 4
 ```
 
 
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 05 - Arrays e Objetos
 
 <video width="60%" controls>
 	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_05.webm" type="video/webm">
