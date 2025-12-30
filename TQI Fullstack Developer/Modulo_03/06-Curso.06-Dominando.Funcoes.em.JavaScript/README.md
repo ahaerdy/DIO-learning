@@ -928,8 +928,14 @@ Neste contexto específico de evento, o `this` funciona como um atalho para o pr
 
 ## 🟩 Vídeo 09 - Manipulando seu valor
 
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_09.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/8b713d82-f56e-4cde-b10d-8552a0eac233?autoplay=1
+
+
 
 
 ## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
