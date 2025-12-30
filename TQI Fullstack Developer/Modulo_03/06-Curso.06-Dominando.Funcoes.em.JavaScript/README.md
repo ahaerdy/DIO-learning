@@ -1242,7 +1242,97 @@ O vídeo apresenta um guia prático em vídeo focado na aplicação de conceitos
 
 ### Anotações
 
-#### ▶️ Código em JavaScript (alunosAprovados.js)
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-12h19m19s983.jpg" alt="" width="840">
+</p>
+
+Nesta aula prática, exploramos a implementação de funções em JavaScript através de dois exercícios fundamentais: a filtragem de dados em arrays e a manipulação do contexto `this`. A instrutora utiliza o repositório **Basecamp JavaScript** no GitHub como referência para guiar o desenvolvimento passo a passo das atividades.
+
+### Atividade 1: Alunos Aprovados
+
+O objetivo é criar uma função que filtre um array de objetos (alunos) e retorne apenas os nomes daqueles que atingiram a média final.
+
+1. **Criação da Função**: A função `alunosAprovados` recebe o array `alunos` e o número `media`.
+2. **Loop e Lógica**: Utilizamos um loop `for` para percorrer o array. É essencial declarar o array auxiliar `aprovados` fora do loop para evitar que ele seja reinicializado a cada iteração.
+3. **Object Destructuring**: Para tornar o código mais limpo e evitar repetições como `array[i].nota`, aplicamos a técnica de desestruturação de objeto para extrair apenas as propriedades `nota` e `nome`.
+
+```javascript
+const alunos = [
+	{
+		nome: 'João',
+		nota: 5,
+		turma: '1B',
+	},
+	{
+		nome: 'Sofia',
+		nota: 9,
+		turma: '1B',
+	},
+	{
+		nome: 'Paulo',
+		nota: 6,
+		turma: '2C',
+	},
+    {
+		nome: 'Miguel',
+		nota: 3,
+		turma: '2C',
+	},
+];
+
+function alunosAprovados(arr, media) {
+	let aprovados = [];
+
+	for (let i = 0; i < arr.length; i++) {
+		const { nota, nome } = arr[i];
+
+		if (nota >= media) {
+			aprovados.push(nome);
+		}
+	}
+
+	return aprovados;
+}
+
+console.log(alunosAprovados(alunos, 5));
+
+```
+
+### Atividade 2: Manipulando o "this"
+
+A segunda etapa foca no uso dos métodos `call` e `apply` para modificar o valor de `this` dentro da função `calculaIdade`.
+
+* **Método call**: Os argumentos são passados individualmente, separados por vírgula, após o objeto de contexto.
+* **Método apply**: Os argumentos são passados obrigatoriamente dentro de um array (entre colchetes) após o objeto de contexto.
+
+```javascript
+function calculaIdade(anos) {
+	return `Daqui a ${anos} anos, ${this.nome} terá ${
+		this.idade + anos
+	} anos de idade.`;
+}
+
+const pessoa1 = {
+	nome: 'Maria',
+	idade: 30,
+};
+
+const pessoa2 = {
+	nome: 'Carla',
+	idade: 26,
+};
+
+const animal = {
+	nome: 'Fiona',
+	idade: 5,
+	raca: 'Pug',
+};
+
+console.log(calculaIdade.call(pessoa2, 30));
+console.log(calculaIdade.apply(pessoa1, [4]));
+```
+
+### ▶️ Código em JavaScript (alunosAprovados.js)
 
 ```javascript
 const alunos = [
