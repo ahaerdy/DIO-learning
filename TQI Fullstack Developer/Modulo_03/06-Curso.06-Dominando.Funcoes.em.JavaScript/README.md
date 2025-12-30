@@ -911,9 +911,7 @@ A tag `<button>` define um botão clicável no HTML. No exemplo, ela possui os s
 
 * **Conteúdo Texto**: O texto "click me!" é o que aparece visualmente para o usuário dentro do botão.
 
----
-
-##### O Comportamento do `this` no Evento
+#### O Comportamento do `this` no Evento
 
 A parte mais crítica dessa tag é o uso da palavra reservada **this** dentro do atributo `onclick`.
 
@@ -923,11 +921,10 @@ A parte mais crítica dessa tag é o uso da palavra reservada **this** dentro do
 
 3. **Resultado no Console**: Ao clicar no botão, o navegador executará o comando `console.log(this)`. Como o `this` aponta para o próprio elemento, o console exibirá a tag completa do botão: `<button id="my-btn" onclick="console.log(this)">click me!</button>`.
 
-##### Resumo do Funcionamento
+#### Resumo do Funcionamento
 
 Neste contexto específico de evento, o `this` funciona como um atalho para o próprio objeto do DOM (o botão), permitindo que você acesse ou manipule suas propriedades (como `this.id`, `this.innerHTML` ou estilos) sem precisar buscar o elemento manualmente pelo ID.
-   
-
+  
 
 ## 🟩 Vídeo 09 - Manipulando seu valor
 
