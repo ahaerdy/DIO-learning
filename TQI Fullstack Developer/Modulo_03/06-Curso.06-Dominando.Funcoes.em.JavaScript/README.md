@@ -461,7 +461,133 @@ Este vídeo apresenta conceitos fundamentais sobre **estruturas de controle** em
 
 ### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h35m23s357.jpg" alt="" width="840">
+</p>
 
+Esta aula aborda um dos pilares fundamentais do JavaScript: os **loops** e as **estruturas de controle**. Essas declarações compõem o "coração" do desenvolvimento na linguagem, sendo ferramentas essenciais que programadores utilizam diariamente para controlar o fluxo de execução de seus códigos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h35m34s205.jpg" alt="" width="840">
+</p>
+
+O objetivo central desta etapa é capacitar o aluno a utilizar as declarações mais famosas e recorrentes do ecossistema JavaScript, garantindo uma base sólida para a lógica de programação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h35m36s697.jpg" alt="" width="840">
+</p>
+
+A primeira parte do estudo foca especificamente na estrutura condicional **if/else**, que é a forma mais comum de realizar verificações e tomar decisões baseadas em condições lógicas dentro de uma função.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h35m38s484.jpg" alt="" width="840">
+</p>
+
+A estrutura básica do **if/else** funciona através de uma condição avaliada entre parênteses. Se o resultado for verdadeiro, o bloco da **Declaração 1** é executado; caso contrário (se a condição for falsa), o fluxo segue para a **Declaração 2** dentro do `else`.
+
+No exemplo abaixo, a função verifica se um número é positivo:
+
+```javascript
+function numeroPositivo(num) {
+  let resultado;
+
+  if (num < 0) {
+    resultado = false; // Declaração 1
+  } else {
+    resultado = true;  // Declaração 2
+  }
+
+  return resultado;
+}
+
+numeroPositivo(2)   // true
+numeroPositivo(-9)  // false
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h35m41s545.jpg" alt="" width="840">
+</p>
+
+Existem formas mais refinadas e performáticas de escrever condicionais seguindo boas práticas de **Clean Code**:
+
+* **Variáveis para Condicionais:** Armazenar a lógica em uma constante (ex: `ehNegativo`) torna o código mais legível.
+* **Otimização de Memória:** Ao utilizar o `return` diretamente dentro do `if`, eliminamos a necessidade de declarar variáveis auxiliares (como `resultado`), poupando endereços de memória.
+* **Controle de Fluxo:** O comando `return` encerra a execução da função imediatamente. Se a condição for atendida, a função retorna o valor e ignora o restante do código abaixo.
+
+```javascript
+// Exemplo com variável de suporte à leitura
+function numeroPositivo(num) {
+  const ehNegativo = num < 0;
+  if (ehNegativo) {
+    return false;
+  }
+  return true;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h35m45s327.jpg" alt="" width="840">
+</p>
+
+É possível **aninhar condicionais** utilizando a estrutura `else if` para verificar múltiplas possibilidades em sequência. Um detalhe sintático crucial é que, no JavaScript, não existe a palavra reservada única `elseif`; deve-se sempre utilizar **else** e **if** separados por um espaço.
+
+```javascript
+function numeroPositivo(num) {
+  const ehNegativo = num < 0;
+  const maiorQueDez = num > 10;
+
+  if (ehNegativo) {
+    return "Esse número é negativo!";
+  } else if (!ehNegativo && maiorQueDez) {
+    return "Esse número é positivo e maior que 10!";
+  }
+
+  return "Esse número é positivo!";
+}
+
+// Exemplos de execução:
+// numeroPositivo(2)  -> "Esse número é positivo!"
+// numeroPositivo(-2) -> "Esse número é negativo!"
+// numeroPositivo(40) -> "Esse número é positivo e maior que 10!"
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h35m49s803.jpg" alt="" width="840">
+</p>
+
+Na segunda etapa da aula, o foco muda para o **switch**, uma estrutura alternativa ao `if/else` projetada para lidar com múltiplas verificações de forma mais organizada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h35m51s042.jpg" alt="" width="840">
+</p>
+
+A declaração **switch/case** é ideal para comparar uma única variável contra diversos valores possíveis. Características importantes:
+
+* **Comparação Estrita:** O `switch` utiliza a comparação de tipo e valor (`===`). Por exemplo, se o caso espera o número `1` e recebe a string `"1"`, ele não será validado.
+* **Valor Default:** É indispensável definir um `default` para tratar situações em que nenhuma das opções anteriores foi atendida.
+
+```javascript
+function getAnimal(id) {
+  switch(id) {
+    case 1:
+      return "cão";
+    case 2:
+      return "gato";
+    case 3:
+      return "pássaro";
+    default:
+      return "peixe";
+  }
+}
+
+getAnimal(1)    // "cão"
+getAnimal(4)    // "peixe" (cai no default)
+getAnimal("1")  // "peixe" (tipo string diferente de número)
+
+```
 
 
 ## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
