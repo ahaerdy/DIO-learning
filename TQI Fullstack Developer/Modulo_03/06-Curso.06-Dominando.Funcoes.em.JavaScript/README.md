@@ -1332,7 +1332,7 @@ console.log(calculaIdade.call(pessoa2, 30));
 console.log(calculaIdade.apply(pessoa1, [4]));
 ```
 
-# Certificado: 
+# Certificado: Dominando Funções em JavaScript
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/LFBBDDXV.pdf
+- Certificado em pdf: [[Certificado-Dominando.Funcoes.em.JavaScript.pdf]]
