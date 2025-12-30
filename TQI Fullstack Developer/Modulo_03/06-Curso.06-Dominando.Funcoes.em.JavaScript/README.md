@@ -261,8 +261,14 @@ console.log(resultSoma); // 3
 
 ## 🟩 Vídeo 04 - Exercício - Valores padrão e Objeto "arguments"
 
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_03.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/1af71d8f-7d70-4802-9f1e-ce396f1729ef?autoplay=1
+
+
 
 
 ## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
