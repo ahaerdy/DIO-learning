@@ -272,7 +272,119 @@ O vídeo apresenta conceitos fundamentais sobre tipos de funções em programaç
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-09h31m32s459.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz conceitos avançados sobre parâmetros em funções JavaScript, focando especificamente em como manipular valores padrão e utilizar o objeto `arguments`. O objetivo é aprofundar o conhecimento sobre a flexibilidade das funções na linguagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-09h31m44s233.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais desta etapa do aprendizado consistem em:
+
+1. Ensinar a manipulação eficiente de parâmetros dentro de uma função.
+2. Apresentar técnicas para lidar com situações onde o número de parâmetros passados é indefinido ou variável.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-09h31m47s888.jpg" alt="" width="840">
+</p>
+
+A primeira etapa foca em **Valores Padrão**, um recurso que permite definir valores predeterminados para os parâmetros caso nenhum argumento seja passado durante a invocação da função.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-09h31m53s984.jpg" alt="" width="840">
+</p>
+
+Existem duas formas de lidar com valores padrão no JavaScript, dependendo da versão do ECMAScript utilizada:
+
+* **Pré-ES2015**: Era necessário verificar manualmente se o parâmetro era `undefined` dentro do corpo da função para atribuir um valor manual.
+* **Pós-ES2015**: A sintaxe tornou-se muito mais limpa, permitindo definir o valor padrão diretamente na assinatura da função (ex: `num = 1`).
+
+```javascript
+// Pré-ES2015
+function exponencial(array, num) {
+  if (num === undefined) {
+    num = 1;
+  }
+
+  const result = [];
+
+  for(let i = 0; i < array.length; i++) {
+    result.push(array[i] ** num);
+  }
+
+  return result;
+}
+
+// Pós-ES2015
+function exponencial(array, num = 1) {
+  const result = [];
+
+  for(let i = 0; i < array.length; i++) {
+    result.push(array[i] ** num);
+  }
+
+  return result;
+}
+
+exponencial([1, 2, 3, 4]); // [1, 2, 3, 4]
+exponencial([1, 2, 3, 4], 4); // [1, 16, 81, 256]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-09h32m08s621.jpg" alt="" width="840">
+</p>
+
+A segunda etapa aborda o **Objeto "arguments"**. Este é um recurso interno das funções JavaScript que permite acessar todos os argumentos passados para a função, independentemente de quantos parâmetros foram declarados formalmente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-09h32m22s775.jpg" alt="" width="840">
+</p>
+
+O objeto `arguments` funciona como um array (embora tecnicamente seja um objeto iterável semelhante a um array) que contém todos os parâmetros passados no momento da invocação. No exemplo abaixo, a função localiza o maior número entre uma lista de argumentos de tamanho variável.
+
+```javascript
+function findMax() {
+  let max = -Infinity;
+
+  for(let i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+
+  return max;
+}
+
+findMax(1, 2, 3, 6, 90, 1); // 90
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-09h32m32s112.jpg" alt="" width="840">
+</p>
+
+Ao retornar ou inspecionar o objeto `arguments`, podemos ver que ele armazena índices numéricos para cada valor passado, possui uma propriedade `length` e outras propriedades como `callee`. Ele é capaz de armazenar diferentes tipos de dados simultaneamente, como números, arrays e strings.
+
+```javascript
+function showArgs() {
+  return arguments;
+}
+
+showArgs(1, 2, [2, 3, 4], "string");
+/*
+Arguments (4) [1, 2, Array(3), "string", callee: f, Symbol(Symbol.iterator): f]
+0: 1
+1: 2
+2: (3) [2, 3, 4]
+3: "string"
+length: 4
+*/
+
+```
 
 
 ## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
