@@ -593,7 +593,177 @@ getAnimal("1")  // "peixe" (tipo string diferente de número)
 ## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
 
 
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_07.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
+
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/4fd60705-f260-4e80-8dcc-ebe40fc6cb98?autoplay=1
+
+O vídeo apresenta um guia didático sobre as diferentes estruturas de **repetição e loops** utilizadas na programação com JavaScript. A autora detalha o funcionamento do **laço for tradicional**, explicando como percorrer arrays através de índices e incrementos manuais. Em seguida, são apresentadas variações mais modernas, como o **for in**, voltado para propriedades de objetos, e o **for of**, ideal para iterar sobre strings e listas de forma simplificada. O material também diferencia o funcionamento do **comando while**, que testa uma condição antes da execução, do **do while**, que garante que o código rode ao menos uma vez. Por fim, o conteúdo incentiva a **prática constante** e a consulta a documentações externas para consolidar o entendimento dessas ferramentas essenciais.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h50m22s327.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, introduzimos o conceito de **loops** (laços de repetição), focando inicialmente em uma das estruturas mais fundamentais da programação: o **for**. O objetivo é entender como executar blocos de código repetidamente sobre elementos iteráveis, como arrays e strings.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h50m24s512.jpg" alt="" width="840">
+</p>
+
+O loop **for** tradicional funciona através da inicialização de um índice, uma condição de parada e um incremento. No exemplo abaixo, a função utiliza o `for` para percorrer um array de números, multiplicar cada elemento por dois e armazenar o resultado em um novo array auxiliar utilizando o método `.push()`.
+
+```javascript
+function multiplicaPorDois(arr) {
+  let multiplicados = [];
+  for(let i = 0; i < arr.length; i++) {
+    multiplicados.push(arr[i] * 2);
+  }
+  return multiplicados;
+}
+
+const meusNumeros = [2, 33, 456, 356, 40];
+multiplicaPorDois(meusNumeros);
+// [4, 66, 912, 712, 80]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h50m28s926.jpg" alt="" width="840">
+</p>
+
+O **for...in** é uma variação do loop utilizada especificamente para iterar sobre as **propriedades enumeráveis** de um objeto. Diferente do array, onde iteramos sobre índices numéricos, aqui o loop percorre as chaves (propriedades) definidas no objeto. Para acessar o valor de cada propriedade dentro do loop, utilizamos a sintaxe de colchetes `obj[prop]`.
+
+```javascript
+function forInExemplo(obj) {
+  for(prop in obj) {
+    console.log(prop);
+  }
+}
+
+function forInExemplo(obj) {
+  for(prop in obj) {
+    console.log(obj[prop]);
+  }
+}
+
+const meuobjeto = {
+  nome: "João",
+  idade: "20",
+  cidade: "Salvador"
+}
+
+forInExemplo(meuobjeto);
+// nome
+// idade
+// cidade
+// João
+// 20
+// Salvador
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h50m32s567.jpg" alt="" width="840">
+</p>
+
+Já o **for...of** oferece uma sintaxe mais simplificada para iterar sobre **estruturas iteráveis**, como arrays e strings. Ele percorre diretamente os valores contidos na estrutura, sendo ideal para casos onde não é necessário manipular o índice explicitamente.
+
+```javascript
+function logLetras(palavra) {
+  for(letra of palavra) {
+    console.log(letra);
+  }
+}
+
+const palavra = "abacaxi";
+logLetras(palavra);
+// a
+// b
+// a
+// c
+// a
+// x
+// i
+
+function logNumeros(nums) {
+  for(num of nums) {
+    console.log(num);
+  }
+}
+
+const nums = [30, 20, 233, 2];
+logNumeros(nums);
+// 30
+// 20
+// 233
+// 2
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h50m36s212.jpg" alt="" width="840">
+</p>
+
+Além das variações do `for`, existem outras estruturas de repetição fundamentais: o **while** e o **do...while**. Ambas baseiam a repetição em uma condição lógica, mas possuem comportamentos distintos quanto à primeira execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h50m37s401.jpg" alt="" width="840">
+</p>
+
+O loop **while** executa um bloco de instruções **enquanto** a condição especificada for verdadeira. A validação da condição ocorre **antes** de cada execução, o que significa que, se a condição for falsa logo no início, o código dentro do bloco nunca será executado.
+
+```javascript
+function exemploWhile() {
+  let num = 0;
+  while(num <= 5) {
+    console.log(num);
+    num++;
+  }
+}
+
+exemploWhile();
+// 0
+// 1
+// 2
+// 3
+// 4
+// 5
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-10h50m39s759.jpg" alt="" width="840">
+</p>
+
+O **do...while** também executa instruções até que a condição se torne falsa. A principal diferença é que a validação ocorre **após** a execução do bloco, garantindo que o código seja executado **pelo menos uma vez**, mesmo que a condição inicial já seja falsa (como no exemplo onde `num = 6`).
+
+```javascript
+function exemploDoWhile() {
+  let num = 0;
+  do {
+    console.log(num);
+    num++;
+  } while(num <= 5);
+}
+exemploDoWhile();
+// 0 a 5
+
+function exemploDoWhile() {
+  let num = 6;
+  do {
+    console.log(num);
+    num++;
+  } while(num <= 5);
+}
+exemploDoWhile();
+// 6
+
+```      
+
 
 
 ## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
