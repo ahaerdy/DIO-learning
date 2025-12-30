@@ -764,18 +764,149 @@ exemploDoWhile();
 
 ```      
 
+# Parte 4 - This
+
+## 🟩 Vídeo 08 - O que é This
+
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_08.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/16bae178-fa0d-45f9-b178-d66cc22168ed?autoplay=1
+
+O vídeo explica o funcionamento da palavra-chave **this** no JavaScript, definindo-a como uma **referência ao contexto** atual de execução do código. Quando utilizada dentro do **método de um objeto**, ela representa o próprio objeto pai, permitindo o acesso às suas propriedades internas de forma dinâmica. O texto também detalha que, em um **escopo global** ou dentro de funções comuns, o termo aponta para o objeto global, como o **window** no navegador. Além disso, o autor destaca que, no contexto de **eventos de DOM**, o comando identifica especificamente o elemento que recebeu a interação. Por fim, a fonte ressalta que o comportamento dessa palavra reservada **varia conforme o local** onde é invocada, sendo essencial para manipular dados e elementos no desenvolvimento web.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h04m23s555.jpg" alt="" width="840">
+</p>
+
+Esta aula aborda o conceito da palavra reservada **this** no JavaScript, um tema que frequentemente gera dúvidas durante o aprendizado da linguagem. O foco principal é compreender como o `this` funciona como uma referência de contexto e aprender métodos para manipular seu valor de acordo com a necessidade do desenvolvedor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h04m29s170.jpg" alt="" width="840">
+</p>
+
+Os objetivos centrais desta etapa do aprendizado são:
+
+1. **Apresentar a palavra "this" e seu uso**: Entender a definição fundamental e o comportamento padrão da palavra reservada.
+2. **Como aplicar métodos para manipular seu valor**: Conhecer as técnicas que permitem alterar o contexto ao qual o `this` se refere.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h04m32s818.jpg" alt="" width="840">
+</p>
+
+A palavra reservada **this** é uma referência de contexto. Quando utilizada dentro de um **método** (uma função que é propriedade de um objeto), o `this` refere-se ao próprio objeto que "pai" ou "dono" desse método. No exemplo abaixo, ao chamar `pessoa.fullName()`, o `this` acessa as propriedades `firstName` e `lastName` do objeto `pessoa`.
+
+```javascript
+const pessoa = {
+    firstName: "André",
+    lastName: "Soares",
+    id: 1,
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    },
+    getId: function() {
+        return this.id;
+    }
+};
+
+pessoa.fullName(); // "André Soares"
+pessoa.getId(); // 1
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h04m38s637.jpg" alt="" width="840">
+</p>
+
+O valor de `this` não é estático; ele pode mudar dependendo do lugar no código onde foi chamado (o contexto de execução). A tabela abaixo resume as referências padrão para diferentes contextos:
+
+| Contexto | Referência |
+| --- | --- |
+| Em um objeto (método) | Próprio objeto dono do método |
+| Sozinha | Objeto global (em navegadores, window) |
+| Função | Objeto global |
+| Evento | Elemento que recebeu o evento |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h04m42s222.jpg" alt="" width="840">
+</p>
+
+Abaixo, observamos o comportamento do `this` em ambientes distintos:
+
+**Fora de uma função (Node.js):**
+No ambiente de servidor (Node.js), ao logar o `this` no escopo global de um módulo, ele retorna um objeto vazio.
+
+```javascript
+console.log(this); // {}
+
+```
+
+**Dentro de uma função:**
+Em uma função simples (não associada a um objeto), o `this` aponta para o objeto global, que contém métodos nativos como `setTimeout` e `setInterval`.
+
+```javascript
+(function() {
+    console.log(this);
+})();
+
+```
+
+**No navegador:**
+Ao digitar `this` diretamente no console do navegador, a referência retornada é o objeto `Window`, que é o objeto global pai de todo o documento HTML.
+
+```bash
+> this
+Window {window: Window, self: Window, document: document, name: "", location: Location, ...}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h04m47s321.jpg" alt="" width="840">
+</p>
+
+Quando o `this` é utilizado dentro de um método de um objeto, ele permite acessar as propriedades internas desse objeto de forma dinâmica. No código abaixo, `this.firstName` e `this.lastName` referenciam diretamente os valores definidos em `pessoa`.
+
+```javascript
+const pessoa = {
+    firstName: 'Diego',
+    lastName: 'Vieira',
+    getFullName: function () {
+        console.log(`${this.firstName} ${this.lastName}`);
+    }
+};
+
+pessoa.getFullName(); // Saída: Diego Vieira
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h04m49s662.jpg" alt="" width="840">
+</p>
+
+Em eventos manipulados diretamente no HTML, o `this` refere-se especificamente ao **elemento que recebeu o evento**. Ao clicar no botão configurado com `onclick="console.log(this)"`, o console do navegador imprimirá o elemento `<button>` completo, demonstrando que ele é o contexto atual da execução.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button id="my-btn" onclick="console.log(this)">click me!</button>
+</body>
+</html>
+
+```      
 
 
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 09 - Manipulando seu valor
 
 
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/8b713d82-f56e-4cde-b10d-8552a0eac233?autoplay=1
 
 
 ## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
