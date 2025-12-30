@@ -935,8 +935,203 @@ Neste contexto específico de evento, o `this` funciona como um atalho para o pr
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/8b713d82-f56e-4cde-b10d-8552a0eac233?autoplay=1
 
+O vídeo explica como **manipular o contexto da palavra-chave this** em JavaScript utilizando os métodos **call, apply e bind**. O autor demonstra que o **call** e o **apply** permitem executar uma função alterando a referência do objeto principal, diferenciando-se apenas pela forma como recebem **argumentos extras**, sendo por vírgulas ou arrays. Já o método **bind** destaca-se por **clonar a estrutura original** da função e fixar o contexto desejado para uma execução posterior. A explicação enfatiza que dominar essas ferramentas é essencial para **gerenciar dados de forma flexível** entre diferentes objetos. Por fim, o conteúdo reconhece a **complexidade técnica** do tema, incentivando a prática constante para superar as ambiguidades inerentes ao comportamento do sistema.
 
+### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h24m39s734.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, o foco é o aprendizado sobre como **manipular o valor de this**. Embora a palavra-chave possua comportamentos padrão em diferentes contextos, o JavaScript oferece métodos específicos para forçar que o `this` se refira a um objeto determinado, permitindo que o código seja executado de acordo com os dados desejados pelo desenvolvedor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h24m42s925.jpg" alt="" width="840">
+</p>
+
+O **método call** é a primeira ferramenta apresentada para essa manipulação. Ele permite chamar uma função passando explicitamente qual objeto deve ser interpretado como `this` em seu escopo interno. No exemplo abaixo, a função `getSomething` não pertence a nenhum objeto, mas ao ser executada via `.call(pessoa)`, ela acessa a propriedade `nome` do objeto `pessoa`.
+
+```javascript
+const pessoa = {
+  nome: 'Miguel',
+};
+
+const animal = {
+  nome: 'Murphy',
+};
+
+function getSomething() {
+  console.log(this.nome);
+}
+
+getSomething.call(pessoa);
+
+```
+
+**Saída no terminal:**
+
+```bash
+$ node playground.js
+Miguel
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h24m51s105.jpg" alt="" width="840">
+</p>
+
+Demonstrando a versatilidade do método, é possível alterar dinamicamente o contexto de referência apenas trocando o argumento enviado ao `call`. Ao passar o objeto `animal`, a mesma função `getSomething` passa a exibir o valor contido naquela constante.
+
+```javascript
+const pessoa = {
+  nome: 'Miguel',
+};
+
+const animal = {
+  nome: 'Murphy',
+};
+
+function getSomething() {
+  console.log(this.nome);
+}
+
+getSomething.call(animal);
+
+```
+
+**Saída no terminal:**
+
+```bash
+$ node playground.js
+Murphy
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h24m53s491.jpg" alt="" width="840">
+</p>
+
+O método `call` também suporta funções que recebem parâmetros. Nesse cenário, o primeiro argumento do `call` continua sendo o objeto de referência (`this`), enquanto os parâmetros subsequentes da função original são passados **separados por vírgulas**.
+
+```javascript
+const myObj = {
+  num1: 2,
+  num2: 4,
+};
+
+function soma(a, b) {
+  console.log(this.num1 + this.num2 + a + b);
+}
+
+soma.call(myObj, 1, 5);
+// Resultado: 12 (2 + 4 + 1 + 5)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h24m56s146.jpg" alt="" width="840">
+</p>
+
+O **método apply** possui um funcionamento e implementação muito similares ao `call`. Sua principal função continua sendo definir qual objeto será o `this` durante a execução de uma função. No exemplo básico, ele redireciona o contexto para o objeto `pessoa`, resultando na exibição do nome "Miguel".
+
+```javascript
+const pessoa = {
+  nome: 'Miguel',
+};
+
+const animal = {
+  nome: 'Godi',
+};
+
+function getSomething() {
+  console.log(this.nome);
+}
+
+getSomething.apply(pessoa);
+
+```
+
+**Saída no terminal:**
+
+```bash
+$ node playground.js
+Miguel
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h24m57s820.jpg" alt="" width="840">
+</p>
+
+Assim como no exemplo anterior, o `apply` pode ser utilizado para alternar o contexto de execução para diferentes objetos, como o objeto `animal`, alterando o valor de `this.nome` conforme a referência passada.
+
+```javascript
+const pessoa = {
+  nome: 'Miguel',
+};
+
+const animal = {
+  nome: 'Godi',
+};
+
+function getSomething() {
+  console.log(this.nome);
+}
+
+getSomething.apply(animal);
+
+```
+
+**Saída no terminal:**
+
+```bash
+$ node playground.js
+Godi
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h24m59s530.jpg" alt="" width="840">
+</p>
+
+A grande diferença entre `call` e `apply` reside na forma como os argumentos adicionais são passados para a função. Enquanto no `call` os argumentos são listados individualmente, no **apply os parâmetros devem ser passados dentro de um array**.
+
+```javascript
+const myObj = {
+  num1: 2,
+  num2: 4,
+};
+
+function soma(a, b) {
+  console.log(this.num1 + this.num2 + a + b);
+}
+
+soma.apply(myObj, [1, 5]);
+// Resultado: 12
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h25m01s964.jpg" alt="" width="840">
+</p>
+
+Por fim, o **método bind** difere dos anteriores por não executar a função imediatamente. Em vez disso, ele **clona a estrutura da função** e "liga" (bind) permanentemente o objeto passado ao `this` dessa nova função criada.
+
+```javascript
+const retornaNomes = function () {
+  return this.nome;
+};
+
+// Cria uma nova função onde 'this' é sempre o objeto { nome: 'Bruno' }
+let bruno = retornaNomes.bind({ nome: 'Bruno' });
+
+bruno(); 
+// Retorno: Bruno
+
+```
+
+O `bind` é útil quando você precisa criar uma referência de função que preserva o contexto para ser executada em um momento futuro. Seria o equivalente a criar uma nova função que já contém o valor fixo do objeto desejado.
+ 
 
 ## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
 
