@@ -1229,10 +1229,16 @@ As principais restrições das arrow functions são:
 Devido a essas limitações, recomenda-se o uso de funções comuns ao criar métodos de objetos.      
 
 
-## 🟩 Vídeo 11 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 11 - Atividade prática
 
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_11.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/0a54c71b-949d-4157-8509-6dbe68492dae?autoplay=1
+
+
 
 
 ## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
