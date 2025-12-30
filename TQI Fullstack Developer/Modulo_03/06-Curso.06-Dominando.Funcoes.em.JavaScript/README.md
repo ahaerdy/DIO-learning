@@ -590,7 +590,7 @@ getAnimal("1")  // "peixe" (tipo string diferente de número)
 ```
 
 
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 07 - For e While
 
 
 <video width="60%" controls>
