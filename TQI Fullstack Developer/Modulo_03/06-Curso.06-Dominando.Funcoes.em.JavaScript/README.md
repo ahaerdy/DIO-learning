@@ -1143,15 +1143,96 @@ O `bind` é útil quando você precisa criar uma referência de função que pre
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/3d17fc75-49d9-4087-acb2-b20ba79ab349?autoplay=1
 
+Este vídeo consiste em ção aula sobre **arrow functions** no JavaScript, detalhando sua **sintaxe simplificada** e o uso da "setinha" para criar funções anônimas. A instrutora explica que essas funções permitem **omitir chaves e o retorno** em operações de linha única, além de dispensar parênteses quando há apenas um parâmetro. O conteúdo destaca que, diferentemente das funções tradicionais, elas **não sofrem hoisting**, exigindo declaração prévia antes de qualquer invocação no código. Além disso, são abordadas **restrições importantes**, como a impossibilidade de usar construtores, o objeto *arguments* ou métodos de manipulação do valor *this*. O texto conclui reforçando que, apesar de prático para reduzir a verbosidade do código, esse recurso possui limitações técnicas que impedem sua aplicação em todos os contextos de programação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h57m59s151.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o conceito e a sintaxe das **arrow functions** no JavaScript. O termo "arrow" (seta) deriva do símbolo `=>` utilizado em sua estrutura. Essas funções são alternativas modernas às funções anônimas tradicionais, permitindo uma escrita mais concisa do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h58m02s694.jpg" alt="" width="840">
+</p>
+
+A sintaxe de uma arrow function pode variar conforme a complexidade da lógica. Em sua forma completa, ela se assemelha a uma função anônima atribuída a uma constante. No entanto, quando a função possui apenas uma linha, é possível omitir as chaves `{}` e a palavra reservada `return`, pois o JavaScript presume o retorno automático do que vem após a seta.
+
+```javascript
+// Função anônima clássica
+const helloWorld = function() {
+  return "Hello World";
+}
+
+// Arrow function completa
+const helloWorld = () => {
+  return "Hello World";
+}
+
+// Arrow function simplificada (uma linha)
+const helloWorld = () => "Hello World";
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h58m05s976.jpg" alt="" width="840">
+</p>
+
+Existem regras de simplificação adicionais baseadas nos parâmetros e no corpo da função:
+
+* **Uma linha:** Caso a função execute apenas uma operação, pode-se dispensar as chaves e o `return`.
+* **Um parâmetro:** Quando a função recebe apenas um argumento, o uso dos parênteses em volta do parâmetro torna-se opcional.
+
+```javascript
+// Exemplo com dois parâmetros
+const soma = (a, b) => a + b;
+soma(4, 6); // 10
+
+// Exemplo com um parâmetro (sem parênteses)
+const soma = a => a;
+soma(4); // 4
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h58m07s991.jpg" alt="" width="840">
+</p>
+
+Uma característica fundamental das arrow functions é que elas **não fazem hoisting**. Diferente das funções comuns declaradas com a palavra `function`, que podem ser chamadas antes de sua definição no código, as arrow functions precisam ser obrigatoriamente declaradas antes de serem invocadas. Tentar chamá-las previamente resultará em um erro de referência.
+
+```javascript
+soma(2, 4); 
+
+const soma = (a, b) => a + b;
+
+// Saída: Uncaught ReferenceError: Cannot access 'soma' before initialization
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h58m10s524.jpg" alt="" width="840">
+</p>
+
+Além do comportamento de hoisting, as arrow functions possuem restrições específicas em comparação às funções tradicionais, especialmente no que diz respeito ao escopo e objetos internos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-11h58m11s978.jpg" alt="" width="840">
+</p>
+
+As principais restrições das arrow functions são:
+
+* **Escopo do `this`:** O valor de `this` será sempre o do objeto global. Consequentemente, métodos como `call`, `apply` e `bind` não funcionam para alterar o contexto de uma arrow function.
+* **Objeto `arguments`:** Diferente das funções comuns, o objeto local `arguments` (que armazena os parâmetros passados) não existe nestas funções.
+* **Construtores:** Elas não podem ser utilizadas como construtores, o que significa que não é possível utilizar o operador `new` com elas.
+
+Devido a essas limitações, recomenda-se o uso de funções comuns ao criar métodos de objetos.      
 
 
-
-# Parte 2 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 11 - xxxxxxxxxxxxxxx
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/0a54c71b-949d-4157-8509-6dbe68492dae?autoplay=1
 
 
 ## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
