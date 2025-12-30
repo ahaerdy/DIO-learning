@@ -268,7 +268,11 @@ console.log(resultSoma); // 3
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/1af71d8f-7d70-4802-9f1e-ce396f1729ef?autoplay=1
 
+O vídeo apresenta conceitos fundamentais sobre tipos de funções em programação, focando inicialmente nas **IIFEs**, que são funções executadas automaticamente logo após sua criação. O autor explica que essas estruturas **autoinvocáveis** podem ser anônimas ou nomeadas, permitindo inclusive o uso de **parâmetros** e o armazenamento de seus resultados em constantes. Em seguida, o conteúdo aborda o conceito de **callbacks**, definindo-os como funções enviadas como argumentos para outras funções para processamento posterior. É demonstrado como essa técnica oferece **controle sobre a execução** do código, permitindo que o desenvolvedor decida o momento exato em que a lógica secundária deve ser ativada. Por fim, o material reforça a importância desses padrões para a **organização lógica** e incentiva a interação entre estudantes para sanar dúvidas sobre o tema.
 
+### Anotações
+
+      
 
 
 ## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
