@@ -1132,11 +1132,18 @@ bruno();
 
 O `bind` é útil quando você precisa criar uma referência de função que preserva o contexto para ser executada em um momento futuro. Seria o equivalente a criar uma nova função que já contém o valor fixo do objeto desejado.
  
+ # Parte 5 - Arrow functions
 
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 10 - Sintaxe e outras restrições
+
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_10.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/3d17fc75-49d9-4087-acb2-b20ba79ab349?autoplay=1
 
 
-Link do vídeo: 
 
 
 # Parte 2 - xxxxxxxxxxxxxxx
