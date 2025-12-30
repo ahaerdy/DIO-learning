@@ -175,6 +175,10 @@ Neste caso, a função é invocada através do nome da variável à qual ela foi
 
 ## 🟩 Vídeo 03 - Função autoinvocável e Callbacks
 
+<video width="60%" controls>
+	<source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.06-Video_03.webm" type="video/webm">
+	  Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/80cd7e6d-5885-4095-afed-fb296b91a376?autoplay=1
 
