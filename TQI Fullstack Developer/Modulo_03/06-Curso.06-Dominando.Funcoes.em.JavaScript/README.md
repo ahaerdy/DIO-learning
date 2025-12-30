@@ -182,6 +182,80 @@ Neste caso, a função é invocada através do nome da variável à qual ela foi
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-funcoes-em-javascript/learning/80cd7e6d-5885-4095-afed-fb296b91a376?autoplay=1
 
+O conteúdo explica o funcionamento das **Expressões de Função Invocadas Imediatamente (IIFE)**, destacando que essas estruturas são executadas de forma automática assim que definidas. O autor detalha que essas funções podem ser **anônimas ou nomeadas**, permitindo também o uso de **parâmetros externos** ou o armazenamento de seus resultados em constantes. Além disso, o texto introduz o conceito de **callbacks**, definindo-os como funções que são enviadas como **argumentos** para outros blocos de código. Essa técnica oferece ao desenvolvedor um maior **controle sobre a ordem de execução**, permitindo que uma lógica específica seja acionada apenas quando necessário. Por fim, o material reforça a importância dessas práticas na **organização de sistemas** e incentiva a interação entre estudantes para sanar dúvidas técnicas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-08h18m25s090.jpg" alt="" width="840">
+</p>
+
+As **IIFEs** (*Immediately Invoked Function Expressions*), ou funções autoinvocáveis, são expressões de funções executadas imediatamente após sua declaração. Para que o motor do JavaScript as reconheça como uma expressão e não como uma declaração de função comum, elas devem estar envolvidas por parênteses. Um segundo par de parênteses ao final é o que efetivamente realiza a chamada da função.
+
+```javascript
+(
+function() {
+  let name = "Digital Innovation One"
+  return name;
+}
+)();
+// Digital Innovation One
+
+```
+
+Este padrão é útil para criar escopos isolados, permitindo que variáveis como `name` não poluam o escopo global.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-08h19m30s189.jpg" alt="" width="840">
+</p>
+
+As funções autoinvocáveis também suportam a passagem de **parâmetros** e podem ter seu resultado de retorno armazenado em variáveis ou constantes. No exemplo abaixo, os valores `1` e `2` são passados como argumentos para os parâmetros `a` e `b`, e o resultado da operação é atribuído à constante `soma3`.
+
+```javascript
+const soma3 = (
+  function(a, b) {
+    return a + b;
+  }
+)(1, 2);
+
+console.log(soma3); // 3
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-08h20m07s768.jpg" alt="" width="840">
+</p>
+
+### Introdução aos Callbacks
+
+Nesta etapa, exploramos o conceito de **Callbacks**. Diferente das IIFEs, os callbacks não possuem uma sintaxe especial obrigatória, mas representam um padrão de projeto fundamental em JavaScript. Um callback é, essencialmente, uma função passada como argumento para outra função, permitindo um comportamento dinâmico e maior controle sobre o fluxo de execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-30-08h20m23s771.jpg" alt="" width="840">
+</p>
+
+O uso de callbacks permite que uma função genérica, como `calc`, execute diferentes operações dependendo da função que recebe como argumento. Isso oferece um controle preciso sobre a **ordem das chamadas**, permitindo decidir exatamente quando a função enviada deve ser processada dentro da lógica principal.
+
+```javascript
+const calc = function(operacao, num1, num2){
+  return operacao(num1, num2);
+}
+
+const soma = function(num1, num2) {
+  return num1 + num2;
+}
+
+const sub = function(num1, num2) {
+  return num1 - num2;
+}
+
+const resultSoma = calc(soma, 1, 2);
+const resultSub = calc(sub, 1, 2);
+
+console.log(resultSub); // -1
+console.log(resultSoma); // 3
+
+```
 
 ## 🟩 Vídeo 04 - Exercício - xxxxxxxxxxxxxxx
 
