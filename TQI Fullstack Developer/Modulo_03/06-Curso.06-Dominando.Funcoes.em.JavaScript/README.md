@@ -903,8 +903,6 @@ Em eventos manipulados diretamente no HTML, o `this` refere-se especificamente a
 
 #### Detalhando o código
 
-##### Estrutura e Atributos da Tag
-
 A tag `<button>` define um botão clicável no HTML. No exemplo, ela possui os seguintes componentes:
 
 * **`id="my-btn"`**: Um identificador único para o elemento, permitindo que ele seja referenciado facilmente por CSS ou scripts.
