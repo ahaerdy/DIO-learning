@@ -391,6 +391,40 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debuggin
 O vídeo consiste em uma **aula prática sobre tratamento de erros em JavaScript**, orientando o aluno a criar uma função de validação de arrays. A instrutora explica como utilizar a estrutura **try...catch** para gerenciar falhas e o operador **instanceof** para identificar tipos específicos de erros, como **ReferenceError**, **TypeError** e **RangeError**. O código demonstrado verifica a existência de parâmetros, o tipo dos dados inseridos e a correspondência entre o tamanho da lista e um valor numérico. Além da codificação ao vivo, o conteúdo destaca a importância de consultar a documentação oficial e utilizar repositórios do **GitHub** como apoio aos estudos. Ao final, o exemplo prático mostra como retornar o próprio objeto em casos de sucesso ou capturar e exibir mensagens detalhadas quando exceções são lançadas.
 
 
+#### Código em JavaScript
+```javascript
+function validaArrays(arr, num) {
+	try {
+		if (!arr && !num) throw new ReferenceError('Envie os parâmetros!');
+
+		if (typeof arr !== 'object')
+			throw new TypeError('Envie um elemento do tipo Array!');
+
+		if (typeof num !== 'number')
+			throw new TypeError('Envie um elemento do tipo Number!');
+
+		if (arr.length !== num) throw new RangeError('Tamanho do array inválido!');
+
+		return arr;
+	} catch (e) {
+		if (e instanceof RangeError) {
+			console.log('RangeError!');
+			console.log(e.stack);
+		} else if (e instanceof ReferenceError) {
+			console.log('ReferenceError!');
+			console.log(e.stack);
+		} else {
+			console.log('Outro tipo de erro!');
+			console.log(e.stack);
+		}
+	}
+}
+
+console.log(validaArrays([1, 2, 3], 0));
+
+```
+
+
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
 
 
