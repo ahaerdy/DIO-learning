@@ -58,21 +58,21 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos  
 
-- [x] Curso: [Introdução a Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/01-Curso.01-Introducao.a.Engenharia.de.Dados.com.Python#-v%C3%ADdeo-01---introdu%C3%A7%C3%A3o-a-engenharia-de-dados-com-python)
-- [x] Curso: [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/02-Curso.02-Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python)
-- [x] Curso: [Conhecendo a Linguagem de Programação Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/03-Curso.03-Conhecendo.a.Linguagem.de.Programacao.Python)
-- [x] Curso: [Versionamento de Código com Git e GitHub](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/04-Curso.04-Versionamento.de.Codigo.com.Git.e.GitHub) 
-- [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/05-Curso.5-Desafios.de.Projetos-Crie.Um.Portfolio.Vencedor)  
-- [x] Projeto: [Contribuindo em um Projeto Open Source no GitHub](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/06-Projeto-Contribuindo.em.um.Projeto.Open.Source.no.GitHub)
+- [x] Curso: [Introdução a Engenharia de Dados com Python](Modulo_01/01-Curso.01-Introducao.a.Engenharia.de.Dados.com.Python#-v%C3%ADdeo-01---introdu%C3%A7%C3%A3o-a-engenharia-de-dados-com-python)
+- [x] Curso: [Ambiente de Desenvolvimento e Primeiros Passos com Python](Modulo_01/02-Curso.02-Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python)
+- [x] Curso: [Conhecendo a Linguagem de Programação Python](Modulo_01/03-Curso.03-Conhecendo.a.Linguagem.de.Programacao.Python)
+- [x] Curso: [Versionamento de Código com Git e GitHub](Modulo_01/04-Curso.04-Versionamento.de.Codigo.com.Git.e.GitHub) 
+- [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](Modulo_01/05-Curso.5-Desafios.de.Projetos-Crie.Um.Portfolio.Vencedor)  
+- [x] Projeto: [Contribuindo em um Projeto Open Source no GitHub](Modulo_01/06-Projeto-Contribuindo.em.um.Projeto.Open.Source.no.GitHub)
     - Repositório: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
     - Descrição: acrescentando o meu arquivo markdown na pasta community no repositório dio-lab-open-source.
-- [x] Mentoria: [Live de Lançamento: Bootcamp NTT DATA - Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_01/07-Mentoria-Live.de.Lancamento)
+- [x] Mentoria: [Live de Lançamento: Bootcamp NTT DATA - Engenharia de Dados com Python](Modulo_01/07-Mentoria-Live.de.Lancamento)
       
 ### Módulo 2: Sintaxe Básica com Python  
 
-- [ ] Curso: [Tipos de Operadores com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_02/01-Curso.01-Tipos.de.Operadores.com.Python)
-- [ ] Curso: [Estruturas Condicionais e de Repetição em Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_02/02-Curso.02-Estruturas.Condicionais.e.de.Repeticao.em.Python)
-- [ ] Curso: Manipulando Strings com Python
+- [ ] Curso: [Tipos de Operadores com Python](Modulo_02/01-Curso.01-Tipos.de.Operadores.com.Python)
+- [ ] Curso: [Estruturas Condicionais e de Repetição em Python](Modulo_02/02-Curso.02-Estruturas.Condicionais.e.de.Repeticao.em.Python)
+- [ ] [Curso: Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python)
 - [ ] Curso: Dominando Funções Python
 - [ ] Projeto: Criando um Sistema Bancário com Python
   - Arquivo do projeto: desafio.py
