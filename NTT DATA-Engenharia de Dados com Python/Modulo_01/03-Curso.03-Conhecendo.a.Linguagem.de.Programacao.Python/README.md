@@ -6,7 +6,7 @@
 ## 🟩 Vídeo 01 - Tipos de Dados
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_03-Video_01.webm|vid-60" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_03-Video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 

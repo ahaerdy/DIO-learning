@@ -5,7 +5,10 @@
 
 ## 🟩 Vídeo 01 - Introdução ao Curso
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_01.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/f3cbaa66-efbd-4c25-842e-2069c188c066?autoplay=1
 
@@ -13,7 +16,11 @@ A instrutora, Lidiana (ou Eli),  se apresenta no início de um curso intitulado 
 
 ## 🟩 Vídeo 02 - O que é Versionamento de Código
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_02.webm|vid-60]]
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/68183181-bc0a-4b66-a877-42dd42b5bc9c?autoplay=1
 
@@ -38,7 +45,11 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versiona
 
 ## 🟩 Vídeo 03 - O que é Git
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_03.webm|vid-60]]
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/a7e0b074-3907-4ca8-a74f-8378ffb8f458?autoplay=1
 
@@ -71,7 +82,10 @@ O vídeo fornece uma introdução abrangente ao **Git**, descrevendo-o como um *
  
 ## 🟩 Vídeo 04 - O que é Github
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_04.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/b86569c8-84af-438d-83ae-eb2a728bb291?autoplay=1
 
@@ -115,7 +129,10 @@ O vídeo fornece uma **introdução abrangente ao GitHub**, distinguindo-o do Gi
 
 ## 🟩Vídeo 05 - Instalando o Git no Windows
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_05.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/c8d73362-9038-4259-af4c-30dcc5551afe?autoplay=1
 
@@ -131,7 +148,10 @@ O vídeo explica o processo de **instalação e configuração do Git** no siste
  
 ## 🟩 Vídeo 06 - Instalando o Git no Linux (Ubuntu)
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_06.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/5e5fe1c6-59d6-4003-b4a1-e9799c7755ec?autoplay=1
 
@@ -163,7 +183,10 @@ O vídeo fornece um **tutorial prático** sobre como instalar a ferramenta Git e
     
 ## 🟩 Vídeo 07 - Configurando o Git
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_07.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/f9b294d2-f8ca-4364-9031-1e897721b3e2?autoplay=1
 
@@ -209,7 +232,10 @@ O vídeo detalha as **configurações iniciais do Git**, utilizando o terminal G
 
 ## 🟩 Vídeo 08 - Autenticando via Token
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_08.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/3d13d85f-2508-4396-9657-4643d3302c79?autoplay=1
 
@@ -232,7 +258,10 @@ O vídeo explica detalhadamente o processo de **autenticação de operações Gi
  
 ## 🟩 Vídeo 09 - Autenticando via Chave SSH
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_09.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/a53b7d6e-d7a2-40de-a8f9-cc30b42fc93d?autoplay=1
 
@@ -246,7 +275,10 @@ O vídeo fornece um guia detalhado sobre como autenticar operações no **GitHub
  
 ## 🟩Vídeo 10 - Criando e Clonando Repositórios
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_10.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/a377a00b-461c-4ab0-8258-3addd2fef14c?autoplay=1
 
@@ -289,7 +321,10 @@ O vídeo é um guia prático para iniciantes e usuários intermediários do Git 
  
 ## 🟩Vídeo 11 - Salvando Alterações no Repositório Local
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_11.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_11.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/599dd3dd-d189-474f-a55c-22f37b4472da?autoplay=1
 
@@ -309,7 +344,10 @@ O vídeo apresenta uma **aula prática sobre como salvar alterações em um repo
  
 ## 🟩 Vídeo 12 - Desfazendo Alterações no Repositório Local
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_12.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_12.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/3f9f2336-6fd5-44cb-ba39-d1a4f6448023?autoplay=1
 
@@ -341,7 +379,10 @@ O material apresentado é um **guia prático e detalhado** sobre o uso de comand
 
 ## 🟩Vídeo 13 - Enviando e Baixando Alterações com o Repositório Remoto
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_13.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_13.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/dd17c56e-2327-493c-942a-358a49a26549?autoplay=1
 
@@ -360,7 +401,10 @@ O vídeo concentra-se em fluxos de trabalho essenciais do Git, demonstrando como
  
 ## 🟩Vídeo 14 - Trabalhando com Branches - Criando, Mesclando, Deletando e Tratando Conflitos
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_14.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_14.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/2c7fd2b1-e7c4-4947-9b07-ffcbfb4bd689?autoplay=1
 
@@ -518,7 +562,10 @@ git branch
 
 ## 🟩Vídeo 15 - Trabalhando com Branches - Comandos Úteis no Dia a Dia
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_15.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_15.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
  Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/80018fab-daac-4917-8527-a6be2e0c3cf0?autoplay=1
 
@@ -543,7 +590,10 @@ O vídeo demonstra comandos avançados do Git para gerenciamento de código e re
 
 ## 🟩 Vídeo 16 - Dicas e Materiais de Apoio
 
-![[bootcamp-ntt-data_modulo_01-Curso_04-Video_16.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_04-Video_16.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/versionamento-de-codigo-com-git-e-github/learning/b2ceffed-9d18-4369-a038-e72be0953455?autoplay=1
 
@@ -574,4 +624,4 @@ O vídeo trata da finalização de curso, onde a instrutora, **Ligiana Andrade**
 # Certificado: Versionamento de Código com Git
 
 - Link do certificado: https://hermes.dio.me/certificates/F10OC6FU.pdf
-- Certificado em pdf: [[Certificado-Versionamento.de.Codigo.com.Git..pdf]]
+- Certificado em pdf: [Certificado-Versionamento.de.Codigo.com.Git..pdf](000-Midia_e_Anexos/Certificado-Versionamento.de.Codigo.com.Git..pdf)
