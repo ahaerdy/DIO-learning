@@ -7,7 +7,10 @@
 
 ## 🟩 Vídeo 01 - Indentação e blocos
 
-![[bootcamp-ntt-data_modulo_02-Curso_02-Video_01.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_02-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/engenharia-dados-python/course/estruturas-condicionais-e-de-repeticao-em-python/learning/f9b78902-9c92-4a12-b411-9b78a56b15d1?autoplay=1
 
@@ -116,7 +119,10 @@ Obrigado por ser nosso cliente, tenha um bom dia!
 
 ## 🟩 Vídeo 02 - Estruturas condicionais
 
-![[bootcamp-ntt-data_modulo_02-Curso_02-Video_02.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_02-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/estruturas-condicionais-e-de-repeticao-em-python/learning/fae4234b-5e28-432b-9fd2-495bc75e28ed?autoplay=1
 
@@ -248,7 +254,10 @@ print(f"{status} ao realizar o saque!")
 
 ## 🟩 Vídeo 03 - Estruturas de Repetição
 
-![[bootcamp-ntt-data_modulo_02-Curso_02-Video_03.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_02-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/estruturas-condicionais-e-de-repeticao-em-python/learning/08d2c695-d00c-4e10-b698-057323c08d9f?autoplay=1
 
@@ -387,9 +396,9 @@ else:
 
 Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
-- [[15-Dio.Indentacao.e.blocos.pptx]]
-- [[16-Dio.Estruturas.condicionais.pptx]]
-- [[17-Dio.Estruturas.de.repeticao.pptx]]
+- [15-Dio.Indentacao.e.blocos.pptx](000-Midia_e_Anexos/15-Dio.Indentacao.e.blocos.pptx)
+- [16-Dio.Estruturas.condicionais.pptx](000-Midia_e_Anexos/16-Dio.Estruturas.condicionais.pptx)
+- [17-Dio.Estruturas.de.repeticao.pptx](000-Midia_e_Anexos/17-Dio.Estruturas.de.repeticao.pptx)
 
 # Certificado: 
 
