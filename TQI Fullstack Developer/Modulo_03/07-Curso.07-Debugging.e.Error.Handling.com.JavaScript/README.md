@@ -468,5 +468,5 @@ O código acima demonstra a lógica de filtragem, onde, se os parâmetros estive
 
 # Certificado: Debugging e Error Handling com JavaScript
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/CZUQLEHO.pdf
+- Certificado em pdf: [Certificado-Debugging.e.Error.Handling.com.JavaScript](000-Midia_e_Anexos/Certificado-Debugging.e.Error.Handling.com.JavaScript.pdf)
