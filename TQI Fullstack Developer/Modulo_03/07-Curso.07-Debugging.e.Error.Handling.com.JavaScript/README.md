@@ -12,8 +12,9 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/abb903e7-981e-4c41-939e-9d9ae5a2fe29?autoplay=1
+
+A instrutora, **Stephanie**, apresenta sua trajetória profissional como engenheira de software e define os pilares do aprendizado, que abrangem desde a **identificação de falhas** até o desenvolvimento de **mensagens customizadas**. O conteúdo está estruturado em aulas teóricas e **atividades práticas** para consolidar a escrita de códigos mais robustos e seguros. Além do material didático, os estudantes são incentivados a utilizar **fóruns e comunidades digitais** para solucionar dúvidas e trocar conhecimentos técnicos. O objetivo central é capacitar o aluno a dominar o fluxo de tratamento de dados de maneira **eficiente e profissional**.
 
 
 
