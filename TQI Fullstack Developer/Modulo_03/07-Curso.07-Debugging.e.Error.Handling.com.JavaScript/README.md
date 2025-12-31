@@ -378,7 +378,6 @@ Ao inspecionar o objeto de erro no console, podemos acessar propriedades especí
 ```      
 
 
-
 ## 🟩 Vídeo 05 - Atividade prática
 
 
@@ -388,6 +387,8 @@ Ao inspecionar o objeto de erro no console, podemos acessar propriedades especí
 </video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/61732474-2428-45c9-be5d-885f777e9e31?autoplay=1
+
+O vídeo consiste em uma **aula prática sobre tratamento de erros em JavaScript**, orientando o aluno a criar uma função de validação de arrays. A instrutora explica como utilizar a estrutura **try...catch** para gerenciar falhas e o operador **instanceof** para identificar tipos específicos de erros, como **ReferenceError**, **TypeError** e **RangeError**. O código demonstrado verifica a existência de parâmetros, o tipo dos dados inseridos e a correspondência entre o tamanho da lista e um valor numérico. Além da codificação ao vivo, o conteúdo destaca a importância de consultar a documentação oficial e utilizar repositórios do **GitHub** como apoio aos estudos. Ao final, o exemplo prático mostra como retornar o próprio objeto em casos de sucesso ou capturar e exibir mensagens detalhadas quando exceções são lançadas.
 
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
