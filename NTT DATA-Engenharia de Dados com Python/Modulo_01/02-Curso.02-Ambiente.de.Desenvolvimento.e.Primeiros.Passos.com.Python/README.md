@@ -5,7 +5,10 @@
 
 ## 🟩 Vídeo 01 - Introdução ao Python
 
-![[bootcamp-ntt-data_modulo_01-Curso_02-Video_01.mkv|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_02-Video_01.mkv" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente-de-desenvolvimento-e-primeiros-passos-com-python/learning/1ecc1827-27d0-4395-8bd2-7738e44ae5b3?autoplay=1
 
@@ -68,7 +71,10 @@ O instrutor **Guilherme Carvalho** fala sobre a linguagem de programação **Pyt
 
 ## 🟩 Vídeo 02 - Configuração do ambiente de desenvolvimento
 
-![[bootcamp-ntt-data_modulo_01-Curso_02-Video_02.mkv|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_02-Video_02.mkv" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente-de-desenvolvimento-e-primeiros-passos-com-python/learning/033f4df5-0f29-441d-9a9e-1becdd451832?autoplay=1
 
@@ -121,7 +127,11 @@ Convite para a Comunidade DIO no Discord (https://discord.com/invite/gFKWUdTkaj)
 
 ## 🟩 Vídeo 03 - Primeiro programa
 
-![[bootcamp-ntt-data_modulo_01-Curso_02-Video_03.mkv|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_02-Video_03.mkv" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/ambiente-de-desenvolvimento-e-primeiros-passos-com-python/learning/8b91a0c8-e506-4190-bc84-a0b6b04cb151?autoplay=1
 
@@ -175,18 +185,15 @@ Saída:
    Olá, mundo!
 ```
 
-
-
-
 # Parte 2: Materiais de apoio e Questionário
 
 ## Material de Apoio
 
 São disponibilizados 3 arquivos em formato Powerpoint:
 
-- [[01-Dio.Introducao.ao.Python.pptx]]
-- [[02-Dio.Configuracao.do.ambiente.de.desenvolvimento.pptx]]
-- [[03-Dio.Primeiro.programa.pptx]]
+- [01-Dio.Introducao.ao.Python.pptx](000-Midia_e_Anexos/01-Dio.Introducao.ao.Python.pptx)
+- [02-Dio.Configuracao.do.ambiente.de.desenvolvimento.pptx](000-Midia_e_Anexos/02-Dio.Configuracao.do.ambiente.de.desenvolvimento.pptx)
+- [03-Dio.Primeiro.programa.pptx](000-Midia_e_Anexos/03-Dio.Primeiro.programa.pptx)
 
 
 # Certificado: Ambiente de Desenvolvimento e Primeiros Passos com Python
