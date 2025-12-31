@@ -1,6 +1,9 @@
 # Mentoria: Live de Lançamento: Bootcamp NTT DATA - Engenharia de Dados com Python
 
-![[Lancamento.Bootcamp.NTT.Data-Engenharia.de.Dados.com.Python.mp4|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/Lancamento.Bootcamp.NTT.Data-Engenharia.de.Dados.com.Python.mp4" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 ▶️ [Assista no Youtube](https://www.youtube.com/watch?v=dEZ6KLh10B4)
 
