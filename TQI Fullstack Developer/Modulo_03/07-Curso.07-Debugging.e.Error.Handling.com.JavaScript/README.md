@@ -283,16 +283,111 @@ tryCatchExemplo('ala');
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/345e4ebc-9020-49f6-9c56-c199c27ff60b?autoplay=1
 
+O vídeo consiste em uma transcrição de aula sobre a **criação e manipulação de erros personalizados** utilizando a linguagem de programação **JavaScript**. O conteúdo detalha a **anatomia do objeto Error**, explicando como desenvolvedores podem configurar propriedades fundamentais como **mensagem, nome e a pilha de chamadas (stack)**. O instrutor demonstra o processo de **instanciar um novo erro** e a importância de consultar a documentação externa para verificar a compatibilidade de parâmetros opcionais entre diferentes navegadores. Além disso, o texto aborda como o comando **throw** é utilizado para disparar essas exceções customizadas durante a execução do código. Ao final, a lição incentiva o uso de **fóruns e comunidades online** para sanar dúvidas sobre a implementação prática desses conceitos técnicos.
+
+### Anotações
+
+#### Criando erros personalizados
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h20m56s641.jpg" alt="" width="840">
+</p>
+
+Nesta aula, o foco é aprender a colocar a mão na massa para criar erros personalizados no JavaScript. O objetivo central é entender como manipular o objeto `Error`, que é nativo da linguagem, explorando suas propriedades e métodos para realizar um tratamento de erros mais eficiente e específico para as necessidades da aplicação.
+
+#### Objetivos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h21m20s462.jpg" alt="" width="840">
+</p>
+
+O objetivo principal desta etapa é explicar a manipulação do objeto `Error`. Serão abordados os parâmetros que este objeto aceita, como a mensagem, o nome do arquivo e o número da linha, além de discutir a compatibilidade desses parâmetros entre diferentes navegadores.
+
+#### Etapa 1: O objeto Error
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h21m40s959.jpg" alt="" width="840">
+</p>
+
+Iniciamos a análise da anatomia do objeto `Error`. Por padrão, ele aceita três parâmetros: `message`, `fileName` e `lineNumber`. É importante notar que todos esses parâmetros são opcionais. No entanto, propriedades como `fileName` e `lineNumber` podem não funcionar em todos os browsers, sendo recomendado o uso prioritário da mensagem para garantir maior compatibilidade.
+
+#### Anatomia e Instanciação
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h21m46s033.jpg" alt="" width="840">
+</p>
+
+Para declarar um novo erro, cria-se uma constante e instancia-se o objeto utilizando o operador `new Error()`. Ao lançar esse erro com o comando `throw`, o sistema exibe a mensagem definida e o rastreamento da linha onde o erro ocorreu.
+
+```javascript
+// todos os parâmetros são opcionais
+new Error(message, fileName, lineNumber)
+
+const MeuErro = new Error('Mensagem Inválida');
+throw MeuErro;
+
+```
+
+**Resultado no console:**
+`Uncaught Error: Mensagem Inválida at <anonymous>:1:17`
+
+#### Personalizando o Nome do Erro
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h22m38s369.jpg" alt="" width="840">
+</p>
+
+Além da mensagem, é possível customizar a propriedade `.name` do objeto. Ao atribuir um valor a essa propriedade, o erro lançado passará a exibir o nome personalizado seguido da mensagem, facilitando a identificação do tipo de falha que ocorreu no código.
+
+```javascript
+const MeuErro = new Error('Mensagem Inválida');
+MeuErro.name = 'InvalidMessage';
+
+throw MeuErro;
+
+```
+
+**Resultado no console:**
+`Uncaught InvalidMessage: Mensagem Inválida at <anonymous>:3:17`
+
+#### Propriedades Name e Stack
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h22m40s645.jpg" alt="" width="840">
+</p>
+
+Ao inspecionar o objeto de erro no console, podemos acessar propriedades específicas:
+
+* **name**: Retorna o nome atribuído ao erro (ex: "InvalidMessage").
+* **stack**: Retorna a "pilha" de execução, indicando exatamente o que foi executado e em qual linha/coluna o erro foi encontrado.
+* **Objeto completo**: Ao exibir apenas o objeto, o JavaScript formata as informações apresentando o nome, a mensagem e a stack de forma organizada.
+
+```javascript
+> MeuErro.name
+< "InvalidMessage"
+
+> MeuErro.stack
+< "InvalidMessage: Mensagem Inválida\n at <anonymous>:3:17"
+
+> MeuErro
+< InvalidMessage: Mensagem Inválida
+  at <anonymous>:3:17
+
+```      
 
 
 
-## 🟩 Vídeo 02 - Atividade prática
+## 🟩 Vídeo 05 - Atividade prática
 
 
-Link do vídeo: 
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_05.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/61732474-2428-45c9-be5d-885f777e9e31?autoplay=1
 
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
