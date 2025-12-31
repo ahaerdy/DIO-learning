@@ -4,14 +4,14 @@
   <source src="000-Midia_e_Anexos/Lancamento.Bootcamp.NTT.Data-Engenharia.de.Dados.com.Python.mp4" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-
+<br>
+<br>
 ▶️ [Assista no Youtube](https://www.youtube.com/watch?v=dEZ6KLh10B4)
-
+<br>
 <br>
 <p align="center">
     <img src="000-Midia_e_Anexos/Pasted image 20251220132948.png" alt="" width="840">
 </p>
-<br>
 
 # Resumo
 
