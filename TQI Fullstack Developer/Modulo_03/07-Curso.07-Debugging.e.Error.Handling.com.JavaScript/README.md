@@ -274,70 +274,22 @@ tryCatchExemplo('ala');
 
 ```      
 
+# Parte 3 - Criando erros
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 04 - O objeto Error
 
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_04.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/345e4ebc-9020-49f6-9c56-c199c27ff60b?autoplay=1
 
 
-Link do vídeo: 
 
 
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-# Parte 3 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - Exxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - Atividade prática
 
 
 Link do vídeo: 
