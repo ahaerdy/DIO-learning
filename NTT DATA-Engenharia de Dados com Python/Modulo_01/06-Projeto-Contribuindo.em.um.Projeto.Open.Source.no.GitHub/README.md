@@ -9,7 +9,10 @@
 
 ## 🟩 Vídeo 01 - Introdução ao Lab
 
-![[bootcamp-ntt-data_modulo_01-Curso_06-Video_01.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_06-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/913f26fd-1018-4643-b59a-6356ea77dc2e?back=/track/engenharia-dados-python
 
@@ -19,7 +22,10 @@ Esta fonte apresenta um **laboratório prático** conduzido pela desenvolvedora 
 
 ## 🟩 Vídeo 02 - Formas de Contribuir num Projeto Open Source
 
-![[bootcamp-ntt-data_modulo_01-Curso_06-Video_02.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_06-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/8e9e1f35-5571-40c4-863f-2279ba388aeb?back=/track/engenharia-dados-python
 
@@ -75,7 +81,10 @@ O vídeo consiste em um guia prático sobre como realizar contribuições em pro
 
 ## 🟩 Vídeo 03 - Desenvolvendo uma Contribuição
 
-![[bootcamp-ntt-data_modulo_01-Curso_06-Video_03.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_06-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/4945958e-0c25-4a04-9d86-29cc7ea82b6a
 
@@ -195,7 +204,10 @@ Profile README enviado para o projeto: [ahaerdy.md](https://github.com/ahaerdy/D
 
 ## 🟩 Vídeo 04 - Exercício - Enviando uma Contribuição
 
-![[bootcamp-ntt-data_modulo_01-Curso_06-Video_04.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_06-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/4945958e-0c25-4a04-9d86-29cc7ea82b6a?back=/track/engenharia-dados-python
 
@@ -203,7 +215,10 @@ O vídeo detalha o procedimento prático para realizar uma **contribuição em u
 
 ## 🟩 Vídeo 05 - Dicas e Materiais de Apoio
 
-![[bootcamp-ntt-data_modulo_01-Curso_06-Video_05.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_06-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/9e6f7eb2-86cc-4a66-b31c-80d3d774667d
 
@@ -212,7 +227,11 @@ O material fornece orientações essenciais para desenvolvedores que desejam **f
 
 ## 🟩 Vídeo 06 - Resumão e Explicação Sobre a Automação dos PRs
 
-![[bootcamp-ntt-data_modulo_01-Curso_06-Video_06.webm|vid-60]]
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_06-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/lab/desafio-de-projeto-contribuindo-em-um-projeto-open-source-no-github/learning/32153d6a-91fe-42d0-9b18-0d2be2e35197
 
@@ -262,4 +281,4 @@ Bons estudos 😉
 # Certificado: Contribuindo em um Projeto Open Source no GitHub
 
 - Link na plataforma: https://hermes.dio.me/certificates/OC0JDME3.pdf
-- Certificado em pdf:  [[Certificado-Contribuindo.em.um.Projeto.Open.Source.no.GitHub.pdf]]
+- Certificado em pdf:  [Certificado-Contribuindo.em.um.Projeto.Open.Source.no.GitHub.pdf](000-Midia_e_Anexos/Certificado-Contribuindo.em.um.Projeto.Open.Source.no.GitHub.pdf)

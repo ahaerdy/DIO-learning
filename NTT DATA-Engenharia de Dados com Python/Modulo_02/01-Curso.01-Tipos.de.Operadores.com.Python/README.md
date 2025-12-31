@@ -7,7 +7,10 @@
 
 ## Vídeo 01 - Operadores aritméticos
 
-![[bootcamp-ntt-data_modulo_02-Curso_01-Video_01.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_01-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/6df69727-d6c2-4956-b81b-2f3c21427c11?autoplay=1
 
@@ -85,7 +88,10 @@ https://github.com/guicarvalho/trilha-python-dio
 
 ## Vídeo 02 - Operadores de comparação
 
-![[bootcamp-ntt-data_modulo_02-Curso_01-Video_02.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_01-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/cfa81a73-1936-484f-8143-f145469f995a?autoplay=1
 
@@ -140,7 +146,10 @@ print(saldo <= saque)
 
 ## Vídeo 03 - Operadores de atribuição
 
-![[bootcamp-ntt-data_modulo_02-Curso_01-Video_03.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_01-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/fdc7a723-ffaf-4366-870f-90b8197b1ccd?autoplay=1
 
@@ -227,7 +236,10 @@ print(saldo)
 
 ## Vídeo 04 - Operadores Lógicos
 
-![[bootcamp-ntt-data_modulo_02-Curso_01-Video_04.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_01-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/41df67fd-70a9-4bb1-b87f-34b129996013?autoplay=1
 
@@ -308,7 +320,14 @@ saldo >= saque and saque <= limite or conta_especial and saldo >= saque
 
 ## Vídeo 05 - Operadores de identidade
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_01-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/e4027b9f-edd1-43e9-8211-01c0090d81ff?autoplay=1
+
+O vídeo apresenta uma aula técnica focada no funcionamento dos **operadores de identidade** dentro da linguagem de programação **Python**. O instrutor detalha como os comandos **"is"** e **"is not"** são fundamentais para verificar se duas variáveis distintas apontam para o **mesmo local na memória**, diferenciando essa lógica de uma simples comparação de valores. Por meio de exemplos práticos no **VS Code**, o conteúdo demonstra a aplicação desses operadores com strings e números inteiros para validar a ocupação de espaço no sistema. Além da explicação teórica, o material incentiva a prática local e oferece suporte em comunidades digitais para sanar eventuais dúvidas dos estudantes. A lição conclui reforçando que essa ferramenta é essencial para entender a **gestão de objetos** e a eficiência do código durante o desenvolvimento de software.
 
 ### Anotações
 
@@ -357,7 +376,14 @@ a is b      # False (objetos diferentes em memória)
 
 ## Vídeo 06 - Operadores de associação
 
-Link do vídeo:
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_01-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/tipos-de-operadores-com-python/learning/cc6031d4-26a1-4a0f-9fc3-72b9250c95af?autoplay=1
+
+O vídeo consiste em uma aula técnica sobre o uso de **operadores de associação** na linguagem de programação **Python**. O conteúdo explica como utilizar os comandos **"in"** e **"not in"** para verificar se um elemento específico existe dentro de sequências, como **strings** ou **listas**. O instrutor demonstra exemplos práticos no **VS Code**, ressaltando que essas comparações são **case-sensitive**, ou seja, diferenciam letras maiúsculas de minúsculas. Além da sintaxe, o material aborda aplicações reais, como a busca de itens em retornos de **bancos de dados**. Por fim, o autor incentiva a prática por meio de exercícios no **GitHub** e a interação com a comunidade para sanar dúvidas.
 
 ### Anotações
 
@@ -396,4 +422,4 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 # Certificado: Tipos de Operadores com Python
 
 Link do certificado:  https://hermes.dio.me/certificates/EUCVFLQ4.pdf
-Certificado em pdf: 
+Certificado em pdf: [Tipos de Operadores com Python](000-Midia_e_Anexos/Certificado-Tipos.de.Operadores.com.Python.pdf)
