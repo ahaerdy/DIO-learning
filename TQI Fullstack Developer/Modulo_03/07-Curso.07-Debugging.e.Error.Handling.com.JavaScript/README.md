@@ -427,24 +427,44 @@ Para auxiliar na resolução, a documentação do MDN (Mozilla Developer Network
 
 Dentre os principais erros citados para esta atividade estão:
 
-* 
-**RangeError**: Indica quando um valor numérico está fora dos limites válidos.
-
-
-* 
-**ReferenceError**: Ocorre ao tentar referenciar uma variável ou referência inválida.
-
-
-* 
-**TypeError**: Lançado quando um valor não é do tipo esperado.
-
+* **RangeError**: Indica quando um valor numérico está fora dos limites válidos.
+* **ReferenceError**: Ocorre ao tentar referenciar uma variável ou referência inválida.
+* **TypeError**: Lançado quando um valor não é do tipo esperado.
 
 
 O uso desses objetos permite criar erros mais semânticos e fáceis de tratar dentro de um bloco `catch`.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-13h04m17s624.jpg" alt="" width="840">
-</p>
+#### ▶️ código em JavaScript ()
+```javascript
+function validaArrays(arr, num) {
+	try {
+		if (!arr && !num) throw new ReferenceError('Envie os parâmetros!');
+
+		if (typeof arr !== 'object')
+			throw new TypeError('Envie um elemento do tipo Array!');
+
+		if (typeof num !== 'number')
+			throw new TypeError('Envie um elemento do tipo Number!');
+
+		if (arr.length !== num) throw new RangeError('Tamanho do array inválido!');
+
+		return arr;
+	} catch (e) {
+		if (e instanceof RangeError) {
+			console.log('RangeError!');
+			console.log(e.stack);
+		} else if (e instanceof ReferenceError) {
+			console.log('ReferenceError!');
+			console.log(e.stack);
+		} else {
+			console.log('Outro tipo de erro!');
+			console.log(e.stack);
+		}
+	}
+}
+
+console.log(validaArrays([1, 2, 3], 0));
+```
 
 A implementação final utiliza a estrutura `try...catch` para encapsular as validações e o retorno do array. No bloco `catch`, o operador `instanceof` é empregado para identific      
 
