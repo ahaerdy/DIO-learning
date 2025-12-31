@@ -5,7 +5,10 @@
 
 ## 🟩 Vídeo 01 - Tipos de Dados
 
-![[bootcamp-ntt-data_modulo_01-Curso_03-Video_01.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_03-Video_01.webm|vid-60" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/81ce773a-b004-43b8-bdc1-1f150df40f96?autoplay=1
 
@@ -74,7 +77,10 @@ O vídeo fornece uma aula detalhada sobre os **tipos de dados** essenciais da li
 
 ## 🟩 Vídeo 02 - Modo interativo
 
-![[bootcamp-ntt-data_modulo_01-Curso_03-Video_02.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_03-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/0c44b229-a31e-4b20-874c-57adaed64fb1?autoplay=1
 
@@ -131,7 +137,6 @@ O material instrucional concentra-se em apresentar o **modo interativo do interp
 
 ### Anotações
 
-
 1. O autor ensina como usar o modo interativo do interpretador Python.
     - Existem duas formas de iniciar o modo interativo, chamando apenas o interpretador (python) ou executando o script com a flag -i (python -i app.py).
 2. Explica os comandos dir e help
@@ -143,7 +148,10 @@ O material instrucional concentra-se em apresentar o **modo interativo do interp
 
 ## 🟩 Vídeo 03 - Variáveis e constantes
 
-![[bootcamp-ntt-data_modulo_01-Curso_03-Video_03.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_03-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/ed872b9c-1c41-4b22-a786-876ded7c2bc4?autoplay=1
 
@@ -235,7 +243,10 @@ Links úteis: https://github.com/guicarvalho/trilha-python-dio
 
 ## 🟩 Vídeo 04 - Conversão de tipos
 
-![[bootcamp-ntt-data_modulo_01-Curso_03-Video_04.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_03-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/0327af41-cbab-4ea6-8781-0ba400b01115?autoplay=1
 
@@ -368,7 +379,10 @@ Links úteis: https://github.com/guicarvalho/trilha-python-dio
 
 ## 🟩 Vídeo 05 - Funções de entrada e saída
 
-![[bootcamp-ntt-data_modulo_01-Curso_03-Video_05.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_03-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-a-linguagem-de-programacao-python/learning/ac9d2a60-2a1d-482f-bd22-38a8325d4998?autoplay=1
 
@@ -460,11 +474,11 @@ Links úteis:
 
 São disponibilizados 4 arquivos em formato Powerpoint:
 
-- [[04-Dio.Tipos.de.dados.pptx]]
-- [[05-Dio.Modo.interativo.pptx]]
-- [[06-Dio.Variaveis.e.constantes.pptx]]
-- [[07-Dio.Conversao.de.tipos.pptx]]
-
+- [04-Dio.Tipos.de.dados.pptx](000-Midia_e_Anexos/04-Dio.Tipos.de.dados)
+- [05-Dio.Modo.interativo.pptx](000-Midia_e_Anexos/05-Dio.Modo.interativo)
+- [06-Dio.Variaveis.e.constantes.pptx](000-Midia_e_Anexos/06-Dio.Variaveis.e.constantes)
+- [07-Dio.Conversao.de.tipos.pptx](000-Midia_e_Anexos/07-Dio.Conversao.de.tipos)
+- [08-Dio.Funcoes.de.entrada.e.saida.input.print..pptx](000-Midia_e_Anexos/08-Dio.Funcoes.de.entrada.e.saida.input.print..pptx)
 # Certificado: 
 
 - Link na plataforma: https://hermes.dio.me/certificates/BRMRBL10.pdf
