@@ -400,20 +400,16 @@ A atividade prática consiste na criação de uma função para validação de e
 
 As validações exigidas para a função são:
 
-* 
-**ReferenceError**: Caso os parâmetros não sejam enviados.
+* **ReferenceError**: Caso os parâmetros não sejam enviados.
 
 
-* 
-**TypeError**: Caso o array não seja do tipo `object`.
+* **TypeError**: Caso o array não seja do tipo `object`.
 
 
-* 
-**TypeError**: Caso o número enviado não seja do tipo `number`.
+* **TypeError**: Caso o número enviado não seja do tipo `number`.
 
 
-* 
-**RangeError**: Caso o tamanho do array seja diferente do número especificado.
+* **RangeError**: Caso o tamanho do array seja diferente do número especificado.
 
 
 
