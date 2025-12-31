@@ -57,8 +57,12 @@ O percurso do curso é estruturado em três etapas objetivas:
 * **Aula 3 - Criando erros:** Atividade prática dedicada à criação de erros customizados e sua integração nas estruturas de tratamento.
 
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 02 - ECMAScript Error e DOMException
 
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_02.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/be209ab1-55cd-4030-b9f2-2334239b5bce?autoplay=1
 
