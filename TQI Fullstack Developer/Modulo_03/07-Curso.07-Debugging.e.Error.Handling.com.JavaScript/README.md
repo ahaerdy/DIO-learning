@@ -3,12 +3,12 @@
 - Stephany Nusch (Software Engineer at Microsoft)
 - Contato Linkedin: / [stephanynusch](https://www.linkedin.com/in/stephanynusch/)
 
-# Parte 1 - xxxxxxxxxxxxxxx
+# Parte 1 - Tipos de erros
 
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 01 - Apresentação do curso
 
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/abb903e7-981e-4c41-939e-9d9ae5a2fe29?autoplay=1
 
 
 ## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
