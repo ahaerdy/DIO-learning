@@ -74,8 +74,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [ ] Curso: [Estruturas Condicionais e de Repetição em Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python/Modulo_02/02-Curso.02-Estruturas.Condicionais.e.de.Repeticao.em.Python)
 - [ ] Curso: Manipulando Strings com Python
 - [ ] Curso: Dominando Funções Python
-- [ ] Projeto: [Criando um Sistema Bancário com Python]()
-  - Arquivo do projeto: [desafio.py]()
+- [ ] Projeto: [Criando um Sistema Bancário com Python]
+  - Arquivo do projeto: [desafio.py](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
   - Descrição: desenvolvimento de um sistema de operações bancárias simples em Python, sem uso de bibliotecas externas, explorando estruturas de controle, manipulação de strings, entrada de dados, validação de regras e aplicação de lógica para simular funcionalidades como saque, depósito e extrato.
 
 
