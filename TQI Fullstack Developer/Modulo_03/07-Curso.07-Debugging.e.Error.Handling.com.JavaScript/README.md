@@ -126,61 +126,19 @@ DOMException: "Node cannot be inserted at the specified point in the hierarchy"
 
 Esses erros são fundamentais para identificar problemas na estrutura da página e na forma como os dados estão sendo consumidos pelo navegador.      
 
+# Parte 2 - Tratando Erros
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
+## 🟩 Vídeo 03 - Throw, Try/Catch e Finally
 
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_02.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/d98f9b27-bd6c-4f33-bc22-82bee03e5591?autoplay=1 
 
 
-Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-# Parte 2 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
 
 
 ## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
