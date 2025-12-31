@@ -9,10 +9,12 @@ function tryCatchExemplo(string) {
   }
   catch(e) {
     throw e;
+    console.log(e);
   }
   finally {
     console.log('A string enviada foi: ' + string);
   }
 }
 
-tryCatchExemplo('ala');
+// tryCatchExemplo('otocomemocoto');
+tryCatchExemplo('');    
