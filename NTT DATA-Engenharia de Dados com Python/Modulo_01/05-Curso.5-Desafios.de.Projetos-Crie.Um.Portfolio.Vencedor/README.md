@@ -3,16 +3,22 @@
 
 ## 🟩 Vídeo 01 - Apresentação
 
-![[bootcamp-ntt-data_modulo_01-Curso_05-Video_01.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_05-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do Vídeo:  https://web.dio.me/track/engenharia-dados-python/course/desafios-de-projetos-crie-um-portfolio-vencedor/learning/37bfd7e4-fadd-48c2-831b-a95f84d244db?autoplay=1
 
-O vídeo **destaca a relevância dos desafios de projeto** para a formação e o sucesso profissional no setor de tecnologia. Ele enfatiza que possuir um **portfólio robusto e bem-sucedido** funciona como um "super poder," permitindo aos profissionais demonstrar suas habilidades práticas e **aumentar a visibilidade de seu perfil técnico** para empresas parceiras. O áudio **apresenta um curso** focado em utilizar esses desafios, cobrindo tópicos como a aplicação de competências técnicas, boas práticas, padrões, versionamento de código e a importância do trabalho em equipe. O objetivo final é capacitar os participantes a **criar um portfólio impressionante** para recrutadores. Ele conclui incentivando os ouvintes a embarcarem nessa jornada para alcançar o sucesso.
+O vídeo **destaca a relevância dos desafios de projeto** para a formação e o sucesso profissional no setor de tecnologia. Ele enfatiza que possuir um **portfólio robusto e bem-sucedido** funciona como um "super poder", permitindo aos profissionais demonstrar suas habilidades práticas e **aumentar a visibilidade de seu perfil técnico** para empresas parceiras. O áudio **apresenta um curso** focado em utilizar esses desafios, cobrindo tópicos como a aplicação de competências técnicas, boas práticas, padrões, versionamento de código e a importância do trabalho em equipe. O objetivo final é capacitar os participantes a **criar um portfólio impressionante** para recrutadores. Ele conclui incentivando os ouvintes a embarcarem nessa jornada para alcançar o sucesso.
 
 
 ## 🟩 Vídeo 02 - PBL, Portfólio, Competências e Empregabilidade
 
-![[bootcamp-ntt-data_modulo_01-Curso_05-Video_02.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_05-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/desafios-de-projetos-crie-um-portfolio-vencedor/learning/cedc1ccf-33f8-48e3-b1b5-4c118df4f4ef?autoplay=1
 
@@ -20,7 +26,10 @@ O vídeo, explica a importância da **Aprendizagem Baseada em Projetos (PBL)**, 
 
 ## 🟩 Vídeo 03 - A Importância dos Desafios de Projeto na Prática
 
-![[bootcamp-ntt-data_modulo_01-Curso_05-Video_03.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_01-Curso_05-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do Vídeo: https://web.dio.me/track/engenharia-dados-python/course/desafios-de-projetos-crie-um-portfolio-vencedor/learning/c10a0846-ed32-4f39-b2ee-29df9b93ec31?autoplay=1
 
@@ -29,4 +38,4 @@ O instrutor **explica detalhadamente a funcionalidade e a importância dos "desa
 # Certificado: 
 
 - Link na plataforma: https://hermes.dio.me/certificates/BRMRBL10.pdf
-- Certificado em pdf: [[Certificado-Desafios.de.Projetos.Crie.Um.Portfolio.Vencedor..pdf]]
+- Certificado em pdf: [Certificado-Desafios.de.Projetos.Crie.Um.Portfolio.Vencedor..pdf](000-Midia_e_Anexos/Certificado-Desafios.de.Projetos.Crie.Um.Portfolio.Vencedor..pdf)
