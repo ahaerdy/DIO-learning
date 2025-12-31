@@ -7,8 +7,9 @@ function tryCatchExemplo(string) {
   try {
     verificaPalindromo(string)
   }
-  catch (e) {
-    console.log(e)
+  catch (e) {      // Captura o erro lançado pela função verificaPalindromo
+    console.log(e) // Exibe o erro controlado no console
+    throw (e);     // Relança o erro para ser tratado em outro lugar, se necessário
   }
 }
 
