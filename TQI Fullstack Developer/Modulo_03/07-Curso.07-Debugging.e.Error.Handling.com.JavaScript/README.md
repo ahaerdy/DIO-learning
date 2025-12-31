@@ -138,7 +138,137 @@ Esses erros são fundamentais para identificar problemas na estrutura da página
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/d98f9b27-bd6c-4f33-bc22-82bee03e5591?autoplay=1 
 
+O vídeo explica as técnicas fundamentais para o **gerenciamento de erros em JavaScript**, destacando as diferenças cruciais entre os comandos **return** e **throw**. Enquanto o primeiro apenas envia uma string comum, o segundo sinaliza uma **exceção real** que interrompe o fluxo para indicar uma falha no sistema. O conteúdo detalha a estrutura **try...catch**, demonstrando como capturar e manipular esses problemas de forma organizada e personalizada. Além disso, é introduzido o bloco **finally**, que garante a execução de um código específico independentemente de ter ocorrido um erro ou não. Através do exemplo de uma função que verifica **palíndromos**, o material ilustra como essas ferramentas tornam o desenvolvimento de software mais robusto e profissional.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h59m26s313.jpg" alt="" width="840">
+</p>
+
+Esta imagem introduz o tema da aula focado no tratamento de erros em JavaScript, destacando os três pilares fundamentais que serão abordados: **Throw**, **Try...Catch** e **Finally**. O objetivo é compreender como lidar com exceções e fluxos de erro de maneira eficiente no desenvolvimento de software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h59m50s666.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta os objetivos principais desta etapa do aprendizado:
+
+1. **Explicar a diferença entre `throw` e `return**`: entender como o `throw` interrompe o fluxo normal para sinalizar um erro, ao contrário do `return`, que apenas entrega um valor de saída.
+2. **Apresentar a implementação da declaração `try...catch**`: demonstrar a sintaxe e a lógica necessária para capturar e tratar erros que possam ocorrer durante a execução do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h00m01s101.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco inicial é a instrução **Throw**. Trata-se do mecanismo utilizado para "lançar" erros personalizados. Quando o interpretador encontra um `throw`, a execução da função atual é interrompida e o controle é passado para o primeiro bloco `catch` na pilha de chamadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h00m05s993.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a diferença prática entre o uso de `return` e `throw` dentro de uma função que verifica palíndromos. Enquanto o `return` apenas devolve uma string informativa, o `throw` gera uma exceção que interrompe o fluxo, resultando em uma mensagem de erro no console ("Uncaught String inválida").
+
+```javascript
+function verificaPalindromo(string) {
+  if (!string) throw "String inválida";
+
+  return string === string.split('').reverse().join('');
+}
+
+verificaPalindromo('');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h02m04s411.jpg" alt="" width="840">
+</p>
+
+Esta etapa introduz a estrutura **Try...catch**. O bloco `try` contém o código que será monitorado quanto a possíveis erros, enquanto o bloco `catch` define como o sistema deve reagir caso uma exceção seja lançada durante a execução do `try`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h02m27s306.jpg" alt="" width="840">
+</p>
+
+Aqui, vemos a implementação prática de uma função que encapsula a verificação de palíndromo dentro de um bloco `try...catch`. Ao ocorrer um erro na função `verificaPalindromo`, o fluxo é desviado para o `catch`, onde a variável `e` (que armazena o erro lançado) é exibida no console de forma controlada através de um `console.log(e)`.
+
+```javascript
+function verificaPalindromo(string) {
+  if (!string) throw "String inválida";
+  return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+  try {
+    verificaPalindromo(string)
+  }
+  catch(e) {
+    console.log(e)
+  }
+}
+
+tryCatchExemplo('');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h04m06s026.jpg" alt="" width="840">
+</p>
+
+Neste exemplo, o tratamento de erro dentro do bloco `catch` é modificado para utilizar novamente a instrução `throw`. Isso faz com que o erro capturado seja "relançado", permitindo que o navegador registre a falha formalmente com o ícone vermelho de alerta no console, em vez de apenas imprimir uma mensagem comum.
+
+```javascript
+function verificaPalindromo(string) {
+  if (!string) throw "String inválida";
+  return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+  try {
+    verificaPalindromo(string)
+  }
+  catch(e) {
+    throw e;
+  }
+}
+
+tryCatchExemplo('');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h04m33s466.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a terceira etapa do tratamento de erros: o bloco **Finally**. Esta instrução é opcional e compõe a estrutura junto ao `try` e ao `catch`, servindo para executar ações que devem ocorrer independentemente do sucesso ou falha das operações anteriores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h05m34s197.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra a aplicação completa da estrutura `try...catch...finally`. O bloco `finally` executa um `console.log` informando qual string foi processada. Note que, mesmo quando a função retorna com sucesso (como no caso da string "ala"), o código dentro do `finally` é executado obrigatoriamente antes da conclusão do processo.
+
+```javascript
+function verificaPalindromo(string) {
+  if (!string) throw "String inválida";
+  return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+  try {
+    return verificaPalindromo(string)
+  }
+  catch(e) {
+    throw e;
+  }
+  finally {
+    console.log('A string enviada foi: ' + string);
+  }
+}
+
+tryCatchExemplo('ala');
+
+```      
 
 
 ## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
