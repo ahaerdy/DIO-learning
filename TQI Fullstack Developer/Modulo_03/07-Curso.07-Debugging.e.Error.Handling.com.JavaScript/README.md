@@ -390,39 +390,63 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debuggin
 
 O vídeo consiste em uma **aula prática sobre tratamento de erros em JavaScript**, orientando o aluno a criar uma função de validação de arrays. A instrutora explica como utilizar a estrutura **try...catch** para gerenciar falhas e o operador **instanceof** para identificar tipos específicos de erros, como **ReferenceError**, **TypeError** e **RangeError**. O código demonstrado verifica a existência de parâmetros, o tipo dos dados inseridos e a correspondência entre o tamanho da lista e um valor numérico. Além da codificação ao vivo, o conteúdo destaca a importância de consultar a documentação oficial e utilizar repositórios do **GitHub** como apoio aos estudos. Ao final, o exemplo prático mostra como retornar o próprio objeto em casos de sucesso ou capturar e exibir mensagens detalhadas quando exceções são lançadas.
 
+### Anotações
 
-#### Código em JavaScript
-```javascript
-function validaArrays(arr, num) {
-	try {
-		if (!arr && !num) throw new ReferenceError('Envie os parâmetros!');
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-13h02m49s031.jpg" alt="" width="840">
+</p>
 
-		if (typeof arr !== 'object')
-			throw new TypeError('Envie um elemento do tipo Array!');
+A atividade prática consiste na criação de uma função para validação de erros baseada em tipos de dados e tamanhos de arrays. O objetivo central é que a função receba um array e um número, retornando o array apenas se o seu comprimento (`length`) corresponder ao número enviado; do contrário, erros específicos devem ser lançados.
 
-		if (typeof num !== 'number')
-			throw new TypeError('Envie um elemento do tipo Number!');
+As validações exigidas para a função são:
 
-		if (arr.length !== num) throw new RangeError('Tamanho do array inválido!');
+* 
+**ReferenceError**: Caso os parâmetros não sejam enviados.
 
-		return arr;
-	} catch (e) {
-		if (e instanceof RangeError) {
-			console.log('RangeError!');
-			console.log(e.stack);
-		} else if (e instanceof ReferenceError) {
-			console.log('ReferenceError!');
-			console.log(e.stack);
-		} else {
-			console.log('Outro tipo de erro!');
-			console.log(e.stack);
-		}
-	}
-}
 
-console.log(validaArrays([1, 2, 3], 0));
+* 
+**TypeError**: Caso o array não seja do tipo `object`.
 
-```
+
+* 
+**TypeError**: Caso o número enviado não seja do tipo `number`.
+
+
+* 
+**RangeError**: Caso o tamanho do array seja diferente do número especificado.
+
+
+
+Além disso, a implementação deve utilizar a estrutura `try...catch` e filtrar as exceções capturadas por meio do operador `instanceof`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-13h03m17s624.jpg" alt="" width="840">
+</p>
+
+Para auxiliar na resolução, a documentação do MDN (Mozilla Developer Network) detalha os diversos tipos de erros nativos do JavaScript. Cada construtor de erro possui um propósito específico para representar diferentes problemas que podem ocorrer durante a execução do código.
+
+Dentre os principais erros citados para esta atividade estão:
+
+* 
+**RangeError**: Indica quando um valor numérico está fora dos limites válidos.
+
+
+* 
+**ReferenceError**: Ocorre ao tentar referenciar uma variável ou referência inválida.
+
+
+* 
+**TypeError**: Lançado quando um valor não é do tipo esperado.
+
+
+
+O uso desses objetos permite criar erros mais semânticos e fáceis de tratar dentro de um bloco `catch`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-13h04m17s624.jpg" alt="" width="840">
+</p>
+
+A implementação final utiliza a estrutura `try...catch` para encapsular as validações e o retorno do array. No bloco `catch`, o operador `instanceof` é empregado para identific      
 
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
