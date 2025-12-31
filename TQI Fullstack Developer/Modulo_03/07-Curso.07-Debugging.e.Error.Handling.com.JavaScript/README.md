@@ -62,6 +62,70 @@ O percurso do curso é estruturado em três etapas objetivas:
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/be209ab1-55cd-4030-b9f2-2334239b5bce?autoplay=1
 
+Esta fonte explica as distinções fundamentais entre dois tipos principais de falhas que ocorrem no desenvolvimento com **JavaScript**. O texto detalha o **objeto Error do ECMAScript**, que surge durante a execução do código devido a falhas de sintaxe, variáveis não declaradas ou erros na **pilha de chamadas**. Em contraste, a **DOM Exception** é apresentada como uma exceção específica para o contexto de **páginas web**, ocorrendo quando há manipulações inválidas na estrutura de elementos do navegador. O conteúdo enfatiza que esses problemas possuem naturezas distintas, variando conforme o **ambiente e a interação** do script com o documento. Ao compreender essas diferenças, desenvolvedores conseguem identificar se um problema reside na **lógica interna** da linguagem ou na comunicação com a **árvore de elementos** da interface. Por fim, o autor reforça que o domínio desses conceitos é essencial para a resolução eficiente de problemas em sistemas modernos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h31m32s204.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o tema de **Tratamento de erros**, focando especificamente na identificação e diferenciação dos tipos de erros que podem surgir durante o desenvolvimento em JavaScript. O objetivo principal é compreender como o sistema lida com falhas em diferentes contextos de execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h31m38s803.jpg" alt="" width="840">
+</p>
+
+A apresentação está estruturada em dois objetivos principais:
+
+1. **Apresentar o objeto Error do ECMAScript**: Compreender a estrutura padrão de erros da linguagem.
+2. **Apresentar a DOMException**: Entender as exceções específicas que ocorrem na interação com a interface da web.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h31m41s828.jpg" alt="" width="840">
+</p>
+
+### ECMAScript Error
+
+Na primeira etapa, exploramos o erro do **ECMAScript**, que é o tipo de erro padrão da linguagem. Ele se manifesta em **tempo de execução**, ou seja, enquanto o código está sendo processado pelo motor JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h31m46s608.jpg" alt="" width="840">
+</p>
+
+Os erros do ECMAScript ocorrem quando o código tenta realizar uma operação inválida, como utilizar uma variável que não foi declarada. Um objeto de erro é composto por quatro elementos fundamentais: **Mensagem**, **Nome**, **Linha** e o **Call Stack** (pilha de chamadas).
+
+```javascript
+let sum = a + 2
+// Uncaught ReferenceError: a is not defined
+// at <anonymous>:1:11
+
+```
+
+Essas notificações podem aparecer tanto no console do navegador quanto em alertas do sistema operacional, indicando exatamente onde a falha ocorreu na estrutura de execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h32m45s445.jpg" alt="" width="840">
+</p>
+
+### DOMException
+
+Na segunda etapa, abordamos a **DOMException**. Diferente do erro básico de script, esta exceção está estritamente ligada ao contexto da página web e à forma como o JavaScript interage com os elementos do documento (DOM).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h33m09s707.jpg" alt="" width="840">
+</p>
+
+A **DOMException** ocorre quando há falhas na manipulação da árvore de elementos de uma página. Exemplos comuns incluem tentar inserir um nó (elemento) em um local inválido da hierarquia ou utilizar caracteres não permitidos em strings processadas pelo DOM.
+
+```bash
+DOMException: String contains an invalid character
+DOMException: "Node cannot be inserted at the specified point in the hierarchy"
+
+```
+
+Esses erros são fundamentais para identificar problemas na estrutura da página e na forma como os dados estão sendo consumidos pelo navegador.      
+
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
 
