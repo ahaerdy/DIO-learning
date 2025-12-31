@@ -421,5 +421,5 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
 # Certificado: Tipos de Operadores com Python
 
-Link do certificado:  https://hermes.dio.me/certificates/EUCVFLQ4.pdf
-Certificado em pdf: [Tipos de Operadores com Python](000-Midia_e_Anexos/Certificado-Tipos.de.Operadores.com.Python.pdf)
+- Link do certificado:  https://hermes.dio.me/certificates/EUCVFLQ4.pdf
+- Certificado em pdf: [Tipos de Operadores com Python](000-Midia_e_Anexos/Certificado-Tipos.de.Operadores.com.Python.pdf)
