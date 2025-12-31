@@ -466,8 +466,9 @@ function validaArrays(arr, num) {
 console.log(validaArrays([1, 2, 3], 0));
 ```
 
-A implementação final utiliza a estrutura `try...catch` para encapsular as validações e o retorno do array. No bloco `catch`, o operador `instanceof` é empregado para identific      
+A implementação final utiliza a estrutura try...catch para encapsular as validações e o retorno do array. No bloco catch, o operador instanceof é empregado para identificar qual tipo de erro foi lançado, permitindo um tratamento personalizado para cada caso, como a exibição da mensagem e do stack (pilha de execução) do erro.    
 
+O código acima demonstra a lógica de filtragem, onde, se os parâmetros estiverem incorretos ou o tipo de dado for divergente, o erro é interceptado e descrito conforme sua categoria.
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
 
