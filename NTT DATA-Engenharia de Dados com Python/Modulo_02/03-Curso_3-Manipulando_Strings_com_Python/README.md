@@ -10,6 +10,7 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/manipulando-strings-com-python/learning/b67433a9-2fc7-41cc-8db0-c0ddd3964198?autoplay=1
 
 O vídeo consiste em uma aula técnica sobre a manipulação de **strings em Python**, focada em métodos práticos para facilitar o desenvolvimento diário. O conteúdo explica funções essenciais para transformar textos, como **upper**, **lower** e **title**, além de técnicas para **remover espaços em branco** indesejados. O instrutor demonstra como **centralizar strings** e utilizar o método **join** para unir caracteres de forma eficiente, comparando a simplicidade do Python com linguagens mais complexas. Através de exemplos no **VS Code**, o material enfatiza a legibilidade do código e a versatilidade da classe string para lidar com objetos iteráveis. O objetivo final é capacitar o aluno a realizar **interpolação de variáveis**, fatiamento e trabalhar com múltiplas linhas de texto.
