@@ -209,6 +209,8 @@ Ano: 1999
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/dominando-funcoes-python/learning/31c31eb0-d504-4876-9b7e-6ffa70072c7f?autoplay=1
 
+O vídeo trata de recursos avançados de **funções em Python**, detalhando como restringir a passagem de argumentos através de **parâmetros posicionais**, **nomeados** ou de formato **híbrido**. O autor explica o conceito de **objetos de primeira classe**, demonstrando que funções podem ser atribuídas a variáveis, retornadas por outros métodos ou passadas como argumentos. Também são discutidas as diferenças entre **escopo local e global**, destacando o uso da palavra-chave `global` e os riscos de modificar variáveis externas. Por fim, o conteúdo alerta sobre a manipulação de **objetos mutáveis**, como listas, sugerindo o uso de cópias para evitar alterações indesejadas por referência. Trata-se de um guia técnico que utiliza exemplos práticos para consolidar boas práticas de programação e manutenção de código.
+
 ### Parâmetros especiais
 
 - Por padrão, argumentos podem ser passados para uma função Python tanto por posição quanto explicitamente pelo nome. Para uma melhor legibilidade e desempenho, faz sentido restringir a maneira pelo qual argumentos possam ser passados, assim um desenvolvedor precisa apenas olhar para a definição da função para determinar se os itens são passados por posição, por posição e nome, ou por nome.
