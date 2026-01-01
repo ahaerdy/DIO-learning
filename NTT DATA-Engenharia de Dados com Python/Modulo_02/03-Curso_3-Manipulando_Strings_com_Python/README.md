@@ -227,9 +227,9 @@ Eu estou aprendendo Python
 
 Disponibilizado o seguinte arquivo em formato MS Powerpoint:
 
-- 18-Dio_String_e_fatiamento.pptx
+- [18-Dio_String_e_fatiamento.pptx](000-Midia_e_Anexos/18-Dio.String.e.fatiamento.pptx)
 
 # Certificado: Manipulando Strings com Python
 
 Link do certificado: https://hermes.dio.me/certificates/5JWHA9TE.pdf
-
+Certificado em PDF: 
