@@ -70,6 +70,8 @@ print(".".join(curso))
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/manipulando-strings-com-python/learning/9a3a3061-5a00-4c43-8d5f-d115bd098144?autoplay=1
 
+O vídeo detalha as três metodologias principais para a **interpolação de variáveis em Python**, comparando abordagens antigas e modernas. O autor explica que o uso de **porcentagem** é considerado obsoleto devido à sua complexidade e falta de legibilidade em códigos extensos. Em seguida, apresenta o método **format**, que oferece maior flexibilidade ao permitir a reutilização de variáveis por meio de índices ou nomes. O destaque principal é dado às **f-strings**, apontadas como a técnica mais atual, eficiente e visualmente limpa para os desenvolvedores. Por fim, o conteúdo ensina como **formatar números decimais**, demonstrando o controle de casas decimais e espaçamentos em valores do tipo float.
+
 ### Interpolação de variáveis
 
 - Em Python temos 3 formas de interpolar variáveis em strings, a primeira é usando o sinal %, a segunda é utilizando o método format e a última é utilizando f strings.
