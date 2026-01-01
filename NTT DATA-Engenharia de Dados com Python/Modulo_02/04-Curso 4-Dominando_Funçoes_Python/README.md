@@ -207,7 +207,7 @@ Ano: 1999
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/dominando-funcoes-python/learning/31c31eb0-d504-4876-9b7e-6ffa70072c7f?autoplay=1
 
 ### Parâmetros especiais
 
