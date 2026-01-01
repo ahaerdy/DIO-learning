@@ -187,6 +187,15 @@ nome[::-1]
 
 ## 🟩 Vídeo 04 - String múltiplas linhas
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_03-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video> 
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/manipulando-strings-com-python/learning/bd277630-a555-4488-a0c1-94e6e36dbcc9?autoplay=1
+
+O vídeo descreve detalhadamente o uso de **strings de múltiplas linhas** na linguagem de programação **Python**. O conteúdo explica que essas strings, também conhecidas como **strings triplas**, são criadas com o uso de três aspas simples ou duplas para preservar automaticamente **espaços em branco e quebras de linha**. O autor demonstra como essa funcionalidade facilita a criação de **menus e mensagens extensas** sem a necessidade de constantes concatenações ou caracteres de escape complexos. Além dos exemplos práticos com **interpolação de f-strings**, o material orienta os alunos sobre como acessar o **repositório de código** e consultar a documentação oficial. O objetivo central é ensinar uma forma mais **eficiente e organizada** de manipular blocos de texto formatados dentro do código fonte.
+
 ### Introdução
 
 - Strings de múltiplas linhas são definidas informando 3 aspas simples ou duplas durante a atribuição. Elas podem ocupar várias linhas do código, e todos os espaços em branco são incluídos na string final. 
