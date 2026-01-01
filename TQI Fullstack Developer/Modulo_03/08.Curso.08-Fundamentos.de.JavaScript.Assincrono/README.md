@@ -94,144 +94,122 @@ O vídeo explica o conceito de **assincronidade** no desenvolvimento com JavaScr
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h19m34s981.jpg" alt="" width="840">
 </p>
 
-Nesta introdução, definimos os objetivos principais do estudo sobre **assincronicidade**. O foco da aula está em compreender o que são **Promises**, aprender como manipulá-las de forma eficiente e dominar o uso das palavras-chave `async` e `await` para o controle de fluxo em JavaScript.
+Esta imagem marca o início da aula sobre **Javascript Assíncrono**, abordando definições fundamentais, o uso de **Promises** e as palavras-chave `async` e `await`. O curso foca em como lidar com operações que não ocorrem simultaneamente, permitindo que o código continue executando enquanto aguarda o processamento de outras tarefas.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h19m47s357.jpg" alt="" width="840">
 </p>
 
-O conceito de **assincronicidade** refere-se a processos que não ocorrem ou não se efetivam ao mesmo tempo. No cotidiano, um exemplo claro é o aprendizado online (pandemia): enquanto no modelo síncrono todos os alunos devem estar presentes simultaneamente em um local, no modelo assíncrono o estudante consome o conteúdo e realiza as atividades no seu próprio ritmo, sem depender da presença imediata de outros.
+Os objetivos principais desta etapa do aprendizado são:
+
+1. Compreender a definição e o funcionamento das **Promises**.
+
+
+2. Aprender as técnicas para manipular essas promessas no código.
+
+
+3. Dominar a sintaxe e a aplicação prática de `async` e `await` para simplificar o fluxo assíncrono.
+
+
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h19m49s814.jpg" alt="" width="840">
 </p>
 
-Por padrão, o JavaScript opera de maneira **síncrona**, onde um processo só começa após o término do anterior. Já no modelo **assíncrono**, é possível iniciar uma tarefa e realizar outras operações simultaneamente, sem bloquear a execução do código enquanto aguarda a finalização daquele processo específico.
+A primeira etapa foca na **Definição** do que é o Javascript Assíncrono. Antes de avançar para a sintaxe, é fundamental entender o conceito base de como o motor do Javascript gerencia tarefas que demandam tempo sem bloquear a execução do programa principal.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h19m54s456.jpg" alt="" width="840">
 </p>
 
-Uma **Promise** (promessa) é um objeto de processamento assíncrono cujo valor inicial é desconhecido. Analogamente a um ingresso de cinema, a Promise representa a garantia de que algo acontecerá no futuro, mas o resultado final — assistir ao filme ou ter a sessão cancelada — só será conhecido após um determinado tempo.
+Conceitualmente, o termo **Assíncrono** refere-se a algo "que não ocorre ou não se efetiva ao mesmo tempo". Fazendo uma analogia com o aprendizado remoto (Remote Learning), o modelo síncrono exige que todos estejam online ao mesmo tempo, enquanto o modelo assíncrono permite que os estudantes realizem as atividades em seu próprio ritmo, sem depender de uma escala temporal rígida.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m03s412.jpg" alt="" width="840">
 </p>
 
-As Promises possuem três estados fundamentais que definem seu ciclo de vida:
-
-* **Pending (Pendente):** Estado inicial, quando a promessa foi declarada mas ainda não foi resolvida ou rejeitada.
-* **Fulfilled (Completada):** Quando a operação foi realizada com sucesso.
-* **Rejected (Rejeitada):** Quando a operação falhou ou algum erro ocorreu.
+Embora o Javascript rode nativamente de maneira síncrona, o modelo assíncrono é essencial para a web. No modelo **Síncrono**, o cliente faz uma requisição e fica parado esperando a resposta do servidor. Já no modelo **Assíncrono**, o cliente faz a requisição, continua trabalhando em outras tarefas e, somente quando recebe a resposta, executa a ação correspondente.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m06s423.jpg" alt="" width="840">
 </p>
 
-A estrutura básica para criar uma Promise envolve o uso do construtor `new Promise`, que recebe uma função de callback com dois parâmetros: `resolve` e `reject`. Estes parâmetros são funções chamadas para concluir a promessa com sucesso ou erro, respectivamente.
+A segunda etapa da aula introduz as **Promises**, que são a base moderna para lidar com essa assincronicidade no Javascript. Elas permitem estruturar o código de forma que possamos prever o que acontecerá quando uma operação for concluída com sucesso ou falhar.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m08s741.jpg" alt="" width="840">
 </p>
 
-```javascript
-const myPromise = new Promise((resolve, reject) => {
-    window.setTimeout(() => {
-        resolve('Resolvida');
-    }, 2000);
-});
+Uma **Promise** é um objeto de processamento assíncrono. Inicialmente, seu valor é desconhecido (estado **Pending**). Ela pode evoluir para dois desfechos:
 
-```
+* 
+**Resolved**: Sucesso, onde utilizamos o método `.then()` para tratar o resultado.
 
-Neste exemplo, a Promise é configurada para ser resolvida após 2 segundos (utilizando `setTimeout`) com a string "Resolvida". Se consultarmos o valor de `myPromise` imediatamente após a criação, ele constará como pendente.
+
+* 
+**Rejected**: Falha, onde utilizamos o método `.catch()` para tratar o erro.
+
+
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m12s561.jpg" alt="" width="840">
 </p>
 
-```javascript
-await myPromise
-    .then((result) => result + ' passando pelo then')
-    .then((result) => result + ' e agora acabou')
-    .catch((err) => console.log(err.message));
+O ciclo de vida de uma Promise envolve três estados principais:
 
-```
+1. 
+**Pending**: Estado inicial, quando a operação assíncrona ainda está em processamento.
 
-É possível encadear chamadas utilizando o método `.then()`. Quando a Promise é resolvida, o resultado passa por cada bloco `.then()`, permitindo transformações sequenciais nos dados. O método `.catch()` é utilizado para capturar e tratar qualquer erro que ocorra durante o processo.
+
+2. 
+**Fulfilled (ou Resolved)**: Quando a operação é concluída com sucesso, retornando um valor.
+
+
+3. 
+**Rejected**: Quando a operação falha, retornando um motivo ou erro.
+Uma vez que a Promise é resolvida ou rejeitada, dizemos que ela está **Settled** (estabelecida).
+
+
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m14s838.jpg" alt="" width="840">
 </p>
 
-As palavras-chave `async` e `await` foram criadas para simplificar o trabalho com Promises. Uma função marcada como `async` indica que ela lida com operações assíncronas, permitindo o uso do `await` em seu interior.
+A estrutura básica para criar uma Promise utiliza o construtor `new Promise`, que recebe uma função com os parâmetros `resolve` e `reject`. No exemplo abaixo, simulamos um atraso de 2 segundos antes de resolver a promessa:
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  window.setTimeout(() => {
+    resolve(console.log('Resolvida!'));
+  }, 2000);
+});
+
+```
+
+Neste caso, após o tempo determinado, o console exibirá a mensagem "Resolvida!".
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m17s759.jpg" alt="" width="840">
 </p>
 
-O `await` instrui o JavaScript a pausar a execução da função assíncrona até que a Promise seja resolvida. Isso garante que o código subsequente só seja executado com o resultado em mãos, evitando que o fluxo síncrono tente utilizar um dado que ainda não chegou.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m23s559.jpg" alt="" width="840">
-</p>
-
-Ao utilizar `async` e `await`, a manipulação de Promises torna-se mais legível, assemelhando-se ao código síncrono tradicional, mas mantendo os benefícios da execução não bloqueante.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m24s964.jpg" alt="" width="840">
-</p>
+Para manipular os dados retornados por uma Promise, encadeamos métodos ou utilizamos `await`. O exemplo demonstra como transformar o resultado sucessivamente através de múltiplos blocos `.then()`, permitindo um fluxo de dados contínuo, e o uso do `.catch()` para capturar possíveis erros em qualquer etapa da cadeia.
 
 ```javascript
-async function resolvePromise() {
-    const myPromise = new Promise((resolve, reject) => {
-        window.setTimeout(() => {
-            resolve('Resolvida');
-        }, 3000);
-    });
+const myPromise = new Promise((resolve, reject) => {
+  window.setTimeout(() => {
+    resolve('Resolvida');
+  }, 2000);
+});
 
-    const resolved = await myPromise
-        .then((result) => result + ' passando pelo then')
-        .then((result) => result + ' e agora acabou')
-        .catch((err) => console.log(err.message));
-        
-    return resolved;
-}
+await myPromise
+  .then((result) => result + ' passando pelo then')
+  .then((result) => result + ' e agora acabou!')
+  .catch((err) => console.log(err.message));
 
-```
+// Após 2 segundos, retornará o valor
+// "Resolvida passando pelo then e agora acabou!"
 
-Neste exemplo prático, a função `resolvePromise` aguarda a resolução da Promise interna e o processamento de seus encadeamentos (`.then`) antes de retornar o valor final para a constante `resolved`.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m31s977.jpg" alt="" width="840">
-</p>
-
-```javascript
-async function resolvePromise() {
-    const myPromise = new Promise((resolve, reject) => {
-        window.setTimeout(() => {
-            resolve('Resolvida');
-        }, 3000);
-    });
-
-    try {
-        const resolved = await myPromise
-            .then((result) => result + ' passando pelo then')
-            .then((result) => result + ' e agora acabou');
-        return resolved;
-    } catch(err) {
-        return err.message;
-    }
-}
-
-```
-
-O tratamento de erros em funções assíncronas também pode ser feito através do bloco `try...catch`. Isso permite capturar rejeições de Promises de forma estruturada, retornando o erro ou lidando com ele sem interromper a aplicação.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m34s813.jpg" alt="" width="840">
-</p>
-
-Concluímos que, embora os nomes e conceitos de assincronicidade pareçam complexos inicialmente, sua compreensão permite escrever códigos JavaScript muito mais robustos e eficientes para lidar com processos que dependem de tempo ou respostas externas.      
+```      
 
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
