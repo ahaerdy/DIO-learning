@@ -145,6 +145,15 @@ print(f"Valor de PI: {PI:10.2f}")
 
 ## 🟩 Vídeo 03 - Fatiamento de string
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_02-Curso_03-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video> 
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/manipulando-strings-com-python/learning/65013e79-d139-4560-b828-096d1487cdf7?autoplay=1
+
+O vídeo explica o conceito de **fatiamento de strings** no Python, uma técnica que permite extrair partes de um texto através de índices numéricos. O conteúdo detalha o uso da sintaxe baseada em **início, fim e passo**, destacando que o sistema é fundamentado no **índice zero** e permite omitir argumentos para capturar dados até as extremidades. O autor demonstra como selecionar **substrings específicas**, pular caracteres em intervalos definidos e até mesmo criar **cópias invertidas** de uma frase usando passos negativos. Além disso, é abordado o uso de **índices negativos**, que facilitam o acesso aos caracteres a partir do final da string sem a necessidade de calcular seu tamanho total. Por fim, o material reforça a **praticidade da linguagem** ao automatizar o fatiamento sem exigir que o programador conheça previamente a extensão exata do dado manipulado.
+
 ### Introdução
 
 - Fatiamento de strings é uma técnica utilizada para retornar substrings (partes da string original), informando inicio (start), fim (stop) e passo (step): [start: stop[, step]].
