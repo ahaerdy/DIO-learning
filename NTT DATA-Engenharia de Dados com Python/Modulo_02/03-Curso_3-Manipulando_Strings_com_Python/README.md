@@ -12,7 +12,7 @@
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/manipulando-strings-com-python/learning/b67433a9-2fc7-41cc-8db0-c0ddd3964198?autoplay=1
 
-O vídeo consiste em uma aula técnica sobre a manipulação de **strings em Python**, focada em métodos práticos para facilitar o desenvolvimento diário. O conteúdo explica funções essenciais para transformar textos, como **upper**, **lower** e **title**, além de técnicas para **remover espaços em branco** indesejados. O instrutor demonstra como **centralizar strings** e utilizar o método **join** para unir caracteres de forma eficiente, comparando a simplicidade do Python com linguagens mais complexas. Através de exemplos no **VS Code**, o material enfatiza a legibilidade do código e a versatilidade da classe string para lidar com objetos iteráveis. O objetivo final é capacitar o aluno a realizar **interpolação de variáveis**, fatiamento e trabalhar com múltiplas linhas de texto.
+O vídeo consiste em uma aula técnica sobre a manipulação de **strings em Python**, focada em métodos práticos para facilitar o desenvolvimento diário. O conteúdo explica funções essenciais para transformar textos, como **upper**, **lower** e **title**, além de técnicas para **remover espaços em branco** indesejados. O instrutor demonstra como **centralizar strings** e utilizar o método **join** para unir caracteres de forma eficiente, comparando a simplicidade do Python com linguagens mais complexas. Através de exemplos no **VS Code**, o material enfatiza a legibilidade do código e a versatilidade da classe string para lidar com objetos iteráveis. O objetivo final é capacitar o aluno a realizar **interpolação de variáveis**, fatiamento e trabalhar com múltiplas linhas de texto...
 
 ### Introdução
 
@@ -229,7 +229,7 @@ Disponibilizado o seguinte arquivo em formato MS Powerpoint:
 
 - [18-Dio_String_e_fatiamento.pptx](000-Midia_e_Anexos/18-Dio.String.e.fatiamento.pptx)
 
-# Certificado: Manipulando Strings com Python ...
+# Certificado: Manipulando Strings com Python 
 
 - Link do certificado: https://hermes.dio.me/certificates/5JWHA9TE.pdf
 - Certificado em PDF: [Certificado-Manipulando.Strings.com.Python.pdf](000-Midia_e_Anexos/Certificado-Manipulando.Strings.com.Python.pdf)
