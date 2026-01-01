@@ -104,13 +104,9 @@ Os objetivos principais desta etapa do aprendizado são:
 
 1. Compreender a definição e o funcionamento das **Promises**.
 
-
 2. Aprender as técnicas para manipular essas promessas no código.
 
-
 3. Dominar a sintaxe e a aplicação prática de `async` e `await` para simplificar o fluxo assíncrono.
-
-
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h19m49s814.jpg" alt="" width="840">
@@ -142,13 +138,9 @@ A segunda etapa da aula introduz as **Promises**, que são a base moderna para l
 
 Uma **Promise** é um objeto de processamento assíncrono. Inicialmente, seu valor é desconhecido (estado **Pending**). Ela pode evoluir para dois desfechos:
 
-* 
-**Resolved**: Sucesso, onde utilizamos o método `.then()` para tratar o resultado.
+* **Resolved**: Sucesso, onde utilizamos o método `.then()` para tratar o resultado.
 
-
-* 
-**Rejected**: Falha, onde utilizamos o método `.catch()` para tratar o erro.
-
+* **Rejected**: Falha, onde utilizamos o método `.catch()` para tratar o erro.
 
 
 <p align="center">
@@ -157,19 +149,12 @@ Uma **Promise** é um objeto de processamento assíncrono. Inicialmente, seu val
 
 O ciclo de vida de uma Promise envolve três estados principais:
 
-1. 
-**Pending**: Estado inicial, quando a operação assíncrona ainda está em processamento.
+1. **Pending**: Estado inicial, quando a operação assíncrona ainda está em processamento.
 
+2. **Fulfilled (ou Resolved)**: Quando a operação é concluída com sucesso, retornando um valor.
 
-2. 
-**Fulfilled (ou Resolved)**: Quando a operação é concluída com sucesso, retornando um valor.
-
-
-3. 
-**Rejected**: Quando a operação falha, retornando um motivo ou erro.
+3. **Rejected**: Quando a operação falha, retornando um motivo ou erro.
 Uma vez que a Promise é resolvida ou rejeitada, dizemos que ela está **Settled** (estabelecida).
-
-
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-08h20m14s838.jpg" alt="" width="840">
@@ -209,8 +194,7 @@ await myPromise
 // Após 2 segundos, retornará o valor
 // "Resolvida passando pelo then e agora acabou!"
 
-```      
-
+```     
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
 
