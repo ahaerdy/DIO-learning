@@ -449,8 +449,7 @@ btn.addEventListener('click', loadImg);
 ```
 
 
-
 # Certificado: Fundamentos de JavaScript Assíncrono
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/L1CDGUVR.pdf
+- Certificado em pdf: [Fundamentos de JavaScript Assíncrono.pdf](000-Midia_e_Anexos/Certificado-Fundamentos.de.JavaScript.Assincrono.pdf)
