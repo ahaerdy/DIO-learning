@@ -205,8 +205,118 @@ await myPromise
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:  
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-javascript-assincrono/learning/e2af7212-05e0-47e1-891e-d2fdad6e0249?autoplay=1
 
+O vídeo aborda os fundamentos do **consumo de APIs** no desenvolvimento de software, definindo-as como pontes de comunicação entre o **backend e o frontend**. A aula detalha como os programadores utilizam **URLs** para acessar dados, destacando que o formato **JSON** é o padrão predominante para a troca dessas informações. O foco principal da explicação é o **método Fetch**, uma ferramenta do JavaScript que permite realizar requisições de rede e retorna **promises**. A instrutora enfatiza a importância de converter os dados recebidos e dominar o uso de **operações assíncronas** para manipular bancos de dados. Por fim, o conteúdo incentiva a prática por meio de exercícios e o suporte da comunidade para consolidar o aprendizado sobre o **gerenciamento de requisições**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h14m56s429.jpg" alt="" width="840">
+</p>
+
+Nesta introdução à aula sobre o consumo de APIs, o foco principal é o estudo do **JavaScript Assíncrono**. O objetivo central é compreender como realizar requisições e manipular dados que não são entregues instantaneamente, permitindo que a aplicação continue funcional enquanto aguarda respostas de servidores externos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h14m59s833.jpg" alt="" width="840">
+</p>
+
+Os objetivos estabelecidos para este módulo são divididos em três pilares fundamentais:
+
+1. **Explicar o conceito de APIs**: Entender o papel dessas interfaces na comunicação de software.
+2. **Lidar com requisições**: Aprender o fluxo de trabalho para solicitar dados de fontes externas.
+3. **Apresentar o método `fetch()**`: Dominar a ferramenta nativa do JavaScript utilizada para realizar essas chamadas assíncronas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h15m01s418.jpg" alt="" width="840">
+</p>
+
+**API** é a sigla para *Application Programming Interface* (Interface de Programação de Aplicações). Ela atua como um intermediário que conecta o **back-end** (onde os dados residem, como em um Database) ao **front-end** (Web Apps ou Mobile Apps). A comunicação é feita por meio de **URLs**, que funcionam como endereços onde os dados podem ser acessados ou enviados, permitindo inclusive que diferentes APIs se comuniquem entre si.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h15m05s868.jpg" alt="" width="840">
+</p>
+
+O formato de dados mais comum no consumo de APIs é o **JSON** (*JavaScript Object Notation*). Ele utiliza uma estrutura de objetos JavaScript (chave e valor) para organizar as informações de maneira leve e legível. Abaixo, observa-se um exemplo de esquema para um arquivo `bank.json`:
+
+```json
+{
+  "description": "schema POST bank",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "minimum": 0
+    },
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
+
+```
+
+Como as APIs frequentemente retornam dados nesse formato, é fundamental realizar o tratamento adequado para converter essas informações em objetos manipuláveis dentro do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h15m08s312.jpg" alt="" width="840">
+</p>
+
+A etapa prática do consumo de dados foca no método **fetch**. Ele é o recurso padrão do JavaScript Moderno para realizar requisições assíncronas, substituindo métodos mais antigos e complexos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h15m09s448.jpg" alt="" width="840">
+</p>
+
+O método `fetch()` recebe a URL do recurso desejado e um objeto opcional de configurações. Um ponto crucial é que o **fetch retorna uma Promise**. Isso permite o uso do encadeamento com `.then()`. O primeiro passo do encadeamento geralmente é converter a resposta bruta em JSON para que o JavaScript consiga processar os dados:
+
+```javascript
+fetch(url, options)
+  .then(response => response.json())
+  .then(json => console.log(json))
+
+// retorna uma Promise
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h15m11s748.jpg" alt="" width="840">
+</p>
+
+O `fetch` permite realizar diversas operações no banco de dados através dos métodos HTTP. Quando realizamos um **GET**, buscamos informações; já no **POST**, enviamos dados para gravação. No caso do POST, é necessário transformar o objeto de dados em uma string JSON antes do envio, utilizando `JSON.stringify()`.
+
+**Exemplo de GET:**
+
+```javascript
+fetch('https://endereco-api.com/', {
+  method: 'GET',
+  cache: 'no-cache',
+})
+.then(response => response.json())
+.then(json => console.log(json))
+// retorna uma Promise
+
+```
+
+**Exemplo de POST:**
+
+```javascript
+fetch('https://endereco-api.com/', {
+  method: 'POST',
+  cache: 'no-cache',
+  body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(json => console.log(json))
+// retorna uma Promise
+
+```
+
+Lembre-se sempre de tratar os dados tanto no recebimento quanto no envio, garantindo a compatibilidade entre o front-end e a API.
+      
 
 ## 🟩 Vídeo 04 - Atividade prática
 
