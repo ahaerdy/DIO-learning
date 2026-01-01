@@ -15,8 +15,6 @@
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-javascript-assincrono/learning/44d7e850-eb64-47d6-8249-6cb22b3440b3?autoplay=1
 
 
-
-
 ## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
 
 
