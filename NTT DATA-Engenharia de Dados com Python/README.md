@@ -73,7 +73,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Tipos de Operadores com Python](Modulo_02/01-Curso.01-Tipos.de.Operadores.com.Python)
 - [x] Curso: [Estruturas Condicionais e de Repetição em Python](Modulo_02/02-Curso.02-Estruturas.Condicionais.e.de.Repeticao.em.Python)
 - [x] Curso: [Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python)
-- [ ] Curso: Dominando Funções Python
+- [ ] Curso: [Dominando Funções Python](hModulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python)
 - [ ] Projeto: Criando um Sistema Bancário com Python
   - Arquivo do projeto: desafio.py
   - Descrição: desenvolvimento de um sistema de operações bancárias simples em Python, sem uso de bibliotecas externas, explorando estruturas de controle, manipulação de strings, entrada de dados, validação de regras e aplicação de lógica para simular funcionalidades como saque, depósito e extrato.
