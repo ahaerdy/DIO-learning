@@ -34,25 +34,15 @@ Nesta introdução, a instrutora Stephany Nusch, Engenheira de Software no Quint
 
 A instrutora compartilha sua trajetória profissional e acadêmica para estabelecer a base de conhecimento do curso: 
 
-* 
-**Formação:** Graduada em Análise e Desenvolvimento de Sistemas (ADS). 
+* **Formação:** Graduada em Análise e Desenvolvimento de Sistemas (ADS). 
 
+* **Experiência:** Atua como programadora há 4 anos. 
 
-* 
-**Experiência:** Atua como programadora há 4 anos. 
+* **Engajamento:** Participa ativamente em frentes voltadas à igualdade de gênero e disseminação de conhecimento técnico. 
 
+* **Interesses:** Além da tecnologia, possui interesse em música, literatura e jogos. 
 
-* 
-**Engajamento:** Participa ativamente em frentes voltadas à igualdade de gênero e disseminação de conhecimento técnico. 
-
-
-* 
-**Interesses:** Além da tecnologia, possui interesse em música, literatura e jogos. 
-
-
-* 
-**Conexão:** Disponibiliza perfis no LinkedIn (Stephany Nusch) e GitHub (stebsnusch), ressaltando que o GitHub será a ferramenta central para o compartilhamento dos códigos e atividades práticas propostas. 
-
+* **Conexão:** Disponibiliza perfis no LinkedIn (Stephany Nusch) e GitHub (stebsnusch), ressaltando que o GitHub será a ferramenta central para o compartilhamento dos códigos e atividades práticas propostas. 
 
 
 #### Objetivo do Curso
