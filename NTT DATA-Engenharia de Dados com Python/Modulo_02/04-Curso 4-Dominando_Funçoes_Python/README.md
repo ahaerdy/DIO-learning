@@ -300,9 +300,9 @@ salario_bonus(500)  # 2500
 
 Disponibilizado o seguinte arquivo em formato MS Powerpoint:
 
-- [05-Dio_Funcoes.pptx](05-Dio.Funcoes.pptx)
+- [05-Dio_Funcoes.pptx](000-Midia_e_Anexos/05-Dio.Funcoes.pptx)
 
 # Certificado: Dominando Funções Python
 
 - Link do certificado: https://hermes.dio.me/certificates/M4SVGNUZ.pdf
-- Certificado em formato PDF: [Certificado-Dominando.Funcoes.Python.pdf](Certificado-Dominando.Funcoes.Python.pdf)
+- Certificado em formato PDF: [000-Midia_e_Anexos/Certificado-Dominando.Funcoes.Python.pdf](Certificado-Dominando.Funcoes.Python.pdf)
