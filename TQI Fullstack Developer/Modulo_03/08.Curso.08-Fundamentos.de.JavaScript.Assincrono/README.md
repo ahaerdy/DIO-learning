@@ -325,7 +325,129 @@ Lembre-se sempre de tratar os dados tanto no recebimento quanto no envio, garant
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-javascript-assincrono/learning/0ff9dcfc-720e-4d26-8052-ef45393e4fb8?autoplay=1
+
+O material consiste em um tutorial prático sobre **JavaScript assíncrono**, focado no desenvolvimento de uma aplicação que exibe fotos aleatórias de gatos. A instrução demonstra como realizar **requisições a uma API externa** utilizando o método **fetch** e como processar os dados retornados no formato **JSON**. A explicação abrange a criação de funções com a sintaxe **async/await**, além de abordar métodos alternativos de tratamento de erros, como o uso de **try/catch** ou **.then()**. O autor também detalha a **manipulação do DOM**, ensinando a vincular eventos de clique a botões e a atualizar dinamicamente o atributo de origem das imagens. Por fim, o conteúdo ressalta a importância da atenção a pequenos detalhes na sintaxe para garantir o funcionamento correto da **comunicação entre o navegador e o servidor**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h29m22s686.jpg" alt="" width="840">
+</p>
+
+A atividade prática consiste na criação de uma página interativa utilizando o repositório **Basecamp JavaScript**, especificamente dentro da pasta de **JavaScript Assíncrono**. O objetivo é desenvolver uma aplicação que consome a API **ThatCat** para carregar fotos aleatórias de gatinhos sempre que um botão for acionado. O projeto integra conceitos fundamentais de requisições assíncronas com o método `fetch` e a manipulação de elementos do DOM (Document Object Model).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h29m24s524.jpg" alt="" width="840">
+</p>
+
+O resultado final da aplicação apresenta uma interface simples contendo o título "Just... cats!", uma área de exibição para a imagem do gatinho e um botão rotulado como "Change cat". O comportamento esperado é que, ao clicar no botão, a imagem atual seja substituída por uma nova, carregada de forma assíncrona. Para facilitar o foco na lógica do JavaScript, a estrutura de HTML e CSS já é fornecida na pasta do projeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h30m24s524.jpg" alt="" width="840">
+</p>
+
+A estrutura HTML base define os elementos necessários para a interação. O arquivo inclui as meta tags padrão, a importação do estilo CSS e um corpo (`body`) contendo uma tag `<img>` com o ID `cat` para a exibição da foto, além de um `<button>` com o ID `change-cat`. No final do arquivo, o script externo `scripts.js` é referenciado para processar a lógica da aplicação.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Just... cats!</title>
+</head>
+<body>
+    <main>
+        <h1>Just... cats!</h1>
+        <img id="cat" /><br />
+        <button id="change-cat">Change cat</button>
+    </main>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h31m24s524.jpg" alt="" width="840">
+</p>
+
+O estilo visual é definido no arquivo CSS, utilizando a fonte 'Quicksand'. O layout é centralizado usando Flexbox, com um fundo bege. As imagens possuem um limite de largura de 600px e bordas arredondadas para um aspecto moderno. O botão é estilizado com cores vibrantes (orangered) e possui uma transição suave para o efeito de `hover`, mudando a cor para laranja ao passar o mouse.
+
+```css
+@import url('https://fonts.googleapis.com/css?family=Quicksand:wght@400;500;600&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: beige;
+}
+
+img {
+    max-width: 600px;
+    border-radius: 30px;
+}
+
+main {
+    text-align: center;
+}
+
+button {
+    border: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 16px;
+    background: orangered;
+    color: white;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+    background: orange;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-01-09h32m24s524.jpg" alt="" width="840">
+</p>
+
+A lógica em `scripts.js` utiliza uma constante `BASE_URL` para o endereço da API. A função assíncrona `getCats` realiza o `fetch`, converte a resposta para JSON e retorna especificamente a propriedade `webpurl`, que contém uma imagem comprimida para carregamento mais rápido. O bloco `try...catch` é utilizado para tratar possíveis erros de rede. A função `loadImg` atualiza o atributo `src` da imagem no HTML com o resultado da API. Finalmente, um listener é adicionado ao botão para disparar a atualização ao clicar, e a função é chamada uma vez ao carregar a página para exibir a imagem inicial.
+
+```javascript
+const BASE_URL = 'https://thatcopy.pw/catapi/rest/';
+
+const getCats = async () => {
+    try {
+        const data = await fetch(BASE_URL);
+        const json = await data.json();
+        return json.webpurl;
+    } catch (e) {
+        console.log(e.message);
+    }
+};
+
+const loadImg = async () => {
+    const img = document.getElementsByTagName('img')[0];
+    img.src = await getCats();
+};
+
+loadImg();
+
+const btn = document.getElementById('change-cat');
+btn.addEventListener('click', loadImg);
+
+```
+
 
 
 # Certificado: Fundamentos de JavaScript Assíncrono
