@@ -232,4 +232,4 @@ Disponibilizado o seguinte arquivo em formato MS Powerpoint:
 # Certificado: Manipulando Strings com Python
 
 Link do certificado: https://hermes.dio.me/certificates/5JWHA9TE.pdf
-Certificado em PDF: 
+Certificado em PDF: [Certificado-Manipulando.Strings.com.Python.pdf](000-Midia_e_Anexos/Certificado-Manipulando.Strings.com.Python.pdf)
