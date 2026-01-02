@@ -406,7 +406,7 @@ class ContaUniversitaria extends ContaBancaria {
 
 ```      
 
-#### Análise detalhada do cõdigo 
+#### Análise detalhada do código 
 
 Esta análise detalha a implementação do sistema de **Conta Bancária**, correlacionando a estrutura do código com os conceitos de Orientação a Objetos (OO) apresentados pela instrutora.
 
