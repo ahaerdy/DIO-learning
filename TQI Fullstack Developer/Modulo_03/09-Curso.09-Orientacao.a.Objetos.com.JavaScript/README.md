@@ -298,7 +298,113 @@ O material consiste em um **tutorial prático** focado no desenvolvimento de um 
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-09h15m29s309.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, definimos a estrutura da atividade prática **Conta Bancária**. O objetivo é exercitar conceitos de Orientação a Objetos criando uma hierarquia de classes para simular operações bancárias. A classe base, `ContaBancaria`, deve gerenciar informações essenciais como agência, número, tipo e saldo.
+
+As diretrizes do projeto incluem:
+
+* Criação da classe principal com construtor para os parâmetros básicos.
+* Implementação de métodos de acesso (getters e setters) para a propriedade saldo.
+* Desenvolvimento de métodos para as operações de `sacar` e `depositar`.
+* Criação de classes filhas especializadas (`ContaCorrente`, `ContaPoupanca` e `ContaUniversitaria`) para demonstrar o uso de herança e polimorfismo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-09h16m29s309.jpg" alt="" width="840">
+</p>
+
+Para integrar o código JavaScript ao navegador e permitir testes em tempo real, utilizamos uma estrutura HTML básica. O arquivo `index.html` vincula o script externo, permitindo que as classes e instâncias sejam manipuladas diretamente através do console do desenvolvedor.
+
+```html
+<html>
+<head>
+  <title>Teste Conta Bancária</title>
+</head>
+<body>
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-09h17m29s309.jpg" alt="" width="840">
+</p>
+
+A implementação completa utiliza a palavra-chave `extends` para realizar a herança e o método `super()` para passar os parâmetros à classe pai. Um detalhe importante é o uso do **underline** (ex: `this._saldo`) para propriedades que possuem getters e setters, evitando loops infinitos na atribuição. Na classe `ContaUniversitaria`, aplicamos o polimorfismo ao sobrescrever o método `sacar` para limitar o valor máximo da operação.
+
+```javascript
+class ContaBancaria {
+    constructor(agencia, numero, tipo) {
+        this.agencia = agencia;
+        this.numero = numero;
+        this.tipo = tipo;
+        this._saldo = 0;
+    }
+
+    get saldo() {
+        return this._saldo;
+    }
+
+    set saldo(valor) {
+        this._saldo = valor;
+    }
+
+    sacar(valor) {
+        if (valor > this._saldo) {
+            return "Operação negada";
+        }
+        this._saldo = this._saldo - valor;
+        return this._saldo;
+    }
+
+    depositar(valor) {
+        this._saldo = this._saldo + valor;
+        return this._saldo;
+    }
+}
+
+class ContaCorrente extends ContaBancaria {
+    constructor(agencia, numero, cartaoCredito) {
+        super(agencia, numero);
+        this.tipo = 'corrente';
+        this._cartaoCredito = cartaoCredito;
+    }
+
+    get cartaoCredito() {
+        return this._cartaoCredito;
+    }
+
+    set cartaoCredito(valor) {
+        this._cartaoCredito = valor;
+    }
+}
+
+class ContaPoupanca extends ContaBancaria {
+    constructor(agencia, numero) {
+        super(agencia, numero);
+        this.tipo = 'poupança';
+    }
+}
+
+class ContaUniversitaria extends ContaBancaria {
+    constructor(agencia, numero) {
+        super(agencia, numero);
+        this.tipo = 'universitária';
+    }
+
+    sacar(valor) {
+        if (valor > 500) {
+            return "Operação negada";
+        }
+        this._saldo = this._saldo - valor;
+        return this._saldo;
+    }
+}
+
+```      
 
 
 
