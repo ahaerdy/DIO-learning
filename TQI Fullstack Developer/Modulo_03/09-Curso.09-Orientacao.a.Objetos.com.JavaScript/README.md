@@ -62,14 +62,19 @@ Para suporte adicional, os alunos podem recorrer ao fórum do curso e à comunid
 
 ## 🟩 Vídeo 02 - Paradigmas e Pilares
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.09-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/orientacao-a-objetos-com-javascript/learning/922dae23-4bb1-4f08-81b4-0e9262253ba1?autoplay=1
 
-
+O vídeo consiste em uma introdução didática ao paradigma da **programação orientada a objetos**, diferenciando o modelo **imperativo** do **declarativo**. O conteúdo explica que este método foca no "como" resolver problemas através de **objetos** que possuem propriedades e comportamentos específicos. O autor detalha os quatro fundamentos essenciais da área: a **abstração**, que simplifica a complexidade; a **herança**, que permite o compartilhamento de traços entre classes; o **encapsulamento**, que garante a independência do código; e o **polimorfismo**, que possibilita reações distintas para um mesmo comando. A lição utiliza exemplos práticos, como veículos e animais, para ilustrar como essas estruturas facilitam a organização do desenvolvimento de software. Por fim, o material reforça a necessidade de **prática constante** e indica canais de suporte para a resolução de dúvidas dos estudantes.
 
 # Parte 2 - Orientação a Objetos em JavaScript
 
 ## 🟩 Vídeo 01 - Protótipos e Classes
+
 
 
 Link do vídeo:  
