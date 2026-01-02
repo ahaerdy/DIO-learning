@@ -64,7 +64,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Variáveis e Tipos com JavaScript](Modulo_03/05-Curso.05-Variaveis.e.Tipos.com.JavaScript)
 - [x] Curso: [Dominando Funções em JavaScript](Modulo_03/06-Curso.06-Dominando.Funcoes.em.JavaScript)
 - [x] Curso: [Debugging e Error Handling com JavaScript](Modulo_03/07-Curso.07-Debugging.e.Error.Handling.com.JavaScript)
-- [ ] Curso: [Fundamentos de JavaScript Assíncrono](Modulo_03/08.Curso.08-Fundamentos.de.JavaScript.Assincrono)
+- [x] Curso: [Fundamentos de JavaScript Assíncrono](Modulo_03/08.Curso.08-Fundamentos.de.JavaScript.Assincrono)
 - [ ] Curso: [Orientação a Objetos com JavaScript](Modulo_03/09-Curso.09-Orientacao.a.Objetos.com.JavaScript)
 - [ ] Curso: [Manipulando a D.O.M. com JavaScript]
 - [ ] Curso: [Desafios TQI - JavaScript]
