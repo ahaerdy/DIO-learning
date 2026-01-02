@@ -294,7 +294,11 @@ b.makeSound()
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/orientacao-a-objetos-com-javascript/learning/808c0d6b-3c88-488a-b1d4-af43e8a1bf30?autoplay=1
 
+O material consiste em um **tutorial prático** focado no desenvolvimento de um sistema de **contas bancárias** utilizando a linguagem **JavaScript**. A instrutora detalha a aplicação de conceitos fundamentais da **orientação a objetos**, como a criação de classes, o uso de **construtores** e a implementação de métodos de depósito e saque. Através de exemplos, o conteúdo demonstra como funciona a **herança** ao criar tipos específicos de contas, como a corrente e a universitária. Além disso, a fonte explica a utilização de **getters e setters** para a manipulação protegida de dados e o **polimorfismo** ao sobrescrever comportamentos específicos de saque. O processo é finalizado com a integração do código em um arquivo **HTML** para testes diretos no navegador.
 
+### Anotações
+
+      
 
 
 
