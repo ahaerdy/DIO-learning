@@ -7,6 +7,10 @@
 
 ## 🟩 Vídeo 01 - Apresentação do curso
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.09-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/orientacao-a-objetos-com-javascript/learning/cc1e176c-b883-4d19-a549-d04afd247687?autoplay=1
 
