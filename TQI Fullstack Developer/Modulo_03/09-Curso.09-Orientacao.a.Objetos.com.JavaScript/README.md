@@ -466,5 +466,5 @@ Para validar a lógica de OO, o código é integrado a um ambiente real via HTML
 
 # Certificado: Orientação a Objetos com JavaScript
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/SHWUPNNQ.pdf
+- Certificado em pdf: [Certificado-Orientacao.a.Objetos.com.JavaScript.pdf](000-Midia_e_Anexos/Certificado-Orientacao.a.Objetos.com.JavaScript.pdf)
