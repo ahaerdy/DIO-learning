@@ -138,24 +138,26 @@ O domínio desses pilares exige prática e exercício constante para a compreens
 
 # Parte 2 - Orientação a Objetos em JavaScript
 
-## 🟩 Vídeo 01 - Protótipos e Classes
+## 🟩 Vídeo 03 - Protótipos e Classes
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.09-Video_03.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:  
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/orientacao-a-objetos-com-javascript/learning/922dae23-4bb1-4f08-81b4-0e9262253ba1?autoplay=1
+
+Esta vídeo explica os fundamentos da **programação orientada a objetos no JavaScript**, destacando que o sistema de herança funciona através de **cadeias de protótipos**. O autor esclarece que todos os objetos herdam métodos e propriedades de um "esqueleto" ascendente, buscando funcionalidades até o topo da estrutura. Embora o JavaScript utilize a sintaxe de **classes**, o texto enfatiza que isso é apenas um **açúcar sintático**, pois, por baixo dos panos, a linguagem continua operando estritamente com objetos e protótipos. A lição também detalha a **anatomia das classes modernas**, abordando o uso de **construtores, getters, setters** e o método **super** para a extensão de funcionalidades. Por fim, discute-se o conceito de **encapsulamento** e a possibilidade de sobrescrever métodos para garantir comportamentos específicos em classes filhas.
 
 
-## 🟩 Vídeo 02 - Atividade prática
+## 🟩 Vídeo 04 - Atividade prática
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.09-Video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/orientacao-a-objetos-com-javascript/learning/808c0d6b-3c88-488a-b1d4-af43e8a1bf30?autoplay=1
 
 
 
