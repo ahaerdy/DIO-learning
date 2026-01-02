@@ -71,6 +71,50 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/orientac
 
 O vídeo consiste em uma introdução didática ao paradigma da **programação orientada a objetos**, diferenciando o modelo **imperativo** do **declarativo**. O conteúdo explica que este método foca no "como" resolver problemas através de **objetos** que possuem propriedades e comportamentos específicos. O autor detalha os quatro fundamentos essenciais da área: a **abstração**, que simplifica a complexidade; a **herança**, que permite o compartilhamento de traços entre classes; o **encapsulamento**, que garante a independência do código; e o **polimorfismo**, que possibilita reações distintas para um mesmo comando. A lição utiliza exemplos práticos, como veículos e animais, para ilustrar como essas estruturas facilitam a organização do desenvolvimento de software. Por fim, o material reforça a necessidade de **prática constante** e indica canais de suporte para a resolução de dúvidas dos estudantes.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h51m20s599.jpg" alt="" width="840">
+</p>
+
+Esta introdução define os objetivos principais do aprendizado em **orientação a objetos**, focando em dois pontos centrais: a apresentação dos **paradigmas da programação** e o detalhamento dos **pilares da orientação a objetos**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h51m25s023.jpg" alt="" width="840">
+</p>
+
+Os paradigmas representam diferentes formas de programar, dividindo-se em duas grandes categorias:
+
+* **Imperativo:** Focado no **como** resolver o problema, descrevendo os passos e a ordem das ações. A orientação a objetos e a programação procedural pertencem a este grupo.
+* **Declarativo:** Focado no **que** deve ser feito, como ocorre em bancos de dados SQL ou na programação funcional, onde se declara o resultado desejado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h51m27s997.jpg" alt="" width="840">
+</p>
+
+Na orientação a objetos, os programas são estruturados como **objetos** que possuem **propriedades**. Utilizando o exemplo de uma "Pessoa", o objeto congrega características específicas como altura, nome, cidade e ancestrais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h51m32s560.jpg" alt="" width="840">
+</p>
+
+A estrutura da orientação a objetos é sustentada por **quatro pilares** fundamentais:
+
+1. **Abstração**
+2. **Herança**
+3. **Encapsulamento**
+4. **Polimorfismo**
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h51m43s907.jpg" alt="" width="840">
+</p>
+
+A **abstração** é o processo de simplificar problemas complexos. Ao **generalizar**, reduzimos um objeto às suas características essenciais para facilitar a classificação e comunicação. Por exemplo, diferentes modelos de carros podem ser simplificados e generalizados para a categoria "Veículo de rodas" e, em um nível ainda mais abstrato, apenas para "Veículo".
+
+<p align="center">
+<img src="000-M      
+
+
 # Parte 2 - Orientação a Objetos em JavaScript
 
 ## 🟩 Vídeo 01 - Protótipos e Classes
