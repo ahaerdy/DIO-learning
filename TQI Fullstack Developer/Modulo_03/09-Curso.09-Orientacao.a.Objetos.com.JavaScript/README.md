@@ -149,6 +149,141 @@ Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/orienta
 
 Esta vídeo explica os fundamentos da **programação orientada a objetos no JavaScript**, destacando que o sistema de herança funciona através de **cadeias de protótipos**. O autor esclarece que todos os objetos herdam métodos e propriedades de um "esqueleto" ascendente, buscando funcionalidades até o topo da estrutura. Embora o JavaScript utilize a sintaxe de **classes**, o texto enfatiza que isso é apenas um **açúcar sintático**, pois, por baixo dos panos, a linguagem continua operando estritamente com objetos e protótipos. A lição também detalha a **anatomia das classes modernas**, abordando o uso de **construtores, getters, setters** e o método **super** para a extensão de funcionalidades. Por fim, discute-se o conceito de **encapsulamento** e a possibilidade de sobrescrever métodos para garantir comportamentos específicos em classes filhas.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-08h53m36s264.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o conceito de **OOJS (Object Oriented JavaScript)**, focando na aplicação do paradigma de Orientação a Objetos dentro do ecossistema JavaScript. O objetivo principal é compreender como a linguagem gerencia objetos e herança, preparando a base para estudos mais avançados sobre a estrutura da linguagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-08h53m43s606.jpg" alt="" width="840">
+</p>
+
+Os objetivos centrais da unidade são divididos em dois pilares:
+
+1. **Conceituação de protótipos e cadeia de protótipos**: Entender como funciona o mecanismo de herança nativo do JavaScript.
+2. **Estrutura de classes**: Explorar a sintaxe de classes introduzida nas versões mais recentes da linguagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-08h53m44s893.jpg" alt="" width="840">
+</p>
+
+A primeira etapa da aula foca nos **Protótipos**. No JavaScript, os protótipos funcionam como o "esqueleto" para a criação de objetos, sendo o mecanismo fundamental por trás do comportamento de quase todos os elementos da linguagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-08h53m46s520.jpg" alt="" width="840">
+</p>
+
+Todos os objetos em JavaScript herdam propriedades e métodos de um **prototype**. O objeto `Object.prototype` reside no topo desta cadeia. Quando criamos um objeto simples ou um array, eles automaticamente ganham acesso a métodos que não definimos manualmente, como `hasOwnProperty`, `toString` ou `valueOf`, pois esses métodos pertencem ao protótipo pai.
+
+```javascript
+// Exemplo de objeto e acesso ao protótipo no console
+> const objeto = {}
+undefined
+> objeto
+  _proto_:
+    constructor: f Object()
+    hasOwnProperty: f hasOwnProperty()
+    isPrototypeOf: f isPrototypeOf()
+    propertyIsEnumerable: f propertyIsEnumerable()
+    toLocaleString: f toLocaleString()
+    toString: f toString()
+    valueOf: f valueOf()
+
+// Exemplo com Array
+> array
+[]
+  length: 0
+  ▼_proto: Array(0)
+    concat: f concat()
+    constructor: f Array()
+    filter: f filter()
+    map: f map()
+    // ...outros métodos de array
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-08h53m53s367.jpg" alt="" width="840">
+</p>
+
+A **Cadeia de Protótipos (prototype chain)** descreve o caminho de busca que o JavaScript percorre para encontrar um método ou propriedade. Se um objeto não possui o que foi solicitado, o motor do JavaScript sobe para o seu protótipo, e assim sucessivamente até encontrar o valor ou chegar em `null`, que marca o fim da linha no `Object.prototype`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-08h53m55s691.jpg" alt="" width="840">
+</p>
+
+Embora o JavaScript utilize protótipos, o ES6 introduziu as **Classes** como um **Syntactic Sugar** (açúcar sintático). Isso significa que, embora a sintaxe pareça com a de linguagens como Java, por baixo dos panos o JavaScript continua operando através de objetos e protótipos. Essa nova sintaxe facilita a escrita e a leitura do código orientado a objetos.
+
+```javascript
+// OLD: Definindo via função e protótipo
+var Meal = function(food) {
+  this.food = food
+}
+
+Meal.prototype.eat = function() {
+  return 'Eating ' + this.food
+}
+
+// NEW: Definindo via Classe (ES6+)
+class Meal {
+  constructor (food) {
+    this.food = food
+  }
+
+  eat() {
+    return 'Eating ' + this.food
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-08h53m59s627.jpg" alt="" width="840">
+</p>
+
+A anatomia de uma classe moderna em JavaScript inclui elementos como o **construtor**, **getters/setters** e o suporte a herança via **extends**. O método `super()` é crucial em classes filhas para invocar o construtor da classe pai e garantir o acesso às propriedades herdadas.
+
+```javascript
+class Animal {
+  constructor(type = 'animal') {
+    this._type = type
+  }
+
+  get type() {
+    return this._type
+  }
+
+  set type(val) {
+    this._type = val.toUpperCase()
+  }
+
+  makeSound() {
+    console.log('Making animal sound')
+  }
+}
+
+class Cat extends Animal {
+  constructor() {
+    super('cat')
+  }
+
+  makeSound() {
+    super.makeSound()
+    console.log('Meow!')
+  }
+}
+
+let b = new Cat()
+console.log(b.type) // CAT
+b.makeSound() 
+// Making animal sound
+// Meow!
+
+```      
+
 
 ## 🟩 Vídeo 04 - Atividade prática
 
