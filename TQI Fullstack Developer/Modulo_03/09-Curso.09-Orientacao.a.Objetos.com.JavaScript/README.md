@@ -406,9 +406,65 @@ class ContaUniversitaria extends ContaBancaria {
 
 ```      
 
+#### Análise detalhada do cõdigo 
+
+Esta análise detalha a implementação do sistema de **Conta Bancária**, correlacionando a estrutura do código com os conceitos de Orientação a Objetos (OO) apresentados pela instrutora.
+
+---
+
+##### 1. Classe Base: Abstração e Encapsulamento
+
+A classe `ContaBancaria` serve como o "molde" principal (classe pai/superclasse) que define as propriedades e comportamentos comuns a todos os tipos de conta.
+
+* **O Construtor e o Operador `this**`: No `constructor`, a instrutora utiliza o `this` para se referir à instância específica que está sendo criada, garantindo que `agencia`, `numero` e `tipo` sejam atribuídos corretamente ao objeto.
 
 
-# Certificado: 
+* **Encapsulamento com `_saldo**`: Para proteger o saldo e permitir o uso de Getters e Setters sem causar loops infinitos, é utilizado o padrão de prefixar a propriedade com um **underline** (`_saldo`). Isso sinaliza que a propriedade é para uso interno da lógica da classe.
+
+
+* **Lógica de Operações**:
+* **Método `sacar(valor)**`: Implementa uma validação crucial; se o valor solicitado for maior que o saldo atual, a operação é interrompida com uma mensagem de erro.
+
+* **Método `depositar(valor)**`: Uma operação simples de incremento que atualiza o estado interno do objeto e retorna o novo saldo para feedback imediato.
+
+---
+
+##### 2. Herança e a Palavra-chave `super`
+
+A instrutora demonstra o pilar da **Herança** ao criar classes especializadas que estendem a funcionalidade da classe base.
+
+* **Extensão de Classe**: O uso de `extends ContaBancaria` permite que as classes filhas herdem todos os métodos (`sacar`, `depositar`) e propriedades da classe pai.
+
+* **Função `super()**`: É fundamental dentro do construtor da classe filha. Ela invoca o construtor da classe pai, permitindo que as propriedades genéricas (agência, número) sejam inicializadas pela lógica já definida na superclasse.
+
+* **Especialização**:
+* A `ContaCorrente` adiciona uma propriedade exclusiva: `cartaoCredito`.
+
+* O `tipo` de cada conta é fixado diretamente no construtor da classe filha (ex: `'corrente'`, `'poupança'`), automatizando essa definição para o usuário.
+
+---
+
+##### 3. Polimorfismo e Sobrescrita de Métodos
+
+O conceito de **Polimorfismo** fica evidente na classe `ContaUniversitaria`. Embora ela herde o comportamento de saque de uma conta comum, ela precisa de uma regra de negócio específica.
+
+* **Sobrescrita (Override)**: Ao definir o método `sacar(valor)` dentro de `ContaUniversitaria`, o JavaScript prioriza esta implementação em vez da que existe na classe pai.
+
+* **Regra Restritiva**: A lógica é alterada para verificar se o valor é maior que 500 reais antes mesmo de verificar o saldo disponível. Se exceder esse tlimite, a operação é negada independentemente do valor em conta.
+
+---
+
+##### 4. Integração e Teste no Navegador
+
+Para validar a lógica de OO, o código é integrado a um ambiente real via HTML.
+
+* **Instanciação**: A criação de objetos reais através do operador `new` (ex: `new ContaCorrente(...)`) transforma a definição teórica das classes em instâncias funcionais na memória do navegador.
+
+
+* **Interatividade**: No console, é possível observar como diferentes objetos respondem aos mesmos comandos (polimorfismo), como um saque de 600 reais sendo aceito por uma `ContaCorrente` (se houver saldo), mas negado imediatamente por uma `ContaUniversitaria`.
+
+
+# Certificado: Orientação a Objetos com JavaScript
 
 - Link na plataforma: 
 - Certificado em pdf: 
