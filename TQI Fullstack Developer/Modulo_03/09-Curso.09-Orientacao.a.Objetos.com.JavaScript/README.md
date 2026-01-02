@@ -112,7 +112,28 @@ A estrutura da orientação a objetos é sustentada por **quatro pilares** funda
 A **abstração** é o processo de simplificar problemas complexos. Ao **generalizar**, reduzimos um objeto às suas características essenciais para facilitar a classificação e comunicação. Por exemplo, diferentes modelos de carros podem ser simplificados e generalizados para a categoria "Veículo de rodas" e, em um nível ainda mais abstrato, apenas para "Veículo".
 
 <p align="center">
-<img src="000-M      
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h51m46s784.jpg" alt="" width="840">
+</p>
+
+A relação de abstração permite identificar o que objetos compartilham. Enquanto um carro, uma bicicleta e um caminhão podem ser generalizados como **veículos de rodas**, um barco não se encaixa nessa categoria específica, embora todos ainda pertençam à abstração maior de **veículos**. Quanto mais especificamos, mais complexo e individual o objeto se torna; quanto mais generalizamos, mais abstraímos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h51m54s960.jpg" alt="" width="840">
+</p>
+
+O conceito de **herança** permite que **objetos filhos herdem propriedades e métodos de objetos pais** (ascendentes). Apesar de compartilharem essa base comum, os objetos filhos mantêm a capacidade de possuir suas próprias características individuais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h51m57s268.jpg" alt="" width="840">
+</p>
+
+O **encapsulamento** garante que as classes possuam propriedades e métodos **independentes** do restante do código. Isso significa que uma alteração em uma propriedade interna de uma classe afetará apenas aquela instância, sem gerar influências indesejadas no sistema global. Já o **polimorfismo** permite que métodos herdados de uma classe pai se comportem de formas diferentes. Por exemplo, se a classe pai "Animal" possui o método "falar", um pato, um cachorro e um gato executarão esse mesmo método de maneiras distintas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-02-07h52m00s175.jpg" alt="" width="840">
+</p>
+
+O domínio desses pilares exige prática e exercício constante para a compreensão plena de como eles se aplicam no desenvolvimento de software. Para suporte adicional, estão disponíveis o fórum do curso e a comunidade no Discord.      
 
 
 # Parte 2 - Orientação a Objetos em JavaScript
