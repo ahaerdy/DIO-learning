@@ -81,16 +81,16 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 3: Trabalhando com Coleções em Python  
 
-- [x] ▶️ Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso%2001-Trabalhando_com_Listas_em_Python#parte-1---trabalhando-com-listas-em-python)
-- [x] Curso: [Conhecendo Tuplas em Python](Modulo_03/02-Curso%2002-Conhecendo_Tuplas_em_Python#parte-1---conhecendo-tuplas-em-python)
-- [x] Curso: [Explorando Conjuntos em Python](Modulo_03/03-Curso%2003-Explorando_Conjuntos_em_Python#parte-1---explorando-conjuntos-em-python)
-- [x] Curso: [Aprendendo a Utilizar Dicionários em Python](Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python/README.md#parte-1---aprendendo-a-utilizar-dicion%C3%A1rios-em-python)
-- [x] Curso: [Lidando com Data, Hora e Fuso Horário no Python](hModulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python#parte-1---lidando-com-data-hora-e-fuso-hor%C3%A1rio-no-python)
-- [x] Projeto: [Otimizando o Sistema Bancário com Funções Python](Modulo_03/06-Curso%2006-Otimizando_o_Sistema_Banc%C3%A1rio_com_Fun%C3%A7%C3%B5es_Python#parte-1---desafio---otimizando-o-sistema-banc%C3%A1rio-com-fun%C3%A7%C3%B5es-python)
-  - Repositório: [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
+- [x] Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso%2001-Trabalhando_com_Listas_em_Python#parte-1---trabalhando-com-listas-em-python)
+- [x] Curso: Conhecendo Tuplas em Python
+- [x] Curso: Explorando Conjuntos em Python
+- [x] Curso: Aprendendo a Utilizar Dicionários em Python
+- [x] Curso: Lidando com Data, Hora e Fuso Horário no Python
+- [x] Projeto: Otimizando o Sistema Bancário com Funções Python
+  - Repositório: DIO-projeto-sistema-bancario-com-funcoes-python
   - Descrição: sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python.
-- [x] Curso: [Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional](Modulo_03/07-Curso%2007-Desafios_de_C%C3%B3digo_Aperfei%C3%A7oe_Sua_L%C3%B3gica_e_Pensamento_Computacional#parte-1---desafios-de-c%C3%B3digo---aperfei%C3%A7oe-sua-l%C3%B3gica-e-pensamento-computacional)
-- [x] Desafio: [Desafio: Gestão e Controle de Transações Bancárias](Modulo_03/08-Curso%2008-Desafio_Gest%C3%A3o_e_Control_de_Transa%C3%A7%C3%B5es_Bancarias#desafio-1---registro-de-transa%C3%A7%C3%B5es-banc%C3%A1rias)
+- [x] Curso: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
+- [x] Desafio: Gestão e Controle de Transações Bancárias
 
 ### Módulo 4: Programação Orientada a Objetos com Python  
 
