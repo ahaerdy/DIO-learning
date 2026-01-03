@@ -70,7 +70,6 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/manipula
 
 Esta aula introdutória explica os conceitos fundamentais de **DOM (Document Object Model)** e **BOM (Browser Object Model)** no contexto do desenvolvimento web. O instrutor define o **DOM** como uma **hierarquia de objetos** que representa os elementos HTML de uma página, estruturados em uma **árvore de nós** para facilitar o acesso e a modificação. Em contraste, o **BOM** é apresentado como um nível superior que engloba a **janela do navegador** e suas funcionalidades, como histórico e localização. O conteúdo enfatiza que o **documento** é apenas um componente dentro do objeto global **Window**, sendo o foco principal do curso a manipulação direta do HTML. Ao diferenciar essas siglas, o material busca fornecer uma base teórica sólida antes de avançar para a prática de **programação e controle de interface**.
 
-
 ### Anotações
 
 #### Entendendo o DOM
@@ -120,10 +119,95 @@ Para compreender o ecossistema do navegador, é preciso diferenciar o **DOM** (D
 
 ## 🟩 Vídeo 03 - Métodos
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.10-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/manipulando-dom-com-javascript/learning/82c628cf-1551-4d21-8a63-352fd45814d9?autoplay=1
 
+O vídeo explica como realizar a **manipulação de elementos** em uma página web utilizando **JavaScript** e a estrutura do **DOM**. O conteúdo detalha a organização básica de um arquivo **HTML**, diferenciando o uso de **IDs exclusivos** e **classes compartilhadas** para identificar componentes. São apresentados diversos métodos de busca, como a seleção por **ID, tag ou classe**, destacando que buscas múltiplas resultam em estruturas do tipo **array**. Além da localização, o texto ensina funções essenciais para **criar, remover e substituir** elementos dinamicamente na interface. Por fim, o autor incentiva a prática dessas ferramentas para a construção de **projetos interativos** e personalizados.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h28m55s630.jpg" alt="" width="840">
+</p>
+
+Nesta aula, o foco é o aprendizado sobre a **manipulação de elementos** dentro do **Document Object Model (DOM)**. O objetivo principal é compreender a estrutura fundamental de uma página HTML e aprender a utilizar métodos específicos que permitem interagir com esses elementos de forma dinâmica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h28m59s002.jpg" alt="" width="840">
+</p>
+
+A manipulação do DOM começa pelo entendimento dos **Métodos de Seleção**. Existem diferentes formas de realizar buscas no documento HTML para encontrar o elemento que se deseja modificar, variando conforme a necessidade de precisão ou abrangência da busca.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h29m00s327.jpg" alt="" width="840">
+</p>
+
+Para selecionar elementos corretamente, é preciso entender a **Estrutura HTML** básica:
+
+* **Tags:** Representam o corpo e o tipo do elemento (ex: `<body>`, `<h1>`, `<section>`, `<p>`, `<ul>`, `<li>`).
+* **ID:** É um **identificador único**. Cada elemento deve ter um ID exclusivo para evitar conflitos na manipulação.
+* **Classe:** Utilizada quando se deseja agrupar vários elementos sob um mesmo identificador, permitindo aplicar o mesmo estilo ou comportamento a múltiplos itens simultaneamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h29m05s054.jpg" alt="" width="840">
+</p>
+
+Existem métodos específicos para selecionar elementos baseados em seus atributos:
+
+* **`document.getElementById('id')`**: Retorna um **único elemento** correspondente ao ID informado.
+* **`document.getElementsByTagName('tag')`**: Retorna um **array** (HTMLCollection) com todas as ocorrências daquela tag na página. Para acessar um item específico, deve-se usar o índice (ex: `[0]`).
+* **`document.getElementsByClassName('classe')`**: Retorna um **array** com todos os elementos que possuem a classe especificada.
+
+```javascript
+document.getElementById('titulo');
+// Retorna: <h1 id="titulo">Minha página</h1>
+
+document.getElementsByTagName('li');
+// Retorna um array: [<li>Projeto 1</li>, <li>Projeto 2</li>, <li>Projeto 3</li>]
+
+document.getElementsByClassName('textos');
+// Retorna um array com as seções que possuem a classe 'textos'
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h29m10s910.jpg" alt="" width="840">
+</p>
+
+O método **`querySelectorAll`** permite realizar buscas mais personalizadas e complexas, combinando seletores de forma similar ao CSS. Ele sempre retorna um array (NodeList).
+
+* **Classes:** Identificadas pelo ponto (`.`).
+* **IDs:** Identificados pelo símbolo de cerquilha (`#`).
+* **Combinações:** É possível buscar, por exemplo, um `li` que contenha uma classe específica.
+
+```javascript
+// Selecionando por múltiplas classes
+document.querySelectorAll('.primeira-classe.segunda-classe');
+
+// Selecionando combinando tag e classe
+document.querySelectorAll('li.opcao');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h29m14s450.jpg" alt="" width="840">
+</p>
+
+Além de selecionar, é possível gerenciar a existência dos elementos na página através dos métodos de adição, substituição e remoção:
+
+| Método | Descrição |
+| --- | --- |
+| `document.createElement(element)` | Cria um novo elemento HTML (ex: 'div', 'p', 'img'). |
+| `document.removeChild(element)` | Remove um elemento filho a partir de um elemento pai. |
+| `document.appendChild(element)` | Adiciona um novo elemento como filho de outro. |
+| `document.replaceChild(new, old)` | Substitui um elemento antigo por um novo. |
+
+Para remover um elemento, a prática comum é acessar o elemento pai e utilizar o `removeChild` passando o elemento que deve ser deletado. Já o `replaceChild` exige a passagem do elemento novo seguida do elemento que será substituído.
+      
 
 # Parte 3 - Trabalhando com estilos
 
