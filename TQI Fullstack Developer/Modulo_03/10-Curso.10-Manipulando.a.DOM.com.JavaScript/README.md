@@ -231,7 +231,7 @@ Este vídeo explica como utilizar o **JavaScript** para gerenciar a aparência v
 Nesta introdução à manipulação de estilos no ecossistema front-end, o foco está na interação entre **HTML, JavaScript e CSS**. O objetivo principal é compreender como o JavaScript pode ser utilizado para manipular o Document Object Model (DOM) e alterar visualmente os elementos da página. Essa integração permite que seletores como IDs e classes sirvam de ponte para que scripts apliquem regras de estilo dinamicamente.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h58m32s376.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h01m05s842.jpg" alt="" width="840">
 </p>
 
 Para gerenciar as classes de um elemento, utilizamos a propriedade **`classList`**, que funciona como uma lista de todas as classes atribuídas a um elemento HTML. Através dessa propriedade, é possível selecionar um elemento pelo seu ID e aplicar métodos específicos para alterar seu estado visual.
