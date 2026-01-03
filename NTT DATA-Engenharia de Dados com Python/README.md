@@ -81,9 +81,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 3: Trabalhando com Coleções em Python  
 
-- [x] --> Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso%2001-Trabalhando_com_Listas_em_Python#parte-1---trabalhando-com-listas-em-python)
-- [x] Curso: [Conhecendo Tuplas em Python
-](Modulo_03/02-Curso%2002-Conhecendo_Tuplas_em_Python#parte-1---conhecendo-tuplas-em-python)
+- [x] ▶️ Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso%2001-Trabalhando_com_Listas_em_Python#parte-1---trabalhando-com-listas-em-python)
+- [x] Curso: [Conhecendo Tuplas em Python](Modulo_03/02-Curso%2002-Conhecendo_Tuplas_em_Python#parte-1---conhecendo-tuplas-em-python)
 - [x] Curso: [Explorando Conjuntos em Python](Modulo_03/03-Curso%2003-Explorando_Conjuntos_em_Python#parte-1---explorando-conjuntos-em-python)
 - [x] Curso: [Aprendendo a Utilizar Dicionários em Python](Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python/README.md#parte-1---aprendendo-a-utilizar-dicion%C3%A1rios-em-python)
 - [x] Curso: [Lidando com Data, Hora e Fuso Horário no Python](hModulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python#parte-1---lidando-com-data-hora-e-fuso-hor%C3%A1rio-no-python)
