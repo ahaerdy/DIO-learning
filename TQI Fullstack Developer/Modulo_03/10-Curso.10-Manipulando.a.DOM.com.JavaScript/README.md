@@ -118,132 +118,36 @@ Para compreender o ecossistema do navegador, é preciso diferenciar o **DOM** (D
 
 # Parte 2 - Selecionando elementos
 
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 03 - Métodos
+
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/manipulando-dom-com-javascript/learning/82c628cf-1551-4d21-8a63-352fd45814d9?autoplay=1
+
+
+
+# Parte 3 - Trabalhando com estilos
+
+## 🟩 Vídeo 04 - Trabalhando com estilos
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+# Parte 4 - Eventos
+
+## 🟩 Vídeo 05 - Trabalhando com estilos
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 06 - Atividade prática
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-# Parte 3 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - Exxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-##  Materiais de Apoio
-
-
-# Certificado: 
+# Certificado: Manipulando a D.O.M. com JavaScript
 
 - Link na plataforma: 
 - Certificado em pdf: 
