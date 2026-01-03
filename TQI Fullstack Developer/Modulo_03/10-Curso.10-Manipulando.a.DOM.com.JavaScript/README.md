@@ -288,14 +288,136 @@ Dessa forma, o desenvolvedor possui total flexibilidade para gerenciar a aparên
 
 # Parte 4 - Eventos
 
-## 🟩 Vídeo 05 - Trabalhando com estilos
+## 🟩 Vídeo 05 - Tipos e Acionando eventos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.10-Video_05.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/manipulando-dom-com-javascript/learning/2a57984c-d99d-4262-bccb-f706f1d56b24?autoplay=1
+
+Este vídeo consiste na transcrição de uma aula técnica focada em **eventos no JavaScript**, definindo-os como **ações ou interações** realizadas por usuários em elementos de uma página web. O instrutor detalha categorias comuns, como **movimentação do mouse, cliques e carregamento de páginas**, explicando como esses gatilhos ativam funções específicas. São apresentados dois métodos principais para implementar esses recursos: o uso do **AddEventListener** diretamente no código JavaScript e a aplicação de atributos **inline no HTML**, como o "onclick". O conteúdo enfatiza a transição da teoria para a **prática**, orientando o aluno sobre como "escutar" e reagir a comportamentos no navegador. Por fim, o material reforça a importância de conectar elementos visuais à **lógica de programação** para criar sites interativos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h12m54s665.jpg" alt="" width="840">
+</p>
+
+Esta aula inicia o estudo sobre **Eventos** dentro do contexto de manipulação do DOM (Document Object Model). O objetivo central é compreender como as interações do usuário podem disparar ações específicas em uma página web.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m08s744.jpg" alt="" width="840">
+</p>
+
+A aula está estruturada em três objetivos principais para o aprendizado de eventos:
+
+1. 
+**Explicar o que são eventos**: Compreender o conceito fundamental dessas interações.
+
+
+2. 
+**Apresentar eventos comumente utilizados**: Identificar os tipos mais frequentes encontrados no desenvolvimento web.
+
+
+3. 
+**Ensinar como acionar estes eventos**: Demonstrar as técnicas práticas para vincular ações ao código.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m12s369.jpg" alt="" width="840">
+</p>
+
+A primeira etapa da aula foca na exploração dos diferentes **Tipos** de eventos que podem ser manipulados no DOM. Esta fase é essencial para categorizar as diversas formas de interação que o navegador consegue detectar.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m17s873.jpg" alt="" width="840">
+</p>
+
+Os **Eventos do mouse** são acionados com base na movimentação ou posicionamento do cursor sobre elementos da página:
+
+* 
+**mouseover**: Disparado quando o cursor do mouse entra na área de um elemento.
+
+
+* 
+**mouseout**: Disparado quando o cursor do mouse deixa a área de um elemento.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m23s386.jpg" alt="" width="840">
+</p>
+
+Outra categoria fundamental são os **Eventos de clique**, que registram as interações diretas de pressão dos botões do mouse:
+
+* 
+**click**: Ocorre quando um elemento é pressionado e solto rapidamente.
+
+
+* 
+**dbclick**: Ocorre especificamente quando há um clique duplo rápido sobre o elemento.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m30s609.jpg" alt="" width="840">
+</p>
+
+Os **Eventos de atualização** monitoram mudanças de estado ou carregamento:
+
+* 
+**change**: Frequentemente utilizado em campos de formulário quando o valor de um elemento é alterado e o foco é perdido.
+
+
+* 
+**load**: Acionado quando a página ou um elemento específico termina de ser carregado completamente pelo navegador.
+
+
+
+A imagem exemplifica a captura de entrada de dados em tempo real, onde a alteração no campo de texto de um componente "Pai" reflete uma atualização imediata no componente "Filho".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m33s211.jpg" alt="" width="840">
+</p>
+
+A segunda etapa da aula aborda como realizar o **acionamento dos eventos**. Nesta fase, o foco deixa de ser apenas a identificação dos tipos de eventos e passa a ser a implementação prática do "link" entre a ação do usuário e a execução do código JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m34s709.jpg" alt="" width="840">
+</p>
+
+O **Event listener** (ou escutador de eventos) é uma das formas de acionamento configurada diretamente no arquivo JavaScript. Ele cria um observador que aguarda o momento exato em que o usuário realiza uma ação para disparar uma função específica.
+
+```javascript
+const botao = document.getElementById("meuBotao");
+botao.addEventListener("click", outraFuncao);
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m39s335.jpg" alt="" width="840">
+</p>
+
+Uma alternativa ao listener é o uso de **Atributos HTML**, onde a chamada da função é especificada diretamente na tag do elemento. Ao utilizar este método direto no HTML, o nome do evento deve ser precedido pelo prefixo **"on"** (como `onclick`, `onmouseover`, etc.).
+
+```html
+<html>
+<body>
+<h1 onclick="mudaTexto(this)">Clique aqui!</h1>
+<script>
+function mudaTexto (id) {
+id.innerHTML = "Mudei!";
+}
+</script>
+</body>
+</html>
+
+```      
 
 
 ## 🟩 Vídeo 06 - Atividade prática
