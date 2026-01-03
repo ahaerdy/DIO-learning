@@ -402,8 +402,18 @@ id.innerHTML = "Mudei!";
 
 ## 🟩 Vídeo 06 - Atividade prática
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.10-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/manipulando-dom-com-javascript/learning/e84c6e17-6a14-4e5d-9916-87600aa4e9aa?autoplay=1
+
+O vídeo consiste em uma **aula prática de programação** voltada para o desenvolvimento de uma funcionalidade de alternância entre **modos claro e escuro** utilizando **JavaScript**. A instrutora orienta os alunos na manipulação do **DOM**, demonstrando como selecionar elementos como botões e títulos através de IDs e nomes de tags para aplicar eventos de clique. O conteúdo enfatiza **boas práticas de codificação**, sugerindo a criação de funções com responsabilidades únicas para gerenciar separadamente a troca de **classes CSS** e a atualização de **textos na interface**. Ao longo da explicação, são apresentados conceitos fundamentais como o uso de **event listeners**, a propriedade **classList.toggle** e a organização de constantes para tornar o código mais escalável e legível. O objetivo final é capacitar o estudante a construir um projeto funcional que possa ser integrado ao seu próprio **portfólio profissional**.
+
+### Anotações
+
+      
 
 
 # Certificado: Manipulando a D.O.M. com JavaScript
