@@ -585,5 +585,5 @@ button.addEventListener('click', changeMode);
 
 # Certificado: Manipulando a D.O.M. com JavaScript
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/MGOLDRSH.pdf
+- Certificado em pdf: [Certificado-Manipulando.a.D.O.M..com.JavaScript.pdf](000-Midia_e_Anexos/Certificado-Manipulando.a.D.O.M..com.JavaScript.pdf)
