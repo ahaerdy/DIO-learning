@@ -293,6 +293,13 @@ quadrado = [numero ** 2 for numero in numeros]
 
 ## 🟩 Vídeo 03 -  Métodos da classe list
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_03-Curso_01-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-listas-em-python/learning/25f7e48d-a986-4f1f-84d3-41c75587fb99?autoplay=1
+
 ### [].append
 
 ```python
