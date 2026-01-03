@@ -16,6 +16,13 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalha
 
 ## 🟩 Vídeo 02 -  Listas: Criação e acesso aos dados
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_03-Curso_01-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-listas-em-python/learning/9793e998-b3df-436c-bef1-50f09b72c15c?autoplay=1
+
 ### Objetivo Geral
 
 - Entender o funcionamento da estrutura de dados lista.
