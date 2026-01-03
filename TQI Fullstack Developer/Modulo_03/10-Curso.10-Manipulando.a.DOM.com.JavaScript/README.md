@@ -413,8 +413,175 @@ O vídeo consiste em uma **aula prática de programação** voltada para o desen
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h45m52s114.jpg" alt="" width="840">
+</p>
 
+Esta atividade prática foca na manipulação da **DOM (Document Object Model)** para criar uma funcionalidade de **Light Mode** e **Dark Mode**. O objetivo é desenvolver uma página onde a aparência visual e os textos informativos sejam alterados dinamicamente ao clicar em um botão. O projeto utiliza uma estrutura básica de front-end composta por HTML, CSS e JavaScript, aproveitando estilos pré-definidos para focar na lógica de programação.
+
+As instruções principais para a atividade incluem:
+
+1. Criar a estrutura básica do projeto.
+2. Utilizar o HTML e CSS fornecidos no repositório.
+3. Desenvolver o arquivo `scripts.js` para a lógica.
+4. Selecionar os elementos `h1`, `button`, `footer` e `body`.
+5. Implementar a alternância da classe `dark-mode` para modificar os estilos e textos dos elementos selecionados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h46m52s114.jpg" alt="" width="840">
+</p>
+
+A estrutura HTML da página define a base sobre a qual o JavaScript atuará. O documento contém um cabeçalho com metadados e links para o CSS externo, e um corpo (`body`) que abriga os elementos principais que serão manipulados:
+
+* Um título `h1` com o ID `page-title`, inicialmente exibindo "Light Mode ON".
+* Um botão com o ID `mode-selector` para disparar a troca de temas.
+* Um rodapé (`footer`) contendo informações sobre o curso.
+* A importação do script `scripts.js` ao final do corpo para garantir que o DOM esteja carregado antes da execução do código JavaScript.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Dark mode and Light Mode</title>
+</head>
+<body>
+    <main>
+        <h1 id="page-title">Light Mode ON</h1>
+        <button aria-label="selecionar-modo" id="mode-selector">Dark Mode</button>
+    </main>
+    <footer>Basecamp Javascript @ Digital Innovation One</footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h47m52s114.jpg" alt="" width="840">
+</p>
+
+O arquivo CSS define as propriedades visuais para os dois estados da página. O **Light Mode** é o padrão (`default`), utilizando cores claras no fundo e tons escuros para o texto. A alternância para o **Dark Mode** é controlada pela presença da classe `.dark-mode`. Quando essa classe é aplicada aos elementos via JavaScript, as propriedades de `background-color` e `color` são invertidas.
+
+O arquivo também inclui configurações de layout usando **Flexbox** no elemento `main` para centralizar o conteúdo e transições suaves (`transition`) no botão para melhorar a experiência do usuário durante a troca de temas.
+
+```css
+@import url('https://fonts.googleapis.com/css?family=Quicksand:wght@300;400;600&display=swap');
+
+body {
+    background-color: #e5e8e8;
+    color: #4e545c;
+    margin: 0;
+    font-family: 'Quicksand';
+}
+
+body.dark-mode {
+    background-color: #000401;
+    color: #e5e8e8;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    background-color: #4e545c;
+    padding: 16px;
+    color: #e5e8e8;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-weight: 400;
+}
+
+footer.dark-mode {
+    background-color: #8d9797;
+    color: #000401;
+}
+
+button {
+    border-radius: 40px;
+    font-size: 1.5rem;
+    height: 60px;
+    width: 200px;
+    border: none;
+    background-color: #4e545c;
+    color: #e5e8e8;
+    transition: all 0.5s linear;
+}
+
+button:hover {
+    background-color: #000401;
+}
+
+button.dark-mode {
+    background-color: #e5e8e8;
+    color: #4e545c;
+}
+
+button.dark-mode:hover {
+    background-color: #4e545c;
+    color: #e5e8e8;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h48m52s114.jpg" alt="" width="840">
+</p>
+
+A lógica do JavaScript é organizada para garantir escalabilidade e seguir a boa prática de responsabilidade única. Primeiro, os elementos são selecionados utilizando `getElementById` (para o botão e título) e `getElementsByTagName` (para o body e footer, acessando o índice `[0]` da coleção retornada). Um **Event Listener** é adicionado ao botão para escutar o evento de clique e disparar a função principal `changeMode`.
+
+A função `changeMode` coordena duas ações:
+
+1. `changeClasses`: Utiliza o método `classList.toggle` para adicionar ou remover a classe `dark-mode` de todos os elementos selecionados.
+2. `changeText`: Verifica se o `body` contém a classe `dark-mode` usando `classList.contains`. Dependendo do resultado, altera o conteúdo interno (`innerHTML`) do botão e do título para refletir o estado atual da página.
+
+```javascript
+function changeMode() {
+    changeClasses();
+    changeText();
+}
+
+function changeClasses() {
+    button.classList.toggle(darkModeClass);
+    h1.classList.toggle(darkModeClass);
+    body.classList.toggle(darkModeClass);
+    footer.classList.toggle(darkModeClass);
+}
+
+function changeText() {
+    const lightMode = 'Light Mode';
+    const darkMode = 'Dark Mode';
+
+    if (body.classList.contains(darkModeClass)) {
+        button.innerHTML = lightMode;
+        h1.innerHTML = darkMode + ' ON';
+        return;
+    }
+
+    button.innerHTML = darkMode;
+    h1.innerHTML = lightMode + ' ON';
+}
+
+const darkModeClass = 'dark-mode';
+const button = document.getElementById('mode-selector');
+const h1 = document.getElementById('page-title');
+const body = document.getElementsByTagName('body')[0];
+const footer = document.getElementsByTagName('footer')[0];
+
+button.addEventListener('click', changeMode);
+
+```      
 
 # Certificado: Manipulando a D.O.M. com JavaScript
 
