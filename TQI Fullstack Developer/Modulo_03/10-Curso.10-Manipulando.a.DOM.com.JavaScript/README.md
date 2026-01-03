@@ -313,17 +313,13 @@ Esta aula inicia o estudo sobre **Eventos** dentro do contexto de manipulação 
 
 A aula está estruturada em três objetivos principais para o aprendizado de eventos:
 
-1. 
-**Explicar o que são eventos**: Compreender o conceito fundamental dessas interações.
+1. **Explicar o que são eventos**: Compreender o conceito fundamental dessas interações.
 
 
-2. 
-**Apresentar eventos comumente utilizados**: Identificar os tipos mais frequentes encontrados no desenvolvimento web.
+2. **Apresentar eventos comumente utilizados**: Identificar os tipos mais frequentes encontrados no desenvolvimento web.
 
 
-3. 
-**Ensinar como acionar estes eventos**: Demonstrar as técnicas práticas para vincular ações ao código.
-
+3. **Ensinar como acionar estes eventos**: Demonstrar as técnicas práticas para vincular ações ao código.
 
 
 <p align="center">
@@ -338,14 +334,9 @@ A primeira etapa da aula foca na exploração dos diferentes **Tipos** de evento
 
 Os **Eventos do mouse** são acionados com base na movimentação ou posicionamento do cursor sobre elementos da página:
 
-* 
-**mouseover**: Disparado quando o cursor do mouse entra na área de um elemento.
+* **mouseover**: Disparado quando o cursor do mouse entra na área de um elemento.
 
-
-* 
-**mouseout**: Disparado quando o cursor do mouse deixa a área de um elemento.
-
-
+* **mouseout**: Disparado quando o cursor do mouse deixa a área de um elemento.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m23s386.jpg" alt="" width="840">
@@ -353,14 +344,9 @@ Os **Eventos do mouse** são acionados com base na movimentação ou posicioname
 
 Outra categoria fundamental são os **Eventos de clique**, que registram as interações diretas de pressão dos botões do mouse:
 
-* 
-**click**: Ocorre quando um elemento é pressionado e solto rapidamente.
+* **click**: Ocorre quando um elemento é pressionado e solto rapidamente.
 
-
-* 
-**dbclick**: Ocorre especificamente quando há um clique duplo rápido sobre o elemento.
-
-
+* **dbclick**: Ocorre especificamente quando há um clique duplo rápido sobre o elemento.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m30s609.jpg" alt="" width="840">
@@ -368,14 +354,10 @@ Outra categoria fundamental são os **Eventos de clique**, que registram as inte
 
 Os **Eventos de atualização** monitoram mudanças de estado ou carregamento:
 
-* 
-**change**: Frequentemente utilizado em campos de formulário quando o valor de um elemento é alterado e o foco é perdido.
+* **change**: Frequentemente utilizado em campos de formulário quando o valor de um elemento é alterado e o foco é perdido.
 
 
-* 
-**load**: Acionado quando a página ou um elemento específico termina de ser carregado completamente pelo navegador.
-
-
+* **load**: Acionado quando a página ou um elemento específico termina de ser carregado completamente pelo navegador.
 
 A imagem exemplifica a captura de entrada de dados em tempo real, onde a alteração no campo de texto de um componente "Pai" reflete uma atualização imediata no componente "Filho".
 
@@ -396,8 +378,6 @@ const botao = document.getElementById("meuBotao");
 botao.addEventListener("click", outraFuncao);
 
 ```
-
-
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-09h13m39s335.jpg" alt="" width="840">
