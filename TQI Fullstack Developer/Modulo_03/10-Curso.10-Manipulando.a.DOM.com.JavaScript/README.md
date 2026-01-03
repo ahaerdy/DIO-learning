@@ -213,14 +213,87 @@ Para remover um elemento, a prática comum é acessar o elemento pai e utilizar 
 
 ## 🟩 Vídeo 04 - Trabalhando com estilos
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.10-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo:  
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/manipulando-dom-com-javascript/learning/25149635-89e3-43da-be0f-681be1c58459?autoplay=1 
+
+Este vídeo explica como utilizar o **JavaScript** para gerenciar a aparência visual de elementos em projetos **front-end**. O conteúdo detalha o uso da propriedade **classList**, que permite **adicionar, remover ou alternar** classes CSS de forma dinâmica, funcionando como um interruptor para modificar o estado de um componente. Além disso, o texto aborda a manipulação direta através da propriedade **style**, permitindo a aplicação de configurações personalizadas como **cores e fontes** sem depender exclusivamente de arquivos externos. O objetivo central é demonstrar a flexibilidade do desenvolvedor ao interagir com o **DOM** para criar interfaces interativas. Assim, o material serve como um guia prático para controlar o **design** e o comportamento visual de uma página web via código.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h58m29s267.jpg" alt="" width="840">
+</p>
+
+Nesta introdução à manipulação de estilos no ecossistema front-end, o foco está na interação entre **HTML, JavaScript e CSS**. O objetivo principal é compreender como o JavaScript pode ser utilizado para manipular o Document Object Model (DOM) e alterar visualmente os elementos da página. Essa integração permite que seletores como IDs e classes sirvam de ponte para que scripts apliquem regras de estilo dinamicamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h58m32s376.jpg" alt="" width="840">
+</p>
+
+Para gerenciar as classes de um elemento, utilizamos a propriedade **`classList`**, que funciona como uma lista de todas as classes atribuídas a um elemento HTML. Através dessa propriedade, é possível selecionar um elemento pelo seu ID e aplicar métodos específicos para alterar seu estado visual.
+
+O código abaixo exemplifica a captura de um elemento e a aplicação inicial de métodos para remover ou alternar classes:
+
+```javascript
+const meuElemento = document.getElementById("meu-elemento")
+
+// Remove uma classe específica da lista do elemento
+meuElemento.classList.remove("classe")
+
+// Alterna a classe: adiciona se não existir, remove se já existir
+meuElemento.classList.toggle("dark-mode")
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h58m40s378.jpg" alt="" width="840">
+</p>
+
+A manipulação via `classList` oferece três métodos principais para o controle de estilos baseados em classes CSS:
+
+* **`add`**: Adiciona uma nova classe ao elemento sem remover as existentes.
+* 
+**`remove`**: Exclui uma classe específica da lista de classes do elemento.
+
+
+* **`toggle`**: Atua como um interruptor, adicionando a classe caso ela não esteja presente ou removendo-a caso já faça parte da lista.
+
+Como resultado dessas operações, a estrutura do HTML é atualizada dinamicamente:
+
+```html
+<div id="meu-elemento" class="novo-estilo dark-mode">
+ </div>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-03-08h58m41s796.jpg" alt="" width="840">
+</p>
+
+Além do uso de classes, o JavaScript permite o acesso direto às propriedades de estilo CSS de um elemento através da propriedade **`.style`**. Esta abordagem é útil quando se deseja aplicar alterações pontuais diretamente no atributo `style` do HTML, sem depender de uma classe pré-definida em um arquivo CSS externo.
+
+É possível, por exemplo, alterar a cor de todos os parágrafos de uma vez ou modificar propriedades como `fontSize` e `border`:
+
+```javascript
+document.getElementsByTagName("p").style.color = "blue";
+
+```
+
+Dessa forma, o desenvolvedor possui total flexibilidade para gerenciar a aparência da aplicação, seja por meio da alternância de classes ou pela definição direta de propriedades CSS.
 
 
 # Parte 4 - Eventos
 
 ## 🟩 Vídeo 05 - Trabalhando com estilos
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.10-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
