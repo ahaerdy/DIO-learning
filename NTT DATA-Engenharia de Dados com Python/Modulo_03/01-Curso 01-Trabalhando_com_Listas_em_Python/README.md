@@ -2,6 +2,13 @@
 
 ## 🟩 Vídeo 01 - Introdução
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_03-Curso_01-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-listas-em-python/learning/14a6cc51-c672-451e-9522-ff90c9c83c64?autoplay=1
+
 - Informações sobre o repositório da trilha:
     - https://github.com/digitalinnovationone/trilha-python-dio
 - Explicaçöes de como cloná-lo. 
