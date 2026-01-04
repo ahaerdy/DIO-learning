@@ -164,8 +164,66 @@ O vídeo consiste em uma aula técnica sobre a **tipagem de objetos e arrays** n
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-15h51m42s318.jpg" alt="" width="840">
+</p>
 
+Nesta etapa, exploramos como tipar objetos no TypeScript utilizando **interfaces**. Diferente dos tipos primitivos, uma interface permite definir a estrutura de um objeto, especificando quais propriedades ele deve ter e de quais tipos elas são.
+
+No exemplo apresentado, criamos a interface `Pessoa` com as seguintes características:
+
+* **nome**: Definido como `string`.
+
+* **idade**: Definido como `number`.
+
+* **profissao?**: O uso do operador de interrogação (`?`) indica que esta propriedade é **opcional**. Isso significa que o TypeScript não exigirá esse valor ao instanciar um objeto desse tipo, permitindo que ele seja `string` ou `undefined`.
+
+Com a interface definida, podemos criar objetos que seguem essa estrutura:
+
+1. **pessoa**: Um objeto que contém apenas as propriedades obrigatórias (`nome` e `idade`).
+
+
+2. **outraPessoa**: Um objeto que utiliza todas as propriedades, incluindo a opcional `profissao`.
+
+Além da tipagem de objetos individuais, o TypeScript permite definir tipos para **arrays**. Existem duas sintaxes comuns para isso:
+
+* **Sintaxe de colchetes**: Como em `number[]`, indicando um array que contém apenas números.
+
+* **Operador Diamante (Generics)**: Como em `Array<Pessoa>` ou `Array<string>`, que utiliza uma sintaxe mais explícita para definir o tipo de dado contido na lista.
+
+
+```typescript
+interface Pessoa {
+  nome: string,
+  idade: number,
+  profissao?: string
+}
+
+const pessoa: Pessoa = {
+  nome: 'Nath',
+  idade: 32
+}
+
+const outraPessoa: Pessoa = {
+  nome: 'Paulo',
+  idade: 25,
+  profissao: 'Desenvolvedor'
+}
+
+const arrayPessoa: Array<Pessoa> = [
+  pessoa,
+  outraPessoa
+]
+
+const arrayNum: number[] = [
+  1, 2, 3
+]
+
+const arrayString: Array<string> = [
+  '1', '2', '3'
+]
+
+```     
 
 ## 🟩 Vídeo 05 - Decisões e repetições
 
