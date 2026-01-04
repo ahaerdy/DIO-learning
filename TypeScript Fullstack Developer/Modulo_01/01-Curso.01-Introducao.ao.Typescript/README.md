@@ -83,7 +83,6 @@ Assim, ao passar os argumentos 'Nath' e 'Souza', o operador + concatena os dois 
 
 O Javascript Original não tem o controle de tipos. 
 
-
 # Parte 2: Fundamentos e sintaxe
 
 ## 🟩 Vídeo 03 - Variáveis e tipos
@@ -94,6 +93,12 @@ O Javascript Original não tem o controle de tipos.
 </video>
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/8f3cfcc8-85b8-444b-ae9f-cff4a5b3322c?autoplay=1
+
+### Anotações
+
+      
+
+
 
 ## 🟩 Vídeo 04 - Objetos e interfaces
 
