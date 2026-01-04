@@ -65,8 +65,7 @@ Exemplo 1
 Exemplo 2
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/image_03.png" alt="" width="480">
+    <img src="000-Midia_e_Anexos/image_03.png" alt="" width="480">
 </p>
-
 
 ## Solução
