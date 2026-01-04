@@ -160,6 +160,13 @@ O uso indiscriminado do `any` compromete a integridade da aplicação. Ele deve 
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/0f530f9b-6172-4177-a649-401b7347cb67?autoplay=1
 
+O vídeo consiste em uma aula técnica sobre a **tipagem de objetos e arrays** no **TypeScript**. O conteúdo explica detalhadamente como utilizar **interfaces** para estruturar objetos, definindo propriedades obrigatórias e o uso do ponto de interrogação para marcar atributos como **opcionais**. Além disso, o material demonstra como garantir a segurança de dados em **listas**, apresentando duas sintaxes distintas para declarar **arrays de objetos ou tipos primitivos**. A explicação foca na importância de definir tipos claros para evitar erros de atribuição durante o desenvolvimento de software. Por fim, o texto reforça como o **VS Code** auxilia o programador ao identificar incompatibilidades de dados em tempo real.
+
+### Anotações
+
+      
+
+
 ## 🟩 Vídeo 05 - Decisões e repetições
 
 <video width="60%" controls>
@@ -167,7 +174,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/5d564867-2317-4433-8109-826220d7fd1a?autoplay=1
 
 ## 🟩 Vídeo 06 - Estruturas de Repetição
 
