@@ -1,6 +1,6 @@
-# Desafio 1 - Registro de Transações Bancárias
+# Desafio 1 - Princípios Básicos
 
-## Descrição
+e
 
 - Daenerys é a khaleesi dos Dothraki. Juntamente com Drogon, eles vão atrás do Tyrion, para tentar dominar Westeros. Ela possui, além do seu dragãozinho, um rastreador que mede o nível de energia de qualquer ser vivo. Todos os seres com o nível menor ou igual a 8000, ela considera como se fosse um inseto. Quando passa deste valor, que foi o caso do Drogon, ela se espanta e grita “Mais de 8000”. Baseado nisso, utilize a mesma tecnologia e analise o nível de energia dos seres vivos.
 
@@ -39,3 +39,28 @@ for(let i = 0; i < qtdEntradas; i++){
         print ("Inseto!")
     }
 ```
+
+# Desafio 2 - Soma de números naturais
+
+## Descrição
+
+- Um número natural é um inteiro não-negativo (0, 1, 2, 3, 4, 5,...). A sua tarefa neste problema é calcular a soma dos números naturais que estão presentes em um determinado intervalo [A, B] inclusive.
+
+Por exemplo, a soma dos números naturais no intervalo [2, 5] é 14 = (2+3+4+5).
+
+## Entrada
+
+- Cada caso de teste contém dois inteiros A e B (1 ≤ A ≤ B ≤ 109), representando o limite inferior e o superior respectivamente.
+
+## Saída
+
+Para cada caso de teste, a saída consiste de uma linha contendo a soma dos números naturais do intervalo.
+
+Exemplo 1
+
+<p align="center">
+    <img src="000-Midia_e_Anexos/image_02.png" alt="" width="480">
+</p>
+
+
+## Solução
