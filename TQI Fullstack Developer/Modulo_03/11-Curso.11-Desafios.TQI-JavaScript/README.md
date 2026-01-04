@@ -121,3 +121,43 @@ Para cada caso de teste de entrada do seu programa, você deve imprimir um núme
 </p>
 
 ## Solução
+
+```javascript
+// a função gets é implementada dentro do sistema para ler as entradas(inputs) dos dados e a função print para imprimir a saída (output) de dados e já pula uma linha ("\n")
+// Abaixo segue um exemplo de código que você pode ou não utilizar
+
+let input = gets()
+
+let qtdEntradas = parseInt(input)
+let melhor = 999
+
+for(let i = 0; i < qtdEntradas; i++){
+    
+    input = gets()
+    let tempo = parseFloat(input)
+    if (tempo < melhor) melhor = tempo
+}
+
+print(melhor)
+```
+
+# Desafio 4 - Arrays Pares
+
+## Descrição
+
+- Seu José possui uma lista de entregas das suas mercadorias e cada uma delas possui um número de identificação. As entregas mais urgentes são as que possuem o número de identificação PAR. Porém, seu José é muito atarefado e pediu sua ajuda para criar um programa que, de acordo com uma lista, mostrasse apenas as entregas urgentes (pares). Utilizando o seu conhecimento sobre Arrays, uma estrutura de dados que armazena uma coleção de dados em um bloco de memória, crie um programa que, dado a lista: {2, 3, 5, 7, 11, 13, 18, 34}, retorne como resultado apenas os números pares dessa array.
+
+## Entrada
+
+- A entrada consiste em um Array de números inteiros positivos. ([2, 3, 5, 7, 11, 13, 18, 34])
+
+## Saída
+
+- A saída do desafio equivale aos números pares do Array, como mostra o exemplo a baixo, porém com o Array do enunciado:
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/image_05.png" alt="" width="480">
+</p>
+
+## Solução
+
