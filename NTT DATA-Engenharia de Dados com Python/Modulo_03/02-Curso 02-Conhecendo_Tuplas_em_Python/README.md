@@ -161,5 +161,5 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
 # Certificado: Conhecendo Tuplas em Python
 
-Link do certificado: https://hermes.dio.me/certificates/OHCCW65H.pdf
-Certificado em PDF: [Conhecendo Tuplas em Python.pdf](000-Midia_e_Anexos/Certificado-Conhecendo.Tuplas.em.Python.pdf)
+- Link do certificado: https://hermes.dio.me/certificates/OHCCW65H.pdf
+- Certificado em PDF: [Conhecendo Tuplas em Python.pdf](000-Midia_e_Anexos/Certificado-Conhecendo.Tuplas.em.Python.pdf)
