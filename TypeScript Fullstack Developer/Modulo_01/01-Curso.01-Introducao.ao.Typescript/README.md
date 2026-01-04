@@ -10,7 +10,6 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-
 Link do vídeo:https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/88a53e9c-b178-42ff-8278-85ea34126c30?autoplay=1
 
 A instrutora **Natalie Souza**, desenvolvedora no Itaú, se apresenta e introduz um módulo de um curso de **introdução ao Typescript**, que faz parte de uma trilha Full Stack. Natalie compartilha sua transição de uma **carreira de dez anos no jornalismo** para a tecnologia, motivada pelo desejo de **transformar e impactar a sociedade**. Ela também aborda sua identidade como **mulher trans/travesti** e a importância de sua posição para **comunidades sub-representadas** na área de tecnologia. Finalmente, ela detalha que o **objetivo do curso** é ensinar a sintaxe básica do Typescript e **conceitos de orientação a objetos**, mencionando que o pré-requisito é ter uma base em lógica de programação.
@@ -87,27 +86,57 @@ O Javascript Original não tem o controle de tipos.
 
 # Parte 2: Fundamentos e sintaxe
 
-## 🟩 Vídeo 01 - Variáveis e tipos
+## 🟩 Vídeo 03 - Variáveis e tipos
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/formacao_typescript_fullstack-modulo_01-Curso_01-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/8f3cfcc8-85b8-444b-ae9f-cff4a5b3322c?autoplay=1
 
-## 🟩 Vídeo 02 - Objetos e interfaces
+## 🟩 Vídeo 04 - Objetos e interfaces
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/formacao_typescript_fullstack-modulo_01-Curso_01-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:
 
-## 🟩 Vídeo 03 - Decisões e repetições
+## 🟩 Vídeo 05 - Decisões e repetições
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/formacao_typescript_fullstack-modulo_01-Curso_01-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:
 
-## 🟩 Vídeo 04 - Estruturas de Repetição
+## 🟩 Vídeo 06 - Estruturas de Repetição
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/formacao_typescript_fullstack-modulo_01-Curso_01-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:
 
-## 🟩 Vídeo 05 - Array
+## 🟩 Vídeo 07 - Array
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/formacao_typescript_fullstack-modulo_01-Curso_01-Video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:
 
-## 🟩 Vídeo 06 - Manipulando Arrays
+## 🟩 Vídeo 08 - Manipulando Arrays
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/formacao_typescript_fullstack-modulo_01-Curso_01-Video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:
 
