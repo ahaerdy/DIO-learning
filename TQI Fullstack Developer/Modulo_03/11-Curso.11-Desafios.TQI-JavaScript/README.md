@@ -81,3 +81,28 @@ print(total);
 
 //Escreva o seu código no espaço em branco
 ```
+
+## Explicação Soma de Gauss
+
+A **soma de Gauss** é uma fórmula matemática que permite calcular rapidamente a soma dos números naturais consecutivos.
+
+### Fórmula geral
+A soma dos primeiros `n` números naturais é:
+
+S = n × (n + 1) / 2
+
+### Intervalo [A, B]
+Para somar números dentro de um intervalo específico, usamos:
+
+S = (B × (B + 1)) / 2 − ((A − 1) × A) / 2
+
+### Exemplo
+Intervalo [2, 5]:
+
+S = (5 × 6) / 2 − (1 × 2) / 2  
+S = 15 − 1 = 14
+
+Resultado: **14**
+
+
+
