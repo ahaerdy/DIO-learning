@@ -1,0 +1,165 @@
+# Parte 1 - Conhecendo Tuplas em Python
+
+## 🟩 Vídeo 01 - Tuplas
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_03-Curso_02-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/conhecendo-tuplas-em-python/learning/5ce0d4ad-7182-4c6c-b798-076ffa6fc958?autoplay=1
+
+### Objetivo
+
+- Entender o funcionamento da estrutura de dados tupla.
+
+## Criação e acesso aos dados
+
+### Criando tuplas
+
+- Tuplas são estruturas de dados muito parecidas com as listas, a principal diferença é que tuplas são imutáveis enquanto listas são mutáveis. Podemos criar tuplas através da classe tuple, ou colocando valores separados por vírgula de parênteses.
+
+### Exemplo
+
+```python
+frutas = ("laranja", "pera", "uva",) 
+
+letras = tuple("python") 
+
+numeros = tuple([1, 2, 3, 4]) 
+
+pais = ("Brasil",)
+```
+
+### Acesso direto
+
+- A tupla é uma sequência, portanto podemos acessar seus dados utilizando índices. Contamos o índice de determinada sequência a partir do zero.
+
+### Exemplo
+
+```python
+frutas = ("maçã", "laranja", "uva", "pera",) 
+
+frutas[0] # maçã 
+
+frutas[2] # uva
+```
+
+### 🟥 Índices negativos
+
+- Sequências suportam indexação negativa. A contagem começa em -1.
+
+### Exemplo
+
+```python
+frutas = ("maçã", "laranja", "uva", "pera",) 
+
+frutas[-1] # pera 
+
+frutas[-3] # laranja
+```
+
+### Tuplas aninhadas
+
+- Tuplas podem armazenar todos os tipos de objetos Python, portanto podemos ter tuplas que armazenam outras tuplas. Com isso podemos criar estruturas bidimensionais (tabelas), e acessar informando os índices de linha e coluna.
+
+### Exemplo
+
+```python
+matriz = ( 
+    (1, "a", 2), ("b", 3, 4), 
+    (6, 5, "c"), 
+) 
+
+matriz[0]        # (1, "a", 2) 
+matriz[0][0]     # 1 
+matriz[0][-1]    # 2
+ matriz[-1][-1]  # "c"
+```
+
+### Fatiamento
+
+- Além de acessar elementos diretamente, podemos extrair um conjunto de valores de uma sequência. Para isso basta passar o índice inicial e/ou final para acessar o conjunto. Podemos ainda informar quantas posições o cursor deve "pular" no acesso.
+
+### Exemplo
+
+```python
+tupla = ("p", "y", "t", "h", "o", "n",) 
+
+tupla[2:]       # ("t", "h", "o", "n") 
+tupla[:2]       # ("p", "y") 
+tupla[1:3]      # ("y", "t") 
+tupla[0:3:2]    # ("p", "t") 
+tupla[::]       # ("p", "y", "t", "h", "o", "n") 
+tupla[::-1]     # ("n", "o", "h", "t", "y", "p")
+```
+
+### Iterar tuplas
+
+- A forma mais comum para percorrer os dados de uma tupla é utilizando o comando for.
+
+### Exemplo
+
+```python
+carros = ("gol", "celta", "palio",) 
+
+for carro in carros: 
+    print(carro)
+```
+
+### Função enumerate
+
+- Às vezes é necessário saber qual o índice do objeto dentro do laço **for**. Para isso podemos usar a função **enumerate**. 
+
+### Enumerate
+
+```python
+carros = ("gol", "celta", "palio",) 
+
+for indice, carro in enumerate(carros): 
+    print(f"{indice}: {carro}")
+```
+
+### Métodos da classe tuple
+
+### ().count
+
+```python
+cores = ("vermelho", "azul", "verde", "azul",) 
+
+cores.count("vermelho")     # 1 
+cores.count("azul")         # 2 cores.count("verde") # 1
+```
+
+### ().index
+
+```python
+linguagens = ("python", "js", "c", "java", "csharp",)
+
+linguagens.index("java") # 3 
+linguagens.index("python") # 0
+```
+
+### 🟨 Função
+
+### len
+
+```python
+linguagens = ("python", "js", "c", "java", "csharp",) 
+
+len(linguagens) # 5
+```
+ 
+
+# Parte 2 - Materiais de apoio e Questionário
+
+## Materiais de apoio
+
+Disponibilizados os seguinte arquivos em formato MS Powerpoint:
+
+- 02-Dio_Tuplas.pdf
+
+# Certificado: Conhecendo Tuplas em Python
+
+Link do certificado: https://hermes.dio.me/certificates/OHCCW65H.pdf
+Certificado em PDF: [Conhecendo Tuplas em Python.pdf](000-Midia_e_Anexos/Certificado-Conhecendo.Tuplas.em.Python.pdf)
