@@ -186,7 +186,6 @@ Além da tipagem de objetos individuais, o TypeScript permite definir tipos para
 * **Sintaxe de colchetes**: Como em `number[]`, indicando um array que contém apenas números.
 * **Operador Diamante (Generics)**: Como em `Array<Pessoa>` ou `Array<string>`, que utiliza uma sintaxe mais explícita para definir o tipo de dado contido na lista.
 
-
 ```typescript
 interface Pessoa {
   nome: string,
@@ -229,6 +228,122 @@ const arrayString: Array<string> = [
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/5d564867-2317-4433-8109-826220d7fd1a?autoplay=1
 
+O material apresenta uma aula técnica sobre **estruturas de controle** no **TypeScript**, focando inicialmente na sintaxe e no funcionamento de condicionais como **if**, **else if** e **else**. O instrutor demonstra como realizar **comparações de valores e tipos** de forma segura e como encadear múltiplas decisões para gerenciar o fluxo de dados. Além da abordagem nativa, o conteúdo introduz o uso de **objetos literais** como uma alternativa mais limpa e organizada para substituir blocos condicionais extensos. Através de exemplos práticos com **funções** e mapeamento de chaves, o vídeo ensina a otimizar o código para facilitar a manutenção em aplicações complexas. O objetivo final é capacitar o aluno a escolher a melhor estratégia de decisão antes de avançar para o estudo de estruturas de repetição.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-16h56m16s233.jpg" alt="" width="840">
+</p>
+
+Esta aula marca o início do estudo sobre **estruturas de decisão e repetição** no TypeScript. Após concluir o módulo de variáveis e tipos — onde foram abordados tipos primitivos e a tipagem de objetos — o foco agora é compreender como controlar o fluxo da aplicação. O conteúdo programático inclui o funcionamento das estruturas de decisão clássicas, o uso de **objetos literais** como alternativa estratégica para essas decisões e a compreensão das estruturas de repetição.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-16h56m21s694.jpg" alt="" width="840">
+</p>
+
+As **estruturas de decisão** permitem que o código execute diferentes blocos de instrução baseados em condições lógicas. No TypeScript, isso é implementado de forma similar ao JavaScript, utilizando principalmente o bloco `if`. Além das estruturas condicionais básicas, será explorado como os objetos literais podem complementar e otimizar a escrita de decisões no código, tornando-o mais limpo e organizado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-16h57m05s503.jpg" alt="" width="840">
+</p>
+
+A estrutura fundamental de decisão utiliza o `if` seguido de uma condição entre parênteses. No exemplo prático, verificamos se uma variável numérica é maior que 15. Caso a condição seja verdadeira, o primeiro bloco de código é executado; caso contrário, o bloco `else` (senão) assume o controle. Para executar o código e visualizar o resultado no terminal, utiliza-se o comando configurado previamente no projeto.
+
+```typescript
+const num: number = 16
+
+if (num > 15) {
+  console.log('Num maior que 15')
+} else {
+  console.log('Num menor que 15')
+}
+
+```
+
+```bash
+fundamentos yarn run dev
+yarn run v1.22.10
+$ ts-node-dev app.ts
+[INFO] 17:18:15 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.8.2, typescript ver. 4.7.4)
+Num maior que 15
+Done in 2.17s.
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-16h58m19s854.jpg" alt="" width="840">
+</p>
+
+Para lidar com múltiplas possibilidades, podemos utilizar o **encadeamento de decisão** com o `else if`. No caso de comparar se um número é igual a outro, o TypeScript (e o JavaScript) exige o uso de operadores de comparação. É altamente recomendado utilizar **três sinais de igual (`===`)**, pois eles garantem a comparação tanto do valor quanto do tipo do dado, evitando comportamentos inesperados que podem ocorrer ao usar apenas dois sinais (`==`).
+
+```typescript
+const num: number = 15
+
+if (num > 15) {
+  console.log('Num maior que 15')
+} else if (num === 15) {
+  console.log('Num igual a 15')
+} else {
+  console.log('Num menor que 15')
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-16h58m28s104.jpg" alt="" width="840">
+</p>
+
+Quando uma aplicação cresce e apresenta muitas condições encadeadas, o uso excessivo de `if/else` pode tornar o código de difícil manutenção. Uma alternativa eficiente é o uso de **objetos literais**. Ao criar um objeto que mapeia chaves (como tipos de usuário) para seus respectivos valores (mensagens), podemos acessar a informação desejada diretamente através de uma função, reduzindo a complexidade visual do código. No TypeScript, ao acessar um objeto dinamicamente com uma string, utilizamos a expressão `as keyof typeof` para garantir que a chave informada pertence de fato ao objeto.
+
+```typescript
+const typeUser = {
+  admin: 'Seja bem vindo admin',
+  student: 'Voce é um estudante',
+  viewer: 'Voce pode visualizar'
+}
+
+function validateUser(user: string) {
+  console.log(typeUser[user as keyof typeof typeUser])
+}
+
+const usuario = 'admin'
+validateUser(usuario)
+
+```
+
+```bash
+fundamentos yarn run dev
+yarn run v1.22.10
+$ ts-node-dev app.ts
+[INFO] 17:45:38 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.8.2, typescript ver. 4.7.4)
+Seja bem vindo admin
+Done in 2.16s.
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-16h58m37s017.jpg" alt="" width="840">
+</p>
+
+A flexibilidade do objeto literal permite validar diferentes entradas chamando a mesma função de validação. Ao passar parâmetros como 'admin', 'student' ou 'viewer', a função recupera instantaneamente o valor associado no objeto `typeUser`. Essa abordagem, combinada com funções, resulta em uma estrutura de decisão limpa, de fácil compreensão e manutenção, sendo uma excelente escolha para substituir sequências extensas de `else if`.
+
+```typescript
+validateUser(usuario)
+validateUser('student')
+validateUser('viewer')
+
+```
+
+```bash
+Seja bem vindo admin
+Voce é um estudante
+Voce pode visualizar
+Done in 1.73s.
+
+```      
+
+
 ## 🟩 Vídeo 06 - Estruturas de Repetição
 
 <video width="60%" controls>
@@ -236,7 +351,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/827e326e-5e34-42b4-9f7c-521dd0012c58?autoplay=1
 
 ## 🟩 Vídeo 07 - Array
 
