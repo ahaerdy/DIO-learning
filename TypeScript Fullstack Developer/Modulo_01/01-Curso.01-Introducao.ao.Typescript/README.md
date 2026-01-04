@@ -94,9 +94,12 @@ O Javascript Original não tem o controle de tipos.
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/8f3cfcc8-85b8-444b-ae9f-cff4a5b3322c?autoplay=1
 
+O vídeo consiste em uma aula técnica que introduz os **fundamentos e a sintaxe básica do TypeScript**, destacando a importância da **tipagem estática** para a segurança do código. A instrutora detalha as três formas de declarar variáveis — **var, let e const** — recomendando evitar o uso de escopo global por questões de proteção. O conteúdo explica os **tipos primitivos**, como strings, números e booleanos, demonstrando como definir explicitamente a natureza de cada dado. Além disso, o texto aborda o uso de **union types** e faz uma crítica ao uso excessivo do tipo **any**, que descaracteriza as vantagens da linguagem. Por fim, a aula reforça que o TypeScript proporciona um **feedback rápido** durante o desenvolvimento, preparando o terreno para o estudo de objetos e interfaces.
+
 ### Anotações
 
-      
+
+
 
 
 
@@ -107,7 +110,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/0f530f9b-6172-4177-a649-401b7347cb67?autoplay=1
 
 ## 🟩 Vídeo 05 - Decisões e repetições
 
