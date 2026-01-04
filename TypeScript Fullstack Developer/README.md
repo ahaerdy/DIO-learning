@@ -29,11 +29,11 @@ Este repositório faz parte da minha estratégia de **aprendizado contínuo** e 
 
 Cada diretório deste repositório poderá conter:
 
-* 📌 **Anotações teóricas**
-* 🧪 **Exercícios práticos**
-* 🧩 **Desafios de código**
-* 🚀 **Projetos Fullstack**
-* 📄 **README específicos por módulo/curso**
+* **Anotações teóricas**
+* **Exercícios práticos**
+* **Desafios de código**
+* **Projetos Fullstack**
+* **README específicos por módulo/curso**
 
 ---
 
@@ -70,7 +70,7 @@ A formação é composta por cursos e desafios organizados em módulos sequencia
 
 ### Módulo 1: Fundamentos de TypeScript
 
-* [ ] Curso: [Introdução ao TypeScript](https://github.com/ahaerdy/DIO-learning/tree/main/TypeScript%20Fullstack%20Developer/Modulo_01/01-Curso.01-Introducao.ao.Typescript)
+* [X] Curso: [Introdução ao TypeScript](https://github.com/ahaerdy/DIO-learning/tree/main/TypeScript%20Fullstack%20Developer/Modulo_01/01-Curso.01-Introducao.ao.Typescript)
 * [ ] Curso: Tipos, Interfaces e Generics
 * [ ] Curso: Configuração de Ambiente e Compiler
 
