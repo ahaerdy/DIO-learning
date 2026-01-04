@@ -398,7 +398,84 @@ while(n < 6){
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/7e4faf5f-9072-4a11-a181-d7d0bd39941d?autoplay=1
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/7e4faf5f-9072-4a11-a181-d7d0bd39941d?autoplay=
+
+O vídeo apresenta uma introdução prática ao uso de **arrays no TypeScript**, destacando que eles funcionam como **listas organizadas** de dados. O autor explica que o desenvolvimento moderno exige o domínio da **tipagem de arrays**, demonstrando como restringir uma lista a números ou textos para garantir a **segurança do código**. São explorados conceitos fundamentais, como o acesso a elementos através de **índices que iniciam em zero** e o uso da propriedade **length** para medir o tamanho da coleção. Além disso, o texto ensina manipulações básicas através dos métodos **push** e **pop**, utilizados para inserir ou remover itens. Por fim, reforça-se a importância de consultar a documentação para aprender funções mais complexas de **iteração e busca**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h16m07s316.jpg" alt="" width="840">
+</p>
+
+Nesta etapa do curso de fundamentos com **TypeScript**, o foco recai sobre o conceito e a manipulação de **arrays**. De forma simplificada, um array funciona como uma lista de elementos que podem conter diversos tipos de dados, como strings, números, booleanos ou objetos complexos.
+
+O conteúdo abordado nesta seção inclui:
+
+* **Conceito**: Entender o que é um array e sua estrutura de lista.
+* **Adicionando e removendo elementos**: Utilização de funções para modificar a composição da lista.
+* **Buscando um elemento**: Localização de itens específicos dentro da estrutura.
+* **Foreach x Map**: Introdução aos métodos de iteração e manipulação de arrays.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h16m27s444.jpg" alt="" width="840">
+</p>
+
+No TypeScript, existem duas sintaxes principais para declarar e tipar um array. A primeira utiliza o **operador diamante** (`Array<tipo>`), enquanto a segunda utiliza o tipo seguido por colchetes (`tipo[]`). Ambas são comuns no mercado, sendo a segunda uma forma mais simplificada. Além disso, é fundamental compreender que o acesso aos elementos é feito via índices, onde o **primeiro elemento está sempre na posição zero**.
+
+```typescript
+// Exemplo 1: Utilizando o operador diamante
+const array: Array<number> = [1, 2, 3, 4]
+
+// Exemplo 2: Forma simplificada
+const stringArray: string[] = ['a', 'b', 'c']
+
+// Acessando o primeiro elemento (índice 0)
+console.log(array[0])
+
+```
+
+Ao executar o código com o comando `yarn dev`, o terminal confirma a saída do valor `1`, correspondente ao índice zero do primeiro array.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h17m04s449.jpg" alt="" width="840">
+</p>
+
+Para adicionar novos elementos a uma lista existente, utilizamos o método **`.push()`**. Esta função insere o valor desejado na última posição do array. O TypeScript permite a inclusão de elementos repetidos por padrão, a menos que regras de controle específicas sejam implementadas pelo desenvolvedor.
+
+```typescript
+const array: Array<number> = [1, 2, 3, 4]
+
+console.log('array original', array)
+
+// Adicionando o elemento 5 ao final da lista
+array.push(5)
+
+console.log('array com novo elemento', array)
+
+```
+
+No console, observa-se a transição do array original `[1, 2, 3, 4]` para a nova configuração `[1, 2, 3, 4, 5]` após a execução do método.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h17m16s588.jpg" alt="" width="840">
+</p>
+
+De forma oposta ao acréscimo, a remoção do último item de uma lista é realizada através do método **`.pop()`**. Diferente do push, o pop não requer parâmetros, pois sua única função é descartar o elemento final da estrutura de dados atual.
+
+```typescript
+const array: Array<number> = [1, 2, 3, 4]
+
+console.log('array original', array)
+
+// Removendo o último elemento da lista
+array.pop()
+
+console.log('array retirando o ultimo elemento', array)
+
+```
+
+A execução demonstra que, ao aplicar o método em um array contendo quatro elementos, o resultado final apresenta apenas os três primeiros valores: `[1, 2, 3]`.
 
 ## 🟩 Vídeo 08 - Manipulando Arrays
 
@@ -407,7 +484,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/e1e62f24-21eb-4718-8eb5-8558584f60fb?autoplay=1
 
 # Parte 3: Materiais de Apoio e Questionário
 
