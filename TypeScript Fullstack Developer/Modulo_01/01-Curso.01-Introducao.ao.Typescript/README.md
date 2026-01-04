@@ -353,6 +353,44 @@ Done in 1.73s.
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/827e326e-5e34-42b4-9f7c-521dd0012c58?autoplay=1
 
+O vídeo apresenta um guia prático sobre **estruturas de repetição** em **TypeScript**, enfatizando que a sintaxe é idêntica à do **JavaScript**. O autor detalha o funcionamento do laço **for**, explicando como os parâmetros de inicialização, condição e incremento trabalham juntos para evitar loops infinitos. Em seguida, o laço **while** é introduzido como uma alternativa menos comum e ligeiramente menos performática, mas ainda importante para o conhecimento do desenvolvedor. A lição destaca que essas ferramentas são fundamentais para a **manipulação de arrays** e validações de objetos em aplicações reais. Por fim, reforça-se que o domínio dessas estruturas é um passo natural para quem já possui uma base sólida na linguagem base, preparando o aluno para tópicos mais avançados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-17h19m48s163.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é apresentada a estrutura de repetição **for**, uma das mais tradicionais no TypeScript e JavaScript. O `for` é caracterizado por concentrar toda a estrutura de controle em uma única linha, recebendo três parâmetros fundamentais: o **estado inicial** da variável de controle, a **condição de parada** (enquanto a condição for verdadeira, o laço executa) e o **incremento** que altera o estado da variável ao fim de cada iteração. No exemplo demonstrado, o laço inicia com `i = 0`, executa enquanto `i < 5` e incrementa de um em um (`i++`), resultando na impressão dos valores de 0 a 4 no terminal.
+
+```typescript
+for(let i = 0; i < 5; i++){
+  console.log(i)
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-17h19m58s296.jpg" alt="" width="840">
+</p>
+
+Além do incremento unitário, o laço `for` permite customizar o passo da repetição, como demonstrado com o uso de `i += 2`, que faz a variável saltar de dois em dois. Em seguida, é apresentada a estrutura **while**. Diferente do `for`, o `while` recebe apenas a condição de execução em seu parâmetro. O estado inicial deve ser declarado antes do laço e o incremento (ou controle de saída) deve ser feito manualmente dentro do bloco de código. Embora o `while` realize funções semelhantes, o `for` costuma ser preferido em projetos TypeScript por ser mais conciso e apresentar melhor performance em diversos cenários.
+
+```typescript
+// Exemplo de for com incremento de 2
+for(let i = 0; i < 5; i += 2){
+  console.log(i)
+}
+
+// Estrutura com while
+let n = 2
+while(n < 6){
+  console.log(n)
+  n++
+}
+
+```
+
 ## 🟩 Vídeo 07 - Array
 
 <video width="60%" controls>
@@ -360,7 +398,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/7e4faf5f-9072-4a11-a181-d7d0bd39941d?autoplay=1
 
 ## 🟩 Vídeo 08 - Manipulando Arrays
 
