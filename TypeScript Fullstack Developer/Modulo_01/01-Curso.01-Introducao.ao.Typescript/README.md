@@ -581,7 +581,7 @@ array.map(num => console.log(num))
 
 ```
 
-# Certificado: 
+# Certificado: Introdução ao TypeScript
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/QW9PNKAN.pdf
+- Certificado em pdf: [Certificado-Introducao.ao.TypeScript.pdf](000-Midia_e_Anexos/Certificado-Introducao.ao.TypeScript.pdf)
