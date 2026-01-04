@@ -25,19 +25,7 @@ Este repositório faz parte da minha estratégia de **aprendizado contínuo** e 
 
 ---
 
-## 📁 Conteúdo do Repositório
-
-Cada diretório deste repositório poderá conter:
-
-* **Anotações teóricas**
-* **Exercícios práticos**
-* **Desafios de código**
-* **Projetos Fullstack**
-* **README específicos por módulo/curso**
-
----
-
-## 🛠️ Tecnologias e Conceitos Abordados
+## Tecnologias e Conceitos Abordados
 
 Ao longo da formação, os principais tópicos estudados incluem:
 
@@ -46,12 +34,10 @@ Ao longo da formação, os principais tópicos estudados incluem:
 * Programação Orientada a Objetos
 * Programação funcional aplicada
 * Desenvolvimento Frontend
-
   * HTML5
   * CSS3
   * JavaScript / TypeScript
 * Desenvolvimento Backend
-
   * Node.js
   * APIs REST
   * Estruturação de projetos
