@@ -60,26 +60,14 @@ A formação é composta por cursos e desafios organizados em módulos sequencia
 * [ ] Curso: Tipos, Interfaces e Generics
 * [ ] Curso: Configuração de Ambiente e Compiler
 
-### Módulo 2: JavaScript Avançado e POO
+### Módulo 2: Introdução ao React com TypeScript
 
-* [ ] Curso: JavaScript Moderno
-* [ ] Curso: Programação Orientada a Objetos com TypeScript
+### Módulo 3: Conceitos Avançados de React com TypeScript
 
-### Módulo 3: Desenvolvimento Backend com Node.js
+### Módulo 4: Introdução ao Node com TypeScript
 
-* [ ] Curso: Node.js com TypeScript
-* [ ] Curso: APIs REST
-* [ ] Desafio de Projeto Backend
+### Módulo 5: Conceitos Avançados de Node com TypeScript
 
-### Módulo 4: Desenvolvimento Frontend
-
-* [ ] Curso: Fundamentos de Frontend
-* [ ] Curso: Integração com APIs
-* [ ] Desafio de Projeto Frontend
-
-### Módulo 5: Projeto Fullstack
-
-* [ ] Desafio Final: Aplicação Fullstack com TypeScript
 
 ---
 
