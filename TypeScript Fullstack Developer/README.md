@@ -56,9 +56,11 @@ A formação é composta por cursos e desafios organizados em módulos sequencia
 
 ### Módulo 1: Fundamentos de TypeScript
 
-* [X] Curso: [Introdução ao TypeScript](https://github.com/ahaerdy/DIO-learning/tree/main/TypeScript%20Fullstack%20Developer/Modulo_01/01-Curso.01-Introducao.ao.Typescript)
-* [ ] Curso: Tipos, Interfaces e Generics
-* [ ] Curso: Configuração de Ambiente e Compiler
+- [x] Curso: [Introdução ao TypeScript](https://github.com/ahaerdy/DIO-learning/tree/main/TypeScript%20Fullstack%20Developer/Modulo_01/01-Curso.01-Introducao.ao.Typescript)
+- [ ] Curso: Programação Orientada a Objetos com TypeScript
+- [ ] Curso: Construindo Uma App Simples de Banco Com Typescript
+- [ ] Curso: Desafios Básicos - Formação Typescript
+- [ ] Curso: Materiais Complementares: Fundamentos do TypeScript
 
 ### Módulo 2: Introdução ao React com TypeScript
 
