@@ -173,22 +173,17 @@ Nesta etapa, exploramos como tipar objetos no TypeScript utilizando **interfaces
 No exemplo apresentado, criamos a interface `Pessoa` com as seguintes características:
 
 * **nome**: Definido como `string`.
-
 * **idade**: Definido como `number`.
-
 * **profissao?**: O uso do operador de interrogação (`?`) indica que esta propriedade é **opcional**. Isso significa que o TypeScript não exigirá esse valor ao instanciar um objeto desse tipo, permitindo que ele seja `string` ou `undefined`.
 
 Com a interface definida, podemos criar objetos que seguem essa estrutura:
 
 1. **pessoa**: Um objeto que contém apenas as propriedades obrigatórias (`nome` e `idade`).
-
-
 2. **outraPessoa**: Um objeto que utiliza todas as propriedades, incluindo a opcional `profissao`.
 
 Além da tipagem de objetos individuais, o TypeScript permite definir tipos para **arrays**. Existem duas sintaxes comuns para isso:
 
 * **Sintaxe de colchetes**: Como em `number[]`, indicando um array que contém apenas números.
-
 * **Operador Diamante (Generics)**: Como em `Array<Pessoa>` ou `Array<string>`, que utiliza uma sintaxe mais explícita para definir o tipo de dado contido na lista.
 
 
