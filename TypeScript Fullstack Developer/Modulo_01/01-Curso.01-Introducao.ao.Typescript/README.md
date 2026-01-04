@@ -490,12 +490,96 @@ O vídeo apresenta uma aula técnica sobre a manipulação de **arrays** em **Ty
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h46m59s563.jpg" alt="" width="840">
+</p>
 
+Para buscar um elemento específico dentro de um array, utiliza-se a função nativa `find`. Esta função recebe como parâmetro uma função de callback que define a condição de busca. No exemplo, busca-se o número exatamente igual a 4. Como o TypeScript é um superset do JavaScript, a sintaxe para manipular essas estruturas de dados permanece idêntica.
 
-# Parte 3: Materiais de Apoio e Questionário
+```javascript
+const array: Array<number> = [1, 2, 3, 4]
+const buscaNum = array.find(num => num === 4)
 
+console.log(buscaNum)
 
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h47m20s242.jpg" alt="" width="840">
+</p>
+
+Ao alterar a condição de busca para encontrar elementos maiores que 2 (`num > 2`), o comportamento do método `find` revela uma característica importante: ele retorna apenas o primeiro elemento que satisfaz a condição, seguindo a ordem de declaração no array. No caso do array `[1, 2, 3, 4]`, o valor retornado é o 3, ignorando o 4 que também atenderia ao critério.
+
+```javascript
+const buscaNum = array.find(num => num > 2)
+console.log(buscaNum)
+// Retorno esperado: 3
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h47m25s237.jpg" alt="" width="840">
+</p>
+
+A ordem dos elementos no array é determinante para o resultado do `find`. Ao inverter a posição dos números para `[1, 2, 4, 3]`, a mesma condição de busca (`num > 2`) agora retorna o valor 4. Isso ocorre porque o método compara elemento a elemento e interrompe a execução assim que encontra a primeira correspondência lógica na sequência disposta.
+
+```javascript
+const array: Array<number> = [1, 2, 4, 3]
+const buscaNum = array.find(num => num > 2)
+
+console.log(buscaNum)
+// Retorno esperado: 4
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h47m47s182.jpg" alt="" width="840">
+</p>
+
+Caso a condição estipulada na função de callback não seja atendida por nenhum elemento do array (como buscar um número maior que 5 em um array que vai até 4), o método `find` retornará `undefined`. Esse valor indica que a busca foi concluída, mas nenhum dado correspondente foi localizado para ser armazenado na variável.
+
+```javascript
+const buscaNum = array.find(num => num > 5)
+console.log(buscaNum)
+// Retorno esperado: undefined
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h47m59s204.jpg" alt="" width="840">
+</p>
+
+Para percorrer todos os elementos de um array individualmente, utilizamos o método `forEach`. Ao contrário de um `console.log` direto no array, que imprime a estrutura completa com colchetes, o `forEach` executa uma ação para cada iteração. No exemplo abaixo, cada número é impresso em uma nova linha, confirmando que o código está "visitando" cada posição da lista separadamente.
+
+```javascript
+console.log(array) // Imprime o array completo: [1, 2, 4, 3]
+
+array.forEach(num => console.log(num))
+/* Imprime individualmente:
+1
+2
+4
+3
+*/
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-19h50m46s236.jpg" alt="" width="840">
+</p>
+
+O uso de iteradores como `forEach` e `map` permite a implementação de lógicas complexas e validações durante o percurso do array. É possível, por exemplo, aplicar filtros condicionais (usando `if`) para manipular apenas dados que atendam a critérios específicos, como números que sejam simultaneamente maiores que 2 e pares. Embora ambos os métodos realizem tarefas similares, o `map` é geralmente preferido em cenários que exigem performance superior ou manipulação de funções assíncronas.
+
+```javascript
+array.forEach(num => {
+  if (num > 2 && num % 2 === 0) {
+    console.log(num * 2)
+  }
+})
+
+array.map(num => console.log(num))
+
+```
 
 # Certificado: 
 
