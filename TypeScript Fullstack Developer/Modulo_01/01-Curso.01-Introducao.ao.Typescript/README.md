@@ -98,9 +98,57 @@ O vídeo consiste em uma aula técnica que introduz os **fundamentos e a sintaxe
 
 ### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-15h03m16s374.jpg" alt="" width="840">
+</p>
 
+Esta etapa marca o início do estudo sobre os **fundamentos e a sintaxe básica** do TypeScript. O foco inicial é compreender como a introdução de tipos modifica a escrita do JavaScript tradicional, proporcionando uma transição suave para quem já conhece a linguagem base e um passo a passo estruturado para iniciantes. Nesta fase, o objetivo é entender o impacto da tipagem no ciclo de desenvolvimento.
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-15h03m22s963.jpg" alt="" width="840">
+</p>
 
+Nesta parte da aula, os tópicos abordados focam na estrutura essencial da linguagem, incluindo:
+
+* **Variáveis e tipos**: Como declarar e manipular dados.
+* **Tipos primitivos**: O uso de `string`, `number` e `boolean`.
+* **Objetos**: A estrutura de dados complexos.
+* **Interface x Type**: As principais diferenças e aplicações de cada um para definir contratos de dados.
+
+O aprendizado é direcionado para a prática direta no VS Code, priorizando a segurança e o controle do código através da tipagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-15h04m21s539.jpg" alt="" width="840">
+</p>
+
+A declaração de variáveis no TypeScript utiliza `let` e `const`, abandonando o uso do `var` devido à sua insegurança por escopo global. Ao definir variáveis, o TypeScript permite a **tipagem explícita** através da sintaxe de dois pontos (`:`), o que garante que a variável aceite apenas o tipo de dado definido, como demonstrado abaixo:
+
+```typescript
+let b: string = 'Nath'
+let n: number = 2
+let x: boolean = true
+
+let m: string | number = 2
+m = 'Nath'
+
+```
+
+O exemplo acima também ilustra o uso do **Union Type** (`|`), que permite a uma variável (`m`) aceitar mais de um tipo específico (neste caso, `string` ou `number`). Tentar atribuir um valor `boolean` a essa variável resultaria em um erro imediato do editor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-04-15h04m31s304.jpg" alt="" width="840">
+</p>
+
+Embora o TypeScript ofereça flexibilidade, o uso do tipo `any` deve ser evitado sempre que possível. Ao declarar uma variável como `any`, ela passa a aceitar qualquer tipo de dado, o que anula os benefícios de segurança e feedback rápido da linguagem.
+
+```typescript
+let m: any = 2
+m = 'Nath'
+m = false
+
+```
+
+O uso indiscriminado do `any` compromete a integridade da aplicação. Ele deve ser reservado para contextos específicos onde a tipagem dinâmica é estritamente necessária, mantendo-se a preferência por tipos bem definidos para garantir a robustez do código.
 
 
 ## 🟩 Vídeo 04 - Objetos e interfaces
