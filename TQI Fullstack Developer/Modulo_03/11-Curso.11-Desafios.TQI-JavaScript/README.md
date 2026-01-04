@@ -12,7 +12,6 @@
 
 Para cada valor lido, imprima o texto correspondente.
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/image.png" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+<p align="center">
+    <img src="000-Midia_e_Anexos/image.png" alt="" width="480">
+</p>
