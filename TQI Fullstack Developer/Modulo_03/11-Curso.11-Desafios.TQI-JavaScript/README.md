@@ -46,7 +46,7 @@ for(let i = 0; i < qtdEntradas; i++){
 
 - Um número natural é um inteiro não-negativo (0, 1, 2, 3, 4, 5,...). A sua tarefa neste problema é calcular a soma dos números naturais que estão presentes em um determinado intervalo [A, B] inclusive.
 
-Por exemplo, a soma dos números naturais no intervalo [2, 5] é 14 = (2+3+4+5).
+- Por exemplo, a soma dos números naturais no intervalo [2, 5] é 14 = (2+3+4+5).
 
 ## Entrada
 
@@ -60,6 +60,12 @@ Exemplo 1
 
 <p align="center">
     <img src="000-Midia_e_Anexos/image_02.png" alt="" width="480">
+</p>
+
+Exemplo 2
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/image_03.png" alt="" width="480">
 </p>
 
 
