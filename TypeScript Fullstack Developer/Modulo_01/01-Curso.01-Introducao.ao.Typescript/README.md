@@ -16,6 +16,7 @@ Link do vídeo:https://web.dio.me/track/formacao-typescript-fullstack-developer/
 A instrutora **Natalie Souza**, desenvolvedora no Itaú, se apresenta e introduz um módulo de um curso de **introdução ao Typescript**, que faz parte de uma trilha Full Stack. Natalie compartilha sua transição de uma **carreira de dez anos no jornalismo** para a tecnologia, motivada pelo desejo de **transformar e impactar a sociedade**. Ela também aborda sua identidade como **mulher trans/travesti** e a importância de sua posição para **comunidades sub-representadas** na área de tecnologia. Finalmente, ela detalha que o **objetivo do curso** é ensinar a sintaxe básica do Typescript e **conceitos de orientação a objetos**, mencionando que o pré-requisito é ter uma base em lógica de programação.
 
 ## 🟩 Vídeo 02 - Conhecendo o Typescript
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/formacao_typescript_fullstack-modulo_01-Curso_01-Video_02.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
