@@ -486,6 +486,13 @@ A execução demonstra que, ao aplicar o método em um array contendo quatro ele
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/o-que-e-o-typescript/learning/e1e62f24-21eb-4718-8eb5-8558584f60fb?autoplay=1
 
+O vídeo apresenta uma aula técnica sobre a manipulação de **arrays** em **TypeScript**, destacando que sua sintaxe é idêntica à do **JavaScript**. A explicação foca inicialmente na função **find**, esclarecendo que ela retorna apenas o primeiro elemento que satisfaz uma condição específica, resultando em *undefined* caso nenhum item seja encontrado. Em seguida, os métodos **forEach** e **map** são introduzidos como ferramentas essenciais para iterar sobre listas e executar validações ou transformações em cada item. A fonte diferencia essas duas funções ao mencionar que o **map** oferece melhor performance e suporte superior para operações assíncronas. Por fim, o conteúdo encerra o módulo introdutório da linguagem, preparando o estudante para tópicos avançados de **programação orientada a objetos**.
+
+### Anotações
+
+      
+
+
 # Parte 3: Materiais de Apoio e Questionário
 
 
