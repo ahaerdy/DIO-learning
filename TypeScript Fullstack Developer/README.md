@@ -6,9 +6,9 @@
   <img src="https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript" />
   <img src="https://img.shields.io/badge/Node.js-Backend-green?logo=node.js" />
   <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-orange" />
-  <img src="https://img.shields.io/github/license/SEU_USUARIO/SEU_REPOSITORIO" />
-  <img src="https://img.shields.io/github/repo-size/SEU_USUARIO/SEU_REPOSITORIO" />
-  <img src="https://img.shields.io/github/last-commit/SEU_USUARIO/SEU_REPOSITORIO" />
+  <img src="https://img.shields.io/github/license/ahaerdy/DIO-learning" />
+  <img src="https://img.shields.io/github/repo-size/ahaerdy/DIO-learning" />
+  <img src="https://img.shields.io/github/last-commit/ahaerdy/DIO-learning" />
 </p>
 
 Este repositório reúne os **exercícios, projetos práticos e anotações** desenvolvidos por mim durante a **Formação TypeScript Fullstack Developer**, oferecida pela plataforma **DIO (Digital Innovation One)**.
