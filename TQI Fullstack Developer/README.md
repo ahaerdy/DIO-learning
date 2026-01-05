@@ -68,7 +68,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Orientação a Objetos com JavaScript](Modulo_03/09-Curso.09-Orientacao.a.Objetos.com.JavaScript)
 - [x] Curso: [Manipulando a D.O.M. com JavaScript](Modulo_03/10-Curso.10-Manipulando.a.DOM.com.JavaScript)
 - [x] Curso: [Desafios TQI - JavaScript](Modulo_03/11-Curso.11-Desafios.TQI-JavaScript)
-- [ ] Projeto: [Desenvolvendo um Jogo da Memória]
+- [ ] Projeto: [Desenvolvendo um Jogo da Memória](Modulo_03/12-Projeto-Desenvolvendo.um.Jogo.da.Memoria)
 
 ### Módulo 4: ReactJS
 
