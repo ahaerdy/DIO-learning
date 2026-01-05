@@ -96,6 +96,7 @@ Para finalizar a aparência das cartas, as classes `.card-front` e `.card-back` 
   border-radius: 5px;
   background: white;
 }
+```
 
 
 ## 🟩 Vídeo 02
