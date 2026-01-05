@@ -496,7 +496,7 @@ function flipCard() {
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/6fd7bf3e-ba1f-4f49-83d3-fd9c844f3aa2?back=/track/tqi-fullstack-developer
 
-A instrutora detalha como utilizar uma **trava no tabuleiro** para impedir que o usuário clique em várias cartas simultaneamente enquanto as animações ocorrem. Além disso, é explicada a correção de um erro comum onde o sistema valida o **clique duplo** na mesma carta como um par idêntico. Para manter a organização do código, o autor introduz uma função de **reset do sistema**, utilizando a técnica de **desestruturação de arrays** para limpar variáveis de estado. Por fim, o tutorial demonstra como garantir que as cartas selecionadas retornem ao **estado nulo** após cada rodada, permitindo que a partida flua sem interrupções técnicas.
+A instrutora detalha como utilizar uma **trava no tabuleiro** para impedir que o usuário clique em várias cartas simultaneamente enquanto as animações ocorrem. Além disso, é explicada a correção de um erro comum onde o sistema valida o **clique duplo** na mesma carta como um par idêntico. Para manter a organização do código, a autora introduz uma função de **reset do sistema**, utilizando a técnica de **desestruturação de arrays** para limpar variáveis de estado. Por fim, o tutorial demonstra como garantir que as cartas selecionadas retornem ao **estado nulo** após cada rodada, permitindo que a partida flua sem interrupções técnicas.
 
 ### Anotações
 
