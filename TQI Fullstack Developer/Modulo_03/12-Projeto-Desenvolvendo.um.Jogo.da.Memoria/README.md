@@ -1,7 +1,7 @@
 ## Instrutor
 
-- Stephany Nusch (Software Engineer at Microsoft)
-- Contato Linkedin: / [stephanynusch](https://www.linkedin.com/in/stephanynusch/)
+- Gabriela Pinheiro (Software Engineer @ Caju | React.js | Next.js | Typescript | Flutter | ex-Uber)
+- Contato Linkedin: / [gabrielapinheiro129](https://www.linkedin.com/in/gabrielapinheiro129/)
 
 ## 🟩 Vídeo 01
 
