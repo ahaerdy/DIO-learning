@@ -434,9 +434,58 @@ A autora detalha a criação da função **disableCards**, que remove a capacida
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h26m54s398.jpg" alt="" width="840">
+</p>
 
+Para gerenciar o estado das cartas que formam um par, é necessária a criação da função `disableCards`. Esta função é responsável por retirar o receptor de eventos (*event listener*) de clique dos elementos que foram identificados como iguais. Ao remover o callback `flipCard`, garantimos que o usuário não consiga mais interagir ou desvirar essas cartas especificamente, consolidando o acerto no jogo.
 
+```javascript
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h27m05s171.jpg" alt="" width="840">
+</p>
+
+Quando as cartas selecionadas não são iguais, elas precisam retornar ao estado original (viradas para baixo). Para isso, utiliza-se a função `unflipCards`, que implementa o método `setTimeout`. Este método nativo do JavaScript permite que a remoção da classe CSS `'flip'` ocorra após um intervalo determinado, dando tempo para que o jogador visualize as cartas antes que elas virem de volta.
+
+```javascript
+function unflipCards() {
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+  }, 1500);
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h27m10s322.jpg" alt="" width="840">
+</p>
+
+Neste estágio, a lógica principal de comparação está operacional no navegador. O jogo verifica se as cartas são iguais: caso a condicional resulte em verdadeiro, as cartas permanecem viradas (conforme o comportamento da função de desabilitação); caso contrário, o atributo de estilização que as mantém viradas é removido, permitindo que o fluxo do jogo continue até que todos os pares sejam encontrados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h27m35s955.jpg" alt="" width="840">
+</p>
+
+Para evitar bugs e comportamentos inesperados, como tentar virar múltiplas cartas simultaneamente enquanto uma animação ainda ocorre, implementa-se o **bloqueio do tabuleiro**. Através de uma variável de controle chamada `lockBoard`, o código verifica se o tabuleiro está "trancado". Se `lockBoard` for verdadeiro, a função `flipCard` interrompe sua execução imediatamente com um `return`, impedindo que novas interações processem lógica de comparação indevida.
+
+```javascript
+let lockBoard = false;
+
+function flipCard() {
+  if (lockBoard) return;
+  this.classList.add('flip');
+  // ... resto da lógica
+}
+
+```
 
 ## 🟩 Vídeo 06
 
