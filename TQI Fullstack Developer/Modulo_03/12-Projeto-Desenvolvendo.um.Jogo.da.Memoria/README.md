@@ -107,6 +107,51 @@ Para finalizar a aparência das cartas, as classes `.card-front` e `.card-back` 
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/3964771d-5ac9-4489-9a32-403150b305d8
 
+O tutorial ensina como criar uma **interação visual dinâmica** em cartas virtuais utilizando propriedades de **CSS** e lógica de **JavaScript**. Inicialmente, o instrutor aplica um efeito de **escala reduzida** e transições suaves para simular um clique físico no elemento. Em seguida, o foco muda para a programação funcional, onde é criada uma lista de componentes para receberem um **ouvinte de eventos**. O código utiliza o método **toggle** para alternar uma classe específica, permitindo que cada carta mude de estado individualmente ao ser acionada pelo usuário. Por fim, o uso do contexto **this** garante que a animação de virar a carta seja aplicada exclusivamente ao item selecionado no momento da interação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-08h58m16s679.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco é a estilização do estado interativo das cartas do jogo. Através do seletor `.card:active`, define-se o comportamento visual de quando o usuário clica e segura a carta. É aplicado um `transform: scale(0.97)`, que reduz levemente o tamanho do elemento para simular um efeito de profundidade e clique. Para que essa transição ocorra de forma fluida e não instantânea, utiliza-se a propriedade `transition: transform .3s`, garantindo uma animação de 0.3 segundos durante a mudança de escala.
+
+```css
+.card:active {
+  transform: scale(0.97);
+  transition: transform .3s;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-08h58m29s546.jpg" alt="" width="840">
+</p>
+
+Iniciando a lógica com JavaScript, o primeiro passo é a seleção de todos os elementos que representam as cartas no DOM. Utiliza-se `document.querySelectorAll('.card')` para gerar uma lista de elementos. Em seguida, é definida a função `flipCard()`, responsável por alternar a visualização da carta. Dentro dessa função, o termo `this` refere-se ao contexto do elemento que recebeu o clique, e o método `classList.toggle('flip')` é empregado para adicionar ou remover a classe de estilização que faz a carta virar.
+
+```javascript
+const cards = document.querySelectorAll('.card');
+
+function flipCard() {
+  this.classList.toggle('flip');
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-08h59m50s427.jpg" alt="" width="840">
+</p>
+
+Para que a função de virar as cartas funcione em todo o tabuleiro, é necessário iterar sobre a lista de elementos selecionados. Utiliza-se o método `forEach` para percorrer cada item da constante `cards`. Para cada `card` individual, é adicionado um ouvinte de evento (`addEventListener`) que monitora o clique do usuário. Quando uma carta é clicada, a função `flipCard` é disparada, permitindo que o estado da carta seja alterado individualmente conforme a interação ocorre.
+
+```javascript
+cards.forEach((card) => {
+  card.addEventListener('click', flipCard);
+});
+
+```      
 
 ## 🟩 Vídeo 03
 
