@@ -164,7 +164,155 @@ O vídeo explica como criar uma **animação 3D de rotação de cartas** para um
 
 ### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h07m49s991.jpg" alt="" width="840">
+</p>
 
+Para iniciar o tratamento das animações das cartas e criar o efeito de virada, é necessário configurar o ambiente tridimensional do jogo. O primeiro passo é adicionar uma perspectiva ao container principal do tabuleiro (`memory-game`). A propriedade `perspective` define a distância entre o plano  e o usuário, determinando a intensidade do efeito 3D; quanto maior o valor, mais suave é a distorção visual. 
+
+```css
+.memory-game {
+  height: 640px;
+  width: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h08m53s428.jpg" alt="" width="840">
+</p>
+
+Para que as cartas não sejam renderizadas de forma achatada no plano 2D, utiliza-se a propriedade `transform-style: preserve-3d`. Isso garante que os elementos filhos (as faces da carta) mantenham sua posição no espaço tridimensional. Além disso, adicionamos uma `transition` para suavizar a animação de transformação, definindo um tempo de 0.9 segundos para que o movimento não seja excessivamente rápido. 
+
+```css
+.card {
+  height: calc(33.333% - 10px);
+  width: calc(25% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(1, 1, 1, 3);
+  cursor: pointer;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .9s;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h09m18s340.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, preparamos a estilização da classe que será alternada via JavaScript. A face frontal da carta (`.card-front`) deve ser rotacionada em 180 graus no eixo Y inicialmente. Isso é necessário para que, ao executarmos a animação de flip no container da carta, a imagem correta fique virada para o usuário. 
+
+```css
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h10m57s741.jpg" alt="" width="840">
+</p>
+
+A animação principal é disparada pela classe `.flip`. Quando esta classe é adicionada ao elemento `.card`, ele sofre uma rotação de 180 graus no eixo Y (`rotateY(180deg)`). Como configuramos a transição anteriormente, essa mudança de estado resultará no efeito visual da carta girando. 
+
+```css
+/* flip card animation */
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h11m09s489.jpg" alt="" width="840">
+</p>
+
+Ao testar a animação, nota-se um problema visual: as cartas aparecem espelhadas ou transparentes durante a virada. Isso ocorre porque, por padrão, o navegador exibe o verso dos elementos de forma espelhada. A interface do jogo mostra as cartas com o ícone de interrogação (back face) e, ao clicar, a transição começa a revelar a face do personagem (Mario), mas o comportamento ainda não está polido. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h11m57s101.jpg" alt="" width="840">
+</p>
+
+Para corrigir o artefato visual da carta espelhada, aplicamos a propriedade `backface-visibility: hidden`. Esta regra retira a visibilidade do verso da div quando ela está voltada para trás em relação ao usuário, garantindo que apenas a face que deve estar visível apareça, criando um efeito de virada muito mais limpo e realista. 
+
+```css
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #fff;
+  backface-visibility: hidden;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h12m04s981.jpg" alt="" width="840">
+</p>
+
+Com a propriedade `backface-visibility` aplicada, o teste no navegador demonstra que a carta do Luigi agora vira corretamente. O verso (caixa com interrogação) desaparece no momento em que a rotação ultrapassa os 90 graus, revelando a face frontal sem transparências indesejadas ou o efeito de espelhamento. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h12m07s316.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra o estado intermediário da animação. Graças ao `preserve-3d` e à `perspective` definidos no container pai, a carta mantém sua integridade estrutural durante o movimento de rotação no eixo Y, criando a ilusão de profundidade necessária para um jogo de memória digital. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h12m09s773.jpg" alt="" width="840">
+</p>
+
+O resultado final da estilização CSS permite que cada carta (como a do Bowser ilustrada) funcione de forma independente. O clique aciona a classe `.flip`, e a combinação de `rotateY(180deg)` na face frontal com o `hidden` na visibilidade do verso completa a lógica visual da mecânica do jogo. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-10h12m34s738.jpg" alt="" width="840">
+</p>
+
+Revisão final do código CSS consolidado. A estrutura utiliza `position: absolute` nas faces para sobrepô-las dentro do container `.card` que possui `position: relative`. A lógica de rotação inversa na face frontal (`.card-front`) é o que permite que, ao girar o card todo em 180 graus, ela finalmente fique de frente para o usuário. 
+
+```css
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #fff;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  transform: rotateY(180deg);
+}
+
+/* flip card animation */
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+```
 
 ## 🟩 Vídeo 04
 
