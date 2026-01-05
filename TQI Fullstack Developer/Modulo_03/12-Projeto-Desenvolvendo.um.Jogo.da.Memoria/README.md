@@ -588,6 +588,50 @@ function resetBoard() {
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/a1da3822-47bc-45ba-80b6-5bed33492380
 
+A instrutora detalha a criação de uma função de **embaralhamento** das cartas, explicando como manipular a propriedade **order** do Flexbox para alterar a disposição visual dos elementos. Para garantir a aleatoriedade, utiliza-se o objeto **Math** para gerar números inteiros que definem novas posições para cada carta. O código é estruturado dentro de uma **IIFE** (Expressão de Função Invocada Imediatamente), permitindo que o jogo seja reiniciado com um novo layout automaticamente. O tutorial encerra demonstrando o funcionamento prático da lógica aplicada no navegador.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-14h44m43s726.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco é a criação da lógica para embaralhar as cartas do jogo, garantindo que a disposição dos elementos mude a cada nova partida. Para isso, utiliza-se a propriedade CSS **order** dentro de um flex container. Como as cartas estão organizadas em grupos (divs com imagens dentro), a alteração do valor numérico desta propriedade redefine a sequência visual em que os elementos aparecem na tela, independentemente da ordem em que foram escritos no HTML.
+
+Para implementar essa funcionalidade, define-se a função `shuffle`. Através de uma iteração no array de cartas (`cards.forEach`), é gerada uma posição aleatória para cada item.
+
+```javascript
+function shuffle() {
+  cards.forEach((card) => {
+    let randomPosition = Math.floor(Math.random() * 12);
+    card.style.order = randomPosition;
+  });
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-14h45m18s672.jpg" alt="" width="840">
+</p>
+
+Para que o embaralhamento ocorra automaticamente no momento em que a página é carregada, a função `shuffle` é transformada em uma **Immediately Invoked Function Expression (IIFE)**. Isso significa que a função será executada assim que for definida. Para transformá-la, basta encapsular a declaração da função entre parênteses e adicionar um par de parênteses extra ao final para invocá-la.
+
+```javascript
+(function shuffle() {
+  cards.forEach((card) => {
+    let randomPosition = Math.floor(Math.random() * 12);
+    card.style.order = randomPosition;
+  });
+})();
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-14h45m23s891.jpg" alt="" width="840">
+</p>
+
+Com a lógica de embaralhamento aplicada, o resultado final é um tabuleiro onde os pares de personagens (como Mario, Luigi, Peach, Yoshi e Toad) aparecem em posições aleatórias a cada execução. O uso do `Math.floor(Math.random() * 12)` garante que cada carta receba um valor de `order` entre 0 e 11, distribuindo-as de forma variada pelo grid do jogo da memória e concluindo a estruturação funcional do projeto.      
+
 
 ## ▶️ Objetivo do Projeto
 
