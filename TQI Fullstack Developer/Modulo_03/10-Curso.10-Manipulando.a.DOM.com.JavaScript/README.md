@@ -2,6 +2,7 @@
 
 - Stephany Nusch (Software Engineer at Microsoft)
 - Contato Linkedin: / [stephanynusch](https://www.linkedin.com/in/stephanynusch/)
+
 # Parte 1 - Entendendo o D.O.M.
 
 ## 🟩 Vídeo 01 - Apresentação do curso
