@@ -421,7 +421,6 @@ cards.forEach((card) => {
 
 ```      
 
-
 ## 🟩 Vídeo 05
 
 <video width="60%" controls>
@@ -429,7 +428,14 @@ cards.forEach((card) => {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/99a27f13-1ee1-4f01-aecb-29f8b47fc28f?back=/track/tqi-fullstack-developer 
+
+A autora detalha a criação da função **disableCards**, que remove a capacidade de clique das cartas quando um par é formado, e a função **unflipCards**, que utiliza o método **setTimeout** para desvirar cartas que não coincidem. Além disso, é introduzida a variável **lockBoard**, um mecanismo essencial para **bloquear o tabuleiro** e evitar que o usuário clique em múltiplas cartas simultaneamente, o que causaria erros na comparação. A explicação demonstra como gerenciar a **interatividade do DOM** para garantir que o fluxo do jogo seja fluido e livre de falhas técnicas. O objetivo final é criar uma experiência dinâmica onde a **lógica condicional** dite as regras de funcionamento de cada jogada.
+
+### Anotações
+
+      
+
 
 
 ## 🟩 Vídeo 06
