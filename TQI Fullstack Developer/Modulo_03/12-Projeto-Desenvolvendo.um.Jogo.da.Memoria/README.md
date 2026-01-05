@@ -6,18 +6,22 @@
 ## 🟩 Vídeo 01
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-12-Projeto-Video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/f2c743aa-edc8-4185-809c-b64d5988a4a0?back=/track/tqi-fullstack-developer 
+
+### Anotações
+
+      
+
 
 
 ## 🟩 Vídeo 02
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/3964771d-5ac9-4489-9a32-403150b305d8
 
 
 ## 🟩 Vídeo 03
