@@ -500,8 +500,83 @@ A instrutora detalha como utilizar uma **trava no tabuleiro** para impedir que o
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h42m32s982.jpg" alt="" width="840">
+</p>
 
+Nesta etapa, a lógica de desvirar as cartas (**unflipCards**) é refinada para garantir a integridade do jogo. Quando as cartas escolhidas não formam um par, a variável `lockBoard` é definida como `true`. Isso impede que o jogador clique em outras cartas enquanto o `setTimeout` está em execução. Após o intervalo de 1500ms, as cartas são desviradas removendo a classe `flip` e o tabuleiro é liberado novamente ao definir `lockBoard` como `false`.
+
+```javascript
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    lockBoard = false;
+  }, 1500);
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h43m15s291.jpg" alt="" width="840">
+</p>
+
+Para evitar erros na lógica de comparação, foi implementada uma verificação de "duplo clique" na mesma carta. Se o elemento clicado (`this`) for exatamente igual ao `firstCard` já armazenado, a função retorna imediatamente. Isso impede que o sistema compare uma carta consigo mesma, o que resultaria em uma combinação positiva indevida baseada no `dataset`.
+
+```javascript
+function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
+
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+    return;
+  }
+
+  secondCard = this;
+  hasFlippedCard = false;
+  checkForMatch();
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h44m46s062.jpg" alt="" width="840">
+</p>
+
+Para manter o código limpo e funcional, foi criada a função `resetBoard`. Utilizando a técnica de desestruturação de arrays, as variáveis de controle (`hasFlippedCard`, `lockBoard`) e as referências das cartas (`firstCard`, `secondCard`) são resetadas para seus estados iniciais após cada rodada de comparação, seja em caso de acerto (dentro de `disableCards`) ou erro (dentro de `unflipCards`).
+
+```javascript
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 1500);
+}
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+```
 
 
 ## 🟩 Vídeo 07
