@@ -323,6 +323,104 @@ Revisão final do código CSS consolidado. A estrutura utiliza `position: absolu
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/ea8ee30d-9ef2-4bb5-87c2-7cd37602e562
 
+O vídeo detalha a **implementação da lógica de programação** para um **jogo da memória** utilizando JavaScript. O instrutor explica a importância de usar o método **add** em vez de toggle para garantir que o usuário não reverta a seleção da carta com cliques repetidos. Para gerenciar as jogadas, o código utiliza **variáveis de controle** que armazenam o estado do clique e identificam especificamente a primeira e a segunda cartas escolhidas. A validação de igualdade é realizada por meio de **atributos data no HTML**, que permitem ao sistema comparar se os pares selecionados são idênticos. Caso haja um acerto, uma função é disparada para **desabilitar as cartas**, enquanto um erro aciona o retorno delas ao estado original. Por fim, o autor enfatiza a necessidade de **resetar o estado do jogo** após cada tentativa para permitir novas rodadas de comparação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h09m49s979.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco é a organização do arquivo HTML para permitir a identificação lógica de cada carta durante o jogo. Para que o JavaScript consiga comparar se duas cartas são iguais, é utilizado o atributo customizado `data-card` em cada elemento `div` que representa uma carta.
+
+Cada carta recebe um valor específico correspondente ao personagem que ela representa, como "bowser", "luigi", "mario" ou "peach". Essa marcação é essencial para a lógica de comparação que será desenvolvida posteriormente, permitindo que o código identifique o conteúdo da carta sem depender apenas da estrutura das imagens internas.
+
+```html
+<div class="card" data-card="bowser">
+  <img src="./img/bowser.jpg" alt="face da carta" class="card-front">
+  <img src="./img/box.png" alt="verso da carta" class="card-back">
+</div>
+<div class="card" data-card="luigi">
+  <img src="./img/luigi.png" alt="face da carta" class="card-front">
+  <img src="./img/box.png" alt="verso da carta" class="card-back">
+</div>
+<div class="card" data-card="mario">
+  <img src="./img/mario.png" alt="face da carta" class="card-front">
+  <img src="./img/box.png" alt="verso da carta" class="card-back">
+</div>
+<div class="card" data-card="peach">
+  <img src="./img/peach.png" alt="face da carta" class="card-front">
+  <img src="./img/box.png" alt="verso da carta" class="card-back">
+</div>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h09m58s885.jpg" alt="" width="840">
+</p>
+
+A finalização do mapeamento dos personagens no HTML completa a estrutura necessária para o funcionamento do tabuleiro. Todos os elementos `div` com a classe `card` agora possuem seus respectivos atributos `data-card`, incluindo novos personagens como "toad" e "yoshi".
+
+Note que, como se trata de um jogo da memória, os pares são criados repetindo as estruturas com o mesmo valor de `data-card`. Ao final do arquivo, o script JavaScript é referenciado através da tag `<script src="./script.js"></script>`, garantindo que a lógica de interação seja carregada após a renderização dos elementos.
+
+```html
+<div class="card" data-card="toad">
+  <img src="./img/toad.png" alt="face da carta" class="card-front">
+  <img src="./img/box.png" alt="verso da carta" class="card-back">
+</div>
+<div class="card" data-card="yoshi">
+  <img src="./img/yoshi.png" alt="face da carta" class="card-front">
+  <img src="./img/box.png" alt="verso da carta" class="card-back">
+</div>
+<div class="card" data-card="bowser">
+  <img src="./img/bowser.jpg" alt="face da carta" class="card-front">
+  <img src="./img/box.png" alt="verso da carta" class="card-back">
+</div>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-05-13h11m36s795.jpg" alt="" width="840">
+</p>
+
+A lógica do jogo é controlada por variáveis de estado e funções de verificação. A variável `hasFlippedCard` controla se o jogador está no primeiro ou no segundo clique da rodada. Quando uma carta é clicada, a função `flipCard` adiciona a classe `'flip'` para animar a carta e armazena a referência do elemento em `firstCard` ou `secondCard`.
+
+A função `checkForMatch` é responsável por comparar os atributos `dataset.card` das duas cartas selecionadas. Se os valores forem idênticos, a função `disableCards` é acionada para manter as cartas viradas e remover sua interatividade. Caso contrário, a função `unflipCards` será chamada para desvirar as cartas e permitir uma nova tentativa.
+
+```javascript
+const cards = document.querySelectorAll('.card');
+let hasFlippedCard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+    return;
+  }
+
+  secondCard = this;
+  hasFlippedCard = false;
+  checkForMatch();
+}
+
+function checkForMatch() {
+  if (firstCard.dataset.card === secondCard.dataset.card) {
+    disableCards();
+    return;
+  }
+
+  unflipCards();
+}
+
+cards.forEach((card) => {
+  card.addEventListener('click', flipCard);
+});
+
+```      
+
 
 ## 🟩 Vídeo 05
 
