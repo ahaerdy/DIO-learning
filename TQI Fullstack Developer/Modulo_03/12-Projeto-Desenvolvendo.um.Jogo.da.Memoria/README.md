@@ -98,39 +98,62 @@ Para finalizar a aparência das cartas, as classes `.card-front` e `.card-back` 
 }
 ```
 
-
 ## 🟩 Vídeo 02
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-12-Projeto-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/3964771d-5ac9-4489-9a32-403150b305d8
 
 
 ## 🟩 Vídeo 03
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-12-Projeto-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/94a38ce9-a391-4e8a-949e-22f4f93e8b59
 
 
 ## 🟩 Vídeo 04
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-12-Projeto-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
 ## 🟩 Vídeo 05
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-12-Projeto-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
 ## 🟩 Vídeo 06
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-12-Projeto-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
 ## 🟩 Vídeo 07
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-12-Projeto-Video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
