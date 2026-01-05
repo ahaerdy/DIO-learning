@@ -160,6 +160,11 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/94a38ce9-a391-4e8a-949e-22f4f93e8b59
 
+O vídeo explica como criar uma **animação 3D de rotação de cartas** para um jogo de memória utilizando **CSS**. A instrutora detalha a importância de definir uma **perspectiva no tabuleiro** e utilizar a propriedade **preserve-3d** para evitar que os elementos fiquem achatados durante o movimento. Ela demonstra como configurar o **tempo da transição** e aplicar a lógica de **rotação no eixo Y** quando uma classe específica é ativada via JavaScript. Um ponto crucial abordado é o uso do **backface-visibility**, técnica necessária para esconder o verso espelhado da carta e garantir um efeito visual fluido. Ao ajustar o posicionamento das faces frontal e traseira, o tutorial ensina como fazer com que a imagem correta apareça ao **clicar no elemento**.  
+
+### Anotações
+
+
 
 ## 🟩 Vídeo 04
 
@@ -168,7 +173,7 @@ Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/desenvolvendo-um-jogo-da-memoria/learning/ea8ee30d-9ef2-4bb5-87c2-7cd37602e562
 
 
 ## 🟩 Vídeo 05
