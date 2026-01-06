@@ -347,10 +347,17 @@ http://localhost:5173
 my-react-app/
 ├── index.html
 ├── package.json
-├── src/
-│   ├── main.jsx   (ponto de entrada da aplicação)
-│   ├── App.jsx    (componente principal)
-│   └── index.css
+├── vite.config.js
+├── public
+│   └── vite.svg
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── assets/
+└── README.md
+
 ```
 
 #### OBSERVAÇÃO SOBRE COMPATIBILIDADE COM O CURSO
