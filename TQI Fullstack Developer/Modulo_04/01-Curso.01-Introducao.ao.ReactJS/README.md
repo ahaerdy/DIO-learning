@@ -295,21 +295,21 @@ A essência do React reside na **componentização**. Diferente de outras ferram
 
 Essa estrutura fortalece a construção da aplicação, permitindo que cada parte da interface seja tratada como uma unidade lógica que contém sua própria estrutura e comportamento, facilitando a escalabilidade do projeto.      
 
-# ▶️ INICIALIZAÇÃO DE PROJETO REACT 
-## PROCEDIMENTO ATUALIZADO COM VITE
+### ▶️ INICIALIZAÇÃO DE PROJETO REACT 
+#### PROCEDIMENTO ATUALIZADO COM VITE
 
-## Nota: 
+#### Nota: 
 
 - O curso original utiliza um roteiro de instalação mais antigo (baseado em create-react-app).
 - Para acompanhar o conteúdo utilizando as práticas atuais do ecossistema React, este projeto
 foi inicializado com Vite + React, abordagem moderna recomendada pela comunidade.
 
-## PRÉ-REQUISITOS
+#### PRÉ-REQUISITOS
 - Node.js (versão LTS, recomendado >= 18)
 - npm (instalado junto com o Node.js)
 - Terminal e editor de código (ex: VS Code)
 
-## PASSO A PASSO
+#### PASSO A PASSO
 
 1. Criar o projeto React com Vite
 No terminal, navegue até o diretório desejado e execute:
@@ -342,7 +342,7 @@ npm run dev
 Após a execução, a aplicação estará disponível em:
 http://localhost:5173
 
-## ESTRUTURA INICIAL DO PROJETO
+#### ESTRUTURA INICIAL DO PROJETO
 
 ```bash
 my-react-app/
@@ -354,13 +354,13 @@ my-react-app/
 │   └── index.css
 ```
 
-## OBSERVAÇÃO SOBRE COMPATIBILIDADE COM O CURSO
+#### OBSERVAÇÃO SOBRE COMPATIBILIDADE COM O CURSO
 
 - A lógica do React ensinada no curso permanece a mesma (componentes, JSX, props, state).
 - A principal diferença está apenas na ferramenta de build e na estrutura inicial.
 - O uso do Vite oferece inicialização mais rápida, build mais leve e melhor experiência de desenvolvimento.
 
-## RESUMO DOS COMANDOS
+#### RESUMO DOS COMANDOS
 
 ```bash
 npm create vite@latest my-react-app -- --template react
