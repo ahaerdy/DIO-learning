@@ -698,6 +698,69 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
 
 O vídeo consiste em uma transcrição técnica detalhada sobre a **configuração inicial do Webpack 4** voltada para o desenvolvimento com **React**. O autor explica conceitos fundamentais como **entry points**, **output**, **loaders** e **plugins**, demonstrando na prática como transformar código moderno em pacotes otimizados para navegadores. A fonte aborda a instalação de dependências essenciais, incluindo o **Babel** para transpilação de sintaxe e o **Webpack Dev Server** para agilizar o fluxo de trabalho com **hot reloading**. Além de orientar sobre a criação de arquivos de configuração, o material diferencia os modos de **produção e desenvolvimento**, focando em performance e depuração. O objetivo central é capacitar o desenvolvedor a estruturar um ambiente completo de **Single Page Application** do zero. Por fim, o conteúdo ressalta a importância de gerar arquivos finais leves para melhorar a experiência do usuário final.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-20h40m18s104.jpg" alt="" width="840">
+</p>
+
+Esta imagem marca o início da aula sobre a configuração do Webpack para o ambiente de desenvolvimento com ReactJS. O objetivo central é compreender como o Webpack gerencia as dependências e módulos de uma aplicação moderna, permitindo que funcionalidades avançadas do JavaScript sejam interpretadas corretamente pelos navegadores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-20h40m24s379.jpg" alt="" width="840">
+</p>
+
+Neste estágio, são apresentados os dois primeiros pilares fundamentais do funcionamento do Webpack:
+
+* **Entry (Entrada):** O Webpack utiliza uma estrutura de grafo para mapear o projeto. O *entry point* é o arquivo inicial onde a ferramenta começa a buscar todos os módulos e dependências necessários para construir a aplicação.
+* **Output (Saída):** Define o destino final dos arquivos processados. É através do *output* que determinamos em qual diretório e com qual nome os bundles (pacotes de arquivos emitidos) serão gerados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-20h40m34s287.jpg" alt="" width="840">
+</p>
+
+Dando continuidade aos conceitos principais, exploramos os Loaders e Plugins:
+
+* **Loaders:** Essenciais para expandir a capacidade do Webpack. Por padrão, ele entende apenas JavaScript, mas os *loaders* permitem que ele gerencie e processe outros tipos de arquivos, como CSS, imagens, HTML e fontes.
+* **Plugins:** Enquanto os loaders agem na transformação de arquivos, os plugins atuam em uma gama mais ampla de tarefas, como a otimização de pacotes, minificação do código final e a injeção automática de scripts nos arquivos HTML.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-20h40m36s872.jpg" alt="" width="840">
+</p>
+
+O conceito de **Mode** (Modo) é introduzido para facilitar a configuração baseada no ambiente de execução. Com a abordagem de "zero configuration" da versão 4, é possível alternar entre:
+
+* **Production:** Focado no usuário final, trazendo otimizações internas e minificação para reduzir o tamanho dos arquivos.
+* **Development:** Focado na experiência do desenvolvedor (debug), executando plugins como o *NoEmitOnErrorsPlugin* para auxiliar na identificação de falhas durante a codificação.
+* **None:** Nenhuma configuração pré-definida é aplicada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-20h40m42s615.jpg" alt="" width="840">
+</p>
+
+Para colocar os conceitos em prática, é necessária a criação do arquivo `webpack.config.js` e a instalação das dependências via terminal. O processo envolve preparar o ambiente para suportar React e a transpilação do código moderno através do Babel.
+
+Abaixo, os comandos de instalação e a configuração de script para o processo de build:
+
+```bash
+# Instalação do Webpack e sua interface de linha de comando como dependência de desenvolvimento
+npm i -D webpack webpack-cli
+
+# Instalação do core do Babel, loader para Webpack e presets para JavaScript moderno e React
+npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+
+```
+
+No arquivo `package.json`, o script de build deve ser configurado da seguinte forma para gerar a versão otimizada:
+
+```json
+"build": "webpack --mode production"
+
+```
+
+---
+
+
 ## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
 
 <video width="60%" controls>
