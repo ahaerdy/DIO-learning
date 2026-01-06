@@ -560,6 +560,84 @@ ReactDOM.render(<App />, rootElement)
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/838c3b03-88fc-4dca-8904-21f43bd57291?autoplay=1 
 
+O vídeo apresenta uma introdução técnica ao **React**, enfatizando que a compreensão do **ciclo de vida dos componentes** é fundamental para dominar a ferramenta. O autor detalha as fases de **inicialização, montagem, atualização e desmontagem**, alertando que falhas no entendimento desses processos podem causar gargalos de performance. Através de exemplos práticos com **classes e estados locais**, a explicação demonstra como o **Virtual DOM** reage a mudanças de propriedades e dados. Além disso, reforça-se a importância de ter uma base sólida em **JavaScript** antes de avançar para conceitos complexos. Por fim, o conteúdo explora o vasto **ecossistema de bibliotecas** complementares que tornam o React uma solução flexível e escalável para o desenvolvimento de aplicações modernas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h25m14s646.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz os conceitos fundamentais de **Estado e Ciclo de Vida** no ReactJS. Compreender esses mecanismos é essencial para dominar a ferramenta, pois eles definem como os componentes reagem a mudanças e como se comportam desde a sua criação até a sua remoção da interface. A base para esse aprendizado avançado reside no domínio sólido do JavaScript básico.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h25m16s352.jpg" alt="" width="840">
+</p>
+
+O ciclo de vida de um componente React é o conjunto de fases que ele percorre durante sua existência na aplicação. Entender esse fluxo permite ao desenvolvedor executar ações em momentos específicos, garantindo que a lógica de negócio e a interface do usuário estejam sempre sincronizadas de forma eficiente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h25m20s614.jpg" alt="" width="840">
+</p>
+
+O funcionamento do React é estruturado em quatro estados ou fases principais:
+
+* **Inicialização:** Onde as propriedades e estados iniciais são definidos.
+* **Montagem:** O momento em que o componente é inserido no DOM.
+* **Atualização:** Quando ocorrem mudanças em props ou no estado, gerando novas renderizações.
+* **Desmontagem:** A fase final, quando o componente é removido da página.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h25m25s457.jpg" alt="" width="840">
+</p>
+
+O ciclo de vida dita uma ordem de execução técnica rigorosa através de métodos específicos:
+
+* **Montagem:** Inicia com `componentWillMount` (depreciado em versões recentes por questões de segurança), seguido pelo `render` para montar a página, e finaliza com o `componentDidMount`.
+* **Atualização:** Toda vez que uma propriedade (**prop**) ou um **state** é alterado, o React inicia um ciclo de atualização que envolve métodos como `shouldComponentUpdate` e `componentDidUpdate`, renderizando o bloco correspondente no DOM virtual.
+* **Desmontagem:** Utiliza o método `componentWillUnmount` para realizar limpezas antes do componente deixar de existir.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h25m32s658.jpg" alt="" width="840">
+</p>
+
+Um conceito fundamental é o isolamento dos componentes. No React, o **estado é local ao componente**, o que significa que componentes pais ou filhos não precisam ter conhecimento sobre a existência de estados internos uns dos outros. Caso seja necessário compartilhar informações entre eles, a comunicação deve ser estabelecida preferencialmente através do uso de **props**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h25m55s661.jpg" alt="" width="840">
+</p>
+
+Como o React é uma biblioteca focada na interface, a construção de aplicações robustas e escaláveis depende da integração com seu vasto **ecossistema**. Algumas das ferramentas essenciais que complementam o desenvolvimento incluem:
+
+* **React Router:** Para o gerenciamento de rotas e navegação.
+* **Redux:** Para o controle de estados complexos e globais.
+* **Material UI / Ant Design:** Bibliotecas de componentes de interface prontos e estilizados.
+* **Storybook:** Para o desenvolvimento visual e documentação de componentes de forma isolada.
+* **Gatsby:** Focado na criação de sites estáticos otimizados.
+* **Jest:** Utilizado para a realização de testes na aplicação.
+* **React i18n Next:** Para suporte a internacionalização de projetos.
+
+O código apresentado na aula utiliza a estrutura de classe, onde é necessário estender `Component` e obrigatoriamente implementar o método `render`:
+
+```javascript
+import React, { Component } from 'react';
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // Definição do estado inicial
+    };
+  }
+
+  render() {
+    return (
+      // JSX a ser renderizado
+    );
+  }
+}
+
+```      
 
 # Parte 2 - xxxxxxxxxxxxxxx
 
