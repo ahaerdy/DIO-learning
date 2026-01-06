@@ -630,10 +630,14 @@ Como o React é uma biblioteca focada na interface, a construção de aplicaçõ
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/6c8cc254-0dbf-4ad8-a087-3e6fa5a59af8?autoplay=1
 
 
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 06 - Aprenda a configurar o webpack
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/f698389b-6687-4bed-b654-b9b7d1f5d887?autoplay=1
 
 
 ## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
