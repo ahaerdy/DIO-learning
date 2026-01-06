@@ -81,8 +81,220 @@ De acordo com o relatório do **Stack Overflow de 2019**, o React.js já se posi
 
 ## 🟩 Vídeo 02 - Aprenda a configurar o ReactJS
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/7b2d1a93-9235-412e-9749-44fb27e0ef93?autoplay=1
+
+O vídeo apresenta um guia prático sobre a **configuração inicial e os fundamentos do React**, destacando o uso do **React Scripts** para automatizar a criação de servidores e ferramentas de build. O autor detalha a estrutura de um projeto, explicando a função do arquivo **package.json** e do gerenciador de pacotes **NPM** no ecossistema JavaScript. Uma parte significativa da explicação é dedicada ao **JSX**, descrevendo-o como uma extensão que permite integrar **lógica JavaScript diretamente em estruturas HTML** de forma declarativa. O conteúdo também aborda o conceito de **Single Page Application (SPA)** e demonstra como renderizar componentes dentro de um elemento raiz no navegador. Por fim, são fornecidos exemplos de **interpolação de funções** e a aplicação de estilos através do atributo **className**, ressaltando a facilidade do desenvolvimento com o recurso de **hot reload**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h39m05s841.jpg" alt="" width="840">
+</p>
+
+Para iniciar o desenvolvimento com React, o requisito fundamental é ter o **NPM (Node Package Manager)** instalado no sistema. A ferramenta padrão recomendada pelo Facebook para criar novos projetos é o **Create React App**, uma biblioteca que automatiza a configuração inicial do ambiente frontend, entregando uma estrutura base pronta para uso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h39m15s023.jpg" alt="" width="840">
+</p>
+
+O **Create React App** utiliza internamente o **React Scripts**, que gerencia ferramentas essenciais como o **Webpack** (para empacotamento) e o **Jest** (para testes). Embora existam alternativas como configurar manualmente via Parcel ou Rollup, ou até utilizar CDNs, o uso do React Scripts simplifica o processo ao montar automaticamente um servidor de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h41m08s555.jpg" alt="" width="840">
+</p>
+
+O processo de criação de um projeto começa com a inicialização do Node.js no diretório escolhido. Ao executar o comando de inicialização, o sistema cria o arquivo de configuração essencial para o ecossistema JavaScript.
+
+```bash
+npm init
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h41m23s317.jpg" alt="" width="840">
+</p>
+
+Após a inicialização, é necessário instalar as dependências principais. O comando abaixo instala a biblioteca do React em uma versão específica e o pacote de scripts que automatiza as tarefas de build e execução.
+
+```bash
+npm install react@16.8.6 react-dom@16.8.6 react-scripts
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h41m29s306.jpg" alt="" width="840">
+</p>
+
+O arquivo **package.json** funciona como o cérebro do projeto, centralizando todas as informações, versões de dependências e os scripts que serão utilizados para rodar a aplicação. Inicialmente, as abas de scripts e dependências refletem o que foi instalado via terminal.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h41m42s385.jpg" alt="" width="840">
+</p>
+
+Para que o React Scripts funcione corretamente, é necessário criar uma pasta chamada **public**. Este diretório é identificado pela ferramenta como o ponto de entrada estático da aplicação.
+
+```bash
+mkdir public
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h42m25s790.jpg" alt="" width="840">
+</p>
+
+Dentro da pasta public, cria-se um arquivo HTML básico. O elemento mais importante deste arquivo é uma **div** com o atributo `id="root"`. É neste local específico que o React "pendurará" toda a interface da aplicação durante a renderização.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React App</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h43m03s826.jpg" alt="" width="840">
+</p>
+
+Além da pasta pública, deve-se criar uma pasta **src** (source), que conterá o código-fonte lógico da aplicação, incluindo os arquivos JavaScript e CSS.
+
+```bash
+mkdir src
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h43m18s662.jpg" alt="" width="840">
+</p>
+
+Um arquivo CSS inicial é geralmente criado para resetar estilos globais, como remover as margens e paddings padrão do navegador, garantindo um layout consistente.
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h43m26s451.jpg" alt="" width="840">
+</p>
+
+No arquivo principal dentro de `src`, realizamos a importação do **React** e do **ReactDOM**. O código utiliza a função de renderização para localizar o elemento `root` no HTML e injetar o conteúdo desejado.
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = () => (
+  <div>
+    <h1>Olá React</h1>
+  </div>
+);
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h43m30s430.jpg" alt="" width="840">
+</p>
+
+O React opera como uma **Single Page Application (SPA)**. Isso significa que, independentemente da complexidade ou das rotas da aplicação, tudo é renderizado dentro de uma única página HTML, o que melhora a performance e evita recarregamentos desnecessários do navegador.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h43m46s820.jpg" alt="" width="840">
+</p>
+
+O **JSX** é a extensão de sintaxe utilizada para descrever a interface. Ele permite escrever estruturas similares ao HTML diretamente no JavaScript. No entanto, como os navegadores não entendem JSX nativamente, o **Babel** atua como transpilador, convertendo esse código para chamadas `React.createElement`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h44m00s637.jpg" alt="" width="840">
+</p>
+
+Para executar a aplicação e abrir o servidor de desenvolvimento (geralmente no `localhost:3000`), utiliza-se o gerenciador de pacotes.
+
+```bash
+npm start
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h44m20s005.jpg" alt="" width="840">
+</p>
+
+Uma das funcionalidades mais poderosas do JSX é a interpolação. Para executar qualquer código JavaScript (como variáveis ou operações matemáticas) dentro da marcação HTML, utilizam-se as **chaves `{}**`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h44m23s056.jpg" alt="" width="840">
+</p>
+
+Exemplo prático de interpolação no JSX, onde uma operação lógica ou variável é inserida diretamente entre elementos HTML:
+
+```javascript
+const element = <h1>Resultado: {1 + 1}</h1>;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h44m24s843.jpg" alt="" width="840">
+</p>
+
+O ambiente de desenvolvimento configurado pelo React Scripts inclui o **hot reload**. Isso permite que qualquer alteração salva no código seja refletida instantaneamente no navegador, agilizando o ciclo de feedback durante a criação da interface.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h44m28s835.jpg" alt="" width="840">
+</p>
+
+O React segue um modelo **declarativo** e foca em **programação funcional**. Em vez de manipular o DOM manualmente, você declara como a interface deve ser baseada no estado atual, e o React se encarrega de atualizar os elementos necessários.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h44m55s919.jpg" alt="" width="840">
+</p>
+
+Embora o React suporte a criação de componentes via classes, a tendência e recomendação moderna é o uso de **funções**, que são suficientes para a maioria das necessidades de desenvolvimento e tornam o código mais conciso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h45m14s168.jpg" alt="" width="840">
+</p>
+
+No JSX, devido ao fato de estarmos escrevendo JavaScript, existem algumas diferenças de nomenclatura em relação ao HTML tradicional. Por exemplo, o atributo para definir classes CSS deve ser escrito como `className`, uma vez que `class` é uma palavra reservada da linguagem JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h45m19s035.jpg" alt="" width="840">
+</p>
+
+O CSS é importado diretamente para o arquivo do componente, integrando o estilo ao contexto daquela parte da interface.
+
+```javascript
+import './index.css';
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h45m52s945.jpg" alt="" width="840">
+</p>
+
+A essência do React reside na **componentização**. Diferente de outras ferramentas que tentam separar rigorosamente as tecnologias (HTML, CSS, JS), o React aproxima esses conceitos para criar blocos independentes e reutilizáveis chamados componentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-14h46m14s814.jpg" alt="" width="840">
+</p>
+
+Essa estrutura fortalece a construção da aplicação, permitindo que cada parte da interface seja tratada como uma unidade lógica que contém sua própria estrutura e comportamento, facilitando a escalabilidade do projeto.      
+
 
 
 ## 🟩 Vídeo 03 - Renderizando elementos
