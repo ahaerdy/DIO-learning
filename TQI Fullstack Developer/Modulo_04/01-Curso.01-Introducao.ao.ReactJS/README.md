@@ -295,8 +295,7 @@ A essência do React reside na **componentização**. Diferente de outras ferram
 
 Essa estrutura fortalece a construção da aplicação, permitindo que cada parte da interface seja tratada como uma unidade lógica que contém sua própria estrutura e comportamento, facilitando a escalabilidade do projeto.      
 
-### ▶️ INICIALIZAÇÃO DE PROJETO REACT 
-#### PROCEDIMENTO ATUALIZADO COM VITE
+### ▶️ INICIALIZAÇÃO DE PROJETO REACT (PROCEDIMENTO ATUALIZADO COM VITE)
 
 #### Nota: 
 
