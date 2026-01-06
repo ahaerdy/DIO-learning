@@ -351,7 +351,7 @@ my-react-app/
 ├── public
 │   └── vite.svg
 ├── src
-│   ├── App.css
+│   ├── 🔴 App.css
 │   ├── App.jsx
 │   ├── index.css
 │   ├── main.jsx
@@ -380,6 +380,18 @@ const App = () => {
 }
 
 export default App
+```
+
+#### App.css 
+
+```css
+...
+
+.teste {
+  color: green;
+}
+
+...
 ```
 
 
