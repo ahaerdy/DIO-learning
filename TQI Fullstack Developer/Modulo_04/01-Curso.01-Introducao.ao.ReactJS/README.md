@@ -351,8 +351,8 @@ my-react-app/
 ├── public
 │   └── vite.svg
 ├── src
-│   ├── 🔴 App.css
-│   ├── App.jsx
+│   ├── 🟢 App.css
+│   ├── 🔴 App.jsx
 │   ├── index.css
 │   ├── main.jsx
 │   └── assets/
@@ -382,7 +382,7 @@ const App = () => {
 export default App
 ```
 
-#### App.css 
+#### 🟢 App.css 
 
 ```css
 ...
