@@ -421,12 +421,21 @@ npm run dev
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/e6388147-f925-4241-964d-eba43b4c531c?autoplay=1
 
+O vídeo explica os fundamentos do **React**, focando na eficiência da renderização por meio do **Virtual DOM**, que atualiza apenas as partes alteradas da interface para otimizar a performance. O autor diferencia **elementos** de **componentes**, descrevendo os componentes como peças modulares e reutilizáveis que facilitam a organização de projetos robustos. A explicação detalha como as **props** são utilizadas para transmitir dados e funções entre esses componentes, permitindo uma comunicação fluida na aplicação. Além disso, aborda a importância do **JSX** e do uso de funções para criar componentes puros, evitando regras de negócio complexas em elementos visuais. Por fim, demonstra a composição de interfaces através da propriedade **children**, que permite aninhar estruturas de forma hierárquica e escalável.
+
+### Anotações
+
+      
 
 
 ## 🟩 Vídeo 04 - Conheça os ecossistemas do ReactJS
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/838c3b03-88fc-4dca-8904-21f43bd57291?autoplay=1 
 
 
 # Parte 2 - xxxxxxxxxxxxxxx
