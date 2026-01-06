@@ -629,6 +629,63 @@ Como o React é uma biblioteca focada na interface, a construção de aplicaçõ
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/6c8cc254-0dbf-4ad8-a087-3e6fa5a59af8?autoplay=1
 
+Nesta aula ministrada por Bruno Carneiro, o foco principal é a **integração do Webpack** no desenvolvimento de aplicações com **React JS**. O instrutor define o Webpack como um **empacotador de módulos** que organiza diversos arquivos e dependências em um único feixe otimizado para navegadores. Durante a apresentação, são detalhados os **pré-requisitos técnicos**, como a necessidade do Node.js e do NPM, além de mencionar o uso do VS Code. O conteúdo destaca que, embora ferramentas automáticas como o React Scripts facilitem o início, a **configuração manual** oferece maior controle e poder de otimização para projetos de grande escala. Além de scripts, o Webpack é capaz de processar **CSS, imagens e fontes** através de plugins, permitindo uma arquitetura de software mais flexível e robusta.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h41m35s521.jpg" alt="" width="840">
+</p>
+
+Nesta aula introdutória ministrada por Bruno Carneiro, Líder Técnico na Luiza Labs, o foco central é a integração do **Webpack** ao desenvolvimento com **React JS**. O objetivo é compreender como essa ferramenta atua no ecossistema moderno de desenvolvimento front-end, permitindo a criação de aplicações robustas e otimizadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h41m39s332.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais desta unidade de aprendizado estão divididos em quatro pilares fundamentais:
+
+1. **O que é o Webpack**: Definição e papel do empacotador.
+2. **Configuração**: Como estruturar o ambiente de forma manual.
+3. **Criando um Dev Server**: Estabelecimento de um ambiente de desenvolvimento ágil.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h41m55s475.jpg" alt="" width="840">
+</p>
+
+Além da configuração estrutural do Webpack, a aula abordará a implementação do **ESLint**, ferramenta essencial para garantir a qualidade do código e a padronização entre diferentes desenvolvedores no projeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h41m58s008.jpg" alt="" width="840">
+</p>
+
+Para acompanhar o desenvolvimento prático, são necessários alguns requisitos básicos instalados na máquina:
+
+* **Node.js**: Recomenda-se a versão 10.16 ou superior.
+* **NPM**: Gerenciador de pacotes que acompanha a instalação do Node.
+* **Editor de Texto**: Preferencialmente o VS Code, embora qualquer editor de preferência possa ser utilizado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h42m02s869.jpg" alt="" width="840">
+</p>
+
+O **Webpack** é definido como um *module bundler* (empacotador de módulos) para aplicações JavaScript. Sua função principal é processar os diversos módulos da aplicação e gerar um **bundle** (arquivo final) em **ES5**, garantindo que o navegador consiga interpretar o código corretamente, independentemente da complexidade da árvore de dependências (grafo) do projeto.
+
+Para mais detalhes, a documentação oficial pode ser consultada em: `https://webpack.js.org/`
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-19h42m09s763.jpg" alt="" width="840">
+</p>
+
+Embora seja um empacotador focado em JavaScript, o Webpack possui um ecossistema vasto que oferece suporte para diversos tipos de recursos através de *loaders* e extensões:
+
+* **Fontes** e **Imagens**
+* **CSS** e **HTML**
+* **JavaScript (JS)**
+* **Plugins** variados para otimização e automação.
+
+Diferente de ferramentas como o Parcel (mais simples) ou Rollup (focado em bibliotecas), o Webpack é a escolha ideal para grandes aplicações devido ao seu alto poder de customização.      
+
 
 ## 🟩 Vídeo 06 - Aprenda a configurar o webpack
 
