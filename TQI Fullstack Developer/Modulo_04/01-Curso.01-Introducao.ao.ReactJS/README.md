@@ -617,27 +617,6 @@ Como o React é uma biblioteca focada na interface, a construção de aplicaçõ
 * **Jest:** Utilizado para a realização de testes na aplicação.
 * **React i18n Next:** Para suporte a internacionalização de projetos.
 
-O código apresentado na aula utiliza a estrutura de classe, onde é necessário estender `Component` e obrigatoriamente implementar o método `render`:
-
-```javascript
-import React, { Component } from 'react';
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      // Definição do estado inicial
-    };
-  }
-
-  render() {
-    return (
-      // JSX a ser renderizado
-    );
-  }
-}
-
-```      
 
 # Parte 2 - xxxxxxxxxxxxxxx
 
