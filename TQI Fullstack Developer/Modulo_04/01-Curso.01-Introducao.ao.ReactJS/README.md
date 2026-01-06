@@ -314,27 +314,37 @@ foi inicializado com Vite + React, abordagem moderna recomendada pela comunidade
 1. Criar o projeto React com Vite
 No terminal, navegue até o diretório desejado e execute:
 
+```bash
 npm create vite@latest my-react-app -- --template react
+```
 
 (Substitua "my-react-app" pelo nome do projeto desejado)
 
 2. Acessar o diretório do projeto
 
+```bash
 cd my-react-app
+```
 
 3. Instalar as dependências
 
+```bash
 npm install
+```
+
 
 4. Iniciar o servidor de desenvolvimento
 
+```bash
 npm run dev
+```
 
 Após a execução, a aplicação estará disponível em:
 http://localhost:5173
 
-ESTRUTURA INICIAL DO PROJETO
+## ESTRUTURA INICIAL DO PROJETO
 
+```bash
 my-react-app/
 ├── index.html
 ├── package.json
@@ -342,19 +352,22 @@ my-react-app/
 │   ├── main.jsx   (ponto de entrada da aplicação)
 │   ├── App.jsx    (componente principal)
 │   └── index.css
+```
 
-OBSERVAÇÃO SOBRE COMPATIBILIDADE COM O CURSO
+## OBSERVAÇÃO SOBRE COMPATIBILIDADE COM O CURSO
+
 - A lógica do React ensinada no curso permanece a mesma (componentes, JSX, props, state).
 - A principal diferença está apenas na ferramenta de build e na estrutura inicial.
 - O uso do Vite oferece inicialização mais rápida, build mais leve e melhor experiência de desenvolvimento.
 
-RESUMO DOS COMANDOS
+## RESUMO DOS COMANDOS
 
+```bash
 npm create vite@latest my-react-app -- --template react
 cd my-react-app
 npm install
 npm run dev
-
+```
 
 ## 🟩 Vídeo 03 - Renderizando elementos
 
