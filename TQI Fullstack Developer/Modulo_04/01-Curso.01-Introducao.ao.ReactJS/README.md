@@ -295,17 +295,17 @@ A essência do React reside na **componentização**. Diferente de outras ferram
 
 Essa estrutura fortalece a construção da aplicação, permitindo que cada parte da interface seja tratada como uma unidade lógica que contém sua própria estrutura e comportamento, facilitando a escalabilidade do projeto.      
 
+# ▶️ INICIALIZAÇÃO DE PROJETO REACT (PROCEDIMENTO ATUALIZADO COM VITE)
+
 <details>
-<summary> aaaaaaaaaaaaaaaaaaaaaa </summary>
+<summary> CLIQUE para EXPANDIR </summary>
+## Nota:
 
-INICIALIZAÇÃO DE PROJETO REACT (PROCEDIMENTO ATUALIZADO COM VITE)
-
-Nota:
 O curso original utiliza um roteiro de instalação mais antigo (baseado em create-react-app).
 Para acompanhar o conteúdo utilizando as práticas atuais do ecossistema React, este projeto
 foi inicializado com Vite + React, abordagem moderna recomendada pela comunidade.
 
-PRÉ-REQUISITOS
+## PRÉ-REQUISITOS
 - Node.js (versão LTS, recomendado >= 18)
 - npm (instalado junto com o Node.js)
 - Terminal e editor de código (ex: VS Code)
