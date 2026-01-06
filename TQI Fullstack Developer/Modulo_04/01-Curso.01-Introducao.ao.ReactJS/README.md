@@ -300,8 +300,7 @@ Essa estrutura fortalece a construção da aplicação, permitindo que cada part
 #### Nota: 
 
 - O curso original utiliza um roteiro de instalação mais antigo (baseado em create-react-app).
-- Para acompanhar o conteúdo utilizando as práticas atuais do ecossistema React, este projeto
-foi inicializado com Vite + React, abordagem moderna recomendada pela comunidade.
+- Para acompanhar o conteúdo utilizando as práticas atuais do ecossistema React, este projeto foi inicializado com Vite + React, abordagem moderna (jan/2026) recomendada pela comunidade.
 
 #### PRÉ-REQUISITOS
 - Node.js (versão LTS, recomendado >= 18)
@@ -421,6 +420,7 @@ npm run dev
 </video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/e6388147-f925-4241-964d-eba43b4c531c?autoplay=1
+
 
 
 ## 🟩 Vídeo 04 - Conheça os ecossistemas do ReactJS
