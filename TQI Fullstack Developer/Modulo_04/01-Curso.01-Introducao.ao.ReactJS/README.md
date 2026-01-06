@@ -618,15 +618,19 @@ Como o React é uma biblioteca focada na interface, a construção de aplicaçõ
 * **React i18n Next:** Para suporte a internacionalização de projetos.
 
 
-# Parte 2 - xxxxxxxxxxxxxxx
+# Parte 2 - Integrando webpack ao desenvolvimento com ReactJS
 
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 05 - O que é webpack?
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/6c8cc254-0dbf-4ad8-a087-3e6fa5a59af8?autoplay=1
 
 
-Link do vídeo:  
-
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
 
 
 Link do vídeo: 
