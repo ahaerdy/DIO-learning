@@ -696,7 +696,7 @@ Diferente de ferramentas como o Parcel (mais simples) ou Rollup (focado em bibli
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/f698389b-6687-4bed-b654-b9b7d1f5d887?autoplay=1
 
-
+O vídeo consiste em uma transcrição técnica detalhada sobre a **configuração inicial do Webpack 4** voltada para o desenvolvimento com **React**. O autor explica conceitos fundamentais como **entry points**, **output**, **loaders** e **plugins**, demonstrando na prática como transformar código moderno em pacotes otimizados para navegadores. A fonte aborda a instalação de dependências essenciais, incluindo o **Babel** para transpilação de sintaxe e o **Webpack Dev Server** para agilizar o fluxo de trabalho com **hot reloading**. Além de orientar sobre a criação de arquivos de configuração, o material diferencia os modos de **produção e desenvolvimento**, focando em performance e depuração. O objetivo central é capacitar o desenvolvedor a estruturar um ambiente completo de **Single Page Application** do zero. Por fim, o conteúdo ressalta a importância de gerar arquivos finais leves para melhorar a experiência do usuário final.
 
 ## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
 
