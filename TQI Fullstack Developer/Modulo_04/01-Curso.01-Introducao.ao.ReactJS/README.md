@@ -415,9 +415,12 @@ npm run dev
 
 ## 🟩 Vídeo 03 - Renderizando elementos
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/e6388147-f925-4241-964d-eba43b4c531c?autoplay=1
 
 
 ## 🟩 Vídeo 04 - Conheça os ecossistemas do ReactJS
