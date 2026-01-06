@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Bruno Carneiro (Planning & Business Performance Director na Magazine Luiza)
+- Contato Linkedin: / [brunohvcarneiro](https://www.linkedin.com/in/brunohvcarneiro/)
 
 # Parte 1 - Introdução ao ReactJS
 
