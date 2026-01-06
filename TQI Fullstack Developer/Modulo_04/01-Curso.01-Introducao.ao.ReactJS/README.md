@@ -425,8 +425,131 @@ O vídeo explica os fundamentos do **React**, focando na eficiência da renderiz
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-18h26m17s470.jpg" alt="" width="840">
+</p>
 
+### Introdução à Renderização no ReactJS
+
+A renderização é o processo fundamental onde o React transforma os elementos definidos em código em componentes visíveis na interface do usuário. No React, essa renderização é baseada em **nós raiz**, tratando cada retorno de elemento como um nó dentro de uma estrutura organizada. Os elementos representam a menor unidade de construção em uma aplicação React, servindo como a base para a criação de interfaces web complexas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-18h26m22s350.jpg" alt="" width="840">
+</p>
+
+### Gerenciamento via React DOM
+
+O **React DOM** atua como a ponte entre o React e o navegador. Diferente de bibliotecas mais antigas que manipulavam o DOM (Document Object Model) do browser diretamente, o React utiliza uma camada intermediária. Os conceitos-chave para entender este fluxo incluem:
+
+* **Renderização de Elementos:** O processo de atualizar a UI.
+* **React DOM:** A biblioteca que renderiza os componentes no contexto do navegador.
+* **Nós Raiz:** O ponto de entrada no HTML onde toda a aplicação React será "montada".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-18h28m18s009.jpg" alt="" width="840">
+</p>
+
+### Performance e o Virtual DOM
+
+Uma das maiores vantagens do React é o uso do **Virtual DOM**. Ao invés de atualizar toda a árvore HTML sempre que ocorre uma mudança, o React compara a versão anterior com a nova e identifica **apenas o pedaço que foi alterado**.
+
+Essa abordagem de "pensar em como a interface deve estar a cada momento" em vez de alterá-la manualmente ao longo do tempo garante um ganho significativo de performance e reduz drasticamente a ocorrência de erros de sincronização entre o estado da aplicação e o que é exibido na tela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-18h44m20s810.jpg" alt="" width="840">
+</p>
+
+### Implementação Básica de Renderização
+
+Para renderizar múltiplos elementos, é necessário encapsulá-los dentro de um único nó pai (como uma `div`), pois o React exige um único ponto de retorno por componente. No código abaixo, vemos a definição de elementos simples e a função `App` que os agrupa.
+
+```javascript
+import React, { Fragment } from 'react'
+import ReactDOM from 'react-dom'
+import "./styles.css"
+
+const element = 'Digital Innovation'
+const element2 = <h1>Olá Turma D</h1>
+
+function App() {
+  return (
+    <div>
+      {element}
+      {element2}
+    </div>
+  )
+}
+
+const rootElement = document.getElementById("root")
+ReactDOM.render(<App />, rootElement)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-18h44m33s762.jpg" alt="" width="840">
+</p>
+
+### Introdução a Components e Props
+
+Os componentes são a essência da modularidade no React. Eles permitem dividir a interface em partes independentes e reutilizáveis, facilitando a manutenção e a escalabilidade do projeto. Já as **Props** (propriedades) são o mecanismo utilizado para passar informações e parâmetros de um componente pai para um componente filho.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-18h44m38s516.jpg" alt="" width="840">
+</p>
+
+### Analogia dos Blocos de Construção
+
+A componentização pode ser comparada a **peças de Lego**. Criar componentes básicos únicos (como botões e menus) permite que diferentes desenvolvedores utilizem o mesmo padrão visual e funcional em toda a aplicação, evitando duplicação de esforço e inconsistências no design. O que parece ser um excesso de arquivos inicialmente é, na verdade, uma organização que favorece o reaproveitamento de código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-18h47m19s572.jpg" alt="" width="840">
+</p>
+
+### Estrutura de Componentes
+
+Ao trabalhar com componentes e props, existem tópicos fundamentais para dominar a arquitetura React:
+
+* **Função e Classe:** As duas formas de definir componentes (atualmente priorizando funções).
+* **Props:** Parâmetros de entrada.
+* **Composição de Componentes:** A habilidade de combinar componentes menores para formar interfaces complexas.
+* **Extração de Componentes:** O processo de transformar partes de um componente grande em componentes menores e mais puros.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-18h57m40s324.jpg" alt="" width="840">
+</p>
+
+### Composição e Uso de Children
+
+Abaixo, um exemplo de aplicação real onde componentes são aninhados. Note o uso da propriedade `children`, que permite que um componente receba e renderize outros componentes inseridos dentro de suas tags de abertura e fechamento.
+
+```javascript
+import React from "react"
+import ReactDOM from "react-dom"
+import Button from './Button'
+import "./styles.css"
+
+function soma(a, b) {
+  alert(a + b)
+}
+
+function App() {
+  return (
+    <div className="App">
+      Hello World
+      <Button onClick={() => soma(10, 20)} name="Bruno Carneiro" />
+      <ComponentA>
+        <ComponentB>
+          <Button onClick={() => soma(40, 20)} name="Aline Carneiro" />
+        </ComponentB>
+      </ComponentA>
+    </div>
+  )
+}
+
+const rootElement = document.getElementById("root")
+ReactDOM.render(<App />, rootElement)
+
+```      
 
 ## 🟩 Vídeo 04 - Conheça os ecossistemas do ReactJS
 
