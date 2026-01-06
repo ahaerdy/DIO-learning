@@ -360,7 +360,7 @@ my-react-app/
 
 ```
 
-Arquivo App.jsx:
+#### 🔴 App.jsx:
 
 ```javascript
 import { useState } from 'react'
