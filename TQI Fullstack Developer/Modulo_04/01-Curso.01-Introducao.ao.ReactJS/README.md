@@ -368,12 +368,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+function sum(a, b) {
+  return a + b
+}
+
 const App = () => {
   return (
-    <div>
-      <h1 className='teste'>Olá React</h1>
-      const element = <h1>Resultado: {1 + 12}</h1>;
-
+    <div className="teste">
+      Bruno Carneiro · Introdução ao ReactJS
+      <h1>Soma: {sum(10, 20)}</h1>
     </div>
     
   )
@@ -411,6 +414,7 @@ npm run dev
 ```
 
 ## 🟩 Vídeo 03 - Renderizando elementos
+
 
 
 Link do vídeo: 
