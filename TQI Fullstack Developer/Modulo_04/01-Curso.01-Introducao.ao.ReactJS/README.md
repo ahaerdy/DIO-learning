@@ -697,10 +697,15 @@ Diferente de ferramentas como o Parcel (mais simples) ou Rollup (focado em bibli
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/f698389b-6687-4bed-b654-b9b7d1f5d887?autoplay=1
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
 
+## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
 
-Link do vídeo: 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/74a29d1d-06eb-47b9-8a2d-ef8ad5c7c031?autoplay=1
 
 
 ## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
