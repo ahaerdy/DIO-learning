@@ -295,6 +295,69 @@ A essência do React reside na **componentização**. Diferente de outras ferram
 
 Essa estrutura fortalece a construção da aplicação, permitindo que cada parte da interface seja tratada como uma unidade lógica que contém sua própria estrutura e comportamento, facilitando a escalabilidade do projeto.      
 
+<details>
+<summary> aaaaaaaaaaaaaaaaaaaaaa </summary>
+
+INICIALIZAÇÃO DE PROJETO REACT (PROCEDIMENTO ATUALIZADO COM VITE)
+
+Nota:
+O curso original utiliza um roteiro de instalação mais antigo (baseado em create-react-app).
+Para acompanhar o conteúdo utilizando as práticas atuais do ecossistema React, este projeto
+foi inicializado com Vite + React, abordagem moderna recomendada pela comunidade.
+
+PRÉ-REQUISITOS
+- Node.js (versão LTS, recomendado >= 18)
+- npm (instalado junto com o Node.js)
+- Terminal e editor de código (ex: VS Code)
+
+PASSO A PASSO
+
+1. Criar o projeto React com Vite
+No terminal, navegue até o diretório desejado e execute:
+
+npm create vite@latest my-react-app -- --template react
+
+(Substitua "my-react-app" pelo nome do projeto desejado)
+
+2. Acessar o diretório do projeto
+
+cd my-react-app
+
+3. Instalar as dependências
+
+npm install
+
+4. Iniciar o servidor de desenvolvimento
+
+npm run dev
+
+Após a execução, a aplicação estará disponível em:
+http://localhost:5173
+
+ESTRUTURA INICIAL DO PROJETO
+
+my-react-app/
+├── index.html
+├── package.json
+├── src/
+│   ├── main.jsx   (ponto de entrada da aplicação)
+│   ├── App.jsx    (componente principal)
+│   └── index.css
+
+OBSERVAÇÃO SOBRE COMPATIBILIDADE COM O CURSO
+- A lógica do React ensinada no curso permanece a mesma (componentes, JSX, props, state).
+- A principal diferença está apenas na ferramenta de build e na estrutura inicial.
+- O uso do Vite oferece inicialização mais rápida, build mais leve e melhor experiência de desenvolvimento.
+
+RESUMO DOS COMANDOS
+
+npm create vite@latest my-react-app -- --template react
+cd my-react-app
+npm install
+npm run dev
+
+
+</details>
 
 
 ## 🟩 Vídeo 03 - Renderizando elementos
