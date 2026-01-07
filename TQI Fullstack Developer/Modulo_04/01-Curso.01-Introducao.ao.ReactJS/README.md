@@ -915,7 +915,7 @@ export default App;
 
 ```
 
-### Abaixo, detalhamos o funcionamento das estruturas lógicas aplicadas:
+### Detalhando o funcionamento das estruturas lógicas aplicadas:
 
 #### 1. Variáveis de Elementos
 
