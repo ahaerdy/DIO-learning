@@ -188,7 +188,9 @@ account.deposit()
 
 ```
 
-O código também exemplifica a **instanciação** de objetos. Ao criar `newAccount` e `account`, os objetos passam a ter o tipo da classe `Account`. O terminal confirma a execução, exibindo as propriedades do objeto e a mensagem de confirmação do método de depósito.      
+O código também exemplifica a **instanciação** de objetos. Ao criar `newAccount` e `account`, os objetos passam a ter o tipo da classe `Account`. O terminal confirma a execução, exibindo as propriedades do objeto e a mensagem de confirmação do método de depósito.    
+
+⚠️ Note que o método `withdraw` não aparece na listagem, porque ele foi definido como método tradicional da classe. Métodos tradicionais ficam no prototype da classe, e o console.log não os mostra diretamente na estrutura do objeto.
 
 
 ## 🟩 Vídeo 04 - Herança
