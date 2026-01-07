@@ -1206,6 +1206,134 @@ Abaixo estão os detalhes técnicos explicados durante a aula:
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/ff1ad283-52f1-4d04-8be6-d8de1b1c54d0?autoplay=1
 
+O video apresenta diretrizes fundamentais para o desenvolvimento utilizando a filosofia de **pensar do jeito React**, priorizando a criação de interfaces modulares e organizadas. O autor recomenda iniciar o projeto com um **MOC de dados** e uma versão estática, progredindo para a divisão da aplicação em uma **hierarquia de componentes** menores e reutilizáveis. Um ponto central é a **abstração de componentes**, como botões genéricos sem lógica interna fixa, garantindo que cada parte do código possua uma **responsabilidade única**. A organização de pastas também é destacada, sugerindo o uso de **containers para as views** principais e diretórios específicos para elementos que podem ser compartilhados. Por fim, enfatiza-se a importância de manter o **estado da aplicação** no local correto, utilizando hooks para gerenciar o ciclo de vida de forma eficiente. Todo o conteúdo busca incentivar práticas que facilitem a **manutenção e a testabilidade** do software através da simplicidade.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-09h38m56s377.jpg" alt="" width="840">
+</p>
+
+Nesta introdução ao tópico "Pensando do Jeito React", o foco inicial é a organização do processo de desenvolvimento. A primeira recomendação fundamental é começar o projeto utilizando um **Mock**, que serve como uma base de dados simulada para facilitar a construção inicial da aplicação. Além disso, é essencial separar a interface do usuário em uma **hierarquia de componentes**, decompondo a aplicação em pequenos pedaços reutilizáveis e fáceis de gerenciar.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-09h38m57s842.jpg" alt="" width="840">
+</p>
+
+Dando continuidade às boas práticas de arquitetura em React, o desenvolvimento deve seguir etapas lógicas para garantir a escalabilidade:
+
+* **Crie uma versão estática em React**: Desenvolva os componentes sem lógica complexa inicialmente, focando na renderização da UI.
+* **Identifique a representação mínima do State da UI**: Determine o conjunto mínimo de dados mutáveis necessários para que a interface funcione.
+* **Identifique onde o State deve ficar**: Defina qual componente deve ser o proprietário do estado com base na hierarquia.
+* **Adicione o fluxo de dados inverso**: Implemente a comunicação de componentes filhos para componentes pais (via callbacks) para atualizar o estado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-09h39m57s842.jpg" alt="" width="840">
+</p>
+
+Este trecho demonstra a aplicação prática da modularização. O componente principal importa um arquivo de **mock** e um componente de **Button** abstraído. A lógica de renderização é separada em funções auxiliares como `renderCustomers` e `renderSkills`, mantendo o retorno principal do componente limpo e focado na estrutura da página.
+
+```javascript
+import React from "react";
+import mock from "../mock";
+import Button from "../components/Button";
+
+const App = () => {
+  const handleClick = (id) => {
+    console.log("deletar cliente");
+    alert(`ID do cliente: ${id}`);
+  }
+
+  const renderCustomers = (customer, index) => {
+    return (
+      <div key={`customer-${customer.id}`}>
+        <li>
+          {customer.name}
+          <Button onClick={() => handleClick(customer.id)}>
+            Deletar o Cliente
+          </Button>
+        </li>
+        {customer.skills.map(renderSkills)}
+      </div>
+    );
+  };
+
+  const renderSkills = (skill, index) => {
+    return (
+      <div style={{ paddingLeft: "30px" }} key={`skill-${index}`}>
+        <li>{skill}</li>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <p>Digital Innovation One</p>
+      <p>Bem vindo a nossa aula =D.</p>
+      <div>
+        <ul>{mock.map(renderCustomers)}</ul>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-09h40m57s842.jpg" alt="" width="840">
+</p>
+
+Para melhorar a clareza do código e separar as responsabilidades, os dados simulados são movidos para um arquivo dedicado de **mock**. Isso simula uma camada de serviço ou uma resposta de API, permitindo que o desenvolvedor trabalhe na interface e nos testes sem depender de um backend real no momento inicial.
+
+```javascript
+const mock = [
+  {
+    id: 1,
+    name: 'Bruno Carneiro',
+    skills: ['React', 'Node', 'CSS', 'Webpack']
+  },
+  {
+    id: 2,
+    name: 'Aline Carneiro',
+    skills: ['HTML', 'React Native', 'Go', 'JS']
+  },
+  {
+    id: 3,
+    name: 'Fulano de Tal',
+    skills: ['Assembly']
+  },
+  {
+    id: 4,
+    name: 'José Ciclano',
+    skills: ['Reason']
+  }
+]
+
+export default mock
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-09h41m57s842.jpg" alt="" width="840">
+</p>
+
+A abstração de componentes é exemplificada na criação de um botão genérico. Este componente é **stateless** (não possui estado interno) e utiliza a propriedade `children` para renderizar o conteúdo interno, além de receber uma função `onClick` via props. Essa abordagem evita que a lógica de negócio fique "amarrada" ao componente visual, permitindo que ele seja reutilizado em qualquer parte do projeto.
+
+```javascript
+import React from 'react'
+
+const Button = ({ children, onClick }) => (
+  <button onClick={onClick}>{children}</button>
+)
+
+export default Button
+
+```
+
+Conclua sua estrutura organizando arquivos em pastas como `containers` (para as views/rotas) e `components` (para elementos reutilizáveis), seguindo o princípio de **responsabilidade única** para facilitar a evolução e os testes do projeto.      
+
 
 ## 🟩 Vídeo 12 - Conceitos aplicados aos tipos de dados e condições da biblioteca
 
