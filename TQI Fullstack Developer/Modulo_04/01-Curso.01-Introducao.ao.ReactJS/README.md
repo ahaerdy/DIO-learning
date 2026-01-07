@@ -857,7 +857,7 @@ A implementação da lógica condicional no JSX pode ser realizada através de q
 * **If-Else inline com Operador Condicional**: Uso do ternário para alternar entre dois elementos diferentes.
 * **Evitando que um Componente seja Renderizado**: Técnica de retornar `null` para impedir que o componente apareça na árvore do DOM.
 
-### Código: App.jsx 
+### 🔴 App.jsx
 
 ```javascript
 import React from "react";
