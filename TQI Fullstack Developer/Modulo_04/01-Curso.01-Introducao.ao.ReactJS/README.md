@@ -1341,5 +1341,5 @@ Link do vídeo:
 
 # Certificado: Introdução ao ReactJS
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/MZPD0CS1.pdf
+- Certificado em pdf: [Certificado-Introducao.ao.ReactJS.pdf](000-Midia_e_Anexos/Certificado-Introducao.ao.ReactJS.pdf)
