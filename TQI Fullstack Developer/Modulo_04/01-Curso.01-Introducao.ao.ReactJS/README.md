@@ -1328,17 +1328,6 @@ export default Button
 
 Conclua sua estrutura organizando arquivos em pastas como `containers` (para as views/rotas) e `components` (para elementos reutilizáveis), seguindo o princípio de **responsabilidade única** para facilitar a evolução e os testes do projeto.      
 
-
-## 🟩 Vídeo 12 - Conceitos aplicados aos tipos de dados e condições da biblioteca
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_12.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-Link do vídeo: 
-
-
 # Certificado: Introdução ao ReactJS
 
 - Link na plataforma: https://hermes.dio.me/certificates/MZPD0CS1.pdf
