@@ -159,7 +159,7 @@ O **polimorfismo** está diretamente relacionado à herança e descreve a capaci
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-15h12m06s914.jpg" alt="" width="840">
 </p>
 
-Nesta etapa, a abstração é aplicada diretamente no código para iniciar a construção do sistema **DBank**. É definida a classe `Account`, que estabelece a estrutura para as contas dos usuários com tipagem explícita para auxiliar na manutenção e documentação do código. O exemplo demonstra a criação da classe com atributos de nome e número da conta, um construtor para inicialização e métodos para operações bancárias básicas.
+Nesta etapa, a abstração é aplicada diretamente no código para iniciar a construção do sistema **Dio Bank**. É definida a classe `Account`, que estabelece a estrutura para as contas dos usuários com tipagem explícita para auxiliar na manutenção e documentação do código. O exemplo demonstra a criação da classe com atributos de nome e número da conta, um construtor para inicialização e métodos para operações bancárias básicas.
 
 ```typescript
 class Account {
