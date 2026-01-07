@@ -110,13 +110,6 @@ for carro in carros:
 
 Quando houver necessidade de obter o índice do objeto durante a iteração em um conjunto, deve-se utilizar a função `enumerate`. Isso contorna a limitação de falta de índices nativos na estrutura do set.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h18m01s079.jpg" alt="" width="840">
-</p>
-
-Na segunda etapa da aula, o foco é detalhar os métodos disponíveis na classe `set` para manipulação de dados e operações de conjuntos.      
-
-
 # Certificado: Explorando Conjuntos em Python
 
 - Link na plataforma: 
