@@ -1079,8 +1079,6 @@ No código, a chave é construída de forma semântica para garantir que não ha
 
 ```
 
-Deseja que eu detalhe como tratar erros de chaves duplicadas no console do navegador?
-
 
 ## 🟩 Vídeo 10 - Manipulando Eventos
 
