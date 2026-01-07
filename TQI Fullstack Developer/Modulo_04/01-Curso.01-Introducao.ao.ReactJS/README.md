@@ -1083,8 +1083,118 @@ O vídeo aborda a **manipulação de eventos no React**, destacando que sua lóg
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-08h57m23s672.jpg" alt="" width="840">
+</p>
 
+### Introdução à Manipulação de Eventos no React
+
+A manipulação de eventos em elementos React compartilha muitas semelhanças com a manipulação de eventos no DOM tradicional, porém, apresenta diferenças sintáticas cruciais para o desenvolvimento com a biblioteca. As duas principais regras de sintaxe são:
+
+* **Nomenclatura camelCase:** Diferente do HTML puro, onde os eventos são escritos em letras minúsculas (como `onclick`), no React utiliza-se o padrão camelCase (como `onClick`).
+* **Passagem de Funções:** No JSX, você deve passar uma função real como o manipulador de eventos, em vez de uma string contendo o código JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-08h57m25s130.jpg" alt="" width="840">
+</p>
+
+### Diferenças Sintáticas e Práticas Recomendadas
+
+Ao trabalhar com eventos no React, é importante observar como a biblioteca integra o JavaScript moderno para facilitar o controle do escopo e a performance:
+
+* **Evitando Re-renderizações Desnecessárias:** Funções de manipulação podem ser definidas fora do componente principal para evitar que sejam recriadas a cada ciclo de renderização, a menos que dependam logicamente do escopo interno do componente.
+* **Arrow Functions e Escopo:** O uso de *arrow functions* simplifica a manipulação de eventos, pois elas possuem escopo encapsulado. Isso elimina a necessidade frequente de utilizar o método `.bind()` para vincular o contexto de `this`, comum em componentes de classe.
+* **Argumentos e Propagação:** É possível capturar o objeto de evento padrão (geralmente representado por `e` ou `event`) para acessar propriedades como `e.target.value` em inputs ou utilizar métodos como `e.preventDefault()` para controlar o comportamento padrão do navegador.
+
+### Implementação Prática: Passagem de Argumentos
+
+Abaixo, o exemplo demonstra como renderizar uma lista de clientes e associar um evento de clique a um botão de "Deletar". Note o uso de uma função anônima no `onClick` para permitir a passagem do `id` do cliente como argumento para a função `handleClick`.
+
+```javascript
+import React from "react";
+
+const listCustomer = [
+  {
+    id: 1,
+    name: "Bruno Carneiro",
+    skills: ["React", "Node", "CSS", "Webpack"]
+  },
+  {
+    id: 2,
+    name: "Aline Carneiro",
+    skills: ["HTML", "React Native", "Go", "JS"]
+  },
+  {
+    id: 3,
+    name: "Fulano de Tal",
+    skills: ["Assembly"]
+  },
+  {
+    id: 4,
+    name: "José Ciclano",
+    skills: ["Reason"]
+  }
+];
+
+const App = () => {
+  const handleClick = (e, id) => {
+    console.log("deletar cliente");
+    console.log(e.target);
+    alert(`ID do cliente: ${id}`);
+  };
+
+  const renderCustomers = (customer, index) => {
+    return (
+      <div key={`customer-${customer.id}`}>
+        <li>
+          {customer.name}
+          <button onClick={(e) => handleClick(e, customer.id)}>
+            Deletar Cliente x
+          </button>
+        </li>
+        {customer.skills.map(renderSkills)}
+      </div>
+    );
+  };
+
+  const renderSkills = (skill, index) => {
+    return (
+      <div style={{ paddingLeft: "30px" }} key={`skill-${index}`}>
+        <li>{skill}</li>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <p>Digital Innovation One</p>
+      <p>Bem vindo a nossa aula =D.</p>
+      <div>
+        <ul>{listCustomer.map(renderCustomers)}</ul>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+Nesta implementação, ao clicar no botão, a função `handleClick` recebe tanto o objeto de evento do navegador quanto o identificador único do cliente, permitindo ações específicas para aquele item da lista.
+
+Abaixo estão os detalhes técnicos explicados durante a aula:
+
+* **Nomenclatura CamelCase**: No código, observa-se o uso de `onClick` (linha 71) em vez do `onclick` do HTML tradicional, respeitando a convenção do React para eventos.
+
+* **Passagem de Funções no JSX**: Ao contrário do JavaScript puro, onde se passa uma string, o código passa uma função como manipulador. No exemplo da linha 71, é utilizada uma *arrow function* `(e) => handleClick(e, customer.id)` para disparar a ação.
+
+* **Objeto de Evento (`e`)**: A função `handleClick` recebe o argumento `e`, que representa o evento sintético do React. Através dele, é possível acessar propriedades como `e.target` (linha 65), que identifica o elemento que disparou o evento.
+
+* **Passagem de Argumentos**: O código ilustra como passar dados extras (neste caso, o `id` do cliente) para o manipulador. Isso é feito chamando a função `handleClick(e, customer.id)` dentro do evento de clique, permitindo identificar exatamente qual cliente deve ser "deletado".
+
+* **Renderização de Listas e Chaves**: Para cada cliente mapeado em `listCustomer`, o código utiliza uma `key` única baseada no ID (`key={customer.id}`) para garantir que o React gerencie corretamente as atualizações na interface.
+
+* **Uso de Arrow Functions para Escopo**: A preferência por *arrow functions* no código (`const App = () => { ... }`) facilita o encapsulamento do escopo, evitando a necessidade de realizar o `bind` manual de funções, técnica comum em versões mais antigas do React com classes.
 
 
 ## 🟩 Vídeo 11 - Conheça dicas para pensar do jeito ReactJS
