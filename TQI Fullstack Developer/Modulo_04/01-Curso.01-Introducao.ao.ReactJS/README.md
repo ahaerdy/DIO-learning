@@ -945,7 +945,6 @@ A função `showCustomer` exemplifica como impedir que um componente seja montad
 * No React, retornar `null` faz com que o componente não apareça na árvore do DOM, o que é fundamental para gerenciar permissões ou dados ausentes sem poluir a interface.
 
 
-
 ## 🟩 Vídeo 09 - Listas e Chaves
 
 <video width="60%" controls>
@@ -953,7 +952,100 @@ A função `showCustomer` exemplifica como impedir que um componente seja montad
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/e123a46b-526b-46bb-9234-ba5c6a669ed9?autoplay=1
+
+O material consiste em uma aula técnica sobre a **renderização de listas e chaves no React JS**, focando em boas práticas de organização de código. O autor demonstra como utilizar a função **map** para transformar arrays de dados em elementos JSX, enfatizando a importância de **separar a lógica em blocos menores** para garantir modularidade. Um ponto central da explicação é a necessidade de atribuir **chaves únicas aos elementos**, preferencialmente utilizando IDs provenientes dos dados em vez de índices simples. O instrutor esclarece que essas propriedades de identificação precisam ser exclusivas apenas entre **elementos irmãos**, permitindo que o React gerencie atualizações de interface de forma eficiente. Além disso, o texto recomenda **evitar funções anônimas embutidas** para prevenir renderizações desnecessárias e melhorar a performance da aplicação. Por fim, o conteúdo incentiva o uso de **arquivos separados para componentes complexos**, promovendo uma arquitetura de software mais legível e escalável.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-08h07m09s319.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, introduzimos o conceito de **Listas e Chaves** no ReactJS. O objetivo principal é compreender como o framework lida com a renderização de múltiplos elementos a partir de coleções de dados.
+
+Uma recomendação importante para a organização do código é o uso de **Arrow Functions** para o retorno direto de elementos. Essa prática é preferível pois ajuda a **evitar renderizações desnecessárias** no projeto, uma vez que impede a criação de funções adicionais toda vez que o componente sofre uma alteração.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-08h07m13s935.jpg" alt="" width="840">
+</p>
+
+Para trabalhar com listas, exploramos os seguintes tópicos fundamentais:
+
+* 
+**Renderizando Múltiplos Componentes:** Utilização de métodos de iteração para gerar vários elementos JSX.
+
+
+* 
+**Componente de Lista Básico:** A estrutura inicial para exibir coleções.
+
+
+* 
+**Chaves (Keys):** A importância de identificar cada item da lista para o React.
+
+
+* 
+**Extraindo Componentes com Chaves:** Como manter a referência da chave ao refatorar partes da lista em componentes menores.
+
+
+* 
+**Unicidade de Chaves:** A regra de que as **chaves devem ser únicas apenas entre elementos irmãos**, não sendo necessário que sejam globais em toda a aplicação.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-08h07m14s935.jpg" alt="" width="840">
+</p>
+
+Na implementação prática, utilizamos o método `.map()` do JavaScript para percorrer o array `listCustomer` e renderizar os componentes na tela. É uma boa prática **separar a renderização em pequenos blocos**, criando funções específicas como `renderCustomers` e `renderSkills` para manter o código modular e legível.
+
+O React exige o uso da propriedade `key` em elementos de lista para controlar quais itens foram alterados, adicionados ou removidos, garantindo a performance da aplicação. Embora o `index` do array possa ser usado, o ideal é utilizar um **ID único** (como `customer.id`) para evitar problemas de renderização e warnings no console.
+
+```javascript
+import React from "react";
+
+const listCustomer = [
+  { id: 1, name: 'Bruno Carneiro', skills: ['React', 'Node', 'CSS', 'Webpack'] },
+  { id: 2, name: 'Aline Carneiro', skills: ['HTML', 'React Native', 'Go', 'JS'] },
+  { id: 3, name: 'Fulano de Tal', skills: ['Assembly'] },
+  { id: 4, name: 'José Ciclano', skills: ['Reason'] }
+]
+
+const App = () => {
+  const renderCustomers = (customer, index) => {
+    return (
+      <div key={`customer-${customer.id}`}>
+        <li>{customer.name}</li>
+        {customer.skills.map(renderSkills)}
+      </div>
+    )
+  }
+
+  const renderSkills = (skill, index) => {
+    return (
+      <div style={{ paddingLeft: '30px' }} key={`skill-${index}`}>
+        <li>{skill}</li>
+      </div>
+    )
+  }
+
+  return (
+    <div>
+      <p>Digital Innovation One</p>
+      <p>Bem vindo a nossa aula =D.</p>
+      <div>
+        <ul>
+          {listCustomer.map(renderCustomers)}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+```    
+
 
 
 ## 🟩 Vídeo 10 - Manipulando Eventos
@@ -963,7 +1055,7 @@ Link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/e8ade921-6274-4122-912a-45400b9eec99?autoplay=1
 
 
 ## 🟩 Vídeo 11 - Conheça dicas para pensar do jeito ReactJS
