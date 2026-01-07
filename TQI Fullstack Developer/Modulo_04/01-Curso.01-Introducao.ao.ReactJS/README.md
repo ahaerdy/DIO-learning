@@ -1069,16 +1069,6 @@ Este é o ponto mais crítico abordado na aula para garantir a performance e evi
 
 ---
 
-### Exemplo de Estrutura de Chave Recomendada
-
-No código, a chave é construída de forma semântica para garantir que não haja colisões:
-
-```javascript
-[cite_start]// Exemplo extraído do código [cite: 73]
-<div key={`customer-${customer.id}`}>
-
-```
-
 
 ## 🟩 Vídeo 10 - Manipulando Eventos
 
