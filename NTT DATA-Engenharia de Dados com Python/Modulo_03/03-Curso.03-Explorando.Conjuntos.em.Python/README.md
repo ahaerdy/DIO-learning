@@ -253,3 +253,4 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 # Certificado: Explorando Conjuntos em Python
 
 Link do certificado: https://hermes.dio.me/certificates/X8KEVLLA.pdf
+Certificado em PDF: [Certificado-Explorando.Conjuntos.em.Python.pdf](000-Midia_e_Anexos/Certificado-Explorando.Conjuntos.em.Python.pdf)
