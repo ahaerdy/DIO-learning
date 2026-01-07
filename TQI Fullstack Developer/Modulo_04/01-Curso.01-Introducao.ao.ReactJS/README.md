@@ -810,6 +810,112 @@ Além da instalação, a configuração é personalizada através de um arquivo 
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/5a5e8e60-fb11-4b66-958b-ed2da9e18432?autoplay=1
 
+O instrutor detalha técnicas de **renderização condicional**, ensinando como exibir ou ocultar elementos na interface utilizando **operadores lógicos** e **ternários** no JSX. Além de abordar a lógica de programação, o conteúdo oferece orientações sobre **boas práticas**, como a modularização do código em funções e a nomeação correta de arquivos para melhorar a legibilidade. Bruno também demonstra configurações práticas no **Webpack** e no ambiente de desenvolvimento para otimizar o fluxo de trabalho. O material serve como um guia técnico para desenvolvedores que buscam compreender o caráter **declarativo** da biblioteca e como aplicá-lo na criação de componentes dinâmicos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-21h50m46s432.jpg" alt="" width="840">
+</p>
+
+Nesta abertura da terceira aula do curso de **Introdução ao React**, o instrutor **Bruno Carneiro**, Líder Técnico no Luiza Labs, apresenta os tópicos centrais que serão abordados. O foco desta etapa é o aprofundamento em conceitos aplicados aos tipos de dados e condições dentro da biblioteca, preparando a base para o desenvolvimento de interfaces mais complexas e dinâmicas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-21h50m49s869.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais desta aula estão estruturados em três pilares fundamentais para a manipulação de componentes e dados no ecossistema React:
+
+1. **Renderização Condicional**: Capacidade de exibir diferentes elementos baseando-se no estado atual.
+2. **Listas e Chaves**: Como iterar sobre dados para gerar múltiplos componentes de forma eficiente.
+3. **Manipulação de Eventos**: A forma como o React lida com as interações do usuário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-21h50m53s983.jpg" alt="" width="840">
+</p>
+
+Para acompanhar o conteúdo prático, são necessários os seguintes requisitos técnicos e teóricos:
+
+* **Editor de Texto**: Ferramenta para escrita do código.
+* **NPM**: Gerenciador de pacotes do Node.js devidamente instalado.
+* **Conhecimento de JS (ES5)**: Domínio básico da sintaxe JavaScript para compreensão da lógica da biblioteca.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-21h50m57s213.jpg" alt="" width="840">
+</p>
+
+A **Renderização Condicional** fundamenta-se na natureza declarativa do React. Ela permite a criação de componentes distintos que encapsulam comportamentos específicos. Na prática, isso significa que a aplicação decide quais elementos devem ser renderizados na interface do usuário dependendo exclusivamente do **estado da aplicação** em um determinado momento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-21h51m01s970.jpg" alt="" width="840">
+</p>
+
+A implementação da lógica condicional no JSX pode ser realizada através de quatro abordagens principais:
+
+* **Variáveis de Elementos**: Armazenar elementos React em variáveis para uso posterior no retorno.
+* **If inline com o Operador Lógico &&**: Utilizado para renderizar um elemento apenas quando uma condição é verdadeira.
+* **If-Else inline com Operador Condicional**: Uso do ternário para alternar entre dois elementos diferentes.
+* **Evitando que um Componente seja Renderizado**: Técnica de retornar `null` para impedir que o componente apareça na árvore do DOM.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-21h52m01s970.jpg" alt="" width="840">
+</p>
+
+```javascript
+import React from "react";
+
+const buttonA = <button>Histórico dos Clientes</button>;
+const buttonB = <button>Cadastrar Cliente</button>;
+
+const hasCustomer = true;
+
+const App = () => {
+
+  const renderShowHistory = (
+    <div>
+      Clique no botão abaixo para visualizar o histórico dos clientes
+      <br />
+      {buttonA}
+    </div>
+  );
+
+  const renderAddCustomer = (
+    <div>
+      Clique abaixo para cadastrar o cliente
+      <br />
+      {buttonB}
+    </div>
+  );
+
+  const showCustomer = () => {
+    if (!hasCustomer) return null;
+
+    return (
+      <div>
+        <h1>Nome do Cliente: Marcia Castagna</h1>
+      </div>
+    );
+  };
+
+  console.log("hasCustomer", hasCustomer);
+
+  return (
+    <div>
+      <p>Digital Innovation One</p>
+      <p>Bem-vindo a nossa aula =D.</p>
+      {hasCustomer ? renderShowHistory : renderAddCustomer}
+      <div>
+        {showCustomer()}
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+```
+
+Este exemplo prático demonstra a aplicação dos conceitos de renderização condicional. O código utiliza o **operador ternário** para alternar entre as funções de renderização `renderShowHistory` e `renderAddCustomer` baseando-se na variável `hasCustomer`. Além disso, a função `showCustomer` exemplifica como evitar a renderização de um bloco inteiro ao retornar `null` caso a condição necessária não seja atendida.      
 
 
 ## 🟩 Vídeo 09 - Listas e Chaves
