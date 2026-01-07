@@ -358,6 +358,8 @@ PeopleAccount {
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/e28bd747-af21-4d88-a5f0-ec9f6470cf01?autoplay=1
 
 
+
+
 ## 🟩 Vídeo 06 - Visibilidade de atributos e métodos
 
 <video width="60%" controls>
@@ -365,7 +367,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/5a96d942-98c2-45cd-b3d4-c289ee9ee214?autoplay=1
 
 
 ## 🟩 Vídeo 07 - Readonly
