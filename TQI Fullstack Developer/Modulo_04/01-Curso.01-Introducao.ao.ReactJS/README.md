@@ -772,114 +772,63 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
 
 O autor explica a importância de utilizar o **ESLint** para garantir a **padronização** e a **qualidade do código** em projetos colaborativos. A ferramenta ajuda a identificar falhas de sintaxe e a aplicar **boas práticas** automaticamente, evitando que divergências de escrita prejudiquem o desenvolvimento. Além disso, o texto destaca o papel fundamental do **Source Map** no processo de **depuração**, pois ele organiza os arquivos para facilitar a localização de erros. Sem essa configuração, o código gerado pelo Webpack torna-se confuso e difícil de analisar durante a fase de testes. Por fim, o instrutor incentiva o uso de **configurações consagradas** e disponibiliza materiais de apoio em seu **GitHub**.
 
+### Anotações
 
+#### Introdução ao ReactJS
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-21h02m01s354.jpg" alt="" width="840">
+</p>
 
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
+O **ESLint** é uma ferramenta fundamental para garantir a **qualidade do código** e manter a padronização em projetos desenvolvidos por múltiplas pessoas. Como cada desenvolvedor possui um estilo de escrita próprio, o ESLint estabelece regras que evitam divergências e ajudam a identificar erros comuns ainda em tempo de desenvolvimento.
 
+A utilização de padrões de mercado, como o guia de estilo do **Airbnb**, permite que o projeto siga convenções amplamente aceitas, verificando automaticamente a presença de itens como ponto e vírgula, o uso correto de tabs ou a estrutura de arrow functions. No contexto desta aula, a ferramenta é integrada ao ecossistema React para assegurar que o código entregue ao repositório esteja limpo e funcional.
 
-Link do vídeo: 
+#### Configuração do ESLint
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-06-21h02m05s145.jpg" alt="" width="840">
+</p>
 
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
+Para integrar o ESLint ao projeto, é necessário instalar as dependências de desenvolvimento que permitem a análise do código JavaScript e o suporte específico para a sintaxe do React e do Babel. A instalação é feita através do gerenciador de pacotes npm:
 
+```bash
+npm install --save-dev eslint babel-eslint eslint-plugin-react eslint-watch
 
-Link do vídeo: 
+```
 
+Além da instalação, a configuração é personalizada através de um arquivo chamado **.eslintrc**, que contém as definições das regras de linting que serão aplicadas em todos os arquivos dentro da pasta do projeto.
 
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
+# Parte 3 - Conceitos aplicados aos tipos de dados e condições da biblioteca
 
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 08 - Renderização Condicional
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 09 - Listas e Chaves
 
 
 Link do vídeo: 
 
 
-# Parte 3 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - Exxxxxxxxxxxxxxx
-
-
-Link do vídeo:  
-
-
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 10 - Manipulando Eventos
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 11 - Conheça dicas para pensar do jeito ReactJS
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 12 - Conceitos aplicados aos tipos de dados e condições da biblioteca
 
 
 Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-##  Materiais de Apoio
 
 
 # Certificado: 
