@@ -1227,11 +1227,9 @@ Dando continuidade às boas práticas de arquitetura em React, o desenvolvimento
 * **Identifique onde o State deve ficar**: Defina qual componente deve ser o proprietário do estado com base na hierarquia.
 * **Adicione o fluxo de dados inverso**: Implemente a comunicação de componentes filhos para componentes pais (via callbacks) para atualizar o estado.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-09h39m57s842.jpg" alt="" width="840">
-</p>
-
 Este trecho demonstra a aplicação prática da modularização. O componente principal importa um arquivo de **mock** e um componente de **Button** abstraído. A lógica de renderização é separada em funções auxiliares como `renderCustomers` e `renderSkills`, mantendo o retorno principal do componente limpo e focado na estrutura da página.
+
+#### 🔴 App.jsx:
 
 ```javascript
 import React from "react";
@@ -1281,11 +1279,9 @@ export default App;
 
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-09h40m57s842.jpg" alt="" width="840">
-</p>
-
 Para melhorar a clareza do código e separar as responsabilidades, os dados simulados são movidos para um arquivo dedicado de **mock**. Isso simula uma camada de serviço ou uma resposta de API, permitindo que o desenvolvedor trabalhe na interface e nos testes sem depender de um backend real no momento inicial.
+
+#### 🟢 mock.js
 
 ```javascript
 const mock = [
@@ -1315,11 +1311,9 @@ export default mock
 
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-09h41m57s842.jpg" alt="" width="840">
-</p>
-
 A abstração de componentes é exemplificada na criação de um botão genérico. Este componente é **stateless** (não possui estado interno) e utiliza a propriedade `children` para renderizar o conteúdo interno, além de receber uma função `onClick` via props. Essa abordagem evita que a lógica de negócio fique "amarrada" ao componente visual, permitindo que ele seja reutilizado em qualquer parte do projeto.
+
+#### 🟢 ./components/Button.jsx
 
 ```javascript
 import React from 'react'
