@@ -761,7 +761,7 @@ No arquivo `package.json`, o script de build deve ser configurado da seguinte fo
 ---
 
 
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 07 - Instalação e configuração do ESLint
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_07.webm" type="video/webm">
@@ -770,8 +770,12 @@ No arquivo `package.json`, o script de build deve ser configurado da seguinte fo
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/74a29d1d-06eb-47b9-8a2d-ef8ad5c7c031?autoplay=1
 
+O autor explica a importância de utilizar o **ESLint** para garantir a **padronização** e a **qualidade do código** em projetos colaborativos. A ferramenta ajuda a identificar falhas de sintaxe e a aplicar **boas práticas** automaticamente, evitando que divergências de escrita prejudiquem o desenvolvimento. Além disso, o texto destaca o papel fundamental do **Source Map** no processo de **depuração**, pois ele organiza os arquivos para facilitar a localização de erros. Sem essa configuração, o código gerado pelo Webpack torna-se confuso e difícil de analisar durante a fase de testes. Por fim, o instrutor incentiva o uso de **configurações consagradas** e disponibiliza materiais de apoio em seu **GitHub**.
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+
+
+
+## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
 
 
 Link do vídeo: 
