@@ -133,6 +133,63 @@ O uso do `this` dentro do construtor (`this.name = name`) garante que o valor pa
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/0e030a09-a274-461d-b985-4b7a6c7da984?autoplay=1
 
+O vídeo apresenta os pilares fundamentais da **Programação Orientada a Objetos (POO)** por meio de uma aula prática voltada ao desenvolvimento de um sistema bancário fictício, o **DBank**. A instrutora detalha a **abstração** como o processo de identificar atributos e métodos essenciais, a **herança** como forma de compartilhar características entre classes para evitar a repetição de código, e o **polimorfismo** como a capacidade de alterar o comportamento de métodos em classes filhas. Além da teoria, o conteúdo demonstra a **implementação em código**, enfatizando a importância da **tipagem** para a manutenção e documentação do software. O exemplo prático utiliza a criação de uma classe de conta com funcionalidades de **depósito e saque**, ilustrando como instanciar objetos reais. Por fim, o material introduz a ideia de **classes mãe e filha**, preparando o terreno para conceitos mais avançados de reaproveitamento de lógica.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-15h11m28s388.jpg" alt="" width="840">
+</p>
+
+A **abstração** é o primeiro dos três conceitos fundamentais da Orientação a Objetos abordados. Ela consiste na capacidade de mentalizar e projetar o objeto que será criado, definindo como seus métodos e atributos serão implementados. Esse processo exige a compreensão do **contexto de negócio**; por exemplo, ao projetar um sistema bancário como o "DBank", a abstração permite identificar que um usuário precisa de atributos como nome, número de documento e conta, além de métodos funcionais como sacar e depositar.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-15h11m34s017.jpg" alt="" width="840">
+</p>
+
+A **herança** é o segundo conceito chave, permitindo que uma classe compartilhe suas características com outras. O objetivo principal é o reaproveitamento de código, evitando repetições desnecessárias ao fazer com que uma classe herde atributos e métodos de uma classe ancestral. Na prática, isso estabelece uma comunicação entre classes onde uma pode passar suas propriedades para que outra as utilize de forma estruturada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-15h11m35s767.jpg" alt="" width="840">
+</p>
+
+O **polimorfismo** está diretamente relacionado à herança e descreve a capacidade de uma classe filha invocar um método que possui uma assinatura ou fluxo diferente do original na classe mãe. Embora a classe filha herde características, ela não precisa ser idêntica à classe genérica; ela pode adaptar o comportamento dos métodos para atender às suas necessidades específicas, alterando a forma como a ação é executada em comparação ao modelo original.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-15h12m06s914.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, a abstração é aplicada diretamente no código para iniciar a construção do sistema **DBank**. É definida a classe `Account`, que estabelece a estrutura para as contas dos usuários com tipagem explícita para auxiliar na manutenção e documentação do código. O exemplo demonstra a criação da classe com atributos de nome e número da conta, um construtor para inicialização e métodos para operações bancárias básicas.
+
+```typescript
+class Account {
+  name: string
+  accountNumber: number
+
+  constructor(name: string, accountNumber: number){
+    this.name = name
+    this.accountNumber = accountNumber
+  }
+
+  deposit = () => {
+    console.log('Você depositou')
+  }
+
+  withdraw() {
+    console.log('Você sacou')
+  }
+}
+
+const newAccount: Account = new Account('Nath', 1)
+console.log(newAccount)
+
+const account: Account = new Account('Joao', 28)
+account.deposit()
+
+```
+
+O código também exemplifica a **instanciação** de objetos. Ao criar `newAccount` e `account`, os objetos passam a ter o tipo da classe `Account`. O terminal confirma a execução, exibindo as propriedades do objeto e a mensagem de confirmação do método de depósito.      
+
 
 ## 🟩 Vídeo 04 - Herança
 
@@ -141,7 +198,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/4ff2edac-8eca-4fff-978f-0b2fce765ef0?autoplay=1 
 
 
 ## 🟩 Vídeo 05 - Módulos
