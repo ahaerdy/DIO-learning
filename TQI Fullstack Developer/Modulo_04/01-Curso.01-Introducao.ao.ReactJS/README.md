@@ -1031,6 +1031,55 @@ export default App;
 
 ```    
 
+### As partes essenciais para o funcionamento de listas e chaves no React são detalhadas a seguir:
+
+#### 1. Estrutura de Dados (Mocks)
+
+O uso de um array de objetos (`listCustomer`) é a base para a renderização dinâmica.
+
+* **Identificação Única**: Cada objeto na lista possui um atributo `id`.
+
+* **Modularização**: O instrutor sugere que, em projetos reais, esses dados (Mocks) sejam separados em arquivos próprios para manter o código modular e organizado.
+
+#### 2. Funções de Renderização Auxiliares
+
+Em vez de escrever todo o JSX dentro do bloco principal, o código utiliza funções específicas para renderizar partes da interface.
+
+* **Separação em Blocos**: As funções `renderCustomers` e `renderSkills` isolam a lógica de exibição de cada item.
+
+* **Vantagem**: Essa prática facilita a leitura e manutenção, especialmente quando a lógica de renderização se torna complexa, como em relatórios ou chamadas de serviço.
+
+#### 3. O Método `.map()`
+
+O `map` é a ferramenta padrão do JavaScript (ES6+) para iterar sobre listas no React.
+
+* **Retorno de Elementos**: Ele percorre o array e retorna um novo elemento JSX para cada item encontrado.
+* **Assinatura da Função**: É possível passar apenas a assinatura da função (ex: `listCustomer.map(renderCustomers)`) para que ela seja executada para cada item.
+
+#### 4. Gestão de Chaves (`key`)
+
+Este é o ponto mais crítico abordado na aula para garantir a performance e evitar erros de sincronização da interface.
+
+* **Importância da Key**: O atributo `key` permite que o React identifique quais itens foram alterados, adicionados ou removidos.
+* **Unicidade entre Irmãos**: As chaves não precisam ser únicas em todo o projeto, mas devem ser obrigatoriamente únicas entre elementos que compartilham o mesmo pai (elementos irmãos).
+* **Uso do ID vs Index**:
+* **ID (Recomendado)**: Utilizar o ID vindo do serviço (ex: `key={customer-${customer.id}}`) é a melhor prática para garantir unicidade e evitar problemas de performance.
+* **Index (Alternativa)**: O índice do array (`index`) só deve ser usado se não houver um ID único disponível, como no caso da lista de `skills`.
+
+
+---
+
+### Exemplo de Estrutura de Chave Recomendada
+
+No código, a chave é construída de forma semântica para garantir que não haja colisões:
+
+```javascript
+[cite_start]// Exemplo extraído do código [cite: 73]
+<div key={`customer-${customer.id}`}>
+
+```
+
+Deseja que eu detalhe como tratar erros de chaves duplicadas no console do navegador?
 
 
 ## 🟩 Vídeo 10 - Manipulando Eventos
