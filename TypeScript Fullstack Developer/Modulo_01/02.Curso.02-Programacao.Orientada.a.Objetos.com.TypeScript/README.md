@@ -200,6 +200,153 @@ O código também exemplifica a **instanciação** de objetos. Ao criar `newAcco
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/4ff2edac-8eca-4fff-978f-0b2fce765ef0?autoplay=1 
 
+O material consiste em uma aula prática sobre **orientação a objetos**, focando especificamente nos conceitos de **herança** e **classes abstratas** em TypeScript. A instrutora demonstra como criar uma classe filha que utiliza a palavra-chave **extends** para herdar atributos e métodos de uma classe base. É detalhada a importância do **superconstrutor** para inicializar corretamente os dados da classe pai dentro da estrutura derivada. Além disso, o conteúdo explica que **classes abstratas** servem apenas como modelos de referência e não permitem a criação direta de objetos. Por fim, o exemplo prático utiliza um sistema bancário para ilustrar como diferentes tipos de contas compartilham comportamentos comuns enquanto mantêm propriedades específicas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-16h34m35s905.jpg" alt="" width="840">
+</p>
+
+Neste estágio inicial da aula, é apresentada a estrutura básica da classe `Account` e a criação da classe `Admin`. A classe `Admin` é definida inicialmente com uma propriedade exclusiva de saldo (`balance`) do tipo *number* e um método específico para consulta desse valor, o `getBalance`. No construtor da classe `Admin`, o saldo é definido automaticamente como 20.
+
+```typescript
+class Account {
+  name: string
+  accountNumber: number
+
+  constructor (name: string, accountNumber: number){
+    this.name = name
+    this.accountNumber = accountNumber
+  }
+
+  deposit = () => {
+    console.log('Voce depositou')
+  }
+
+  withdraw = () => {
+    console.log('Voce sacou')
+  }
+}
+
+class Admin extends Account {
+  balance: number
+
+  constructor(name: string, accountNumber: number){
+    super(name, accountNumber)
+    this.balance = 20
+  }
+
+  getBalance = () => {
+    console.log(this.balance)
+  }
+}
+
+const adminAccount = new Admin('Nath', 1)
+console.log(adminAccount)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-16h34m50s219.jpg" alt="" width="840">
+</p>
+
+Ao executar o código via terminal utilizando o `ts-node-dev`, observa-se o comportamento da herança na prática. O objeto instanciado `adminAccount` (do tipo `Admin`) exibe não apenas o seu atributo próprio `balance` e o método `getBalance`, mas também herda as propriedades `name` e `accountNumber`, além dos métodos `deposit` e `withdraw` da classe pai `Account`. Em contraste, um objeto instanciado diretamente da classe `Account` (como o "Joao") possui apenas os elementos definidos em sua própria classe original.
+
+```javascript
+[INFO] 10:52:04 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.8.2, typescript ver. 4.7.4)
+Admin {
+  deposit: [Function (anonymous)],
+  withdraw: [Function (anonymous)],
+  name: 'Nath',
+  accountNumber: 1,
+  getBalance: [Function (anonymous)],
+  balance: 20
+}
+Account {
+  deposit: [Function (anonymous)],
+  withdraw: [Function (anonymous)],
+  name: 'Joao',
+  accountNumber: 28
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-16h38m08s301.jpg" alt="" width="840">
+</p>
+
+A aula introduz o conceito de **classes abstratas** utilizando a palavra-chave `abstract`. Ao definir `abstract class Account`, a classe passa a servir exclusivamente como um modelo (blueprint) para outras classes filhas. Uma característica fundamental demonstrada é que classes abstratas não podem ser instanciadas diretamente. O compilador do TypeScript gera erros (TS2511) ao detectar tentativas de criar objetos usando `new Account`, forçando o uso de classes específicas como `Admin` ou `PeopleAccount`.
+
+```typescript
+abstract class Account {
+  name: string
+  accountNumber: number
+  balance: number = 0
+
+  constructor(name: string, accountNumber: number){
+    this.name = name
+    this.accountNumber = accountNumber
+  }
+
+  deposit = () => {
+    console.log('Voce depositou')
+  }
+
+  withdraw() {
+    console.log('Voce sacou')
+  }
+
+  getBalance = () => {
+    console.log(this.balance)
+  }
+}
+
+// Erro: Cannot create an instance of an abstract class.
+const adminAccount = new Account('Nath', 1) 
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-16h40m15s972.jpg" alt="" width="840">
+</p>
+
+Para expandir o sistema, é criada a classe `PeopleAccount` que estende a classe abstrata `Account`. Esta nova classe introduz um atributo específico chamado `doc_id`. O exemplo foca na necessidade de utilizar o **superconstrutor** (`super`) dentro do construtor da classe filha. O `super` é responsável por repassar os parâmetros `name` e `accountNumber` para a classe pai, garantindo que a base do objeto seja construída corretamente antes da atribuição das propriedades específicas da classe `PeopleAccount`.
+
+```typescript
+class PeopleAccount extends Account {
+  doc_id: number
+
+  constructor(doc_id: number, name: string, accountNumber: number){
+    super(name, accountNumber)
+    this.doc_id = doc_id
+  }
+}
+
+const peopleAccount = new PeopleAccount(1, 'Nath', 10)
+console.log(peopleAccount)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-16h40m26s466.jpg" alt="" width="840">
+</p>
+
+A execução final no terminal valida a implementação da herança com a classe `PeopleAccount`. O log do objeto mostra a consolidação de todos os membros: o `balance` (iniciado em 0 na classe pai), os métodos herdados (`deposit`, `withdraw`, `getBalance`), as propriedades da classe pai (`name`, `accountNumber`) e a propriedade exclusiva da classe filha (`doc_id`). Isso confirma que a estrutura abstrata funcionou como molde e a classe filha estendeu corretamente as funcionalidades.
+
+```javascript
+[INFO] 11:00:29 ts-node-dev ver. 2.0.0 (using ts-node ver. 18.8.2, typescript ver. 4.7.4)
+PeopleAccount {
+  balance: 0,
+  deposit: [Function (anonymous)],
+  withdraw: [Function (anonymous)],
+  getBalance: [Function (anonymous)],
+  name: 'Nath',
+  accountNumber: 10,
+  doc_id: 1
+}
+
+```
 
 ## 🟩 Vídeo 05 - Módulos
 
@@ -208,7 +355,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/e28bd747-af21-4d88-a5f0-ec9f6470cf01?autoplay=1
 
 
 ## 🟩 Vídeo 06 - Visibilidade de atributos e métodos
