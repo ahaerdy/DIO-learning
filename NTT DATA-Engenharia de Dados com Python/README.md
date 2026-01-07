@@ -81,8 +81,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 3: Trabalhando com Coleções em Python  
 
-- [x] Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso%2001-Trabalhando_com_Listas_em_Python#parte-1---trabalhando-com-listas-em-python)
-- [x] Curso: [Conhecendo Tuplas em Python](Modulo_03/02-Curso%2002-Conhecendo_Tuplas_em_Python)
+- [x] Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso%2001-Trabalhando.com.Listas.em.Python#parte-1---trabalhando-com-listas-em-python)
+- [x] Curso: [Conhecendo Tuplas em Python](Modulo_03/02-Curso%2002-Conhecendo.Tuplas.em.Python)
 - [x] Curso: Explorando Conjuntos em Python
 - [x] Curso: Aprendendo a Utilizar Dicionários em Python
 - [x] Curso: Lidando com Data, Hora e Fuso Horário no Python
