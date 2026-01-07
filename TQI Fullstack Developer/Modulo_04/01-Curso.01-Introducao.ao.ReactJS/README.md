@@ -972,30 +972,15 @@ Uma recomendação importante para a organização do código é o uso de **Arro
 
 Para trabalhar com listas, exploramos os seguintes tópicos fundamentais:
 
-* 
-**Renderizando Múltiplos Componentes:** Utilização de métodos de iteração para gerar vários elementos JSX.
+* **Renderizando Múltiplos Componentes:** Utilização de métodos de iteração para gerar vários elementos JSX.
 
+* **Componente de Lista Básico:** A estrutura inicial para exibir coleções.
 
-* 
-**Componente de Lista Básico:** A estrutura inicial para exibir coleções.
+* **Chaves (Keys):** A importância de identificar cada item da lista para o React.
 
+* **Extraindo Componentes com Chaves:** Como manter a referência da chave ao refatorar partes da lista em componentes menores.
 
-* 
-**Chaves (Keys):** A importância de identificar cada item da lista para o React.
-
-
-* 
-**Extraindo Componentes com Chaves:** Como manter a referência da chave ao refatorar partes da lista em componentes menores.
-
-
-* 
-**Unicidade de Chaves:** A regra de que as **chaves devem ser únicas apenas entre elementos irmãos**, não sendo necessário que sejam globais em toda a aplicação.
-
-
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-08h07m14s935.jpg" alt="" width="840">
-</p>
+* **Unicidade de Chaves:** A regra de que as **chaves devem ser únicas apenas entre elementos irmãos**, não sendo necessário que sejam globais em toda a aplicação.
 
 Na implementação prática, utilizamos o método `.map()` do JavaScript para percorrer o array `listCustomer` e renderizar os componentes na tela. É uma boa prática **separar a renderização em pequenos blocos**, criando funções específicas como `renderCustomers` e `renderSkills` para manter o código modular e legível.
 
