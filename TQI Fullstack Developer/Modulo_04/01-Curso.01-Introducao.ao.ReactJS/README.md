@@ -1079,6 +1079,13 @@ Este é o ponto mais crítico abordado na aula para garantir a performance e evi
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/e8ade921-6274-4122-912a-45400b9eec99?autoplay=1
 
+O vídeo aborda a **manipulação de eventos no React**, destacando que sua lógica é muito similar à do DOM tradicional, embora apresente diferenças sintáticas cruciais. O autor enfatiza que, no React, os eventos utilizam a nomenclatura **camelCase** e recebem **funções como manipuladores** em vez de strings. Através de exemplos práticos com botões e campos de entrada, é demonstrado como capturar informações através do objeto de evento e como utilizar o **onChange** para monitorar alterações. Além disso, a explicação detalha como **passar argumentos extras** para essas funções, o que facilita a identificação de itens específicos em uma lista, como ao deletar um cliente. Por fim, reforça-se a preferência pelo uso de **arrow functions** para manter o escopo léxico de forma simplificada.
+
+### Anotações
+
+      
+
+
 
 ## 🟩 Vídeo 11 - Conheça dicas para pensar do jeito ReactJS
 
@@ -1087,7 +1094,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/ff1ad283-52f1-4d04-8be6-d8de1b1c54d0?autoplay=1
 
 
 ## 🟩 Vídeo 12 - Conceitos aplicados aos tipos de dados e condições da biblioteca
