@@ -369,7 +369,7 @@ class PeopleAccount extends Account {
 const peopleAccount = new PeopleAccount(1, 'Nath', 10)
 console.log(peopleAccount)
 ```
-Saída:
+🟢 Saída:
 
 ```javascript
 [INFO] 11:00:29 ts-node-dev ver. 2.0.0 (using ts-node ver. 18.8.2, typescript ver. 4.7.4)
