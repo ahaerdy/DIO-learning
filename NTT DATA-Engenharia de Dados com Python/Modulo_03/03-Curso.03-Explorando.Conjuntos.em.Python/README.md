@@ -1,116 +1,255 @@
-# Instrutor
-
-- Guilherme Arthur de Carvalho (Analista de Sistemas)
-- Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
-
 # Parte 1 - Explorando Conjuntos em Python
 
-## 🟩 Vídeo 01 - Conjuntos
+# 🟩 Vídeo 01 - Conjuntos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_03-Curso_03-Video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-conjuntos-em-python/learning/09c6ccff-aec7-4506-96b7-b90307851402?autoplay=1
 
-O vídeo consiste em uma aula detalhada sobre a estrutura de dados **set** (conjuntos) na linguagem Python, destacando sua principal característica de armazenar apenas **elementos únicos** e não duplicados. O instrutor explica que, embora menos comum que listas, essa ferramenta é extremamente poderosa para otimizar códigos que exigem a **remoção automática de duplicatas** e a realização de operações matemáticas. São exploradas funcionalidades fundamentais como **união, intersecção e diferença**, além de métodos específicos para manipulação de itens, como o **add, discard e pop**. O conteúdo também alerta sobre a **ausência de ordenação** e a impossibilidade de acessar elementos por indexação direta, recomendando a conversão para listas quando necessário. Por fim, a fonte demonstra como o Python facilita o trabalho com **lógica de conjuntos**, tornando tarefas complexas em outras linguagens muito mais simples e eficientes.
+## Objetivo Geral
 
-### Anotações
+- Entender o funcionamento da estrutura de dados set.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m16s168.jpg" alt="" width="840">
-</p>
+## Criando sets
 
-Esta aula introduz o conceito de **Conjuntos** (sets) em Python, apresentada por Guilherme Arthur de Carvalho. O objetivo é explorar essa estrutura de dados que possui características únicas em relação a listas e tuplas.
+- Um set é uma coleção que não possui objetos repetidos, usamos sets para representar conjuntos matemáticos ou eliminar itens duplicados de um iterável.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m24s061.jpg" alt="" width="840">
-</p>
-
-O foco principal da aula é o entendimento teórico e prático do funcionamento da estrutura de dados `set`.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m28s713.jpg" alt="" width="840">
-</p>
-
-O roteiro de aprendizagem está dividido em duas etapas principais:
-
-1. 
-**Como criar conjuntos**: Fundamentos e sintaxe inicial.
-
-
-2. 
-**Métodos da classe set**: Operações e manipulações avançadas disponíveis para essa estrutura.
-
-
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m30s766.jpg" alt="" width="840">
-</p>
-
-Um `set` é definido como uma coleção que não admite objetos repetidos. Essa estrutura é ideal para representar conjuntos matemáticos ou para remover de forma eficiente elementos duplicados de qualquer iterável.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m34s516.jpg" alt="" width="840">
-</p>
-
-A criação de um set pode ser feita passando diferentes tipos de iteráveis, como listas, strings ou tuplas, para o construtor `set()`. Note que a ordem dos elementos pode não ser preservada e as duplicatas são removidas automaticamente.
+## Exemplo
 
 ```python
-set([1, 2, 3, 1, 3, 4])
-# {1, 2, 3, 4}
+set([1, 2, 3, 1, 3, 4])  # {1, 2, 3, 4}
 
-set("abacaxi") 
-# {"b", "a", "c", "x", "i"}
+set("abacaxi")  # {"b", "a", "c", "x", "i"}
 
-set(("palio", "gol", "celta", "palio")) 
-# {"gol", "celta", "palio"}
-
+set(("palio", "gol", "celta", "palio"))  # {"gol", "celta", "palio"}
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m46s878.jpg" alt="" width="840">
-</p>
+## Acessando os dados
 
-Diferente das listas, os conjuntos em Python não suportam indexação ou fatiamento. Para acessar um valor específico por índice, é necessário converter o conjunto em uma lista previamente.
+- Conjuntos em Python não suportam indexação e nem fatiamento, caso queira acessar os seus valores é necessário converter o conjunto para ➡️ lista.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m49s247.jpg" alt="" width="840">
-</p>
-
-O exemplo abaixo demonstra a conversão de um conjunto para lista para permitir o acesso via índice, já que tentar acessar `numeros[0]` diretamente em um `set` resultaria em erro.
+## Exemplo
 
 ```python
 numeros = {1, 2, 3, 2}
 
-numeros = list(numeros)
+numeros = list(numeros)  # Convertendo um conjunto para uma ➡️ lista.
 
-print(numeros[0])
-
+numeros[0]
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m54s185.jpg" alt="" width="840">
-</p>
+### Iterar conjuntos
 
-Embora não suportem indexação direta, os conjuntos são iteráveis. É possível percorrer seus elementos utilizando um laço `for`.
+- A forma mais comum para percorrer os dados de um conjunto é utilizando o comando for.
+
+### Exemplo
 
 ```python
 carros = {"gol", "celta", "palio"}
 
 for carro in carros:
     print(carro)
+```
 
+### Função enumerate
+
+- Às vezes é necessário saber qual o índice do objeto dentro do laço for. Para isso podemos usar a função enumerate.
+
+### Exemplo
+
+```python
+carros = {"gol", "celta", "palio"}
+
+for indice, carro in enumerate(carros):
+    print(f"{indice}: {carro}")
+```
+
+## Métodos da classe set
+
+### {}.union
+
+```python
+conjunto_a = {1, 2}
+conjunto_b = {3, 4}
+
+conjunto_a.union(conjunto_b) # {1, 2, 3, 4}
 ```
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-13h17m57s474.jpg" alt="" width="840">
+    <img src="images/image.png" alt="Diagrama" width="200">
 </p>
 
-Quando houver necessidade de obter o índice do objeto durante a iteração em um conjunto, deve-se utilizar a função `enumerate`. Isso contorna a limitação de falta de índices nativos na estrutura do set.
+### {}.intersection
+
+```python
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.intersection(conjunto_b) # {2, 3}
+```
+
+<p align="center">
+    <img src="images/image-2.png" alt="Diagrama" width="200">
+</p>
+
+### {}.difference
+
+```python
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.difference(conjunto_b) # {1}
+conjunto_b.difference(conjunto_a) # {4}
+```
+
+<p align="center">
+    <img src="images/image-3.png" alt="Diagrama" width="200">
+</p>
+
+### {}.symmetric_difference
+
+```python
+conjunto_a = {1, 2, 3}
+conjunto_b = {2, 3, 4}
+
+conjunto_a.symmetric_difference(conjunto_b) # {1, 4}
+```
+
+<p align="center">
+    <img src="images/image-4.png" alt="Diagrama" width="200">
+</p>
+
+### {}.issubset
+
+```python
+conjunto_a = {1, 2, 3}
+conjunto_b = {4, 1, 2, 5, 6, 3}
+
+conjunto_a.issubset(conjunto_b) # True
+conjunto_b.issubset(conjunto_a) # False
+```
+
+<p align="center">
+    <img src="images/image-5.png" alt="Diagrama" width="200">
+</p>
+
+### {}.issuperset
+
+```python
+conjunto_a = {1, 2, 3}
+conjunto_b = {4, 1, 2, 5, 6, 3}
+
+conjunto_a.issuperset(conjunto_b)  # False
+conjunto_b.issuperset(conjunto_a)  # True
+```
+
+<p align="center">
+    <img src="images/image-6.png" alt="Diagrama" width="200">
+</p>
+
+### {}.isdisjoint
+
+```python
+conjunto_a = {1, 2, 3, 4, 5}
+conjunto_b = {6, 7, 8, 9}
+conjunto_c = {1, 0}
+
+conjunto_a.isdisjoint(conjunto_b)  # True
+conjunto_a.isdisjoint(conjunto_c)  # False
+```
+
+<p align="center">
+    <img src="images/image-7.png" alt="Diagrama" width="200">
+</p>
+
+### {}.add
+
+```python
+sorteio = {1, 23}
+
+sorteio.add(25) # {1, 23, 25}
+sorteio.add(42) # {1, 23, 25, 42}
+sorteio.add(25) # {1, 23, 25, 42}
+```
+
+### {}.clear
+
+```python
+sorteio = {1, 23}
+
+sorteio # {1,23}
+sorteio.clear()
+sorteio # {}
+```
+
+### {}.copy
+
+```python
+sorteio = {1, 23}
+
+sorteio # {1, 23}
+sorteio.copy()
+sorteio # {1, 23}
+```
+
+### {}.discard
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros # {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+numeros.discard(1)
+numeros.discard(45)
+numeros # {2, 3, 4, 5, 6, 7, 8, 9, 0}
+```
+
+### {}.pop
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+numeros.pop() # 0
+numeros.pop() # 1
+numeros # {2, 3, 4, 5, 6, 7, 8, 9}
+```
+
+### {}.remove
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+numeros.remove(0) # 0
+numeros # {1, 2, 3, 4, 5, 6, 7, 8, 9}
+```
+
+### len
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+len(numeros) # 10
+```
+
+### in
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+1 in numeros # True
+10 in numeros # False
+```
+
+# Parte 2 - Materiais de apoio e Questionário
+
+## Materiais de apoio
+
+Disponibilizados os seguinte arquivos em formato MS Powerpoint:
+- 03-Dio_Conjuntos.pdf
 
 # Certificado: Explorando Conjuntos em Python
 
-- Link na plataforma: 
-- Certificado em pdf: 
+Link do certificado: https://hermes.dio.me/certificates/X8KEVLLA.pdf
