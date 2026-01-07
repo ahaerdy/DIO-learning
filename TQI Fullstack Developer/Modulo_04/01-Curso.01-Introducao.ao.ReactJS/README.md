@@ -915,7 +915,37 @@ export default App;
 
 ```
 
-Este exemplo prático demonstra a aplicação dos conceitos de renderização condicional. O código utiliza o **operador ternário** para alternar entre as funções de renderização `renderShowHistory` e `renderAddCustomer` baseando-se na variável `hasCustomer`. Além disso, a função `showCustomer` exemplifica como evitar a renderização de um bloco inteiro ao retornar `null` caso a condição necessária não seja atendida.      
+### Abaixo, detalhamos o funcionamento das estruturas lógicas aplicadas:
+
+#### 1. Variáveis de Elementos
+
+No início do código, elementos JSX são armazenados diretamente em constantes. Isso permite que botões ou fragmentos de interface sejam reutilizados de forma limpa dentro da lógica de renderização posterior.
+
+* `buttonA`: Armazena o elemento de botão para o histórico.
+* `buttonB`: Armazena o elemento de botão para cadastro.
+
+#### 2. Funções de Renderização Auxiliares
+
+Seguindo a boa prática de manter o código legível e modular, foram criadas funções específicas para gerar blocos de interface.
+
+* `renderShowHistory`: Uma função que retorna um agrupamento de elementos (texto + `buttonA`) focado na visualização de dados existentes.
+* `renderAddCustomer`: Uma função focada no fluxo de criação, retornando orientações para o cadastro junto ao `buttonB`.
+
+#### 3. Operador Condicional (Ternário) Inline
+
+Dentro do retorno principal do componente `App`, o código utiliza a variável `hasCustomer` para decidir qual bloco exibir.
+
+* **Sintaxe**: `{hasCustomer ? renderShowHistory : renderAddCustomer}`.
+* Se `hasCustomer` for **verdadeiro**, a interface mostra o histórico.
+* Se for **falso**, a interface alterna automaticamente para a opção de cadastro.
+
+#### 4. Prevenção de Renderização com `null`
+
+A função `showCustomer` exemplifica como impedir que um componente seja montado na tela.
+
+* **Lógica de Bloqueio**: O código verifica se o cliente não existe (`!hasCustomer`) e, caso positivo, retorna **`null`**.
+* No React, retornar `null` faz com que o componente não apareça na árvore do DOM, o que é fundamental para gerenciar permissões ou dados ausentes sem poluir a interface.
+
 
 
 ## 🟩 Vídeo 09 - Listas e Chaves
