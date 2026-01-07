@@ -336,6 +336,41 @@ console.log(peopleAccount)
 
 A execução final no terminal valida a implementação da herança com a classe `PeopleAccount`. O log do objeto mostra a consolidação de todos os membros: o `balance` (iniciado em 0 na classe pai), os métodos herdados (`deposit`, `withdraw`, `getBalance`), as propriedades da classe pai (`name`, `accountNumber`) e a propriedade exclusiva da classe filha (`doc_id`). Isso confirma que a estrutura abstrata funcionou como molde e a classe filha estendeu corretamente as funcionalidades.
 
+🔴 app.ts
+
+```javascript
+abstract class Account {
+  name: string
+  accountNumber: number
+
+  constructor (name: string, accountNumber: number){
+    this.name = name
+    this.accountNumber = accountNumber
+  }
+
+  deposit = () => {
+    console.log('Voce depositou')
+  }
+
+  withdraw = () => {
+    console.log('Voce sacou')
+  }
+}
+
+class PeopleAccount extends Account {
+  doc_id: number
+
+  constructor(doc_id: number, name: string, accountNumber: number){
+    super(name, accountNumber)
+    this.doc_id = doc_id
+  }
+}
+
+const peopleAccount = new PeopleAccount(1, 'Nath', 10)
+console.log(peopleAccount)
+```
+Saída:
+
 ```javascript
 [INFO] 11:00:29 ts-node-dev ver. 2.0.0 (using ts-node ver. 18.8.2, typescript ver. 4.7.4)
 PeopleAccount {
