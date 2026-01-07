@@ -803,35 +803,56 @@ Além da instalação, a configuração é personalizada através de um arquivo 
 
 ## 🟩 Vídeo 08 - Renderização Condicional
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-ao-reactjs/learning/5a5e8e60-fb11-4b66-958b-ed2da9e18432?autoplay=1
+
 
 
 ## 🟩 Vídeo 09 - Listas e Chaves
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
 ## 🟩 Vídeo 10 - Manipulando Eventos
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
 ## 🟩 Vídeo 11 - Conheça dicas para pensar do jeito ReactJS
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_11.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
 ## 🟩 Vídeo 12 - Conceitos aplicados aos tipos de dados e condições da biblioteca
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Video_12.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
-# Certificado: 
+# Certificado: Introdução ao ReactJS
 
 - Link na plataforma: 
 - Certificado em pdf: 
