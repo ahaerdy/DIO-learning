@@ -1194,8 +1194,165 @@ O conteúdo aborda o desenvolvimento de aplicações **React** focando no uso es
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-19h14m16s853.jpg" alt="" width="840">
+</p>
 
+Nesta etapa inicial, é apresentada a tentativa de controlar o estado de montagem do componente utilizando uma variável local simples (`let mounted = true`). A ideia é sinalizar quando o componente está ativo para evitar atualizações de estado em componentes já desmontados. No entanto, como demonstrado no código, definir uma variável comum dentro do corpo da função do componente React faz com que seu valor seja reiniciado a cada nova renderização.
+
+```javascript
+export function App() {
+  let mounted = true;
+  console.log(mounted);
+
+  const [quoteState, setQuoteState] = useState({
+    quote: 'ok',
+    speaker: 'Speaker'
+  });
+  
+  // ... resto do componente
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-19h14m20s911.jpg" alt="" width="840">
+</p>
+
+Ao observar o console e os alertas do linter, percebe-se o problema da abordagem anterior: o React avisa que atribuições à variável `mounted` dentro do `useEffect` serão perdidas a cada renderização. O objetivo de definir `mounted = false` na função de limpeza (cleanup) do `useEffect` é evitar que processos assíncronos tentem atualizar o estado de um componente que não existe mais na tela, mas variáveis locais não persistem entre os ciclos de renderização do React.
+
+```javascript
+  useEffect(() => {
+    onUpdate();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-19h15m24s402.jpg" alt="" width="840">
+</p>
+
+Para resolver o problema da persistência de valor sem disparar novas renderizações desnecessárias, introduzimos o hook `useRef`. Diferente de uma variável comum, o `useRef` mantém seu objeto `.current` persistente durante todo o ciclo de vida do componente. Aqui, iniciamos `isMounted` com o valor `true`.
+
+```javascript
+import { useState, useEffect, useRef } from 'react';
+
+export function App() {
+  const isMounted = useRef(true);
+  console.log(isMounted);
+  
+  const [quoteState, setQuoteState] = useState({
+    quote: 'ok',
+    speaker: 'Speaker'
+  });
+  // ...
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-19h15m26s757.jpg" alt="" width="840">
+</p>
+
+Com o `useRef` configurado, podemos alterar o valor de `isMounted.current` com segurança. No exemplo visualizado, o código mostra que, mesmo após atualizações e re-renderizações, o valor armazenado na referência pode ser manipulado e consultado para verificar o estado real do componente, mantendo a consistência que a variável simples não permitia.
+
+```javascript
+  const onUpdate = async () => {
+    const quote = await getQuote();
+    
+    isMounted.current = false; // Exemplo de alteração de valor na referência
+    audio.play();
+    setQuoteState(quote);
+  };
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-19h16m11s832.jpg" alt="" width="840">
+</p>
+
+Agora aplicamos a lógica final de proteção. Dentro da função `onUpdate`, inserimos uma condicional que verifica se `isMounted.current` é verdadeiro antes de executar o `setQuoteState`. Isso garante que, se a requisição ao servidor terminar após o usuário ter saído da tela (desmontado o componente), a aplicação não tentará atualizar um estado inexistente. No `useEffect`, a função de retorno define a referência como `false`.
+
+```javascript
+  const onUpdate = async () => {
+    const quote = await getQuote();
+
+    if (isMounted.current) {
+      audio.play();
+      setQuoteState(quote);
+    }
+  };
+
+  useEffect(() => {
+    onUpdate();
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-19h16m37s836.jpg" alt="" width="840">
+</p>
+
+Após a implementação da proteção com `useRef`, os testes unitários são executados para validar a estabilidade da aplicação. O resultado mostra que todas as suítes de testes passaram com sucesso, incluindo os testes de serviço, componentes e o teste principal da página `App.test.js`.
+
+```bash
+PASS  src/services/quotesService/quotesService.test.js
+PASS  src/components/button/Button.test.js
+PASS  src/components/quotes/Quotes.test.js
+PASS  src/pages/app/App.test.js
+
+Test Suites: 4 passed, 4 total
+Tests:       7 passed, 7 total
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-19h18m09s717.jpg" alt="" width="840">
+</p>
+
+Nesta fase, ajustamos os testes unitários para refletir as mudanças visuais do componente. O teste utiliza o `screen.getByText` para verificar a presença do texto de carregamento inicial ("loading speaker"). É destacado o uso da biblioteca `@testing-library/react` para simular o comportamento do usuário e validar o ciclo de vida da requisição API dentro do teste.
+
+```javascript
+test('renders the app with a button, a quote and a button', () => {
+  render(<App />);
+
+  const buttonEl = screen.getByRole('button');
+  const imageEl = screen.getByRole('img');
+  const textEl = screen.getByText(/loading speaker/i);
+
+  expect(buttonEl).toBeInTheDocument();
+  expect(imageEl).toBeInTheDocument();
+  expect(textEl).toBeInTheDocument();
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-19h18m32s759.jpg" alt="" width="840">
+</p>
+
+O relatório final de cobertura de testes (coverage report) demonstra a eficácia do desenvolvimento orientado a testes (TDD). A aplicação atingiu níveis altíssimos de cobertura, com quase 100% em declarações (statements), funções e linhas em quase todos os arquivos críticos do projeto, garantindo que as funcionalidades principais e ramificações de código estejam protegidas contra regressões.
+
+```bash
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |    96.3 |      100 |     100 |   96.15 |                   
+ src                      |       0 |      100 |     100 |       0 |                   
+  index.js                |       0 |      100 |     100 |       0 | 7-13              
+ src/components/button    |     100 |      100 |     100 |     100 |                   
+  Button.js               |     100 |      100 |     100 |     100 |                   
+ src/pages/app            |     100 |      100 |     100 |     100 |                   
+  App.js                  |     100 |      100 |     100 |     100 |                   
+--------------------------|---------|----------|---------|---------|-------------------
+
+```
 
 ## 🟩 Vídeo 12 - Dúvidas
 
