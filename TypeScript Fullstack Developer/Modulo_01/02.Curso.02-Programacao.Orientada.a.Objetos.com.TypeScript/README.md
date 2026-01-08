@@ -398,10 +398,6 @@ O vídeo consiste em uma aula técnica sobre **Programação Orientada a Objetos
 
 ### Anotações
 
-   <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-21h16m06s290.jpg" alt="" width="840">
-</p>
-
 Nesta etapa, o foco está na organização e execução do arquivo principal da aplicação (`app.ts`). Após a criação das classes de conta, o código demonstra a instância de objetos e a chamada de métodos herdados. É possível observar a criação de uma `peopleAccount` (do tipo `PeopleAccount`) e de uma `companyAccount` (do tipo `CompanyAccount`), testando a funcionalidade de depósito em ambas para validar o comportamento do sistema.
 
 ```typescript
@@ -416,10 +412,6 @@ const companyAccount: CompanyAccount = new CompanyAccount('DIO', 1)
 companyAccount.deposit()
 
 ```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-21h17m06s290.jpg" alt="" width="840">
-</p>
 
 Aqui é apresentada a estrutura da classe abstrata **DioAccount**, que serve como a "classe mãe" no conceito de herança. Por ser `abstract`, ela não pode ser instanciada diretamente, mas garante que todas as classes filhas (como contas de pessoas físicas ou jurídicas) possuam atributos e métodos essenciais centralizados, como nome, número da conta, saldo e as operações de depósito, saque e verificação de saldo.
 
@@ -449,10 +441,6 @@ export abstract class DioAccount {
 
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-21h18m06s290.jpg" alt="" width="840">
-</p>
-
 A imagem detalha a implementação da classe **PeopleAccount**, que utiliza o operador `extends` para herdar as funcionalidades de `DioAccount`. Um ponto crucial aqui é o uso do **superconstrutor** (`super`), que é responsável por inicializar as propriedades da classe mãe dentro da classe filha. Além dos atributos herdados, a `PeopleAccount` introduz o atributo específico `doc_id`.
 
 ```typescript
@@ -468,10 +456,6 @@ export class PeopleAccount extends DioAccount {
 }
 
 ```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-21h19m06s290.jpg" alt="" width="840">
-</p>
 
 A classe **CompanyAccount** demonstra o conceito de **polimorfismo** na prática. Além de possuir um método exclusivo (`getLoan`), ela sobrescreve o método `deposit` da classe mãe. Ao redefinir o método na classe filha, alteramos o seu fluxo de execução (neste caso, mudando a mensagem exibida no console), permitindo que um mesmo método se comporte de maneiras diferentes dependendo do tipo de objeto que o chama.
 
@@ -494,7 +478,15 @@ export class CompanyAccount extends DioAccount {
 
 ```
      
+🟢 Saída:
 
+```bash
+$ ts-node-dev app.ts 
+
+[INFO] 21:28:28 ts-node-dev ver. 2.0.0 (using ts-node ver. 10.9.2, typescript ver. 5.9.3)
+Você depositou
+A empresa depositou
+```
 
 ## 🟩 Vídeo 06 - Visibilidade de atributos e métodos
 
