@@ -898,8 +898,166 @@ O vídeo descreve um processo de **desenvolvimento orientado a testes (TDD)** em
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h53m21s673.jpg" alt="" width="840">
+</p>
 
+Nesta etapa, é iniciada a configuração do ambiente de testes utilizando a biblioteca **MSW (Mock Service Worker)** para simular as requisições do servidor. O objetivo é garantir que a aplicação se comporte corretamente ao buscar dados da API sem depender de um servidor real ativo, tratando o teste como uma forma de documentação do comportamento esperado do componente `App`.
+
+```javascript
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
+import { render, screen, fireEvent } from '@testing-library/react';
+import { App } from './App';
+
+const response = { speaker: 'Speaker', quote: 'test quote' };
+
+const server = setupServer(
+  rest.get(process.env.REACT_APP_API, (req, res, ctx) => {
+    return res(ctx.json(response));
+  })
+);
+
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h53m30s693.jpg" alt="" width="840">
+</p>
+
+Após a configuração do servidor de mock, é executado um teste para verificar se a aplicação atualiza o texto da frase após o clique no botão. O teste falha inicialmente porque a lógica de busca de dados e atualização de estado ainda não foi implementada no componente, seguindo a metodologia de desenvolvimento orientado a testes (TDD).
+
+```javascript
+test('calls api on button click and update its text', async () => {
+  render(<App />);
+
+  const buttonEl = screen.getByRole('button');
+  fireEvent.click(buttonEl);
+
+  const quoteEl = await screen.findByText(response.quote);
+
+  expect(quoteEl).toBeInTheDocument();
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h53m52s767.jpg" alt="" width="840">
+</p>
+
+Para fazer o teste passar, inicia-se a alteração no componente `App.js`. Primeiramente, é criada uma função de callback chamada `onUpdate`, que por enquanto apenas registra uma mensagem no console. Esta função será vinculada ao evento de clique do componente de frases.
+
+```javascript
+export function App() {
+  const onUpdate = () => {
+    console.log('teste');
+  };
+
+  return (
+    <Content>
+      <Quotes quote={'ok'} speaker={'Speaker'} onUpdate={onUpdate} />
+      <NarutoImg src={narutoImg} alt="Naruto with a kunai" />
+    </Content>
+  );
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h54m04s547.jpg" alt="" width="840">
+</p>
+
+A falha do teste é confirmada no console, indicando que o elemento com o texto "test quote" não foi encontrado. Isso ocorre porque, apesar de o botão disparar a função `onUpdate`, o estado do componente permanece estático com o valor inicial "ok".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h55m27s781.jpg" alt="" width="840">
+</p>
+
+A implementação evolui com a introdução do Hook `useState` do React para gerenciar o estado das frases de forma dinâmica. O estado inicial é definido com um objeto contendo uma frase e um autor padrão, e a função `onUpdate` é tornada assíncrona para preparar a chamada ao serviço de API.
+
+```javascript
+import { useState } from 'react';
+// ... outros imports
+
+export function App() {
+  const [quoteState, setQuoteState] = useState({ 
+    quote: 'ok', 
+    speaker: 'Speaker' 
+  });
+
+  const onUpdate = async () => {
+    const quote = await getQuote();
+    // lógica de atualização virá a seguir
+  };
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h55m53s888.jpg" alt="" width="840">
+</p>
+
+O código é ajustado para que o componente `Quotes` receba os dados diretamente do `quoteState`. Ao clicar no botão, a função `onUpdate` chama o serviço `getQuote()`, que retorna os dados simulados pelo MSW no ambiente de teste ou os dados reais do servidor em produção.
+
+```javascript
+<Quotes 
+  quote={quoteState.quote} 
+  speaker={quoteState.speaker} 
+  onUpdate={onUpdate} 
+/>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h56m14s956.jpg" alt="" width="840">
+</p>
+
+Mesmo com a chamada ao serviço implementada, os testes ainda falham. O console mostra que o estado não está sendo atualizado corretamente com o retorno da API, resultando na permanência do texto "ok" na tela em vez da frase esperada ("test quote").
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h56m32s855.jpg" alt="" width="840">
+</p>
+
+Para otimizar o código e torná-lo mais legível, é aplicado o **operador spread** (`...`). Como o objeto `quoteState` possui exatamente as mesmas propriedades que o componente `Quotes` espera (`quote` e `speaker`), o spread permite "espalhar" essas propriedades de forma simplificada, funcionando como um atalho (*short hand*).
+
+```javascript
+<Quotes {...quoteState} onUpdate={onUpdate} />
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h56m45s405.jpg" alt="" width="840">
+</p>
+
+Finalmente, a lógica de atualização do estado é concluída dentro da função `onUpdate`. Ao chamar `setQuoteState(quote)`, o React identifica a mudança, renderiza novamente o componente e exibe a nova frase recebida do servidor (ou do mock).
+
+```javascript
+const onUpdate = async () => {
+  const quote = await getQuote();
+  setQuoteState(quote);
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h56m51s739.jpg" alt="" width="840">
+</p>
+
+Com a implementação da função de atualização de estado, todos os testes unitários e de integração passam a apresentar o status **PASS**. Isso confirma que a integração entre o clique do botão, a chamada assíncrona ao serviço e a atualização da interface via Hook está funcionando conforme o esperado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h56m54s530.jpg" alt="" width="840">
+</p>
+
+A validação final ocorre no navegador, onde é possível observar a aplicação funcionando na prática. Ao clicar no botão "Quote No Jutsu", o sistema busca e exibe frases de personagens como Zabuza e Gaara, demonstrando que o estado está sendo atualizado corretamente com os dados reais vindos da API.
+
+```javascript
+// Exemplo de resultado final no navegador exibindo a frase de Zabuza Momochi
+
+```      
 
 # Parte 3 - xxxxxxxxxxxxxxx
 
