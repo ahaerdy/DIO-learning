@@ -1352,7 +1352,7 @@ O vídeo consiste em um **bate-papo técnico** onde um especialista aborda prát
 
 ### Anotações
 
-Este relatório didático sintetiza os principais pontos discutidos na sessão de dúvidas sobre o curso, focando em boas práticas de desenvolvimento, testes e ferramentas modernas de programação.
+Este relatório sintetiza os principais pontos discutidos na sessão de dúvidas, focando em boas práticas de desenvolvimento, testes e ferramentas modernas de programação.
 
 ### **1. Cobertura de Testes (Coverage)**
 
