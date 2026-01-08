@@ -400,6 +400,8 @@ O vídeo consiste em uma aula técnica sobre **Programação Orientada a Objetos
 
 Nesta etapa, o foco está na organização e execução do arquivo principal da aplicação (`app.ts`). Após a criação das classes de conta, o código demonstra a instância de objetos e a chamada de métodos herdados. É possível observar a criação de uma `peopleAccount` (do tipo `PeopleAccount`) e de uma `companyAccount` (do tipo `CompanyAccount`), testando a funcionalidade de depósito em ambas para validar o comportamento do sistema.
 
+🔴 app.ts
+
 ```typescript
 import { DioAccount } from './class/DioAccount'
 import { PeopleAccount } from './class/PeopleAccount'
@@ -414,6 +416,8 @@ companyAccount.deposit()
 ```
 
 Aqui é apresentada a estrutura da classe abstrata **DioAccount**, que serve como a "classe mãe" no conceito de herança. Por ser `abstract`, ela não pode ser instanciada diretamente, mas garante que todas as classes filhas (como contas de pessoas físicas ou jurídicas) possuam atributos e métodos essenciais centralizados, como nome, número da conta, saldo e as operações de depósito, saque e verificação de saldo.
+
+🟡 ./class/DioAccount.ts
 
 ```typescript
 export abstract class DioAccount {
@@ -443,6 +447,8 @@ export abstract class DioAccount {
 
 A imagem detalha a implementação da classe **PeopleAccount**, que utiliza o operador `extends` para herdar as funcionalidades de `DioAccount`. Um ponto crucial aqui é o uso do **superconstrutor** (`super`), que é responsável por inicializar as propriedades da classe mãe dentro da classe filha. Além dos atributos herdados, a `PeopleAccount` introduz o atributo específico `doc_id`.
 
+🟡 ./class/PeopleAccount.ts
+
 ```typescript
 import { DioAccount } from "./DioAccount"
 
@@ -458,6 +464,8 @@ export class PeopleAccount extends DioAccount {
 ```
 
 A classe **CompanyAccount** demonstra o conceito de **polimorfismo** na prática. Além de possuir um método exclusivo (`getLoan`), ela sobrescreve o método `deposit` da classe mãe. Ao redefinir o método na classe filha, alteramos o seu fluxo de execução (neste caso, mudando a mensagem exibida no console), permitindo que um mesmo método se comporte de maneiras diferentes dependendo do tipo de objeto que o chama.
+
+🟡 ./class/CompanyAccount.ts
 
 ```typescript
 import { DioAccount } from "./DioAccount"
