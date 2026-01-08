@@ -741,7 +741,11 @@ const NarutoImg = styled.img`
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/c320bd61-1228-4f2e-8d83-694b487c0c5f?autoplay=1
 
+O vídeo apresenta um guia técnico sobre o desenvolvimento de um **serviço em React** voltado para o consumo de frases via **API**. O autor enfatiza a importância de **segregar responsabilidades** ao criar pastas específicas para serviços, facilitando a organização e a manutenção do código. A explicação foca na prática de **testes unitários**, demonstrando como utilizar a biblioteca **MSW** para simular respostas de um servidor fictício e garantir a autonomia do código. Além disso, o conteúdo aborda o uso de **funções assíncronas** com `async/await` para gerenciar requisições de forma eficiente. Por fim, o autor destaca as boas práticas no uso de **variáveis de ambiente**, que permitem configurar URLs distintas para diferentes contextos de desenvolvimento e produção.
 
+### Anotações
+
+      
 
 
 ## 🟩 Vídeo 09 - Evoluindo nosso projeto através do controle de estado
