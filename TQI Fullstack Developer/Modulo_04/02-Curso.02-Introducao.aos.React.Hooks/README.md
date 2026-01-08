@@ -275,7 +275,90 @@ Time:        4.525 s
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/798759df-077a-4e49-8c10-f6d9969c0333?autoplay=1
 
+O video apresenta um tutorial prático sobre o desenvolvimento de interfaces utilizando **React** e a biblioteca **Styled Components**. O autor demonstra como criar **componentes estilizados** diretamente no JavaScript, destacando a facilidade de organizar layouts com **Flexbox** e o uso de medidas responsivas. Além da parte visual, o conteúdo aborda a importância da **refatoração de código**, sugerindo a separação de elementos em novos arquivos para facilitar a **manutenção e reutilização**. Por fim, discute-se a estratégia de **testes unitários**, priorizando a validação de comportamentos e regras de negócio em vez de focar apenas em aspectos visuais. O guia utiliza um exemplo prático com imagens e textos para ilustrar a montagem da estrutura e a preparação de um **ambiente de testes**.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-13h45m58s062.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, inicia-se a construção da interface do componente principal utilizando `styled-components`. A abordagem foca em criar um container estrutural chamado `Content` para organizar os elementos que foram definidos previamente no teste unitário: um parágrafo para o texto, um botão de ação e a imagem do personagem.
+
+O código estabelece a estrutura básica do componente `App`, importando a imagem do Naruto e definindo a estilização inicial para centralizar o conteúdo na tela.
+
+```javascript
+import styled from 'styled-components';
+import narutoImg from '../../images/naruto.png';
+
+export function App() {
+  return (
+    <Content>
+      <p>quote xpto</p>
+      <span>Speaker</span>
+      <button>Quote No Jutsu</button>
+      <img src={narutoImg} alt="Naruto with a kunai" />
+    </Content>
+  );
+}
+
+const Content = styled.div`
+  height: 100vh;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const NarutoImg = styled.img`
+  max-width: 50vw;
+  align-self: flex-end;
+`;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-13h46m49s186.jpg" alt="" width="840">
+</p>
+
+Para melhorar a organização do projeto, a lógica de exibição das frases é isolada em um componente específico chamado `Quotes`. Esta refatoração permite que o componente `App` gerencie o layout global enquanto o `Quotes` cuida especificamente da renderização do texto da frase, do autor (speaker) e do botão de interação.
+
+```javascript
+export const Quotes = () => {
+  return (
+    <div>
+      <p>quote xpto</p>
+      <span>Speaker</span>
+      <button>Quote No Jutsu</button>
+    </div>
+  );
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-13h47m26s571.jpg" alt="" width="840">
+</p>
+
+Após a criação do componente `Quotes`, é necessário atualizar os testes unitários para garantir que a aplicação continue funcionando conforme esperado. Utilizando a **Testing Library**, o teste é configurado para renderizar o componente e verificar a presença dos elementos fundamentais. A busca pelos elementos é refinada para imitar o comportamento do usuário, utilizando métodos como `screen.getByText` ou expressões regulares para localizar o "speaker" e a citação na tela.
+
+```javascript
+import { render, screen } from '@testing-library/react';
+import { Quotes } from './Quotes';
+
+test('renders quotes with a button and text', () => {
+  render(<Quotes />);
+  
+  const buttonEl = screen.getByRole('button');
+  const textEl = screen.getByText(/quote xpto/i);
+  const speakerEl = screen.getByText(/speaker/i);
+
+  expect(buttonEl).toBeInTheDocument();
+  expect(textEl).toBeInTheDocument();
+  expect(speakerEl).toBeInTheDocument();
+});
+
+```
 
 ## 🟩 Vídeo 05 - Evoluindo e testando nosso componente
 
