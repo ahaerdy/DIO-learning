@@ -479,12 +479,94 @@ Após a refatoração e a correta importação dos componentes, executamos a su�
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/100f4b25-07fb-4e23-8e43-6410a3045989?autoplay=1 
 
+O vídeo detalha o processo de **desenvolvimento de interface** utilizando a biblioteca **Styled Components** no ecossistema React. O instrutor demonstra como configurar uma **imagem de fundo global** e criar componentes customizados para exibir citações e autores com **unidades de medida relativas**, visando garantir a **acessibilidade**. Além da estilização visual, o conteúdo enfatiza a importância da **organização do código**, sugerindo a separação do botão em um componente distinto devido ao seu alto potencial de reuso. Por fim, o tutorial aborda a validação de dados com **Prop Types**, técnica essencial para **identificar erros de tipagem** precocemente e elevar a qualidade técnica do projeto.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h42m00s487.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, a estrutura base do componente de citações (`Quotes`) é estabelecida utilizando a biblioteca **styled-components**. O foco inicial está na organização visual do conteúdo, criando um componente chamado `Wrapper` que utiliza **Flexbox** para gerenciar o layout.
+
+Ao definir `display: flex` e `flex-direction: column`, garantimos que a frase, o autor e o botão sejam empilhados verticalmente. A propriedade `flex: 1` é aplicada para que o componente ocupe o espaço disponível e interaja corretamente com outros elementos da tela, como a imagem do personagem que compõe o cenário da aplicação.
+
+```javascript
+import styled from 'styled-components';
+import { string } from 'prop-types';
+
+export const Quotes = ({ quote, speaker }) => {
+  return (
+    <Wrapper>
+      <Quote>{quote}</Quote>
+      <Speaker>- {speaker}</Speaker>
+      <button>Quote No Jutsu</button>
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Quote = styled.p`
+  font-size: 2em;
+  margin: 0;
+`;
+
+const Speaker = styled(Quote)`
+  text-align: right;
+  margin-bottom: 50px;
+`;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h42m27s444.jpg" alt="" width="840">
+</p>
+
+Após a estilização, é introduzida uma boa prática fundamental para o desenvolvimento com React: a **tipagem de propriedades** (PropTypes). O uso do `prop-types` permite validar se os dados recebidos pelo componente correspondem ao esperado, como strings para o texto da citação e o nome do autor.
+
+Essa técnica funciona como uma documentação viva e uma ferramenta de depuração. Caso o componente receba um tipo de dado inesperado (por exemplo, um número ou array onde se esperava um texto), o React emitirá um alerta no console do navegador, facilitando a identificação de bugs antes que eles causem falhas críticas na renderização da interface.
+
+```javascript
+import { string } from 'prop-types';
+
+// ... (restante do componente)
+
+Quotes.propTypes = {
+  quote: string,
+  speaker: string
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h42m43s514.jpg" alt="" width="840">
+</p>
+
+Para demonstrar a utilidade das **PropTypes**, é realizado um teste prático enviando um dado incorreto (um array) para a propriedade `quote` no arquivo principal (`App.js`). Embora o navegador consiga converter e exibir o conteúdo de forma rudimentar, o console de desenvolvedor do Chrome exibe imediatamente um aviso detalhado.
+
+O erro indica explicitamente que a propriedade `quote` recebeu um valor do tipo `array`, mas o componente esperava uma `string`. Esse mecanismo de alerta é essencial em projetos reais para manter a integridade dos dados e garantir que a comunicação entre diferentes partes da aplicação ocorra de forma previsível.
+
+```javascript
+// Exemplo do teste de erro no App.js
+<Quotes quote={['teste']} speaker={'Speaker'} />
+
+```      
 
 
 ## 🟩 Vídeo 07 - Abstraindo melhor nossos componentes
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Curso.02-Video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/c62c7b54-7c38-4141-902a-56fe2bb51b71?autoplay=1
 
 
 ## 🟩 Vídeo 08 - Mockando uma API REST em seus testes com msw
