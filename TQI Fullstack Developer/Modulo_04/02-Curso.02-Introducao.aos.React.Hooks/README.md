@@ -1339,21 +1339,6 @@ test('renders the app with a button, a quote and a button', () => {
 
 O relatório final de cobertura de testes (coverage report) demonstra a eficácia do desenvolvimento orientado a testes (TDD). A aplicação atingiu níveis altíssimos de cobertura, com quase 100% em declarações (statements), funções e linhas em quase todos os arquivos críticos do projeto, garantindo que as funcionalidades principais e ramificações de código estejam protegidas contra regressões.
 
-```bash
---------------------------|---------|----------|---------|---------|-------------------
-File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------------------|---------|----------|---------|---------|-------------------
-All files                 |    96.3 |      100 |     100 |   96.15 |                   
- src                      |       0 |      100 |     100 |       0 |                   
-  index.js                |       0 |      100 |     100 |       0 | 7-13              
- src/components/button    |     100 |      100 |     100 |     100 |                   
-  Button.js               |     100 |      100 |     100 |     100 |                   
- src/pages/app            |     100 |      100 |     100 |     100 |                   
-  App.js                  |     100 |      100 |     100 |     100 |                   
---------------------------|---------|----------|---------|---------|-------------------
-
-```
-
 ## 🟩 Vídeo 12 - Dúvidas
 
 <video width="60%" controls>
