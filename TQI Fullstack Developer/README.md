@@ -73,7 +73,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 4: ReactJS
 
 - [ ] Curso: [Introdução ao ReactJS](Modulo_04/01-Curso.01-Introducao.ao.ReactJS)
-- [ ] Curso: Introdução aos React Hooks
+- [ ] Curso: [Introdução aos React Hooks](Modulo_04/02-Curso.02-Introducao.aos.React.Hooks)
 - [ ] Curso: Trabalhando com States & Effects no ReactJs
 - [ ] Curso: Desenvolvimento de aplicações para internet com ReactJS
 - [ ] Curso: Práticas avançadas em projetos com ReactJS
