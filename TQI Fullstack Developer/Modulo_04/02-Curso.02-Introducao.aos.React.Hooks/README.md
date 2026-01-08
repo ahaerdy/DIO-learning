@@ -895,18 +895,6 @@ A execução final dos testes demonstra sucesso absoluto. Todas as suítes de te
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/d8fe3c1d-d3b8-4399-97f1-d3ebcee00c14?autoplay=1
 
 
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 11 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
 
 # Parte 3 - xxxxxxxxxxxxxxx
 
