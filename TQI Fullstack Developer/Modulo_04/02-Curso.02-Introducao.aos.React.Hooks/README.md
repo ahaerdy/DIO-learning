@@ -1211,7 +1211,7 @@ Link do vídeo:
 Link do vídeo: 
 
 
-# Certificado: 
+# Certificado: Introdução aos React Hooks
 
 - Link na plataforma: 
 - Certificado em pdf: 
