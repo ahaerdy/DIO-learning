@@ -742,10 +742,16 @@ const NarutoImg = styled.img`
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/c320bd61-1228-4f2e-8d83-694b487c0c5f?autoplay=1
 
 
+
+
 ## 🟩 Vídeo 09 - Evoluindo nosso projeto através do controle de estado
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Curso.02-Video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/d8fe3c1d-d3b8-4399-97f1-d3ebcee00c14?autoplay=1
 
 
 ## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
