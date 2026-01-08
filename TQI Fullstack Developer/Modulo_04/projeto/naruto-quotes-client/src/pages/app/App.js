@@ -1,3 +1,4 @@
+
 import narutoImg from '../../images/naruto.png';
 
 export function App() {
