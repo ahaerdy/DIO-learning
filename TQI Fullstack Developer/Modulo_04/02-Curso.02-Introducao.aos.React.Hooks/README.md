@@ -470,25 +470,30 @@ Após a refatoração e a correta importação dos componentes, executamos a su�
 
 # Parte 2 - Ajustes estéticos
 
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 06 - Explorando o React Styled Components um pouco mais
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Curso.02-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/100f4b25-07fb-4e23-8e43-6410a3045989?autoplay=1 
 
 
-Link do vídeo:  
 
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 07 - Abstraindo melhor nossos componentes
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 08 - Mockando uma API REST em seus testes com msw
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 09 - Evoluindo nosso projeto através do controle de estado
 
 
 Link do vídeo: 
