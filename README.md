@@ -12,6 +12,8 @@
   <a href="https://www.linkedin.com/in/arthur-haerdy-jr/">
     <img src="https://img.shields.io/badge/LinkedIn-Arthur%20Haerdy%20Jr.-0077B5?logo=linkedin" />
   </a>
+
+  ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)
 </p>
 
 
