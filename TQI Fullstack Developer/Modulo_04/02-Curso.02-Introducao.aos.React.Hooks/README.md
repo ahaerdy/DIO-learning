@@ -369,6 +369,104 @@ test('renders quotes with a button and text', () => {
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/1996357a-d196-4665-900d-49ab75cfe66f?autoplay=1
 
+O vídeo descreve o processo de desenvolvimento de um **componente React** utilizando a metodologia de **testes unitários** primeiro. O autor detalha a criação de um componente de frases que deve **renderizar propriedades** específicas, como o texto de uma citação, o autor e um botão de ação. Durante a explicação, é enfatizada a importância de escrever o **teste antes da funcionalidade**, garantindo que o código cumpra o contrato estabelecido. O relato aborda a resolução de falhas nos testes através da **desestruturação de propriedades** e da refatoração da estrutura de diretórios do projeto. Por fim, o desenvolvedor demonstra como a **integração entre componentes** e a exportação correta de arquivos resultam em um sistema funcional e validado.
+
+### Anotações
+
+ <p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h06m47s603.jpg" alt="" width="840">
+</p>
+
+Para garantir que o componente de frases se comporte conforme o esperado, iniciamos o desenvolvimento aplicando a **mentalidade de testes unitários**, escrevendo o teste antes mesmo da funcionalidade existir. O objetivo é criar um contrato onde o componente deve receber uma frase (`quote`) e um autor (`speaker`) via propriedades e renderizá-los na tela juntamente com um botão.
+
+No código abaixo, utilizamos a biblioteca de testes para simular a renderização do componente `Quotes` e verificar se os textos passados e o elemento de botão estão presentes no documento:
+
+```javascript
+import { render, screen } from '@testing-library/react';
+import { Quotes } from './Quotes';
+
+const quote = 'test quote';
+const speaker = 'random speaker';
+
+test('renders received quote, speaker and a button', () => {
+  render(<Quotes quote={quote} speaker={speaker} />);
+
+  const quoteEl = screen.getByText(quote);
+  const speakerEl = screen.getByText(speaker);
+  const buttonEl = screen.getByRole('button');
+
+  expect(quoteEl).toBeInTheDocument();
+  expect(speakerEl).toBeInTheDocument();
+  expect(buttonEl).toBeInTheDocument();
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h07m09s511.jpg" alt="" width="840">
+</p>
+
+Ao executar os testes pela primeira vez, encontramos falhas esperadas. O erro indicado pelo terminal mostra que o sistema de testes não conseguiu localizar o texto "test quote" no componente. Isso ocorre porque o componente `Quotes` ainda possui conteúdo estático e não está tratando as propriedades recebidas, resultando em uma falha de asserção durante a busca pelo texto na árvore do DOM.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h07h35s925.jpg" alt="" width="840">
+</p>
+
+Para corrigir a falha e fazer o teste passar, alteramos a implementação do componente para aceitar propriedades. Utilizamos a técnica de **destructuring** para extrair `quote` e `speaker` dos argumentos da função. Agora, o componente deixa de exibir um texto fixo e passa a renderizar dinamicamente o que recebe, incluindo o botão com o texto "Quote No Jutsu".
+
+```javascript
+export const Quotes = ({ quote, speaker }) => {
+  return (
+    <div>
+      <p>{quote}</p>
+      <p>- {speaker}</p>
+      <button>Quote No Jutsu</button>
+    </div>
+  );
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h07m54s559.jpg" alt="" width="840">
+</p>
+
+Com o componente individual funcionando, é necessário integrá-lo ao arquivo principal da aplicação (`App.js`). Realizamos a importação do componente `Quotes` e o organizamos dentro de uma estrutura estilizada utilizando `styled-components`. O componente principal agora delega a responsabilidade de exibição da frase para o novo componente, passando as propriedades necessárias, enquanto lida com o layout global e a imagem lateral do personagem.
+
+```javascript
+import styled from 'styled-components';
+import narutoImg from '../../images/naruto.png';
+import { Quotes } from '../../components';
+
+export function App() {
+  return (
+    <Content>
+      <Quotes quote={'ok'} speaker={'Speaker'} />
+      <NarutoImg src={narutoImg} alt="Naruto with a kunai" />
+    </Content>
+  );
+}
+
+const Content = styled.div`
+  height: 100vh;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const NarutoImg = styled.img`
+  /* Estilização da imagem */
+`;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h08m05s267.jpg" alt="" width="840">
+</p>
+
+Após a refatoração e a correta importação dos componentes, executamos a suíte de testes novamente. O resultado no terminal confirma que tanto o teste unitário do componente `Quotes` quanto o teste de integração do `App` foram bem-sucedidos. Ver a sinalização "PASS" em todos os arquivos de teste indica que a lógica de renderização por propriedades e a estrutura de componentes estão operando corretamente.
+
 
 ## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
 
