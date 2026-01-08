@@ -1068,7 +1068,121 @@ A validação final ocorre no navegador, onde é possível observar a aplicaçã
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:  
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/371f6f63-e3ff-4264-b9b1-c78272a48eb3?autoplay=1
+
+O autor demonstra o desenvolvimento de um componente **React**, focando na integração de **efeitos sonoros** e na busca automática de dados. Ele explica como utilizar o hook **useEffect** com uma lista de dependências vazia para garantir que uma função seja executada apenas uma vez durante o **carregamento inicial**. Durante a implementação, surge um erro comum em **testes unitários** relacionado à tentativa de atualizar o **estado** de um componente que já foi desmontado. Para solucionar esse problema, o desenvolvedor propõe verificar se o componente ainda está **ativo na tela** antes de processar a resposta da API. O conteúdo enfatiza boas práticas para evitar vazamentos de memória e garantir que a aplicação se comporte de forma robusta em **produção**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-18h48m06s701.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é realizada a implementação de um efeito sonoro para a aplicação. Para isso, o arquivo de áudio `jutso.mp3` é importado da pasta de recursos e instanciado utilizando o construtor nativo `Audio`. A função `onUpdate` é atualizada para disparar a execução desse áudio sempre que uma nova frase for buscada, adicionando uma camada de feedback sonoro à interação do usuário.
+
+```javascript
+import { useState } from 'react';
+import styled from 'styled-components';
+import narutoImg from '../../images/naruto.png';
+import { Quotes } from '../../components';
+import { getQuote } from '../../services';
+import jutsoSound from '../../sounds/jutso.mp3';
+
+const audio = new Audio(jutsoSound);
+
+export function App() {
+  const [quoteState, setQuoteState] = useState({
+    quote: 'ok',
+    speaker: 'Speaker'
+  });
+
+  const onUpdate = async () => {
+    const quote = await getQuote();
+    
+    audio.play();
+    setQuoteState(quote);
+  };
+
+  return (
+    <Content>
+      <Quotes {...quoteState} onUpdate={onUpdate} />
+      <NarutoImg src={narutoImg} alt="Naruto with a kunai" />
+    </Content>
+  );
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-18h48m28s159.jpg" alt="" width="840">
+</p>
+
+Para garantir que a aplicação apresente dados logo no carregamento inicial, sem depender do clique no botão, é criado um novo teste automatizado. O objetivo deste teste é verificar se a chamada à API ocorre durante a inicialização (startup) e se o componente renderiza corretamente a resposta mockada pelo servidor de testes (MSW).
+
+```javascript
+test('calls api on startup and renders it response', async () => {
+  render(<App />);
+
+  const quoteEl = await screen.findByText(response.quote);
+
+  expect(quoteEl).toBeInTheDocument();
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-18h48m58s342.jpg" alt="" width="840">
+</p>
+
+Para implementar a funcionalidade de carregamento automático demandada pelo teste anterior, introduzimos o hook `useEffect`. Enquanto o `useState` gerencia o estado e a re-renderização, o `useEffect` permite reagir a mudanças ou executar códigos em momentos específicos do ciclo de vida do componente. No exemplo, ele é utilizado para monitorar alterações no `quoteState`.
+
+```javascript
+import { useState, useEffect } from 'react';
+// ... outros imports
+
+export function App() {
+  const [quoteState, setQuoteState] = useState({
+    quote: 'ok',
+    speaker: 'Speaker'
+  });
+
+  useEffect(() => {
+    console.log('quoteState foi alterado');
+  }, [quoteState]);
+  
+  // ... resto do componente
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-18h49m06s054.jpg" alt="" width="840">
+</p>
+
+Ao configurar o `useEffect` com um array de dependências vazio `[]`, a função interna é executada apenas uma vez, exatamente quando o componente é montado. Isso é ideal para disparar a função `onUpdate` na inicialização, garantindo que uma frase seja buscada na API assim que a aplicação carregar.
+
+```javascript
+useEffect(() => {
+  onUpdate();
+}, []);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-18h49m18s212.jpg" alt="" width="840">
+</p>
+
+Ao executar os testes, surge um erro de "Unable to find an element". Embora o teste tenha passado tecnicamente em alguns cenários, o console exibe um aviso crítico: não é possível atualizar o estado de um componente que já foi desmontado. Isso ocorre porque o teste unitário pode finalizar e desmontar o componente antes que a promessa da API ou a execução do áudio sejam concluídas, gerando uma tentativa de atualização em um componente inexistente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-18h49m28s135.jpg" alt="" width="840">
+</p>
+
+O erro identificado é um risco de **memory leak** (vazamento de memória). Se um usuário navegar para outra tela antes de uma resposta assíncrona terminar, o código tentará atualizar o estado de um componente que não está mais na tela. Para solucionar isso, será necessário utilizar um novo hook que verifique se o componente ainda está montado antes de realizar qualquer atualização de estado ou disparo de áudio.
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+---
 
 
 ## 🟩 Vídeo 11 - Conclusão do projeto
@@ -1078,7 +1192,7 @@ Link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/701fe57a-ceeb-434e-a121-7bc982c723ba?autoplay=1
 
 
 ## 🟩 Vídeo 12 - Dúvidas
