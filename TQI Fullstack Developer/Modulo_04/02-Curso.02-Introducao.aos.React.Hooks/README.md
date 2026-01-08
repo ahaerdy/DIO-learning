@@ -276,6 +276,7 @@ Time:        4.525 s
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/798759df-077a-4e49-8c10-f6d9969c0333?autoplay=1
 
 
+
 ## 🟩 Vídeo 05 - Evoluindo e testando nosso componente
 
 <video width="60%" controls>
@@ -283,7 +284,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/1996357a-d196-4665-900d-49ab75cfe66f?autoplay=1
 
 
 ## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
