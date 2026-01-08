@@ -7,7 +7,10 @@
 
 ## 🟩 Vídeo 01 - Apresentação e Objetivo Geral
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_01.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/b1ad8b5e-47ca-493b-a78f-5a1b1d888eb4?autoplay=1
 
@@ -16,7 +19,10 @@ Nesse conteúdo introdutório, o líder técnico **Venilton** detalha o funciona
 
 ## 🟩 Vídeo 02 - Percurso
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_02.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/42822234-a717-4616-a397-11e947e6d563?autoplay=1
 
@@ -26,7 +32,10 @@ Esta fonte detalha a **estrutura programática** de um treinamento voltado para 
 
 ## 🟩 Vídeo 03 - Bootcamp DIO - Nossa Metodologia de Ensino
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_03.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/c879a248-1e5d-469f-afe0-e252ac1ea1a5?autoplay=1
 
@@ -35,7 +44,10 @@ A trilha de aprendizado é composta por **cursos teóricos** que estabelecem a b
 
 ## 🟩 Vídeo 04 - Bootcamp DIO - Conhecendo Nossa Plataforma
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_04.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/c7ff66f0-a9b6-4afd-a702-b516672df905?autoplay=1
 
@@ -45,7 +57,10 @@ O vídeo apresenta um guia detalhado sobre o funcionamento da plataforma **DIO**
 
 ## 🟩 Vídeo 05 - Desafios de Código
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_05.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/cb8c9096-ee70-4f2f-8794-044b00e876ec?autoplay=1
 
@@ -53,7 +68,10 @@ O vídeo consiste em uma introdução didática sobre a relevância dos **desafi
 
 ## 🟩 Vídeo 06 - Desafios de Código - Entendendo na Prática com Java
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_06.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/00df16bd-68c0-42e3-b6cd-8f7adf143426?autoplay=1
 
@@ -62,7 +80,10 @@ O vídeo descreve o funcionamento dos **desafios de código** em um ambiente de 
 
 ## 🟩 Vídeo 07 - Desafios de Código - Entendendo na Prática com JavaScript
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_07.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/7bae349e-a158-4c18-8f31-f703cdecf89d?autoplay=1
 
@@ -72,7 +93,10 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/seja-pro
 
 ## 🟩 Vídeo 08 - Desafios de Projeto
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_08.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/2c65b03a-dbae-4ce1-8fb5-3e465e74e65a?autoplay=1
 
@@ -80,7 +104,10 @@ O vídeo discute a importância fundamental dos **desafios de projeto** dentro d
 
 ## 🟩 Vídeo 09 - Desafios de Projeto - Entendendo na Prática
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_09.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/1e99dbe1-29c5-4701-b5bd-1164ee643257?autoplay=1
 
@@ -90,7 +117,10 @@ O vídeo detalha o funcionamento prático dos **desafios de projeto** na platafo
 
 ## 🟩 Vídeo 10 - Dicas Finais e Conclusão
 
-![[bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_10.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Curso_03-Video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/seja-protagonista-neste-bootcamp/learning/ad02c292-5f57-4753-b199-a52c4cc68730?autoplay=1
 
