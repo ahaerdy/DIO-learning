@@ -39,40 +39,40 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 1: Conteúdo de abertura
 
-- [x] Curso: [Boas-vindas ao TQI Fullstack Developer](Modulo_01/01-Curso.01-Boas-vindas.ao.TQI.Fullstack.Developer)
-- [x] Mentoria: [Aula inaugural - TQI Fullstack Developer](Modulo_01/02-Curso.02-Aula.inaugural-TQI.Fullstack.Developer)
-- [x] Curso: [Seja Protagonista Neste Bootcamp](Modulo_01/03-Curso.03-Seja.Protagonista.Neste.Bootcamp)
-- [x] Curso: [Introdução à Programação e Pensamento Computacional](Modulo_01/04-Curso.04-Introducao.a.Programacao.e.Pensamento.Computacional)
-- [x] Curso: [Introdução ao Git e ao GitHub](Modulo_01/05-Curso.05-Introducao.ao.Git.e.ao.GitHub)
-- [x] Projeto: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso](Modulo_01/06-Desafio-Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso)
+- [x] Curso: [Boas-vindas ao TQI Fullstack Developer](Modulo_01/01-Curso.01-Boas-vindas.ao.TQI.Fullstack.Developer/README.md)
+- [x] Mentoria: [Aula inaugural - TQI Fullstack Developer](Modulo_01/02-Curso.02-Aula.inaugural-TQI.Fullstack.Developer/README.md)
+- [x] Curso: [Seja Protagonista Neste Bootcamp](Modulo_01/03-Curso.03-Seja.Protagonista.Neste.Bootcamp/README.md)
+- [x] Curso: [Introdução à Programação e Pensamento Computacional](Modulo_01/04-Curso.04-Introducao.a.Programacao.e.Pensamento.Computacional/README.md)
+- [x] Curso: [Introdução ao Git e ao GitHub](Modulo_01/05-Curso.05-Introducao.ao.Git.e.ao.GitHub/README.md)
+- [x] Projeto: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso](Modulo_01/06-Desafio-Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso/README.md)
 	- Repositório: [DIO Learning](https://github.com/ahaerdy/DIO-learning)
     - Descrição: Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma DIO - Digital Innovation One. Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
 
 ### Módulo 2: HTML/CSS3
 
-- [x] Curso: [Introdução a Criação de Websites com HTML5 e CSS3](Modulo_02/01-Curso.01-Introducao.a.Criacao.de.Websites.com.HTML5.e.CSS3)
-- [x] Projeto: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions](Modulo_02/02-Curso.02-Desenvolvendo.um.Menu.Hamburguer.e.Morphing.Menu.com.CSS.Transitions)
+- [x] Curso: [Introdução a Criação de Websites com HTML5 e CSS3](Modulo_02/01-Curso.01-Introducao.a.Criacao.de.Websites.com.HTML5.e.CSS3/README.md)
+- [x] Projeto: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions](Modulo_02/02-Curso.02-Desenvolvendo.um.Menu.Hamburguer.e.Morphing.Menu.com.CSS.Transitions/README.md)
 	- Repositório: [DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css](https://github.com/ahaerdy/DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css)
     - Descrição: Este repositório contém o projeto desenvolvido durante o curso “Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions”, ministrado por Gabriela Pinheiro na plataforma DIO (Digital Innovation One). O projeto tem como objetivo consolidar conceitos de estruturação HTML, estilização com CSS, animações, transições e responsividade, sem utilização de JavaScript.
 
 ### Módulo 3: Javascript
 
-- [x] Curso: [Instalação e Configuração do Visual Studio Code](Modulo_03/01-Curso.01-Instalacao.e.Configuracao.do.Visual.Studio.Code)
-- [x] Curso: [Introdução ao JavaScript](Modulo_03/02-Curso.02-Introducao.ao.JavaScript)
-- [x] Curso: [Sintaxe Básica em JavaScript](Modulo_03/03-Curso.03-Sintaxe.Basica.em.JavaScript)
-- [x] Curso: [Sintaxe e Operadores JavaScript](Modulo_03/04-Curso.04-Sintaxe.e.Operadores.JavaScript)
-- [x] Curso: [Variáveis e Tipos com JavaScript](Modulo_03/05-Curso.05-Variaveis.e.Tipos.com.JavaScript)
-- [x] Curso: [Dominando Funções em JavaScript](Modulo_03/06-Curso.06-Dominando.Funcoes.em.JavaScript)
-- [x] Curso: [Debugging e Error Handling com JavaScript](Modulo_03/07-Curso.07-Debugging.e.Error.Handling.com.JavaScript)
-- [x] Curso: [Fundamentos de JavaScript Assíncrono](Modulo_03/08.Curso.08-Fundamentos.de.JavaScript.Assincrono)
-- [x] Curso: [Orientação a Objetos com JavaScript](Modulo_03/09-Curso.09-Orientacao.a.Objetos.com.JavaScript)
-- [x] Curso: [Manipulando a D.O.M. com JavaScript](Modulo_03/10-Curso.10-Manipulando.a.DOM.com.JavaScript)
-- [x] Curso: [Desafios TQI - JavaScript](Modulo_03/11-Curso.11-Desafios.TQI-JavaScript)
-- [ ] Projeto: [Desenvolvendo um Jogo da Memória](Modulo_03/12-Projeto-Desenvolvendo.um.Jogo.da.Memoria)
+- [x] Curso: [Instalação e Configuração do Visual Studio Code](Modulo_03/01-Curso.01-Instalacao.e.Configuracao.do.Visual.Studio.Code/README.md)
+- [x] Curso: [Introdução ao JavaScript](Modulo_03/02-Curso.02-Introducao.ao.JavaScript/README.md)
+- [x] Curso: [Sintaxe Básica em JavaScript](Modulo_03/03-Curso.03-Sintaxe.Basica.em.JavaScript/README.md)
+- [x] Curso: [Sintaxe e Operadores JavaScript](Modulo_03/04-Curso.04-Sintaxe.e.Operadores.JavaScript/README.md)
+- [x] Curso: [Variáveis e Tipos com JavaScript](Modulo_03/05-Curso.05-Variaveis.e.Tipos.com.JavaScript/README.md)
+- [x] Curso: [Dominando Funções em JavaScript](Modulo_03/06-Curso.06-Dominando.Funcoes.em.JavaScript/README.md)
+- [x] Curso: [Debugging e Error Handling com JavaScript](Modulo_03/07-Curso.07-Debugging.e.Error.Handling.com.JavaScript/README.md)
+- [x] Curso: [Fundamentos de JavaScript Assíncrono](Modulo_03/08.Curso.08-Fundamentos.de.JavaScript.Assincrono/README.md)
+- [x] Curso: [Orientação a Objetos com JavaScript](Modulo_03/09-Curso.09-Orientacao.a.Objetos.com.JavaScript/README.md)
+- [x] Curso: [Manipulando a D.O.M. com JavaScript](Modulo_03/10-Curso.10-Manipulando.a.DOM.com.JavaScript/README.md)
+- [x] Curso: [Desafios TQI - JavaScript](Modulo_03/11-Curso.11-Desafios.TQI-JavaScript/README.md)
+- [ ] Projeto: [Desenvolvendo um Jogo da Memória](Modulo_03/12-Projeto-Desenvolvendo.um.Jogo.da.Memoria/README.md)
 
 ### Módulo 4: ReactJS
 
-- [ ] Curso: [Introdução ao ReactJS](Modulo_04/01-Curso.01-Introducao.ao.ReactJS)
+- [ ] Curso: [Introdução ao ReactJS](Modulo_04/01-Curso.01-Introducao.ao.ReactJS/README.md)
 - [ ] Curso: [Introdução aos React Hooks](Modulo_04/02-Curso.02-Introducao.aos.React.Hooks/README.md)
 - [ ] Curso: Trabalhando com States & Effects no ReactJs
 - [ ] Curso: Desenvolvimento de aplicações para internet com ReactJS

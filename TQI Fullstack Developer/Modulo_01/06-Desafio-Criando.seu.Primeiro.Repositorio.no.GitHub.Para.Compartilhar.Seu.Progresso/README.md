@@ -5,7 +5,10 @@
 
 ## 🟩 Vídeo 01 - Introdução e apresentação do projeto
 
-![[bootcamp_tqi_fullstack-modulo_01-Desafio_07-Video_01.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Desafio_07-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  https://web.dio.me/lab/criando-seu-primeiro-repositorio-no-github-para-compartilhar-seu-progresso/learning/a6e285fa-b9a0-4bc2-8353-7b729dabcf0c?back=/track/tqi-fullstack-developer
 
