@@ -468,75 +468,14 @@ const NarutoImg = styled.img`
 Após a refatoração e a correta importação dos componentes, executamos a suíte de testes novamente. O resultado no terminal confirma que tanto o teste unitário do componente `Quotes` quanto o teste de integração do `App` foram bem-sucedidos. Ver a sinalização "PASS" em todos os arquivos de teste indica que a lógica de renderização por propriedades e a estrutura de componentes estão operando corretamente.
 
 
+# Parte 2 - Ajustes estéticos
+
 ## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-# Parte 2 - xxxxxxxxxxxxxxx
-
-## 🟩 Vídeo 01 - xxxxxxxxxxxxxxx
 
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
 ## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
 
 
@@ -559,6 +498,13 @@ Link do vídeo:
 
 
 Link do vídeo: 
+
+
+## 🟩 Vídeo 11 - xxxxxxxxxxxxxxx
+
+
+Link do vídeo: 
+
 
 
 # Parte 3 - xxxxxxxxxxxxxxx
