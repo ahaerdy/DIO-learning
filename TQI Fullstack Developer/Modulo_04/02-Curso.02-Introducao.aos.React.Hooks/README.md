@@ -1346,17 +1346,8 @@ O relatório final de cobertura de testes (coverage report) demonstra a eficáci
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/f2aa35fb-f829-4d43-9801-894ee38cec0d?autoplay=1
 
-
-## 🟩 Vídeo 13 - GitHub
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Curso.02-Video_13.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-Link do vídeo: 
 
 
 # Certificado: Introdução aos React Hooks
