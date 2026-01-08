@@ -394,7 +394,106 @@ PeopleAccount {
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/e28bd747-af21-4d88-a5f0-ec9f6470cf01?autoplay=1
 
+O vídeo consiste em uma aula técnica sobre **Programação Orientada a Objetos** utilizando **TypeScript**, focando especificamente nos pilares de **herança** e **polimorfismo**. O instrutor demonstra como criar classes filhas que estendem uma classe abstrata comum para compartilhar atributos e métodos, utilizando o método **super** para inicializar o construtor da classe pai. Além da teoria, o conteúdo aborda práticas de organização de código, como a **modularização** de classes em arquivos separados para facilitar a manutenção do projeto. O conceito de polimorfismo é exemplificado através da **sobrescrita de métodos**, permitindo que classes derivadas alterem o comportamento ou a assinatura de funções herdadas. Por fim, o material prepara o terreno para discussões futuras sobre modificadores de acesso e a palavra-chave **readonly**.
 
+### Anotações
+
+   <p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-21h16m06s290.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco está na organização e execução do arquivo principal da aplicação (`app.ts`). Após a criação das classes de conta, o código demonstra a instância de objetos e a chamada de métodos herdados. É possível observar a criação de uma `peopleAccount` (do tipo `PeopleAccount`) e de uma `companyAccount` (do tipo `CompanyAccount`), testando a funcionalidade de depósito em ambas para validar o comportamento do sistema.
+
+```typescript
+import { DioAccount } from './class/DioAccount'
+import { PeopleAccount } from './class/PeopleAccount'
+import { CompanyAccount } from './class/CompanyAccount'
+
+const peopleAccount: PeopleAccount = new PeopleAccount(12, 'Nath', 2)
+peopleAccount.deposit()
+
+const companyAccount: CompanyAccount = new CompanyAccount('DIO', 1)
+companyAccount.deposit()
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-21h17m06s290.jpg" alt="" width="840">
+</p>
+
+Aqui é apresentada a estrutura da classe abstrata **DioAccount**, que serve como a "classe mãe" no conceito de herança. Por ser `abstract`, ela não pode ser instanciada diretamente, mas garante que todas as classes filhas (como contas de pessoas físicas ou jurídicas) possuam atributos e métodos essenciais centralizados, como nome, número da conta, saldo e as operações de depósito, saque e verificação de saldo.
+
+```typescript
+export abstract class DioAccount {
+  name: string
+  accountNumber: number
+  balance: number = 0
+
+  constructor(name: string, accountNumber: number) {
+    this.name = name
+    this.accountNumber = accountNumber
+  }
+
+  deposit = (): void => {
+    console.log('Você depositou')
+  }
+
+  withdraw = (): void => {
+    console.log('Você sacou')
+  }
+
+  getBalance = (): void => {
+    console.log(this.balance)
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-21h18m06s290.jpg" alt="" width="840">
+</p>
+
+A imagem detalha a implementação da classe **PeopleAccount**, que utiliza o operador `extends` para herdar as funcionalidades de `DioAccount`. Um ponto crucial aqui é o uso do **superconstrutor** (`super`), que é responsável por inicializar as propriedades da classe mãe dentro da classe filha. Além dos atributos herdados, a `PeopleAccount` introduz o atributo específico `doc_id`.
+
+```typescript
+import { DioAccount } from "./DioAccount"
+
+export class PeopleAccount extends DioAccount {
+  doc_id: number
+
+  constructor(doc_id: number, name: string, accountNumber: number) {
+    super(name, accountNumber)
+    this.doc_id = doc_id
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-07-21h19m06s290.jpg" alt="" width="840">
+</p>
+
+A classe **CompanyAccount** demonstra o conceito de **polimorfismo** na prática. Além de possuir um método exclusivo (`getLoan`), ela sobrescreve o método `deposit` da classe mãe. Ao redefinir o método na classe filha, alteramos o seu fluxo de execução (neste caso, mudando a mensagem exibida no console), permitindo que um mesmo método se comporte de maneiras diferentes dependendo do tipo de objeto que o chama.
+
+```typescript
+import { DioAccount } from "./DioAccount"
+
+export class CompanyAccount extends DioAccount {
+  constructor(name: string, accountNumber: number){
+    super(name, accountNumber)
+  }
+
+  getLoan = (): void => {
+    console.log('Você pegou um empréstimo')
+  }
+
+  deposit = (): void => {
+    console.log('A empresa depositou')
+  }
+}
+
+```
+     
 
 
 ## 🟩 Vídeo 06 - Visibilidade de atributos e métodos
