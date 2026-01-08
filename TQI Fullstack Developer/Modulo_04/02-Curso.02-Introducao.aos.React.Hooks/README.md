@@ -1059,69 +1059,46 @@ A validação final ocorre no navegador, onde é possível observar a aplicaçã
 
 ```      
 
-# Parte 3 - xxxxxxxxxxxxxxx
+# Parte 3 - Finalizando o projeto
 
-## 🟩 Vídeo 01 - Exxxxxxxxxxxxxxx
+## 🟩 Vídeo 10 - Trabalhando com testes de qualidade
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Curso.02-Video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo:  
 
 
-## 🟩 Vídeo 02 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 11 - Conclusão do projeto
 
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 03 - xxxxxxxxxxxxxxx
-
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Curso.02-Video_11.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 04 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 12 - Dúvidas
 
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 05 - xxxxxxxxxxxxxxx
-
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Curso.02-Video_12.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 06 - xxxxxxxxxxxxxxx
+## 🟩 Vídeo 13 - GitHub
 
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 07 - xxxxxxxxxxxxxxx
-
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-Curso.02-Video_13.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 09 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 10 - xxxxxxxxxxxxxxx
-
-
-Link do vídeo: 
-
-
-##  Materiais de Apoio
 
 
 # Certificado: 
