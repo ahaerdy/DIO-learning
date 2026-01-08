@@ -1,20 +1,30 @@
 # DIO Learning
 
 <p align="center">
+  <!-- Status e informações do repositório -->
   <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow" />
   <img src="https://img.shields.io/badge/Bootcamps-DIO.me-blueviolet?logo=codeforces" />
-  <img src="https://img.shields.io/badge/Linguagens-Python%2C%20JS%2C%20TS%2C%20HTML%2C%20CSS-orange?logo=python&logoColor=white" />
   <img src="https://img.shields.io/github/repo-size/ahaerdy/dio-learning" />
   <img src="https://img.shields.io/github/last-commit/ahaerdy/dio-learning" />
+  
+  <!-- Links externos -->
   <a href="https://web.dio.me/users/arthur_haerdy?tab=achievements">
     <img src="https://img.shields.io/badge/DIO-arthur__haerdy-success?logo=tryhackme" />
   </a>
   <a href="https://www.linkedin.com/in/arthur-haerdy-jr/">
     <img src="https://img.shields.io/badge/LinkedIn-Arthur%20Haerdy%20Jr.-0077B5?logo=linkedin" />
   </a>
-
-  ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white)
 </p>
+
+<p align="center">
+  <!-- Linguagens -->
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white" />
+</p>
+
 
 
 Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma [DIO - Digital Innovation One](https://dio.me). Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
