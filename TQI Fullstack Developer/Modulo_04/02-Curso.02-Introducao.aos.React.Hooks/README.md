@@ -745,7 +745,144 @@ O vídeo apresenta um guia técnico sobre o desenvolvimento de um **serviço em 
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h21m32s909.jpg" alt="" width="840">
+</p>
+
+Para manter o projeto organizado e facilitar a manutenção, aplica-se o conceito de **segregação de responsabilidades**. No diretório `src`, é criada uma pasta `services` para concentrar as funções responsáveis pela comunicação com APIs externas. O arquivo inicial define a estrutura base do serviço que buscará as frases (quotes).
+
+```javascript
+export const quotesService = () => {};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h21m50s877.jpg" alt="" width="840">
+</p>
+
+Para testar as requisições sem depender de um servidor real, utiliza-se a biblioteca **MSW (Mock Service Worker)**. Ela intercepta as chamadas de rede no nível do navegador ou do Node.js utilizando Service Workers. O setup inicial do teste envolve importar o `setupServer` do MSW e a função que será testada.
+
+```javascript
+import { rest } from 'msw';
+import { setupServer } from 'msw/node';
+import { getQuote } from './quotesService';
+
+const response = { test: 'testing' };
+const server = setupServer(
+  rest.get('http://127.0.0.1:5000', (req, res, ctx) => {
+    return res(ctx.json(response));
+  })
+);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h22m02s147.jpg" alt="" width="840">
+</p>
+
+Ao executar o teste pela primeira vez após definir a estrutura, o sistema apresenta um erro de tipo (`TypeError`). Isso ocorre porque, embora o teste espere a função `getQuote`, ela ainda não foi propriamente exportada ou definida no arquivo de serviço, resultando em uma falha controlada típica do fluxo de **Desenvolvimento Orientado a Testes (TDD)**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h22m13s869.jpg" alt="" width="840">
+</p>
+
+Para corrigir o erro e fazer o teste passar, implementa-se a função `getQuote` utilizando a **Fetch API**. A função realiza a chamada para o endpoint local e utiliza o método `.json()` para converter a resposta do servidor em um objeto JavaScript utilizável.
+
+```javascript
+export const getQuote = () => 
+  fetch('http://127.0.0.1:5000').then(response => response.json());
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h22m26s297.jpg" alt="" width="840">
+</p>
+
+Após a implementação da lógica de fetch, o executor de testes (Jest) confirma que todos os ambientes estão operando corretamente. O teste de serviço, junto aos testes de componentes de interface, agora apresenta o status **PASS**, validando que a integração entre a chamada de rede e o tratamento do JSON está funcional.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h22m42s128.jpg" alt="" width="840">
+</p>
+
+Para demonstrar a eficácia do **mock**, o teste é configurado para gerenciar o ciclo de vida do servidor fictício. Através dos comandos `beforeAll`, `afterEach` e `afterAll`, garante-se que o servidor de mock inicie, limpe seus estados entre os testes para evitar poluição de dados e feche ao final da execução.
+
+```javascript
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
+
+test('transform json response into object', async () => {
+  const quote = await getQuote();
+  expect(quote).toStrictEqual(response);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h23m01s964.jpg" alt="" width="840">
+</p>
+
+Ao alterar propositalmente o valor esperado no teste para `response2` (contendo "testing2") enquanto o mock continua retornando `response` ("testing"), o teste falha. Isso prova que o teste é robusto e está realmente validando a igualdade estrita dos dados, garantindo que não estamos recebendo respostas aleatórias do servidor real durante a unidade de teste.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h23m12s369.jpg" alt="" width="840">
+</p>
+
+A estrutura final do teste unitário consolidada utiliza o MSW para interceptar a URL específica. O uso de `toStrictEqual` é fundamental para garantir que a estrutura do objeto retornado pela Service coincida exatamente com o que foi definido no contexto do mock.
+
+```javascript
+const response = { test: 'testing' };
+// ... setup do server ...
+test('transform json response into object', async () => {
+  const quote = await getQuote();
+  expect(quote).toStrictEqual(response);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h23m35s943.jpg" alt="" width="840">
+</p>
+
+Introduz-se o uso de **variáveis de ambiente** através de um arquivo `.env` na raiz do projeto. Isso permite centralizar a URL da API (ex: `REACT_APP_API`), facilitando a troca entre endereços de desenvolvimento local e produção sem a necessidade de alterar o código-fonte em múltiplos locais.
+
+```bash
+REACT_APP_API=http://127.0.0.1:5000/
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h23m44s797.jpg" alt="" width="840">
+</p>
+
+Com a variável de ambiente configurada, o serviço é refatorado para utilizar `process.env`. O Webpack, durante o processo de build ou execução, substituirá essa referência pelo valor real definido no arquivo `.env`.
+
+```javascript
+export const getQuote = () =>
+  fetch(process.env.REACT_APP_API).then(response => response.json());
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h23m58s073.jpg" alt="" width="840">
+</p>
+
+O arquivo de teste também é atualizado para ser consistente com o uso das variáveis de ambiente. Em vez de declarar a URL manualmente no `rest.get`, utiliza-se a mesma variável `process.env.REACT_APP_API`, garantindo que o mock intercepte exatamente a rota configurada para a aplicação.
+
+```javascript
+const server = setupServer(
+  rest.get(process.env.REACT_APP_API, (req, res, ctx) => {
+    return res(ctx.json(response));
+  })
+);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-16h24m12s666.jpg" alt="" width="840">
+</p>
+
+A execução final dos testes demonstra sucesso absoluto. Todas as suítes de teste (Button, App, Quotes e QuotesService) passaram, confirmando que a refatoração para o uso de variáveis de ambiente e a implementação do serviço de busca de frases estão operando em harmonia dentro da arquitetura proposta.    
 
 
 ## 🟩 Vídeo 09 - Evoluindo nosso projeto através do controle de estado
