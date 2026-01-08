@@ -1394,5 +1394,5 @@ Este relatório sintetiza os principais pontos discutidos na sessão de dúvidas
 
 # Certificado: Introdução aos React Hooks
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/5GGK9GCL.pdf
+- Certificado em pdf: [Certificado-Introducao.aos.React.Hooks.pdf](000-Midia_e_Anexos/Certificado-Introducao.aos.React.Hooks.pdf)
