@@ -148,8 +148,123 @@ export function App() {
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/564a2de4-1e02-4322-a065-cd35761ac225?autoplay=1
 
+O material apresenta uma introdução prática à metodologia **Test-Driven Development (TDD)** utilizando **React** e a biblioteca **Testing Library**. O instrutor demonstra como redigir testes unitários que simulam a **perspectiva do usuário** antes mesmo de desenvolver as funcionalidades do software. O processo foca em criar um teste que inicialmente falha ao procurar elementos como **botões e imagens**, forçando o desenvolvedor a implementar o código necessário para que a aplicação funcione. Através da função **render** e de seletores de tela, o conteúdo ensina a validar a existência de componentes essenciais na interface. Por fim, o tutorial destaca a importância da **acessibilidade** e da organização de arquivos, como a importação correta de ativos visuais.
 
+### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-12h10m11s881.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, iniciamos a implementação seguindo a metodologia **TDD (Test Driven Development)**, onde o teste é escrito antes da funcionalidade real. O arquivo `App.test.js` apresenta um teste inicial que utiliza a **Testing Library** para verificar a renderização de um texto específico na tela. A biblioteca fornece utilitários como `render` e `screen` para simular o comportamento do usuário e validar se os elementos esperados estão presentes no DOM.
+
+```javascript
+import { render, screen } from '@testing-library/react';
+import { App } from './App';
+
+test('renders the app', () => {
+  render(<App />);
+  const text = screen.getByText(/Hello/i);
+  expect(text).toBeInTheDocument();
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-12h14m03s985.jpg" alt="" width="840">
+</p>
+
+Para validar o estado atual do projeto, executamos o comando de testes no terminal. Este comando aciona o *test runner* (Jest) que analisa os arquivos com extensão `.test.js`. Como o projeto foi recém-criado com o Create React App, o ambiente já está configurado com as dependências necessárias para rodar as verificações iniciais.
+
+```bash
+npm run test
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-12h48m36s455.jpg" alt="" width="840">
+</p>
+
+O resultado da execução mostra que a suíte de testes passou com sucesso (`PASS`). O sistema indica o tempo de execução e confirma que um teste unitário foi concluído. Este é o ponto de partida ideal para a refatoração, garantindo que o ambiente está estável antes de começarmos a definir os novos requisitos da interface baseada em Naruto.
+
+```bash
+PASS src/App.test.js
+  ✓ renders the app (10 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        3.237 s
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-12h48m43s597.jpg" alt="" width="840">
+</p>
+
+Agora, refatoramos o teste para refletir os elementos que realmente desejamos na aplicação: um botão, uma imagem e um texto de citação. O objetivo do TDD neste momento é fazer o teste falhar, pois esses elementos ainda não existem no componente `App`. Utilizamos o método `getByRole` para buscar os elementos por sua função semântica (botão, imagem, etc.), simulando como um usuário ou tecnologia assistiva identificaria a interface.
+
+```javascript
+import { render, screen } from '@testing-library/react';
+import { App } from './App';
+
+test('renders the app with a button, a quote and a button', () => {
+  render(<App />);
+  
+  const buttonEl = screen.getByRole('button');
+  const imageEl = screen.getByRole('img');
+  const textEl = screen.getByRole('p');
+
+  expect(buttonEl).toBeInTheDocument();
+  expect(imageEl).toBeInTheDocument();
+  expect(textEl).toBeInTheDocument();
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-12h53m05s937.jpg" alt="" width="840">
+</p>
+
+Após a falha planejada do teste, iniciamos a implementação no arquivo `App.js` para satisfazer os requisitos. Definimos a estrutura básica com uma `div` contendo um parágrafo para a citação, um botão com o texto "Quote No Jutsu" e um elemento de imagem. Para a imagem, realizamos a importação de um arquivo local e definimos um `alt` descritivo, o que é fundamental para acessibilidade e SEO.
+
+```javascript
+import narutoImg from '../../images/naruto.png';
+
+export function App() {
+  return (
+    <div>
+      <p>quote xpto Speaker</p>
+      <button>Quote No Jutsu</button>
+      <img src={narutoImg} alt="Naruto with a kunai" />
+    </div>
+  );
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-13h02m15s103.jpg" alt="" width="840">
+</p>
+
+Com a estrutura básica implementada, visualizamos o resultado no navegador. Embora o visual ainda não possua o estilo final desejado, os elementos fundamentais já estão presentes no DOM: o texto da citação, o botão de ação e a imagem do Naruto com sua kunai. Esta visualização confirma que o componente está renderizando as tags HTML corretamente no endereço local da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-13h04m09s868.jpg" alt="" width="840">
+</p>
+
+Ao final do ciclo, rodamos novamente os testes para confirmar se a implementação satisfez as asserções. O terminal indica que a suíte de testes passou, validando que o botão, a imagem e os textos estão presentes no documento conforme o esperado. Este sucesso marca a conclusão da primeira iteração do ciclo TDD, permitindo avançar para a estilização e funcionalidades dinâmicas.
+
+```bash
+PASS src/pages/app/App.test.js
+  ✓ renders the app with a button (42 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        4.525 s
+
+```
 
 ## 🟩 Vídeo 04 - Conhecendo o React Styled Components e criando um componente
 
