@@ -567,6 +567,170 @@ O erro indica explicitamente que a propriedade `quote` recebeu um valor do tipo 
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/c62c7b54-7c38-4141-902a-56fe2bb51b71?autoplay=1
 
+O conteúdo detalha a **criação de um componente de botão** no React utilizando a metodologia de **Desenvolvimento Orientado a Testes (TDD)**. O autor demonstra como estruturar arquivos, realizar a **estilização com Styled Components** e garantir a qualidade do código através de **testes unitários** com as bibliotecas Jest e Testing Library. A explicação enfatiza a importância de validar se os elementos são renderizados corretamente e se as **funções de callback** são acionadas em eventos de clique. Além disso, o material aborda conceitos de **acessibilidade e tipagem de propriedades** com Prop Types para aumentar a segurança do projeto. O objetivo central é ilustrar como construir componentes **reutilizáveis e robustos** dentro de um fluxo de trabalho profissional.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-15h32m32s865.jpg" alt="" width="840">
+</p>
+
+A implementação do componente de botão começa com a metodologia **TDD (Test Driven Development)**. O objetivo inicial é criar um teste unitário que garanta a renderização correta do componente e a exibição do texto esperado. Para isso, são utilizadas as funções `render` e `screen` da biblioteca `testing-library`. O teste verifica se, ao renderizar o `<Button>`, o texto "Test" está presente no documento, garantindo uma base sólida antes mesmo da estilização visual.
+
+```javascript
+import { render, screen } from '@testing-library/react';
+import { Button } from './Button';
+
+test('renders button with text', () => {
+  render(<Button>Test</Button>);
+  const buttonEl = screen.getByText('Test');
+  expect(buttonEl).toBeInTheDocument();
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-15h33m56s067.jpg" alt="" width="840">
+</p>
+
+Após garantir o funcionamento lógico via testes, o componente é estilizado utilizando **styled-components**. A definição visual foca na identidade do projeto, aplicando uma cor de fundo laranja (hexadecimal `#dc872c`) e removendo bordas padrão. Além da estética, define-se a tipografia "New Tegomin" e o comportamento do cursor. Um ponto importante de acessibilidade e feedback visual é a inclusão da pseudo-classe `&:hover`, que altera a cor do botão para um tom avermelhado quando o usuário passa o mouse sobre o elemento.
+
+```javascript
+import styled from 'styled-components';
+
+export const Button = styled.button`
+  background: #dc872c;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  font-family: 'New Tegomin', serif;
+  cursor: pointer;
+  box-shadow: #333 3px 3px;
+
+  &:hover {
+    background: #a40000;
+  }
+`;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-15h34m47s775.jpg" alt="" width="840">
+</p>
+
+A evolução dos testes passa a cobrir a interação do usuário com o componente `Quotes`. Para verificar se o botão cumpre seu papel funcional, utiliza-se um **"spy" (espião)** através do `jest.fn()`. Este recurso permite monitorar se uma função de callback é devidamente invocada. O teste simula um evento de clique utilizando o `fireEvent.click` e valida se a função passada para a propriedade `onUpdate` foi chamada exatamente uma vez.
+
+```javascript
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Quotes } from './Quotes';
+
+const quote = 'test quote';
+const speaker = 'random speaker';
+
+test('renders received quote, speaker and a button', () => {
+  render(<Quotes quote={quote} speaker={speaker} />);
+  const quoteEl = screen.getByText(quote);
+  const speakerEl = screen.getByText(`- ${speaker}`);
+  const buttonEl = screen.getByRole('button');
+
+  expect(quoteEl).toBeInTheDocument();
+  expect(speakerEl).toBeInTheDocument();
+  expect(buttonEl).toBeInTheDocument();
+});
+
+test('calls a callback when button is pressed', () => {
+  const callback = jest.fn();
+  render(<Quotes quote={quote} speaker={speaker} onUpdate={callback} />);
+  const buttonEl = screen.getByRole('button');
+
+  fireEvent.click(buttonEl);
+  expect(callback).toHaveBeenCalledTimes(1);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-15h34m56s485.jpg" alt="" width="840">
+</p>
+
+Com os testes aprovados, a estrutura do componente `Quotes` é consolidada. Ele organiza a exibição da frase (quote) e do autor (speaker), integrando o botão de atualização. O componente utiliza `PropTypes` para validação técnica, garantindo que `quote` e `speaker` sejam strings, e que `onUpdate` seja uma função (`func`). A estilização via `styled-components` define o layout interno como um container flexível centralizado em coluna, posicionando o texto e o botão de forma harmônica.
+
+```javascript
+import styled from 'styled-components';
+import { string, func } from 'prop-types';
+import { Button } from '../../components';
+
+export const Quotes = ({ quote, speaker, onUpdate }) => {
+  return (
+    <Wrapper>
+      <Quote>{quote}</Quote>
+      <Speaker>- {speaker}</Speaker>
+      <Button onClick={onUpdate}>Quote No Jutsu</Button>
+    </Wrapper>
+  );
+};
+
+Quotes.propTypes = {
+  quote: string,
+  speaker: string,
+  onUpdate: func
+};
+
+const Wrapper = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Quote = styled.p`
+  font-size: 2em;
+  margin: 0;
+`;
+
+const Speaker = styled(Quote)`
+  text-align: right;
+  margin-bottom: 50px;
+`;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-15h35m12s024.jpg" alt="" width="840">
+</p>
+
+Na integração final dentro do arquivo `App.js`, os componentes são reunidos para compor a interface principal. O container `Content` é configurado para ocupar toda a altura da tela (`100vh`) e centralizar o conteúdo. Além do componente `Quotes`, é inserida a imagem temática do personagem Naruto, importada como `narutoImg`. A imagem é estilizada para se alinhar ao final do container flexível (`align-self: flex-end`) e ter sua largura limitada a `50vw`, garantindo que o visual seja responsivo e equilibrado com a área de texto.
+
+```javascript
+import styled from 'styled-components';
+import narutoImg from '../../images/naruto.png';
+import { Quotes } from '../../components';
+
+export function App() {
+  return (
+    <Content>
+      <Quotes quote={'ok'} speaker={'Speaker'} />
+      <NarutoImg src={narutoImg} alt="Naruto with a kunai" />
+    </Content>
+  );
+}
+
+const Content = styled.div`
+  height: 100vh;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const NarutoImg = styled.img`
+  max-width: 50vw;
+  align-self: flex-end;
+`;
+
+```
 
 ## 🟩 Vídeo 08 - Mockando uma API REST em seus testes com msw
 
