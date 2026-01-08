@@ -1180,10 +1180,6 @@ Ao executar os testes, surge um erro de "Unable to find an element". Embora o te
 
 O erro identificado é um risco de **memory leak** (vazamento de memória). Se um usuário navegar para outra tela antes de uma resposta assíncrona terminar, o código tentará atualizar o estado de um componente que não está mais na tela. Para solucionar isso, será necessário utilizar um novo hook que verifique se o componente ainda está montado antes de realizar qualquer atualização de estado ou disparo de áudio.
 
-*Conteúdo não identificado com segurança a partir do material disponível.*
-
----
-
 
 ## 🟩 Vídeo 11 - Conclusão do projeto
 
