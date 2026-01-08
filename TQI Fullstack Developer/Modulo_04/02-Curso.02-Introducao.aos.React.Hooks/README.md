@@ -894,6 +894,11 @@ A execução final dos testes demonstra sucesso absoluto. Todas as suítes de te
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/d8fe3c1d-d3b8-4399-97f1-d3ebcee00c14?autoplay=1
 
+O vídeo descreve um processo de **desenvolvimento orientado a testes (TDD)** em uma aplicação React, utilizando a biblioteca **MSW** para simular respostas de uma API. O autor demonstra como **automatizar a verificação** de cliques em botões e a atualização assíncrona de textos na interface. Durante a explicação, destaca-se a implementação do **hook useState** para gerenciar o estado dos componentes e o uso de **funções assíncronas** para lidar com requisições. A técnica de **mockar o servidor** é apresentada como uma forma de garantir a confiabilidade dos testes, permitindo que a aplicação seja validada mesmo sem uma conexão real. Por fim, o conteúdo enfatiza como essa metodologia traz **segurança para o código**, facilitando manutenções futuras e o trabalho colaborativo entre desenvolvedores.
+
+### Anotações
+
+      
 
 
 # Parte 3 - xxxxxxxxxxxxxxx
