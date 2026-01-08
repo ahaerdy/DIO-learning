@@ -1348,7 +1348,49 @@ O relatório final de cobertura de testes (coverage report) demonstra a eficáci
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/f2aa35fb-f829-4d43-9801-894ee38cec0d?autoplay=1
 
+O vídeo consiste em um **bate-papo técnico** onde um especialista aborda práticas essenciais de desenvolvimento de software, com foco especial no ecossistema **React e TypeScript**. O autor discute a importância da **cobertura de testes** como indicador de qualidade e oferece orientações sobre como se comportar em **testes técnicos** e processos seletivos. Além disso, ele esclarece evoluções históricas da biblioteca React, como a dispensa da importação manual do framework em versões recentes e o papel do **JSX**. São detalhadas também as diferenças entre **Prop Types** e TypeScript, enfatizando que ferramentas mais robustas auxiliam na detecção de erros antes mesmo da execução do código. Por fim, o conteúdo traz dicas sobre **organização de repositórios**, uso de Git para autoria de código e a aplicação de **boas práticas** para atender às expectativas do mercado de trabalho.
 
+### Anotações
+
+Este relatório didático sintetiza os principais pontos discutidos na sessão de dúvidas sobre o curso, focando em boas práticas de desenvolvimento, testes e ferramentas modernas de programação.
+
+### **1. Cobertura de Testes (Coverage)**
+
+*   **Pergunta:** O que é o *coverage* e como ele é utilizado em ambientes profissionais?
+*   **Resposta:** O *coverage* representa o **percentual de cobertura de testes** em um código. Em contextos profissionais, muitas empresas estabelecem uma **cobertura mínima** (geralmente entre 70% e 80%) como requisito para que o código seja aceito no repositório. Essa métrica funciona como um **indicador de qualidade**, garantindo que novas funcionalidades não sejam enviadas sem a devida validação, mantendo o projeto saudável por meio de verificações automáticas antes do *commit*.
+
+### **2. Evolução da Importação do React**
+
+*   **Pergunta:** Por que não é mais necessário importar o React ao criar componentes, como era feito antigamente?
+*   **Resposta:** Anteriormente, a importação era obrigatória porque o **JSX** (mistura de HTML e JavaScript) era transformado pelo Webpack em funções como `React.createElement`. Para que esses métodos funcionassem, o React precisava estar presente no arquivo. Atualmente, os **transformadores de código JSX** evoluíram e já realizam essa importação automaticamente ao identificar as tags, simplificando a semântica do desenvolvimento.
+
+### **3. Testes Técnicos e TDD**
+
+*   **Pergunta:** Em testes técnicos com tempo limitado, devo priorizar o TDD (*Test Driven Development*) ou focar apenas na solução?
+*   **Resposta:** Se as instruções do teste não forem claras, é essencial **perguntar**, pois a proatividade em tirar dúvidas é um critério de avaliação. Se o teste for **ao vivo**, você pode perguntar se esperam a escrita de testes; caso não esperem, explicar verbalmente como você testaria o componente já demonstra um alto grau de **senioridade**. Para testes levados para casa com prazos de uma ou duas semanas, a recomendação é **sempre incluir testes**, pois isso demonstra o seu padrão de qualidade e domínio de boas práticas.
+
+### **4. Validação com Prop Types vs. Tipos Primitivos**
+
+*   **Pergunta:** Por que é necessário importar `string` (ou outros tipos) do Prop Types se eles já são tipos primitivos do JavaScript?
+*   **Resposta:** O JavaScript é *case sensitive*, e o `string` importado do Prop Types é uma **função de validação**, não sendo idêntico ao tipo primitivo. Enquanto o tipo primitivo define a natureza do dado, a importação do Prop Types serve para **validar se a propriedade recebida pelo componente é do tipo correto** durante a execução. O mesmo se aplica a `func`, `number` e outros validadores.
+
+### **5. Autoria e Comentários no Código**
+
+*   **Pergunta:** Preciso incluir o nome do autor nos arquivos de teste ou de código?
+*   **Resposta:** Não é necessário. Antigamente, comentários de autoria eram comuns porque os sistemas de repositórios não eram populares. Hoje, ferramentas como o **GitHub** e o **Git** registram automaticamente quem escreveu cada linha por meio de comandos como `git log` ou `git blame`. O ideal é que o código e os testes sejam autoexplicativos e sirvam como a própria **documentação da aplicação**.
+
+### **6. Organização de Repositórios (Microserviços)**
+
+*   **Pergunta:** Como devo gerenciar repositórios distintos, como o de Front-end e o de API? Devo clonar um dentro do outro?
+*   **Resposta:** Eles devem ser clonados em **diretórios separados**. O Front-end funciona de forma independente, apenas consumindo o *endpoint* da API, sem precisar conhecer a estrutura interna ou a linguagem (como Python) em que a API foi escrita. Para facilitar a execução desses ambientes, pode-se utilizar ferramentas como o **Docker**.
+
+### **7. TypeScript vs. Prop Types**
+
+*   **Pergunta:** Se eu já utilizo TypeScript no meu projeto, ainda preciso usar Prop Types?
+*   **Resposta:** Não, se estiver usando TypeScript, o Prop Types torna-se desnecessário. O Prop Types é considerado um "quebra-galho" menos robusto para projetos que não utilizam TypeScript. A principal diferença é que o TypeScript valida os erros em **tempo de compilação** (antes de rodar o código), enquanto o Prop Types só identifica falhas em **tempo de execução** (*runtime*). O TypeScript oferece uma integração muito superior com editores de texto e segurança no desenvolvimento.
+
+**Analogia para compreensão:** Imagine que o **TypeScript** é um **projeto de engenharia detalhado** que identifica erros estruturais no papel antes da construção começar, enquanto o **Prop Types** é como um **fiscal de obras** que só aponta os defeitos depois que as paredes já foram levantadas e a casa está funcionando.      
+ 
 
 # Certificado: Introdução aos React Hooks
 
