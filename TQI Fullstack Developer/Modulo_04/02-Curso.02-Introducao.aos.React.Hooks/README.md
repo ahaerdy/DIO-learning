@@ -409,7 +409,7 @@ test('renders received quote, speaker and a button', () => {
 Ao executar os testes pela primeira vez, encontramos falhas esperadas. O erro indicado pelo terminal mostra que o sistema de testes não conseguiu localizar o texto "test quote" no componente. Isso ocorre porque o componente `Quotes` ainda possui conteúdo estático e não está tratando as propriedades recebidas, resultando em uma falha de asserção durante a busca pelo texto na árvore do DOM.
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h07h35s925.jpg" alt="" width="840">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-01-08-14h07h35s925_.jpg" alt="" width="840">
 </p>
 
 Para corrigir a falha e fazer o teste passar, alteramos a implementação do componente para aceitar propriedades. Utilizamos a técnica de **destructuring** para extrair `quote` e `speaker` dos argumentos da função. Agora, o componente deixa de exibir um texto fixo e passa a renderizar dinamicamente o que recebe, incluindo o botão com o texto "Quote No Jutsu".
