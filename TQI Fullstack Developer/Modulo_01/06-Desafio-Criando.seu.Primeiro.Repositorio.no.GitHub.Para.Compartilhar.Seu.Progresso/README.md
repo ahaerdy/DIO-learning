@@ -17,7 +17,10 @@ O especialista em tecnologia **Venilton**, da plataforma **DIO**, apresenta um d
 
 ## 🟩 Vídeo 02 - Git e Github: Relembrando algumas coisinhas
 
-![[bootcamp_tqi_fullstack-modulo_01-Desafio_07-Video_02.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Desafio_07-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/lab/criando-seu-primeiro-repositorio-no-github-para-compartilhar-seu-progresso/learning/e714fb1c-4990-4c47-99a5-d97703e40b4d?back=/track/tqi-fullstack-developer
 
@@ -26,7 +29,10 @@ O conteúdo apresenta um guia prático sobre a utilização do **Git e GitHub** 
 
 ## 🟩 Vídeo 03 - Desafio de projeto
 
-![[bootcamp_tqi_fullstack-modulo_01-Desafio_07-Video_03.webm|vid-60]]
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_01-Desafio_07-Video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/lab/criando-seu-primeiro-repositorio-no-github-para-compartilhar-seu-progresso/learning/a1134ba9-3c54-4650-a24a-6964a182d919?back=/track/tqi-fullstack-developer
 
