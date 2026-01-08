@@ -149,6 +149,8 @@ export function App() {
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/564a2de4-1e02-4322-a065-cd35761ac225?autoplay=1
 
 
+
+
 ## 🟩 Vídeo 04 - Conhecendo o React Styled Components e criando um componente
 
 <video width="60%" controls>
@@ -156,7 +158,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/798759df-077a-4e49-8c10-f6d9969c0333?autoplay=1
 
 
 ## 🟩 Vídeo 05 - Evoluindo e testando nosso componente
