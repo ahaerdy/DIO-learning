@@ -1190,6 +1190,12 @@ O erro identificado é um risco de **memory leak** (vazamento de memória). Se u
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-aos-react-hooks/learning/701fe57a-ceeb-434e-a121-7bc982c723ba?autoplay=1
 
+O conteúdo aborda o desenvolvimento de aplicações **React** focando no uso estratégico do hook **useRef** para gerenciar o estado de montagem de componentes. O autor demonstra como essa ferramenta evita tentativas inválidas de atualizar o estado em componentes já desmontados, garantindo a **estabilidade do código**. Além da parte técnica de hooks, o material explora a metodologia **TDD**, enfatizando a importância de escrever testes antes da implementação para assegurar a **confiabilidade do software**. O processo inclui a manipulação de chamadas de API, uso de **Styled Components** e análise de **cobertura de testes**, que atingiu níveis elevados de segurança. Por fim, o texto reforça que adotar **boas práticas** e uma estrutura profissional facilita a evolução do projeto e a colaboração entre desenvolvedores.
+
+### Anotações
+
+      
+
 
 ## 🟩 Vídeo 12 - Dúvidas
 
