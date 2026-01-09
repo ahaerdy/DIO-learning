@@ -182,7 +182,6 @@ export default App;
 
 ```      
 
-
 ## 🟩 Vídeo 05 - Como criar um componente sem utilizar estados
 
 <video width="60%" controls>
@@ -191,6 +190,7 @@ export default App;
 </video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/a65bdeb8-eaf0-4006-96f9-86dc93dda6dc?autoplay=1
+
 
 
 ## 🟩 Vídeo 06 - Como criar um componente utilizando estados
