@@ -130,11 +130,21 @@ Essa organização segue os padrões convencionais do desenvolvimento *frontend*
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/87678a53-4135-42ab-b728-7249a14e70d6?autoplay=1
 
+O vídeo apresenta um guia prático sobre como **organizar e otimizar a estrutura inicial de um projeto React**. O autor demonstra como **executar a aplicação via terminal** e explica o funcionamento do **hot reload**, que atualiza o navegador automaticamente após mudanças no código. O conteúdo foca na **limpeza de arquivos desnecessários** gerados pelo comando padrão e na criação de uma arquitetura baseada em **pastas de componentes**. É detalhada a importância do arquivo **index.js** como o ponto de entrada que injeta os elementos na **div root** do HTML. Por fim, o material define o que é um **componente funcional** e prepara o terreno para o ensino de **Hooks**.
+
+### Anotações
+
+      
+
 
 ## 🟩 Vídeo 05 - Como criar um componente sem utilizar estados
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.03-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/a65bdeb8-eaf0-4006-96f9-86dc93dda6dc?autoplay=1
 
 
 ## 🟩 Vídeo 06 - Como criar um componente utilizando estados
