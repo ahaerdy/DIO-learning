@@ -82,7 +82,7 @@ for chave, valor in contatos.items():
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/aprendendo-a-utilizar-dicionarios-em-python/learning/02bcfa47-c93d-4d79-a2dd-027dd950e2d5?autoplay=1
 
 
 ### {}.clear
