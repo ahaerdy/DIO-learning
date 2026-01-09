@@ -224,6 +224,8 @@ export default Counter;
 Nesta etapa, definimos a lógica inicial do contador. Criamos uma variável local chamada `quantity` com o valor inicial de `10` e a exibimos no HTML utilizando interpolação `{quantity}`. Também implementamos a função `upQuantity`, que incrementa o valor da variável e imprime o resultado no console para verificação. No navegador, a interface exibe o título "Hello World" (vindo do componente App) seguido pelo valor do contador e o botão.
 
 ```javascript
+import React from 'react';
+
 function Counter(){
 
   let quantity = 10;
@@ -241,6 +243,7 @@ function Counter(){
   )
 }
 
+export default Counter;
 ```
 
 <p align="center">
@@ -250,6 +253,8 @@ function Counter(){
 Ao testar o botão, percebemos que, embora a variável `quantity` aumente na memória (como mostrado no `console.log`), a interface do usuário não é atualizada automaticamente pelo React. Para resolver isso de forma "arcaica" (sem Hooks), adicionamos um `id="counter-box"` ao elemento `h1` e utilizamos manipulação direta do DOM com `document.getElementById` para forçar a atualização do conteúdo na tela sempre que a função `upQuantity` é disparada.
 
 ```javascript
+import React from 'react';
+
 function Counter(){
   let quantity = 10;
 
@@ -267,6 +272,7 @@ function Counter(){
   )
 }
 
+export default Counter;
 ```
 
 <p align="center">
@@ -276,6 +282,8 @@ function Counter(){
 Aqui vemos o resultado da manipulação manual do DOM em funcionamento. O console do navegador mostra que o valor da variável subiu para `12` após cliques no botão, e graças à instrução `innerHTML`, o valor exibido na tela agora reflete esse estado. Este exemplo demonstra o trabalho explícito necessário para atualizar a interface quando não utilizamos as ferramentas nativas de estado do React, servindo de base para introduzirmos o conceito de Hooks.
 
 ```javascript
+import React from 'react';
+
 function Counter(){
   let quantity = 10;
 
@@ -293,6 +301,7 @@ function Counter(){
   )
 }
 
+export default Counter;
 ```
 
 O próximo passo será transformar essa lógica manual em um código mais profissional e inteligente utilizando Hooks. 
