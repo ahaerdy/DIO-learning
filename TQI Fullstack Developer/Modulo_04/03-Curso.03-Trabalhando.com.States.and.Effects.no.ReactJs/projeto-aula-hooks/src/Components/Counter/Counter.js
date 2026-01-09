@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Counter(){
   let quantity = 10;
 
@@ -14,3 +16,5 @@ function Counter(){
     </>
   )
 }
+
+export default Counter;
