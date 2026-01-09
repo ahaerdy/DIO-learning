@@ -68,13 +68,13 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Orientação a Objetos com JavaScript](Modulo_03/09-Curso.09-Orientacao.a.Objetos.com.JavaScript/README.md)
 - [x] Curso: [Manipulando a D.O.M. com JavaScript](Modulo_03/10-Curso.10-Manipulando.a.DOM.com.JavaScript/README.md)
 - [x] Curso: [Desafios TQI - JavaScript](Modulo_03/11-Curso.11-Desafios.TQI-JavaScript/README.md)
-- [ ] Projeto: [Desenvolvendo um Jogo da Memória](Modulo_03/12-Projeto-Desenvolvendo.um.Jogo.da.Memoria/README.md)
+- [x] Projeto: [Desenvolvendo um Jogo da Memória](Modulo_03/12-Projeto-Desenvolvendo.um.Jogo.da.Memoria/README.md)
 
 ### Módulo 4: ⭐️ ReactJS
 
-- [ ] Curso: [Introdução ao ReactJS](Modulo_04/01-Curso.01-Introducao.ao.ReactJS/README.md)
-- [ ] Curso: [Introdução aos React Hooks](Modulo_04/02-Curso.02-Introducao.aos.React.Hooks/README.md)
-- [ ] ⭐️ Curso: [Trabalhando com States & Effects no ReactJs](Modulo_04/03-Curso.03-Trabalhando.com.States.and.Effects.no.ReactJs)
+- [x] Curso: [Introdução ao ReactJS](Modulo_04/01-Curso.01-Introducao.ao.ReactJS/README.md)
+- [x] Curso: [Introdução aos React Hooks](Modulo_04/02-Curso.02-Introducao.aos.React.Hooks/README.md)
+- [x] ⭐️ Curso: [Trabalhando com States & Effects no ReactJs](Modulo_04/03-Curso.03-Trabalhando.com.States.and.Effects.no.ReactJs)
 - [ ] Curso: Desenvolvimento de aplicações para internet com ReactJS
 - [ ] Curso: Práticas avançadas em projetos com ReactJS
 - [ ] Curso: Criando um Front-end Totalmente Componentizado na Prática com ReactJS
