@@ -70,7 +70,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Desafios TQI - JavaScript](Modulo_03/11-Curso.11-Desafios.TQI-JavaScript/README.md)
 - [ ] Projeto: [Desenvolvendo um Jogo da Memória](Modulo_03/12-Projeto-Desenvolvendo.um.Jogo.da.Memoria/README.md)
 
-### Módulo 4: ReactJS
+### Módulo 4: ⭐️ ReactJS
 
 - [ ] Curso: [Introdução ao ReactJS](Modulo_04/01-Curso.01-Introducao.ao.ReactJS/README.md)
 - [ ] Curso: [Introdução aos React Hooks](Modulo_04/02-Curso.02-Introducao.aos.React.Hooks/README.md)
