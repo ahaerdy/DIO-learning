@@ -121,7 +121,7 @@ Após a conclusão do processo de instalação, o React gera uma estrutura de pa
 Essa organização segue os padrões convencionais do desenvolvimento *frontend*, onde cada arquivo JavaScript atua como um componente capaz de retornar blocos de HTML e CSS.
 
 
-## 🟩 Vídeo 04 - Organizando o seu projeto
+## 🟩 Vídeo 04 - 👨🏻‍💻 Organizando o seu projeto
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.03-Video_04.webm" type="video/webm">
