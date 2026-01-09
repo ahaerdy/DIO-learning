@@ -191,12 +191,22 @@ export default App;
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/a65bdeb8-eaf0-4006-96f9-86dc93dda6dc?autoplay=1
 
+O instrutor explica como estruturar funções JavaScript que retornam **código HTML** e a importância de exportá-las para integração no projeto principal. Um ponto central da explicação é o uso de **fragments** para envolver múltiplos elementos sem adicionar tags desnecessárias ao navegador. A fonte detalha as dificuldades de atualizar manualmente a **interface do usuário** via manipulação direta do DOM quando variáveis internas sofrem alterações. Por fim, o conteúdo prepara o estudante para entender a necessidade dos **Hooks**, apresentando-os como uma solução inteligente para automatizar a renderização de dados.
+
+### Anotações
+
+      
 
 
 ## 🟩 Vídeo 06 - Como criar um componente utilizando estados
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.03-Video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/3f00bb5d-0ae0-4cc6-868e-f826d024a9b4?autoplay=1
 
 
 ## 🟩 Vídeo 07 - Criando um componente prático com estado
