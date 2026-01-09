@@ -134,55 +134,11 @@ O vídeo apresenta um guia prático sobre como **organizar e otimizar a estrutur
 
 ### Anotações
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m21s099.jpg" alt="" width="840">
-</p>
-
-Para iniciar a organização do projeto React, o primeiro passo é garantir que a aplicação está rodando corretamente. Após a criação do projeto via terminal, é necessário navegar até a pasta raiz do projeto utilizando o comando `cd aula-hooks`. Uma vez dentro do diretório, utiliza-se o comando `npm start` para executar o script que inicia o servidor de desenvolvimento.
-
-```bash
-npm start
-
-```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m26s654.jpg" alt="" width="840">
-</p>
-
-O comando de inicialização cria uma instância do projeto no navegador, geralmente na porta 3000. O React utiliza o conceito de **Hot Reload**, o que significa que qualquer alteração salva nos arquivos do código-fonte (como no `App.js`) será refletida automaticamente no navegador sem a necessidade de atualizar a página manualmente. Isso demonstra a natureza dinâmica de uma **SPA (Single Page Application)**.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m30s252.jpg" alt="" width="840">
-</p>
-
 Ao analisar a estrutura de pastas gerada pelo **Create React App**, identificamos o arquivo `public/index.html`. Este arquivo contém uma `<div id="root">`, que funciona como o "coração" da aplicação. Todos os componentes JavaScript e elementos HTML que construirmos serão injetados dinamicamente dentro desta div específica. Geralmente, não manipulamos este arquivo HTML diretamente, pois o React cuida dessa renderização.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m51s818.jpg" alt="" width="840">
-</p>
 
 Para manter o projeto limpo e focado no desenvolvimento com Hooks, removemos arquivos desnecessários gerados pelo template padrão. Foram deletados os arquivos de testes (`App.test.js` e `setupTests.js`) e o `reportWebVitals.js`. Após a exclusão, é necessário limpar as referências a esses arquivos no `index.js` para evitar erros de compilação, como demonstrado no terminal do editor.
 
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-10h00m55s700.jpg" alt="" width="840">
-</p>
-
-Uma boa prática de organização consiste em criar uma pasta chamada `components` dentro do diretório `src`. O objetivo é isolar cada componente em sua própria pasta. Neste exemplo, movemos os arquivos relacionados ao componente principal (`App.js`, `App.css` e o logo) para a subpasta `src/components/app/`. Ao mover os arquivos, o editor pode auxiliar na atualização automática dos caminhos de importação.
+Uma boa prática de organização consiste em criar uma pasta chamada `Components` dentro do diretório `src`. O objetivo é isolar cada componente em sua própria pasta. Neste exemplo, movemos os arquivos relacionados ao componente principal (`App.js`, `App.css` e o logo) para a subpasta `src/components/app/`. Ao mover os arquivos, o editor pode auxiliar na atualização automática dos caminhos de importação.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-10h01m01s162.jpg" alt="" width="840">
