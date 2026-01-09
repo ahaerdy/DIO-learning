@@ -541,8 +541,14 @@ export default App;
 
 ## 🟩 Vídeo 08 - Trabalhando com efeitos colaterais (useEffect)
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.03-Video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/3676c554-2ade-4d2f-8879-cf5ac125d8dd?autoplay=1
+
+O vídeo apresenta o conceito de **useEffect** no React através de uma analogia com **efeitos colaterais** de medicamentos, onde uma ação inicial gera uma consequência posterior no sistema. O autor explica que essa ferramenta serve para **monitorar estados** ou variáveis específicas, disparando funções automáticas sempre que houver uma alteração detectada. Exemplos práticos, como a atualização do valor total em um carrinho de compras ao alterar a quantidade de itens, ilustram como o gancho sincroniza diferentes partes de um componente. Além disso, a fonte aborda o comportamento do **array de dependências**, diferenciando ações que ocorrem apenas na montagem do componente daquelas vinculadas a gatilhos específicos. Por fim, destaca-se que utilizar efeitos colaterais pode ser uma estratégia mais eficiente do que criar múltiplos estados complexos para gerenciar a lógica da interface.
 
 
 ## 🟩 Vídeo 09 - Conclusão do curso
