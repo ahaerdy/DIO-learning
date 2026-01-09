@@ -199,7 +199,7 @@ O instrutor explica como estruturar funções JavaScript que retornam **código 
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-12h20m37s262.jpg" alt="" width="840">
 </p>
 
-Para compreender a necessidade dos Hooks, iniciamos a criação de um componente de forma tradicional. A estrutura do projeto no VS Code mostra a organização da pasta `aula-hooks`, onde criamos uma subpasta chamada `counter` dentro de `components`. O arquivo principal do componente, `Counter.js`, é iniciado com letra maiúscula, seguindo as boas práticas do React. No terminal, o projeto está rodando localmente através do endereço `http://localhost:3000`.
+Para compreender a necessidade dos Hooks, iniciamos a criação de um componente de forma tradicional. A estrutura do projeto no VS Code mostra a organização da pasta `aula-hooks`, onde criamos uma subpasta chamada `Counter` dentro de `components`. O arquivo principal do componente, `Counter.js`, é iniciado com letra maiúscula, seguindo as boas práticas do React. No terminal, o projeto está rodando localmente através do endereço `http://localhost:3000`.
 
 ```javascript
 import React from 'react';
