@@ -324,9 +324,7 @@ function App() {
 export default App;
 ```
 
-
 O próximo passo será transformar essa lógica manual em um código mais profissional e inteligente utilizando Hooks. 
-
 
 ## 🟩 Vídeo 06 - Como criar um componente utilizando estados
 
@@ -335,14 +333,19 @@ O próximo passo será transformar essa lógica manual em um código mais profis
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/3f00bb5d-0ae0-4cc6-868e-f826d024a9b4?autoplay=1
+
 
 
 ## 🟩 Vídeo 07 - Criando um componente prático com estado
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.03-Video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/e9f852c4-f0dc-4b99-8756-96846f37694a?autoplay=1
 
 
 ## 🟩 Vídeo 08 - Trabalhando com efeitos colaterais (useEffect)
