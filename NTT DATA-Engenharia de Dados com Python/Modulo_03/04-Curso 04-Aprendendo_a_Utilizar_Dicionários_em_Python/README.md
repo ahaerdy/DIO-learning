@@ -77,6 +77,14 @@ for chave, valor in contatos.items():
 
 ## 🟩 Vídeo 02 - Métodos da classe dict
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_03-Curso_04-Video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo:
+
+
 ### {}.clear
 
 ```python
