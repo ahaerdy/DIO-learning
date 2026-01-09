@@ -92,8 +92,33 @@ O autor explica o conceito de **Hooks no React**, definindo-os como funções qu
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h27m29s585.jpg" alt="" width="840">
+</p>
 
+Para iniciar o desenvolvimento com Hooks, o primeiro passo é a criação do ambiente de trabalho. Utiliza-se o **Create React App**, uma ferramenta de *scaffolding* que agiliza o processo ao baixar automaticamente todas as dependências e templates fundamentais para um projeto inicial.
+
+A criação é feita via terminal através do comando `npx`, garantindo que você utilize a versão mais recente do utilitário sem a necessidade de instalação global. É importante que o nome do projeto seja escrito inteiramente em letras minúsculas e, caso precise separar palavras, deve-se utilizar o hífen.
+
+```bash
+npx create-react-app aula-hooks
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h28m03s982.jpg" alt="" width="840">
+</p>
+
+Após a conclusão do processo de instalação, o React gera uma estrutura de pastas padronizada. Os principais arquivos e diretórios incluem:
+
+* **public/**: Contém os arquivos estáticos acessíveis publicamente.
+* **src/**: Onde reside o código-fonte da aplicação, incluindo o `App.js` (componente principal) e o `index.js` (ponto de entrada).
+* **App.css / index.css**: Arquivos destinados à estilização dos componentes.
+* **App.test.js / setupTests.js**: Estrutura configurada para a criação de testes automatizados utilizando Jest.
+* **package.json**: Arquivo central de configuração que lista as dependências do projeto e define scripts de execução, como o comando `start`.
+* **reportWebVitals.js**: Arquivo responsável por métricas de performance e saúde da aplicação web.
+
+Essa organização segue os padrões convencionais do desenvolvimento *frontend*, onde cada arquivo JavaScript atua como um componente capaz de retornar blocos de HTML e CSS.
 
 
 ## 🟩 Vídeo 04 - Organizando o seu projeto
