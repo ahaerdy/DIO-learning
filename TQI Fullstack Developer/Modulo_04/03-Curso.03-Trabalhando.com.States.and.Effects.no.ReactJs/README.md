@@ -138,7 +138,7 @@ O vídeo apresenta um guia prático sobre como **organizar e otimizar a estrutur
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m21s099.jpg" alt="" width="840">
 </p>
 
-A organização inicial do projeto foca em garantir que a aplicação React está rodando corretamente. No terminal, após criar o projeto com o nome **aula-hooks**, é necessário navegar até a pasta raiz utilizando o comando `cd aula-hooks`. Para iniciar o servidor de desenvolvimento, utiliza-se o script de start, que abre uma instância do projeto no navegador em uma porta específica (geralmente a 3000), permitindo a renderização em tempo real do que está sendo construído.
+Para iniciar a organização do projeto React, o primeiro passo é garantir que a aplicação está rodando corretamente. Após a criação do projeto via terminal, é necessário navegar até a pasta raiz do projeto utilizando o comando `cd aula-hooks`. Uma vez dentro do diretório, utiliza-se o comando `npm start` para executar o script que inicia o servidor de desenvolvimento.
 
 ```bash
 npm start
@@ -149,10 +149,25 @@ npm start
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m26s654.jpg" alt="" width="840">
 </p>
 
-O projeto utiliza o conceito de **Hot Reload**, que recarrega a página automaticamente sempre que uma alteração é salva nos arquivos do diretório `src`, como no `App.js`. No arquivo `index.js`, observamos a estrutura inicial onde o React renderiza o componente principal dentro do elemento HTML com o ID `root`. É possível notar a importação do `reportWebVitals`, que faz parte do boilerplate padrão do Create React App.
+O comando de inicialização cria uma instância do projeto no navegador, geralmente na porta 3000. O React utiliza o conceito de **Hot Reload**, o que significa que qualquer alteração salva nos arquivos do código-fonte (como no `App.js`) será refletida automaticamente no navegador sem a necessidade de atualizar a página manualmente. Isso demonstra a natureza dinâmica de uma **SPA (Single Page Application)**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m30s252.jpg" alt="" width="840">
+</p>
+
+Ao analisar a estrutura de pastas gerada pelo **Create React App**, identificamos o arquivo `public/index.html`. Este arquivo contém uma `<div id="root">`, que funciona como o "coração" da aplicação. Todos os componentes JavaScript e elementos HTML que construirmos serão injetados dinamicamente dentro desta div específica. Geralmente, não manipulamos este arquivo HTML diretamente, pois o React cuida dessa renderização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m51s818.jpg" alt="" width="840">
+</p>
+
+Para manter o projeto limpo e focado no desenvolvimento com Hooks, removemos arquivos desnecessários gerados pelo template padrão. Foram deletados os arquivos de testes (`App.test.js` e `setupTests.js`) e o `reportWebVitals.js`. Após a exclusão, é necessário limpar as referências a esses arquivos no `index.js` para evitar erros de compilação, como demonstrado no terminal do editor.
 
 ```javascript
-import reportWebVitals from './reportWebVitals';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -161,27 +176,19 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-reportWebVitals();
-
 ```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m30s252.jpg" alt="" width="840">
-</p>
-
-Para deixar o projeto mais limpo e focado no desenvolvimento, iniciamos a remoção de arquivos desnecessários criados pelo template padrão. Arquivos como `setupTests.js`, `reportWebVitals.js` e `App.test.js` são deletados, pois não serão utilizados no momento. Após essas exclusões, o terminal pode exibir erros de compilação indicando a ausência desses arquivos, o que exige a limpeza das referências correspondentes dentro do código, especialmente no `index.js`.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-09h59m51s818.jpg" alt="" width="840">
-</p>
-
-Após a limpeza das dependências de teste e métricas, o projeto é visualizado rodando com sucesso no navegador (localhost:3000). O terminal confirma que a compilação foi bem-sucedida, exibindo o endereço local e o endereço na rede para acesso. O estado atual do projeto mantém apenas o essencial: o componente `App` sendo renderizado dentro da `div root` do HTML principal, servindo como o "coração" da aplicação.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-10h00m55s700.jpg" alt="" width="840">
 </p>
 
-Seguindo as boas práticas de organização, cria-se uma pasta chamada `components` dentro de `src`. O objetivo é isolar cada componente em sua própria pasta contendo seu JavaScript e CSS. Ao mover o componente `App` para `src/components/App/`, o VS Code pode oferecer a atualização automática das importações. No `index.js`, o caminho de importação do `App` deve ser ajustado para refletir a nova estrutura de pastas.
+Uma boa prática de organização consiste em criar uma pasta chamada `components` dentro do diretório `src`. O objetivo é isolar cada componente em sua própria pasta. Neste exemplo, movemos os arquivos relacionados ao componente principal (`App.js`, `App.css` e o logo) para a subpasta `src/components/app/`. Ao mover os arquivos, o editor pode auxiliar na atualização automática dos caminhos de importação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-10h01m01s162.jpg" alt="" width="840">
+</p>
+
+Após a reestruturação das pastas, o arquivo `index.js` (o ponto de entrada principal) passa a importar o componente `App` do novo local. O `index.js` permanece na raiz da pasta `src`, servindo como a ponte entre o componente principal e o arquivo HTML físico.
 
 ```javascript
 import React from 'react';
@@ -199,24 +206,19 @@ ReactDOM.render(
 ```
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-10h01m01s162.jpg" alt="" width="840">
-</p>
-
-Com a nova estrutura de pastas consolidada, o projeto volta a compilar corretamente. O navegador agora renderiza a aplicação com o componente `App` devidamente importado de sua nova localização em `components/App/App`. Esta organização permite que o `index.js` (o componente principal) permaneça limpo, atuando apenas como o ponto de entrada que injeta a lógica no HTML.
-
-<p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-10h01m59s899.jpg" alt="" width="840">
 </p>
 
-O componente `App` é simplificado para sua forma mais pura: uma função JavaScript que retorna elementos HTML (JSX). Removemos o logo e o conteúdo padrão do template para exibir apenas um cabeçalho simples. Um componente React é, em essência, uma função que retorna HTML e pode carregar comportamentos de estilo associados.
+Para finalizar a limpeza, simplificamos o componente `App.js`. Removemos o conteúdo padrão e o logo, deixando apenas um elemento `<h1>`. Um componente React, em sua forma mais pura, é uma função JavaScript que retorna elementos HTML (JSX). Esta estrutura limpa servirá de base para a criação dos nossos primeiros componentes e para o estudo das vantagens dos Hooks.
 
 ```javascript
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div className="App">
+      <h1>Hello World</h1>
+    </div>
   );
 }
 
