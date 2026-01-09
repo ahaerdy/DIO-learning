@@ -2,6 +2,13 @@
 
 ## 🟩 Vídeo 01 - Dicionários: Criação e acesso aos dados
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp-ntt-data_modulo_03-Curso_04-Video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/aprendendo-a-utilizar-dicionarios-em-python/learning/d60c0324-9369-4e88-9354-abc1dfc876a7?autoplay=1
+
 ### Objetivo Geral
 
 - Entender o funcionamento da estrutura de dados dicionário.
