@@ -427,125 +427,9 @@ O vídeo consiste em uma **aula técnica** voltada para o ensino de **React hook
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h01m06s290.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta o resultado visual inicial da aplicação React no navegador. É exibida a mensagem "Hello World" e a estrutura básica do componente de contador inspirado no iFood, composto por um botão de subtração, o número zero centralizado e um botão de adição. Este componente demonstra a aplicação prática de estados para criar interfaces dinâmicas que reagem às interações do usuário.
+A imagem acima apresenta o resultado visual inicial da aplicação React no navegador. É exibida a mensagem "Hello World" e a estrutura básica do componente de contador inspirado no iFood, composto por um botão de subtração, o número zero centralizado e um botão de adição. Este componente demonstra a aplicação prática de estados para criar interfaces dinâmicas que reagem às interações do usuário.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h02m06s290.jpg" alt="" width="840">
-</p>
-
-O arquivo CSS define a estilização do componente `iFoodCounter`, utilizando **Flexbox** para o alinhamento central e distribuição do espaço. O código estabelece classes específicas para alternar o estado visual dos botões entre ativo (vermelho) e desativado (cinza), alterando propriedades como cor e cursor conforme a lógica de negócio do contador.
-
-```css
-.countex-wrapper {
-  display: flex;
-  flex-direction: row;
-  border: 3px solid rgb(192, 192, 192);
-  border-radius: 4px;
-  align-items: center;
-  justify-content: space-between;
-  height: 30px;
-  width: 6%;
-}
-
-.counter-button-plus-active {
-  border: none;
-  background-color: transparent;
-  height: 100%;
-  font-size: larger;
-  color: red;
-  cursor: pointer;
-}
-
-.counter-button-minus-active {
-  border: none;
-  background-color: transparent;
-  height: 100%;
-  font-size: larger;
-  color: red;
-  cursor: pointer;
-}
-
-.counter-button-minus-desactive {
-  border: none;
-  background-color: transparent;
-  height: 100%;
-  font-size: larger;
-  color: rgb(105, 105, 105);
-  cursor: pointer;
-}
-
-```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h03m06s290.jpg" alt="" width="840">
-</p>
-
-Este trecho apresenta a implementação lógica do componente funcional utilizando o hook `useState`. São definidos dois estados: `value`, para o valor numérico do contador, e `buttonStyle`, para controlar dinamicamente a classe CSS do botão de diminuir. As funções `up` e `down` encapsulam a lógica de atualização, garantindo que o valor não seja negativo e que a interface mude visualmente quando o contador chega a zero.
-
-```javascript
-import { useState } from "react"
-import '../Ifoodcounter/Ifoodcounter.css'
-
-export default function Ifoodcounter() {
-
-  const [value, setValue] = useState(1)
-  const [buttonStyle, setButtonStyle] = useState("counter-button-minus-active")
-
-  function down (){
-    if (value <= 1) {
-      setButtonStyle("counter-button-minus-inactive")
-    }
-
-    if (value > 0) {
-      setValue(value - 1)
-    }
-  }
-
-  function up(){
-    setValue(value + 1)
-    setButtonStyle("counter-button-minus-active")
-  }
-
-  return (
-    <div className="countex-wrapper">
-      <button
-        className={buttonStyle}
-        onClick={down}
-      >-</button>
-      <p>{ value }</p>
-      <button
-        className="counter-button-plus-active"
-        onClick={up}
-      >+</button>
-    </div>
-  )
-}
-
-```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h04m06s290.jpg" alt="" width="840">
-</p>
-
-A imagem mostra a integração do componente `Ifoodcounter` dentro do componente principal `App`. Para que o contador seja renderizado na tela, ele é importado e declarado no JSX do arquivo `App.js`, permitindo que a aplicação exiba o título "Hello World" seguido pelo componente funcional desenvolvido.
-
-```javascript
-import './App.css';
-import SmartCounter from '../SmartCounter/SmartCounter';
-import Ifoodcounter from '../Ifoodcounter/Ifoodcounter';
-
-function App() {
-  return (
-    <>
-      <h1>Hello World</h1>
-      <Ifoodcounter />
-    </>
-  )
-}
-
-export default App;
-
-```
+O arquivo CSS (abaixo) define a estilização do componente `iFoodCounter`, utilizando **Flexbox** para o alinhamento central e distribuição do espaço. O código estabelece classes específicas para alternar o estado visual dos botões entre ativo (vermelho) e desativado (cinza), alterando propriedades como cor e cursor conforme a lógica de negócio do contador.
 
 🟡 ./Components/Ifoodcounter/Ifoodcounter.ss
 
@@ -588,6 +472,8 @@ export default App;
     cursor: pointer;
 }
 ```
+
+O trecho abaixo apresenta a implementação lógica do componente funcional utilizando o hook `useState`. São definidos dois estados: `value`, para o valor numérico do contador, e `buttonStyle`, para controlar dinamicamente a classe CSS do botão de diminuir. As funções `up` e `down` encapsulam a lógica de atualização, garantindo que o valor não seja negativo e que a interface mude visualmente quando o contador chega a zero.
 
 🟡 ./Components/Ifoodcounter/Ifoodcounter.js
 
@@ -632,6 +518,8 @@ export default function Ifoodcounter() {
 }
 ```
 
+O código abaixo mostra a integração do componente `Ifoodcounter` dentro do componente principal `App`. Para que o contador seja renderizado na tela, ele é importado e declarado no JSX do arquivo `App.js`, permitindo que a aplicação exiba o título "Hello World" seguido pelo componente funcional desenvolvido.
+
 🔴 ./Components/App/App.js
 
 ```javascript
@@ -650,9 +538,6 @@ function App() {
 
 export default App;
 ```
-
-
-
 
 ## 🟩 Vídeo 08 - Trabalhando com efeitos colaterais (useEffect)
 
