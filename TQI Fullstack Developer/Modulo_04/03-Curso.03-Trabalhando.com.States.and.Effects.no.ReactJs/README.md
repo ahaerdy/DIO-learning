@@ -550,6 +550,45 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
 
 O vídeo apresenta o conceito de **useEffect** no React através de uma analogia com **efeitos colaterais** de medicamentos, onde uma ação inicial gera uma consequência posterior no sistema. O autor explica que essa ferramenta serve para **monitorar estados** ou variáveis específicas, disparando funções automáticas sempre que houver uma alteração detectada. Exemplos práticos, como a atualização do valor total em um carrinho de compras ao alterar a quantidade de itens, ilustram como o gancho sincroniza diferentes partes de um componente. Além disso, a fonte aborda o comportamento do **array de dependências**, diferenciando ações que ocorrem apenas na montagem do componente daquelas vinculadas a gatilhos específicos. Por fim, destaca-se que utilizar efeitos colaterais pode ser uma estratégia mais eficiente do que criar múltiplos estados complexos para gerenciar a lógica da interface.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h36m48s696.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, é introduzido o conceito de **Hook `useEffect**` no React, utilizando a analogia de um "efeito colateral" de um remédio. Assim como um medicamento gera uma reação após ser processado pelo corpo, o `useEffect` permite que o componente execute uma ação específica após uma mudança em seu estado ou após ser renderizado.
+
+No código apresentado, o hook é configurado para monitorar a variável de estado `buttonStyle`. Toda vez que essa variável sofre uma alteração (como a mudança de uma classe CSS de ativa para desativada), a função de efeito é disparada, executando um `console.log` para informar o estilo atual do botão.
+
+**Pontos principais do código:**
+
+* **Monitoramento de Estado:** O array de dependências `[buttonStyle]` garante que o efeito só rode quando este valor específico mudar.
+* **Lógica Condicional:** Dentro da função `down()`, existe uma verificação: se o `value` for menor ou igual a 1, o estilo do botão é alterado para "counter-button-minus-desactive", o que por sua vez gatilha o `useEffect`.
+
+```javascript
+import '../Ifoodcounter/Ifoodcounter.css'
+
+export default function Ifoodcounter() {
+    const [value, setValue] = useState(1)
+    const [buttonStyle, setButtonStyle] = useState("counter-button-minus-active")
+
+    useEffect(() => {
+        console.log("o estilo do botao atual é: " + buttonStyle)
+    }, [buttonStyle])
+
+    function down(){
+        if (value <= 1){
+            setButtonStyle("counter-button-minus-desactive")
+        }
+
+        if(value > 0) {
+            setValue(value-1)
+        }
+    }
+}
+
+```      
+
 
 ## 🟩 Vídeo 09 - Conclusão do curso
 
