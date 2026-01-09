@@ -574,12 +574,17 @@ No código apresentado, o hook é configurado para monitorar a variável de esta
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/ea0ff440-ea45-4933-a494-d2b3a98258df?autoplay=1
 
+O curso aborda os fundamentos do **desenvolvimento de componentes** modernos, focando principalmente na **gestão de estados** e no funcionamento dos **Hooks**. O conteúdo explica como utilizar o **useState** para armazenar informações dinâmicas e o **useEffect** para lidar com **efeitos colaterais**, como a busca de dados em bancos de dados. Além da aplicação prática, o instrutor destaca como essas ferramentas permitem monitorar variáveis e **atualizar a interface** do usuário de forma automática. Para aprofundar o aprendizado, recomenda-se a leitura da **documentação oficial**, que detalha funções essenciais para a interatividade do layout. O encerramento reforça que o domínio dessas técnicas é crucial para quem deseja manipular a **funcionalidade e o visual** de aplicações de maneira eficiente.
 
-## 🟩 Vídeo 10 - Trabalhando com States & Effects no ReactJs
+### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h53m14s990.jpg" alt="" width="840">
+</p>
 
-Link do vídeo: 
+Esta é a página inicial da documentação oficial do **React**, uma biblioteca JavaScript amplamente utilizada para a criação de interfaces de usuário (UIs). O site destaca os pilares fundamentais da biblioteca, como sua natureza **declarativa**, que facilita a criação de UIs interativas, e a arquitetura **baseada em componentes**, permitindo a construção de elementos encapsulados que gerenciam seu próprio estado.
 
+No contexto do desenvolvimento com React, é essencial compreender o uso de **Hooks**, como `useState` e `useEffect`, para manipular estados de componentes e gerenciar efeitos colaterais. A documentação oficial, acessível em **pt-br.reactjs.org**, é o recurso recomendado para aprofundar o conhecimento sobre esses conceitos, oferecendo artigos detalhados na seção de "Documentos".
 
 # Certificado: Trabalhando com States & Effects no ReactJs
 
