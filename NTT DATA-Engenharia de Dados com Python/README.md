@@ -84,7 +84,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso.01-Trabalhando.com.Listas.em.Python)
 - [x] Curso: [Conhecendo Tuplas em Python](Modulo_03/02-Curso.02-Conhecendo.Tuplas.em.Python)
 - [x] Curso: [Explorando Conjuntos em Python](Modulo_03/03-Curso.03-Explorando.Conjuntos.em.Python)
-- [x] Curso: Aprendendo a Utilizar Dicionários em Python
+- [x] Curso: [Aprendendo a Utilizar Dicionários em Python](Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python/README.md)
 - [x] Curso: Lidando com Data, Hora e Fuso Horário no Python
 - [x] Projeto: Otimizando o Sistema Bancário com Funções Python
   - Repositório: DIO-projeto-sistema-bancario-com-funcoes-python
