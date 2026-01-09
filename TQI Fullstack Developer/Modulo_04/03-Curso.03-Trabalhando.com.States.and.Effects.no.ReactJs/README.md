@@ -18,8 +18,19 @@ Nesta introdução de curso, o instrutor Felipe Aguiar apresenta um guia focado 
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-08h44m38s582.jpg" alt="" width="840">
+</p>
 
+Felipe Aguiar apresenta a introdução ao curso focado em **React Hooks**, destacando que o aprendizado será centrado em **componentes funcionais** e na lógica comportamental da aplicação. O objetivo principal é capacitar o desenvolvedor a criar componentes inteligentes através do gerenciamento de estados e efeitos, deixando a estilização visual (CSS) em segundo plano para priorizar a funcionalidade.
+
+Para acompanhar o conteúdo, são estabelecidos os seguintes pré-requisitos técnicos e conceituais:
+
+* **Ambiente:** Instalação do Node.js, npm e um editor de código (como VS Code).
+* **Base de JavaScript:** Domínio de funções, desestruturação, sistemas de import/export e funções com retorno.
+* **Conceito de Componente:** Compreensão de que um componente é uma função ou classe JavaScript capaz de retornar HTML.
+
+O cronograma do curso abrange desde a organização inicial do projeto e arquivos até o uso avançado do **useState** para reatividade e do **useEffect** para o controle de efeitos colaterais na aplicação.
 
 ## 🟩 Vídeo 02 - O que são hooks
 
