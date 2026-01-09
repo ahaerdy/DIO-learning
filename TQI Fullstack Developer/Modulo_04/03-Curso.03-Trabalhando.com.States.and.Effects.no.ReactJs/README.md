@@ -195,7 +195,107 @@ O instrutor explica como estruturar funções JavaScript que retornam **código 
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-12h20m37s262.jpg" alt="" width="840">
+</p>
+
+Para compreender a necessidade dos Hooks, iniciamos a criação de um componente de forma tradicional. A estrutura do projeto no VS Code mostra a organização da pasta `aula-hooks`, onde criamos uma subpasta chamada `counter` dentro de `components`. O arquivo principal do componente, `Counter.js`, é iniciado com letra maiúscula, seguindo as boas práticas do React. No terminal, o projeto está rodando localmente através do endereço `http://localhost:3000`.
+
+```javascript
+import React from 'react';
+
+function Counter() {
+  return (
+    <>
+      <h1>1</h1>
+      <button>Aumentar</button>
+    </>
+  );
+}
+
+export default Counter;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-12h20m59s284.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, definimos a lógica inicial do contador. Criamos uma variável local chamada `quantity` com o valor inicial de `10` e a exibimos no HTML utilizando interpolação `{quantity}`. Também implementamos a função `upQuantity`, que incrementa o valor da variável e imprime o resultado no console para verificação. No navegador, a interface exibe o título "Hello World" (vindo do componente App) seguido pelo valor do contador e o botão.
+
+```javascript
+function Counter(){
+
+  let quantity = 10;
+
+  function upQuantity(){
+    quantity = quantity + 1;
+    console.log(quantity);
+  }
+
+  return(
+    <>
+      <h1>{quantity}</h1>
+      <button onClick={upQuantity}>Aumentar</button>
+    </>
+  )
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-12h21m11s303.jpg" alt="" width="840">
+</p>
+
+Ao testar o botão, percebemos que, embora a variável `quantity` aumente na memória (como mostrado no `console.log`), a interface do usuário não é atualizada automaticamente pelo React. Para resolver isso de forma "arcaica" (sem Hooks), adicionamos um `id="counter-box"` ao elemento `h1` e utilizamos manipulação direta do DOM com `document.getElementById` para forçar a atualização do conteúdo na tela sempre que a função `upQuantity` é disparada.
+
+```javascript
+function Counter(){
+  let quantity = 10;
+
+  function upQuantity(){
+    quantity = quantity + 1;
+    document.getElementById("counter-box").innerHTML = quantity;
+    console.log(quantity);
+  }
+
+  return(
+    <>
+      <h1 id="counter-box">{quantity}</h1>
+      <button onClick={upQuantity}>Aumentar</button>
+    </>
+  )
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-12h21m16s944.jpg" alt="" width="840">
+</p>
+
+Aqui vemos o resultado da manipulação manual do DOM em funcionamento. O console do navegador mostra que o valor da variável subiu para `12` após cliques no botão, e graças à instrução `innerHTML`, o valor exibido na tela agora reflete esse estado. Este exemplo demonstra o trabalho explícito necessário para atualizar a interface quando não utilizamos as ferramentas nativas de estado do React, servindo de base para introduzirmos o conceito de Hooks.
+
+```javascript
+function Counter(){
+  let quantity = 10;
+
+  function upQuantity(){
+    quantity = quantity + 1;
+    document.getElementById("counter-box").innerHTML = quantity;
+    console.log(quantity);
+  }
+
+  return(
+    <>
+      <h1 id="counter-box">{quantity}</h1>
+      <button onClick={upQuantity}>Aumentar</button>
+    </>
+  )
+}
+
+```
+
+O próximo passo será transformar essa lógica manual em um código mais profissional e inteligente utilizando Hooks. 
 
 
 ## 🟩 Vídeo 06 - Como criar um componente utilizando estados
