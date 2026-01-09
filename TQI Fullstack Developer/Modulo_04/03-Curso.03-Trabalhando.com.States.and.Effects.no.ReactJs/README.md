@@ -565,35 +565,14 @@ No código apresentado, o hook é configurado para monitorar a variável de esta
 * **Monitoramento de Estado:** O array de dependências `[buttonStyle]` garante que o efeito só rode quando este valor específico mudar.
 * **Lógica Condicional:** Dentro da função `down()`, existe uma verificação: se o `value` for menor ou igual a 1, o estilo do botão é alterado para "counter-button-minus-desactive", o que por sua vez gatilha o `useEffect`.
 
-```javascript
-import '../Ifoodcounter/Ifoodcounter.css'
-
-export default function Ifoodcounter() {
-    const [value, setValue] = useState(1)
-    const [buttonStyle, setButtonStyle] = useState("counter-button-minus-active")
-
-    useEffect(() => {
-        console.log("o estilo do botao atual é: " + buttonStyle)
-    }, [buttonStyle])
-
-    function down(){
-        if (value <= 1){
-            setButtonStyle("counter-button-minus-desactive")
-        }
-
-        if(value > 0) {
-            setValue(value-1)
-        }
-    }
-}
-
-```      
-
-
 ## 🟩 Vídeo 09 - Conclusão do curso
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.03-Video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/ea0ff440-ea45-4933-a494-d2b3a98258df?autoplay=1
 
 
 ## 🟩 Vídeo 10 - Trabalhando com States & Effects no ReactJs
