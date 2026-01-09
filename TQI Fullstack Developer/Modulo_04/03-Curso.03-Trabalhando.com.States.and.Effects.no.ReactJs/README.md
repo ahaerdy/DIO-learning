@@ -180,7 +180,7 @@ function App() {
 
 export default App;
 
-```      
+```
 
 ## 🟩 Vídeo 05 - Como criar um componente sem utilizar estados
 
@@ -410,7 +410,6 @@ function App() {
 export default App;
 ```
 
-
 ## 🟩 Vídeo 07 - Criando um componente prático com estado
 
 <video width="60%" controls>
@@ -418,14 +417,247 @@ export default App;
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/e9f852c4-f0dc-4b99-8756-96846f37694a?autoplay=1
+
+O vídeo consiste em uma **aula técnica** voltada para o ensino de **React hooks**, utilizando a criação de um contador inspirado no aplicativo iFood como exemplo prático. O instrutor detalha o processo de construção de um **componente funcional**, demonstrando como gerenciar estados através do hook `useState` para manipular valores numéricos. Além da lógica aritmética de somar e subtrair, o conteúdo foca em **boas práticas de programação**, como a nomenclatura de funções e a responsabilidade única. O tutorial também ensina a tornar o **CSS dinâmico**, alternando estilos visualmente para desabilitar botões quando o contador chega a zero. Por fim, reforça-se que o estado de um componente pode ser aplicado não apenas a dados visíveis, mas a qualquer propriedade lógica ou estética da interface.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h01m06s290.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o resultado visual inicial da aplicação React no navegador. É exibida a mensagem "Hello World" e a estrutura básica do componente de contador inspirado no iFood, composto por um botão de subtração, o número zero centralizado e um botão de adição. Este componente demonstra a aplicação prática de estados para criar interfaces dinâmicas que reagem às interações do usuário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h02m06s290.jpg" alt="" width="840">
+</p>
+
+O arquivo CSS define a estilização do componente `iFoodCounter`, utilizando **Flexbox** para o alinhamento central e distribuição do espaço. O código estabelece classes específicas para alternar o estado visual dos botões entre ativo (vermelho) e desativado (cinza), alterando propriedades como cor e cursor conforme a lógica de negócio do contador.
+
+```css
+.countex-wrapper {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid rgb(192, 192, 192);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  width: 6%;
+}
+
+.counter-button-plus-active {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  font-size: larger;
+  color: red;
+  cursor: pointer;
+}
+
+.counter-button-minus-active {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  font-size: larger;
+  color: red;
+  cursor: pointer;
+}
+
+.counter-button-minus-desactive {
+  border: none;
+  background-color: transparent;
+  height: 100%;
+  font-size: larger;
+  color: rgb(105, 105, 105);
+  cursor: pointer;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h03m06s290.jpg" alt="" width="840">
+</p>
+
+Este trecho apresenta a implementação lógica do componente funcional utilizando o hook `useState`. São definidos dois estados: `value`, para o valor numérico do contador, e `buttonStyle`, para controlar dinamicamente a classe CSS do botão de diminuir. As funções `up` e `down` encapsulam a lógica de atualização, garantindo que o valor não seja negativo e que a interface mude visualmente quando o contador chega a zero.
+
+```javascript
+import { useState } from "react"
+import '../Ifoodcounter/Ifoodcounter.css'
+
+export default function Ifoodcounter() {
+
+  const [value, setValue] = useState(1)
+  const [buttonStyle, setButtonStyle] = useState("counter-button-minus-active")
+
+  function down (){
+    if (value <= 1) {
+      setButtonStyle("counter-button-minus-inactive")
+    }
+
+    if (value > 0) {
+      setValue(value - 1)
+    }
+  }
+
+  function up(){
+    setValue(value + 1)
+    setButtonStyle("counter-button-minus-active")
+  }
+
+  return (
+    <div className="countex-wrapper">
+      <button
+        className={buttonStyle}
+        onClick={down}
+      >-</button>
+      <p>{ value }</p>
+      <button
+        className="counter-button-plus-active"
+        onClick={up}
+      >+</button>
+    </div>
+  )
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-20h04m06s290.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a integração do componente `Ifoodcounter` dentro do componente principal `App`. Para que o contador seja renderizado na tela, ele é importado e declarado no JSX do arquivo `App.js`, permitindo que a aplicação exiba o título "Hello World" seguido pelo componente funcional desenvolvido.
+
+```javascript
+import './App.css';
+import SmartCounter from '../SmartCounter/SmartCounter';
+import Ifoodcounter from '../Ifoodcounter/Ifoodcounter';
+
+function App() {
+  return (
+    <>
+      <h1>Hello World</h1>
+      <Ifoodcounter />
+    </>
+  )
+}
+
+export default App;
+
+```
+
+🟡 ./Components/Ifoodcounter/Ifoodcounter.ss
+
+```css
+.countex-wrapper {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid rgb(192, 192, 192);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  width: 6%;
+}
+
+.counter-button-plus-active {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    font-size: larger;
+    color: red;
+    cursor: pointer;
+}
+
+.counter-button-minus-active {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    font-size: larger;
+    color: red;
+    cursor: pointer;
+}
+
+.counter-button-minus-desactive {
+    border: none;
+    background-color: transparent;
+    height: 100%;
+    font-size: larger;
+    color: rgb(105, 105, 105);
+    cursor: pointer;
+}
+```
+
+🟡 ./Components/Ifoodcounter/Ifoodcounter.js
+
+```javascript
+import { useState } from "react"
+import '../Ifoodcounter/Ifoodcounter.css'
+
+export default function Ifoodcounter() {
+
+  const [value, setValue] = useState(1)
+  const [buttonStyle, setButtonStyle] = useState("counter-button-minus-active")
+
+
+  function down (){
+    if (value <= 1) {
+      setButtonStyle("counter-button-minus-inactive")
+    }
+    
+    if (value > 0) { 
+      setValue(value - 1)  
+    }
+  }
+
+  function up (){
+    setValue(value + 1)
+    setButtonStyle("counter-button-minus-active")
+  } 
+
+  return (
+    <div className="countex-wrapper">
+      <button 
+        className={buttonStyle}
+        onClick={down}         
+      >-</button >
+      <p>{ value }</p>
+      <button 
+        className="counter-button-plus-active"
+        onClick={up}
+      >+</button>
+    </div> 
+  )
+}
+```
+
+🔴 ./Components/App/App.js
+
+```javascript
+import './App.css';
+import SmartCounter from '../SmartCounter/SmartCounter';
+import Ifoodcounter from '../Ifoodcounter/Ifoodcounter';
+
+function App() {
+  return (
+    <>
+      <h1>Hello World</h1>
+      <Ifoodcounter />
+    </>
+  )
+}
+
+export default App;
+```
+
+
 
 
 ## 🟩 Vídeo 08 - Trabalhando com efeitos colaterais (useEffect)
 
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/3676c554-2ade-4d2f-8879-cf5ac125d8dd?autoplay=1
 
 
 ## 🟩 Vídeo 09 - Conclusão do curso
