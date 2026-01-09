@@ -58,32 +58,32 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 1: Introdução ao Ambiente Python e Projetos Colaborativos  
 
-- [x] Curso: [Introdução a Engenharia de Dados com Python](Modulo_01/01-Curso.01-Introducao.a.Engenharia.de.Dados.com.Python#-v%C3%ADdeo-01---introdu%C3%A7%C3%A3o-a-engenharia-de-dados-com-python)
-- [x] Curso: [Ambiente de Desenvolvimento e Primeiros Passos com Python](Modulo_01/02-Curso.02-Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python)
-- [x] Curso: [Conhecendo a Linguagem de Programação Python](Modulo_01/03-Curso.03-Conhecendo.a.Linguagem.de.Programacao.Python)
-- [x] Curso: [Versionamento de Código com Git e GitHub](Modulo_01/04-Curso.04-Versionamento.de.Codigo.com.Git.e.GitHub) 
-- [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](Modulo_01/05-Curso.5-Desafios.de.Projetos-Crie.Um.Portfolio.Vencedor)  
-- [x] Projeto: [Contribuindo em um Projeto Open Source no GitHub](Modulo_01/06-Projeto-Contribuindo.em.um.Projeto.Open.Source.no.GitHub)
+- [x] Curso: [Introdução a Engenharia de Dados com Python](Modulo_01/01-Curso.01-Introducao.a.Engenharia.de.Dados.com.Python#-v%C3%ADdeo-01---introdu%C3%A7%C3%A3o-a-engenharia-de-dados-com-python/README.md)
+- [x] Curso: [Ambiente de Desenvolvimento e Primeiros Passos com Python](Modulo_01/02-Curso.02-Ambiente.de.Desenvolvimento.e.Primeiros.Passos.com.Python/README.md)
+- [x] Curso: [Conhecendo a Linguagem de Programação Python](Modulo_01/03-Curso.03-Conhecendo.a.Linguagem.de.Programacao.Python/README.md)
+- [x] Curso: [Versionamento de Código com Git e GitHub](Modulo_01/04-Curso.04-Versionamento.de.Codigo.com.Git.e.GitHub/README.md) 
+- [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](Modulo_01/05-Curso.5-Desafios.de.Projetos-Crie.Um.Portfolio.Vencedor/README.md)  
+- [x] Projeto: [Contribuindo em um Projeto Open Source no GitHub](Modulo_01/06-Projeto-Contribuindo.em.um.Projeto.Open.Source.no.GitHub/README.md)
     - Repositório: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
     - Descrição: acrescentando o meu arquivo markdown na pasta community no repositório dio-lab-open-source.
 - [x] Mentoria: [Live de Lançamento: Bootcamp NTT DATA - Engenharia de Dados com Python](Modulo_01/07-Mentoria-Live.de.Lancamento)
       
 ### Módulo 2: Sintaxe Básica com Python  
 
-- [x] Curso: [Tipos de Operadores com Python](Modulo_02/01-Curso.01-Tipos.de.Operadores.com.Python)
-- [x] Curso: [Estruturas Condicionais e de Repetição em Python](Modulo_02/02-Curso.02-Estruturas.Condicionais.e.de.Repeticao.em.Python)
-- [x] Curso: [Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python)
-- [x] Curso: [Dominando Funções Python](hModulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python)
-- [x] Projeto: [Criando um Sistema Bancário com Python](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python)
+- [x] Curso: [Tipos de Operadores com Python](Modulo_02/01-Curso.01-Tipos.de.Operadores.com.Python/README.md)
+- [x] Curso: [Estruturas Condicionais e de Repetição em Python](Modulo_02/02-Curso.02-Estruturas.Condicionais.e.de.Repeticao.em.Python/README.md)
+- [x] Curso: [Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python/README.md)
+- [x] Curso: [Dominando Funções Python](hModulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python/README.md)
+- [x] Projeto: [Criando um Sistema Bancário com Python](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/README.md)
   - Arquivo do projeto: [desafio.py](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
   - Descrição: desenvolvimento de um sistema de operações bancárias simples em Python, sem uso de bibliotecas externas, explorando estruturas de controle, manipulação de strings, entrada de dados, validação de regras e aplicação de lógica para simular funcionalidades como saque, depósito e extrato.
 
 
 ### Módulo 3: Trabalhando com Coleções em Python  
 
-- [x] Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso.01-Trabalhando.com.Listas.em.Python)
-- [x] Curso: [Conhecendo Tuplas em Python](Modulo_03/02-Curso.02-Conhecendo.Tuplas.em.Python)
-- [x] Curso: [Explorando Conjuntos em Python](Modulo_03/03-Curso.03-Explorando.Conjuntos.em.Python)
+- [x] Curso: [Trabalhando com Listas em Python](Modulo_03/01-Curso.01-Trabalhando.com.Listas.em.Python/README.md)
+- [x] Curso: [Conhecendo Tuplas em Python](Modulo_03/02-Curso.02-Conhecendo.Tuplas.em.Python/README.md)
+- [x] Curso: [Explorando Conjuntos em Python](Modulo_03/03-Curso.03-Explorando.Conjuntos.em.Python/README.md)
 - [x] Curso: [Aprendendo a Utilizar Dicionários em Python](Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python/README.md)
 - [x] Curso: Lidando com Data, Hora e Fuso Horário no Python
 - [x] Projeto: Otimizando o Sistema Bancário com Funções Python
