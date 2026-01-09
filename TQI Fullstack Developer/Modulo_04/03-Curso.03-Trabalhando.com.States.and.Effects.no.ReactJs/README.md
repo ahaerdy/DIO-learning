@@ -335,6 +335,80 @@ O próximo passo será transformar essa lógica manual em um código mais profis
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-states-effects-no-reactjs/learning/3f00bb5d-0ae0-4cc6-868e-f826d024a9b4?autoplay=1
 
+Esta transcrição aborda o uso de **Hooks no React**, focando especificamente na implementação do **useState** para criar componentes com **estado e memória**. O instrutor explica a transição de um contador comum para um **Smart Counter**, demonstrando como abandonar a manipulação manual do DOM em favor de uma abordagem **reativa**. Ao utilizar essa ferramenta, o desenvolvedor obtém uma **variável de estado** e uma função vinculada que atualiza automaticamente a interface sempre que o valor muda. O conteúdo destaca que componentes **stateful** são mais eficientes, pois permitem que o sistema gerencie a renderização de forma **padronizada e inteligente**. Por fim, a aula reforça que os **Hooks** funcionam como ganchos que conectam funções a variáveis, facilitando o desenvolvimento de interfaces dinâmicas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-12h56m22s957.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o ambiente de desenvolvimento no Visual Studio Code mostra a transição de um componente estático para um componente mais sofisticado. O objetivo é substituir o componente `Counter` manual por um novo chamado `SmartCounter`, que utilizará o poder dos **Hooks** do React para gerenciar seu próprio estado de forma padronizada.
+
+O código inicial no arquivo `App.js` demonstra a importação do `SmartCounter` e sua utilização dentro do retorno da função `App`. Note que, ao utilizar editores modernos, a importação pode ocorrer de forma automática ao digitar o nome do componente como uma tag HTML.
+
+```javascript
+import './App.css';
+import Counter from '../Counter/Counter';
+import SmartCounter from '../Smartcounter/Smartcounter';
+
+function App() {
+  return (
+    <>
+      <h1>Hello World</h1>
+      <SmartCounter/>
+    </>
+  );
+}
+
+export default App;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-12h59m57s967.jpg" alt="" width="840">
+</p>
+
+Para que o componente tenha "memória", utilizamos o hook **useState**. Ele transforma um componente *stateless* (sem estado) em um componente *stateful* (com estado). O `useState` retorna um vetor contendo dois elementos: uma variável que armazena o valor atual e uma função específica para atualizar esse valor.
+
+No exemplo do `SmartCounter`, a variável `quantity` guarda o estado e a função `upQuantity` é responsável por alterá-lo. Ao clicar no botão "Aumentar", a função é disparada, atualizando o valor na memória e forçando o React a refletir essa mudança automaticamente em todos os lugares onde a variável `quantity` estiver sendo exibida na tela.
+
+🟡 ./Components/SmartCounter/SmartCounter.js
+
+```javascript
+import {useState} from 'react';
+
+function SmartCounter(){
+  const [quantity, upQuantity] = useState(1);
+
+  return (
+    <>
+      <h1>{quantity}</h1>
+      <button onClick={() => upQuantity(quantity + 1)}>Aumentar</button>
+    </>
+  )
+}
+
+export default SmartCounter;
+```
+
+🔴 App.js
+
+```javascript
+import './App.css';
+import SmartCounter from '../SmartCounter/SmartCounter';
+
+function App() {
+  return (
+    <>
+      <h1>Hello World</h1>
+      <SmartCounter />
+    </>
+  )
+}
+
+export default App;
+```
 
 
 ## 🟩 Vídeo 07 - Criando um componente prático com estado
