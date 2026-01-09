@@ -273,4 +273,5 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 
 ## Certificado: Aprendendo a Utilizar Dicionários em Python
 
-Link do certificado: https://hermes.dio.me/certificates/UZPKD2UH.pdf
+- Link do certificado: https://hermes.dio.me/certificates/UZPKD2UH.pdf
+- Certificado em PDF: [Certificado-Aprendendo.a.Utilizar.Dicionarios.em.Python.pdf](000-Midia_e_Anexos/Certificado-Aprendendo.a.Utilizar.Dicionarios.em.Python.pdf)
