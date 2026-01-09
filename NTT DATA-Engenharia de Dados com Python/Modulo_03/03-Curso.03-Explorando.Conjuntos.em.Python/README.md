@@ -7,6 +7,7 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-conjuntos-em-python/learning/09c6ccff-aec7-4506-96b7-b90307851402?autoplay=1
 
 ## Objetivo Geral
 
