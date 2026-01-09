@@ -281,6 +281,8 @@ export default Counter;
 
 Aqui vemos o resultado da manipulação manual do DOM em funcionamento. O console do navegador mostra que o valor da variável subiu para `12` após cliques no botão, e graças à instrução `innerHTML`, o valor exibido na tela agora reflete esse estado. Este exemplo demonstra o trabalho explícito necessário para atualizar a interface quando não utilizamos as ferramentas nativas de estado do React, servindo de base para introduzirmos o conceito de Hooks.
 
+🟡 ./Components/Counter/Counter.js
+
 ```javascript
 import React from 'react';
 
@@ -303,6 +305,25 @@ function Counter(){
 
 export default Counter;
 ```
+
+🔴 App.js
+
+```javascript
+import './App.css';
+import Counter from '../Counter/Counter';
+
+function App() {
+  return (
+    <>
+      <h1>Hello World</h1>
+      <Counter />
+    </>
+  )
+}
+
+export default App;
+```
+
 
 O próximo passo será transformar essa lógica manual em um código mais profissional e inteligente utilizando Hooks. 
 
