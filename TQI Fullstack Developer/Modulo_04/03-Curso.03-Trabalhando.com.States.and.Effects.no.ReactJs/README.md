@@ -45,7 +45,38 @@ O vídeo apresenta o conceito fundamental de **Hooks no React**, definindo-os co
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-08h58m23s807.jpg" alt="" width="840">
+</p>
+
+Os **Hooks** (termo que significa "gancho" em inglês) são funções fundamentais que permitem "enganchar" funcionalidades aos componentes do React. A analogia visual do anzol ilustra perfeitamente esse conceito: assim como um peixe preso ao anzol reage quando a vara é puxada, o componente reage e executa ações sempre que sofre um clique ou uma atualização, justamente por estar conectado a um Hook. Essa estrutura permite o uso de estados e outros recursos de forma simplificada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-09-08h59m38s281.jpg" alt="" width="840">
+</p>
+
+Introduzidos na versão 16.8 do React, os Hooks permitem gerenciar estados e outros recursos sem a necessidade de escrever classes. O exemplo de código abaixo demonstra a utilização do `useState`, o Hook de estado, para criar um contador simples onde a interface reage ao clique do usuário:
+
+```javascript
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare uma nova variável de state, a qual chamaremos de "count"
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+```
+
+Antes de avançarmos para as implementações complexas, é essencial compreender que o estado (`state`) é o que garante a reatividade correta dos componentes, permitindo que eles se atualizem visualmente sempre que houver uma alteração nos dados.      
 
 
 ## 🟩 Vídeo 03 - Criando seu projeto
