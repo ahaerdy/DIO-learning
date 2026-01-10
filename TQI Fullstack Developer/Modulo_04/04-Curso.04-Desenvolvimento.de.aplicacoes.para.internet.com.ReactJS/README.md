@@ -755,6 +755,148 @@ Para o acompanhamento prático da aula, são necessários os seguintes requisito
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/a94f6436-850b-4a4f-9e4b-2ba7d77fcb39?autoplay=1 
 
+O vídeo consiste em uma aula técnica sobre a integração de **APIs HTTP** em aplicações **React**, detalhando os fundamentos da arquitetura **REST**. O instrutor explica os principais métodos de comunicação, como **GET**, **POST**, **DELETE** e **PUT**, utilizando exemplos práticos com uma API de cientistas brasileiras. São comparadas duas abordagens principais: a nativa **Fetch API**, que exige o tratamento manual de promessas e conversão de dados, e a biblioteca **Axios**, destacada por sua sintaxe compacta e suporte a navegadores antigos. O conteúdo também aborda a implementação prática dentro do ciclo de vida de **componentes React**, recomendando o uso de **Hooks** ou do método `componentDidMount`. Por fim, o material ensina como monitorar essas requisições através das ferramentas de desenvolvedor do navegador para validar o sucesso das operações.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m20s445.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz a integração de APIs HTTP em aplicações desenvolvidas com ReactJS. O foco inicial está em compreender como o desenvolvimento para internet utiliza o modelo Rest para comunicação entre o front-end e os servidores de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m33s488.jpg" alt="" width="840">
+</p>
+
+As APIs HTTP servem como ponte para conectar a aplicação a um ou mais servidores. Para manipular dados através dessas APIs, utilizamos métodos fundamentais como **GET**, **POST**, **DELETE** e **PUT**. No ecossistema JavaScript, as ferramentas mais comuns para realizar essas requisições são a **Fetch API** e a biblioteca **Axios**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m38s275.jpg" alt="" width="840">
+</p>
+
+A **Fetch API** é uma ferramenta nativa dos navegadores modernos, servindo como uma alternativa mais atual ao antigo `XMLHttpRequest()` e ao `jQuery.ajax()`. Entre suas características, destaca-se o suporte a Service Workers. Contudo, possui particularidades importantes: não envia nem recebe cookies por padrão (exigindo a configuração da opção `credentials`) e não rejeita automaticamente o status de erro HTTP (como 404 ou 500) na Promise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m41s161.jpg" alt="" width="840">
+</p>
+
+Para testar as requisições durante o desenvolvimento, é possível utilizar ferramentas como o **Beeceptor**. Ele permite criar regras de *mocking* (simulação) para diferentes endpoints. No exemplo, vemos a configuração de rotas para gerenciar uma lista de cientistas brasileiras, definindo status de resposta (como 200 OK) e atrasos (delay) para simular o comportamento real de uma rede.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m45s723.jpg" alt="" width="840">
+</p>
+
+Reforçando os conceitos da **Fetch API**, é importante lembrar que ela opera sobre Promises. Ao realizar uma chamada, o desenvolvedor deve tratar a resposta para convertê-la no formato desejado, geralmente JSON, e gerenciar o ciclo de vida da requisição manualmente em caso de erros de rede.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m46s974.jpg" alt="" width="840">
+</p>
+
+Para realizar uma consulta de dados (**GET**) utilizando Fetch, passamos a URL do endpoint. O resultado é processado através de encadeamentos `.then()`, onde primeiro convertemos a resposta para JSON e depois manipulamos os dados recebidos.
+
+```javascript
+fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras')
+  .then(response => response.json())
+  .then(data => {
+    alert(`Conheça algumas cientistas brasileiras: ${data}`);
+  })
+  .catch(error => {
+    alert('Ops! Erro a seguir: ' + error);
+  });
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m51s890.jpg" alt="" width="840">
+</p>
+
+Ao realizar um **POST** para enviar novos dados, precisamos configurar o objeto de opções do Fetch, definindo o `method` como 'post' e o `body` com o conteúdo a ser enviado, devidamente convertido para string.
+
+```javascript
+const novaCientista = { nome: 'Heleieth Saffioti', area: 'Letras' };
+
+fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras', {
+  method: 'post',
+  body: JSON.stringify(novaCientista)
+})
+.then(response => response.json())
+.then(data => {
+  alert(`Conheça algumas cientistas brasileiras: ${data}`);
+})
+.catch(error => {
+  alert('Ops! Erro a seguir: ' + error);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m54s932.jpg" alt="" width="840">
+</p>
+
+O método **DELETE** é utilizado para remover um recurso específico. Geralmente, o ID do item é passado diretamente na URL da requisição.
+
+```javascript
+fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras/4', {
+  method: 'delete'
+})
+.then(response => response.json())
+.then(data => {
+  alert(`Conheça algumas cientistas brasileiras: ${data}`);
+})
+.catch(error => {
+  alert('Ops! Erro a seguir: ' + error);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m58s089.jpg" alt="" width="840">
+</p>
+
+Para atualizar dados existentes, utilizamos o método **PUT**. Assim como no POST, é necessário enviar o corpo da requisição com as novas informações, mas direcionando para o ID do recurso específico na URL.
+
+```javascript
+const novaCientista = { nome: 'Sonia Guimarães', area: 'Física' };
+
+fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras/3', {
+  method: 'put',
+  body: JSON.stringify(novaCientista)
+})
+.then(response => response.json())
+.then(data => {
+  alert(`Conheça algumas cientistas brasileiras: ${data}`);
+})
+.catch(error => {
+  alert('Ops! Erro a seguir: ' + error);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m00s712.jpg" alt="" width="840">
+</p>
+
+O **Axios** surge como uma alternativa poderosa à Fetch API. É uma biblioteca externa (lib) que facilita o consumo de APIs HTTP, sendo cross-browser e oferecendo recursos avançados como o monitoramento do progresso de requisições, melhor tratamento automático de erros e facilidade para escrita de testes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m04s759.jpg" alt="" width="840">
+</p>
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m05s837.jpg" alt="" width="840">
+</p>
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m09s701.jpg" alt="" width="840">
+</p>
+
+*Conteúdo não identificado com segurança a partir do material disponível.*      
+
 
 ## 🟩 Vídeo 07 - O que é Flux?
 
@@ -763,7 +905,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvol
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/fd62eb8e-a109-4f7c-9f48-30c56d0c899f?autoplay=1
 
 
 ## 🟩 Vídeo 08 - Conheça o Redux e como trabalhar com ele
