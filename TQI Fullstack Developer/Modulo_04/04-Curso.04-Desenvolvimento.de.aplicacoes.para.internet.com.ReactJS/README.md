@@ -3,7 +3,9 @@
 - Eduardo Gonçalves (Senior Software Engineer @Gupy | JavaScript Specialist | React | Node.js | Design System | AWS | SQL)
 - Contato Linkedin: / [geceduardo](https://www.linkedin.com/in/geceduardo/)
 - Github: https://github.com/eduardogc
-- Repositório: https://github.com/eduardogc/digital-one-react-intermediario
+- Repositório (fork): https://github.com/ahaerdy/fork-digital-one-react-intermediario-eduardogc
+
+[![LinkedIn](https://cdn.simpleicons.org/linkedin/0A66C2)]
 
 # Parte 1 - Trabalhando com estilos em elementos e componentes
 
