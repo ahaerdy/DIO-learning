@@ -1405,7 +1405,249 @@ Ao testar a aplicação no navegador, a aba **Network** das ferramentas do desen
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/fd62eb8e-a109-4f7c-9f48-30c56d0c899f?autoplay=1
 
+O vídeo aborda a importância da **imutabilidade** no desenvolvimento com **React** e **Redux**, destacando como essa prática otimiza a **performance** e facilita o **debugging**. O texto explica que, ao tratar coleções como unidades inalteráveis, o sistema utiliza **comparações rasas** (shallow comparisons) para detectar mudanças de estado de forma mais rápida e eficiente. São apresentados métodos práticos para garantir a imutabilidade, como o uso de **spread operators**, **Pure Components** e bibliotecas especializadas como a **Immutable.js**. Além disso, o conteúdo detalha como o Redux depende estritamente desses conceitos em seus **reducers** e na conexão com a **store** para disparar renderizações precisas. Por fim, o autor alerta sobre erros comuns ao tentar mutar dados diretamente, o que impede a atualização correta da interface.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h35m44s992.jpg" alt="" width="840">
+</p>
+
+Esta segunda parte da aula foca na relação entre imutabilidade e Redux, explorando como esses conceitos são aplicados no desenvolvimento com ReactJS para garantir consistência de dados e performance.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h35m47s243.jpg" alt="" width="840">
+</p>
+
+A imutabilidade é regida por três princípios fundamentais:
+
+1. Uma coleção, uma vez criada, não pode ser alterada.
+2. Novas coleções são geradas a partir de estados anteriores mediante mutações controladas (setters).
+3. Novas estruturas reaproveitam o máximo possível da estrutura original (persistência), o que reduz a necessidade de cópias completas e otimiza o desempenho.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h35m50s773.jpg" alt="" width="840">
+</p>
+
+Adotar a imutabilidade traz benefícios claros para o ciclo de desenvolvimento:
+
+* **Performance**: Evita o processamento excessivo de mutações diretas.
+* **Programação Simples**: Trabalhar com estados fixos torna o fluxo de dados previsível.
+* **Debugging**: Facilita a detecção de mudanças através de "shallow comparisons" (comparações rasas), onde verifica-se apenas a referência da memória em vez de percorrer todo o objeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h35m52s903.jpg" alt="" width="840">
+</p>
+
+No ecossistema React, a performance está intrinsecamente ligada ao uso de dados imutáveis. O desenvolvedor pode controlar o ciclo de renderização utilizando métodos como `shouldComponentUpdate` ou a classe `React.PureComponent` para evitar atualizações desnecessárias na interface.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h35m55s029.jpg" alt="" width="840">
+</p>
+
+O código abaixo ilustra o uso manual do `shouldComponentUpdate`. O componente `CounterButton` só executará o processo de renderização se houver uma alteração efetiva na cor (via props) ou no contador (via state). Caso contrário, ele retorna `false`, economizando recursos de processamento.
+
+```javascript
+class CounterButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 1};
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.color !== nextProps.color) {
+      return true;
+    }
+    if (this.state.count !== nextState.count) {
+      return true;
+    }
+    return false;
+  }
+
+  render() {
+    return (
+      <button
+        color={this.props.color}
+        onClick={() => this.setState(state => ({count: state.count + 1}))}>
+        Count: {this.state.count}
+      </button>
+    );
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h35m59s475.jpg" alt="" width="840">
+</p>
+
+Este diagrama demonstra como o React decide o que renderizar. Através do `shouldComponentUpdate` (SCU) e da verificação do Virtual DOM (VDOM), o framework identifica componentes cujos dados não mudaram (em verde) e evita processá-los, focando apenas naqueles que realmente precisam de atualização (em vermelho).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m03s809.jpg" alt="" width="840">
+</p>
+
+O `React.PureComponent` simplifica a lógica de performance ao implementar automaticamente uma comparação rasa (shallow comparison) tanto em `props` quanto em `state`. Isso elimina a necessidade de escrever manualmente o método `shouldComponentUpdate` para casos simples, mantendo o componente eficiente.
+
+```javascript
+class CounterButton extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {count: 1};
+  }
+
+  render() {
+    return (
+      <button
+        color={this.props.color}
+        onClick={() => this.setState(state => ({count: state.count + 1}))}>
+        Count: {this.state.count}
+      </button>
+    );
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m07s700.jpg" alt="" width="840">
+</p>
+
+É fundamental entender que o `PureComponent` pode não funcionar se os dados forem mutados diretamente. No exemplo abaixo, o método `handleClick` usa `.push()` no array original. Como a referência de memória de `words` permanece a mesma, o React entende que não houve mudança, impedindo a atualização da interface — um erro comum de desenvolvimento.
+
+```javascript
+class ListOfWords extends React.PureComponent {
+  render() {
+    return <div>{this.props.words.join(',')}</div>;
+  }
+}
+
+class WordAdder extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      words: ['marklar']
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    // Essa parte é um padrão ruim e causa um bug
+    const words = this.state.words;
+    words.push('marklar');
+    this.setState({words: words});
+  }
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleClick} />
+        <ListOfWords words={this.state.words} />
+      </div>
+    );
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m10s583.jpg" alt="" width="840">
+</p>
+
+O problema central na mutação de dados com `PureComponent` é que ele compara apenas as referências. Se você altera o conteúdo de um objeto mas mantém a mesma referência, a comparação indicará que os valores são "iguais", resultando em falhas na renderização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m15s824.jpg" alt="" width="840">
+</p>
+
+Para corrigir o bug de renderização, deve-se utilizar uma abordagem imutável. No código a seguir, o operador *spread* (`...`) cria uma nova instância do array contendo os dados anteriores mais o novo elemento. Como a referência agora é nova, o React detecta a mudança e atualiza o componente corretamente.
+
+```javascript
+handleClick() {
+  this.setState(state => ({
+    words: [...state.words, 'marklar'],
+  }));
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m18s312.jpg" alt="" width="840">
+</p>
+
+Este exemplo simples em JavaScript puro demonstra o perigo da mutação por referência. Ao atribuir `x` a `y`, ambos apontam para o mesmo local na memória. Modificar `y.foo` altera automaticamente `x.foo`, o que pode causar efeitos colaterais imprevisíveis em aplicações que dependem de estados estáveis.
+
+```javascript
+const x = { foo: 'bar' };
+const y = x;
+y.foo = 'baz';
+console.log(x === y); // true
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m20s041.jpg" alt="" width="840">
+</p>
+
+Para gerenciar dados de forma estritamente imutável, recomenda-se o uso de bibliotecas como **Immutable.js**. Ela provê estruturas de dados que não podem ser modificadas após a criação, garantindo que qualquer alteração resulte em uma nova referência de forma performática.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m23s996.jpg" alt="" width="840">
+</p>
+
+Utilizando o `Record` do Immutable.js, vemos que a operação de `set` gera uma nova cópia. No código abaixo, `x === y` é falso porque as referências são distintas após a mudança de valor, enquanto `x === z` é verdadeiro, pois o Immutable.js reconhece que o estado final é idêntico ao original e mantém a eficiência.
+
+```javascript
+const { Record } = require('immutable');
+const sumRecord = Record({ foo: null });
+const x = new sumRecord({ foo: 'bar' });
+const y = x.set('foo', 'BHZ');
+const z = x.set('foo', 'bar');
+
+console.log(x === y); // false
+console.log(x === z); // true
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m29s415.jpg" alt="" width="840">
+</p>
+
+Além do Immutable.js, existem outras bibliotecas populares indicadas pela comunidade React para lidar com imutabilidade, tais como **Immer**, **Immutability-helper** e **Seamless-immutable**. Cada uma oferece diferentes formas de simplificar a criação de cópias profundas e estados persistentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m31s177.jpg" alt="" width="840">
+</p>
+
+A imutabilidade é um requisito obrigatório no Redux. Como o fluxo de dados depende de comparações rasas na Store para disparar atualizações, o uso de dados imutáveis garante que o Redux DevTools funcione corretamente, permitindo recursos avançados como o *Time Travel Debugger*.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m38s808.jpg" alt="" width="840">
+</p>
+
+O Redux opera através de dois mecanismos principais:
+
+1. **Reducers**: O `combineReducers` verifica mudanças via comparação rasa. Se um reducer retorna uma nova referência, o Redux compõe um novo objeto de estado global.
+2. **Connect**: Cria componentes que monitoram o estado. Através do `mapStateToProps`, se a comparação rasa detectar uma mudança na fatia do estado correspondente, o componente é re-renderizado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-17h36m43s055.jpg" alt="" width="840">
+</p>
+
+Um erro clássico é realizar mutações diretas dentro de seletores ou no `mapStateToProps`. No exemplo abaixo, ao incrementar o contador diretamente no objeto `state.user`, a referência da memória não muda. Consequentemente, o Redux assume que não houve alteração e o componente nunca será atualizado na tela.
+
+```javascript
+const getUser = (state) => {
+  const user = state.user; 
+  user.contadorDeAcesso++; // ERRO: Mutação direta do estado
+  return user;
+}
+
+const mapStateToProps = (state) => ({
+  user: getUser(state) // Retornará sempre a mesma referência, impedindo o rerender
+});
+
+```      
 
 
 ## 🟩 Vídeo 12 - Redux + Rest
