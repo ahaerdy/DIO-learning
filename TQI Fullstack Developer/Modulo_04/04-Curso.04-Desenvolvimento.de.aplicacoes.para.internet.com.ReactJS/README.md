@@ -1093,8 +1093,7 @@ serviceWorker.unregister();
 
 ```      
 
-
-# Parte 3 - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# Parte 3 - Comunicação avançada entre aplicações
 
 ## 🟩 Vídeo 09 - Introdução da aula
 
