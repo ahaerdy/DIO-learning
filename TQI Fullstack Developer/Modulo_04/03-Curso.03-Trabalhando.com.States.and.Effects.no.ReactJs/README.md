@@ -588,5 +588,5 @@ No contexto do desenvolvimento com React, é essencial compreender o uso de **Ho
 
 # Certificado: Trabalhando com States & Effects no ReactJs
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/HIBCTUY0.pdf
+- Certificado em pdf: [Certificado-Trabalhando.com.States.and.Effects.no.ReactJs.pdf](000-Midia_e_Anexos/Certificado-Trabalhando.com.States.and.Effects.no.ReactJs.pdf)
