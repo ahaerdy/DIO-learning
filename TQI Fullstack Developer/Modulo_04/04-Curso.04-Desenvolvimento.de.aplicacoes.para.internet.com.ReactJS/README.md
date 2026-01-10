@@ -706,29 +706,40 @@ Para encerrar a aula, é disponibilizado um repositório no GitHub contendo todo
 
 # Parte 2 - Introdução ao Redux e fluxos da arquitetura com ReactJS
 
-## 🟩 Vídeo 06 - Introdução aos conceitos da aula
+## 🟩 Vídeo 05 - Introdução aos conceitos da aula
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/10b90206-d27b-4ab0-809e-8ce0abd295df?autoplay=1
+
+Esse vídeo consiste na transcrição de um áudio educativo focado na **integração do Redux com a biblioteca React**. O conteúdo está estruturado em três etapas principais que abrangem desde a **teoria da arquitetura Flux** até a **aplicação prática** de ferramentas de gerenciamento de estado. Para acompanhar a lição, os estudantes precisam possuir conhecimentos prévios e ter um **ambiente de desenvolvimento configurado** com Node.js e um editor de código. O instrutor também destaca a importância de instalar uma **extensão de depuração no navegador** para monitorar o comportamento da aplicação. No decorrer da explicação, é prometido um guia detalhado sobre como realizar essas **configurações técnicas** essenciais. Dessa forma, o material serve como um **roteiro de aprendizado** para desenvolvedores que desejam dominar fluxos de dados complexos no ecossistema JavaScript.
+
+### Anotações
+
+      
+
+
+## 🟩 Vídeo 06 - O que é Flux?
+
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/10b90206-d27b-4ab0-809e-8ce0abd295df?autoplay=1
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/d62cb913-ba7e-4f03-a0aa-ddf71022ab09?autoplay=1
 
 
-## 🟩 Vídeo 07 - O que é Flux?
-
-
-Link do vídeo: 
-
-
-## 🟩 Vídeo 08 - Conheça o Redux e como trabalhar com ele
+## 🟩 Vídeo 07 - Conheça o Redux e como trabalhar com ele
 
 
 Link do vídeo: 
 
 
-## 🟩 Vídeo 09 - Aprenda a prática de como desenvolver código com React e Redux
+## 🟩 Vídeo 08 - Aprenda a prática de como desenvolver código com React e Redux
 
 
 Link do vídeo: 
@@ -736,10 +747,10 @@ Link do vídeo:
 
 # Parte 3 - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-## 🟩 Vídeo 10 - Introdução da aula
+## 🟩 Vídeo 09 - Introdução da aula
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_10.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -775,10 +786,10 @@ Para o acompanhamento prático da aula, são necessários os seguintes requisito
 * Ambiente de desenvolvimento configurado com um editor de texto, **Node.js** e **React** instalados.
 * Instalação da extensão **Redux DevTools** no navegador Google Chrome para depuração do estado da aplicação.      
 
-## 🟩 Vídeo 11 - Rest HTTP com React
+## 🟩 Vídeo 10 - Rest HTTP com React
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_11.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_10.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -1037,20 +1048,20 @@ No painel do Beeceptor, podemos visualizar as regras de mock configuradas. Cada 
 Ao testar a aplicação no navegador, a aba **Network** das ferramentas do desenvolvedor permite confirmar o sucesso da operação. Um status **200 OK** indica que a requisição foi concluída, e na aba **Preview**, podemos inspecionar a estrutura do JSON retornado pela API, garantindo que os dados estão prontos para serem mapeados e exibidos no frontend.      
 
 
-## 🟩 Vídeo 12 - Imutabilidade e Redux
+## 🟩 Vídeo 11 - Imutabilidade e Redux
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_07.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_11.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/fd62eb8e-a109-4f7c-9f48-30c56d0c899f?autoplay=1
 
 
-## 🟩 Vídeo 13 - Redux + Rest
+## 🟩 Vídeo 12 - Redux + Rest
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_08.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_12.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
