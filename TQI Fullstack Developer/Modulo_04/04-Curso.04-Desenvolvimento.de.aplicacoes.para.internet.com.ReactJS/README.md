@@ -5,7 +5,7 @@
 - Github: https://github.com/eduardogc
 - Repositório (fork): https://github.com/ahaerdy/fork-digital-one-react-intermediario-eduardogc
 
-[![GitHub](https://cdn.simpleicons.org/github/181717)]
+<a href="https://github.com/eduardogc"> <img src="assets/github.svg" width="16" height="16" /> eduardogc </a>
 
 # Parte 1 - Trabalhando com estilos em elementos e componentes
 
