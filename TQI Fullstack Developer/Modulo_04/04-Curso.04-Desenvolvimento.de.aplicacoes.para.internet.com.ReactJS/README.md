@@ -915,9 +915,9 @@ Os **Reducers** simplificam o fluxo ao eliminar a necessidade de um dispatcher. 
 
 Para integrar o React à Store do Redux na camada de View , utilizam-se três conceitos principais:
 
-**Provider**: Atua como um *wrapper* para facilitar a conexão dos componentes filhos com a store.
-**connect()**: Função que envolve um componente para que ele receba atualizações do estado.
-**selector**: Função utilizada para definir quais estados específicos do Redux devem ser passados como propriedades (props) para o componente.
+* **Provider**: Atua como um *wrapper* para facilitar a conexão dos componentes filhos com a store.
+* **connect()**: Função que envolve um componente para que ele receba atualizações do estado.
+* **selector**: Função utilizada para definir quais estados específicos do Redux devem ser passados como propriedades (props) para o componente.
 
 
 ## 🟩 Vídeo 08 - Aprenda a prática de como desenvolver código com React e Redux
