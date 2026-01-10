@@ -2,6 +2,8 @@
 
 - Eduardo Gonçalves (Senior Software Engineer @Gupy | JavaScript Specialist | React | Node.js | Design System | AWS | SQL)
 - Contato Linkedin: / [geceduardo](https://www.linkedin.com/in/geceduardo/)
+- Github: https://github.com/eduardogc
+- Repositório: https://github.com/eduardogc/digital-one-react-intermediario
 
 # Parte 1 - Trabalhando com estilos em elementos e componentes
 
@@ -388,7 +390,7 @@ export default TodoListFunctional;
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m57s781.jpg" alt="" width="840">
 </p>
 
-Devido à evolução tecnológica, a nomenclatura foi atualizada. Atualmente, a distinção mais precisa é entre **Class Components** e **Function Components**. Como os componentes funcionais agora podem manipular estados através de Hooks, eles deixaram de ser exclusivamente "stateless". Hoje, chamamos de Stateless apenas o componente funcional que não utiliza gerenciamento de estados.      
+Devido à evolução tecnológica, a nomenclatura foi atualizada. Atualmente, a distinção mais precisa é entre **Class Components** e **Function Components**. Como os componentes funcionais agora podem manipular estados através de Hooks, eles deixaram de ser exclusivamente "stateless". Hoje, chamamos de Stateless apenas o componente funcional que não utiliza gerenciamento de estados.
 
 
 ## 🟩 Vídeo 04 - Introdução em Formulários no ReactJS
@@ -399,6 +401,13 @@ Devido à evolução tecnológica, a nomenclatura foi atualizada. Atualmente, a 
 </video>
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/5a44ad8b-f289-4c5f-887e-d4531a186852?autoplay=1
+
+O vídeo consiste em uma aula técnica sobre a manipulação de **formulários em React**, detalhando como gerenciar o estado entre o **DOM** e a biblioteca. O conteúdo explora a diferença entre **componentes controlados**, onde o React é a única fonte de verdade, e **componentes não controlados**, que utilizam referências para acessar valores. São apresentados exemplos práticos envolvendo diversos elementos de entrada, como **inputs, selects e checkboxes**, além de estratégias para simplificar o código. O instrutor também aborda exceções, como campos de **upload de arquivos**, que exigem abordagens específicas por serem somente leitura. Por fim, o texto sugere o uso de bibliotecas externas como **Formic** para lidar com estruturas de dados mais complexas e robustas.
+
+### Anotações
+
+      
+
 
 
 ## 🟩 Vídeo 05 - Trabalhando com estilos em elementos e componentes
