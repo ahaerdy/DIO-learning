@@ -19,7 +19,32 @@ Nesta introdução, o desenvolvedor Eduardo apresenta as diretrizes de um curso 
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-08h26m41s079.jpg" alt="" width="840">
+</p>
+
+Esta aula marca o início do curso de **Desenvolvimento de aplicações para internet com ReactJS**, ministrado por Eduardo Gonçalves Costa, desenvolvedor Front End na Tracksale. O foco inicial desta trilha de aprendizado será a exploração de como trabalhar com estilos, focando especificamente na aplicação de CSS em elementos e componentes dentro do ecossistema React.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-08h26m58s621.jpg" alt="" width="840">
+</p>
+
+A aula está estruturada em três objetivos principais:
+
+1. **CSS componentes e elementos**: Onde serão abordadas três abordagens distintas para a estilização.
+2. **Stateful vs. stateless**: Uma análise sobre a diferença entre esses tipos de componentes e o entendimento dos ciclos de vida no React.
+3. **Formulários**: O aprendizado prático de como construir formulários utilizando a biblioteca.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-08h27m00s479.jpg" alt="" width="840">
+</p>
+
+Para acompanhar o conteúdo de forma eficiente, são necessários os seguintes requisitos básicos:
+
+* Ter concluído os cursos de **Introdução ao ReactJS** e **Programação para internet com HTML5 e CSS3**.
+* Possuir um **Editor de Texto** de sua preferência.
+* Ter o **Node.js** e o **React** corretamente instalados no ambiente de desenvolvimento.
+* Conhecimentos básicos em Git para clonar repositórios do GitHub e acessar os exemplos práticos.
 
 
 ## 🟩 Vídeo 02 - Aprenda sobre estilização de componentes e elementos CSS
