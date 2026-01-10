@@ -202,6 +202,193 @@ As principais vantagens do **CSS in JS** incluem:
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/42654499-4869-47ff-bb4c-8b0dfe5cfd18?autoplay=1
 
+O vídeo explica a diferença fundamental entre componentes **stateful** e **stateless** no ecossistema **React**, focando em como cada um lida com o gerenciamento de dados. O autor descreve que, tradicionalmente, componentes baseados em **classes** gerenciam estados e ciclos de vida complexos, enquanto componentes **funcionais** eram usados apenas para exibição simples. Através de um exemplo de lista de compras, o texto demonstra a evolução para o uso de **Hooks**, que permite que funções também controlem estados de forma mais compacta. Com essa mudança tecnológica, a nomenclatura evoluiu para priorizar os termos **componentes de classe** e **componentes funcionais**. O conteúdo ressalta ainda que os estados são **imutáveis**, exigindo a criação de novas cópias a cada atualização para garantir a performance. Dessa forma, o material serve como um guia didático sobre a modernização das práticas de desenvolvimento de interfaces.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h52m38s469.jpg" alt="" width="840">
+</p>
+
+Nesta segunda parte da aula, o foco é a diferenciação entre **Stateful** e **Stateless** components no ecossistema React. A distinção fundamental entre ambos reside na forma como lidam com os dados internos e a lógica de estado da aplicação. Com a introdução dos **Hooks**, essa nomenclatura passou por adaptações necessárias para refletir as novas possibilidades de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h52m44s656.jpg" alt="" width="840">
+</p>
+
+As definições básicas para iniciar o estudo deste capítulo são:
+
+* **Stateful:** Indica que o componente utiliza e gerencia estados internamente.
+* **Stateless:** Indica que o componente não faz uso de estados, funcionando apenas para renderização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h52m49s855.jpg" alt="" width="840">
+</p>
+
+Um componente **Stateful** caracteriza-se por possuir o gerenciamento de estado interno. Tradicionalmente, na arquitetura do React, esses componentes são construídos utilizando **classes** de JavaScript, permitindo o controle de dados dinâmicos que afetam o comportamento e a interface do componente ao longo do tempo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h52m52s142.jpg" alt="" width="840">
+</p>
+
+O React oferece diversos métodos de **ciclo de vida** para controlar um componente Stateful desde sua criação até sua destruição. O fluxo divide-se em fases principais:
+
+* **Inicialização (Initialization):** Configuração inicial de `props` (propriedades recebidas) e `states` (estados iniciais).
+* **Montagem (Mounting):** Envolve o `componentWillMount` (antes da renderização), a fase de `render` e o `componentDidMount` (executado após a renderização inicial).
+* **Atualização (Updation):** Controla as mudanças via props (`componentWillReceiveProps`, `shouldComponentUpdate`) ou via states, permitindo decidir se o componente deve ou não atualizar a interface.
+* **Desmontagem (Unmounting):** Fase de destruição onde o `componentWillUnmount` é utilizado para limpezas de memória ou encerramento de processos persistidos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m14s026.jpg" alt="" width="840">
+</p>
+
+Para ilustrar a aplicação prática de um componente Stateful, utiliza-se o exemplo de uma **lista de supermercado**. A interface apresenta uma lista de itens (como Tomate, Alface e Melancia) e controles interativos, como botões para adicionar novos produtos (ex: Abóbora) ou remover itens existentes. Esta interação exige que o componente armazene e atualize a lista dinamicamente através do estado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m19s596.jpg" alt="" width="840">
+</p>
+
+A implementação da lista de supermercado utilizando classes envolve a inicialização do estado no construtor. É fundamental notar que os estados no React são **imutáveis**; para atualizar a lista, o estado anterior é destruído e uma nova cópia com os dados atualizados é criada para garantir a performance e a consistência da renderização.
+
+```javascript
+import React, { Component } from 'react';
+
+class TodoListStatefull extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [
+        'Tomate',
+        'Alface',
+        'Melancia'
+      ]
+    }
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m25s568.jpg" alt="" width="840">
+</p>
+
+Para manipular os itens da lista, são definidas funções como `addItem`. No exemplo abaixo, utiliza-se o operador *spread* para garantir a imutabilidade, criando um novo array que contém os itens atuais mais o novo item inserido.
+
+```javascript
+addItem = (item) => {
+  /* ...this.state.items, item é o mesmo que:
+     let itemsUpdated = this.state.items;
+     itemsUpdated.push(item);
+     this.setState({ items: itemsUpdated }); 
+  */
+  this.setState({items: [...this.state.items, item]});
+}
+
+removeItem = () => {
+  /* this.state.items.slice(1) é o mesmo que:
+     let itemsUpdated = this.state.items;
+     itemsUpdated.pop();
+     this.setState({ items: itemsUpdated });
+  */
+  this.setState({ items: [...this.state.items.slice(1)] })
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m30s615.jpg" alt="" width="840">
+</p>
+
+O método `render` do componente Stateful extrai os itens do estado e mapeia cada elemento para um item de lista (`<li>`). Os botões de interface disparam as funções de adição e remoção definidas anteriormente através de eventos de clique.
+
+```javascript
+render() {
+  const { items } = this.state;
+  return (
+    <div className="bloco-lista">
+      <p>Minha lista ClassName</p>
+      <ul className="lista-estilizada">
+        {items.map(item => <li>{item}</li>)}
+      </ul>
+      <button onClick={() => this.addItem('Abóbora')}>Adicionar item</button>
+      <button onClick={() => this.removeItem()}>Remover item</button>
+    </div>
+  )
+}
+
+export default TodoListStatefull;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m34s705.jpg" alt="" width="840">
+</p>
+
+Em contraste, o componente **Stateless** não possui gerenciamento de estados internos. Ele é construído utilizando **funções** simples em JavaScript (Functional Components). Este tipo de componente é ideal para renderizações puras, como ícones ou módulos de exibição que dependem apenas das `props` recebidas para mostrar informações, resultando em um código mais conciso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m38s683.jpg" alt="" width="840">
+</p>
+
+A versão Stateless da lista de tarefas é significativamente mais curta. Ela recebe os `items` via desestruturação das propriedades e apenas renderiza a estrutura HTML. Não há lógica de alteração de estado (como `addItem` ou `removeItem`) dentro deste componente específico, pois ele atua apenas como uma camada de visualização.
+
+```javascript
+import React from 'react';
+
+const TodoListStateless = ({items}) => (
+  <div className="bloco-lista">
+    <p>Minha lista Stateless</p>
+    <ul className="lista-estilizada">
+      {items.map(item => <li>{item}</li>)}
+    </ul>
+  </div>
+);
+
+export default TodoListStateless;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m53s125.jpg" alt="" width="840">
+</p>
+
+Com a chegada do **Hooks**, tornou-se possível gerenciar estados dentro de componentes funcionais utilizando o `useState`. Esta abordagem combina a simplicidade das funções com o poder de gerenciamento de dados que antes era exclusivo das classes. O hook define um par contendo o estado atual e uma função para modificá-lo.
+
+```javascript
+import React, { useState } from 'react';
+
+const TodoListFunctional = () => {
+  const [items, setItems] = useState(['Tomate', 'Alface', 'Melancia']);
+
+  const addItem = (item) => {
+    setItems([...items, item]);
+  }
+
+  const removeItem = () => {
+    setItems([...items.slice(1)]);
+  }
+
+  return (
+    <div className="bloco-lista">
+      <p>Minha Lista</p>
+      <ul className="lista-estilizada">
+        {items.map(item => <li>{item}</li>)}
+      </ul>
+      <button onClick={() => addItem('Abóbora')}>Add Item</button>
+      <button onClick={() => removeItem()}>Remove Item</button>
+    </div>
+  );
+}
+
+export default TodoListFunctional;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-10h53m57s781.jpg" alt="" width="840">
+</p>
+
+Devido à evolução tecnológica, a nomenclatura foi atualizada. Atualmente, a distinção mais precisa é entre **Class Components** e **Function Components**. Como os componentes funcionais agora podem manipular estados através de Hooks, eles deixaram de ser exclusivamente "stateless". Hoje, chamamos de Stateless apenas o componente funcional que não utiliza gerenciamento de estados.      
 
 
 ## 🟩 Vídeo 04 - Introdução em Formulários no ReactJS
