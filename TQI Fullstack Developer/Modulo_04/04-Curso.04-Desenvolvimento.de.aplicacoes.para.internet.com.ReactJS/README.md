@@ -763,37 +763,49 @@ O vídeo consiste em uma aula técnica sobre a integração de **APIs HTTP** em 
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m20s445.jpg" alt="" width="840">
 </p>
 
-Esta aula introduz a integração de APIs HTTP em aplicações desenvolvidas com ReactJS. O foco inicial está em compreender como o desenvolvimento para internet utiliza o modelo Rest para comunicação entre o front-end e os servidores de dados.
+Nesta aula, exploraremos os fundamentos de **Rest HTTP com React**, focando no desenvolvimento de aplicações para internet utilizando o ecossistema ReactJS para realizar comunicações eficientes com servidores.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m33s488.jpg" alt="" width="840">
 </p>
 
-As APIs HTTP servem como ponte para conectar a aplicação a um ou mais servidores. Para manipular dados através dessas APIs, utilizamos métodos fundamentais como **GET**, **POST**, **DELETE** e **PUT**. No ecossistema JavaScript, as ferramentas mais comuns para realizar essas requisições são a **Fetch API** e a biblioteca **Axios**.
+As **APIs HTTP** atuam como a ponte de conexão entre uma aplicação frontend e um ou mais servidores. Para manipular dados através dessas APIs, utilizamos os métodos fundamentais do protocolo HTTP:
+
+* **GET**: Utilizado para a listagem e recuperação de dados.
+* **POST**: Destinado à criação de novos registros.
+* **DELETE**: Responsável pela remoção de dados.
+* **PUT**: Empregado para a alteração ou atualização de informações existentes.
+
+Abordaremos duas formas principais de implementar essas requisições: a **Fetch API**, que é nativa, e a biblioteca **Axios**.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m38s275.jpg" alt="" width="840">
 </p>
 
-A **Fetch API** é uma ferramenta nativa dos navegadores modernos, servindo como uma alternativa mais atual ao antigo `XMLHttpRequest()` e ao `jQuery.ajax()`. Entre suas características, destaca-se o suporte a Service Workers. Contudo, possui particularidades importantes: não envia nem recebe cookies por padrão (exigindo a configuração da opção `credentials`) e não rejeita automaticamente o status de erro HTTP (como 404 ou 500) na Promise.
+A **Fetch API** é uma interface nativa moderna dos navegadores para manipulação de requisições HTTP, servindo como uma alternativa atual ao antigo `XMLHttpRequest()` e ao `jQuery.ajax()`. Entre suas características principais, destaca-se o suporte a **Service Workers**.
+
+Contudo, ela possui comportamentos específicos que o desenvolvedor deve observar:
+
+* **Cookies**: Por padrão, ela não envia nem recebe cookies, sendo necessário configurar manualmente a opção `credentials`.
+* **Tratamento de Erros**: A Fetch API não rejeita a Promise automaticamente em caso de erros de status HTTP (como 404 ou 500); a rejeição só ocorre em falhas de rede ou interrupções de conexão.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m41s161.jpg" alt="" width="840">
 </p>
 
-Para testar as requisições durante o desenvolvimento, é possível utilizar ferramentas como o **Beeceptor**. Ele permite criar regras de *mocking* (simulação) para diferentes endpoints. No exemplo, vemos a configuração de rotas para gerenciar uma lista de cientistas brasileiras, definindo status de resposta (como 200 OK) e atrasos (delay) para simular o comportamento real de uma rede.
+Para exemplificar o uso dessas ferramentas, utilizaremos o **Beeceptor**, um serviço que permite a criação de APIs de mocks. Configuramos endpoints específicos para simular uma base de dados de **cientistas brasileiras**, permitindo testar operações de GET, POST, DELETE e PUT de forma prática.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m45s723.jpg" alt="" width="840">
 </p>
 
-Reforçando os conceitos da **Fetch API**, é importante lembrar que ela opera sobre Promises. Ao realizar uma chamada, o desenvolvedor deve tratar a resposta para convertê-la no formato desejado, geralmente JSON, e gerenciar o ciclo de vida da requisição manualmente em caso de erros de rede.
+Reforçando as características da Fetch API, é importante lembrar que, embora seja uma especificação robusta e nativa, sua compatibilidade em navegadores muito antigos pode exigir o uso de bibliotecas auxiliares, como o **Node Fetch**, para garantir que o suporte a Service Workers e a nova estrutura de requisições funcionem corretamente em diversos ambientes.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m46s974.jpg" alt="" width="840">
 </p>
 
-Para realizar uma consulta de dados (**GET**) utilizando Fetch, passamos a URL do endpoint. O resultado é processado através de encadeamentos `.then()`, onde primeiro convertemos a resposta para JSON e depois manipulamos os dados recebidos.
+Para realizar uma operação de **GET** com Fetch API, passamos a URL do endpoint. Como o retorno inicial é uma Promise pendente, precisamos utilizar o primeiro `.then()` para converter a resposta bruta em **JSON** antes de acessar os dados.
 
 ```javascript
 fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras')
@@ -811,7 +823,7 @@ fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m51s890.jpg" alt="" width="840">
 </p>
 
-Ao realizar um **POST** para enviar novos dados, precisamos configurar o objeto de opções do Fetch, definindo o `method` como 'post' e o `body` com o conteúdo a ser enviado, devidamente convertido para string.
+Ao realizar um **POST** para cadastrar um novo registro, devemos passar um objeto de configuração como segundo argumento do `fetch`. Neste objeto, definimos o `method` como 'post' e o `body`, que deve conter o dado convertido em string via `JSON.stringify()`.
 
 ```javascript
 const novaCientista = { nome: 'Heleieth Saffioti', area: 'Letras' };
@@ -834,7 +846,7 @@ fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m54s932.jpg" alt="" width="840">
 </p>
 
-O método **DELETE** é utilizado para remover um recurso específico. Geralmente, o ID do item é passado diretamente na URL da requisição.
+Para a operação de **DELETE**, a boa prática recomenda passar o identificador (ID ou índice) do recurso diretamente na URL. O método deve ser explicitamente definido como 'delete' no objeto de configuração.
 
 ```javascript
 fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras/4', {
@@ -854,7 +866,7 @@ fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h27m58s089.jpg" alt="" width="840">
 </p>
 
-Para atualizar dados existentes, utilizamos o método **PUT**. Assim como no POST, é necessário enviar o corpo da requisição com as novas informações, mas direcionando para o ID do recurso específico na URL.
+A atualização de dados via **PUT** combina a identificação do registro na URL com o envio do novo estado do objeto no corpo da requisição, seguindo a mesma lógica de conversão para string JSON utilizada no POST.
 
 ```javascript
 const novaCientista = { nome: 'Sonia Guimarães', area: 'Física' };
@@ -877,25 +889,123 @@ fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m00s712.jpg" alt="" width="840">
 </p>
 
-O **Axios** surge como uma alternativa poderosa à Fetch API. É uma biblioteca externa (lib) que facilita o consumo de APIs HTTP, sendo cross-browser e oferecendo recursos avançados como o monitoramento do progresso de requisições, melhor tratamento automático de erros e facilidade para escrita de testes.
+O **Axios** é uma biblioteca de requisições HTTP amplamente recomendada para projetos React. Baseada em `XMLHttpRequest`, ela oferece vantagens como:
+
+* Funcionamento **Cross-browser**.
+* Capacidade de monitorar o progresso de requisições.
+* Tratamento de erros mais intuitivo e simplificado.
+* Facilidade para a escrita de testes automatizados.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m04s759.jpg" alt="" width="840">
 </p>
 
-*Conteúdo não identificado com segurança a partir do material disponível.*
+Diferente da Fetch API, o Axios não é nativo do navegador e precisa ser instalado no projeto através de um gerenciador de pacotes.
+
+```bash
+yarn add axios
+
+```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m05s837.jpg" alt="" width="840">
 </p>
 
-*Conteúdo não identificado com segurança a partir do material disponível.*
+O uso do Axios simplifica o código, pois ele já entrega o dado processado no objeto de resposta, eliminando a etapa manual de conversão para JSON (o `.json()`) necessária no Fetch.
+
+```javascript
+import axios from 'axios';
+
+axios.get('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras')
+  .then(response => {
+    alert(`Conheça algumas cientistas brasileiras: ${response.data}`);
+  })
+  .catch(error => {
+    alert('Ops! Erro a seguir: ' + error);
+  });
+
+```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m09s701.jpg" alt="" width="840">
 </p>
 
-*Conteúdo não identificado com segurança a partir do material disponível.*      
+No **POST** com Axios, o código torna-se mais compacto. Passamos os dados diretamente como o segundo argumento da função, sem a necessidade de chamar `JSON.stringify`, pois a biblioteca gerencia essa conversão internamente.
+
+```javascript
+import axios from 'axios';
+
+axios.post('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras', {
+  nome: 'Heleieth Saffioti',
+  area: 'Letras'
+})
+.then(response => {
+  alert(`Conheça algumas cientistas brasileiras: ${response.data}`);
+})
+.catch(error => {
+  alert('Ops! Erro a seguir: ' + error);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m11s525.jpg" alt="" width="840">
+</p>
+
+A operação de **DELETE** segue a mesma simplicidade, bastando invocar o método correspondente passando a URL com o identificador do recurso que se deseja remover.
+
+```javascript
+import axios from 'axios';
+
+axios.delete('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras/4')
+  .then(response => {
+    alert(`Conheça algumas cientistas brasileiras: ${response.data}`);
+  })
+  .catch(error => {
+    alert('Ops! Erro a seguir: ' + error);
+  });
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m12s624.jpg" alt="" width="840">
+</p>
+
+Para o **PUT**, o Axios recebe a URL (com o ID) e o objeto com as novas informações, tratando o sucesso ou erro da atualização de forma direta.
+
+```javascript
+import axios from 'axios';
+
+axios.put('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras/3', {
+  nome: 'Sonia Guimarães',
+  area: 'Física'
+})
+.then(response => {
+  alert(`Conheça algumas cientistas brasileiras: ${response.data}`);
+})
+.catch(error => {
+  alert('Ops! Erro a seguir: ' + error);
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m14s318.jpg" alt="" width="840">
+</p>
+
+A integração com o React ocorre através de **Hooks**. Utilizamos o `useState` para gerenciar a lista de cientistas e o `useEffect` para disparar a requisição assim que o componente é montado. Em componentes de classe, essa lógica ficaria no `componentDidMount`; é importante evitar o `componentWillMount`, pois ele foi descontinuado e pode causar inconsistências.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m21s528.jpg" alt="" width="840">
+</p>
+
+No painel do Beeceptor, podemos visualizar as regras de mock configuradas. Cada endpoint (GET, POST, DELETE, PUT) está associado a uma resposta simulada e, em alguns casos, a atrasos (delays) específicos para testar o comportamento da interface durante o carregamento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-14h28m22s900.jpg" alt="" width="840">
+</p>
+
+Ao testar a aplicação no navegador, a aba **Network** das ferramentas do desenvolvedor permite confirmar o sucesso da operação. Um status **200 OK** indica que a requisição foi concluída, e na aba **Preview**, podemos inspecionar a estrutura do JSON retornado pela API, garantindo que os dados estão prontos para serem mapeados e exibidos no frontend.      
 
 
 ## 🟩 Vídeo 07 - O que é Flux?
