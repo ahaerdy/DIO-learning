@@ -5,9 +5,6 @@
 - Github: https://github.com/eduardogc
 - Repositório (fork): https://github.com/ahaerdy/fork-digital-one-react-intermediario-eduardogc
 
-[![GitHub](https://img.shields.io/badge/GitHub-eduardogc-black?logo=github&logoColor=white)](https://github.com/eduardogc)
-
-
 
 # Parte 1 - Trabalhando com estilos em elementos e componentes
 
@@ -410,8 +407,302 @@ O vídeo consiste em uma aula técnica sobre a manipulação de **formulários e
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h54m55s154.jpg" alt="" width="840">
+</p>
 
+### Introdução aos Formulários no React
+
+Os formulários são fundamentais para a interatividade em aplicações web. No ecossistema React, lidamos com uma particularidade: enquanto os elementos do DOM no HTML5 (como `<input>`, `<textarea>` e `<select>`) já mantêm naturalmente um estado interno, o React também busca controlar o estado da aplicação. Para harmonizar essas duas frentes, existem estratégias específicas para garantir que os dados inseridos pelo usuário sejam processados corretamente pela biblioteca.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h54m57s455.jpg" alt="" width="840">
+</p>
+
+### Componentes Controlados vs. Não Controlados
+
+Existem duas formas principais de trabalhar com formulários no React:
+
+1. **Componentes Controlados:** O React é a "fonte única da verdade" (*single source of truth*). O estado do componente controla o valor do input através do atributo `value` e as atualizações são feitas via eventos como o `onChange`.
+2. **Componentes Não Controlados:** O estado é mantido pelo próprio DOM. O React acessa esses valores geralmente por meio de referências (`refs`) quando necessário, como no momento da submissão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h55m01s186.jpg" alt="" width="840">
+</p>
+
+### Implementação de um Componente Controlado
+
+Neste exemplo, transformamos um formulário simples em um *stateful component*. O valor do campo de texto é atrelado ao estado `value`, e qualquer alteração dispara a função `handleChange`, que atualiza o estado do React com os dados vindos do DOM (`event.target.value`).
+
+```javascript
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('Um nome foi enviado: ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Nome:
+          <input type="text" value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Enviar" />
+      </form>
+    );
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h55m04s173.jpg" alt="" width="840">
+</p>
+
+### Manipulando Múltiplos Elementos
+
+Diferentes elementos de formulário seguem o mesmo princípio de componentes controlados, mas com atributos levemente distintos:
+
+* **Input e Textarea:** Utilizam o atributo `value`.
+* **Select:** No React, o `value` é definido na tag `<select>` principal para determinar qual `<option>` está selecionada, simplificando o uso em relação ao HTML puro.
+* **Checkbox e Radio Button:** Utilizam o atributo `checked` em vez de `value` para definir seu estado ativado/desativado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h55m07s217.jpg" alt="" width="840">
+</p>
+
+### Exemplo: Formulário de Pedidos (Sorveteria)
+
+Para gerenciar formulários mais complexos, como um pedido de sorvete com múltiplas opções, definimos estados iniciais para cada campo (sabor, casquinha, guardanapos).
+
+```javascript
+this.state = {
+  sabor: 'uva',
+  casquinha: true,
+  guardanapos: 'sim'
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h55m11s003.jpg" alt="" width="840">
+</p>
+
+### Estrutura do Form com Select e Checkbox
+
+O código abaixo demonstra a renderização do formulário de pedidos. Note que o `select` utiliza o `value` vindo do estado, e o `checkbox` utiliza a propriedade `checked`. Ambos compartilham uma função de manipulação chamada `handleInputChange`.
+
+```javascript
+<form onSubmit={this.handleSubmit} style={{display: 'flex', flexDirection: 'column'}}>
+  <label>
+    Escolha o sabor:
+    <select name="sabor" value={this.state.sabor} onChange={this.handleInputChange}>
+      <option value="uva">Uva</option>
+      <option value="limao">Limão</option>
+      <option value="coco">Coco</option>
+      <option value="chocolate">Chocolate</option>
+      <option value="morango">Morango</option>
+    </select>
+  </label>
+  <label>
+    <input
+      name="casquinha"
+      type="checkbox"
+      checked={this.state.casquinha}
+      onChange={this.handleInputChange} />
+    Colocar na casquinha?
+  </label>
+</form>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h55m29s477.jpg" alt="" width="840">
+</p>
+
+### Radio Buttons e Submissão
+
+No caso dos Radio Buttons, é necessário definir tanto o `value` (valor fixo do campo) quanto o `checked` (comparação lógica com o estado atual) para que o React saiba qual opção exibir como selecionada.
+
+```javascript
+<label>
+  <input
+    type="radio"
+    name="guardanapos"
+    value="sim"
+    checked={this.state.guardanapos === 'sim'}
+    onChange={this.handleInputChange} />
+  Sim
+</label>
+<label>
+  <input
+    type="radio"
+    name="guardanapos"
+    value="nao"
+    checked={this.state.guardanapos === 'nao'}
+    onChange={this.handleInputChange} />
+  Não
+</label>
+<button type="submit">Enviar</button>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h55m43s372.jpg" alt="" width="840">
+</p>
+
+### Processando o Envio dos Dados
+
+A função `handleSubmit` é responsável por interceptar o evento de submissão do formulário. O `event.preventDefault()` evita que a página recarregue (comportamento padrão do HTML), permitindo que o React exiba os dados processados, como um alerta com as escolhas do usuário.
+
+```javascript
+handleSubmit(event) {
+  const {sabor, casquinha, guardanapos} = this.state;
+  alert(`Seu sabor escolhido foi ${sabor}, guardanapos ${guardanapos} e casquinha ${casquinha}`);
+  event.preventDefault();
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h55m51s374.jpg" alt="" width="840">
+</p>
+
+### Estratégia Universal: Handle Input Change
+
+Para evitar a criação de uma função de alteração para cada campo, utilizamos uma abordagem genérica. Extraímos o `name`, o `type` e o valor (ou `checked` para checkboxes) do `event.target`. Usamos o atributo `name` do elemento HTML para atualizar dinamicamente a chave correspondente no estado.
+
+```javascript
+handleInputChange(event) {
+  const target = event.target;
+  const value = target.type === 'checkbox' ? target.checked : target.value;
+  const name = target.name;
+
+  this.setState({
+    [name]: value
+  });
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m05s210.jpg" alt="" width="840">
+</p>
+
+### Componentes Não Controlados e Referências
+
+Em situações onde não queremos (ou não podemos) controlar cada batida de tecla no estado do React, utilizamos componentes não controlados. Neles, os dados do formulário são gerenciados pelo próprio DOM. Para acessar esses valores, utilizamos o atributo `ref`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m07s423.jpg" alt="" width="840">
+</p>
+
+### A Exceção: Input de Arquivo
+
+Um caso obrigatório de uso de componente não controlado é o `<input type="file">`. No HTML5, este campo é estritamente de leitura (*read-only*). O React não consegue definir seu valor programaticamente por razões de segurança, portanto, devemos sempre usar referências para capturar o arquivo selecionado no momento da submissão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m26s056.jpg" alt="" width="840">
+</p>
+
+### Implementação de Referência (createRef)
+
+Para trabalhar com o input de arquivo, criamos uma referência no construtor da classe usando `React.createRef()`. No método `render`, atrelamos essa referência ao elemento através do atributo `ref`.
+
+```javascript
+class FileInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.fileInput = React.createRef();
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    alert(
+      `Arquivo selecionado - ${this.fileInput.current.files[0].name}`
+    );
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Upload de arquivo:
+          <input type="file" ref={this.fileInput} />
+        </label>
+        <br />
+        <button type="submit">Enviar</button>
+      </form>
+    );
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m37s557.jpg" alt="" width="840">
+</p>
+
+### Comparativo: Controlados vs. Não Controlados
+
+Embora o React recomende o uso de componentes controlados para a maioria dos casos, a escolha depende da necessidade de validação em tempo real ou da complexidade do formulário. Componentes controlados oferecem mais poder (validação instantânea, desativação condicional de botões), enquanto os não controlados podem ser mais simples para casos básicos ou integrações com bibliotecas externas de terceiros.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m39s429.jpg" alt="" width="840">
+</p>
+
+### Desafios e Verbosidade
+
+Um ponto comum de discussão na comunidade é que lidar com formulários no React "puro" pode se tornar muito verboso. Escrever funções de manipulação, gerenciar cada estado e tratar submissões exige uma quantidade considerável de código repetitivo (*boilerplate*).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m41s131.jpg" alt="" width="840">
+</p>
+
+### Bibliotecas de Terceiros
+
+Para facilitar a gestão de formulários complexos e robustos, a comunidade desenvolveu bibliotecas especializadas. Duas das mais populares e recomendadas são:
+
+* **Formik:** Atualmente a mais utilizada e recomendada pela própria documentação do React.
+* **Redux Form:** Muito comum em projetos que utilizam Redux para gerenciamento de estado global.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m50s978.jpg" alt="" width="840">
+</p>
+
+### Bibliotecas Populares: Formik e Redux Form
+
+A imagem destaca os logotipos e nomes das bibliotecas citadas: **Formik**, que foca em simplicidade e escalabilidade, e **Redux Form**, que integra o estado do formulário diretamente à store do Redux.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m52s764.jpg" alt="" width="840">
+</p>
+
+### Formik: A Recomendação Atual
+
+O Formik destaca-se por resolver problemas de validação, tratamento de erros e submissão sem a necessidade de acoplar o estado do formulário ao Redux, tornando-o mais performático e fácil de implementar em componentes isolados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-12h56m56s285.jpg" alt="" width="840">
+</p>
+
+### Conclusão e Recursos
+
+Para encerrar a aula, é disponibilizado um repositório no GitHub contendo todos os exemplos práticos discutidos, incluindo implementações com componentes controlados, não controlados e um exemplo utilizando a biblioteca Formik. Os alunos são incentivados a explorar o código e praticar as diferentes abordagens.
 
 
 ## 🟩 Vídeo 05 - Trabalhando com estilos em elementos e componentes
