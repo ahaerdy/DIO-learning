@@ -712,7 +712,42 @@ Para encerrar a aula, é disponibilizado um repositório no GitHub contendo todo
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/e606a7eb-aadf-4c59-9b47-81b02f0f0100?autoplay=1
+
+Esta terceira aula de **React intermediário** foca no desenvolvimento de competências de **comunicação avançada** entre aplicações e servidores. O conteúdo explora a integração de **APIs REST** utilizando as bibliotecas mais relevantes do ecossistema atual. Os alunos aprenderão conceitos fundamentais de **imutabilidade** e como aplicá-los na gestão de estado global através do **Redux**. Além disso, o instrutor aborda o uso de **middlewares** para otimizar fluxos de dados complexos entre a interface e o backend. Para acompanhar o progresso, é indispensável possuir o ambiente de desenvolvimento configurado e ter concluído os módulos anteriores do curso.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-13h47m14s534.jpg" alt="" width="840">
+</p>
+
+Esta aula aborda o desenvolvimento de aplicações para internet com **ReactJS**, focando especificamente em **comunicação avançada entre aplicações**. O conteúdo explora tanto a integração da aplicação com servidores externos quanto a intercomunicação eficiente entre componentes utilizando **Redux**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-13h47m19s419.jpg" alt="" width="840">
+</p>
+
+Os objetivos estabelecidos para esta etapa do aprendizado são:
+
+* **Rest HTTP com React**: Estudo das principais bibliotecas utilizadas para comunicação com APIs.
+* **Imutabilidade e Redux**: Compreensão dos conceitos de imutabilidade e sua importância fundamental dentro do ecossistema Redux.
+* **Redux + Rest**: Integração de chamadas assíncronas com o estado global, abordando o uso de **Redux middlewares**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-13h47m21s727.jpg" alt="" width="840">
+</p>
+
+Para o acompanhamento prático da aula, são necessários os seguintes requisitos:
+
+* Conclusão prévia das aulas 1 e 2 do curso de React intermediário.
+
+
+* Ambiente de desenvolvimento configurado com um editor de texto, **Node.js** e **React** instalados.
+
+
+* Instalação da extensão **Redux DevTools** no navegador Google Chrome para depuração do estado da aplicação.      
+
 
 
 # Parte 2 - Introdução ao Redux e fluxos da arquitetura com ReactJS
@@ -724,7 +759,7 @@ Link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:  
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/a94f6436-850b-4a4f-9e4b-2ba7d77fcb39?autoplay=1 
 
 
 ## 🟩 Vídeo 07 - O que é Flux?
