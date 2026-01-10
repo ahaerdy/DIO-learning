@@ -854,11 +854,81 @@ A adoção de bibliotecas Flux deve ser estratégica. Como define o criador do R
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/9f055508-a7e0-4ed2-8ea5-c18e36853766?autoplay=1
 
+O vídeo apresenta uma **introdução teórica ao Redux**, detalhando sua origem como uma evolução simplificada da arquitetura Flux criada em 2015. O conteúdo destaca que o Redux centraliza as informações em uma **única fonte de verdade**, mantendo o estado da aplicação como um objeto **imutável e de leitura exclusiva**. Diferente do modelo anterior, a figura do **dispatcher é removida**, introduzindo os **reducers** para gerenciar as transformações lógicas de dados de forma organizada. No contexto do React, o texto explica ferramentas essenciais como o **Provider**, que envolve a aplicação, e o **Connect**, que vincula componentes aos dados. Por fim, o autor esclarece a função dos **selectors** para filtrar estados específicos, preparando o estudante para uma futura abordagem prática sobre o tema.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h16m55s707.jpg" alt="" width="840">
+</p>
+
+Esta etapa da aula introduz o conceito de Redux dentro do contexto de desenvolvimento de aplicações para internet utilizando a biblioteca ReactJS. O objetivo é estabelecer uma base teórica sólida antes de avançar para a implementação prática.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h16m57s711.jpg" alt="" width="840">
+</p>
+
+O Redux foi criado por Dan Abramov e Andrew Clark no ano de 2015. Ele é tecnicamente uma implementação da arquitetura Flux , embora apresente diferenças significativas em relação ao modelo original devido a decisões específicas de projeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h16m58s841.jpg" alt="" width="840">
+</p>
+
+O fluxo de funcionamento do Redux  apresenta algumas mudanças estruturais importantes:
+
+* A camada de View é representada pelo **React**.
+* O sistema utiliza **Actions** que interagem com a **Store**.
+* Um novo elemento central, o **Reducer**, é introduzido para gerenciar as mudanças de estado.
+* Diferente do Flux tradicional, este esquema não utiliza um dispatcher.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h17m00s505.jpg" alt="" width="840">
+</p>
+
+A arquitetura do Redux é fundamentada em três princípios básicos:
+
+1. *Single source of truth**: Toda a aplicação possui uma única Store.
+2. *State é read-only**: A árvore de estados é de apenas leitura.
+3. *Mudanças são feitas com pure functions**: As alterações no estado devem ser realizadas através de funções puras, garantindo a imutabilidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h17m04s093.jpg" alt="" width="840">
+</p>
+
+As **Actions** no Redux operam de forma similar ao Flux , mas possuem uma diferença crucial: elas não enviam a ação diretamente para um dispatcher. Em vez disso, a responsabilidade de uma Action é apenas retornar um objeto devidamente formatado que descreve a mudança pretendida.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h17m05s666.jpg" alt="" width="840">
+</p>
+
+Diferente do Flux, onde podem existir diversas Stores , o Redux centraliza tudo em uma **única Store**. Esta Store é responsável por cuidar de toda a árvore de estados da aplicação, enquanto a lógica para identificar quais estados mudam é delegada aos reducers.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h17m07s102.jpg" alt="" width="840">
+</p>
+
+Os **Reducers** simplificam o fluxo ao eliminar a necessidade de um dispatcher. A Store conecta-se a um **root reducer**, que por sua vez divide a árvore de estados em reducers menores para lidar com partes específicas do estado. É fundamental notar que, neste processo, os estados permanecem imutáveis.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h17m09s045.jpg" alt="" width="840">
+</p>
+
+Para integrar o React à Store do Redux na camada de View , utilizam-se três conceitos principais:
+
+* *Provider**: Atua como um *wrapper* para facilitar a conexão dos componentes filhos com a store.
+* *connect()**: Função que envolve um componente para que ele receba atualizações do estado.
+* *selector**: Função utilizada para definir quais estados específicos do Redux devem ser passados como propriedades (props) para o componente.
+
 
 ## 🟩 Vídeo 08 - Aprenda a prática de como desenvolver código com React e Redux
 
 
-Link do vídeo: 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/e33a3e3e-021f-4cc9-9b53-d7978165e10b?autoplay=1
 
 
 # Parte 3 - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
