@@ -203,6 +203,7 @@ As principais vantagens do **CSS in JS** incluem:
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/42654499-4869-47ff-bb4c-8b0dfe5cfd18?autoplay=1
 
 
+
 ## 🟩 Vídeo 04 - Introdução em Formulários no ReactJS
 
 <video width="60%" controls>
@@ -210,7 +211,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvol
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/5a44ad8b-f289-4c5f-887e-d4531a186852?autoplay=1
 
 
 ## 🟩 Vídeo 05 - Trabalhando com estilos em elementos e componentes
