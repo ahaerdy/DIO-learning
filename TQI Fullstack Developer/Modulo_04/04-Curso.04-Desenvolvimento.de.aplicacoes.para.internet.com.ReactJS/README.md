@@ -749,7 +749,6 @@ Para o prosseguimento dos estudos, é necessário atender aos seguintes requisit
 
 ## 🟩 Vídeo 06 - O que é Flux?
 
-
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
@@ -757,11 +756,103 @@ Para o prosseguimento dos estudos, é necessário atender aos seguintes requisit
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/d62cb913-ba7e-4f03-a0aa-ddf71022ab09?autoplay=1
 
+O vídeo explica a **arquitetura Flux**, um padrão criado pelo **Facebook** para resolver problemas de **sincronização de dados** em interfaces complexas. O texto detalha como o fluxo de informações ocorre de maneira **unidirecional**, utilizando componentes específicos como **Action, Dispatcher, Store e View**. O autor utiliza analogias do cotidiano, como telégrafos e gerentes controladores, para ilustrar as funções de cada parte dessa estrutura técnica. Além da teoria, o conteúdo menciona **implementações populares** do mercado, com destaque para o **Redux**, que centraliza estados compartilhados entre componentes. Por fim, recomenda-se cautela no uso dessas ferramentas, sugerindo sua aplicação apenas quando houver necessidade real de **comunicação global** no sistema.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m29s748.jpg" alt="" width="840">
+</p>
+
+Introdução ao estudo do **Flux**, uma arquitetura desenvolvida pelo Facebook para otimizar a comunicação entre componentes em aplicações ReactJS. Esta etapa da aula aborda a motivação histórica e os pilares fundamentais dessa estrutura de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m32s494.jpg" alt="" width="840">
+</p>
+
+O Facebook identificou a necessidade de uma nova arquitetura devido a problemas crônicos de interface em sua área de notificações. O sistema apresentava falhas de sincronia que impactavam diretamente a experiência do usuário na plataforma.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m34s495.jpg" alt="" width="840">
+</p>
+
+A falha manifestava-se visualmente quando o ícone de notificações indicava a existência de novas mensagens que, ao serem acessadas, não estavam presentes. Essa discrepância entre o contador visual e o estado real dos dados gerava confusão e um alto volume de chamados de suporte.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m35s571.jpg" alt="" width="840">
+</p>
+
+As tentativas de correção pontual resultavam em um ciclo frustrante onde o erro parecia resolvido, mas retornava logo em seguida. Isso evidenciou que a falha de sincronização era estrutural e não apenas um bug isolado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m37s170.jpg" alt="" width="840">
+</p>
+
+Até então, o tráfego de dados era gerenciado por padrões como **MVVM** e **MVC**. Nesses modelos, a relação entre Models e Views podia criar fluxos complexos e bidirecionais, o que dificultava a manutenção da consistência dos dados em aplicações de grande porte.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m39s235.jpg" alt="" width="840">
+</p>
+
+Como solução, o Facebook criou o **Flux**, estabelecendo um sistema composto por quatro partes principais: **Action**, **Dispatcher**, **Store** e **View**. Essa organização visa garantir que a informação flua de maneira previsível e controlada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m43s904.jpg" alt="" width="840">
+</p>
+
+A **Arquitetura Flux** define um padrão de projeto onde o tráfego de dados ocorre de maneira estritamente **unidirecional**. Esse fluxo de via única impede atualizações de estado desordenadas e resolve os problemas de dessincronização entre os componentes da interface.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m45s698.jpg" alt="" width="840">
+</p>
+
+A **Action** é comparada a um **telégrafo**, pois sua função é formatar a mensagem que descreve uma intenção de alteração no sistema. Ela é o ponto de partida para qualquer mudança de estado, empacotando os dados necessários para o envio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m47s943.jpg" alt="" width="840">
+</p>
+
+O **Dispatcher** atua como um **telefonista** ou centralizador. Ele detém o conhecimento de todos os callbacks para as diferentes Stores da aplicação e redireciona a mensagem vinda da Action para o local correto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m49s950.jpg" alt="" width="840">
+</p>
+
+A **Store** funciona como um **gerente super controlador**, sendo a única entidade responsável por guardar a informação e processar alterações. Devido ao fluxo unidirecional, os dados não podem ser alterados diretamente por outros componentes; toda mudança deve ser executada exclusivamente pela própria Store.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m53s105.jpg" alt="" width="840">
+</p>
+
+A **View** exerce o papel de um **gerente intermediário** entre a Store e a tela. Ela observa as atualizações ocorridas na Store e solicita ao React que realize a renderização necessária no **Virtual DOM** para refletir o novo estado para o usuário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m54s589.jpg" alt="" width="840">
+</p>
+
+Existem diversas implementações do padrão Flux disponíveis no mercado, cada uma com características específicas para diferentes necessidades e frameworks:
+
+* **Redux**: A implementação mais popular e amplamente utilizada.
+* **Reflux**: Focada em ser uma alternativa mais simples ao Flux original.
+* **MobX**: Baseada no uso de *observables* para gerenciar o estado.
+* **Vuex**: Implementação baseada em Redux voltada para o framework Vue.
+* **NGRX Store**: Versão comum em Angular, também baseada nos princípios do Redux.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h03m58s139.jpg" alt="" width="840">
+</p>
+
+A adoção de bibliotecas Flux deve ser estratégica. Como define o criador do Redux, essas ferramentas são como **óculos**: o desenvolvedor saberá exatamente o momento em que precisará usá-las, ou seja, quando houver necessidade de gerenciar dados globais ou compartilhados entre múltiplos componentes.      
+
 
 ## 🟩 Vídeo 07 - Conheça o Redux e como trabalhar com ele
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/9f055508-a7e0-4ed2-8ea5-c18e36853766?autoplay=1
 
 
 ## 🟩 Vídeo 08 - Aprenda a prática de como desenvolver código com React e Redux
