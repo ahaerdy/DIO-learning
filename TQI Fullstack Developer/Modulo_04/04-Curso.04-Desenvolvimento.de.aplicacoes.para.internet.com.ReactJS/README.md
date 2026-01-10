@@ -741,14 +741,8 @@ Os objetivos estabelecidos para esta etapa do aprendizado são:
 Para o acompanhamento prático da aula, são necessários os seguintes requisitos:
 
 * Conclusão prévia das aulas 1 e 2 do curso de React intermediário.
-
-
 * Ambiente de desenvolvimento configurado com um editor de texto, **Node.js** e **React** instalados.
-
-
 * Instalação da extensão **Redux DevTools** no navegador Google Chrome para depuração do estado da aplicação.      
-
-
 
 # Parte 2 - Introdução ao Redux e fluxos da arquitetura com ReactJS
 
