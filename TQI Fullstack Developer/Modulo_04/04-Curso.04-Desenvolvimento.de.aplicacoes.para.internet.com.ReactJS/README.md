@@ -1406,6 +1406,8 @@ Ao testar a aplicação no navegador, a aba **Network** das ferramentas do desen
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/fd62eb8e-a109-4f7c-9f48-30c56d0c899f?autoplay=1
 
 
+
+
 ## 🟩 Vídeo 12 - Redux + Rest
 
 <video width="60%" controls>
@@ -1413,7 +1415,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvol
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/4c1d8601-b28a-4ed5-97a6-4b63dcc7d68c?autoplay=1
 
 
 
