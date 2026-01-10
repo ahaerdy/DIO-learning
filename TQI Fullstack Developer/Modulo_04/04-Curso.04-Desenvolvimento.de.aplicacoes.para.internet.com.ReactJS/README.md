@@ -5,8 +5,6 @@
 - Github: https://github.com/eduardogc
 - Repositório (fork): https://github.com/ahaerdy/fork-digital-one-react-intermediario-eduardogc
 
-<a href="https://github.com/eduardogc"> <img src="assets/github.svg" width="16" style="filter: invert(100%);" /> </a>
-
 # Parte 1 - Trabalhando com estilos em elementos e componentes
 
 ## 🟩 Vídeo 01 - Introdução e objetivos da aula
