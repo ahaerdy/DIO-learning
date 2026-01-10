@@ -930,6 +930,169 @@ Para integrar o React à Store do Redux na camada de View , utilizam-se três co
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/e33a3e3e-021f-4cc9-9b53-d7978165e10b?autoplay=1
 
+O vídeo consiste em uma aula prática focada na integração das bibliotecas **Redux e React** para o gerenciamento de estado em aplicações web. O instrutor detalha a instalação de pacotes essenciais e o uso da extensão **Redux DevTools** para monitorar as alterações de dados em tempo real. Através de um exemplo de **contador**, explica-se o fluxo de funcionamento entre **actions**, que enviam mensagens de mudança, e **reducers**, que processam essas solicitações sem alterar o estado diretamente. O conteúdo aborda a configuração do **Store** no componente raiz e a utilização da função **connect** para vincular a lógica global à interface do usuário. Por fim, o material reforça a importância de disparar eventos via **dispatch** para manter a integridade das informações durante o ciclo de vida do software.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m01s879.jpg" alt="" width="840">
+</p>
+
+Esta etapa da aula foca na abordagem prática do desenvolvimento de aplicações para internet utilizando a integração entre **ReactJS e Redux**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m04s638.jpg" alt="" width="840">
+</p>
+
+Para o funcionamento do Redux em uma aplicação React, é necessária a instalação de dois pacotes fundamentais: o **React Redux**, que é a implementação específica para o ecossistema React, e o **Redux DevTools**, utilizado para conectar a aplicação à extensão de monitoramento do navegador.
+
+```bash
+npm install react-redux
+npm install --save-dev redux-devtools
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m08s440.jpg" alt="" width="840">
+</p>
+
+O **Redux DevTools** é uma extensão disponível na Chrome Web Store que atua como um monitor para a aplicação. Ele permite acompanhar em tempo real todas as alterações de estado que ocorrem na **store**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m11s146.jpg" alt="" width="840">
+</p>
+
+O fluxo de dados segue um ciclo definido: a view (React) dispara uma **action**, que leva uma mensagem para a **store**. A store utiliza **reducers** para processar a mudança e atualizar o estado, que é então refletido de volta na interface.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m29s021.jpg" alt="" width="840">
+</p>
+
+No componente de contador, a conexão com o Redux é feita através do método `connect`. As funções de incremento e decremento não alteram o estado local diretamente, mas utilizam o `dispatch` para enviar uma action para a store. A função `mapStateToProps` é responsável por mapear o estado global da store para as propriedades (props) do componente.
+
+```javascript
+import React from 'react';
+import { connect } from 'react-redux';
+
+class Counter extends React.Component {
+  increment = () => {
+    this.props.dispatch({ type: 'INCREMENT' });
+  }
+
+  decrement = () => {
+    this.props.dispatch({ type: 'DECREMENT' });
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Counter</h2>
+        <div>
+          <button onClick={this.decrement}>-</button>
+          <span>{this.props.count}</span>
+          <button onClick={this.increment}>+</button>
+        </div>
+      </div>
+    );
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    count: state.count
+  };
+}
+
+export default connect(mapStateToProps)(Counter);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m31s862.jpg" alt="" width="840">
+</p>
+
+A interface da aplicação apresenta um contador simples onde o valor exibido é gerenciado pelo Redux. Cada clique nos botões de "+" ou "-" gera um evento que será processado pela store.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m39s507.jpg" alt="" width="840">
+</p>
+
+Através do inspetor do navegador, o Redux DevTools exibe o histórico de ações disparadas, como `INCREMENT` e `DECREMENT`. É possível visualizar o "Action", o "State" e o "Diff", que mostra exatamente o que mudou entre o estado anterior e o atual da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m47s147.jpg" alt="" width="840">
+</p>
+
+As **actions** são as mensagens enviadas para a aplicação. Neste arquivo, definimos constantes do tipo string para representar as ações de incrementar e decrementar, garantindo que a comunicação entre componentes e reducers seja padronizada.
+
+```javascript
+export const INCREMENT = 'INCREMENT';
+export const DECREMENT = 'DECREMENT';
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m54s880.jpg" alt="" width="840">
+</p>
+
+O **reducer** determina como o estado deve ser alterado com base na action recebida. Ele define um `initialState` (neste caso, começando em zero) e utiliza uma estrutura `switch` para retornar um novo estado incrementado ou decrementado. O reducer nunca altera o estado diretamente, ele sempre retorna um novo valor.
+
+```javascript
+import { INCREMENT, DECREMENT } from './actions';
+
+const initialState = {
+  count: 0
+};
+
+export function reducer(state = initialState, action) {
+  switch (action.type) {
+    case INCREMENT:
+      return {
+        count: state.count + 1
+      };
+    case DECREMENT:
+      return {
+        count: state.count - 1
+      };
+    default:
+      return state;
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-16h40m58s674.jpg" alt="" width="840">
+</p>
+
+No arquivo `index.js`, que é o componente raiz, configuramos a criação da store através do `createStore`. Aqui também é feita a conexão com a extensão Redux DevTools. O componente `Provider` envolve a aplicação, disponibilizando a store única para todos os componentes.
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { reducer } from './redux/reducers';
+
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
+
+serviceWorker.unregister();
+
+```      
+
 
 # Parte 3 - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
