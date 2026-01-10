@@ -719,7 +719,32 @@ Esse vídeo consiste na transcrição de um áudio educativo focado na **integra
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-15h51m09s841.jpg" alt="" width="840">
+</p>
+
+Esta aula marca o início dos estudos sobre a **introdução ao Redux e os fluxos da arquitetura com ReactJS**. O conteúdo faz parte do módulo de desenvolvimento de aplicações para internet, focado em gerenciar o estado e o fluxo de dados dentro do ecossistema React.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-15h51m18s366.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais desta aula estão divididos em três etapas fundamentais:
+
+1. **Introdução ao Flux**: Compreensão do padrão de arquitetura que deu origem aos conceitos utilizados.
+2. **O que é Redux**: Explicação detalhada sobre a biblioteca de gerenciamento de estado.
+3. **Redux + React**: Demonstração de um exemplo prático integrando as duas tecnologias.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-10-15h51m22s759.jpg" alt="" width="840">
+</p>
+
+Para o prosseguimento dos estudos, é necessário atender aos seguintes requisitos técnicos e de conhecimento:
+
+* Ter concluído a **Aula 1** do curso.
+* Possuir um **editor de texto** configurado.
+* Garantir que o **Node.js** e o **React** estejam corretamente instalados na máquina.
+* Realizar a instalação da extensão **Redux Dev Tools** no navegador Chrome, que será utilizada para monitorar os estados da aplicação durante a parte prática do conteúdo.      
 
 
 ## 🟩 Vídeo 06 - O que é Flux?
