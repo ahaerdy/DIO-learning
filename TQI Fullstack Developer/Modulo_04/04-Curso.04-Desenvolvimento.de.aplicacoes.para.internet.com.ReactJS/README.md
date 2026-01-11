@@ -1860,7 +1860,7 @@ export default connect(
 ```      
 # Parte 4 -Conceitos aplicados a qualidade de código e automação de testes em React
 
-## Vĩdeo 13 -
+## Vĩdeo 13 - Introdução a testes em React
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_13.webm" type="video/webm">
@@ -1869,7 +1869,7 @@ export default connect(
 
 Link do vídeo:
 
-## Vĩdeo 14-
+## Vĩdeo 14 - TDD e BDD com Jest
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_14.webm" type="video/webm">
@@ -1878,7 +1878,7 @@ Link do vídeo:
 
 Link do vídeo:
 
-## Vĩdeo 15 -
+## Vĩdeo 15 - Debugging
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_15.webm" type="video/webm">
@@ -1887,7 +1887,7 @@ Link do vídeo:
 
 Link do vídeo:
 
-## Vĩdeo 16 -
+## Vĩdeo 16 - Tratamento de erros
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_16.webm" type="video/webm">
