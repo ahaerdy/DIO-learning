@@ -2098,6 +2098,116 @@ Em suma, tanto o TDD quanto o BDD são práticas essenciais para garantir a robu
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/ab798200-19e4-4f34-9348-f53283f81774?autoplay=1
 
+O vídeo apresenta uma aula detalhada sobre o processo de **depuração de software**, focando especificamente no ecossistema **React**. O conteúdo explora métodos que variam desde a inserção manual de **logs no console** e o uso do comando **debugger** até o emprego de ferramentas avançadas como o **React Developer Tools**. O autor demonstra como inspecionar a **hierarquia de componentes**, monitorar estados no **Redux** e validar o comportamento da **pilha de chamadas** do navegador. Além da correção de erros, o texto aborda a análise de **performance e acessibilidade** através de auditorias automatizadas no Chrome. Por fim, destaca-se que dominar esses recursos é essencial para profissionais que buscam construir aplicações **escaláveis e otimizadas**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m03s592.jpg" alt="" width="840">
+</p>
+
+Esta segunda parte da aula aborda o conceito e as práticas de **debugging** (ou depuração) no desenvolvimento de aplicações para a internet utilizando ReactJS. O objetivo é apresentar métodos e ferramentas que facilitam a identificação e correção de problemas no código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m05s669.jpg" alt="" width="840">
+</p>
+
+O **debugging**, ou depuração em português, é definido como o processo fundamental de encontrar e reduzir defeitos em um software. Essa prática pode ser realizada de diversas maneiras:
+
+* **Manualmente**: Executando a lógica do código mentalmente.
+* **Logging**: Utilizando registros de log ou o comando `console.log` diretamente na aplicação.
+* **Ferramentas específicas**: Utilizando softwares projetados para monitorar a execução do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m08s328.jpg" alt="" width="840">
+</p>
+
+Para otimizar o processo de depuração, as ferramentas mais comuns e amplamente utilizadas no mercado são:
+
+* **Chrome DevTools**: Conjunto de ferramentas de diagnóstico integradas ao navegador Google Chrome (também disponível em versões similares no Mozilla Firefox).
+* **Redux DevTools**: Monitor para acompanhar as mudanças de estado na store do Redux.
+* **React DevTools**: Extensão dedicada a inspecionar a árvore de componentes React, suas props e hooks.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m13s958.jpg" alt="" width="840">
+</p>
+
+A extensão **React Developer Tools** (disponível para Chrome e Firefox) é essencial para desenvolvedores React. Ela permite inspecionar a hierarquia de componentes de forma amigável, visualizar as propriedades (props), o estado (state) e os hooks utilizados em cada parte da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m15s862.jpg" alt="" width="840">
+</p>
+
+Exemplo da página de instalação da extensão na Chrome Web Store. Uma vez instalada, ela adiciona abas específicas como "Components" e "Profiler" ao console do desenvolvedor do navegador, permitindo uma depuração profunda da estrutura do React.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m22s201.jpg" alt="" width="840">
+</p>
+
+No ambiente de desenvolvimento, como o Visual Studio Code, é possível forçar uma interrupção na execução do código inserindo a palavra-chave `debugger`. No exemplo abaixo, o depurador é acionado antes de renderizar cada item de uma lista:
+
+```javascript
+import React from 'react';
+
+const Item = (item, index) => {
+  debugger
+  return <li key={index}>{item}</li>
+}
+
+export const Topico2 = () => {
+  const list = [1, 2, 3, 4, 5]
+  return (
+    <ul>
+      {list.map((item, index) => Item(item, index))}
+    </ul>
+  )
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m30s398.jpg" alt="" width="840">
+</p>
+
+Ao carregar a aplicação no navegador com a linha `debugger` no código, a execução é pausada automaticamente. Isso permite que o desenvolvedor utilize a aba **Sources** do Chrome DevTools para acompanhar a **Call Stack** (pilha de chamadas) e observar os valores das variáveis e o fluxo de renderização passo a passo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m32s680.jpg" alt="" width="840">
+</p>
+
+O depurador é uma alternativa poderosa ao `console.log`, especialmente em funções grandes onde é necessário monitorar diversos valores simultaneamente. Enquanto a execução está pausada, o painel lateral exibe detalhadamente a árvore de execução, desde o início no `react-dom` até o componente específico que está sendo processado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m37s353.jpg" alt="" width="840">
+</p>
+
+Através da aba **Components** do React DevTools, é possível visualizar a estrutura hierárquica completa da aplicação. No exemplo, vemos que um componente está aninhado dentro de uma série de provedores e consumidores (como `Router.Consumer` e `Provider`), facilitando a localização de onde um dado específico está sendo originado na árvore de componentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m43s466.jpg" alt="" width="840">
+</p>
+
+O **Redux DevTools** permite monitorar as ações disparadas na aplicação. Na imagem, observa-se o histórico de ações como `INCREMENT` e `DECREMENT`. A ferramenta possibilita ver o estado atual, a ação enviada e o "Diff", que destaca exatamente o que mudou no estado global após o disparo do evento. Além disso, ela pode gerar testes automatizados baseados nessas transições de estado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m48s127.jpg" alt="" width="840">
+</p>
+
+Além das ferramentas específicas para React e Redux, o Chrome oferece a aba **Audits** (Lighthouse). Esta ferramenta realiza uma análise automatizada da aplicação em diversas categorias, como performance e acessibilidade, preparando o ambiente para gerar um relatório detalhado de melhorias.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m50s611.jpg" alt="" width="840">
+</p>
+
+O relatório gerado pelo **Audits** atribui notas de 0 a 100 para Performance, Acessibilidade, Boas Práticas e SEO. No exemplo, embora a performance esteja excelente (100), outras áreas como SEO (78) indicam pontos de atenção. O diagnóstico oferece dicas práticas sobre o que deve ser corrigido para tornar a aplicação mais robusta e escalável.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h50m54s882.jpg" alt="" width="840">
+</p>
+
+Para uma depuração de nível avançado, a aba **Performance** permite utilizar o **Profiler**. Ele mapeia todo o processo de renderização e pintura (*painting*) da tela, exibindo uma árvore de chamadas e um log de eventos. É uma ferramenta fundamental para identificar falhas de desempenho e gargalos de processamento em aplicações complexas.      
+
+
 ## 🟩 Vĩdeo 16 - Tratamento de erros
 
 <video width="60%" controls>
@@ -2105,7 +2215,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvol
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: docs: corrige links de referência dos vídeos de Debugging e Erros
 
 
 ##  Materiais de Apoio
