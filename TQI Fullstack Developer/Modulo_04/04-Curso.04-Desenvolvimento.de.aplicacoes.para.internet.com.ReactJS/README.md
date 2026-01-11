@@ -1649,7 +1649,6 @@ const mapStateToProps = (state) => ({
 
 ```      
 
-
 ## 🟩 Vídeo 12 - Redux + Rest
 
 <video width="60%" controls>
@@ -1659,6 +1658,206 @@ const mapStateToProps = (state) => ({
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/4c1d8601-b28a-4ed5-97a6-4b63dcc7d68c?autoplay=1
 
+O vídeo consiste em uma aula técnica que detalha a integração do **Redux** com requisições **REST** utilizando a camada de **Middlewares**. O instrutor explica como essas ferramentas funcionam como intermediárias entre o disparo de uma ação e o redutor, permitindo gerenciar efeitos colaterais como **logs de sistema** e **chamadas de API**. Através de uma evolução didática, o conteúdo demonstra desde soluções manuais e improvisadas até a implementação profissional com a biblioteca **Redux Thunk**. A explicação abrange a criação de **actions assíncronas** para monitorar estados de carregamento, sucesso ou erro durante a busca de dados. Por fim, o material ensina a organizar a aplicação de forma escalável usando o **combineReducers** e a conectar os componentes React ao estado global para exibir informações dinâmicas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m05s185.jpg" alt="" width="840">
+</p>
+
+Esta etapa marca o início da terceira parte do curso, focada na integração entre o Redux e o consumo de APIs REST. O objetivo é aprofundar o desenvolvimento de aplicações para internet utilizando ReactJS, abordando como gerenciar estados complexos que dependem de dados externos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m09s807.jpg" alt="" width="840">
+</p>
+
+A sincronização de dados é um desafio comum em sistemas que possuem funcionalidades transversais, como notificações ou logs. Para garantir que a informação permaneça consistente independentemente da tela em que o usuário esteja, uma solução eficaz é centralizar o armazenamento desses dados de serviço no Redux, permitindo um fluxo de dados único e previsível.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m11s940.jpg" alt="" width="840">
+</p>
+
+Os Redux Middlewares funcionam como uma camada de interceptação posicionada entre o disparo de uma ação (`dispatch`) e o momento em que ela é processada pelo `reducer`. Eles são ferramentas versáteis, sendo amplamente utilizados para realizar chamadas de APIs, manipulação de logs e tratamento de efeitos colaterais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m13s498.jpg" alt="" width="840">
+</p>
+
+Para entender o funcionamento de um middleware, imagine um sistema de log básico. Toda vez que uma `action` é disparada, o sistema imprime no console os detalhes dessa ação e, em seguida, mostra o estado resultante da aplicação (`next state`). Isso permite rastrear exatamente como cada interação afeta a lógica global.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m15s964.jpg" alt="" width="840">
+</p>
+
+A primeira tentativa de implementar um sistema de log é através do registro manual. Nesse modelo, inserimos instruções de console antes e depois do disparo da ação diretamente no código onde o evento ocorre.
+
+```javascript
+const action = addTodo('Use Redux')
+console.log('dispatching', action)
+store.dispatch(action)
+console.log('next state', store.getState())
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m18s726.jpg" alt="" width="840">
+</p>
+
+Na segunda tentativa, buscamos organizar melhor o código encapsulando o processo de log em uma função auxiliar chamada `dispatchAndLog`. Embora ajude a centralizar a lógica, essa abordagem ainda requer que o desenvolvedor lembre-se de chamar essa função específica em vez do método nativo da `store`.
+
+```javascript
+function dispatchAndLog(store, action) {
+  console.log('dispatching', action)
+  store.dispatch(action)
+  console.log('next state', store.getState())
+}
+
+dispatchAndLog(store, addTodo('Use Redux'))
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m21s396.jpg" alt="" width="840">
+</p>
+
+A terceira tentativa utiliza uma técnica conhecida como *monkeypatching* para substituir o método `dispatch` original da `store`. Armazenamos a função original em uma variável (`next`) e redefinimos `store.dispatch` para incluir o comportamento de log desejado antes de repassar a execução para a função original.
+
+```javascript
+const next = store.dispatch
+store.dispatch = function dispatchAndLog(action) {
+  console.log('dispatching', action)
+  let result = next(action)
+  console.log('next state', store.getState())
+  return result
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m23s663.jpg" alt="" width="840">
+</p>
+
+O uso de substituição direta do `dispatch` via *monkeypatching* apresenta um problema de escalabilidade. Se precisarmos adicionar outras funcionalidades independentes, como um relatório de erros (*crash report*), a estrutura começa a se tornar complexa e difícil de manter, pois cada nova função precisaria gerenciar manualmente a referência ao `dispatch` anterior.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m26s466.jpg" alt="" width="840">
+</p>
+
+Para resolver o problema de múltiplas responsabilidades, podemos criar funções de "patch" separadas. Cada uma dessas funções intercepta a execução para adicionar sua lógica específica (logging ou tratamento de erros) e mantém a cadeia de execução funcionando ao chamar a versão anterior do `dispatch`.
+
+```javascript
+function patchStoreToAddLogging(store) {
+  const next = store.dispatch
+  store.dispatch = function dispatchAndLog(action) {
+    console.log('dispatching', action)
+    let result = next(action)
+    console.log('next state', store.getState())
+    return result
+  }
+}
+
+function patchStoreToAddCrashReporting(store) {
+  const next = store.dispatch
+  store.dispatch = function dispatchAndReportErrors(action) {
+    try {
+      return next(action)
+    } catch (err) {
+      console.error('Caught an exception!', err)
+      Raven.captureException(err, {
+        extra: {
+          action,
+          state: store.getState()
+        }
+      })
+      throw err
+    }
+  }
+}
+
+patchStoreToAddLogging(store)
+patchStoreToAddCrashReporting(store)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m30s082.jpg" alt="" width="840">
+</p>
+
+A quarta tentativa refina o conceito ao automatizar a aplicação desses patches. Em vez de chamar cada função manualmente, define-se um método `applyMiddlewareByMonkeypatching` que recebe uma lista de middlewares. Ele inverte a ordem e aplica cada um à `store`, transformando a função `dispatch` de forma sistemática.
+
+```javascript
+function logger(store) {
+  const next = store.dispatch
+  
+  return function dispatchAndLog(action) {
+    console.log('dispatching', action)
+    let result = next(action)
+    console.log('next state', store.getState())
+    return result
+  }
+}
+
+function applyMiddlewareByMonkeypatching(store, middlewares) {
+  middlewares = middlewares.slice()
+  middlewares.reverse()
+
+  // Transforma a função dispatch com cada middleware.
+  middlewares.forEach(middleware => (store.dispatch = middleware(store)))
+}
+
+applyMiddlewareByMonkeypatching(store, [logger, crashReporter])
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m32s869.jpg" alt="" width="840">
+</p>
+
+Ao trabalhar com APIs reais, utilizamos middlewares como o Redux Thunk para gerenciar ações assíncronas. No exemplo abaixo, a função `fetchCientistas` inicia um estado de pendência, realiza a requisição via `fetch` e, dependendo do retorno, dispara uma ação de sucesso com os dados ou uma ação de erro.
+
+```javascript
+const fetchCientistas = () => (dispatch) => {
+  dispatch(fetchCientistasPending())
+  return fetch('http://localhost:3000/cientistas')
+    .then(res => res.json())
+    .then(res => {
+      if(res.error) {
+        throw(res.error)
+      }
+      dispatch(fetchCientistasSuccess(res))
+      return res
+    })
+    .catch(error => {
+      dispatch(fetchCientistasError(error))
+    })
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h00m36s915.jpg" alt="" width="840">
+</p>
+
+Por fim, conectamos a lógica ao componente React. Através das funções `mapStateToProps` e `mapDispatchToProps` e do Higher Order Component `connect`, mapeamos os estados de carregamento, erro e os dados dos cientistas para as propriedades do componente, além de disponibilizar o disparador `fetchCientistas`.
+
+```javascript
+const mapStateToProps = state => ({
+  cientistas: state.cientistas.data,
+  pending: state.cientistas.pending,
+  error: state.cientistas.error
+})
+
+const mapDispatchToProps = dispatch => ({
+  fetchCientistas: () => dispatch(fetchCientistas())
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Cientistas)
+
+```      
 
 
 ##  Materiais de Apoio
