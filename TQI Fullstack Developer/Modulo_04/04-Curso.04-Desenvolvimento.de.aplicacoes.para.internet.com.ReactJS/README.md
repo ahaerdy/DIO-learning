@@ -1928,7 +1928,7 @@ Link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/ab798200-19e4-4f34-9348-f53283f81774?autoplay=1
 
 
 ##  Materiais de Apoio
