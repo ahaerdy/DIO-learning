@@ -2376,5 +2376,5 @@ Basic.propTypes = {
 
 # Certificado: Desenvolvimento de aplicações para internet com ReactJS
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/3DAN05X7.pdf
+- Certificado em pdf: [Certificado-Desenvolvimento.de.aplicacoes.para.internet.com.ReactJS.pdf](000-Midia_e_Anexos/Certificado-Desenvolvimento.de.aplicacoes.para.internet.com.ReactJS.pdf)
