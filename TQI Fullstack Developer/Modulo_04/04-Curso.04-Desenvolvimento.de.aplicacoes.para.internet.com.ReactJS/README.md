@@ -1860,7 +1860,7 @@ export default connect(
 ```      
 # Parte 4 -Conceitos aplicados a qualidade de código e automação de testes em React
 
-## Vĩdeo 13 - Introdução a testes em React
+## 🟩 Vĩdeo 13 - Introdução a testes em React
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_13.webm" type="video/webm">
@@ -1903,7 +1903,7 @@ O slide detalha o roteiro de aprendizado planejado para a sessão, estabelecendo
 
 O slide enumera os **requisitos básicos** necessários para que o aluno consiga acompanhar as implementações práticas demonstradas. É fundamental ter concluído as aulas anteriores do módulo (1, 2 e 3) , possuir um **editor de texto** configurado e garantir que as dependências essenciais, **Node.js e React**, estejam corretamente instaladas no ambiente de desenvolvimento.
 
-## Vĩdeo 14 - TDD e BDD com Jest
+## 🟩 Vĩdeo 14 - TDD e BDD com Jest
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_14.webm" type="video/webm">
@@ -1912,7 +1912,7 @@ O slide enumera os **requisitos básicos** necessários para que o aluno consiga
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/001f9042-10e8-451e-8040-38a1ba91d699?autoplay=1
 
-## Vĩdeo 15 - Debugging
+## 🟩 Vĩdeo 15 - Debugging
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_15.webm" type="video/webm">
@@ -1921,7 +1921,7 @@ Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvol
 
 Link do vídeo:
 
-## Vĩdeo 16 - Tratamento de erros
+## 🟩 Vĩdeo 16 - Tratamento de erros
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_04-curso.04-Video_16.webm" type="video/webm">
