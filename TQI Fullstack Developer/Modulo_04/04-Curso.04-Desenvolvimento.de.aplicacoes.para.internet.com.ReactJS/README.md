@@ -1867,7 +1867,41 @@ export default connect(
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/0b79c51f-eb7d-4c46-9231-b01bb91661c0?autoplay=1
+
+O vídeo consiste na introdução de uma **quarta aula** focada em aprimorar o desenvolvimento com **React**, priorizando a **qualidade do código** e a **automação**. O conteúdo explora metodologias de teste como **TDD e BDD** utilizando a ferramenta **Jest**, além de abordar técnicas de **depuração** e estratégias para o **tratamento de erros**. Para acompanhar o aprendizado, os alunos devem possuir conhecimentos prévios das lições anteriores e ter o **Node** devidamente configurado. O instrutor também menciona que softwares e bibliotecas adicionais serão **instalados e configurados** conforme a progressão dos tópicos. Assim, o material serve como um guia técnico para transformar desenvolvedores intermediários em profissionais mais atentos à **estabilidade de software**.
+
+#### Introdução ao Desenvolvimento com ReactJS
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h14m21s250.jpg" alt="" width="840">
+</p>
+
+Esta imagem marca o início da aula sobre **Desenvolvimento de aplicações para internet com ReactJS** , apresentada por Eduardo Gonçalves Costa, Desenvolvedor Front End na Tracksale. O tema central abordado nesta sessão foca em **conceitos aplicados à qualidade de código e automação de testes**, preparando o terreno para a implementação de lógicas robustas e testáveis em ambientes de produção.
+
+#### Objetivos da Aula
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h14m28s116.jpg" alt="" width="840">
+</p>
+
+O slide detalha o roteiro de aprendizado planejado para a sessão, estabelecendo três **objetivos principais** para o desenvolvimento da aplicação:
+
+1. **TDD e BDD com Jest**: Implementação de testes seguindo as metodologias de Desenvolvimento Orientado a Testes e Desenvolvimento Orientado a Comportamento.
+
+2. **Debugging**: Técnicas para identificar e corrigir falhas no código de forma eficiente.
+
+3. **Tratamento de erros**: Melhores práticas para gerenciar exceções, garantindo a resiliência do sistema diante de falhas de API ou de lógica.
+
+
+
+#### Requisitos Básicos do Ambiente
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-09h14m29s476.jpg" alt="" width="840">
+</p>
+
+O slide enumera os **requisitos básicos** necessários para que o aluno consiga acompanhar as implementações práticas demonstradas. É fundamental ter concluído as aulas anteriores do módulo (1, 2 e 3) , possuir um **editor de texto** configurado e garantir que as dependências essenciais, **Node.js e React**, estejam corretamente instaladas no ambiente de desenvolvimento.
 
 ## Vĩdeo 14 - TDD e BDD com Jest
 
@@ -1876,7 +1910,7 @@ Link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo:
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/001f9042-10e8-451e-8040-38a1ba91d699?autoplay=1
 
 ## Vĩdeo 15 - Debugging
 
