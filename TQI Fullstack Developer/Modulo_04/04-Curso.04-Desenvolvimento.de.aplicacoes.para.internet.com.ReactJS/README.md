@@ -2215,13 +2215,166 @@ Para uma depuração de nível avançado, a aba **Performance** permite utilizar
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: docs: corrige links de referência dos vídeos de Debugging e Erros
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/0f275c0f-0789-4e90-85c0-a667cb0e75ce?autoplay=1
+
+O vídeo aborda a importância do **tratamento de erros** em aplicações R e React, focando em aumentar a **resiliência e a segurança** do software. O conteúdo demonstra como validar funções para evitar dados inválidos e como proteger **formulários** contra robôs e entradas maliciosas através de **sanitização e captchas**. O autor também explica a gestão de respostas de **APIs**, sugerindo mensagens de erro que auxiliem o usuário sem expor vulnerabilidades do sistema. Por fim, discute-se o uso de **Prop Types** e linguagens tipadas para garantir que os **componentes** recebam os dados corretos. Todas essas estratégias visam criar uma interface mais robusta e uma experiência de usuário mais segura.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h10m35s060.jpg" alt="" width="840">
+</p>
+
+Esta parte da aula aborda o **tratamento de erros** no desenvolvimento de aplicações para internet utilizando **ReactJS**. O objetivo principal é explorar técnicas que garantam que a aplicação lide de forma robusta com falhas inesperadas durante a execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h10m36s579.jpg" alt="" width="840">
+</p>
+
+O tratamento de erros é fundamental para prover dois pilares essenciais no desenvolvimento de software:
+
+* 
+**Resiliência de SW:** Refere-se à capacidade do sistema de se recuperar ou apresentar uma resposta adequada quando ocorre uma falha.
 
 
-##  Materiais de Apoio
+* 
+**Segurança:** Garantir que erros não exponham vulnerabilidades ou dados sensíveis da aplicação.
 
 
-# Certificado: 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h10m40s279.jpg" alt="" width="840">
+</p>
+
+Um dos pontos iniciais para garantir a resiliência é o **tratamento em funções**. Funções simples que não validam seus parâmetros podem causar comportamentos inesperados no software.
+
+```javascript
+export const soma = (a, b) => a + b;
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h10m42s302.jpg" alt="" width="840">
+</p>
+
+Para aumentar a resiliência, utiliza-se a abordagem de funções "seguras". No exemplo abaixo, a função verifica se os argumentos são do tipo numérico antes de realizar a operação. Caso os dados sejam inválidos (como nulos ou undefined), a função retorna um valor convencionado para erro.
+
+```javascript
+export const somaSegura = (a, b) => {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a + b;
+  } else {
+    // vamos convencionar -1 quando a soma for inválida
+    return -1;
+  }
+}
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h10m44s792.jpg" alt="" width="840">
+</p>
+
+O **tratamento em formulários (forms)** foca em validação, sanitização e segurança contra agentes maliciosos. É essencial validar dados obrigatórios e utilizar atributos como `required` para garantir que o usuário forneça as informações necessárias antes do envio.
+
+```javascript
+<form onSubmit={this.handleSubmit} style={{display: 'flex', flexDirection: 'column'}}>
+  <label>
+    Nome:
+    <input type="text" value={this.state.value} onChange={this.handleChange} required />
+  </label>
+  <input type="submit" value="Submit" />
+</form>
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h10m51s876.jpg" alt="" width="840">
+</p>
+
+No **retorno de APIs**, o tratamento é feito para gerenciar falhas de comunicação ou erros vindos do servidor. Utiliza-se o bloco `.catch` para capturar erros da requisição e disparar ações, como exibir mensagens específicas baseadas no código de erro retornado.
+
+```javascript
+export const fetchCientistas = () => {
+  fetch('https://react-intermediario-dio.free.beeceptor.com/cientistas-brasileiras')
+    .then(response => response.json())
+    .then(data => {
+      setCientistas(data)
+    })
+    .catch(error => {
+      exibirMensagem(error.code);
+    });
+}
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h10m54s291.jpg" alt="" width="840">
+</p>
+
+Ao tratar retornos de API, é recomendável mapear os códigos de status HTTP para mensagens amigáveis ao usuário, mantendo a segurança ao não expor detalhes técnicos do servidor.
+
+```javascript
+function exibirMensagem (codigo) {
+  if (codigo === 401) {
+    alert('Faça login para continuar')
+  }
+  if (codigo === 404) {
+    alert('Recurso não encontrado.')
+  }
+  if (codigo === 500) {
+    alert('Erro interno de servidor.')
+  }
+}
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h10m58s378.jpg" alt="" width="840">
+</p>
+
+Para o **tratamento em componentes**, existem diferentes abordagens dependendo da tecnologia utilizada:
+
+* 
+**Em JavaScript:** Utiliza-se o **PropTypes** para validar as propriedades (props) recebidas.
+
+
+* 
+**Em linguagens tipadas:** Como o **TypeScript**, utilizam-se interfaces para definir rigorosamente os tipos de dados esperados.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-15h11m02s010.jpg" alt="" width="840">
+</p>
+
+O exemplo abaixo demonstra a implementação prática de **PropTypes** em um componente React para garantir que a propriedade `name` seja sempre tratada como uma string.
+
+```javascript
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export const Basic = ({ name }) => (
+  <p>Meu nome é {name}</p>
+)
+
+Basic.propTypes = {
+  name: PropTypes.string
+}
+
+```      
+
+# Certificado: Desenvolvimento de aplicações para internet com ReactJS
 
 - Link na plataforma: 
 - Certificado em pdf: 
