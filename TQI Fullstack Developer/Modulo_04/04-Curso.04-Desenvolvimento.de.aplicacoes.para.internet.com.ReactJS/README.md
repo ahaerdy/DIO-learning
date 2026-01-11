@@ -1912,6 +1912,183 @@ O slide enumera os **requisitos básicos** necessários para que o aluno consiga
 
 Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/desenvolvimento-de-aplicacoes-para-internet-com-reactjs/learning/001f9042-10e8-451e-8040-38a1ba91d699?autoplay=1
 
+O conteúdo detalha o **TDD (Test Driven Development)**, explicando seu ciclo de vida de falha, correção e refatoração, além de diferenciar testes unitários de testes de ponta a ponta (**E2E**). Ferramentas fundamentais como **Jest**, **React Testing Library** e **Puppeteer** são apresentadas para validar desde funções lógicas simples até componentes complexos integrados ao **Redux**. O material também explora o **BDD (Behavior Driven Development)**, utilizando a sintaxe **Gherkin** para unir especificações de negócio ao código através da biblioteca **Jest Cucumber**. O autor enfatiza a importância de criar códigos testáveis e a utilização de **mocks** para simular comportamentos em aplicações reais. Por fim, o texto incentiva a prática constante e o uso de relatórios de **cobertura de código** para garantir a qualidade do software em produção.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m22s783.jpg" alt="" width="840">
+</p>
+
+Esta introdução aborda os conceitos de **TDD (Test Driven Development)** e **BDD (Behavior Driven Development)** utilizando o **Jest**, com foco em aplicações desenvolvidas em React. O objetivo principal é apresentar um panorama de como essas práticas de teste garantem a qualidade do software desde as etapas iniciais do desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m25s911.jpg" alt="" width="840">
+</p>
+
+O **TDD (Test Driven Development)**, ou Desenvolvimento Orientado a Testes, é uma prática onde o desenvolvedor escreve o código de teste para validar sua própria funcionalidade antes mesmo de implementá-la. Essa abordagem ajuda a antecipar erros. Um exemplo clássico é o desenvolvimento de uma função de soma: antes de criar a lógica, define-se um teste que espera que a soma de dois valores (A e B) retorne o resultado correto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m31s121.jpg" alt="" width="840">
+</p>
+
+O ciclo de vida do TDD é composto por três etapas fundamentais, frequentemente referidas como o ciclo "Red, Green, Refactor":
+
+1. **Escrever um teste que falha:** Cria-se o cenário de teste antes da funcionalidade existir (o teste "quebra" ou fica vermelho).
+2. **Fazer o teste passar:** Implementa-se o código mínimo necessário para que o teste seja bem-sucedido (o teste fica verde).
+3. **Refatorar:** Melhora-se a lógica interna do código, mantendo a garantia de que ele continua funcionando conforme os testes anteriores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m33s003.jpg" alt="" width="840">
+</p>
+
+Existem duas vertentes principais para a aplicação de testes:
+
+* **Unit (Unitários):** Focam em testar a menor unidade de código de forma isolada, como funções, componentes individuais, serviços ou páginas específicas.
+* **End-to-End (E2E):** Testam o fluxo completo da aplicação, simulando a jornada do usuário do início ao fim para garantir que todas as partes integradas funcionem corretamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m36s030.jpg" alt="" width="840">
+</p>
+
+Para implementar esses testes no ecossistema JavaScript e React, utilizamos ferramentas consagradas como o **Jest** (que já integra o *create-react-app*) e a **React Testing Library**, que é a biblioteca recomendada pela comunidade para testar componentes e hooks.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m39s660.jpg" alt="" width="840">
+</p>
+
+Além das ferramentas principais, outras bibliotecas auxiliam no processo de automação e testes de fluxo:
+
+* **Shallow Enzyme / Chai / Mocha:** Alternativas para estruturação e asserção de testes.
+* **Selenium:** Uma ferramenta robusta de propósito geral para automação de navegadores.
+* **Puppeteer:** Uma API que controla o Chrome de forma *headless* (sem interface gráfica), ideal para rodar testes de fluxo sobre o browser.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m41s248.jpg" alt="" width="840">
+</p>
+
+O Jest utiliza internamente a sintaxe do **Jasmine**, que é a base para a estrutura de escrita de testes em muitas bibliotecas JavaScript. Essa estrutura organiza os testes de forma legível e semântica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m42s601.jpg" alt="" width="840">
+</p>
+
+A estrutura básica de um teste envolve dois blocos principais:
+
+* **`describe`**: Define uma bateria ou conjunto de testes relacionados.
+* **`it`**: Define um teste unitário individual, contendo uma descrição clara do comportamento esperado.
+
+Dentro desses blocos, utilizamos o comando **`expect`** para realizar as asserções (comparações), como em `expect(a).toBe(true)`, que verifica se o valor de `a` é verdadeiro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m47s943.jpg" alt="" width="840">
+</p>
+
+No contexto de componentes, a **React Testing Library** é utilizada em conjunto com o `@testing-library/jest-dom`. Esta última estende as capacidades do Jest, permitindo fazer verificações específicas em elementos do DOM (Document Object Model), o que é essencial para validar o que o usuário realmente vê na tela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m50s285.jpg" alt="" width="840">
+</p>
+
+Ao testar um componente React, o processo envolve renderizar o componente e capturar elementos do DOM para validação.
+
+```javascript
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m51s707.jpg" alt="" width="840">
+</p>
+
+Para componentes que exibem dados baseados em propriedades (props), o teste utiliza a função `render` para extrair o resultado e verificar se o texto esperado está presente no `baseElement`.
+
+```javascript
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
+
+describe('App Component', () => {
+  it('should render name correctly', () => {
+    const { getByText } = render(<App name="Digital" />);
+    expect(getByText('Meu nome é Digital')).toBeInTheDocument();
+  });
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m53s181.jpg" alt="" width="840">
+</p>
+
+Quando lidamos com componentes complexos que utilizam **Redux**, é necessário realizar o **Mocking** da Store. Em vez de testar a Store real, criamos um ambiente de teste que envolve o componente em um `Provider`, garantindo que ele tenha acesso ao estado global sem precisar de uma integração real completa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h23m56s253.jpg" alt="" width="840">
+</p>
+
+Uma estratégia comum é criar uma função auxiliar, como `renderWithRedux`, para facilitar a inicialização de componentes que dependem da Store. Isso permite configurar um estado inicial específico para cada cenário de teste de forma limpa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h24m04s153.jpg" alt="" width="840">
+</p>
+
+Para interagir com os elementos durante o teste, utilizamos seletores como `getByText` ou `getByTestId` (este último funciona de forma similar ao `getElementById`). A função **`fireEvent`** permite simular interações do usuário, como cliques em botões, para validar se o estado da aplicação é atualizado corretamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h24m10s010.jpg" alt="" width="840">
+</p>
+
+O Jest oferece a funcionalidade de gerar relatórios de **Code Coverage** (Cobertura de Código). Esse relatório é fundamental para medir quanto do código fonte está sendo efetivamente testado, ajudando a cumprir requisitos de qualidade que muitas empresas estabelecem (como atingir 70% ou 80% de cobertura).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h24m12s549.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a execução de um teste no terminal, mostrando o resultado bem-sucedido (**PASS**) de um arquivo de teste e estatísticas sobre o tempo de execução e a quantidade de testes que passaram.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2024-01-11-14h24m14s231.jpg" alt="" width="840">
+</p>
+
+O **BDD (Behavior Driven Development)**, ou Desenvolvimento Baseado em Comportamento, é uma evolução do TDD que integra as especificações de negócio diretamente nos testes. Ele utiliza uma linguagem documental para descrever como o software deve se comportar sob a perspectiva do usuário ou do negócio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h24m18s239.jpg" alt="" width="840">
+</p>
+
+Para viabilizar o BDD, utiliza-se a **sintaxe Gherkin**, que permite descrever cenários através de palavras-chave reservadas:
+
+* **Dado (Given):** Define o estado inicial ou contexto.
+* **Quando (When):** Define a ação ou evento.
+* **Então (Then):** Define o resultado esperado ou a consequência da ação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h24m19s464.jpg" alt="" width="840">
+</p>
+
+No ecossistema React, as ferramentas mais utilizadas para BDD são o **Jest Cucumber** e o **Chai**. O Cucumber permite que arquivos com a extensão `.feature` (escritos em Gherkin) sejam interpretados e vinculados à lógica de teste automatizada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h24m23s224.jpg" alt="" width="840">
+</p>
+
+A implementação técnica do BDD no código envolve o uso das funções `loadFeature` (para carregar o arquivo `.feature`) e `defineFeature`. É imprescindível que as strings de descrição dentro do código sejam exatamente iguais às do arquivo de especificação para que o mapeamento entre o cenário de negócio e o teste unitário ocorra corretamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-11-14h24m25s611.jpg" alt="" width="840">
+</p>
+
+Em suma, tanto o TDD quanto o BDD são práticas essenciais para garantir a robustez de aplicações React. O TDD foca na estrutura e corretude técnica através do ciclo Red-Green-Refactor, enquanto o BDD alinha o desenvolvimento às necessidades de negócio através de especificações legíveis por humanos e máquinas.      
+
+
 ## 🟩 Vĩdeo 15 - Debugging
 
 <video width="60%" controls>
