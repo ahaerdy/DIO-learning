@@ -142,7 +142,7 @@ O vídeo consiste em uma **aula técnica** focada na transição do **React para
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/ee284557-ca75-4902-9797-d9f483288cb1?autoplay=1
 
-
+O vídeo apresenta um guia técnico sobre a implementação da **Context API** do React utilizando **Hooks**, destacando como essa ferramenta facilita o compartilhamento de estados globais. O autor demonstra a criação de um **Provider** na camada superior da aplicação para distribuir dados, como temas e tokens de autenticação, sem a necessidade de passar propriedades manualmente por componentes intermediários. Através de exemplos práticos com **useContext**, o conteúdo explica como os componentes filhos podem consumir valores e reagir a atualizações de estado de forma eficiente. Além de abordar o ciclo de vida e a renderização, o material compara essa abordagem com bibliotecas externas como **Redux** ou **MobX**. Por fim, o autor reforça que o uso de contextos globais deve ser feito com cautela para manter a **manutenibilidade do código** e evitar renderizações desnecessárias.
 
 ## Parte 2 - Técnicas com components e DOM
 
