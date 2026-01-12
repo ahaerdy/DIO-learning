@@ -194,11 +194,12 @@ Este conteúdo técnico descreve a implementação de **Dumb Components** no des
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/c1e02c65-1526-42c4-bfa3-04e650127447?autoplay=1
 
-
+O vídeo aborda o conceito de **Smart Components** no desenvolvimento de software, diferenciando-os dos chamados **Dumb Components**, que são focados apenas na interface visual. O autor explica que os componentes inteligentes gerenciam o **comportamento da aplicação**, lidando com estados, regras de negócio e a comunicação com serviços externos ou sistemas de armazenamento de dados. Por meio de um exemplo prático de uma **galeria de fotos**, demonstra-se como esses elementos podem conter outros componentes para executar ações específicas, como a remoção de itens de uma lista. Embora sejam menos reutilizáveis devido ao seu **forte acoplamento**, eles são essenciais para organizar fluxos complexos e manter a lógica separada da apresentação. O conteúdo enfatiza que essa distinção facilita a **manutenção do código** e preserva a integridade do design do sistema. Por fim, recomenda-se o uso de técnicas como a **imutabilidade** e a otimização de renderização para melhorar o desempenho e a clareza da aplicação.
 
 ### 🟩 Vídeo 13 - Finalizando o projeto
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/684f5f85-07f2-4f93-9eaf-91b86c61ce56?autoplay=1
+
 
 
 
