@@ -136,9 +136,12 @@ npx create-react-app advanced-reactjs-dio
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/a8522b88-3b01-4044-9138-ed0b49193b1e?autoplay=1
 
+O vídeo consiste em uma **aula técnica** focada na transição do **React para o modelo de programação funcional** através do uso de **Hooks**. O instrutor explica como substituir a estrutura tradicional de **classes** por **funções**, destacando que essa abordagem torna o código mais legível, simples e elimina a necessidade do escopo **"this"**. Durante a explicação, são demonstradas as implementações práticas de hooks essenciais como **useState** para gerenciamento de estado e **useEffect** para controlar o **ciclo de vida** do componente. O conteúdo detalha como replicar comportamentos de montagem, atualização e desmontagem de componentes de forma modular e eficiente. Além disso, o autor aborda a otimização de performance com o uso de **memo** para evitar renderizações desnecessárias. Por fim, são reforçadas as **boas práticas**, recomendando que hooks sejam utilizados exclusivamente dentro de componentes React para garantir a ordem de execução correta.
+
 ### 🟩 Vídeo 03 - Context API
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/ee284557-ca75-4902-9797-d9f483288cb1?autoplay=1
+
 
 
 ## Parte 2 - Técnicas com components e DOM
