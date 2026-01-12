@@ -32,7 +32,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/lidando-
 ## 🟩 Vídeo 02 - Manipulando datas com timedelta
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.04-video_02.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -80,7 +80,7 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
 ## 🟩 Vídeo 03 - Formatando e convertendo datas com strftime e strptime
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.04-video_03.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -99,7 +99,7 @@ link do vídeo:
 ## 🟩 Vídeo 04 - Trabalhando com timezone
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.04-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -130,7 +130,7 @@ link do vídeo:
 ## 🟩 Vídeo 05 - Explicação do desafio
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.04-video_05.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -554,7 +554,7 @@ main()
 ## 🟩 Vídeo 06 - Resolução do desafio
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.04-video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
