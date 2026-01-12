@@ -162,26 +162,31 @@ O vídeo aborda o funcionamento dos **Error Boundaries**, uma funcionalidade int
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/77ea105d-a6a0-470b-947a-7ace45fc6461?autoplay=1
 
-
+O vídeo consiste em uma **aula técnica** sobre o conceito de **Render Props** no desenvolvimento com **React**. O autor define essa estratégia como uma forma de **compartilhar lógica** entre componentes ao passar uma **função como propriedade**, permitindo que um componente receba dados e métodos sem implementá-los internamente. Para ilustrar a teoria, o instrutor demonstra a criação de um **componente wrapper de contador**, que gerencia estados de incremento e decremento para outros elementos filhos. O exemplo prático foca no **reaproveitamento de código**, comparando a abordagem ao funcionamento de bibliotecas famosas como **Formik** e **React Router**. Por fim, a fonte reforça que essa técnica é essencial para manter a aplicação modular e evitar a repetição desnecessária de funcionalidades complexas.
 
 ### 🟩 Vídeo 08 - Typechecking com PropTypes
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/fc938d47-258a-40c3-9879-938d3ce7ed0d?autoplay=1
+
+O conteúdo explica como utilizar a biblioteca **Prop Types** para realizar a checagem de tipos em aplicações **React**, servindo como uma alternativa nativa ao **TypeScript** ou **Flow**. O autor demonstra que, embora essa validação ocorra apenas durante o **tempo de execução**, ela é fundamental para identificar a ausência de propriedades obrigatórias ou o envio de dados incorretos. Através de exemplos práticos, como a criação de um componente de pet shop, o texto detalha como definir **tipos específicos** e configurar **valores padrão** via **default props**. Além de cobrir validações comuns para números, strings e funções, o material destaca a importância de garantir a **segurança do código** para evitar efeitos colaterais em produção. Por fim, o recurso incentiva a adoção dessas práticas para melhorar a **manutenção do projeto** e a experiência de desenvolvimento.
 
 ### 🟩 Vídeo 09 - Refs e DOM
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/e94c09d4-4601-400e-b0b6-a4bd7311b0d0?autoplay=1
 
+O conteúdo aborda o funcionamento do hook **useRef** no React, destacando sua capacidade de acessar diretamente elementos da **árvore do DOM**. O autor explica que essa ferramenta é essencial para gerenciar **focos de input**, manipular **bibliotecas de terceiros** e criar animações sem disparar novas renderizações. Diferente do estado tradicional, as alterações em uma referência não atualizam a interface, o que torna o recurso ideal para **armazenar valores anteriores** e realizar comparações lógicas eficientes. O tutorial demonstra na prática como capturar métodos nativos do JavaScript através da propriedade **current** do objeto de referência. Por fim, o material incentiva o uso dessa técnica para otimizar a performance ao evitar **re-renderizações desnecessárias** em componentes complexos.
 
 ## Parte 3 - Organizando o seu projeto
 
 ### 🟩 Vídeo 10 - O que é um Dumb Components
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/ece08045-15d2-46f3-9836-31008fb94f93?autoplay=1
+
+Nesta aula de **React JS avançado**, o instrutor Bruno Cardeira detalha as características fundamentais dos **Dumb Components**, também conhecidos como componentes de apresentação. Essas estruturas focam exclusivamente na **renderização da interface**, sendo totalmente **desacopladas** da lógica de negócios ou do gerenciamento de dados complexos da aplicação. Eles operam como **funções puras**, recebendo informações e funções de retorno estritamente por meio de **props** para garantir a reutilização do código. O autor ressalta que tais componentes raramente possuem estado interno, exceto quando necessário para controlar elementos visuais específicos, como um **menu suspenso ou calendário**. Exemplos práticos citados incluem botões e barras laterais, que servem apenas para exibir conteúdo e disparar ações externas sem processar mutações de dados.
 
 ### 🟩 Vídeo 11 - Como trabalhar com Dumb Components
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/5dbe1d00-bf11-4d69-9f04-1712280ea0d8?autoplay=1
 
 ### 🟩 Vídeo 12 - E Smart Components?
 
