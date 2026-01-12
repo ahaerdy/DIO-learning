@@ -188,9 +188,13 @@ Nesta aula de **React JS avançado**, o instrutor Bruno Cardeira detalha as cara
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/5dbe1d00-bf11-4d69-9f04-1712280ea0d8?autoplay=1
 
+Este conteúdo técnico descreve a implementação de **Dumb Components** no desenvolvimento com React, destacando que sua principal característica é a **ausência de estado interno** e lógica de negócio. O autor utiliza exemplos práticos, como botões e calculadoras, para demonstrar que esses componentes devem apenas **receber propriedades e callbacks** de um componente pai para funcionar. Através dessa abordagem, os elementos tornam-se **totalmente desacoplados**, facilitando a reutilização em diferentes partes do sistema. A explicação reforça que a **inteligência da aplicação** deve residir nos containers, enquanto os componentes de apresentação focam exclusivamente na interface. Além disso, é enfatizada a importância do uso de **Prop Types** para garantir a integridade dos dados recebidos. O tutorial encerra incentivando a criação de componentes puros que apenas **renderizam informações externas** sem manipular dados de forma direta.
+
 ### 🟩 Vídeo 12 - E Smart Components?
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/c1e02c65-1526-42c4-bfa3-04e650127447?autoplay=1
+
+
 
 ### 🟩 Vídeo 13 - Finalizando o projeto
 
