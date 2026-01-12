@@ -7,11 +7,11 @@
 
 ### 🟩 Vídeo 01 - Ciclo de Vida e suas fases
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/8f7be828-9ebd-473c-a215-bf6f04ffea3d?autoplay=1
 
 ### 🟩 Vídeo 02 - O que são Hooks e como ele pode otimizar o código
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/a8522b88-3b01-4044-9138-ed0b49193b1e?autoplay=1
 
 ### 🟩 Vídeo 03 - Context API
 
