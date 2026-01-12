@@ -200,10 +200,10 @@ O vídeo aborda o conceito de **Smart Components** no desenvolvimento de softwar
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/684f5f85-07f2-4f93-9eaf-91b86c61ce56?autoplay=1
 
+O vídeo apresenta uma aula sobre **arquitetura e organização de pastas** em projetos desenvolvidos com a biblioteca **React**. O autor enfatiza que, por não ser um framework opinativo, o React exige que a equipe defina sua própria estrutura para garantir a **escalabilidade e manutenção** do código. A metodologia sugerida foca na separação de responsabilidades, distribuindo elementos como **componentes reutilizáveis, páginas (containers), serviços de API e rotas** em diretórios específicos. Além disso, destaca-se a importância de manter **testes e estilos** próximos aos seus respectivos arquivos para facilitar a gestão do projeto. O conteúdo é concluído com orientações sobre como lidar com **funções utilitárias puras** e a integração de estados globais de forma organizada.
 
 
+# Certificado: Práticas avançadas em projetos com ReactJS
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/68QSK6HS.pdf
+- Certificado em pdf: [Certificado-Praticas.avancadas.em.projetos.com.ReactJS.pdf](000-Midia_e_Anexos/Certificado-Praticas.avancadas.em.projetos.com.ReactJS.pdf)
