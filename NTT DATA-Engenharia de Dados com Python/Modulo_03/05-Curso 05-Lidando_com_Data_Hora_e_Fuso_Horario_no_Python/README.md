@@ -36,7 +36,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/lidando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/lidando-com-data-hora-e-fuso-horario-no-python/learning/26e5d844-424d-4e57-ad3b-e81ca5f57d02?autoplay=1
 
 ### Introdução
 
@@ -84,7 +84,7 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/lidando-com-data-hora-e-fuso-horario-no-python/learning/f0194027-f5bd-46a4-a01c-1f957a59596b?autoplay=1
 
 #### Introdução
 
@@ -103,7 +103,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/lidando-com-data-hora-e-fuso-horario-no-python/learning/94b1b34d-a259-4373-9a6c-552cdc7974d8?autoplay=1
 
 #### Introdução
 
@@ -134,7 +134,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/lidando-com-data-hora-e-fuso-horario-no-python/learning/56665e16-09c2-46e8-a8cf-7ea81077a3aa?autoplay=1
 
 ### Introdução
 
@@ -558,7 +558,7 @@ main()
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/lidando-com-data-hora-e-fuso-horario-no-python/learning/81f70c72-520c-45e0-80f2-19c8786fb33b?autoplay=1 
 
 - Etapa anterior do desafio
 - 🔴 **Observação**: este algoritmo, no ponto em que se encontra, **NÃO** foi tratado nesse Bootcamp (está sendo apresentado neste módulo para FINS DIDÁTICOS - template do código apresentado no vídeo anterior).
