@@ -85,7 +85,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Conhecendo Tuplas em Python](Modulo_03/02-Curso.02-Conhecendo.Tuplas.em.Python/README.md)
 - [x] Curso: [Explorando Conjuntos em Python](Modulo_03/03-Curso.03-Explorando.Conjuntos.em.Python/README.md)
 - [x] Curso: [Aprendendo a Utilizar Dicionários em Python](Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python/README.md)
-- [x] Curso: [Lidando com Data, Hora e Fuso Horário no Python](Modulo_03/04-Curso%2004-Aprendendo_a_Utilizar_Dicion%C3%A1rios_em_Python)
+- [x] Curso: [Lidando com Data, Hora e Fuso Horário no Python](Modulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python)
 - [x] Projeto: Otimizando o Sistema Bancário com Funções Python
   - Repositório: DIO-projeto-sistema-bancario-com-funcoes-python
   - Descrição: sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python.
