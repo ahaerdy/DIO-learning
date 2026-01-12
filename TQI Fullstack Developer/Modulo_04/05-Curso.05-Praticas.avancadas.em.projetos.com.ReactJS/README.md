@@ -132,8 +132,6 @@ npx create-react-app advanced-reactjs-dio
 
 ```
 
-
-
 ### 🟩 Vídeo 02 - O que são Hooks e como ele pode otimizar o código
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/a8522b88-3b01-4044-9138-ed0b49193b1e?autoplay=1
