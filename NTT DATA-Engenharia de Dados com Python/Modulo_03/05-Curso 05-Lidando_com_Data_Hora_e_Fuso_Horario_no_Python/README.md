@@ -1025,3 +1025,4 @@ Disponibilizados os seguinte arquivos em formato MS Powerpoint:
 ## Certificado: Aprendendo a Utilizar Dicionários em Python
 
 Link do certificado: https://hermes.dio.me/certificates/AQA3RRPA.pdf
+Certificado em pdf: [Certificado-Lidando.com.Data,.Hora.e.Fuso.Horario.no.Python.pdf](000-Midia_e_Anexos/Certificado-Lidando.com.Data,.Hora.e.Fuso.Horario.no.Python.pdf)
