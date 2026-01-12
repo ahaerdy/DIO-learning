@@ -6,6 +6,13 @@
 
 ## 🟩 Vídeo 01 - Trabalhando com objetos date, datetime e time
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.04-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/lidando-com-data-hora-e-fuso-horario-no-python/learning/9889d0cb-cc0a-4808-8352-c10863dc02b7?autoplay=1
+
 ### Objetivo Geral
 
 - Aprender a trabalhar com datas, horas e fusos horários em Python, dominando o módulo 'datetime' para manipulações precisas.
@@ -23,6 +30,13 @@
 </p>
 
 ## 🟩 Vídeo 02 - Manipulando datas com timedelta
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: 
 
 ### Introdução
 
@@ -65,6 +79,13 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
 
 ## 🟩 Vídeo 03 - Formatando e convertendo datas com strftime e strptime
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: 
+
 #### Introdução
 
 - Python também permite converter e formatar datas e horas. Para isso, usamos os métodos 'strftime' (string format time) e 'strptime' (string parse time).
@@ -76,6 +97,13 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
 </p>
 
 ## 🟩 Vídeo 04 - Trabalhando com timezone
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: 
 
 #### Introdução
 
@@ -100,6 +128,13 @@ O carro chegou: 2025-07-26 14:45:05.077475 e ficará pronto às 2025-07-26 15:15
 # Parte 2 - Hands-On - Lidando com Data, Hora e Fuso Horário no Python 
 
 ## 🟩 Vídeo 05 - Explicação do desafio
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: 
 
 ### Introdução
 
@@ -517,6 +552,13 @@ main()
 
 
 ## 🟩 Vídeo 06 - Resolução do desafio
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: 
 
 - Etapa anterior do desafio
 - 🔴 **Observação**: este algoritmo, no ponto em que se encontra, **NÃO** foi tratado nesse Bootcamp (está sendo apresentado neste módulo para FINS DIDÁTICOS - template do código apresentado no vídeo anterior).
