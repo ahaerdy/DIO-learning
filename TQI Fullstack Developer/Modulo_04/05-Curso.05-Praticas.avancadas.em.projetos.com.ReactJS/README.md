@@ -148,11 +148,15 @@ O vídeo apresenta um guia técnico sobre a implementação da **Context API** d
 
 ### 🟩 Vídeo 05 - Por que trabalhar com Fragments
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/0f5903a8-0af9-4fc6-b665-f94c5d99520c?autoplay=1
+
+O vídeo é uma aula de **React avançado** foca no uso estratégico de **Fragments** para otimizar a estrutura do código e do **DOM**. O instrutor explica que o React exige que componentes retornem um **único elemento pai**, o que frequentemente leva à criação de **divs desnecessárias** que poluem o HTML final. Para resolver isso, os **Fragments** permitem agrupar múltiplos filhos sem adicionar nós extras, mantendo a árvore de renderização mais limpa e eficiente. O conteúdo demonstra diferentes formas de sintaxe, incluindo o **syntax sugar** e a necessidade de usar a nomenclatura completa ao lidar com **propriedades de chave (keys)** em listas. Por fim, o autor reforça que essa técnica é essencial para evitar problemas de estilização e para garantir um **desempenho melhor** em aplicações complexas.
 
 ### 🟩 Vídeo 06 - Error Boundaries
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/8007118e-7c1b-49c9-8e9a-b504d547697c?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Render Props
 
