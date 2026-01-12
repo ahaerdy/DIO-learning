@@ -150,17 +150,19 @@ O vídeo apresenta um guia técnico sobre a implementação da **Context API** d
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/0f5903a8-0af9-4fc6-b665-f94c5d99520c?autoplay=1
 
-O vídeo é uma aula de **React avançado** foca no uso estratégico de **Fragments** para otimizar a estrutura do código e do **DOM**. O instrutor explica que o React exige que componentes retornem um **único elemento pai**, o que frequentemente leva à criação de **divs desnecessárias** que poluem o HTML final. Para resolver isso, os **Fragments** permitem agrupar múltiplos filhos sem adicionar nós extras, mantendo a árvore de renderização mais limpa e eficiente. O conteúdo demonstra diferentes formas de sintaxe, incluindo o **syntax sugar** e a necessidade de usar a nomenclatura completa ao lidar com **propriedades de chave (keys)** em listas. Por fim, o autor reforça que essa técnica é essencial para evitar problemas de estilização e para garantir um **desempenho melhor** em aplicações complexas.
+O vídeo é uma aula de **React avançado** que foca no uso estratégico de **Fragments** para otimizar a estrutura do código e do **DOM**. O instrutor explica que o React exige que componentes retornem um **único elemento pai**, o que frequentemente leva à criação de **divs desnecessárias** que poluem o HTML final. Para resolver isso, os **Fragments** permitem agrupar múltiplos filhos sem adicionar nós extras, mantendo a árvore de renderização mais limpa e eficiente. O conteúdo demonstra diferentes formas de sintaxe, incluindo o **syntax sugar** e a necessidade de usar a nomenclatura completa ao lidar com **propriedades de chave (keys)** em listas. Por fim, o autor reforça que essa técnica é essencial para evitar problemas de estilização e para garantir um **desempenho melhor** em aplicações complexas.
 
 ### 🟩 Vídeo 06 - Error Boundaries
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/8007118e-7c1b-49c9-8e9a-b504d547697c?autoplay=1
 
-
+O vídeo aborda o funcionamento dos **Error Boundaries**, uma funcionalidade introduzida no **React 16** para evitar que falhas isoladas de JavaScript interrompam todo o funcionamento da interface. Essa ferramenta atua como um **componente wrapper**, capturando exceções em partes específicas da árvore de elementos e permitindo a exibição de uma **mensagem amigável** ou imagem de fallback ao usuário. O autor destaca que, ao contrário do tradicional bloco **try/catch**, essa API é projetada para a natureza declarativa do React, sendo capaz de registrar logs detalhados de erros para serviços externos. Além disso, é explicado que o React prefere **desmontar a árvore de componentes** corrompida para garantir a integridade dos dados e evitar comportamentos imprevisíveis na aplicação. Por fim, o material esclarece que certas situações, como **eventos assíncronos** ou falhas no próprio componente de erro, ainda exigem métodos convencionais de tratamento.
 
 ### 🟩 Vídeo 07 - Render Props
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/praticas-avancadas-em-projetos-com-reactjs/learning/77ea105d-a6a0-470b-947a-7ace45fc6461?autoplay=1
+
+
 
 ### 🟩 Vídeo 08 - Typechecking com PropTypes
 
