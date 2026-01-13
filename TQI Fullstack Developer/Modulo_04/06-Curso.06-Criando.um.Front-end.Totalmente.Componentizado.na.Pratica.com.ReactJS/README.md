@@ -316,6 +316,117 @@ export default Repositories;
 
 link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/2dcd3be2-fff0-4fe7-b38f-9cb8e20b9c19
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h50m43s835.jpg" alt="" width="840">
+</p>
+
+Esta imagem marca o início da terceira parte do curso, intitulada "Parte 3: Transformando nosso lego em interface". O foco desta etapa é a utilização do ReactJs para converter os componentes e a lógica desenvolvidos anteriormente em uma interface de usuário funcional e integrada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h50m46s173.jpg" alt="" width="840">
+</p>
+
+Neste momento, a aula foca na remontagem da interface. O objetivo é começar a unir as peças ("legos") do projeto para construir a experiência visual final da aplicação, descrevendo este processo como a "parte divertida" do desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h51m13s542.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o resultado visual esperado para a aplicação. Ela exibe o perfil de um usuário do GitHub com informações como nome, username, empresa, localização, blog e estatísticas (seguidores, seguindo, gists e repositórios), além de abas para alternar entre a visualização de "Repos" (repositórios) e "Starred" (favoritos).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h51m41s787.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a estrutura de pastas do projeto `GITHUB-API` no Visual Studio Code e o terminal onde a aplicação está sendo iniciada.
+
+```bash
+$ yarn start
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h52m00s044.jpg" alt="" width="840">
+</p>
+
+Aqui vemos o estado inicial da aplicação no navegador (`localhost`). A interface apresenta um campo de busca no topo e a mensagem "Nenhum usuário pesquisado" no corpo da página, indicando que a aplicação está pronta para realizar consultas à API do GitHub.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h52m07s838.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a aplicação em funcionamento após uma pesquisa. Os dados do usuário "benits" foram carregados, incluindo seu avatar, informações de perfil e a lista de repositórios exibida em cards abaixo das abas de navegação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h52m12s037.jpg" alt="" width="840">
+</p>
+
+Esta imagem exibe o perfil real do usuário no GitHub para fins de comparação com os dados que serão consumidos pela aplicação. Estão em destaque informações como a bio, localização e links que serão mapeados para o estado da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h53m24s154.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o comando utilizado para criar o projeto React inicial através do terminal.
+
+```bash
+$ npx create-react-app github-app
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h54m13s655.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o arquivo `package.json` com as dependências necessárias para o projeto, incluindo `axios` para as requisições HTTP, `styled-components` para estilização e `react-tabs` para a interface de abas.
+
+```json
+{
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "react-tabs": "^3.2.1",
+    "styled-components": "^5.2.1",
+    "web-vitals": "^1.0.1"
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h54m50s452.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a implementação do componente `Providers` no arquivo `providers.js`. Este componente é responsável por centralizar os contextos da aplicação, como o `GithubProvider`, e aplicar estilos globais como o `ResetCSS`.
+
+```javascript
+import React from "react";
+import App from "./App";
+import { ResetCSS } from "./global/resetCSS";
+import GithubProvider from "./providers/github-provider";
+
+const Providers = () => {
+  return (
+    <main>
+      <GithubProvider>
+        <ResetCSS />
+        <App />
+      </GithubProvider>
+    </main>
+  );
+};
+
+export default Providers;
+
+```
+
+O código foca na propriedade `user` dentro do estado do `GithubProvider`, que centraliza dados como `id`, `avatar`, `login`, `name`, `html_url` e `blog`, obtidos diretamente da API do GitHub para serem consumidos pelo componente de perfil.
+
 ### 🟩 Vídeo 06 - Criando componentes e explorando o React Hooks
 
 <video width="60%" controls>
@@ -323,7 +434,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-component
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/14bddee1-5c6e-4f61-b8b6-43962d5d165f
 
 ### 🟩 Vídeo 07 - Refinando ainda mais nossos componentes
 
