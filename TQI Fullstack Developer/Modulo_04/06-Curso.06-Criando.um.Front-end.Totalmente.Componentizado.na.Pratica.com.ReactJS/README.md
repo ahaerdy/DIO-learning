@@ -1063,19 +1063,21 @@ O vídeo explica a diferença fundamental entre o desenvolvimento frontend utili
 
 link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/5ce4ed40-b1ec-4e47-b37c-ad2246d4867f
 
+O vídeo apresenta o relato inspirador de Mateus, um desenvolvedor que transformou radicalmente sua trajetória profissional em apenas três anos através do estudo de React e desenvolvimento front-end. Ele compartilha sua jornada de superação da insatisfação profissional para o sucesso financeiro e pessoal, enfatizando que o crescimento na tecnologia depende de uma tríade de disciplina (foco, consistência e persistência) e de uma participação ativa na comunidade de desenvolvedores.
 
+### 🟩 Entendendo o Desafio
 
-### 🟩 Vídeo 11 - Entendendo o Desafio
+#### Descrição do Desafio
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/tqi_fullstack-modulo.04-curso.06-video_11.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+Agora é a sua hora! Crie uma solução que explore os conceitos apresentados em um projeto prático. Para isso, você pode reproduzir a solução criada neste Desafio de Projeto ou, caso se sinta preparado, desenvolver algo novo ;-)
 
-link do vídeo:
+**Dica:** você pode dar um "fork" no repositório disponibilizado pelo expert para organizar melhor as suas alterações e evoluções, mantendo uma referência direta ao código original.
 
+#### Links Úteis
 
-##  Materiais de Apoio
+- Repositório **github-api-interface** (implementação de referência)
+- Playlist **Interface Componentizada**
+
 
 # Certificado: 
 
