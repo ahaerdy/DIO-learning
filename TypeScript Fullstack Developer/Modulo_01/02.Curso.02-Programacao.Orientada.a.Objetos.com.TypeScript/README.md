@@ -749,7 +749,7 @@ deposit = (): void => {
 
 ```
 
-# Certificado: 
+# Certificado: Programação Orientada a Objetos com TypeScript
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/ZLOUZY3S.pdf
+- Certificado em pdf: [Certificado-Programacao.Orientada.a.Objetos.com.TypeScript.pdf](000-Midia_e_Anexos/Certificado-Programacao.Orientada.a.Objetos.com.TypeScript.pdf)
