@@ -695,12 +695,6 @@ export default api;
 
 Para validar a estrutura dos dados retornados, pode-se realizar uma consulta direta à API do GitHub via navegador ou ferramentas de teste. Ao acessar o endpoint de um usuário específico, a API retorna um JSON detalhado com todos os campos necessários para popular o estado global da aplicação.
 
-*Conteúdo não identificado com segurança a partir do material disponível.*
-
----
-
-Deseja que eu detalhe mais algum componente específico do código ou explique como a estilização com Styled Components foi integrada a essa estrutura?      
-
 
 ### 🟩 Vídeo 06 - Criando componentes e explorando o React Hooks
 
@@ -711,6 +705,172 @@ Deseja que eu detalhe mais algum componente específico do código ou explique c
 
 link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/14bddee1-5c6e-4f61-b8b6-43962d5d165f
 
+O vídeo apresenta um tutorial técnico sobre o desenvolvimento de uma aplicação React que consome a API do GitHub. O foco central é a organização do código através do uso de Providers (Context API) e Hooks, enfatizando a separação de responsabilidades e a criação de componentes reutilizáveis e desacoplados. O palestrante demonstra como centralizar a lógica de busca de dados e como refatorar a interface para facilitar a manutenção e a escalabilidade do projeto.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h29m57s404.jpg" alt="" width="840">
+</p>
+
+O instrutor apresenta a estrutura do `GithubProvider`, que atua como a central de dados da aplicação. Este componente é responsável por guardar e buscar as informações, garantindo que o projeto tenha uma única "fonte da verdade". A função `getUser` é destacada como o gatilho que, ao ser acionado pelo botão de busca, recebe um *username* e atualiza o estado do provider com os dados retornados pela API.
+
+```javascript
+const getUser = (username) => {
+  setGithubState((prevState) => ({
+    ...prevState,
+    loading: !prevState.loading,
+  }));
+
+  api.get(`users/${username}`).then(({ data }) => {
+    setGithubState((prevState) => ({
+      ...prevState,
+      hasUser: true,
+      user: {
+        id: data.id,
+        avatar: data.avatar_url,
+        login: data.login,
+        name: data.name,
+        html_url: data.html_url,
+        blog: data.blog,
+      },
+    }));
+  });
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h31m28s900.jpg" alt="" width="840">
+</p>
+
+Para realizar as requisições HTTP, é utilizada a biblioteca Axios. Através do método `axios.create`, define-se uma `baseURL` apontando para a API do GitHub. Esta configuração simplifica as chamadas subsequentes dentro do provider, permitindo que as funções de busca utilizem apenas os caminhos relativos (como `/repos` ou `/starred`) em vez da URL completa.
+
+```javascript
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: "https://api.github.com/",
+});
+
+export default api;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h31m36s392.jpg" alt="" width="840">
+</p>
+
+A organização do `GithubProvider` segue o princípio de responsabilidade única. Além do `getUser`, são implementadas funções específicas como `getUserRepos` e `getUserStarred`. Cada uma foca exclusivamente em retornar sua respectiva lista de dados (repositórios ou favoritos), mantendo o código organizado e fácil de manter.
+
+```javascript
+const getUserRepos = (username) => {
+  api.get(`users/${username}/repos`).then(({ data }) => {
+    setGithubState((prevState) => ({
+      ...prevState,
+      repositories: data,
+    }));
+  });
+};
+
+const getUserStarred = (username) => {
+  api.get(`users/${username}/starred`).then(({ data }) => {
+    setGithubState((prevState) => ({
+      ...prevState,
+      starred: data,
+    }));
+  });
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h32m10s183.jpg" alt="" width="840">
+</p>
+
+Para disponibilizar os dados e funções aos componentes filhos, é criada a variável `contextValue`. Ela encapsula o estado e as funções de busca em um único objeto que é passado para o `GithubContext.Provider`. Isso permite que qualquer componente dentro da árvore de renderização acesse as informações de forma reativa.
+
+```javascript
+const contextValue = {
+  githubState,
+  getUser: useCallback((username) => getUser(username), []),
+  getUserRepos: useCallback((username) => getUserRepos(username), []),
+  getUserStarred: useCallback((username) => getUserStarred(username), []),
+};
+
+return (
+  <GithubContext.Provider value={contextValue}>
+    {children}
+  </GithubContext.Provider>
+);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h33m06s934.jpg" alt="" width="840">
+</p>
+
+O instrutor demonstra a técnica de refatoração para melhorar a modularidade. O componente `Profile`, que continha a lógica de exibição do contador de status, é simplificado. O trecho de código referente ao `StatusCount` é extraído para um novo componente independente, facilitando a reutilização e o isolamento de responsabilidades.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h33m22s172.jpg" alt="" width="840">
+</p>
+
+Após a extração, o novo componente `StatusCount` é configurado. Ele utiliza o hook `useGithub` para acessar os dados necessários diretamente do provider. A lógica foca unicamente em exibir os seguidores, seguindo e a quantidade de repositórios, utilizando componentes estilizados para manter a identidade visual através do `styled-components`.
+
+```javascript
+import React from "react";
+import useGithub from "../../hooks/github-hooks";
+import * as S from "./styled";
+
+const StatusCount = () => {
+  const { githubState } = useGithub();
+
+  return (
+    <S.WrapperStatusCount>
+      <div>
+        <h4>Followers</h4>
+        <span>{githubState.user.followers}</span>
+      </div>
+      <div>
+        <h4>Followings</h4>
+        <span>{githubState.user.following}</span>
+      </div>
+      <div>
+        <h4>Gists</h4>
+        <span>{githubState.user.public_gists}</span>
+      </div>
+      <div>
+        <h4>Repos</h4>
+        <span>{githubState.user.public_repos}</span>
+      </div>
+    </S.WrapperStatusCount>
+  );
+};
+
+export default StatusCount;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h33m37s591.jpg" alt="" width="840">
+</p>
+
+O processo de desacoplamento é concluído ao importar e inserir o componente `StatusCount` de volta no `Profile`. O instrutor destaca que, embora visualmente o resultado seja o mesmo para o usuário final, a estrutura interna agora é muito mais limpa e permite que o `StatusCount` seja movido ou replicado em qualquer outra parte da interface com facilidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h33m52s549.jpg" alt="" width="840">
+</p>
+
+A eficácia da refatoração é comprovada ao realizar uma nova busca na aplicação (utilizando o perfil de Felipe Deschamps). Os dados são carregados corretamente e o componente `StatusCount`, agora independente, renderiza as informações de seguidores e repositórios sem conflitos, demonstrando o poder do desenvolvimento orientado a componentes reutilizáveis.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h35m38s096.jpg" alt="" width="840">
+</p>
+
+Por fim, é exemplificada a facilidade de reutilização. O instrutor mostra que o `StatusCount` poderia ser inserido dentro do componente de repositórios ou em qualquer outra lista. Como o componente é autossuficiente e busca seus próprios dados do contexto, ele funciona instantaneamente onde quer que seja colocado, reforçando o conceito de código desacoplado.   
+
+
 ### 🟩 Vídeo 07 - Refinando ainda mais nossos componentes
 
 <video width="60%" controls>
@@ -718,7 +878,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-component
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/d5a81f2c-6140-4c59-9995-0d05a6805e61
 
 ### 🟩 Vídeo 08 - Dúvidas Parte 1
 
