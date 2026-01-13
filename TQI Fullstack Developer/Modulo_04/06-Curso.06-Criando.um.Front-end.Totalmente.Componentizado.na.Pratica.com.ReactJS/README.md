@@ -880,6 +880,78 @@ Por fim, é exemplificada a facilidade de reutilização. O instrutor mostra que
 
 link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/d5a81f2c-6140-4c59-9995-0d05a6805e61
 
+O conteúdo aborda a importância da componentização e da refatoração no desenvolvimento de software, destacando o Princípio da Responsabilidade Única. O orador enfatiza que a criação de códigos limpos, legíveis e reutilizáveis é um processo contínuo que exige paciência, atenção aos detalhes e a capacidade de aprender com os erros, sugerindo que a maturidade técnica para decidir quando e como dividir componentes é uma habilidade desenvolvida com a prática e o tempo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h51m34s284.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é apresentada a interface final da aplicação que consome a API do GitHub. O componente visual exibe as informações de um perfil de usuário, como o avatar, nome (Filipe Deschamps), localização e estatísticas de seguidores, seguindo e repositórios. O instrutor destaca que, embora o componente de perfil pareça uma unidade, ele foi refatorado para que elementos como o contador de status (`statusCount`) fossem extraídos em componentes menores, garantindo que cada parte do código tenha uma única responsabilidade e seja mais fácil de manter.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h51m38s103.jpg" alt="" width="840">
+</p>
+
+O código visualizado foca na implementação do componente `Header`, responsável pela funcionalidade de busca da aplicação. Ele utiliza um hook customizado chamado `useGithub` para obter a função `getUser` e gerencia o estado local do nome de usuário digitado através do `useState`. A lógica de submissão verifica se existe um valor no campo de busca antes de disparar a requisição, garantindo que a aplicação não tente buscar usuários com campos vazios.
+
+```javascript
+import useGithub from "../../hooks/github-hooks";
+// ... (outros imports)
+
+const Header = () => {
+  const { getUser } = useGithub();
+  const [usernameForSearch, setUsernameForSearch] = useState();
+
+  const submitGetUser = () => {
+    if (!usernameForSearch) return;
+    return getUser(usernameForSearch);
+  };
+
+  return (
+    <header>
+      <S.Wrapper>
+        <input 
+          type="text" 
+          placeholder="Digite o username para pesquisa..." 
+          onChange={(event) => setUsernameForSearch(event.target.value)} 
+        />
+        {/* ... botão de busca */}
+      </S.Wrapper>
+    </header>
+  );
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h51m40s548.jpg" alt="" width="840">
+</p>
+
+Abaixo, vemos o fechamento da estrutura JSX do componente `Header`. O botão de busca está vinculado à função `submitGetUser` através do evento `onClick`. O instrutor reforça que esta parte da interface tem a responsabilidade única de capturar a entrada do usuário e acionar a busca, mantendo-se isolada da lógica de exibição dos resultados, que fica a cargo do `layout` e dos componentes de `profile`.
+
+```javascript
+        <button type="submit" onClick={submitGetUser}>
+          <span>Buscar</span>
+        </button>
+      </S.Wrapper>
+    </header>
+  );
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-14h51m59s018.jpg" alt="" width="840">
+</p>
+
+Ao final da explicação, são disponibilizados os recursos externos para aprofundamento no projeto. Isso inclui o link para o repositório contendo o código-fonte da interface da API do GitHub e o acesso à playlist detalhada, onde o processo de componentização e limpeza de código é demonstrado passo a passo ao longo de aproximadamente três horas de conteúdo técnico.
+
+* **Repositório:** [http://bit.ly/github-api-interface](http://bit.ly/github-api-interface)
+* **Playlist:** [http://bit.ly/playlist-interface-componentizada](http://bit.ly/playlist-interface-componentizada)
+
+
 ### 🟩 Vídeo 08 - Dúvidas Parte 1
 
 <video width="60%" controls>
@@ -887,7 +959,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-component
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/79f2e096-98ed-4191-8a2e-cb2d3e72c013
 
 ### 🟩 Vídeo 09 - Dúvidas Parte 2
 
