@@ -505,6 +505,141 @@ A empresa depositou
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/5a96d942-98c2-45cd-b3d4-c289ee9ee214?autoplay=1
 
+Esta aula aborda o conceito de permissionamento em Programação Orientada a Objetos (POO), focando especificamente no uso de modificadores de acesso public e private. Através de uma analogia com o funcionamento de um carro, o conteúdo demonstra como proteger atributos internos de uma classe e a importância de utilizar métodos específicos (Getters e Setters) para manipular dados de forma segura e controlada, garantindo a integridade do software e evitando alterações acidentais.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-21h59m57s227.jpg" alt="" width="840">
+</p>
+
+Ao definir um atributo como privado (`private`), o TypeScript impede o acesso direto a essa propriedade fora da classe onde ela foi declarada. No exemplo abaixo, ao tentar ler ou alterar o atributo `name` da instância `peopleAccount` diretamente no arquivo `app.ts`, o VS Code sinaliza um erro de compilação, informando que a propriedade é acessível apenas dentro da classe `DioAccount`. 
+
+```typescript
+// Exemplo de tentativa de acesso direto que gera erro
+console.log(peopleAccount.name)
+peopleAccount.name = 'Nathally Souza'
+console.log(peopleAccount.name)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-22h00m19s140.jpg" alt="" width="840">
+</p>
+
+O erro de acesso a propriedades privadas também é reportado no terminal durante a execução via `ts-node-dev`. O erro `TS2341` confirma que a propriedade `name` não pode ser manipulada externamente, garantindo o encapsulamento dos dados internos do objeto. 
+
+```bash
+[ERROR] 13:43:15 Unable to compile TypeScript:
+app.ts(5,27): error TS2341: Property 'name' is private and only accessible within class 'DioAccount'
+app.ts(7,15): error TS2341: Property 'name' is private and only accessible within class 'DioAccount'
+app.ts(8,27): error TS2341: Property 'name' is private and only accessible within class 'DioAccount'.
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-22h07m51s430.jpg" alt="" width="840">
+</p>
+
+Para permitir a interação com atributos privados de forma segura, utilizamos métodos conhecidos como **Getters** (para obter o valor) e **Setters** (para configurar ou alterar o valor). Esses métodos são públicos e atuam como intermediários, permitindo que a classe controle como seus dados internos são acessados ou modificados. 
+
+```typescript
+// Implementação de Setter e Getter na classe DioAccount
+setName = (name: string): void => {
+  this.name = name
+  console.log('Nome alterado com sucesso!')
+}
+
+getName = (): string => {
+  return this.name
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-22h12m42s195.jpg" alt="" width="840">
+</p>
+
+O permissionamento também se aplica aos métodos. Um método definido como `private` só pode ser invocado internamente pela própria classe. No caso abaixo, o método `validateStatus` é criado para verificar se a conta está ativa antes de realizar operações, mas essa lógica de validação não deve ser acessível por quem utiliza a classe externamente. 
+
+```typescript
+private validateStatus = (): boolean => {
+  if (this.status) {
+    return this.status
+  }
+
+  throw new Error()
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-22h13m03s986.jpg" alt="" width="840">
+</p>
+
+Com o método de validação interno pronto, ele pode ser utilizado por outros métodos públicos da classe, como o `deposit`. O método `deposit` chama `this.validateStatus()`; se o retorno for verdadeiro, a operação prossegue e exibe a mensagem de confirmação. 
+
+```typescript
+deposit = (): void => {
+  if(this.validateStatus()){
+    console.log('Voce depositou')
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-22h13m14s494.jpg" alt="" width="840">
+</p>
+
+Para testar o comportamento do sistema de permissões e validações, o atributo `status` é definido inicialmente como `false`. Como o `status` é privado, ele só pode ser alterado internamente na classe ou através de sua inicialização. 
+
+```typescript
+private status: boolean = false
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-22h13m47s553.jpg" alt="" width="840">
+</p>
+
+Para tornar o erro mais descritivo quando uma validação falha, é possível passar uma mensagem personalizada para o objeto `Error`. Assim, caso o `validateStatus` identifique que a conta não está ativa, ele interromperá a execução com uma mensagem clara sobre o problema. 
+
+```typescript
+throw new Error('Conta inválida')
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-22h13m56s068.jpg" alt="" width="840">
+</p>
+
+Ao executar o código com o status da conta definido como `false`, o terminal exibe o erro lançado pelo método `validateStatus`. A pilha de erros mostra que a falha ocorreu durante a tentativa de realizar um depósito, resultando na interrupção do programa com a mensagem "Conta inválida". 
+
+```bash
+Error: Conta inválida
+    at PeopleAccount.DioAccount.validateStatus (.../class/DioAccount.ts:40:11)
+    at PeopleAccount.DioAccount.deposit (.../class/DioAccount.ts:22:13)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-22h14m05s208.jpg" alt="" width="840">
+</p>
+
+Quando o `status` da conta é alterado para `true`, a validação interna do método `deposit` passa a permitir a operação. O resultado final no terminal mostra que o objeto foi processado corretamente e a mensagem de sucesso do depósito foi exibida, demonstrando o fluxo completo de permissionamento e lógica interna. 
+
+```bash
+PeopleAccount {
+  balance: 0,
+  status: true,
+  ...
+  name: 'Nath',
+  accountNumber: 10
+}
+Voce depositou
+
+```      
 
 ## 🟩 Vídeo 07 - Readonly
 
@@ -513,7 +648,7 @@ Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/6629ae1a-cacd-49d4-9f34-8ba6fbae024d?autoplay=1
 
 
 # Certificado: 
