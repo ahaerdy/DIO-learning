@@ -316,32 +316,39 @@ export default Repositories;
 
 link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/2dcd3be2-fff0-4fe7-b38f-9cb8e20b9c19
 
+### Anotações
+
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h50m43s835.jpg" alt="" width="840">
 </p>
 
-Esta imagem marca o início da terceira parte do curso, intitulada "Parte 3: Transformando nosso lego em interface". O foco desta etapa é a utilização do ReactJs para converter os componentes e a lógica desenvolvidos anteriormente em uma interface de usuário funcional e integrada.
+O processo de transformar o design em uma interface funcional envolve a remontagem de componentes previamente decompostos. A analogia do "Lego" ilustra a necessidade de planejar cuidadosamente onde quebrar o código e qual a responsabilidade de cada peça, garantindo que, ao reconstruir a "Estrela da Morte" (a aplicação final), o sistema seja eficiente e compreensível.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h50m46s173.jpg" alt="" width="840">
 </p>
 
-Neste momento, a aula foca na remontagem da interface. O objetivo é começar a unir as peças ("legos") do projeto para construir a experiência visual final da aplicação, descrevendo este processo como a "parte divertida" do desenvolvimento.
+Para o usuário final, a interface parece ser um bloco único e contínuo. Entretanto, sob a perspectiva do desenvolvedor, ela é um quebra-cabeça de responsabilidades desacopladas. A estrutura apresentada demonstra como diferentes seções da tela são tratadas como unidades independentes que se integram para formar a experiência completa.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h51m13s542.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta o resultado visual esperado para a aplicação. Ela exibe o perfil de um usuário do GitHub com informações como nome, username, empresa, localização, blog e estatísticas (seguidores, seguindo, gists e repositórios), além de abas para alternar entre a visualização de "Repos" (repositórios) e "Starred" (favoritos).
+A arquitetura da interface é dividida em componentes específicos:
+
+* **Layout:** A estrutura externa que permanece constante (como o campo de busca), alterando-se apenas o conteúdo interno.
+* **Profile:** Responsável por exibir os dados do perfil do usuário.
+* **Repos:** Um container que agrupa as listas de repositórios.
+* **Repositories e Starred:** Subcomponentes dentro de Repos, focados respectivamente em listar os projetos do usuário e os itens favoritados por ele.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h51m41s787.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a estrutura de pastas do projeto `GITHUB-API` no Visual Studio Code e o terminal onde a aplicação está sendo iniciada.
+Para iniciar o desenvolvimento do projeto, utiliza-se o comando `create-react-app`. Este utilitário automatiza a criação do ambiente de trabalho, gerando um boilerplate com as pastas e configurações de bundle necessárias para que o desenvolvedor possa focar exclusivamente na lógica de negócio.
 
 ```bash
-$ yarn start
+npx create-react-app github-api
 
 ```
 
@@ -349,60 +356,23 @@ $ yarn start
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h52m00s044.jpg" alt="" width="840">
 </p>
 
-Aqui vemos o estado inicial da aplicação no navegador (`localhost`). A interface apresenta um campo de busca no topo e a mensagem "Nenhum usuário pesquisado" no corpo da página, indicando que a aplicação está pronta para realizar consultas à API do GitHub.
+A aplicação em execução demonstra a integração dos componentes. Ao realizar uma busca por um username, a interface renderiza dinamicamente as informações capturadas, incluindo nome, links para blog e perfil, além de alternar entre as abas de repositórios próprios e favoritados (Starred).
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h52m07s838.jpg" alt="" width="840">
 </p>
 
-A imagem demonstra a aplicação em funcionamento após uma pesquisa. Os dados do usuário "benits" foram carregados, incluindo seu avatar, informações de perfil e a lista de repositórios exibida em cards abaixo das abas de navegação.
+O gerenciamento de dependências do projeto é mantido de forma enxuta. As bibliotecas principais utilizadas para estender as funcionalidades do React são:
+
+* **Axios:** Para requisições HTTP à API do GitHub.
+* **React Tabs:** Para a navegação entre as listas de repositórios.
+* **Styled Components:** Para a estilização e criação de estilos globais.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h52m12s037.jpg" alt="" width="840">
 </p>
 
-Esta imagem exibe o perfil real do usuário no GitHub para fins de comparação com os dados que serão consumidos pela aplicação. Estão em destaque informações como a bio, localização e links que serão mapeados para o estado da aplicação.
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h53m24s154.jpg" alt="" width="840">
-</p>
-
-A imagem mostra o comando utilizado para criar o projeto React inicial através do terminal.
-
-```bash
-$ npx create-react-app github-app
-
-```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h54m13s655.jpg" alt="" width="840">
-</p>
-
-A imagem exibe o arquivo `package.json` com as dependências necessárias para o projeto, incluindo `axios` para as requisições HTTP, `styled-components` para estilização e `react-tabs` para a interface de abas.
-
-```json
-{
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3",
-    "react-tabs": "^3.2.1",
-    "styled-components": "^5.2.1",
-    "web-vitals": "^1.0.1"
-  }
-}
-
-```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h54m50s452.jpg" alt="" width="840">
-</p>
-
-A imagem mostra a implementação do componente `Providers` no arquivo `providers.js`. Este componente é responsável por centralizar os contextos da aplicação, como o `GithubProvider`, e aplicar estilos globais como o `ResetCSS`.
+A distribuição de dados pela aplicação é feita através da Context API do React. No arquivo principal, o `GitHubProvider` envolve os componentes, permitindo que as informações do usuário pesquisado sejam acessíveis em diferentes níveis da hierarquia sem a necessidade de passar propriedades manualmente por todos os níveis.
 
 ```javascript
 import React from "react";
@@ -410,7 +380,7 @@ import App from "./App";
 import { ResetCSS } from "./global/resetCSS";
 import GithubProvider from "./providers/github-provider";
 
-const Providers = () => {
+const Root = () => {
   return (
     <main>
       <GithubProvider>
@@ -421,11 +391,316 @@ const Providers = () => {
   );
 };
 
-export default Providers;
+export default Root;
 
 ```
 
-O código foca na propriedade `user` dentro do estado do `GithubProvider`, que centraliza dados como `id`, `avatar`, `login`, `name`, `html_url` e `blog`, obtidos diretamente da API do GitHub para serem consumidos pelo componente de perfil.
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h53m24s154.jpg" alt="" width="840">
+</p>
+
+O componente principal `App.js` demonstra os benefícios da componentização. Em vez de concentrar centenas ou milhares de linhas de código em um único arquivo, o `App` apenas orquestra os componentes maiores como `Layout`, `Profile` e `Repositories`, mantendo o código limpo e de fácil manutenção.
+
+```javascript
+import React from "react";
+import Layout from "./components/layout";
+import NoSearch from "./components/no-search";
+import Profile from "./components/profile";
+import Repositories from "./components/repositories";
+import useGithub from "./hooks/github-hooks";
+
+const App = () => {
+  const { githubState } = useGithub();
+  return (
+    <Layout>
+      {githubState.hasUser ? (
+        <>
+          {githubState.loading ? (
+            <p>Loading</p>
+          ) : (
+            <>
+              <Profile />
+              <Repositories />
+            </>
+          )}
+        </>
+      ) : (
+        <NoSearch />
+      )}
+    </Layout>
+  );
+};
+
+export default App;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h54m13s655.jpg" alt="" width="840">
+</p>
+
+O componente `Profile` utiliza o hook personalizado `useGitHub` para extrair os dados necessários do contexto. Através da desestruturação do `githubState`, o componente acessa as informações do usuário de forma reativa, permitindo que a interface se atualize assim que os dados são carregados no provedor.
+
+```javascript
+import React from "react";
+import useGithub from "../../hooks/github-hooks";
+import * as S from "./styled";
+
+const Profile = () => {
+  const { githubState } = useGithub();
+
+  return (
+    <S.Wrapper>
+      <S.WrapperImage src={githubState.user.avatar} alt="Avatar of user" />
+      <S.WrapperInfoUser>
+        <div>
+          <h1>{githubState.user.name}</h1>
+          <S.WrapperUserGeneric>
+            <h3>Username:</h3>
+            <a
+              href={githubState.user.html_url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {githubState.user.login}
+            </a>
+          </S.WrapperUserGeneric>
+          {/* ... outros campos de informação ... */}
+        </div>
+      </S.WrapperInfoUser>
+    </S.Wrapper>
+  );
+};
+
+export default Profile;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h55m27s870.jpg" alt="" width="840">
+</p>
+
+O `github-provider.js` estabelece a estrutura inicial do estado da aplicação. Utilizando `createContext`, define-se um objeto padrão que inclui carregamento (`loading`), dados do usuário (`user`), e listas para repositórios e itens favoritados, servindo como a "fonte da verdade" para toda a interface.
+
+```javascript
+import React, { createContext, useCallback, useState } from "react";
+import api from "../services/api";
+
+export const GithubContext = createContext({
+  loading: false,
+  user: {},
+  repositories: [],
+  starred: [],
+});
+
+const GithubProvider = ({ children }) => {
+  const [githubState, setGithubState] = useState({
+    hasUser: false,
+    loading: false,
+    user: {
+      id: undefined,
+      avatar: undefined,
+      login: undefined,
+      name: undefined,
+      html_url: undefined,
+      blog: undefined,
+      company: undefined,
+      location: undefined,
+      followers: 0,
+      following: 0,
+      public_gists: 0,
+      public_repos: 0,
+    },
+    repositories: [],
+    starred: [],
+  });
+  // ... lógica adicional ...
+};
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h55m32s901.jpg" alt="" width="840">
+</p>
+
+Dentro do estado do `GithubProvider`, os arrays `repositories` e `starred` são cruciais para a renderização das listas. A propriedade `user` centraliza dados específicos do perfil, como o login (username), o nome completo e URLs externas, organizando as informações que a API do GitHub retornará.
+
+```javascript
+// Continuação da estrutura do GithubProvider mostrando o estado detalhado
+    user: {
+      id: undefined,
+      avatar: undefined,
+      login: undefined,
+      name: undefined,
+      html_url: undefined,
+      blog: undefined,
+      company: undefined,
+      location: undefined,
+      followers: 0,
+      following: 0,
+      public_gists: 0,
+      public_repos: 0,
+    },
+    repositories: [],
+    starred: [],
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h57m05s816.jpg" alt="" width="840">
+</p>
+
+A função `getUser` é responsável por realizar a chamada assíncrona à API do GitHub. Ela altera o estado de `loading` para verdadeiro, busca os dados do usuário através do Axios e, em seguida, atualiza o `githubState` com as informações recebidas, como o avatar, nome e estatísticas de seguidores.
+
+```javascript
+  const getUser = (username) => {
+    setGithubState((prevState) => ({
+      ...prevState,
+      loading: !prevState.loading,
+    }));
+
+    api
+      .get(`users/${username}`)
+      .then(({ data }) => {
+        setGithubState((prevState) => ({
+          ...prevState,
+          hasUser: true,
+          user: {
+            id: data.id,
+            avatar: data.avatar_url,
+            login: data.login,
+            name: data.name,
+            html_url: data.html_url,
+            blog: data.blog,
+            company: data.company,
+            location: data.location,
+            followers: data.followers,
+            following: data.following,
+            public_gists: data.public_gists,
+            public_repos: data.public_repos,
+          },
+        }));
+      })
+      .finally(() => {
+        setGithubState((prevState) => ({
+          ...prevState,
+          loading: !prevState.loading,
+        }));
+      });
+  };
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h57m12s485.jpg" alt="" width="840">
+</p>
+
+Para obter as listas de projetos, a aplicação implementa a função `getUserRepos`. Ela utiliza o endpoint `/repos` da API do GitHub, filtrando o retorno para armazenar apenas as informações relevantes no array `repositories` dentro do estado global.
+
+```javascript
+  const getUserRepos = (username) => {
+    api.get(`users/${username}/repos`).then(({ data }) => {
+      console.log("data: " + JSON.stringify(data));
+      setGithubState((prevState) => ({
+        ...prevState,
+        repositories: data,
+      }));
+    });
+  };
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h57m24s461.jpg" alt="" width="840">
+</p>
+
+De maneira similar aos repositórios, a função `getUserStarred` consulta o endpoint `/starred`. Os dados retornados são salvos no estado `starred`, garantindo que a interface possa exibir separadamente os repositórios que o usuário marcou com estrela no GitHub.
+
+```javascript
+  const getUserStarred = (username) => {
+    api.get(`users/${username}/starred`).then(({ data }) => {
+      console.log("data: " + JSON.stringify(data));
+      setGithubState((prevState) => ({
+        ...prevState,
+        starred: data,
+      }));
+    });
+  };
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h57m34s805.jpg" alt="" width="840">
+</p>
+
+O `GithubProvider` expõe um objeto de contexto (`contextValue`) contendo tanto o estado atual quanto as funções de busca (`getUser`, `getUserRepos`, `getUserStarred`). Isso permite que qualquer componente filho dispare novas pesquisas ou consuma os dados existentes.
+
+```javascript
+  const contextValue = {
+    githubState,
+    getUser: useCallback((username) => getUser(username), []),
+    getUserRepos: useCallback((username) => getUserRepos(username), []),
+    getUserStarred: useCallback((username) => getUserStarred(username), []),
+  };
+
+  return (
+    <GithubContext.Provider value={contextValue}>
+      {children}
+    </GithubContext.Provider>
+  );
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h58m00s376.jpg" alt="" width="840">
+</p>
+
+O hook customizado `github-hooks.js` simplifica o acesso ao contexto. Em vez de importar o `GithubContext` e o `useContext` em cada componente, o desenvolvedor utiliza apenas o `useGithub`, tornando o código mais conciso e legível.
+
+```javascript
+import { useContext } from "react";
+import { GithubContext } from "../providers/github-provider";
+
+const useGithub = () => {
+  const { githubState, getUser, getUserRepos, getUserStarred } =
+    useContext(GithubContext);
+
+  return { githubState, getUser, getUserRepos, getUserStarred };
+};
+
+export default useGithub;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h58m07s549.jpg" alt="" width="840">
+</p>
+
+A configuração do Axios é centralizada em um serviço de API. Definir a `baseURL` como a URL oficial da API do GitHub facilita as chamadas subsequentes, permitindo o uso de caminhos relativos como `users/{username}` em outras partes da aplicação.
+
+```javascript
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: "https://api.github.com/",
+});
+
+export default api;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-13h59m22s409.jpg" alt="" width="840">
+</p>
+
+Para validar a estrutura dos dados retornados, pode-se realizar uma consulta direta à API do GitHub via navegador ou ferramentas de teste. Ao acessar o endpoint de um usuário específico, a API retorna um JSON detalhado com todos os campos necessários para popular o estado global da aplicação.
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+---
+
+Deseja que eu detalhe mais algum componente específico do código ou explique como a estilização com Styled Components foi integrada a essa estrutura?      
+
 
 ### 🟩 Vídeo 06 - Criando componentes e explorando o React Hooks
 
