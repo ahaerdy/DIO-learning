@@ -961,6 +961,89 @@ Ao final da explicação, são disponibilizados os recursos externos para aprofu
 
 link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/79f2e096-98ed-4191-8a2e-cb2d3e72c013
 
+O vídeo apresenta uma explicação técnica sobre como capturar e enviar dados de formulários em aplicações React. O foco principal é resolver a dificuldade de obter valores de componentes como dropdowns e campos de busca para enviá-los via requisições POST. O palestrante detalha o uso da biblioteca React Hook Form como uma solução eficiente para gerenciar estados de inputs, validações e submissões de forma simplificada e performática.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-15h38m14s570.jpg" alt="" width="840">
+</p>
+
+A aula aborda uma dúvida comum no desenvolvimento com React: como capturar valores de componentes de interface, como dropdowns e campos de busca, para enviá-los em uma requisição POST. Existem diversas abordagens para solucionar esse problema, desde a passagem de funções via props para componentes filhos até o uso de bibliotecas especializadas em gerenciamento de formulários. Entre as opções citadas para facilitar esse processo estão o **React Hook Form**, o **Formik** e o **Unform**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-15h38m30s479.jpg" alt="" width="840">
+</p>
+
+Para que um formulário funcione corretamente e consiga capturar as referências dos campos, todos os inputs e botões de ação devem estar contidos dentro da tag `<form>`. No exemplo estrutural abaixo, define-se um formulário básico com campos de diferentes tipos (e-mail, nome, senha e telefone) e um botão de submissão. Para que as bibliotecas de formulário identifiquem os dados, é essencial que cada input possua um atributo `name` ou `id`.
+
+```javascript
+import React from "react";
+
+function form() {
+    return (
+        <form>
+            <input type="text" name="email"/>
+            <input type="text" name="name"/>
+            <input type="text" name="password"/>
+            <input type="number" name="phone"/>
+            <button type="submit">enviar</button>
+        </form>
+    );
+}
+
+export default form;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-15h38m46s919.jpg" alt="" width="840">
+</p>
+
+Utilizando a biblioteca **React Hook Form**, o processo de captura de dados é simplificado através do hook `useForm`. Ele fornece funções essenciais como o `register`, que vincula o input ao estado do formulário, e o `handleSubmit`, que gerencia o evento de envio. Ao registrar os campos, a função de callback do submit (neste caso, `clickOnSubmit`) recebe um objeto `data` contendo todos os valores preenchidos nos inputs referenciados.
+
+```javascript
+function form() {
+    const { register, handleSubmit, watch, errors } = useForm();
+
+    const clickOnSubmit = data => {
+        console.log(data);
+    }
+
+    return (
+        <form onSubmit={handleSubmit(clickOnSubmit)}>
+            <input type="text" name="email" ref={register({ required: true })} />
+            <input type="text" name="name" ref={register} />
+            <input type="text" name="password" ref={register} />
+            <input type="number" name="phone" ref={register} />
+            <button type="submit">enviar</button>
+        </form>
+    );
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-15h39m09s096.jpg" alt="" width="840">
+</p>
+
+Além da captura de dados, é possível implementar validações diretamente no registro do campo. Ao definir um campo como obrigatório (`required: true`), o hook disponibiliza o estado de erro através do objeto `errors`. Isso permite a exibição de mensagens de feedback condicionais para o usuário. Caso o componente seja externo ou personalizado (como um Modal ou Dropdown), a função `register` pode ser passada via props para garantir que esses componentes também tenham suas referências capturadas pelo formulário principal.
+
+```javascript
+<form onSubmit={handleSubmit(clickOnSubmit)}>
+    <input type="text" name="email" ref={register({ required: true })} />
+    {errors.email && <span>Este campo é obrigatório</span>}
+    
+    <input type="text" name="name" ref={register} />
+    <input type="text" name="password" ref={register} />
+    <input type="number" name="phone" ref={register} />
+    
+    <button type="submit">enviar</button>
+</form>
+
+```
+
+
 ### 🟩 Vídeo 09 - Dúvidas Parte 2
 
 <video width="60%" controls>
@@ -968,7 +1051,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-component
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/8184059a-068e-44d6-b5b4-b999e1d92007
 
 ### 🟩 Vídeo 10 - Conselhos para quem está começando com ReactJS
 
