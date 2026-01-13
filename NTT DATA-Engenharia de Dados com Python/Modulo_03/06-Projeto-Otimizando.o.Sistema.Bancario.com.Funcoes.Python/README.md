@@ -465,4 +465,5 @@ main()
 
 ## Certificado: Otimizando o Sistema Bancário com Funções Python
 
-Link do certificado: https://hermes.dio.me/certificates/EXCY5DYB.pdf
+- Link do certificado: https://hermes.dio.me/certificates/EXCY5DYB.pdf
+- Certificado em pdf: [Certificado-Otimizando.o.Sistema.Bancario.com.Funcoes.Python.pdf](000-Midias_e_Anexos/Certificado-Otimizando.o.Sistema.Bancario.com.Funcoes.Python.pdf)
