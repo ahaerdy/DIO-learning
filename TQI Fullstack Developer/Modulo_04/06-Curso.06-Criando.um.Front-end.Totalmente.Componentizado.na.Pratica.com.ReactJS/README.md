@@ -1043,7 +1043,6 @@ Além da captura de dados, é possível implementar validações diretamente no 
 
 ```
 
-
 ### 🟩 Vídeo 09 - Dúvidas Parte 2
 
 <video width="60%" controls>
@@ -1053,6 +1052,8 @@ Além da captura de dados, é possível implementar validações diretamente no 
 
 link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/8184059a-068e-44d6-b5b4-b999e1d92007
 
+O vídeo explica a diferença fundamental entre o desenvolvimento frontend utilizando Single Page Applications (SPA) e o modelo tradicional de múltiplas páginas. Enquanto em aplicações tradicionais (como em PHP) o servidor renderiza e entrega uma nova página para cada requisição, as SPAs (como em React) mantêm o usuário em uma única página, manipulando dinamicamente o DOM para trocar componentes conforme a rota acessada, proporcionando uma experiência mais fluida e veloz.
+
 ### 🟩 Vídeo 10 - Conselhos para quem está começando com ReactJS
 
 <video width="60%" controls>
@@ -1060,7 +1061,9 @@ link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-component
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/5ce4ed40-b1ec-4e47-b37c-ad2246d4867f
+
+
 
 ### 🟩 Vídeo 11 - Entendendo o Desafio
 
