@@ -650,6 +650,104 @@ Voce depositou
 
 Link do vídeo: https://web.dio.me/track/formacao-typescript-fullstack-developer/course/programacao-orientada-a-objetos-com-typescript-22/learning/6629ae1a-cacd-49d4-9f34-8ba6fbae024d?autoplay=1
 
+Este conteúdo aborda conceitos avançados de Programação Orientada a Objetos (POO) utilizando TypeScript, com foco especial no modificador de acesso readonly e no Princípio da Responsabilidade Única (SRP). O instrutor demonstra como garantir a imutabilidade de atributos após a instanciação e a importância de criar métodos modulares e especializados para facilitar a manutenção e a escalabilidade do código.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-23h01m07s507.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos o uso da palavra reservada `readonly` no TypeScript para definir permissões de acesso. Ao aplicar esse modificador ao atributo `accountNumber`, indicamos que este valor deve ser apenas de leitura. A estrutura da classe `DioAccount` demonstra como esse atributo é declarado e inicializado através do construtor, garantindo que ele receba um valor no momento da criação da instância.
+
+```typescript
+export abstract class DioAccount {
+  private name: string
+  readonly accountNumber: number
+  balance: number = 0
+  private status: boolean = true
+
+  constructor(name: string, accountNumber: number){
+    this.name = name
+    this.accountNumber = accountNumber
+  }
+
+  setName = (name: string): void => {
+    this.name = name
+    console.log('Nome alterado com sucesso!')
+  }
+
+  getName = (): string => {
+    return this.name
+  }
+
+  deposit = (): void => {
+    if(this.validateStatus()){
+      console.log('Voce depositou')
+    }
+  }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-23h01m52s069.jpg" alt="" width="840">
+</p>
+
+A principal característica do `readonly` é impedir alterações após a inicialização do objeto. Ao tentar atribuir um novo valor ao `accountNumber` da instância `companyAccount` fora da classe, o compilador do TypeScript sinaliza um erro, protegendo a integridade do dado e garantindo que o número da conta permaneça imutável.
+
+```typescript
+companyAccount.accountNumber = 11
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-23h03m09s485.jpg" alt="" width="840">
+</p>
+
+Os modificadores podem ser combinados para restringir ainda mais o acesso. Ao definir o atributo como `private readonly`, ele deixa de ser acessível para leitura externa direta. O erro apresentado no VS Code mostra que tentar realizar um `console.log` diretamente no `accountNumber` a partir da instância não é mais permitido, pois a propriedade agora é privada à classe `DioAccount`.
+
+```typescript
+private readonly accountNumber: number
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-23h03m25s801.jpg" alt="" width="840">
+</p>
+
+Embora o acesso direto ao atributo privado seja bloqueado pelo compilador para garantir a segurança do código, é possível visualizar o estado interno do objeto ao imprimir a instância completa no terminal. O log exibe a estrutura da `CompanyAccount` com seus respectivos valores, confirmando que o `accountNumber` mantém o valor atribuído durante a construção.
+
+```typescript
+console.log(companyAccount)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-23h04m24s981.jpg" alt="" width="840">
+</p>
+
+O modificador `readonly` também protege o atributo contra modificações internas dentro da própria classe. Mesmo em métodos criados para atualização de dados, o TypeScript impede que o `accountNumber` receba um novo valor, reforçando o conceito de que propriedades de apenas leitura só podem ter seus valores definidos no construtor.
+
+```typescript
+this.accountNumber = 23
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-12-23h05m41s795.jpg" alt="" width="840">
+</p>
+
+Concluímos a organização da classe aplicando o princípio da responsabilidade única. Cada método deve executar apenas uma tarefa específica. No exemplo do método `deposit`, a lógica de depósito é executada apenas se a validação externa do status da conta for bem-sucedida através do método `validateStatus`. Isso isola as regras de negócio e facilita manutenções futuras, pois alterações na validação não impactam diretamente o fluxo de depósito.
+
+```typescript
+deposit = (): void => {
+  if(this.validateStatus()){
+    console.log('Voce depositou')
+  }
+}
+
+```
 
 # Certificado: 
 
