@@ -223,6 +223,90 @@ export default App;
 
 link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/7fb0feb4-c982-4e67-a722-c3496ff7351a
 
+O conteúdo aborda a importância estratégica de dividir interfaces em React em componentes menores e modulares, utilizando a analogia de peças de Lego. O foco central é a criação de códigos reutilizáveis e eficientes, evitando a duplicação e facilitando a manutenção, especialmente em projetos de grande escala e em ambientes de trabalho colaborativo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-10h43m57s026.jpg" alt="" width="840">
+</p>
+
+A abordagem de desenvolvimento no React baseia-se na decomposição da interface em pequenos pedaços, comparáveis a peças de um brinquedo de montar (Lego). O objetivo é transformar a interface em componentes menores, onde cada um possui sua própria responsabilidade bem definida, permitindo que sejam remontados posteriormente para formar a aplicação completa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-10h44m02s543.jpg" alt="" width="840">
+</p>
+
+O ponto central da componentização é a criação de códigos **reutilizáveis**. Ao evitar a duplicação de código, é possível desenvolver uma lógica que atenda a diversos cenários de maneira eficiente, garantindo que o esforço de desenvolvimento seja otimizado e o sistema se torne mais sustentável.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-10h44m31s454.jpg" alt="" width="840">
+</p>
+
+Em uma estrutura sem componentização, um componente principal como o `GitHub App` acumularia toda a lógica de renderização, incluindo o `Profile` e o `Repos`, em um único bloco. Em projetos de grande escala, com milhares de linhas e múltiplos desenvolvedores, essa falta de organização resultaria em arquivos gigantescos e frequentes conflitos de merge no Git, dificultando a manutenção e a escalabilidade do software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-10h44m56s945.jpg" alt="" width="840">
+</p>
+
+Para organizar o código de forma efetiva, a estrutura recomendada isola as responsabilidades. O componente principal `GitHub App` contém um `Layout`, que por sua vez organiza os componentes core: `Profile` e `Repos`. Esta arquitetura garante que, se for necessário reutilizar o perfil em outra parte do sistema, o desenvolvedor tenha a certeza de que aquele componente possui uma única responsabilidade: renderizar os dados do usuário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-10h45m04s728.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, observamos a implementação do componente de layout, que serve como um container estrutural para os demais elementos da aplicação.
+
+```javascript
+import React from 'react';
+
+const Layout = ({ children }) => {
+  return (
+    <header>
+      {children}
+    </header>
+  );
+};
+
+export default Layout;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-10h45m12s912.jpg" alt="" width="840">
+</p>
+
+A organização prossegue com a definição dos componentes específicos para o perfil e para os repositórios, mantendo a lógica de cada um isolada em seu próprio escopo.
+
+```javascript
+import React from "react";
+
+const Profile = () => {
+  return <div>Profile</div>;
+};
+
+export default Profile;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-13-10h45m17s926.jpg" alt="" width="840">
+</p>
+
+Abaixo, a estrutura básica para a listagem de repositórios, completando a separação de interesses dentro da interface do GitHub App.
+
+```javascript
+import React from "react";
+
+const Repositories = () => {
+  return <div>Repositories</div>;
+};
+
+export default Repositories;
+
+```      
+
+
 ### 🟩 Vídeo 05 - Transformando nosso lego em interface
 
 <video width="60%" controls>
@@ -230,7 +314,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-component
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-front-end-totalmente-componentizado-na-pratica-com-reactjs/learning/2dcd3be2-fff0-4fe7-b38f-9cb8e20b9c19
 
 ### 🟩 Vídeo 06 - Criando componentes e explorando o React Hooks
 
