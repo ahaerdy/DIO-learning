@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1768414560997" clover="3.2.0">
+  <project timestamp="1768414560997" name="All files">
+    <metrics statements="34" coveredstatements="33" conditionals="4" coveredconditionals="4" methods="12" coveredmethods="11" elements="50" coveredelements="48" complexity="0" loc="34" ncloc="34" packages="1" files="4" classes="4"/>
+    <file name="CompanyAccount.ts" path="/mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning/TypeScript Fullstack Developer/Modulo_01/03-Projeto-Construindo.Uma.App.Simples.de.Banco.Com.Typescript/projeto/class/CompanyAccount.ts">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+    </file>
+    <file name="DioAccount.ts" path="/mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning/TypeScript Fullstack Developer/Modulo_01/03-Projeto-Construindo.Uma.App.Simples.de.Banco.Com.Typescript/projeto/class/DioAccount.ts">
+      <metrics statements="20" coveredstatements="19" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="6"/>
+      <line num="1" count="3" type="stmt"/>
+      <line num="4" count="10" type="stmt"/>
+      <line num="5" count="10" type="stmt"/>
+      <line num="8" count="10" type="stmt"/>
+      <line num="9" count="10" type="stmt"/>
+      <line num="12" count="10" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
+      <line num="17" count="10" type="stmt"/>
+      <line num="18" count="4" type="stmt"/>
+      <line num="21" count="10" type="stmt"/>
+      <line num="22" count="13" type="cond" truecount="1" falsecount="0"/>
+      <line num="23" count="13" type="stmt"/>
+      <line num="28" count="10" type="stmt"/>
+      <line num="29" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="5" type="stmt"/>
+      <line num="37" count="10" type="stmt"/>
+      <line num="41" count="10" type="stmt"/>
+      <line num="42" count="13" type="cond" truecount="1" falsecount="0"/>
+      <line num="43" count="13" type="stmt"/>
+      <line num="46" count="0" type="stmt"/>
+    </file>
+    <file name="PeopleAccount.ts" path="/mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning/TypeScript Fullstack Developer/Modulo_01/03-Projeto-Construindo.Uma.App.Simples.de.Banco.Com.Typescript/projeto/class/PeopleAccount.ts">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="7" count="5" type="stmt"/>
+      <line num="8" count="5" type="stmt"/>
+    </file>
+    <file name="SpecialAccount.ts" path="/mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning/TypeScript Fullstack Developer/Modulo_01/03-Projeto-Construindo.Uma.App.Simples.de.Banco.Com.Typescript/projeto/class/SpecialAccount.ts">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+    </file>
+  </project>
+</coverage>

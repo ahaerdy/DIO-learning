@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@page { margin: 0; }
+
+body {
+  margin: 0;
+  background: #0c0c0c;
+  color: #e6e6e6;
+  font-family: "JetBrains Mono","Fira Code","DejaVu Sans Mono",monospace;
+  font-size: 14px;
+  line-height: 1.32;
+  font-weight: 600;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.pass-token {
+  background: #00ff00;
+  color: #000;
+  font-weight: 800;
+  padding: 0 4px;
+}
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+pre {
+  font-family:Courier New;
+  font-size:10pt;
+}
+
+.af_line {
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+<title>output.ansi</title>
+</head>
+<body>
+<pre>Após empréstimo de 100 (+10 bônus) → saldo esperado: 110, saldo real: 110
+Após empréstimo de 50 (+10 bônus) → saldo esperado: 170, saldo real: 170
+Após depósito de 100 → saldo esperado: 100, saldo real: 100
+Após saque de 40 → saldo esperado: 60, saldo real: 60
+Tentativa de saque de 200 → saldo esperado: 60 (sem alteração), saldo real: 60
+Após depósito de 100 → saldo esperado: 100, saldo real: 100
+Após empréstimo de 50 (+10 bônus) → saldo esperado: 160, saldo real: 160
+Após saque de 75 → saldo esperado: 85, saldo real: 85
+<span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#00ff00;background-color:#000000;"> PASS </span><span style="color:#000000;background-color:#000000;"></span> __tests__/<span style="font-weight:bold;color:#7f7f7f;">SpecialAccount.test.ts</span><span style="color:#7f7f7f;">
+  SpecialAccount com saída limpa
+    </span><span style="color:#00cd00;">✓</span> Empréstimos com bônus (2 ms)
+    <span style="color:#00cd00;">✓</span> Depósitos e saques (1 ms)
+    <span style="color:#00cd00;">✓</span> Operações combinadas
+
+Conta criada → nome: Nath, doc_id: 1, saldo inicial: 0
+Após depósito de 100 → saldo esperado: 100, saldo real: 100
+Após depósito de 50.75 → saldo esperado: 150.75, saldo real: 150.75
+Saldo inicial após depósito → 100
+Após saque de 40 → saldo esperado: 60, saldo real: 60
+Tentativa de saque de 200 → saldo esperado: 60 (sem alteração), saldo real: 60
+Nome alterado → esperado: Maria, real: Maria
+Nome alterado novamente → esperado: Pedro, real: Pedro
+Após depósito de 200 → saldo esperado: 200, saldo real: 200
+Após saque de 50 → saldo esperado: 150, saldo real: 150
+Após depósito de 25 → saldo esperado: 175, saldo real: 175
+<span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#00ff00;background-color:#000000;"> PASS </span><span style="color:#000000;background-color:#000000;"></span> __tests__/<span style="font-weight:bold;color:#7f7f7f;">PeopleAccount.test.ts</span><span style="color:#7f7f7f;">
+  PeopleAccount com saída limpa
+    </span><span style="color:#00cd00;">✓</span> Criação de conta
+    <span style="color:#00cd00;">✓</span> Depósitos
+    <span style="color:#00cd00;">✓</span> Saques (1 ms)
+    <span style="color:#00cd00;">✓</span> Alteração de nome
+    <span style="color:#00cd00;">✓</span> Operações combinadas (1 ms)
+
+Após depósito de 100 → saldo esperado: 100, saldo real: 100
+Após empréstimo de 50 → saldo esperado: 150, saldo real: 150
+Saldo inicial → 100
+Após saque de 40 → saldo esperado: 60, saldo real: 60
+Tentativa de saque de 200 → saldo esperado: 60 (sem alteração), saldo real: 60
+<span style="color:#000000;background-color:#000000;"></span><span style="font-weight:bold;color:#7f7f7f;background-color:#000000;"></span><span style="font-weight:bold;color:#00ff00;background-color:#000000;"> PASS </span><span style="color:#000000;background-color:#000000;"></span> __tests__/<span style="font-weight:bold;color:#7f7f7f;">CompanyAccount.test.ts</span><span style="color:#7f7f7f;">
+  CompanyAccount com saída limpa
+    </span><span style="color:#00cd00;">✓</span> Depósitos e empréstimos (1 ms)
+    <span style="color:#00cd00;">✓</span> Saques
+
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+<span style="font-weight:bold;color:#7f7f7f;">All files         </span> | <span style="font-weight:bold;color:#7f7f7f;">  97.05</span> | <span style="font-weight:bold;color:#7f7f7f;">     100</span> | <span style="font-weight:bold;color:#7f7f7f;">  91.66</span> | <span style="font-weight:bold;color:#7f7f7f;">  97.05</span> | <span style="font-weight:bold;color:#7f7f7f;">                 </span> 
+<span style="font-weight:bold;color:#7f7f7f;"> CompanyAccount.ts</span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">     100</span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">                 </span> 
+<span style="font-weight:bold;color:#7f7f7f;"> DioAccount.ts    </span> | <span style="font-weight:bold;color:#7f7f7f;">     95</span> | <span style="font-weight:bold;color:#7f7f7f;">     100</span> | <span style="font-weight:bold;color:#7f7f7f;">  85.71</span> | <span style="font-weight:bold;color:#7f7f7f;">     95</span> | <span style="font-weight:bold;color:#7f7f7f;">46               </span> 
+<span style="font-weight:bold;color:#7f7f7f;"> PeopleAccount.ts </span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">     100</span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">                 </span> 
+<span style="font-weight:bold;color:#7f7f7f;"> SpecialAccount.ts</span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">     100</span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">    100</span> | <span style="font-weight:bold;color:#7f7f7f;">                 </span> 
+-------------------|---------|----------|---------|---------|-------------------
+<span style="font-weight:bold;color:#7f7f7f;">Test Suites: </span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#00ff00;">3 passed</span>, 3 total
+<span style="font-weight:bold;color:#7f7f7f;">Tests:       </span><span style="color:#7f7f7f;"></span><span style="font-weight:bold;color:#7f7f7f;"></span><span style="font-weight:bold;color:#00ff00;">10 passed</span>, 10 total
+<span style="font-weight:bold;color:#7f7f7f;">Snapshots:   </span><span style="color:#7f7f7f;">0 total
+</span><span style="font-weight:bold;color:#7f7f7f;">Time:</span><span style="color:#7f7f7f;">        1.633 s, estimated 2 s
+</span><span style="color:#7f7f7f;">Ran all test suites</span><span style="color:#7f7f7f;"></span><span style="color:#7f7f7f;">.</span><span style="color:#7f7f7f;">
+</span></pre>
+</body>
+</html>
+<!--HTML generated by ansifilter 2.18, http://www.andre-simon.de/-->
+</body>
+</html>
