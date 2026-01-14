@@ -31,10 +31,3 @@ https://github.com/digitalinnovationone/desafio01-ts
   
 Bons estudos 😉
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
-
-
-
