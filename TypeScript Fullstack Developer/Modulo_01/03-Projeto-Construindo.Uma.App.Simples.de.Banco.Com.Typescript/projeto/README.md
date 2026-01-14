@@ -1,9 +1,3 @@
-Este é um excelente projeto para demonstrar os fundamentos de **Programação Orientada a Objetos (POO)** com TypeScript e a importância de **Testes Unitários** com Jest.
-
-Abaixo, preparei um `README.md` estruturado para o seu portfólio, detalhando a arquitetura do "DIO Bank" e a estratégia de validação técnica.
-
----
-
 # 🏦 DIO Bank - TypeScript & Jest
 
 O **DIO Bank** é um sistema bancário simplificado desenvolvido em TypeScript para praticar conceitos avançados de Programação Orientada a Objetos (POO), como Herança e Abstração, além de garantir a integridade do código através de testes unitários rigorosos com **Jest**.
