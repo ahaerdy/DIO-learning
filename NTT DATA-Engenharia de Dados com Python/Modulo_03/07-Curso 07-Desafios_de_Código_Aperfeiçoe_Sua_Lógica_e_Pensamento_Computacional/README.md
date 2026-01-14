@@ -5,10 +5,12 @@
 
 ## 🟩 Vídeo 01 - Introdução
 
-- O instrutor explica o propósito dos desafios de código no aprendizado.
-- Cada problema é uma oportunidade de superar limites.
-- Compreender a engrenagem de uma lógica de programação e como aplicá-la nos desafios.
-- Tour por diversas linguagens e de como usá-las como ferramentas de uma lógica estruturada.
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.07-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Venilton, da DIO, apresenta uma jornada de imersão focada em desafios de código, destacando a prática como o caminho fundamental para a perfeição técnica. O conteúdo enfatiza o desenvolvimento da lógica e do pensamento computacional, tratando as linguagens de programação como ferramentas que servem a uma estrutura de raciocínio sólida, preparando o desenvolvedor para superar limites e dominar novas tecnologias.
 
 ## 🟩 Vídeo 02 - PBL, Lógica e Pensamento Computacional
 
