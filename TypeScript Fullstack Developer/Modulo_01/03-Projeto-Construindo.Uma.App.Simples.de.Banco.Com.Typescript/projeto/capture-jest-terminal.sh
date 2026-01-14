@@ -2,7 +2,7 @@
 
 # ============================================================
 # Captura saída do Jest e gera imagens JPG contínuas
-# Dark e Light, com crop final real (SEM FOLGA)
+# Dark e Light, com crop final REAL (SEM FOLGA)
 # ============================================================
 
 set -e
@@ -31,7 +31,6 @@ IMG_LIGHT="$BASE_DIR/terminal_capture-light.jpg"
 echo "▶ Executando Jest..."
 FORCE_COLOR=3 npx jest --verbose --runInBand --coverage > "$ANSI_FILE" 2>&1
 
-# Remove quebra de linha final (ajuda o baseline)
 sed -i '${/^$/d;}' "$ANSI_FILE"
 
 # ------------------------------------------------------------
@@ -45,7 +44,7 @@ ansifilter --html --encoding=UTF-8 \
 cp "$HTML_RAW" "$HTML_BASE"
 
 # ------------------------------------------------------------
-# 3. Corrige semanticamente PASS
+# 3. Corrige PASS
 # ------------------------------------------------------------
 sed -E -i \
   's/<span class="ansi-green">PASS<\/span>/<span class="pass-token">PASS<\/span>/g' \
@@ -61,7 +60,6 @@ cat > "$HTML_DARK" <<EOF
 <meta charset="UTF-8">
 <style>
 @page { margin: 0; }
-
 body {
   margin: 0;
   background: #0c0c0c;
@@ -71,13 +69,7 @@ body {
   line-height: 1.32;
   font-weight: 600;
 }
-
-pre {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-}
-
+pre { margin: 0; padding: 0; display: inline-block; }
 .pass-token {
   background: #00ff00;
   color: #000;
@@ -102,7 +94,6 @@ cat > "$HTML_LIGHT" <<EOF
 <meta charset="UTF-8">
 <style>
 @page { margin: 0; }
-
 body {
   margin: 0;
   background: #ffffff;
@@ -112,13 +103,7 @@ body {
   line-height: 1.32;
   font-weight: 600;
 }
-
-pre {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-}
-
+pre { margin: 0; padding: 0; display: inline-block; }
 .pass-token {
   background: #00cc00;
   color: #000;
@@ -141,7 +126,7 @@ weasyprint "$HTML_DARK" "$PDF_DARK"
 weasyprint "$HTML_LIGHT" "$PDF_LIGHT"
 
 # ------------------------------------------------------------
-# 7. PDF → JPG (arquivo único)
+# 7. PDF → JPG
 # ------------------------------------------------------------
 echo "▶ Convertendo PDFs para JPG..."
 pdftoppm -jpeg -r "$DPI" "$PDF_DARK" "$BASE_DIR/tmp-dark"
@@ -151,11 +136,20 @@ mv "$BASE_DIR/tmp-dark-1.jpg" "$IMG_DARK"
 mv "$BASE_DIR/tmp-light-1.jpg" "$IMG_LIGHT"
 
 # ------------------------------------------------------------
-# 8. CROP FINAL REAL (REMOVE FOLGA DEFINITIVAMENTE)
+# 8. CROP FINAL (DARK ≠ LIGHT)
 # ------------------------------------------------------------
 echo "▶ Cortando folga final..."
-convert "$IMG_DARK"  -trim +repage "$IMG_DARK"
-convert "$IMG_LIGHT" -trim +repage "$IMG_LIGHT"
+
+# DARK (fundo escuro precisa normalização)
+convert "$IMG_DARK" \
+  -background '#0c0c0c' -flatten \
+  -fuzz 8% -trim +repage \
+  "$IMG_DARK"
+
+# LIGHT (simples)
+convert "$IMG_LIGHT" \
+  -fuzz 5% -trim +repage \
+  "$IMG_LIGHT"
 
 # ------------------------------------------------------------
 # 9. Limpeza
