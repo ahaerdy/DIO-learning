@@ -24,8 +24,6 @@ O projeto utiliza uma classe abstrata como fundação, garantindo que todos os a
 * **Atributos Privados e Imutáveis**:
 * `name` e `accountNumber` são protegidos e não podem ser alterados interna ou externamente (uso de `private` e `readonly`).
 * `status` e `balance` (saldo) também são controlados internamente.
-
-
 * **Regras de Depósito e Saque**:
 * O depósito (`deposit`) altera o saldo apenas se a conta estiver ativa (`status: true`).
 * O saque (`withdraw`) é validado pela regra de negócio: a conta deve estar ativa e possuir saldo superior ou igual ao valor solicitado.
@@ -53,8 +51,6 @@ Os testes foram desenhados para serem **silenciosos e informativos**, utilizando
 * **Polimorfismo e Herança**:
 * Garante que o `CompanyAccount` processe o empréstimo somando ao saldo.
 * O comportamento da `SpecialAccount` é validado para confirmar o bônus de 10 unidades no depósito.
-
-
 * **Spying & Mocking**: No arquivo `CompanyAccount.test.ts`, utilizamos `jest.spyOn` para silenciar o `console.log` original, permitindo uma saída de teste limpa.
 
 #### Exemplo de Verificação (Regra de Saque):
