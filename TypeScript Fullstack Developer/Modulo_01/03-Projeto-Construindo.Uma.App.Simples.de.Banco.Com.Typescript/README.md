@@ -39,7 +39,7 @@ Bons estudos 😉
 # Demo
 
 <p align="center">
-  <img src="./capture_jest_terminal/terminal_capture-dark.jpg" alt="" width="840">
+  <img src="./capture-jest-terminal/terminal_capture-dark.jpg" alt="" width="840">
 </p>
 
 
