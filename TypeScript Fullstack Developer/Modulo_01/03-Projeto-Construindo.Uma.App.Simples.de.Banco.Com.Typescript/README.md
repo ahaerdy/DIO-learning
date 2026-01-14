@@ -3,7 +3,7 @@
 - Nathally Souza (Software Engineer | Startup Founder | Javascript, Typescript, Cloud, Frontend, Backend)
 - Contato Linkedin: / [nathsouza](https://www.linkedin.com/in/nathsouza/)
 
-### 🟩 Vídeo 01 - EConstruindo o Dio Bank
+### 🟩 Vídeo 01 - Construindo o Dio Bank
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/formacao_typescript_fullstack-modulo.01-curso.03-video_01.webm" type="video/webm">
