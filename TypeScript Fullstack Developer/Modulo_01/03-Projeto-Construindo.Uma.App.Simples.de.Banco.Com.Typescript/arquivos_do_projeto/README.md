@@ -98,5 +98,5 @@ npx jest --verbose --runInBand --coverage
 Abaixo, a captura de tela demonstrando a execução bem-sucedida de todos os suítes de teste, garantindo que o **DIO Bank** está operando conforme as regras de negócio estabelecidas.
 
 <p align="center">
-<img src="./capture-jest-terminal/terminal_capture-dark.jpg" alt="Relatório Jest" width="840">
+<img src="./projeto/capture-jest-terminal/terminal_capture-dark.jpg" alt="Relatório Jest" width="840">
 </p>
