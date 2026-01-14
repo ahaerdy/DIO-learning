@@ -10,9 +10,19 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/desafios-de-codigo-aperfeicoe-sua-logica-e-pensamento-computacional/learning/e294adbf-9f6b-434b-a9ab-3645b166457e?autoplay=1
+
 Venilton, da DIO, apresenta uma jornada de imersão focada em desafios de código, destacando a prática como o caminho fundamental para a perfeição técnica. O conteúdo enfatiza o desenvolvimento da lógica e do pensamento computacional, tratando as linguagens de programação como ferramentas que servem a uma estrutura de raciocínio sólida, preparando o desenvolvedor para superar limites e dominar novas tecnologias.
 
 ## 🟩 Vídeo 02 - PBL, Lógica e Pensamento Computacional
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.07-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/desafios-de-codigo-aperfeicoe-sua-logica-e-pensamento-computacional/learning/d41fab09-549b-4e8d-bf65-8ccaa8918c3b?autoplay=1
 
 ### PBL (Problem Based Learning)
 
@@ -40,6 +50,8 @@ Venilton, da DIO, apresenta uma jornada de imersão focada em desafios de códig
     - Seja protagonista na comunidade tech mais vibrante do mundo!
 
 ## 🟩 Vídeo 03 - A Linguagem é Só Um Detalhe... Como Resolver Desafios de Código
+
+Link do vídeo: 
 
 - O professor apresenta na tela 5 desafios de código, cada um numa linguagem de programação diferente.
 
