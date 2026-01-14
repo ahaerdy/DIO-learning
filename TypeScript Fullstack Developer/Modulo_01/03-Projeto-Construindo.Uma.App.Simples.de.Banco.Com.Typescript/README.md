@@ -36,7 +36,5 @@ Bons estudos 😉
 - Link na plataforma: 
 - Certificado em pdf: 
 
-# Demo
-
 
 
