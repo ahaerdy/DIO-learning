@@ -157,4 +157,5 @@ Este conteúdo apresenta uma abordagem prática sobre o desenvolvimento de lógi
 
 ## Certificado: Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional
 
-Link do certificado: https://hermes.dio.me/certificates/PGDMAIJT.pdf
+- Link do certificado: https://hermes.dio.me/certificates/PGDMAIJT.pdf
+- Certificado em pdf: [Certificado-Desafios.de.Codigo.Aperfeicoe.Sua.Logica.e.Pensamento.Computacional.pdf](000-Midia_e_Anexos/Certificado-Desafios.de.Codigo.Aperfeicoe.Sua.Logica.e.Pensamento.Computacional.pdf)
