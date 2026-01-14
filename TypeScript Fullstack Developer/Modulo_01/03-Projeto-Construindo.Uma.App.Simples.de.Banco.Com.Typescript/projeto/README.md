@@ -76,13 +76,8 @@ npm test
 
 3. **Veja o relatório de cobertura**:
 ```bash
-npm run test:coverage
-
+npx jest --verbose --runInBand --coverage
 ```
-
-<p align="center">
-  <img src="./capture-jest-terminal/terminal_capture-dark.jpg" alt="" width="840">
-</p>
 
 ---
 
@@ -90,10 +85,7 @@ npm run test:coverage
 
 Abaixo, a captura de tela demonstrando a execução bem-sucedida de todos os suítes de teste, garantindo que o **DIO Bank** está operando conforme as regras de negócio estabelecidas.
 
-*(Insira aqui a sua imagem: `terminal_capture-dark.jpg`)*
+<p align="center">
+  <img src="./capture-jest-terminal/terminal_capture-dark.jpg" alt="" width="840">
+</p>
 
----
-
-### Próximos Passos
-
-Gostaria que eu criasse um arquivo de teste específico para a `SpecialAccount` para validar se o bônus de depósito de  está funcionando corretamente?
