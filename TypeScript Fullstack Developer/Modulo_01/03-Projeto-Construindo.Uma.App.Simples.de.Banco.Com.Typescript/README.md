@@ -38,8 +38,5 @@ Bons estudos 😉
 
 # Demo
 
-<p align="center">
-  <img src="./capture-jest-terminal/terminal_capture-dark.jpg" alt="" width="840">
-</p>
 
 
