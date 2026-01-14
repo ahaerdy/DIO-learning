@@ -38,5 +38,8 @@ Bons estudos 😉
 
 # Demo
 
-<iframe src="output_dark.html" width="100%" height="600" style="border:1px solid #333;"></iframe>
+<p align="center">
+  <img src="terminal_capture-dark.png" alt="" width="480">
+</p>
+
 
