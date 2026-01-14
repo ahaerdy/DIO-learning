@@ -28,13 +28,13 @@ O vídeo apresenta a metodologia educacional da DIO, focada em "Desafios de Cód
 ### Anotações
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h03m53s005.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h03m53s005.jpg" alt="" width="840">
 </p>
 
 A **Aprendizagem Baseada em Problemas (PBL - Problem-Based Learning)** é um pilar da metodologia educacional que coloca o estudante no centro do processo. Em vez de uma absorção puramente teórica, você é incentivado a mergulhar na resolução de problemas reais ou simulados enquanto aprende. Na prática, essa ideia é representada pelos **Desafios de Código**, que trazem problemas do mundo real para serem solucionados através de soluções algorítmicas, potencializando o estudo de forma prática e contextualizada.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h03m57s294.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h03m57s294.jpg" alt="" width="840">
 </p>
 
 Para atuar com eficiência na tecnologia, é necessário dominar duas competências fundamentais que funcionam como "superpoderes" no mundo digital:
@@ -43,7 +43,7 @@ Para atuar com eficiência na tecnologia, é necessário dominar duas competênc
 * **Pensamento Computacional:** Funciona como um mapa que ajuda a encontrar caminhos para resolver desafios, projetar sistemas e compreender comportamentos que podem não ser claros à primeira vista.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h04m03s913.jpg" alt="" width="840">
+    <img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h04m03s913.jpg" alt="" width="840">
 </p>
 
 O aprendizado fundamentado na prática e na colaboração justifica-se por três pilares essenciais:
