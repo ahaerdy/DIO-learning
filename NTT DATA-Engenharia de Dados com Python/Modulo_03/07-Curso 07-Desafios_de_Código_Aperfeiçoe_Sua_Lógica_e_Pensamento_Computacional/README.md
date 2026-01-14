@@ -64,7 +64,7 @@ O aprendizado fundamentado na prática e na colaboração justifica-se por três
 
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/desafios-de-codigo-aperfeicoe-sua-logica-e-pensamento-computacional/learning/0742edea-d41f-4584-a8bb-d5e9866fb019?autoplay=1
 
-
+Este conteúdo apresenta uma abordagem prática sobre o desenvolvimento de lógica de programação e pensamento computacional através da resolução de um desafio de cálculo salarial. O instrutor demonstra como implementar a mesma solução em cinco linguagens diferentes (Java, C#, JavaScript, Python e Kotlin), enfatizando que a sintaxe é apenas uma ferramenta, enquanto a lógica subjacente permanece constante. O objetivo é desmistificar a complexidade das linguagens e encorajar o aprendizado focado na resolução de problemas.
 
 - O professor apresenta na tela 5 desafios de código, cada um numa linguagem de programação diferente.
 
