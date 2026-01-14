@@ -15,44 +15,55 @@ O **DIO Bank** é um sistema bancário simplificado desenvolvido em TypeScript p
 
 ## 🏗️ Arquitetura do Projeto
 
-O projeto utiliza uma classe abstrata como fundação, permitindo que diferentes tipos de contas compartilhem lógica comum enquanto implementam comportamentos específicos.
+O projeto utiliza uma classe abstrata como fundação, garantindo que todos os atributos de qualquer conta sejam estritamente **privados**.
 
 ### 1. A Classe Base: `DioAccount`
 
 É uma classe **abstrata**, ou seja, serve apenas como modelo e não pode ser instanciada diretamente.
 
-* **Atributos Privados**: `name`, `accountNumber` e `status` são protegidos contra acessos externos diretos.
-* **Encapsulamento**: Métodos como `getName()` e `setName()` controlam o acesso aos dados.
-* **Lógica de Proteção**: O método `validateStatus()` garante que operações só ocorram em contas ativas.
+* **Atributos Privados e Imutáveis**:
+* `name` e `accountNumber` são protegidos e não podem ser alterados interna ou externamente (uso de `private` e `readonly`).
+* `status` e `balance` (saldo) também são controlados internamente.
+
+
+* **Regras de Depósito e Saque**:
+* O depósito (`deposit`) altera o saldo apenas se a conta estiver ativa (`status: true`).
+* O saque (`withdraw`) é validado pela regra de negócio: a conta deve estar ativa e possuir saldo superior ou igual ao valor solicitado.
+
+
 
 ### 2. Especializações (Herança)
 
-* **PeopleAccount**: Extende a conta base adicionando o atributo `doc_id` (CPF/RG).
-* **CompanyAccount**: Introduz o método `getLoan`, permitindo que empresas aumentem seu saldo através de empréstimos.
-* **SpecialAccount**: Uma conta VIP onde cada depósito recebe um bônus adicional de  unidades monetárias.
+* **PeopleAccount**: Estende a conta base adicionando o atributo específico `doc_id`.
+* **CompanyAccount**: Implementa o método `getLoan` (empréstimo). O saldo é acrescido do valor solicitado, desde que o status da conta seja `true`.
+* **SpecialAccount**: Um novo tipo de conta que não possui atributos extras, mas redefine a lógica de depósito: para cada valor informado, a conta soma **10 unidades adicionais** ao saldo final (Ex: depósito de 100 resulta em saldo de 110).
 
 ---
 
 ## 🧪 Estratégia de Testes (Jest)
 
-A robustez do DIO Bank é validada por um conjunto de testes que cobrem sucessos e falhas críticas.
+A robustez do DIO Bank é validada por um conjunto de testes que cobrem sucessos e falhas críticas, garantindo que as regras de negócio acima sejam cumpridas.
 
 ### Lógica dos Testes Unitários
 
-Os testes foram desenhados para serem **silenciosos e informativos**, utilizando `process.stdout.write` para logar o progresso sem poluir o terminal com logs internos das classes.
+Os testes foram desenhados para serem **silenciosos e informativos**, utilizando `process.stdout.write` para logar o progresso sem poluir o terminal com logs internos.
 
-* **Validação de Saldo**: Verifica se o saldo inicial é  e se as operações matemáticas (soma/subtração) refletem o estado real da conta.
-* **Segurança no Saque**: Testa se a conta impede saques que excedam o saldo disponível (regra de saldo insuficiente).
-* **Polimorfismo e Herança**: Garante que o `CompanyAccount` processe o empréstimo corretamente e que o `PeopleAccount` mantenha a integridade do `doc_id`.
-* **Spying & Mocking**: No arquivo `CompanyAccount.test.ts`, utilizamos `jest.spyOn` para silenciar o `console.log` original, permitindo uma saída de teste muito mais limpa e profissional.
+* **Validação de Saldo**: Verifica se o saldo inicial é 0 e se as operações refletem o estado real.
+* **Segurança no Saque**: Valida explicitamente a regra de "Saldo Insuficiente", garantindo que o saldo não mude se o saque for maior que o disponível.
+* **Polimorfismo e Herança**:
+* Garante que o `CompanyAccount` processe o empréstimo somando ao saldo.
+* O comportamento da `SpecialAccount` é validado para confirmar o bônus de 10 unidades no depósito.
 
-#### Exemplo de Verificação:
+
+* **Spying & Mocking**: No arquivo `CompanyAccount.test.ts`, utilizamos `jest.spyOn` para silenciar o `console.log` original, permitindo uma saída de teste limpa.
+
+#### Exemplo de Verificação (Regra de Saque):
 
 ```typescript
 test('Saques', () => {
   account.deposit(100);
-  account.withdraw(200); // Tentativa inválida
-  expect((account as any).balance).toBe(100); // O saldo deve permanecer intacto
+  account.withdraw(200); // Tentativa que viola a regra de saldo
+  expect((account as any).balance).toBe(100); // O saldo deve permanecer 100
 });
 
 ```
@@ -62,21 +73,26 @@ test('Saques', () => {
 ## 🛠️ Como Executar
 
 1. **Instale as dependências**:
+
 ```bash
 npm install
 
 ```
 
-
 2. **Execute os testes**:
+
 ```bash
 npm test
 
 ```
 
-3. **Veja o relatório de cobertura**:
+3. **Execução Manual (app.ts)**:
+O arquivo `app.ts` contém instâncias de todos os tipos de conta (`People`, `Company` e `Special`) para demonstração prática dos métodos.
+4. **Relatório de cobertura**:
+
 ```bash
 npx jest --verbose --runInBand --coverage
+
 ```
 
 ---
@@ -86,6 +102,5 @@ npx jest --verbose --runInBand --coverage
 Abaixo, a captura de tela demonstrando a execução bem-sucedida de todos os suítes de teste, garantindo que o **DIO Bank** está operando conforme as regras de negócio estabelecidas.
 
 <p align="center">
-  <img src="./capture-jest-terminal/terminal_capture-dark.jpg" alt="" width="840">
+<img src="./capture-jest-terminal/terminal_capture-dark.jpg" alt="Relatório Jest" width="840">
 </p>
-
