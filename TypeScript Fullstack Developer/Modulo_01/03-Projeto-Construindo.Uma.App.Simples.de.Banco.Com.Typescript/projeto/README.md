@@ -4,7 +4,7 @@ O **DIO Bank** é um sistema bancário simplificado desenvolvido em TypeScript p
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **TypeScript**: Linguagem base para tipagem estática e POO.
 * **Jest**: Framework de testes para garantir que as regras de negócio funcionem.
@@ -13,7 +13,7 @@ O **DIO Bank** é um sistema bancário simplificado desenvolvido em TypeScript p
 
 ---
 
-## 🏗️ Arquitetura do Projeto
+## Arquitetura do Projeto
 
 O projeto utiliza uma classe abstrata como fundação, garantindo que todos os atributos de qualquer conta sejam estritamente **privados**.
 
@@ -38,7 +38,7 @@ O projeto utiliza uma classe abstrata como fundação, garantindo que todos os a
 
 ---
 
-## 🧪 Estratégia de Testes (Jest)
+## Estratégia de Testes (Jest)
 
 A robustez do DIO Bank é validada por um conjunto de testes que cobrem sucessos e falhas críticas, garantindo que as regras de negócio acima sejam cumpridas.
 
@@ -66,7 +66,7 @@ test('Saques', () => {
 
 ---
 
-## 🛠️ Como Executar
+## Como Executar
 
 1. **Instale as dependências**:
 
@@ -93,7 +93,7 @@ npx jest --verbose --runInBand --coverage
 
 ---
 
-## 📊 Resultado dos Testes
+## Resultado dos Testes
 
 Abaixo, a captura de tela demonstrando a execução bem-sucedida de todos os suítes de teste, garantindo que o **DIO Bank** está operando conforme as regras de negócio estabelecidas.
 
