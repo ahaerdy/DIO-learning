@@ -39,7 +39,7 @@ Bons estudos 😉
 # Demo
 
 <p align="center">
-  <img src="terminal_capture-dark.png" alt="" width="480">
+  <img src="./terminal_capture-dark.jpg" alt="" width="480">
 </p>
 
 
