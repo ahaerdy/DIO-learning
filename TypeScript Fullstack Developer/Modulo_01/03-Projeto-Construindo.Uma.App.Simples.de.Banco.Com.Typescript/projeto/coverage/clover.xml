@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1768415703386" clover="3.2.0">
-  <project timestamp="1768415703386" name="All files">
+<coverage generated="1768416892537" clover="3.2.0">
+  <project timestamp="1768416892537" name="All files">
     <metrics statements="34" coveredstatements="33" conditionals="4" coveredconditionals="4" methods="12" coveredmethods="11" elements="50" coveredelements="48" complexity="0" loc="34" ncloc="34" packages="1" files="4" classes="4"/>
     <file name="CompanyAccount.ts" path="/mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning/TypeScript Fullstack Developer/Modulo_01/03-Projeto-Construindo.Uma.App.Simples.de.Banco.Com.Typescript/projeto/class/CompanyAccount.ts">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
