@@ -8,9 +8,9 @@ Após empréstimo de 50 (+10 bônus) → saldo esperado: 160, saldo real: 160
 Após saque de 75 → saldo esperado: 85, saldo real: 85
 [0m[7m[1m[32m PASS [39m[22m[27m[0m [2m__tests__/[22m[1mSpecialAccount.test.ts[22m
   SpecialAccount com saída limpa
-    [32m✓[39m [2mEmpréstimos com bônus (2 ms)[22m
-    [32m✓[39m [2mDepósitos e saques (1 ms)[22m
-    [32m✓[39m [2mOperações combinadas[22m
+    [32m✓[39m [2mEmpréstimos com bônus (3 ms)[22m
+    [32m✓[39m [2mDepósitos e saques[22m
+    [32m✓[39m [2mOperações combinadas (1 ms)[22m
 
 Conta criada → nome: Nath, doc_id: 1, saldo inicial: 0
 Após depósito de 100 → saldo esperado: 100, saldo real: 100
@@ -25,11 +25,11 @@ Após saque de 50 → saldo esperado: 150, saldo real: 150
 Após depósito de 25 → saldo esperado: 175, saldo real: 175
 [0m[7m[1m[32m PASS [39m[22m[27m[0m [2m__tests__/[22m[1mPeopleAccount.test.ts[22m
   PeopleAccount com saída limpa
-    [32m✓[39m [2mCriação de conta[22m
-    [32m✓[39m [2mDepósitos[22m
-    [32m✓[39m [2mSaques (1 ms)[22m
-    [32m✓[39m [2mAlteração de nome[22m
-    [32m✓[39m [2mOperações combinadas (1 ms)[22m
+    [32m✓[39m [2mCriação de conta (1 ms)[22m
+    [32m✓[39m [2mDepósitos (1 ms)[22m
+    [32m✓[39m [2mSaques[22m
+    [32m✓[39m [2mAlteração de nome (1 ms)[22m
+    [32m✓[39m [2mOperações combinadas[22m
 
 Após depósito de 100 → saldo esperado: 100, saldo real: 100
 Após empréstimo de 50 → saldo esperado: 150, saldo real: 150
@@ -39,7 +39,7 @@ Tentativa de saque de 200 → saldo esperado: 60 (sem alteração), saldo real: 
 [0m[7m[1m[32m PASS [39m[22m[27m[0m [2m__tests__/[22m[1mCompanyAccount.test.ts[22m
   CompanyAccount com saída limpa
     [32m✓[39m [2mDepósitos e empréstimos (1 ms)[22m
-    [32m✓[39m [2mSaques[22m
+    [32m✓[39m [2mSaques (1 ms)[22m
 
 -------------------|---------|----------|---------|---------|-------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
@@ -53,5 +53,5 @@ File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 [1mTest Suites: [22m[1m[32m3 passed[39m[22m, 3 total
 [1mTests:       [22m[1m[32m10 passed[39m[22m, 10 total
 [1mSnapshots:   [22m0 total
-[1mTime:[22m        1.633 s, estimated 2 s
+[1mTime:[22m        1.736 s, estimated 2 s
 [2mRan all test suites[22m[2m.[22m
