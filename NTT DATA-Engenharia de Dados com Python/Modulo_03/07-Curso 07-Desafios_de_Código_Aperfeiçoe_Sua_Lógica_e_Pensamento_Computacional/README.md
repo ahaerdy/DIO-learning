@@ -21,37 +21,50 @@ Venilton, da DIO, apresenta uma jornada de imersão focada em desafios de códig
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-
 Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/desafios-de-codigo-aperfeicoe-sua-logica-e-pensamento-computacional/learning/d41fab09-549b-4e8d-bf65-8ccaa8918c3b?autoplay=1
 
-### PBL (Problem Based Learning)
+O vídeo apresenta a metodologia educacional da DIO, focada em "Desafios de Código" e fundamentada na Aprendizagem Baseada em Problemas (PBL). O conteúdo destaca a importância da lógica de programação e do pensamento computacional como competências transversais e essenciais para qualquer profissional de tecnologia, enfatizando que a prática constante e a colaboração em comunidade são os pilares para o domínio técnico e o protagonismo na carreira digital.
 
-- Explicação acerca da metodologia educacional.
-- PBL (Problem Based Learning) - uso de problemas reais para potencializar os esutdos.
+### Anotações
 
-### Lógica de programação e o pensamento computacional 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h03m53s005.jpg" alt="" width="840">
+</p>
 
-- Lógica de programação é como aprender um novo idioma, um que permite transformar problemas em soluções claras e ordenadas através de passos lógicos e algoritmos.
+A **Aprendizagem Baseada em Problemas (PBL - Problem-Based Learning)** é um pilar da metodologia educacional que coloca o estudante no centro do processo. Em vez de uma absorção puramente teórica, você é incentivado a mergulhar na resolução de problemas reais ou simulados enquanto aprende. Na prática, essa ideia é representada pelos **Desafios de Código**, que trazem problemas do mundo real para serem solucionados através de soluções algorítmicas, potencializando o estudo de forma prática e contextualizada.
 
-- Já o pensamento computacional é como ter um mapa que te ajuda a encontrar caminhos para resolver desafios, projetar sistemas e compreender comportamentos.
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h03m57s294.jpg" alt="" width="840">
+</p>
 
-### Por Que Aprender Assim?
-    
-- Aprendizagem Ativa
-    - Porque a melhor forma de aprender é fazendo.
-    - É mais do que teoria; é se preparar para o mundo real, para as demandas e desafios do futuro.
+Para atuar com eficiência na tecnologia, é necessário dominar duas competências fundamentais que funcionam como "superpoderes" no mundo digital:
 
-- Transformação Digital
-    - A programação se tornou mais do que uma habilidade, é a linguagem do futuro!
-    - Dominar essa competência pode promover oportunidades incríveis!
+* **Lógica de Programação:** É comparável ao aprendizado de um novo idioma, permitindo transformar problemas em soluções claras e ordenadas através de passos lógicos e algoritmos.
+* **Pensamento Computacional:** Funciona como um mapa que ajuda a encontrar caminhos para resolver desafios, projetar sistemas e compreender comportamentos que podem não ser claros à primeira vista.
 
-- Comunidade Protagonista
-    - Aqui, aprendemos juntos, interagindo, colaborando e compartilhando conhecimento.
-    - Seja protagonista na comunidade tech mais vibrante do mundo!
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-14-19h04m03s913.jpg" alt="" width="840">
+</p>
+
+O aprendizado fundamentado na prática e na colaboração justifica-se por três pilares essenciais:
+
+1. **Aprendizagem Ativa:** Defende que a melhor forma de aprender é fazendo. É uma preparação para o mundo real, focando nas demandas e desafios futuros através da prática direta.
+
+2. **Transformação Digital:** A programação tornou-se a linguagem do futuro. Dominar essa competência promove oportunidades incríveis, pois traz uma forma de pensar e resolver problemas que transcende a área de tecnologia.
+
+3. **Comunidade Protagonista:** O aprendizado é potencializado pela interação e colaboração. Ao compartilhar conhecimento, você se torna protagonista na comunidade tech, aprendendo e crescendo junto com outros profissionais.      
+
 
 ## 🟩 Vídeo 03 - A Linguagem é Só Um Detalhe... Como Resolver Desafios de Código
 
-Link do vídeo: 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.03-curso.07-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/desafios-de-codigo-aperfeicoe-sua-logica-e-pensamento-computacional/learning/0742edea-d41f-4584-a8bb-d5e9866fb019?autoplay=1
+
+
 
 - O professor apresenta na tela 5 desafios de código, cada um numa linguagem de programação diferente.
 
