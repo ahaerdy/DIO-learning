@@ -58,7 +58,7 @@ A formação é composta por cursos e desafios organizados em módulos sequencia
 
 - [x] Curso: [Introdução ao TypeScript](Modulo_01/01-Curso.01-Introducao.ao.Typescript)
 - [x] Curso: [Programação Orientada a Objetos com TypeScript](Modulo_01/02.Curso.02-Programacao.Orientada.a.Objetos.com.TypeScript)
-- [x] Projeto: [Construindo Uma App Simples de Banco Com Typescript](Modulo_01/03-Curso.03-Construindo.Uma.App.Simples.de.Banco.Com.Typescript)
+- [x] Projeto: [Construindo Uma App Simples de Banco Com Typescript](Modulo_01/03-Projeto-Construindo.Uma.App.Simples.de.Banco.Com.Typescript)
 - [ ] Curso: Desafios Básicos - Formação Typescript
 - [ ] Curso: Materiais Complementares: Fundamentos do TypeScript
 
