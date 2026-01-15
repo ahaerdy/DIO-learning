@@ -141,10 +141,8 @@ Saída no console
 
 ### 🟥🟥 Preenchendo o campo de buscas e clicando em buscar - estado INTERMEDIÁRIO da aplicação:
 
-![alt text](image.png)
 
-<img src="./000-Midia_e_Anexos/image-2.png" alt="" width="480">
-
+<img src="000-Midia_e_Anexos/image-2.png" alt="" width="480">
 
 ```js
 githubState atualizado: {
