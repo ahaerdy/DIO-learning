@@ -95,6 +95,11 @@ const { githubState } = useGithub();
 
 <img src="000-Midia_e_Anexos/image-1.png" alt="" width="480">
 
+**Comentário:**  
+Este é o estado inicial da aplicação. Nenhum usuário foi buscado ainda, não há carregamento em andamento e todos os dados estão vazios. É o ponto de partida antes da interação do usuário.
+
+---
+
 #### 🟥🟥 Estado intermediário (busca iniciada)
 ```js
 Buscando usuário: ahaerdy
@@ -108,6 +113,11 @@ Buscando usuário: ahaerdy
 ```
 
 <img src="000-Midia_e_Anexos/image-2.png" alt="" width="480">
+
+**Comentário:**  
+Aqui vemos que a busca foi iniciada. O estado indica `loading: true`, ou seja, a aplicação está aguardando resposta da API. O usuário ainda não foi carregado (`hasUser: false`) e os dados continuam vazios.
+
+---
 
 #### 🟥🟥 Usuário encontrado (dados básicos)
 ```js
@@ -126,6 +136,11 @@ Buscando usuário: ahaerdy
 
 <img src="000-Midia_e_Anexos/image-3.png" alt="" width="480">
 
+**Comentário:**  
+Neste ponto, a API já respondeu com sucesso. O usuário foi encontrado (`hasUser: true`) e o carregamento terminou (`loading: false`). O objeto `user` já contém dados reais, mas os repositórios e favoritos ainda não foram carregados.
+
+---
+
 #### 🟥🟥 Estado final completo
 ```js
 {
@@ -141,6 +156,9 @@ Buscando usuário: ahaerdy
 ```
 
 <img src="000-Midia_e_Anexos/image-4.png" alt="" width="480">
+
+**Comentário:**  
+Este é o estado final após todas as requisições. O usuário está carregado, os repositórios foram preenchidos (30 itens) e os favoritos também (12 itens). A aplicação está pronta para renderizar todas as informações na interface.
 
 ---
 
