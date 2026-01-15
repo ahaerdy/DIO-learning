@@ -7,7 +7,7 @@
   - `NoSearch` (se não há usuário)
   - `Profile` e `Repositories` (se há usuário e não está carregando)
 
-🟡 /src/App.js
+🔴 /src/App.js
 
 ```javascript
 import React from "react";
@@ -40,6 +40,23 @@ const App = () => {
 };
 
 export default App;
+```
+
+🟢 ./src/hooks/github-hooks.js
+
+```javascript
+import { useContext } from "react";
+import { GithubContext } from "../providers/github-provider";
+
+const useGithub = () => {
+  const { githubState, getUser, getUserRepos, getUserStarred } = useContext(
+    GithubContext
+  );
+
+  return { githubState, getUser, getUserRepos, getUserStarred };
+};
+
+export default useGithub;
 ```
 
 
