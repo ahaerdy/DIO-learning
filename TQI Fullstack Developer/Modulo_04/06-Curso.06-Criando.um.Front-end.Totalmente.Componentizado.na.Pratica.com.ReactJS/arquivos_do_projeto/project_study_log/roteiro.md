@@ -93,6 +93,17 @@ const { githubState } = useGithub();
 - Permite que o `App.js` saiba se existe usuário, se está carregando e quais dados já foram buscados.  
 - É a **ponte** entre o contexto global e a lógica de renderização do `App.js`.
 
+### Analisando o objeto githubState
+
+```javascript
+  const { githubState } = useGithub();
+  console.log("Conteúdo de githubState:", githubState);
+```
+
+Saída no console:
+
+![saída no console](../000-Midia_e_Anexos/snapshot-1.png)
+
 
 ---
 
