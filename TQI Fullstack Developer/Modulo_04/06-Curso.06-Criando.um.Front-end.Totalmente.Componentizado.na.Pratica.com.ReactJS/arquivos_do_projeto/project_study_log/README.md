@@ -42,7 +42,7 @@ const App = () => {
 export default App;
 ```
 
-### Verificar posteriormente:
+### Para mais detalhes, verificar:
 - [doc_github-hooks_js](doc_github-hooks_js.md)
 - [doc_github-provider_js](doc_github-provider_js.md)
 
