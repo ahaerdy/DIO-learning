@@ -100,7 +100,7 @@ const { githubState } = useGithub();
   console.log("Conteúdo de githubState:", githubState);
 ```
 
-Saída no console:
+Saída no console
 
 ![saída no console](000-Midia_e_Anexos/image-1.png))
 
