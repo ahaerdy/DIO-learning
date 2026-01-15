@@ -120,14 +120,13 @@ const GithubProvider = ({ children }) => {
 
 <details>
 <summary> 🟥🟥🟥 Detalhamento sobre o papel do Provider em relação à aplicação inteira 🟥🟥🟥 </summary>
-<br>
 <hr style="border: none; border-top: 2px dashed #888; margin: 10px 0;">
 
-#####  O que o Provider faz
+####  O que o Provider faz
 Um **Provider** no React é como um **“distribuidor de informações”**.  
 Ele envolve a aplicação (ou parte dela) e **torna disponíveis dados e funções para todos os componentes filhos**, sem precisar passar *props* manualmente em cada nível.
 
-##### No projeto
+#### No projeto
 - O **`GithubProvider`** envolve toda a aplicação.  
 - Ele fornece:
   - O estado global (`githubState`) → dados do usuário, repositórios, favoritos, status de carregamento.  
@@ -135,7 +134,7 @@ Ele envolve a aplicação (ou parte dela) e **torna disponíveis dados e funçõ
 
 Qualquer componente dentro de `<GithubProvider> ... </GithubProvider>` pode acessar esses dados e funções usando o hook `useGithub`.
 
-### Estrutura visual
+#### Estrutura visual
 ```jsx
 <GithubProvider>
   <App />
@@ -144,7 +143,7 @@ Qualquer componente dentro de `<GithubProvider> ... </GithubProvider>` pode aces
 
 ➡️ Aqui, o `App` e todos os componentes dentro dele (Profile, Repositories, NoSearch, etc.) têm acesso ao contexto fornecido pelo `GithubProvider`.
 
-##### Em resumo
+#### Em resumo
 - O **Provider** é como um **“cérebro central”** que guarda informações e funções.  
 - Ele **distribui** esses recursos para todos os componentes filhos.  
 - Isso evita o problema de *prop drilling* (passar props manualmente por vários níveis).  
