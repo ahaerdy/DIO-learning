@@ -118,8 +118,8 @@ const GithubProvider = ({ children }) => {
 - Define o **Provider**, que vai envolver toda a aplicação (`<GithubProvider> ... </GithubProvider>`).
 - Recebe `children` (os componentes que estarão dentro dele).
 
-<datails>
-<summary>Detalhes sobre o papel do **Provider** em relação à aplicação inteira.</summary>
+<details>
+<summary> ▶️ Detalhes sobre o papel do **Provider** em relação à aplicação inteira.</summary>
 
 ### 📌 O que o Provider faz
 Um **Provider** no React é como um **“distribuidor de informações”**.  
