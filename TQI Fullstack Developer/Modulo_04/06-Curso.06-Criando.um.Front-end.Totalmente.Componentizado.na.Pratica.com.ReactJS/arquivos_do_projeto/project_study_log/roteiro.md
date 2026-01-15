@@ -42,7 +42,7 @@ const App = () => {
 export default App;
 ```
 
-## 2. Hook github-hooks.js explicado
+## 2. Hook github-hooks.js (explicado)
 
 🟢 Código: /src/hooks/github-hooks.js
 
