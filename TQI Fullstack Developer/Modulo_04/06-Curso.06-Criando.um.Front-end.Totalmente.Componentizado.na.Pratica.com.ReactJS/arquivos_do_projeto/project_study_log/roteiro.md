@@ -172,31 +172,90 @@ Este é o estado final após todas as requisições. O usuário está carregado,
   - `user.company`, `user.location`, `user.blog`, `user.bio`, `user.created_at` → informações adicionais.  
   - Contadores (`followers`, `following`, `public_gists`, `public_repos`) → exibidos com links clicáveis.
 
-### 🎯 Objetivos da análise
+### Objetivos da análise
 1. **Confirmar como o `Profile` recebe os dados**  
-
-  - Verificar se está usando `useGithub()` corretamente. ✅ 
-  - Garantir que acessa `githubState.user`. ✅
+    - Verificar se está usando `useGithub()` corretamente. ✅ 
+    - Garantir que acessa `githubState.user`. ✅
 
 2. **Checar a renderização dos campos**  
 
-  - Validar se `name`, `login`, `avatar`, `html_url`, `company`, `location`, `blog`, `bio` e `created_at` aparecem corretamente. ✅ 
-  - Tratar casos em que algum campo pode ser `null` (exibir “não informado”). ✅
-  - Implementado no códifo ✅
+    - Validar se `name`, `login`, `avatar`, `html_url`, `company`, `location`, `blog`, `bio` e `created_at` aparecem corretamente. ✅ 
+    - Tratar casos em que algum campo pode ser `null` (exibir “não informado”). ✅
+    - Implementado no códifo ✅
 
 3. **Validar integração com o estado global**  
-  - Confirmar que o `Profile` reage às mudanças do `githubState`.  
-  - Evitar erros de acesso a propriedades indefinidas.
+    - Confirmar que o `Profile` reage às mudanças do `githubState`.  
+    - Evitar erros de acesso a propriedades indefinidas.
 
 4. **Melhorias aplicadas**  
-  - Fallbacks (“não informado”). ✅
-  - Links clicáveis apenas quando há valor válido. ✅
-  - Acessibilidade (atributo `alt` na imagem). ✅ 
-  - Responsividade no CSS para mobile.  
+    - Fallbacks (“não informado”). ✅
+    - Links clicáveis apenas quando há valor válido. ✅
+    - Acessibilidade (atributo `alt` na imagem). ✅ 
+    - Responsividade no CSS para mobile. ✅
 
 <p align="center">
   <img src="000-Midia_e_Anexos/image-5.png" alt="" width="200">
 </p>
 
-  - Inclusão de bio e data de criação da conta. ✅
+   - Inclusão de bio e data de criação da conta. ✅
 
+## 3. **Análise do componente `Repositories`**
+
+### Função principal
+- O componente `Repositories` é responsável por **listar os repositórios e os favoritos (starred)** do usuário.
+- Ele consome o estado global via `useGithub()` e chama as funções `getUserRepos` e `getUserStarred` para buscar os dados na API.
+
+### Estrutura do código
+- Usa `useEffect` para disparar a busca assim que `githubState.user.login` estiver disponível.
+- Controla o estado local `hasUserForSearchrepos` para decidir se deve renderizar as abas.
+- Renderiza duas abas (`Repositories` e `Starred`) usando `react-tabs` estilizado com `styled-components`.
+
+### Renderização
+- **Aba Repositories**: percorre `githubState.repositories` e renderiza cada item com `RepositoryItem`.
+  ```jsx
+  {githubState.repositories.map((item) => (
+    <RepositoryItem
+      key={item.id}
+      name={item.name}
+      linkToRepo={item.full_name}
+      fullName={item.full_name}
+    />
+  ))}
+  ```
+- **Aba Starred**: percorre `githubState.starred` e renderiza cada item.
+  ```jsx
+  {githubState.starred.map((item) => (
+    <RepositoryItem
+      key={item.id}
+      name={item.name}
+      linkToRepo={item.html_url}
+      fullName={item.full_name}
+    />
+  ))}
+  ```
+
+### Estilização (`styled.js`)
+- Usa `styled-components` para customizar os elementos do `react-tabs`:
+  - `WrapperTabs` → container principal das abas.
+  - `WrapperTabList` → lista de abas, exibida em linha (`display: flex`).
+  - `WrapperTab` → cada aba, com borda, padding e efeito de seleção (`.is-selected`).
+  - `WrapperTabPanel` → painel de conteúdo, exibido apenas quando selecionado.
+  - `WrapperList` → container dos itens, com `flex-wrap` para quebrar em múltiplas linhas.
+
+### Pontos de atenção
+1. **Consistência dos links**  
+   - Em `Repositories`, está usando `linkToRepo={item.full_name}` (isso não é uma URL, deveria ser `item.html_url`).  
+   - Em `Starred`, está correto (`linkToRepo={item.html_url}`).
+
+2. **Fallbacks**  
+   - Se não houver repositórios ou favoritos, atualmente renderiza apenas `<></>`.  
+   - Poderia exibir uma mensagem amigável: “Nenhum repositório encontrado”.
+
+3. **Integração com estado global**  
+   - O componente depende de `githubState.repositories` e `githubState.starred`.  
+   - Atualiza automaticamente quando o Provider busca os dados.
+
+4. **Melhorias possíveis**  
+   - Corrigir `linkToRepo` para usar `item.html_url` em ambos os casos.  
+   - Adicionar descrição, linguagem e contadores (stars, forks) no `RepositoryItem`.  
+   - Paginação ou scroll infinito para listas grandes.
