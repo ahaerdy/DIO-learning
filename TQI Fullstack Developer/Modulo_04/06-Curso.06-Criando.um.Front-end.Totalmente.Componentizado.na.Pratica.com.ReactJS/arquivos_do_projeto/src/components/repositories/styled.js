@@ -25,12 +25,6 @@ export const WrapperTab = styled(Tab)`
   background-color: "#fff";
   margin: 8px;
 
-  /* 👇 novas regras */
-  max-width: 200px;        /* limite de largura */
-  overflow: hidden;        /* esconde o excesso */
-  text-overflow: ellipsis; /* adiciona "..." */
-  white-space: nowrap;     /* impede quebra de linha */
-
   &:focus {
     outline: none;
   }
