@@ -59,7 +59,7 @@ const useGithub = () => {
 export default useGithub;
 ```
 
-[Detalhando o componente github-provider.js](./doc_github-provider_e_github_hooks.md)
+Verificar: [Detalhando o componente github-provider.js](./doc_github-provider_e_github_hooks.md)
 
 ## 2. **Explorar os componentes usados**
 A partir do `App.js`, seguir para:
