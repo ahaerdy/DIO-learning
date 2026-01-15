@@ -1,94 +1,49 @@
-# Getting Started with Create React App
+# 🚀 GitHub Profile Viewer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação React que consome a API do GitHub para exibir informações de perfil, repositórios e favoritos de qualquer usuário.
 
-## About project
+## 📌 Funcionalidades
+- Busca de usuário do GitHub.
+- Exibição de dados de perfil (nome, login, avatar, bio, etc).
+- Listagem de repositórios e favoritos (starred).
+- Navegação entre abas usando `react-tabs`.
+- Estado global gerenciado com Context API + custom hook `useGithub`.
 
-This repository was created in order to show how we can create a frontend application with reusable components.
+## 🛠️ Tecnologias utilizadas
+- React
+- Context API
+- Styled-components
+- React-tabs
+- GitHub REST API
 
-We will create an application using the github public api.
+## ▶️ Como executar
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repo.git
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Execute o projeto:
+   ```bash
+   npm start
+   ```
 
-### Features
+## 📂 Estrutura principal
+- `App.js` → Componente raiz, controla fluxo de renderização.
+- `Profile/` → Exibe dados do usuário.
+- `Repositories/` → Lista repositórios e favoritos em abas.
+- `hooks/github-hooks.js` → Hook para acessar estado global.
+- `providers/github-provider.js` → Provider que gerencia estado e chamadas à API.
 
-- Search infos by username
-- Search repo by username
-- Search starred by username
+## 📖 Documentação técnica
+O estudo detalhado do projeto, com análise de cada componente e do estado global, está disponível em:
 
-### Preview
+👉 `[Parece que o resultado não era seguro para exibição. Vamos mudar as coisas e tentar outra opção!]`
 
-Print of the finished project.
+## ✅ Conclusão
+Este projeto cumpre seu objetivo de forma simples e clara: consumir a API do GitHub e apresentar informações básicas de perfil e repositórios.  
+A arquitetura está organizada e pronta para evoluir com novas funcionalidades caso seja necessário.
+```
 
-![plot](./image/snapshot-1.png)
-
-### Libraries used
-
-- [axios](https://www.npmjs.com/package/axios)
-- [react-tabs](https://www.npmjs.com/package/react-tabs)
-- [styled-components](https://styled-components.com/)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
