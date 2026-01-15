@@ -99,7 +99,7 @@ import api from "../services/api";
   - `createContext` → cria um **Contexto** para compartilhar dados globalmente.
   - `useState` → gerencia o estado interno do provider.
   - `useCallback` → memoriza funções para evitar recriações desnecessárias.
-- Importa `api`, que é provavelmente um **axios configurado** para acessar a API do GitHub.
+- Importa `api`, isto é, um **axios configurado** para acessar a API do GitHub.
 
 ---
 
@@ -122,7 +122,36 @@ const GithubProvider = ({ children }) => {
 - Define o **Provider**, que vai envolver toda a aplicação (`<GithubProvider> ... </GithubProvider>`).
 - Recebe `children` (os componentes que estarão dentro dele).
 
----
+<datails>
+<summary>Detalhes sobre o papel do **Provider** em relação à aplicação inteira.</summary>
+
+### 📌 O que o Provider faz
+Um **Provider** no React é como um **“distribuidor de informações”**.  
+Ele envolve a aplicação (ou parte dela) e **torna disponíveis dados e funções para todos os componentes filhos**, sem precisar passar *props* manualmente em cada nível.
+
+### 🔎 No projeto
+- O **`GithubProvider`** envolve toda a aplicação.  
+- Ele fornece:
+  - O estado global (`githubState`) → dados do usuário, repositórios, favoritos, status de carregamento.  
+  - Funções (`getUser`, `getUserRepos`, `getUserStarred`) → para buscar informações na API do GitHub.  
+
+Qualquer componente dentro de `<GithubProvider> ... </GithubProvider>` pode acessar esses dados e funções usando o hook `useGithub`.
+
+### 📂 Estrutura visual
+```jsx
+<GithubProvider>
+  <App />
+</GithubProvider>
+```
+
+➡️ Aqui, o `App` e todos os componentes dentro dele (Profile, Repositories, NoSearch, etc.) têm acesso ao contexto fornecido pelo `GithubProvider`.
+
+### 🎯 Em resumo
+- O **Provider** é como um **“cérebro central”** que guarda informações e funções.  
+- Ele **distribui** esses recursos para todos os componentes filhos.  
+- Isso evita o problema de *prop drilling* (passar props manualmente por vários níveis).  
+- No seu caso, o `GithubProvider` garante que qualquer parte da aplicação possa acessar os dados do GitHub sem complicação.
+</details>
 
 ```js
   const [githubState, setGithubState] = useState({
