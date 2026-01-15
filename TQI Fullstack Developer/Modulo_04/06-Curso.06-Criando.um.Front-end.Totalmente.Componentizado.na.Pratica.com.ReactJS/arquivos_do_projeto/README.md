@@ -1,22 +1,22 @@
-# 🚀 GitHub Profile Viewer
+# GitHub Profile Viewer
 
 Aplicação React que consome a API do GitHub para exibir informações de perfil, repositórios e favoritos de qualquer usuário.
 
-## 📌 Funcionalidades
+## Funcionalidades
 - Busca de usuário do GitHub.
 - Exibição de dados de perfil (nome, login, avatar, bio, etc).
 - Listagem de repositórios e favoritos (starred).
 - Navegação entre abas usando `react-tabs`.
 - Estado global gerenciado com Context API + custom hook `useGithub`.
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 - React
 - Context API
 - Styled-components
 - React-tabs
 - GitHub REST API
 
-## ▶️ Como executar
+## Como executar
 1. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/seu-repo.git
