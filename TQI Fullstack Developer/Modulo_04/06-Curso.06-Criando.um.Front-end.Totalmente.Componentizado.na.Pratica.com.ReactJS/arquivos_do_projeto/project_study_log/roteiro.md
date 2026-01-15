@@ -53,59 +53,36 @@ const { githubState } = useGithub();
 ```
 
 #### 🔎 O que acontece aqui
-
-1. **Chamada ao hook personalizado**
-   - `useGithub()` é o **custom hook** definido em `github-hooks.js`.
+1. **Chamada ao hook personalizado**  
+   - `useGithub()` é o **custom hook** definido em `github-hooks.js`.  
    - Esse hook usa `useContext(GithubContext)` para acessar o **estado global** e as funções fornecidas pelo `GithubProvider`.
 
-2. **Desestruturação**
-   - O hook retorna um objeto com várias propriedades:
+2. **Desestruturação**  
+   - O hook retorna um objeto com várias propriedades:  
      ```js
      { githubState, getUser, getUserRepos, getUserStarred }
      ```
-   - A linha está usando **desestruturação** para pegar **apenas** a propriedade `githubState` desse objeto.
-   - Ou seja, ignora `getUser`, `getUserRepos` e `getUserStarred` porque neste componente (`App.js`) só precisa do estado.
+   - Aqui pegamos apenas `githubState`, ignorando as funções.
 
-3. **O que é `githubState`**
-   - É o **estado global** que contém:
-     - `hasUser` → se já foi buscado um usuário.
-     - `loading` → se está carregando dados.
-     - `user` → objeto com dados do usuário (id, avatar, login, etc.).
-     - `repositories` → lista de repositórios.
-     - `starred` → lista de repositórios favoritados.
+3. **O que é `githubState`**  
+   - Estado global com:  
+     - `hasUser` → se já foi buscado um usuário.  
+     - `loading` → se está carregando dados.  
+     - `user` → objeto com dados do usuário.  
+     - `repositories` → lista de repositórios.  
+     - `starred` → lista de favoritos.
 
-4. **Uso dentro do App.js**
-   - O `App.js` usa `githubState` para decidir o que renderizar:
-     - Se `hasUser` é `false` → mostra `<NoSearch />`.
-     - Se `hasUser` é `true` e `loading` é `true` → mostra `"Loading"`.
-     - Se `hasUser` é `true` e `loading` é `false` → mostra `<Profile />` e `<Repositories />`.
+4. **Uso dentro do App.js**  
+   - Decide o que renderizar:  
+     - `NoSearch` se não há usuário.  
+     - `"Loading"` se está carregando.  
+     - `Profile` e `Repositories` se já carregou.
 
 ---
 
-#### 🎯 Em resumo
-A linha:
+### 🟥 Analisando o objeto `githubState` em suas etapas
 
-```js
-const { githubState } = useGithub();
-```
-
-- **Conecta o `App.js` ao estado global do GitHub** fornecido pelo `GithubProvider`.  
-- Permite que o `App.js` saiba se existe usuário, se está carregando e quais dados já foram buscados.  
-- É a **ponte** entre o contexto global e a lógica de renderização do `App.js`.
-
-### 🟥🟥 Analisando o objeto githubState em seu estado inicial:
-
-```javascript
-  const { githubState } = useGithub();
-  console.log("Conteúdo de githubState:", githubState);
-```
-
-Saída no console
-
-<img src="000-Midia_e_Anexos/image-1.png" alt="" width="480">
-
-#### 📋 Estado atual observado:
-
+#### Estado inicial
 ```js
 {
   hasUser: false,
@@ -116,81 +93,25 @@ Saída no console
 }
 ```
 
-#### 🔍 O que podemos analisar nesse momento
+<img src="000-Midia_e_Anexos/image-1.png" alt="" width="480">
 
-##### 1. **Nenhum usuário foi buscado ainda**
-- `hasUser: false` indica que nenhuma chamada à função `getUser()` foi feita.
-- A aplicação está em seu estado inicial, aguardando uma ação do usuário (como digitar um nome e buscar).
-
-##### 2. **Não está carregando dados**
-- `loading: false` mostra que nenhuma requisição está em andamento.
-- Isso é útil para controlar o que mostrar na tela (ex: spinner de carregamento).
-
-##### 3. **Dados do usuário estão vazios**
-- O objeto `user` tem todas as propriedades como `undefined` ou `0`.
-- Isso confirma que ainda não houve preenchimento com dados reais da API do GitHub.
-
-##### 4. **Listas de repositórios e favoritos estão vazias**
-- `repositories: []` e `starred: []` mostram que ainda não foram buscados os dados relacionados ao usuário.
-
-#### O que isso revela sobre o fluxo da aplicação
-
-- O `App.js` está funcionando corretamente ao acessar o estado global.
-- O `GithubProvider` está fornecendo o estado inicial como esperado.
-- Nenhuma ação foi disparada ainda — ou seja, o usuário ainda não interagiu com a interface para buscar um perfil.
-
-### 🟥🟥 Preenchendo o campo de buscas e clicando em buscar - estado INTERMEDIÁRIO da aplicação:
-
-
-<img src="000-Midia_e_Anexos/image-2.png" alt="" width="480">
-
+#### Estado intermediário (busca iniciada)
 ```js
 Buscando usuário: ahaerdy
-githubState atualizado: {
+{
   hasUser: false,
   loading: true,
-  user: {
-    id: undefined,
-    avatar: undefined,
-    login: undefined
-  },
+  user: { id: undefined, avatar: undefined, login: undefined },
   repositories: [],
   starred: []
 }
 ```
 
-#### 🔍 Análise detalhada
+<img src="000-Midia_e_Anexos/image-2.png" alt="" width="480">
 
-##### ✅ `hasUser: false`
-- A variável com nome de usuário já foi carregada, mas nenhum usuário foi carregado ainda.
-- Isso indica que a requisição à API do GitHub **ainda está em andamento** ou **acabou de começar**.
-
-##### 🔄 `loading: true`
-- A aplicação está **em estado de carregamento**.
-- Isso é disparado logo após o clique no botão “Buscar”, quando `getUser(username)` é chamado.
-- Serve para exibir um spinner ou mensagem de “Carregando...” na interface.
-
-##### 🧑‍💻 `user: { id: undefined, avatar: undefined, login: undefined }`
-- O objeto `user` ainda não foi preenchido.
-- Isso é esperado nesse momento, já que os dados ainda estão sendo buscados.
-
-##### 📂 `repositories: []` e `starred: []`
-- Nenhum repositório ou starred repo foi carregado ainda.
-- Essas chamadas (`getUserRepos`, `getUserStarred`) geralmente são feitas **depois** que o usuário é carregado com sucesso.
-
-#### Interpretação geral 
-
-Essa saída representa o **estado intermediário** da aplicação:
-- A busca foi iniciada.
-- O estado foi atualizado para refletir que está carregando.
-- Nenhum dado chegou ainda — tudo está vazio ou indefinido.
-
-### 🟥🟥 Estado intermediário - o usuário foi encontrado com sucesso
-
-<img src="000-Midia_e_Anexos/image-3.png" alt="" width="480">
-
+#### Usuário encontrado (dados básicos)
 ```js
-githubState atualizado: {
+{
   hasUser: true,
   loading: false,
   repositories: [],
@@ -203,133 +124,52 @@ githubState atualizado: {
 }
 ```
 
-#### 🔍 Análise detalhada
+<img src="000-Midia_e_Anexos/image-3.png" alt="" width="480">
 
-##### ✅ `hasUser: true`
-- O usuário foi encontrado com sucesso.
-- Isso indica que a requisição à API do GitHub foi concluída e os dados do usuário foram recebidos.
-
-##### 🧘 `loading: false`
-- A aplicação saiu do estado de carregamento.
-- Isso significa que a interface pode exibir os dados sem mostrar “Carregando...”.
-
-##### 🧑‍💻 `user: {...}`
-- O objeto `user` agora contém dados reais:
-  - `id`: 29876254
-  - `avatar`: URL da imagem de perfil
-  - `login`: "ahaerdy"
-
-##### 📂 `repositories: []` e `starred: []`
-- Ainda estão vazios.
-- Isso pode significar que as funções `getUserRepos()` e `getUserStarred()` **ainda não foram chamadas** ou **ainda estão aguardando resposta**.
-
-
-#### Interpretação geral
-
-Esse estado representa o momento **logo após a resposta da API do usuário**, mas **antes** dos dados de repositórios e favoritos serem carregados.
-
-### 🟥🟥 Estado final completo, após todas as requisições
-
-<img src="000-Midia_e_Anexos/image-4.png" alt="" width="480">
-
-Claro, Arthur! Aqui está o conteúdo extraído da imagem mais recente, formatado em bloco para seus apontamentos:
-
+#### Estado final completo
 ```js
-githubState atualizado: {
+{
   hasUser: true,
   loading: false,
   user: {
     id: 29876254,
     avatar: "https://avatars.githubusercontent.com/u/29876254?v=4"
   },
-  repositories: [
-    {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...},
-    {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...},
-    {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...}, {...}
-  ],
-  starred: [
-    {...}, {...}, {...}, {...}, {...}, {...},
-    {...}, {...}, {...}, {...}, {...}, {...}
-  ]
+  repositories: [30 itens],
+  starred: [12 itens]
 }
 ```
 
-
-#### 🔍 Análise detalhada
-
-##### ✅ `hasUser: true`
-- O usuário foi carregado com sucesso.
-- A aplicação reconhece que há dados válidos no estado `user`.
-
-##### 🧘 `loading: false`
-- O carregamento terminou.
-- A interface está pronta para exibir os dados.
-
-##### 🧑‍💻 `user: {...}`
-- O objeto `user` contém:
-  - `id`: 29876254
-  - `avatar`: URL da imagem de perfil
-- O campo `login` não aparece no log, mas está presente no estado completo.
-
-##### 📂 `repositories: [30 itens]`
-- O array `repositories` foi preenchido com 30 repositórios.
-- Isso mostra que a função `getUserRepos()` foi chamada e respondeu corretamente.
-
-##### ⭐ `starred: [12 itens]`
-- O array `starred` foi preenchido com 12 repositórios favoritos.
-- A função `getUserStarred()` também foi executada com sucesso.
-
-#### Interpretação geral
-
-Esse é o **estado final completo** após todas as requisições:
-- O usuário foi carregado.
-- Os repositórios e favoritos foram atualizados.
-- O estado está pronto para renderizar todos os dados na interface.
-
-
+<img src="000-Midia_e_Anexos/image-4.png" alt="" width="480">
 
 ---
 
+## 2. **Análise do componente `Profile`**
+- O `Profile` é responsável por **exibir os dados do usuário** carregados no estado global.
+- Ele provavelmente acessa `githubState` via `useGithub()` e renderiza:
+  - `user.name` → Nome completo.  
+  - `user.login` → Username do GitHub.  
+  - `user.avatar` → Foto de perfil.  
+  - `user.html_url` → Link para o perfil.  
 
+### 🎯 Objetivos da análise
+1. **Confirmar como o `Profile` recebe os dados**  
+   - Verificar se está usando `useGithub()` corretamente.  
+   - Garantir que acessa `githubState.user`.
 
+2. **Checar a renderização dos campos**  
+   - Validar se `name`, `login`, `avatar` e `html_url` aparecem corretamente na interface.  
+   - Tratar casos em que `name` pode ser `null` ou `avatar` não existir.
 
+3. **Validar integração com o estado global**  
+   - Confirmar que o `Profile` reage às mudanças do `githubState`.  
+   - Evitar erros de acesso a propriedades indefinidas.
 
-## 2. **Explorar os componentes usados**
-A partir do `App.js`, seguir para:
-- `Layout` → provavelmente define a estrutura visual (header, container, etc.)
-- `NoSearch` → tela inicial ou mensagem quando nenhum usuário foi buscado
-- `Profile` → exibe dados do usuário (nome, avatar, localização, etc.)
-- `Repositories` → lista os repositórios do usuário
+4. **Pensar em melhorias**  
+   - Adicionar fallback (“Nome não informado”).  
+   - Garantir acessibilidade (atributo `alt` na imagem).  
+   - Exibir informações adicionais (bio, localização, seguidores).
 
-## 3. **Entender o hook `useGithub()`**
-- Está em `hooks/github-hooks.js`
-- Provavelmente usa `useContext` para acessar o estado global
-- Esse estado vem do `GithubProvider` (em `providers/github-provider.js`)
+---
 
-## 4. **Analisar o `GithubProvider`**
-- Definir o contexto e o estado compartilhado
-- Deve conter lógica de chamada à API do GitHub (via `axios`)
-- É onde o estado `hasUser`, `loading`, `user`, `repositories` etc. é definido
-
-## 5. **Verificar estilos e reset**
-- `ResetCSS` é usado para limpar estilos padrão do navegador
-- `styled-components` provavelmente define os estilos dos componentes
-
-### 📝 Como estudar e comentar
-- Abrir cada componentem anotando:
-  - O que ele faz
-  - Quais props recebe
-  - Como se conecta ao estado global
-  - Quais responsabilidades tem (UI, lógica, API, etc.)
-
-- Comentar o código com observações como:
-  ```js
-  // Verifica se o usuário foi buscado antes de renderizar os dados
-  ```
-
-- Criar um README explicando:
-  - O propósito do projeto
-  - Como instalar e rodar
-  - Como funciona a busca de usuários
-  - Quais componentes principais existem
-
+👉 Assim, o roteiro segue organizado: primeiro entendemos o **App.js** e o fluxo do estado, e agora entramos no **Profile**, garantindo que os dados que vimos no console realmente aparecem na interface.
