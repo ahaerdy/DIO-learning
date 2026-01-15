@@ -1,6 +1,6 @@
 ## Detalhando o componente github-provider.js
 
-### 🟢  ./src/providers/`github-provider.js`
+### 🟢 Código: /src/providers/`github-provider.js`
 
 ```javascript
 import React, { createContext, useCallback, useState } from "react";
