@@ -1,8 +1,4 @@
-Excelente, Arthur! Agora temos em mãos o **núcleo da lógica** do projeto: o `github-provider.js`. Vou comentar cada detalhe para você entender tecnicamente como ele funciona.
-
----
-
-### 🟢  ./src/providers/`github-provider.js`
+## 🟢  ./src/providers/`github-provider.js`
 
 
 ```javascript
@@ -89,7 +85,7 @@ const GithubProvider = ({ children }) => {
       console.log("data: " + JSON.stringify(da
 ```
 
-#### Comentário linha a linha:
+### Comentário linha a linha:
 
 ```js
 import React, { createContext, useCallback, useState } from "react";
