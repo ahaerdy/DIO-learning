@@ -3,8 +3,9 @@
 Aplicação React que consome a API do GitHub para exibir informações de perfil, repositórios e favoritos de qualquer usuário.
 
 <p align="center">
-  <img src="image.png" alt="" width="860">
+  <img src="screencapture-localhost-3000-2026-01-15-16_55_46.jpg" alt="" width="860">
 </p>
+![alt text]()
 
 ## Funcionalidades
 - Busca de usuário do GitHub.
