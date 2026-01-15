@@ -93,7 +93,7 @@ const { githubState } = useGithub();
 - Permite que o `App.js` saiba se existe usuário, se está carregando e quais dados já foram buscados.  
 - É a **ponte** entre o contexto global e a lógica de renderização do `App.js`.
 
-### Analisando o objeto githubState em seu estado inicial:
+### 🟥🟥 Analisando o objeto githubState em seu estado inicial:
 
 ```javascript
   const { githubState } = useGithub();
@@ -139,7 +139,12 @@ Saída no console
 - O `GithubProvider` está fornecendo o estado inicial como esperado.
 - Nenhuma ação foi disparada ainda — ou seja, o usuário ainda não interagiu com a interface para buscar um perfil.
 
-### Preenchendo o campo de buscas e clicando em buscar - estado INTERMEDIÁRIO da aplicação:
+### 🟥🟥 Preenchendo o campo de buscas e clicando em buscar - estado INTERMEDIÁRIO da aplicação:
+
+![alt text](image.png)
+
+<img src="000-Midia_e_Anexos/image-2.png" alt="" width="480">
+
 
 ```js
 githubState atualizado: {
