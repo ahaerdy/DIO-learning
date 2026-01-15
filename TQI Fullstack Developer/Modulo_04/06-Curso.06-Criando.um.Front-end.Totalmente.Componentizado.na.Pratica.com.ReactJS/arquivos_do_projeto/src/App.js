@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react"; // <-- adiciona useEffect
 import Layout from "./components/layout";
 import NoSearch from "./components/no-search";
 import Profile from "./components/profile";
@@ -7,7 +7,11 @@ import useGithub from "./hooks/github-hooks";
 
 const App = () => {
   const { githubState } = useGithub();
-  console.log("Conteúdo de githubState:", githubState);
+  // console.log("Conteúdo de githubState:", githubState);
+
+  // Monitora mudanças no estado global 
+  useEffect(() => { console.log("githubState atualizado:", githubState); }, [githubState]);
+
   return (
     <Layout>
       {githubState.hasUser ? (

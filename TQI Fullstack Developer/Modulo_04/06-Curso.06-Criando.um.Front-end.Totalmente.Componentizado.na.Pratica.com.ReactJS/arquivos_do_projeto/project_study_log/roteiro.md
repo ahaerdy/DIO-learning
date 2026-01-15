@@ -93,7 +93,7 @@ const { githubState } = useGithub();
 - Permite que o `App.js` saiba se existe usuário, se está carregando e quais dados já foram buscados.  
 - É a **ponte** entre o contexto global e a lógica de renderização do `App.js`.
 
-### Analisando o objeto githubState:
+### Analisando o objeto githubState em seu estado inicial:
 
 ```javascript
   const { githubState } = useGithub();
@@ -133,25 +133,53 @@ Saída no console
 ##### 4. **Listas de repositórios e favoritos estão vazias**
 - `repositories: []` e `starred: []` mostram que ainda não foram buscados os dados relacionados ao usuário.
 
-
 #### 🧠 O que isso revela sobre o fluxo da aplicação
 
 - O `App.js` está funcionando corretamente ao acessar o estado global.
 - O `GithubProvider` está fornecendo o estado inicial como esperado.
 - Nenhuma ação foi disparada ainda — ou seja, o usuário ainda não interagiu com a interface para buscar um perfil.
 
-#### ✅ Próximo passo lógico
+### Preenchendo o campo de buscas e clicando em buscar - estado INTERMEDIÁRIO da aplicação:
 
-Você pode agora:
-- Criar um campo de busca para digitar um nome de usuário do GitHub.
-- Disparar a função `getUser("nome")` ao clicar em um botão.
-- Observar o `githubState` mudando no console:
-  - `loading: true` → enquanto busca.
-  - `hasUser: true` → quando os dados chegam.
-  - `user`, `repositories`, `starred` → preenchidos com dados reais.
+```js
+githubState atualizado: {
+  hasUser: false,
+  loading: true,
+  user: {
+    id: undefined,
+    avatar: undefined,
+    login: undefined
+  },
+  repositories: [],
+  starred: []
+}
+```
 
+#### 🔍 Análise detalhada
 
+##### ✅ `hasUser: false`
+- Nenhum usuário foi carregado ainda.
+- Isso indica que a requisição à API do GitHub **ainda está em andamento** ou **acabou de começar**.
 
+##### 🔄 `loading: true`
+- A aplicação está **em estado de carregamento**.
+- Isso é disparado logo após o clique no botão “Buscar”, quando `getUser(username)` é chamado.
+- Serve para exibir um spinner ou mensagem de “Carregando...” na interface.
+
+##### 🧑‍💻 `user: { id: undefined, avatar: undefined, login: undefined }`
+- O objeto `user` ainda não foi preenchido.
+- Isso é esperado nesse momento, já que os dados ainda estão sendo buscados.
+
+##### 📂 `repositories: []` e `starred: []`
+- Nenhum repositório ou starred repo foi carregado ainda.
+- Essas chamadas (`getUserRepos`, `getUserStarred`) geralmente são feitas **depois** que o usuário é carregado com sucesso.
+
+#### 🧠 Interpretação geral
+
+Essa saída representa o **estado intermediário** da aplicação:
+- A busca foi iniciada.
+- O estado foi atualizado para refletir que está carregando.
+- Nenhum dado chegou ainda — tudo está vazio ou indefinido.
 
 
 
