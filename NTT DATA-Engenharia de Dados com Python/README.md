@@ -64,8 +64,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Versionamento de Código com Git e GitHub](Modulo_01/04-Curso.04-Versionamento.de.Codigo.com.Git.e.GitHub/README.md) 
 - [x] Curso: [Desafios de Projetos: Crie Um Portfólio Vencedor](Modulo_01/05-Curso.5-Desafios.de.Projetos-Crie.Um.Portfolio.Vencedor/README.md)  
 - [x] Projeto: [Contribuindo em um Projeto Open Source no GitHub](Modulo_01/06-Projeto-Contribuindo.em.um.Projeto.Open.Source.no.GitHub/README.md)
-    - Repositório: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
-    - Descrição: acrescentando o meu arquivo markdown na pasta community no repositório dio-lab-open-source.
+    - **Repositório**: [Fork-dio-lab-open-source](https://github.com/ahaerdy/Fork-dio-lab-open-source)
+    - **Descrição**: acrescentando o meu arquivo markdown na pasta community no repositório dio-lab-open-source.
 - [x] Mentoria: [Live de Lançamento: Bootcamp NTT DATA - Engenharia de Dados com Python](Modulo_01/07-Mentoria-Live.de.Lancamento)
       
 ### Módulo 2: Sintaxe Básica com Python  
@@ -75,8 +75,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python/README.md)
 - [x] Curso: [Dominando Funções Python](hModulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python/README.md)
 - [x] Projeto: [Criando um Sistema Bancário com Python](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/README.md)
-  - Arquivo do projeto: [desafio.py](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
-  - Descrição: desenvolvimento de um sistema de operações bancárias simples em Python, sem uso de bibliotecas externas, explorando estruturas de controle, manipulação de strings, entrada de dados, validação de regras e aplicação de lógica para simular funcionalidades como saque, depósito e extrato.
+  - **Repositório**: [desafio.py](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
+  - **Descrição**: desenvolvimento de um sistema de operações bancárias simples em Python, sem uso de bibliotecas externas, explorando estruturas de controle, manipulação de strings, entrada de dados, validação de regras e aplicação de lógica para simular funcionalidades como saque, depósito e extrato.
 
 
 ### Módulo 3: Trabalhando com Coleções em Python  
@@ -88,7 +88,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Lidando com Data, Hora e Fuso Horário no Python](Modulo_03/05-Curso%2005-Lidando_com_Data_Hora_e_Fuso_Horario_no_Python)
 - [x] Projeto: [Otimizando o Sistema Bancário com Funções Python](Modulo_03/06-Projeto-Otimizando.o.Sistema.Bancario.com.Funcoes.Python)
   - **Repositório**: [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
-  - Descrição: sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python.
+  - **Descrição**: sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python.
 - [x] Curso: [Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional](Modulo_03/07-Curso%2007-Desafios_de_C%C3%B3digo_Aperfei%C3%A7oe_Sua_L%C3%B3gica_e_Pensamento_Computacional)
 - [x] Desafio: Aplicando Técnicas de Listas em Python
 
