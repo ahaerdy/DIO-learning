@@ -7,10 +7,14 @@ const Profile = () => {
 
   return (
     <S.Wrapper>
-      <S.WrapperImage src={githubState.user.avatar} alt="Avatar of user" />
+      <S.WrapperImage 
+        src={githubState.user.avatar} 
+        alt={`Avatar de ${githubState.user.login}`} 
+      />
       <S.WrapperInfoUser>
         <div>
-          <h1>{githubState.user.name}</h1>
+          <h1>{githubState.user.name || "não informado"}</h1>
+
           <S.WrapperUserGeneric>
             <h3>Username:</h3>
             <a
@@ -21,37 +25,87 @@ const Profile = () => {
               {githubState.user.login}
             </a>
           </S.WrapperUserGeneric>
+
           <S.WrapperUserGeneric>
             <h3>Company:</h3>
-            <span>{githubState.user.company}</span>
+            <span>{githubState.user.company || "não informado"}</span>
           </S.WrapperUserGeneric>
+
           <S.WrapperUserGeneric>
             <h3>Location:</h3>
-            <span>{githubState.user.location}</span>
+            <span>{githubState.user.location || "não informado"}</span>
           </S.WrapperUserGeneric>
+
           <S.WrapperUserGeneric>
             <h3>Blog:</h3>
-            <a href={githubState.user.blog} target="_blank" rel="noreferrer">
-              {githubState.user.blog}
-            </a>
+            {githubState.user.blog ? (
+              <a 
+                href={githubState.user.blog} 
+                target="_blank" 
+                rel="noreferrer"
+              >
+                {githubState.user.blog}
+              </a>
+            ) : (
+              <span>não informado</span>
+            )}
+          </S.WrapperUserGeneric>
+
+          <S.WrapperUserGeneric>
+            <h3>Bio:</h3>
+            <span>{githubState.user.bio || "não informado"}</span>
+          </S.WrapperUserGeneric>
+
+          <S.WrapperUserGeneric>
+            <h3>Desde:</h3>
+            <span>
+              {githubState.user.created_at 
+                ? new Date(githubState.user.created_at).toLocaleDateString() 
+                : "não informado"}
+            </span>
           </S.WrapperUserGeneric>
         </div>
+
         <S.WrapperStatusCount>
           <div>
             <h4>Followers</h4>
-            <span> {githubState.user.followers}</span>
+            <a 
+              href={`https://github.com/${githubState.user.login}?tab=followers`} 
+              target="_blank" 
+              rel="noreferrer"
+            >
+              {githubState.user.followers}
+            </a>
           </div>
           <div>
             <h4>Followings</h4>
-            <span> {githubState.user.following}</span>
+            <a 
+              href={`https://github.com/${githubState.user.login}?tab=following`} 
+              target="_blank" 
+              rel="noreferrer"
+            >
+              {githubState.user.following}
+            </a>
           </div>
           <div>
             <h4>Gists</h4>
-            <span> {githubState.user.public_gists}</span>
+            <a 
+              href={`https://gist.github.com/${githubState.user.login}`} 
+              target="_blank" 
+              rel="noreferrer"
+            >
+              {githubState.user.public_gists}
+            </a>
           </div>
           <div>
             <h4>Repos</h4>
-            <span> {githubState.user.public_repos}</span>
+            <a 
+              href={`https://github.com/${githubState.user.login}?tab=repositories`} 
+              target="_blank" 
+              rel="noreferrer"
+            >
+              {githubState.user.public_repos}
+            </a>
           </div>
         </S.WrapperStatusCount>
       </S.WrapperInfoUser>

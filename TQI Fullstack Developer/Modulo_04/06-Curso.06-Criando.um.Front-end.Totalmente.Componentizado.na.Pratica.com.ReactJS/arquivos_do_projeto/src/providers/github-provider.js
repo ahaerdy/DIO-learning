@@ -21,6 +21,8 @@ const GithubProvider = ({ children }) => {
       blog: undefined,
       company: undefined,
       location: undefined,
+      bio: undefined,          // 👈 adicionado
+      created_at: undefined,   // 👈 adicionado
       followers: 0,
       following: 0,
       public_gists: 0,
@@ -51,6 +53,8 @@ const GithubProvider = ({ children }) => {
             blog: data.blog,
             company: data.company,
             location: data.location,
+            bio: data.bio,             // 👈 incluído
+            created_at: data.created_at, // 👈 incluído
             followers: data.followers,
             following: data.following,
             public_gists: data.public_gists,
@@ -68,7 +72,6 @@ const GithubProvider = ({ children }) => {
 
   const getUserRepos = (username) => {
     api.get(`users/${username}/repos`).then(({ data }) => {
-      // console.log("data: " + JSON.stringify(data));
       setGithubState((prevState) => ({
         ...prevState,
         repositories: data,
@@ -78,7 +81,6 @@ const GithubProvider = ({ children }) => {
 
   const getUserStarred = (username) => {
     api.get(`users/${username}/starred`).then(({ data }) => {
-      // console.log("data: " + JSON.stringify(data));
       setGithubState((prevState) => ({
         ...prevState,
         starred: data,
