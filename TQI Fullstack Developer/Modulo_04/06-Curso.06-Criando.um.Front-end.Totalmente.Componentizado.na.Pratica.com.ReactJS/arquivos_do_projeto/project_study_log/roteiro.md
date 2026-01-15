@@ -55,7 +55,7 @@ const { githubState } = useGithub();
 #### 🔎 O que acontece aqui
 
 1. **Chamada ao hook personalizado**
-   - `useGithub()` é o **custom hook** que você definiu em `github-hooks.js`.
+   - `useGithub()` é o **custom hook** definido em `github-hooks.js`.
    - Esse hook usa `useContext(GithubContext)` para acessar o **estado global** e as funções fornecidas pelo `GithubProvider`.
 
 2. **Desestruturação**
