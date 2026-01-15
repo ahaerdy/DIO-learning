@@ -277,10 +277,6 @@ export default GithubProvider;
 
 ---
 
-Ótimo, Arthur! Vamos montar um **diagrama textual** que mostra claramente como os principais blocos do projeto se conectam. Assim você terá uma visão hierárquica e de fluxo de dados.
-
----
-
 ### 🗺️ Fluxo de Hierarquia e Dados
 
 ```
