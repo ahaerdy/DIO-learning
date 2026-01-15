@@ -120,7 +120,7 @@ const GithubProvider = ({ children }) => {
 
 <details>
 <summary> 🟥🟥🟥 Detalhamento sobre o papel do Provider em relação à aplicação inteira 🟥🟥🟥 </summary>
-
+<br>
 <div align="center"><p>▁▁▁▁▁✦✦✦▁▁▁▁▁</p></div>
 
 ###  O que o Provider faz
