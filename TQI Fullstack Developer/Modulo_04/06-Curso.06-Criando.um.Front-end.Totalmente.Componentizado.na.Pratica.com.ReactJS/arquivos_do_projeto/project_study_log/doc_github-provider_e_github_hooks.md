@@ -2,7 +2,7 @@ Excelente, Arthur! Agora temos em mãos o **núcleo da lógica** do projeto: o `
 
 ---
 
-### 📄 Comentário linha a linha
+### 📄 ./src/providers/`github-provider.js`Comentário linha a linha
 
 ```js
 import React, { createContext, useCallback, useState } from "react";
