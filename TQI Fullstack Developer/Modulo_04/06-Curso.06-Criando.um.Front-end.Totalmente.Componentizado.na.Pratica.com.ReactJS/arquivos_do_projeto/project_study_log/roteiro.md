@@ -102,11 +102,9 @@ const { githubState } = useGithub();
 
 Saída no console
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/image-1.png" alt="" width="480">
-</p>
+<img src="000-Midia_e_Anexos/image-1.png" alt="" width="480">
 
-#### 📋 Estado atual observado no console
+#### 📋 Estado atual observado:
 
 ```js
 {
