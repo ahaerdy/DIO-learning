@@ -5,7 +5,8 @@ import Providers from "./providers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // Comentando a linha abaixo apra evitar o duplo render em dev
+  // <React.StrictMode>
     <Providers />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
