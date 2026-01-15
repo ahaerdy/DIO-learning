@@ -82,7 +82,7 @@ const { githubState } = useGithub();
 
 ### 🟥 Analisando o objeto `githubState` em suas etapas
 
-#### Estado inicial
+#### 🟥🟥 Estado inicial
 ```js
 {
   hasUser: false,
@@ -95,7 +95,7 @@ const { githubState } = useGithub();
 
 <img src="000-Midia_e_Anexos/image-1.png" alt="" width="480">
 
-#### Estado intermediário (busca iniciada)
+#### 🟥🟥 Estado intermediário (busca iniciada)
 ```js
 Buscando usuário: ahaerdy
 {
@@ -109,7 +109,7 @@ Buscando usuário: ahaerdy
 
 <img src="000-Midia_e_Anexos/image-2.png" alt="" width="480">
 
-#### Usuário encontrado (dados básicos)
+#### 🟥🟥 Usuário encontrado (dados básicos)
 ```js
 {
   hasUser: true,
@@ -126,7 +126,7 @@ Buscando usuário: ahaerdy
 
 <img src="000-Midia_e_Anexos/image-3.png" alt="" width="480">
 
-#### Estado final completo
+#### 🟥🟥 Estado final completo
 ```js
 {
   hasUser: true,
