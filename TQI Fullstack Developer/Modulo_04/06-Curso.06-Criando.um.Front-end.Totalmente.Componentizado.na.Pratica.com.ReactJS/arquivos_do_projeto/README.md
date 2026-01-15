@@ -40,10 +40,9 @@ Aplicação React que consome a API do GitHub para exibir informações de perfi
 ## 📖 Documentação técnica
 O estudo detalhado do projeto, com análise de cada componente e do estado global, está disponível em:
 
-👉 `[Parece que o resultado não era seguro para exibição. Vamos mudar as coisas e tentar outra opção!]`
+👉 [tapas para entender o projeto tecnicamente](project_study_log/README.md)
 
 ## ✅ Conclusão
-Este projeto cumpre seu objetivo de forma simples e clara: consumir a API do GitHub e apresentar informações básicas de perfil e repositórios.  
-A arquitetura está organizada e pronta para evoluir com novas funcionalidades caso seja necessário.
-```
+Este projeto cumpre seu objetivo de forma simples e clara: consumir a API do GitHub e apresentar informações básicas de perfil e repositórios. A arquitetura está organizada e pronta para evoluir com novas funcionalidades caso seja necessário.
+
 
