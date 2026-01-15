@@ -120,7 +120,7 @@ const GithubProvider = ({ children }) => {
 
 <details>
 <summary>🟥🟥🟥 Detalhamento sobre o papel do Provider em relação à aplicação inteira 🟥🟥🟥</summary>
-<hr style="border: none; border-top: 5px solid red; margin: 10px 0;">
+<center>▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</center>
 
 ###  O que o Provider faz
 Um **Provider** no React é como um **“distribuidor de informações”**.  
@@ -148,7 +148,7 @@ Qualquer componente dentro de `<GithubProvider> ... </GithubProvider>` pode aces
 - Ele **distribui** esses recursos para todos os componentes filhos.  
 - Isso evita o problema de *prop drilling* (passar props manualmente por vários níveis).  
 - Neste caso, o `GithubProvider` garante que qualquer parte da aplicação possa acessar os dados do GitHub sem complicação.
-
+<center>▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</center>
 </details>
 
 ```js
