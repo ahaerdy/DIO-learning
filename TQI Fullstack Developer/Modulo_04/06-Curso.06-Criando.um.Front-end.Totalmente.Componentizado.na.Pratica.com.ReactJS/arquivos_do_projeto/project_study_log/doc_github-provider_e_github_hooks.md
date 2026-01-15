@@ -151,6 +151,7 @@ Qualquer componente dentro de `<GithubProvider> ... </GithubProvider>` pode aces
 <center>▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</center>
 </details>
 
+
 ```js
   const [githubState, setGithubState] = useState({
     hasUser: false,
