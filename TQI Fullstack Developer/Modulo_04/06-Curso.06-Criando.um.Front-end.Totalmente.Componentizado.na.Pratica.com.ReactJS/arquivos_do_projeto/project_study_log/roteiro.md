@@ -182,17 +182,9 @@ Essa saída representa o **estado intermediário** da aplicação:
 - Nenhum dado chegou ainda — tudo está vazio ou indefinido.
 
 
+---
 
-
-
-
-
-
-
-
-
-
-
+---
 
 
 
