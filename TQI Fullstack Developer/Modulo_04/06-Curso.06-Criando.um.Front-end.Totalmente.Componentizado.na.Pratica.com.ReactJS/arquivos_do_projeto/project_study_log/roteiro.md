@@ -1,6 +1,6 @@
 # 🗺️ Etapas para entender o projeto tecnicamente
 
-## 1. **Começar pelo `App.js`**
+## 1. **Começando pelo `App.js`**
 - É o **componente raiz** da aplicação.
 - Mostra como os dados são consumidos e como os componentes principais se organizam.
 - Neste caso, ele usa o hook `useGithub()` para acessar o estado global e renderizar condicionalmente:
