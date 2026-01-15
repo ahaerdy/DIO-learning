@@ -119,7 +119,7 @@ const GithubProvider = ({ children }) => {
 - Recebe `children` (os componentes que estarão dentro dele).
 
 <details>
-<summary> 🟥🟥🟥 Detalhamento sobre o papel do **Provider** em relação à aplicação inteira 🟥🟥🟥 </summary>
+<summary> 🟥🟥🟥 Detalhamento sobre o papel do Provider em relação à aplicação inteira 🟥🟥🟥 </summary>
 
 ###  O que o Provider faz
 Um **Provider** no React é como um **“distribuidor de informações”**.  
