@@ -174,7 +174,7 @@ githubState atualizado: {
 - Nenhum repositório ou starred repo foi carregado ainda.
 - Essas chamadas (`getUserRepos`, `getUserStarred`) geralmente são feitas **depois** que o usuário é carregado com sucesso.
 
-#### 🧠 Interpretação geral
+#### 🧠 Interpretação geral aaaa
 
 Essa saída representa o **estado intermediário** da aplicação:
 - A busca foi iniciada.
