@@ -1,5 +1,6 @@
-## 🟢  ./src/providers/`github-provider.js`
+## detalhando o componente github-provider.js e o hook github-hooks.js
 
+### 🟢  ./src/providers/`github-provider.js`
 
 ```javascript
 import React, { createContext, useCallback, useState } from "react";
@@ -150,7 +151,6 @@ Qualquer componente dentro de `<GithubProvider> ... </GithubProvider>` pode aces
 - Neste caso, o `GithubProvider` garante que qualquer parte da aplicação possa acessar os dados do GitHub sem complicação.
 <center>▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</center>
 </details>
-
 
 ```js
   const [githubState, setGithubState] = useState({
