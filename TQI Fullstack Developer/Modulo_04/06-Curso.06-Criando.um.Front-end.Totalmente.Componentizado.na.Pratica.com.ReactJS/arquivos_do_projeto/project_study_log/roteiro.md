@@ -42,9 +42,62 @@ const App = () => {
 export default App;
 ```
 
-Detalhamentos:
+### Verificar posteriormente:
 - [doc_github-hooks_js](doc_github-hooks_js.md)
 - [doc_github-provider_js](doc_github-provider_js.md)
+
+### Destrinchando a **chamada ao hook** `useGithub()` dentro do contexto do `App.js`:
+
+```js
+const { githubState } = useGithub();
+```
+
+---
+
+### 🔎 O que acontece aqui
+
+1. **Chamada ao hook personalizado**
+   - `useGithub()` é o **custom hook** que você definiu em `github-hooks.js`.
+   - Esse hook usa `useContext(GithubContext)` para acessar o **estado global** e as funções fornecidas pelo `GithubProvider`.
+
+2. **Desestruturação**
+   - O hook retorna um objeto com várias propriedades:
+     ```js
+     { githubState, getUser, getUserRepos, getUserStarred }
+     ```
+   - A linha está usando **desestruturação** para pegar **apenas** a propriedade `githubState` desse objeto.
+   - Ou seja, ignora `getUser`, `getUserRepos` e `getUserStarred` porque neste componente (`App.js`) só precisa do estado.
+
+3. **O que é `githubState`**
+   - É o **estado global** que contém:
+     - `hasUser` → se já foi buscado um usuário.
+     - `loading` → se está carregando dados.
+     - `user` → objeto com dados do usuário (id, avatar, login, etc.).
+     - `repositories` → lista de repositórios.
+     - `starred` → lista de repositórios favoritados.
+
+4. **Uso dentro do App.js**
+   - O `App.js` usa `githubState` para decidir o que renderizar:
+     - Se `hasUser` é `false` → mostra `<NoSearch />`.
+     - Se `hasUser` é `true` e `loading` é `true` → mostra `"Loading"`.
+     - Se `hasUser` é `true` e `loading` é `false` → mostra `<Profile />` e `<Repositories />`.
+
+---
+
+### 🎯 Em resumo
+A linha:
+
+```js
+const { githubState } = useGithub();
+```
+
+- **Conecta o `App.js` ao estado global do GitHub** fornecido pelo `GithubProvider`.  
+- Permite que o `App.js` saiba se existe usuário, se está carregando e quais dados já foram buscados.  
+- É a **ponte** entre o contexto global e a lógica de renderização do `App.js`.
+
+---
+
+👉 Quer que eu monte um **fluxo visual simplificado** mostrando como `GithubProvider → useGithub → App.js` se conectam nessa linha específica? Isso ajuda a fixar como os dados “viajam” até o componente.
 
 ---
 
