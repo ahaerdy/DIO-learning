@@ -164,30 +164,37 @@ Este é o estado final após todas as requisições. O usuário está carregado,
 
 ## 2. **Análise do componente `Profile`**
 - O `Profile` é responsável por **exibir os dados do usuário** carregados no estado global.
-- Ele provavelmente acessa `githubState` via `useGithub()` e renderiza:
+- Ele acessa `githubState` via `useGithub()` e renderiza:
   - `user.name` → Nome completo.  
   - `user.login` → Username do GitHub.  
   - `user.avatar` → Foto de perfil.  
   - `user.html_url` → Link para o perfil.  
+  - `user.company`, `user.location`, `user.blog`, `user.bio`, `user.created_at` → informações adicionais.  
+  - Contadores (`followers`, `following`, `public_gists`, `public_repos`) → exibidos com links clicáveis.
 
 ### 🎯 Objetivos da análise
 1. **Confirmar como o `Profile` recebe os dados**  
-   - Verificar se está usando `useGithub()` corretamente.  
-   - Garantir que acessa `githubState.user`.
+   - Verificar se está usando `useGithub()` corretamente. ✅ 
+   - Garantir que acessa `githubState.user`. ✅
 
 2. **Checar a renderização dos campos**  
-   - Validar se `name`, `login`, `avatar` e `html_url` aparecem corretamente na interface.  
-   - Tratar casos em que `name` pode ser `null` ou `avatar` não existir.
+   - Validar se `name`, `login`, `avatar`, `html_url`, `company`, `location`, `blog`, `bio` e `created_at` aparecem corretamente. ✅ 
+   - Tratar casos em que algum campo pode ser `null` (exibir “não informado”). ✅
+    - Implementado no códifo ✅
 
 3. **Validar integração com o estado global**  
    - Confirmar que o `Profile` reage às mudanças do `githubState`.  
    - Evitar erros de acesso a propriedades indefinidas.
 
-4. **Pensar em melhorias**  
-   - Adicionar fallback (“Nome não informado”).  
-   - Garantir acessibilidade (atributo `alt` na imagem).  
-   - Exibir informações adicionais (bio, localização, seguidores).
+4. **Melhorias aplicadas**  
+   - Fallbacks (“não informado”). ✅
+   - Links clicáveis apenas quando há valor válido. ✅
+   - Acessibilidade (atributo `alt` na imagem). ✅ 
+   - Responsividade no CSS para mobile.  
 
----
+<p align="center">
+  <img src="000-Midia_e_Anexos/image-5.png" alt="" width="200">
+</p>
 
-👉 Assim, o roteiro segue organizado: primeiro entendemos o **App.js** e o fluxo do estado, e agora entramos no **Profile**, garantindo que os dados que vimos no console realmente aparecem na interface.
+   - Inclusão de bio e data de criação da conta. ✅
+
