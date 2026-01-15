@@ -119,7 +119,7 @@ const GithubProvider = ({ children }) => {
 - Recebe `children` (os componentes que estarão dentro dele).
 
 <details>
-<summary> 🟥🟥🟥 Detalhamento sobre o papel do Provider em relação à aplicação inteira 🟥🟥🟥 </summary>
+<summary>span style="display: block; text-align: center;">🟥🟥🟥 Detalhamento sobre o papel do Provider em relação à aplicação inteira 🟥🟥🟥</span></summary>
 <hr style="border: none; border-top: 2px dashed #888; margin: 10px 0;">
 
 ####  O que o Provider faz
