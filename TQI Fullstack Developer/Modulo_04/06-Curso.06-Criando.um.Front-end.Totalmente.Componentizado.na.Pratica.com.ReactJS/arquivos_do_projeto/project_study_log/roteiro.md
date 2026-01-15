@@ -102,7 +102,9 @@ const { githubState } = useGithub();
 
 Saída no console
 
-![saída no console](000-Midia_e_Anexos/image-1.png))
+<p align="center">
+  <img src="000-Midia_e_Anexos/image-1.png" alt="" width="480">
+</p>
 
 
 ---
