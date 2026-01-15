@@ -133,7 +133,7 @@ Saída no console
 ##### 4. **Listas de repositórios e favoritos estão vazias**
 - `repositories: []` e `starred: []` mostram que ainda não foram buscados os dados relacionados ao usuário.
 
-#### 🧠 O que isso revela sobre o fluxo da aplicação
+#### O que isso revela sobre o fluxo da aplicação
 
 - O `App.js` está funcionando corretamente ao acessar o estado global.
 - O `GithubProvider` está fornecendo o estado inicial como esperado.
@@ -178,14 +178,14 @@ githubState atualizado: {
 - Nenhum repositório ou starred repo foi carregado ainda.
 - Essas chamadas (`getUserRepos`, `getUserStarred`) geralmente são feitas **depois** que o usuário é carregado com sucesso.
 
-#### 🧠 Interpretação geral aaaa
+#### Interpretação geral 
 
 Essa saída representa o **estado intermediário** da aplicação:
 - A busca foi iniciada.
 - O estado foi atualizado para refletir que está carregando.
 - Nenhum dado chegou ainda — tudo está vazio ou indefinido.
 
-### 🟥🟥 O usuário foi encontrado com sucesso!
+### 🟥🟥 Estado intermediário - o usuário foi encontrado com sucesso
 
 <img src="000-Midia_e_Anexos/image-3.png" alt="" width="480">
 
@@ -224,7 +224,7 @@ githubState atualizado: {
 - Isso pode significar que as funções `getUserRepos()` e `getUserStarred()` **ainda não foram chamadas** ou **ainda estão aguardando resposta**.
 
 
-#### 🧠 Interpretação geral
+#### Interpretação geral
 
 Esse estado representa o momento **logo após a resposta da API do usuário**, mas **antes** dos dados de repositórios e favoritos serem carregados.
 
@@ -279,7 +279,7 @@ githubState atualizado: {
 - O array `starred` foi preenchido com 12 repositórios favoritos.
 - A função `getUserStarred()` também foi executada com sucesso.
 
-#### 🧠 Interpretação geral
+#### Interpretação geral
 
 Esse é o **estado final completo** após todas as requisições:
 - O usuário foi carregado.
