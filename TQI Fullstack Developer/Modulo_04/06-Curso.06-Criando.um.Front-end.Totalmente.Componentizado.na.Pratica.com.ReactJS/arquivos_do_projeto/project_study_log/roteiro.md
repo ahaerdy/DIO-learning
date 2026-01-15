@@ -52,9 +52,7 @@ export default App;
 const { githubState } = useGithub();
 ```
 
----
-
-### 🔎 O que acontece aqui
+#### 🔎 O que acontece aqui
 
 1. **Chamada ao hook personalizado**
    - `useGithub()` é o **custom hook** que você definiu em `github-hooks.js`.
@@ -84,7 +82,7 @@ const { githubState } = useGithub();
 
 ---
 
-### 🎯 Em resumo
+#### 🎯 Em resumo
 A linha:
 
 ```js
@@ -95,9 +93,6 @@ const { githubState } = useGithub();
 - Permite que o `App.js` saiba se existe usuário, se está carregando e quais dados já foram buscados.  
 - É a **ponte** entre o contexto global e a lógica de renderização do `App.js`.
 
----
-
-👉 Quer que eu monte um **fluxo visual simplificado** mostrando como `GithubProvider → useGithub → App.js` se conectam nessa linha específica? Isso ajuda a fixar como os dados “viajam” até o componente.
 
 ---
 
