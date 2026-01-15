@@ -1,4 +1,4 @@
-## Detalhando o componente github-provider.js e o hook github-hooks.js
+## Detalhando o componente github-provider.js
 
 ### 🟢  ./src/providers/`github-provider.js`
 
