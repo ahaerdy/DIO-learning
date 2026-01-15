@@ -143,7 +143,7 @@ Saída no console
 
 ![alt text](image.png)
 
-<img src="000-Midia_e_Anexos/image-2.png" alt="" width="480">
+<img src="./000-Midia_e_Anexos/image-2.png" alt="" width="480">
 
 
 ```js
