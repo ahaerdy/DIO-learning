@@ -145,6 +145,7 @@ Saída no console
 <img src="000-Midia_e_Anexos/image-2.png" alt="" width="480">
 
 ```js
+Buscando usuário: ahaerdy
 githubState atualizado: {
   hasUser: false,
   loading: true,
@@ -161,7 +162,7 @@ githubState atualizado: {
 #### 🔍 Análise detalhada
 
 ##### ✅ `hasUser: false`
-- Nenhum usuário foi carregado ainda.
+- A variável com nome de usuário já foi carregada, mas nenhum usuário foi carregado ainda.
 - Isso indica que a requisição à API do GitHub **ainda está em andamento** ou **acabou de começar**.
 
 ##### 🔄 `loading: true`
@@ -184,8 +185,50 @@ Essa saída representa o **estado intermediário** da aplicação:
 - O estado foi atualizado para refletir que está carregando.
 - Nenhum dado chegou ainda — tudo está vazio ou indefinido.
 
+### 🟥🟥 O usuário foi encontrado com sucesso!
 
----
+<img src="000-Midia_e_Anexos/image-3.png" alt="" width="480">
+
+```js
+githubState atualizado: {
+  hasUser: true,
+  loading: false,
+  repositories: [],
+  starred: [],
+  user: {
+    id: 29876254,
+    avatar: "https://avatars.githubusercontent.com/u/29876254?v=4",
+    login: "ahaerdy"
+  }
+}
+```
+
+#### 🔍 Análise detalhada
+
+##### ✅ `hasUser: true`
+- O usuário foi encontrado com sucesso.
+- Isso indica que a requisição à API do GitHub foi concluída e os dados do usuário foram recebidos.
+
+##### 🧘 `loading: false`
+- A aplicação saiu do estado de carregamento.
+- Isso significa que a interface pode exibir os dados sem mostrar “Carregando...”.
+
+##### 🧑‍💻 `user: {...}`
+- O objeto `user` agora contém dados reais:
+  - `id`: 29876254
+  - `avatar`: URL da imagem de perfil
+  - `login`: "ahaerdy"
+
+##### 📂 `repositories: []` e `starred: []`
+- Ainda estão vazios.
+- Isso pode significar que as funções `getUserRepos()` e `getUserStarred()` **ainda não foram chamadas** ou **ainda estão aguardando resposta**.
+
+
+#### 🧠 Interpretação geral
+
+Esse estado representa o momento **logo após a resposta da API do usuário**, mas **antes** dos dados de repositórios e favoritos serem carregados.
+
+
 
 ---
 

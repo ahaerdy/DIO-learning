@@ -8,6 +8,7 @@ const Header = () => {
 
   const submitGetUser = () => {
     if (!usernameForSearch) return;
+    console.log("Buscando usuário:", usernameForSearch); // 👈 log do nome digitado
     return getUser(usernameForSearch);
   };
 
