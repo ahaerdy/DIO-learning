@@ -42,6 +42,8 @@ const App = () => {
 export default App;
 ```
 
+## 2. Hook github-hooks.js explicado
+
 🟢 Código: /src/hooks/github-hooks.js
 
 ```javascript
@@ -61,11 +63,7 @@ export default useGithub;
 
 Verificar: [Detalhando o componente github-provider.js](./doc_github-provider_e_github_hooks.md)
 
-Perfeito, Arthur! Vamos analisar **linha por linha** esse código para que você entenda exatamente o que está acontecendo.
-
----
-
-### 📄 Código do Hook github-hooks.js explicado
+Detalhando cada parte:
 
 ```js
 import { useContext } from "react";
