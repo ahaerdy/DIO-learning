@@ -146,7 +146,7 @@ Qualquer componente dentro de `<GithubProvider> ... </GithubProvider>` pode aces
 - O **Provider** é como um **“cérebro central”** que guarda informações e funções.  
 - Ele **distribui** esses recursos para todos os componentes filhos.  
 - Isso evita o problema de *prop drilling* (passar props manualmente por vários níveis).  
-- No seu caso, o `GithubProvider` garante que qualquer parte da aplicação possa acessar os dados do GitHub sem complicação.
+- Neste caso, o `GithubProvider` garante que qualquer parte da aplicação possa acessar os dados do GitHub sem complicação.
 </details>
 
 ```js
