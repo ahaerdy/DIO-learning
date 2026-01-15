@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client"; // mudou aqui
 
 import Providers from "./providers";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <Providers />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
