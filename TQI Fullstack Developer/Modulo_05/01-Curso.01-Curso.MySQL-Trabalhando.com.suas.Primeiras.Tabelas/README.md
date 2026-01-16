@@ -157,7 +157,73 @@ Após a execução do comando de `start`, os serviços Apache e MySQL estarão a
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: MySQL - Trabalhando com suas Primeiras Tabelas
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/a6c57d77-1cc1-4583-a905-d0069ddac255?autoplay=1
+
+O vídeo apresenta um tutorial prático sobre a criação de tabelas em bancos de dados MySQL, utilizando tanto comandos SQL manuais quanto a interface do PHPMyAdmin. O instrutor enfatiza a importância de seguir boas práticas de sintaxe, como o uso de letras maiúsculas para comandos e indentação, e destaca a necessidade crucial de definir uma Chave Primária (Primary Key) e o Auto Incremento para que as tabelas sejam funcionais e permitam a manipulação de dados de forma eficiente.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h27m43s202.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz a criação de tabelas em bancos de dados utilizando o MySQL. O comando fundamental para esta tarefa é o `CREATE TABLE`, que mantém uma sintaxe padronizada independentemente da ferramenta de gerenciamento utilizada, seja o phpMyAdmin, PostgreSQL ou o MySQL Workbench. O objetivo inicial é demonstrar como estruturar uma tabela do tipo "pessoa" definindo seus atributos básicos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h27m57s314.jpg" alt="" width="840">
+</p>
+
+A definição de atributos em uma tabela requer a especificação do nome da coluna e do tipo de dado que ela irá armazenar. No exemplo apresentado, a tabela "pessoa" possui o atributo "nome", configurado como `VARCHAR(20)` para aceitar textos de até 20 caracteres, e o atributo "nascimento", configurado como `DATE` para armazenar datas.
+
+```sql
+CREATE TABLE pessoa (nome varchar(20), nascimento date);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h28m31s553.jpg" alt="" width="840">
+</p>
+
+Antes de proceder com a criação de tabelas, é necessário estabelecer o ambiente dentro do phpMyAdmin. O processo começa pela aba "Bancos de dados", onde um novo esquema chamado `dio_mysql` é criado para organizar as tabelas que serão desenvolvidas ao longo da prática.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h29m38s477.jpg" alt="" width="840">
+</p>
+
+Utilizando a aba "SQL" do phpMyAdmin, é possível inserir os comandos manualmente. Como boa prática de programação em SQL, recomenda-se escrever as palavras-chave do comando em letras maiúsculas (como `CREATE TABLE`) e utilizar a indentação para separar os atributos, o que facilita a leitura e a compreensão da estrutura da tabela por outros desenvolvedores.
+
+```sql
+CREATE TABLE pessoas (
+    nome VARCHAR(20),
+    nascimento DATE
+);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h30m04s311.jpg" alt="" width="840">
+</p>
+
+Após a execução do comando SQL, o sistema retorna uma mensagem confirmando que o MySQL processou a solicitação com sucesso, resultando em um conjunto vazio. Isso indica que a tabela foi devidamente criada na estrutura do banco de dados, embora ainda não contenha nenhum dado inserido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h31m37s306.jpg" alt="" width="840">
+</p>
+
+Ao visualizar a aba "Estrutura" da tabela recém-criada, é possível confirmar as colunas "nome" e "nascimento". Entretanto, nota-se que sem a definição de chaves ou índices específicos, a interface de gerenciamento pode limitar certas operações de manipulação, evidenciando a necessidade de elementos estruturais mais avançados para tornar a tabela plenamente funcional.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h31m53s698.jpg" alt="" width="840">
+</p>
+
+Para otimizar a criação, o phpMyAdmin oferece uma interface visual onde se define o campo "id" como um número inteiro (`INT`). Nesta etapa, ativa-se a opção "A_I" (Auto Increment), que garante que cada novo registro inserido receba automaticamente um identificador único e sequencial, facilitando a organização dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h32m01s435.jpg" alt="" width="840">
+</p>
+
+A configuração final da tabela exige a definição de uma Primary Key (Chave Primária). Este elemento é obrigatório e crucial para o funcionamento do banco de dados, pois permite que o sistema identifique, localize, altere ou delete registros específicos de forma eficiente. Uma tabela sem chave primária compromete a integridade e a utilidade das consultas e operações futuras.      
+
 
 ### 🟩 Vídeo 04 - Inserindo dados na tabela
 
@@ -166,7 +232,7 @@ link do vídeo: MySQL - Trabalhando com suas Primeiras Tabelas
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/affaa006-7cdb-46d7-bf28-8843e38a0a13?autoplay=1
 
 ### 🟩 Vídeo 05 - Dicas e dúvidas
 
