@@ -494,6 +494,106 @@ Visualização final da tabela totalmente configurada e corrigida. Os dados orig
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/4e35118f-43a7-47e2-9d0f-009060bff0ac?autoplay=1
 
+
+Este conteúdo aborda comandos fundamentais de manipulação e organização de dados em SQL, com foco especial nas cláusulas DELETE e ORDER BY. O instrutor enfatiza a natureza irreversível do comando de exclusão, comparando-o ao "efeito Thanos", e apresenta boas práticas de segurança para evitar a perda acidental de informações. Além disso, explora o comportamento das Chaves Primárias (Primary Keys) após exclusões e as diferentes formas de ordenar resultados em consultas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h12m40s368.jpg" alt="" width="840">
+</p>
+
+A cláusula **DELETE** é apresentada como uma ferramenta de grande impacto no banco de dados. Diferente de processos reversíveis, a exclusão de dados aqui é permanente; uma vez executado o comando, não há funções de recuperação como "lixeira" ou "Ctrl+Z". Por isso, o uso dessa cláusula exige extrema responsabilidade e cautela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h12m50s735.jpg" alt="" width="840">
+</p>
+
+A sintaxe básica para a exclusão de registros utiliza o comando `DELETE FROM`. Ele é composto pelo identificador da tabela e, crucialmente, por uma condição de seleção. Sem a definição correta do que deve ser apagado, corre-se o risco de perder informações vitais do banco de dados.
+
+**Exemplo de sintaxe:**
+
+```sql
+DELETE FROM pessoas WHERE id = 1;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h13m03s365.jpg" alt="" width="840">
+</p>
+
+Como boa prática de segurança, antes de realizar um DELETE, deve-se executar um `SELECT` com a mesma condição `WHERE`. Isso permite visualizar e confirmar se os registros retornados são exatamente aqueles que se deseja excluir, evitando erros acidentais.
+
+```sql
+SELECT * FROM pessoa WHERE id = 5;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h13m21s738.jpg" alt="" width="840">
+</p>
+
+Após validar o dado com o comando de seleção, basta substituir a instrução `SELECT *` por `DELETE` para proceder com a remoção. No ambiente do phpMyAdmin, um alerta de confirmação é exibido antes da execução final como uma camada extra de proteção.
+
+```sql
+DELETE FROM pessoa WHERE id = 5;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h13m30s401.jpg" alt="" width="840">
+</p>
+
+Ao visualizar a estrutura da tabela após a execução do comando, confirma-se que o registro selecionado foi removido com sucesso da lista de dados ativos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h14m33s449.jpg" alt="" width="840">
+</p>
+
+Para fins de demonstração, o registro anteriormente deletado é inserido novamente no banco de dados. Utiliza-se a cláusula `INSERT INTO` especificando as colunas de nome e data de nascimento.
+
+```sql
+INSERT INTO pessoa (nome, nascimento) VALUES ('Flavio', '2002-12-01');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h15m02s133.jpg" alt="" width="840">
+</p>
+
+Um conceito fundamental da **Primary Key** (Chave Primária) é demonstrado aqui: ela é única e imutável. Embora o registro de "Flavio" tenha sido reinserido com os mesmos dados, ele recebeu o ID 6. O ID 5, que pertencia ao registro deletado, jamais será reutilizado pelo sistema de auto-incremento, garantindo que cada chave funcione como uma "certidão de nascimento" exclusiva para aquela entrada de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h15m41s301.jpg" alt="" width="840">
+</p>
+
+A cláusula **ORDER BY** é utilizada para organizar a exibição das informações coletadas pelo `SELECT`. Ela permite que os dados sejam apresentados em ordem alfabética ou numérica, facilitando a leitura e análise dos resultados.
+
+**Exemplo de sintaxe:**
+
+```sql
+SELECT * FROM pessoas ORDER BY nome;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h16m06s526.jpg" alt="" width="840">
+</p>
+
+Para inverter a ordem padrão (que é crescente/ASC), utiliza-se a palavra-chave `DESC`. Isso faz com que o banco de dados organize as informações de forma decrescente (do maior para o menor ou de Z para A).
+
+```sql
+SELECT * FROM pessoa ORDER BY nome DESC;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h16m15s381.jpg" alt="" width="840">
+</p>
+
+O resultado da consulta mostra os nomes ordenados decrescentemente, iniciando pelos registros que começam com letras mais tardias no alfabeto (como Pedro e Natali) e terminando nos primeiros (como Flavio).      
+
+
 ### 🟩 Vídeo 08 - Agrupando dados
 
 <video width="60%" controls>
@@ -501,7 +601,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-tr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/a826b9ac-4e8b-47ec-a6d9-11a6c8bb68c4?autoplay=1
 
 ## Certificado - MySQL - Trabalhando com suas Primeiras Tabelas
 
