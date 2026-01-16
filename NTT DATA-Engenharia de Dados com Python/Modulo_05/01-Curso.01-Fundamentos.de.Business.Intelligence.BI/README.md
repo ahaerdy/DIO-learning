@@ -113,10 +113,6 @@ Como parte do ecossistema de ensino da DIO, Juliana disponibiliza diversos curso
 * **Mensageria:** Implementação de Java Spring com RabbitMQ.
 * **SQL:** Atuação na formação SQL Database Specialist.
 
----
-
-Would you like me to expand on any specific technology mentioned in Juliana's trajectory, such as the Network Science concepts or the AWS integration steps?      
-
 
 ### 🟩 Vídeo 03 - Pré-requisitos para melhor aproveitamento da Formação
 
@@ -127,6 +123,22 @@ Would you like me to expand on any specific technology mentioned in Juliana's tr
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/ce126fcb-dcaf-4a4d-8b40-6c8bc8cb0a80?autoplay=1
 
+O vídeo consiste na **introdução de um treinamento especializado em Power BI**, onde o instrutor estabelece os critérios fundamentais para os alunos. O conteúdo assume que os participantes já possuem **domínio prévio em modelagem de dados relacional e linguagem SQL**, pois esses tópicos não serão ensinados do zero. Além disso, é necessário ter **conhecimento básico de Excel** e possuir uma **conta institucional ou estudantil** para acessar os recursos de publicação na nuvem. O foco central da capacitação será o uso prático da ferramenta de visualização, exigindo **proatividade e disposição para o aprendizado**. Ao definir essas diretrizes, o orador busca garantir que todos aproveitem a jornada técnica de forma eficiente e alinhada às expectativas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-19h21m27s714.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da formação, são apresentados os **pré-requisitos** fundamentais para que o aluno consiga acompanhar e aproveitar ao máximo o conteúdo oferecido. Embora o curso seja acessível a qualquer pessoa, assume-se o domínio prévio de pilares técnicos específicos para garantir o fluxo da jornada de aprendizado:
+
+* **Modelagem de Dados e SQL**: É necessário compreender a modelagem relacional tradicional e dominar a linguagem **SQL** para consultas em bancos de dados, uma vez que esses temas não serão explorados detalhadamente.
+* **Conhecimentos em Excel**: A ferramenta será utilizada de forma prática durante as aulas, portanto, é esperado que o aluno já possua um conhecimento básico no software.
+* **Power BI e Conta de Acesso**: O foco principal é o Power BI Desktop, mas para utilizar o **Power BI Serviço** e realizar a publicação de relatórios, o aluno deve obrigatoriamente possuir uma **conta organizacional ou estudantil**.
+* **Atitude**: Além das competências técnicas, a **vontade de aprender** é destacada como o requisito essencial para o sucesso em toda a formação.
+
+
 ## Parte 2 - Fundamentos de Business Intelligence (BI)
 
 ### 🟩 Vídeo 04 - Breve descrição do que será abordado no Módulo
@@ -136,7 +148,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/f9eab4bb-272e-4dc4-bdfc-d10d1fff5931?autoplay=1
 
 ### 🟩 Vídeo 05 - Contextualizando a área de dados
 
