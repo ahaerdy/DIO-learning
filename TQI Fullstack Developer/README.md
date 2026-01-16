@@ -78,7 +78,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Desenvolvimento de aplicações para internet com ReactJS](Modulo_04/04-Curso.04-Desenvolvimento.de.aplicacoes.para.internet.com.ReactJS)
 - [x] Curso: [Práticas avançadas em projetos com ReactJS](Modulo_04/05-Curso.05-Praticas.avancadas.em.projetos.com.ReactJS)
 - [x] Projeto: [Criando um Front-end Totalmente Componentizado na Prática com ReactJS](Modulo_04/06-Curso.06-Criando.um.Front-end.Totalmente.Componentizado.na.Pratica.com.ReactJS)
-
+    - **Repositório**: [DIO-github-profile-viewer-tqi-fullstack](https://github.com/ahaerdy/DIO-github-profile-viewer-tqi-fullstack)
+    - **Descrição**: Projeto desenvolvido em ReactJS para consumir a API do GitHub e exibir perfil, repositórios e favoritos de usuários, como parte do bootcamp TQI Fullstack Developer na DIO.
 ### Módulo 5: SQL
 
 - [ ] Curso: [MySQL - Trabalhando com suas Primeiras Tabelas](Modulo_05/01-Curso.01-Curso.MySQL-Trabalhando.com.suas.Primeiras.Tabelas)
