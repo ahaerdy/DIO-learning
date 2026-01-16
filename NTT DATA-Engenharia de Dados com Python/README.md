@@ -147,7 +147,6 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [ ] Curso: Fundamentos de Data Analytics com Power BI
 - [ ] Curso: Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI
 - [ ] Curso: Criando um Relatório Vendas e Lucros com Data Analytics com Power BI
-- [ ] Curso: 
 
 ## 🏆 Certificados Obtidos
 
