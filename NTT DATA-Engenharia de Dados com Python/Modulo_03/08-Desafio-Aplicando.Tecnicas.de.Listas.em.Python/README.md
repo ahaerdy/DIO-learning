@@ -52,20 +52,29 @@ Atenção: É extremamente importante que as entradas e saídas sejam exatamente
 
 ```python
 def analise_vendas(vendas):
-    # Calcula o total de vendas e a média mensal
+    # A função sum(vendas) → soma todos os elementos da lista 'vendas'
     total_vendas = sum(vendas)
+    
+    # Calcula a média mensal dividindo o total pelo número de elementos da lista
     media_vendas = total_vendas / len(vendas)
+    
+    # Retorna o resultado formatado: total de vendas e média com duas casas decimais
     return f"{total_vendas}, {media_vendas:.2f}"
 
 def obter_entrada_vendas():
     # Solicita a entrada do usuário em uma única linha
     entrada = input()
-    # Converte a entrada em uma lista de inteiros
+    
+    # split(',') → separa a string em substrings
+    # map(int, ...) → converte cada substring em inteiro
+    # list(...) → transforma o resultado em uma lista
     vendas = list(map(int, entrada.split(',')))
+    
     return vendas
 
 vendas = obter_entrada_vendas()
 print(analise_vendas(vendas))
+
 ```
 
 ### Exemplo de uso  
