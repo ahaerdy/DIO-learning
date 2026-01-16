@@ -603,6 +603,128 @@ O resultado da consulta mostra os nomes ordenados decrescentemente, iniciando pe
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/a826b9ac-4e8b-47ec-a6d9-11a6c8bb68c4?autoplay=1
 
+Este conteúdo aborda a técnica de agrupamento de dados em SQL utilizando a cláusula GROUP BY e a função de agregação COUNT. Através de um exemplo prático em MySQL, o instrutor demonstra desde a alteração da estrutura de uma tabela (ALTER TABLE) e atualização de registros (UPDATE) até a execução de consultas que permitem contabilizar informações com base em critérios específicos, como gênero ou categorias de produtos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h55m39s019.jpg" alt="" width="840">
+</p>
+
+Nesta etapa do curso, o foco é o agrupamento de informações no banco de dados. O agrupamento é uma ferramenta essencial para organizar dados e realizar contagens baseadas em critérios específicos, como identificar a quantidade de registros que pertencem a uma determinada categoria.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h55m43s141.jpg" alt="" width="840">
+</p>
+
+O comando `GROUP BY` é utilizado para agrupar as informações da tabela de acordo com um critério selecionado. No exemplo apresentado, o objetivo é agrupar os registros pelos gêneros declarados para realizar a contagem de cada grupo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h56m09s983.jpg" alt="" width="840">
+</p>
+
+Para exemplificar o agrupamento, é necessário adicionar uma nova coluna à tabela existente através da aba de estrutura do phpMyAdmin. O novo campo é definido com o nome **genero** e o tipo **VARCHAR(1)**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h56m13s245.jpg" alt="" width="840">
+</p>
+
+Ao salvar a alteração na estrutura, o sistema executa um comando `ALTER TABLE`. Esta cláusula é utilizada por administradores para modificar a estrutura de tabelas já existentes, indicando onde a nova coluna deve ser inserida — neste caso, logo após o campo de nascimento.
+
+```sql
+ALTER TABLE pessoa ADD genero VARCHAR(1) NOT NULL AFTER nascimento;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h56m34s127.jpg" alt="" width="840">
+</p>
+
+Após criar a coluna, é necessário povoá-la com dados utilizando o comando `UPDATE`. A instrução abaixo define o valor 'F' para o campo gênero no registro cujo ID é igual a 1.
+
+```sql
+UPDATE pessoa SET genero = 'F' WHERE id = 1;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h56m37s363.jpg" alt="" width="840">
+</p>
+
+Ao visualizar a tabela após a execução do comando, observa-se que o registro de Nathally Souza agora possui a informação "F" na coluna de gênero.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h56m49s653.jpg" alt="" width="840">
+</p>
+
+Para completar os dados da tabela, são executados novos comandos de atualização para os IDs restantes. É importante notar que valores do tipo string devem estar obrigatoriamente entre aspas, enquanto números não exigem essa formatação.
+
+```sql
+UPDATE pessoa SET genero = 'M' WHERE id = 2;
+UPDATE pessoa SET genero = 'F' WHERE id = 3;
+UPDATE pessoa SET genero = 'M' WHERE id = 6;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h56m52s669.jpg" alt="" width="840">
+</p>
+
+A tabela agora está devidamente populada, contendo dois registros masculinos e dois registros femininos, o que permite aplicar o agrupamento para análise desses dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h57m23s856.jpg" alt="" width="840">
+</p>
+
+Para realizar a contagem por agrupamento, utiliza-se a função `COUNT` em conjunto com o `GROUP BY`. O comando solicita a contagem dos IDs para cada gênero distinto presente na tabela.
+
+```sql
+SELECT COUNT(id), genero FROM pessoa GROUP BY genero;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h57m29s587.jpg" alt="" width="840">
+</p>
+
+O resultado da consulta exibe informações únicas para cada gênero e o total de elementos pertencentes a cada um. O `GROUP BY` funciona como se criasse tabelas temporárias separadas para cada critério antes de realizar a contagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h57m50s030.jpg" alt="" width="840">
+</p>
+
+Ao observar a listagem completa dos registros, fica evidente como o banco de dados processa a contagem de IDs (1, 2, 3, 6) para validar quantos indivíduos pertencem ao gênero feminino e quantos ao masculino.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h58m42s567.jpg" alt="" width="840">
+</p>
+
+Para validar se a contagem é dinâmica, um novo registro é inserido na tabela. A inserção da nova pessoa chamada 'Paula' com o gênero 'F' deve alterar o resultado do agrupamento subsequente.
+
+```sql
+INSERT INTO pessoa (nome, nascimento, genero) VALUES ('Paula', '1998-10-22', 'F');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h58m58s300.jpg" alt="" width="840">
+</p>
+
+A consulta de agrupamento é executada novamente, desta vez utilizando a contagem baseada na própria coluna de gênero para demonstrar a flexibilidade do comando `COUNT`.
+
+```sql
+SELECT COUNT(genero), genero FROM pessoa GROUP BY genero;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-15h59m10s028.jpg" alt="" width="840">
+</p>
+
+O resultado final confirma a atualização correta: agora existem 3 registros para o gênero feminino e 2 para o masculino. Essa lógica de agrupamento é amplamente aplicada no cotidiano, como em e-commerces para contar produtos por categoria.      
+
+
 ## Certificado - MySQL - Trabalhando com suas Primeiras Tabelas
 
-Link do certificado: 
+- Link do certificado: https://hermes.dio.me/certificates/45ZNKMO1.pdf
+- Certificado em pdf: [Certificado-MySQL-Trabalhando.com.suas.Primeiras.Tabelas.pdf](000-Midia_e_Anexos/Certificado-MySQL-Trabalhando.com.suas.Primeiras.Tabelas.pdf)
