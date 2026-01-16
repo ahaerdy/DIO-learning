@@ -8,7 +8,7 @@
 ### 🟩 Vídeo 01 - Introdução ao curso e conceitos iniciais sobre modelo relacional
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.05-curso.01-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -76,19 +76,104 @@ A utilização de tabelas é justificada por três fatores críticos para a gest
 
 ### 🟩 Vídeo 02 - Ferramentas e configuração do ambiente
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.05-curso.01-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/85acd077-edce-468e-977c-5b6f328e7c55?autoplay=1
 
+Este conteúdo apresenta uma introdução prática ao ecossistema de bancos de dados, focando no MySQL e no PHPMyAdmin. O instrutor destaca a relevância dessas ferramentas no mercado de trabalho, explica a lógica de abstração de dados do cotidiano para o formato de tabelas e fornece um guia técnico para a configuração do ambiente de desenvolvimento utilizando o pacote XAMPP em diferentes sistemas operacionais (Windows, macOS e Linux).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-10h59m30s784.jpg" alt="" width="840">
+</p>
+
+Nesta introdução, apresentamos as ferramentas fundamentais que serão exploradas ao longo do curso. O foco principal é o **MySQL**, um banco de dados gratuito e amplamente adotado no mercado de trabalho. Compreender o funcionamento do MySQL fornece uma base sólida, pois a lógica de comandos e queries é muito semelhante em outros sistemas de banco de dados disponíveis. Complementarmente, utilizaremos o **phpMyAdmin**, um sistema gerenciador de banco de dados prático e acessível, capaz de rodar via localhost na maioria dos computadores corporativos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-10h59m38s869.jpg" alt="" width="840">
+</p>
+
+Para consolidar os conceitos iniciais, propomos um exercício de abstração focado em transformar situações cotidianas em estruturas de dados. O objetivo é identificar **entidades** e **atributos**. Um exemplo prático é a conversão de uma lista de compras em uma tabela:
+
+* **Item:** Tomate, arroz, feijão (respeitando a atomicidade dos dados).
+* **Quantidade:** Volume necessário de cada item.
+* **Preço:** Valor unitário e total.
+
+Essa prática ajuda a compreender como a organização em tabelas facilita o controle e a consulta de informações complexas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-10h59m55s540.jpg" alt="" width="840">
+</p>
+
+Iniciamos agora a quarta parte do curso, dedicada exclusivamente à **configuração do ambiente**. Após compreendermos a teoria e a importância da abstração de dados, o próximo passo é preparar as ferramentas técnicas para que possamos criar nossas próprias tabelas e executar comandos MySQL no ambiente real de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-11h00m00s499.jpg" alt="" width="840">
+</p>
+
+Para montar o ambiente de trabalho, focaremos na instalação do **MySQL** através do **XAMPP**. O XAMPP funciona como uma "pilha" (stack) de aplicações que integra em um único instalador o servidor Apache, o banco de dados MySQL, a linguagem PHP e o gerenciador phpMyAdmin. Embora a instalação em Windows e macOS seja um processo simplificado de "avançar e aceitar", abordaremos as particularidades necessárias para que o ambiente funcione corretamente em diferentes sistemas operacionais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-11h00m18s178.jpg" alt="" width="840">
+</p>
+
+Como alternativa visual para o gerenciamento de bancos de dados, exploramos o **MySQL Workbench**. Trata-se de uma ferramenta unificada para arquitetos de dados e desenvolvedores que permite modelagem SQL e administração de servidores. Embora o XAMPP já forneça o phpMyAdmin, o Workbench é apresentado como uma opção robusta e muito comum no dia a dia profissional, disponível para Windows, Linux e macOS.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-11h00m27s019.jpg" alt="" width="840">
+</p>
+
+A configuração do ambiente no Linux (Ubuntu) exige o uso do terminal para garantir que as permissões e versões estejam corretas. Abaixo, detalhamos o passo a passo dos comandos necessários para baixar, preparar e iniciar a pilha de aplicações:
+
+```bash
+# 1. Verifique a versão do seu sistema (32 ou 64 bits)
+uname -m
+
+# 2. Download do instalador (Exemplo para 64 bits versão 7.4.13)
+wget "https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.4.13/xampp-linux-x64-7.4.13-0-Installer.run/download" -O xampp-installer.run
+
+# 3. Torne o arquivo baixado um executável
+chmod +x xampp-installer.run
+
+# 4. Inicie a instalação (requer privilégios de superusuário)
+sudo ./xampp-installer.run
+
+# 5. Após a instalação, inicie os serviços do XAMPP
+sudo /opt/lampp/lampp start
+
+```
+
+Após a execução do comando de `start`, os serviços Apache e MySQL estarão ativos, permitindo o acesso ao gerenciador através do endereço `localhost/phpmyadmin` no navegador.      
 
 
 ### 🟩 Vídeo 03 - Criando tabelas
 
-link do vídeo:
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.05-curso.01-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: MySQL - Trabalhando com suas Primeiras Tabelas
 
 ### 🟩 Vídeo 04 - Inserindo dados na tabela
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.05-curso.01-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 05 - Dicas e dúvidas
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.05-curso.01-video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
@@ -97,12 +182,31 @@ link do vídeo:
 
 ### 🟩 Vídeo 06 - Selecionando e alterando dados
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.05-curso.01-video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 07 - Deletando e ordenando dados
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.05-curso.01-video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 08 - Agrupando dados
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.05-curso.01-video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
+
+## Certificado - MySQL - Trabalhando com suas Primeiras Tabelas
+
+Link do certificado: 
