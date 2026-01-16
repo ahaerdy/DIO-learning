@@ -42,6 +42,39 @@ Atenção: É extremamente importante que as entradas e saídas sejam exatamente
 
 ## Solução:
 
+### O código precisa:
+
+1. Converter a entrada em uma lista de inteiros usando split(','), map(int, ...) e list().
+2. Calcular o total de vendas com sum(vendas).
+3. Calcular a média mensal com sum(vendas) / len(vendas).
+
+### Código completo:
+
+```python
+def analise_vendas(vendas):
+    # Calcula o total de vendas e a média mensal
+    total_vendas = sum(vendas)
+    media_vendas = total_vendas / len(vendas)
+    return f"{total_vendas}, {media_vendas:.2f}"
+
+def obter_entrada_vendas():
+    # Solicita a entrada do usuário em uma única linha
+    entrada = input()
+    # Converte a entrada em uma lista de inteiros
+    vendas = list(map(int, entrada.split(',')))
+    return vendas
+
+vendas = obter_entrada_vendas()
+print(analise_vendas(vendas))
+```
+
+### Exemplo de uso  
+
+#### Entrada:
+120,150,170,130,200,250,180,220,210,160,140,190  
+
+#### Saída:
+2120, 176.67
 
 
 # Desafio 2 - 
