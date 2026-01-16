@@ -335,30 +335,6 @@ INSERT INTO pessoas (nome, nascimento) VALUES ('Marcela', '2000-04-05');
 
 Em ambientes de desenvolvimento real, os comandos SQL são integrados diretamente na lógica da aplicação. Através de arquivos de configuração de banco de dados (como um arquivo `.js` em projetos Node.js), a aplicação executa instruções como `CREATE TABLE IF NOT EXISTS` para garantir que a infraestrutura de dados necessária esteja presente no momento em que o sistema é iniciado, automatizando o processo que antes era feito manualmente via interface gráfica.
 
-```javascript
-const Database = require('sqlite-async');
-
-function execute(db) {
-    return db.exec(`
-        CREATE TABLE IF NOT EXISTS orphanages (
-            id INTEGER PRIMARY KEY AUTO_INCREMENT,
-            lat TEXT,
-            lng TEXT,
-            name TEXT,
-            about TEXT,
-            whatsapp TEXT,
-            images TEXT,
-            instructions TEXT,
-            opening_hours TEXT,
-            open_on_weekends TEXT
-        );
-    `);
-}
-
-module.exports = Database.open(__dirname + '/database.sqlite').then(execute);
-
-```      
-
 
 ## Parte 2 - Realizando manutenção de suas tabelas
 
@@ -369,7 +345,9 @@ module.exports = Database.open(__dirname + '/database.sqlite').then(execute);
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/687cf848-a9ef-4d97-b9b1-09788187537f?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Deletando e ordenando dados
 
