@@ -300,6 +300,66 @@ Ao conferir o resultado na tabela `pessoa`, percebe-se que o campo **ID** foi pr
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/ecad526b-8ae8-4cb2-96d8-3528fa4711a8?autoplay=1
 
 
+Este vídeo marca a conclusão do primeiro módulo de um curso de MySQL e Workbench, focando na transição da teoria para a prática de desenvolvimento. O instrutor demonstra como organizar e salvar scripts SQL utilizando o VS Code, reforça a importância do versionamento de código via GitHub e exemplifica a criação de tabelas e inserção de dados, destacando que aplicações reais dependem de comandos programáticos em vez de interfaces gráficas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h07m59s781.jpg" alt="" width="840">
+</p>
+
+O curso de MySQL e Workbench foca na fundamentação prática de bancos de dados relacionais. Ao concluir o módulo de inserção de dados, é essencial consolidar o que foi aprendido, organizando os comandos SQL para facilitar o compartilhamento do conhecimento e a manutenção do código em plataformas de colaboração.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h08m14s639.jpg" alt="" width="840">
+</p>
+
+Para gerenciar os scripts SQL, utiliza-se o Visual Studio Code para criar arquivos com a extensão `.sql`. Isso permite estruturar a criação de tabelas e a inserção de registros de forma organizada. No exemplo, a tabela "pessoas" é definida com um campo `id` de incremento automático, garantindo a unicidade de cada registro sem intervenção manual.
+
+```sql
+CREATE TABLE pessoas (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    nascimento DATE
+);
+
+INSERT INTO pessoas (nome, nascimento) VALUES ('Nathally', '1990-05-22');
+INSERT INTO pessoas (nome, nascimento) VALUES ('Pedro', '1995-07-17');
+INSERT INTO pessoas (nome, nascimento) VALUES ('Marcela', '2000-04-05');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h08m19s290.jpg" alt="" width="840">
+</p>
+
+Em ambientes de desenvolvimento real, os comandos SQL são integrados diretamente na lógica da aplicação. Através de arquivos de configuração de banco de dados (como um arquivo `.js` em projetos Node.js), a aplicação executa instruções como `CREATE TABLE IF NOT EXISTS` para garantir que a infraestrutura de dados necessária esteja presente no momento em que o sistema é iniciado, automatizando o processo que antes era feito manualmente via interface gráfica.
+
+```javascript
+const Database = require('sqlite-async');
+
+function execute(db) {
+    return db.exec(`
+        CREATE TABLE IF NOT EXISTS orphanages (
+            id INTEGER PRIMARY KEY AUTO_INCREMENT,
+            lat TEXT,
+            lng TEXT,
+            name TEXT,
+            about TEXT,
+            whatsapp TEXT,
+            images TEXT,
+            instructions TEXT,
+            opening_hours TEXT,
+            open_on_weekends TEXT
+        );
+    `);
+}
+
+module.exports = Database.open(__dirname + '/database.sqlite').then(execute);
+
+```      
+
+
 ## Parte 2 - Realizando manutenção de suas tabelas
 
 ### 🟩 Vídeo 06 - Selecionando e alterando dados
