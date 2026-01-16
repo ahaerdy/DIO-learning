@@ -343,6 +343,29 @@ Nesta etapa, aprofundamos a distinção entre os três pilares da análise: **Da
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/2e2419d7-ec6a-49ff-962b-5b86d14c9060?autoplay=1
 
+O vídeo aborda a **evolução humana** no registro e processamento de informações, destacando como o **storytelling** é uma ferramenta biológica poderosa para facilitar a **retenção de dados** e a tomada de decisões. O autor explica que a comunicação narrativa ativa áreas sensoriais do cérebro, transformando números abstratos em **conhecimento prático** e experiências memoráveis. Além disso, a fonte estabelece uma distinção clara entre **dados, informação e inteligência**, definindo esta última como a capacidade superior de **resolver problemas** inéditos através da abstração. Ao conectar sabedoria ancestral com a análise moderna, o conteúdo demonstra que o valor real dos dados surge quando eles são convertidos em **ações estratégicas** e aprendizado. Por fim, a narrativa enfatiza que a **inteligência** depende da integração mútua entre o conhecimento acumulado e as ferramentas disponíveis para gerar resultados efetivos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h44m19s469.jpg" alt="" width="840">
+</p>
+
+A evolução da humanidade está intrinsecamente ligada à forma como lidamos com os dados e o conhecimento ao longo do tempo. Historicamente, passamos por diversas formas de registro, desde a **escrita cuneiforme** em cerâmica até o uso de **papiros, mapas e o pagamento de impostos**, que já geravam volumes consideráveis de dados para a época.
+
+Essa trajetória culminou na era digital, onde utilizamos **computadores** para processar uma quantidade massiva de informações. Um ponto crucial nessa evolução é o **storytelling**; nosso cérebro é biologicamente inclinado a absorver melhor informações quando estas são transmitidas através de narrativas, pois as histórias ativam sentidos e auxiliam na compreensão de contextos complexos, facilitando a memorização através de conexões semânticas e palavras-chave.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h44m26s778.jpg" alt="" width="840">
+</p>
+
+Além da tríade de dados, informação e conhecimento, surge o conceito fundamental de **Inteligência**. Enquanto o conhecimento é o que extraímos da informação (como o fazendeiro que identifica uma praga ao observar o comportamento de uma folha), a inteligência é a **capacidade de resolução de problemas** e a **tomada de decisão** baseada nesse conhecimento.
+
+A inteligência permite:
+
+* **Abstração:** Identificar o "core" de um problema para aplicar soluções similares em cenários diferentes.
+* **Adaptação:** Utilizar ferramentas, analogias e indução para resolver problemas desconhecidos.
+* **Geração de Valor:** Através da união entre conhecimento e inteligência, torna-se possível tomar decisões estratégicas que alteram trajetórias e resolvem desafios de forma eficiente.      
 
 
 ### 🟩 Vídeo 09 - Fluxo de dados em BI
@@ -352,7 +375,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/c5c6aab6-e53e-460b-8e1d-e001df1a1d3f?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - O que é Business Intelligence?
 
