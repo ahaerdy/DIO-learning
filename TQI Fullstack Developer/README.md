@@ -81,8 +81,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 5: SQL
 
-- [ ] Curso: MySQL - Trabalhando com suas Primeiras Tabelas
-- [ ] curso: MySQL - Consultas com Join
+- [ ] [Curso: MySQL - Trabalhando com suas Primeiras Tabelas](Modulo_05/01-Curso.01-Curso.MySQL-Trabalhando.com.suas.Primeiras.Tabelas)
+- [ ] Curso: MySQL - Consultas com Join
 
 ### Módulo 6: Java
 
