@@ -109,7 +109,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 5: Fundamentos de Power BI
 
-- [ ] Curso: Fundamentos de Business Intelligence (BI)
+- [ ] Curso: [Fundamentos de Business Intelligence (BI)]()
 - [ ] Curso: Introdução a Análise de Dados com SQL
 - [ ] Curso: Fundamentos Teóricos Sobre ETL
 - [ ] Curso: Primeiros Passos com Power BI
