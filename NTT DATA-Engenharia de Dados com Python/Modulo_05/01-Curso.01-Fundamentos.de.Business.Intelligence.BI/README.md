@@ -175,7 +175,64 @@ A estrutura de aprendizado abrange os seguintes pilares:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/5be21eed-93fb-4a41-8752-b3dde9a7bda2?autoplay=1 .
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/5be21eed-93fb-4a41-8752-b3dde9a7bda2?autoplay=1
+
+O vídeo introduz os conceitos fundamentais do **pensamento analítico** aplicado à área de dados, destacando como o **Business Intelligence (BI)** se diferencia de outras carreiras. O conteúdo explica que a evolução do **hardware** e o surgimento das **redes sociais** transformaram a maneira como informações são geradas e consumidas em diversos setores, como medicina e e-commerce. O autor enfatiza que, enquanto o **cientista de dados** foca em predições futuras, o analista de BI dedica-se principalmente à **análise descritiva** para monitorar a saúde dos negócios. Através de exemplos práticos, o texto demonstra que os dados são ativos valiosos capazes de gerar **insights estratégicos** e personalização de serviços. Por fim, discute-se como o paradigma do **Big Data** diversificou as profissões no setor, criando papéis específicos para engenheiros e analistas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h03m24s894.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, o curso introduz o conceito de **Pensamento Analítico voltado para Business Intelligence (BI)**. O objetivo é contextualizar a área de dados, explorando os diferentes perfis profissionais existentes e definindo o papel fundamental do analista de BI. Embora as nomenclaturas de "Analista de Dados" e "Analista de BI" possam parecer subjetivas ou semelhantes à primeira vista, a aula propõe diferenciar esses perfis com base na finalidade de suas análises e nas ferramentas utilizadas em seus respectivos fluxos de trabalho.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h03m28s143.jpg" alt="" width="840">
+</p>
+
+A discussão avança para a motivação por trás do crescimento da área de dados. Atualmente, a geração de dados é onipresente: desde o uso de GPS e redes sociais até transações em e-commerce e aplicativos bancários. Ao interagir com esses sistemas, o usuário gera informações que podem ser armazenadas localmente ou enviadas para servidores, onde são processadas para oferecer serviços personalizados, como a aprovação de limites de crédito ou recomendações de produtos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h03m31s633.jpg" alt="" width="840">
+</p>
+
+Historicamente, entre a década de 90 e o início dos anos 2000, a maioria dos dados disponíveis era predominantemente baseada em texto. Esse cenário mudou drasticamente com o advento das redes sociais, que impulsionou a criação de tipos de dados mais pesados e complexos, como imagens e vídeos, exigindo novas formas de processamento e análise para extrair informações relevantes desse volume crescente de "Big Data".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h03m35s174.jpg" alt="" width="840">
+</p>
+
+A evolução da computação é marcada por um ciclo onde o avanço do **hardware** (representado por componentes como SSDs e maior poder de processamento) fomenta a evolução do **software**. Comparando com a década de 90, onde os sites eram construídos em HTML básico, as aplicações modernas são extremamente robustas, utilizando recursos visuais e interativos que demandam maior largura de banda e capacidade computacional para aprimorar a experiência do usuário através de dados multimídia.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h03m37s701.jpg" alt="" width="840">
+</p>
+
+A aplicação de dados abrange diversos setores do conhecimento:
+
+* **Medicina:** Utilizada para rastrear o histórico de pacientes e realizar predições de doenças baseadas em dados históricos (ramo voltado para a Ciência de Dados).
+* **Negócios e E-commerce:** Foco em entender o comportamento do cliente e melhorar as vendas através da análise de padrões.
+* **Engenharia e Social Media:** Uso intenso de dados para otimização de sistemas e interações.
+Nesse contexto, destaca-se que o **Analista de BI** foca principalmente na **análise descritiva** (saúde atual do negócio), enquanto o Cientista de Dados foca em análises preditivas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h03m43s787.jpg" alt="" width="840">
+</p>
+
+A organização das equipes de dados também evoluiu. Antigamente, o foco estava em atores lidando com **bancos de dados dedicados** e processos mais simples. Com o crescimento das empresas e o surgimento das grandes organizações, tornou-se necessária uma estrutura que envolve manutenção, design de sistemas e usabilidade para gerenciar o fluxo de informações de maneira estratégica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h03m45s787.jpg" alt="" width="840">
+</p>
+
+Com a consolidação do paradigma de **Big Data** e o uso de bancos de dados não-relacionais (NoSQL), o mercado de dados se diversificou em perfis profissionais específicos que atuam como atores chaves:
+
+* **Engenheiro de Dados:** Responsável pela infraestrutura e preparação.
+* **Cientista de Dados:** Focado em modelos estatísticos e predições futuras.
+* **Analista de Dados/BI:** Focado em extrair insights para a tomada de decisão organizacional, unindo técnica e visão de negócio.      
+
+
 ### 🟩 Vídeo 06 - Principais Perfis na Carreira de Dados e BI
 
 <video width="60%" controls>
@@ -183,7 +240,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/0f4f5a54-5879-4323-a9f8-130708b5b9f0?autoplay=1
 
 ### 🟩 Vídeo 07 - BI e sua matéria prima: Dados
 
