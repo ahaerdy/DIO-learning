@@ -242,6 +242,66 @@ Com a consolidação do paradigma de **Big Data** e o uso de bancos de dados nã
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/0f4f5a54-5879-4323-a9f8-130708b5b9f0?autoplay=1
 
+O material detalha as distinções fundamentais entre as principais **carreiras no ecossistema de dados**, explicando as funções específicas de cada profissional. O **engenheiro de dados** é apresentado como o arquiteto responsável pela infraestrutura e pelo fluxo de coleta e organização das informações brutas. Já o **cientista de dados** utiliza um viés investigativo e estatístico para descobrir padrões e realizar previsões complexas através de modelos de aprendizado de máquina. Por outro lado, o **analista de dados** foca na interpretação do negócio, criando visualizações e diagnósticos para auxiliar na tomada de decisão dos stakeholders. Por fim, o texto menciona brevemente o papel do **engenheiro de machine learning** na manutenção de modelos e introduz o conceito de **Business Intelligence** como o próximo tópico essencial.
+
+### Anotações
+
+#### Engenheiro de Dados
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h15m41s636.jpg" alt="" width="840">
+</p>
+
+O **Engenheiro de Dados** atua na base da pirâmide de dados, sendo o principal responsável pelo **desenho, construção e sustentação das soluções** que permitem o armazenamento e o gerenciamento das informações. Sua função central envolve a **extração de dados de fontes heterogêneas** (diversificadas), transformando esse material bruto para que possa ser efetivamente consumido por outros profissionais, como analistas e cientistas.
+
+No dia a dia, este profissional lida com:
+
+* **Sistemas de armazenamento:** Data Warehouses e bancos de dados relacionais e não relacionais.
+* **Coleta e Fluxo:** Utilização de linguagens como Python para *web scrapping* e ferramentas de mensageria como Rabbit MQ e Kafka.
+* **Processos de ETL:** Sigla para *Extract, Transform, Load* (Extrair, Transformar e Carregar), que define a ordem de execução para disponibilizar os dados.
+
+#### Cientista de Dados
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h15m45s969.jpg" alt="" width="840">
+</p>
+
+O **Cientista de Dados** possui um perfil mais voltado para a **pesquisa e modelagem estatística**. Diferente do engenheiro, seu foco está no **reconhecimento de padrões e na predição** de eventos futuros, buscando responder perguntas complexas atreladas ao contexto do negócio.
+
+Este profissional utiliza uma "caixa de ferramentas" (*toolbox*) variada para encontrar *insights*:
+
+* **Machine Learning:** O aprendizado de máquina é uma das principais ferramentas para criar modelos preditivos.
+* **Técnicas Avançadas:** Uso de deduções estatísticas e *network data science* (análise de redes complexas).
+* **Linguagens:** O foco principal de atuação e desenvolvimento é a linguagem Python.
+
+#### Analista de Dados
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h15m49s474.jpg" alt="" width="840">
+</p>
+
+O **Analista de Dados** desempenha um papel fundamental na interpretação do **comportamento do negócio** através da observação histórica dos dados. Sua atuação é muito próxima ao conceito de BI (*Business Intelligence*), focando em transformar dados brutos em informações visuais compreensíveis para os tomadores de decisão (*stakeholders*).
+
+Suas principais responsabilidades incluem:
+
+* **Criação de Dashboards:** Desenvolvimento de painéis para apresentação visual e monitoramento de métricas.
+* **Diagnóstico:** Identificação de possíveis motivos para determinados comportamentos do mercado ou do produto.
+* **Métricas:** Verificação constante de indicadores de desempenho, como satisfação de usuários e saúde do negócio.
+
+#### Perfil de Profissional em Data
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h15m52s644.jpg" alt="" width="840">
+</p>
+
+Além dos três pilares principais (Engenharia, Ciência e Análise), o mercado de dados oferece **outras carreiras especializadas** que se adaptam a diferentes necessidades organizacionais:
+
+* **BI Analyst:** Focado estritamente em inteligência de negócio e relatórios estratégicos.
+* **Analistas Setoriais:** Profissionais de áreas como Logística e Marketing que utilizam técnicas de análise de dados aplicadas aos seus nichos específicos.
+* **Machine Learning Engineer:** Diferente do cientista, este engenheiro é focado em colocar os modelos em produção, garantindo que o sistema funcione em escala, realize manutenções e otimizações constantes.
+* **Data Architect:** Profissional responsável pela estrutura de alto nível dos dados, muitas vezes mesclando competências da engenharia de dados.  
+
+
 ### 🟩 Vídeo 07 - BI e sua matéria prima: Dados
 
 <video width="60%" controls>
@@ -249,7 +309,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/57ad3abf-f1c7-4226-ab03-3c843c7b0bdd?autoplay=1
 
 ### 🟩 Vídeo 08 - Dados, Informação e Conhecimento
 
@@ -258,7 +318,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 09 - Fluxo de dados em BI
 
