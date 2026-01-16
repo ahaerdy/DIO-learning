@@ -109,16 +109,45 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 5: Fundamentos de Power BI
 
+- [ ] Curso: Fundamentos de Business Intelligence (BI)
+- [ ] Curso: Introdução a Análise de Dados com SQL
+- [ ] Curso: Fundamentos Teóricos Sobre ETL
+- [ ] Curso: Primeiros Passos com Power BI
+- [ ] Curso: Analisando dados de um Dashboard de Vendas no Power BI
+- [ ] Curso: Desvendando o Power BI com Python
+
 ### Módulo 6: Visualização de Dados e Relatórios com Power BI  
 
+- [ ] Curso: Trabalhando com Visuais no Power BI
+- [ ] Curso: Fundamentos de BI: KPIs e Métricas
+- [ ] Curso: Criando Dashboard Interativos com Power BI
+- [ ] Curso: Criando Um Relatório Gerencial de Vendas com Power BI
+- [ ] Curso: Materiais complementares - Visualização de Dados e Relatórios com Power BI
+- [ ] Curso: Dominando Filtragem e Extração de Dados com Python
 
 ### Módulo 7: Processamento de Dados com Power BI  
 
+- [ ] Curso: Coleta e Extração de Dados com Power BI
+- [ ] Curso: Limpeza e Transformação de Dados com Power BI
+- [ ] Curso: Criando um Dashboard corporativo com integração com MySQL e Azure
 
 ### Módulo 8: Modelagem de Dados com Power BI  
 
+- [ ] Curso: Fundamentos de Modelagem Dimensional
+- [ ] Curso: Modelagem de Dados no Power BI
+- [ ] Curso: Primeiros passos com DAX e Cálculos com Power BI
+- [ ] Curso: Otimização de Modelo de Dados com Foco em Desempenho no Power BI
+- [ ] Curso: Dashboard de Vendas com Power BI utilizando Star Schema
+- [ ] Curso: Modelando um Dashboard de E-commerce com Power BI Utilizando Fórmulas DAX
 
 ### Módulo 9: Data Analytics & Storytelling com Power BI  
+
+- [ ] Curso: Relatórios & Experiência do Usuário no Power BI
+- [ ] Curso: Explorando Recursos para criar Storytelling dos dados com Power BI
+- [ ] Curso: Fundamentos de Data Analytics com Power BI
+- [ ] Curso: Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI
+- [ ] Curso: Criando um Relatório Vendas e Lucros com Data Analytics com Power BI
+- [ ] Curso: 
 
 ## 🏆 Certificados Obtidos
 
