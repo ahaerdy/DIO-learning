@@ -8,7 +8,7 @@
 ### 🟩 Vídeo 01 - O que você aprenderá na Formação
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/xxxxxxxxxxxxxxxxxxxxxx" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -51,47 +51,162 @@ Esta formação é destinada a profissionais que precisam comunicar resultados v
 
 ### 🟩 Vídeo 02 - Conhecendo a Instrutora Juliana
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/25454c64-07b0-47cd-98e9-d77aaf858dc6?autoplay=1
+
+O vídeo apresenta a trajetória profissional e acadêmica de Juliana Mascarenhas, que atualmente atua como especialista em educação tecnológica na plataforma DIO. A palestrante compartilha sua transição de carreira, que começou no setor de telecomunicações e infraestrutura de redes até evoluir para a área de ciência de dados. Ela destaca sua formação sólida, incluindo um mestrado em modelagem computacional, e sua versatilidade no domínio de linguagens como Python, Java e C. Além de sua experiência técnica com Linux e gerenciamento de projetos, Juliana menciona sua atuação como criadora de conteúdo educacional no YouTube. Por fim, ela introduz os cursos que ministra, estabelecendo sua autoridade para guiar os alunos em formações voltadas para banco de dados e tecnologia.
+
+### Anotações
+
+#### Juliana Mascarenhas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-19h13m10s462.jpg" alt="" width="840">
+</p>
+
+A instrutora Juliana Mascarenhas apresenta seu perfil profissional como Tech Education Specialist na DIO e cientista de dados. Com formação acadêmica sólida, ela possui mestrado em modelagem computacional pelo Laboratório Nacional de Computação Científica (LNCC), onde direcionou sua carreira para a ciência de dados através de um foco multidisciplinar. Além de sua atuação educacional, Juliana é desenvolvedora em linguagens como Java e Python, e mantém canais de produção de conteúdo técnico como o "Simplificando Redes" e "Simplificando Programação".
+
+#### Trajetória Acadêmica e Profissional
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-19h13m13s708.jpg" alt="" width="840">
+</p>
+
+A trajetória de Juliana na tecnologia demonstra uma evolução contínua entre 2009 e 2023, evidenciando que a carreira no setor pode seguir caminhos não lineares:
+
+* **2009 – 2011:** Início como Técnica de Telecomunicações pelo CEFET/RJ.
+* **2011 – 2015:** Graduação em Engenharia da Computação pela UCP.
+* **2017 – 2019:** Mestrado em Modelagem Computacional pelo LNCC.
+* **2023:** Definição do objetivo de ingressar no doutorado.
+
+#### Experiência com Tecnologias e Infraestrutura
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-19h13m15s965.jpg" alt="" width="840">
+</p>
+
+Ao longo de sua carreira, a instrutora acumulou experiência em um ecossistema diversificado de tecnologias, transitando entre o desenvolvimento e a infraestrutura. Seu histórico inclui o uso de sistemas operacionais Linux (notadamente Ubuntu), linguagens de programação como C++ e Java, além de sistemas de gerenciamento de banco de dados como PostgreSQL. Essa base técnica permitiu sua atuação em frentes variadas, desde a manipulação de código de baixo nível até a gestão de dados.
+
+#### Especialização e Network Science
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-19h13m17s953.jpg" alt="" width="840">
+</p>
+
+Além do desenvolvimento, a experiência da instrutora abrange a área de infraestrutura de redes e gestão, utilizando ferramentas como Zabbix e Apache, além de práticas baseadas nas diretrizes do Project Management Institute (PMI) para gerenciamento de projetos. Essa convergência de conhecimentos em redes, programação e dados culminou em sua especialização em **Network Data Science** (ou Network Science), um ramo específico da ciência de dados voltado para a análise de estruturas de rede.
+
+#### Cursos e Formações na Plataforma
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-19h13m19s547.jpg" alt="" width="840">
+</p>
+
+Como parte do ecossistema de ensino da DIO, Juliana disponibiliza diversos cursos que cobrem desde fundamentos até tópicos avançados:
+
+* **Introdução à Programação e Pensamento Computacional:** Curso base para iniciantes.
+* **Protocolos de Comunicação:** Estudo de HTTP e Web Sockets.
+* **Desenvolvimento Java:** Criação de APIs REST conectadas ao Amazon RDS e microsserviços de upload de imagens com Amazon S3.
+* **Mensageria:** Implementação de Java Spring com RabbitMQ.
+* **SQL:** Atuação na formação SQL Database Specialist.
+
+---
+
+Would you like me to expand on any specific technology mentioned in Juliana's trajectory, such as the Network Science concepts or the AWS integration steps?      
+
 
 ### 🟩 Vídeo 03 - Pré-requisitos para melhor aproveitamento da Formação
 
-link do vídeo:
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/ce126fcb-dcaf-4a4d-8b40-6c8bc8cb0a80?autoplay=1
 
 ## Parte 2 - Fundamentos de Business Intelligence (BI)
 
 ### 🟩 Vídeo 04 - Breve descrição do que será abordado no Módulo
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 05 - Contextualizando a área de dados
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 06 - Principais Perfis na Carreira de Dados e BI
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 07 - BI e sua matéria prima: Dados
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 08 - Dados, Informação e Conhecimento
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 09 - Fluxo de dados em BI
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 10 - O que é Business Intelligence?
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 11 - Tipos de Análises em BI
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_11.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 12 - Análise de Dados e Big Data
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.01-video_12.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
