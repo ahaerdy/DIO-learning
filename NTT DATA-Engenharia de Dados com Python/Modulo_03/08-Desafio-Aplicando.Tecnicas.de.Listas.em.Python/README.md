@@ -33,10 +33,10 @@ Um único número inteiro representando o total de vendas e um número decimal r
 
 A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/image.png" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+<p align="center">
+  <img src="000-Midia_e_Anexos/image.png" alt="" width="480">
+</p>
+
 
 Atenção: É extremamente importante que as entradas e saídas sejam exatamente iguais às descritas na descrição do desafio de código.
 
