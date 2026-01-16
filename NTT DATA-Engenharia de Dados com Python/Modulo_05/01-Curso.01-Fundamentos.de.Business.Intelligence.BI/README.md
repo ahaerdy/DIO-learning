@@ -175,8 +175,7 @@ A estrutura de aprendizado abrange os seguintes pilares:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/5be21eed-93fb-4a41-8752-b3dde9a7bda2?autoplay=1
-
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/5be21eed-93fb-4a41-8752-b3dde9a7bda2?autoplay=1 .
 ### 🟩 Vídeo 06 - Principais Perfis na Carreira de Dados e BI
 
 <video width="60%" controls>
