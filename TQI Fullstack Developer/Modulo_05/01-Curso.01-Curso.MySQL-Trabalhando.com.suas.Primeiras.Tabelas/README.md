@@ -234,6 +234,62 @@ A configuração final da tabela exige a definição de uma Primary Key (Chave P
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/affaa006-7cdb-46d7-bf28-8843e38a0a13?autoplay=1
 
+O vídeo consiste em um tutorial prático sobre a inserção de dados em bancos de dados MySQL utilizando o comando INSERT INTO. O instrutor demonstra como cadastrar informações (nome e data de nascimento) através do phpMyAdmin, enfatizando a importância da estrutura das tabelas, a formatação correta de dados (especialmente datas no padrão americano) e o papel fundamental da Chave Primária (Primary Key) com auto-incremento para a integridade e manipulação eficiente dos registros.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h54m49s264.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, inicia-se o processo de **inserção de dados** em tabelas MySQL, uma funcionalidade essencial para realizar cadastros e criar registros de informações. O comando fundamental para realizar essa operação é o `INSERT INTO`, que permite persistir dados desde que estes respeitem os critérios e tipos definidos previamente na estrutura da tabela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h54m58s401.jpg" alt="" width="840">
+</p>
+
+Para utilizar o comando `INSERT INTO`, é necessário indicar o nome da tabela alvo, as colunas que serão preenchidas e os respectivos valores. Um ponto de atenção importante é o formato de data utilizado pelo MySQL, que segue o padrão americano (`AAAA-MM-DD`).
+
+```sql
+INSERT INTO pessoas (nome, nascimento) VALUES ('Nathally', '1990-05-22');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h55m12s801.jpg" alt="" width="840">
+</p>
+
+Na prática, dentro da interface do **phpMyAdmin**, o comando é executado na aba SQL. No exemplo abaixo, a inserção é realizada na tabela `pessoas` (no plural), informando apenas os campos de nome e nascimento. Como os valores são strings e datas, eles devem ser passados entre aspas simples.
+
+```sql
+INSERT INTO pessoas (nome, nascimento) VALUES ('Nathally', '1990-05-22');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h55m17s843.jpg" alt="" width="840">
+</p>
+
+Ao visualizar os dados inseridos na tabela `pessoas`, observa-se que o registro foi criado com sucesso. No entanto, nota-se uma limitação importante: como esta tabela específica não possui uma **Primary Key** (Chave Primária), a interface do phpMyAdmin não oferece opções diretas para editar ou excluir a linha individualmente em modo de grade. Isso ocorre porque o sistema não possui um identificador único e garantido para diferenciar esse registro de outros que possam ter dados idênticos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h55m56s110.jpg" alt="" width="840">
+</p>
+
+Agora, o mesmo procedimento de inserção é realizado na tabela `pessoa` (no singular), que foi estruturada para incluir uma coluna de ID. Note que, embora a tabela possua três colunas (id, nome e nascimento), apenas as colunas de nome e data de nascimento são referenciadas no comando SQL.
+
+```sql
+INSERT INTO pessoa (nome, nascimento) VALUES ('Nathally', '1990-05-22');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-13h56m29s906.jpg" alt="" width="840">
+</p>
+
+Ao conferir o resultado na tabela `pessoa`, percebe-se que o campo **ID** foi preenchido automaticamente com o valor "1". Isso acontece devido à propriedade de **auto-incremento** configurada na criação da tabela. A presença desta Primary Key é fundamental, pois ela funciona como a "certidão de nascimento" do dado, permitindo que o MySQL diferencie registros de forma única e habilite funções de manipulação, como as opções de "Editar", "Copiar" e "Remover" visíveis na interface.
+
+
 ### 🟩 Vídeo 05 - Dicas e dúvidas
 
 <video width="60%" controls>
@@ -241,7 +297,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-tr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/ecad526b-8ae8-4cb2-96d8-3528fa4711a8?autoplay=1
 
 
 ## Parte 2 - Realizando manutenção de suas tabelas
