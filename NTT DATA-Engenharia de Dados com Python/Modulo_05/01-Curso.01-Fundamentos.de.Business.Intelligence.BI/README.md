@@ -150,6 +150,24 @@ Nesta etapa da formação, são apresentados os **pré-requisitos** fundamentais
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/f9eab4bb-272e-4dc4-bdfc-d10d1fff5931?autoplay=1
 
+O vídeo introduz o módulo inicial da formação **PBI Analyst**, focada em estabelecer os **fundamentos de inteligência de dados**. O instrutor destaca que o curso capacita os alunos a utilizarem o **Power BI** e a linguagem **SQL** para solucionar problemas reais de negócios. Um ponto central da abordagem é o desenvolvimento do **pensamento analítico exploratório**, que permite ao profissional interpretar contextos e formular perguntas precisas antes de aplicar técnicas de extração. O conteúdo abrange temas essenciais como os processos de **ETL e ELT**, além de oferecer um primeiro contato prático com a instalação e uso da ferramenta de visualização da Microsoft. Ao longo das lições, os estudantes aprenderão a transformar **bancos de dados relacionais** em informações estratégicas para a tomada de decisão.
+
+### Anotações
+     
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-19h31m45s889.jpg" alt="" width="840">
+</p>
+
+Nesta introdução à formação **PBI Analyst**, o foco inicial estabelece os **Fundamentos de Business Intelligence (BI)** e inteligência de dados. O objetivo é capacitar o profissional a realizar análises de dados robustas, utilizando o **Power BI** como ferramenta central, mas compreendendo que a base técnica exige o domínio de **bancos de dados relacionais** e a linguagem **SQL**.
+
+O módulo destaca que a carreira em dados exige um **pensamento analítico exploratório** inerente. Diferente de outras áreas de TI, o profissional de dados deve priorizar o entendimento do contexto de negócio para determinar quais perguntas são relevantes antes de aplicar técnicas de extração.
+
+A estrutura de aprendizado abrange os seguintes pilares:
+
+* **SQL Analytics**: Utilização de consultas para inferir informações e responder perguntas de negócio diretamente na base de dados.
+* **Processos de ETL e ELT**: Compreensão das diferenças fundamentais entre *Extract, Transform, Load* (ETL) e *Extract, Load, Transform* (ELT), conceitos essenciais para o tratamento de grandes volumes de dados.
+* **Introdução ao Power BI**: Primeiro contato prático com o Power BI Desktop, focando na instalação e na afinidade com a ferramenta líder de mercado. 
+
 ### 🟩 Vídeo 05 - Contextualizando a área de dados
 
 <video width="60%" controls>
@@ -157,7 +175,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/5be21eed-93fb-4a41-8752-b3dde9a7bda2?autoplay=1
 
 ### 🟩 Vídeo 06 - Principais Perfis na Carreira de Dados e BI
 
