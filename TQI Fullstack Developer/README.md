@@ -77,9 +77,12 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: ⭐️ [Trabalhando com States & Effects no ReactJs](Modulo_04/03-Curso.03-Trabalhando.com.States.and.Effects.no.ReactJs)
 - [x] Curso: [Desenvolvimento de aplicações para internet com ReactJS](Modulo_04/04-Curso.04-Desenvolvimento.de.aplicacoes.para.internet.com.ReactJS)
 - [x] Curso: [Práticas avançadas em projetos com ReactJS](Modulo_04/05-Curso.05-Praticas.avancadas.em.projetos.com.ReactJS)
-- [ ] Projeto: [Criando um Front-end Totalmente Componentizado na Prática com ReactJS](Modulo_04/06-Curso.06-Criando.um.Front-end.Totalmente.Componentizado.na.Pratica.com.ReactJS)
+- [x] Projeto: [Criando um Front-end Totalmente Componentizado na Prática com ReactJS](Modulo_04/06-Curso.06-Criando.um.Front-end.Totalmente.Componentizado.na.Pratica.com.ReactJS)
 
 ### Módulo 5: SQL
+
+- [ ] Curso: MySQL - Trabalhando com suas Primeiras Tabelas
+- [ ] curso: MySQL - Consultas com Join
 
 ### Módulo 6: Java
 
