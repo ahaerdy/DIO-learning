@@ -311,6 +311,29 @@ Além dos três pilares principais (Engenharia, Ciência e Análise), o mercado 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/57ad3abf-f1c7-4226-ab03-3c843c7b0bdd?autoplay=1
 
+O vídeo diferencia os conceitos de **dados**, **informações** e **conhecimento** dentro de uma perspectiva analítica e profissional. O autor explica que **dados brutos** são desorganizados e carecem de valor imediato, exigindo um intenso processo de **limpeza e tratamento** por parte de especialistas. Uma vez refinados, esses dados transformam-se em **informações**, que fornecem contexto e permitem a compreensão de cenários específicos. A partir dessas informações, gera-se o **conhecimento**, etapa fundamental para que empresas abandonem meros palpites e adotem uma postura **orientada a dados**. Esse fluxo lógico possibilita a tomada de **decisões assertivas** e estratégicas em diversos setores do mercado.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h31m31s602.jpg" alt="" width="840">
+</p>
+
+Esta imagem ilustra o fluxo de transformação de **Dados** brutos em **Informações**. À esquerda, os dados são representados como elementos desorganizados e dispersos, simbolizando estruturas que possuem um nível de organização em arquivos ou repositórios, mas que carecem de coerência ou relação entre si à primeira vista.
+
+No centro, o ícone de um banco de dados representa a etapa de armazenamento e tratamento. Para que esses dados se tornem úteis, é necessário um processo de limpeza e lapidação, eliminando redundâncias ou lacunas. À direita, o resultado desse processo é a **Informação**, representada por figuras humanas interagindo com painéis organizados, indicando que os dados tratados agora possuem contexto e podem ser utilizados para formular perguntas e respostas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-20h31m37s682.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, aprofundamos a distinção entre os três pilares da análise: **Dados**, **Informação** e **Conhecimento**.
+
+* **Dados**: São descritos como elementos que não possuem valor por si sós, podendo ser qualquer tipo de dado bruto.
+* **Informação**: É definida como a representação de um cenário, possuindo o poder de informar e permitir a compreensão da situação atual.
+* **Conhecimento**: É a compreensão de um contexto, alcançada por meio da razão ou da experiência. O conhecimento permite a tomada de decisões assertivas e fundamentadas, fundamentando o cenário de decisões orientadas a dados (*data-driven*). É a capacidade humana de aprender e buscar a compreensão de algo novo.      
+
+
 ### 🟩 Vídeo 08 - Dados, Informação e Conhecimento
 
 <video width="60%" controls>
@@ -318,7 +341,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/2e2419d7-ec6a-49ff-962b-5b86d14c9060?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Fluxo de dados em BI
 
