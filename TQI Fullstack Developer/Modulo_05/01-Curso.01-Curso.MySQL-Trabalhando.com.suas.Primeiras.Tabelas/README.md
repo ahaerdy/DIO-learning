@@ -347,6 +347,142 @@ Em ambientes de desenvolvimento real, os comandos SQL são integrados diretament
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/687cf848-a9ef-4d97-b9b1-09788187537f?autoplay=1
 
+Este vídeo apresenta a segunda parte do curso de MySQL com PHPMyAdmin, conduzido por Anatoli Souza. O foco principal é a manipulação de dados em tabelas, abordando as cláusulas SELECT para visualização e UPDATE para modificação. O conteúdo destaca a importância crítica da cláusula WHERE e do uso de Chaves Primárias (Primary Keys) para evitar alterações indesejadas em massa, além de desmistificar a necessidade de fluência em inglês para aprender a sintaxe SQL.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h23m41s902.jpg" alt="" width="840">
+</p>
+
+Apresentação dos objetivos principais da aula, que consistem em aprender a selecionar e atualizar dados em uma tabela, além de deletar e organizar as informações registradas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h23m44s081.jpg" alt="" width="840">
+</p>
+
+Início da quinta parte do curso de MySQL com phpMyAdmin, focada especificamente no estudo e aplicação das cláusulas `SELECT` e `UPDATE`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h23m57s340.jpg" alt="" width="840">
+</p>
+
+Introdução à cláusula `SELECT`, que serve para escolher quais dados serão exibidos. É apresentada a sintaxe fundamental `SELECT * FROM pessoas`, onde o asterisco indica a seleção de todos os campos da tabela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h24m45s915.jpg" alt="" width="840">
+</p>
+
+Demonstração prática da utilização do comando `SELECT` no editor SQL do phpMyAdmin para visualizar todos os registros da tabela `pessoa`.
+
+```sql
+SELECT * FROM pessoa
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h24m50s797.jpg" alt="" width="840">
+</p>
+
+Visualização dos resultados obtidos após a execução da consulta anterior. A tabela retorna todos os dados cadastrados, incluindo as colunas de identificação, nome e data de nascimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h25m15s012.jpg" alt="" width="840">
+</p>
+
+Exemplo de refinamento da consulta para exibir apenas informações específicas. Ao substituir o asterisco pelo nome de uma coluna, o sistema filtra a visualização para trazer exclusivamente aquele campo.
+
+```sql
+SELECT nome FROM pessoa
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h26m06s948.jpg" alt="" width="840">
+</p>
+
+Resultado da consulta filtrada, exibindo uma lista contendo apenas os nomes das pessoas registradas no banco de dados, sem mostrar o `id` ou a data de nascimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h26m19s505.jpg" alt="" width="840">
+</p>
+
+Aplicação de um `SELECT` para retornar dois campos específicos da tabela. O comando solicita as colunas de nome e data de nascimento simultaneamente.
+
+```sql
+SELECT nome, nascimento FROM pessoa
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h26m22s057.jpg" alt="" width="840">
+</p>
+
+Exibição dos resultados da consulta composta, apresentando os registros organizados apenas pelas colunas de nome e nascimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h26m37s265.jpg" alt="" width="840">
+</p>
+
+Introdução à cláusula `UPDATE`, utilizada para atualizar ou alterar dados já existentes na tabela. O slide exemplifica a sintaxe básica para configurar um novo valor em uma coluna específica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h27m06s329.jpg" alt="" width="840">
+</p>
+
+Execução de um comando de atualização no campo `nome`. O objetivo é modificar o registro "Anatoli" para "Anatoli Souza" na tabela `pessoa`.
+
+```sql
+UPDATE pessoa SET nome = 'Anatoli Souza'
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h27m20s075.jpg" alt="" width="840">
+</p>
+
+Demonstração das consequências de executar um `UPDATE` sem uma cláusula condicional. Como não houve restrição, o sistema aplicou a alteração do nome "Anatoli Souza" a todos os registros da tabela indiscriminadamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h27m28s279.jpg" alt="" width="840">
+</p>
+
+Explicação sobre a importância da cláusula `WHERE` e do identificador único (Primary Key). O uso do `id` como condição é fundamental para garantir que apenas o registro desejado seja manipulado, evitando erros de atualização em massa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h27m46s180.jpg" alt="" width="840">
+</p>
+
+Aplicação correta do `UPDATE` utilizando a cláusula `WHERE` para restaurar o nome "Pedro" apenas no registro onde o `ID` é igual a 2.
+
+```sql
+UPDATE pessoa SET nome = 'Pedro' WHERE ID = 2
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h28m00s565.jpg" alt="" width="840">
+</p>
+
+Verificação da tabela após a correção pontual. Observa-se que apenas o registro com o `ID 2` foi alterado, comprovando a eficácia da condição estabelecida no comando SQL.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h28m24s913.jpg" alt="" width="840">
+</p>
+
+Execução simultânea de múltiplos comandos de atualização para restaurar os nomes de outros registros específicos utilizando seus respectivos identificadores.
+
+```sql
+UPDATE pessoa SET nome = 'Marcela' WHERE ID = 3;
+UPDATE pessoa SET nome = 'Flávio' WHERE ID = 5;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h28m32s471.jpg" alt="" width="840">
+</p>
+
+Visualização final da tabela totalmente configurada e corrigida. Os dados originais foram restaurados nos IDs corretos e a alteração pretendida no nome principal foi mantida com sucesso.      
 
 
 ### 🟩 Vídeo 07 - Deletando e ordenando dados
@@ -356,7 +492,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-tr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/4e35118f-43a7-47e2-9d0f-009060bff0ac?autoplay=1
 
 ### 🟩 Vídeo 08 - Agrupando dados
 
