@@ -31,9 +31,7 @@ Esta aula marca o início do curso de **MySQL com phpMyAdmin**. Ministrada por N
 Os **objetivos da aula** são divididos em três pilares fundamentais para o aprendizado prático e teórico:
 
 1. **Compreender o conceito de banco de dados relacional**, que é a base da estrutura que será utilizada.
-
 2. **Conhecer as ferramentas MySQL e phpMyAdmin**, entendendo como elas interagem.
-
 3. **Criar a primeira tabela**, aplicando os conhecimentos na prática.
 
 <p align="center">
