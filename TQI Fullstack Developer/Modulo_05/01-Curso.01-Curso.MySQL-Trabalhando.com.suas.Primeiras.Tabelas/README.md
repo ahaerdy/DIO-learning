@@ -347,7 +347,7 @@ Em ambientes de desenvolvimento real, os comandos SQL são integrados diretament
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-trabalhando-com-as-suas-primeiras-tabelas/learning/687cf848-a9ef-4d97-b9b1-09788187537f?autoplay=1
 
-Este vídeo apresenta a segunda parte do curso de MySQL com PHPMyAdmin, conduzido por Anatoli Souza. O foco principal é a manipulação de dados em tabelas, abordando as cláusulas SELECT para visualização e UPDATE para modificação. O conteúdo destaca a importância crítica da cláusula WHERE e do uso de Chaves Primárias (Primary Keys) para evitar alterações indesejadas em massa, além de desmistificar a necessidade de fluência em inglês para aprender a sintaxe SQL.
+Este vídeo apresenta a segunda parte do curso de MySQL com PHPMyAdmin, conduzido por Nathaly Souza. O foco principal é a manipulação de dados em tabelas, abordando as cláusulas SELECT para visualização e UPDATE para modificação. O conteúdo destaca a importância crítica da cláusula WHERE e do uso de Chaves Primárias (Primary Keys) para evitar alterações indesejadas em massa, além de desmistificar a necessidade de fluência em inglês para aprender a sintaxe SQL.
 
 ### Anotações
 
@@ -430,10 +430,10 @@ Introdução à cláusula `UPDATE`, utilizada para atualizar ou alterar dados j�
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h27m06s329.jpg" alt="" width="840">
 </p>
 
-Execução de um comando de atualização no campo `nome`. O objetivo é modificar o registro "Anatoli" para "Anatoli Souza" na tabela `pessoa`.
+Execução de um comando de atualização no campo `nome`. O objetivo é modificar o registro "Nathaly" para "Nathaly Souza" na tabela `pessoa`.
 
 ```sql
-UPDATE pessoa SET nome = 'Anatoli Souza'
+UPDATE pessoa SET nome = 'Nathaly Souza'
 
 ```
 
@@ -441,7 +441,7 @@ UPDATE pessoa SET nome = 'Anatoli Souza'
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h27m20s075.jpg" alt="" width="840">
 </p>
 
-Demonstração das consequências de executar um `UPDATE` sem uma cláusula condicional. Como não houve restrição, o sistema aplicou a alteração do nome "Anatoli Souza" a todos os registros da tabela indiscriminadamente.
+Demonstração das consequências de executar um `UPDATE` sem uma cláusula condicional. Como não houve restrição, o sistema aplicou a alteração do nome "Nathaly Souza" a todos os registros da tabela indiscriminadamente.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-14h27m28s279.jpg" alt="" width="840">
