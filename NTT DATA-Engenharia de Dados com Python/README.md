@@ -90,7 +90,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
   - **Repositório**: [DIO-projeto-sistema-bancario-com-funcoes-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
   - **Descrição**: sistema bancário em Python com funções, desenvolvido como parte de desafio da DIO. O projeto simula operações de contas e usuários, com controle por meio de funções modulares. Foram aplicados conceitos de lógica, listas, dicionários e boas práticas em Python.
 - [x] Curso: [Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional](Modulo_03/07-Curso%2007-Desafios_de_C%C3%B3digo_Aperfei%C3%A7oe_Sua_L%C3%B3gica_e_Pensamento_Computacional)
-- [x] [Desafio: Aplicando Técnicas de Listas em Python](Modulo_03/08-Desafio-Aplicando.Tecnicas.de.Listas.em.Python)
+- [x] Desafio: [Aplicando Técnicas de Listas em Python](Modulo_03/08-Desafio-Aplicando.Tecnicas.de.Listas.em.Python)
 
 ### Módulo 4: Programação Orientada a Objetos com Python  
 
