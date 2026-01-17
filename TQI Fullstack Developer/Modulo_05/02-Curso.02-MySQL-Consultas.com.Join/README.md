@@ -300,6 +300,41 @@ Para corrigir a consulta, deve-se entender a posição das tabelas: a query come
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-consultas-com-join/learning/873f7d1b-a8c3-4df0-95bf-afdb2a8516c3?autoplay=1
 
+O vídeo descreve uma aula prática sobre manipulação de bancos de dados SQL, focada especificamente no uso de cláusulas de junção e união. O instrutor demonstra as diferenças técnicas entre LEFT OUTER JOIN e RIGHT OUTER JOIN, explicando como a ordem das tabelas na consulta define a hierarquia dos dados. Além disso, aborda a cláusula UNION como uma solução para combinar resultados de diferentes consultas, destacando a importância da consistência no número de colunas para o sucesso da operação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-09h08m42s039.jpg" alt="" width="840">
+</p>
+
+Para lidar com situações onde uma consulta precisa retornar registros de ambas as tabelas, mesmo quando não há um relacionamento correspondente (como um vídeo sem canal ou um canal sem vídeos), utiliza-se a cláusula `UNION`. Esta cláusula permite unir o resultado de duas consultas distintas em um único conjunto de dados. No entanto, para que a união funcione corretamente, ambas as consultas devem possuir o mesmo número de colunas e tipos de dados compatíveis.
+
+No exemplo prático, a consulta busca o ID e o nome tanto da tabela de vídeos quanto da tabela de canais, aplicando `LEFT OUTER JOIN` e `RIGHT OUTER JOIN` para garantir que as informações de ambos os lados sejam capturadas antes da unificação.
+
+```sql
+SELECT v.id_video, v.nome_video FROM videos AS v LEFT OUTER JOIN videos_canais AS vc ON v.id_video = vc.fk_video
+UNION
+SELECT c.id_canal, c.nome_canal FROM videos_canais AS vc RIGHT OUTER JOIN canais AS c ON vc.fk_canal = c.id_canal
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-09h08m44s538.jpg" alt="" width="840">
+</p>
+
+A execução da query com `UNION` resulta em uma lista consolidada que exibe todos os registros integrados. Como demonstrado na interface do phpMyAdmin, o resultado apresenta tanto os vídeos que possuem canais (como "Login com React" e "Componentes com React") quanto aqueles que poderiam estar isolados, além de incluir canais que não possuem vídeos vinculados, como o canal de "CSS".
+
+Esta técnica é essencial para obter uma visão completa do banco de dados quando os relacionamentos são parciais, permitindo que o desenvolvedor identifique lacunas de dados ou simplesmente apresente um relatório geral de todas as entidades cadastradas nas tabelas relacionadas.
+
+```sql
+SELECT v.id_video, v.nome_video FROM videos AS v LEFT OUTER JOIN videos_canais AS vc ON v.id_video = vc.fk_video 
+UNION 
+SELECT c.id_canal, c.nome_canal FROM videos_canais AS vc RIGHT OUTER JOIN canais AS c ON vc.fk_canal = c.id_canal
+
+```      
+
+
 ### 🟩 Vídeo 07 - Inserindo novos dados com tabelas relacionadas
 
 <video width="60%" controls>
@@ -307,7 +342,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-co
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-consultas-com-join/learning/ca67a7e1-fbc0-4544-bcc9-40f9012e2a69?autoplay=1
 
 ### 🟩 Vídeo 08 - Realizando consultas com comando WHERE e conclusão da aula
 
