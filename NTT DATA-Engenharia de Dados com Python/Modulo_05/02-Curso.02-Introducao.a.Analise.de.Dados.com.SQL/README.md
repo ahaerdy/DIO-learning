@@ -188,6 +188,154 @@ Além da manipulação de dados, o DBeaver gera automaticamente **Diagramas de E
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/77165df8-4339-4368-85ea-66ca3fb9f5c4?autoplay=1
 
+O vídeo apresenta um tutorial prático de análise descritiva utilizando SQL no software DBeaver. A demonstração foca na exploração de um banco de dados de música, abordando desde a contagem básica de registros até a realização de junções entre tabelas (Joins) e agrupamentos complexos para identificar padrões e inconsistências nos dados, como a ausência de capas de álbuns.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h06m27s728.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, é realizada uma consulta simples para verificar o volume total de dados presentes na tabela `Album` do banco de dados SQLite. O objetivo é estabelecer uma base quantitativa para as análises subsequentes. 
+
+```sql
+SELECT count(*) as Records FROM Album
+
+```
+
+O resultado da execução indica que a tabela possui um total de **347** registros. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h07m13s932.jpg" alt="" width="840">
+</p>
+
+Neste ponto, a análise foca na identificação de registros específicos através de filtros. É utilizada uma cláusula `WHERE` para localizar álbuns onde uma determinada coluna (neste caso, referida como `Column1`) possui valores nulos. 
+
+```sql
+SELECT AlbumId, Title FROM Album WHERE Column1 is NULL;
+
+```
+
+A interface do DBeaver exibe os resultados na grade de dados, listando títulos como "Restless and Wild", "Big Ones" e "Jagged Little Pill", permitindo visualizar quais álbuns atendem ao critério de ausência de dados na coluna filtrada. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h07m32s266.jpg" alt="" width="840">
+</p>
+
+A consulta é refinada para realizar uma contagem baseada na condição de nulidade. O comando SQL busca quantificar quantos registros na tabela `Album` possuem valores nulos na coluna especificada. 
+
+```sql
+SELECT count(*) FROM Album WHERE Column1 is NULL;
+
+```
+
+O painel de resultados confirma que existem **344** registros que satisfazem essa condição, indicando que a grande maioria dos dados nessa coluna específica não foi preenchida. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h07m54s688.jpg" alt="" width="840">
+</p>
+
+Inversamente à análise anterior, executa-se agora uma verificação para identificar registros que possuem conteúdo válido (não nulo) na coluna em questão. 
+
+```sql
+SELECT count(*) FROM Album WHERE Column1 is NOT NULL;
+
+```
+
+A execução revela que apenas **1** registro na tabela `Album` possui dados preenchidos nesta coluna, contrastando com o volume massivo de nulos identificado anteriormente. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h08m49s563.jpg" alt="" width="840">
+</p>
+
+Retornando à visualização de dados brutos, a consulta seleciona novamente os campos `AlbumId` e `Title` para uma inspeção visual detalhada da lista de álbuns disponíveis na base de dados. 
+
+```sql
+SELECT AlbumId, Title FROM Album;
+
+```
+
+A grade de resultados apresenta uma sequência de álbuns, incluindo "Facelift", "Warner 25 Anos" e "Audioslave", demonstrando a diversidade de títulos catalogados antes de prosseguir para correlações com outras tabelas. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h10m25s970.jpg" alt="" width="840">
+</p>
+
+Para expandir a análise, a exploração muda o foco para a tabela `Artist`. Esta ação visa entender a estrutura e os dados dos artistas cadastrados no sistema de forma independente. 
+
+```sql
+SELECT * FROM Artist a
+
+```
+
+Os resultados exibem os nomes dos artistas e seus respectivos identificadores (`ArtistId`), como AC/DC, Accept e Aerosmith, preparando o terreno para operações de junção entre álbuns e artistas. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h11m15s888.jpg" alt="" width="840">
+</p>
+
+Inicia-se o processo de enriquecimento dos dados através do comando `INNER JOIN`. O objetivo é cruzar as informações da tabela de álbuns com a tabela de artistas, agrupando os resultados para entender a distribuição de registros por cada artista. 
+
+```sql
+SELECT a.AlbumId, a2.Name, count(*) 
+FROM Album a 
+INNER JOIN Artist a2 ON a.ArtistId = a2.ArtistId 
+GROUP BY 2;
+
+```
+
+Esta estrutura de agrupamento (`GROUP BY 2`, referenciando o nome do artista) permite consolidar a quantidade de álbuns ou registros associados a cada entidade artística presente na base. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h12m35s259.jpg" alt="" width="840">
+</p>
+
+A consulta anterior é aprimorada com a inclusão de um alias (`Records`) para a coluna de contagem, tornando a leitura do relatório mais intuitiva. 
+
+```sql
+SELECT a.AlbumId, a2.Name, count(*) as Records 
+FROM Album a 
+INNER JOIN Artist a2 ON a.ArtistId = a2.ArtistId 
+GROUP BY 2;
+
+```
+
+Ao observar os dados retornados, nota-se uma característica peculiar desta base de dados: diversos artistas, como AC/DC e Aaron Goldberg, aparecem com exatamente **347** registros cada, indicando uma distribuição uniforme (e possivelmente artificial) de dados na amostra. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h12m43s875.jpg" alt="" width="840">
+</p>
+
+A visualização na grade de resultados é expandida para mostrar nomes completos de artistas e orquestras, mantendo a contagem de registros constante. 
+
+```sql
+SELECT a.AlbumId, a2.Name, count(*) as Records 
+FROM Album a 
+INNER JOIN Artist a2 ON a.ArtistId = a2.ArtistId 
+GROUP BY 2;
+
+```
+
+A imagem destaca a consistência dos **347** registros para entidades como a "Academy of St. Martin in the Fields", reforçando a observação sobre a padronização dos dados nesta versão do banco de dados de exemplo. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h13m08s655.jpg" alt="" width="840">
+</p>
+
+Para finalizar a análise de caracterização, a consulta é ajustada para ordenar os resultados. Utiliza-se a cláusula `ORDER BY` de forma descendente (`DESC`) para verificar se algum artista foge ao padrão de 347 registros identificado. 
+
+```sql
+SELECT a2.ArtistId, a2.Name, count(*) as Records 
+FROM Album a 
+INNER JOIN Artist a2 ON a.ArtistId = a2.ArtistId 
+GROUP BY 1 
+ORDER BY Records DESC;
+
+```
+
+A ordenação confirma que a base é homogênea, com os principais artistas listados no topo possuindo a mesma quantidade de registros, o que caracteriza a estrutura atual desta base de dados específica.      
+
+
 ### 🟩 Vídeo 04 - O que fazer em um primeiro contato com base de dados?
 
 <video width="60%" controls>
@@ -195,7 +343,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/168882bb-7cbe-42a0-ba6f-c0f3ce8f956b?autoplay=1
 
 ### 🟩 Vídeo 05 - Análise Descritiva: Caracterizando os Registros dos Artistas
 
