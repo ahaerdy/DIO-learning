@@ -536,6 +536,60 @@ O resultado exibido no painel de dados mostra uma lista de clientes (como Puja, 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/b7bee4b6-b9fe-48b4-bd78-c80572fa17e8?autoplay=1
 
+O material consiste em uma aula prática voltada para a **análise e manipulação de dados** utilizando **SQL**, com foco especial em extrair informações estatísticas de um banco de dados. O instrutor demonstra como utilizar técnicas de **agrupamento e contagem** para identificar a **frequência de ocorrências**, permitindo a criação de **histogramas** e a caracterização da base de dados. Durante a explicação, são ensinados procedimentos para **conectar ao servidor MySQL**, configurar permissões de acesso e realizar **junções de tabelas** através do comando `INNER JOIN`. O conteúdo foca em exemplos práticos, como a contagem de **colaboradores e projetos por departamento**, visando transformar registros numéricos em informações visuais significativas. Além disso, o vídeo introduz conceitos de **limpeza de dados**, padronização e o uso de **cláusulas condicionais** para rotular variáveis de forma mais intuitiva para o usuário final.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-20h34m38s089.jpg" alt="" width="840">
+</p>
+
+Para iniciar a análise de frequências e manipulação de dados, é necessário estabelecer uma conexão com o gerenciador de banco de dados. No exemplo, utiliza-se o **DBeaver** para criar uma nova conexão. Ao selecionar a opção "New Database Connection", o usuário deve escolher o driver correspondente ao banco de dados utilizado, que neste caso é o **MySQL**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-20h34m42s908.jpg" alt="" width="840">
+</p>
+
+Após selecionar o driver, configuram-se os parâmetros de conexão em "Connection Settings". Os campos principais incluem:
+
+* **Server Host:** Definido como `localhost` para conexões locais.
+* **Port:** A porta padrão `3306`.
+* **Authentication:** Inserção de `Username` (geralmente root) e `Password`.
+* **Configurações de SSL:** Em casos de erro de conexão, pode ser necessário ajustar a aba SSL para permitir a recuperação de chave pública ("Allow public key retrieval") e desabilitar verificações estritas de certificado se o ambiente for de teste.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-20h34m57s770.jpg" alt="" width="840">
+</p>
+
+Com a conexão estabelecida, é possível realizar análises de frequência e categorização utilizando o banco `company_constraints`. Através de junções (`INNER JOIN`) e agrupamentos (`GROUP BY`), conseguimos extrair informações estratégicas como o volume de colaboradores e projetos por departamento.
+
+Abaixo, os códigos utilizados para gerar essas métricas:
+
+**Categorização de departamentos por número de colaboradores:**
+
+```sql
+SELECT Dno, COUNT(*) AS Total 
+FROM employee 
+INNER JOIN department ON Dno = Dnumber 
+GROUP BY Dno 
+ORDER BY Total DESC;
+
+```
+
+**Verificação da quantidade de projetos por departamento:**
+
+```sql
+SELECT Dnum, COUNT(*) AS Projects 
+FROM project 
+INNER JOIN department ON Dnum = Dnumber 
+GROUP BY Dnum 
+ORDER BY Projects ASC;
+
+```
+
+O resultado dessas consultas permite observar padrões na base de dados, como a correlação entre o aumento do número de projetos e o aumento proporcional da equipe alocada no departamento.
+
+
 ### 🟩 Vídeo 09 - Analisando Frequência dos Dados com Funções de Agregação
 
 <video width="60%" controls>
@@ -543,7 +597,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/ed4c6813-9be0-4753-8ed3-911b5a1febfe?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Discretização com CASE Statement
 
