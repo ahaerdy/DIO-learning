@@ -226,76 +226,70 @@ O vídeo apresenta uma aula técnica sobre manipulação de bancos de dados SQL,
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h43m27s405.jpg" alt="" width="840">
 </p>
 
-Neste estágio, é realizada uma análise comparativa entre as tabelas do banco de dados `dio_mysql`. Ao observar a tabela de vídeos, nota-se a presença de cinco registros, enquanto a consulta SQL utilizando a cláusula `JOIN` exibe apenas quatro resultados. O vídeo intitulado "Páginas com HTML" (ID 5) é o registro que não aparece no resultado da união.
+Nesta etapa, inicia-se a análise de como a cláusula `JOIN` funciona na prática para relacionar diferentes tabelas. O objetivo é realizar uma consulta que una a tabela de relacionamento `videos_canais` com as tabelas de entidades `videos` e `canais` para visualizar os dados de forma integrada.
+
+```sql
+SELECT * FROM videos_canais AS vc 
+JOIN videos AS v ON vc.fk_video = v.id_video 
+JOIN canais AS c ON vc.fk_canal = c.id_canal
+
+```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h43m44s091.jpg" alt="" width="840">
 </p>
 
-A verificação estende-se à tabela de canais, onde existem três registros cadastrados: React, PHP e CSS. No entanto, o resultado da consulta SQL omite o canal "CSS" (ID 3). Essa discrepância ocorre porque o `JOIN` convencional filtra apenas os dados que possuem correspondência direta entre as tabelas relacionadas.
+Ao observar a tabela `videos` isoladamente, nota-se que existem cinco registros cadastrados, incluindo um vídeo sobre "HTML" (ID 5). Entretanto, na consulta anterior utilizando o `JOIN` padrão, esse vídeo específico não aparece nos resultados, evidenciando que a junção simples está filtrando apenas registros que possuem correspondência mútua.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h44m03s261.jpg" alt="" width="840">
 </p>
 
-A explicação para a ausência dos registros mencionados reside na tabela associativa `videos_canais`. O vídeo de ID 5 (HTML) e o canal de ID 3 (CSS) não possuem entradas nesta tabela, o que significa que não há um relacionamento estabelecido entre eles no banco de dados até o momento.
+Da mesma forma, a tabela `canais` possui três registros: React, PHP e CSS. Contudo, o canal "CSS" (ID 3) também não é exibido no resultado da junção realizada anteriormente. Isso ocorre porque o `INNER JOIN` (ou apenas `JOIN`) retorna apenas os valores que possuem um relacionamento direto e presente em ambas as tabelas da consulta.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h44m42s992.jpg" alt="" width="840">
 </p>
 
-Para resolver a necessidade de exibir todos os registros, mesmo aqueles sem relacionamento, introduz-se o conceito de `INNER JOIN`. Por padrão, a cláusula `JOIN` isolada funciona como um `INNER JOIN`, retornando apenas os valores presentes em ambas as tabelas da consulta, descartando campos que resultariam em valores nulos.
-
-```sql
-SELECT FROM videos_canais AS vc 
-INNER JOIN videos AS v ON vc.fk_video = v.id_video 
-INNER JOIN canais AS c ON vc.fk_canal = c.id_canal
-
-```
+A explicação para a ausência desses dados está na tabela intermediária `videos_canais`. O vídeo de HTML e o canal de CSS ainda não foram relacionados nessa tabela. Como o `INNER JOIN` descarta qualquer registro que resulte em valores nulos ou que não possua vínculo, essas informações são omitidas do resultado final da consulta.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h44m55s800.jpg" alt="" width="840">
 </p>
 
-A aula avança para a cláusula `OUTER JOIN`, que tem o objetivo de trazer todos os dados da consulta, inclusive aqueles que não possuem relacionamentos correspondentes. No entanto, ao tentar executar o comando de forma genérica, o MySQL retorna um erro de sintaxe.
+Para contornar essa limitação e exibir todos os registros — inclusive aqueles sem relacionamento — é necessário utilizar a cláusula `OUTER JOIN`. É importante destacar que usar apenas `JOIN` é tecnicamente o mesmo que usar `INNER JOIN`, o qual foca estritamente na interseção dos dados e ignora campos que retornariam nulo.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h44m57s429.jpg" alt="" width="840">
 </p>
 
-O erro apresentado ocorre porque o `OUTER JOIN` exige a especificação do "lado" da consulta que deve ser preservado (seja à esquerda ou à direita). O analisador estático do phpMyAdmin aponta palavras-chave desconhecidas próximas à posição da cláusula `OUTER`.
+Nesta visualização, reforça-se que o `INNER JOIN` mantém o foco apenas nos dados que se cruzam perfeitamente entre as tabelas `videos`, `canais` e a tabela de ligação `videos_canais`. O objetivo agora é evoluir a query para permitir que o vídeo de HTML e o canal de CSS apareçam, mesmo sem um vínculo direto registrado na tabela central.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h45m04s267.jpg" alt="" width="840">
+</p>
+
+Ao tentar aplicar o comando `OUTER JOIN` diretamente, o sistema exige uma especificação mais clara. No SQL, não basta dizer que a junção é externa; é preciso identificar qual lado da consulta (tabela da esquerda ou da direita) contém as informações que não possuem relacionamento, mas que ainda assim devem ser exibidas.
 
 ```sql
-SELECT FROM videos_canais AS vc 
+SELECT * FROM videos_canais AS vc 
 OUTER JOIN videos AS v ON vc.fk_video = v.id_video 
 OUTER JOIN canais AS c ON vc.fk_canal = c.id_canal
 
 ```
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h45m04s267.jpg" alt="" width="840">
-</p>
-
-Para corrigir a consulta e entender o posicionamento dos dados, analisa-se a estrutura do resultado atual. A query inicia com `SELECT FROM videos_canais`, posicionando esta como a tabela base (à esquerda). As uniões subsequentes trazem a tabela `videos` e a tabela `canais` para a direita da estrutura de dados resultante.
-
-<p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h45m16s323.jpg" alt="" width="840">
 </p>
 
-A visualização das colunas confirma a hierarquia: as primeiras colunas pertencem a `videos_canais`, seguidas pelas colunas de `videos` e, por fim, as de `canais`. Compreender se a informação faltante (os valores nulos) está à esquerda ou à direita desta sequência é fundamental para definir se utilizaremos `LEFT JOIN` ou `RIGHT JOIN`.
+A tentativa de executar a consulta acima gera um erro de sintaxe (#1064) no MySQL. O erro ocorre porque "OUTER" é uma palavra-chave que não pode ser usada isoladamente; ela deve vir acompanhada de `LEFT` ou `RIGHT` para definir a direção da consulta e quais dados preservar.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h46m00s649.jpg" alt="" width="840">
 </p>
 
-Retornando à consulta padrão com `JOIN`, observa-se novamente o conjunto de dados limitado a quatro registros. A estratégia a seguir consiste em ajustar a direção do `JOIN` para garantir que o vídeo de HTML e o canal de CSS, que atualmente não possuem referências na tabela central `videos_canais`, sejam incluídos no resultado final.
+Para corrigir a consulta, deve-se entender a posição das tabelas: a query começa com `videos_canais` à esquerda, unindo-se com `videos` à sua direita, e depois com `canais` também à direita. Compreender essa hierarquia visual e lógica é fundamental para aplicar corretamente o `LEFT JOIN` ou `RIGHT JOIN` e finalmente exibir todos os dados desejados.      
 
-```sql
-SELECT FROM videos_canais AS vc 
-JOIN videos AS v ON vc.fk_video = v.id_video 
-JOIN canais AS c ON vc.fk_canal = c.id_canal
-
-```
 
 ### 🟩 Vídeo 06 - Praticando consultas com RIGHT e LEFT JOIN
 
