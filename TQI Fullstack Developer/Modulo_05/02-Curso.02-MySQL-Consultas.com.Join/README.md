@@ -344,6 +344,83 @@ SELECT c.id_canal, c.nome_canal FROM videos_canais AS vc RIGHT OUTER JOIN canais
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-consultas-com-join/learning/ca67a7e1-fbc0-4544-bcc9-40f9012e2a69?autoplay=1
 
+Este vídeo apresenta uma aula prática sobre o gerenciamento de bancos de dados relacionais, focando na transição entre o uso de comandos SQL manuais e a interface gráfica do PHPMyAdmin. O instrutor demonstra como criar novos registros, estabelecer relacionamentos utilizando chaves estrangeiras (Foreign Keys) e realizar consultas complexas com múltiplos JOINs para validar a integridade dos dados entre as tabelas de canais e vídeos.
+
+### Anotações
+
+  <p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h50m57s470.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco é a utilização da interface gráfica do phpMyAdmin para gerenciar o banco de dados `dio_mysql`, aplicando conceitos de **Foreign Key** (Chave Estrangeira) para relacionar as tabelas. A interface facilita a visualização e execução de operações que anteriormente foram realizadas via linha de comando, como queries de seleção e inserção.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h51m42s279.jpg" alt="" width="840">
+</p>
+
+Acessando a aba **Insere** da tabela `canais`, é possível adicionar novos registros manualmente. A imagem mostra a estrutura de colunas prontas para receber dados, especificamente os campos `id_canal` e `nome_canal`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h51m47s600.jpg" alt="" width="840">
+</p>
+
+Para expandir a lista de canais, é inserido um novo registro com o ID 4 para o canal de "HTML". Após preencher os campos, a execução gera automaticamente o comando SQL correspondente:
+
+```sql
+INSERT INTO canais (id_canal, nome_canal) VALUES (4, 'HTML');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h51m50s715.jpg" alt="" width="840">
+</p>
+
+Após a inserção, a tabela `canais` passa a listar quatro registros: React (1), PHP (2), CSS (3) e o recém-adicionado HTML (4). Este ID 4 é fundamental, pois servirá como a referência de Chave Estrangeira na tabela de relacionamento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h52m19s245.jpg" alt="" width="840">
+</p>
+
+Na tabela `videos`, observa-se que o vídeo "Páginas com HTML" possui o ID 5. O objetivo agora é criar um vínculo entre este vídeo (ID 5) e o canal de HTML criado anteriormente (ID 4).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h53m04s674.jpg" alt="" width="840">
+</p>
+
+Na tabela intermediária `videos_canais`, responsável pelo relacionamento N:N, utiliza-se a aba **Insere**. Uma vantagem da interface é o menu suspenso para as chaves estrangeiras (`fk_canal` e `fk_video`), que permite selecionar visualmente os registros relacionados, como o canal "4-HTML" e o vídeo "5-Páginas com HTML".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h53m06s912.jpg" alt="" width="840">
+</p>
+
+A confirmação da inserção na tabela de relacionamento gera o seguinte comando SQL:
+
+```sql
+INSERT INTO `videos_canais` (`id_canais_video`, `fk_canal`, `fk_video`) VALUES ('5', '4', '5');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h56m03s333.jpg" alt="" width="840">
+</p>
+
+Para consolidar os dados das três tabelas (`videos`, `canais` e `videos_canais`), é executada uma query complexa utilizando a cláusula `JOIN`. O objetivo é unir as informações de IDs com seus respectivos nomes e autores para uma visualização completa.
+
+```sql
+SELECT * FROM videos_canais 
+JOIN videos ON videos_canais.fk_video = videos.id_video 
+JOIN canais ON videos_canais.fk_canal = canais.id_canal
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-12h56m38s485.jpg" alt="" width="840">
+</p>
+
+O resultado da consulta exibe a junção bem-sucedida de todos os dados. É possível visualizar, em uma única grade, o ID do relacionamento, o ID e nome do vídeo, o autor e o nome do canal correspondente. Por exemplo, o vídeo "Páginas com HTML" aparece corretamente vinculado ao canal "HTML" através de suas respectivas Chaves Estrangeiras.
+
+Seria possível filtrar ainda mais esses resultados para trazer, por exemplo, apenas os vídeos vinculados a um canal específico, como o de PHP.
+
 ### 🟩 Vídeo 08 - Realizando consultas com comando WHERE e conclusão da aula
 
 <video width="60%" controls>
@@ -351,12 +428,40 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-co
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-consultas-com-join/learning/5630e97a-9b2e-4570-a71b-6c9b214d8a99?autoplay=1
 
+Este conteúdo encerra um módulo sobre MySQL, destacando a importância da cláusula WHERE para a precisão em consultas, atualizações e exclusões de dados. O instrutor reforça a utilização de IDs únicos como boa prática para evitar ambiguidades e revisa conceitos de junção de tabelas (JOINs) e união de resultados (UNION), enfatizando que a prática constante e a correção de erros são fundamentais para o desenvolvimento profissional na área de banco de dados.
 
-##  Materiais de Apoio
+### Anotações
 
-# Certificado: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-13h07m07s173.jpg" alt="" width="840">
+</p>
 
-- Link na plataforma: 
-- Certificado em pdf: 
+Nesta etapa, a interface do phpMyAdmin exibe a construção de uma consulta SQL utilizando a cláusula `WHERE` em conjunto com múltiplos `JOIN`. O objetivo é filtrar os resultados de uma união entre três tabelas (`videos_canais`, `videos` e `canais`) para retornar apenas os registros vinculados a um canal específico através de seu identificador numérico. O uso do ID em vez do nome do canal é recomendado por ser um valor único, evitando ambiguidades caso existam canais com nomes semelhantes.
+
+```sql
+SELECT * FROM videos_canais 
+JOIN videos ON videos_canais.fk_video = videos.id_video 
+JOIN canais ON videos_canais.fk_canal = canais.id_canal 
+WHERE canais.id_canal = 2
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-13h07m10s846.jpg" alt="" width="840">
+</p>
+
+Após a execução da query, o sistema apresenta o resultado filtrado na grade de dados. A consulta retornou dois registros específicos correspondentes ao `id_canal = 2` (canal de PHP). A visualização confirma a eficácia da cláusula `WHERE` para restringir a busca em conjuntos de dados complexos, trazendo apenas as informações de interesse, como os títulos dos vídeos "Funções com PHP" e "Listas com PHP", juntamente com seus respectivos autores e identificadores de relacionamento.
+
+```sql
+SELECT * FROM videos_canais 
+JOIN videos ON videos_canais.fk_video = videos.id_video 
+JOIN canais ON videos_canais.fk_canal = canais.id_canal 
+WHERE canais.id_canal = 2
+```      
+
+# Certificado: MySQL - Consultas com Join
+
+- Link na plataforma: https://hermes.dio.me/certificates/9H0BMMAG.pdf
+- Certificado em pdf: [Certificado-MySQL-Consultas.com.Join.pdf](000-Midia_e_Anexos/Certificado-MySQL-Consultas.com.Join.pdf)
