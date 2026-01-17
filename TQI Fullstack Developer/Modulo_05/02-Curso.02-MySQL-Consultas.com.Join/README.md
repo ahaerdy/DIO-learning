@@ -156,7 +156,6 @@ SELECT * FROM videos_canais AS vc JOIN videos AS v ON vc.fk_canal = v.id_video
 
 Após a aplicação do relacionamento correto e do uso de apelidos, o resultado final exibe apenas os registros que possuem correspondência entre as tabelas. A visualização combina as colunas da tabela `videos_canais` com as informações da tabela `videos`, consolidando os nomes e autores dos vídeos de forma organizada.      
 
-
 ### 🟩 Vídeo 04 - Implementando múltiplos comandos JOIN
 
 <video width="60%" controls>
@@ -164,7 +163,51 @@ Após a aplicação do relacionamento correto e do uso de apelidos, o resultado 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-consultas-com-join/learning/6b2e7d54-ea0e-4c75-be54-7644b6567b8a?autoplay=1
+
+O vídeo apresenta uma aula prática sobre a manipulação de bancos de dados utilizando SQL, focando especificamente na junção de múltiplas tabelas através da cláusula JOIN. O instrutor demonstra como conectar as tabelas de "vídeos" e "canais" por meio de uma tabela intermediária, enfatizando a importância de selecionar apenas as colunas necessárias para o usuário final. Além da técnica de codificação, o conteúdo aborda boas práticas de performance e usabilidade em ambientes de produção.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h29m58s462.jpg" alt="" width="840">
+</p>
+
+Para expandir a consulta e relacionar não apenas vídeos, mas também os canais correspondentes, utiliza-se uma nova cláusula `JOIN`. Nesta etapa, a tabela `videos_canais` (apelidada de `vc`) é conectada à tabela `canais` (apelidada de `c`). A junção é estabelecida através da comparação entre a chave estrangeira `fk_canal` da tabela associativa e a chave primária `id_canal` da tabela de canais. Além disso, é realizada uma correção na lógica anterior para garantir que as chaves estrangeiras de vídeos e canais estejam devidamente pareadas com seus respectivos identificadores, corrigindo um erro de autocompletar que trocou as referências iniciais.
+
+```sql
+SELECT * FROM videos_canais AS vc 
+JOIN videos AS v ON vc.fk_video = v.id_video
+JOIN canais AS c ON vc.fk_canal = c.id_canal
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h30m04s074.jpg" alt="" width="840">
+</p>
+
+Após a execução da consulta com múltiplos `JOIN`, o banco de dados retorna uma tabela resultante que combina as colunas de todas as tabelas envolvidas. O sistema identifica as linhas onde os valores das chaves coincidem, unindo os dados de `videos_canais`, `videos` e `canais`. Como o comando utilizou o asterisco (`SELECT *`), o resultado apresenta todas as colunas disponíveis, incluindo IDs e chaves estrangeiras, demonstrando que a junção ocorre estritamente nos registros onde os identificadores numéricos são iguais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h30m47s585.jpg" alt="" width="840">
+</p>
+
+Para tornar a consulta mais eficiente e o resultado mais limpo para o usuário final, substitui-se o asterisco pela especificação direta das colunas desejadas. Utilizando os apelidos definidos (`v` para vídeos e `c` para canais), selecionamos apenas os campos de interesse: o nome e o autor do vídeo, além do nome do canal. Essa prática evita o tráfego de dados desnecessários, como chaves estrangeiras e identificadores, focando apenas na informação semântica que será exibida na interface.
+
+```sql
+SELECT v.nome_video, v.autor_video, c.nome_canal
+FROM videos_canais AS vc 
+JOIN videos AS v ON vc.fk_video = v.id_video
+JOIN canais AS c ON vc.fk_canal = c.id_canal
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h31m20s139.jpg" alt="" width="840">
+</p>
+
+O resultado final da consulta filtrada apresenta uma visualização organizada, contendo apenas as colunas `nome_video`, `autor_video` e `nome_canal`. Esta abordagem é fundamental em cenários reais de mercado, onde bancos de dados podem conter volumes massivos de dados e centenas de colunas. Ao delimitar as colunas no `SELECT`, reduz-se a sobrecarga no banco de dados e agiliza-se o processamento do algoritmo, entregando ao usuário apenas o que é essencial para as regras de negócio.
+
 
 ### 🟩 Vídeo 05 - Conceito inicial sobre RIGHT e LEFT JOIN
 
@@ -173,7 +216,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 06 - Praticando consultas com RIGHT e LEFT JOIN
 
