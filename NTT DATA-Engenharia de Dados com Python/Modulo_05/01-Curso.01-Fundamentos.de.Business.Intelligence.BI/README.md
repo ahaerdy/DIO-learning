@@ -576,10 +576,110 @@ Em resumo, as diferenças fundamentais entre os tipos de análise podem ser sint
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/58c1f5ef-0e13-4182-bc4e-1012ecc91ee8?autoplay=1
 
+O vídeo aborda a transição do paradigma de dados tradicionais para o conceito de **Big Data**, destacando como a evolução do **hardware** permitiu o surgimento de softwares capazes de processar grandes volumes de informações. O autor detalha os **cinco Vs** (volume, velocidade, variedade, veracidade e valor), explicando que, enquanto dados estruturados seguem modelos rígidos, os **dados não estruturados** demandam novas tecnologias de armazenamento, como os **Data Lakes**. Ferramentas modernas, como **Power BI**, Spark e Hadoop, são apresentadas como soluções essenciais para integrar essas fontes heterogêneas e converter dados complexos em análises úteis. O foco principal reside na distinção entre os processos de **coleta e tratamento (ETL)**, embora as técnicas de visualização final permaneçam semelhantes para ambos os tipos de dados. Por fim, a fonte reforça que o objetivo da análise de dados, independentemente da escala, é sempre gerar **insights estratégicos** que resolvam problemas específicos do negócio.
 
-##  Materiais de Apoio
+### Anotações
 
-# Certificado: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h55m49s473.jpg" alt="" width="840">
+</p>
+
+O curso introduz a relação entre a análise de dados e o paradigma de Big Data, focando em como o poder computacional moderno e a evolução do hardware permitiram o surgimento de softwares mais potentes. Esta etapa inicial estabelece a base para o papel do Analista de Power BI em um cenário onde grandes volumes de informações são gerados constantemente por redes sociais e serviços digitais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h55m54s458.jpg" alt="" width="840">
+</p>
+
+A contextualização histórica demonstra que a evolução do hardware, exemplificada pela transição para tecnologias como o SSD, foi o motor para o desenvolvimento de softwares capazes de lidar com diversos tipos de dados (texto, vídeo, imagem). Esse avanço possibilitou o processamento de grandes quantidades de informação em alta velocidade, característica central do Big Data.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h55m57s139.jpg" alt="" width="840">
+</p>
+
+O conceito de Big Data é definido pelos seus pilares fundamentais, conhecidos como os Vs do Big Data: Volume, Velocidade e Variedade. Adicionalmente, destacam-se a Veracidade dos dados e o Valor gerado a partir deles, que compõem o paradigma necessário para transformar dados brutos em insights estratégicos para os clientes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h55m58s919.jpg" alt="" width="840">
+</p>
+
+A integração entre Big Data e Business Intelligence (BI) envolve um ecossistema de ferramentas variadas. Enquanto bancos de dados tradicionais utilizam sistemas relacionais como o MySQL, o ambiente de Big Data exige tecnologias especializadas para processamento em larga escala e armazenamento flexível, como Apache Spark, Hadoop, Cassandra e MongoDB.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h56m06s774.jpg" alt="" width="840">
+</p>
+
+O fluxo de análise de dados moderno percorre diversas etapas fundamentais. O processo inicia na fonte dos dados (Data Source), passa pelo ETL (Extração, Transformação e Carga) e pelo armazenamento em um Data Warehouse. A partir daí, os dados são submetidos à análise para, finalmente, serem apresentados visualmente através de ferramentas de visualização como o Power BI.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h56m10s420.jpg" alt="" width="840">
+</p>
+
+Dados não estruturados representam o grande desafio e oportunidade do Big Data. Diferente dos bancos de dados tradicionais que possuem estruturas rígidas e restrições (constraints) bem definidas, os dados não estruturados vêm de fontes heterogêneas, como logs de sistemas, sensores de IoT e redes sociais, exigindo o uso de Data Lakes para preencher a lacuna de armazenamento de formatos variados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h56m15s332.jpg" alt="" width="840">
+</p>
+
+Para ilustrar a diferença entre os modelos, apresenta-se o formato orientado a documentos, comumente utilizado em bancos de dados NoSQL como o MongoDB. Este modelo utiliza a estrutura JSON, que permite uma organização flexível e aninhada de informações, em contraste com a estrutura de tabelas fixas do SQL tradicional.
+
+```json
+{
+  "id": 16,
+  "student name": "Jasmin Scott",
+  "school": {
+    "school id": 226,
+    "name": "Tech Secondary",
+    "address": "100 Broadway St",
+    "city": "New York",
+    "state": "NY",
+    "zipcode": "10001"
+  },
+  "marks": [98, 93, 95, 85, 100]
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h56m17s576.jpg" alt="" width="840">
+</p>
+
+Os dados podem estar armazenados em diversas extensões de arquivos, como CSV, JSON e Parquet. Abaixo, exemplos de como a mesma informação pode ser representada em um formato orientado a documentos (JSON) e em um formato tabular tradicional (CSV).
+
+```json
+{
+  "_id": ObjectId("5f339953491024badf1138ec"),
+  "title": "MongoDB Tutorial",
+  "isbn": "978-4-7766-7944-8",
+  "published_date": new Date('June 01, 2020'),
+  "author": {
+    "first_name": "John",
+    "last_name": "Doe"
+  }
+}
+
+```
+
+```csv
+"Course name","Course number","Credit hours","Department"
+"Intro to Computer Science","CS1310","4","CS"
+"Data Structures","CS3320","4","CS"
+"Discrete Mathematics","MATH2410","3","MATH"
+"Database","CS3380","3","CS"
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h56m19s994.jpg" alt="" width="840">
+</p>
+
+Independentemente da tecnologia (Big Data ou tradicional), os tipos de análise de dados seguem quatro níveis fundamentais que guiam o processo de decisão:
+
+* **Descritiva:** Focada em entender o que aconteceu.
+* **Diagnóstica:** Busca explicar por que determinado evento ocorreu.
+* **Preditiva:** Utiliza os dados para prever o que pode acontecer no futuro.
+* **Prescritiva:** Determina as ações que devem ser tomadas com base nas análises anteriores.      
+
+# Certificado: Fundamentos de Business Intelligence (BI)
 
 - Link na plataforma: 
 - Certificado em pdf: 
