@@ -345,6 +345,28 @@ A ordenação confirma que a base é homogênea, com os principais artistas list
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/168882bb-7cbe-42a0-ba6f-c0f3ce8f956b?autoplay=1
 
+O vídeo enfatiza a importância de compreender o **esquema e os relacionamentos** entre tabelas, como álbuns e artistas, para extrair informações valiosas em vez de apenas recuperar dados brutos. O autor diferencia a modelagem conceitual da **análise exploratória**, destacando que o objetivo é entender o contexto e a história por trás dos registros. São discutidos conceitos de **padronização, limpeza e transformação** de dados para tornar os resultados mais amigáveis e assertivos para o negócio. Por fim, o conteúdo demonstra como identificar chaves primárias e estrangeiras para interpretar o comportamento de entidades como clientes e funcionários dentro do sistema.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-15h53m08s638.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, utilizamos o **DBeaver** para realizar o primeiro contato com a base de dados, explorando a visualização do **Diagrama Entidade-Relacionamento (ER)**. Esta funcionalidade é essencial para entender o contexto e a estrutura do conjunto de dados, permitindo visualizar como as tabelas representam entidades do mundo real e como se conectam entre si.
+
+Através do diagrama, identificamos as seguintes relações e estruturas principais:
+
+* **Núcleo Artístico**: A tabela `Artist` conecta-se a `Album`, que por sua vez se relaciona com `Track`. Isso demonstra que um álbum só faz sentido dentro do contexto de um artista, e as faixas (`tracks`) estão vinculadas a esses álbuns.
+* **Detalhes da Faixa (Track)**: A entidade `Track` centraliza informações como nome, compositor, milissegundos, bytes e preço unitário (`UnitPrice`), indicando que se trata de um item comercializável.
+* **Classificações e Formatos**: As tabelas `Genre` (Gênero) e `MediaType` (Tipo de Mídia, como MPEG ou AAC) associam-se a `Track`, permitindo categorizar cada música.
+* **Estrutura de Vendas**: O relacionamento se estende para a parte comercial com as tabelas `Invoice` (Fatura) e `InvoiceLine` (Itens da Fatura), que conectam as vendas aos clientes (`Customer`).
+* **Gestão e Playlists**: Observamos a tabela `PlaylistTrack`, que possui uma **chave primária composta** pelas chaves estrangeiras (`PlaylistId` e `TrackId`), permitindo que uma música pertença a várias listas de reprodução e vice-versa. Além disso, a tabela `Employee` apresenta uma relação de auto-hierarquia (`ReportsTo`) e se conecta aos clientes que os funcionários atendem.
+
+Essa análise visual é o passo inicial para a **Análise Exploratória de Dados (EDA)**, facilitando a compreensão de intervalos de valores e a identificação de necessidades de padronização antes de iniciarmos as consultas SQL para extração de informações.
+
+
+
 ### 🟩 Vídeo 05 - Análise Descritiva: Caracterizando os Registros dos Artistas
 
 <video width="60%" controls>
@@ -352,7 +374,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/9fc42f5f-735d-44fc-be20-39b4f5086e1f?autoplay=1
 
 ### 🟩 Vídeo 06 - Análise Descritiva: Caracterizando os Registros de Customers
 
