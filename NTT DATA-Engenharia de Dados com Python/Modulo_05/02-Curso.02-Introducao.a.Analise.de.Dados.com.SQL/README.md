@@ -501,7 +501,31 @@ O resultado da execução no DBeaver retorna os registros que satisfazem a condi
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/9fe2aa75-b179-4a0e-bbec-f6a1eb64944a?autoplay=1
 
+O vídeo apresenta uma **análise exploratória de dados** utilizando **SQL** para investigar a estrutura de tabelas de faturamento e clientes. A instrutora demonstra como realizar **junções (JOINS)** entre as tabelas `invoice`, `invoice_line` e `customer` para identificar padrões de consumo e volumes de registros. Durante a prática, enfatiza-se a importância de aplicar o comando **LIMIT** para preservar a performance do banco de dados e evitar travamentos. O conteúdo foca em validar a **integridade dos dados**, ensinando a distinguir entre resultados reais e possíveis redundâncias causadas por modelagens inadequadas. Através de agrupamentos e contagens, o tutorial orienta como extrair **insights descritivos** fundamentais para entender o comportamento da base. Por fim, o material prepara o terreno para etapas futuras de **limpeza e padronização** dentro de processos de ETL.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-19h54m45s298.jpg" alt="" width="840">
+</p>
+
+Esta etapa da análise foca na caracterização e exploração dos dados através de junções complexas para extrair insights sobre o comportamento dos clientes. O objetivo é identificar quais clientes possuem faturas (invoices) associadas e quantificar esses registros, utilizando o ambiente DBeaver para executar queries SQL em um banco de dados SQLite.
+
+A interface demonstra a construção de um `INNER JOIN` entre as tabelas `Customer` e `Invoice`, permitindo cruzar informações de identificação do cliente (como nome e ID) com os dados de transação. A ordenação é aplicada para destacar os clientes com maior volume de registros, facilitando a visualização de padrões de consumo na base de dados.
+
+```sql
+SELECT 
+    c.CustomerId, 
+    c.FirstName, 
+    COUNT(*) as Record 
+FROM Invoice i
+INNER JOIN Customer c ON c.CustomerId = i.CustomerId
+GROUP BY 1 
+ORDER BY Record DESC;
+
+```
+
+O resultado exibido no painel de dados mostra uma lista de clientes (como Puja, Leonie e François) acompanhada da contagem de registros (`Record`), validando a estrutura da query e a integridade das relações entre as tabelas.
 
 ### 🟩 Vídeo 08 - Utilizando Junções para Caracterizar os Dados
 
@@ -510,7 +534,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/b7bee4b6-b9fe-48b4-bd78-c80572fa17e8?autoplay=1
 
 ### 🟩 Vídeo 09 - Analisando Frequência dos Dados com Funções de Agregação
 
