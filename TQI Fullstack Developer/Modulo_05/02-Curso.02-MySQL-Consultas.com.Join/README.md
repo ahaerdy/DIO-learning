@@ -66,6 +66,47 @@ Para aplicar esses conceitos, utilizaremos um modelo de banco de dados baseado e
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-consultas-com-join/learning/cd2277d9-a439-4e9c-87ef-e80393a77b1d?autoplay=1
 
+O vídeo consiste em uma aula técnica sobre manipulação de bancos de dados SQL, focando especificamente na implementação e consulta de relacionamentos "Muitos para Muitos" (N:N). O instrutor demonstra como estruturar tabelas de "Canais" e "Vídeos", utilizando uma terceira tabela associativa (tabela de junção) e a cláusula JOIN para consolidar informações que, isoladamente, apresentam apenas identificadores numéricos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-07h34m57s490.jpg" alt="" width="840">
+</p>
+
+A interface do phpMyAdmin apresenta a estrutura da base de dados `dio_mysql`. Esta base é composta por três tabelas principais: `canais`, `videos` e `videos_canais`.
+
+* **canais**: Contém 3 registros e utiliza o motor InnoDB.
+* **videos**: Possui 5 registros cadastrados.
+* **videos_canais**: Contém 4 registros, servindo como uma tabela de ligação.
+
+Essa configuração inicial confirma que as tabelas já foram devidamente povoadas para a execução das consultas da aula.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-07h35m07s457.jpg" alt="" width="840">
+</p>
+
+Nesta visualização, observa-se o conteúdo da tabela `videos`, que inclui as colunas `id_video`, `nome_video` e `autor_video`. Entre os registros listados estão títulos como "Login com React", "Componentes com React", "Listas com PHP", "Funções com PHP" e "Páginas com HTML".
+
+Conforme explicado, o campo `autor_video` nesta tabela armazena informações textuais que não possuem um relacionamento direto com a tabela de canais neste momento. Para visualizar esses dados, utiliza-se o seguinte comando:
+
+```sql
+SELECT * FROM videos
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-07h35m11s702.jpg" alt="" width="840">
+</p>
+
+A tabela `videos_canais` é utilizada para gerenciar o relacionamento de muitos para muitos entre vídeos e canais. Diferente das tabelas de dados descritivos, esta contém apenas referências numéricas por meio de chaves estrangeiras (Foreign Keys).
+
+As colunas visíveis são `id_canais_video`, `fk_canal` e `fk_video`. Esses dados vinculam os IDs de cada conteúdo para determinar quais vídeos pertencem a quais canais. A consulta para listar esses vínculos é:
+
+```sql
+SELECT * FROM videos_canais
+
+```      
 
 
 ### 🟩 Vídeo 03 - Realizando consultas com comandos JOIN e AS
@@ -75,7 +116,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-co
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-consultas-com-join/learning/6b814223-fb76-4c63-b955-0a39a5cb7d72?autoplay=1
 
 ### 🟩 Vídeo 04 - Implementando múltiplos comandos JOIN
 
