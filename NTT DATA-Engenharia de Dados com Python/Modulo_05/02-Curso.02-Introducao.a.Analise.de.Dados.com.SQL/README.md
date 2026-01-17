@@ -366,7 +366,6 @@ Através do diagrama, identificamos as seguintes relações e estruturas princip
 Essa análise visual é o passo inicial para a **Análise Exploratória de Dados (EDA)**, facilitando a compreensão de intervalos de valores e a identificação de necessidades de padronização antes de iniciarmos as consultas SQL para extração de informações.
 
 
-
 ### 🟩 Vídeo 05 - Análise Descritiva: Caracterizando os Registros dos Artistas
 
 <video width="60%" controls>
@@ -375,6 +374,75 @@ Essa análise visual é o passo inicial para a **Análise Exploratória de Dados
 </video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/9fc42f5f-735d-44fc-be20-39b4f5086e1f?autoplay=1
+
+A instrutora demonstra como **explorar tabelas de clientes**, destacando a importância de identificar **dados ausentes**, como estados e empresas, para orientar decisões de **logística e marketing**. Através de comandos de **filtragem, contagem e agrupamento**, o material ensina a transformar registros brutos em **informações estratégicas** para o negócio. Além disso, a fonte enfatiza o método de **construir consultas baseadas em perguntas de negócio**, facilitando a interpretação dos resultados. O conteúdo conclui preparando o terreno para a **comparação entre diferentes tabelas**, como a de clientes e funcionários, visando uma compreensão mais profunda da estrutura de dados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-16h17m03s453.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial da análise exploratória, o objetivo é compreender a estrutura da tabela `Customer`. Para evitar o processamento de um volume desnecessário de dados e focar apenas no entendimento das colunas e do tipo de informação armazenada (como IDs, nomes e empresas associadas), utiliza-se o comando `LIMIT`.
+
+```sql
+SELECT * FROM Customer LIMIT 10;
+
+```
+
+A visualização dos primeiros registros revela a presença de valores nulos na coluna `Company`, sugerindo que nem todos os clientes estão vinculados a uma organização formal, o que pode indicar diferentes perfis de consumidores na base de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-16h17m23s999.jpg" alt="" width="840">
+</p>
+
+Ao detalhar os registros da tabela `Customer`, observa-se que, além de informações básicas como nome e endereço, existem campos importantes para a análise geográfica, como cidade, estado (`State`) e país. Um ponto de atenção identificado é a consistência dos dados: muitos registros apresentam a informação de estado como nula, o que representa um desafio comum na coleta de dados e impacta futuras análises de caracterização regional.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-16h17m53s050.jpg" alt="" width="840">
+</p>
+
+Para quantificar a distribuição dos clientes por localização, aplica-se um agrupamento baseado na coluna de estado. Esta consulta permite verificar quantos registros existem para cada localidade, evidenciando imediatamente a grande quantidade de valores nulos (identificados como `[NULL]`), que neste caso somam 29 registros.
+
+```sql
+SELECT State, COUNT(*) FROM Customer GROUP BY 1;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-16h18m40s163.jpg" alt="" width="840">
+</p>
+
+Para tornar a análise mais útil para a tomada de decisão — como o direcionamento de esforços logísticos para estados com maior demanda — a query é refinada com a inclusão de um pseudônimo (`alias`), ordenação decrescente e um limite de resultados para destacar os principais mercados.
+
+```sql
+SELECT State, COUNT(*) AS Total 
+FROM Customer 
+GROUP BY 1 
+ORDER BY Total DESC 
+LIMIT 10;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-16h18m53s510.jpg" alt="" width="840">
+</p>
+
+A execução da query ordenada confirma que o maior grupo de registros (29 clientes) não possui estado definido, seguido por estados como São Paulo (SP) e Califórnia (CA), ambos com 3 clientes. Essa visão consolidada é fundamental para entender a representatividade da base de dados antes de realizar cruzamentos com outras tabelas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-16h21m11s940.jpg" alt="" width="840">
+</p>
+
+A exploração prossegue para buscas específicas utilizando o operador `LIKE`. O objetivo aqui é filtrar clientes por endereços que contenham termos específicos, como no exemplo de uma busca por moradores da "Broadway". Essa técnica é útil para planejar ações localizadas, como eventos de divulgação de álbuns em regiões específicas.
+
+```sql
+SELECT FirstName, Address 
+FROM Customer 
+WHERE Address LIKE '%Broadway%';
+
+```      
+
 
 ### 🟩 Vídeo 06 - Análise Descritiva: Caracterizando os Registros de Customers
 
