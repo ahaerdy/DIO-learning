@@ -681,5 +681,5 @@ Independentemente da tecnologia (Big Data ou tradicional), os tipos de análise 
 
 # Certificado: Fundamentos de Business Intelligence (BI)
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/3SJHSOUZ.pdf
+- Certificado em pdf: [Certificado-Fundamentos.de.Business.Intelligence.BI.pdf](000-Midia_e_Anexos/Certificado-Fundamentos.de.Business.Intelligence.BI..pdf)
