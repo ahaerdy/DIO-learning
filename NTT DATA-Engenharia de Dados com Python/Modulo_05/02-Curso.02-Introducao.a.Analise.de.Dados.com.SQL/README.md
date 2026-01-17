@@ -119,41 +119,144 @@ O plano de estudo para a formação foca em um workflow orientado a problemas re
 
 ### 🟩 Vídeo 02 - Workbench e DBeaver : Explorando Ferramentas de Acesso à Banco de dados
 
-link do vídeo:
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/77165df8-4339-4368-85ea-66ca3fb9f5c4?autoplay=1
+
+O conteúdo apresenta uma comparação técnica entre ferramentas de manipulação de bancos de dados, com foco principal no MySQL Workbench e no DBeaver. A discussão enfatiza que, embora as ferramentas ofereçam funcionalidades distintas como suporte multi-plataforma, visualização de diagramas e facilidade de exportação, a competência central reside no domínio da linguagem SQL, que permanece constante independentemente da interface utilizada.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-14h35m21s020.jpg" alt="" width="840">
+</p>
+
+A interface inicial apresentada é o **MySQL Workbench**, a ferramenta gráfica oficial para gerenciamento e desenvolvimento com MySQL. Através desta tela, é possível gerenciar conexões, desenhar modelos lógicos e físicos de bancos de dados, além de executar consultas SQL diretamente no servidor local ou remoto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-14h35m33s745.jpg" alt="" width="840">
+</p>
+
+No editor de queries do Workbench, é demonstrada a seleção do esquema de trabalho e a listagem das tabelas existentes. A vantagem de utilizar esta interface em relação ao terminal é a persistência do script, permitindo correções rápidas sem a perda do comando digitado anteriormente.
+
+```sql
+use company_constraints;
+show tables;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-14h35m43s823.jpg" alt="" width="840">
+</p>
+
+O **DBeaver** surge como uma alternativa versátil ao Workbench. Diferente da ferramenta oficial do MySQL, o DBeaver é multi-plataforma e suporta diversos sistemas de gerenciamento de banco de dados (SGBD). Na imagem, observa-se a visualização das propriedades da tabela `dependent`, exibindo as colunas, tipos de dados (como `char` e `varchar`) e as restrições associadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-14h35m45s963.jpg" alt="" width="840">
+</p>
+
+Uma das grandes potências do DBeaver é a sua ampla gama de conexões. Ele permite a integração não apenas com bancos relacionais tradicionais (como MySQL, SQL Server, SQLite e Oracle), mas também com tecnologias de Big Data e NoSQL, incluindo Apache Hive, Spark, Hadoop e bancos de grafos como o Neo4j.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-14h36m23s530.jpg" alt="" width="840">
+</p>
+
+O DBeaver oferece uma visualização clara dos metadados e dos dados persistidos. Ao abrir uma tabela específica, como o exemplo do banco de dados de amostra `Album` (SQLite), o usuário tem acesso a uma grade de resultados intuitiva que facilita a inspeção e a manipulação direta das informações armazenadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-14h36m27s570.jpg" alt="" width="840">
+</p>
+
+A ferramenta simplifica tarefas cotidianas, como a exportação de dados. Através de assistentes (wizards), é possível extrair o conteúdo de consultas ou tabelas inteiras para formatos externos, como CSV, facilitando a integração com outras ferramentas de análise, como o Power BI.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-14h36m34s944.jpg" alt="" width="840">
+</p>
+
+Além da manipulação de dados, o DBeaver gera automaticamente **Diagramas de Entidade-Relacionamento (ER)**. Esse recurso visual é fundamental para compreender como as tabelas se conectam através de chaves primárias e estrangeiras, permitindo uma visão macro da arquitetura do banco de dados sem a necessidade de ferramentas externas de modelagem.      
+
 
 ### 🟩 Vídeo 03 - Analisando a Sample do DBeaver persistida no SQLite
 
-link do vídeo:
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/77165df8-4339-4368-85ea-66ca3fb9f5c4?autoplay=1
 
 ### 🟩 Vídeo 04 - O que fazer em um primeiro contato com base de dados?
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 05 - Análise Descritiva: Caracterizando os Registros dos Artistas
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 06 - Análise Descritiva: Caracterizando os Registros de Customers
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 07 - Análise Descritiva: Caracterizando os Registros de Invoice
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 08 - Utilizando Junções para Caracterizar os Dados
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 09 - Analisando Frequência dos Dados com Funções de Agregação
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 10 - Discretização com CASE Statement
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 11 - Aplicando Padronização na Recuperação dos Dados com CASE Statement
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.02-video_11.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
