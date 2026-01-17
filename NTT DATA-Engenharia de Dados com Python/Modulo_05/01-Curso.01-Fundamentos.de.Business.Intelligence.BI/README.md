@@ -377,6 +377,36 @@ A inteligência permite:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/c5c6aab6-e53e-460b-8e1d-e001df1a1d3f?autoplay=1
 
+O vídeo apresenta o conceito fundamental de **Business Intelligence (BI)**, definindo-o como um conjunto de estratégias e ferramentas para converter **dados brutos em decisões inteligentes**. O autor descreve o fluxo essencial de transformação da informação e destaca que o objetivo central dessa área é gerar **insights estratégicos** para resolver problemas empresariais. Além disso, o conteúdo diferencia as funções de **analista de BI**, **cientista de dados** e **analista de dados**, baseando-se nas ferramentas utilizadas e no nível de proximidade com o setor de negócios. Enquanto o analista de dados foca em linguagens técnicas como **Python e R**, o profissional de BI atua como um mediador que equilibra o conhecimento técnico com a **visão de mercado**. Por fim, a fonte esclarece que o foco da formação mencionada é o domínio de ferramentas práticas, sem esgotar todas as complexas **regras de negócio**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h07m43s545.jpg" alt="" width="840">
+</p>
+
+O objetivo central do trabalho com dados é transformar elementos brutos em ações concretas por meio de um fluxo estruturado. Esse processo, essencial para o analista de BI, percorre as seguintes etapas:
+
+* **Dados:** Representam o insumo bruto (como sequências binárias ou valores isolados) que, sozinhos, não possuem valor prático. 
+* **Informações:** Resultam do tratamento e organização dos dados, permitindo extrair os primeiros insights úteis. 
+* **Conhecimento:** Surge quando as informações são contextualizadas dentro de uma situação específica, gerando compreensão sobre um cenário. 
+* **Decisões:** É o estágio final onde se utiliza a inteligência para resolver problemas e definir estratégias baseadas em todo o fluxo anterior. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h07m49s301.jpg" alt="" width="840">
+</p>
+
+O **Business Intelligence (BI)** é definido como uma área estratégica que une tecnologia e processos para otimizar a gestão empresarial. Suas principais características incluem:
+
+* **Composição:** É formada por um conjunto de estratégias e tecnologias específicas. 
+* **Finalidade:** O foco principal é a realização de análise de dados rigorosa e o gerenciamento eficiente das informações da organização. 
+* **Posicionamento:** O profissional de BI atua como um mediador, posicionando-se entre o analista de negócios e o analista de dados, possuindo um viés muito forte voltado para estratégias de mercado. 
+
+Conforme descrito no conceito fundamental:
+
+> "Business intelligence consiste em uma área composta por estratégias e tecnologias utilizadas pelas empresa a fim de realizar análise de dados e gerenciamento das informações." 
+> 
+> 
 
 
 ### 🟩 Vídeo 10 - O que é Business Intelligence?
@@ -386,7 +416,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/3be6f289-999b-40ea-bd6a-63b5be59d9ac?autoplay=1
 
 ### 🟩 Vídeo 11 - Tipos de Análises em BI
 
