@@ -418,6 +418,66 @@ Conforme descrito no conceito fundamental:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/3be6f289-999b-40ea-bd6a-63b5be59d9ac?autoplay=1
 
+O vídeo apresenta o conceito de **Business Intelligence (BI)**, definindo-o como o processo de transformar dados brutos em **conhecimento estratégico** para otimizar operações e aumentar a competitividade empresarial. A autora explica que a área evoluiu de simples **relatórios estáticos** para análises interativas e preditivas que utilizam **Machine Learning** para entender o comportamento do cliente. Um ponto central da discussão é a capacidade de **interligar métricas distintas** para gerar insights valiosos que fundamentam a tomada de decisão. O conteúdo também aborda a convergência entre o BI tradicional e o paradigma do **Big Data**, destacando a importância de lidar com grandes volumes e variedades de informações. Por fim, são mencionadas ferramentas essenciais do mercado, como o **Power BI e Tableau**, que facilitam a integração e visualização desses dados complexos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h21m56s348.jpg" alt="" width="840">
+</p>
+
+O **Business Intelligence (BI)** fundamenta-se em um fluxo contínuo de valor que transforma dados brutos em inteligência para o negócio. Esse processo percorre as etapas de **Dados, Informação, Conhecimento e Inteligência**, com o objetivo final de subsidiar a **tomada de decisões** assertivas. O foco central do BI é a melhoria das operações cotidianas e a saúde geral da empresa, utilizando fatores conhecidos e explorando variáveis desconhecidas para otimizar os resultados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h21m58s693.jpg" alt="" width="840">
+</p>
+
+No âmbito estratégico, o BI visa o fortalecimento da organização através da **melhoria operacional**. Ao aplicar suas técnicas, a empresa busca **aumentar os lucros** e consolidar uma **vantagem competitiva** sustentável perante os concorrentes do mesmo setor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h22m00s177.jpg" alt="" width="840">
+</p>
+
+Historicamente, o BI passou por uma evolução significativa. Em seus estágios iniciais, a área limitava-se a gerar **relatórios simples** e diretos — conhecidos como *snapshots* — que ofereciam apenas uma visão generalista e estática do panorama da empresa naquele exato momento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h22m07s030.jpg" alt="" width="840">
+</p>
+
+Com o avanço tecnológico, o BI tornou-se mais sofisticado, incorporando **análises interativas** e ativas. Atualmente, é possível monitorar o **comportamento de clientes**, realizar o acompanhamento de ativos e utilizar **Machine Learning** para a **previsibilidade de vendas**, indo muito além da mera visualização de dados passados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h22m15s985.jpg" alt="" width="840">
+</p>
+
+O diferencial estratégico do Business Intelligence reside na **combinação de métricas independentes**. Embora dados como receita recorrente, margem bruta, ROI e satisfação do cliente possam ser extraídos individualmente de forma tradicional, o BI os interliga de maneira coerente. Essa conexão entre métricas aparentemente distintas revela informações úteis e gera conhecimento crítico para o negócio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h22m24s677.jpg" alt="" width="840">
+</p>
+
+Para gerenciar esse volume de informações, utilizam-se ferramentas de orquestração e integração que permitem lidar com diferentes níveis de detalhamento dos dados (**granularidade**). Sistemas de gerenciamento como o **DBeaver** facilitam a conexão com ecossistemas de dados robustos.
+
+```sql
+-- Exemplo de interface de gerenciamento de dados mencionada (DBeaver)
+-- Permite a integração com diferentes fontes e tecnologias de Big Data
+SELECT * FROM vendas_previsibilidade;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h22m26s655.jpg" alt="" width="840">
+</p>
+
+O novo paradigma da área associa o **BI ao Big Data**. Embora a exposição final para o usuário mude pouco, a infraestrutura de coleta e processamento é transformada pela integração com tecnologias como **R, Spark e Hadoop**, permitindo análises descritivas e preditivas muito mais potentes. No mercado atual, ferramentas como **Power BI** e **Tableau** lideram essa integração.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h22m29s137.jpg" alt="" width="840">
+</p>
+
+A transição do BI tradicional para o contexto de Big Data é definida pelos pilares conhecidos como os "Vs": **Volume, Variedade, Velocidade e Veracidade**. A convergência desses elementos resulta na geração de **Valor** real para a empresa, permitindo que o BI moderno lide com grandes massas de dados de forma eficiente e estratégica.      
+
+
 ### 🟩 Vídeo 11 - Tipos de Análises em BI
 
 <video width="60%" controls>
@@ -425,7 +485,87 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/cc3e830a-9ada-4614-9832-ae5f9f0a7f39?autoplay=1
+
+O vídeo apresenta os quatro pilares fundamentais da **análise de dados**, diferenciando as abordagens de **Business Intelligence (BI)** e **Ciência de Dados**. A **análise descritiva** foca em relatar o que aconteceu no passado, enquanto a **análise diagnóstica** busca identificar as causas desses eventos através de relações de probabilidade. Já voltadas para o futuro, a **análise preditiva** utiliza tendências para projetar o que deve ocorrer e a **análise prescritiva** sugere estratégias práticas para otimizar resultados ou solucionar problemas. A fonte reforça que o sucesso dessas técnicas depende de **identificar claramente o problema de negócio** e entender o contexto antes de aplicar métricas. Por fim, o autor destaca que, embora o processamento de dados tenha evoluído, a necessidade de **gerar perguntas coerentes** para extrair informações valiosas permanece essencial.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m04s883.jpg" alt="" width="840">
+</p>
+
+No campo da análise de dados e Business Intelligence (BI), existem quatro pilares fundamentais que orientam o tratamento das informações. A jornada se inicia com a **Análise Descritiva**, que é o estágio inicial e essencial para qualquer projeto.
+
+A análise descritiva tem como objetivo:
+
+* **Descrever e caracterizar** um contexto específico.
+* Entender o **comportamento dos dados** através da sumarização.
+* Fornecer uma visão clara do que está acontecendo no momento ou o que já aconteceu no conjunto de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m06s719.jpg" alt="" width="840">
+</p>
+
+Avançando na complexidade, encontramos a **Análise Diagnóstica**. Para compreender sua função, pode-se utilizar a analogia de uma consulta médica: após uma análise descritiva inicial (exames preliminares), o foco passa a ser o diagnóstico detalhado da situação atual baseando-se no histórico disponível. Esta etapa não foca ainda no tratamento, mas sim na compreensão profunda do estado presente dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m09s429.jpg" alt="" width="840">
+</p>
+
+O objetivo central da análise diagnóstica é estabelecer **relações de causa e efeito**. Trata-se de um processo probabilístico onde se busca identificar qual causa gerou um efeito específico no cenário analisado. Diferente da simples descrição, aqui o analista busca os porquês por trás dos padrões encontrados nos dados passados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m12s464.jpg" alt="" width="840">
+</p>
+
+Enquanto as análises descritiva e diagnóstica são consideradas abordagens tradicionais de BI (utilizadas há décadas), a evolução da computação, do **Big Data** e do processamento paralelo permitiu o surgimento de novas frentes: as análises **Preditiva** e **Prescritiva**. A grande diferença reside no horizonte temporal: enquanto as tradicionais olham para o passado, as novas abordagens focam em entender e influenciar o futuro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m21s914.jpg" alt="" width="840">
+</p>
+
+A **Análise Preditiva** é uma característica marcante da ciência de dados. Seu foco está em tentar prever cenários futuros e identificar **tendências**. Através dela, busca-se responder perguntas como: "Quanto venderemos no próximo mês?", utilizando a probabilidade para estimar a chance de determinados eventos ocorrerem com base no que já se conhece.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m24s867.jpg" alt="" width="840">
+</p>
+
+A **Análise Prescritiva** surge como a evolução final do processo. Partindo do diagnóstico de um problema, ela prescreve a solução. Seu foco é a **resolução de problemas** e a geração de impactos positivos na saúde da empresa. Ela permite identificar as ações necessárias para reverter cenários desfavoráveis ou alavancar vendas, criando roteiros de atuação e otimizando fluxos de trabalho.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m31s543.jpg" alt="" width="840">
+</p>
+
+A aplicação prática do Business Intelligence envolve um fluxo técnico estruturado conhecido como **ETL (Extração, Transformação e Carga)**. Este processo consiste em:
+
+1. **Extração**: Coletar os dados de diversas fontes.
+2. **Transformação**: Estruturar e limpar as informações coletadas.
+3. **Carga (Load)**: Carregar os dados prontos para serem representados visualmente para análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m32s963.jpg" alt="" width="840">
+</p>
+
+Para o sucesso de uma estratégia de BI, é fundamental seguir um processo metodológico antes de aplicar qualquer modelo:
+
+* **Identificar o problema de negócio** de forma clara.
+* **Entender o contexto** e a natureza dos dados disponíveis.
+* **Elaborar perguntas coerentes** primeiro, para só então buscar as respostas nos dados. Extrair dados sem um propósito ou sem perguntas prévias compromete a eficiência da análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-16-21h36m35s390.jpg" alt="" width="840">
+</p>
+
+Em resumo, as diferenças fundamentais entre os tipos de análise podem ser sintetizadas da seguinte forma:
+
+| Tipo de Análise | Foco da Pergunta |
+| --- | --- |
+| **Descritiva** | O que aconteceu? |
+| **Diagnóstica** | Por que aconteceu? |
+| **Preditiva** | O que vai acontecer? |
+| **Prescritiva** | O que eu vou fazer? |      
+
 
 ### 🟩 Vídeo 12 - Análise de Dados e Big Data
 
@@ -434,7 +574,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-business-intelligence-bi/learning/58c1f5ef-0e13-4182-bc4e-1012ecc91ee8?autoplay=1
 
 
 ##  Materiais de Apoio
