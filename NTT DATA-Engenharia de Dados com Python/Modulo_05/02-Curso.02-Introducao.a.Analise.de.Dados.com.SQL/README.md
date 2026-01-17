@@ -599,6 +599,48 @@ O resultado dessas consultas permite observar padrões na base de dados, como a 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/ed4c6813-9be0-4753-8ed3-911b5a1febfe?autoplay=1
 
+A instrutora demonstra como extrair informações de um **banco de dados próprio** para realizar **análises visuais** preliminares. O processo envolve a **exportação de dados** no formato CSV para o Excel, onde são gerados **gráficos de colunas** que comparam a quantidade de funcionários e projetos por departamento. Durante a explicação, destaca-se a importância de **refinar as consultas SQL**, substituindo códigos numéricos por nomes reais para tornar a interpretação mais clara. Embora utilize ferramentas tradicionais, o narrador enfatiza que essa abordagem é apenas uma **introdução simplista**. O objetivo final é preparar o terreno para o uso do **Power BI**, que permitirá a criação de cenários e relatórios muito mais **complexos e profissionais**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-20h48m03s109.jpg" alt="" width="840">
+</p>
+
+A interface do **DBeaver** mostra a execução de queries SQL para análise de dados diretamente no banco de dados. O objetivo é categorizar os departamentos baseando-se no número de colaboradores, utilizando funções de agregação e agrupamento para consolidar as informações que serão posteriormente exportadas.
+
+```sql
+-- Categorizar os departamentos por número de colaboradores
+select Dno, count(*) as Total from employee e
+inner join department d on Dno = Dnumber
+group by 1 order by Total ASC;
+
+-- Projetos por departamento
+select Pname, Dnum from project p inner join department d on Dnum = Dnumber;
+
+select Dnum, COUNT(*) as Projects from project p
+inner join department d on Dnum = Dnumber
+group by 1 order by Projects DESC;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-20h48m12s149.jpg" alt="" width="840">
+</p>
+
+Após a extração dos dados do banco via CSV, as informações são importadas para o **Excel** para uma análise visual rápida. Nesta etapa inicial, os departamentos ainda estão identificados apenas por seus códigos numéricos (DEP 1, DEP 2, DEP 5), permitindo a criação de um gráfico de colunas que quantifica o total de colaboradores por unidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-20h48m31s349.jpg" alt="" width="840">
+</p>
+
+Para tornar a análise mais intuitiva e "interessante", os códigos numéricos dos departamentos são substituídos por seus nomes reais diretamente na planilha. À medida que os dados textuais são inseridos (Headquarters, Administration, Research), o gráfico vinculado é atualizado automaticamente, facilitando a identificação visual de que o departamento de **Research** (Pesquisa) possui o maior contingente de pessoal.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-20h48m39s904.jpg" alt="" width="840">
+</p>
+
+A etapa final demonstra a consolidação de diferentes métricas na mesma visualização. Além do número de funcionários por departamento, é possível organizar os dados para comparar o volume de projetos. Esta abordagem visual serve como uma introdução aos conceitos de análise de dados que serão aprofundados em ferramentas mais robustas, como o **Power BI**, permitindo entender melhor o contexto e a distribuição das informações no banco de dados.
 
 
 ### 🟩 Vídeo 10 - Discretização com CASE Statement
@@ -608,7 +650,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/29db496e-9766-4a37-95fe-feeab2e6d124?autoplay=1
 
 ### 🟩 Vídeo 11 - Aplicando Padronização na Recuperação dos Dados com CASE Statement
 
