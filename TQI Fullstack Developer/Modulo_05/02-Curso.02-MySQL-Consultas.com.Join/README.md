@@ -108,7 +108,6 @@ SELECT * FROM videos_canais
 
 ```      
 
-
 ### 🟩 Vídeo 03 - Realizando consultas com comandos JOIN e AS
 
 <video width="60%" controls>
@@ -117,6 +116,46 @@ SELECT * FROM videos_canais
 </video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/mysql-consultas-com-join/learning/6b814223-fb76-4c63-b955-0a39a5cb7d72?autoplay=1
+
+
+O vídeo consiste em uma aula técnica sobre manipulação de bancos de dados SQL, focada na junção de tabelas e otimização de consultas. O instrutor demonstra como realizar um JOIN entre as tabelas videos_canais e videos, destacando a importância da cláusula ON para garantir a integridade dos dados e o uso de apelidos (aliases) via cláusula AS para aumentar a produtividade e legibilidade do código em ambientes complexos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h16m08s795.jpg" alt="" width="840">
+</p>
+
+Para realizar a união entre diferentes tabelas no banco de dados, utiliza-se a cláusula **JOIN**. Neste cenário, a tabela `videos_canais` é utilizada como o ponto central para conectar as informações, funcionando como um "meio de campo" para relacionar os dados com a tabela `videos`.
+
+```sql
+SELECT * FROM videos_canais JOIN videos ON videos_canais.fk_canal = videos.id_video
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h16m18s196.jpg" alt="" width="840">
+</p>
+
+Ao executar um relacionamento sem a devida filtragem ou quando a estrutura ainda não está clara, o resultado pode apresentar dados duplicados ou desorganizados. No exemplo, os registros aparecem repetidos, dificultando a identificação de qual vídeo está relacionado a qual canal ou coluna específica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h16m28s006.jpg" alt="" width="840">
+</p>
+
+Para tornar a consulta mais eficiente e legível, utiliza-se a cláusula **AS** para criar apelidos (aliases) para as tabelas. Em vez de repetir nomes extensos como `videos_canais`, podemos abreviá-los para termos mais simples como `vc`. Isso reduz o esforço de digitação e melhora a produtividade ao referenciar colunas específicas no relacionamento através do comando **ON**.
+
+```sql
+SELECT * FROM videos_canais AS vc JOIN videos AS v ON vc.fk_canal = v.id_video
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-08h16m33s958.jpg" alt="" width="840">
+</p>
+
+Após a aplicação do relacionamento correto e do uso de apelidos, o resultado final exibe apenas os registros que possuem correspondência entre as tabelas. A visualização combina as colunas da tabela `videos_canais` com as informações da tabela `videos`, consolidando os nomes e autores dos vídeos de forma organizada.      
+
 
 ### 🟩 Vídeo 04 - Implementando múltiplos comandos JOIN
 
