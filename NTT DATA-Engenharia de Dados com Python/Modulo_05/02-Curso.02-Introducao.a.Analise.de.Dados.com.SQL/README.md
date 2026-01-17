@@ -451,7 +451,46 @@ WHERE Address LIKE '%Broadway%';
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/bcf4c31d-c280-4883-bad0-027783a78b85?autoplay=1
+
+O material consiste em uma aula técnica que demonstra como identificar registros duplicados entre as tabelas de **clientes e funcionários** utilizando linguagem **SQL**. A instrutora apresenta dois caminhos distintos para realizar essa verificação: o uso de **subqueries** com o operador "IN" e a aplicação de **junções de tabelas**, como o Inner Join e o Natural Join. Durante a explicação, destaca-se que o uso de **joins** é geralmente mais eficiente em termos de **performance**, especialmente quando se lida com grandes volumes de dados. Além de comparar a sintaxe de cada método, a aula aborda problemas comuns de **ambiguidade de colunas** e a importância de filtrar atributos para obter resultados precisos. O conteúdo foca na lógica de programação para banco de dados, preparando o terreno para análises futuras envolvendo faturamento e valores totais.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-19h15m27s204.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o objetivo é identificar quais colaboradores (tabela `Employee`) também estão registrados como clientes (tabela `Customer`) no banco de dados SQLite utilizando o **DBeaver**. A interface mostra a estrutura das tabelas e o editor SQL onde as consultas são construídas para comparar os nomes presentes em ambas as entidades.
+
+Para realizar essa verificação, são exploradas duas abordagens principais: o uso de **Subqueries** (subconsultas) e o uso de **Joins**. A escolha entre elas impacta diretamente a legibilidade do código e a performance da consulta, especialmente em bases de dados volumosas. Atributos numéricos são preferíveis para buscas, mas, na ausência deles, a comparação é feita através do campo `FirstName`.
+
+Abaixo, os dois métodos aplicados para solucionar o problema:
+
+**1. Abordagem com Subquery**
+Neste formato, utiliza-se a cláusula `IN` para verificar se o nome do cliente existe no conjunto de resultados retornado pela consulta na tabela de funcionários.
+
+```sql
+SELECT c.FirstName, c.LastName 
+FROM Customer c 
+WHERE Company IS NULL 
+AND c.FirstName IN (SELECT e.FirstName FROM Employee e);
+
+```
+
+**2. Abordagem com Inner Join**
+O `JOIN` é apresentado como uma alternativa mais intuitiva e performática, pois realiza a combinação exata entre as tabelas. No exemplo, utiliza-se um filtro para garantir que os nomes correspondam em ambos os lados.
+
+```sql
+SELECT c.FirstName, c.LastName 
+FROM Customer c 
+INNER JOIN Employee e 
+ON c.FirstName = e.FirstName;
+
+```
+
+O resultado da execução no DBeaver retorna os registros que satisfazem a condição, como os nomes **Robert Brown** e **Steve Murray**, confirmando que estes indivíduos constam simultaneamente nos dois cadastros.
+
 
 ### 🟩 Vídeo 07 - Análise Descritiva: Caracterizando os Registros de Invoice
 
@@ -460,7 +499,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/9fe2aa75-b179-4a0e-bbec-f6a1eb64944a?autoplay=1
+
+
 
 ### 🟩 Vídeo 08 - Utilizando Junções para Caracterizar os Dados
 
