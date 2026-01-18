@@ -163,10 +163,10 @@ Uma IDE (Ambiente de Desenvolvimento Integrado) é um software que consolida div
 
 Para encerrar esta introdução ao ecossistema Java, são disponibilizados os canais de comunicação e redes sociais para acompanhamento de materiais complementares. O código-fonte e informações técnicas do treinamento podem ser encontrados no GitHub. Além disso, é possível manter contato e tirar dúvidas através do LinkedIn e perfis no Instagram, onde são compartilhadas dicas e conteúdos gratuitos sobre a linguagem. Caso surjam dúvidas específicas durante o curso, os alunos devem utilizar o fórum da plataforma DIO ou o servidor no Discord
 
-    - **GitHub:** [https://github.com/cami-la/curso-dio-dominando-ides-java](https://github.com/cami-la/curso-dio-dominando-ides-java)  
-    - **LinkedIn:** [https://www.linkedin.com/in/cami-la/](https://www.linkedin.com/in/cami-la/)  
-    - **Instagram:** [https://www.instagram.com/estudant.i](https://www.instagram.com/estudant.i)  
-    - **Instagram:** [https://www.instagram.com/camimi_la](https://www.instagram.com/camimi_la)
+* **GitHub:** [https://github.com/cami-la/curso-dio-dominando-ides-java](https://github.com/cami-la/curso-dio-dominando-ides-java)  
+* **LinkedIn:** [https://www.linkedin.com/in/cami-la/](https://www.linkedin.com/in/cami-la/)  
+* **Instagram:** [https://www.instagram.com/estudant.i](https://www.instagram.com/estudant.i)  
+* **Instagram:** [https://www.instagram.com/camimi_la](https://www.instagram.com/camimi_la)
 
 
 ## Parte 2 - Ambiente de desenvolvimento Ubuntu
