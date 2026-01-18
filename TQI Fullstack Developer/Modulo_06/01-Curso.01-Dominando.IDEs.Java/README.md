@@ -73,45 +73,41 @@ Esta aula introdutória apresenta os fundamentos do ecossistema Java, abrangendo
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h10m10s499.jpg" alt="" width="840">
 </p>
 
-Esta imagem apresenta os objetivos da aula, servindo como um roteiro para o conteúdo que será abordado. Os tópicos principais incluem uma introdução à história do Java, a diferenciação entre a plataforma e a linguagem Java, a exploração das diversas versões existentes e, por fim, uma explicação sobre o que é uma IDE (Ambiente de Desenvolvimento Integrado).
+Nesta aula introdutória, o foco central é fornecer uma visão geral sobre o ecossistema Java. Os tópicos abordados incluem uma retrospectiva histórica da linguagem, a distinção fundamental entre a plataforma e a linguagem Java, o acompanhamento das diversas versões lançadas ao longo dos anos e a definição de IDE (Ambiente de Desenvolvimento Integrado), ferramentas essenciais para a produtividade do desenvolvedor.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h10m14s045.jpg" alt="" width="840">
 </p>
 
-Neste slide, são apresentados os pré-requisitos para acompanhar a aula teórica. O foco está na disposição do aluno, destacando que o principal requisito necessário é a "vontade de aprender" para absorver os conceitos que serão discutidos ao longo do treinamento.
+Para acompanhar o conteúdo, o único pré-requisito estabelecido para esta aula teórica é a disposição e vontade de aprender os conceitos básicos que sustentam a tecnologia Java.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h10m23s096.jpg" alt="" width="840">
 </p>
 
-A imagem aborda o contexto histórico do Java, definindo-o como uma linguagem de programação orientada a objetos que surgiu na década de 90 na Sun Microsystems, sendo adquirida pela Oracle em 2008. É destacado que, desde seu lançamento em 1995, a plataforma obteve uma adoção extremamente rápida, tornando-se popular especialmente pelo uso na internet, em navegadores, dispositivos móveis e diversos outros sistemas computacionais.
+A história do Java remonta à década de 90, quando foi criada pela Sun Microsystems como uma linguagem de programação orientada a objetos. Em 2008, a empresa foi adquirida pela Oracle. Desde o seu lançamento oficial em maio de 1995, a plataforma experimentou uma adoção sem precedentes na história da computação, tornando-se onipresente na internet, navegadores, softwares desktop, dispositivos móveis e até calculadoras.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h10m30s589.jpg" alt="" width="840">
 </p>
 
-Esta imagem detalha as características fundamentais que diferenciam o ciclo de vida do Java em relação a linguagens puramente compiladas como C/C++. Enquanto em C/C++ o código é compilado diretamente para o sistema operacional, no Java o código-fonte é compilado para um formato intermediário chamado bytecode. Este bytecode não é lido diretamente pelo hardware, mas sim interpretado pela JVM (Java Virtual Machine), o que garante a portabilidade da linguagem.
-
-A imagem contém exemplos comparativos de sintaxe entre C e Java:
+O Java se diferencia de linguagens puramente compiladas (como C e C++) por seu ciclo de execução híbrido. Enquanto em C/C++ o código é compilado diretamente para código de máquina específico do sistema operacional (OS), o código Java é compilado para um formato intermediário chamado **bytecode**. Este bytecode não é lido diretamente pelo hardware, mas sim interpretado por uma Máquina Virtual Java (JVM), o que garante a portabilidade do programa entre diferentes plataformas.
 
 ```c
 #include <stdio.h>
-int main () {
-  char* nome = "Manuel da Silva";
-  float salario = 800.0;
-  char[] sql = "insert into usuario";
-}
+ int main () {
+ char( nome = "Manuel da Silva
+ float salario = 800.0;
+ char[] sql = "insert into usuario";
+ }
 
 ```
 
 ```java
-public class CadastroFrame {
-    public static void main (String[] args) {
-        User u = new User();
-        u.save();
-    }
-}
+public class CadastroFrame (
+ public static void main (String() ) {
+ User u new User();
+ usave();
 
 ```
 
@@ -119,41 +115,49 @@ public class CadastroFrame {
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h10m38s329.jpg" alt="" width="840">
 </p>
 
-O slide diferencia a Linguagem Java da Plataforma Java. Embora a linguagem Java seja a principal, a plataforma pode suportar outras linguagens. A grande vantagem apresentada é a independência de hardware e sistema operacional, uma vez que os programas rodam em uma máquina virtual emulada. Além disso, são listadas as divisões da plataforma: Java SE (Standard Edition), Java EE (Enterprise Edition) e Java ME (Micro Edition).
+É importante distinguir a **Linguagem Java** da **Plataforma Java**. Embora o Java seja a linguagem padrão, a plataforma é capaz de suportar outras linguagens que também geram bytecodes compatíveis com a JVM. A grande vantagem reside na independência de hardware e sistema operacional, permitindo que os programas rodem em qualquer lugar onde a máquina virtual possa ser emulada. A plataforma se divide em três edições principais:
+
+* **Java SE (Standard Edition):** Núcleo da plataforma, usado para aplicações desktop e servidores.
+* **Java EE (Enterprise Edition):** Voltado para aplicações corporativas e de grande escala.
+* **Java ME (Micro Edition):** Destinado a dispositivos com recursos limitados, como sistemas embarcados.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h10m46s722.jpg" alt="" width="840">
 </p>
 
-Esta imagem ilustra as fases de execução de um programa Java e a hierarquia entre JDK, JRE e JVM. O processo inicia com a escrita do código-fonte (`.java`), que é compilado pelo JDK gerando o bytecode (`.class`). Para a execução, a JVM interpreta esse bytecode utilizando as bibliotecas contidas no JRE. O diagrama mostra que o JDK contém o JRE (ferramentas de desenvolvimento + bibliotecas), e o JRE, por sua vez, contém a JVM (ambiente de execução).
+O processo de execução de um programa Java segue três etapas fundamentais:
+
+1. **Escrita:** Criação do código-fonte em um arquivo com extensão `.java`.
+2. **Compilação:** Utilização do Java Compiler (presente no JDK) para transformar o código-fonte em um arquivo de bytecode com extensão `.class`.
+3. **Execução:** A JVM lê o arquivo `.class` e, juntamente com as bibliotecas do JRE, interpreta e executa as instruções no sistema operacional.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h10m51s940.jpg" alt="" width="840">
 </p>
 
-O conteúdo foca na distinção técnica entre os três componentes essenciais:
+Para trabalhar com Java, é essencial entender a relação entre os componentes do kit de ferramentas:
 
-* **JDK (Java Development Kit):** O kit de desenvolvimento necessário para compilar o código `.java` em `.class`.
-* **JVM (Java Virtual Machine):** A máquina virtual responsável por executar o bytecode em diferentes sistemas operacionais.
-* **JRE (Java Runtime Environment):** O ambiente que fornece as bibliotecas padrões necessárias tanto para a compilação quanto para a execução.
+* **JDK (Java Development Kit):** O conjunto completo para desenvolvedores, contendo o compilador (`javac`) e ferramentas de empacotamento (`jar`). Ele é responsável por transformar `.java` em `.class`.
+* **JRE (Java Runtime Environment):** O ambiente necessário para rodar aplicações Java. Ele fornece as bibliotecas padrões (Java API) e a JVM.
+* **JVM (Java Virtual Machine):** A peça que efetivamente executa o bytecode, atuando como uma camada entre a aplicação e o sistema operacional, contando com recursos como o Garbage Collector para gerenciamento de memória.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h11m01s155.jpg" alt="" width="840">
 </p>
 
-Este slide trata das versões do Java, focando na diferença entre o OpenJDK e o JDK da Oracle. O OpenJDK é totalmente de código aberto (licença GNU), enquanto o Oracle JDK pode exigir licença comercial. É mencionado também o ciclo de lançamentos das versões LTS (Long Term Support), que ocorre a cada dois anos (conforme o texto, embora a imagem cite a cada quatro anos no contexto de atualizações públicas do OpenJDK).
+Existem duas distribuições principais do Java: o **OpenJDK** e o **JDK Oracle**. A diferença fundamental reside no licenciamento: o OpenJDK é totalmente de código aberto (GPL), enquanto o JDK Oracle possui termos comerciais específicos para uso corporativo. Versões com suporte de longo prazo (LTS) do OpenJDK são lançadas aproximadamente a cada quatro anos, garantindo estabilidade para grandes projetos.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h11m02s765.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta um cronograma histórico detalhado das versões do Java, desde o JDK Beta em 1995 até as versões mais recentes como o Java SE 16 e 17. A tabela detalha as datas de lançamento e os períodos de suporte gratuito e estendido para diversas distribuições, como Oracle, Zulu, AdoptOpenJDK e Amazon Corretto, diferenciando as versões LTS das versões de ciclo curto.
+A imagem apresenta um cronograma detalhado das versões do Java, desde o seu lançamento inicial em 1995. O gráfico destaca a evolução das versões LTS (como Java 8, 11 e 17) e o período de suporte gratuito e estendido oferecido por diferentes fornecedores (Oracle, AdoptOpenJDK, Zulu, Amazon Corretto), evidenciando a maturidade e a continuidade do ecossistema.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h11m10s794.jpg" alt="" width="840">
 </p>
 
-A última imagem define o conceito de IDE (Ambiente de Desenvolvimento Integrado), descrevendo-a como um software que combina ferramentas comuns de desenvolvimento em uma interface gráfica única (GUI). É explicado que o JDK é integrado a essas IDEs (como IntelliJ, Eclipse e NetBeans) para facilitar o trabalho do desenvolvedor, permitindo que a escrita, compilação e execução do código ocorram em um único ambiente.      
+Uma IDE (Ambiente de Desenvolvimento Integrado) é um software que consolida diversas ferramentas (editor de texto, compilador, depurador) em uma interface gráfica única para facilitar a criação de aplicações. No ecossistema Java, as IDEs utilizam o JDK instalado no sistema para funcionar. Exemplos populares incluem IntelliJ IDEA, Eclipse e NetBeans. Embora as ferramentas facilitem muito o trabalho, é recomendado que o desenvolvedor não se prenda a uma única opção, mas entenda a lógica de funcionamento comum a todas elas.      
 
 
 ## Parte 2 - Ambiente de desenvolvimento Ubuntu
