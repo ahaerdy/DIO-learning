@@ -87,7 +87,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 6: Java
 
-- [ ] Curso: [Dominando IDEs Java](Modulo_06/01-Curso.01-Dominando.IDEs.Java)
+- [x] Curso: [Dominando IDEs Java](Modulo_06/01-Curso.01-Dominando.IDEs.Java)
 
 ### Módulo 7: Spring Framework
 
