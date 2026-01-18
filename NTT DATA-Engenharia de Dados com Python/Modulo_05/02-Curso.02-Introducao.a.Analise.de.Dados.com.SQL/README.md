@@ -652,6 +652,34 @@ A etapa final demonstra a consolidação de diferentes métricas na mesma visual
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/29db496e-9766-4a37-95fe-feeab2e6d124?autoplay=1
 
+O vídeo aborda o conceito de **discretização e agrupamento de dados**, técnica conhecida como **binning**, aplicada em consultas SQL para transformar valores contínuos em categorias qualitativas. O autor demonstra como utilizar a cláusula **CASE** para criar perfis de colaboradores e clientes, exemplificando a classificação de níveis profissionais com base em **faixas salariais**. Além disso, a fonte explora como essa lógica pode ser aplicada para segmentar idades ou analisar indicadores de satisfação, como o **NPS (Net Promoter Score)**. O objetivo central é converter registros numéricos brutos em **informações estratégicas** e descritivas que facilitem a interpretação de grandes volumes de dados. Ao final, ressalta-se que essa padronização ajuda a esconder valores sensíveis enquanto fornece uma visão clara sobre a **composição da força de trabalho** ou do público-alvo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-21h04m12s539.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos a técnica de **discretização** (também conhecida como *binning*), que consiste em transformar valores numéricos contínuos em categorias discretas ou intervalos. Essa abordagem é fundamental para criar perfis de colaboradores ou clientes, permitindo agrupar dados (como salários ou idades) em compartimentos (*bins*) que facilitam a análise gerencial e a construção de indicadores, como histogramas de força de trabalho por departamento. 
+
+Para implementar essa lógica no SQL, utiliza-se a estrutura condicional `CASE`. No exemplo prático, os salários dos funcionários são convertidos em níveis profissionais baseados em faixas salariais pré-definidas, permitindo que o resultado da consulta apresente uma descrição textual (como "Executivo" ou "Sênior") em vez de apenas o valor bruto. 
+
+```sql
+select Fname,
+case
+    when Salary > 39000 then 'Executivo'
+    when Salary > 29000 then 'Senior'
+    when Salary > 19000 then 'Pleno'
+    else 'NA'
+end as Employee_level
+from employee e
+order by Employee_level;
+
+```
+
+A imagem demonstra a execução dessa query no **DBeaver**, exibindo a tabela resultante onde cada colaborador é classificado conforme seu rendimento. A ordenação por `Employee_level` agrupa os perfis, facilitando a visualização de quantos funcionários ocupam cada patamar na estrutura organizacional da empresa. 
+
+
 ### 🟩 Vídeo 11 - Aplicando Padronização na Recuperação dos Dados com CASE Statement
 
 <video width="60%" controls>
@@ -659,7 +687,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/b71f369a-9c7a-4cd9-83a9-4eb8517bab0b?autoplay=1
+
+
 
 
 ##  Materiais de Apoio
