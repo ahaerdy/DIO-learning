@@ -18,7 +18,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
 
 ### 🟩 Vídeo 02 - Visão Geral da Linguagem de Programação Java e da sua Plataforma
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/d5c408f0-b772-4cb7-a522-9dafec72f29c?autoplay=1
 
 ### 🟩 Vídeo 03 - Apresentação e Visão Geral
 
