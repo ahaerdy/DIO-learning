@@ -193,6 +193,10 @@ Fork do repositório (com o tutorial): https://github.com/ahaerdy/fork-curso-dio
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/4f443027-b82b-4793-b452-73f67b00c1c7?autoplay=1
 
+O vídeo é uma aula prática focada na configuração de um ambiente de desenvolvimento Java em sistemas Linux. O instrutor demonstra, passo a passo, como baixar, instalar e configurar as duas principais IDEs do mercado — IntelliJ IDEA (versão Community) e Eclipse (versão Enterprise) — utilizando uma máquina virtual para garantir uma instalação limpa. O conteúdo enfatiza a execução de scripts via terminal, a gestão de dependências como o JDK 11 e a criação de atalhos no sistema para otimizar a produtividade do desenvolvedor.
+
+Fork do repositório (com o tutorial): https://github.com/ahaerdy/fork-curso-dio-dominando-ides-java
+
 
 ## Parte 3 - Ambiente de desenvolvimento Windows
 
