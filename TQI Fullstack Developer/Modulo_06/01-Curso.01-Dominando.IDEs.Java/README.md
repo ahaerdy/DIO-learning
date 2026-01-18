@@ -212,7 +212,6 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
 Este guia tutorial ensina como **configurar o ambiente de desenvolvimento Java** no Windows, focando na instalação do **OpenJDK Zulu 11** e do **Git**. A instrutora demonstra o passo a passo da **extração dos arquivos**, a configuração essencial das **variáveis de ambiente** (Java Home e Path) e a validação via terminal. Além da instalação, o conteúdo aborda a **configuração inicial do Git**, incluindo a definição de nome de usuário e e-mail para versionamento. Para ilustrar o funcionamento do **JDK**, o material apresenta a criação manual de um programa simples no Bloco de Notas, utilizando os comandos **javac** para compilação e **java** para execução. O objetivo central é familiarizar o estudante com o ciclo de desenvolvimento básico antes da introdução de ferramentas mais complexas como o Eclipse ou IntelliJ.
 
 
-
 ### 🟩 Vídeo 06 - Instalação IntelliJ e Eclipse no Windows
 
 <video width="60%" controls>
