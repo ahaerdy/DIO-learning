@@ -689,7 +689,34 @@ A imagem demonstra a execução dessa query no **DBeaver**, exibindo a tabela re
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-a-analise-de-dados-com-sql/learning/b71f369a-9c7a-4cd9-83a9-4eb8517bab0b?autoplay=1
 
+Este vídeo consiste em uma transcrição de uma aula técnica sobre **manipulação de dados** utilizando a linguagem **SQL**. O instrutor demonstra como realizar a **limpeza e padronização** de informações através da estrutura **CASE**, exemplificando a conversão de categorias de gênero para um formato uniforme. Além disso, o conteúdo aborda o uso de **funções de agregação**, como contagem e médias, para extrair métricas relevantes de grandes volumes de dados. O objetivo central é capacitar o analista a realizar uma **análise descritiva** eficiente, transformando registros brutos em insights estruturados. Por fim, o autor incentiva a aplicação dessas ferramentas para responder perguntas de negócio e compreender melhor a **dinâmica organizacional**.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-17-21h16m40s195.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, o foco é a **padronização de dados** como parte do processo de limpeza e análise descritiva. A imagem apresenta a interface da ferramenta DBeaver, onde está sendo construída uma query SQL para tratar a coluna de gênero (sexo) utilizando a estrutura condicional `CASE`.
+
+A necessidade de padronização surge devido à inconsistência comum na inserção manual de dados. No exemplo prático, o objetivo é transformar siglas ou caracteres isolados em descrições completas e padronizadas para facilitar a leitura e interpretação dos resultados.
+
+O código extraído da imagem demonstra a aplicação da lógica para converter os valores 'M' e 'F' nos termos 'Masculino' e 'Feminino':
+
+```sql
+SELECT 
+    name, 
+    sex,
+    CASE
+        WHEN sex = 'M' THEN 'Masculino'
+        WHEN sex = 'F' THEN 'Feminino'
+        ELSE sex
+    END AS gender
+FROM employee;
+
+```
+
+Abaixo do editor de código, no **Data Grid**, observa-se o resultado da execução: os nomes dos funcionários (como John, Amanda, Franklin e Joyce) aparecem ao lado de sua classificação original e da nova coluna `gender` devidamente padronizada. Essa técnica é essencial para converter dados brutos em informações com maior significado para o negócio, permitindo que funções de agregação futuras sejam aplicadas de forma mais precisa.      
 
 
 ##  Materiais de Apoio
