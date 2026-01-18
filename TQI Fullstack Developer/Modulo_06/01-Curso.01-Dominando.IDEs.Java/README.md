@@ -178,7 +178,11 @@ Para encerrar esta introdução ao ecossistema Java, são disponibilizados os ca
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/d080c83d-2302-4136-842d-0b4713652617?autoplay=1
+
+Este guia prático detalha o processo de configuração de um ambiente de desenvolvimento Java no sistema operacional Ubuntu Linux. O conteúdo abrange desde a instalação do OpenJDK 11 e a configuração manual das variáveis de ambiente (`JAVA_HOME`), até a preparação do sistema de controle de versão Git, garantindo que o desenvolvedor possua as ferramentas fundamentais prontas para o uso de IDEs e a sincronização de projetos com o GitHub.
+
+Fork do repositório (com o tutorial): https://github.com/ahaerdy/fork-curso-dio-dominando-ides-java
 
 ### 🟩 Vídeo 04 - Instalação IntelliJ e Eclipse no Ubuntu
 
@@ -187,7 +191,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/4f443027-b82b-4793-b452-73f67b00c1c7?autoplay=1
 
 
 ## Parte 3 - Ambiente de desenvolvimento Windows
