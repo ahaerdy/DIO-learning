@@ -159,6 +159,9 @@ A imagem apresenta um cronograma detalhado das versões do Java, desde o seu lan
 
 Uma IDE (Ambiente de Desenvolvimento Integrado) é um software que consolida diversas ferramentas (editor de texto, compilador, depurador) em uma interface gráfica única para facilitar a criação de aplicações. No ecossistema Java, as IDEs utilizam o JDK instalado no sistema para funcionar. Exemplos populares incluem IntelliJ IDEA, Eclipse e NetBeans. Embora as ferramentas facilitem muito o trabalho, é recomendado que o desenvolvedor não se prenda a uma única opção, mas entenda a lógica de funcionamento comum a todas elas.      
 
+<p align="center"> <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h11m20s221.jpg" alt="" width="840"> </p>
+
+Para encerrar esta introdução ao ecossistema Java, são disponibilizados os canais de comunicação e redes sociais para acompanhamento de materiais complementares. O código-fonte e informações técnicas do treinamento podem ser encontrados no GitHub. Além disso, é possível manter contato e tirar dúvidas através do LinkedIn e perfis no Instagram, onde são compartilhadas dicas e conteúdos gratuitos sobre a linguagem. Caso surjam dúvidas específicas durante o curso, os alunos devem utilizar o fórum da plataforma DIO ou o servidor no Discord.
 
 ## Parte 2 - Ambiente de desenvolvimento Ubuntu
 
