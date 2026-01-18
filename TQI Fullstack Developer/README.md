@@ -82,10 +82,12 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
     - **Descrição**: Projeto desenvolvido em ReactJS para consumir a API do GitHub e exibir perfil, repositórios e favoritos de usuários, como parte do bootcamp TQI Fullstack Developer na DIO.
 ### Módulo 5: SQL
 
-- [ ] Curso: [MySQL - Trabalhando com suas Primeiras Tabelas](Modulo_05/01-Curso.01-Curso.MySQL-Trabalhando.com.suas.Primeiras.Tabelas)
-- [ ] Curso: [MySQL - Consultas com Join](Modulo_05/02-Curso.02-MySQL-Consultas.com.Join)
+- [x] Curso: [MySQL - Trabalhando com suas Primeiras Tabelas](Modulo_05/01-Curso.01-Curso.MySQL-Trabalhando.com.suas.Primeiras.Tabelas)
+- [x] Curso: [MySQL - Consultas com Join](Modulo_05/02-Curso.02-MySQL-Consultas.com.Join)
 
 ### Módulo 6: Java
+
+- [ ] Curso: [Dominando IDEs Java](Modulo_06/01-Curso.01-Dominando.IDEs.Java)
 
 ### Módulo 7: Spring Framework
 
