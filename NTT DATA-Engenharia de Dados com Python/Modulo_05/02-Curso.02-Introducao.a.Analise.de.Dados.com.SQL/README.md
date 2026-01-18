@@ -742,7 +742,7 @@ Por fim, disponibilizamos alguns links úteis para que você possa se desenvolve
 
 - **Pesquise na Web**: pode parecer óbvio, mas é importante frisar a importância das engines de busca no dia-a-dia de um profissional de TI. Caso não encontre o que procura dentro da DIO, pesquise sobre o assunto (conceito, dúvida, erro etc) na Internet (dê um Google), pois na maioria das vezes você será levado a páginas incríveis como o StackOverflow que salvarão o seu dia 😎
 
-# Certificado: 
+# Certificado: Introdução a Análise de Dados com SQL
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/PEAAPAN5.pdf
+- Certificado em pdf: [Certificado-Introducao.a.Analise.de.Dados.com.SQL.pdf](000-Midia_e_Anexos/Certificado-Introducao.a.Analise.de.Dados.com.SQL.pdf)
