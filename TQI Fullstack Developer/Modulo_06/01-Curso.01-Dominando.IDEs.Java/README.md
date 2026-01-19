@@ -688,7 +688,9 @@ O vídeo apresenta um guia prático sobre funcionalidades essenciais do Eclipse 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/907e1507-001d-4187-bfed-bac33e689bb1?autoplay=1
+
+
 
 ### 🟩 Vídeo 13 - Mais atalhos e versionamento
 
@@ -697,7 +699,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/907e1507-001d-4187-bfed-bac33e689bb1?autoplay=1
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/ee645041-ddd4-4130-86e5-5aebe3f75efa?autoplay=1
 
 ### 🟩 Vídeo 14 - Debug
 
