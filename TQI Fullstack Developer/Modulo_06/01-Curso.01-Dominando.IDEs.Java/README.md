@@ -529,6 +529,9 @@ class Livros {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/76dc0314-0fea-43eb-981b-feacf129e960?autoplay=1
 
+Este conteúdo tutorial aborda a integração prática entre o Git e o GitHub utilizando a linguagem Java, demonstrando dois fluxos de trabalho principais: o versionamento através de uma IDE (Eclipse) e via linha de comando (CLI). O instrutor detalha desde a organização de diretórios do projeto (distinguindo código-fonte de arquivos compilados) até a criação de repositórios remotos, realização de commits e o processo de autenticação necessário para realizar o push do código para a nuvem.
+
+
 ### 🟩 Vídeo 10 - Debug
 
 <video width="60%" controls>
@@ -536,7 +539,134 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/b7b0fb08-dfef-4610-8664-6c11ba9cebd5?autoplay=1
+
+Este conteúdo apresenta um guia prático sobre depuração (debugging) em Java utilizando a IDE Eclipse. Através da construção de uma calculadora simples, o instrutor demonstra como identificar erros de lógica — exemplificados por uma divisão de inteiros com resultado inesperado — e como utilizar ferramentas essenciais da IDE, como breakpoints, inspeção de variáveis e comandos de navegação de fluxo, além de dicas de produtividade e integração com Git.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h03m44s667.jpg" alt="" width="840">
+</p>
+
+Para iniciar o desenvolvimento do sistema de calculadora, cria-se uma nova classe Java no Eclipse IDE. Nesta etapa, definimos o pacote como `br.com.dio.calculadora` e nomeamos a classe como `Calculadora`. Além disso, selecionamos a opção para gerar automaticamente o método `public static void main(String[] args)`, que servirá como ponto de entrada para a execução do programa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h03m54s556.jpg" alt="" width="840">
+</p>
+
+Com a classe estruturada, implementamos o primeiro método de operação matemática fora do bloco `main`. O método `soma` é definido como estático (`public static int`), recebendo dois números inteiros (`int a, int b`) como parâmetros e retornando a soma aritmética entre eles. O uso de métodos estáticos neste contexto facilita a chamada direta dentro da mesma classe.
+
+```java
+public static int soma(int a, int b) {
+    return a + b;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h04m09s954.jpg" alt="" width="840">
+</p>
+
+Seguindo a mesma lógica, implementamos as demais operações básicas: subtração, divisão e multiplicação. Para otimizar a escrita, é possível utilizar o atalho `Ctrl + Alt + Seta para baixo` para duplicar as linhas de código. Note que, nesta implementação inicial, todos os métodos trabalham exclusivamente com o tipo primitivo `int`.
+
+```java
+public static int subtracao(int a, int b) {
+    return a - b;
+}
+
+public static int divisao(int a, int b) {
+    return a / b;
+}
+
+public static int multiplicacao(int a, int b) {
+    return a * b;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h04m21s856.jpg" alt="" width="840">
+</p>
+
+Dentro do método `main`, configuramos a interação com o usuário. Utilizamos a classe `Scanner` (do pacote `java.util`) para capturar dados via teclado (`System.in`). O programa solicita o primeiro e o segundo valor, armazenando as entradas nas variáveis inteiras `a` e `b` através do método `scan.nextInt()`.
+
+```java
+public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    
+    int a, b;
+    
+    System.out.println("Digite o primeiro valor: ");
+    a = scan.nextInt();
+    
+    System.out.println("Digite o segundo valor: ");
+    b = scan.nextInt();
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h04m34s919.jpg" alt="" width="840">
+</p>
+
+Nesta fase, realizamos as chamadas aos métodos criados anteriormente e atribuímos seus retornos a novas variáveis locais. Uma funcionalidade útil da IDE demonstrada é o atalho `Ctrl + 1` ou `Ctrl + 2 + L`, que permite criar automaticamente a variável local com o tipo correto com base no retorno do método chamado.
+
+```java
+int soma = soma(a, b);
+int subtracao = subtracao(a, b);
+int multiplicacao = multiplicacao(a, b);
+int divisao = divisao(a, b);
+
+System.out.println(soma);
+System.out.println(subtracao);
+System.out.println(multiplicacao);
+System.out.println(divisao);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h04m51s512.jpg" alt="" width="840">
+</p>
+
+Para validar o código, realizamos o primeiro teste de execução. No Eclipse, clicamos com o botão direito sobre o arquivo ou dentro do editor e selecionamos **Run As > Java Application**. Isso compila e inicia o programa, abrindo o console para interação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h05m25s329.jpg" alt="" width="840">
+</p>
+
+O console exibe o resultado do teste com os valores `5` e `5`. O programa processa e imprime corretamente: a soma (10), a subtração (0), a multiplicação (25) e a divisão (1). Esta etapa confirma que o fluxo básico de entrada, processamento e saída está operante.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h05m54s960.jpg" alt="" width="840">
+</p>
+
+Ao realizar um teste com os valores `5` e `2`, observa-se que o resultado da divisão é apresentado como `2`, quando o esperado matematicamente seria `2.5`. Para investigar esse comportamento (erro de lógica devido ao tipo de dado), inserimos um **breakpoint** na linha 20 (operação de divisão), clicando na margem esquerda do editor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h06m10s214.jpg" alt="" width="840">
+</p>
+
+Iniciamos agora o processo de depuração através de **Debug As > Java Application**. Ao contrário da execução comum, o modo debug permite que o desenvolvedor pause o programa em pontos específicos para analisar o estado das variáveis e o comportamento interno do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h06m17s691.jpg" alt="" width="840">
+</p>
+
+A IDE entra na perspectiva de Debug e pausa a execução na linha marcada. Na aba **Variables**, podemos inspecionar em tempo real que `a` vale `5` e `b` vale `2`. Note que as operações de soma, subtração e multiplicação já foram concluídas, e seus resultados estão armazenados na memória, visíveis no painel superior direito.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h06m44s334.jpg" alt="" width="840">
+</p>
+
+Utilizando as teclas de controle de depuração, como o **F6 (Step Over)**, avançamos a execução linha por linha. A linha em destaque verde indica o próximo passo a ser executado. No console, vemos as impressões ocorrendo uma a uma conforme avançamos o fluxo manualmente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h06m51s139.jpg" alt="" width="840">
+</p>
+
+A visão final do código mostra a estrutura completa da classe `Calculadora` após a análise. O debug permitiu concluir que, para obter resultados decimais na divisão (como 2.5), seria necessário alterar o tipo de retorno do método e das variáveis envolvidas de `int` para `double` ou `float`.      
+
 
 ### 🟩 Vídeo 11 - Últimas observações sobre Eclipse
 
@@ -545,7 +675,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/1bdfc2be-f6d4-4f9c-ae45-85167bd6be28?autoplay=1
 
 
 ##  Materiais de Apoio
