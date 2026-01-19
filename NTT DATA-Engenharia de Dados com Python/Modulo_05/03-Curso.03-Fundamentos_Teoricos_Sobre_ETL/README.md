@@ -72,6 +72,35 @@ O fluxo de dados lida com fontes heterogêneas que possuem diferentes estruturas
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/9d2d3d38-bdf6-454c-b8e0-4b90bd7ae19b?autoplay=1
 
+O vídeo aborda a transição do modelo tradicional de **ETL** para a abordagem de **ELT**, destacando como a **inversão das etapas** de carga e transformação impacta o fluxo de dados. Ao carregar as informações em um repositório central antes de tratá-las, as empresas ganham **maior agilidade** e preservam a integridade dos **dados brutos** para diferentes análises futuras. Essa mudança permite que a perspectiva sobre o conteúdo mude conforme a necessidade, sem a perda de dados que ocorreria em uma limpeza prévia. Além disso, o processo transfere parte da responsabilidade da transformação do **engenheiro de dados** para os **analistas**, otimizando o tempo de desenvolvimento. Portanto, o **ELT** surge como uma solução moderna para lidar com o grande volume de dados da **computação em nuvem**, oferecendo um ciclo de vida mais flexível e eficiente.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-20h33m03s434.jpg" alt="" width="840">
+</p>
+
+O conceito de **ELT** (**Extract, Load, Transform**) baseia-se em uma inversão fundamental em relação ao modelo tradicional. Em vez de transformar os dados antes do carregamento, o processo consiste em extrair as informações e realizar o carregamento diretamente em um repositório central para, somente então, realizar a transformação. Embora pareça uma mudança simples, essa inversão não é trivial e altera a dinâmica de como os dados são manipulados dentro de um ecossistema tecnológico.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-20h33m07s178.jpg" alt="" width="840">
+</p>
+
+No pipeline de dados do ELT, a origem das informações pode abranger diversos sistemas, como **CRM**, ferramentas em **Cloud**, **Filas**, **SGBDs**, sistemas **Legados** e arquivos diversos (**Files**). A característica marcante aqui é o envio desses dados brutos diretamente para o estágio de **Load**. Esse modelo ganhou força com a evolução da computação em nuvem e dos **Data Warehouses** modernos, que permitem centralizar e processar grandes volumes de dados de forma otimizada, atendendo às demandas de Big Data de maneira mais eficiente do que o ETL tradicional.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-20h33m10s762.jpg" alt="" width="840">
+</p>
+
+A mudança na ordem entre o carregamento e a transformação traz impactos diretos na governança e na análise dos dados. Ao carregar os dados primeiro, preserva-se o estado bruto da informação, o que oferece maior controle e flexibilidade. Isso permite que a perspectiva sobre os dados mude ao longo do tempo sem a necessidade de reprocessar toda a extração. Além disso, essa abordagem transfere parte da responsabilidade da transformação para os analistas e cientistas de dados, permitindo que a estrutura organizacional da informação seja moldada conforme a necessidade específica de cada análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-20h33m15s755.jpg" alt="" width="840">
+</p>
+
+O principal ganho do processo de ELT em comparação ao fluxo tradicional é a **agilidade**. Como a etapa de limpeza e organização profunda (transformação) é postergada, o esforço inicial de engenharia para disponibilizar os dados no repositório é drasticamente reduzido. Ao focar primeiro na extração e na carga imediata, o fluxo de trabalho torna-se mais veloz, permitindo que os dados cheguem ao ambiente de destino de forma muito mais rápida, poupando trabalho manual exaustivo nas fases iniciais do pipeline.      
+
+
 ### 🟩 Vídeo 04 - Processo de Extração de Dados - ELT
 
 <video width="60%" controls>
@@ -79,7 +108,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/9a4c6d2c-549d-4cfa-a557-e46b1952bf7b?autoplay=1
 
 ### 🟩 Vídeo 05 - Load, Transform e Vantagens do ELT
 
