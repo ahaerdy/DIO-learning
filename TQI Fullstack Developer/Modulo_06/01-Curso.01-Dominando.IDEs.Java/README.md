@@ -248,18 +248,6 @@ Este conteúdo é um guia prático introdutório sobre o uso da IDE Eclipse para
 A interface inicial do Eclipse IDE apresenta o ambiente de desenvolvimento padrão, com o *Project Explorer* (explorador de projetos) localizado à esquerda. Neste momento, o workspace está vazio, indicando que nenhum projeto foi criado ou importado ainda, estando pronto para o início de uma nova aplicação Java.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h48m39s545.jpg" alt="" width="840">
-</p>
-
-*Conteúdo não identificado com segurança a partir do material disponível.*
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h49m10s905.jpg" alt="" width="840">
-</p>
-
-*Conteúdo não identificado com segurança a partir do material disponível.*
-
-<p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h49m28s768.jpg" alt="" width="840">
 </p>
 
