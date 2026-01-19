@@ -690,7 +690,72 @@ O vídeo apresenta um guia prático sobre funcionalidades essenciais do Eclipse 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/907e1507-001d-4187-bfed-bac33e689bb1?autoplay=1
 
+### Anotações
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h50m37s151.jpg" alt="" width="840">
+</p>
+
+Na tela inicial do IntelliJ IDEA, a seção **Plugins** permite a personalização da IDE com ferramentas adicionais. É possível navegar pelo **Marketplace** para encontrar extensões úteis, como o **Key Promoter X**, que auxilia no aprendizado de atalhos de teclado, exibindo notificações sempre que uma ação é realizada com o mouse quando existe um atalho correspondente disponível.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h50m43s171.jpg" alt="" width="840">
+</p>
+
+A aba **Learn IntelliJ IDEA** oferece recursos educacionais integrados para usuários que desejam se familiarizar com a ferramenta. Através do **IDE Training Course**, o desenvolvedor pode aprender atalhos básicos e funcionalidades essenciais de forma interativa, além de acessar links diretos para a documentação de suporte e referências de mapas de teclas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h51m00s881.jpg" alt="" width="840">
+</p>
+
+Ao iniciar a criação de um novo projeto, a janela **New Project** permite selecionar a tecnologia base, como Java, Maven ou Gradle. Neste estágio, deve-se definir o **Project SDK**, que neste caso utiliza o **Java 11 Azul Zulu Community**, garantindo que o ambiente de desenvolvimento esteja alinhado à versão do Java desejada para a aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h51m08s631.jpg" alt="" width="840">
+</p>
+
+A opção **Create project from template** permite que o IntelliJ gere automaticamente uma estrutura de aplicação básica, como uma **Command Line App**, incluindo o método `main`. No entanto, para fins educacionais, é possível prosseguir sem selecionar templates para construir os arquivos manualmente a partir do zero.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h51m21s754.jpg" alt="" width="840">
+</p>
+
+Na etapa final de configuração, define-se o **Project name** e o **Project location** no disco rígido. Caso a pasta de destino ainda não exista, a IDE emitirá um aviso informando que o diretório será criado automaticamente pelo sistema ao clicar em **Create** ou **Finish**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h52m20s038.jpg" alt="" width="840">
+</p>
+
+Dentro da estrutura do projeto, após criar um pacote, utiliza-se a janela **New Java Class** para gerar novos arquivos de código-fonte. O usuário pode escolher entre diferentes tipos de estruturas, como **Class**, **Interface**, **Enum** ou **Annotation**, definindo o nome da classe principal do programa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h52m40s011.jpg" alt="" width="840">
+</p>
+
+Com a classe criada, o código-fonte é escrito no editor central. O exemplo abaixo demonstra a estrutura de um programa simples que utiliza o método `main` para imprimir uma mensagem no console:
+
+```java
+package br.com.dio;
+
+public class PrimeiroPrograma {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h52m45s961.jpg" alt="" width="840">
+</p>
+
+Antes da primeira execução, a IDE permite configurar os parâmetros de rodagem através do menu **Run/Debug Configurations**. Caso não existam configurações prévias, o IntelliJ identifica automaticamente as classes que possuem um método `main` executável para facilitar o processo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-15h52m49s503.jpg" alt="" width="840">
+</p>
+
+Ao executar o programa, o painel **Run** é aberto na parte inferior da interface, exibindo o comando utilizado para chamar a JVM e a saída do programa. O resultado "Hello World!" confirma que o ambiente está configurado corretamente e que o código foi compilado e executado com sucesso, finalizando com o código de saída 0.
 
 ### 🟩 Vídeo 13 - Mais atalhos e versionamento
 
@@ -701,6 +766,66 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/ee645041-ddd4-4130-86e5-5aebe3f75efa?autoplay=1
 
+Este vídeo tutorial explora as funcionalidades de produtividade do IntelliJ IDEA, focando em atalhos essenciais para refatoração, formatação e manipulação de código Java. O material também demonstra o fluxo completo de integração com o GitHub, desde a criação do repositório até o versionamento de classes, destacando a superioridade da experiência de uso do IntelliJ em comparação ao Eclipse para desenvolvedores iniciantes e experientes.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-16h38m31s735.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, observa-se a interface do IntelliJ IDEA com um projeto Java estruturado. O código apresenta a classe `PrimeiroPrograma` executando a criação de uma instância da classe `Gato`. Um ponto fundamental de produtividade é a organização automática do código através do atalho **Ctrl + Alt + L**, que ajusta a indentação e o posicionamento dos elementos. Além da organização, o ambiente permite a execução rápida do código, exibindo no console inferior o resultado do método `System.out.println(gato)`, que retorna os atributos do objeto e confirma que o processo foi finalizado com sucesso.
+
+```java
+package br.com.dio;
+
+import br.com.dio.model.Gato;
+
+public class PrimeiroPrograma {
+    public static void main(String[] args) {
+        Gato gato = new Gato();
+        System.out.println(gato);
+
+        /*int a = 5;
+        int b = 3;
+        System.out.println("Hello World! " + (a + b));*/
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-16h39m02s472.jpg" alt="" width="840">
+</p>
+
+Para otimizar o fluxo de trabalho no IntelliJ IDEA, existem diversos atalhos de teclado e templates de código (Live Templates) que agilizam tarefas repetitivas. Diferente de outros ambientes, o IntelliJ utiliza combinações específicas para manipulação de linhas e navegação:
+
+Atalhos Gerais e de Edição:
+
+* **Alt + 1**: Foca na aba de projetos lateral.
+* **Ctrl + Shift + F12**: Expande a área do editor de texto, ocultando abas auxiliares.
+* **Ctrl + D**: Duplica a linha atual.
+* **Ctrl + Y**: Apaga a linha inteira de forma rápida.
+* **Ctrl + Shift + Setas (Cima/Baixo)**: Move a linha atual para cima ou para baixo no código mantendo o contexto.
+
+Templates de Código:
+
+* **psvm**: Cria o método main.
+* **sout**: Atalho para o comando de impressão `System.out.println()`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-16h39m06s849.jpg" alt="" width="840">
+</p>
+
+A JetBrains disponibiliza um guia de referência oficial (Reference Card) que compila os atalhos disponíveis para Windows e Linux. O documento é categorizado por funcionalidades para facilitar a consulta:
+
+* **Editing (Edição)**: Comandos para completude de código inteligente, geração de código (**Alt + Insert**) e comentários rápidos (**Ctrl + /**).
+* **Navigation (Navegação)**: Busca por classes (**Ctrl + N**), arquivos ou símbolos, além de navegação entre erros e métodos.
+* **Refactoring (Refatoração)**: Atalhos como o **Shift + F6** para renomear elementos e **Ctrl + Alt + M** para extrair métodos.
+* **Compile and Run**: Comandos para o build do projeto (**Ctrl + F9**) e execução da configuração selecionada (**Shift + F10**).
+* **VCS/Local History**: Atalhos para integração com controle de versão, como o commit (**Ctrl + K**) e o push (**Ctrl + Shift + K**).      
+
+
 ### 🟩 Vídeo 14 - Debug
 
 <video width="60%" controls>
@@ -708,7 +833,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/da94d26c-d002-4390-b7f3-a1a035ba5c45?autoplay=1
+
+
 
 ### 🟩 Vídeo 15 - Plugins
 
