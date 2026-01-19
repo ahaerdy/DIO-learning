@@ -235,7 +235,93 @@ Fork do repositório (com o tutorial): https://github.com/ahaerdy/fork-curso-dio
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/9b9d5b2f-bb33-4661-bfc2-71e9f92c244b?autoplay=1
+
+Este conteúdo é um guia prático introdutório sobre o uso da IDE Eclipse para o desenvolvimento em Java. O foco principal não é o ensino da linguagem em si, mas a familiarização com a interface, a configuração de áreas de trabalho (workspaces), a manipulação de "Perspectivas" e, especialmente, o uso de atalhos de teclado para aumentar a produtividade. O tutorial demonstra desde a criação de um projeto simples até a execução de um código "Hello World", destacando como a IDE facilita a escrita de códigos tradicionalmente verbosos do Java.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h48m29s672.jpg" alt="" width="840">
+</p>
+
+A interface inicial do Eclipse IDE apresenta o ambiente de desenvolvimento padrão, com o *Project Explorer* (explorador de projetos) localizado à esquerda. Neste momento, o workspace está vazio, indicando que nenhum projeto foi criado ou importado ainda, estando pronto para o início de uma nova aplicação Java.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h48m39s545.jpg" alt="" width="840">
+</p>
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h49m10s905.jpg" alt="" width="840">
+</p>
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h49m28s768.jpg" alt="" width="840">
+</p>
+
+Para iniciar a criação de uma nova aplicação, acessamos o assistente de criação de projetos através do menu. Na janela "Select a wizard", deve-se selecionar a opção **Java Project** dentro da categoria Java, que fornecerá a estrutura base necessária para o desenvolvimento de programas na linguagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h49m30s932.jpg" alt="" width="840">
+</p>
+
+Na janela de configuração do novo projeto Java, definimos o "Project name". Seguindo as boas práticas, utiliza-se o nome `primeiro-programa-java`, preferencialmente em letras minúsculas e separadas por hifens. Esta etapa também permite configurar o JRE (Java Runtime Environment) que será utilizado para compilar e rodar o projeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h49m52s832.jpg" alt="" width="840">
+</p>
+
+Dentro do projeto criado, procedemos com a criação de uma nova classe Java. O pacote (*Package*) é definido como `com.dio` e o nome da classe como `PrimeiroPrograma`, utilizando o padrão *CamelCase* (iniciais maiúsculas). Para agilizar o desenvolvimento, selecionamos a opção `public static void main(String[] args)`, que instrui a IDE a gerar automaticamente o ponto de entrada principal do programa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h50m12s955.jpg" alt="" width="840">
+</p>
+
+O código inicial apresenta a estrutura básica da classe com o método `main`. Ao utilizar o comando `System.out.println`, a aplicação imprime a mensagem "Hello World!" no Console da IDE, confirmando que o ambiente está configurado corretamente e o código foi compilado com sucesso.
+
+```java
+package com.dio;
+
+public class PrimeiroPrograma {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h50m23s924.jpg" alt="" width="840">
+</p>
+
+A IDE facilita o processo de execução do programa. Ao clicar com o botão direito sobre o código-fonte, é possível acessar o menu **Run As > Java Application**. Esse fluxo permite que o Eclipse salve automaticamente as alterações pendentes, compile o novo código e execute a aplicação de forma integrada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-08h50m40s463.jpg" alt="" width="840">
+</p>
+
+Nesta etapa final, o programa é incrementado com o uso de variáveis do tipo inteiro (`int`). O código realiza a soma de duas variáveis e concatena o resultado com o texto original dentro do `System.out.println`. O console exibe o resultado da operação aritmética junto à mensagem.
+
+```java
+package com.dio;
+
+public class PrimeiroPrograma {
+
+	public static void main(String[] args) {
+		int a = 2;
+		int b = 3;
+		System.out.println("Hello World! " + (a + b));
+	}
+
+}
+```      
+
 
 ### 🟩 Vídeo 08 - Atalhos
 
@@ -244,7 +330,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/33a71135-d694-4a38-9459-48ed80e7b196?autoplay=1
 
 ### 🟩 Vídeo 09 - Git e GitHub
 
