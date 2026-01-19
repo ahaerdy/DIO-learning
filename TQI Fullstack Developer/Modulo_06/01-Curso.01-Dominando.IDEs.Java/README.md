@@ -858,11 +858,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/149f4580-a965-47f2-8111-cd7ef22ab1d4?autoplay=1
 
+Este conteúdo apresenta um guia prático sobre o Visual Studio Code (VS Code), destacando sua versatilidade como uma IDE que, embora popular para JavaScript, oferece suporte robusto para o desenvolvimento em Java por meio de extensões. O tutorial abrange desde a instalação e personalização estética até funcionalidades avançadas, como a integração direta com o GitHub para clonagem de repositórios e a configuração do ambiente necessário para compilar e executar códigos Java de forma simplificada.
 
+# Certificado: Dominando IDEs Java
 
-##  Materiais de Apoio
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/UE78VGLQ.pdf
+- Certificado em pdf: [Certificado-Dominando_IDEs_Java.pdf](000-Midia_e_Anexos/Certificado-Dominando_IDEs_Java.pdf)
