@@ -840,30 +840,6 @@ Esta aula técnica aborda o processo de depuração (debug) no ambiente de desen
 ### Anotações
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-18h13m29s743.jpg" alt="" width="840">
-</p>
-
-A imagem apresenta a execução bem-sucedida da classe `PrimeiroPrograma` no IntelliJ IDEA. O código instanciam um objeto da classe `Gato` e, ao executá-lo, o console exibe os atributos do objeto como nulos, além de mostrar a saída de um objeto `Livro`. É possível observar que partes do código, como operações matemáticas simples e um "Hello World", estão comentadas.
-
-```java
-package br.com.dio;
-
-import br.com.dio.model.Gato;
-
-public class PrimeiroPrograma {
-    public static void main(String[] args) {
-        Gato gato = new Gato();
-        System.out.println(gato);
-
-        /*int a=5;
-        int b=3;
-        System.out.println("Hello World! " + (a+b));*/
-    }
-}
-
-```
-
-<p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-18h13m39s455.jpg" alt="" width="840">
 </p>
 
