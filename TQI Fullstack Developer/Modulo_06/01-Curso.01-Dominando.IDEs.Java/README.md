@@ -320,6 +320,100 @@ public class PrimeiroPrograma {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/33a71135-d694-4a38-9459-48ed80e7b196?autoplay=1
 
+O foco principal deste bloco é a otimização do fluxo de trabalho através da personalização da interface (temas e fontes), organização de pacotes e, crucialmente, o uso de atalhos de produtividade para a geração automática de código repetitivo (boilerplate), como construtores, getters/setters e métodos utilitários.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-10h46m59s235.jpg" alt="" width="840">
+</p>
+
+O processo de refatoração no Eclipse permite renomear pacotes de forma segura para manter a organização do projeto seguindo as convenções de nomenclatura. Na janela "Rename Package", é definido o novo nome do pacote (como `br.com.dio`) e as opções para atualizar referências e ocorrências textuais são marcadas para garantir que a mudança seja propagada por todo o código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-10h47m12s118.jpg" alt="" width="840">
+</p>
+
+Ao realizar a renomeação de um pacote que contém classes com o método `main`, o Eclipse exibe um aviso de segurança. Esse alerta informa que algumas configurações de execução ou scripts externos que dependem do nome qualificado da classe podem ser afetados, solicitando a confirmação do desenvolvedor para continuar com a operação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-10h47m20s115.jpg" alt="" width="840">
+</p>
+
+Após a refatoração, a estrutura do projeto é atualizada para o novo pacote, e o código da classe principal reflete essa mudança na declaração inicial. O exemplo abaixo demonstra a classe operando dentro do pacote correto com uma lógica simples de soma e impressão.
+
+```java
+package br.com.dio;
+
+public class PrimeiroPrograma {
+	public static void main(String[] args) {
+		int a = 2;
+		int b = 3;
+		System.out.println("Hello World! " + (a + b));
+	}
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h07m22s478.jpg" alt="" width="840">
+</p>
+
+Para organizar melhor o código e seguir padrões de arquitetura, é possível criar novas classes em pacotes específicos de modelo. Através do menu "New Java Class", define-se o nome da classe, como `Gato`, e o subpacote correspondente, como `br.com.dio.model`, estabelecendo uma separação clara de responsabilidades no projeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h11m27s899.jpg" alt="" width="840">
+</p>
+
+A classe `Gato` é criada inicialmente como uma estrutura básica dentro do pacote de modelos. Esta classe servirá como um objeto de representação para dados específicos que serão manipulados pelo programa.
+
+```java
+package br.com.dio.model;
+
+public class Gato {
+
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h12m01s266.jpg" alt="" width="840">
+</p>
+
+O Eclipse oferece ferramentas de produtividade para automatizar a criação de construtores. Através da opção "Generate Constructor using Fields", o desenvolvedor pode selecionar os atributos da classe (como nome, cor e idade) para que a IDE gere automaticamente o método construtor com a inicialização desses campos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h14m11s908.jpg" alt="" width="840">
+</p>
+
+Uma forma ágil de acessar funcionalidades no Eclipse é utilizar o atalho `Ctrl + 3` para abrir a barra de pesquisa rápida. Ao digitar parte do nome do comando desejado, como "constru", a IDE filtra as opções disponíveis, permitindo localizar e executar rapidamente o assistente de geração de construtores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h17m54s445.jpg" alt="" width="840">
+</p>
+
+Na tela de configuração da geração automática, é possível definir a ordem dos campos e o modificador de acesso do construtor. Ao confirmar a seleção de todos os atributos desejados, a IDE insere o código pronto no arquivo, poupando o trabalho manual de escrita repetitiva.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h18m34s145.jpg" alt="" width="840">
+</p>
+
+O resultado da geração automática é um construtor padronizado que utiliza a palavra-chave `this` para associar os parâmetros recebidos aos atributos privados da classe.
+
+```java
+public Gato(String nome, String cor, Integer idade) {
+	this.nome = nome;
+	this.cor = cor;
+	this.idade = idade;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h19m07s842.jpg" alt="" width="840">
+</p>
+
+Além dos construtores, o Eclipse também automatiza a criação de métodos de acesso e modificação (Getters e Setters). Utilizando novamente a busca rápida (atalho `ggas`), o desenvolvedor pode acessar o assistente para gerar esses métodos fundamentais para o encapsulamento dos dados da classe.
+
+
 ### 🟩 Vídeo 09 - Git e GitHub
 
 <video width="60%" controls>
@@ -327,7 +421,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/76dc0314-0fea-43eb-981b-feacf129e960?autoplay=1
 
 ### 🟩 Vídeo 10 - Debug
 
