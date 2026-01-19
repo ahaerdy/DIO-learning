@@ -110,6 +110,31 @@ O principal ganho do processo de ELT em comparação ao fluxo tradicional é a *
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/9a4c6d2c-549d-4cfa-a557-e46b1952bf7b?autoplay=1
 
+O vídeo aborda as diferenças fundamentais entre **dados estruturados, não estruturados e semiestruturados** no contexto dos processos de integração de dados. A explicação destaca que **bancos de dados relacionais** exigem estruturas rígidas e regras pré-definidas, enquanto dados brutos, como vídeos e e-mails, demandam maior flexibilidade. O conteúdo diferencia os fluxos **ETL e ELT**, enfatizando que carregar informações brutas antes da transformação acelera a coleta inicial. Essa abordagem permite maior agilidade, pois elimina a necessidade de verificações imediatas de esquemas ou restrições complexas. Por fim, o material reforça a importância de organizar esses conjuntos diversos para viabilizar **análises de dados** eficientes em repositórios centrais.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-20h49m54s872.jpg" alt="" width="840">
+</p>
+
+No processo de **ELT**, a etapa inicial de **Extração** foca na **coleta de dados brutos** provenientes de fontes heterogêneas. Esses dados, que muitas vezes não possuem estruturação ou organização prévia, são extraídos de diversas origens tecnológicas para uma integração posterior, incluindo:
+
+* **CRM e SGBD:** Sistemas de relacionamento com o cliente e bancos de dados relacionais tradicionais.
+* **Cloud e Files:** Armazenamento em nuvem e arquivos avulsos (como CSVs).
+* **Filas e Sistemas Legados:** Mensageria em tempo real e sistemas antigos da organização.
+
+Diferente do modelo tradicional, aqui os dados são capturados em seu estado original, independentemente de possuírem redundâncias ou lacunas, para que a carga ocorra de forma ágil.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-20h50m09s690.jpg" alt="" width="840">
+</p>
+
+A segunda etapa do processo é o **Load (Carga)**, que consiste na transferência e no carregamento dos **dados brutos** extraídos anteriormente. Nesta fase, as informações são enviadas diretamente para um **Data Warehouse** ou um repositório central.
+
+A principal característica desta etapa no modelo ELT é a velocidade. Como não há uma transformação prévia, o sistema não precisa verificar **constraints** (restrições), chaves primárias ou tipos de dados específicos antes da inserção. Essa ausência de uma estrutura rígida de checagem imediata permite que grandes volumes de dados, sejam eles estruturados, não estruturados ou semiestruturados, sejam armazenados rapidamente para processamento futuro.      
+
+
 ### 🟩 Vídeo 05 - Load, Transform e Vantagens do ELT
 
 <video width="60%" controls>
@@ -117,7 +142,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/013c99fd-3c64-47af-bb8d-280579bd8656?autoplay=1
 
 ### 🟩 Vídeo 06 - Diferenças entre ETL e ELT
 
