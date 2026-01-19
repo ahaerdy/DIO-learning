@@ -677,6 +677,54 @@ A visão final do código mostra a estrutura completa da classe `Calculadora` ap
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/1bdfc2be-f6d4-4f9c-ae45-85167bd6be28?autoplay=1
 
+O vídeo apresenta um guia prático sobre funcionalidades essenciais do Eclipse IDE, focando na importação de projetos Java existentes, configuração do ambiente de desenvolvimento e integração com o Git. A instrutora detalha procedimentos de organização de pastas, ajustes no Build Path para diferentes versões do JDK e explora as ferramentas de controle de versão nativas da IDE, preparando o terreno para a transição para o IntelliJ.
+
+## Parte 4 - IntelliJ
+
+### 🟩 Vídeo 12 - Criando seu primeiro projeto com IntelliJ
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.01-video_12.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 13 - Mais atalhos e versionamento
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.01-video_13.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/907e1507-001d-4187-bfed-bac33e689bb1?autoplay=1
+
+### 🟩 Vídeo 14 - Debug
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.01-video_14.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 15 - Plugins
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.01-video_15.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 16 - Outra opção de IDE: Visual Studio Code
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.01-video_16.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
 
 ##  Materiais de Apoio
 
