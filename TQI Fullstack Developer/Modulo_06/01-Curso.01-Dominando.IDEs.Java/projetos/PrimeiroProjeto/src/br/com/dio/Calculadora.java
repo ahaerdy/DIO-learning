@@ -16,7 +16,7 @@ public class Calculadora {
         int somar = somar(a, b);
         int subtrair = subtrair(a, b);
         int multiplicar = multiplicar(a, b);
-        int dividir = dividir(a,b);
+           int dividir = dividir(a,b);
 
         System.out.println("somar: " + somar);
         System.out.println("subt: " + subtrair);

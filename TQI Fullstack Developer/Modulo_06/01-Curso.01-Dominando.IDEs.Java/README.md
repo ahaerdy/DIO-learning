@@ -847,6 +847,8 @@ Esta aula técnica aborda o processo de depuração (debug) no ambiente de desen
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/b51d42fd-06c8-4bf5-95a4-05c1685c04c0?autoplay=1
 
+ A instrutora apresenta uma série de atalhos essenciais para navegação e gerenciamento de arquivos, além de demonstrar a instalação e o impacto visual de cinco plugins populares que visam aumentar a produtividade, melhorar a legibilidade do código e facilitar o aprendizado de comandos do teclado.
+
 ### 🟩 Vídeo 16 - Outra opção de IDE: Visual Studio Code
 
 <video width="60%" controls>
@@ -854,7 +856,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominando-ides-java/learning/149f4580-a965-47f2-8111-cd7ef22ab1d4?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
