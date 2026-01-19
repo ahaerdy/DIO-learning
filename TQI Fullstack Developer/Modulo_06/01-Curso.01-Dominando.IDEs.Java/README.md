@@ -322,33 +322,35 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
 
 O foco principal deste bloco é a otimização do fluxo de trabalho através da personalização da interface (temas e fontes), organização de pacotes e, crucialmente, o uso de atalhos de produtividade para a geração automática de código repetitivo (boilerplate), como construtores, getters/setters e métodos utilitários.
 
+### Anotações
+
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-10h46m59s235.jpg" alt="" width="840">
 </p>
 
-O processo de refatoração no Eclipse permite renomear pacotes de forma segura para manter a organização do projeto seguindo as convenções de nomenclatura. Na janela "Rename Package", é definido o novo nome do pacote (como `br.com.dio`) e as opções para atualizar referências e ocorrências textuais são marcadas para garantir que a mudança seja propagada por todo o código.
+Para renomear um pacote no Eclipse, o processo pode ser iniciado pressionando `F2` sobre o nome do pacote ou através do menu de refatoração. Nesta etapa, o pacote original `com.dio` está sendo alterado para `br.com.dio`. A IDE oferece opções para atualizar automaticamente as referências a este pacote em outros arquivos do projeto, garantindo a integridade do código.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-10h47m12s118.jpg" alt="" width="840">
 </p>
 
-Ao realizar a renomeação de um pacote que contém classes com o método `main`, o Eclipse exibe um aviso de segurança. Esse alerta informa que algumas configurações de execução ou scripts externos que dependem do nome qualificado da classe podem ser afetados, solicitando a confirmação do desenvolvedor para continuar com a operação.
+Ao realizar a alteração de nome em um pacote que contém uma classe com método `main`, o Eclipse exibe uma janela de confirmação alertando sobre possíveis impactos na execução de scripts ou configurações de lançamento. Para prosseguir com a refatoração e aplicar as mudanças, deve-se confirmar a operação clicando no botão "Continue".
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-10h47m20s115.jpg" alt="" width="840">
 </p>
 
-Após a refatoração, a estrutura do projeto é atualizada para o novo pacote, e o código da classe principal reflete essa mudança na declaração inicial. O exemplo abaixo demonstra a classe operando dentro do pacote correto com uma lógica simples de soma e impressão.
+Após a conclusão da refatoração, a declaração de pacote dentro da classe Java é atualizada automaticamente para refletir a nova estrutura de diretórios. O código fonte agora exibe o pacote renomeado, mantendo a classe `PrimeiroPrograma` dentro da nova hierarquia definida.
 
 ```java
 package br.com.dio;
 
 public class PrimeiroPrograma {
-	public static void main(String[] args) {
-		int a = 2;
-		int b = 3;
-		System.out.println("Hello World! " + (a + b));
-	}
+    public static void main(String[] args) {
+        int a = 2;
+        int b = 3;
+        System.out.println("Hello World! " + (a+b));
+    }
 }
 
 ```
@@ -357,13 +359,13 @@ public class PrimeiroPrograma {
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h07m22s478.jpg" alt="" width="840">
 </p>
 
-Para organizar melhor o código e seguir padrões de arquitetura, é possível criar novas classes em pacotes específicos de modelo. Através do menu "New Java Class", define-se o nome da classe, como `Gato`, e o subpacote correspondente, como `br.com.dio.model`, estabelecendo uma separação clara de responsabilidades no projeto.
+Na criação de uma nova classe Java, é possível definir subpacotes diretamente no campo "Package". Ao digitar `br.com.dio.model`, a IDE entende que a nova classe, denominada `Gato`, deve ser criada dentro de uma pasta `model`, que será aninhada na estrutura de pacotes existente. O uso de pontos no nome do pacote determina a hierarquia de pastas do projeto.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h11m27s899.jpg" alt="" width="840">
 </p>
 
-A classe `Gato` é criada inicialmente como uma estrutura básica dentro do pacote de modelos. Esta classe servirá como um objeto de representação para dados específicos que serão manipulados pelo programa.
+A classe `Gato` foi criada com sucesso dentro do pacote `br.com.dio.model`, conforme indicado na declaração `package` na primeira linha do arquivo. Neste momento, a classe está vazia, contendo apenas a estrutura básica pronta para receber a definição de atributos e métodos.
 
 ```java
 package br.com.dio.model;
@@ -378,31 +380,38 @@ public class Gato {
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h12m01s266.jpg" alt="" width="840">
 </p>
 
-O Eclipse oferece ferramentas de produtividade para automatizar a criação de construtores. Através da opção "Generate Constructor using Fields", o desenvolvedor pode selecionar os atributos da classe (como nome, cor e idade) para que a IDE gere automaticamente o método construtor com a inicialização desses campos.
+Após definir os atributos privados da classe (`nome`, `cor`, `idade`), utiliza-se o recurso de geração automática de código da IDE. Através do comando `Ctrl + 3`, acessa-se a funcionalidade "Generate Constructor using Fields". Nesta etapa, é possível selecionar quais atributos farão parte do construtor ou optar por criar um construtor vazio desmarcando os campos.
+
+```java
+private String nome;
+private String cor;
+private Integer idade;
+
+```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h14m11s908.jpg" alt="" width="840">
 </p>
 
-Uma forma ágil de acessar funcionalidades no Eclipse é utilizar o atalho `Ctrl + 3` para abrir a barra de pesquisa rápida. Ao digitar parte do nome do comando desejado, como "constru", a IDE filtra as opções disponíveis, permitindo localizar e executar rapidamente o assistente de geração de construtores.
+Um construtor padrão (sem argumentos) foi gerado no código: `public Gato() {}`. Logo abaixo, há um bloco de código comentado que exemplifica como seria a implementação manual de um construtor com argumentos. A ferramenta de busca de comandos (`Ctrl + 3`) está ativa novamente, permitindo buscar rapidamente a função para gerar novos construtores ou outros métodos.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h17m54s445.jpg" alt="" width="840">
 </p>
 
-Na tela de configuração da geração automática, é possível definir a ordem dos campos e o modificador de acesso do construtor. Ao confirmar a seleção de todos os atributos desejados, a IDE insere o código pronto no arquivo, poupando o trabalho manual de escrita repetitiva.
+Para criar um construtor que inicialize todos os dados do objeto, selecionam-se todos os campos disponíveis (`nome`, `cor`, `idade`) na janela "Generate Constructor using Fields". A opção de omitir a chamada ao construtor da superclasse (`super()`) também pode ser configurada nesta interface.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h18m34s145.jpg" alt="" width="840">
 </p>
 
-O resultado da geração automática é um construtor padronizado que utiliza a palavra-chave `this` para associar os parâmetros recebidos aos atributos privados da classe.
+O código agora apresenta dois construtores: o construtor vazio (`public Gato() {}`) e o construtor completo que recebe os parâmetros `nome`, `cor` e `idade` para inicializar os atributos da instância. O uso do `this` é empregado para diferenciar os atributos da classe dos parâmetros recebidos pelo método.
 
 ```java
 public Gato(String nome, String cor, Integer idade) {
-	this.nome = nome;
-	this.cor = cor;
-	this.idade = idade;
+    this.nome = nome;
+    this.cor = cor;
+    this.idade = idade;
 }
 
 ```
@@ -411,7 +420,104 @@ public Gato(String nome, String cor, Integer idade) {
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h19m07s842.jpg" alt="" width="840">
 </p>
 
-Além dos construtores, o Eclipse também automatiza a criação de métodos de acesso e modificação (Getters e Setters). Utilizando novamente a busca rápida (atalho `ggas`), o desenvolvedor pode acessar o assistente para gerar esses métodos fundamentais para o encapsulamento dos dados da classe.
+Para encapsular os dados da classe, utiliza-se novamente a busca de comandos do Eclipse (atalho `Ctrl + 3`), digitando parte do nome da funcionalidade desejada. A opção "Generate Getters and Setters" é localizada no menu, permitindo a criação automática dos métodos de acesso e modificação para os atributos privados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h19m25s398.jpg" alt="" width="840">
+</p>
+
+Na janela de geração de Getters e Setters, é possível escolher para quais atributos os métodos serão criados. A árvore de seleção permite marcar campos individuais ou todos de uma vez (`Select All`) para gerar os pares de métodos `get` e `set` correspondentes a `nome`, `cor` e `idade`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h19m35s191.jpg" alt="" width="840">
+</p>
+
+Os métodos de acesso foram inseridos na classe. O código mostra a implementação padrão gerada pela IDE, como `getNome()` que retorna a String correspondente, e `setNome(String nome)` que atualiza o valor do atributo. Essa automação acelera o desenvolvimento de classes de modelo (JavaBeans).
+
+```java
+public String getNome() {
+    return nome;
+}
+
+public void setNome(String nome) {
+    this.nome = nome;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h21m05s835.jpg" alt="" width="840">
+</p>
+
+A implementação dos métodos `hashCode()` e `equals()` é essencial para a comparação correta de objetos. A IDE oferece uma ferramenta dedicada para gerar esses métodos ("Generate hashCode() and equals()"), baseando-se nos atributos selecionados para determinar a unicidade e igualdade das instâncias da classe.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h21m15s384.jpg" alt="" width="840">
+</p>
+
+Para permitir uma representação textual legível do objeto, utiliza-se a função de geração do método `toString()`. Na janela de configuração, selecionam-se os campos que devem aparecer na String de retorno, facilitando a depuração e visualização dos dados do objeto em logs ou no console.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h23m18s559.jpg" alt="" width="840">
+</p>
+
+O método `toString()` gerado sobrescreve a implementação padrão da classe `Object` (`@Override`), retornando uma concatenação dos nomes dos campos e seus respectivos valores. Isso permite que, ao imprimir o objeto, sejam exibidos os dados internos em vez do endereço de memória.
+
+```java
+@Override
+public String toString() {
+    return "Gato [nome=" + nome + ", cor=" + cor + ", idade=" + idade + "]";
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h27m28s158.jpg" alt="" width="840">
+</p>
+
+Ao instanciar a classe `Gato` dentro da classe principal `PrimeiroPrograma`, a IDE identifica que `Gato` está em um pacote diferente (`br.com.dio.model`). O Eclipse sublinha o código em vermelho e sugere a importação automática da classe necessária (`br.com.dio.model.Gato`) através de um pop-up de correção rápida.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h33m02s869.jpg" alt="" width="840">
+</p>
+
+Com a importação resolvida (`import br.com.dio.model.Gato;`), o objeto é instanciado corretamente usando `Gato gato = new Gato();`. O código anterior que apenas imprimia "Hello World" foi comentado para dar lugar à utilização da nova classe de modelo criada.
+
+```java
+package br.com.dio;
+
+import br.com.dio.model.Gato;
+
+public class PrimeiroPrograma {
+    public static void main(String[] args) {
+        Gato gato = new Gato();
+        // ...
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-13h46m13s355.jpg" alt="" width="840">
+</p>
+
+O exemplo final demonstra a diferença entre usar uma classe importada e uma classe definida no mesmo arquivo. Uma classe `Livros` é criada localmente (sem modificador `public`) e instanciada no método `main`. Ao imprimir o objeto `gato`, o método `toString()` exibe os dados formatados, enquanto a impressão do objeto `livros` (sem `toString`) exibiria o endereço de memória padrão.
+
+```java
+public static void main(String[] args) {
+    Gato gato = new Gato();
+    Livros livros = new Livros();
+    
+    System.out.println(gato);
+    // ...
+}
+
+class Livros {
+    private String nome;
+    private String npag;
+}
+
+```      
 
 
 ### 🟩 Vídeo 09 - Git e GitHub
