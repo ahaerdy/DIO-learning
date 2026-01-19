@@ -224,6 +224,8 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/dominand
 
 O conteúdo consiste em um guia prático para a instalação e configuração inicial das duas principais IDEs (Ambientes de Desenvolvimento Integrado) utilizadas no ecossistema Java: Eclipse e IntelliJ IDEA. A instrutora enfatiza a importância de seguir um roteiro estruturado (arquivo README) para garantir que todas as dependências, como o JDK e o Git, estejam corretamente configuradas, facilitando o processo de preparação do ambiente de desenvolvimento para novos programadores.
 
+Fork do repositório (com o tutorial): https://github.com/ahaerdy/fork-curso-dio-dominando-ides-java
+
 ## Parte 4 - Eclipse
 
 ### 🟩 Vídeo 07 - Criando seu primeiro projeto com Eclipse
