@@ -473,6 +473,53 @@ Após o carregamento dos dados, a interface do Power BI exibe a visualização d
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/ed4d1c3a-85f5-4797-9890-fbcddb8b0a12?autoplay=1
 
+Os materiais apresentam uma introdução prática ao uso do **Power BI** para a análise de diferentes tipos de informações. O instrutor demonstra inicialmente como processar dados médicos sobre **diabetes**, examinando variáveis como **pressão arterial**, **índice de massa corporal** e níveis de **insulina**. Na sequência, o foco muda para um relatório de **vendas globais**, detalhando o desempenho financeiro por **países** e **segmentos**. O objetivo central é ensinar a criação de **gráficos interativos** e a aplicação de **métricas estatísticas** dentro da plataforma. Por fim, o conteúdo serve como um guia motivacional para quem deseja dar os **primeiros passos** na visualização de dados profissional.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h51m16s734.jpg" alt="" width="840">
+</p>
+
+Nesta visualização inicial do Power BI Desktop, observamos um painel de análise sobre diabetes. O relatório apresenta múltiplos gráficos que cruzam dados médicos e demográficos: na parte superior, um gráfico de barras analisa a "Soma de Diabetes Pedigree Function" por idade ("Age"); abaixo, dois gráficos combinados (linhas e colunas) detalham médias de pressão arterial ("BloodPressure"), glicose, insulina e BMI, além da soma de desfechos ("Outcome") por número de gestações ("Pregnancies") e idade. O ambiente exibe a interface de edição com as abas de "Página Inicial", "Visualizações" e o painel de "Campos" à direita.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h51m21s642.jpg" alt="" width="840">
+</p>
+
+A interface muda para a "Exibição de Dados", onde é possível visualizar a tabela bruta que alimenta o relatório. As colunas exibidas incluem dados biométricos como "Pregnancies", "Glucose", "Blood Pressure", "Skin Thickness", "Insulin", "BMI", "Diabetes Pedigree Function", "Age" e o "Outcome" (resultado). Esta tabela contém 768 linhas e permite verificar como os dados estão estruturados, como os valores binários do desfecho (0 ou 1) e as medidas numéricas de cada paciente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h51m24s901.jpg" alt="" width="840">
+</p>
+
+Neste momento, o foco é o gráfico de barras que correlaciona a "Soma de Diabetes Pedigree Function" com a idade ("Age"). O gráfico mostra picos de valores em idades específicas (em torno dos 20 a 50 anos), indicando o acúmulo da função de pedigree genético na amostra. No painel de configuração à direita, vemos que o campo "Age" está definido no Eixo X e a "Soma de Diabetes Pedigree Function" no Eixo Y.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h51m30s946.jpg" alt="" width="840">
+</p>
+
+Esta tela destaca o gráfico "Média de BloodPressure, Média de Diabetes Pedigree Function e Soma de Outcome por Pregnancies". É um gráfico de colunas agrupadas com linha, onde as colunas representam as médias de pressão e pedigree, enquanto a linha (ou uma coluna secundária) rastreia a soma do "Outcome". Este dado de soma é crucial pois, como o valor original é binário (0 ou 1), uma soma de 38 indica que exatamente 38 mulheres naquela categoria tiveram o resultado positivo para o estudo de diabetes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h51m35s560.jpg" alt="" width="840">
+</p>
+
+Aqui visualizamos a análise detalhada das médias de BMI, Glicose e Insulina por idade. O gráfico permite observar a variação dos níveis de açúcar no organismo (glicose) e de insulina em relação ao índice de massa corporal ao longo dos anos. A configuração no painel de "Visualizações" mostra que múltiplos valores foram adicionados ao Eixo Y para permitir este comparativo direto entre diferentes métricas médicas em um único visual.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h51m39s062.jpg" alt="" width="840">
+</p>
+
+A apresentação transiciona para um novo exemplo: o "Report Executivo de Vendas". Este painel demonstra capacidades de filtragem temporal e análise de produtos. Vemos segmentadores de dados para Ano (2013 e 2014) e Trimestre, além de gráficos de barras horizontais que mostram a "Soma de Sales por Product" e um gráfico de pizza para a "Contagem de Sale Price por Product", permitindo analisar o desempenho comercial de forma dinâmica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h51m41s828.jpg" alt="" width="840">
+</p>
+
+Na segunda página do relatório de vendas, o foco é o equilíbrio global. O visual apresenta a "Soma de Sales por Country", destacando a distribuição geográfica das vendas em países como Canadá, França, Alemanha, México e Estados Unidos. O painel inclui também cartões com métricas isoladas, como o "Máximo de Units Sold" (4,49 mil), e análises de lucro ("Profit") por segmento e mês, servindo de exemplo para as construções fundamentais de programação e visualização em Power BI.      
+
+
 ### 🟩 Vídeo 10 - Coletando, modificando os dados do Kaggle e criando o primeiro gráfico
 
 <video width="60%" controls>
@@ -480,7 +527,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/aa7cf0c2-bfa8-4844-8b66-466c147f7fb3?autoplay=1
 
 ### 🟩 Vídeo 11 - Caracterizando o dataset diabetes com gráfico de barras com linhas
 
