@@ -120,6 +120,8 @@ O vídeo apresenta uma introdução prática ao ecossistema do Power BI, destaca
 
 O ponto de partida para utilizar a ferramenta é o site oficial do Microsoft Power BI. Nele, o usuário encontra as opções principais para começar a explorar a plataforma, com destaque para o botão de início gratuito. Embora o foco da aplicação de alto desempenho seja o desenvolvimento local, a Microsoft oferece caminhos para que o usuário experimente as funcionalidades de análise de dados diretamente pelo navegador.
 
+Link: https://powerbi.microsoft.com/pt-br/
+
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h01m33s047.jpg" alt="" width="840">
 </p>
