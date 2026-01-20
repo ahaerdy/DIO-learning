@@ -88,6 +88,20 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 6: Java
 
 - [x] Curso: [Dominando IDEs Java](Modulo_06/01-Curso.01-Dominando.IDEs.Java)
+- [ ] Curso: Variáveis, Tipos de Dados e Operadores Matemáticos em Java
+- [ ] Curso: Entendendo Métodos Java
+- [ ] Curso: Lógica Condicional e Controle de Fluxos em Java
+- [ ] Curso: Estruturas de Repetição e Arrays em Java
+- [ ] Curso: Trabalhando com Collections Java
+- [ ] Curso: Estruturas de Dados em Java: Principais Implementações
+- [ ] Curso: Debugging Java
+- [ ] Curso: Tratamento de Exceções em Java
+- [ ] Curso: Desafios TQI - Java
+- [ ] Curso: Programação Orientada a Objetos com Java
+- [ ] Curso: Trabalhando com Banco de Dados utilizando JDBC e JPA
+- [ ] Curso: Persistência de Dados com Java, JPA e Hibernate
+- [ ] Projeto: Criando um Banco Digital com Java e Orientação a Objetos 
+- [ ] Curso: Testes Unitários Com JUnit
 
 ### Módulo 7: Spring Framework
 
