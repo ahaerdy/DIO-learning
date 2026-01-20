@@ -397,6 +397,47 @@ A visualização de **Modelagem** (ou Modelo) é onde se define a estrutura lóg
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/5d555db8-cfab-4981-a058-37bdc88de135?autoplay=1
 
+O vídeo apresenta um guia prático sobre a obtenção e exploração de conjuntos de dados (datasets) para análise, destacando o Kaggle como uma plataforma essencial para cientistas de dados. A instrutora demonstra como navegar no site, selecionar dados por categorias e detalha um estudo de caso específico sobre diabetes em mulheres, explicando a importância de compreender cada variável antes de iniciar a visualização e análise no Power BI.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h07m49s986.jpg" alt="" width="840">
+</p>
+
+A interface inicial do Kaggle apresenta diversas opções para quem deseja iniciar na ciência de dados, como cursos rápidos e competições. No menu lateral, observamos o acesso a datasets e códigos, além de uma lista de itens visualizados recentemente, onde já consta o "Diabetes Dataset", indicando o ponto de partida para o estudo de caso que será desenvolvido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h07m55s100.jpg" alt="" width="840">
+</p>
+
+Ao navegar pela seção de datasets, é possível filtrar bases de dados por categorias como educação, classificação e visão computacional. O sistema destaca bases em tendência, permitindo explorar e analisar diferentes tipos de dados antes de selecionar o arquivo específico para o projeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h07m58s955.jpg" alt="" width="840">
+</p>
+
+A página do "Diabetes Dataset" revela que os dados são originários do *National Institute of Diabetes and Digestive and Kidney Diseases*. O objetivo central desta base de dados é prever diagnosticamente se uma paciente possui diabetes, utilizando medições diagnósticas específicas incluídas no conjunto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h08m08s189.jpg" alt="" width="840">
+</p>
+
+O detalhamento do dataset impõe restrições importantes sobre a amostra: todos os registros referem-se a mulheres com pelo menos 21 anos de idade e de herança indígena Pima. A estrutura do arquivo CSV conta com diversas variáveis médicas independentes (preditores) e uma única variável dependente de alvo, denominada "Outcome".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h08m11s143.jpg" alt="" width="840">
+</p>
+
+Na seção "About Dataset", reforça-se que este é um problema de classificação binária fundamentado em variáveis médicas. O arquivo é leve (cerca de 9 kB) e possui uma licença de domínio público (CC0), sendo atualizado anualmente para garantir a relevância das informações para estudos de visualização e análise de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h08m15s644.jpg" alt="" width="840">
+</p>
+
+O "Data Explorer" detalha os atributos presentes nas 9 colunas do arquivo `diabetes.csv`. As variáveis incluem o número de gestações (*Pregnancies*), o nível de glicose no sangue (*Glucose*), a pressão arterial (*Blood Pressure*) e a espessura da dobra cutânea (*Skin Thickness*). A variável final, "Outcome", utiliza os valores 1 para presença de diabetes e 0 para ausência.      
+
+
 ### 🟩 Vídeo 08 - Não tenho dataset e agora? - Power BI Samples
 
 <video width="60%" controls>
@@ -404,7 +445,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/e82a74f8-3653-4555-a790-6cf34adc0fac?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Quais relatórios iremos fazer neste curso?
 
