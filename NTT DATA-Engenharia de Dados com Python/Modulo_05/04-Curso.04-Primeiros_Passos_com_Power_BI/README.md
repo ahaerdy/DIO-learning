@@ -110,6 +110,72 @@ O posicionamento de mercado do Power BI é validado pelo **Quadrante Mágico da 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/c9ff68f8-125b-406b-8603-489c843c8817?autoplay=1
 
+O vídeo apresenta uma introdução prática ao ecossistema do Power BI, destacando as diferenças entre as versões Desktop e Web (browser). O foco principal recai sobre a navegação na interface online, a utilização de conjuntos de dados de exemplo (samples) e a funcionalidade de Scorecards para o monitoramento estratégico de metas e KPIs. O conteúdo enfatiza a importância de plataformas externas como Kaggle e GitHub para o desenvolvimento de portfólios e o treinamento de cientistas de dados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h01m21s375.jpg" alt="" width="840">
+</p>
+
+O ponto de partida para utilizar a ferramenta é o site oficial do Microsoft Power BI. Nele, o usuário encontra as opções principais para começar a explorar a plataforma, com destaque para o botão de início gratuito. Embora o foco da aplicação de alto desempenho seja o desenvolvimento local, a Microsoft oferece caminhos para que o usuário experimente as funcionalidades de análise de dados diretamente pelo navegador.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h01m33s047.jpg" alt="" width="840">
+</p>
+
+Ao avançar para a área de introdução, a plataforma detalha as possibilidades de uso, como a obtenção de insights significativos e a criação de relatórios de análise visual. Nesta etapa, o usuário é incentivado a escolher entre descobrir relatórios relevantes, extrair insights ou compartilhar essas informações com a equipe, consolidando o caráter colaborativo do ecossistema Power BI.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h01m41s407.jpg" alt="" width="840">
+</p>
+
+A interface do Power BI no browser (Serviço do Power BI) apresenta uma organização baseada em uma barra lateral de navegação. Na página inicial, o usuário tem acesso rápido a tutoriais de introdução, como "Explore os conceitos básicos" e "Início rápido", além de visualizar os itens recentes e os espaços de trabalho disponíveis, como o "Meu workspace".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h02m43s609.jpg" alt="" width="840">
+</p>
+
+Dentro do ambiente web, o menu lateral permite alternar entre diferentes visões:
+
+* **Página Inicial:** Visão geral e recomendações.
+* **Criar:** Início de novos relatórios.
+* **Procurar:** Localização de relatórios e dashboards existentes.
+* **Hub de dados:** Centralização de conjuntos de dados disponíveis.
+* **Metrics:** Acompanhamento de indicadores e scorecards.
+* **Workspaces:** Áreas de trabalho específicas para diferentes projetos ou contextos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h02m53s828.jpg" alt="" width="840">
+</p>
+
+Na aba **Criar**, o sistema oferece opções para adicionar dados e iniciar um relatório. É possível colar dados manualmente, escolher um conjunto de dados já publicado ou até optar pela criação automática de um relatório predefinido. Caso a fonte de dados desejada não esteja disponível na web, a plataforma sugere o uso do Power BI Desktop para maior flexibilidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h03m12s719.jpg" alt="" width="840">
+</p>
+
+O **Hub de dados** funciona como um local central para gerenciar e descobrir dados em toda a organização. Um exemplo prático disponível é o "Supplier Quality Analysis Sample", um conjunto de dados de exemplo (sample) fornecido pela Microsoft para que o usuário possa explorar a estrutura de dados e as possibilidades de visualização sem precisar importar arquivos externos inicialmente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h03m45s758.jpg" alt="" width="840">
+</p>
+
+A seção de **Métricas (Metrics)** é voltada para o acompanhamento colaborativo de metas de negócio. Através de **scorecards**, gestores e equipes podem monitorar o desempenho de indicadores cruciais. A plataforma oferece diversos modelos prontos (samples), como scorecards para educação, vendas, marketing e recursos humanos, que unificam dados e objetivos em uma única interface.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h03m54s207.jpg" alt="" width="840">
+</p>
+
+Ao abrir um exemplo como o **Education Sample**, o scorecard exibe métricas detalhadas divididas por status: "No prazo", "Em risco" ou "Concluído". Cada item mostra o valor atual em relação à meta (ex: 34/45), quem é o proprietário daquela métrica e o progresso histórico, permitindo uma análise rápida se os objetivos estratégicos da organização estão sendo atingidos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h03m59s442.jpg" alt="" width="840">
+</p>
+
+Para cada métrica individual no scorecard, é possível abrir um painel de detalhes que apresenta o histórico e o período de tempo em formato gráfico. Isso fornece uma visão granular da evolução dos dados, facilitando a identificação de tendências ou problemas em metas específicas, como o engajamento de estudantes ou a satisfação em pesquisas trimestrais.
+
+
 ### 🟩 Vídeo 04 - Explorando Power BI Service (Browser) - Parte 2
 
 <video width="60%" controls>
@@ -117,7 +183,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/3e2109f5-b2e4-4dbb-a08e-8b00737d8689?autoplay=1
 
 ### 🟩 Vídeo 05 - Instalando o Power BI Desktop
 
