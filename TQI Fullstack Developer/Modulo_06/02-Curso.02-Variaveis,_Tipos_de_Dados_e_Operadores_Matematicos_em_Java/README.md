@@ -459,13 +459,7 @@ Nesta aula o instrutor demonstra a criação de variáveis para armazenar **valo
 
 ### Anotações
 
-Código apresentado pelo instrutor:
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h40m23s024.jpg" alt="" width="840">
-</p>
-
-Segue o código completo em Java, comentado linha a linha com base nas explicações e observações técnicas fornecidas pelo professor durante a aula.
+Segue o código completo em Java apresentado pelo instrutor, comentado linha a linha com base nas explicações e observações técnicas fornecidas durante a aula.
 
 ```java
 package one.digitalinnovation.basecamp; // Define o pacote para organizar as classes do projeto
