@@ -447,6 +447,21 @@ O "Data Explorer" detalha os atributos presentes nas 9 colunas do arquivo `diabe
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/e82a74f8-3653-4555-a790-6cf34adc0fac?autoplay=1
 
+Este conteúdo consiste em um guia prático sobre como iniciar a manipulação de dados no **Power BI** utilizando bases de exemplos nativas da plataforma. O instrutor demonstra o processo de **extração de informações**, focando especificamente em um conjunto de dados do setor **financeiro** para facilitar o aprendizado de quem não possui arquivos próprios. A explicação detalha as etapas iniciais do **fluxo ETL**, mencionando que, após o carregamento, os dados passarão por uma fase de **normalização e transformação**. Ao explorar a tabela, são destacados campos essenciais como **segmentos de mercado**, volumes de vendas e lucros, que servirão de base para a criação de painéis visuais. O objetivo final é preparar o usuário para realizar **análises métricas** e construir visualizações de dados eficientes em vídeos subsequentes.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h35m16s571.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o Power BI Desktop é inicializado para a recuperação de informações. Para fins de treinamento, a ferramenta disponibiliza um conjunto de dados de exemplo (sample) focado na área financeira, permitindo que usuários construam modelos e dashboards mesmo sem acesso a bases externas. Ao conectar-se a esse recurso, o sistema identifica o arquivo "Financial Sample.xlsx", exibindo a tabela **financials** disponível para importação. O usuário pode optar por carregar os dados diretamente ou transformá-los, iniciando o processo de **ETL (Extract, Transform and Load)**, onde a extração ocorre no carregamento e a normalização das informações é preparada para as fases seguintes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-18h35m40s048.jpg" alt="" width="840">
+</p>
+
+Após o carregamento dos dados, a interface do Power BI exibe a visualização de tabela com as colunas estruturadas da base financeira. É possível observar campos como **Segment** (Segmento), **Country** (País), **Product** (Produto), **Units Sold** (Unidades Vendidas), além de métricas de valores como **Gross Sales**, **Discounts** e **Sales**. No painel lateral de campos, o software identifica e organiza os dados, criando automaticamente somatórias para campos numéricos (indicados pelo símbolo ) e permitindo a criação de novas métricas. Essa estrutura serve de base para a construção das visualizações e análise dos dados no relatório.
 
 
 ### 🟩 Vídeo 09 - Quais relatórios iremos fazer neste curso?
@@ -456,7 +471,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/ed4d1c3a-85f5-4797-9890-fbcddb8b0a12?autoplay=1
 
 ### 🟩 Vídeo 10 - Coletando, modificando os dados do Kaggle e criando o primeiro gráfico
 
