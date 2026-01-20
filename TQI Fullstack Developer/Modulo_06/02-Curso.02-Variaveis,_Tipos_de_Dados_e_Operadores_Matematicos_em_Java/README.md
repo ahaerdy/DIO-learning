@@ -347,6 +347,102 @@ Abaixo da área de saída, a IDE ainda exibe parte das instruções de impressã
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/953faabc-94d8-45df-a8f1-e40db3d16201?autoplay=1
 
+Esta aula aborda os fundamentos dos tipos de dados na programação, definindo-os como o conjunto de valores e operações que uma variável pode assumir e sofrer. O conteúdo explora as classificações de tipagem (estática/forte vs. dinâmica/fraca), a distinção entre tipos primitivos e compostos, e detalha as categorias numéricas, textuais e lógicas, enfatizando a importância da escolha correta do tipo para a eficiência e integridade do software.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h11m13s497.jpg" alt="" width="840">
+</p>
+
+Esta aula marca o início do estudo sobre **Tipos de Dado**, dentro do contexto de Variáveis e Operadores Aritméticos. O objetivo principal é definir o que são esses tipos e compreender os critérios para a escolha adequada de cada um durante o desenvolvimento de um software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h11m18s436.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, define-se **Tipo de Dado** como o conjunto de valores que uma variável pode assumir, juntamente com as operações que podem ser realizadas sobre esses valores. A tipificação é explicada sob dois prismas:
+
+* **Estática (Forte) vs. Dinâmica (Fraca):** Na tipificação estática, o tipo é definido na criação da variável (comum em linguagens compiladas). Na dinâmica, o tipo é inferido pelo valor atribuído durante a execução (comum em linguagens interpretadas).
+* **Primitivo vs. Composto:** Tipos primitivos são os dados básicos e atômicos (numéricos, textuais simples). Tipos compostos (como objetos ou *structs*) são heterogêneos, podendo agrupar diferentes tipos primitivos ou até outros tipos compostos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h11m27s222.jpg" alt="" width="840">
+</p>
+
+As linguagens de programação oferecem quatro categorias principais de tipos de dados:
+
+1. **Textual:** Utilizado para armazenar caracteres, palavras ou blocos de texto.
+2. **Numeral:** Destinado a números inteiros ou reais (fracionários). A capacidade de armazenamento depende da quantidade de bits do tipo escolhido.
+3. **Lógico:** Armazena estados booleanos (verdadeiro ou falso).
+4. **Objeto:** Relacionado à orientação a objetos (não aprofundado neste módulo básico).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h11m34s543.jpg" alt="" width="840">
+</p>
+
+Abaixo, observamos exemplos práticos de **tipos numerais inteiros** em Java. Cada tipo possui uma capacidade de armazenamento distinta:
+
+* **byte:** De -128 até 127.
+* **short:** De -32.768 até 32.767.
+* **int:** O tipo padrão para inteiros, com uma faixa muito mais ampla de valores.
+
+```java
+byte b = 15;
+short s = -15785;
+int i = 8515785;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h11m36s089.jpg" alt="" width="840">
+</p>
+
+Para números inteiros de altíssima magnitude ou números com casas decimais (reais), utilizam-se os seguintes tipos:
+
+* **long:** Inteiro de 64 bits. Exige o sufixo "L".
+* **float:** Real de 32 bits. Exige obrigatoriamente o sufixo "F".
+* **double:** Real de 64 bits. Oferece maior precisão e o sufixo "D" é opcional.
+
+```java
+long L = 5938515785L;
+float f = 3.14F;
+double d = 3.14;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h11m38s846.jpg" alt="" width="840">
+</p>
+
+A manipulação de **texto** em Java diferencia caracteres individuais de cadeias de texto:
+
+* **char:** Representa um único caractere Unicode (16 bits). Deve ser declarado entre **aspas simples**.
+* **String:** Embora seja um tipo composto (objeto), é fundamental para o uso cotidiano. Deve ser declarada entre **aspas duplas**.
+
+```java
+char c = '\u0054'; // Representação Unicode para a letra 'T'
+char c2 = 'T';
+String s = "T";
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h11m43s144.jpg" alt="" width="840">
+</p>
+
+O **tipo lógico** é representado pelo `boolean`. Ele não permite operações matemáticas e comporta apenas dois valores: `true` (verdadeiro) ou `false` (falso).
+
+```java
+boolean s = false;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h11m49s722.jpg" alt="" width="840">
+</p>
+
+Linguagens modernas atribuem **valores default** (padrão) a variáveis que não foram explicitamente inicializadas. Isso previne erros de leitura de "sujeira" da memória RAM.
 
 
 ### 🟩 Vídeo 05 - Exercitando
@@ -356,7 +452,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variavei
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/9b32d383-6989-445f-b593-0f902af189c7?autoplay=1
 
 ## Parte 3 - Operadores Aritméticos
 
