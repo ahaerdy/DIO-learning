@@ -839,6 +839,83 @@ Essa operação exige cautela, especialmente em transações financeiras, onde o
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/27c0145b-7930-4993-a345-3b5dab49fa64?autoplay=1
 
+O vídeo detalha **conversão de tipos de dados**, processo também conhecido como **casting** na programação Java. O autor diferencia o **upcast**, que ocorre de forma automática e segura quando um valor é promovido para um espaço maior, do **downcast**, que exige declaração explícita e oferece riscos. É enfatizado que reduzir a capacidade de representação pode resultar em **perda de informação**, arredondamentos indesejados ou no **truncamento** de valores fracionários ao convertê-los para inteiros. O texto demonstra que, embora conversões sejam possíveis entre quase todos os tipos, o desenvolvedor deve ser cauteloso com os **efeitos colaterais** de reduzir o tamanho de um dado. Por fim, o conteúdo serve como um guia prático para entender como a memória do computador lida com diferentes **capacidades de armazenamento** numérico.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h47m38s757.jpg" alt="" width="840">
+</p>
+
+Esta aula foca na resolução do exercício sobre **casting** (conversões de tipos), explorando como o Java lida com a transferência de dados entre variáveis de capacidades distintas. O exemplo demonstra que o **upcast** (promoção) é um processo seguro e implícito, enquanto o **downcast** (rebaixamento) exige declaração explícita e oferece riscos à integridade dos dados.
+
+### Conceitos Fundamentais de Casting
+
+* **Downcast e Perda de Informação**: Quando um valor de maior capacidade é forçado em um tipo menor, pode ocorrer perda de informação se o valor exceder o limite do destino.
+* **Upcast Implícito**: A promoção de um tipo menor para um maior é automática, pois sempre haverá espaço suficiente para a representação, não gerando efeitos colaterais.
+* **Truncamento**: Converter valores de ponto flutuante para inteiros resulta na perda da parte fracionária, mantendo apenas a parte inteira do número.
+* **Flexibilidade entre Tipos**: O Java permite conversões entre quase todos os tipos numéricos, desde que o casting seja feito de forma explícita nos casos de redução de capacidade.
+
+```java
+package one.digitalinnovation.basecamp;
+
+/**
+ * Classe de exemplo para o exercício da Aula 4 de Variáveis, Tipos de Dado e Operadores aritméticos.
+ */
+public class Main {
+    public static void main(String[] args) {
+
+        byte b1;
+        short s1 = 1000;
+        b1 = (byte) s1; // Downcast: Redução de capacidade; ocasionou perda de informação (1000 virou -24)
+
+        long l1;
+        int i1 = 10;
+        l1 = i1; // Upcast: Promoção automática (implícita); não há perda de informação
+
+        int i2;
+        long l2 = 1000000000000000000L; 
+        i2 = (int) l2; // Downcast: Valor muito grande para o int; resultou em perda de informação
+
+        int i3;
+        long l3 = 10000L;
+        i3 = (int) l3; // Downcast: Embora explícito, não houve perda pois 10.000 cabe no limite do int
+
+        double d1;
+        float f1 = 10.5f;
+        d1 = f1; // Upcast: Valor real promovido para double; sobra espaço de representação
+
+        float f2;
+        double d2 = 1000.58d;
+        f2 = (float) d2; // Downcast: Sem perda perceptível pois as casas decimais são poucas
+
+        float f3;
+        double d3 = 10000.588888888888888888888888888888888888888d;
+        f3 = (float) d3; // Downcast: Muitas casas decimais geraram perda de precisão (arredondamento)
+
+        int i4;
+        float f4 = 11.5697f;
+        i4 = (int) f4; // Truncar: A parte fracionária é ignorada, mantendo apenas o valor inteiro 11
+
+        b1 = (byte) d3; // Downcast extremo: De double (maior) para byte (menor); resultou em apenas 16
+
+        // Impressão dos resultados para conferência dos efeitos colaterais do casting
+        System.out.println("b1:" + b1);
+        System.out.println("l1:" + l1);
+        System.out.println("i2:" + i2);
+        System.out.println("i3:" + i3);
+        System.out.println("d1:" + d1);
+        System.out.println("f2:" + f2);
+        System.out.println("f3:" + f3);
+        System.out.println("i4:" + i4);
+        System.out.println("b1:" + b1);
+    }
+}
+
+```
+
+
+
 ### 🟩 Vídeo 10 - Encerramento
 
 <video width="60%" controls>
@@ -846,8 +923,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variavei
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/8612fba9-75b7-4226-8869-895f2a405088?autoplay=1
-
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/8cbf4e9a-ecda-409e-b9bb-e0acfb591f0a?autoplay=1
 
 
 
