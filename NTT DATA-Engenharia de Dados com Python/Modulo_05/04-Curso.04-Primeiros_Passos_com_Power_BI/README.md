@@ -9,13 +9,57 @@
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/adbc7cbe-940c-4e33-a662-c8e5bd6adf34?autoplay=1
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-15h11m33s693.jpg" alt="" width="840">
+</p>
+
+Esta etapa inicial introduz os fundamentos de análise de dados dentro do ecossistema Power BI. O objetivo é compreender o conceito de *self-service BI*, uma abordagem que visa descentralizar a análise de dados, permitindo que analistas de negócios e profissionais sem formação técnica em TI ganhem independência. Dessa forma, é possível realizar diagnósticos e gerar insights sem a necessidade de domínio profundo em lógica de programação complexa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-15h11m35s978.jpg" alt="" width="840">
+</p>
+
+A análise de dados é categorizada em quatro pilares principais, dependendo do objetivo do negócio:
+
+* **Descritiva:** Focada em responder "O que aconteceu?", caracterizando a base de dados atual.
+* **Diagnóstica:** Busca entender "Por que aconteceu?", identificando causas e padrões.
+* **Preditiva:** Utiliza modelos para projetar "O que vai acontecer?".
+* **Prescritiva:** Indica "O que fazer?", sugerindo ações baseadas nas previsões.
+
+No contexto do Power BI, o foco inicial recai sobre as análises descritiva e diagnóstica. Para análises preditivas avançadas, o uso de linguagens como Python ou Java (esta última muito comum em engenharia de dados) torna-se necessário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-15h11m43s758.jpg" alt="" width="840">
+</p>
+
+O Power BI define-se como uma ferramenta que "preenche a lacuna entre os dados e a tomada de decisão". Sua interface é projetada para ser amigável e baseada no conceito de "arrastar e soltar", facilitando a criação de relatórios e dashboards. Enquanto os relatórios oferecem visualizações detalhadas e segmentadas, os dashboards permitem uma visão consolidada para o monitoramento estratégico dos indicadores de negócio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-15h11m46s139.jpg" alt="" width="840">
+</p>
+
+A plataforma permite a criação de experiências de dados ricas através de diversos recursos visuais, como árvores hierárquicas, gráficos de barras (ex: *Sales by developer*) e gráficos de rosca (ex: *Games by publisher*). Além da facilidade de uso, o Power BI oferece extensibilidade para usuários avançados, permitindo a execução de scripts em R e Python diretamente na ferramenta para análises estatísticas e científicas mais profundas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-15h11m48s834.jpg" alt="" width="840">
+</p>
+
+Uma das grandes forças do Power BI é sua capacidade de integração com uma vasta gama de fontes de dados. Através do menu "Get Data", é possível conectar-se a:
+
+* **Arquivos e Bancos de Dados Locais:** Excel, CSV, SQL Server, MySQL, PostgreSQL e SAP.
+* **Soluções em Nuvem:** Azure, Amazon Redshift, Google BigQuery e Snowflake.
+* **Plataformas de Negócio:** Power Platform (Power Apps e Power Automate) e serviços online.
+
+Essa versatilidade permite que a ferramenta lide tanto com pequenos conjuntos de dados quanto com Big Data, integrando-se a ecossistemas como o Hadoop para processamento de grandes volumes.
+
+
 ### 🟩 Vídeo 02 - Por que Power BI?
 
 link do vídeo:
 
 ### 🟩 Vídeo 03 - Explorando Power BI Service (Browser) - Parte 1
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/58535aa8-ece3-4962-a5e9-0f04ae4c9168?autoplay=1
 
 ### 🟩 Vídeo 04 - Explorando Power BI Service (Browser) - Parte 2
 
