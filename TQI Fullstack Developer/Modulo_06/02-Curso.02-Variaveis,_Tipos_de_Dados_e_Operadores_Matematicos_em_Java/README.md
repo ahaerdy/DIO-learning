@@ -624,6 +624,112 @@ Dessa forma, em uma expressão complexa, os operadores pós-fixados serão proce
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/a87cd5e1-0ca1-493a-8700-56108cf21d2b?autoplay=1
 
+Aula prática sobre **programação em Java**, focada especificamente no uso de **operadores aritméticos e de atribuição**. O instrutor demonstra como utilizar incrementos **pré e pós-fixados**, explicando como a ordem de execução altera o valor final das variáveis. Além das operações matemáticas básicas, o texto aborda **atribuições compostas** e a importância das **regras de precedência** em expressões complexas. O conteúdo enfatiza a diferença entre a teoria acadêmica e as **boas práticas de mercado**, sugerindo quais métodos são mais comuns no dia a dia profissional. Por fim, o material serve como um guia de fixação para entender como o computador processa cálculos e organiza o armazenamento de dados na memória.
+
+### Anotações
+
+Conforme observado em aula, este exercício prioriza a fixação de conceitos sobre boas práticas rigorosas, utilizando métodos auxiliares para organizar os diferentes tipos de operadores.
+
+```java
+package one.digitalinnovation.basecamp; [cite_start]// Define o pacote de organização das classes do projeto[cite: 1].
+
+[cite_start]public class Main { // Declara a classe principal para o exercício sobre variáveis e operadores[cite: 1, 2].
+
+    [cite_start]public static void main(String[] args) { // Método de entrada que gerencia a ordem de execução dos exemplos[cite: 1].
+        System.out.println("PrePos"); [cite_start]// Imprime o cabeçalho da seção de incrementos e decrementos[cite: 1].
+        prePos(); [cite_start]// Chama o método para demonstrar operadores pré e pós-fixados[cite: 1, 2].
+        
+        System.out.println("Aritmético"); [cite_start]// Imprime o cabeçalho da seção de operações matemáticas básicas[cite: 1].
+        aritmetico(); [cite_start]// Executa o método focado em soma, subtração, multiplicação, divisão e módulo[cite: 1, 2].
+        
+        System.out.println("Atribuição"); [cite_start]// Imprime o cabeçalho da seção de tipos de atribuição[cite: 1].
+        atribuicao(); [cite_start]// Chama o método que explora atribuições simples e compostas[cite: 1, 2].
+        
+        System.out.println("Precedencia"); [cite_start]// Imprime o cabeçalho da seção de ordem de execução[cite: 1].
+        precedencia(); [cite_start]// Executa o método que demonstra a hierarquia de execução das expressões[cite: 1, 2].
+    [cite_start]} // Encerramento do método main[cite: 1].
+
+    [cite_start]private static void prePos() { // Início do método que explica o comportamento de ++ e --[cite: 1, 2].
+        int k = 10; [cite_start]// Inicializa a variável k com o valor 10[cite: 1, 2].
+        int i = ++k; [cite_start]// Pré-fixado: incrementa k para 11 e depois atribui esse valor a i[cite: 2].
+        int j = k--; [cite_start]// Pós-fixado: atribui o valor atual de k (11) a j, e só então decrementa k para 10[cite: 2].
+        int x = k; [cite_start]// Atribui o valor final de k (que agora é 10) à variável x para conferência[cite: 2].
+
+        System.out.println("i:" + i); [cite_start]// Exibe o valor de i (11)[cite: 2].
+        System.out.println("j:" + j); [cite_start]// Exibe o valor de j (11)[cite: 2].
+        System.out.println("x:" + x); [cite_start]// Exibe o valor de x (10)[cite: 2].
+    [cite_start]} // Fim do método de demonstração de pré e pós-incremento[cite: 1].
+
+    [cite_start]private static void aritmetico() { // Método focado em cálculos matemáticos fundamentais[cite: 1, 2].
+        int a = 10; [cite_start]// Define a variável a como 10[cite: 1, 2].
+        int b = 20; [cite_start]// Define a variável b como 20[cite: 1, 2].
+        int c = 30; [cite_start]// Define a variável c como 30[cite: 1, 2].
+        int d = 40; [cite_start]// Define a variável d como 40[cite: 1, 2].
+        int e = 50; [cite_start]// Define a variável e como 50[cite: 1, 2].
+
+        int r1 = a + b; [cite_start]// Realiza a soma de a e b, resultando em 30[cite: 2].
+        int r2 = c - a; [cite_start]// Realiza a subtração de c por a, resultando em 20[cite: 2].
+        int r3 = d * b; [cite_start]// Realiza a multiplicação de d por b, resultando em 800[cite: 2].
+        int r4 = e / a; [cite_start]// Realiza a divisão inteira de e por a, resultando em 5[cite: 2].
+        int r5 = c % b; [cite_start]// Operador mod: calcula o resto da divisão de 30 por 20, resultando em 10[cite: 2].
+
+        System.out.println("a+b=" + r1); [cite_start]// Exibe o resultado da soma[cite: 2].
+        System.out.println("c-a=" + r2); [cite_start]// Exibe o resultado da subtração[cite: 2].
+        System.out.println("d*b=" + r3); [cite_start]// Exibe o resultado da multiplicação[cite: 2].
+        System.out.println("e/a=" + r4); [cite_start]// Exibe o resultado da divisão[cite: 2].
+        System.out.println("c%b=" + r5); [cite_start]// Exibe o resto da divisão[cite: 2].
+    [cite_start]} // Encerramento do método de operadores aritméticos[cite: 1].
+
+    [cite_start]private static void atribuicao() { // Método sobre como armazenar valores em variáveis[cite: 1, 2].
+        int i = 1500; [cite_start]// Atribuição simples de valor inteiro[cite: 2].
+        short j = 15; [cite_start]// Atribuição simples de valor curto[cite: 2].
+        long l = 500L; [cite_start]// Atribuição de long, utilizando 'L' para especificar o tipo[cite: 2].
+        int k = 35; [cite_start]// Atribuição simples do valor 35[cite: 2].
+        float f = 3.5f; [cite_start]// Atribuição de float, usando 'f' para indicar que o valor é fracionário[cite: 2].
+        double d = f; [cite_start]// Atribuição simples: a variável double d recebe o valor contido em f[cite: 2].
+
+        i += 5; [cite_start]// Atribuição composta: i recebe o valor de i somado a 5 (1505)[cite: 2].
+        j -= 3; [cite_start]// Atribuição composta: j recebe seu valor menos 3 (12)[cite: 2].
+        d /= 2.7d; [cite_start]// Atribuição composta: d recebe seu valor dividido por 2.7[cite: 2].
+        l *= 3; [cite_start]// Atribuição composta: l recebe seu valor multiplicado por 3 (1500)[cite: 2].
+        k %= 2; [cite_start]// Atribuição composta: k recebe o resto da divisão de seu valor por 2 (1)[cite: 2].
+
+        i = k = j; [cite_start]// Atribuições encadeadas: executadas da direita para a esquerda (k recebe j, e i recebe k)[cite: 2].
+        
+        System.out.println("k:" + k); [cite_start]// Exibe o valor final de k (12)[cite: 2].
+        System.out.println("i:" + i); [cite_start]// Exibe o valor final de i (12)[cite: 2].
+    [cite_start]} // Fim do método de demonstração de atribuições[cite: 1].
+
+    [cite_start]private static void precedencia() { // Método para explicar a hierarquia de execução das operações[cite: 1, 2].
+        int i = 10; [cite_start]// Inicializa i com 10[cite: 2].
+        int j = 20; [cite_start]// Inicializa j com 20[cite: 2].
+        int k = 30; [cite_start]// Inicializa k com 30[cite: 2].
+
+        // Primeiro avalia i++ (usa 10), depois --j (muda para 19). [cite_start]Multiplica 19*30 e soma 10 (580)[cite: 2].
+        int a = i++ + --j * k; 
+        System.out.println("a:" + a); [cite_start]// Exibe o resultado 580[cite: 2].
+        System.out.println("i:" + i); [cite_start]// Exibe que i agora vale 11 após a expressão anterior terminar[cite: 2].
+
+        // Primeiro --i (volta para 10). [cite_start]Executa 30/10=3, depois 3%3=0, e soma 1 (resultado 1)[cite: 2].
+        int b = k / --i % 3 + 1; 
+        System.out.println("b:" + b); [cite_start]// Exibe o valor 1[cite: 2].
+
+        int c = 2; [cite_start]// Inicializa c com 2[cite: 2].
+        [cite_start]// Atribuições compostas ocorrem da direita para a esquerda: i += 5 (15), depois c *= 15 (30)[cite: 2].
+        c *= i += 5; 
+        System.out.println("c:" + c); [cite_start]// Exibe o resultado final 30[cite: 2].
+    [cite_start]} // Encerramento do método de precedência[cite: 1].
+[cite_start]} // Fim da classe Main[cite: 1].
+
+```
+
+### Observações Importantes do Professor:
+
+* **Pós-fixado vs. Pré-fixado**: O incremento pós-fixado (`i++`) só altera o valor da variável **depois** que toda a expressão onde ela está inserida é avaliada.
+* **Encadeamento**: Em atribuições compostas como `c *= i += 5`, a execução ocorre da direita para a esquerda.
+* **Uso Prático**: O professor ressalta que, embora atribuições complexas e encadeadas sejam possíveis, na vida real o mais comum e recomendado é o uso de **atribuições simples** para facilitar a leitura do código.
+
+
 ##  Materiais de Apoio
 
 # Certificado: 
