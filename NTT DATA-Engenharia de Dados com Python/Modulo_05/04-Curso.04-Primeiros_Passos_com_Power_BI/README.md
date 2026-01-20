@@ -7,6 +7,11 @@
 
 ### 🟩 Vídeo 01 - O que é o Power BI?
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/adbc7cbe-940c-4e33-a662-c8e5bd6adf34?autoplay=1
 
 <p align="center">
@@ -55,61 +60,139 @@ Essa versatilidade permite que a ferramenta lide tanto com pequenos conjuntos de
 
 ### 🟩 Vídeo 02 - Por que Power BI?
 
-link do vídeo:
-
-### 🟩 Vídeo 03 - Explorando Power BI Service (Browser) - Parte 1
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/58535aa8-ece3-4962-a5e9-0f04ae4c9168?autoplay=1
 
+
+
+
+### 🟩 Vídeo 03 - Explorando Power BI Service (Browser) - Parte 1
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/c9ff68f8-125b-406b-8603-489c843c8817?autoplay=1
+
 ### 🟩 Vídeo 04 - Explorando Power BI Service (Browser) - Parte 2
 
-link do vídeo:
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: 
 
 ### 🟩 Vídeo 05 - Instalando o Power BI Desktop
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 06 - Conhecendo o Power BI Desktop
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 07 - Não tenho dataset e agora? - Kaggle
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 08 - Não tenho dataset e agora? - Power BI Samples
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 09 - Quais relatórios iremos fazer neste curso?
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 10 - Coletando, modificando os dados do Kaggle e criando o primeiro gráfico
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 11 - Caracterizando o dataset diabetes com gráfico de barras com linhas
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_11.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 12 - Finalizando relatório preliminar – dataset diabetes kaggle
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_12.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 13 - Obtendo dados com Simples Transformação dos dados Sample Financials do Power BI
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_13.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 14 - Criando Primeira Página do Relatório Financials – Sample Power BI
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_14.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 15 - Criando Segunda Página do Relatório Financials – Sample Power BI
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_15.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 16 - Explorando Relatório Financials e Ajustando Recursos Visuais
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.05-curso.04-video_16.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
