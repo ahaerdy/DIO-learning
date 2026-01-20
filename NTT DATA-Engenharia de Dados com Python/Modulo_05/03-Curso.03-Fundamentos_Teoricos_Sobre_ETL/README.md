@@ -144,6 +144,67 @@ A principal característica desta etapa no modelo ELT é a velocidade. Como não
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/013c99fd-3c64-47af-bb8d-280579bd8656?autoplay=1
 
+O vídeo aborda a transição do modelo tradicional de processamento para o **ELT (Extract, Load, Transform)**, destacando como essa abordagem otimiza o fluxo de trabalho em **Data Warehouses**. Diferente do método convencional, os **dados brutos** são carregados no repositório central antes da transformação, permitindo que a modelagem ocorra de acordo com as necessidades específicas do negócio. Essa mudança promove a **independência de TI**, transferindo a responsabilidade da estruturação dos dados para o **analista de dados**, que possui maior visão estratégica sobre as métricas da empresa. O autor ressalta que essa metodologia exige que os analistas dominem competências de **modelagem dimensional e relacional** para gerar análises mais precisas. Em suma, o conteúdo explora as **vantagens operacionais** e a eficiência técnica de manipular informações diretamente no destino final.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h00m09s678.jpg" alt="" width="840">
+</p>
+
+No contexto do processo de **ELT**, o carregamento (**Load**) representa a fase em que os dados brutos são transferidos diretamente para um repositório central, como um **Data Warehouse** ou um **Data Lake**. Diferente do modelo tradicional, aqui as informações são armazenadas em seu estado original antes de qualquer modificação. O Data Warehouse atua como esse centro unificado, consistindo em um conjunto de bancos de dados que podem estar organizados em modelos relacionais para análises posteriores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h00m13s231.jpg" alt="" width="840">
+</p>
+
+A etapa de **Transformação** ocorre após os dados já estarem dentro do repositório central. Esta abordagem permite que o mesmo conjunto de dados brutos seja estruturado de maneiras distintas conforme a necessidade, como em documentos (MongoDB) ou em tabelas relacionais (SQL). Ter os dados brutos disponíveis localmente oferece a flexibilidade de aplicar regras de negócio e manipulações específicas sem a necessidade de solicitar novas extrações ao setor de TI sempre que um novo formato for requisitado.
+
+```json
+{
+  "_id": 1,
+  "student_name": "Jasmin Scott",
+  "school": {
+    "school_id": 226,
+    "name": "Tech Secondary",
+    "address": "100 Broadway St",
+    "city": "New York",
+    "state": "NY",
+    "zipcode": "10001"
+  },
+  "marks": [98, 93, 95, 88, 100]
+}
+
+```
+
+```sql
+SELECT s.name, sc.name AS "school_name"
+FROM student s
+JOIN school_details sd ON s.id = sd.student_id
+JOIN school sc ON sd.school_id = sc.school_id
+WHERE s.name = 'Jasmin Scott';
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h00m14s940.jpg" alt="" width="840">
+</p>
+
+A inversão da ordem entre o carregamento e a transformação gera uma mudança fundamental de responsabilidades: a **independência de TI**. No fluxo ELT, o engenheiro de dados foca na coleta e extração, enquanto o **analista de dados** assume o papel principal na transformação. Por estar mais próximo do negócio e entender as métricas, KPIs e dores da empresa, o analista tem autonomia para modelar os dados conforme o contexto necessário para a análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h00m16s760.jpg" alt="" width="840">
+</p>
+
+As principais vantagens da adoção do ELT incluem:
+
+* **Otimização de tempo**: Agilidade no processamento e disponibilidade dos dados.
+* **Eficiência na implementação de projetos**: Ciclos de desenvolvimento mais rápidos.
+* **Menor dependência de TI**: Autonomia para que os analistas realizem modelagens relacionais e dimensionais.
+
+Essa mudança exige que o analista de BI ou de dados domine técnicas de modelagem para garantir que a transformação reflita corretamente as regras de negócio.
+
+
 ### 🟩 Vídeo 06 - Diferenças entre ETL e ELT
 
 <video width="60%" controls>
@@ -151,7 +212,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/9111866a-aada-4e3c-b5be-5e8be3eab09b?autoplay=1
 
 ### 🟩 Vídeo 07 - Quando usar ETL ou ELT?
 
