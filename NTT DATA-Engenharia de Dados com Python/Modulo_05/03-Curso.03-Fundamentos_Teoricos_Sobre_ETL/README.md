@@ -282,6 +282,28 @@ A imagem final traz a pergunta decisiva: **"Qual dos processos escolher?"**. A c
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/09313bc4-84ba-460b-80e4-3be4316e1439?autoplay=1
 
+O vídeo discute as diferenças fundamentais entre os processos de integração de dados **ETL** e **ELT**, destacando que a escolha entre eles depende do cenário tecnológico e financeiro de cada empresa. O método **ETL** é apresentado como uma abordagem tradicional e estruturada, ideal para quando o **armazenamento é caro** e os dados precisam ser limpos e reduzidos antes de serem salvos. Já o **ELT** é descrito como uma solução moderna voltada para **Big Data**, aproveitando a queda nos custos de **nuvem** para carregar dados brutos rapidamente e realizar transformações posteriores. O autor enfatiza que, embora o **ELT** ofereça maior **agilidade e flexibilidade** para analistas, ele exige uma infraestrutura mais robusta e gera maior complexidade técnica. Em última análise, o conteúdo defende que não existe uma ferramenta superior, mas sim aquela que melhor resolve o problema de negócio específico.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h35m23s365.jpg" alt="" width="840">
+</p>
+
+Nesta introdução, abordamos o dilema fundamental na engenharia de dados moderna: a escolha entre as abordagens **ETL (Extract, Transform and Load)** e **ELT (Extract, Load and Transform)**. A decisão entre converter os dados antes de enviá-los ao destino ou carregá-los primeiro para transformá-los depois é uma questão estratégica que depende diretamente do cenário tecnológico e das necessidades de negócio da organização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h35m25s425.jpg" alt="" width="840">
+</p>
+
+O foco do **ETL** está centralizado na fase de **Transformação**. Historicamente, esta abordagem foi consolidada em uma época em que o custo de armazenamento (*storage*) era extremamente elevado e o processamento era lento. Por esse motivo, o fluxo prioriza a limpeza, o preenchimento de lacunas e a retirada de redundâncias logo após a extração, garantindo que apenas dados "enxutos", estruturados e já validados ocupem o caro espaço do repositório central. É o modelo indicado para cenários com estruturas bem definidas e onde o destino não possui capacidade robusta para processar grandes volumes de dados brutos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h35m36s592.jpg" alt="" width="840">
+</p>
+
+O foco do **ELT** reflete a mudança de paradigma trazida pela computação em nuvem, como os serviços da **AWS, Azure e GCP**. Atualmente, o armazenamento de dados brutos tornou-se rápido e acessível, tornando o custo de *storage* um problema menor se comparado ao tempo de espera pela disponibilidade do dado. Nesta abordagem, os dados são carregados diretamente no repositório final logo após a extração, permitindo que a transformação ocorra por demanda (*ad hoc*). Isso confere maior agilidade e flexibilidade ao processo, permitindo que analistas e engenheiros adaptem as transformações conforme as regras de negócio evoluem, embora exija uma infraestrutura de destino mais robusta.
+
 
 ##  Materiais de Apoio
 
