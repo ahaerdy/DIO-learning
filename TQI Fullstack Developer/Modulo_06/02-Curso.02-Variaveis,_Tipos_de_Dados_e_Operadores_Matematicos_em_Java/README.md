@@ -2,6 +2,7 @@
 
 - Thiago Leite e Carvalho (Senior Java Developer and Software Engineer | Java Tech Lead | University Professor | Writer | Speaker | Instructor)
 - Contato Linkedin: / [thiago-leite-e-carvalho-1b337b127](https://www.linkedin.com/in/thiago-leite-e-carvalho-1b337b127/)
+- Códigos de exemplo da aula neste link: https://github.com/tlcdio
 
 ## Parte 1 - Conceituação e criação
 
@@ -459,7 +460,7 @@ Nesta aula o instrutor demonstra a criação de variáveis para armazenar **valo
 
 ### Anotações
 
-Segue o código completo em Java apresentado pelo instrutor, comentado linha a linha com base nas explicações e observações técnicas fornecidas durante a aula.
+Segue o código completo em Java, apresentado pelo instrutor, comentado linha a linha, com base nas explicações e observações técnicas fornecidas durante a aula.
 
 ```java
 package one.digitalinnovation.basecamp; // Define o pacote para organizar as classes do projeto
@@ -524,7 +525,6 @@ public class Main { // Declaração da classe principal
 }
 ```
 
-
 ## Parte 3 - Operadores Aritméticos
 
 ### 🟩 Vídeo 06 - Operadores aritméticos
@@ -534,7 +534,86 @@ public class Main { // Declaração da classe principal
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/be926bdf-afbf-469c-b743-9f2d9827c9bd?autoplay=1
+
+Esta aula apresenta uma introdução técnica sobre **operadores aritméticos** no contexto da linguagem **Java**, destacando que esses símbolos realizam ações em operandos para gerar resultados. O conteúdo detalha diferentes categorias, como os operadores **pós-fixados e pré-fixados**, as operações matemáticas básicas e as **atribuições compostas** que servem como atalhos de sintaxe. Um ponto central da aula é a explicação sobre a **precedência de execução**, estabelecendo a ordem hierárquica necessária para garantir cálculos precisos em expressões complexas. Por fim, o autor enfatiza a importância de dominar essas regras para escrever códigos mais eficientes e evitar erros lógicos. O material conclui propondo um **exercício prático** no ambiente IntelliJ para fixar o aprendizado sobre como essas prioridades influenciam os resultados finais.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-12h32m48s577.jpg" alt="" width="840">
+</p>
+
+Esta é a aula inicial sobre **operadores aritméticos**, inserida no contexto de estudo de Variáveis e Tipos de Dados. O objetivo central é abordar como as operações matemáticas fundamentais e manipulações de valores são realizadas dentro da programação, utilizando a linguagem Java como base prática.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-12h32m50s854.jpg" alt="" width="840">
+</p>
+
+Para esta etapa do aprendizado, foram estabelecidos dois objetivos principais:
+
+1. **Entender o que são:** Compreender a definição teórica e o papel dos operadores no processamento de dados.
+2. **Saber como usar cada um:** Aprender a sintaxe correta e a aplicação prática de cada operador disponível.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-12h32m52s582.jpg" alt="" width="840">
+</p>
+
+Os operadores são definidos como **símbolos especiais** capazes de realizar ações específicas em um, dois ou mais operandos. Após realizar a operação pretendida, eles retornam um resultado para o sistema. Embora o conceito de operadores seja amplo na programação, o foco aqui reside especificamente nos de natureza aritmética.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-12h32m55s594.jpg" alt="" width="840">
+</p>
+
+Os operadores são classificados em quatro grupos principais de acordo com sua função e posicionamento:
+
+* **Pós-fixado:** Expressões onde o operador vem após o operando (`exp++` ou `exp--`).
+* **Prefixado:** Expressões onde o operador antecede o operando (`++exp` ou `--exp`).
+* **Aritmético:** Operações matemáticas padrão como soma (`+`), subtração (`-`), multiplicação (`*`), divisão (`/`) e o resto da divisão (`%`).
+* **Atribuição:** Utilizados para definir ou modificar valores, incluindo a atribuição simples (`=`) e as compostas (`+=`, `-=`, `*=`, `/=`, `%=`).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-12h33m00s362.jpg" alt="" width="840">
+</p>
+
+A aplicação prática dos operadores demonstra como diferentes tipos de dados (int, float, long, double) interagem. Os operadores de incremento e decremento (prefixados e pós-fixados) alteram o valor da variável em uma unidade, enquanto os operadores de atribuição composta funcionam como atalhos para realizar uma operação aritmética e atribuir o resultado à própria variável simultaneamente.
+
+```java
+// Exemplos de Incremento/Decremento e Aritmética
+int i = ++k;      // Equivalente a: k = k + 1; i = k;
+int j = k--;      // Equivalente a: j = k; k = k - 1;
+
+float f = 1.5f + 4.5f;
+long l = 10398L * 5L;
+double d = 45d / 4d;
+int k = 15 % 4;   // Resto da divisão
+
+// Exemplos de Atribuição e Atalhos
+double d = f;
+i += 5;           // i = i + 5;
+j -= 3;           // j = j - 3;
+i *= 3;           // i = i * 3;
+k %= 2;           // k = k % 2;
+d /= 2.7d;        // d = d / 2.7d;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-12h33m09s316.jpg" alt="" width="840">
+</p>
+
+A **precedência de operadores** determina a ordem em que as expressões são avaliadas pelo computador. Compreender essa hierarquia é fundamental para garantir que os cálculos resultem no valor esperado. A ordem de execução segue a tabela abaixo:
+
+| Operador | Precedência |
+| --- | --- |
+| **Pós-fixado** | `exp++`, `exp--` |
+| **Prefixado** | `++exp`, `--exp` |
+| **Multiplicativo** | `*`, `/`, `%` |
+| **Aditivo** | `+`, `-` |
+| **Atribuição** | `=`, `+=`, `-=`, `*=`, `/=`, `%=` |
+
+Dessa forma, em uma expressão complexa, os operadores pós-fixados serão processados primeiro, enquanto os de atribuição serão os últimos.
+     
 
 ### 🟩 Vídeo 07 - Exercitando
 
@@ -543,7 +622,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/a87cd5e1-0ca1-493a-8700-56108cf21d2b?autoplay=1
 
 ##  Materiais de Apoio
 
