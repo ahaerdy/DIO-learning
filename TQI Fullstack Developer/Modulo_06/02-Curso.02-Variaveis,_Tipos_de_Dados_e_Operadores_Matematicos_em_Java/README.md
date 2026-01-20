@@ -336,19 +336,20 @@ Abaixo da área de saída, a IDE ainda exibe parte das instruções de impressã
 
 ```      
 
+## Parte 2 - Tipos de dado
 
-### 🟩 Vídeo 04 - Aula 1: Conceituação e criação
+### 🟩 Vídeo 04 - Tipos de dado
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/953faabc-94d8-45df-a8f1-e40db3d16201?autoplay=1
 
-## Parte 2 - Tipos de dado
 
-### 🟩 Vídeo 05 - Tipos de dado
+
+### 🟩 Vídeo 05 - Exercitando
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_05.webm" type="video/webm">
@@ -357,7 +358,9 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 06 - Exercitando
+## Parte 3 - Operadores Aritméticos
+
+### 🟩 Vídeo 06 - Operadores aritméticos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_06.webm" type="video/webm">
@@ -366,7 +369,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 07 - Aula 2: Tipos de dado
+### 🟩 Vídeo 07 - Exercitando
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_07.webm" type="video/webm">
@@ -374,37 +377,6 @@ link do vídeo:
 </video>
 
 link do vídeo:
-
-## Parte 3 - Operadores Aritméticos
-
-### 🟩 Vídeo 08 - Operadores aritméticos
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_08.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
-
-### 🟩 Vídeo 09 - Exercitando
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_09.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
-
-### 🟩 Vídeo 10 - Aula 3: Operadores aritméticos
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_10.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
-
-
 
 ##  Materiais de Apoio
 
