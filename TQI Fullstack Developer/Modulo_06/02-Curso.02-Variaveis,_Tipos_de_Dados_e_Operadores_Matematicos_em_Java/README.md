@@ -454,6 +454,81 @@ Linguagens modernas atribuem **valores default** (padrão) a variáveis que não
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/9b32d383-6989-445f-b593-0f902af189c7?autoplay=1
 
+Nesta aula o instrutor demonstra a criação de variáveis para armazenar **valores inteiros, números decimais, caracteres e textos**, destacando as diferenças de capacidade entre tipos como **short, int, long, float e double**. Durante a explicação, são exibidos **erros comuns de compilação** que ocorrem quando os limites de armazenamento são ultrapassados ou quando a sintaxe, como o uso de sufixos e aspas, está incorreta. O material também aborda o uso de **boas práticas**, diferenciando o tipo primitivo **char** da classe **String**, além de mencionar a importância de escolher tipos específicos para dados lógicos e datas. Por fim, o tutorial reforça a aplicação de **códigos Unicode** e a relevância didática de simplificar nomes de variáveis para facilitar o aprendizado inicial.
+
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h40m23s024.jpg" alt="" width="840">
+</p>
+
+Segue o código completo em Java, comentado linha a linha com base nas explicações e observações técnicas fornecidas pelo professor durante a aula.
+
+```java
+package one.digitalinnovation.basecamp; // Define o pacote para organizar as classes do projeto
+
+public class Main { // Declaração da classe principal
+    public static void main(String[] args) { // Ponto de entrada do programa (método main)
+
+        // --- TIPOS INTEIROS ---
+        byte b1 = 10; // Tipo byte: menor capacidade, valor 10 está dentro do limite
+        byte b2 = 20; // Tipo byte: valor 20 também está correto e sem erros
+
+        short s1 = 20000; // Tipo short: suporta valores maiores que byte; 20.000 é válido
+        // short s2 = 40000; // ERRO: 40.000 ultrapassa o limite máximo suportado pelo tipo short
+
+        // int i1 = -10000000000000; // ERRO: Este valor negativo ultrapassa o limite inferior do tipo int
+        int i2 = 28500; // Tipo int: valor padrão para inteiros, 28.500 é perfeitamente válido
+
+        // Tipo long: maior capacidade para inteiros. Exige a letra 'L' ao final do número
+        long l1 = 1000000000000000000L; // O 'L' informa ao Java que este número grande deve ser tratado como long
+        long l2 = 2004005000500055000L; // Sem o 'L', o Java tentaria ler como int e acusaria erro de tamanho
+
+        // --- TIPOS REAIS (PONTO FLUTUANTE) ---
+        // float f1 = 4.5; // ERRO: Números decimais sem sufixo são interpretados como double por padrão
+        float f2 = 10.68F; // Para definir como float, deve-se usar 'F' ou 'f' para caber na variável
+
+        double d1 = 85.69; // Double: tipo padrão para números fracionários, aceita o valor diretamente
+        double d2 = 99.04D; // Pode-se usar o sufixo 'D' ou 'd' para ser explícito, embora seja opcional
+
+        // --- TIPOS TEXTUAIS ---
+        char c1 = 'W'; // Char: armazena apenas UM caractere e utiliza aspas SIMPLES
+        // char c2 = 'TW'; // ERRO: O tipo char não aceita mais de um caractere simultaneamente
+        char c3 = '\u0057'; // Char via código Unicode: representa o caractere 'W' de forma implícita
+
+        String st1 = "Fulano"; // String: classe que armazena sequências de texto usando aspas DUPLAS
+        String st2 = "Cicrano"; // Exemplo de nome simples guardado em uma String
+        String st3 = "ag dgb se se et t KNBJBJBB &**&%& 75894389"; // String aceita símbolos, espaços e números
+
+        // String dt1 = "09/02/1981"; // OBS: Evite usar String para datas; existem tipos específicos para cálculos cronológicos
+
+        // --- TIPO LÓGICO ---
+        boolean bo1 = true; // Booleano: aceita apenas o valor lógico verdadeiro (true)
+        boolean bo2 = false; // Booleano: aceita apenas o valor lógico falso (false)
+
+        // --- SAÍDAS NO CONSOLE ---
+        System.out.println(b1); // Exibe o valor do byte b1
+        System.out.println(b2); // Exibe o valor do byte b2
+        System.out.println(s1); // Exibe o valor do short s1
+        System.out.println(i2); // Exibe o valor do int i2
+        System.out.println(l1); // Exibe o valor do long l1
+        System.out.println(l2); // Exibe o valor do long l2
+        System.out.println(f2); // Exibe o valor do float f2
+        System.out.println(d1); // Exibe o valor do double d1
+        System.out.println(d2); // Exibe o valor do double d2
+        System.out.println(c1); // Exibe o caractere 'W'
+        System.out.println(c3); // Exibe o caractere 'W' (convertido do Unicode)
+        System.out.println(st1); // Exibe o texto "Fulano"
+        System.out.println(st2); // Exibe o texto "Cicrano"
+        System.out.println(st3); // Exibe a string longa com caracteres especiais
+        System.out.println(bo1); // Exibe o valor lógico true
+        System.out.println(bo2); // Exibe o valor lógico false
+    }
+}
+```
+
+
 ## Parte 3 - Operadores Aritméticos
 
 ### 🟩 Vídeo 06 - Operadores aritméticos
