@@ -77,6 +77,153 @@ Para obter o melhor aproveitamento das aulas, são necessários os seguintes req
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/08601add-19fb-4776-be4c-d61a57c59500?autoplay=1
 
+Esta aula introdutória de Java foca no conceito e na criação de variáveis, definindo-as como espaços reservados na memória do computador para o armazenamento de dados. O conteúdo explora a sintaxe rigorosa da linguagem, que é fortemente tipada, detalhando as regras obrigatórias de nomenclatura e as convenções de boas práticas (como o uso de CamelCase). O objetivo principal é capacitar o aluno a declarar variáveis de forma correta e legível, preparando a base para o desenvolvimento de códigos profissionais e colaborativos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h19m37s700.jpg" alt="" width="840">
+</p>
+
+Esta é a abertura da **Aula 1**, focada em **Conceituação e criação**. O conteúdo programático desta etapa introdutória abrange três pilares fundamentais para o início na programação: **Variáveis, Tipos de dado e Operadores Aritméticos**. A aula utilizará a linguagem Java para explorar estes conceitos básicos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h19m44s526.jpg" alt="" width="840">
+</p>
+
+Os objetivos centrais desta primeira aula são claros e diretos. Espera-se que o aluno seja capaz de:
+
+1. **Entender o que são variáveis**;
+2. **Saber como criar variáveis**.
+
+O foco é compreender o mecanismo de funcionamento e a sintaxe de declaração na linguagem Java.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h19m46s285.jpg" alt="" width="840">
+</p>
+
+Para a **conceituação**, define-se variável formalmente como **"Um espaço na memória do computador, onde se pode guardar valores"**.
+
+Na linguagem Java, as variáveis são categorizadas em quatro tipos distintos:
+
+* **Instância:** Pertence ao objeto;
+* **Classe:** Pertence à classe;
+* **Local:** Declarada dentro de métodos;
+* **Parâmetro:** Presente na assinatura do método.
+
+Nesta fase introdutória, o foco recairá sobre as variáveis locais (como aquelas criadas dentro do método `main`), uma vez que os tipos de instância e classe estão atrelados ao paradigma de Orientação a Objetos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h19m51s688.jpg" alt="" width="840">
+</p>
+
+A **criação** de variáveis em Java segue um padrão de definição específico, composto por elementos obrigatórios e opcionais. A estrutura geral é:
+
+```java
+<?visibilidade?> <?modificador?> tipo nome <?=valorInicial?>;
+
+```
+
+A legenda para interpretar esta estrutura é a seguinte:
+
+* **V (Visibilidade):** Define o acesso, podendo ser "public", "protected" ou "private";
+* **M (Modificador):** Define comportamentos especiais, como "static" ou "final" (constante);
+* **T (Tipo):** Especifica o tipo de dado (obrigatório em Java);
+* **N (Nome):** O identificador fornecido à variável;
+* **VI (Valor Inicial):** Um valor atribuído na declaração, caso se deseje.
+
+Os itens entre interrogações (`?`) são opcionais. O modificador `final` é utilizado para declarar constantes, ou seja, variáveis cujo valor não pode ser alterado após a inicialização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h19m56s476.jpg" alt="" width="840">
+</p>
+
+Existem **convenções e regras** rígidas para a nomenclatura de variáveis em Java. O desrespeito a algumas destas regras pode impedir a compilação do código:
+
+* **Não devem começar com números**;
+* O uso de cifrão (`$`) e *underscore* (`_`) é permitido, mas **deve ser evitado** como boa prática;
+* As variáveis são **case-sensitive**, ou seja, diferenciam maiúsculas de minúsculas;
+* **Sem espaços** no nome da variável;
+* **Não pode ser uma das palavras reservadas do Java**.
+
+A lista de palavras reservadas inclui termos de comando da própria linguagem, como `abstract`, `boolean`, `class`, `if`, `void`, `while`, entre outros listados na imagem, que não podem ser usados como identificadores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h19m59s977.jpg" alt="" width="840">
+</p>
+
+Abaixo estão **exemplos** práticos de declarações de variáveis, ilustrando casos válidos, inválidos e particularidades da sintaxe:
+
+```java
+int i;
+int final j = 10;
+int I;
+int 1a;
+int asrn24678md;
+int asrn246 78md;
+int asrn2$4678_md = 10;
+int_1a;
+int $aq;
+int asrn2$46%78_md = 10;
+int I = 10;
+
+```
+
+Alguns pontos de atenção nestes exemplos:
+
+* `int i;` e `int I;` são variáveis diferentes (case-sensitive).
+* `int final j = 10;` declara uma constante.
+* `int 1a;` é inválido pois começa com número.
+* `int asrn246 78md;` é inválido devido ao espaço.
+* `int asrn2$46%78_md = 10;` é inválido pelo uso do caractere especial `%`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h20m06s304.jpg" alt="" width="840">
+</p>
+
+Além das regras obrigatórias, existem **boas práticas** que visam a legibilidade e manutenção do código. Recomenda-se:
+
+* **Sempre começar com letra minúscula**;
+* Utilizar **nomes expressivos** que indiquem o propósito da variável;
+* Adotar a **Notação Camelo** (*CamelCase*), onde a primeira letra é minúscula e as palavras subsequentes iniciam com maiúscula;
+* Quando for uma constante (`final`), o nome deve ser escrito em **letra maiúscula e separada por "_"** (*underscore*).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h20m09s590.jpg" alt="" width="840">
+</p>
+
+Para ilustrar as boas práticas, a imagem apresenta exemplos comparativos:
+
+```java
+int quantidadeProduto;
+int QuantidadeProduto;
+int final NUMERO_TENTATIVAS = 5;
+int final numeroTentativas = 5;
+int NUMERO_TENTATIVAS = 5;
+int qtdProd;
+int i;
+
+```
+
+Análise dos exemplos:
+
+* `int quantidadeProduto`: Segue corretamente o CamelCase e inicia com minúscula.
+* `int QuantidadeProduto`: Evitar, pois inicia com maiúscula.
+* `int final NUMERO_TENTATIVAS = 5`: Correto para constantes (tudo maiúsculo com underscore).
+* `int qtdProd`: Nome pouco expressivo, dificultando o entendimento.
+* `int i`: Aceitável em contextos específicos como contadores de laços (`for`), embora simples.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h20m18s431.jpg" alt="" width="840">
+</p>
+
+Como etapa final da aula, propõe-se um momento de **Exercitando**. A tarefa consiste em:
+
+* **Criar um simples projeto no IntelliJ e criar as variáveis do slide anterior**.
+
+O objetivo é replicar o código apresentado, observando na prática o comportamento da IDE diante dos erros de compilação (regras violadas) e a estruturação correta das variáveis válidas.      
+
+
 ### 🟩 Vídeo 03 - Exercitando
 
 <video width="60%" controls>
@@ -84,7 +231,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variavei
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/372c2a91-6f32-48ec-bfd3-27c4a063ad0d?autoplay=1
 
 ### 🟩 Vídeo 04 - Aula 1: Conceituação e criação
 
