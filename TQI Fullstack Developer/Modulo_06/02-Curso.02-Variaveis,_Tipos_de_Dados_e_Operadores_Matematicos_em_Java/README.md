@@ -258,55 +258,56 @@ O código ilustra conceitos fundamentais de sintaxe e boas práticas discutidos 
 * **Convenções:** O código mostra a aplicação de *CamelCase* para variáveis comuns (`quantidadeProduto`) e a convenção de letras maiúsculas separadas por underline para constantes (`NUMERO_TENTATIVAS`).
 * **Inicialização e Impressão:** Todas as variáveis recebem valores e são passadas para o comando `System.out.println` para exibição no console .
 
+Com base nas explicações fornecidas pelo professor durante a aula, aqui está o código Java comentado linha a linha:
 
 ```java
-public class Main {
-    public static void main(String[] args) {
+public class Main { // Definição da classe Main, ponto de partida do exercício[cite: 11, 105].
+    public static void main(String[] args) { // Método principal (main), o ponto inicial para a execução de aplicações Java[cite: 12, 100, 110].
 
-        int i;
-        //int i;
-        int I;
-        //int 1a;
-        int _1a;
-        int $aq;
+        int i; // Definição de uma variável inteira simples, sem segredos[cite: 15, 68].
+        //int i; // Comentado para evitar erro: não se pode definir duas variáveis com o mesmo nome no mesmo escopo[cite: 17].
+        int I; // Válido: Java é case-sensitive, então "I" maiúsculo é diferente de "i" minúsculo[cite: 19, 127].
+        //int 1a; // Inválido: Variáveis em Java não podem começar com números[cite: 21, 128].
+        int _1a; // Válido, mas não é boa prática iniciar variáveis com underline[cite: 23, 128].
+        int $aq; // Válido, mas não é boa prática iniciar variáveis com cifrão[cite: 25, 129].
 
-        i = 5;
-        I = 10;
-        _1a = 20;
-        $aq = 7;
+        i = 5; // Atribuição de valor inicial para a variável 'i'[cite: 28, 116].
+        I = 10; // Atribuição de valor inicial para a variável 'I'[cite: 30, 116].
+        _1a = 20; // Atribuição de valor inicial para a variável '_1a'[cite: 32, 111].
+        $aq = 7; // Atribuição de valor inicial para a variável '$aq'[cite: 34, 112].
 
-        final int j = 10;
-        //j = 15;
-        int asrn24678md;
-        //int asrn246 78md;
-        int asrn2$4678_md = 10;
-        //int asrn2$46%_md = 10;
+        final int j = 10; // Definição de uma constante (final); seu valor não pode ser alterado após definido[cite: 55, 130].
+        //j = 15; // Erro: Tentativa inválida de mudar o valor de uma variável constante (final)[cite: 56].
+        int asrn24678md; // Definição válida usando letras e números, embora o nome não seja usual[cite: 57, 131].
+        //int asrn246 78md; // Erro: Não é permitido o uso de espaços em nomes de variáveis[cite: 58].
+        int asrn2$4678_md = 10; // Válido, mas o uso de '$' e '_' fere as boas práticas, exceto em casos específicos[cite: 59, 132].
+        //int asrn2$46%_md = 10; // Erro: O caractere '%' é inválido e proibido em nomes de variáveis[cite: 60].
 
-        asrn24678md = 100;
-        asrn2$4678_md = 10;
+        asrn24678md = 100; // Atribuição de valor para a variável 'asrn24678md'[cite: 61].
+        asrn2$4678_md = 10; // Atribuição de valor para a variável 'asrn2$4678_md'[cite: 62].
 
-        int quantidadeProduto = 50;
-        //int QuantidadeProduto;
-        final int NUMERO_TENTATIVAS = 5;
-        //final int numeroTentativas = 5;
-        int QUANTIDADE_OPCOES = 25;
-        //int qtdProd;
+        int quantidadeProduto = 50; // Boa prática: Nome expressivo, começa com minúscula e segue a notação CamelCase[cite: 63, 133].
+        //int QuantidadeProduto; // Má prática: Embora não dê erro, variáveis não devem começar com letra maiúscula[cite: 64, 121].
+        final int NUMERO_TENTATIVAS = 5; // Boa prática para constantes: Nomes em maiúsculo separados por underline[cite: 65, 133].
+        //final int numeroTentativas = 5; // Má prática para constantes: Não segue o padrão de nomenclatura para variáveis 'final'[cite: 65, 123].
+        int QUANTIDADE_OPCOES = 25; // Má prática: Nome em maiúsculo para variável que não é constante (não possui 'final')[cite: 66, 133].
+        //int qtdProd; // Má prática: Nome pouco expressivo que dificulta a compreensão do código[cite: 67, 125].
 
-        System.out.println(i);
-        System.out.println(I);
-        System.out.println(_1a);
-        System.out.println($aq);
+        // As linhas abaixo utilizam o System.out.println para exibir os valores das variáveis no console da IDE[cite: 77, 126].
+        System.out.println(i); // Exibe o valor de 'i'[cite: 68, 126].
+        System.out.println(I); // Exibe o valor de 'I'[cite: 69, 127].
+        System.out.println(_1a); // Exibe o valor de '_1a'[cite: 71, 128].
+        System.out.println($aq); // Exibe o valor de '$aq'[cite: 73, 129].
 
-        System.out.println(j);
-        System.out.println(asrn24678md);
-        System.out.println(asrn2$4678_md);
+        System.out.println(j); // Exibe o valor da constante 'j'[cite: 76, 130].
+        System.out.println(asrn24678md); // Exibe o valor de 'asrn24678md'[cite: 78, 131].
+        System.out.println(asrn2$4678_md); // Exibe o valor de 'asrn2$4678_md'[cite: 80, 132].
 
-        System.out.println(quantidadeProduto);
-        System.out.println(NUMERO_TENTATIVAS);
-        System.out.println(QUANTIDADE_OPCOES);
+        System.out.println(quantidadeProduto); // Exibe o valor de 'quantidadeProduto'[cite: 83, 133].
+        System.out.println(NUMERO_TENTATIVAS); // Exibe o valor da constante 'NUMERO_TENTATIVAS'[cite: 85, 133].
+        System.out.println(QUANTIDADE_OPCOES); // Exibe o valor de 'QUANTIDADE_OPCOES'[cite: 87, 133].
     }
 }
-
 ```
 
 <p align="center">
