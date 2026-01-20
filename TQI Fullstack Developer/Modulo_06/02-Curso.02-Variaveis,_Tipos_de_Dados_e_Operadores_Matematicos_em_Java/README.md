@@ -949,9 +949,7 @@ A seção "Para saber mais" disponibiliza links diretos da documentação oficia
 * **Resumo de Variáveis**: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variablesummary.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variablesummary.html)      
 
 
-##  Materiais de Apoio
+# Certificado: Variáveis, Tipos de Dados e Operadores Matemáticos em Java
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/FDOXFRHH.pdf
+- Certificado em pdf: [Certificado-Variaveis,_Tipos_de_Dados_e_Operadores_Matematicos_em_Java.pdf](000-Midia_e_Anexos/Certificado-Variaveis,_Tipos_de_Dados_e_Operadores_Matematicos_em_Java.pdf)
