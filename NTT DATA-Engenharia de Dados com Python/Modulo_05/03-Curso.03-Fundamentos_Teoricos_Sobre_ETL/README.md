@@ -214,6 +214,65 @@ Essa mudança exige que o analista de BI ou de dados domine técnicas de modelag
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/9111866a-aada-4e3c-b5be-5e8be3eab09b?autoplay=1
 
+O vídeo apresenta uma comparação técnica detalhada entre os processos de integração de dados **ETL** e **ELT**, destacando como cada um impacta a rotina e a eficiência das empresas. A autora analisa critérios fundamentais como **tempo de carregamento**, **manutenção**, **complexidade** e a disponibilidade de **profissionais qualificados** no mercado de tecnologia. Enquanto o **ETL** é descrito como um método mais rígido e dependente de especialistas de TI para transformar dados antes do armazenamento, o **ELT** surge como uma abordagem moderna e ágil. No modelo **ELT**, a transformação ocorre após o carregamento, o que favorece o uso de **Big Data** e dá maior autonomia aos **analistas de dados**. O conteúdo ressalta que a escolha entre as metodologias depende do **volume de informações**, da infraestrutura em **nuvem** disponível e das necessidades estratégicas de cada negócio. Por fim, explica-se que o **ELT** oferece maior escalabilidade e flexibilidade, embora exija uma arquitetura de dados mais robusta para lidar com registros brutos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m31s701.jpg" alt="" width="840">
+</p>
+
+Esta imagem introduz o tema central da discussão: as diferenças entre os processos de **ETL** (Extract, Transform, Load) e **ELT** (Extract, Load, Transform). O objetivo é analisar o impacto real dessas escolhas no cotidiano de uma empresa, avaliando ganhos de eficiência e os motivos que levam à escolha de um modelo em detrimento do outro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m35s957.jpg" alt="" width="840">
+</p>
+
+O slide apresenta os critérios fundamentais para avaliar as vantagens do ELT, destacando o impacto do uso de diversos sistemas distintos no **tempo de carregamento**. No modelo ETL tradicional, a integração de múltiplos sistemas pode causar um *delay* (atraso) considerável, tornando o processo mais lento. Em contrapartida, o ELT tende a ser mais ágil, pois os dados brutos são carregados diretamente para um repositório central sem a necessidade de transformação prévia, reduzindo o tempo de ingestão inicial.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m37s479.jpg" alt="" width="840">
+</p>
+
+Aqui o foco recai sobre o **tempo de transformação**. É destacado que a transformação pode se tornar um gargalo, especialmente quando se lida com grandes volumes de dados (Big Data). No ELT, embora o carregamento seja rápido, a fase de transformação posterior exige uma capacidade de processamento significativa para evitar demoras consideráveis na disponibilização da informação final.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m40s441.jpg" alt="" width="840">
+</p>
+
+Este slide aborda o **tempo de manutenção** e o **custo com atualização**. No processo de ETL, a manutenção é vista como uma tarefa mais árdua e cara, pois qualquer alteração ou atualização nos dados exige que todo o fluxo de transformação seja revisitado. Já no ELT, por trabalhar com dados brutos carregados antecipadamente, a manutenção tende a ser mais flexível, permitindo atualizações com menor impacto na infraestrutura de extração.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m43s340.jpg" alt="" width="840">
+</p>
+
+A imagem enfatiza a **complexidade de implementação**. O ETL é descrito como um processo que exige uma implementação muito bem definida e rígida desde o início, envolvendo altos custos e profissionais altamente qualificados (como engenheiros de dados). O ELT, por sua vez, permite uma abordagem inicial mais simples na extração, embora desloque a complexidade para a fase de transformação dentro do repositório de dados, exigindo uma infraestrutura de processamento robusta.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m47s363.jpg" alt="" width="840">
+</p>
+
+Este slide levanta a questão fundamental: **"Quais dados estão disponíveis?"**. Ele inicia a discussão sobre a **limitação de dados**, sugerindo que a escolha entre ETL e ELT afeta diretamente a amplitude das informações acessíveis para análise. No ETL, há uma limitação maior, pois se um dado não foi mapeado e transformado no início, ele não estará disponível no destino final.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m48s988.jpg" alt="" width="840">
+</p>
+
+O foco aqui é reforçar como o ELT lida com a disponibilidade de dados. Diferente do ETL, no ELT não há essa limitação rígida inicial, pois os dados brutos são carregados integralmente. Isso permite que, se um novo dado for necessário futuramente, ele já esteja presente no repositório, bastando apenas realizar a sua transformação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m50s890.jpg" alt="" width="840">
+</p>
+
+A imagem destaca a **abordagem do processo** e a **usabilidade**. É apresentada a ideia de que o ETL segue uma estrutura mais rígida e governada pela TI, enquanto o ELT permite uma abordagem mais *ad-hoc* (flexível e conforme a necessidade), escalável e fluida. Isso aumenta a usabilidade para analistas de dados, que ganham autonomia para criar diferentes perspectivas a partir dos dados brutos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-19-21h17m53s539.jpg" alt="" width="840">
+</p>
+
+A imagem final traz a pergunta decisiva: **"Qual dos processos escolher?"**. A conclusão aponta que não há uma resposta única; a escolha depende do volume de dados (Big Data favorece o ELT), da disponibilidade de verba e da velocidade de geração dos dados. Para dados tradicionais com visões muito específicas e menor volume, o ETL ainda pode ser a solução mais adequada.      
+
+
 ### 🟩 Vídeo 07 - Quando usar ETL ou ELT?
 
 <video width="60%" controls>
@@ -221,7 +280,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-teoricos-sobre-etl/learning/09313bc4-84ba-460b-80e4-3be4316e1439?autoplay=1
 
 
 ##  Materiais de Apoio
