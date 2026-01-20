@@ -674,6 +674,51 @@ No Microsoft PowerPoint, o relatório é inserido como um elemento interativo de
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/15033822-e550-4c45-8ef8-bd6f13493876?autoplay=1
 
+Este material consiste em uma **transcrição de aula prática** sobre o uso inicial do **Power BI**, focando especificamente na manipulação de conjuntos de dados de exemplo. O instrutor demonstra o processo de **transformação de dados**, ilustrando como realizar ajustes técnicos como o **arredondamento de valores** numéricos e a formatação de textos para **letras maiúsculas**. A explicação aborda a importância de tratar informações para que façam sentido lógico, exemplificando como **remover ou desfazer alterações** indesejadas na interface do software. O conteúdo reforça o conceito de **ETL**, destacando que as modificações apresentadas ocorrem em dados já minimamente estruturados. Por fim, o tutorial prepara o aluno para a etapa seguinte de **criação de relatórios** visuais e gráficos dinâmicos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h47m56s241.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta a interface inicial do **Power BI Desktop**, destacando o painel de **Visualizações** e a área de carregamento de dados. No centro, observa-se a opção para carregar dados de exemplo, especificamente o conjunto de dados **Financial Sample.xlsx**, que servirá de base para o tutorial. O painel lateral exibe os diversos ícones de gráficos disponíveis (colunas, linhas, mapas, etc.) que serão utilizados para construir o relatório após a etapa de preparação dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h48m00s516.jpg" alt="" width="840">
+</p>
+
+A imagem detalha o **Editor do Power Query**, onde ocorre o processo de **transformação de dados (ETL)**. É possível visualizar a tabela de dados estruturada e o painel lateral de **Etapas Aplicadas**, que registra cada modificação feita, como a alteração de tipos de dados e a ordenação de colunas.
+
+Durante esta etapa, podem ser realizadas operações de limpeza e ajuste, como:
+
+* 
+**Remover vazios**: Filtragem de linhas sem informações.
+
+
+* 
+**Arredondamento**: Ajuste de colunas numéricas (ex: "Unidades Vendidas") para números inteiros.
+
+
+* 
+**Formatação de Texto**: Transformação de nomes de meses ou países para maiúsculas para manter a padronização.
+
+
+* 
+**Gerenciamento de Etapas**: Caso uma transformação não seja satisfatória, ela pode ser excluída individualmente no painel de configurações da consulta para retornar ao estado anterior.
+
+
+
+Na parte superior, a barra de fórmulas exibe o código em **Linguagem M** correspondente à última ação realizada:
+
+```powerquery
+Table.Sort("Tipo Alterado", {{"Country", Order.Ascending}})
+
+```
+
+Ao finalizar essas transformações, utiliza-se a opção **Fechar e Aplicar** para carregar os dados tratados no modelo do relatório.
+
+
 ### 🟩 Vídeo 14 - Criando Primeira Página do Relatório Financials – Sample Power BI
 
 <video width="60%" controls>
@@ -681,7 +726,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/d3a47918-800a-4bac-9cca-5d4580b39d4b?autoplay=1
 
 ### 🟩 Vídeo 15 - Criando Segunda Página do Relatório Financials – Sample Power BI
 
