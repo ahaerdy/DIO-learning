@@ -304,10 +304,7 @@ O foco do **ETL** está centralizado na fase de **Transformação**. Historicame
 
 O foco do **ELT** reflete a mudança de paradigma trazida pela computação em nuvem, como os serviços da **AWS, Azure e GCP**. Atualmente, o armazenamento de dados brutos tornou-se rápido e acessível, tornando o custo de *storage* um problema menor se comparado ao tempo de espera pela disponibilidade do dado. Nesta abordagem, os dados são carregados diretamente no repositório final logo após a extração, permitindo que a transformação ocorra por demanda (*ad hoc*). Isso confere maior agilidade e flexibilidade ao processo, permitindo que analistas e engenheiros adaptem as transformações conforme as regras de negócio evoluem, embora exija uma infraestrutura de destino mais robusta.
 
+# Certificado: Fundamentos Teóricos Sobre ETL
 
-##  Materiais de Apoio
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/AWMKK1HD.pdf
+- Certificado em pdf: [Cerificado-Fundamentos_Teoricos_Sobre_ETL.pdf](000-Midia_e_Anexos/Cerificado-Fundamentos_Teoricos_Sobre_ETL.pdf)
