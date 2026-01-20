@@ -6,7 +6,8 @@
   <img src="https://img.shields.io/badge/Bootcamps-DIO.me-blueviolet?logo=codeforces" />
   <img src="https://img.shields.io/github/repo-size/ahaerdy/dio-learning" />
   <img src="https://img.shields.io/github/last-commit/ahaerdy/dio-learning" />
-   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black" />
