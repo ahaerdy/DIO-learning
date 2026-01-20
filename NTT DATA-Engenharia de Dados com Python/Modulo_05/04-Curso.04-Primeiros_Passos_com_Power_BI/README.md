@@ -529,6 +529,31 @@ Na segunda página do relatório de vendas, o foco é o equilíbrio global. O vi
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/aa7cf0c2-bfa8-4844-8b66-466c147f7fb3?autoplay=1
 
+O material consiste em um tutorial prático sobre **análise de dados** utilizando o **Power BI**, focado no processamento de um conjunto de dados sobre **diabetes**. O instrutor demonstra inicialmente como solucionar problemas de **formatação de arquivos CSV**, ajustando pontos e vírgulas para que o software reconheça corretamente os valores decimais. Durante a fase de **Transformação de Dados**, ele explica a importância de limpar registros inconsistentes, como níveis de **pressão arterial ou insulina** marcados como zero. A lição avança para a criação de **visualizações gráficas**, onde são comparadas métricas como **glicose e idade** para identificar padrões de saúde. Por fim, o conteúdo ressalta que o entendimento do **contexto médico** é fundamental para decidir entre utilizar médias ou medianas na construção de modelos precisos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-19h27m22s585.jpg" alt="" width="840">
+</p>
+
+### Visualização de Dados Médicos no Power BI
+
+Nesta etapa, é apresentado o processo de criação de um visual para análise de um conjunto de dados sobre diabetes. Após o tratamento inicial dos dados no **Power Query** — onde foi necessário corrigir a interpretação de pontos e vírgulas para garantir a consistência dos resultados — os dados são carregados para a interface de relatório do Power BI.
+
+A imagem demonstra a configuração de um **gráfico de colunas agrupadas**, utilizando a **Idade (Age)** no Eixo X para observar tendências ao longo do tempo de vida das pacientes estudadas.
+
+#### Configuração do Gráfico e Métricas
+
+Para evitar distorções causadas por valores extremos ou falta de informações em determinados registros (como os valores "zero" encontrados nos campos de insulina e pressão arterial), optou-se pela utilização da **Mediana** em vez da Média ou Soma.
+
+* **Eixo X:** Age (Idade).
+* **Eixo Y:** Mediana de Glucose e Mediana de Blood Pressure (Pressão Arterial).
+* **Objetivo:** Identificar como os níveis de glicose e a pressão arterial se comportam conforme a idade avança.
+
+A escolha da mediana é justificada pela necessidade de representar o valor central que mais frequentemente aparece no conjunto, minimizando o impacto de ruídos nos dados médicos. Através dessa visualização, é possível notar, por exemplo, como os níveis de glicose tendem a apresentar variações significativas em idades mais avançadas, o que pode estar relacionado à resistência à insulina comum no processo de envelhecimento.
+
+
 ### 🟩 Vídeo 11 - Caracterizando o dataset diabetes com gráfico de barras com linhas
 
 <video width="60%" controls>
@@ -536,7 +561,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/60f7fe3b-9dc2-4b94-8089-30daa50b6048?autoplay=1
 
 ### 🟩 Vídeo 12 - Finalizando relatório preliminar – dataset diabetes kaggle
 
