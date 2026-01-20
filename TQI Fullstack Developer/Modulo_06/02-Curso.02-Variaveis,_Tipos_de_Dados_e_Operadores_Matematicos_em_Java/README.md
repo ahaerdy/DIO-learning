@@ -240,6 +240,125 @@ O objetivo é replicar o código apresentado, observando na prática o comportam
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/372c2a91-6f32-48ec-bfd3-27c4a063ad0d?autoplay=1
 
+Este conteúdo apresenta uma aula prática sobre a definição e manipulação de variáveis locais em Java, utilizando o método main como cenário. O instrutor demonstra, através de exemplos de código, as regras de nomenclatura, a sensibilidade a maiúsculas e minúsculas (case sensitivity), o uso de modificadores como final para constantes e a importância de seguir boas práticas de programação para garantir a legibilidade e a correção do código.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h43m42s012.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o código-fonte de uma classe Java chamada `Main` dentro do ambiente de desenvolvimento IntelliJ IDEA. O foco central é o método `main`, onde diversas variáveis locais são declaradas, inicializadas e preparadas para exibição.
+
+O código ilustra conceitos fundamentais de sintaxe e boas práticas discutidos na aula:
+
+* 
+**Case Sensitivity:** A definição de `int i;` e `int I;` demonstra que a linguagem diferencia letras maiúsculas de minúsculas.
+
+
+* 
+**Nomes de Variáveis:** São apresentados exemplos de nomes válidos, porém não recomendados, iniciados com caracteres especiais como `_` e `$` (`int _1a;`, `int $aq;`).
+
+
+* 
+**Constantes:** O uso da palavra-chave `final` é exemplificado em `final int j = 10;`, indicando um valor imutável.
+
+
+* 
+**Convenções:** O código mostra a aplicação de *CamelCase* para variáveis comuns (`quantidadeProduto`) e a convenção de letras maiúsculas separadas por underline para constantes (`NUMERO_TENTATIVAS`).
+
+
+* 
+**Inicialização e Impressão:** Todas as variáveis recebem valores e são passadas para o comando `System.out.println` para exibição no console .
+
+
+
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        int i;
+        //int i;
+        int I;
+        //int 1a;
+        int _1a;
+        int $aq;
+
+        i = 5;
+        I = 10;
+        _1a = 20;
+        $aq = 7;
+
+        final int j = 10;
+        //j = 15;
+        int asrn24678md;
+        //int asrn246 78md;
+        int asrn2$4678_md = 10;
+        //int asrn2$46%_md = 10;
+
+        asrn24678md = 100;
+        asrn2$4678_md = 10;
+
+        int quantidadeProduto = 50;
+        //int QuantidadeProduto;
+        final int NUMERO_TENTATIVAS = 5;
+        //final int numeroTentativas = 5;
+        int QUANTIDADE_OPCOES = 25;
+        //int qtdProd;
+
+        System.out.println(i);
+        System.out.println(I);
+        System.out.println(_1a);
+        System.out.println($aq);
+
+        System.out.println(j);
+        System.out.println(asrn24678md);
+        System.out.println(asrn2$4678_md);
+
+        System.out.println(quantidadeProduto);
+        System.out.println(NUMERO_TENTATIVAS);
+        System.out.println(QUANTIDADE_OPCOES);
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-08h44m42s012.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta o console de execução ("Run") da IDE, exibindo o resultado do processamento do código da aula. A saída confirma que o programa foi concluído com sucesso ("Process finished with exit code 0") e imprimiu os valores armazenados em cada variável.
+
+Os valores listados no console correspondem diretamente às atribuições feitas no código:
+
+* 
+**Primeiro Grupo:** `20` e `7` (referentes a `_1a` e `$aq`).
+
+
+* 
+**Segundo Grupo:** `10`, `100` e `10` (referentes à constante `j` e às variáveis `asrn24678md` e `asrn2$4678_md`).
+
+
+* 
+**Terceiro Grupo:** `50`, `5` e `25` (referentes a `quantidadeProduto`, `NUMERO_TENTATIVAS` e `QUANTIDADE_OPCOES`).
+
+
+
+Abaixo da área de saída, a IDE ainda exibe parte das instruções de impressão (`System.out.println`) utilizadas para gerar esses resultados .
+
+```text
+20
+7
+10
+100
+10
+50
+5
+25
+
+```      
+
+
 ### 🟩 Vídeo 04 - Aula 1: Conceituação e criação
 
 <video width="60%" controls>
