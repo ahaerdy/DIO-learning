@@ -730,6 +730,36 @@ package one.digitalinnovation.basecamp; [cite_start]// Define o pacote de organi
 * **Uso Prático**: O professor ressalta que, embora atribuições complexas e encadeadas sejam possíveis, na vida real o mais comum e recomendado é o uso de **atribuições simples** para facilitar a leitura do código.
 
 
+## Parte 4 - Conversões(casting)
+
+### 🟩 Vídeo 08 - Conversões (casting)
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 09 - Exercitando
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 10 - Encerramento
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.02-video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+
 ##  Materiais de Apoio
 
 # Certificado: 
