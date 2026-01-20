@@ -600,6 +600,71 @@ A análise foca no comportamento dos dados: observa-se que tanto a probabilidade
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/90486f04-eb81-4a83-9b06-d824bc0ebe50?autoplay=1
 
+O material consiste em um tutorial prático sobre a criação de um relatório de **análise descritiva de dados** utilizando o **Power BI**. O instrutor demonstra como construir um **gráfico de áreas** para monitorar a incidência de diabetes por idade, enfatizando a importância do **tratamento prévio de dados**, como o ajuste de vírgulas. Além de configurar a estética visual com sombras e títulos, o conteúdo ensina como **exportar o relatório** para formatos estáticos, como o PDF. A aula também detalha a integração dinâmica com o **PowerPoint**, permitindo que os dados sejam manipulados diretamente durante apresentações. Por fim, o autor prepara o terreno para módulos mais avançados, mencionando o uso de **Inteligência Artificial** e bases de dados financeiras complexas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h15m25s356.jpg" alt="" width="840">
+</p>
+
+A interface do Power BI Desktop apresenta um relatório de análise descritiva sobre dados de diabetes, composto por três visualizações principais: um gráfico de linhas comparando medianas de Glucose, Blood Pressure e Insulin por idade; um gráfico de colunas e linhas relacionando a função de diabetes e o IMC com o número de gestações; e um gráfico de barras que detalha a contagem de resultados (Outcome) por faixa etária. No painel lateral "Campos", observamos a estrutura da tabela carregada, contendo variáveis como `Age`, `BMI`, `Glucose` e `Outcome`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h15m33s351.jpg" alt="" width="840">
+</p>
+
+Ao acessar o menu "Arquivo" no Power BI Desktop, visualizamos as opções de gerenciamento do projeto. Entre as funcionalidades disponíveis, destacam-se a capacidade de salvar o relatório, obter novos dados e as opções de importação e exportação. O menu está posicionado para demonstrar como iniciar o processo de compartilhamento ou conversão do arquivo para outros formatos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h15m36s721.jpg" alt="" width="840">
+</p>
+
+Dentro das opções de exportação, o Power BI oferece a funcionalidade "Exportar em PDF". Ao selecionar este comando, o sistema inicia o processamento para converter as páginas do relatório em um documento estático, exibindo uma caixa de diálogo com a mensagem "Gerando um PDF do relatório...". Este recurso é fundamental para comunicações rápidas onde a interatividade dos dados não é o foco principal.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h15m42s719.jpg" alt="" width="840">
+</p>
+
+O resultado da exportação é visualizado em um leitor de PDF, como o Adobe Acrobat Reader. O documento preserva o layout visual do relatório original, incluindo todos os gráficos e títulos da "Análise Descritiva sobre dados de diabetes", permitindo a visualização offline e o compartilhamento simplificado das informações coletadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h15m58s266.jpg" alt="" width="840">
+</p>
+
+Além da exportação estática, é possível realizar a publicação do relatório para o ecossistema online através do botão "Publicar", localizado na página inicial. Esta ação prepara o envio do arquivo `.pbix` do ambiente local (Desktop) para o Power BI Serviço na nuvem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h16m02s736.jpg" alt="" width="840">
+</p>
+
+Ao clicar em publicar, o Power BI solicita a seleção de um destino. O usuário deve escolher um workspace, como o "Meu workspace", para hospedar o relatório na nuvem. Este passo é essencial para habilitar recursos avançados de colaboração e integração com outras ferramentas da Microsoft.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h16m09s329.jpg" alt="" width="840">
+</p>
+
+Uma janela de status confirma o andamento da operação com a mensagem "Publicando no Power BI". Durante esse processo, o sistema também oferece dicas úteis ao usuário, como a possibilidade de criar exibições personalizadas para telefones celulares através do Layout Móvel.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h16m17s648.jpg" alt="" width="840">
+</p>
+
+O relatório agora está acessível via navegador no Power BI Serviço (`app.powerbi.com`). Nesta interface web, as mesmas visualizações do Desktop estão disponíveis, mas com opções adicionais no menu superior, como "Exportar", que permite integrar o relatório com o PowerPoint de forma dinâmica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h16m35s248.jpg" alt="" width="840">
+</p>
+
+Ao escolher a integração com o PowerPoint, o Power BI Serviço gera uma URL específica para "dados dinâmicos". O usuário pode copiar essa URL para colá-la em uma apresentação existente ou clicar em "Abrir no PowerPoint" para criar automaticamente um novo slide que manterá a interatividade dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-20h16m51s102.jpg" alt="" width="840">
+</p>
+
+No Microsoft PowerPoint, o relatório é inserido como um elemento interativo dentro do slide. Através do suplemento do Power BI, o apresentador pode filtrar dados e navegar pelas informações em tempo real durante a apresentação, eliminando a necessidade de capturas de tela estáticas e garantindo que os dados visualizados estejam sempre atualizados conforme a fonte no Power BI Serviço.      
+
+
 ### 🟩 Vídeo 13 - Obtendo dados com Simples Transformação dos dados Sample Financials do Power BI
 
 <video width="60%" controls>
@@ -607,7 +672,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/15033822-e550-4c45-8ef8-bd6f13493876?autoplay=1
 
 ### 🟩 Vídeo 14 - Criando Primeira Página do Relatório Financials – Sample Power BI
 
