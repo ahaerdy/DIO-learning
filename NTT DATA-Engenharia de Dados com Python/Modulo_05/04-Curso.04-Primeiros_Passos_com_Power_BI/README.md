@@ -563,6 +563,34 @@ A escolha da mediana é justificada pela necessidade de representar o valor cent
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/60f7fe3b-9dc2-4b94-8089-30daa50b6048?autoplay=1
 
+O vídeo apresenta um tutorial prático sobre a **criação e ajuste de gráficos** em uma ferramenta de análise de dados, focando em indicadores de **saúde feminina**. O instrutor demonstra como corrigir inconsistências nos dados e escolher as melhores **métricas estatísticas**, como média e mediana, para representar informações de **insulina e pressão arterial**. Durante a explicação, há uma ênfase na **personalização visual**, alterando cores e layouts para tornar a leitura dos relatórios mais clara e profissional. Além disso, o conteúdo explora a correlação entre o **índice de massa corpórea** e a probabilidade de desenvolver **diabetes gestacional**. O vídeo termina destacando as **tendências de dados** que mostram como o avanço da idade influencia os níveis de glicose dos pacientes.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-19h48m36s141.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é iniciada a construção de um gráfico de colunas combinadas com linha para analisar a relação entre o número de gestações e indicadores de saúde. O objetivo é observar a **Mediana de Diabetes Pedigree Function** (representada pelas colunas azuis) e a **Média de BMI** (índice de massa corpórea, representada pela linha) em função da quantidade de **Pregnancies** (gestações) no eixo X.
+
+A configuração busca identificar padrões de probabilidade genética de diabetes e variações de massa corpórea conforme o histórico de gravidez. No painel de visualizações, os campos são organizados da seguinte forma:
+
+* **Eixo X**: Pregnancies.
+* **Eixo Y da coluna**: Mediana de Diabetes Pedigree Function.
+* **Eixo Y da linha**: Média de BMI.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-19h48m39s944.jpg" alt="" width="840">
+</p>
+
+Nesta visualização, o gráfico é refinado para melhorar a legibilidade e a comparação visual entre as métricas. A cor da linha que representa o **BMI** foi alterada para um tom de amarelo, facilitando o contraste com as colunas azuis que indicam a mediana da função de pedigree de diabetes.
+
+A análise foca no comportamento dos dados: observa-se que tanto a probabilidade relacionada ao diabetes quanto o índice de massa corpórea tendem a apresentar variações significativas conforme o número de gestações aumenta. Através do painel de campos, confirma-se a utilização de medidas estatísticas específicas para evitar distorções por valores extremos:
+
+* **Coluna**: Utiliza a **Mediana** de *Diabetes Pedigree Function*.
+* **Linha**: Utiliza a **Mediana** (ou média, dependendo do ajuste de escala) de *BMI* para observar se o comportamento permanece similar e condizente com a realidade dos dados.      
+
+
 ### 🟩 Vídeo 12 - Finalizando relatório preliminar – dataset diabetes kaggle
 
 <video width="60%" controls>
@@ -570,7 +598,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/90486f04-eb81-4a83-9b06-d824bc0ebe50?autoplay=1
 
 ### 🟩 Vídeo 13 - Obtendo dados com Simples Transformação dos dados Sample Financials do Power BI
 
