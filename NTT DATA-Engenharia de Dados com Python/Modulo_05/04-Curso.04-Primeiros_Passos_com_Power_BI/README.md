@@ -334,6 +334,60 @@ Ao fechar a tela inicial, revela-se a **interface principal do Power BI Desktop*
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/8d1ea71b-ce50-4ffb-82bc-4b202121e208?autoplay=1
 
+O vídeo consiste em uma introdução técnica ao **Power BI**, destacando sua interface intuitiva que se assemelha ao **Excel** para facilitar o aprendizado. O instrutor detalha as diversas formas de **importação de dados**, abrangendo desde arquivos locais e **GitHub** até bancos de dados complexos como **SQL Server** e **MySQL**. A explicação enfatiza a importância do **relacionamento entre tabelas**, comparando a estrutura da ferramenta à modelagem de dados convencional. Além disso, são exploradas as integrações com o ecossistema **Microsoft**, incluindo **Azure** e **SharePoint**, para a criação de relatórios na nuvem. O conteúdo foca em preparar o usuário para a **prática direta**, ensinando como coletar, estruturar e visualizar informações através de gráficos. Por fim, o guia reforça que a análise correta dos dados é essencial para gerar **insights valiosos** para gestores e empresas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h57m49s925.jpg" alt="" width="840">
+</p>
+
+A interface principal do Power BI Desktop apresenta três visualizações fundamentais no menu vertical à esquerda: **Relatório** (onde os gráficos são construídos), **Dados** (para visualização das tabelas) e **Modelo** (para gestão de relacionamentos). No centro da tela, o software oferece atalhos rápidos para a importação inicial de dados, permitindo ao usuário escolher entre importar do Excel, do SQL Server ou até colar dados em uma tabela em branco. À direita, localizam-se os painéis de **Filtros** e **Visualizações**, que contêm o catálogo de gráficos disponíveis para compor o relatório.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h58m05s179.jpg" alt="" width="840">
+</p>
+
+O menu **Arquivo** do Power BI Desktop centraliza as operações de gerenciamento de projeto. Além das funções tradicionais como "Salvar" e "Salvar como", este menu permite **Importar** modelos do Power BI ou elementos do Visual Studio, e **Exportar** o trabalho em formato PDF ou como um modelo de arquivo (.pbit). Também é por aqui que se acessam as "Opções e configurações" e a tela de "Introdução", que remete à página inicial de instalação do sistema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h58m22s256.jpg" alt="" width="840">
+</p>
+
+Através do botão **Obter dados** na Página Inicial, o usuário tem acesso às "Fontes de dados comuns". Este menu rápido facilita a conexão com origens frequentes, como:
+
+* Pasta de trabalho do Excel
+* Conjuntos de dados do Power BI
+* Fluxos de dados
+* Dataverse
+* SQL Server
+* Texto/CSV e Web
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h58m32s680.jpg" alt="" width="840">
+</p>
+
+Ao selecionar a opção "Mais..." no menu de dados, abre-se a janela completa de conectores. Na categoria **Arquivo**, o Power BI demonstra sua versatilidade ao suportar diversos formatos estruturados e semiestruturados, permitindo a extração de informações de documentos **JSON, XML, PDF**, pastas completas ou arquivos no formato **Parquet**, além da integração direta com pastas do **SharePoint**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h58m38s334.jpg" alt="" width="840">
+</p>
+
+Na seção **Power Platform**, o foco é a integração com o ecossistema de dados da Microsoft. É possível conectar-se a **Dataverses**, fluxos de dados (Dataflows) e **Datamarts**, facilitando o consumo de dados que já foram tratados ou padronizados dentro da organização através de outras ferramentas da plataforma.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h58m40s372.jpg" alt="" width="840">
+</p>
+
+A categoria **Azure** revela as possibilidades de conexão com a nuvem, permitindo importar dados de instâncias de **Banco de Dados SQL do Azure**, **Azure Synapse Analytics**, **Azure Databricks** e armazenamentos de grande escala como o **Azure Data Lake Storage**. Essa integração é ideal para ambientes corporativos que desejam disponibilizar relatórios atualizados para executivos e equipes a partir de dados hospedados em nuvem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h58m43s824.jpg" alt="" width="840">
+</p>
+
+A visualização de **Modelagem** (ou Modelo) é onde se define a estrutura lógica do relatório. Quando os dados possuem uma base relacional, como os provenientes de bancos SQL, o Power BI exibe as tabelas e suas conexões de forma similar a um **Diagrama de Entidade e Relacionamento (DER)**. Neste painel, é possível configurar as propriedades de cada campo e gerenciar como as tabelas interagem entre si através de chaves comuns.
+
+
 ### 🟩 Vídeo 07 - Não tenho dataset e agora? - Kaggle
 
 <video width="60%" controls>
@@ -341,7 +395,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/5d555db8-cfab-4981-a058-37bdc88de135?autoplay=1
 
 ### 🟩 Vídeo 08 - Não tenho dataset e agora? - Power BI Samples
 
