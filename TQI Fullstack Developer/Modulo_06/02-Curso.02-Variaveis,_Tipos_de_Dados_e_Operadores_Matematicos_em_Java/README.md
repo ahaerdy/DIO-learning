@@ -843,10 +843,6 @@ O vídeo detalha **conversão de tipos de dados**, processo também conhecido co
 
 ### Anotações
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h47m38s757.jpg" alt="" width="840">
-</p>
-
 Esta aula foca na resolução do exercício sobre **casting** (conversões de tipos), explorando como o Java lida com a transferência de dados entre variáveis de capacidades distintas. O exemplo demonstra que o **upcast** (promoção) é um processo seguro e implícito, enquanto o **downcast** (rebaixamento) exige declaração explícita e oferece riscos à integridade dos dados.
 
 ### Conceitos Fundamentais de Casting
@@ -915,7 +911,6 @@ public class Main {
 ```
 
 
-
 ### 🟩 Vídeo 10 - Encerramento
 
 <video width="60%" controls>
@@ -925,6 +920,33 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/8cbf4e9a-ecda-409e-b9bb-e0acfb591f0a?autoplay=1
 
+O autor encerra o treinamento enfatizando que **sentir incertezas** após a conclusão das aulas é um processo **esperado e positivo**. Para solucionar questionamentos, ele recomenda o uso do **fórum interno**, onde instrutores e outros estudantes colaboram diretamente. Caso a demanda seja mais abrangente, os alunos são incentivados a buscar suporte na **comunidade do Discord**, que oferece uma rede de contatos mais ampla. Além disso, o material disponibiliza **referências externas** baseadas na documentação oficial da Oracle para quem deseja aprofundar seus estudos técnicos. Esse suporte contínuo visa garantir que o aprendizado se estenda para além do conteúdo em vídeo. Por fim, o instrutor agradece a participação de todos e sinaliza a continuidade da jornada em **cursos futuros**.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h59m19s505.jpg" alt="" width="840">
+</p>
+
+Ao concluir o curso, é natural que surjam dúvidas sobre o conteúdo estudado. Para solucionar essas questões, estão disponíveis dois canais principais de suporte: o **fórum do curso**, onde ocorre a interação entre alunos e instrutores, e a **comunidade online no Discord**, voltada para discussões mais amplas que transcendem o escopo específico das aulas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h59m23s669.jpg" alt="" width="840">
+</p>
+
+Para o aprofundamento nos temas abordados, a documentação oficial da Oracle oferece recursos detalhados sobre a estrutura fundamental da linguagem Java. Os materiais de referência incluem guias sobre palavras-chave, conceitos de variáveis e tipos de dados, servindo como base técnica para o conteúdo apresentado:
+
+* **Palavras-chave**: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/keywords.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/keywords.html) 
+* **Resumo de Variáveis**: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variablesummary.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variablesummary.html) 
+* **Tipos de Dados**: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html) 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h59m25s050.jpg" alt="" width="840">
+</p>
+
+A seção "Para saber mais" disponibiliza links diretos da documentação oficial da Oracle, especificamente focados no resumo de variáveis. Esses recursos adicionais permitem que o estudante explore a fundamentação teórica utilizada na confecção do material didático:
+
+* **Resumo de Variáveis**: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variablesummary.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variablesummary.html)      
 
 
 ##  Materiais de Apoio
