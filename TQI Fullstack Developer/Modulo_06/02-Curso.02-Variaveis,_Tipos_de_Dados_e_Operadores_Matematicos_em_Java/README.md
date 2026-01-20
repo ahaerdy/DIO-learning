@@ -252,25 +252,11 @@ A imagem exibe o código-fonte de uma classe Java chamada `Main` dentro do ambie
 
 O código ilustra conceitos fundamentais de sintaxe e boas práticas discutidos na aula:
 
-* 
-**Case Sensitivity:** A definição de `int i;` e `int I;` demonstra que a linguagem diferencia letras maiúsculas de minúsculas.
-
-
-* 
-**Nomes de Variáveis:** São apresentados exemplos de nomes válidos, porém não recomendados, iniciados com caracteres especiais como `_` e `$` (`int _1a;`, `int $aq;`).
-
-
-* 
-**Constantes:** O uso da palavra-chave `final` é exemplificado em `final int j = 10;`, indicando um valor imutável.
-
-
-* 
-**Convenções:** O código mostra a aplicação de *CamelCase* para variáveis comuns (`quantidadeProduto`) e a convenção de letras maiúsculas separadas por underline para constantes (`NUMERO_TENTATIVAS`).
-
-
-* 
-**Inicialização e Impressão:** Todas as variáveis recebem valores e são passadas para o comando `System.out.println` para exibição no console .
-
+* **Case Sensitivity:** A definição de `int i;` e `int I;` demonstra que a linguagem diferencia letras maiúsculas de minúsculas.
+* **Nomes de Variáveis:** São apresentados exemplos de nomes válidos, porém não recomendados, iniciados com caracteres especiais como `_` e `$` (`int _1a;`, `int $aq;`).
+* **Constantes:** O uso da palavra-chave `final` é exemplificado em `final int j = 10;`, indicando um valor imutável.
+* **Convenções:** O código mostra a aplicação de *CamelCase* para variáveis comuns (`quantidadeProduto`) e a convenção de letras maiúsculas separadas por underline para constantes (`NUMERO_TENTATIVAS`).
+* **Inicialização e Impressão:** Todas as variáveis recebem valores e são passadas para o comando `System.out.println` para exibição no console .
 
 
 ```java
