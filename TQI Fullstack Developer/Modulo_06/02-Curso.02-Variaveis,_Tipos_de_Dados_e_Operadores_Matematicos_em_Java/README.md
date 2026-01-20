@@ -739,7 +739,96 @@ package one.digitalinnovation.basecamp; [cite_start]// Define o pacote de organi
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/8612fba9-75b7-4226-8869-895f2a405088?autoplay=1
+
+O vídeo consiste em uma aula final sobre o conceito de **casting**, que se refere à **conversão de tipos de dados** na linguagem de programação Java. O material explica que a **promoção de uma variável** para uma capacidade maior é chamada de **upcast** e ocorre de forma automática e **implícita**. Em contrapartida, reduzir um dado para um tipo menos específico é denominado **downcast**, um processo que exige uma declaração **explícita** e apresenta riscos de **perda de informações**. O autor detalha como essa prática funciona em **tipos primitivos**, alertando para os perigos de **truncar valores decimais** em contextos sensíveis, como transações financeiras. Por fim, o texto propõe a realização de **exercícios práticos** em um ambiente de desenvolvimento para observar o comportamento dessas transformações na prática.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h33m13s384.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o conceito de **conversões**, amplamente conhecido no desenvolvimento de software como **casting**. O objetivo principal é compreender como transformar variáveis entre diferentes tipos de dados, explorando as capacidades de promoção e rebaixamento oferecidas pela linguagem Java.
+
+Os objetivos específicos desta unidade são:
+
+* **Entender o que é casting:** Compreender a fundamentação teórica da conversão de tipos.
+* **Conhecer os tipos:** Identificar as modalidades de casting disponíveis na linguagem.
+* **Saber como e quando usar:** Desenvolver o critério técnico para aplicar a castuação de forma segura e eficaz.
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h33m17s411.jpg" alt="" width="840">
+</p>
+
+A conceituação formal de casting define o processo como a **transformação de uma determinada variável de um tipo menos específico para um tipo mais específico, ou vice-versa**. Na prática, isso significa que é possível tanto elevar a capacidade de representação de um dado (promover) quanto reduzi-la (rebaixar).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h33m18s956.jpg" alt="" width="840">
+</p>
+
+Existem duas categorias fundamentais de casting baseadas na direção da conversão:
+
+* **Upcast (implícito):** Ocorre quando se promove um tipo de dado de menor capacidade para um de maior capacidade de armazenamento. Por não haver risco de perda de dados, a linguagem realiza a transição automaticamente (de forma implícita).
+* **Downcast (explícito):** Ocorre ao rebaixar uma variável de maior capacidade para uma de menor capacidade. Como há risco de perda de precisão ou de informação, o desenvolvedor deve declarar a conversão de forma explícita no código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h33m22s044.jpg" alt="" width="840">
+</p>
+
+A tabela de utilização detalha como os tipos primitivos interagem entre si durante as conversões:
+
+* **U-I (Upcast Implícito):** Indicado quando o destino tem maior capacidade que a origem (ex: de `int` para `long` ou `float`).
+* **D-E (Downcast Explícito):** Necessário quando o destino tem menor capacidade que a origem (ex: de `long` para `int`), exigindo a intervenção do programador.
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h33m26s926.jpg" alt="" width="840">
+</p>
+
+A aplicação prática do casting demonstra a diferença sintática entre as promoções e os rebaixamentos:
+
+* No **Upcast**, a atribuição é direta, pois o valor cabe com folga no novo tipo.
+* No **Downcast**, utiliza-se parênteses com o tipo de destino antes da variável para instruir a linguagem sobre a transformação.
+
+
+```java
+// Exemplos de Upcast e Downcast
+long l; 
+int i = 10; 
+l = i; // Upcast implícito
+
+int i2; 
+long l2 = 100; 
+i2 = (int) l2; // Downcast explícito
+
+double d; 
+float f = 10.5f; 
+d = f; // Upcast implícito
+
+float f2; 
+double d2 = 10.5d; 
+f2 = (float) d2; // Downcast explícito
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-13h33m31s766.jpg" alt="" width="840">
+</p>
+
+Um dos casos mais críticos de casting envolve a conversão de números reais para inteiros. Ao realizar um downcast de um `float` para um `int`, ocorre o **truncamento**: a parte decimal é simplesmente descartada, restando apenas o valor inteiro.
+
+```java
+// Exemplo de perda de informação por truncamento
+int i; 
+float f = 10.5f; 
+i = (int) f; // O valor resultante em 'i' será 10
+
+```
+
+Essa operação exige cautela, especialmente em transações financeiras, onde o descarte sistemático de centavos pode gerar prejuízos significativos ao longo de muitas operações.
+
 
 ### 🟩 Vídeo 09 - Exercitando
 
@@ -748,7 +837,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/27c0145b-7930-4993-a345-3b5dab49fa64?autoplay=1
 
 ### 🟩 Vídeo 10 - Encerramento
 
@@ -757,7 +846,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/variaveis-tipos-de-dados-e-operadores-matematicos-em-java/learning/8612fba9-75b7-4226-8869-895f2a405088?autoplay=1
+
+
 
 
 ##  Materiais de Apoio
