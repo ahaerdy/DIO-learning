@@ -40,6 +40,13 @@ Para acompanhar o trabalho do instrutor e acessar materiais complementares, voc�
 * **GitHub Pessoal:** Espaço para projetos autorais e componentes disponibilizados para a comunidade.
 * **GitHub DIO:** Perfil específico para o armazenamento dos repositórios e projetos de exemplo práticos deste curso.
 
+Links:
+
+- [https://www.linkedin.com/in/thiago-leite-e-carvalho-1b337b127/](https://www.linkedin.com/in/thiago-leite-e-carvalho-1b337b127/)
+- [https://github.com/thiagoleitecarvalho](https://github.com/thiagoleitecarvalho)
+- [https://github.com/tlcdio](https://github.com/tlcdio)
+
+
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-07h43m03s752.jpg" alt="" width="840">
 </p>
