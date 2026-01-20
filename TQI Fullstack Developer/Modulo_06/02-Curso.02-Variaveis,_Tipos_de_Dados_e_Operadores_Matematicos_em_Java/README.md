@@ -318,18 +318,9 @@ Esta imagem apresenta o console de execução ("Run") da IDE, exibindo o resulta
 
 Os valores listados no console correspondem diretamente às atribuições feitas no código:
 
-* 
-**Primeiro Grupo:** `20` e `7` (referentes a `_1a` e `$aq`).
-
-
-* 
-**Segundo Grupo:** `10`, `100` e `10` (referentes à constante `j` e às variáveis `asrn24678md` e `asrn2$4678_md`).
-
-
-* 
-**Terceiro Grupo:** `50`, `5` e `25` (referentes a `quantidadeProduto`, `NUMERO_TENTATIVAS` e `QUANTIDADE_OPCOES`).
-
-
+* **Primeiro Grupo:** `20` e `7` (referentes a `_1a` e `$aq`).
+* **Segundo Grupo:** `10`, `100` e `10` (referentes à constante `j` e às variáveis `asrn24678md` e `asrn2$4678_md`).
+* **Terceiro Grupo:** `50`, `5` e `25` (referentes a `quantidadeProduto`, `NUMERO_TENTATIVAS` e `QUANTIDADE_OPCOES`).
 
 Abaixo da área de saída, a IDE ainda exibe parte das instruções de impressão (`System.out.println`) utilizadas para gerar esses resultados .
 
