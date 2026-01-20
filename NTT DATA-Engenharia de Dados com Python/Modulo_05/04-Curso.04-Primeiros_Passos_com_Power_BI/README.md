@@ -692,22 +692,10 @@ A imagem detalha o **Editor do Power Query**, onde ocorre o processo de **transf
 
 Durante esta etapa, podem ser realizadas operações de limpeza e ajuste, como:
 
-* 
-**Remover vazios**: Filtragem de linhas sem informações.
-
-
-* 
-**Arredondamento**: Ajuste de colunas numéricas (ex: "Unidades Vendidas") para números inteiros.
-
-
-* 
-**Formatação de Texto**: Transformação de nomes de meses ou países para maiúsculas para manter a padronização.
-
-
-* 
-**Gerenciamento de Etapas**: Caso uma transformação não seja satisfatória, ela pode ser excluída individualmente no painel de configurações da consulta para retornar ao estado anterior.
-
-
+* **Remover vazios**: Filtragem de linhas sem informações.
+* **Arredondamento**: Ajuste de colunas numéricas (ex: "Unidades Vendidas") para números inteiros.
+* **Formatação de Texto**: Transformação de nomes de meses ou países para maiúsculas para manter a padronização.
+* **Gerenciamento de Etapas**: Caso uma transformação não seja satisfatória, ela pode ser excluída individualmente no painel de configurações da consulta para retornar ao estado anterior.
 
 Na parte superior, a barra de fórmulas exibe o código em **Linguagem M** correspondente à última ação realizada:
 
