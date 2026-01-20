@@ -459,6 +459,8 @@ Nesta aula o instrutor demonstra a criação de variáveis para armazenar **valo
 
 ### Anotações
 
+Código apresentado pelo instrutor:
+
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-10h40m23s024.jpg" alt="" width="840">
 </p>
