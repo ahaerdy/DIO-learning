@@ -286,6 +286,45 @@ A imagem foca na aba de **Downtime Analysis** (Análise de Tempo de Inatividade)
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/186a7ed0-1077-4367-aab5-5d9ca49ef4e0?autoplay=1
 
+O vídeo consiste em um tutorial prático que ensina como **instalar o Microsoft Power BI Desktop** em sistemas operacionais Windows. A pessoa narradora explica que o software é **exclusivo para Windows**, detalhando o processo de download pelo site oficial em vez da loja de aplicativos padrão. Durante a demonstração, são fornecidas orientações sobre a **configuração de idioma**, a aceitação de termos e as etapas finais da instalação. Após concluir o processo, a fonte apresenta a **interface inicial da ferramenta**, destacando recursos como tutoriais, fóruns e a função de importação de dados. O objetivo final é preparar o usuário para as próximas fases de **análise de dados e criação de gráficos** dentro da plataforma.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h41m09s484.jpg" alt="" width="840">
+</p>
+
+Ao acessar o portal da Microsoft para adquirir a ferramenta, é comum encontrar sugestões para utilizar a Microsoft Store. No entanto, para garantir um processo de instalação mais controlado e padrão, a recomendação é buscar pelo instalador executável direto. A imagem ilustra a página de **Visualização de Dados** do Power BI, onde o usuário deve navegar para encontrar as opções de download ("Saiba mais" ou "Download"), evitando o redirecionamento automático para a loja de aplicativos do Windows, optando assim pelo instalador manual.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h41m26s630.jpg" alt="" width="840">
+</p>
+
+Após a confirmação do download, visualiza-se a página de agradecimento da Microsoft ("Thank you for downloading..."). Neste etapa, é crucial selecionar a arquitetura correta para o sistema operacional, geralmente a versão **64 bits**. Vale ressaltar uma limitação importante de compatibilidade: o **Microsoft Power BI Desktop** é exclusivo para o ambiente Windows. Usuários de outros sistemas, como macOS ou Linux (Ubuntu), não possuem uma versão nativa e precisam migrar para o Windows para utilizar a ferramenta de desenvolvimento desktop.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h41m32s771.jpg" alt="" width="840">
+</p>
+
+Ao executar o programa pela primeira vez, o usuário é recebido por uma **tela de boas-vindas** sobreposta (frequentemente chamada de *splash screen* interativa). Esta janela funciona como um hub central que oferece:
+
+* **Acesso a Dados:** Atalhos para "Obter dados" de diversas fontes e abrir projetos recentes.
+* **Recursos Educativos:** Uma coluna lateral dedicada a novidades, fóruns da comunidade, blog oficial do Power BI e tutoriais em vídeo para aprendizado.
+* **Identificação:** Opções para login na conta corporativa ou escolar, embora o uso local possa ser iniciado sem login imediato.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-17h41m35s971.jpg" alt="" width="840">
+</p>
+
+Ao fechar a tela inicial, revela-se a **interface principal do Power BI Desktop**. O ambiente é composto por áreas distintas para a construção de relatórios:
+
+* **Faixa de Opções (Topo):** Menus como Página Inicial, Inserir, Modelagem e Exibição, similares aos do Office.
+* **Canvas (Centro):** A área em branco onde os visuais e gráficos serão dispostos.
+* **Painéis Laterais (Direita):**
+* **Visualizações:** Onde se escolhe o tipo de gráfico (barras, pizza, mapas, etc.) e se configuram seus eixos.
+* **Campos:** Local onde aparecerão as tabelas e colunas dos dados importados para serem arrastados para o relatório.      
+
+
 ### 🟩 Vídeo 06 - Conhecendo o Power BI Desktop
 
 <video width="60%" controls>
@@ -293,7 +332,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/8d1ea71b-ce50-4ffb-82bc-4b202121e208?autoplay=1
 
 ### 🟩 Vídeo 07 - Não tenho dataset e agora? - Kaggle
 
