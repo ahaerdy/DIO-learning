@@ -187,6 +187,96 @@ Para cada métrica individual no scorecard, é possível abrir um painel de deta
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/3e2109f5-b2e4-4dbb-a08e-8b00737d8689?autoplay=1
 
+Este conteúdo apresenta uma exploração técnica da interface web do Power BI, focando na navegação de métricas, utilização de aplicativos integrados e análise de amostras de dados (samples). O instrutor detalha as funcionalidades de visualização interativa, como mapas e gráficos dinâmicos, e estabelece distinções fundamentais entre relatórios, dashboards e workspaces, preparando o usuário para a transição ao Power BI Desktop.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h34m25s238.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos a seção de **Aplicativos** no Power BI Service. A interface apresenta opções para obter novos aplicativos ("Get apps"), destacando a integração com serviços externos e modelos prontos.
+
+* **Integrações:** É possível conectar-se a serviços como GitHub, LinkedIn e outros produtos Microsoft.
+* **Samples (Amostras):** Existem diversos templates disponíveis para estudo e customização.
+* **Objetivo:** Facilitar a criação de ambientes analíticos sem começar do zero, utilizando estruturas pré-definidas para diferentes contextos organizacionais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h34m35s319.jpg" alt="" width="840">
+</p>
+
+A tela exibe o **Centro de Aprendizagem** e a área de obtenção de dados. Aqui, o Power BI oferece recursos fundamentais para quem está iniciando ou busca aprofundamento:
+
+1. **Documentação:** Acesso direto à documentação oficial, essencial para entender funcionalidades complexas.
+2. **Comunidade:** Links para ingressar na comunidade Power BI e trocar experiências.
+3. **Amostras de Dados:** Listagem de conjuntos de dados fictícios para prática, como "Análise de Oportunidade", "Vendas Regionais" e "Gastos de TI".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h34m41s777.jpg" alt="" width="840">
+</p>
+
+O instrutor seleciona especificamente a amostra **"Exemplo de Análise com Gastos de TI"** (IT Spend Analysis). Ao clicar nesta opção, o Power BI inicia o processo de provisionamento de um ambiente de demonstração que inclui dados, relatórios e painéis pré-configurados, permitindo ao usuário explorar as capacidades da ferramenta em um cenário de negócios simulado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h34m50s517.jpg" alt="" width="840">
+</p>
+
+Durante o carregamento da amostra, é comum enfrentar um tempo de espera. Este atraso no processamento pode ser influenciado por diversos fatores técnicos:
+
+* Qualidade da conexão com a internet.
+* Tamanho da base de dados sendo importada.
+* Carga de processamento nos servidores do Power BI ou na máquina local.
+
+Essa tela de "carregando" ilustra o comportamento real da plataforma ao lidar com a importação de novos datasets e a criação automática de dashboards.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h34m55s126.jpg" alt="" width="840">
+</p>
+
+Diante da demora no carregamento, o instrutor navega para a seção de **Workspaces** (Áreas de Trabalho). O Workspace funciona como um contêiner organizacional onde residem os artefatos do Power BI:
+
+* Painéis (Dashboards)
+* Relatórios
+* Conjuntos de dados (Datasets)
+
+A imagem mostra a tentativa de acessar o "Meu Workspace" para verificar se o conteúdo foi criado ou para acessar conteúdos existentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h34m59s564.jpg" alt="" width="840">
+</p>
+
+Dentro do Workspace, a lista de conteúdos é atualizada. É possível identificar a criação bem-sucedida do **"Supply Quality Sample"** (Amostra de Qualidade de Fornecedor). A interface lista os diferentes tipos de arquivos disponíveis na área de trabalho, permitindo distinguir entre Painéis (ícone de velocímetro) e Relatórios/Datasets, consolidando a visão de gerenciamento de ativos dentro do Power BI Service.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h35m01s577.jpg" alt="" width="840">
+</p>
+
+Esta visualização apresenta um **Painel (Dashboard)** completo. Diferente de um relatório paginado, o painel agrega as informações mais críticas em uma única tela ("at a glance"). Os elementos visuais incluem:
+
+* **Cartões (Cards):** Para exibir números grandes e indicadores nominais importantes.
+* **Mapas:** Para análise de distribuição geográfica.
+* **Gráficos de Linha e Dispersão:** Para análise de tendências e correlações.
+* **Gráficos Combinados:** Barras com linhas para comparar métricas distintas simultaneamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h35m04s565.jpg" alt="" width="840">
+</p>
+
+Aqui acessamos o **Relatório** "Supplier Quality Analysis". Diferentemente do painel, o relatório permite uma análise mais granular e detalhada.
+
+* **Tabelas:** Utilizadas quando é necessário visualizar os dados brutos ou detalhes específicos que gráficos não mostram com precisão.
+* **Filtros Interativos:** A funcionalidade de *Top-bottom analysis* permite segmentar a visão por categorias (como Elétrica, Logística, Serviços), alterando dinamicamente os dados apresentados na tabela e nos gráficos adjacentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-20-16h35m17s470.jpg" alt="" width="840">
+</p>
+
+A imagem foca na aba de **Downtime Analysis** (Análise de Tempo de Inatividade) e demonstra o recurso de **Dica de Ferramenta (Tooltip)**.
+
+* **Interatividade:** Ao passar o cursor (mouse over) sobre uma barra ou ponto do gráfico, uma janela flutuante aparece.
+* **Contexto:** Essa janela exibe informações detalhadas específicas daquele ponto de dados, permitindo aprofundar a análise sem poluir a visualização principal com excesso de rótulos.      
+
+
 ### 🟩 Vídeo 05 - Instalando o Power BI Desktop
 
 <video width="60%" controls>
@@ -194,7 +284,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/186a7ed0-1077-4367-aab5-5d9ca49ef4e0?autoplay=1
 
 ### 🟩 Vídeo 06 - Conhecendo o Power BI Desktop
 
