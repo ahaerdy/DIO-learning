@@ -89,7 +89,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 - [x] Curso: [Dominando IDEs Java](Modulo_06/01-Curso.01-Dominando.IDEs.Java)
 - [ ] Curso: [Variáveis, Tipos de Dados e Operadores Matemáticos em Java](Modulo_06/02-Curso.02-Variaveis%2C_Tipos_de_Dados_e_Operadores_Matematicos_em_Java)
-- [ ] Curso: Entendendo Métodos Java
+- [x] Curso: [Entendendo Métodos Java](Modulo_06/03-Curso.03-Entendendo.Metodos.Java)
 - [ ] Curso: Lógica Condicional e Controle de Fluxos em Java
 - [ ] Curso: Estruturas de Repetição e Arrays em Java
 - [ ] Curso: Trabalhando com Collections Java

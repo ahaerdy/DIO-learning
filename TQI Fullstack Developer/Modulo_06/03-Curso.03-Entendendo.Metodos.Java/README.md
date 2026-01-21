@@ -8,25 +8,55 @@
 
 ### 🟩 Vídeo 01 - Introdução ao Curso
 
-link do vídeo:
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/1d32857c-8137-4b87-8a1c-474300f71648?autoplay=1
 
 ### 🟩 Vídeo 02 - Conceituação de métodos
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 03 - Definição
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 04 - Conceitos Inerentes aos métodos e boas práticas na sua criação
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
 ### 🟩 Vídeo 05 - Apresentação do exercício
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 06 - Exercício prático
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
@@ -34,9 +64,19 @@ link do vídeo:
 
 ### 🟩 Vídeo 07 - Como criar sobrecargas, usá-las e exercício prático
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 08 - Resolução do exercício prático
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
@@ -44,13 +84,28 @@ link do vídeo:
 
 ### 🟩 Vídeo 09 - Funcionamento, considerações, uso de retornos e apresentação do exercício
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 10 - Resolução do exercício
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 11 - Encerramento do curso
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.03-video_11.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
 
 link do vídeo:
 
