@@ -682,6 +682,68 @@ Para fixar o conteúdo, propõe-se o seguinte exercício:
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/c080dbf5-b31b-4bf6-90e3-275fafa4a6af?autoplay=1
 
+Esta aula aborda o conceito de sobrecarga de métodos em Java, utilizando como exemplo prático o cálculo da área de quadriláteros (quadrado, retângulo, trapézio e losango). O conteúdo demonstra que a sobrecarga permite que um único método, com o mesmo nome, execute diferentes comportamentos com base na sua assinatura, que é definida pela quantidade e pelos tipos de dados dos parâmetros fornecidos. O vídeo enfatiza que apenas alterar o nome das variáveis de entrada não é suficiente para caracterizar a sobrecarga; é necessário que haja uma variação real na lista de parâmetros para que a linguagem consiga identificar qual implementação deve ser executada, garantindo assim maior flexibilidade e organização ao código.
+
+### Anotações
+
+Nesta etapa, é apresentada a criação da classe `Quadrilatero`, focada no conceito de **sobrecarga de métodos**. A sobrecarga permite que um método mantenha o mesmo nome, desde que sua assinatura (nome + lista de parâmetros) seja alterada. No exemplo, o método `area` é definido com diferentes listas de parâmetros para calcular a área de figuras distintas:
+
+* **Quadrado:** Recebe um único parâmetro (`double lado`).
+* **Retângulo:** Recebe dois parâmetros (`double lado1, double lado2`).
+* **Trapézio:** Recebe três parâmetros (`double baseMaior, double baseMenor, double altura`).
+* **Losango:** Recebe dois parâmetros do tipo `float` (`float diagonal1, float diagonal2`).
+
+A distinção entre a área do retângulo e do losango demonstra que a sobrecarga não depende apenas da quantidade, mas também dos **tipos de dados** dos parâmetros, permitindo que a linguagem Java identifique qual método executar com base nos argumentos fornecidos.
+
+```java
+package one.digitalinnovation.basecamp;
+
+public class Quadrilatero {
+
+    public static void area(double lado) {
+        System.out.println("Área do quadrado:" + lado * lado);
+    }
+
+    public static void area(double lado1, double lado2) {
+        System.out.println("Área do retângulo:" + lado1 * lado2);
+    }
+
+    public static void area(double baseMaior, double baseMenor, double altura) {
+        System.out.println("Área do trapézio:" + ((baseMaior + baseMenor) * altura) / 2);
+    }
+
+    public static void area(float diagonal1, float diagonal2) {
+        System.out.println("Área do losango:" + (diagonal1 * diagonal2) / 2);
+    }
+}
+
+```
+
+A classe `Main` demonstra a execução prática das sobrecargas definidas anteriormente. Ao chamar o método `Quadrilatero.area()`, o Java determina automaticamente qual implementação utilizar baseando-se nos valores passados:
+
+* `area(3)`: Identifica o método para **quadrado** (um inteiro/double).
+* `area(5d, 5d)`: Identifica o método para **retângulo** (dois doubles).
+* `area(7, 8, 9)`: Identifica o método para **trapézio** (três parâmetros).
+* `area(5f, 5f)`: Identifica o método para **losango**, pois os sufixos `f` especificam que os argumentos são do tipo `float`, diferenciando esta chamada da do retângulo.
+
+```java
+package one.digitalinnovation.basecamp;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // Quadrilátero
+        System.out.println("Exercício quadrilátero");
+        Quadrilatero.area(3);
+        Quadrilatero.area(5d, 5d);
+        Quadrilatero.area(7, 8, 9);
+        Quadrilatero.area(5f, 5f);
+    }
+}
+
+```      
+
+
 ## Parte 3 - Retornos
 
 ### 🟩 Vídeo 09 - Funcionamento, considerações, uso de retornos e apresentação do exercício
