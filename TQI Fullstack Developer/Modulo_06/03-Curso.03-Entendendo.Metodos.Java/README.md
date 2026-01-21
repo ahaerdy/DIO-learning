@@ -81,8 +81,6 @@ Esta aula introduz o conceito de métodos como sub-rotinas essenciais que define
 
 ### Anotações
 
-#### Aula 1: Criação de Métodos
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-15h29m36s308.jpg" alt="" width="840">
 </p>
