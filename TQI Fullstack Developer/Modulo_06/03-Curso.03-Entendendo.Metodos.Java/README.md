@@ -890,31 +890,44 @@ package one.digitalinnovation.basecamp;
 
 /**
  * Classe de exemplo para o exercício da Aula 3 de Métodos.
+ * O objetivo é demonstrar como substituir métodos 'void' por métodos com retorno.
  */
 public class Quadrilatero {
 
+    // Método que calcula a área do quadrado.
+    // O tipo 'double' indica que o método deve devolver um valor numérico ao final da execução.
     public static double area(double lado) {
-        return lado * lado;
+        return lado * lado; // A instrução 'return' interrompe o método e retorna o resultado.
     }
 
+    // Sobrecarga para cálculo da área do retângulo.
     public static double area(double lado1, double lado2) {
         return lado1 * lado2;
     }
 
+    // Sobrecarga para cálculo da área do trapézio.
     public static double area(double baseMaior, double baseMenor, double altura) {
         return ((baseMaior + baseMenor) * altura) / 2;
     }
 
+    /**
+     * Exemplo de uso do 'return' em método 'void'.
+     * Embora não retorne valor, o 'return' aqui serve como uma instrução de interrupção.
+     */
     public static void xpto() {
         System.out.println("Antes");
-        return;
+        return; // O que estivesse abaixo deste comando não seria executado.
     }
 
+    /**
+     * Exemplo de compatibilidade de tipos.
+     * O valor retornado (1.6) deve ser compatível com o tipo declarado na assinatura (double).
+     */
     public static double abc() {
+        // Se este método fosse declarado como 'long', o retorno de '1.6' (double) causaria erro.
         return 1.6;
     }
 }
-
 ```
 
 A classe `Main` demonstra como utilizar os métodos que possuem retorno. A principal mudança em relação aos exercícios de sobrecarga anteriores é a capacidade de armazenar os resultados das operações em variáveis locais (como `areaQuadrado`, `areaRetangulo` e `areaTrapezio`) antes de exibi-los.
@@ -942,7 +955,6 @@ public class Main {
 }
 
 ```      
-
 
 ### 🟩 Vídeo 11 - Encerramento do curso
 
