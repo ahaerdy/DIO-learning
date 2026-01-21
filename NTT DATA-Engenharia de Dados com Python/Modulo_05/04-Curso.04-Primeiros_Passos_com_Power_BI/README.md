@@ -716,6 +716,8 @@ Ao finalizar essas transformações, utiliza-se a opção **Fechar e Aplicar** p
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/d3a47918-800a-4bac-9cca-5d4580b39d4b?autoplay=1
 
+### Anotações
+
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-07h41m50s975.jpg" alt="" width="840">
 </p>
@@ -744,7 +746,9 @@ A disposição visual busca o alinhamento dos componentes para facilitar a leitu
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/999df371-5082-4993-b1bc-4ca72473dd38?autoplay=1
+
+
 
 ### 🟩 Vídeo 16 - Explorando Relatório Financials e Ajustando Recursos Visuais
 
@@ -753,11 +757,47 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/16ebbfc7-4b0e-438f-affe-49b8aa6f4e9e?autoplay=1
 
-##  Materiais de Apoio
+O vídeo é uma aula prática sobre a **personalização de relatórios no Power BI**, focando na experiência do usuário. O instrutor demonstra como utilizar ferramentas de **ajuste de visualização**, como o bloqueio de objetos e a configuração de indicadores para capturar estados específicos dos dados. Um ponto central da explicação é a criação de um **layout móvel**, que permite organizar gráficos de forma independente da versão para desktop sem alterar o projeto original. Além de ensinar a redimensionar elementos para dispositivos móveis, o conteúdo aborda a **inserção de linguagens de programação** como Python e R para análises avançadas. Por fim, o tutorial encerra apresentando recursos de **inteligência artificial e modelagem**, incentivando a continuidade dos estudos em níveis mais complexos da plataforma.
 
-# Certificado: 
+### Anotações
 
-- Link na plataforma: 
-- Certificado em pdf: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-10h33m07s055.jpg" alt="" width="840">
+</p>
+
+Na guia de **Exibição** do Power BI Desktop, encontram-se ferramentas essenciais para a organização visual e precisão do layout do relatório. É possível ajustar a visualização da página para "Ajustar à página", "Ajustar à largura" ou ver o "Tamanho real", o que facilita a análise detalhada de cada gráfico individualmente.
+
+Para auxiliar no alinhamento dos elementos visuais, a interface oferece opções como:
+
+* **Linhas de grade**: Exibe guias horizontais e verticais no plano de fundo.
+* **Ajustar à grade**: Força os objetos a se alinharem automaticamente com as linhas de grade ao serem movidos.
+* **Bloquear objetos**: Impede que elementos já posicionados saiam do lugar acidentalmente enquanto o usuário manipula outros componentes do relatório.
+
+Nesta tela, observa-se um relatório de vendas que utiliza cartões para destacar métricas como a "Soma de Sales" (118,73 Mi) e gráficos que detalham o lucro por ano e mês.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-10h33m25s565.jpg" alt="" width="840">
+</p>
+
+O recurso de **Layout móvel** permite a criação de uma versão otimizada do relatório especificamente para visualização em dispositivos celulares. O funcionamento é baseado no sistema de "arrastar e soltar", onde o usuário seleciona os elementos visuais da página original no painel lateral e os posiciona na tela que simula o visor de um smartphone.
+
+Um ponto fundamental deste modo é que as modificações de tamanho e posicionamento feitas no layout móvel **não afetam a área de trabalho (desktop)**. Isso permite, por exemplo, reduzir o tamanho de cartões de dados (como a "Soma de Sales" e "Units Sold") para que se ajustem melhor à tela estreita, sem prejudicar a visualização principal no monitor do computador.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-10h33m33s705.jpg" alt="" width="840">
+</p>
+
+A guia **Inserir** expande as capacidades analíticas do Power BI, oferecendo recursos avançados para a construção de relatórios inteligentes. Entre as opções disponíveis, destacam-se:
+
+* **Narrativa inteligente**: Gera automaticamente um resumo por escrito baseado nos dados presentes no relatório.
+* **Árvore hierárquica e Principais influenciadores**: Ferramentas de análise que ajudam a entender os fatores que impulsionam determinadas métricas.
+* **Integrações**: Possibilidade de inserir scripts de Python e R, além de integrar com Power Apps e Power Automate.
+
+O exemplo prático mostra a diversidade de visuais que podem ser combinados, como o **gráfico de pizza** para a "Soma de Sales por Product" e gráficos de colunas para analisar o desempenho de vendas ao longo do tempo (Ano/Mês) segmentado por diferentes canais. A escolha do visual correto é determinante para a clareza da informação, especialmente quando se lida com variações temporais extensas ou múltiplas categorias de produtos.
+
+# Certificado: Primeiros Passos com Power BI
+
+- Link na plataforma: https://hermes.dio.me/certificates/YRS6OXNN.pdf
+- Certificado em pdf: [[Certificado-Primeiros_Passos_com_Power_BI.pdf]](000-Midia_e_Anexos/Certificado-Primeiros_Passos_com_Power_BI.pdf)
