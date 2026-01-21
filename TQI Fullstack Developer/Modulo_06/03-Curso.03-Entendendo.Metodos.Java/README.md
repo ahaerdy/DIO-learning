@@ -572,7 +572,106 @@ public class Main {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/af32c883-6ada-4fc8-bd49-480b007196a9?autoplay=1
+
+A sobrecarga de métodos é um conceito fundamental que permite definir múltiplas versões de um mesmo método, preservando seu nome, mas alterando sua assinatura por meio da mudança na lista de parâmetros. Essa técnica possibilita que um método se comporte de forma diferente conforme o contexto, seja pela alteração dos tipos de dados, da quantidade ou até da ordem dos parâmetros recebidos. Exemplos práticos desse recurso são amplamente encontrados na API do Java, como nos métodos println e valueOf, que aceitam diversos tipos de entrada sob o mesmo comando. É importante distinguir a sobrecarga da sobrescrita, pois, enquanto a primeira foca na variação de parâmetros dentro da mesma estrutura, a segunda está vinculada ao conceito de herança na orientação a objetos. A aula demonstra que a sobrecarga é essencial para criar aplicações mais flexíveis e organizadas, como exemplificado no desenvolvimento de funções para o cálculo de áreas de diferentes quadriláteros.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-18h58m13s143.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o conceito de **Sobrecarga**, focando em explicar o que é essa técnica aplicada a métodos e como ela funciona dentro do desenvolvimento de software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-18h58m17s040.jpg" alt="" width="840">
+</p>
+
+Os objetivos centrais desta unidade são:
+
+1. **Entender** o que caracteriza a sobrecarga de um método.
+2. **Saber criar** sobrecargas na prática durante a programação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-18h58-18s691.jpg" alt="" width="840">
+</p>
+
+A **Sobrecarga** é definida como a capacidade de definir métodos para diferentes contextos, mantendo o mesmo nome original. Isso permite que um método se comporte de maneiras distintas conforme a necessidade, contanto que sua lista de parâmetros seja alterada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-18h58m22s564.jpg" alt="" width="840">
+</p>
+
+Para criar uma sobrecarga, é necessário alterar a **assinatura do método**, que é composta pelo **nome + parâmetros**. No exemplo abaixo, o método `converterParaInteiro` é sobrecarregado diversas vezes mudando o tipo, a quantidade ou a ordem dos parâmetros:
+
+```java
+// Assinatura = nome + parâmetros
+converterParaInteiro (float f);
+converterParaInteiro (double d);
+converterParaInteiro (String s);
+converterParaInteiro (float f, RoundType rd);
+converterParaInteiro (double d, RoundType rd);
+converterParaInteiro (String s, RoundType rd);
+converterParaInteiro (RoundType rd, String s);
+converterParaInteiro();
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-18h58m29s184.jpg" alt="" width="840">
+</p>
+
+Um exemplo prático e comum de sobrecarga na API do Java é o método `println` da classe `PrintStream`. Ele permite imprimir diferentes tipos de dados usando o mesmo nome de método:
+
+```java
+void println()
+void println(boolean x)
+void println(char x)
+void println(char[] x)
+void println(double x)
+void println(float x)
+void println(int x)
+void println(long x)
+void println(Object x)
+void println(String x)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-18h58m32s219.jpg" alt="" width="840">
+</p>
+
+Outro exemplo fundamental é o método estático `valueOf` da classe `String`. Ele é utilizado para retornar a representação em texto de diversos tipos primitivos e objetos:
+
+```java
+static String valueOf(boolean b)
+static String valueOf(char c)
+static String valueOf(char[] data)
+static String valueOf(char[] data, int offset, int count)
+static String valueOf(double d)
+static String valueOf(float f)
+static String valueOf(int i)
+static String valueOf(long l)
+static String valueOf(Object obj)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-18h58m40s800.jpg" alt="" width="840">
+</p>
+
+É importante distinguir **Sobrecarga** de **Sobrescrita**. Enquanto a sobrecarga foca em manter o nome e mudar os parâmetros no mesmo contexto, a sobrescrita é um conceito de Orientação a Objetos estritamente ligado à **herança**, que será explorado em cursos futuros.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-18h58m43s013.jpg" alt="" width="840">
+</p>
+
+Para fixar o conteúdo, propõe-se o seguinte exercício:
+
+* **Tarefa:** Criar uma aplicação que calcule a área de três quadriláteros notáveis: quadrado, retângulo e trapézio.
+* **Observação:** É obrigatório o uso de **sobrecarga** para implementar os cálculos.      
+
 
 ### 🟩 Vídeo 08 - Resolução do exercício prático
 
@@ -581,7 +680,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/c080dbf5-b31b-4bf6-90e3-275fafa4a6af?autoplay=1
 
 ## Parte 3 - Retornos
 
