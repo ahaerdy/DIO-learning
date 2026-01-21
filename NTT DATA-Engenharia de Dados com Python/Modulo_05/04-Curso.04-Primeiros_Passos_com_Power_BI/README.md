@@ -716,6 +716,27 @@ Ao finalizar essas transformações, utiliza-se a opção **Fechar e Aplicar** p
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/d3a47918-800a-4bac-9cca-5d4580b39d4b?autoplay=1
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-07h41m50s975.jpg" alt="" width="840">
+</p>
+
+Para garantir a integridade das análises visuais, é essencial validar a estrutura dos dados na **Exibição de Dados** do Power BI. Nesta interface, podemos observar a tabela `financials`, que contém colunas fundamentais como **Segment**, **Country**, **Product**, **Manufacturing Price** e **Sale Price**.
+
+A análise direta da tabela permite identificar comportamentos que podem parecer anômalos nos gráficos, como o **Manufacturing Price** (Preço de Manufatura) apresentar valores superiores ao **Sale Price** (Preço de Venda) em determinadas linhas. Ao examinar os dados brutos, percebe-se que isso ocorre devido à aplicação de faixas de desconto (**Discount Band**) elevadas, o que impacta diretamente a margem de lucro e o comportamento das médias exibidas no relatório.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-07h42m24s359.jpg" alt="" width="840">
+</p>
+
+O dashboard finalizado, intitulado **"Relatório de Vendas Considerando Produtos e Segmento"**, consolida diferentes perspectivas das métricas financeiras de forma interativa. A interface é composta por quatro elementos principais:
+
+* **Soma de Sales por Product:** Um gráfico de pizza que demonstra a participação de cada produto no volume total de vendas, destacando o produto **Paseo** como o de maior saída.
+* **Média de Sale Price por Product:** Um gráfico de área que revela a hierarquia de preços médios, permitindo identificar que o produto mais vendido não é necessariamente o mais caro ou o mais barato.
+* **Soma de Sales por Ano, Mês e Segmento:** Um gráfico de colunas clusterizado que detalha o desempenho das vendas ao longo do tempo (2013-2014), segmentado por categorias como **Government**, **Small Business** e **Enterprise**.
+* **Segmentação de Dados (Filtro):** Um controle lateral que permite filtrar todo o relatório por períodos específicos, facilitando a análise de intervalos temporais customizados.
+
+A disposição visual busca o alinhamento dos componentes para facilitar a leitura e a comparação rápida entre o volume de vendas e o perfil dos segmentos atendidos.
+
 ### 🟩 Vídeo 15 - Criando Segunda Página do Relatório Financials – Sample Power BI
 
 <video width="60%" controls>
