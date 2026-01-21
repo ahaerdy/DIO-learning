@@ -748,6 +748,22 @@ A disposição visual busca o alinhamento dos componentes para facilitar a leitu
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-power-bi/learning/999df371-5082-4993-b1bc-4ca72473dd38?autoplay=1
 
+Nesta aula, o instrutor orienta a criação de uma segunda página de relatório no Power BI, alterando o foco da análise de produtos para o desempenho de vendas por países. O tutorial detalha a inserção de cartões para exibir métricas importantes, como a soma das vendas e o total de unidades vendidas, além da construção de gráficos de pizza para o lucro por país e gráficos de barras para analisar a evolução temporal dos lucros mensais. O vídeo também demonstra a criação de um histograma para comparação visual das vendas entre nações e ensina técnicas de formatação estética, como a aplicação de sombras, alteração de cores e ajustes de transparência no fundo, finalizando com uma introdução ao próximo tema sobre layout para celular.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-11h20m41s883.jpg" alt="" width="840">
+</p>
+
+Nesta etapa do desenvolvimento no Power BI Desktop, o foco do dashboard muda para a análise de desempenho por localização geográfica. A interface apresenta a criação de uma nova página de relatório, intitulada "Relatório de Vendas Considerando Países e Lucro", organizada com os seguintes elementos visuais:
+
+* **Cartões de Indicadores (KPIs):** No topo à esquerda, destaca-se um cartão exibindo a **Soma de Sales** (118,73 Mi), fornecendo uma visão imediata do volume financeiro total. Durante a aula, é explorada a inclusão de outros indicadores, como o máximo de unidades vendidas e médias de vendas.
+* **Gráfico de Pizza:** Localizado ao centro, este visual detalha a **Soma de Profit por Country**. Ele permite identificar rapidamente a contribuição percentual e absoluta de lucro de cada nação (França, Alemanha, Canadá, Estados Unidos e México) na composição do resultado total.
+* **Gráfico de Colunas Agrupadas:** Na parte inferior, o gráfico de barras/histograma exibe a **Soma de Profit por Ano e Mês**. Este visual é essencial para observar a sazonalidade e a evolução dos lucros ao longo do tempo (período de 2013 e 2014), permitindo ajustes de hierarquia de datas (ano, trimestre e mês).
+* **Painel de Campos (Campos):** À direita, observa-se a tabela `financials` expandida, revelando as colunas utilizadas para alimentar os gráficos, como `Country`, `Month Name`, `Profit` e `Sales`.
+
+O layout utiliza recursos estéticos como **sombras e efeitos de transparência** nos visuais para melhorar a legibilidade e o acabamento profissional do dashboard.
 
 
 ### 🟩 Vídeo 16 - Explorando Relatório Financials e Ajustando Recursos Visuais
