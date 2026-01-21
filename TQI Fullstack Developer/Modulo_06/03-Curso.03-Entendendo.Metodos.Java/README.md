@@ -994,5 +994,5 @@ Links:
 
 # Certificado: Entendendo Métodos Java
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/N9ZC4NGD.pdf
+- Certificado em pdf: [Certificado-Entendendo_Metodos_Java.pdf](000-Midia_e_Anexos/Certificado-Entendendo_Metodos_Java.pdf)
