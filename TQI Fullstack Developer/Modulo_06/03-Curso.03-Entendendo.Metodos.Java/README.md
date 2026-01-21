@@ -766,7 +766,6 @@ public class Main {
 }
 ```      
 
-
 ## Parte 3 - Retornos
 
 ### 🟩 Vídeo 09 - Funcionamento, considerações, uso de retornos e apresentação do exercício
@@ -776,7 +775,94 @@ public class Main {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/3fe282bb-81e7-4275-a963-389e1b09ad53?autoplay=1
+
+Esta aula aborda o funcionamento da instrução return em métodos, caracterizando-a como uma estrutura de interrupção capaz de finalizar a execução de um bloco de código de forma abrupta ou ao término das instruções. O conteúdo destaca que o retorno deve ser estritamente compatível com o tipo de dado definido na assinatura do método — seja ele um tipo primitivo ou um objeto — e explica que, em métodos do tipo void, o uso do return é opcional e serve apenas para encerrar o fluxo precocemente, sem retornar valores. Por fim, a aula propõe um exercício prático de refatoração, evoluindo uma aplicação de cálculo de áreas de quadriláteros para que os métodos deixem de apenas exibir resultados no console e passem a retornar valores processados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-19h44m27s935.jpg" alt="" width="840">
+</p>
+
+Esta aula aborda o conceito de **retornos** dentro do contexto de métodos em Java. O objetivo principal é compreender como o mecanismo de retorno funciona para finalizar a execução de um método e devolver, ou não, um valor ao chamador.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-19h44m30s390.jpg" alt="" width="840">
+</p>
+
+### Relembrando: Instrução de Interrupção
+
+O retorno é classificado como uma **instrução de interrupção**, assim como o `break` e o `continue`. No entanto, enquanto os outros dois são comumente aplicados a estruturas de repetição (laços), o `return` é estritamente atrelado à execução de métodos. A simbologia utilizada na linguagem é a palavra reservada `return`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-19h44m33s277.jpg" alt="" width="840">
+</p>
+
+### Funcionamento
+
+Um método executa seu retorno e finaliza sua operação quando ocorre uma das três situações abaixo:
+
+* **Completa todas as suas instruções internas:** O fluxo de execução chega ao fim do bloco de código do método.
+* **Chega a uma declaração explícita de retorno:** O interpretador encontra a palavra-chave `return`, interrompendo o método imediatamente.
+* **Lança uma exceção:** Ocorre um erro durante a execução que força a interrupção do método.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-19h44m37s492.jpg" alt="" width="840">
+</p>
+
+### Considerações Importantes
+
+Ao trabalhar com retornos, deve-se observar as seguintes regras:
+
+* **Definição do Tipo:** O tipo de retorno é definido na assinatura do método durante sua criação, podendo ser um tipo primitivo (como `int` ou `double`) ou um objeto.
+* **Compatibilidade:** O valor retornado pela instrução `return` deve ser obrigatoriamente compatível com o tipo de dado declarado na assinatura do método.
+* **Métodos Void:** Se um método é declarado como `void` (sem retorno), o uso da instrução `return` é opcional e serve apenas para encerrar a execução prematuramente, não devendo vir acompanhado de nenhum valor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-19h44m40s795.jpg" alt="" width="840">
+</p>
+
+### Exemplos de Uso e Erros Comuns
+
+Abaixo estão exemplos que demonstram retornos corretos e casos que geram erros de compilação devido à incompatibilidade de tipos:
+
+```java
+// Exemplo Correto: Retorno de String compatível
+public String getMensagem() {
+    return "Ola!";
+}
+
+// Exemplo Correto: Retorno de Double compatível
+public double getJuros() {
+    return 2.36;
+}
+
+// Exemplo de ERRO: O método espera int, mas retorna float (1.36f)
+public int getParcelas() {
+    return 1.36f; // Erro de compilação
+}
+
+// Exemplo de ERRO: O método é void (sem retorno), mas tenta retornar o valor 10
+public void setIdade() {
+    return 10; // Erro de compilação
+}
+
+// Exemplo Correto: Uso de return vazio em método void para interrupção
+public void executar() {
+    // ... instruções ...
+    return; 
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-19h44m46s864.jpg" alt="" width="840">
+</p>
+
+### Exercitando
+
+Como proposta prática, deve-se evoluir a aplicação de cálculo de área dos três quadriláteros notáveis (quadrado, retângulo e trapézio). O objetivo é refatorar os métodos para que, em vez de apenas exibirem o resultado no console, eles **retornem** os valores calculados em tipos compatíveis com os parâmetros recebidos.      
 
 ### 🟩 Vídeo 10 - Resolução do exercício
 
@@ -785,7 +871,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/7304b268-50f9-45de-8cfb-6084ebd028fd?autoplay=1
 
 ### 🟩 Vídeo 11 - Encerramento do curso
 
