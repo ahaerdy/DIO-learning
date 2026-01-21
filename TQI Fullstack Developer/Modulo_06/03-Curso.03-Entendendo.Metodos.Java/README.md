@@ -107,7 +107,6 @@ Um método é definido como uma sub-rotina ou porção de código disponibilizad
 * **Execução sob Demanda**: O código interno do método permanece inativo até que seja feita uma requisição específica para sua execução.
 * **Definição de Comportamento**: Os métodos são os responsáveis diretos por realizar as ações e operações que fazem o software funcionar de fato, definindo como a aplicação deve se comportar diante de cada tarefa.
 
-
 ### 🟩 Vídeo 03 - Definição
 
 <video width="60%" controls>
@@ -116,6 +115,104 @@ Um método é definido como uma sub-rotina ou porção de código disponibilizad
 </video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/648b17de-d6e5-47e3-84c1-097e701ab296?autoplay=1
+
+
+Esta aula detalha a estrutura de criação e aplicação de métodos em Java, diferenciando os elementos obrigatórios — como nome, tipo de retorno, parênteses e corpo — dos componentes opcionais vinculados à Orientação a Objetos, como modificadores de visibilidade e exceções. O conteúdo enfatiza que o retorno pode ser um tipo primitivo, um objeto complexo ou void quando não há saída de dados, seguindo regras de nomenclatura idênticas às das variáveis. Além da definição técnica, explica-se que a execução de um método exige uma chamada ativa via classe ou objeto através da notação de ponto, priorizando, para fins didáticos, o padrão public static para garantir a organização e a reutilização do código.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h08m31s920.jpg" alt="" width="840">
+</p>
+
+A criação de um método em Java segue um padrão de definição específico que determina como ele será estruturado e acessado. Este padrão é composto por elementos obrigatórios e opcionais:
+
+* **Obrigatórios:** Retorno, nome, parênteses `()` e o corpo do método.
+* **Opcionais:** Visibilidade, tipo, modificador e exceções.
+
+O modelo sintático base é:
+
+```java
+<?visibilidade?> <?tipo?> <?modificador?> retorno nome (<?parâmetros?>) <?exceções?> corpo
+
+```
+
+Os itens marcados entre `<?>` indicam que sua presença depende da necessidade específica da implementação, enquanto os demais são os requisitos mínimos para definir um método válido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h08m34s892.jpg" alt="" width="840">
+</p>
+
+Para compreender a definição de um método, é necessário detalhar cada um dos componentes que podem compor sua assinatura:
+
+* **V (Visibilidade):** Define quem pode acessar o método, podendo ser `public`, `protected` ou `private`.
+* **T (Tipo):** Indica se o método é `concreto` (possui implementação) ou `abstrato` (apenas a assinatura).
+* **M (Modificador):** Pode ser `static` (pertence à classe) ou `final` (não pode ser sobrescrito).
+* **R (Retorno):** O tipo de dado que o método devolve após a execução (tipos primitivos ou objetos) ou `void` quando não há retorno.
+* **N (Nome):** Identificador fornecido ao método, seguindo as mesmas regras de nomenclatura de variáveis em Java.
+* **P (Parâmetros):** Lista de entradas que o método pode receber para processar.
+* **E (Exceções):** Erros que o método pode disparar caso algo inesperado ocorra.
+* **C (Corpo):** O bloco de código entre chaves `{}` que contém a lógica do método.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h08m41s656.jpg" alt="" width="840">
+</p>
+
+Dentre os elementos de definição, destacam-se o retorno e os parâmetros pela sua frequência de uso. O **retorno** pode ser qualquer tipo de dado conhecido (inteiro, float, objetos) ou o termo reservado `void`. O `void` indica que o método executa sua lógica interna, mas não devolve nenhum valor ao final para quem o chamou.
+
+Os **parâmetros** residem obrigatoriamente dentro dos parênteses. Mesmo que um método não precise de parâmetros, o par de parênteses vazio `()` deve estar presente. Quando necessários, os parâmetros funcionam como variáveis de entrada para a lógica que reside no **corpo** do método, que pode conter o código a ser executado ou até mesmo estar vazio em contextos específicos de orientação a objetos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h08m43s975.jpg" alt="" width="840">
+</p>
+
+Abaixo constam diversos exemplos de métodos válidos, demonstrando variações em retornos (primitivos e complexos) e listas de parâmetros:
+
+```java
+public String getNome() { ... }
+public double calcularTotalNota() {...}
+public int verificarDistancia (int cordenada1, int cordenada2) {...}
+public abstract void executar();
+public void alterarFabricante (Fabricante fabricante) { ... }
+public Relatorio gerarDadosAnaliticos(Cliente cliente, List<Compra> compras) {...}
+
+// Padrão muito utilizado em contextos iniciais e exercícios:
+public static R N(P){...}
+
+```
+
+Observe que os métodos podem receber desde tipos simples como `int` até objetos complexos como `Fabricante` ou listas. O método `executar()` exemplifica um método abstrato, onde o corpo é substituído por um ponto e vírgula `;`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h08m47s695.jpg" alt="" width="840">
+</p>
+
+Um método não executa sozinho; ele precisa ser chamado (invocado) através de uma mensagem enviada a uma classe ou a um objeto. Em Java, por convenção, classes iniciam com letra maiúscula e objetos com letra minúscula.
+
+Abaixo, os formatos de utilização:
+
+```java
+// Através de uma Classe (Métodos Estáticos)
+nome_da_classe.nome_do_metodo();
+nome_da_classe.nome_do_metodo(...);
+
+// Exemplos Práticos (Classe Math)
+Math.random(); // Sem parâmetros
+Math.sqrt(4);  // Com parâmetro
+
+// Através de um Objeto (Instância)
+nome_do_objeto.nome_do_metodo();
+nome_do_objeto.nome_do_metodo(...);
+
+// Exemplos Práticos (Objeto usuário)
+usuario.getEmail();
+usuario.alterarEndereco(endereco);
+
+```
+
+A chamada consiste em referenciar a entidade (classe ou objeto), utilizar o operador ponto `.` seguido do nome do método e passar os argumentos necessários dentro dos parênteses.
+
+
 
 ### 🟩 Vídeo 04 - Conceitos Inerentes aos métodos e boas práticas na sua criação
 
