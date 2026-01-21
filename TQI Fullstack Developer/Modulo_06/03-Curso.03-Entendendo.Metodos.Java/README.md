@@ -221,7 +221,83 @@ A chamada consiste em referenciar a entidade (classe ou objeto), utilizar o oper
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/bc9c60c8-8a5f-4a70-84e1-9b9d2f824f02?autoplay=1
+
+Este resumo apresenta os conceitos fundamentais sobre a estrutura, o funcionamento e as boas práticas no desenvolvimento de métodos em programação. A aula explora a definição de assinatura de um método — composta por seu nome e parâmetros — e introduz tipos especiais como construtores e destruidores, além do conceito de mensagem como o ato de solicitar a execução de um código. É dada ênfase à passagem de parâmetros por valor, onde uma cópia dos dados é utilizada, garantindo que alterações internas não afetem a variável original externa. Para assegurar a legibilidade e a manutenção do software, o conteúdo recomenda o uso da notação Camelo (camelCase), nomes descritivos com verbos e substantivos, e a limitação da extensão dos métodos a um intervalo de 80 a 120 linhas, incentivando a criação de métodos auxiliares e a aplicação de visibilidades adequadas para reduzir o acoplamento.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h43m56s363.jpg" alt="" width="840">
+</p>
+
+A **assinatura de um método** é o mecanismo utilizado para identificar unicamente um método dentro de um sistema. Ela é composta estritamente pelo **nome do método** somado aos seus **parâmetros** (tipo e ordem).
+
+No exemplo apresentado, o método possui modificadores de acesso e tipo de retorno, mas sua assinatura foca apenas na identificação da chamada:
+
+```java
+// Método completo
+public double calcularTotalVenda (double precoItem1, double precoItem2, double precoItem3) {...}
+
+// Assinatura do método
+calcularTotalVenda (double precoItem1, double precoItem2, double precoItem3)
+
+```
+
+Mesmo que um método não possua parâmetros, a assinatura é considerada existente, representada pelo nome seguido de parênteses vazios. Compreender este conceito é fundamental para o estudo de sobrecarga de métodos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h44m04s221.jpg" alt="" width="840">
+</p>
+
+Existem tipos especiais de métodos e formas de interação que são pilares da Orientação a Objetos:
+
+* **Construtor e Destrutor:** São métodos especiais. De forma simplista, o construtor é responsável pela criação de objetos, enquanto o destrutor auxilia na destruição dos mesmos.
+* **Mensagem:** É o termo técnico utilizado para o ato de solicitar que um método execute seu código interno. Essa solicitação (ou chamada) pode ser direcionada especificamente a um **objeto** ou a uma **classe**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h44m13s183.jpg" alt="" width="840">
+</p>
+
+A **passagem de parâmetros** define como os dados são enviados para dentro de um método durante a sua chamada. Existem duas formas principais de realizar esse processo:
+
+* **Por valor (cópia):** O método recebe uma cópia do dado original. Alterações feitas dentro do método não afetam a variável externa.
+* **Por referência (endereço):** O método recebe o endereço de memória do dado, permitindo que alterações internas reflitam diretamente no valor original.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h44m17s099.jpg" alt="" width="840">
+</p>
+
+Na **passagem por valor**, também conhecida como passagem por cópia, o sistema cria um novo espaço em memória para o parâmetro dentro do escopo do método.
+
+No exemplo abaixo, embora a variável `i` seja incrementada dentro do método `fazerAlgo`, a variável original definida fora do método permanece inalterada:
+
+```java
+int i = 10;
+
+public void fazerAlgo (int i) {
+    i = i + 10;
+    System.out.println("Valor de i dentro: " + i); // Exibirá 20
+}
+
+System.out.println("Valor de i fora: " + i); // Exibirá 10
+
+```
+
+Isso ocorre porque o método operou apenas sobre a **cópia** do valor, sem afetar o endereço de memória da variável externa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-16h44m30s120.jpg" alt="" width="840">
+</p>
+
+Para garantir a qualidade e a manutenção do código, devem-se seguir algumas **boas práticas** na criação de métodos:
+
+* **Nomes descritivos e curtos:** Use verbos e substantivos que expressem a finalidade do método, evitando artigos e preposições.
+* **Notação Camelo (camelCase):** A primeira letra da primeira palavra é minúscula, e as primeiras letras das palavras subsequentes são maiúsculas (ex: `verificarSaldo()`).
+* **Tamanho ideal:** Recomenda-se que métodos possuam entre **80 e 120 linhas**. Caso fiquem muito extensos, devem ser divididos em métodos auxiliares.
+* **Lista de parâmetros curta:** Evite métodos com muitos parâmetros para reduzir o acoplamento.
+* **Visibilidades adequadas:** Utilize modificadores de acesso (como público ou privado) conforme a real necessidade de exposição do método.      
+
 
 ### 🟩 Vídeo 05 - Apresentação do exercício
 
@@ -230,7 +306,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/ee23f1ff-2afa-4f7f-8a3b-0939125c0052?autoplay=1
 
 ### 🟩 Vídeo 06 - Exercício prático
 
