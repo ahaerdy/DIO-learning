@@ -877,20 +877,12 @@ Esta aula aborda a transição do uso de métodos void para métodos com retorno
 
 ### Anotações
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-20h04m17s951.jpg" alt="" width="840">
-</p>
-
 Nesta etapa, analisamos a implementação da classe `Quadrilatero`, que exemplifica a aplicação de retornos em métodos sobrecarregados. Diferente de versões anteriores onde os métodos eram `void` e exibiam os resultados diretamente no console, aqui eles são definidos para retornar um valor do tipo `double`.
 
 O uso da palavra reservada `return` atua como uma instrução de interrupção que finaliza a execução do método e envia o valor calculado (seja a área do quadrado, retângulo ou trapézio) de volta para quem o chamou. Além disso, o exemplo demonstra que:
 
-* 
-**Métodos `void` e `return**`: É possível utilizar o `return` em métodos `void` (como no método `xpto`) para interromper a execução prematuramente, embora sem retornar um valor.
-
-
+* **Métodos `void` e `return**`: É possível utilizar o `return` em métodos `void` (como no método `xpto`) para interromper a execução prematuramente, embora sem retornar um valor.
 * **Compatibilidade de Tipos**: O valor retornado deve ser estritamente compatível com o tipo definido na assinatura do método. No método `abc`, por exemplo, há um erro proposital onde se tenta retornar um `double` (1.6) em um método declarado como `long`, o que causaria erro de compilação.
-
 
 
 ```java
@@ -924,10 +916,6 @@ public class Quadrilatero {
 }
 
 ```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-20h05m17s951.jpg" alt="" width="840">
-</p>
 
 A classe `Main` demonstra como utilizar os métodos que possuem retorno. A principal mudança em relação aos exercícios de sobrecarga anteriores é a capacidade de armazenar os resultados das operações em variáveis locais (como `areaQuadrado`, `areaRetangulo` e `areaTrapezio`) antes de exibi-los.
 
