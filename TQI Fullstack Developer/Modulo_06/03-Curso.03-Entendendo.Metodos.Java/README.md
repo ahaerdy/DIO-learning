@@ -873,6 +873,89 @@ Como proposta prática, deve-se evoluir a aplicação de cálculo de área dos t
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/7304b268-50f9-45de-8cfb-6084ebd028fd?autoplay=1
 
+Esta aula aborda a transição do uso de métodos void para métodos com retorno em Java, utilizando como exemplo prático o cálculo de áreas de quadriláteros. O conteúdo demonstra como a instrução return permite que os valores calculados sejam devolvidos ao chamador e armazenados em variáveis para uso posterior, separando a lógica de processamento da exibição de resultados. Além da implementação técnica de métodos com retorno do tipo double, a aula reforça conceitos fundamentais como a obrigatoriedade da compatibilidade entre o tipo de dado retornado e o definido na assinatura do método, e a possibilidade de utilizar o return em métodos void como uma instrução de interrupção de fluxo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-20h04m17s951.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, analisamos a implementação da classe `Quadrilatero`, que exemplifica a aplicação de retornos em métodos sobrecarregados. Diferente de versões anteriores onde os métodos eram `void` e exibiam os resultados diretamente no console, aqui eles são definidos para retornar um valor do tipo `double`.
+
+O uso da palavra reservada `return` atua como uma instrução de interrupção que finaliza a execução do método e envia o valor calculado (seja a área do quadrado, retângulo ou trapézio) de volta para quem o chamou. Além disso, o exemplo demonstra que:
+
+* 
+**Métodos `void` e `return**`: É possível utilizar o `return` em métodos `void` (como no método `xpto`) para interromper a execução prematuramente, embora sem retornar um valor.
+
+
+* **Compatibilidade de Tipos**: O valor retornado deve ser estritamente compatível com o tipo definido na assinatura do método. No método `abc`, por exemplo, há um erro proposital onde se tenta retornar um `double` (1.6) em um método declarado como `long`, o que causaria erro de compilação.
+
+
+
+```java
+package one.digitalinnovation.basecamp;
+
+/**
+ * Classe de exemplo para o exercício da Aula 3 de Métodos.
+ */
+public class Quadrilatero {
+
+    public static double area(double lado) {
+        return lado * lado;
+    }
+
+    public static double area(double lado1, double lado2) {
+        return lado1 * lado2;
+    }
+
+    public static double area(double baseMaior, double baseMenor, double altura) {
+        return ((baseMaior + baseMenor) * altura) / 2;
+    }
+
+    public static void xpto() {
+        System.out.println("Antes");
+        return;
+    }
+
+    public static double abc() {
+        return 1.6;
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-20h05m17s951.jpg" alt="" width="840">
+</p>
+
+A classe `Main` demonstra como utilizar os métodos que possuem retorno. A principal mudança em relação aos exercícios de sobrecarga anteriores é a capacidade de armazenar os resultados das operações em variáveis locais (como `areaQuadrado`, `areaRetangulo` e `areaTrapezio`) antes de exibi-los.
+
+Dessa forma, a responsabilidade de exibir a mensagem de saída é transferida dos métodos de cálculo para a classe de teste. Isso permite que os valores calculados sejam reutilizados em outros pontos do programa, aumentando a flexibilidade do código.
+
+```java
+package one.digitalinnovation.basecamp;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Retornos
+        System.out.println("Exercício retornos");
+
+        double areaQuadrado = Quadrilatero.area(3);
+        System.out.println("Área do quadrado:" + areaQuadrado);
+
+        double areaRetangulo = Quadrilatero.area(5, 5);
+        System.out.println("Área do retângulo:" + areaRetangulo);
+
+        double areaTrapezio = Quadrilatero.area(7, 8, 9);
+        System.out.println("Área do trapézio:" + areaTrapezio);
+    }
+}
+
+```      
+
+
 ### 🟩 Vídeo 11 - Encerramento do curso
 
 <video width="60%" controls>
@@ -880,7 +963,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entenden
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/456a3eac-f35b-48a8-a750-4d32004e9a56?autoplay=1
 
 ##  Materiais de Apoio
 
