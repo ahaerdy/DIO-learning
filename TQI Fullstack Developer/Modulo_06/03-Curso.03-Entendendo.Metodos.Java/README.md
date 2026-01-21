@@ -987,6 +987,11 @@ Para aprofundar os conhecimentos que serviram de base para a elaboração deste 
 * **Livro sobre Orientação a Objetos:** Obra do autor publicada pela Casa do Código, que detalha conceitos de métodos e todo o universo da programação orientada a objetos.
 * **Documentação Oracle (Java Tutorials):** Links oficiais que serviram de base para o conteúdo, abordando o que é um método, o funcionamento de retornos e o uso de argumentos/parâmetros.      
 
+Links:
+
+- https://www.casadocodigo.com.br/products/livro-oo-conceitos
+- https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html
+
 # Certificado: Entendendo Métodos Java
 
 - Link na plataforma: 
