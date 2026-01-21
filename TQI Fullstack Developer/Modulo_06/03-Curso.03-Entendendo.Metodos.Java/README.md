@@ -965,9 +965,29 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/456a3eac-f35b-48a8-a750-4d32004e9a56?autoplay=1
 
-##  Materiais de Apoio
+Este curso sobre métodos e programação orientada a objetos oferece uma base sólida fundamentada em documentações oficiais da Oracle e na literatura especializada do autor, abordando desde conceitos essenciais, como argumentos e retornos, até a aplicação prática no desenvolvimento de software. Para aprofundar o aprendizado, os alunos contam com o suporte de uma comunidade ativa via Discord para discussões amplas, além de um fórum específico para a resolução de dúvidas pontuais com o instrutor e outros estudantes. O encerramento das aulas incentiva a exploração de materiais complementares, como o livro do instrutor sobre orientação a objetos, garantindo que o conhecimento adquirido possa ser expandido para todo o universo da programação.
 
-# Certificado: 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-20h24m02s902.jpg" alt="" width="840">
+</p>
+
+Ao concluir o estudo sobre métodos, é fundamental saber onde buscar suporte para sanar dúvidas remanescentes. Existem canais oficiais destinados à interação e resolução de problemas técnicos específicos:
+
+* **Fórum do curso:** Espaço dedicado exclusivamente ao curso de métodos, onde o instrutor e a comunidade de alunos (atuais e ex-alunos) colaboram para resolver questões pontuais.
+* **Comunidade Online (Discord):** Ambiente voltado para dúvidas mais amplas e discussões gerais, permitindo o contato com um número maior de pessoas para auxílio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-20h24m05s731.jpg" alt="" width="840">
+</p>
+
+Para aprofundar os conhecimentos que serviram de base para a elaboração deste curso, recomenda-se a consulta às fontes de referência e documentação oficial:
+
+* **Livro sobre Orientação a Objetos:** Obra do autor publicada pela Casa do Código, que detalha conceitos de métodos e todo o universo da programação orientada a objetos.
+* **Documentação Oracle (Java Tutorials):** Links oficiais que serviram de base para o conteúdo, abordando o que é um método, o funcionamento de retornos e o uso de argumentos/parâmetros.      
+
+# Certificado: Entendendo Métodos Java
 
 - Link na plataforma: 
 - Certificado em pdf: 
