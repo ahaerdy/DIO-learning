@@ -797,6 +797,7 @@ A guia **Inserir** expande as capacidades analíticas do Power BI, oferecendo re
 
 O exemplo prático mostra a diversidade de visuais que podem ser combinados, como o **gráfico de pizza** para a "Soma de Sales por Product" e gráficos de colunas para analisar o desempenho de vendas ao longo do tempo (Ano/Mês) segmentado por diferentes canais. A escolha do visual correto é determinante para a clareza da informação, especialmente quando se lida com variações temporais extensas ou múltiplas categorias de produtos.
 
+
 # Certificado: Primeiros Passos com Power BI
 
 - Link na plataforma: https://hermes.dio.me/certificates/YRS6OXNN.pdf
