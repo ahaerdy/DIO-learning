@@ -308,6 +308,31 @@ Para garantir a qualidade e a manutenção do código, devem-se seguir algumas *
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/ee23f1ff-2afa-4f7f-8a3b-0939125c0052?autoplay=1
 
+Esta aula propõe uma atividade prática focada no desenvolvimento e na organização de métodos para fortalecer a lógica de programação e a reutilização de código. O desafio consiste em criar uma aplicação que execute quatro operações matemáticas básicas com dois valores, emita saudações personalizadas (bom dia, boa tarde ou boa noite) com base no horário informado e realize o cálculo do valor final de um empréstimo, permitindo a definição arbitrária de taxas e parcelas. O vídeo enfatiza a importância de decompor problemas complexos em pequenos métodos que podem trabalhar de forma independente ou em conjunto — inclusive sendo passados como parâmetros uns para os outros — com o objetivo de evitar códigos extensos, facilitar a manutenção e promover o reaproveitamento de funções.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-17h35m46s809.jpg" alt="" width="840">
+</p>
+
+Nesta etapa prática, o desafio consiste em desenvolver uma aplicação que gerencie três cenários comuns de lógica de programação:
+
+* **Operações Matemáticas**: Implementação de um calculador para as quatro operações básicas (soma, subtração, multiplicação e divisão). É obrigatória a passagem de dois valores como parâmetros para essas operações.
+* **Mensagens de Saudação**: Criação de uma lógica que identifique o período do dia (manhã, tarde ou noite) com base na hora informada, retornando a saudação "Bom dia", "Boa tarde" ou "Boa noite".
+* **Simulação de Empréstimo**: Desenvolvimento de um sistema para calcular o valor final de um empréstimo a partir do montante solicitado. O cálculo deve ser influenciado por taxas e pela quantidade de parcelas , com a liberdade de definir arbitrariamente as faixas que determinam esses valores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-21-17h35m51s446.jpg" alt="" width="840">
+</p>
+
+Para a resolução dos exercícios, é fundamental aplicar boas práticas de modularização e reutilização de código:
+
+* **Modularização**: Deve-se buscar ao máximo a criação de métodos que executem tarefas de forma independente ou em conjunto.
+* **Composição de Métodos**: É permitido e recomendável chamar um método dentro de outro para organizar a lógica do programa.
+* **Parâmetros Dinâmicos**: É possível passar a chamada de um método como parâmetro para outro método, facilitando o fluxo de dados e o reaproveitamento de funções.
+
+
 ### 🟩 Vídeo 06 - Exercício prático
 
 <video width="60%" controls>
@@ -315,7 +340,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entenden
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/c93b0388-6923-4bb1-986d-274f2cf990aa?autoplay=1
+
+
 
 ## Parte 2 - Sobrecarga
 
