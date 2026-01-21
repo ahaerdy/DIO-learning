@@ -353,29 +353,40 @@ O código foca na estrutura fundamental de um método: visibilidade (`public`), 
 ```java
 package one.digitalinnovation.basecamp;
 
+/**
+ * Classe de exemplo para o exercício da Aula 1 de Métodos.
+ */
 public class Calculadora {
 
+    // O professor define a visibilidade (public), o modificador (static) e o retorno (void - sem retorno)
     public static void soma(double numero1, double numero2) {
+        // Recebe dois números como parâmetro, soma-os e armazena em uma variável temporária
         double resultado = numero1 + numero2;
+        // Utiliza o System.out.println para mostrar o valor resultante da soma
         System.out.println("A soma de " + numero1 + " mais " + numero2 + " é " + resultado);
     }
 
+    // Segue a mesma ideia: recebe dois parâmetros e executa a operação de subtração
     public static void subtracao(double numero1, double numero2) {
         double resultado = numero1 - numero2;
+        // Armazena na variável temporária e exibe o resultado no console
         System.out.println("A subtracao de " + numero1 + " menos " + numero2 + " é " + resultado);
     }
 
+    // Método definido para realizar a multiplicação entre os dois parâmetros recebidos
     public static void multiplicacao(double numero1, double numero2) {
         double resultado = numero1 * numero2;
+        // Exibe o resultado da operação de multiplicação
         System.out.println("A multiplicação de " + numero1 + " vezes " + numero2 + " é " + resultado);
     }
 
+    // Método chamado 'divisao', também public, static e void (sem retorno)
     public static void divisao(double numero1, double numero2) {
         double resultado = numero1 / numero2;
+        // Divide os dois números passados e mostra o resultado de forma clara
         System.out.println("A divisão de " + numero1 + " por " + numero2 + " é " + resultado);
     }
 }
-
 ```
 
 A classe `Mensagem` demonstra a possibilidade de métodos trabalharem em conjunto, onde um método principal chama outros métodos auxiliares. O método `obterMensagem` utiliza uma estrutura de controle `switch` para avaliar a hora informada e decidir qual saudação disparar.
@@ -385,9 +396,12 @@ Em vez de imprimir o texto diretamente no `switch`, o código delega essa funç�
 ```java
 package one.digitalinnovation.basecamp;
 
+// Definição da classe que gerencia mensagens de saudação baseadas no horário [cite: 139]
 public class Mensagem {
 
+    // Método principal da classe, novamente definido como public, static e void [cite: 146]
     public static void obterMensagem(int hora) {
+        // Estrutura de controle para decidir qual saudação exibir baseada no parâmetro recebido [cite: 142]
         switch (hora) {
             case 5:
             case 6:
@@ -397,13 +411,16 @@ public class Mensagem {
             case 10:
             case 11:
             case 12:
+                // Demonstração de um método sendo chamado dentro de outro [cite: 153]
                 mensagemBomDia();
+                // Interrompe a execução do switch após encontrar o caso válido [cite: 142]
                 break;
             case 13:
             case 14:
             case 15:
             case 16:
             case 17:
+                // Chamada do método específico para o período da tarde [cite: 154]
                 mensagemBoaTarde();
                 break;
             case 18:
@@ -417,27 +434,31 @@ public class Mensagem {
             case 2:
             case 3:
             case 4:
+                // Chamada do método específico para o período da noite [cite: 154]
                 mensagemBoaNoite();
                 break;
             default:
+                // Caso a hora passada não esteja nos intervalos acima, exibe mensagem de erro [cite: 158, 159]
                 System.out.println("Hora inválida.");
                 break;
         }
     }
 
+    // Método simples com a finalidade única de exibir a saudação matinal [cite: 161]
     public static void mensagemBomDia() {
         System.out.println("Bom dia!");
     }
 
+    // Método criado para exibir a saudação vespertina [cite: 161]
     public static void mensagemBoaTarde() {
         System.out.println("Bom tarde!");
     }
 
+    // Método criado para exibir a saudação noturna [cite: 161]
     public static void mensagemBoaNoite() {
         System.out.println("Bom noite!");
     }
 }
-
 ```
 
 A classe `Emprestimo` aprofunda o conceito de interação entre métodos, introduzindo o uso de retornos. O método `calcular` recebe o valor solicitado e a quantidade de parcelas, utilizando métodos auxiliares como `getTaxaDuasParcelas()` para obter os valores necessários para o cálculo final.
@@ -447,37 +468,54 @@ O exemplo destaca que métodos podem retornar tipos de dados diferentes, como `i
 ```java
 package one.digitalinnovation.basecamp;
 
+// Classe criada para exemplificar cálculos de empréstimo com taxas e parcelas
 public class Emprestimo {
 
+    // Método que retorna um valor inteiro representando a opção de duas parcelas
     public static int getDuasParcelas() {
+        // O comando return devolve o valor 2 para quem invocar este método
         return 2;
     }
 
+    // Método que retorna a quantidade de três parcelas
     public static int getTresParcelas() {
+        // Retorna o valor fixo 3
         return 3;
     }
 
+    // Método que retorna um valor double representando a taxa de juros (30%)
     public static double getTaxaDuasParcelas() {
+        // O retorno de dados será explorado com mais profundidade em aulas futuras
         return 0.3;
     }
 
+    // Método que retorna a taxa de juros para o parcelamento em três vezes (45%)
     public static double getTaxaTresParcelas() {
+        // Retorna o valor decimal correspondente à taxa
         return 0.45;
     }
 
+    // Método principal de cálculo que recebe dois parâmetros de tipos diferentes
     public static void calcular(double valor, int parcelas) {
+        // Verificação lógica: se a quantidade de parcelas informada for igual a 2
         if (parcelas == 2) {
+            // Calcula o valor final somando o valor inicial ao juro obtido via método de taxa
             double valorFinal = valor + (valor * getTaxaDuasParcelas());
+            // Exibe o resultado formatado para 2 parcelas no console
             System.out.println("Valor final do empréstimo para 2 parcelas: R$ " + valorFinal);
+        // Verificação lógica: se a quantidade de parcelas informada for igual a 3
         } else if (parcelas == 3) {
+            // Realiza o cálculo utilizando o retorno do método de taxa para 3 parcelas
             double valorFinal = valor + (valor * getTaxaTresParcelas());
+            // Exibe o resultado formatado para 3 parcelas no console
             System.out.println("Valor final do empréstimo para 3 parcelas: R$ " + valorFinal);
+        // Caso o usuário informe um número de parcelas diferente de 2 ou 3
         } else {
+            // Exibe uma mensagem informando que a opção não é aceita pelo sistema
             System.out.println("Quantidade de parcelas não aceita.");
         }
     }
 }
-
 ```
 
 A classe `Main` atua como o ponto de entrada da aplicação, onde todos os métodos criados anteriormente são executados. Aqui é demonstrada a invocação de métodos estáticos diretamente a partir do nome da classe (ex: `Calculadora.soma(3, 6)`), o que é possível graças ao modificador `static`.
@@ -487,30 +525,42 @@ Também é ilustrada uma prática comum: passar a execução de um método como 
 ```java
 package one.digitalinnovation.basecamp;
 
+/**
+ * Classe principal que executa e testa todos os métodos criados nos exercícios anteriores.
+ */
 public class Main {
     public static void main(String[] args) {
         
-        // Calculadora
+        // Início dos testes da classe Calculadora
         System.out.println("Exercício calculadora");
+        // Chamada direta do método estático soma, passando dois valores double
         Calculadora.soma(3, 6);
+        // Chamada do método de subtração; note que o ponto é usado para decimais em Java
         Calculadora.subtracao(9, 1.8);
+        // Execução do método de multiplicação
         Calculadora.multiplicacao(7, 8);
+        // Execução do método de divisão
         Calculadora.divisao(5, 2.5);
 
-        // Mensagem
+        // Início dos testes da classe Mensagem
         System.out.println("Exercício mensagem");
+        // Passa o valor 9, que o switch da classe Mensagem identificará como 'Bom dia'
         Mensagem.obterMensagem(9);
+        // Passa o valor 14, resultando na chamada do método mensagemBoaTarde()
         Mensagem.obterMensagem(14);
+        // Passa o valor 1, resultando na chamada do método mensagemBoaNoite()
         Mensagem.obterMensagem(1);
 
-        // Empréstimo
+        // Início dos testes da classe Empréstimo
         System.out.println("Exercício empréstimo");
+        // Exemplo avançado: o resultado do método getDuasParcelas (valor 2) é passado como parâmetro
         Emprestimo.calcular(1000, Emprestimo.getDuasParcelas());
+        // Aqui, o retorno do método getTresParcelas (valor 3) é usado para o cálculo
         Emprestimo.calcular(1000, Emprestimo.getTresParcelas());
+        // Demonstração de que também é possível passar o valor fixo (5) diretamente
         Emprestimo.calcular(1000, 5);
     }
 }
-
 ```      
 
 ## Parte 2 - Sobrecarga
