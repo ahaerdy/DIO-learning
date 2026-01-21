@@ -696,27 +696,36 @@ Nesta etapa, é apresentada a criação da classe `Quadrilatero`, focada no conc
 A distinção entre a área do retângulo e do losango demonstra que a sobrecarga não depende apenas da quantidade, mas também dos **tipos de dados** dos parâmetros, permitindo que a linguagem Java identifique qual método executar com base nos argumentos fornecidos.
 
 ```java
+// Define o pacote onde a classe está localizada [cite: 2]
 package one.digitalinnovation.basecamp;
 
+// Declaração da classe Quadrilatero 
 public class Quadrilatero {
 
+    // Método para calcular a área do quadrado: usa apenas um parâmetro (lado) [cite: 17]
     public static void area(double lado) {
+        // Exibe o resultado da multiplicação do lado por ele mesmo [cite: 19]
         System.out.println("Área do quadrado:" + lado * lado);
     }
 
+    // Sobrecarga do método area para retângulo: recebe dois parâmetros do tipo double 
     public static void area(double lado1, double lado2) {
+        // Exibe o resultado da base vezes a altura (lado1 * lado2) [cite: 23]
         System.out.println("Área do retângulo:" + lado1 * lado2);
     }
 
+    // Sobrecarga do método area para trapézio: recebe três parâmetros do tipo double [cite: 28]
     public static void area(double baseMaior, double baseMenor, double altura) {
+        // Aplica a fórmula: ((Base Maior + Base Menor) * Altura) / 2 [cite: 31]
         System.out.println("Área do trapézio:" + ((baseMaior + baseMenor) * altura) / 2);
     }
 
+    // Sobrecarga do método area para losango: usa dois parâmetros do tipo float para diferenciar do retângulo 
     public static void area(float diagonal1, float diagonal2) {
+        // Exibe o resultado da multiplicação das diagonais dividido por dois [cite: 39]
         System.out.println("Área do losango:" + (diagonal1 * diagonal2) / 2);
     }
 }
-
 ```
 
 A classe `Main` demonstra a execução prática das sobrecargas definidas anteriormente. Ao chamar o método `Quadrilatero.area()`, o Java determina automaticamente qual implementação utilizar baseando-se nos valores passados:
@@ -727,20 +736,34 @@ A classe `Main` demonstra a execução prática das sobrecargas definidas anteri
 * `area(5f, 5f)`: Identifica o método para **losango**, pois os sufixos `f` especificam que os argumentos são do tipo `float`, diferenciando esta chamada da do retângulo.
 
 ```java
+// Define o pacote ao qual esta classe pertence 
 package one.digitalinnovation.basecamp;
 
+// Declaração da classe principal para execução do programa 
 public class Main {
 
+    // Método principal (ponto de entrada) do sistema 
     public static void main(String[] args) {
+        
+        // Comentário indicando o início do bloco de exercícios sobre Quadriláteros 
         // Quadrilátero
+        
+        // Exibe uma mensagem de cabeçalho no console 
         System.out.println("Exercício quadrilátero");
+        
+        // Chama a área do Quadrado: identifica pelo único parâmetro (3) 
         Quadrilatero.area(3);
+        
+        // Chama a área do Retângulo: utiliza '5d' para especificar o tipo Double explicitamente 
         Quadrilatero.area(5d, 5d);
+        
+        // Chama a área do Trapézio: identifica pelos três argumentos fornecidos 
         Quadrilatero.area(7, 8, 9);
+        
+        // Chama a área do Losango: utiliza '5f' para garantir que os parâmetros sejam lidos como Float 
         Quadrilatero.area(5f, 5f);
     }
 }
-
 ```      
 
 
