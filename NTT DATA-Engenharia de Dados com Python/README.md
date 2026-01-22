@@ -113,7 +113,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Introdução a Análise de Dados com SQL](Modulo_05/02-Curso.02-Introducao.a.Analise.de.Dados.com.SQL)
 - [x] Curso: [Fundamentos Teóricos Sobre ETL](Modulo_05/03-Curso.03-Fundamentos_Teoricos_Sobre_ETL)
 - [ ] Curso: [Primeiros Passos com Power BI](Modulo_05/04-Curso.04-Primeiros_Passos_com_Power_BI)
-- [ ] Curso: Analisando dados de um Dashboard de Vendas no Power BI
+- [ ] Projeto: [Analisando dados de um Dashboard de Vendas no Power BI](Modulo_05/05-Projeto-Analisando_dados_de_um_Dashboard_de_Vendas_no_Power_BI)
 - [ ] Curso: Desvendando o Power BI com Python
 
 ### Módulo 6: Visualização de Dados e Relatórios com Power BI  
