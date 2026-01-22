@@ -513,19 +513,20 @@ boolean muitosDependentes = quantidadeDependentes >= mediaDependentes;
 
 ```      
 
-
-### 🟩 Vídeo 09 - Operadores Lógicos
+### 🟩 Vídeo 09 - Resolução do exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.04-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/d960095e-26eb-4a58-9827-64ecb5b8b0b3?autoplay=1
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/251872eb-02ff-417e-a1fc-a4e51d9d88ed?autoplay=1
 
 
 
-### 🟩 Vídeo 10 - Resolução do exercício
+## Parte 3 - Controle de Fluxo
+
+### 🟩 Vídeo 10 - O que é Controle de Fluxo
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.04-video_10.webm" type="video/webm">
@@ -534,9 +535,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-c
 
 link do vídeo:
 
-## Parte 3 - Controle de Fluxo
-
-### 🟩 Vídeo 11 - O que é Controle de Fluxo
+### 🟩 Vídeo 11 - Criando estruturas de Controle de Fluxo
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.04-video_11.webm" type="video/webm">
@@ -545,7 +544,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 12 - Criando estruturas de Controle de Fluxo
+### 🟩 Vídeo 12 - Boas práticas
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.04-video_12.webm" type="video/webm">
@@ -554,7 +553,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 13 - Boas práticas
+### 🟩 Vídeo 13 - Exercício de Controle de Fluxo
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.04-video_13.webm" type="video/webm">
@@ -563,7 +562,9 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 14 - Exercício de Controle de Fluxo
+## Parte 4 - Blocos
+
+### 🟩 Vídeo 14 - Blocos, tipos e uso
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.04-video_14.webm" type="video/webm">
@@ -572,21 +573,10 @@ link do vídeo:
 
 link do vídeo:
 
-## Parte 4 - Blocos
-
-### 🟩 Vídeo 15 - Blocos, tipos e uso
+### 🟩 Vídeo 15 - Encerramento do curso
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.04-video_15.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
-
-### 🟩 Vídeo 16 - Encerramento do curso
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.04-video_16.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
