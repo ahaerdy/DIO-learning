@@ -542,52 +542,70 @@ Uma técnica de **boa prática** destacada é a criação de **variáveis interm
 ```java
 package one.digitalinnovation.basecamp;
 
+/**
+ * Classe de exemplo para o exercício da Aula 2 de Operadores lógicos e relacionais, 
+ * Controle de fluxo e Blocos. 
+ */
 public class Main {
 
     public static void main(String[] args) {
 
+        // Definição de variáveis booleanas para exemplificar as quatro operações lógicas fundamentais. 
         boolean b1 = true;
         boolean b2 = false;
         boolean b3 = true;
         boolean b4 = false;
 
-        System.out.println("b1 && b2 " + (b1 && b2));
-        System.out.println("b1 && b3 " + (b1 && b3));
+        // Operação de Conjunção (AND - &&): Só resulta em true quando ambos os operandos são true. 
+        System.out.println("b1 && b2 " + (b1 && b2)); // b1(T) e b2(F) -> Resultado: false 
+        System.out.println("b1 && b3 " + (b1 && b3)); // b1(T) e b3(T) -> Resultado: true 
 
-        System.out.println("b2 || b3 " + (b2 || b3));
-        System.out.println("b2 || b4 " + (b2 || b4));
+        // Operação de Disjunção (OR - ||): Só resulta em false quando ambos os operandos são false. 
+        System.out.println("b2 || b3 " + (b2 || b3)); // b2(F) ou b3(T) -> Resultado: true 
+        System.out.println("b2 || b4 " + (b2 || b4)); // b2(F) ou b4(F) -> Resultado: false 
 
-        System.out.println("b1 ^ b3 " + (b1 ^ b3));
-        System.out.println("b4 ^ b1 " + (b4 ^ b1));
+        // Operação de Disjunção Exclusiva (XOR - ^): Resulta em true quando os operandos são diferentes. 
+        System.out.println("b1 ^ b3 " + (b1 ^ b3)); // b1(T) e b3(T) são iguais -> Resultado: false 
+        System.out.println("b4 ^ b1 " + (b4 ^ b1)); // b4(F) e b1(T) são diferentes -> Resultado: true 
 
-        System.out.println(!b1);
-        System.out.println(!b2);
+        // Operação de Negação (!): Inverte o valor lógico atual (o que é true vira false e vice-versa). 
+        System.out.println(!b1); // !true -> Resultado: false 
+        System.out.println(!b2); // !false -> Resultado: true 
 
+        // Demonstração de Expressões Compostas misturando tipos numéricos e operadores. 
         int i1 = 10;
         int i2 = 5;
         float f1 = 20f;
         float f2 = 50f;
+
+        // Exemplo de expressão complexa: Primeiro resolve-se a aritmética, depois a relacional e por fim a lógica. 
+        // ((10 + 5) < (50 - 20)) && true -> (15 < 30) && true -> true && true -> true 
         System.out.println("((i1 + i2) < (f2 - f1)) && true " + (((i1 + i2) < (f2 - f1)) && true));
+        
+        // Outra expressão composta unindo operadores relacionais e lógicos. 
         System.out.println("(i1 > i2) || (f2 < f1) " + ((i1 > i2) || (f2 < f1)));
 
+        // Demonstração da "Boa Prática": Criar variáveis intermediárias para facilitar o entendimento. 
         double salarioMensal = 11893.58d;
         double mediaSalario = 10500d;
-
         int quantidadeDependentes = 4;
         int mediaDependentes = 2;
 
+        // Forma complexa e menos legível de realizar a verificação de negócio. 
         System.out.println((salarioMensal < mediaSalario) && (quantidadeDependentes > mediaDependentes));
 
+        // Simplificação através de variáveis auxiliares com nomes semânticos (salário baixo e muitos dependentes). 
         boolean salarioBaixo = salarioMensal < mediaSalario;
         boolean muitosDependentes = quantidadeDependentes > mediaDependentes;
 
+        // A expressão torna-se muito mais fácil de ler e entender do que a anterior. 
         System.out.println((salarioBaixo) && (muitosDependentes));
 
+        // Criação de uma variável final para possibilitar o reúso do resultado sem repetir a lógica. 
         boolean recebeAuxilio = (salarioBaixo) && (muitosDependentes);
-        System.out.println("recebeAuxilio " + recebeAuxilio);
+        System.out.println("recebeAuxilio " + recebeAuxilio); // Resultado esperado: false baseado nos valores fornecidos. 
     }
 }
-
 ```
    
 
