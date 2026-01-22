@@ -315,7 +315,6 @@ public class Main {
 }
 ```
 
-
 ## Parte 2 - Operadores Lógicos
 
 ### 🟩 Vídeo 06 - O que são Operadores Lógicos
@@ -325,7 +324,36 @@ public class Main {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/32902316-d0cc-48ef-b8b6-5a30c65c7d5b?autoplay=1
+
+Esta aula introduz o conceito de operadores lógicos na programação, definindo-os como símbolos que realizam comparações entre operandos ou expressões lógicas para retornar um resultado booleano. O conteúdo destaca a distinção entre comparações lógicas e relacionais, enfatizando que operadores lógicos são restritivos e operam especificamente sobre valores verdadeiro ou falso (True/False).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-12h34m50s316.jpg" alt="" width="840">
+</p>
+
+Esta aula foca no estudo dos operadores lógicos, estabelecendo duas metas principais para o aprendizado:
+
+* **Entender a definição**: Compreender o que são operadores lógicos.
+* **Saber como utilizá-los**: Desenvolver a capacidade de aplicação prática desses operadores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-12h34m52s082.jpg" alt="" width="840">
+</p>
+
+Os operadores lógicos são definidos como símbolos especiais capazes de realizar comparações lógicas entre operandos ou expressões, retornando posteriormente um resultado.
+
+Diferente de comparações puramente numéricas, esses operadores aplicam-se a valores lógicos (como `true` ou `false`) ou expressões que resultem em dados do tipo booleano. Eles são fundamentais para estruturar o fluxo de decisão em algoritmos.
+
+Os tipos fundamentais de operadores lógicos apresentados são:
+
+* **Conjunção** 
+* **Disjunção** 
+* **Disjunção exclusiva** 
+* **Negação** 
+
 
 ### 🟩 Vídeo 07 - Como utilizar Operadores Lógicos
 
@@ -334,7 +362,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 08 - Exemplos, Boas práticas e Exercitando
 
