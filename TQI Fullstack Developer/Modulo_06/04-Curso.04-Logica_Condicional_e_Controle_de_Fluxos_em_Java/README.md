@@ -468,24 +468,24 @@ Para compreender o funcionamento prático dos operadores lógicos (Conjunção, 
 No caso da conjunção (`&&`), o resultado só é verdadeiro se ambos os operandos forem `true`. Na disjunção (`||`), basta que um seja verdadeiro. Já o XOR (`^`) exige que os valores sejam opostos para resultar em verdadeiro. Por fim, a negação (`!`) simplesmente inverte o estado atual da variável.
 
 ```java
-[cite_start]boolean b1 = true; boolean b2 = false; [cite: 10]
-[cite_start]boolean b3 = true; boolean b4 = false; [cite: 11]
+boolean b1 = true; boolean b2 = false; [cite: 10]
+boolean b3 = true; boolean b4 = false; [cite: 11]
 
-[cite_start]b1 && b2 // false [cite: 12]
-[cite_start]b1 && b3 // true [cite: 12]
+b1 && b2 // false [cite: 12]
+b1 && b3 // true [cite: 12]
 
-[cite_start]b2 || b3 // true [cite: 13]
-[cite_start]b2 || b4 // false [cite: 13]
+b2 || b3 // true [cite: 13]
+b2 || b4 // false [cite: 13]
 
-[cite_start]b1 ^ b3 // false (são iguais) [cite: 14]
-[cite_start]b4 ^ b1 // true (são opostos) [cite: 14]
+b1 ^ b3 // false (são iguais) [cite: 14]
+b4 ^ b1 // true (são opostos) [cite: 14]
 
-[cite_start]!b1 // false [cite: 15]
-[cite_start]!b2 // true [cite: 15]
+!b1 // false [cite: 15]
+!b2 // true [cite: 15]
 
 // Exemplos de expressões complexas:
-(i1 > i2) || (f2 < f1) [cite_start][cite: 16]
-((i1 + i2) [cite_start]< (f2 - f1)) && true [cite: 16]
+(i1 > i2) || (f2 < f1) [cite: 16]
+((i1 + i2) < (f2 - f1)) && true [cite: 16]
 
 ```
 
@@ -499,17 +499,17 @@ Ao extrair partes de uma condição composta para variáveis com nomes significa
 
 ```java
 // Expressão complexa e de difícil leitura:
-(salarioMensal < mediaSalario) [cite_start]&& (quantidadeDependentes >= mediaDependentes) [cite: 20]
+(salarioMensal < mediaSalario) && (quantidadeDependentes >= mediaDependentes) [cite: 20]
 
 // Aplicando boas práticas com variáveis auxiliares:
 boolean salarioBaixo = salarioMensal < mediaSalario;
 boolean muitosDependentes = quantidadeDependentes >= mediaDependentes;
 
 // A expressão simplificada:
-(salarioBaixo) [cite_start]&& (muitosDependentes) [cite: 22]
+(salarioBaixo) && (muitosDependentes) [cite: 22]
 
 // Resultado final legível:
-[cite_start]boolean recebeAuxilio = (salarioBaixo) && (muitosDependentes); [cite: 23]
+boolean recebeAuxilio = (salarioBaixo) && (muitosDependentes); [cite: 23]
 
 ```      
 
