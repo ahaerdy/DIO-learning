@@ -13,8 +13,9 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/b5616a08-8f2f-4da0-bf9c-0fe384be2b42?autoplay=1 
 
-link do vídeo:
+
 
 ### 🟩 Vídeo 02 - O que são Operadores Relacionais
 
