@@ -1114,6 +1114,83 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/1e39b6fb-3ee0-401e-8e1c-3033225a8da8?autoplay=1
 
+Esta aula final aborda a definição e a aplicação de blocos de execução, caracterizados como conjuntos de códigos que operam de forma integrada para realizar operações específicas. O conteúdo detalha os três tipos de blocos existentes — locais, estáticos e de instância —, concentrando-se nos blocos locais, uma vez que os demais estão vinculados à orientação a objetos. A estrutura de um bloco é definida pela abertura e fechamento de chaves, sendo exemplificada através de estruturas de controle como "if" e "else". Destaca-se que, embora o uso de chaves seja opcional para blocos de apenas uma linha, ele se torna obrigatório em execuções compostas por múltiplas linhas de código.
+
+### Anotações
+
+#### Introdução aos Blocos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-16h16m42s245.jpg" alt="" width="840">
+</p>
+
+Esta aula aborda os conceitos fundamentais de **blocos**, explorando a lógica de agrupamento de códigos, os diferentes tipos existentes e a aplicação prática dessas estruturas no desenvolvimento.
+
+#### Objetivos de Aprendizado
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-16h16m44s734.jpg" alt="" width="840">
+</p>
+
+O aprendizado está estruturado em três objetivos principais:
+
+1. **Entender o que são blocos**: Compreender a definição teórica e prática dessa estrutura.
+2. **Tipos de blocos**: Identificar as diferentes categorias de blocos.
+3. **Saber como usar blocos**: Aplicar o conhecimento na escrita de código eficiente.
+
+#### Conceituação e Tipos de Blocos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-16h16m46s341.jpg" alt="" width="840">
+</p>
+
+Um bloco é definido como um grupo de zero ou mais códigos que trabalham em conjunto para executar uma operação. Embora tecnicamente um bloco possa conter zero linhas, na prática, ele costuma possuir ao menos uma instrução.
+
+Os blocos são classificados em três tipos principais:
+
+* **Locais**: Localizados dentro de métodos (como o método `main`).
+* **Estáticos**: Definidos dentro de classes (foco em Orientação a Objetos).
+* **Instância**: Definidos dentro de classes (foco em Orientação a Objetos).
+
+#### Criação de Blocos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-16h16m49s711.jpg" alt="" width="840">
+</p>
+
+A criação de um bloco é feita de forma simples através do uso de chaves. Tudo o que estiver contido entre o abrir e o fechar de chaves faz parte de um bloco de execução.
+
+```java
+{
+    ...
+}
+
+```
+
+#### Exemplos Práticos de Blocos e Controle de Fluxo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-16h16m51s380.jpg" alt="" width="840">
+</p>
+
+Os blocos são amplamente utilizados em estruturas de controle de fluxo, como o `if`. Quando um bloco possui mais de uma linha de execução, o uso de chaves é obrigatório. Caso possua apenas uma linha, as chaves tornam-se opcionais.
+
+```java
+if (autorizado) {
+    Carregar Perfil
+    Direcionar Página Principal
+}
+
+if (menorIdade)
+    Direcionar Página Proibido
+
+if (autorizado) {
+    ...
+} else {
+    ...
+}
+
+```      
 
 
 ### 🟩 Vídeo 15 - Encerramento do curso
@@ -1123,8 +1200,37 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/07055704-5622-49a3-a565-350c6a38075b?autoplay=1
 
+Esta conclusão de aula orienta os estudantes sobre os canais de suporte e as referências teóricas utilizadas na construção do treinamento. O instrutor incentiva o uso do fórum do curso para dúvidas específicas e a comunidade no Discord para questões mais amplas, promovendo a interação entre alunos e ex-alunos. Além disso, são disponibilizados links da documentação oficial da Oracle que serviram de base para o conteúdo detalhado no vídeo, permitindo que os participantes aprofundem seus conhecimentos por meio de exemplos adicionais e materiais complementares.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-16h25m06s343.jpg" alt="" width="840">
+</p>
+
+Para esclarecer dúvidas que surjam durante ou após o curso, a Digital Innovation One disponibiliza canais oficiais de suporte e interação. Você pode utilizar o **fórum do curso** para enviar mensagens diretamente ao instrutor, trocar experiências com colegas que estão cursando o módulo no momento ou interagir com ex-alunos. Caso a dúvida seja mais abrangente e não se limite apenas ao conteúdo específico deste curso, a recomendação é utilizar a **comunidade online no Discord**, onde um volume maior de pessoas pode auxiliar na resolução do problema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-16h25m16s660.jpg" alt="" width="840">
+</p>
+
+O embasamento teórico para a construção deste curso foi extraído diretamente da documentação oficial da Oracle para a linguagem Java. Para aprofundar os estudos sobre a sintaxe básica e o funcionamento da linguagem, recomenda-se a consulta aos seguintes tópicos técnicos:
+
+* **[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html)** 
+* **[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html)** 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-16h25m17s803.jpg" alt="" width="840">
+</p>
+
+Dando continuidade às referências utilizadas para o detalhamento minucioso do conteúdo, os seguintes links da documentação oficial abordam o controle de fluxo na linguagem Java:
+
+* **[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)** 
+* **[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flowsummary.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flowsummary.html)** 
+
+Estes materiais serviram de base para os exemplos apresentados e permitem visualizar cenários adicionais além dos discutidos em aula.
 
 ##  Materiais de Apoio
 
