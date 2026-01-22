@@ -174,8 +174,46 @@ Complementando os operadores de tamanho, temos as funções para verificar valor
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/b67ed1b2-4bcd-4323-8032-8ad477ac1832?autoplay=1
 
-link do vídeo:
+Esta aula aborda a aplicação de operadores relacionais de similaridade (igualdade e diferença) e tamanho (maior, menor ou igual) em diferentes tipos de dados, como inteiros, floats, caracteres, strings e booleanos. O conteúdo destaca que nem todos os operadores são compatíveis com todos os tipos de informação, demonstrando erros de compilação ao tentar realizar comparações de magnitude entre booleanos ou strings, bem como entre tipos incompatíveis como booleanos e inteiros. Em contrapartida, valida-se a possibilidade de comparar tipos numéricos distintos, como inteiros e floats. O vídeo propõe um exercício prático no ambiente IntelliJ para codificar essas variáveis, testar as limitações dos operadores e explorar novos cenários de comparação para consolidar o entendimento sobre as regras de tipagem e lógica de programação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-11h16m23s683.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, são apresentados exemplos práticos da aplicação de operadores relacionais de similaridade e tamanho em diferentes tipos de dados. Para realizar os testes, foram definidas variáveis dos tipos `int`, `float`, `char`, `String` e `boolean`.
+
+As operações demonstram como os operadores de igualdade (), diferença (), maior que (), menor que () e suas variações se comportam dependendo do tipo de dado envolvido. É importante notar que nem todo operador relacional pode ser aplicado a qualquer tipo de dado. Por exemplo, tentar verificar se um valor booleano é maior que outro ou comparar um booleano com um número inteiro resultará em erros de compilação, pois essas operações não possuem lógica fundamental na linguagem. Da mesma forma, operadores de tamanho não são aplicáveis entre Strings. Por outro lado, a comparação entre tipos numéricos distintos, como um `int` e um `float`, é permitida e funcional.
+
+```java
+int i1 = 10; int i2 = 20;
+float f1 = 4.5f; float f2 = 3.5f;
+char c1 = 'x'; char c2 = 'y';
+String s1 = "Fulano"; String s2 = "Fulano";
+boolean b1 = true; boolean b2 = false;
+
+i1 == i2; i1 != i2; i1 > i2; i1 <= i2;
+f1 == f2; f1 != f2; f1 >= f2; f1 < f2;
+c1 == c2; c1 != c2; c1 > c2; c1 <= c2;
+s1 == s2; s1 != s2; s1 >= s2; s1 < s2;
+b1 == b2; b1 != b2; b1 > b2; b1 <= i1;
+12 > f1;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-11h16m29s532.jpg" alt="" width="840">
+</p>
+
+A proposta de exercício foca na fixação dos conceitos de operadores e tipos de dados através da prática no ambiente de desenvolvimento IntelliJ. O objetivo é reproduzir as comparações discutidas para observar diretamente quais geram erros de compilação e quais são executadas com sucesso.
+
+Além de codificar os exemplos já vistos, deve-se expandir o projeto criando novas variáveis com tipos de dados que ainda não foram apresentados. Essa exploração permite testar diversas combinações de operadores e tipos, consolidando o entendimento sobre as restrições e possibilidades das comparações em Java.
+
+Seria útil se eu gerasse uma lista de outros tipos de dados primitivos em Java para você incluir no seu exercício?      
+
 
 ### 🟩 Vídeo 05 - Resolução do exercício
 
@@ -185,7 +223,7 @@ link do vídeo:
 </video>
 
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/682f9e6c-593f-4878-b45a-e3b41a04a935?autoplay=1
 
 ## Parte 2 - Operadores Lógicos
 
