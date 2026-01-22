@@ -798,7 +798,53 @@ switch (olhos) {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/f469b8db-2f05-43c9-acf9-192521254b09?autoplay=1
+
+Esta aula apresenta diretrizes essenciais para o uso de estruturas de controle de fluxo, visando otimizar a legibilidade e a manutenção do código. O conteúdo estabelece que o switch deve ser reservado para avaliações de variáveis únicas com valores exatos, enquanto o if é indicado para expressões booleanas complexas envolvendo múltiplas variáveis. Entre as boas práticas destacadas, o vídeo enfatiza a necessidade de evitar o "efeito flecha" e o aninhamento excessivo de ifs — sugerindo o uso de variáveis intermediárias para simplificar condições — e alerta para que a cláusula default do switch seja utilizada apenas para tratar valores inválidos, e não como um comportamento padrão genérico. A aula conclui com uma série de exercícios práticos que desafiam a aplicação desses conceitos na conversão de meses e dias da semana, além de lógica condicional para identificação de períodos de férias e classificação de valores numéricos.
+
+### Anotações
+
+thought
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-15h09m43s024.jpg" alt="" width="840">
+</p>
+
+## Boas Práticas em Estruturas de Controle
+
+Para garantir a legibilidade e a facilidade de manutenção do código, é fundamental seguir boas práticas ao utilizar estruturas de decisão como `if` e `switch`. As principais recomendações incluem:
+
+* **Switch vs. If**: Utilize o `switch` para testar valores exatos de uma única variável. Já o `if` deve ser preferido para expressões booleanas ou quando múltiplas variáveis estão envolvidas na tomada de decisão.
+* **Uso do Default**: Evite utilizar a cláusula `default` do `switch` para comportamentos ou casos genéricos. O ideal é que ela sirva para tratar valores inválidos, prevenindo comportamentos inesperados.
+* **Efeito Flecha e Aninhamento**: Deve-se evitar o "efeito flecha", que ocorre quando muitos `if`s são aninhados, deslocando o código excessivamente para a direita e dificultando a leitura.
+* **Variáveis Intermediárias**: Aplique técnicas de boas práticas para simplificar expressões lógicas e diminuir o tamanho do `if`, tornando o código mais limpo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-15h09m51s173.jpg" alt="" width="840">
+</p>
+
+## Exercitando: Estruturas de Decisão
+
+Para aplicar os conceitos de controle de fluxo e boas práticas, propõe-se a realização de exercícios práticos no ambiente IntelliJ:
+
+1. **Exibição de Meses**: Crie uma estrutura `if` que receba o número de um mês e exiba o nome correspondente (ex: 1 para "Janeiro"). O desafio é implementar essa lógica evitando o efeito flecha.
+2. **Verificação de Férias**: Implemente um `if` que verifique se o mês é janeiro, julho ou dezembro para exibir o texto "Férias".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-15h09m53s633.jpg" alt="" width="840">
+</p>
+
+## Exercitando: Uso do Switch
+
+Dando continuidade aos exercícios, utilizaremos a estrutura `switch` para cenários de valores exatos e constantes:
+
+1. **Dias da Semana**: A partir de uma variável do tipo `String` contendo o dia da semana, utilize o `switch` para exibir o número correspondente.
+2. **Avaliação de Estados**: Crie um exemplo onde:
+* Valores inteiros entre **1 e 3** exibem "Certo".
+* O valor **4** exibe "Errado".
+* O valor **5** exibe "Talvez".
+* Para os demais valores, deve-se exibir "Valor indefinido".
+
 
 ### 🟩 Vídeo 13 - Exercício de Controle de Fluxo
 
