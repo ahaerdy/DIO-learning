@@ -664,7 +664,132 @@ As estruturas são divididas em três tipos principais:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/c44c19bc-41a4-4242-8617-86bb63942d0d?autoplay=1
+
+Esta aula aborda as estruturas de controle de fluxo de decisão em Java, detalhando o funcionamento e as boas práticas para o uso de IF, Operador Ternário e Switch. O IF é apresentado como a estrutura fundamental para avaliar condições booleanas, permitindo variações como IF ELSE e IF ELSE IF, com o alerta de que o aninhamento excessivo pode indicar baixa qualidade de código. O Operador Ternário é discutido como uma alternativa linear ao IF, porém seu uso é desencorajado por comprometer a legibilidade e manutenção, especialmente quando envolve retornos nulos ou expressões complexas. Por fim, a aula explora o Switch como uma opção mais organizada para avaliar variáveis específicas (como int, enum e String), destacando a importância da cláusula default e do comando break para o direcionamento correto do fluxo de execução.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h55m44s135.jpg" alt="" width="840">
+</p>
+
+Nesta introdução, define-se a estrutura de decisão como uma construção que avalia uma condição booleana ou uma variável para direcionar o fluxo de execução do programa. As opções fundamentais de estruturas de decisão apresentadas são o `if` (se), o `switch` (escolha) e o operador ternário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h55m49s271.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o fluxo lógico de uma estrutura de decisão básica (`if`, `if-else`, `if-else-if`). O fluxo demonstra que, ao encontrar uma condição, o programa avalia se ela é verdadeira (`true`) ou falsa (`false`). Se verdadeira, um bloco de código específico é executado; se falsa, o fluxo segue para o fim da estrutura ou para uma rota alternativa, dependendo da variação utilizada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h55m52s041.jpg" alt="" width="840">
+</p>
+
+Aqui são apresentadas as sintaxes fundamentais do `if` em Java, variando entre a forma simples, a composta com `else` e a encadeada com `else if`. Cada bloco demonstra como as chaves delimitam o código a ser executado caso a condição associada seja validada como verdadeira.
+
+```java
+// If simples
+if (condição) {
+}
+
+// If-else
+if (condição) {
+} else {
+}
+
+// If-else-if
+if (condição) {
+} else if (condição) {
+} else {
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h55m55s930.jpg" alt="" width="840">
+</p>
+
+Neste exemplo prático, vemos a aplicação de estruturas de decisão para validar condições específicas, como idade ou estado civil combinados com a presença de filhos. O código ilustra o uso de operadores lógicos como o AND (`&&`) dentro das expressões de decisão para criar filtros mais complexos.
+
+```java
+if (idade > 18) {
+    if (aprovado) {
+    }
+} else {
+}
+
+if (casado && temFilhos) {
+} else if (casado && semFilhos) {
+} else {
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h56m02s747.jpg" alt="" width="840">
+</p>
+
+A imagem introduz o operador ternário, uma forma concisa de escrever uma estrutura de decisão simples. Ele é composto por uma condição, seguida por um ponto de interrogação (`?`), uma expressão a ser executada se for verdadeira, dois pontos (`:`) e uma expressão para o caso falso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h56m08s610.jpg" alt="" width="840">
+</p>
+
+São apresentados exemplos práticos do uso do operador ternário para atribuições ou ações diretas. O operador permite simplificar lógicas de "ligado/desligado" ou validações simples que resultam em um valor ou `null`, tornando o código mais enxuto.
+
+```java
+condição ? true : false;
+ligado ? desligar : ligar;
+
+condição ? true : null;
+emMovimento ? freia : null;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h56m16s576.jpg" alt="" width="840">
+</p>
+
+Esta imagem ilustra o fluxo de funcionamento da estrutura `switch` (escolha). Diferente do `if`, que avalia uma condição booleana, o `switch` avalia o valor de uma variável e direciona o fluxo para diferentes "casos" (`case`). Se o valor corresponder a um caso, o código associado é executado até encontrar um comando de interrupção ou o fim da estrutura.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h56m19s489.jpg" alt="" width="840">
+</p>
+
+A imagem detalha os tipos de dados permitidos em uma variável de controle de um `switch` em Java: `byte`, `short`, `char`, `int`, `Enum` e `String`. É apresentada a sintaxe básica com os blocos `case`, o uso obrigatório do `break` para evitar a execução em cascata e o bloco `default` para situações onde nenhuma correspondência é encontrada.
+
+```java
+switch (variável) {
+    case 1:
+        break;
+    case ... :
+        break;
+    default:
+        break;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h56m24s196.jpg" alt="" width="840">
+</p>
+
+Exemplo prático de um `switch` utilizando uma `String` como variável de decisão. O código avalia a cor dos "olhos" e executa uma ação específica para "AZUIS", "VERDES" ou "CASTANHOS". O uso do `default` garante que o programa saiba como agir caso a cor informada não esteja entre as opções previstas.
+
+```java
+switch (olhos) {
+    case "AZUIS":
+        break;
+    case "VERDES":
+        break;
+    case "CASTANHOS":
+        break;
+    default:
+        break;
+}
+
+```      
 
 ### 🟩 Vídeo 12 - Boas práticas
 
@@ -673,7 +798,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 13 - Exercício de Controle de Fluxo
 
