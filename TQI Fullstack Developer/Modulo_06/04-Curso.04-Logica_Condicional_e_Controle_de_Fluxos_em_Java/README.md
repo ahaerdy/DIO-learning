@@ -522,6 +522,74 @@ boolean recebeAuxilio = (salarioBaixo) && (muitosDependentes); [cite: 23]
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/251872eb-02ff-417e-a1fc-a4e51d9d88ed?autoplay=1
 
+Esta aula aborda a aplicação prática de operadores lógicos (conjunção, disjunção, disjunção exclusiva e negação) e sua integração em expressões complexas que envolvem operadores aritméticos e relacionais. O conteúdo demonstra o funcionamento técnico de cada operador — destacando que o "AND" exige que ambos os operandos sejam verdadeiros e o "XOR" requer operandos distintos para resultar em verdadeiro — e enfatiza a importância de boas práticas de programação. Entre as recomendações principais, destaca-se a criação de variáveis intermediárias para simplificar expressões extensas, o que facilita o entendimento do código, promove o reúso de lógica e melhora a manutenção do software ao substituir verificações manuais repetitivas por termos semânticos mais claros.
+
+### Anotações
+
+Esta aula prática foca na aplicação de **operadores lógicos** (conjunção, disjunção, disjunção exclusiva e negação) e na criação de expressões complexas que combinam operadores aritméticos e relacionais. O exemplo demonstra como resultados booleanos podem ser derivados tanto de variáveis lógicas diretas quanto de comparações entre tipos numéricos.
+
+O código inicial utiliza as variáveis `b1`, `b2`, `b3` e `b4` para testar as seguintes operações:
+
+* **Conjunção (`&&`)**: Resulta em `true` apenas se ambos os operandos forem verdadeiros.
+* **Disjunção (`||`)**: Resulta em `false` apenas se ambos os operandos forem falsos.
+* **Disjunção Exclusiva (`^`)**: Resulta em `true` se os operandos forem diferentes e `false` se forem iguais.
+* **Negação (`!`)**: Inverte o valor booleano original.
+
+O exemplo avança para expressões que envolvem cálculos (`i1 + i2`) e comparações (`<`, `>`), mostrando que o Java resolve primeiro as operações aritméticas, depois as relacionais e, por fim, as lógicas.
+
+Uma técnica de **boa prática** destacada é a criação de **variáveis intermediárias** (como `salarioBaixo` e `muitosDependentes`). Em vez de avaliar uma expressão longa e complexa repetidamente, os resultados são armazenados em variáveis com nomes significativos, o que facilita a leitura, a manutenção e o reúso da lógica de negócio, como no caso da verificação do método `recebeAuxilio`.
+
+```java
+package one.digitalinnovation.basecamp;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        boolean b1 = true;
+        boolean b2 = false;
+        boolean b3 = true;
+        boolean b4 = false;
+
+        System.out.println("b1 && b2 " + (b1 && b2));
+        System.out.println("b1 && b3 " + (b1 && b3));
+
+        System.out.println("b2 || b3 " + (b2 || b3));
+        System.out.println("b2 || b4 " + (b2 || b4));
+
+        System.out.println("b1 ^ b3 " + (b1 ^ b3));
+        System.out.println("b4 ^ b1 " + (b4 ^ b1));
+
+        System.out.println(!b1);
+        System.out.println(!b2);
+
+        int i1 = 10;
+        int i2 = 5;
+        float f1 = 20f;
+        float f2 = 50f;
+        System.out.println("((i1 + i2) < (f2 - f1)) && true " + (((i1 + i2) < (f2 - f1)) && true));
+        System.out.println("(i1 > i2) || (f2 < f1) " + ((i1 > i2) || (f2 < f1)));
+
+        double salarioMensal = 11893.58d;
+        double mediaSalario = 10500d;
+
+        int quantidadeDependentes = 4;
+        int mediaDependentes = 2;
+
+        System.out.println((salarioMensal < mediaSalario) && (quantidadeDependentes > mediaDependentes));
+
+        boolean salarioBaixo = salarioMensal < mediaSalario;
+        boolean muitosDependentes = quantidadeDependentes > mediaDependentes;
+
+        System.out.println((salarioBaixo) && (muitosDependentes));
+
+        boolean recebeAuxilio = (salarioBaixo) && (muitosDependentes);
+        System.out.println("recebeAuxilio " + recebeAuxilio);
+    }
+}
+
+```
+   
 
 
 ## Parte 3 - Controle de Fluxo
@@ -533,7 +601,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/285dc72b-5424-4bd5-8893-3a1402daaf5b?autoplay=1
 
 ### 🟩 Vídeo 11 - Criando estruturas de Controle de Fluxo
 
