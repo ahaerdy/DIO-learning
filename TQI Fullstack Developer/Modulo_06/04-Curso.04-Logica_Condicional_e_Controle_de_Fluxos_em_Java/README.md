@@ -98,6 +98,34 @@ Caso surjam dúvidas durante o percurso, o aluno é incentivado a usar o fórum 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/1b4108ec-ccd1-4a2d-905d-b78a83711f6c?autoplay=1
 
+Esta aula apresenta os operadores relacionais como símbolos específicos voltados para a comparação entre operandos e a geração de um resultado correspondente. O vídeo detalha que esses operadores se dividem em duas categorias principais: os de similaridade, que tratam de igualdade e diferença, e os de tamanho, responsáveis por determinar grandezas como maior, menor ou suas variações. Além de estabelecer que tais operações exigem obrigatoriamente a presença de pelo menos dois operandos, o conteúdo enfatiza a existência de regras rigorosas para o uso desses símbolos, observando que nem todos os tipos de dados são compatíveis para certas comparações, como no caso de variáveis booleanas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-10h45m40s724.jpg" alt="" width="840">
+</p>
+
+### Introdução aos Operadores Relacionais
+
+Operadores relacionais são definidos como símbolos especiais capazes de realizar comparações entre determinados operandos e, consequentemente, retornar um resultado. Eles são fundamentais para estabelecer a lógica de decisão em algoritmos.
+
+Tipos de Operadores 
+
+Estes símbolos são classificados em duas categorias principais de acordo com a natureza da comparação:
+
+* **Similaridade**: Utilizados para verificar se dois valores são iguais ou diferentes entre si.
+* **Tamanho**: Utilizados para determinar a grandeza entre operandos, abrangendo as operações de maior, maior ou igual, menor e menor ou igual.
+
+#### Regras de Aplicação e Contexto Didático
+
+Para utilizar esses operadores corretamente, é necessário seguir diretrizes que garantam a validade lógica da operação:
+
+* **Compatibilidade de Dados**: A comparação deve ocorrer entre operandos que possuam lógica relacional. Por exemplo, não se aplica operadores de grandeza (como "maior que") a tipos booleanos, pois não há hierarquia de tamanho entre verdadeiro e falso.
+* **Comparação entre Tipos**: Embora o sistema permita comparar tipos de dados distintos em certas linguagens, existem regras rígidas sobre quais tipos são compatíveis para evitar erros de execução.
+* **Número de Operandos**: Ao contrário dos operadores aritméticos, que podem ser unários em casos específicos, os operadores relacionais exigem sempre a presença de pelo menos dois operandos para estabelecer o vínculo de comparação.
+
+
 ### 🟩 Vídeo 03 - Utilizando Operadores Relacionais
 
 <video width="60%" controls>
@@ -105,8 +133,39 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/25395ff3-5975-478d-9ebc-9dbf4956f431?autoplay=1
 
-link do vídeo:
+Esta aula detalha o funcionamento dos operadores relacionais em Java, dividindo-os em categorias de similaridade e de grandeza. No âmbito da similaridade, o vídeo diferencia o operador de igualdade (==) do de diferença (!=), alertando para o erro comum de utilizar um único símbolo de igual, que em Java representa atribuição e não comparação. Em relação às grandezas, são apresentados os operadores de maior (>), maior ou igual (>=), menor (<) e menor ou igual (<=), explicando suas aplicações práticas para verificar a relação de valor entre dois operandos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-11h01m10s992.jpg" alt="" width="840">
+</p>
+
+Os operadores relacionais de similaridade são utilizados para comparar dois operandos entre si, dividindo-se em dois tipos principais:
+
+* **Igualdade:** Determina se um operando é exatamente igual ao outro. Em Java, a simbologia utilizada é o duplo sinal de igual `==`. É fundamental não confundir este operador com o sinal de igual único `=`, que é destinado à atribuição de valores; o uso incorreto de apenas um símbolo pode causar erros de execução.
+* **Diferença:** Determina se um operando não é igual ao outro. A simbologia correspondente é representada pelo ponto de exclamação seguido do sinal de igual `!=`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-11h01m14s285.jpg" alt="" width="840">
+</p>
+
+No contexto de grandezas e tamanhos, os operadores relacionais permitem verificar a superioridade ou equivalência entre valores:
+
+* **Maior:** Verifica se o operando posicionado à esquerda é maior do que o da direita, utilizando o símbolo `>`. Visualmente, a abertura do símbolo fica voltada para o operando maior.
+* **Maior Igual:** Determina se o operando da esquerda é maior ou possui o mesmo valor que o operando da direita. A simbologia para esta operação em Java é `>=`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-11h01m15s668.jpg" alt="" width="840">
+</p>
+
+Complementando os operadores de tamanho, temos as funções para verificar valores inferiores:
+
+* **Menor:** Utilizado para determinar se o operando da esquerda é menor do que o da direita, representado pelo símbolo `<`. Neste caso, a parte "fechada" do símbolo aponta para o operando da esquerda.
+* **Menor Igual:** Verifica se o operando da esquerda é menor ou igual ao da direita. A simbologia aplicada é `<=`.      
+
 
 ### 🟩 Vídeo 04 - Exercício de exemplo
 
