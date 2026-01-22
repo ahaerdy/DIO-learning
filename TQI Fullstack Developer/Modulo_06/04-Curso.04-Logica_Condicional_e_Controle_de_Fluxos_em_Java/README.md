@@ -222,8 +222,90 @@ Seria útil se eu gerasse uma lista de outros tipos de dados primitivos em Java 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/682f9e6c-593f-4878-b45a-e3b41a04a935?autoplay=1
+
+Este vídeo apresenta a resolução do primeiro exercício prático sobre operadores relacionais, explorando a aplicação de comparadores de similaridade (igual e diferente) e de tamanho (maior, menor ou igual) em diversos tipos de dados, como inteiros, floats, chars, strings e booleanos. A aula destaca as restrições técnicas da linguagem, demonstrando que operadores de tamanho não podem ser aplicados a strings ou booleanos, e que tipos incompatíveis, como strings e números, geram erros de compilação. Por outro lado, o vídeo esclarece que é possível realizar comparações entre diferentes tipos numéricos (como long, short e double) e entre caracteres, dado que estes últimos são processados como códigos numéricos em baixo nível. Por fim, o instrutor faz uma ressalva importante sobre o uso de operadores de igualdade em objetos e classes, como no caso das strings, antecipando que cuidados adicionais serão abordados futuramente em tópicos de orientação a objetos.
+
+### Anotações
+
+Esta aula foca na resolução de exercícios práticos sobre **operadores relacionais** em Java. Para expandir as possibilidades de comparação além dos slides teóricos, foram instanciadas variáveis de diversos tipos primitivos e de referência, como `int`, `float`, `double`, `char`, `String`, `boolean`, `long`, `byte` e `short`.
+
+O primeiro bloco de execução foca em comparações de similaridade (igual e diferente) e de tamanho (maior, menor ou igual) utilizando variáveis inteiras. Por exemplo, ao comparar `i1` (10) e `i2` (20), o operador de igualdade (`==`) retorna `false`, enquanto o de diferença (`!=`) retorna `true`.
+
+Um ponto crítico abordado é que nem todos os operadores podem ser aplicados a todos os tipos de dados. Enquanto operadores de similaridade funcionam com `String`, operadores de tamanho (como `> ` ou `<=`) resultam em erro de compilação quando aplicados a textos. Da mesma forma, tipos booleanos não suportam comparações de grandeza, pois não existe lógica em definir se `true` é maior que `false`.
+
+A imagem também demonstra que é possível comparar tipos numéricos diferentes entre si, como um `double` e um `short`, ou um `long` e um `int`, pois ambos compartilham a natureza numérica. Por fim, destaca-se a necessidade de cautela ao usar o operador de igualdade com objetos e classes (como `String`), um conceito que é aprofundado na orientação a objetos.
+
+```java
+package one.digitalinnovation.basecamp;
+
+/**
+ * Classe de exemplo para o exercício da Aula 1 de Operadores lógicos e relacionais, Controle de fluxo e Blocos.
+ */
+public class Main {
+
+    public static void main(String[] args) {
+
+        int i1 = 10;
+        int i2 = 20;
+        float f1 = 4.5f;
+        float f2 = 3.5f;
+        double d1 = 59.6d;
+        char c1 = 'x';
+        char c2 = 'y';
+        String s1 = "Fulano";
+        String s2 = "Fulano";
+        String s3 = "Cicrano";
+        boolean b1 = true;
+        boolean b2 = false;
+
+        long l1 = 1597L;
+        long l2 = 8997L;
+        byte y1 = 1;
+        short h1 = 25;
+
+        System.out.println("i1 == i2 " + (i1 == i2));
+        System.out.println("i1 != i2 " + (i1 != i2));
+        System.out.println("i1 > i2 " + (i1 > i2));
+        System.out.println("i1 <= i2 " + (i1 <= i2));
+
+        System.out.println("f1 == f2 " + (f1 == f2));
+        System.out.println("f1 != f2 " + (f1 != f2));
+        System.out.println("f1 >= f2 " + (f1 >= f2));
+        System.out.println("f1 < f2 " + (f1 < f2));
+
+        System.out.println("c1 == c2 " + (c1 == c2));
+        System.out.println("c1 != c2 " + (c1 != c2));
+        System.out.println("c1 > c2 " + (c1 > c2));
+        System.out.println("c1 <= c2 " + (c1 <= c2));
+
+        System.out.println("s1 == s2 " + (s1 == s2));
+        System.out.println("s1 == s3 " + (s1 == s3));
+        System.out.println("s1 != s2 " + (s1 != s2));
+        // System.out.println(s1 >= s2);
+        // System.out.println(s1 < s2);
+
+        System.out.println("b1 == b2 " + (b1 == b2));
+        System.out.println("b1 != b2 " + (b1 != b2));
+        // System.out.println(b1 > b2);
+        // System.out.println(b1 <= b1);
+
+        System.out.println("i2 > f1 " + (i2 > f1));
+        System.out.println("d1 == h1 " + (d1 == h1));
+        // System.out.println(s2 != c1);
+        // System.out.println(s3 != i1);
+
+        System.out.println("l1 == i2 " + (l1 == i2));
+        System.out.println("l2 >= i1 " + (l2 >= i1));
+        System.out.println("y1 != h1 " + (y1 != h1));
+
+    }
+}
+
+```
+
+Seria útil se eu explicasse detalhadamente por que o Java permite comparar `char` com operadores de tamanho, relacionando isso aos valores da tabela Unicode?      
+
 
 ## Parte 2 - Operadores Lógicos
 
