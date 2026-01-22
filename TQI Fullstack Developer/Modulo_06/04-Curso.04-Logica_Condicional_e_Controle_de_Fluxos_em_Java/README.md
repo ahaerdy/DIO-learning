@@ -1232,9 +1232,7 @@ Dando continuidade às referências utilizadas para o detalhamento minucioso do 
 
 Estes materiais serviram de base para os exemplos apresentados e permitem visualizar cenários adicionais além dos discutidos em aula.
 
-##  Materiais de Apoio
+# Certificado: Lógica Condicional e Controle de Fluxos em Java
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/FYPQDIMC.pdf
+- Certificado em pdf: [Certificado-Logica_Condicional_e_Controle_de_Fluxos_em_Java.pdf](000-Midia_e_Anexos/Certificado-Logica_Condicional_e_Controle_de_Fluxos_em_Java.pdf)
