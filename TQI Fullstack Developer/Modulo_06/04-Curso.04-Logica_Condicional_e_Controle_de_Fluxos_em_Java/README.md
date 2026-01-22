@@ -608,8 +608,6 @@ public class Main {
 }
 ```
    
-
-
 ## Parte 3 - Controle de Fluxo
 
 ### 🟩 Vídeo 10 - O que é Controle de Fluxo
@@ -620,6 +618,44 @@ public class Main {
 </video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/285dc72b-5424-4bd5-8893-3a1402daaf5b?autoplay=1
+
+Esta aula introduz o conceito fundamental de estruturas de controle de fluxo na programação. O conteúdo explica como essas ferramentas permitem que o desenvolvedor direcione a execução do código para além da sequência linear padrão (cima para baixo, esquerda para direita), possibilitando a criação de lógicas complexas que envolvem tomadas de decisão, repetições e interrupções de processos.
+
+### Anotações
+
+#### Introdução ao Controle de Fluxo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h12m06s711.jpg" alt="" width="840">
+</p>
+
+Esta aula aborda o **Controle de Fluxo**, focando especificamente em operadores lógicos e relacionais, além de blocos de código. O objetivo central é compreender como gerenciar a ordem de execução das instruções em um programa.
+
+#### Objetivos de Aprendizado
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h12m11s521.jpg" alt="" width="840">
+</p>
+
+A disciplina estabelece dois objetivos principais para o aprendizado das estruturas de controle:
+
+1. **Entender o que são** as estruturas de controle de fluxo.
+2. **Saber como aplicar** cada uma delas adequadamente, conforme a necessidade do código.
+
+#### Conceituação e Tipos de Estruturas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-14h12m13s922.jpg" alt="" width="840">
+</p>
+
+As estruturas de controle de fluxo são ferramentas que possuem a capacidade de **direcionar o fluxo de execução** do código. Sem elas, o programa seria executado de forma estritamente linear (de cima para baixo e da esquerda para a direita). Com essas estruturas, é possível desviar o caminho, repetir trechos ou interromper processos.
+
+As estruturas são divididas em três tipos principais:
+
+* **Decisão:** Utilizadas para determinar qual caminho o código deve seguir. Incluem `if`, `if-else`, `if-else-if`, `switch` e o `operador ternário`.
+* **Repetição:** Permitem que um trecho de código seja executado múltiplas vezes. Exemplos: `for`, `while` e `do while`.
+* **Interrupção:** Servem para parar a execução de determinados blocos ou funções. Incluem `break`, `continue` e `return`.
+
 
 ### 🟩 Vídeo 11 - Criando estruturas de Controle de Fluxo
 
