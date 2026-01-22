@@ -853,7 +853,255 @@ Dando continuidade aos exercícios, utilizaremos a estrutura `switch` para cená
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/f469b8db-2f05-43c9-acf9-192521254b09?autoplay=1
+
+Esta aula aborda as melhores práticas no uso de estruturas de controle de fluxo em programação, com foco na legibilidade e manutenção do código. O conteúdo demonstra como evitar o "efeito flecha" causado por condicionais aninhadas excessivas, recomendando o uso de variáveis intermediárias para simplificar expressões lógicas complexas e a substituição de blocos "if" extensos por estruturas "switch" quando se lida com valores exatos de uma única variável. Além disso, o vídeo destaca a importância de não utilizar cláusulas de comportamento padrão, como o "else" final ou o "default", para regras de negócio, reservando-as estritamente para o tratamento de exceções ou entradas inválidas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-15h52m35s242.jpg" alt="" width="840">
+</p>
+
+Esta aula foca na aplicação prática de estruturas de controle de fluxo em Java, abordando especificamente o uso de `if`, `else` e `switch`. O objetivo é demonstrar como essas estruturas podem ser utilizadas para direcionar a lógica do programa com base em diferentes condições, além de apresentar boas práticas de programação para manter o código limpo e legível.
+
+### O Problema do "Efeito Flecha" (Arrow Effect)
+
+O primeiro conceito abordado é o chamado **efeito flecha**. Isso ocorre quando múltiplos blocos `if` são aninhados uns dentro dos outros, fazendo com que o código se desloque progressivamente para a direita devido à indentação. Embora funcional, essa prática prejudica a estética e a manutenção do sistema, indicando frequentemente um projeto de código mal estruturado.
+
+Para mitigar esse problema, recomenda-se o uso do **if sem flecha**, onde as condições são tratadas de forma linear (utilizando `if-else if-else`), mantendo o alinhamento à esquerda e facilitando a leitura por outros desenvolvedores.
+
+### Uso de Variáveis Intermediárias para Legibilidade
+
+Outra técnica demonstrada para melhorar o controle de fluxo é a criação de variáveis intermediárias, o que simplifica expressões lógicas complexas. Em vez de realizar um teste com múltiplas condições diretamente no `if`, criam-se variáveis booleanas que explicam o que está sendo testado (ex: `salarioBaixo` ou `recebeAuxilio`), tornando o código mais semântico.
+
+### Estrutura Switch: Quando Utilizar
+
+O `switch` é apresentado como a alternativa ideal ao `if` quando se lida com uma única variável que possui valores exatos e pré-definidos. O exemplo do calendário e dos meses ilustra bem essa transição: em vez de testar `if (mes == 1)`, `if (mes == 2)`, utiliza-se o `switch(mes)` com diversos `case`.
+
+* **Switch com Break:** Utilizado quando cada condição exige uma ação exclusiva.
+* **Switch sem Break (Agrupamento):** Útil quando múltiplos valores devem resultar na mesma saída (como agrupar dezembro, julho e janeiro como meses de "férias").
+
+### Tratamento de Exceções e Comportamento Padrão
+
+Um ponto crítico discutido é o uso correto do bloco `else` final ou do `default` no `switch`. É uma má prática utilizar esses recursos para comportamentos normais de negócio. Eles devem ser reservados para tratar dados inesperados ou inválidos, funcionando como uma garantia de que o programa não assumirá valores errados quando receber uma entrada imprevista.
+
+```java
+package one.digitalinnovation.basecamp;
+
+/**
+ * Classe de exemplo para o exercício da Aula 3 de Operadores lógicos e relacionais, 
+ * Controle de fluxo e Blocos.
+ */
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Execução dos métodos de demonstração de controle de fluxo.
+        ifFlecha();
+        ifSemFlecha();
+        ifFerias();
+        ifMenor();
+
+        switchSemana();
+        switchNumero();
+        switchFerias();
+    }
+
+    /**
+     * Demonstração do "Efeito Flecha" (Arrow Effect).
+     * MÁ PRÁTICA: Ocorre quando ifs aninhados deslocam o código excessivamente para a direita.
+     * Isso prejudica a legibilidade e indica um projeto de código mal estruturado.
+     */
+    private static void ifFlecha() {
+
+        int mes = 20; // Valor de teste para observar o comportamento do 'else' final.
+        if (mes == 1) {
+            System.out.println("Janeiro");
+        } else {
+            if (mes == 2) {
+                System.out.println("Fevereiro");
+            } else {
+                if (mes == 3) {
+                    System.out.println("Março");
+                } else {
+                    // O aninhamento continua... cada nível adiciona complexidade desnecessária.
+                    if (mes == 12) {
+                        System.out.println("Dezembro");
+                    } else {
+                        // Uso correto do 'else' final: tratar situações indefinidas/exceções.
+                        System.out.println("Mês indefinido");
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Refatoração para evitar o efeito flecha.
+     * BOA PRÁTICA: Utilizar a estrutura 'else if' para manter o alinhamento à esquerda.
+     * Facilita a leitura e manutenção por outros desenvolvedores.
+     */
+    private static void ifSemFlecha() {
+
+        int mes = 9;
+        if (mes == 1) {
+            System.out.println("Janeiro");
+        } else if (mes == 2) {
+            System.out.println("Fevereiro");
+        } else if (mes == 3) {
+            System.out.println("Março");
+        } else if (mes == 4) {
+            System.out.println("Abril");
+        } else if (mes == 5) {
+            System.out.println("Maio");
+        } else if (mes == 6) {
+            System.out.println("Junho");
+        } else if (mes == 7) {
+            System.out.println("Julho");
+        } else if (mes == 8) {
+            System.out.println("Agosto");
+        } else if (mes == 9) {
+            System.out.println("Setembro");
+        } else if (mes == 10) {
+            System.out.println("Outubro");
+        } else if (mes == 11) {
+            System.out.println("Novembro");
+        } else {
+            // ALERTA DO PROFESSOR: É um erro comum assumir que o 'else' final é o "Dezembro".
+            // Se o valor fosse 20, o programa imprimiria "Dezembro" erroneamente.
+            System.out.println("Dezembro");
+        }
+    }
+
+    /**
+     * Exemplo de quando o 'if' NÃO é a melhor opção.
+     * Se você tem uma única variável sendo comparada com valores exatos, 
+     * o 'switch' seria semanticamente mais adequado.
+     */
+    private static void ifFerias() {
+
+        String mes = "julho";
+        if (mes == "julho" || mes == "dezembro" || mes == "janeiro") {
+            System.out.println("Férias");
+        }
+    }
+
+    /**
+     * Técnica para melhorar a legibilidade de expressões complexas.
+     * BOA PRÁTICA: Extrair condições lógicas para variáveis booleanas intermediárias.
+     */
+    private static void ifMenor() {
+
+        double salarioMensal = 11893.58d;
+        double mediaSalario = 10500d;
+        int quantidadeDependentes = 4;
+        int mediaDependentes = 2;
+
+        // Versão difícil de ler: muitos parênteses e operadores juntos.
+        if ((salarioMensal < mediaSalario) && (quantidadeDependentes >= mediaDependentes)) {
+            System.out.println("Funcionário deve receber auxílio.");
+        }
+
+        // MELHORIA: Criação de variáveis que descrevem a regra de negócio.
+        boolean salarioBaixo = salarioMensal < mediaSalario;
+        boolean muitosDependentes = quantidadeDependentes >= mediaDependentes;
+
+        if ((salarioBaixo) && (muitosDependentes)) {
+            System.out.println("Funcionário deve receber auxílio.");
+        }
+
+        // MELHORIA MÁXIMA: Uma única variável que resume a condição final.
+        boolean recebeAuxilio = (salarioBaixo) && (muitosDependentes);
+        if (recebeAuxilio) {
+            System.out.println("Funcionário deve receber auxílio.");
+        } else {
+            System.out.println("Funcionário não deve receber auxílio.");
+        }
+    }
+
+    /**
+     * Uso correto do Switch para valores exatos.
+     */
+    private static void switchSemana() {
+
+        String dia = "mgmgjmg"; // Valor aleatório para testar o 'default'.
+        switch (dia){
+            case "Segunda":
+                System.out.println(2);
+                break; // O 'break' é obrigatório para não executar o caso seguinte.
+            case "Terça":
+                System.out.println(3);
+                break;
+            case "Quarta":
+                System.out.println(4);
+                break;
+            case "Quinta":
+                System.out.println(5);
+                break;
+            case "Sexta":
+                System.out.println(6);
+                break;
+            case "Sábado":
+                System.out.println(7);
+                break;
+            case "Domingo":
+                System.out.println(1);
+                break;
+            default:
+                // BOA PRÁTICA: O 'default' deve ser usado para erros ou entradas inválidas.
+                // Nunca use o default para um comportamento padrão de negócio (ex: assumir domingo).
+                System.out.println("Dia inválido");
+                break;
+        }
+    }
+
+    /**
+     * Demonstração do "Fall-through" (Agrupamento).
+     * Quando removemos o 'break', o Java executa todos os casos seguintes até encontrar um break.
+     */
+    private static void switchNumero() {
+
+        int numero = 4;
+        switch (numero){
+            case 1:
+            case 2:
+            case 3:
+                // Se o número for 1, 2 ou 3, ele cairá aqui e imprimirá "Certo".
+                System.out.println("Certo");
+                break;
+            case 4:
+                System.out.println("Errado");
+                break;
+            case 5:
+                System.out.println("Talvez");
+                break;
+            default:
+                System.out.println("Valor Indefinido");
+                break;
+        }
+    }
+
+    /**
+     * Aplicação do agrupamento para simplificar regras de negócio.
+     */
+    private static void switchFerias() {
+
+        String mes = "dezembro";
+        switch (mes) {
+            case "dezembro":
+            case "julho":
+            case "janeiro":
+                // Vários casos levando à mesma saída.
+                System.out.println("Férias");
+                break;
+            default:
+                System.out.println("Mês Indefinido");
+                break;
+        }
+    }
+}
+```
 
 ## Parte 4 - Blocos
 
@@ -864,7 +1112,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/1e39b6fb-3ee0-401e-8e1c-3033225a8da8?autoplay=1
+
+
 
 ### 🟩 Vídeo 15 - Encerramento do curso
 
