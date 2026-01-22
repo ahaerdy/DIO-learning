@@ -362,7 +362,72 @@ Os tipos fundamentais de operadores lógicos apresentados são:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/32902316-d0cc-48ef-b8b6-5a30c65c7d5b?autoplay=1
+
+O conteúdo apresenta uma explicação técnica e didática sobre os quatro operadores lógicos fundamentais utilizados na linguagem de programação Java: conjunção, disjunção, disjunção exclusiva e negação. Através da análise de tabelas-verdade, o áudio detalha as condições necessárias para que cada operação resulte em um valor verdadeiro ou falso, fornecendo a simbologia correta e a terminologia aplicada no desenvolvimento de software.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-12h44m54s976.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos o conceito de **Conjunção**, uma operação lógica fundamental que determina a validade de uma expressão composta. A regra central da conjunção é que o resultado só será **verdadeiro (V)** se todos os operandos ou expressões envolvidas forem simultaneamente verdadeiros.
+
+Para facilitar a compreensão, utilizamos a seguinte tabela verdade:
+
+| O - E | O - E | R (Resultado) |
+| --- | --- | --- |
+| V | V | **V** |
+| V | F | F |
+| F | V | F |
+| F | F | F |
+
+No contexto da linguagem Java, a simbologia utilizada para representar o "AND" lógico (o nosso "e") são dois caracteres *ampersand* (`&&`). Esta operação é essencial para verificar múltiplas condições variáveis em um mesmo bloco de decisão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-12h44m58s596.jpg" alt="" width="840">
+</p>
+
+A **Disjunção** funciona de maneira oposta à conjunção no que diz respeito ao critério de falsidade. Nesta operação, o resultado só será **falso (F)** quando ambos os operandos ou expressões envolvidas forem falsos. Caso exista ao menos uma verdade na expressão, o resultado final será verdadeiro.
+
+| O - E | O - E | R (Resultado) |
+| --- | --- | --- |
+| V | V | V |
+| V | F | V |
+| F | V | V |
+| F | F | **F** |
+
+Na programação Java, utilizamos a simbologia de duas barras verticais (`||`), conhecidas como *pipes*, para representar o operador lógico "OR" (ou).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-12h45m00s687.jpg" alt="" width="840">
+</p>
+
+A **Disjunção Exclusiva**, identificada pela terminologia **XOR**, apresenta uma lógica distinta: o resultado só é **verdadeiro (V)** quando os operandos possuem valores lógicos **opostos**. Se os valores forem iguais (ambos verdadeiros ou ambos falsos), o resultado será falso.
+
+| O - E | O - E | R (Resultado) |
+| --- | --- | --- |
+| V | V | F |
+| V | F | **V** |
+| F | V | **V** |
+| F | F | F |
+
+Para executar essa operação lógica, utiliza-se o símbolo do acento circunflexo (`^`).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-12h45m04s092.jpg" alt="" width="840">
+</p>
+
+A **Negação** é uma operação unária que tem como função básica inverter o valor lógico atual de um operando ou de uma expressão complexa.
+
+| O - E | R (Resultado) |
+| --- | --- |
+| V | **F** |
+| F | **V** |
+
+A terminologia aplicada é a de **inversão**. No Java, o símbolo utilizado para realizar essa negação lógica é o ponto de exclamação (`!`). Ao aplicar esse operador antes de uma variável ou expressão booleana, o que era verdadeiro torna-se falso, e vice-versa.      
+
 
 ### 🟩 Vídeo 08 - Exemplos, Boas práticas e Exercitando
 
@@ -371,7 +436,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 09 - Operadores Lógicos
 
