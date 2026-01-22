@@ -13,6 +13,7 @@
   <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black" />
   <img src="https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/Power%20BI-F2CC8F?logo=powerbi&logoColor=black" />
   
   <!-- Links externos -->
   <a href="https://web.dio.me/users/arthur_haerdy?tab=achievements">
