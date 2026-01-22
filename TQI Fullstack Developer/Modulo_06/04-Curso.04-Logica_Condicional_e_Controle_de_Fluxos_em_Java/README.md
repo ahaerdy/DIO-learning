@@ -246,6 +246,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Declaração de variáveis de diversos tipos para testar a abrangência dos operadores
         int i1 = 10;
         int i2 = 20;
         float f1 = 4.5f;
@@ -264,47 +265,55 @@ public class Main {
         byte y1 = 1;
         short h1 = 25;
 
-        System.out.println("i1 == i2 " + (i1 == i2));
-        System.out.println("i1 != i2 " + (i1 != i2));
-        System.out.println("i1 > i2 " + (i1 > i2));
-        System.out.println("i1 <= i2 " + (i1 <= i2));
+        // Comparações com tipos Inteiros: Uso de similaridade e tamanho
+        System.out.println("i1 == i2 " + (i1 == i2)); // 10 é igual a 20? Falso.
+        System.out.println("i1 != i2 " + (i1 != i2)); // 10 é diferente de 20? Verdadeiro (True).
+        System.out.println("i1 > i2 " + (i1 > i2));   // 10 é maior que 20? Falso.
+        System.out.println("i1 <= i2 " + (i1 <= i2)); // 10 é menor ou igual a 20? Verdadeiro.
 
-        System.out.println("f1 == f2 " + (f1 == f2));
-        System.out.println("f1 != f2 " + (f1 != f2));
-        System.out.println("f1 >= f2 " + (f1 >= f2));
-        System.out.println("f1 < f2 " + (f1 < f2));
+        // Comparações com tipos Float
+        System.out.println("f1 == f2 " + (f1 == f2)); // 4.5 é igual a 3.5? Falso.
+        System.out.println("f1 != f2 " + (f1 != f2)); // Verdadeiro.
+        System.out.println("f1 >= f2 " + (f1 >= f2)); // 4.5 é maior ou igual a 3.5? Verdadeiro.
+        System.out.println("f1 < f2 " + (f1 < f2));   // Falso.
 
-        System.out.println("c1 == c2 " + (c1 == c2));
-        System.out.println("c1 != c2 " + (c1 != c2));
-        System.out.println("c1 > c2 " + (c1 > c2));
-        System.out.println("c1 <= c2 " + (c1 <= c2));
+        // Comparações com Char: Funcionam pois, em baixo nível, char é um código numérico
+        System.out.println("c1 == c2 " + (c1 == c2)); // 'x' é igual a 'y'? Falso.
+        System.out.println("c1 != c2 " + (c1 != c2)); // Verdadeiro.
+        System.out.println("c1 > c2 " + (c1 > c2));   // Compara os códigos numéricos das letras.
+        System.out.println("c1 <= c2 " + (c1 <= c2)); // Também permitido para tipos char.
 
-        System.out.println("s1 == s2 " + (s1 == s2));
-        System.out.println("s1 == s3 " + (s1 == s3));
-        System.out.println("s1 != s2 " + (s1 != s2));
-        // System.out.println(s1 >= s2);
+        // Comparações com String
+        System.out.println("s1 == s2 " + (s1 == s2)); // "Fulano" == "Fulano"? Verdadeiro. (Nota: Cuidado ao comparar objetos)
+        System.out.println("s1 == s3 " + (s1 == s3)); // "Fulano" == "Cicrano"? Falso.
+        System.out.println("s1 != s2 " + (s1 != s2)); // Falso.
+        // ERRO: Não se pode comparar tamanho (grandeza) entre Strings
+        // System.out.println(s1 >= s2); 
         // System.out.println(s1 < s2);
 
-        System.out.println("b1 == b2 " + (b1 == b2));
-        System.out.println("b1 != b2 " + (b1 != b2));
+        // Comparações com Boolean
+        System.out.println("b1 == b2 " + (b1 == b2)); // true == false? Falso.
+        System.out.println("b1 != b2 " + (b1 != b2)); // Verdadeiro.
+        // ERRO: Não existe lógica para perguntar se true é maior ou menor que false
         // System.out.println(b1 > b2);
         // System.out.println(b1 <= b1);
 
-        System.out.println("i2 > f1 " + (i2 > f1));
-        System.out.println("d1 == h1 " + (d1 == h1));
+        // Comparações entre tipos numéricos diferentes: Permitido pela semelhança aritmética
+        System.out.println("i2 > f1 " + (i2 > f1));   // int 20 é maior que float 4.5? Verdadeiro.
+        System.out.println("d1 == h1 " + (d1 == h1)); // double 59.6 é igual a short 25? Falso.
+        
+        // ERRO: Tipos excessivamente diferentes (String vs Char ou String vs Número) não podem ser comparados
         // System.out.println(s2 != c1);
         // System.out.println(s3 != i1);
 
-        System.out.println("l1 == i2 " + (l1 == i2));
-        System.out.println("l2 >= i1 " + (l2 >= i1));
-        System.out.println("y1 != h1 " + (y1 != h1));
+        // Outros exemplos de tipos mistos, porém compatíveis (todos numéricos)
+        System.out.println("l1 == i2 " + (l1 == i2)); // long vs int.
+        System.out.println("l2 >= i1 " + (l2 >= i1)); // long vs int.
+        System.out.println("y1 != h1 " + (y1 != h1)); // byte vs short.
 
     }
 }
-
 ```
-
-Seria útil se eu explicasse detalhadamente por que o Java permite comparar `char` com operadores de tamanho, relacionando isso aos valores da tabela Unicode?      
 
 
 ## Parte 2 - Operadores Lógicos
