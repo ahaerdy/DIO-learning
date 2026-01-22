@@ -436,7 +436,83 @@ A terminologia aplicada é a de **inversão**. No Java, o símbolo utilizado par
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/75b78760-2674-460c-a795-36456231dcaf?autoplay=1
+
+Esta aula aborda o uso estratégico de operadores lógicos em estruturas de controle de fluxo, destacando a importância de não confundi-los com operadores bitwise e shift, que operam em nível de bits e possuem aplicações raras e específicas. Através de exemplos práticos com variáveis booleanas e expressões complexas que integram operadores aritméticos e relacionais, o conteúdo enfatiza boas práticas de programação, como o uso de variáveis auxiliares para simplificar expressões extensas. Essa abordagem visa melhorar a legibilidade e a manutenção do código, preparando o aluno para aplicar esses conceitos em exercícios práticos de simplificação e tomada de decisão lógica no ambiente IntelliJ.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-13h15m42s029.jpg" alt="" width="840">
+</p>
+
+Neste ponto, é importante distinguir os operadores lógicos de outros operadores que possuem sintaxe semelhante, mas funções completamente distintas: os operadores **bitwise** e **shift**. Embora utilizem símbolos como o e comercial (`&`) ou a barra vertical (`|`), eles não realizam operações lógicas de curto-circuito.
+
+Os operadores bitwise e shift trabalham em um nível muito baixo, manipulando diretamente os bits de números inteiros. Eles podem inverter bits ou deslocar zeros e uns para a esquerda ou para a direita. Na programação convencional de alto nível, o uso desses operadores é raro, sendo destinados a casos muito específicos de otimização ou manipulação de dados binários.
+
+* 
+**Operadores Bitwise:** `&` (AND) e `|` (OR).
+
+
+* 
+**Operadores Shift:** `>>`, `>>>` e `<<`.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-13h15m44s370.jpg" alt="" width="840">
+</p>
+
+Para compreender o funcionamento prático dos operadores lógicos (Conjunção, Disjunção, Disjunção Exclusiva e Negação), analisamos exemplos baseados em variáveis booleanas. Uma **expressão** nada mais é do que a combinação desses operandos com operadores aritméticos, relacionais ou lógicos.
+
+No caso da conjunção (`&&`), o resultado só é verdadeiro se ambos os operandos forem `true`. Na disjunção (`||`), basta que um seja verdadeiro. Já o XOR (`^`) exige que os valores sejam opostos para resultar em verdadeiro. Por fim, a negação (`!`) simplesmente inverte o estado atual da variável.
+
+```java
+[cite_start]boolean b1 = true; boolean b2 = false; [cite: 10]
+[cite_start]boolean b3 = true; boolean b4 = false; [cite: 11]
+
+[cite_start]b1 && b2 // false [cite: 12]
+[cite_start]b1 && b3 // true [cite: 12]
+
+[cite_start]b2 || b3 // true [cite: 13]
+[cite_start]b2 || b4 // false [cite: 13]
+
+[cite_start]b1 ^ b3 // false (são iguais) [cite: 14]
+[cite_start]b4 ^ b1 // true (são opostos) [cite: 14]
+
+[cite_start]!b1 // false [cite: 15]
+[cite_start]!b2 // true [cite: 15]
+
+// Exemplos de expressões complexas:
+(i1 > i2) || (f2 < f1) [cite_start][cite: 16]
+((i1 + i2) [cite_start]< (f2 - f1)) && true [cite: 16]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-22-13h15m47s795.jpg" alt="" width="840">
+</p>
+
+Como boa prática de programação, recomenda-se o uso de **variáveis auxiliares** para armazenar resultados intermediários de expressões complexas. Quando uma linha de código possui muitas operações lógicas e relacionais agrupadas, a legibilidade é prejudicada, dificultando a manutenção futura.
+
+Ao extrair partes de uma condição composta para variáveis com nomes significativos (como `salarioBaixo` ou `muitosDependentes`), o código torna-se autoexplicativo. Isso simplifica a estrutura de decisão e permite que a lógica de negócio seja compreendida rapidamente.
+
+```java
+// Expressão complexa e de difícil leitura:
+(salarioMensal < mediaSalario) [cite_start]&& (quantidadeDependentes >= mediaDependentes) [cite: 20]
+
+// Aplicando boas práticas com variáveis auxiliares:
+boolean salarioBaixo = salarioMensal < mediaSalario;
+boolean muitosDependentes = quantidadeDependentes >= mediaDependentes;
+
+// A expressão simplificada:
+(salarioBaixo) [cite_start]&& (muitosDependentes) [cite: 22]
+
+// Resultado final legível:
+[cite_start]boolean recebeAuxilio = (salarioBaixo) && (muitosDependentes); [cite: 23]
+
+```      
+
 
 ### 🟩 Vídeo 09 - Operadores Lógicos
 
@@ -445,7 +521,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/logica-condicional-e-controle-de-fluxos-em-java/learning/d960095e-26eb-4a58-9827-64ecb5b8b0b3?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Resolução do exercício
 
