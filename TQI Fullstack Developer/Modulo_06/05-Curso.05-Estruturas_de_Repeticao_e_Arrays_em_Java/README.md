@@ -418,10 +418,6 @@ O vídeo detalha a criação de um programa em Java que solicita ao usuário uma
 
 ### Anotações
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-14h58m34s571.jpg" alt="" width="840">
-</p>
-
 Nesta etapa, desenvolvemos um programa em Java para resolver um problema clássico de lógica: solicitar uma quantidade  de números inteiros ao usuário e contabilizar quantos deles são pares ou ímpares. O código utiliza a classe `Scanner` para permitir a entrada de dados via console.
 
 A lógica do programa segue estes passos fundamentais:
