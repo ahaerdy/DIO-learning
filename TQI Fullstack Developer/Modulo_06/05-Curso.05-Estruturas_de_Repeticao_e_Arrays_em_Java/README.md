@@ -241,6 +241,54 @@ Um exemplo prático do uso de Issues envolve a resolução de problemas de ambie
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/153842a5-4928-4e7e-b803-2345feac599b?autoplay=1
 
+Este conteúdo consiste em uma aula prática de programação em Java focada na resolução de exercícios sobre estruturas de repetição (loops). O instrutor demonstra passo a passo como criar um programa que solicita continuamente o nome e a idade de alunos, utilizando a classe Scanner para entrada de dados e um laço while com uma condição de parada específica: o programa deve ser encerrado assim que o usuário digitar o valor "0" no campo destinado ao nome.
+
+### Anotações
+
+Nesta aula, o objetivo é desenvolver um programa em Java que realize a leitura de conjuntos de dois valores: o nome de um aluno e a sua idade. A estrutura do código é fundamentada nos seguintes pontos:
+
+* **Entrada de Dados**: Utiliza-se a classe `Scanner` vinculada ao `System.in` para permitir que o usuário insira informações via teclado.
+* **Laço de Repetição**: É implementado um loop `while(true)` para que a solicitação de dados ocorra repetidamente.
+* **Condição de Parada**: O programa deve ser interrompido imediatamente se o usuário digitar o valor "0" no campo destinado ao nome. Para isso, utiliza-se a instrução `break` dentro de um bloco condicional `if (nome.equals("0"))`.
+* **Captura de Tipos**: O método `scan.next()` é usado para capturar a `String` (nome) e `scan.nextInt()` para capturar o valor inteiro (idade).
+
+
+#### Implementação do Exercício
+
+```java
+package br.com.dio.exercicios.loops;
+
+import java.util.Scanner;
+
+public class Ex1_NomeEIdade {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        String nome;
+        int idade;
+
+        while(true) {
+            System.out.println("Nome: ");
+            nome = scan.next();
+            
+            // Condição para interromper o laço
+            if (nome.equals("0")) break;
+
+            System.out.println("Idade: ");
+            idade = scan.nextInt();
+        }
+
+        System.out.println("Continua aqui...");
+    }
+}
+
+```
+
+O uso do `break` garante que, ao identificar o valor de sentinela (zero no nome), o fluxo de execução saia do laço `while` e execute as linhas de código que aparecem logo após o bloco de repetição.
+
+
+
 ### 🟩 Vídeo 05 - Nota
 
 <video width="60%" controls>
@@ -248,7 +296,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/36b670ef-4df2-48ed-802c-dd4ddf10e1bc?autoplay=1
 
 ### 🟩 Vídeo 06 - Maior e Média
 
