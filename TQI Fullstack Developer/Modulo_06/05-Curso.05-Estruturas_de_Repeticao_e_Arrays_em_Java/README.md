@@ -744,6 +744,59 @@ public class Ex3_NumerosAleatorios {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/5dfde385-6340-4677-b9ff-35feb7b2dba5?autoplay=1
 
+Esta aula introduz o conceito de arrays multidimensionais em Java, demonstrando na prática a criação, o preenchimento e a exibição de uma matriz de ordem 4x4. A explicação detalha a estrutura de uma matriz como um conjunto de arrays unidimensionais, onde a primeira dimensão representa as linhas e a segunda as colunas, utilizando a classe Random para gerar valores inteiros aleatórios entre zero e nove. O vídeo foca na lógica de iteração necessária para manipular esses dados, empregando laços "for" aninhados para percorrer as coordenadas da matriz e, posteriormente, a estrutura "for-each" para uma exibição organizada dos elementos no console. Ao concluir este módulo introdutório, reforça-se a importância da abstração desses conceitos para o domínio da linguagem e incentiva-se a prática autônoma através de exercícios complementares e canais de suporte da comunidade.
+
+### Anotações
+
+Nesta etapa, exploramos a criação e manipulação de **arrays multidimensionais** (matrizes) em Java. O objetivo é gerar uma matriz de ordem 4 (4x4) preenchida com números inteiros aleatórios entre 0 e 9.
+
+#### Estrutura da Matriz
+
+Uma matriz bidimensional pode ser visualizada como uma tabela composta por linhas e colunas. No Java, a declaração utiliza dois pares de colchetes:
+
+* O primeiro par representa as **linhas**.
+* O segundo par representa as **colunas**.
+
+Internamente, cada linha da matriz é tratada como um array unidimensional independente. Assim, uma matriz 4x4 é, na prática, um array que contém quatro outros arrays, onde cada um destes possui quatro elementos.
+
+#### Implementação do Código
+
+O código utiliza a classe `Random` para gerar os valores e estruturas de repetição aninhadas para percorrer as dimensões da matriz:
+
+1. **Preenchimento**: Um laço `for` percorre as linhas (`i`), enquanto um segundo laço interno percorre as colunas (`j`), atribuindo a cada posição `M[i][j]` um valor gerado por `random.nextInt(9)`.
+2. **Exibição**: É utilizado o laço `for-each` para facilitar a leitura. O primeiro laço extrai cada `linha` da matriz `M`, e o segundo extrai cada `coluna` (elemento) daquela linha para impressão no console.
+
+```java
+package br.com.dio.exercicios.arrays;
+
+import java.util.Random;
+
+/*
+Gere e imprima uma matriz M 4x4 com valores aleatórios entre 0-9.
+*/
+
+public class Ex4_ArrayMultidimensional {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int[][] M = new int[4][4];
+
+        for(int i = 0; i < M.length; i++) {
+            for(int j = 0; j < M[i].length; j++) {
+                M[i][j] = random.nextInt(9);
+            }
+        }
+
+        System.out.println("Matriz: ");
+        for (int[] linha : M) {
+            for (int coluna : linha) {
+                System.out.print(coluna + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+```
 
 ##  Materiais de Apoio
 
