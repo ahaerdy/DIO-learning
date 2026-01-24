@@ -14,6 +14,8 @@
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/febaaad5-ea57-4389-a960-2907fa40041c?autoplay=1    
 
+
+
 ### 🟩 Vídeo 02 - Visão Geral
 
 <video width="60%" controls>
@@ -21,7 +23,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/c8f1bd80-21dc-4aa9-b967-a7da11000851?autoplay=1
 
 ### 🟩 Vídeo 03 - Conhecendo o Repositório
 
