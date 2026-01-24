@@ -573,6 +573,47 @@ public class Ex6_Fatorial {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/e258b94f-9048-4f97-b75b-7172aa1f0b92?autoplay=1
 
+O vídeo oferece uma introdução abrangente aos arrays (vetores) em Java, destacando sua importância fundamental na programação e seu uso como base para outras coleções. A aula foca em arrays unidimensionais, explicando detalhadamente como declará-los, inicializá-los e, crucialmente, como entender a indexação baseada em zero em contraste com o tamanho total do array. Através de demonstrações práticas, a palestrante ensina a iterar e exibir os elementos de um array usando laços while e for, culminando na exibição dos elementos em ordem inversa.
+
+### Anotações
+
+Esta aula introduz o conceito de **arrays unidimensionais** (vetores) em Java, que são estruturas de dados capazes de armazenar elementos do mesmo tipo em uma única linha com várias colunas. O exemplo prático foca na criação de um vetor de seis números inteiros e na exibição desses valores tanto na ordem original quanto na ordem inversa.
+
+Um ponto fundamental abordado é a diferença entre o **tamanho do array** (obtido pela propriedade `.length`) e os **índices das posições**. Embora o vetor contenha 6 elementos, as posições são indexadas de 0 a 5. Tentar acessar a posição 6 resultaria em erro, pois ela não existe no espaço de memória alocado.
+
+Para manipular o array, são utilizados dois tipos de laços de repetição:
+
+* **While:** Utilizado para percorrer o vetor do início ao fim (índice 0 até `vetor.length - 1`).
+* **For:** Configurado para realizar a leitura inversa, iniciando o contador no último índice válido (`vetor.length - 1`) e decrementando até chegar a zero.
+
+```java
+package br.com.dio.exercicios.arrays;
+
+/*
+Crie um vetor de 6 números inteiros
+e mostre-os na ordem inversa.
+*/
+public class Ex1_OrdemInversa {
+    public static void main(String[] args) {
+        
+        int[] vetor = {-5, -6, 15, 50, 8, 4};
+
+        System.out.print("Vetor: ");
+        int count = 0;
+        while(count < (vetor.length)) {
+            System.out.print(vetor[count] + " ");
+            count++;
+        }
+
+        System.out.print("\nVetor: ");
+        for(int i = (vetor.length - 1); i >= 0; i--) {
+            System.out.print(vetor[i] + " ");
+        }
+    }
+}
+
+```
+
 ### 🟩 Vídeo 11 - Consoantes
 
 <video width="60%" controls>
