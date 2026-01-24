@@ -298,6 +298,49 @@ O uso do `break` garante que, ao identificar o valor de sentinela (zero no nome)
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/36b670ef-4df2-48ed-802c-dd4ddf10e1bc?autoplay=1
 
+O vídeo detalha a criação de um programa em Java que solicita ao usuário uma nota, validando se o valor inserido está entre 0 e 10. O programa utiliza um laço de repetição (while) para garantir que, caso a nota seja inválida, uma mensagem de erro seja exibida e o usuário seja solicitado a digitar a nota novamente até que um valor válido seja fornecido.
+
+### Anotações
+
+Nesta etapa, o objetivo é criar um programa que valide a entrada de dados do usuário, garantindo que uma nota informada esteja obrigatoriamente entre 0 e 10. Caso o usuário digite um valor fora desse intervalo, o sistema deve exibir uma mensagem de erro e repetir a solicitação até que um valor válido seja inserido.
+
+A implementação utiliza a classe `Scanner` para a leitura dos dados via teclado. A estrutura lógica funciona da seguinte forma:
+
+* **Entrada Inicial**: O programa solicita a nota e armazena o valor na variável inteira `nota`.
+* **Estrutura de Repetição**: É utilizado um laço `while` que testa a condição de invalidade: se a nota for menor que 0 **ou** maior que 10.
+* **Bloco de Validação**: Enquanto a condição for verdadeira (nota inválida), o programa entra no laço, imprime a mensagem "Nota Inválida! Digite novamente" e realiza uma nova leitura.
+* **Encerramento**: O laço só é interrompido quando o usuário fornece um valor que satisfaça o intervalo de 0 a 10, momento em que a condição do `while` se torna falsa e o programa segue para a finalização.
+
+```java
+package br.com.dio.exercicios.loops;
+
+import java.util.Scanner;
+
+/*
+Faça um programa que peça uma nota, entre zero e dez.
+Mostre uma mensagem caso o valor seja inválido
+e continue pedindo
+até que o usuário informe um valor válido.
+*/
+
+public class Ex2_Nota {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int nota;
+
+        System.out.println("Nota: ");
+        nota = scan.nextInt();
+
+        while(nota < 0 | nota > 10) {
+            System.out.println("Nota Inválida! Digite novamente: ");
+            nota = scan.nextInt();
+        }
+    }
+}
+
+```    
+
+
 ### 🟩 Vídeo 06 - Maior e Média
 
 <video width="60%" controls>
@@ -305,7 +348,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/13d02199-ec76-4553-a1d0-5705eb912f70?autoplay=1
 
 ### 🟩 Vídeo 07 - Par e Impar
 
