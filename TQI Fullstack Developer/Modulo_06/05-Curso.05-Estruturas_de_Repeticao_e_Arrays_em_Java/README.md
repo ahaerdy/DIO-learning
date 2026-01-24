@@ -519,6 +519,49 @@ public class Ex5_Tabuada {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/37b9014a-3069-4b81-978f-d758c6405aae?autoplay=1
 
+Esta aula demonstra a implementação de um algoritmo para cálculo de fatorial utilizando a linguagem Java, focando na aplicação prática de laços de repetição. A explicação detalha a lógica de decomposição numérica (como $5! = 5 \times 4 \times 3 \times 2 \times 1 = 120$) e a tradução desse conceito para o código através de um laço `for`, onde uma variável contadora decrementa a partir do número inserido pelo usuário. O vídeo também oferece orientações sobre a escolha adequada entre as estruturas `for`, `while` e `do-while`, destacando o uso do `for` quando há necessidade de um contador explícito. Por fim, o conteúdo aborda a importância da inicialização de variáveis acumuladoras de multiplicação com o valor um e apresenta o processo de depuração (debug) para monitorar a evolução dos valores das variáveis durante a execução do programa.
+
+### Anotações
+
+Nesta etapa, implementamos um programa para calcular o **fatorial** de um número inteiro fornecido pelo usuário. O fatorial de um número  é definido pela multiplicação de todos os seus antecessores inteiros positivos até 1. Por exemplo, o fatorial de 5 () é calculado como .
+
+Para realizar esse cálculo em Java, utilizamos a estrutura de repetição `for`. A lógica aplicada consiste em:
+
+1. **Captura de dados**: Utilizamos a classe `Scanner` para ler o número desejado.
+2. **Inicialização**: Criamos uma variável `multiplicacao` iniciada em 1. É fundamental que ela não comece em 0, pois qualquer multiplicação por zero resultaria em zero.
+3. **Laço de repetição**: O contador `i` inicia com o valor do fatorial lido e decrementa (`i--`) até que chegue a 1.
+4. **Processamento**: A cada iteração, a variável `multiplicacao` recebe o seu valor atual multiplicado pelo valor de `i`, acumulando o resultado final.
+
+```java
+package br.com.dio.exercicios.loops;
+
+import java.util.Scanner;
+
+/*
+Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário.
+Ex.: 5! = 120 (5 x 4 x 3 x 2 x 1)
+*/
+
+public class Ex6_Fatorial {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Fatorial: ");
+        int fatorial = scan.nextInt();
+
+        int multiplicacao = 1;
+
+        System.out.print(fatorial + "! = ");
+        for(int i = fatorial; i >= 1; i--) {
+            multiplicacao = multiplicacao * i;
+        }
+
+        System.out.println(multiplicacao);
+    }
+}
+
+```
+
 ## Parte 3 - Exercícios Resolvidos: Arrays
 
 ### 🟩 Vídeo 10 - Ordem Inversa
@@ -528,7 +571,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/e258b94f-9048-4f97-b75b-7172aa1f0b92?autoplay=1
 
 ### 🟩 Vídeo 11 - Consoantes
 
