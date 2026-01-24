@@ -74,6 +74,103 @@ Para acompanhamento do conteúdo e interação, são disponibilizados os seguint
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/c8f1bd80-21dc-4aa9-b967-a7da11000851?autoplay=1
 
+Esta aula conceitual aborda estruturas de repetição (laços), operadores de incremento/decremento, operadores de atribuição aritmética e arrays em programação. O foco principal é explicar como os computadores repetem operações através de while, do-while e for, a funcionalidade dos comandos break e continue dentro desses laços, e a utilização de operadores para simplificar operações matemáticas. Por fim, detalha o conceito de arrays como estruturas para armazenar sequencialmente dados do mesmo tipo, incluindo arrays unidimensionais e multidimensionais, e suas características essenciais como tamanho fixo e indexação baseada em zero.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-12h03m33s793.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz os conceitos fundamentais de **estruturas de repetição** e **arrays**. O conteúdo é focado na parte teórica e conceitual, servindo como base essencial para a resolução de exercícios práticos posteriores. A compreensão desses mecanismos é vital para o desenvolvimento de lógica na programação estruturada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-12h03m47s883.jpg" alt="" width="840">
+</p>
+
+As estruturas de repetição, também conhecidas como **laços** ou **loops**, representam a capacidade dos computadores de executar uma sequência de comandos diversas vezes. O funcionamento básico consiste em:
+
+* **Condição:** A execução depende de expressões lógicas que retornam um valor booleano (`true` ou `false`).
+* **Repetição:** Enquanto a condição for satisfeita (`true`), o bloco de comandos é executado e o fluxo retorna para testar a condição novamente.
+* **Interrupção:** O loop é encerrado assim que a condição retorna `false`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-12h03m53s001.jpg" alt="" width="840">
+</p>
+
+As estruturas de repetição são classificadas de acordo com o momento em que o teste lógico é realizado:
+
+1. **Repetição com teste no início (`while`):** A condição é verificada antes de qualquer execução da sentença.
+2. **Repetição com teste no final (`do-while`):** A sentença é executada ao menos uma vez antes do primeiro teste.
+3. **Repetição contada (`for`):** Utilizada quando se sabe previamente o número de repetições ou quando há uma variável de controle clara.
+
+Além disso, existem comandos de controle de fluxo:
+
+* **`break`:** Interrompe a repetição de forma abrupta, saindo do laço.
+* **`continue`:** Ignora os comandos restantes da iteração atual e volta para o próximo teste lógico do laço. Diferente do `break`, o `continue` só pode ser utilizado dentro de estruturas de repetição.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-12h04m02s879.jpg" alt="" width="840">
+</p>
+
+Os fluxogramas detalham visualmente o comportamento lógico de cada estrutura:
+
+* **`while`:** O fluxo chega na expressão; se for `true` (1), executa a sentença e retorna à expressão. Se for `false` (0), segue para o fim.
+* **`do-while`:** O fluxo entra diretamente na sentença. Após a execução, avalia a expressão; se `true` (1), repete a sentença. Se `false` (0), encerra.
+* **`for`:** Estrutura mais complexa que envolve quatro etapas: inicialização, teste da condição, execução da sentença e atualização da variável de controle. O ciclo entre teste, sentença e atualização permanece até que o teste retorne `false` (0).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-12h04m07s634.jpg" alt="" width="840">
+</p>
+
+Operadores de incremento e decremento são atalhos para modificar o valor de uma variável em uma unidade. Eles se dividem em dois tipos:
+
+**Pré-fixados:** A operação é feita antes de retornar o valor.
+
+```java
+++numero; // Soma 1 e retorna o novo valor
+--numero; // Subtrai 1 e retorna o novo valor
+
+```
+
+**Pós-fixados:** A operação é feita após retornar o valor original.
+
+```java
+numero++; // Retorna o valor atual e depois soma 1
+numero--; // Retorna o valor atual e depois subtrai 1
+
+```
+
+A forma original equivalente seria `numero = numero + 1;` ou `numero = numero - 1;`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-12h04m52s006.jpg" alt="" width="840">
+</p>
+
+Para operações aritméticas que envolvem um valor fixo `k`, existem atalhos que simplificam a escrita do código:
+
+| Objetivo | Atalho | Forma Original |
+| --- | --- | --- |
+| Somar k unidades | `numero += k;` | `numero = numero + k;` |
+| Subtrair k unidades | `numero -= k;` | `numero = numero - k;` |
+| Multiplicar por k | `numero *= k;` | `numero = numero * k;` |
+| Dividir por k | `numero /= k;` | `numero = numero / k;` |
+
+Esses operadores facilitam a leitura do código e são amplamente utilizados em atualizações de variáveis dentro de loops.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-12h05m36s025.jpg" alt="" width="840">
+</p>
+
+Um **Array** é um objeto que armazena sequencialmente dados do mesmo tipo. Suas principais características são:
+
+* **Tipo Único:** Todos os elementos dentro de um array devem ser do mesmo tipo (ex: apenas `int`, apenas `String`).
+* **Tamanho Fixo:** Uma vez criado em Java, o tamanho do array não pode ser alterado.
+* **Unidimensional:** Organizado por um único índice (ou subscrito), começando sempre em `0`. Exemplo: `c[0]`, `c[1]`.
+* **Multidimensional:** Organizado em linhas e colunas, como uma matriz. Para acessar um elemento, utilizam-se dois índices, como `a[linha][coluna]`.
+
+O uso de arrays permite agrupar dados relacionados em uma única variável, facilitando o processamento em massa através de estruturas de repetição.
+
 ### 🟩 Vídeo 03 - Conhecendo o Repositório
 
 <video width="60%" controls>
@@ -81,7 +178,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/0efdfb4c-0d73-410a-99e8-78e003485ccd?autoplay=1
 
 ## Parte 2 - Exercícios Resolvidos: Estruturas de Repetição
 
