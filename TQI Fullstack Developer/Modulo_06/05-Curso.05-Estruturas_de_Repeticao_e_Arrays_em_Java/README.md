@@ -350,6 +350,61 @@ public class Ex2_Nota {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/13d02199-ec76-4553-a1d0-5705eb912f70?autoplay=1
 
+O vídeo detalha a criação de um programa em Java que utiliza um laço do-while para ler cinco números inteiros fornecidos pelo usuário. O objetivo principal do programa é identificar e exibir o maior valor entre os números digitados, além de calcular e apresentar a média aritmética desses mesmos números. A explicação aborda a implementação de um contador para controlar as repetições do loop, a lógica para encontrar o maior número através de comparações condicionais e o acúmulo da soma para o cálculo da média, com ênfase na importância da inicialização de variáveis e testes incrementais.
+
+### Anotações
+
+Neste exercício, exploramos a estrutura de repetição **do-while** para criar um programa que solicita cinco números ao usuário, identifica o maior valor informado e calcula a média aritmética entre eles.
+
+### Estrutura e Lógica do Programa
+
+O fluxo do código é dividido em três etapas principais:
+
+1. **Inicialização de Variáveis**: São definidas variáveis para capturar o input (`numero`), armazenar o maior valor encontrado (`maior`), acumular a soma dos valores (`soma`) e controlar a quantidade de repetições (`count`).
+
+2. **O Laço do-while**: Diferente do laço `while` convencional, o `do-while` garante que o bloco de código seja executado **pelo menos uma vez** antes de testar a condição de parada.
+
+* A cada iteração, o programa lê um número e o adiciona à variável `soma`.
+* Uma estrutura condicional `if` verifica se o número digitado é superior ao valor atualmente armazenado em `maior`. Se for, a variável é atualizada.
+* O contador `count` é incrementado em uma unidade até atingir o limite de 5 repetições.
+
+
+3. **Saída de Dados**: Após o encerramento do laço, os resultados são exibidos no console. A média é obtida dividindo o total acumulado na `soma` por 5.
+
+#### Código Transcrito
+
+```java
+package br.com.dio.exercicios.loops;
+
+import java.util.Scanner;
+
+public class Ex3_MaiorEMedia {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        int numero;
+        int maior = 0;
+        int soma = 0;
+        int count = 0;
+
+        do {
+            System.out.println("Número: ");
+            numero = scan.nextInt();
+
+            soma = soma + numero;
+
+            if (numero > maior) maior = numero;
+
+            count = count + 1;
+        } while(count < 5);
+
+        System.out.println("Maior: " + maior);
+        System.out.println("Média: " + (soma / 5));
+    }
+}
+
+```      
+
 ### 🟩 Vídeo 07 - Par e Impar
 
 <video width="60%" controls>
@@ -357,7 +412,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/e9f076ec-5c51-42af-bd9d-7b3caa06e761?autoplay=1
 
 ### 🟩 Vídeo 08 - Tabuada
 
@@ -366,7 +421,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 09 - Fatorial
 
