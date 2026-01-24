@@ -621,7 +621,61 @@ public class Ex1_OrdemInversa {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/cae02091-afc3-48d6-8473-0acfd066f866?autoplay=1
+
+O vídeo apresenta um exercício de programação em Java focado na manipulação de arrays (vetores), estruturas de repetição e lógica condicional. O objetivo é criar um programa que leia seis caracteres digitados pelo usuário, identifique quais são consoantes, armazene-as em um array de String e, por fim, imprima apenas as consoantes lidas e a quantidade total delas, demonstrando conceitos importantes sobre o comportamento de arrays e objetos em Java.
+
+### Anotações
+
+Nesta aula, o objetivo é desenvolver um programa que realize a leitura de um vetor de seis caracteres e identifique quantas consoantes foram digitadas, exibindo-as ao final. A lógica central utiliza a classe `Scanner` para entrada de dados e um array de `String` com tamanho fixo de 6 posições.
+
+Um ponto fundamental abordado é a característica estática dos arrays em Java: uma vez definido com seis posições, esse espaço em memória permanece fixo. Caso o usuário digite vogais, essas posições não serão preenchidas com caracteres de interesse, resultando em valores `null` (nulos), já que o array de objetos `String` inicializa suas posições vazias dessa forma. Para gerenciar a contagem real de elementos válidos, utiliza-se a variável `quantidadeConsoantes` como um contador externo, já que o atributo `.length` retornará sempre o tamanho total do array (6), independentemente do conteúdo.
+
+O fluxo de repetição é controlado por um laço `do-while`, que solicita a entrada de uma letra a cada iteração. A verificação se o caractere é uma consoante é feita por meio de uma negação lógica: o programa testa se a letra é uma vogal (utilizando `equalsIgnoreCase` para ignorar a diferença entre maiúsculas e minúsculas) e, caso **não** seja, ela é armazenada no array e o contador de consoantes é incrementado.
+
+Para a exibição dos resultados, é introduzido o laço `for-each`, que percorre o array de forma simplificada. Para evitar a impressão dos valores nulos correspondentes às vogais descartadas, uma estrutura condicional `if (consoante != null)` garante que apenas os caracteres efetivamente armazenados sejam impressos no console.
+
+```java
+package br.com.dio.exercicios.arrays;
+
+import java.util.Scanner;
+
+public class Ex2_Consoantes {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        String[] consoantes = new String[6];
+        int quantidadeConsoantes = 0;
+        int count = 0;
+
+        do {
+            System.out.println("Letra: ");
+            String letra = scan.next();
+
+            if ( !(letra.equalsIgnoreCase("a") |
+                letra.equalsIgnoreCase("e") |
+                letra.equalsIgnoreCase("i") |
+                letra.equalsIgnoreCase("o") |
+                letra.equalsIgnoreCase("u")) ) {
+                
+                consoantes[count] = letra;
+                quantidadeConsoantes++;
+            }
+
+            count++;
+
+        } while(count < consoantes.length);
+
+        System.out.print("Consoantes: ");
+        for (String consoante : consoantes) {
+            if (consoante != null)
+                System.out.print(consoante + " ");
+        }
+        System.out.println("\nQuantidade de consoantes: " + quantidadeConsoantes);
+    }
+}
+
+```
 
 ### 🟩 Vídeo 12 - Números Aleatórios
 
@@ -630,7 +684,56 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/a086d494-e00f-4a4f-867c-e31d85baada5?autoplay=1
+
+Este vídeo aborda o último desafio sobre arrays unidimensionais em Java, focando na criação de um programa que gera 20 números inteiros aleatórios entre 0 e 100, armazena-os em um vetor, e então exibe tanto os números gerados quanto seus sucessores. A aula detalha o uso da classe Random para geração de números, a declaração e manipulação de arrays, e a aplicação de diferentes tipos de laços (for e forEach), destacando suas funcionalidades e limitações específicas.
+
+### Anotações
+
+Nesta aula, concluímos o estudo de arrays unidimensionais com um desafio prático: criar um programa que gera 20 números inteiros aleatórios entre 0 e 100, armazena-os em um vetor e, ao final, exibe os números originais, seus antecessores e seus sucessores.
+
+Para a geração dos valores, utilizamos a classe **Random** do pacote `java.util`. Um ponto fundamental abordado é a definição do `bound` (limite), que determina o valor máximo que pode ser gerado pela classe. O array é declarado de forma convencional para garantir a clareza de que se trata de um conjunto de inteiros.
+
+Durante a implementação, são exploradas as diferenças entre os laços de repetição:
+
+* **For convencional:** Utilizado para preencher o array, pois permite o acesso direto ao índice `i`, necessário para atribuir cada número gerado a uma posição específica.
+* **For-each:** Recomendado para a saída de dados (output), por ser mais simples e legível ao navegar pelos elementos. No entanto, ele possui a limitação de não fornecer acesso à posição específica do elemento.
+
+O código também demonstra operações aritméticas simples dentro dos laços para exibir o **antecessor** (`numero - 1`) e o **sucessor** (`numero + 1`) de cada elemento armazenado. Por fim, é mencionado que arrays de tipos primitivos numéricos, como `int`, são inicializados por padrão com o valor zero em posições não alocadas.
+
+```java
+package br.com.dio.exercicios.arrays;
+
+import java.util.Random;
+
+public class Ex3_NumerosAleatorios {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int[] numerosAleatorios = new int[20];
+
+        for (int i = 0; i < numerosAleatorios.length; i++) {
+            int numero = random.nextInt(100);
+            numerosAleatorios[i] = numero;
+        }
+
+        System.out.print("Numeros Aleatorios: ");
+        for (int numero : numerosAleatorios) {
+            System.out.print(numero + " ");
+        }
+
+        System.out.print("\nAntecessor dos Numeros Aleatorios: ");
+        for (int numero : numerosAleatorios) {
+            System.out.print((numero - 1) + " ");
+        }
+
+        System.out.print("\nSucessores dos Numeros Aleatorios: ");
+        for (int numero : numerosAleatorios) {
+            System.out.print((numero + 1) + " ");
+        }
+    }
+}
+
+```
 
 ### 🟩 Vídeo 13 - Array Multidimensional
 
@@ -639,7 +742,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/5dfde385-6340-4677-b9ff-35feb7b2dba5?autoplay=1
 
 
 ##  Materiais de Apoio
