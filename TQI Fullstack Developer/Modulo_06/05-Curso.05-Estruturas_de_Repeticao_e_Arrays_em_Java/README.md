@@ -798,9 +798,7 @@ public class Ex4_ArrayMultidimensional {
 
 ```
 
-##  Materiais de Apoio
+# Certificado: Estruturas de Repetição e Arrays em Java
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/U5PHKGZW.pdf
+- Certificado em pdf: [certificado-Estruturas_de_Repeticao_e_Arrays_em_Java.pdf](000-Midia_e_Anexos/certificado-Estruturas_de_Repeticao_e_Arrays_em_Java.pdf)
