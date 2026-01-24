@@ -180,6 +180,56 @@ O uso de arrays permite agrupar dados relacionados em uma única variável, faci
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/0efdfb4c-0d73-410a-99e8-78e003485ccd?autoplay=1
 
+O vídeo apresenta uma visão detalhada de um repositório educacional voltado ao ensino de Java, com foco específico em estruturas de repetição (loops) e arrays. A instrutora orienta sobre os pré-requisitos técnicos, a organização dos materiais (que incluem exercícios práticos e resoluções comentadas passo a passo) e fornece estratégias de estudo, incentivando a prática constante e a interação via GitHub para a resolução de dúvidas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-13h31m11s701.jpg" alt="" width="840">
+</p>
+
+O repositório principal do curso, intitulado **Loops e Arrays**, serve como base para todo o conteúdo prático. No arquivo `README.md`, estão listados os pré-requisitos fundamentais para acompanhar as aulas:
+
+* **Java JDK 11**: Versão necessária para compilação e execução dos exemplos.
+* **IDE para desenvolvimento Java**: Recomendação do uso do IntelliJ, embora outras ferramentas como Eclipse ou VS Code também sejam compatíveis.
+* **Conhecimento em sintaxe Java**: Base necessária para a compreensão da lógica que será implementada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-13h31m17s286.jpg" alt="" width="840">
+</p>
+
+A estrutura de arquivos do projeto está organizada para facilitar o aprendizado. Dentro do pacote de exercícios de loops, encontramos uma série de classes Java destinadas à resolução de problemas específicos, como cálculo de médias, notas e tabuadas. Além disso, existe uma pasta denominada **Comentado**, onde cada linha de código possui explicações detalhadas para auxiliar o estudante em caso de dúvidas sobre a implementação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-13h31m26s794.jpg" alt="" width="840">
+</p>
+
+Neste repositório estão localizadas todas as orientações do curso de Loops e Arrays em Java.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-13h31m40s318.jpg" alt="" width="840">
+</p>
+
+Os exercícios práticos de repetição foram baseados em listas consagradas, como a do portal **Python Brasil**, adaptando a lógica para a linguagem Java. Entre os desafios propostos, encontram-se:
+
+* Validação de entrada (notas entre zero e dez).
+* Comparação entre nomes de usuário e senhas.
+* Cálculos de crescimento populacional.
+* Identificação de maiores valores e médias em conjuntos numéricos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-13h32m43s872.jpg" alt="" width="840">
+</p>
+
+A interação com o projeto e a resolução de dúvidas ocorrem através da aba **Issues** no GitHub. Este espaço permite que o estudante relate problemas, sugira melhorias ou tire dúvidas técnicas enviando prints de tela e blocos de código. Centralizar as dúvidas nesta plataforma ajuda outros colegas que possam enfrentar dificuldades semelhantes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-13h32m48s247.jpg" alt="" width="840">
+</p>
+
+Um exemplo prático do uso de Issues envolve a resolução de problemas de ambiente e conexão. No caso ilustrado, um usuário relatou dificuldades em encontrar uma versão específica do JDK e erros de autorização ao tentar realizar o "push" de um repositório para o GitHub. Essas discussões são fundamentais para o suporte técnico entre a comunidade de desenvolvedores e o instrutor.      
+
+
 ## Parte 2 - Exercícios Resolvidos: Estruturas de Repetição
 
 ### 🟩 Vídeo 04 - Nome e Idade
@@ -189,7 +239,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/153842a5-4928-4e7e-b803-2345feac599b?autoplay=1
 
 ### 🟩 Vídeo 05 - Nota
 
