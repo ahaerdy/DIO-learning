@@ -61,17 +61,9 @@ A instrutora apresenta informações sobre seu perfil pessoal e profissional:
 
 Para acompanhamento do conteúdo e interação, são disponibilizados os seguintes canais:
 
-* 
-**GitHub**: Repositório `loops-e-arrays` sob o usuário `cami-la`, onde está hospedado o código-fonte do curso.
-
-
-* 
-**LinkedIn**: Perfil para conexões profissionais em `cami-la`.
-
-
-* 
-**Instagram**: Perfis `estudante.it` para compartilhamento de estudos e `camimi la` para interações pessoais.      
-
+* **GitHub**: Repositório `loops-e-arrays` sob o usuário `cami-la`, onde está hospedado o código-fonte do curso.
+* **LinkedIn**: Perfil para conexões profissionais em `cami-la`.
+* **Instagram**: Perfis `estudante.it` para compartilhamento de estudos e `camimi la` para interações pessoais.      
 
 ### 🟩 Vídeo 02 - Visão Geral
 
