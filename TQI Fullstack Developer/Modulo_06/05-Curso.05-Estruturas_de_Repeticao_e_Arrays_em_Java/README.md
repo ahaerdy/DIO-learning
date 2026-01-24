@@ -414,6 +414,58 @@ public class Ex3_MaiorEMedia {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/e9f076ec-5c51-42af-bd9d-7b3caa06e761?autoplay=1
 
+O vídeo detalha a criação de um programa em Java que solicita ao usuário uma quantidade 'N' de números inteiros, para então calcular e exibir a contagem de números pares e ímpares inseridos. A explicação abrange desde a configuração inicial do ambiente de desenvolvimento, passando pela implementação de um laço do-while para coletar os números, a lógica para determinar paridade usando o operador módulo, até a exibição dos resultados finais, incluindo uma importante lição sobre como evitar loops infinitos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-24-14h58m34s571.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, desenvolvemos um programa em Java para resolver um problema clássico de lógica: solicitar uma quantidade  de números inteiros ao usuário e contabilizar quantos deles são pares ou ímpares. O código utiliza a classe `Scanner` para permitir a entrada de dados via console.
+
+A lógica do programa segue estes passos fundamentais:
+
+* **Entrada da Quantidade**: O programa solicita inicialmente que o usuário informe quantos números deseja inserir, armazenando esse valor na variável `quantNumeros`.
+* **Laço de Repetição**: É utilizado um laço `do-while`, garantindo que o bloco de código seja executado pelo menos uma vez e se repita conforme o valor de `count` em relação ao limite definido em `quantNumeros`.
+* **Processamento de Paridade**: Dentro do loop, cada número informado (`numero`) passa por um teste condicional usando o operador de resto `%`. Se `numero % 2 == 0`, o contador `quantPares` é incrementado; caso contrário, incrementa-se `quantImpares`.
+* **Saída de Dados**: Após o encerramento das repetições, os resultados acumulados são exibidos no console.
+
+```java
+package br.com.dio.exercicios.loops;
+
+import java.util.Scanner;
+
+public class Ex4_ParEImpar {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        int quantNumeros;
+        int numero;
+        int quantPares = 0, quantImpares = 0;
+
+        System.out.println("Quantidade de números: ");
+        quantNumeros = scan.nextInt();
+
+        int count = 0;
+        do {
+            System.out.println("Número: ");
+            numero = scan.nextInt();
+
+            if (numero % 2 == 0) quantPares++;
+            else quantImpares++;
+
+            count++;
+        } while(count < quantNumeros);
+
+        System.out.println("Quantidade Par: " + quantPares);
+        System.out.println("Quantidade Ímpar: " + quantImpares);
+    }
+}
+
+```
+
+
 ### 🟩 Vídeo 08 - Tabuada
 
 <video width="60%" controls>
@@ -421,7 +473,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/aa4e1b8e-1087-475d-ac79-4220984005bc?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Fatorial
 
