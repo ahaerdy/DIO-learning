@@ -475,6 +475,43 @@ public class Ex4_ParEImpar {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/aa4e1b8e-1087-475d-ac79-4220984005bc?autoplay=1
 
+Nesta aula, o instrutor demonstra a implementação de uma tabuada utilizando a estrutura de repetição for, destacando-a como uma versão comprimida do laço while. O conteúdo aborda a sintaxe do comando, dividindo-o em três partes essenciais: a inicialização de uma variável de controle (geralmente denominada "i" por convenção), a definição da condição de limite para o encerramento da execução e o incremento do contador. O exemplo prático foca na lógica de iteração necessária para multiplicar um número fornecido pelo usuário em um intervalo de 1 a 10, incentivando os alunos a compararem essa estrutura com outros laços de repetição para consolidar o entendimento sobre fluxos de controle em programação.
+
+### Anotações
+
+Nesta etapa da aula, o foco é a implementação de um gerador de tabuada utilizando a estrutura de repetição `for`. O objetivo é que o programa receba um número inteiro entre 1 e 10 e exiba os resultados da multiplicação desse número pelos valores de 1 a 10.
+
+A estrutura do `for` em Java é apresentada como uma versão comprimida do laço `while`, dividida em três partes fundamentais separadas por ponto e vírgula dentro dos parênteses:
+
+1. **Inicialização:** Onde se define a variável de controle, como `int i = 1`. O uso do `i` é uma convenção comum em literatura de programação, funcionando como o contador do laço. 
+
+2. **Condição (Limite):** Define até quando o laço deve ser executado. No exemplo, o laço continua enquanto `i <= 10`. 
+
+3. **Incremento:** Define como a variável de controle evolui a cada repetição, no caso, `i = i + 1` (ou `i++`). 
+
+
+Dentro do bloco de código, utiliza-se o `System.out.println` para formatar a saída, concatenando a variável da tabuada, o símbolo de multiplicação, o valor atual do contador `i` e o resultado da operação `(tabuada * i)`. 
+
+```java
+package br.com.dio.exercicios.loops;
+
+import java.util.Scanner;
+
+public class Ex5_Tabuada {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Tabuada: ");
+        int tabuada = scan.nextInt();
+
+        System.out.println("Tabuada de " + tabuada);
+
+        for(int i = 1; i <= 10; i = i + 1) {
+            System.out.println(tabuada + " X " + i + " = " + (tabuada * i));
+        }
+    }
+}
+``` 
 
 
 ### 🟩 Vídeo 09 - Fatorial
@@ -484,7 +521,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estruturas-de-repeticao-e-arrays-em-java/learning/37b9014a-3069-4b81-978f-d758c6405aae?autoplay=1
 
 ## Parte 3 - Exercícios Resolvidos: Arrays
 
