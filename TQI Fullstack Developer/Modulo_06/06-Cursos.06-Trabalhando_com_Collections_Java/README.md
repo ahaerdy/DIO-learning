@@ -596,7 +596,68 @@ Foram criadas classes específicas para lidar com diferentes lógicas de compara
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/5bdd9534-1fc4-4612-9309-383812ec570e?autoplay=1
+
+Esta aula detalha o uso da interface Comparator em Java para a ordenação personalizada de listas de objetos, complementando a interface Comparable. Através da implementação do método compare, demonstra-se como criar classes específicas para ordenar atributos como idade (utilizando Integer.compare) e cor (utilizando compareToIgnoreCase para Strings). O vídeo explora ainda a criação de ordenações compostas, onde múltiplos critérios — nome, cor e idade — são encadeados como níveis de desempate, e apresenta a flexibilidade de aplicar esses ordenadores tanto via Collections.sort quanto pelo método sort da própria lista.
+
+### Anotações
+
+Nesta aula, exploramos a ordenação de listas em Java utilizando a interface `Comparator`. Diferente da interface `Comparable` (que define uma ordem natural única para a classe), o `Comparator` permite criar múltiplas estratégias de ordenação externas à classe principal.
+
+Abaixo, detalhamos as implementações para ordenar uma lista de objetos do tipo `Gato` por diferentes atributos: idade, cor e uma composição de múltiplos critérios.
+
+#### 1. Ordenação por Idade
+
+Para ordenar por idade, implementamos a classe `ComparatorIdade`. Como o atributo `idade` é um `Integer`, utilizamos o método estático `Integer.compare()`, que facilita a comparação entre dois valores inteiros, retornando um valor negativo se o primeiro for menor, zero se forem iguais, ou positivo se for maior.
+
+```java
+class ComparatorIdade implements Comparator<Gato> {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+}
+
+```
+
+#### 2. Ordenação por Cor
+
+Para a ordenação por cor, a classe `ComparatorCor` utiliza o método `compareToIgnoreCase` da classe `String`. Isso garante que a comparação alfabética ignore a diferença entre letras maiúsculas e minúsculas.
+
+```java
+class ComparatorCor implements Comparator<Gato> {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return g1.getCor().compareToIgnoreCase(g2.getCor());
+    }
+}
+
+```
+
+#### 3. Ordenação Composta (Nome/Cor/Idade)
+
+Quando precisamos de múltiplos critérios de desempate, implementamos uma lógica encadeada na classe `ComparatorNomeCorIdade`. O sistema primeiro compara os nomes; se forem diferentes, define a ordem por eles. Se os nomes forem iguais (retorno 0), o código passa a comparar as cores. Se as cores também forem idênticas, o critério final de desempate é a idade.
+
+```java
+class ComparatorNomeCorIdade implements Comparator<Gato> {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        int nome = g1.getNome().compareToIgnoreCase(g2.getNome());
+        if (nome != 0) return nome;
+
+        int cor = g1.getCor().compareToIgnoreCase(g2.getCor());
+        if (cor != 0) return cor;
+
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+}
+
+```
+
+#### Execução da Ordenação
+
+Para aplicar essas ordenações à lista `meusGatos`, podemos utilizar tanto o método `Collections.sort(lista, comparator)` quanto o método `.sort(comparator)` disponível diretamente na interface `List` a partir do Java 8.
+
 
 ### 🟩 Vídeo 08 - Exercícios Propostos - List
 
@@ -605,16 +666,59 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/b58befe2-06fb-43fa-9817-5e897cfd9797?autoplay=1
 
-### 🟩 Vídeo 09 - List
+Esta aula encerra o módulo sobre a interface List com a proposição de dois exercícios práticos focados em lógica de programação e manipulação de coleções. O primeiro desafio requer o armazenamento de temperaturas médias semestrais para o cálculo de uma média geral e a identificação dos meses com valores acima desse índice, apresentados por extenso. O segundo exercício utiliza listas para classificar a participação em um crime com base em cinco perguntas interrogativas, categorizando o usuário como inocente, suspeito, cúmplice ou assassino conforme o volume de respostas positivas. O vídeo conclui incentivando a resolução autônoma antes da consulta ao repositório de soluções e antecipa que o domínio de List facilitará significativamente o aprendizado da próxima interface, Set.
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_09.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+### Anotações
 
-link do vídeo:
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-17h04m19s483.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta o primeiro exercício proposto para fixação do conteúdo sobre listas. O objetivo é exercitar a lógica de programação através da manipulação de coleções e cálculos simples. O desafio consiste em desenvolver um programa que:
+
+1. **Entrada de Dados**: Receba a temperatura média dos seis primeiros meses do ano.
+2. **Armazenamento**: Guarde esses valores em uma lista.
+3. **Processamento**: Calcule a média aritmética semestral dessas temperaturas.
+4. **Saída**: Exiba quais temperaturas ficaram acima da média calculada e identifique o mês correspondente por extenso (ex: 1 - Janeiro, 2 - Fevereiro).
+
+Para a resolução, será necessário percorrer a lista para realizar a soma e o cálculo da média, e posteriormente filtrar os dados para a exibição dos resultados condicionais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-17h04m24s655.jpg" alt="" width="840">
+</p>
+
+O segundo exercício proposto foca na utilização de listas para classificação baseada em múltiplas entradas. O programa deve simular um interrogatório sobre um crime, realizando cinco perguntas específicas:
+
+* "Telefonou para a vítima?"
+* "Esteve no local do crime?"
+* "Mora perto da vítima?"
+* "Devia para a vítima?"
+* "Já trabalhou com a vítima?"
+
+As respostas (positivas ou negativas) devem ser armazenadas em uma lista. A classificação final do indivíduo dependerá da quantidade de respostas positivas coletadas:
+
+* **2 respostas**: Suspeita
+* **3 a 4 respostas**: Cúmplice
+* **5 respostas**: Assassina
+* **Menos de 2**: Inocente
+
+Este exercício visa praticar a filtragem de elementos dentro de uma lista e a aplicação de estruturas condicionais encadeadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-17h04m27s446.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, são apresentados os canais de referência para consulta das resoluções dos exercícios e contato com a instrutora. É reforçado que não existe uma única solução correta em programação, incentivando o aluno a tentar resolver os desafios de forma autônoma antes de comparar com o código de referência disponível no GitHub.
+
+**Redes Sociais e Repositório:**
+
+* **GitHub**: [https://github.com/cami-la/curso-dio-intro-collections](https://github.com/cami-la/curso-dio-intro-collections)
+* **LinkedIn**: [https://www.linkedin.com/in/cami-la/](https://www.linkedin.com/in/cami-la/)
+* **Instagram**: @camimi_la
+
+Além do repositório, o suporte para dúvidas e discussões pode ser realizado através do fórum da plataforma DIO ou pela comunidade no Discord. Com a conclusão deste módulo de `List`, o próximo tópico abordado será a interface `Set`.      
 
 ## Parte 3 - Set
 
