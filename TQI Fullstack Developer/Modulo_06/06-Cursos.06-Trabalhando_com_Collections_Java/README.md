@@ -14,6 +14,57 @@
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/a34f3db6-de2b-44fa-a059-6ae7785695cc?autoplay=1
 
+Este vídeo serve como uma introdução a um curso sobre o Collections Framework em Java, ministrado por Camila Cavalcante. O curso tem como objetivo capacitar os alunos a entender e aplicar as principais interfaces de Collections (List, Set, Map) e a Stream API, auxiliando na manipulação de coleções. A instrutora também compartilha um breve histórico pessoal sobre sua jornada na programação, destacando sua paixão por desafios e aprendizado contínuo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-13h13m39s995.jpg" alt="" width="840">
+</p>
+
+Bem-vindos ao curso introdutório sobre **Collections**. Esta jornada de aprendizado é guiada por Camila Cavalcante, graduanda em Ciência da Computação, e tem como foco explorar as estruturas de dados fundamentais para o desenvolvimento Java moderno.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-13h13m41s633.jpg" alt="" width="840">
+</p>
+
+### Objetivo do curso
+
+O foco principal é capacitar o desenvolvedor a compreender o **Collections Framework**. Ao final das aulas, você será capaz de entender a aplicabilidade das principais interfaces do ecossistema:
+
+* **List**: Para coleções que permitem iterações ordenadas.
+* **Set**: Para coleções que focam na singularidade dos elementos.
+* **Map**: Para coleções estruturadas em pares.
+
+Além disso, o curso abordará a **Stream API** e como ela auxilia na manipulação dessas coleções.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-13h13m43s694.jpg" alt="" width="840">
+</p>
+
+### Percurso
+
+O conteúdo está organizado em uma trilha lógica para facilitar o aprendizado progressivo:
+
+* **Aula 1**: Coleções com iterações ordenadas: List.
+* **Aula 2**: Coleções com Singularidade: Set.
+* **Aula 3**: Coleções de Pares: Map.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-13h13m51s134.jpg" alt="" width="840">
+</p>
+
+### Mais sobre mim
+
+Camila Cavalcante compartilha detalhes sobre sua trajetória e interesses na área tecnológica:
+
+* **Formação**: Estudante de Ciência da Computação.
+* **Início**: Conheceu a programação através do Excel.
+* **Tecnologias**: Atua com os frameworks Spring e Angular.
+* **Perfil**: Gosta de enfrentar desafios e aprender coisas novas.
+* **Projetos**: Aspirante a YouTuber.
+
+Para conectar-se ou explorar seus projetos, você pode acessar seu **LinkedIn** ou seu perfil no **GitHub**.
 
 
 ### 🟩 Vídeo 02 - Visão geral: Collections Framework
