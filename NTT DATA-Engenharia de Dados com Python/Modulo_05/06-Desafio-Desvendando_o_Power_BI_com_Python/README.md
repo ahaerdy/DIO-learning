@@ -32,7 +32,7 @@ A saída esperada é a descrição associada ao termo fornecido como entrada. Se
 A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
 
 <p align="center">
-  <img src="Midias_e_Anexos/2026-01-25-10-44-56.png" alt="" width="480">
+  <img src="000-Midias_e_Anexos/2026-01-25-10-47-24.png" alt="" width="480">
 </p>
 
 ### Instruções para a função obter_entrada_vendas()
