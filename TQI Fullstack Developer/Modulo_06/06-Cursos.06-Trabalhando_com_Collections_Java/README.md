@@ -157,7 +157,6 @@ Para otimizar o desenvolvimento no IntelliJ IDEA, recomenda-se explorar atalhos 
 
 Estes recursos preparam o ambiente para as próximas aulas práticas, onde será abordada a interface `List`.
 
-
 ## Parte 2 - Lists
 
 ### 🟩 Vídeo 03 - Coleções com iterações ordenadas: Listas
@@ -167,7 +166,64 @@ Estes recursos preparam o ambiente para as próximas aulas práticas, onde será
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/8cab6dc3-3fec-43ed-96fa-0da97eca687a?autoplay=1
+
+Esta aula introdutória sobre coleções em Java foca na interface List, detalhando suas características principais, como permitir elementos duplicados e garantir a ordem de inserção. O conteúdo explora as implementações Vector, ArrayList e LinkedList, destacando suas diferenças fundamentais e os cenários ideais de uso para cada uma, com ênfase na escolha entre ArrayList (para buscas) e LinkedList (para inserções e exclusões).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-14h41m14s091.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial da aula, introduzimos o conceito de **Coleções com iterações ordenadas**, focando especificamente em **Listas** (`List`). Este conteúdo faz parte do estudo introdutório sobre o ecossistema de *Collections* em Java, abordando estruturas que mantêm a sequência de inserção dos elementos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-14h41m19s016.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais desta unidade didática estão divididos em três pilares fundamentais:
+
+1. **Características da interface List**: Compreender as propriedades básicas da interface.
+2. **Uso de ArrayList e LinkedList**: Entender como e quando utilizar cada uma dessas implementações.
+3. **Principais métodos**: Conhecer as funcionalidades essenciais para manipulação dessas coleções.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-25-14h41m25s661.jpg" alt="" width="840">
+</p>
+
+A interface `java.util.List` define uma estrutura que permite **elementos duplicados** e garante a **ordem de inserção**. Isso significa que os elementos serão exibidos na mesma sequência em que foram adicionados. Dentro da hierarquia do Java, a interface `List` estende `Collection`.
+
+As implementações mais comuns possuem características distintas de performance e comportamento:
+
+* **Vector**: Uma implementação pensada para contextos que envolvem *threads*, sendo considerada *thread-safe*.
+* **ArrayList**: Utiliza um **array dinâmico** internamente. É a escolha preferencial para aplicações que demandam mais **operações de pesquisa e acesso** aos dados. No entanto, a remoção de elementos é mais demorada, pois exige o deslocamento de bits na memória.
+* **LinkedList**: Utiliza uma estrutura de **lista duplamente ligada**. É mais eficiente para **operações de inserção e exclusão**, pois apenas altera os links de referência entre os elementos, sem necessidade de deslocamento interno. Além disso, implementa as interfaces `List` e `Deque`/`Queue`.
+
+
+| Característica | ArrayList | LinkedList |
+| --- | --- | --- |
+| **Estrutura Interna** | Array Dinâmico 
+
+ | Lista Duplamente Ligada 
+
+ |
+| **Melhor para** | Pesquisa e Acesso 
+
+ | Inserção e Exclusão 
+
+ |
+| **Interfaces** | Implementa `List` 
+
+ | Implementa `List` e `Deque`/`Queue` 
+
+ |
+| **Manipulação** | Mais lenta devido ao deslocamento 
+
+ | Mais rápida via troca de referências 
+
+ |
+  
 
 ### 🟩 Vídeo 04 - Conhecendo os métodos List - parte 1
 
@@ -176,7 +232,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/5d2b4933-e791-4f57-b39e-cb044f774b75?autoplay=1
 
 ### 🟩 Vídeo 05 - Conhecendo os métodos List - parte 2
 
