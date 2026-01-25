@@ -291,6 +291,37 @@ class ExemploList {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/e383c216-1786-4505-80a6-f3f87db7238d?autoplay=1
 
+Esta aula técnica detalha a manipulação de coleções em Java, focando em operações essenciais da interface List e o uso de métodos utilitários da classe Collections. O conteúdo abrange desde a recuperação de elementos por índice com o método get() e a identificação de valores extremos (mínimo e máximo) através da interface Comparable, até a implementação de lógicas customizadas de soma e remoção condicional utilizando o Iterator para percorrer a lista de forma segura. Adicionalmente, são explorados métodos de gerenciamento de estado da coleção, como size() para medição de tamanho, clear() para esvaziamento e isEmpty() para verificação de conteúdo, culminando em um desafio prático que incentiva a exploração de implementações específicas como o LinkedList e suas interfaces complementares.
+
+### Anotações
+
+Esta etapa da aula foca na manipulação de dados em uma `List` utilizando a linguagem Java. O exemplo demonstra como acessar elementos por índice, encontrar valores extremos (mínimo e máximo) e realizar operações de soma e média.
+
+Para recuperar a terceira nota adicionada, utiliza-se o método `get(int index)`. Como as listas em Java possuem indexação baseada em zero, o índice `2` corresponde ao terceiro elemento. No exemplo visualizado, o retorno para esta operação é a nota `9.3`.
+
+Para identificar a menor e a maior nota, recorre-se à classe utilitária `Collections`. Os métodos `Collections.min(notas)` e `Collections.max(notas)` funcionam porque o tipo `Double` implementa a interface `Comparable`, que define a ordem natural dos elementos.
+
+A soma dos valores é realizada através de um `Iterator`. O fluxo consiste em percorrer a lista com um laço `while`, verificando a existência de um próximo elemento com `hasNext()` e recuperando-o com `next()` para acumulá-lo em uma variável de controle. A média é obtida dividindo-se o total acumulado pelo tamanho da lista, retornado pelo método `size()`.
+
+```java
+// Exemplo de operações demonstradas
+System.out.println("Exiba a terceira nota adicionada: " + notas.get(2));
+System.out.println("Exiba a menor nota: " + Collections.min(notas));
+System.out.println("Exiba a maior nota: " + Collections.max(notas));
+
+Iterator<Double> iterator = notas.iterator();
+Double soma = 0d;
+while(iterator.hasNext()){
+    Double next = iterator.next();
+    soma += next;
+}
+System.out.println("Exiba a soma dos valores: " + soma);
+System.out.println("Exiba a média das notas: " + (soma/notas.size()));
+
+```
+
+Além disso, a aula aborda a remoção de elementos. É importante notar a diferença entre `remove(int index)` e `remove(Object o)`. Ao lidar com `Double`, deve-se especificar o sufixo `d` (ex: `0d`) para garantir que o compilador entenda que se trata do objeto valor, e não do índice da posição. Para remoções condicionais (como notas menores que 7), utiliza-se o `iterator.remove()` para evitar erros de concorrência durante a iteração. Por fim, os métodos `clear()` e `isEmpty()` são apresentados para esvaziar a lista e verificar seu estado, respectivamente.
+
 ### 🟩 Vídeo 06 - Ordenação de elementos em uma coleção List - parte 1
 
 <video width="60%" controls>
@@ -298,7 +329,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/72c54080-cbe0-4a60-85b4-d15fb46fb512?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Ordenação de elementos em uma coleção List - parte 2
 
