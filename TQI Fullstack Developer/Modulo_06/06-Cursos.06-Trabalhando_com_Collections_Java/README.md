@@ -201,30 +201,6 @@ As implementações mais comuns possuem características distintas de performanc
 * **LinkedList**: Utiliza uma estrutura de **lista duplamente ligada**. É mais eficiente para **operações de inserção e exclusão**, pois apenas altera os links de referência entre os elementos, sem necessidade de deslocamento interno. Além disso, implementa as interfaces `List` e `Deque`/`Queue`.
 
 
-| Característica | ArrayList | LinkedList |
-| --- | --- | --- |
-| **Estrutura Interna** | Array Dinâmico 
-
- | Lista Duplamente Ligada 
-
- |
-| **Melhor para** | Pesquisa e Acesso 
-
- | Inserção e Exclusão 
-
- |
-| **Interfaces** | Implementa `List` 
-
- | Implementa `List` e `Deque`/`Queue` 
-
- |
-| **Manipulação** | Mais lenta devido ao deslocamento 
-
- | Mais rápida via troca de referências 
-
- |
-  
-
 ### 🟩 Vídeo 04 - Conhecendo os métodos List - parte 1
 
 <video width="60%" controls>
