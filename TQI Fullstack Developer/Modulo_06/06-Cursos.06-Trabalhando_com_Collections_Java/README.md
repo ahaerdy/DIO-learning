@@ -93,9 +93,7 @@ Esta é a tela de abertura da segunda parte do curso introdutório sobre **Colle
 Os objetivos principais desta sessão de aprendizado estão divididos em três pilares fundamentais:
 
 1. **Definição e Utilidade:** Entender o conceito de Collections Framework e os motivos de sua utilização.
-
 2. **Composição:** Conhecer os elementos que formam a estrutura do framework.
-
 3. **Hierarquia:** Visualizar como as interfaces e classes se organizam e se relacionam entre si.
 
 <p align="center">
@@ -146,7 +144,6 @@ Além disso, o framework disponibiliza classes utilitárias como `Arrays` e `Col
 Para fixação do conteúdo teórico apresentado, sugere-se os seguintes exercícios:
 
 1. Aprofundar o estudo sobre a tríade de composição: **Interfaces, Implementações e Algoritmos**.
-
 2. Analisar detidamente a **Hierarquia do Collections Framework**, observando as relações de herança e implementação entre os componentes.
 
 <p align="center">
