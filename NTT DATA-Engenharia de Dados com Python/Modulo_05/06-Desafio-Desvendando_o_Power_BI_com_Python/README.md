@@ -58,6 +58,37 @@ entrada = input()
 
 print(identificar_termo_bi(entrada))
 ```
+# Desafio 1 - Fundamentos sobre ETL
 
+## Descrição
 
+O processo ETL (Extract, Transform, Load) é uma etapa crítica em Business Intelligence que envolve a integração de dados provenientes de diferentes fontes para análises e relatórios. Cada etapa do processo ETL tem um papel específico na preparação dos dados para serem analisados. Complete o código associando os conceitos e etapas do processo ETL às suas respectivas descrições para entender como cada fase contribui para a análise de dados.
 
+## Entrada
+
+A entrada é um conceito ou etapa do processo ETL para o qual você deve retornar a descrição. Os conceitos considerados são:
+
+- Extract
+- Transform
+- Load
+- Data Integration
+
+## Saída
+
+A saída esperada é a descrição associada ao conceito fornecido como entrada. Seguem as saídas possíveis, listadas aleatoriamente, para que você possa analisar e associar corretamente:
+
+- Processo de coletar dados de diversas fontes.
+- Processo de converter dados para um formato adequado.
+- Carregamento de dados transformados em banco de dados ou warehouse.
+- Unificação de dados provenientes de múltiplas fontes.
+## Exemplos
+
+A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-01-25-11-17-35.png" alt="" width="480">
+</p>
+
+Atenção: É extremamente importante que as entradas e saídas sejam exatamente iguais às descritas na descrição do desafio de código.
+
+Os desafios apresentados aqui têm como objetivo principal exercitar os conceitos aprendidos e proporcionar um primeiro contato com lógica de programação. Caso não tenha experiência em programação, utilize o template disponível e preencha com os conceitos aprendidos. Para resetar o template, basta clicar em “`Restart Code`”.
