@@ -722,7 +722,16 @@ Além do repositório, o suporte para dúvidas e discussões pode ser realizado 
 
 ## Parte 3 - Set
 
-### 🟩 Vídeo 10 - Coleções com singularidade: Set
+### 🟩 Vídeo 09 - Coleções com singularidade: Set
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 10 - Conhecendo os métodos Set
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_10.webm" type="video/webm">
@@ -731,7 +740,7 @@ Além do repositório, o suporte para dúvidas e discussões pode ser realizado 
 
 link do vídeo:
 
-### 🟩 Vídeo 11 - Conhecendo os métodos Set
+### 🟩 Vídeo 11 - Ordenação de elementos em uma coleção Set
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_11.webm" type="video/webm">
@@ -740,7 +749,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 12 - Ordenação de elementos em uma coleção Set
+### 🟩 Vídeo 12 - Exercícios Propostos Set
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_12.webm" type="video/webm">
@@ -749,7 +758,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 13 - Exercícios Propostos Set
+### 🟩 Vídeo 13 - Set
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_13.webm" type="video/webm">
@@ -758,7 +767,9 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 14 - Set
+## Parte 4 - Map
+
+### 🟩 Vídeo 14 - Coleções de pares: Map
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_14.webm" type="video/webm">
@@ -767,9 +778,7 @@ link do vídeo:
 
 link do vídeo:
 
-## Parte 4 - Map
-
-### 🟩 Vídeo 15 - Coleções de pares: Map
+### 🟩 Vídeo 15 - Conhecendo os métodos Map - parte 1
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_15.webm" type="video/webm">
@@ -778,7 +787,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 16 - Conhecendo os métodos Map - parte 1
+### 🟩 Vídeo 16 - Conhecendo os métodos Map - parte 2
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_16.webm" type="video/webm">
@@ -787,7 +796,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 17 - Conhecendo os métodos Map - parte 2
+### 🟩 Vídeo 17 - Ordenação - Map
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_17.webm" type="video/webm">
@@ -796,7 +805,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 18 - Ordenação - Map
+### 🟩 Vídeo 18 - Exercícios propostos - Map
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_18.webm" type="video/webm">
@@ -805,7 +814,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 19 - Exercícios propostos - Map
+### 🟩 Vídeo 19 - Map
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_19.webm" type="video/webm">
@@ -814,7 +823,9 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 20 - Map
+## Parte 5 - Stream
+
+### 🟩 Vídeo 20 - Visão geral: Stream API - parte 1
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_20.webm" type="video/webm">
@@ -823,9 +834,7 @@ link do vídeo:
 
 link do vídeo:
 
-## Parte 5 - Stream
-
-### 🟩 Vídeo 21 - Visão geral: Stream API - parte 1
+### 🟩 Vídeo 21 - Visão geral: Stream API - parte 2
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_21.webm" type="video/webm">
@@ -834,7 +843,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 22 - Visão geral: Stream API - parte 2
+### 🟩 Vídeo 22 - Principais operações Stream API - parte 1
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_22.webm" type="video/webm">
@@ -843,7 +852,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 23 - Principais operações Stream API - parte 1
+### 🟩 Vídeo 23 - Principais operações Stream API - parte 2
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_23.webm" type="video/webm">
@@ -852,7 +861,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 24 - Principais operações Stream API - parte 2
+### 🟩 Vídeo 24 - Principais operações Stream API - parte 3
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_24.webm" type="video/webm">
@@ -861,7 +870,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 25 - Principais operações Stream API - parte 3
+### 🟩 Vídeo 25 - Conclusão do curso
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_25.webm" type="video/webm">
@@ -870,19 +879,10 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 26 - Conclusão do curso
+### 🟩 Vídeo 26 - Stream
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_26.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
-
-### 🟩 Vídeo 27 - Stream
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_27.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
