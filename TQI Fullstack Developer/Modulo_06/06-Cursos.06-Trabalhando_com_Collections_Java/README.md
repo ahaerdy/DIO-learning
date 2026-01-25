@@ -216,11 +216,13 @@ O vídeo apresenta um tutorial prático sobre a manipulação de listas em Java,
 
 Nesta aula prática, exploramos a interface `List` do Java através da classe `ExemploList`. O objetivo é resolver uma série de exercícios práticos que demonstram a manipulação de coleções de dados, especificamente utilizando uma lista de notas de um aluno.
 
+#### Código Completo
+
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-01-25-15-30-43.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-01-25-15-30-43.png" alt="" width="1024">
 </p>
 
-### Formas de Inicialização de Listas
+#### Formas de Inicialização de Listas
 
 A imagem apresenta diversas maneiras de instanciar e inicializar uma lista em Java, destacando a evolução da linguagem e as boas práticas de programação:
 
@@ -229,7 +231,7 @@ A imagem apresenta diversas maneiras de instanciar e inicializar uma lista em Ja
 * **Programação voltada à Interface:** É recomendado declarar a variável usando a interface `List` e instanciá-la com uma implementação específica, como `ArrayList`, para manter o código flexível.
 * **Métodos Utilitários:** O uso de `Arrays.asList` permite criar listas de forma rápida, porém, dependendo da implementação, a lista resultante pode ter tamanho fixo ou ser imutável, impedindo operações de adição ou remoção de elementos.
 
-### Operações Práticas com ArrayList
+#### Operações Práticas com ArrayList
 
 Após a inicialização da lista `notas`, realizamos as seguintes operações:
 
