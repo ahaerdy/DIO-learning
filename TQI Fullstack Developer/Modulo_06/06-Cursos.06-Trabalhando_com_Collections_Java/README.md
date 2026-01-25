@@ -429,6 +429,258 @@ Além disso, a aula aborda a remoção de elementos. É importante notar a difer
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/72c54080-cbe0-4a60-85b4-d15fb46fb512?autoplay=1
 
+O vídeo demonstra a criação e manipulação de listas em Java, focando na organização de objetos do tipo "Gato" com atributos de nome, idade e cor. São apresentados métodos para adicionar elementos a uma lista, exibir a lista em sua ordem de inserção e embaralhar a ordem dos elementos utilizando a classe Collections.
+
+### Anotações
+
+Nesta aula, exploramos o processo de ordenação de elementos em uma `List` utilizando a linguagem Java. O exemplo prático consiste em organizar uma lista de objetos do tipo `Gato` com base em atributos como nome, idade e cor.
+
+#### 🔴 Código completo
+
+```java
+package br.com.dio.collection.list;
+
+/*Dadas as seguintes informações sobre meus gatos, crie uma lista
+e ordene esta lista exibindo:
+(nome - idade - cor);
+
+Gato 1 = nome: Jon, idade: 18, cor: preto
+Gato 2 = nome: Simba, idade: 6, cor: tigrado
+Gato 3 = nome: Jon, idade: 12, cor: amarelo
+*/
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class ExemploOrdenacaoList {
+    public static void main(String[] args) {
+
+        List<Gato> meusGatos = new ArrayList<>(){{
+            add(new Gato("Jon", 12, "preto"));
+            add(new Gato("Simba", 6, "tigrado"));
+            add(new Gato("Jon", 18, "amarelo"));
+        }};
+        meusGatos.sort(Comparator.comparing(Gato::getNome));
+
+
+        System.out.println("--\tOrdem de Inserção\t---");
+        System.out.println(meusGatos);
+
+        System.out.println("--\tOrdem aleatória\t---");
+        Collections.shuffle(meusGatos);
+        System.out.println(meusGatos);
+
+        System.out.println("--\tOrdem Natural (Nome)\t---");
+        Collections.sort(meusGatos);
+        System.out.println(meusGatos);
+
+        System.out.println("--\tOrdem Idade\t---");
+//        Collections.sort(meusGatos, new ComparatorIdade());
+        meusGatos.sort(new ComparatorIdade());
+        System.out.println(meusGatos);
+
+        System.out.println("--\tOrdem cor\t---");
+//        Collections.sort(meusGatos, new ComparatorCor());
+        meusGatos.sort(new ComparatorCor());
+        System.out.println(meusGatos);
+
+        System.out.println("--\tOrdem Nome/Cor/Idade\t---");
+//        Collections.sort(meusGatos, new ComparatorNomeCorIdade());
+        meusGatos.sort(new ComparatorNomeCorIdade());
+        System.out.println(meusGatos);
+    }
+}
+
+class Gato implements Comparable<Gato>{
+    private String nome;
+    private Integer idade;
+    private String cor;
+
+    public Gato(String nome, Integer idade, String cor) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cor = cor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", cor='" + cor + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Gato gato) {
+        return this.getNome().compareToIgnoreCase(gato.getNome());
+    }
+}
+
+class ComparatorIdade implements Comparator<Gato> {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+}
+
+class ComparatorCor implements Comparator<Gato> {
+
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return g1.getCor().compareToIgnoreCase(g2.getCor());
+    }
+}
+
+class ComparatorNomeCorIdade implements Comparator<Gato> {
+
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        int nome = g1.getNome().compareToIgnoreCase(g2.getNome());
+        if (nome != 0) return nome;
+
+        int cor = g1.getCor().compareToIgnoreCase(g2.getCor());
+        if(cor !=0) return cor;
+
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+
+    }
+}
+```
+
+#### Definição do Modelo e Estrutura Inicial
+
+Para iniciar, é definida a classe `Gato`, que implementa a interface `Comparable` para estabelecer uma **ordem natural** de comparação. A classe possui os atributos `nome`, `idade` e `cor`, acompanhados de seus respectivos métodos construtores e getters.
+
+#### Instanciação e Ordem de Inserção
+
+Os gatos são adicionados a uma `ArrayList` utilizando o método `add`. Por padrão, a `List` mantém os elementos na **ordem de inserção**. Para visualizar os dados corretamente em vez do endereço de memória, o método `toString()` é sobrescrevido na classe.
+
+#### Métodos de Ordenação
+
+A aula demonstra diferentes formas de manipular a ordem da lista:
+
+* **Ordem Aleatória**: Utiliza-se `Collections.shuffle(meusGatos)` para embaralhar os elementos.
+* **Ordem Natural**: Implementada através do método `compareTo` na classe `Gato`, comparando os nomes ignorando maiúsculas e minúsculas (`compareToIgnoreCase`). A ordenação é executada com `Collections.sort(meusGatos)`.
+* **Ordenação por Atributos Específicos (Customizada)**: Para critérios que fogem à ordem natural, criam-se classes que implementam a interface `Comparator`.
+
+#### Implementação de Comparators
+
+Foram criadas classes específicas para lidar com diferentes lógicas de comparação:
+
+* **ComparatorIdade**: Compara os gatos pela idade de forma numérica.
+* **ComparatorCor**: Compara as cores das Strings.
+* **ComparatorNomeCorIdade**: Uma ordenação composta que verifica primeiro o nome; se forem iguais, verifica a cor; e por fim, a idade, garantindo um critério de desempate preciso.
+
+```java
+package br.com.dio.collection;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class ExemploOrdenacaoList {
+    public static void main(String[] args) {
+        List<Gato> meusGatos = new ArrayList<>(){{
+            add(new Gato("Jon", 18, "preto"));
+            add(new Gato("Simba", 6, "tigrado"));
+            add(new Gato("Jon", 12, "amarelo"));
+        }};
+
+        System.out.println("--\tOrdem de Inserção\t---");
+        System.out.println(meusGatos);
+
+        System.out.println("--\tordem aleatória\t--");
+        Collections.shuffle(meusGatos);
+        System.out.println(meusGatos);
+
+        System.out.println("--\tordem Natural (Nome)\t---");
+        Collections.sort(meusGatos);
+        System.out.println(meusGatos);
+
+        System.out.println("--\tordem Idade\t---");
+        meusGatos.sort(new ComparatorIdade());
+        System.out.println(meusGatos);
+
+        System.out.println("--\tOrdem cor\t---");
+        meusGatos.sort(new ComparatorCor());
+        System.out.println(meusGatos);
+
+        System.out.println("--\tOrdem Nome/Cor/Idade\t---");
+        meusGatos.sort(new ComparatorNomeCorIdade());
+        System.out.println(meusGatos);
+    }
+}
+
+class Gato implements Comparable<Gato>{
+    private String nome;
+    private Integer idade;
+    private String cor;
+
+    public Gato(String nome, Integer idade, String cor) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cor = cor;
+    }
+
+    public String getNome() { return nome; }
+    public Integer getIdade() { return idade; }
+    public String getCor() { return cor; }
+
+    @Override
+    public String toString() {
+        return "{" + "nome='" + nome + '\'' + ", idade=" + idade + ", cor='" + cor + '\'' + '}';
+    }
+
+    @Override
+    public int compareTo(Gato gato) {
+        return this.getNome().compareToIgnoreCase(gato.getNome());
+    }
+}
+
+class ComparatorIdade implements Comparator<Gato> {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+}
+
+class ComparatorCor implements Comparator<Gato> {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return g1.getCor().compareToIgnoreCase(g2.getCor());
+    }
+}
+
+class ComparatorNomeCorIdade implements Comparator<Gato> {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        int nome = g1.getNome().compareToIgnoreCase(g2.getNome());
+        if (nome != 0) return nome;
+
+        int cor = g1.getCor().compareToIgnoreCase(g2.getCor());
+        if (cor != 0) return cor;
+
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+}
+
+```      
 
 
 ### 🟩 Vídeo 07 - Ordenação de elementos em uma coleção List - parte 2
