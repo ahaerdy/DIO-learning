@@ -216,6 +216,10 @@ O vídeo apresenta um tutorial prático sobre a manipulação de listas em Java,
 
 Nesta aula prática, exploramos a interface `List` do Java através da classe `ExemploList`. O objetivo é resolver uma série de exercícios práticos que demonstram a manipulação de coleções de dados, especificamente utilizando uma lista de notas de um aluno.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-01-25-15-30-43.png" alt="" width="480">
+</p>
+
 ### Formas de Inicialização de Listas
 
 A imagem apresenta diversas maneiras de instanciar e inicializar uma lista em Java, destacando a evolução da linguagem e as boas práticas de programação:
@@ -274,9 +278,7 @@ class ExemploList {
         System.out.println(notas.toString());
     }
 }
-
 ```
-
 
 ### 🟩 Vídeo 05 - Conhecendo os métodos List - parte 2
 
