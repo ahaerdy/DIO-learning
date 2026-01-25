@@ -216,7 +216,7 @@ O vídeo apresenta um tutorial prático sobre a manipulação de listas em Java,
 
 Nesta aula prática, exploramos a interface `List` do Java através da classe `ExemploList`. O objetivo é resolver uma série de exercícios práticos que demonstram a manipulação de coleções de dados, especificamente utilizando uma lista de notas de um aluno.
 
-#### Código Completo
+#### 🟡 Código Completo
 
 ```java
 package br.com.dio.collection.list;
