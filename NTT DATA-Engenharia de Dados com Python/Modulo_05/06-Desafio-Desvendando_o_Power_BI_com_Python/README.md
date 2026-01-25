@@ -58,7 +58,7 @@ entrada = input()
 
 print(identificar_termo_bi(entrada))
 ```
-# Desafio 1 - Fundamentos sobre ETL
+# Desafio 2 - Fundamentos sobre ETL
 
 ## Descrição
 
