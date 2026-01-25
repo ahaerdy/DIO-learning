@@ -210,6 +210,74 @@ As implementações mais comuns possuem características distintas de performanc
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/5d2b4933-e791-4f57-b39e-cb044f774b75?autoplay=1
 
+O vídeo apresenta um tutorial prático sobre a manipulação de listas em Java, demonstrando a criação, adição, remoção, substituição e verificação de elementos em uma lista de números do tipo double. São exploradas diferentes formas de inicialização de listas, incluindo o uso de ArrayList e a importância de programar voltado para interfaces, além de abordar conceitos como Generics e o Diamond Operator.
+
+### Anotações
+
+Nesta aula prática, exploramos a interface `List` do Java através da classe `ExemploList`. O objetivo é resolver uma série de exercícios práticos que demonstram a manipulação de coleções de dados, especificamente utilizando uma lista de notas de um aluno.
+
+### Formas de Inicialização de Listas
+
+A imagem apresenta diversas maneiras de instanciar e inicializar uma lista em Java, destacando a evolução da linguagem e as boas práticas de programação:
+
+* **Antes do Java 5:** Utilizava-se a declaração bruta sem Generics.
+* **Generics e Diamond Operator:** Introduzidos para garantir a segurança de tipos. O Diamond Operator (`<>`), disponível a partir do Java 7, simplifica a escrita ao não exigir a repetição do tipo no lado direito da atribuição.
+* **Programação voltada à Interface:** É recomendado declarar a variável usando a interface `List` e instanciá-la com uma implementação específica, como `ArrayList`, para manter o código flexível.
+* **Métodos Utilitários:** O uso de `Arrays.asList` permite criar listas de forma rápida, porém, dependendo da implementação, a lista resultante pode ter tamanho fixo ou ser imutável, impedindo operações de adição ou remoção de elementos.
+
+### Operações Práticas com ArrayList
+
+Após a inicialização da lista `notas`, realizamos as seguintes operações:
+
+1. **Adição de Elementos:** Utilizamos o método `add(Double)` para inserir as sete notas individualmente.
+2. **Exibição da Posição:** O método `indexOf(5d)` é utilizado para localizar o índice da primeira ocorrência da nota 5.0.
+3. **Inserção em Posição Específica:** O método `add(int index, Double element)` insere um valor em uma posição determinada, deslocando os elementos subsequentes.
+4. **Substituição:** O método `set(int index, Double element)` substitui o valor existente em uma posição específica. No exemplo, a nota 5.0 foi substituída por 6.0.
+5. **Verificação de Conteúdo:** O método `contains(Object)` retorna um valor booleano indicando se o elemento está presente na lista.
+
+```java
+package br.com.dio.collection.list;
+
+import java.util.*;
+
+class ExemploList {
+    public static void main(String[] args) {
+        // Dada uma lista com 7 notas de um aluno (7, 8.5, 9.3, 5, 7, 0, 3.6), faça:
+
+        System.out.println("Crie uma lista e adicione as sete notas: ");
+        List<Double> notas = new ArrayList<Double>(); 
+        notas.add(7.0);
+        notas.add(8.5);
+        notas.add(9.3);
+        notas.add(5.0);
+        notas.add(7.0);
+        notas.add(0.0);
+        notas.add(3.6);
+        System.out.println(notas.toString());
+
+        System.out.println("Exiba a posição da nota 5.0: " + notas.indexOf(5d));
+
+        System.out.println("Adicione na lista a nota 8.0 na posição 4: ");
+        notas.add(4, 8d);
+        System.out.println(notas);
+
+        System.out.println("Substitua a nota 5.0 pela nota 6.0: ");
+        notas.set(notas.indexOf(5d), 6.0);
+        System.out.println(notas);
+
+        System.out.println("Confira se a nota 5.0 está na lista: " + notas.contains(5d));
+
+        System.out.println("Exiba todas as notas na ordem em que foram informados: ");
+        for (Double nota : notas) System.out.println(nota);
+
+        System.out.println("Exiba a terceira nota adicionada: " + notas.get(2));
+        System.out.println(notas.toString());
+    }
+}
+
+```
+
+
 ### 🟩 Vídeo 05 - Conhecendo os métodos List - parte 2
 
 <video width="60%" controls>
@@ -217,7 +285,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/e383c216-1786-4505-80a6-f3f87db7238d?autoplay=1
 
 ### 🟩 Vídeo 06 - Ordenação de elementos em uma coleção List - parte 1
 
