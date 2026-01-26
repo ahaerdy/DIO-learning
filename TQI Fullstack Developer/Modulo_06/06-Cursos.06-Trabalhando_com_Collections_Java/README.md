@@ -1546,6 +1546,60 @@ O desafio final proposto consiste em realizar a ordenação pelo número de pág
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/93d1881d-5c1b-41d4-92df-fa970c91742b?autoplay=1
 
+Este vídeo marca o final de uma aula, introduzindo uma série de exercícios práticos e um desafio adicional, focados principalmente na manipulação de dicionários em Python e na simulação de eventos aleatórios.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-19h35m51s571.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, iniciamos os exercícios propostos focados na manipulação de coleções. O objetivo é praticar a estrutura de dicionários utilizando dados demográficos reais de estados do Nordeste brasileiro.
+
+As tarefas iniciais consistem em:
+
+1. **Criação do dicionário**: Relacionar os estados (chaves) às suas respectivas populações (valores).
+2. **Atualização de dados**: Corrigir a população do Rio Grande do Norte (RN).
+3. **Verificação e inserção**: Checar a existência do estado da Paraíba (PB) no dicionário e adicioná-lo caso não esteja presente.
+
+**Dados para o exercício:**
+
+* PE: 9.616.621 
+* AL: 3.351.543 
+* CE: 9.187.103 
+* RN: 3.534.265 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-19h36m01s158.jpg" alt="" width="840">
+</p>
+
+Dando continuidade aos exercícios de fixação, são propostas operações avançadas de visualização, cálculo e filtragem sobre o dicionário de estados criado anteriormente:
+
+* **Ordenação**: Exibir os dados na ordem de inserção e também em ordem alfabética. 
+* **Análise de Extremos**: Identificar e exibir os estados com a menor e a maior população. 
+* **Operações Matemáticas**: Calcular a soma total e a média da população de todos os estados listados. 
+* **Limpeza de Dados**: Remover entradas com população inferior a 4.000.000 e, por fim, esvaziar o dicionário completamente para validar se ele ficou vazio. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-19h36m04s962.jpg" alt="" width="840">
+</p>
+
+Além dos exercícios estruturados, é apresentado um desafio de lógica de programação para simular o lançamento de dados. O objetivo é trabalhar com geração de números aleatórios e contagem de frequência:
+
+* **Simulação**: Lançar um dado de 6 faces 100 vezes. 
+* **Armazenamento**: Guardar todos os resultados obtidos. 
+* **Análise**: Contabilizar e mostrar quantas vezes cada face (valor) do dado apareceu durante as 100 iterações. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-19h36m10s517.jpg" alt="" width="840">
+</p>
+
+Para aprofundar o conhecimento em ordenação de coleções complexas, são sugeridos cenários onde a chave ou o valor não são tipos primitivos simples (como String ou Integer), mas sim objetos:
+
+1. **Chave (Objeto) + valor (Set de Objetos)**: Útil para estruturas de dados onde uma entidade principal mapeia para um conjunto de sub-entidades. 
+2. **Chave (Objeto) + valor (Objeto)**: Quando a relação de mapeamento ocorre diretamente entre dois objetos complexos. 
+
+Estes exemplos visam preparar o desenvolvedor para situações reais de mercado onde a estrutura de dados exige maior complexidade técnica do que o uso de tipos básicos.
 
 
 ## Parte 5 - Stream
