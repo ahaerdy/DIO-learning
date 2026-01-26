@@ -1342,7 +1342,9 @@ Além das operações básicas, o código demonstra como encontrar valores extre
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/961c9cdc-fd2d-459f-b4dd-95892ad88552?autoplay=1
+
+
 
 ### 🟩 Vídeo 16 - Ordenação - Map
 
