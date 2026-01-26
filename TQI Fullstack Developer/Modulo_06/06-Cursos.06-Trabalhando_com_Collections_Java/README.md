@@ -1108,6 +1108,39 @@ Para aplicar essa lógica, passamos uma instância do comparador no construtor d
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/fcf392c8-9c8a-45dd-8146-b64d0e342ff0?autoplay=1
 
+Este módulo foca na aplicação prática dos conceitos de conjuntos (Set) na linguagem Java. O instrutor propõe dois desafios principais que visam consolidar o conhecimento sobre manipulação, ordenação e filtragem de dados que não permitem duplicidade.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-16h28m53s076.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta uma série de exercícios propostos para consolidar o conhecimento sobre a interface `Set` em Java. O desafio principal consiste em criar um conjunto para armazenar as cores do arco-íris e realizar diversas operações de manipulação e exibição.
+
+Os objetivos práticos incluem:
+
+* **Exibição e Contagem:** Listar todas as cores, uma abaixo da outra, e verificar a quantidade total de elementos que o conjunto possui.
+* **Ordenação:** Exibir os dados em ordem alfabética e na ordem inversa à da que foi informada.
+* **Filtragem:** Selecionar e exibir apenas as cores que começam com a letra "v", além de remover do conjunto todas as cores que não atendem a esse critério.
+* **Gerenciamento de Estado:** Limpar completamente o conjunto e conferir se a estrutura ficou vazia.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-16h28m57s544.jpg" alt="" width="840">
+</p>
+
+Esta imagem detalha um exercício focado na ordenação de objetos personalizados dentro de coleções. O objetivo é criar uma classe chamada `LinguagemFavorita` contendo os atributos `nome`, `anoDeCriacao` e `ide`.
+
+Após criar um conjunto com três linguagens, o programa deve ordenar essa coleção seguindo diferentes critérios:
+
+* **Ordem de Inserção:** Mantendo a sequência em que os elementos foram adicionados ao conjunto.
+* **Ordem Natural:** Realizando a ordenação baseada no atributo `nome`.
+* **IDE:** Ordenando os elementos pelo nome da IDE utilizada.
+* **Critérios Compostos:** Ordenações combinadas por `Ano de criação e nome`, ou por `Nome, ano de criação e IDE`.
+
+Ao final, o programa deve exibir as linguagens no console, uma abaixo da outra, para validar os resultados das ordenações aplicadas.
+
+
 ### 🟩 Vídeo 13 - Set
 
 <video width="60%" controls>
