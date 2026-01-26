@@ -2,6 +2,7 @@
 
 - Camila Cavalcante (Software Developer @ Reclame AQUI | Full Stack | Java | Kotlin | Go | TypeScript | PHP)
 - Contato Linkedin: / [cami-la](https://www.linkedin.com/in/cami-la/)
+- Repositório dos exercícios usados neste curso: https://github.com/ahaerdy/fork-DIO-curso-dio-intro-collections 
 
 ## Parte 1 - Introdução do Curso
 
@@ -771,6 +772,8 @@ A hierarquia de classes e interfaces define o comportamento de cada implementaç
 </video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/e28b9311-8659-4fe4-a4e1-f4ce47a9210d?autoplay=1
+
+
 
 ### 🟩 Vídeo 11 - Ordenação de elementos em uma coleção Set
 
