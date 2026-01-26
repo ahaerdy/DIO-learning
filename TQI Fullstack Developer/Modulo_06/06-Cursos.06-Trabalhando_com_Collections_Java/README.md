@@ -908,6 +908,197 @@ Para contornar a natureza aleatória do `HashSet`, utilizamos outras implementa�
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/2b0fd52a-7424-4bf7-89be-376483007b3d?autoplay=1
 
+Este guia resume a aula prática sobre como criar, manipular e ordenar coleções do tipo Set em Java, utilizando como exemplo um conjunto de séries de TV. O foco principal é entender as diferenças entre HashSet, LinkedHashSet e TreeSet, além da implementação das interfaces Comparable e Comparator.
+
+### Anotações
+
+Nesta aula, exploramos a ordenação de conjuntos (`Set`) em Java utilizando diferentes implementações e critérios. O objetivo inicial é criar um conjunto de séries favoritas contendo nome, gênero e tempo de episódio, para então exibir esses dados em ordens variadas: aleatória, de inserção e natural. 
+
+```java
+package br.com.dio.collection.set;
+
+/*Dadas as seguintes informações sobre minhas séries favoritas,
+crie um conjunto e ordene este conjunto exibindo:
+(nome - genero - tempo de episódio);
+
+Série 1 = Nome: got, genero: fantasia, tempoEpisodio: 60
+Série 2 = nome: dark, genero: drama, tempoEpisodio: 60
+Série 3 = nome: that '70s show, genero: comédia, tempoEpisodio: 25
+*/
+
+import java.util.*;
+
+public class ExemploOrdenacaoSet {
+    public static void main(String[] args) {
+
+        System.out.println("--\tOrdem aleatória\t--");
+        Set<Serie> minhasSeries = new HashSet<>(){{
+            add(new Serie("got", "fantasia", 60));
+            add(new Serie("dark", "drama", 60));
+            add(new Serie("that '70s show", "comédia", 25));
+        }};
+        for (Serie serie: minhasSeries) System.out.println(serie.getNome() + " - "
+                + serie.getGenero() + " - " + serie.getTempoEpisodio());
+
+        System.out.println("--\tOrdem inserção\t--");
+        Set<Serie> minhasSeries1 = new LinkedHashSet<>() {{
+            add(new Serie("got", "fantasia", 60));
+            add(new Serie("dark", "drama", 60));
+            add(new Serie("that '70s show", "comédia", 25));
+        }};
+        for (Serie serie: minhasSeries1) System.out.println(serie.getNome() + " - "
+                + serie.getGenero() + " - " + serie.getTempoEpisodio());
+
+        System.out.println("--\tOrdem natural (TempoEpisodio)\t--");
+        Set<Serie> minhasSeries2 = new TreeSet<>(minhasSeries1);
+        for (Serie serie: minhasSeries2) System.out.println(serie.getNome() + " - "
+                + serie.getGenero() + " - " + serie.getTempoEpisodio());
+
+        System.out.println("--\tOrdem Nome/Gênero/TempoEpisodio\t--");
+        Set<Serie> minhasSeries3 = new TreeSet<>(new ComparatorNomeGeneroTempoEpisodio());
+        minhasSeries3.addAll(minhasSeries);
+        for (Serie serie: minhasSeries3) System.out.println(serie.getNome() + " - "
+                + serie.getGenero() + " - " + serie.getTempoEpisodio());
+
+//Pra você
+/*        System.out.println("--\tOrdem gênero\t--");
+
+          System.out.println("--\tOrdem Tempo Episódio\t--");
+ */
+
+    }
+}
+
+class Serie implements Comparable<Serie>{
+    private String nome;
+    private String genero;
+    private Integer tempoEpisodio;
+
+    public Serie(String nome, String genero, Integer tempoEpisodio) {
+        this.nome = nome;
+        this.genero = genero;
+        this.tempoEpisodio = tempoEpisodio;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public Integer getTempoEpisodio() {
+        return tempoEpisodio;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "nome='" + nome + '\'' +
+                ", genero='" + genero + '\'' +
+                ", tempoEpisodio=" + tempoEpisodio +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Serie serie = (Serie) o;
+        return nome.equals(serie.nome) && genero.equals(serie.genero) && tempoEpisodio.equals(serie.tempoEpisodio);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, genero, tempoEpisodio);
+    }
+
+    @Override
+    public int compareTo(Serie serie) {
+        int tempoEpisodio = Integer.compare(this.getTempoEpisodio(), serie.getTempoEpisodio());
+        if (tempoEpisodio != 0) return tempoEpisodio;
+
+        return this.getGenero().compareTo(serie.getGenero());
+    }
+}
+
+class ComparatorNomeGeneroTempoEpisodio implements Comparator<Serie>{
+
+    @Override
+    public int compare(Serie s1, Serie s2) {
+        int nome = s1.getNome().compareTo(s2.getNome());
+        if (nome != 0) return nome;
+
+        int genero = s1.getGenero().compareTo(s2.getGenero());
+        if (genero != 0) return genero;
+
+        return Integer.compare(s1.getTempoEpisodio(), s2.getTempoEpisodio());
+    }
+}
+```
+
+#### Definição da Classe Base e Ordem Aleatória
+
+Para manipular os dados, criamos a classe `Serie` com os atributos `nome`, `genero` e `tempoEpisodio`. É fundamental sobrescrever os métodos `equals` e `hashCode`, garantindo que o conjunto identifique corretamente objetos únicos, especialmente ao utilizar implementações "hash". 
+
+Utilizamos o `HashSet` para a primeira exibição. Esta implementação não garante nenhuma ordem específica, resultando em uma disposição aleatória dos elementos ao imprimir o conjunto. 
+
+```java
+public class ExemploOrdenacaoSet {
+    public static void main(String[] args) {
+        System.out.println("--\tordem aleatória\t--");
+        Set<Serie> minhasSeries = new HashSet<>(){{
+            add(new Serie("got", "fantasia", 68));
+            add(new Serie("dark", "drama", 60));
+            add(new Serie("that '70s show", "comédia", 25));
+        }};
+        for (Serie serie : minhasSeries) System.out.println(serie.getNome() + " - " 
+            + serie.getGenero() + " - " + serie.getTempoEpisodio());
+    }
+}
+
+```
+
+#### Ordem de Inserção e Ordem Natural
+
+Para manter os elementos na ordem em que foram adicionados, utilizamos o `LinkedHashSet`. Já para a **ordem natural**, empregamos o `TreeSet`. Para que o `TreeSet` funcione, a classe `Serie` deve implementar a interface `Comparable`, definindo o critério de comparação (neste caso, o `tempoEpisodio`). 
+
+Um detalhe importante no `TreeSet` é que, se dois objetos possuem o mesmo valor no critério de comparação (como séries com o mesmo tempo de episódio), o `Set` descartará um deles por considerá-los iguais. Para evitar isso, adicionamos um critério de desempate, como o gênero. 
+
+```java
+// Implementação do Comparable na classe Serie
+public int compareTo(Serie serie) {
+    int tempoEpisodio = Integer.compare(this.getTempoEpisodio(), serie.getTempoEpisodio());
+    if (tempoEpisodio != 0) return tempoEpisodio;
+    return this.getGenero().compareTo(serie.getGenero());
+}
+
+```
+
+#### Ordenação Personalizada com Comparator
+
+Quando precisamos de uma ordenação que foge à regra natural, criamos uma classe que implementa `Comparator`. No exemplo `ComparatorNomeGeneroTempoEpisodio`, definimos uma hierarquia de comparação: primeiro pelo nome, depois pelo gênero e, por fim, pelo tempo de episódio. 
+
+```java
+class ComparatorNomeGeneroTempoEpisodio implements Comparator<Serie> {
+    @Override
+    public int compare(Serie s1, Serie s2) {
+        int nome = s1.getNome().compareTo(s2.getNome());
+        if (nome != 0) return nome;
+
+        int genero = s1.getGenero().compareTo(s2.getGenero());
+        if (genero != 0) return genero;
+
+        return Integer.compare(s1.getTempoEpisodio(), s2.getTempoEpisodio());
+    }
+}
+
+```
+
+Para aplicar essa lógica, passamos uma instância do comparador no construtor do `TreeSet` e utilizamos o método `addAll` para povoar o novo conjunto organizado. 
+
+
 ### 🟩 Vídeo 12 - Exercícios Propostos Set
 
 <video width="60%" controls>
@@ -915,7 +1106,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/fcf392c8-9c8a-45dd-8146-b64d0e342ff0?autoplay=1
 
 ### 🟩 Vídeo 13 - Set
 
