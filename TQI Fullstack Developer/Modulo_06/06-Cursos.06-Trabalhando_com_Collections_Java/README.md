@@ -729,7 +729,9 @@ Além do repositório, o suporte para dúvidas e discussões pode ser realizado 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/f9fb3d0e-8999-4a2a-8735-24144ae40d8e?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Conhecendo os métodos Set
 
@@ -738,7 +740,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/e28b9311-8659-4fe4-a4e1-f4ce47a9210d?autoplay=1
 
 ### 🟩 Vídeo 11 - Ordenação de elementos em uma coleção Set
 
