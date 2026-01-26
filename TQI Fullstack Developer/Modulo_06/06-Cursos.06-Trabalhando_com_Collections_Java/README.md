@@ -773,6 +773,130 @@ A hierarquia de classes e interfaces define o comportamento de cada implementaç
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/e28b9311-8659-4fe4-a4e1-f4ce47a9210d?autoplay=1
 
+O vídeo apresenta uma comparação prática entre as interfaces List e Set. Embora ambas herdem de Collection, o Set possui características únicas: não permite elementos duplicados e, em sua implementação padrão (HashSet), não garante a ordem dos elementos. A aula demonstra como realizar operações comuns (soma, média, busca, remoção) e como escolher a implementação correta de acordo com a necessidade de ordenação.
+
+### Anotações
+
+Nesta aula, exploramos a implementação da interface `Set` em Java, utilizando como base um exercício prático com notas de alunos. O objetivo principal é destacar as diferenças fundamentais entre `List` e `Set`, observando como os conjuntos lidam com a ordenação e a duplicidade de elementos. 
+
+```java
+package br.com.dio.collection.set;
+
+
+import java.util.*;
+
+public class ExemploSet {
+    public static void main(String[] args) {
+// Dada uma lista com 7 notas de um aluno [7, 8.5, 9.3, 5, 7, 0, 3.6], faça:
+
+//      Set notas = new HashSet(); //antes do java 5
+//      HashSet<Double> notas = new HashSet<>();
+//      Set<Double> notas = new HashSet<>(); //Generics(jdk 5) - Diamont Operator(jdk 7)
+/*      Set<Double> notas = Set.of(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6);
+        notas.add(1d);
+        notas.remove(5d);
+        System.out.println(notas);
+*/
+
+        System.out.println("Crie um conjunto e adicione as notas: ");
+        Set<Double> notas = new HashSet<>(Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6));
+        System.out.println(notas.toString());
+
+//        System.out.println("Exiba a posição da nota 5.0: ");
+
+//        System.out.println("Adicione na lista a nota 8.0 na posição 4: ");
+
+//        System.out.println("Substitua a nota 5.0 pela nota 6.0: ");
+
+        System.out.println("Confira se a nota 5.0 está no conjunto: " + notas.contains(5d));
+
+//        System.out.println("Exiba a terceira nota adicionada: ");
+
+        System.out.println("Exiba a menor nota: " + Collections.min(notas));
+
+        System.out.println("Exiba a maior nota: " + Collections.max(notas));
+
+        Iterator<Double> iterator = notas.iterator();
+        Double soma = 0.0;
+        while(iterator.hasNext()) {
+            Double next = iterator.next();
+            soma += next;
+        }
+        System.out.println("Exiba a soma dos valores: " + soma);
+
+        System.out.println("Exiba a média das notas: " + (soma/ notas.size()));
+
+        System.out.println("Remova a nota 0: ");
+        notas.remove(0d);
+        System.out.println(notas);
+
+//        System.out.println("Remova a nota da posição 0");
+
+        System.out.println("Remova as notas menores que 7 e exiba a lista: ");
+        Iterator<Double> iterator1 = notas.iterator();
+        while(iterator1.hasNext()){
+            Double next = iterator1.next();
+            if (next < 7) iterator1.remove();
+        }
+        System.out.println(notas);
+
+        System.out.println("Exiba todas as notas na ordem em que foram informados: ");
+        Set<Double> notas2 = new LinkedHashSet<>();
+        notas2.add(7d);
+        notas2.add(8.5);
+        notas2.add(9.3);
+        notas2.add(5d);
+        notas2.add(7d);
+        notas2.add(0d);
+        notas2.add(3.6);
+        System.out.println(notas2);
+
+        System.out.println("Exiba todas as notas na ordem crescente: ");
+        Set<Double> notas3 = new TreeSet<>(notas2);
+        System.out.println(notas3);
+
+        System.out.println("Apague todo o conjunto");
+        notas.clear();
+
+        System.out.println("Confira se o conjunto está vazio: " + notas.isEmpty());
+        System.out.println("Confira se o conjunto 2 está vazio: " + notas2.isEmpty());
+        System.out.println("Confira se o conjunto 3 está vazio: " + notas3.isEmpty());
+
+    }
+}
+```
+
+#### Inicialização e Características do HashSet
+
+A imagem demonstra diferentes formas de inicializar um `Set`, desde sintaxes anteriores ao Java 5 até o uso de **Generics** e do **Diamond Operator**. Na prática principal, utilizamos a implementação `HashSet`. 
+
+Ao adicionar os elementos `[7, 8.5, 9.3, 5, 7, 0, 3.6]` ao `HashSet`, observamos comportamentos específicos: 
+
+* **Não ordenação:** Os elementos são exibidos em ordem aleatória, pois o `HashSet` não garante a ordem de inserção.
+* **Unicidade:** O valor `7` (repetido na lista original) é inserido apenas uma vez no conjunto. [00:01:00, cite: 17, 116]
+
+#### Limitações de Acesso por Índice
+
+Diferente das listas, a interface `Set` (especialmente no `HashSet`) não permite buscas ou manipulações baseadas em posição ou índice.
+
+* Não existe o método `get(index)`, impossibilitando exibir a "terceira nota adicionada" ou a "nota na posição 4".
+* Não é possível substituir um valor em uma posição específica via método `set`.
+
+#### Operações com Collections e Iterator
+
+Apesar das restrições de índice, podemos realizar operações comuns a todas as `Collection`:
+
+* **Busca:** O método `contains(5d)` retorna `true` se o elemento estiver presente. [00:02:30, cite: 42, 43]
+* **Análise:** Métodos como `Collections.min(notas)` e `Collections.max(notas)` funcionam normalmente para encontrar os valores extremos. [00:02:30, 00:03:00, cite: 50, 54]
+* **Soma e Média:** Utilizamos um `Iterator` para percorrer o conjunto e acumular os valores na variável `soma`, dividindo posteriormente pelo `size()` para obter a média. [00:03:30, 00:04:30, cite: 57, 58, 81, 82]
+* **Remoção Condicional:** Também via `Iterator`, é possível remover elementos que atendam a um critério (ex: notas menores que 7). [00:05:30, cite: 87, 96]
+
+#### Preservando a Ordem e Ordenação Natural
+
+Para contornar a natureza aleatória do `HashSet`, utilizamos outras implementações:
+
+* **LinkedHashSet:** Mantém a ordem em que os elementos foram informados. [00:06:00, cite: 106]
+* **TreeSet:** Armazena os elementos seguindo sua ordem natural (crescente). 
 
 
 ### 🟩 Vídeo 11 - Ordenação de elementos em uma coleção Set
