@@ -1150,7 +1150,9 @@ Ao final, o programa deve exibir as linguagens no console, uma abaixo da outra, 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/67376a55-e735-4b35-8b33-323cf5e0e74e?autoplay=1
+
+
 
 ### 🟩 Vídeo 14 - Conhecendo os métodos Map - parte 1
 
@@ -1240,15 +1242,6 @@ link do vídeo:
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_23.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
-
-### 🟩 Vídeo 24 - Stream
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_24.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
