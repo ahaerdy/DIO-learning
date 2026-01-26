@@ -76,8 +76,6 @@ Muito bem, a terceira página é composta por:
 - **Visual mapa 2:** Soma de lucro (profit) por país  
 - **Visual de pizza:** Lucro por segmento
 
+## Projeto entregue
 
-# Certificado: Analisando dados de um Dashboard de Vendas no Power BI
-
-- Link na plataforma: 
-- Certificado em pdf: 
+Link : https://github.com/ahaerdy/DIO-projeto-powerbi-financials

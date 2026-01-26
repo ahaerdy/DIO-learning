@@ -114,7 +114,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Fundamentos Teóricos Sobre ETL](Modulo_05/03-Curso.03-Fundamentos_Teoricos_Sobre_ETL)
 - [ ] Curso: [Primeiros Passos com Power BI](Modulo_05/04-Curso.04-Primeiros_Passos_com_Power_BI)
 - [ ] Projeto: [Analisando dados de um Dashboard de Vendas no Power BI](Modulo_05/05-Projeto-Analisando_dados_de_um_Dashboard_de_Vendas_no_Power_BI)
-  - Repositório: [Relatório de Vendas e Lucro com Power BI](https://github.com/ahaerdy/projeto-powerbi-financials)
+  - Repositório: [Relatório de Vendas e Lucro com Power BI](https://github.com/ahaerdy/DIO-projeto-powerbi-financials)
   - Descrição: Desenvolvimento de um dashboard estratégico no Power BI para análise de performance comercial, transformando os dados do arquivo financials.csv em insights acionáveis sobre vendas e lucratividade global. Através da criação de três páginas de relatórios, incluindo uma análise geoespacial autônoma com mapas de bolhas, foi possível identificar disparidades entre volume de vendas e lucro real, destacando a eficiência por segmento e país para suporte à tomada de decisão.
 - [ ] Desafio: [Desvendando o Power BI com Python](Modulo_05/06-Desafio-Desvendando_o_Power_BI_com_Python)
 
