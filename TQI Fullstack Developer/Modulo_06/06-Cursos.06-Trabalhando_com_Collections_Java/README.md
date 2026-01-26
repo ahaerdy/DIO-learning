@@ -1344,7 +1344,64 @@ Além das operações básicas, o código demonstra como encontrar valores extre
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/961c9cdc-fd2d-459f-b4dd-95892ad88552?autoplay=1
 
+Este vídeo demonstra diversas operações e métodos úteis para manipular estruturas de dados do tipo Map em Java, focando em como extrair, processar e organizar informações de um dicionário de carros (modelo e consumo)
 
+### Anotações
+
+Nesta etapa da aula, exploramos operações avançadas com a interface `Map` em Java, focando em como manipular coleções de dados de forma mais granular. O exemplo utiliza um dicionário de carros populares e seus respectivos consumos de combustível para demonstrar métodos de busca, iteração e ordenação. 
+
+### Identificando Extremos e Manipulando Entradas
+
+Para encontrar o modelo menos econômico, utilizamos a classe `Collections.min()` aplicada aos valores do Map (`carrosPopulares.values()`). No entanto, como o método `values()` retorna apenas os números, é necessário utilizar o método `entrySet()` para obter um conjunto de entradas (`Map.Entry`) que vinculam a chave (modelo) ao valor (consumo).
+
+Ao iterar sobre esse conjunto, comparamos o valor de cada entrada com o valor mínimo encontrado. Quando há uma correspondência, extraímos a chave associada através do método `getKey()`.
+
+### Cálculos Agregados e Iteração
+
+Para somar os consumos e calcular a média, utilizamos um `Iterator`. O iterador percorre a `Collection` de valores, acumulando a soma em uma variável. A média é obtida dividindo-se o total acumulado pelo tamanho do dicionário (`size()`).
+
+### Remoção e Ordenação
+
+A remoção de itens com base em um critério específico (neste caso, consumo igual a 15,6 km/l) também é realizada via `Iterator`, garantindo que a estrutura do Map não sofra erros de concorrência durante a exclusão.
+
+Para organizar a exibição dos dados:
+
+* **LinkedHashMap**: Utilizado para exibir os elementos na ordem exata em que foram inseridos.
+* **TreeMap**: Utilizado para ordenar o dicionário automaticamente de acordo com a ordem natural das chaves (ordem alfabética dos modelos).
+
+Por fim, o método `clear()` é demonstrado para esvaziar o dicionário, seguido de `isEmpty()` para validar que a estrutura não contém mais elementos.
+
+```java
+// Exemplo de manipulação de Map com Java
+Map<String, Double> carrosPopulares = new HashMap<>() {{
+    put("gol", 14.4);
+    put("uno", 15.6);
+    put("mobi", 16.1);
+    put("hb20", 14.5);
+    put("kwid", 15.6);
+}};
+
+// Encontrando o modelo menos eficiente
+Double consumoMenosEficiente = Collections.min(carrosPopulares.values());
+String modeloMenosEficiente = "";
+for (Map.Entry<String, Double> entry : carrosPopulares.entrySet()) {
+    if (entry.getValue().equals(consumoMenosEficiente)) {
+        modeloMenosEficiente = entry.getKey();
+        System.out.println("Modelo menos eficiente: " + modeloMenosEficiente + " - " + consumoMenosEficiente);
+    }
+}
+
+// Removendo modelos com consumo específico
+Iterator<Double> iterator1 = carrosPopulares.values().iterator();
+while(iterator1.hasNext()){
+    if(iterator1.next().equals(15.6)) iterator1.remove();
+}
+
+// Ordenação com TreeMap
+Map<String, Double> carrosPopulares2 = new TreeMap<>(carrosPopulares);
+System.out.println(carrosPopulares2.toString());
+
+```
 
 ### 🟩 Vídeo 16 - Ordenação - Map
 
@@ -1353,7 +1410,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/9b8bf5b4-b3df-4ed8-8dd9-5f65cef933be?autoplay=1
+
+
 
 ### 🟩 Vídeo 17 - Exercícios propostos - Map
 
