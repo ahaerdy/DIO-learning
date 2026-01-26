@@ -782,7 +782,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/2b0fd52a-7424-4bf7-89be-376483007b3d?autoplay=1
 
 ### 🟩 Vídeo 12 - Exercícios Propostos Set
 
@@ -791,7 +791,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 13 - Set
 
