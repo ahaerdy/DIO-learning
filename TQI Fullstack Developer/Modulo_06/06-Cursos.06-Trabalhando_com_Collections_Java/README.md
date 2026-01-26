@@ -1152,6 +1152,64 @@ Ao final, o programa deve exibir as linguagens no console, uma abaixo da outra, 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/67376a55-e735-4b35-8b33-323cf5e0e74e?autoplay=1
 
+Este vídeo aborda a interface Map em Java, suas características, implementações comuns (HashMap, LinkedHashMap, TreeMap) e um comparativo entre elas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-18h23m49s082.jpg" alt="" width="840">
+</p>
+
+### Introdução à Interface Map e sua Hierarquia
+
+A interface **Map**, pertencente ao pacote `java.util`, representa uma estrutura de dados distinta das interfaces `List` e `Set`. Diferente delas, o **Map não estende a interface Collection**, embora faça parte do framework de coleções do Java. Sua principal característica é o armazenamento de elementos no formato de **Pares (Chave e Valor)**.
+
+Nesta estrutura:
+
+* **Chaves (Key):** Devem ser únicas e não permitem duplicidade.
+* **Valores (Value):** Podem ser repetidos e estão associados a uma chave específica.
+
+A hierarquia apresentada destaca as principais implementações e subinterfaces:
+
+* **Hashtable:** Uma implementação antiga e *thread-safe*.
+* **HashMap e LinkedHashMap:** Onde a `LinkedHashMap` estende a funcionalidade da `HashMap`.
+* **TreeMap:** Uma implementação que garante a ordenação, estendendo `NavigableMap` e `SortedMap`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-18h24m07s688.jpg" alt="" width="840">
+</p>
+
+### Comparativo Técnico entre Implementações Map
+
+Para escolher a implementação ideal, é necessário analisar critérios de performance, ordenação e estrutura de dados. Abaixo, os dados comparativos detalhados entre **HashMap**, **LinkedHashMap** e **TreeMap**:
+
+| Propriedade | HashMap | LinkedHashMap | TreeMap |
+| --- | --- | --- | --- |
+| **Complexidade (Big O)** |  |  |  |
+| **Ordem de Iteração** | Aleatória | Ordem de Inserção ou Acesso | Ordem Natural ou Comparator |
+| **Chaves Nulas** | Permitido | Permitido | Não permitido (para ordem natural) |
+| **Interface** | Map | Map | Map, SortedMap e NavigableMap |
+| **Sincronização** | Nenhuma (Manual via Collections) | Nenhuma (Manual via Collections) | Nenhuma (Manual via Collections) |
+| **Estrutura de Dados** | Tabela Hash (List of Buckets) | Lista Duplamente Encadeada | Árvore Rubro-Negra (Red-Black Tree) |
+
+**Considerações Importantes:**
+
+* **Performance:** `HashMap` e `LinkedHashMap` oferecem alta performance para operações básicas como `get`, `put` e `remove`. O `TreeMap` é ligeiramente mais lento devido ao esforço de manter a árvore balanceada e ordenada.
+* **Casos de Uso:** Use `TreeMap` quando precisar de busca por intervalos ou ordenação constante. O `LinkedHashMap` é ideal para caches (como o LRU) onde a ordem de acesso importa.
+* **Requisitos de Chave:** Para as implementações baseadas em Hash, é obrigatório sobrescrever os métodos `equals()` e `hashCode()` para garantir o funcionamento correto da coleção. No caso do `TreeMap`, a chave deve implementar `Comparable` ou um `Comparator` deve ser fornecido.
+
+O próximo passo é colocar esse conhecimento em prática através dos principais métodos de manipulação dessas coleções.      
+
+
+### 🟩 Vídeo 14 - Conhecendo os métodos Map - parte 1
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_14.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/961c9cdc-fd2d-459f-b4dd-95892ad88552?autoplay=1
+
 Este vídeo aborda a implementação técnica e os conceitos fundamentais da interface Map no Java, utilizando um exemplo prático de consumo de combustível de diferentes modelos de carros.
 
 ### Anotações
@@ -1276,15 +1334,6 @@ No exemplo visualizado, utilizamos a implementação `HashMap`. É importante no
 
 Além das operações básicas, o código demonstra como encontrar valores extremos em uma coleção usando `Collections.max()` e `Collections.min()` sobre os valores do mapa. Para identificar qual chave pertence a um determinado valor (como descobrir o carro mais eficiente), utilizamos o `entrySet()`, que permite iterar sobre os pares de entrada e acessar métodos como `getKey()` e `getValue()`.     
  
-
-### 🟩 Vídeo 14 - Conhecendo os métodos Map - parte 1
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.06-video_14.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/961c9cdc-fd2d-459f-b4dd-95892ad88552?autoplay=1
 
 ### 🟩 Vídeo 15- Conhecendo os métodos Map - parte 2
 
