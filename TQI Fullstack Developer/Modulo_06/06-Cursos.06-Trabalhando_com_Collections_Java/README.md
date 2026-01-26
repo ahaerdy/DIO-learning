@@ -1412,6 +1412,129 @@ System.out.println(carrosPopulares2.toString());
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/9b8bf5b4-b3df-4ed8-8dd9-5f65cef933be?autoplay=1
 
+Este vídeo demonstra como ordenar elementos dentro de diferentes tipos de Map em Java, explorando a ordenação aleatória, por inserção, alfabética pela chave e alfabética pelo valor, utilizando HashMap, LinkedHashMap, TreeMap e TreeSet com um Comparator personalizado.
+
+### Anotações
+
+Nesta aula, o objetivo é demonstrar como manipular e ordenar coleções do tipo `Map` em Java, utilizando diferentes implementações da interface para alcançar critérios específicos de organização (aleatória, inserção e alfabética).
+
+```java
+package br.com.dio.collection.map;
+
+/*Dadas as seguintes informações sobre meus livros favoritos e seus autores,
+crie um dicionário e ordene este dicionário:
+exibindo (Nome Autor - Nome Livro);
+
+Autor = Hawking, Stephen  - Livro = nome: Uma Breve História do Tempo. páginas: 256
+Autor = Duhigg, Charles - Livro = nome: O Poder do Hábito, paginas: 408
+Autor = Harari, Yuval Noah  - Livro = 21 Lições Para o Século 21, páginas: 432
+*/
+
+import java.util.*;
+
+public class ExemploOrdenacaoMap {
+    public static void main(String[] args) {
+
+        System.out.println("--\tOrdem aleatória\t--");
+        Map<String, Livro> meusLivros = new HashMap<>() {{
+            put(" Hawking, Stephen", new Livro("Uma Breve História do Tempo", 256));
+            put(" Duhigg, Charles", new Livro("O Poder do Hábito", 408));
+            put(" Harari, Yuval Noah", new Livro("21 Lições Para o Século 21", 432));
+        }};
+        for (Map.Entry<String, Livro> livro : meusLivros.entrySet())
+            System.out.println(livro.getKey() + " - " + livro.getValue().getNome());
+
+        System.out.println("--\tOrdem Inserção\t--");
+        Map<String, Livro> meusLivros1 = new LinkedHashMap<>() {{
+            put(" Hawking, Stephen", new Livro("Uma Breve História do Tempo", 256));
+            put(" Duhigg, Charles", new Livro("O Poder do Hábito", 408));
+            put(" Harari, Yuval Noah", new Livro("21 Lições Para o Século 21", 432));
+        }};
+        for (Map.Entry<String, Livro> livro : meusLivros1.entrySet())
+            System.out.println(livro.getKey() + " - " + livro.getValue().getNome());
+
+        System.out.println("--\tOrdem alfabética autores\t--");
+        Map<String, Livro> meusLivros2 = new TreeMap<>(meusLivros1);
+        for (Map.Entry<String, Livro> livro : meusLivros2.entrySet())
+            System.out.println(livro.getKey() + " - " + livro.getValue().getNome());
+
+        System.out.println("--\tOrdem alfabética nomes dos livros\t--");
+
+        Set<Map.Entry<String, Livro>> meusLivros3 = new TreeSet<>(new ComparatorNome());
+        meusLivros3.addAll(meusLivros.entrySet());
+        for (Map.Entry<String, Livro> livro : meusLivros3)
+            System.out.println(livro.getKey() + " - " + livro.getValue().getNome());
+
+//        System.out.println("--\tOrdem número de página\t--"); //Pra você
+
+    }
+}
+
+class Livro {
+    private String nome;
+    private Integer paginas;
+
+    public Livro(String nome, Integer paginas) {
+        this.nome = nome;
+        this.paginas = paginas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Integer getPaginas() {
+        return paginas;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Livro livro = (Livro) o;
+        return nome.equals(livro.nome) && paginas.equals(livro.paginas);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, paginas);
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "nome='" + nome + '\'' +
+                ", paginas=" + paginas +
+                '}';
+    }
+}
+
+class ComparatorNome implements Comparator<Map.Entry<String, Livro>>{
+
+    @Override
+    public int compare(Map.Entry<String, Livro> l1, Map.Entry<String, Livro> l2) {
+        return l1.getValue().getNome().compareToIgnoreCase(l2.getValue().getNome());
+    }
+}
+```
+
+Para exemplificar, é criado um dicionário de livros favoritos onde a **Chave (Key)** é o nome do autor (String) e o **Valor (Value)** é um objeto da classe `Livro`, que contém os atributos `nome` e `paginas`.
+
+### Implementação da Classe Base
+
+Para garantir o funcionamento correto das coleções, especialmente ao utilizar `HashMap` e `TreeMap`, a classe `Livro` deve ser implementada com o construtor, métodos acessores (getters) e a sobrescrita dos métodos essenciais:
+
+* **`equals` e `hashCode**`: Necessários para que o Map consiga identificar e comparar os objetos corretamente.
+* **`toString`**: Sobrescrito para que, ao imprimir os valores, o Java exiba os dados do livro em vez do endereço de memória.
+
+### Formas de Ordenação Apresentadas
+
+1. **Ordem Aleatória (`HashMap`)**: Os elementos são exibidos sem uma ordem garantida, variando conforme o hashing interno.
+2. **Ordem de Inserção (`LinkedHashMap`)**: Mantém a sequência exata em que os autores e livros foram adicionados ao dicionário.
+3. **Ordem Alfabética por Chave (`TreeMap`)**: Ordena automaticamente o dicionário com base no nome dos autores.
+4. **Ordem Alfabética por Valor**: Para ordenar pelo nome do livro (que está no objeto `Livro`), utiliza-se um `TreeSet` recebendo um `Comparator` personalizado que acessa `getValue().getNome()`.
+
+O desafio final proposto consiste em realizar a ordenação pelo número de páginas, seguindo a mesma lógica de criação de um `Comparator` específico para o campo `paginas`.
 
 
 ### 🟩 Vídeo 17 - Exercícios propostos - Map
@@ -1421,7 +1544,8 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/93d1881d-5c1b-41d4-92df-fa970c91742b?autoplay=1
+
 
 
 ## Parte 5 - Stream
