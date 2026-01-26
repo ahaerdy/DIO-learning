@@ -731,6 +731,36 @@ Além do repositório, o suporte para dúvidas e discussões pode ser realizado 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/f9fb3d0e-8999-4a2a-8735-24144ae40d8e?autoplay=1
 
+Este vídeo apresenta uma introdução detalhada à interface Set do framework de Collections do Java, destacando suas características fundamentais, como a proibição de elementos duplicados e a ausência de índices. O conteúdo explora as três principais implementações — HashSet, LinkedHashSet e TreeSet — comparando seus comportamentos em termos de ordenação, performance e permissão de valores nulos, servindo como um guia prático para desenvolvedores escolherem a estrutura de dados mais adequada às suas necessidades.
+
+ ### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-11h13m18s829.jpg" alt="" width="840">
+</p>
+
+Nesta introdução à segunda aula do curso de Collections, iniciamos a etapa focada em **Coleções Singulares: Set**. O objetivo central é explorar como essa interface se comporta dentro do ecossistema Java e quais são as suas particularidades em relação a outras estruturas de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-11h13m21s898.jpg" alt="" width="840">
+</p>
+
+Os objetivos desta aula estão divididos em dois pontos principais:
+
+1. **Características da interface Set:** Compreender as regras fundamentais que regem todas as coleções do tipo Set.
+2. **Implementações específicas:** Entender o funcionamento, as diferenças e o momento ideal para utilizar **HashSet**, **LinkedHashSet** e **TreeSet**, além de conhecer seus métodos essenciais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-26-11h13m28s669.jpg" alt="" width="840">
+</p>
+
+A interface `java.util.Set` possui características marcantes que a definem: **não permite elementos duplicados** e **não possui índice**. A ausência de índice significa que não é possível recuperar elementos por uma posição numérica (como o método `get(int index)` da interface List) ou realizar substituições baseadas em posição.
+
+A hierarquia de classes e interfaces define o comportamento de cada implementação:
+
+* **HashSet:** Implementa a interface `Set` diretamente. Internamente, utiliza uma `HashMap` para armazenar elementos. Não garante nenhuma ordem (a disposição é aleatória), oferece a melhor performance e permite um elemento nulo.
+* **LinkedHashSet:** Estende `HashSet` e mantém a **ordem de inserção** dos elementos, utilizando internamente uma `LinkedHashMap`. Sua performance é intermediária e também permite um elemento nulo.
+* **TreeSet:** Implementa `NavigableSet` (que estende `SortedSet`). Utiliza uma `TreeMap` para manter os elementos em sua **ordem natural** (alfabética ou numérica) ou através de um `Comparator`. É a implementação com performance mais lenta e **não permite elementos nulos**.
 
 
 ### 🟩 Vídeo 10 - Conhecendo os métodos Set
