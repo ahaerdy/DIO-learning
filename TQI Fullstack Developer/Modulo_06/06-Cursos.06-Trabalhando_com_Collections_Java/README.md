@@ -2092,5 +2092,5 @@ O domínio desses tópicos, somado ao conteúdo de introdução a Collections, p
 
 # Certificado: Trabalhando com Collections Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/ZQ1FHJ76.pdf
+- Certificado em pdf: [Certificado-Trabalhando_com_Collections_Java.pdf](000-Midia_e_Anexos/Certificado-Trabalhando_com_Collections_Java.pdf)
