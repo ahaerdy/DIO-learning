@@ -2054,10 +2054,43 @@ numerosAleatorios.stream()
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/428a796a-2957-4091-8729-487e512c4f1a?autoplay=1
 
+Nesta aula de encerramento, o instrutor celebra a conclusão do curso introdutório de Java Collections e recomenda três trilhas de aprendizado gratuitas na plataforma DIO para aprofundamento técnico. As sugestões incluem o curso de "Implementando Collections e Streams com Java", focado em métodos avançados como Optional e interfaces de Queue; a formação em "Desenvolvimento Avançado em Java", que detalha o uso de interfaces funcionais e o paradigma de programação funcional; e o curso de "Estrutura de Dados", que aborda conceitos fundamentais como árvores e listas de forma didática. O vídeo finaliza incentivando o compartilhamento de certificados no LinkedIn, a participação na comunidade do Discord e a consulta ao código-fonte disponível no GitHub para consolidar o domínio sobre Streams, Lambdas e coleções.
 
-## Materiais de Apoio
+### Anotações
 
-# Certificado: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-16h26m14s053.jpg" alt="" width="840">
+</p>
+
+Nesta etapa de encerramento do curso introdutório de Collections, são apresentadas recomendações de estudos avançados disponíveis na plataforma DIO para aprofundar o domínio da linguagem Java e fundamentos de computação. As sugestões focam em três pilares essenciais:
+
+#### 1. Implementando Collections e Streams com Java
+
+Ministrado pelo instrutor Wesley Fuchter, este curso é o próximo passo ideal para dominar recursos que não foram explorados a fundo no módulo introdutório, tais como:
+
+* **Interface Queue:** Compreensão de filas e suas implementações.
+* **Optional:** Manipulação segura de valores que podem ser nulos, evitando o `NullPointerException`.
+* **Métodos Avançados:** Exploração detalhada de métodos específicos das estruturas `TreeSet` e `TreeMap`.
+
+#### 2. Desenvolvimento Avançado em Java
+
+Com o instrutor João Paulo, este conteúdo foca na modernização da linguagem e no paradigma funcional. Os tópicos principais incluem:
+
+* **Interfaces Funcionais:** Entendimento profundo de como o Java utiliza funções como cidadãos de primeira classe.
+* **Streams e Lambdas:** Detalhamento do porquê dessas implementações e como elas otimizam a manipulação de dados em coleções.
+* **Orientação a Objetos vs. Funcional:** Uma análise técnica sobre a coexistência desses paradigmas no ecossistema Java atual.
+
+#### 3. Estrutura de Dados e Algoritmos
+
+O curso do instrutor Bruno de Campos é fundamental para entender a "mágica" por trás das Collections. Diferente dos anteriores, este curso foca na lógica pura e em conceitos teóricos aplicados, utilizando ferramentas como o **VisualG** para ilustrar:
+
+* **Listas:** Diferenças entre listas simples e listas duplamente ligadas.
+* **Pilhas e Filas:** O funcionamento lógico de inserção e remoção de dados.
+* **Árvores:** Conceitos de estruturas hierárquicas de dados.
+
+O domínio desses tópicos, somado ao conteúdo de introdução a Collections, prepara o desenvolvedor para resolver problemas complexos de engenharia de software e otimização de performance.
+
+# Certificado: Trabalhando com Collections Java
 
 - Link na plataforma: 
 - Certificado em pdf:
