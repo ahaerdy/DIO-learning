@@ -1932,6 +1932,81 @@ A aula conclui incentivando a prática da refatoração para que o desenvolvedor
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/97eabea3-277e-454d-9eaf-5380a05e5f62?autoplay=1
 
+Esta aula técnica detalha o funcionamento da Stream API no Java, distinguindo operações intermediárias, que permitem encadeamento e retornam novas streams, de operações terminais, que encerram o fluxo retornando valores ou objetos específicos. Através de exemplos práticos com uma lista de strings numéricas, a aula demonstra a aplicação de métodos essenciais como forEach para iteração simplificada via method reference, limit para seleção de subconjuntos de dados, e collect para conversão de resultados em estruturas como Set. O conteúdo enfatiza ainda a importância da operação map para a transformação de tipos de dados — exemplificando a conversão de strings para inteiros via interfaces funcionais — e fornece recursos complementares para o aprofundamento nos detalhes sintáticos e funcionais de cada operação.
+
+### Anotações
+
+Esta explicação detalha o uso da **Stream API** em Java para manipular coleções de forma funcional, baseando-se no código e na aula fornecidos.
+
+#### 1. Visão Geral das Operações de Stream
+
+As streams em Java são compostas por dois tipos principais de operações:
+
+* **Operações Intermediárias:** Retornam uma nova stream, permitindo o encadeamento de várias operações (ex: `filter`, `map`, `limit`).
+* **Operações Terminais:** Encerram o fluxo e retornam um objeto ou um valor (ex: `forEach`, `collect`, `count`).
+
+
+#### 2. Exemplos Práticos de Manipulação
+
+##### Impressão de Elementos
+
+Para imprimir elementos, utiliza-se a operação terminal `forEach`. O código evolui de um `Consumer` anônimo para o uso de **Method Reference**:
+
+```java
+// Forma simplificada com Method Reference
+[cite_start]numerosAleatorios.forEach(System.out::println); [cite: 54]
+
+```
+
+##### Filtragem e Coleta (Limit e Set)
+
+O código demonstra como extrair os 5 primeiros elementos e armazená-los em um `Set`. Note que o `Set` remove duplicatas automaticamente.
+
+* **`.limit(5)`**: Pega os primeiros 5 elementos.
+* **`.collect(Collectors.toSet())`**: Converte o resultado para um conjunto.
+
+##### Transformação de Tipos (Map)
+
+A operação `map` é essencial para transformar o tipo dos dados dentro da stream, como converter uma `List<String>` para `List<Integer>`.
+
+* **`.map(Integer::parseInt)`**: Transforma cada String em um número inteiro.
+
+##### Filtros Condicionais
+
+Para selecionar elementos específicos, utiliza-se o `filter` com um predicado (Lambda):
+
+```java
+// Exemplo: Números pares e maiores que 2
+numerosAleatorios.stream()
+    .map(Integer::parseInt)
+    [cite_start].filter(i -> i % 2 == 0 && i > 2) [cite: 73, 75, 76, 78]
+    [cite_start].collect(Collectors.toList()); [cite: 77]
+
+```
+
+#### 3. Operações Numéricas e Agrupamento
+
+O código também aborda cálculos estatísticos e organização de dados:
+
+* **Média:** Utiliza `mapToInt` seguido de `average()`.
+* **Soma de Pares:** Filtra os pares e utiliza `.sum()`.
+* **Agrupamento:** O método `Collectors.groupingBy` é usado para categorizar elementos, como múltiplos de 3 e 5.
+
+
+| Operação | Tipo | Descrição |
+| --- | --- | --- |
+| `distinct()` | Intermediária | Remove elementos duplicados da stream.
+
+ |
+| `sorted()` | Intermediária | Ordena a lista (ex: ordem natural).
+
+ |
+| `count()` | Terminal | Retorna a quantidade de elementos.
+
+ |
+| `min()` / `max()` | Terminal | Encontra o menor ou maior valor.
+
+ |
 
 
 ### 🟩 Vídeo 22 - Principais operações Stream API - parte 3
