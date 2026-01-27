@@ -1945,7 +1945,6 @@ As streams em Java são compostas por dois tipos principais de operações:
 * **Operações Intermediárias:** Retornam uma nova stream, permitindo o encadeamento de várias operações (ex: `filter`, `map`, `limit`).
 * **Operações Terminais:** Encerram o fluxo e retornam um objeto ou um valor (ex: `forEach`, `collect`, `count`).
 
-
 #### 2. Exemplos Práticos de Manipulação
 
 ##### Impressão de Elementos
@@ -1954,7 +1953,7 @@ Para imprimir elementos, utiliza-se a operação terminal `forEach`. O código e
 
 ```java
 // Forma simplificada com Method Reference
-[cite_start]numerosAleatorios.forEach(System.out::println); [cite: 54]
+numerosAleatorios.forEach(System.out::println); [cite: 54]
 
 ```
 
@@ -1979,8 +1978,8 @@ Para selecionar elementos específicos, utiliza-se o `filter` com um predicado (
 // Exemplo: Números pares e maiores que 2
 numerosAleatorios.stream()
     .map(Integer::parseInt)
-    [cite_start].filter(i -> i % 2 == 0 && i > 2) [cite: 73, 75, 76, 78]
-    [cite_start].collect(Collectors.toList()); [cite: 77]
+    .filter(i -> i % 2 == 0 && i > 2) [cite: 73, 75, 76, 78]
+    .collect(Collectors.toList()); [cite: 77]
 
 ```
 
@@ -2008,7 +2007,43 @@ O código também aborda cálculos estatísticos e organização de dados:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/7beb8c44-242b-460e-9edd-d6a2faaf4a20?autoplay=1
+
+Esta aula aborda a aplicação prática da Stream API e do Optional no Java 8 para a manipulação eficiente de coleções, focando em operações de filtragem, transformação e agregação. A instrutora demonstra como converter listas de strings em inteiros utilizando `map` e `method reference`, filtrar elementos com base em múltiplos critérios através do método `filter` e coletar resultados em novas listas. O conteúdo também explora o uso de `mapToInt` e `average` para cálculos estatísticos, introduzindo o `Optional` como mecanismo de segurança para retornos nulos, e diferencia operações de Stream (que não alteram a fonte) de métodos de lista como `removeIf`, que modificam a coleção original. Ao final, ressalta-se a expressividade e o poder do encadeamento de operações para simplificar códigos complexos, incentivando a prática autônoma em exercícios complementares de ordenação e agrupamento.
+
+### Anotações
+
+Nesta etapa da aula, o foco é a manipulação de coleções utilizando a **Stream API** do Java para realizar filtragens e transformações de dados de forma encadeada. A instrutora demonstra como selecionar elementos específicos de uma lista com base em múltiplas condições lógicas.
+
+Para o exercício proposto — selecionar números pares e maiores que dois — é necessário realizar as seguintes etapas:
+
+1. **Transformação (Map):** Como a lista original `numerosAleatorios` contém strings, utiliza-se o método `.map(Integer::parseInt)` para converter cada elemento em um número inteiro.
+2. **Filtragem (Filter):** Aplica-se a operação `filter` que recebe um `Predicate`. No exemplo didático, a instrutora utiliza uma implementação anônima (ou posteriormente simplificada para Lambda) que verifica se o número é par (`i % 2 == 0`) e se é maior que dois (`i > 2`).
+3. **Coleta (Collect):** Os elementos que satisfazem os critérios do filtro são agrupados em uma nova lista através do `collect(Collectors.toList())`.
+
+O uso de Streams permite que essas operações sejam escritas de forma declarativa, reduzindo a verbosidade em comparação aos métodos tradicionais de iteração.
+
+```java
+// Trecho correspondente à filtragem de números pares maiores que 2
+List<Integer> listParesMaioresQue2 = numerosAleatorios.stream()
+        .map(Integer::parseInt)
+        .filter(i -> (i % 2 == 0 && i > 2))
+        .collect(Collectors.toList());
+
+System.out.println(listParesMaioresQue2);
+
+```
+
+Além disso, a aula introduz o cálculo de médias utilizando `mapToInt`, que transforma a Stream em uma `IntStream`. Isso possibilita o acesso ao método `average()`, que retorna um `OptionalDouble`. Para lidar com esse resultado de forma segura, utiliza-se o método `ifPresent`, garantindo que a impressão no console só ocorra se um valor válido tiver sido calculado.
+
+```java
+// Cálculo da média dos números
+numerosAleatorios.stream()
+        .mapToInt(Integer::parseInt)
+        .average()
+        .ifPresent(System.out::println);
+
+```
 
 ### 🟩 Vídeo 23 - Conclusão do curso
 
@@ -2017,7 +2052,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/428a796a-2957-4091-8729-487e512c4f1a?autoplay=1
 
 
 ## Materiais de Apoio
