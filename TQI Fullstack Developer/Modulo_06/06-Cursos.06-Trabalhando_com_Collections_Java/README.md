@@ -1611,7 +1611,111 @@ Estes exemplos visam preparar o desenvolvedor para situações reais de mercado 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/b592a952-7c4d-4650-abaa-74b93573b441?autoplay=1
+
+Esta aula aborda a transição conceitual e prática entre interfaces funcionais, classes anônimas e expressões Lambda no contexto da Stream API em Java. O conteúdo define uma interface funcional como aquela que possui um único método abstrato (SAM - Single Abstract Method), exemplificando-a com as interfaces Function, Comparator e Action Listener. A aula demonstra como simplificar a implementação de classes anônimas verbosas através da sintaxe Lambda, caracterizando-a como uma função sem declaração composta por argumento, flecha e corpo. Por fim, destaca-se que o uso de Lambdas visa a legibilidade e a simplificação do código ao reduzir a estrutura necessária para implementar comportamentos, como a comparação de objetos em uma lista por atributos específicos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-14h12m50s185.jpg" alt="" width="840">
+</p>
+
+Esta é a introdução da **Aula 4** do curso de Java, voltada especificamente para o ecossistema de **Collections** e a introdução ao **Java Streams**. O objetivo desta seção é apresentar as ferramentas modernas de manipulação de dados que preparam o desenvolvedor para o uso da Stream API.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-14h12m53s034.jpg" alt="" width="840">
+</p>
+
+Nesta aula, serão abordados cinco tópicos fundamentais para o domínio da programação funcional e processamento de dados em Java:
+
+1. **Classe Anônima**: Implementações rápidas de classes sem nome.
+2. **Functional Interface**: A base teórica (SAM) que permite o uso de lambdas.
+3. **Lambda**: A sintaxe enxuta para expressar funções.
+4. **Reference Method**: Uma forma ainda mais simplificada de referenciar métodos existentes.
+5. **Stream API**: O ponto culminante, onde todos os conceitos anteriores são aplicados para manipular coleções de forma declarativa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-14h13m00s041.jpg" alt="" width="840">
+</p>
+
+A **Classe Anônima** é um recurso que permite declarar e instanciar uma classe simultaneamente em uma única instrução. Ela é ideal para situações onde você precisa criar uma implementação específica que será utilizada apenas uma vez no código, como em comparadores.
+
+No exemplo apresentado, observa-se a transição de um comparador tradicional para uma classe anônima:
+
+```java
+// Implementação tradicional (Exige criação de classe externa)
+class ComparatorIdade implements Comparator<Gato> {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+}
+meusGatos.sort(new ComparatorIdade());
+
+// Implementação com Classe Anônima (Instanciada no local de uso)
+meusGatos.sort(new Comparator<Gato>() {
+    @Override
+    public int compare(Gato g1, Gato g2) {
+        return Integer.compare(g1.getIdade(), g2.getIdade());
+    }
+});
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-14h13m12s958.jpg" alt="" width="840">
+</p>
+
+Uma **Functional Interface** (Interface Funcional) é caracterizada por possuir exatamente um **SAM (Single Abstract Method)**, ou seja, apenas um método abstrato. Esta regra é o que permite ao Java converter expressões Lambda no tipo da interface correspondente.
+
+Embora o uso da anotação `@FunctionalInterface` seja uma boa prática para evitar a adição acidental de novos métodos, qualquer interface que siga a regra do método único (como o exemplo do `ActionListener`) é considerada funcional.
+
+```java
+// Interface Funcional com anotação explícita
+@FunctionalInterface
+public interface Comparator<T> {
+    int compare(T var1, T var2);
+}
+
+// Interface Funcional sem anotação (Baseada no SAM)
+public interface ActionListener extends EventListener {
+    void actionPerformed(ActionEvent var1);
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-14h13m14s888.jpg" alt="" width="840">
+</p>
+
+A **Expressão Lambda** é definida como uma função sem declaração formal. Isso significa que não é necessário explicitar um nome para a função, o tipo de retorno ou modificadores de acesso. A sintaxe básica é composta por:
+`(argumento) -> (corpo)`
+
+A ideia central é que o comportamento seja declarado exatamente no ponto onde será executado, aumentando a clareza do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-14h13m21s979.jpg" alt="" width="840">
+</p>
+
+Neste ponto, é demonstrado como o **Lambda** simplifica drasticamente a escrita em comparação com as **Classes Anônimas**. No exemplo de ordenação de uma lista de gatos pelo nome, a estrutura burocrática da classe anônima é substituída por uma única linha:
+
+```java
+// Utilizando Classe Anônima (Verboso)
+meusGatos.sort(Comparator.comparing(new Function<Gato, String>() {
+    @Override
+    public String apply(Gato gato) {
+        return gato.getNome();
+    }
+}));
+
+// Utilizando Lambda (Simplificado)
+meusGatos.sort(Comparator.comparing((Gato gato) -> gato.getNome()));
+
+```
+
+A expressão lambda cumpre a mesma função da interface `Function`, recebendo um objeto do tipo `Gato` e retornando seu nome para o comparador, porém de forma muito mais legível.      
+
 
 ### 🟩 Vídeo 19 - Visão geral: Stream API - parte 2
 
@@ -1620,7 +1724,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/1af2e285-8b76-4ff2-b763-dd79b99e08ec?autoplay=1
 
 ### 🟩 Vídeo 20 - Principais operações Stream API - parte 1
 
