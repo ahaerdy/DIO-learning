@@ -1995,18 +1995,10 @@ O código também aborda cálculos estatísticos e organização de dados:
 
 | Operação | Tipo | Descrição |
 | --- | --- | --- |
-| `distinct()` | Intermediária | Remove elementos duplicados da stream.
-
- |
-| `sorted()` | Intermediária | Ordena a lista (ex: ordem natural).
-
- |
-| `count()` | Terminal | Retorna a quantidade de elementos.
-
- |
-| `min()` / `max()` | Terminal | Encontra o menor ou maior valor.
-
- |
+| `distinct()` | Intermediária | Remove elementos duplicados da stream.|
+| `sorted()` | Intermediária | Ordena a lista (ex: ordem natural).|
+| `count()` | Terminal | Retorna a quantidade de elementos.|
+| `min()` / `max()` | Terminal | Encontra o menor ou maior valor. |
 
 
 ### 🟩 Vídeo 22 - Principais operações Stream API - parte 3
