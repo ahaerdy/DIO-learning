@@ -1726,6 +1726,62 @@ A expressão lambda cumpre a mesma função da interface `Function`, recebendo u
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/1af2e285-8b76-4ff2-b763-dd79b99e08ec?autoplay=1
 
+Esta aula aborda a simplificação do código Java moderno através do uso de Method References e da Stream API, recursos introduzidos no Java 8 para promover a programação funcional. O Method Reference, identificado pelo operador ::, é apresentado como uma sintaxe ainda mais concisa que as expressões lambda para referenciar métodos ou construtores de forma direta. O conteúdo detalha como essas ferramentas se conectam: as Streams facilitam a manipulação de coleções por meio de uma estrutura composta por fonte (Source), operações intermediárias (Pipeline) e operações terminais, frequentemente utilizando interfaces funcionais (padrão SAM) e lambdas em seus argumentos. Em suma, o vídeo demonstra que a adoção dessas práticas resulta em um código mais legível, de fácil manutenção e preparado para paralelização, reduzindo a complexidade de implementações que anteriormente exigiriam classes anônimas extensas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-14h36m27s175.jpg" alt="" width="840">
+</p>
+
+O **Method Reference** (ou Reference Method) é um recurso introduzido no Java 8 que funciona como uma forma de simplificar expressões lambda. Ele permite referenciar um método ou construtor de uma classe de forma funcional, indicando que ele deve ser utilizado em um ponto específico do código para torná-lo mais legível. A sintaxe utiliza o símbolo `::` entre a classe (ou referência) e o nome do método, sem os parênteses. 
+
+No exemplo prático de ordenação de uma lista de objetos, podemos comparar a abordagem tradicional com a simplificação oferecida por este recurso:
+
+**Sem Reference Method (Utilizando Lambda):**
+Neste caso, a interface funcional `Function` é implementada através de um lambda, onde definimos explicitamente o argumento (`gato`) e a lógica no corpo (`gato.getNome()`). 
+
+```java
+List<Gato> meusGatos = new ArrayList<>(){{
+    add(new Gato("Jon", 12, "preto"));
+    add(new Gato("Simba", 6, "tigrado"));
+    add(new Gato("Jon", 18, "amarelo"));
+}};
+
+meusGatos.sort(Comparator.comparing((Gato gato) -> gato.getNome()));
+
+```
+
+**Com Reference Method:**
+A sintaxe é reduzida drasticamente. Como o Java consegue inferir o tipo de dado da lista, substituímos a expressão lambda pelo nome da classe seguido de `::` e o método de acesso. 
+
+```java
+List<Gato> meusGatos = new ArrayList<>(){{
+    add(new Gato("Jon", 12, "preto"));
+    add(new Gato("Simba", 6, "tigrado"));
+    add(new Gato("Jon", 18, "amarelo"));
+}};
+
+meusGatos.sort(Comparator.comparing(Gato::getNome));
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-27-14h36m33s451.jpg" alt="" width="840">
+</p>
+
+A **Streams API** traz uma nova opção para a manipulação de coleções em Java seguindo os princípios da programação funcional. Quando combinada com expressões lambda, ela oferece uma maneira simples e concisa de lidar com conjuntos de elementos, facilitando a manutenção do código e permitindo a paralelização sem efeitos colaterais indesejados. 
+
+A estrutura fundamental de uma Stream é composta por três partes principais: 
+
+* **Source (Fonte):** É a origem dos dados, geralmente uma `Collection` (como uma lista ou conjunto). 
+* **Pipeline (Operações Intermediárias):** Sequência de operações que transformam ou filtram os dados da fonte. 
+* **Terminal (Operação Terminal):** A operação final que encerra a Stream e produz um resultado ou um efeito colateral (como uma nova lista, um valor único ou uma impressão em tela). 
+
+Essa arquitetura permite que o desenvolvedor foque no "o que" deve ser feito com os dados, em vez de "como" iterar manualmente sobre eles.
+
+
+
 ### 🟩 Vídeo 20 - Principais operações Stream API - parte 1
 
 <video width="60%" controls>
@@ -1733,7 +1789,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/cca159e8-b88c-42c5-9d95-0cd615a5d6bf?autoplay=1
 
 ### 🟩 Vídeo 21 - Principais operações Stream API - parte 2
 
