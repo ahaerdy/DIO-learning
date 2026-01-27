@@ -1791,6 +1791,138 @@ Essa arquitetura permite que o desenvolvedor foque no "o que" deve ser feito com
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/cca159e8-b88c-42c5-9d95-0cd615a5d6bf?autoplay=1
 
+Esta aula aborda a refatoração de código Java voltada para a ordenação de coleções do tipo Map, evoluindo de implementações tradicionais para sintaxes modernas da linguagem. A instrução demonstra a transição do uso de classes Comparator externas para o emprego de classes anônimas e, posteriormente, a simplificação através do método estático `Comparator.comparing` associado à interface funcional `Function`. O ápice do conteúdo foca na implementação de expressões Lambda, detalhando o processo prático de redução da verbosidade do código para alcançar uma escrita mais fluida e eficiente. Além de apresentar a lógica de ordenação por atributos específicos de um objeto, a aula incentiva o domínio das ferramentas da IDE para auxiliar na construção dessa sintaxe e propõe exercícios práticos de fixação antes de introduzir conceitos de Stream API e Method Reference.
+
+### Anotações
+
+Nesta aula, o foco é a refatoração de um código Java voltado para a ordenação de dicionários (`Map`). O cenário base utiliza uma agenda de contatos onde cada entrada possui um ID (chave) e um objeto `Contato` (valor), contendo os atributos `nome` e `numero`.
+
+```java
+package br.com.dio.collection.streamAPI;
+
+import br.com.dio.collection.map.exercicioProposto03.Contato;
+
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
+
+/*Dadas as seguintes informações  de id e contato, crie um dicionário e
+ordene este dicionário exibindo (Nome id - Nome contato);
+
+id = 1 - Contato = nome: Simba, numero: 2222;
+id = 4 - Contato = nome: Cami, numero: 5555;
+id = 3 - Contato = nome: Jon, numero: 1111;
+*/
+public class RefatoracaoOrdenacaoMap {
+
+    public static void main(String[] args) {
+        System.out.println("--\tOrdem aleatória\t--");
+        Map<Integer, Contato> agenda = new HashMap<>() {{
+           put(1, new Contato("Simba", 5555));
+           put(4, new Contato("Cami", 1111));
+           put(3, new Contato("Jon", 2222));
+        }};
+        System.out.println(agenda);
+        for (Map.Entry<Integer, Contato> entry: agenda.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
+        }
+
+        System.out.println("--\tOrdem Inserção\t--");
+        Map<Integer, Contato> agenda1 = new LinkedHashMap<>() {{
+            put(1, new Contato("Simba", 5555));
+            put(4, new Contato("Cami", 1111));
+            put(3, new Contato("Jon", 2222));
+        }};
+        System.out.println(agenda1);
+        for (Map.Entry<Integer, Contato> entry: agenda1.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
+        }
+
+        System.out.println("--\tOrdem id\t--");
+        Map<Integer, Contato> agenda2 = new TreeMap<>(agenda);
+        System.out.println(agenda2);
+        for (Map.Entry<Integer, Contato> entry: agenda2.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue().getNome());
+        }
+
+        System.out.println("--\tOrdem número telefone\t--");
+        //precisamos organizar os valores. Logo:
+        /*Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(new Comparator<Map.Entry<Integer, Contato>>() {
+            @Override
+            public int compare(Map.Entry<Integer, Contato> cont1, Map.Entry<Integer, Contato> cont2) {
+                return Integer.compare(cont1.getValue().getNumero(), cont2.getValue().getNumero());
+            }
+        });*/
+
+        /*Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(Comparator.comparing(
+                new Function<Map.Entry<Integer, Contato>, Integer>() {
+                    @Override
+                    public Integer apply(Map.Entry<Integer, Contato> cont) {
+                        return cont.getValue().getNumero();
+                    }
+                }));*/
+
+        Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(Comparator.comparing(
+                cont -> cont.getValue().getNumero()));
+        set.addAll(agenda.entrySet());
+        for (Map.Entry<Integer, Contato> entry: set) {
+            System.out.println(entry.getKey() + " - " + entry.getValue().getNumero() +
+                    ": " +entry.getValue().getNome());
+        }
+
+        System.out.println("--\tOrdem nome contato\t--");
+        //precisamos organizar os valores. Logo:
+        Set<Map.Entry<Integer, Contato>> set1 = new TreeSet<>(Comparator.comparing(
+                cont -> cont.getValue().getNome()));
+        set1.addAll(agenda.entrySet());
+        //imprimindo usando forEach
+        set1.forEach(entry -> System.out.println(entry.getKey() + " - " + entry.getValue().getNome()));
+    }
+}
+
+/*class ComparatorOrdemNumerica implements Comparator<Map.Entry<Integer, Contato>> {
+    @Override
+    public int compare(Map.Entry<Integer, Contato> cont1, Map.Entry<Integer, Contato> cont2) {
+        return Integer.compare(cont1.getValue().getNumero(), cont2.getValue().getNumero());
+    }
+}*/
+
+/*class ComparatorOrdemNomeContato implements Comparator<Map.Entry<Integer, Contato>> {
+    @Override
+    public int compare(Map.Entry<Integer, Contato> cont1, Map.Entry<Integer, Contato> cont2) {
+        return cont1.getValue().getNome().compareToIgnoreCase(cont2.getValue().getNome());
+    }
+}*/
+```
+
+A estrutura inicial demonstra diferentes formas de organização:
+
+* **Ordem Aleatória**: Implementada através de um `HashMap`. 
+* **Ordem de Inserção**: Utilizando um `LinkedHashMap`. 
+* **Ordem de ID (Chave)**: Realizada automaticamente pelo `TreeMap`. 
+
+O ponto central da aula é a evolução da ordenação por **número de telefone** (um atributo do valor do Map). A professora demonstra o processo de simplificação do código, partindo de implementações verbosas para abordagens mais modernas e concisas: 
+
+1.**Classe Anônima com Comparator**: Em vez de criar uma classe externa, utiliza-se `new Comparator<Map.Entry<Integer, Contato>>()` diretamente na instância do `TreeSet`, sobrescrevendo o método `compare`. 
+2. **Interface Funcional Function**: Evolui para o uso do método estático `Comparator.comparing`, que recebe uma `Function` para extrair a chave de comparação (neste caso, o número do contato). 
+3. **Expressões Lambda**: A simplificação máxima ocorre com a remoção de toda a sintaxe de classes anônimas, reduzindo a lógica a uma instrução direta: `cont -> cont.getValue().getNumero()`. 
+
+```java
+// Exemplo de refatoração para ordenação por número de telefone usando Lambda
+Set<Map.Entry<Integer, Contato>> set = new TreeSet<>(Comparator.comparing(
+    cont -> cont.getValue().getNumero()));
+set.addAll(agenda.entrySet());
+
+// Exemplo de ordenação por nome do contato
+Set<Map.Entry<Integer, Contato>> set1 = new TreeSet<>(Comparator.comparing(
+    cont -> cont.getValue().getNome()));
+set1.addAll(agenda.entrySet());
+
+```
+
+A aula conclui incentivando a prática da refatoração para que o desenvolvedor se sinta confortável em identificar onde remover redundâncias e como utilizar as ferramentas da IDE para auxiliar na criação de expressões Lambda e métodos de comparação.     
+
+
 ### 🟩 Vídeo 21 - Principais operações Stream API - parte 2
 
 <video width="60%" controls>
@@ -1798,7 +1930,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-collections-java/learning/97eabea3-277e-454d-9eaf-5380a05e5f62?autoplay=1
+
+
 
 ### 🟩 Vídeo 22 - Principais operações Stream API - parte 3
 
