@@ -375,6 +375,7 @@ O gráfico funciona como um demonstrador de métricas de variação, sendo ideal
 
 
 ### 🟩 Vídeo 09 - Trabalhando com Árvore Hierárquica, Segmentadores e outros Visuais
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
@@ -382,13 +383,56 @@ O gráfico funciona como um demonstrador de métricas de variação, sendo ideal
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/3b5b8165-3eb6-4e33-b182-465b542a4c7e?autoplay=1
 
+Este guia resume as técnicas de construção de relatórios interativos utilizando ferramentas de BI (como o Power BI). O foco está em como segmentar faturamentos, analisar caminhos de dados e otimizar a experiência do usuário final através de um design estratégico.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h20m00s832.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é introduzido o visual de **Árvore Hierárquica** (Decomposition Tree) no Power BI para analisar o faturamento de forma segmentada. O objetivo é compreender como o **Total Invoice** (Total de Faturas) se distribui através de diferentes níveis de detalhamento.
+
+A estrutura inicial foca na localização geográfica, expandindo os dados a partir do campo de faturamento para o nível de **Country/Region**. Ao clicar nos indicadores de expansão (o ícone "+"), o relatório permite escolher o caminho da análise, como verificar onde estão os valores mais altos ou mais baixos. No exemplo visualizado, os dados mostram a predominância do faturamento nos **USA** ($458.366.278,85) em comparação ao **Mexico** ($58.969.249,04).
+
+Abaixo, os campos utilizados para configurar a análise visual:
+
+```bash
+Analisar:
+  - Total Invoice
+
+Explicar por:
+  - Country/Region
+  - Category
+  - Sub Category
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h20m20s147.jpg" alt="" width="840">
+</p>
+
+Após a organização dos elementos visuais no relatório, a análise avança para a utilização de **Segmentadores de Dados** (Slicers) e do gráfico **Treemap**. O Treemap é utilizado para fornecer uma visão instantânea da proporção das categorias de faturamento, onde o tamanho e a cor de cada retângulo facilitam a identificação dos setores mais relevantes, como as categorias "Direct" e "Indirect".
+
+A interatividade é um ponto central: ao selecionar um ano específico no segmentador (neste caso, o campo **Year** da tabela **Date**), todos os visuais do relatório, incluindo a Árvore Hierárquica e o cartão de faturamento total ($196.87 Mi), são filtrados automaticamente.
+
+Para melhorar a legibilidade e o design do relatório, foram realizados ajustes de formatação:
+
+* **Segmentador:** Alterado para o estilo "Suspenso" (Dropdown) e renomeado para "Ano" no cabeçalho.
+* **Efeitos:** Aplicação de tela de fundo com transparência e ajuste de bordas.
+* **Hierarquia:** A árvore agora detalha que, dentro da categoria "Direct", a subcategoria de maior peso é "Hardware".
+
+O resultado final demonstra um dashboard funcional onde o usuário pode navegar entre diferentes perspectivas temporais e categorias de produtos de forma dinâmica.
+
+
 ### 🟩 Vídeo 10 - Onde estão as Samples do Power BI que iremos utilizar?
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_10.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/a269d142-013d-445a-ad63-34eb7ca0c802?autoplay=1
 
 ### 🟩 Vídeo 11 - Entendendo como os Dados da Sample estão Organizados no Power BI
 <video width="60%" controls>
