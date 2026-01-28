@@ -170,13 +170,85 @@ A finalização do ajuste para o layout móvel foca na legibilidade e na propor�
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/9ba7efd5-cd9f-460b-9f64-733354d467e3?autoplay=1
 
+Este guia explora como transformar dados brutos em decisões estratégicas utilizando o Power BI, detalhando os principais componentes da ferramenta e as melhores práticas para escolher o gráfico ideal para cada cenário.
+
+### Anotações
+
+#### Blocos de Construção do Power BI
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h34m43s785.jpg" alt="" width="840">
+</p>
+
+No Power BI, os dados são organizados através de unidades fundamentais chamadas de **blocos de construção**. Esses componentes funcionam como a menor unidade ou "átomo" dentro da ferramenta, permitindo que a informação seja estruturada desde a sua origem até a apresentação final. Os principais blocos são:
+
+* **Visualizações:** A representação gráfica dos dados.
+* **Conjunto de dados:** A fonte de informação carregada.
+* **Relatórios:** Páginas que agrupam diversas visualizações.
+* **Painéis (Dashboards):** Uma visão única e consolidada de métricas importantes.
+* **Blocos:** Elementos individuais de visualização presentes em um painel.
+
+#### Gráficos de Colunas e Barras
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h34m51s128.jpg" alt="" width="840">
+</p>
+
+O Power BI Desktop oferece diversas opções para visualização de agrupamentos, como o **gráfico de barras** (horizontal) e o **gráfico de colunas** (vertical). No exemplo de "Spend Overview", utiliza-se o gráfico de colunas para comparar o faturamento (**Total Invoice**) entre diferentes subcategorias.
+
+Existem variações importantes para esses visuais:
+
+* **Empilhado:** Coloca diferentes categorias uma sobre a outra na mesma coluna para mostrar a composição do total.
+* **Clusterizado:** Posiciona as categorias lado a lado, facilitando a comparação direta de valores distintos entre segmentos.
+
+#### Hierarquia e Detalhamento (Drill-down)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h35m02s912.jpg" alt="" width="840">
+</p>
+
+Ao configurar o **Eixo X** com múltiplos campos (como Sub Category e Commodity), o Power BI habilita a função de hierarquia. Isso permite que o usuário navegue entre diferentes níveis de detalhamento sem poluir o visual principal. No exemplo, ao analisar o "Total Invoice por Sub Category", é possível identificar que a categoria **Hardware** possui o maior volume de faturamento, servindo como ponto de partida para investigações mais profundas.
+
+#### Exploração da Commodity
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h35m05s098.jpg" alt="" width="840">
+</p>
+
+Ao descer um nível na hierarquia (utilizando o recurso de expansão), o gráfico altera sua visualização para mostrar os dados por **Commodity**. Essa transição é fundamental para entender a distribuição da magnitude dos dados em subníveis; enquanto algumas categorias mantêm valores altos, outras, como detalhes específicos de commodities, podem apresentar volumes significativamente menores (na casa dos 10 milhões), evidenciando a utilidade de não exibir todas as informações simultaneamente.
+
+#### Visualização de Barras Horizontais (Tiers)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h35m10s122.jpg" alt="" width="840">
+</p>
+
+O gráfico de barras horizontais é ideal quando se deseja dar ênfase aos nomes das categorias ou quando há necessidade de mais espaço para os rótulos de dados. No caso da análise por **Tier**, o faturamento é deslocado para o Eixo X, permitindo uma leitura clara da proporção entre os diferentes níveis de vendedores (Vendors). Habilitar os **Rótulos de dados** neste formato é uma prática recomendada para fornecer clareza imediata sobre os valores nominais sem depender apenas da escala visual.
+
+#### Coordenadas e Mapas Geográficos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h35m16s448.jpg" alt="" width="840">
+</p>
+
+Para dados que possuem componentes de localização, o **Gráfico de Mapa** é a ferramenta mais indicada. Ele permite associar medidas (como faturamento) a países, regiões ou cidades. Assim como nos gráficos de barras, o mapa suporta hierarquias: é possível visualizar os dados de forma macro nos **Estados Unidos** e **México** e, através do comando de expansão, detalhar a análise até o nível de cidades específicas, como Ottawa ou Cidade do México.
+
+#### Gráficos de Linha e Combinação
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h35m19s308.jpg" alt="" width="840">
+</p>
+
+O **Gráfico de Linha** é essencial para demonstrar tendências e variações ao longo do tempo (meses ou dias), permitindo identificar padrões de intensidade e sazonalidade. Já o **Gráfico de Combinação** une o melhor de dois mundos: utiliza barras para volumes e linhas para tendências ou taxas. Esta abordagem é superior aos gráficos clusterizados simples quando lidamos com magnitudes diferentes, pois permite o uso de dois eixos Y distintos, facilitando a identificação de correlações entre as métricas.      
+
+
 ### 🟩 Vídeo 06 - Conjunto de Dados, Report e Blocos do Power BI
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/ec38dd46-9b21-49a8-99b8-5d096f600c9f?autoplay=1
 
 ### 🟩 Vídeo 07 - Utilizando o Modelo para Analisar o conjunto de dados da Sample do Power BI
 <video width="60%" controls>
