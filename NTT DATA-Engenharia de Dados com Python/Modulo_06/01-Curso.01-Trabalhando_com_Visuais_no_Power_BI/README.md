@@ -139,6 +139,27 @@ Tela de confirmação de êxito na publicação do relatório. O sistema informa
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/f5f52aa8-2230-4659-be9c-2680973c6ff6?autoplay=1
 
+Este tutorial foca na adaptação de relatórios do Power BI para o formato mobile, garantindo que a visualização de dados seja eficiente e atraente em telas menores. O instrutor demonstra desde a ativação do layout móvel até a personalização detalhada de elementos visuais e interativos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h14m02s679.jpg" alt="" width="840">
+</p>
+
+A interface inicial apresenta o **Power BI Desktop** configurado para a criação de um relatório analítico baseado em um conjunto de dados sobre diabetes. No painel lateral de **Campos**, é possível observar o *dataset* carregado com variáveis críticas como **Glucose** (glicose), **Age** (idade), **Blood Pressure** (pressão arterial) e **Pregnancies** (gravidezes). O objetivo central é explorar os fatores principais relacionados à condição, utilizando visualizações como o gráfico de barras que correlaciona a contagem de glicose com o número de gestações. Este ambiente serve como base para a transição entre as visualizações de desktop e as adaptações necessárias para dispositivos móveis.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h14m31s529.jpg" alt="" width="840">
+</p>
+
+Ao acessar a aba **Exibição** e selecionar o **Layout móvel**, a interface disponibiliza uma tela que simula a proporção de um smartphone. Nesta etapa, é demonstrada a inclusão de um **segmentador de dados** (slicer) baseado no **BMI** (Índice de Massa Corpórea). A personalização deste elemento envolve o ajuste de efeitos visuais, como a definição de uma tela de fundo azul suave com transparência e a aplicação de uma **fronteira visual** com cantos arredondados. O processo enfatiza que os elementos devem ser criados previamente na visão de desktop para que fiquem disponíveis para organização na tela do dispositivo móvel.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h14m35s300.jpg" alt="" width="840">
+</p>
+
+A finalização do ajuste para o layout móvel foca na legibilidade e na proporção dos gráficos. Para o visual de **Média de Glucose por Idade**, os **rótulos de categoria** e os títulos são redimensionados para tamanhos menores (como fonte 10), garantindo que a informação não fique poluída no espaço restrito da tela do celular. Esta adaptação é essencial para que os interessados possam acessar informações estratégicas de qualquer lugar, respeitando a hierarquia visual e a interatividade dos dados configurados, como a segmentação por amostragem de grávidas e níveis de glicose.      
 
 
 ### 🟩 Vídeo 05 - Conversando sobre Power BI e seus Blocos Construtores
@@ -147,7 +168,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/9ba7efd5-cd9f-460b-9f64-733354d467e3?autoplay=1
 
 ### 🟩 Vídeo 06 - Conjunto de Dados, Report e Blocos do Power BI
 <video width="60%" controls>
