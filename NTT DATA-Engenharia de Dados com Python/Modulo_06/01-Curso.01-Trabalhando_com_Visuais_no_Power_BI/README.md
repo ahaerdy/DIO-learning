@@ -557,13 +557,55 @@ A última imagem detalha a coluna **Chain** (Cadeia/Rede) na tabela `Store`. Est
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/bca5d999-e8dd-4aa5-b920-913b7c77dcad?autoplay=1
 
+Este resumo detalha a criação e análise de um Gráfico de Dispersão (Scatter Plot) no Power BI, explorando suas funcionalidades, os cálculos envolvidos e o contexto ideal para sua aplicação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-20h49m30s460.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, é selecionado o visual de **Gráfico de Dispersão** no Power BI para iniciar uma análise de avaliação de vendas. O objetivo é configurar um gráfico que permita verificar o relacionamento entre diferentes variáveis. A primeira métrica arrastada para a estrutura do gráfico é a **Total Sales Variance** (Variação Total de Vendas), que é automaticamente alocada no **Eixo X**. Este eixo representará a variável independente da análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-20h49m39s211.jpg" alt="" width="840">
+</p>
+
+Para compor o **Eixo Y**, utiliza-se a medida **Sales Per Sq Ft**. Esta métrica é calculada através de uma expressão DAX complexa que visa normalizar as vendas pelo tamanho da área de cada loja, permitindo uma comparação justa entre estabelecimentos de dimensões diferentes. O cálculo considera o total de vendas do ano corrente (*This Year*), a contagem de meses distintos e o somatório do tamanho das áreas de vendas (*Selling Area Size*).
+
+A expressão utilizada para esta medida é:
+
+```dax
+Sales Per Sq Ft = ([TotalSalesTY]/(DISTINCTCOUNT('Time'[MonthID])*SUM('Store'[SellingAreaSize])))*12
+
+```
+
+Esta fórmula resulta no total de vendas anualizado por mês, levando em conta a proporção da área de negócio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-20h49m42s252.jpg" alt="" width="840">
+</p>
+
+Após configurar os eixos, o gráfico é detalhado utilizando o campo **District** (Distrito) no campo de **Legenda**. Isso atribui cores diferentes aos pontos, permitindo identificar a distribuição das vendas por região. Para refinar ainda mais a visualização e dar significado ao tamanho das "bolhas" no gráfico, adiciona-se a medida **This Year Sales** ao campo **Tamanho**. Com isso, quanto maior o volume de vendas de um distrito ou loja, maior será a representação visual do ponto no gráfico, facilitando a identificação imediata dos maiores mercados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-20h49m44s755.jpg" alt="" width="840">
+</p>
+
+O gráfico de dispersão finalizado permite analisar a força do relacionamento entre a variância de vendas (Eixo X) e a produtividade por área de venda (Eixo Y). Adicionando o **StoreNumber** e o **District** aos valores, cria-se uma hierarquia que permite explorar os dados desde o nível macro (distrito) até o nível micro (loja individual).
+
+A utilidade principal deste visual é verificar se existe uma tendência ou convergência nos dados. No contexto desta análise, o Eixo X contém a variável independente, enquanto o Eixo Y apresenta a variável dependente, permitindo observar como a variação percentual de vendas se comporta em relação à eficiência do espaço físico das lojas. Para melhorar a legibilidade, podem ser aplicados ajustes estéticos como rótulos de categoria, sombras e linhas de tendência ou simetria.      
+
+
 ### 🟩 Vídeo 13 - Utilizando Gráficos de Dispersão, Donut Chart e Cartões
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_13.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/37ca113b-5eba-4543-9303-82d5ed2119c2?autoplay=1
+
+
 
 ### 🟩 Vídeo 14 - Criando um Gráfico de Funil e Realizando Interação com Relatório Criado
 <video width="60%" controls>
