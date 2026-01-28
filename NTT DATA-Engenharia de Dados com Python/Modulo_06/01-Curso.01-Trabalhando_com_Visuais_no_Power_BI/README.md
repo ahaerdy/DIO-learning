@@ -434,13 +434,53 @@ O resultado final demonstra um dashboard funcional onde o usuário pode navegar 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/a269d142-013d-445a-ad63-34eb7ca0c802?autoplay=1
 
+Este vídeo serve como uma transição prática para o uso de dados reais e complexos no Power BI. O instrutor demonstra onde encontrar bases de dados oficiais da Microsoft e introduz conceitos fundamentais sobre armazenamento de dados e a lógica por trás das medidas calculadas (DAX).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h36m29s362.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é apresentada a documentação oficial da Microsoft para a obtenção de exemplos práticos no Power BI. O portal "learn.microsoft.com" oferece diversos conjuntos de dados e relatórios prontos, como o exemplo de "Vendas e Devoluções", que servem como base para explorar as funcionalidades da ferramenta sem a necessidade de possuir dados próprios inicialmente. Além dos arquivos de relatório, a página destaca oportunidades de aprendizado, como desafios de habilidades na nuvem e certificações gratuitas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h36m37s454.jpg" alt="" width="840">
+</p>
+
+A documentação detalha diferentes tipos de amostras disponíveis para o usuário, incluindo:
+
+* **Arquivos .pbix:** Relatórios completos que podem ser explorados no Power BI Desktop ou carregados no serviço online.
+* **Exemplos de Inteligência Artificial:** Relatórios específicos para testar recursos como influenciadores-chave, análise de causa raiz em árvores hierárquicas e detecção de anomalias.
+* **Aplicativos de Modelo:** Conjuntos de dashboards e relatórios disponíveis via AppSource que podem ser personalizados e distribuídos para colegas.
+* **Exemplos Internos:** Oito amostras originais integradas diretamente ao serviço do Power BI, abrangendo diversos cenários de negócios.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h36m50s372.jpg" alt="" width="840">
+</p>
+
+Para realizar exercícios práticos, é possível baixar arquivos individuais no formato `.pbix` projetados para uso com o Power BI Desktop. Entre as opções disponíveis para download automático, destacam-se:
+
+* Exemplo de Lucratividade do Cliente.
+* Exemplo de Recursos Humanos.
+* Exemplo de Análise de Compras.
+* Exemplo de Análise de Varejo.
+* Exemplo de Vendas e Marketing.
+* Exemplo de Análise de Qualidade do Fornecedor.
+
+Após o download, o usuário deve navegar até o local do arquivo e abri-lo através do menu "Arquivo > Abrir" no Power BI Desktop para iniciar a exploração.
+
+
 ### 🟩 Vídeo 11 - Entendendo como os Dados da Sample estão Organizados no Power BI
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_11.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/219f4813-c0ff-4535-bfe1-c3fb743a31c4?autoplay=1
+
+
 
 ### 🟩 Vídeo 12 - Gráficos de Mapas
 <video width="60%" controls>
