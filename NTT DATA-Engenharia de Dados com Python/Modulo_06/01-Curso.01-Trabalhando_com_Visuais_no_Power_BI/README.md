@@ -13,7 +13,26 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/ee757ff7-83d8-49c9-94b8-27471b713364?autoplay=1
+
+Este módulo foca na transformação de dados brutos em narrativas visuais impactantes. O objetivo principal é capacitar o aluno a entender não apenas como criar gráficos, mas quando e por que utilizar cada tipo de visualização para gerar insights claros e acionáveis
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-14h11m38s966.jpg" alt="" width="840">
+</p>
+
+Nesta introdução ao módulo **Explorando Dados e Relatórios com Power BI**, o foco é compreender a arquitetura da ferramenta e como ela se organiza para a criação de dashboards interativos. A abordagem central do curso visa definir claramente o que são os "blocos" dentro do ecossistema do Power BI e como as visualizações se integram aos dados.
+
+Para proporcionar um aprendizado abrangente, a dinâmica de ensino é dividida em frentes específicas:
+
+* **Diversidade de Visuais**: Desenvolvimento de três relatórios distintos em contextos variados para explorar quando e como utilizar componentes como gráficos de funil, pizza, donut, treemap e a árvore hierárquica.
+* **Interatividade e Tooltips**: Criação de dicas de ferramenta personalizadas, permitindo que janelas flutuantes com informações contextuais sejam exibidas ao interagir com os gráficos.
+* **Visuais Customizados**: Além dos recursos nativos do Power BI Desktop, o curso explora a integração de visuais externos e referências avançadas para expandir as possibilidades de análise de dados.
+
+O objetivo final é garantir que a escolha de cada visual seja estratégica, evitando a monotonia e garantindo que o relatório atenda às necessidades específicas de cada cenário de negócio. 
+
 
 ### 🟩 Vídeo 02 - Formalizando conceitos do Power BI
 <video width="60%" controls>
@@ -21,7 +40,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/a6c48aca-cdec-4b4b-b29c-e2d97b879bc5?autoplay=1
 
 ### 🟩 Vídeo 03 - Criando Alguns gráficos publicando relatório no Power BI Service
 <video width="60%" controls>
