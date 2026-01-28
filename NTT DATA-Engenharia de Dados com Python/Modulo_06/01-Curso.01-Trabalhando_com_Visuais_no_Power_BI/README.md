@@ -289,13 +289,67 @@ Nesta visualização, destaca-se o conceito de **Bloco** (Tile) como a unidade i
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/8caa4bb3-1d84-4b23-bef5-28842c08d74f?autoplay=1
 
+Este vídeo tutorial foca na base de qualquer relatório de sucesso no Power BI: o conjunto de dados e sua modelagem. O instrutor demonstra como navegar pelas tabelas, criar relacionamentos manuais e automáticos, e enfatiza a importância de manter um modelo de dados "limpo" e eficiente, removendo ou ocultando informações desnecessárias antes de partir para a criação de visuais.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h54m19s370.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, o foco da aula deixa de ser os elementos visuais para concentrar-se no **conjunto de dados** do Power BI. A interface mostra o ambiente de desenvolvimento onde as tabelas que compõem o relatório estão listadas. É possível observar os diferentes painéis como "Visualizações", "Filtros" e, principalmente, o painel de **Campos**, que contém as tabelas de dados como *Currency*, *Date*, *Invoice*, *Item*, entre outras, prontas para serem exploradas e manipuladas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h54m24s384.jpg" alt="" width="840">
+</p>
+
+Ao selecionar a tabela **Invoice** na exibição de dados, podemos visualizar seu conteúdo estruturado em colunas e linhas. Esta visualização tabular permite validar a integridade dos dados, como o formato de datas, percentuais de desconto e termos de pagamento. Observar o conteúdo bruto é fundamental para entender como as informações estão organizadas antes de realizar qualquer manipulação no modelo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h54m27s927.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a tabela **ExchangeRate** (Taxa de Câmbio). Através desta visão, nota-se que certas tabelas podem conter informações específicas de suporte ao negócio, como variações de taxas ao longo do tempo. É mencionado que algumas dessas tabelas ou campos podem estar ocultos no modelo original para simplificar a experiência do usuário final no relatório, mantendo apenas o que é estritamente necessário para a visualização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h54m31s065.jpg" alt="" width="840">
+</p>
+
+A interface de **Modelagem** revela a estrutura de relacionamentos entre as tabelas, assemelhando-se a um Diagrama de Entidade e Relacionamento (DER). Neste ambiente, as conexões (relacionamentos) entre tabelas como *Invoice*, *Invoice Line Item* e *Date* definem como os dados interagem entre si. O Power BI utiliza essas linhas de conexão para entender como filtrar e agregar dados de diferentes fontes de forma coordenada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h55m09s394.jpg" alt="" width="840">
+</p>
+
+Demonstração da manipulação direta de relacionamentos. O usuário pode gerenciar como as tabelas se conectam, identificando chaves comuns (como o `LocationID`). Se o Power BI não identificar um relacionamento automaticamente, é possível criá-lo manualmente arrastando campos entre as tabelas ou utilizando o menu superior **Gerenciar relações**, garantindo que a integridade referencial do modelo seja mantida.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h55m16s908.jpg" alt="" width="840">
+</p>
+
+A janela **Gerenciar relações** exibe uma lista detalhada de todos os relacionamentos ativos no modelo. Aqui, é possível visualizar as tabelas de origem e destino, bem como as colunas específicas que servem de ponte entre elas. Por exemplo:
+
+* **De: Tabela (Coluna)**: Invoice (InvoiceDateID) -> **Para: Tabela (Coluna)**: Date (DateID)
+* **De: Tabela (Coluna)**: Invoice Line Item (ItemID) -> **Para: Tabela (Coluna)**: Item (ItemID)
+
+Esta central permite criar novas conexões, editar as existentes ou excluir aquelas que não são mais necessárias para a análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h55m29s935.jpg" alt="" width="840">
+</p>
+
+Ao configurar um novo relacionamento, a janela **Criar relacionamento** permite definir propriedades técnicas cruciais, como a **Cardinalidade** (ex: Um para muitos) e a **Direção do filtro cruzado**. O Power BI frequentemente oferece a "Detecção automática", mas o ajuste manual garante que o modelo reflita fielmente as regras de negócio. O objetivo final é ter uma estrutura limpa, avaliando se todos os dados importados e ocultos são realmente necessários para evitar desperdício de espaço de armazenamento.      
+
+
 ### 🟩 Vídeo 08 - Entendendo os Tipos de gráficos Construindo um Relatório no Power BI
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_08.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/e34a2796-7bdf-43ab-95fd-d2118b8abaa7?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Trabalhando com Árvore Hierárquica, Segmentadores e outros Visuais
 <video width="60%" controls>
