@@ -480,6 +480,73 @@ Após o download, o usuário deve navegar até o local do arquivo e abri-lo atra
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/219f4813-c0ff-4535-bfe1-c3fb743a31c4?autoplay=1
 
+Este vídeo foca na exploração detalhada da estrutura de um conjunto de dados (dataset) que será utilizado para criar dashboards interativos no Power BI. O objetivo é garantir que os alunos compreendam a organização dos dados e o propósito de cada campo antes de iniciar a construção das visualizações.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h57m27s382.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, acessamos as ferramentas de medida no Power BI Desktop para configurar a métrica **Store Count**. Esta medida utiliza a função DAX `DISTINCTCOUNT` aplicada ao campo `LocationID` da tabela `Sales`, garantindo a contagem exclusiva de cada localidade. Na interface, definimos o nome da medida e confirmamos sua associação à tabela inicial de vendas.
+
+```dax
+Store Count = DISTINCTCOUNT ([LocationID])
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h57m38s722.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a criação de uma métrica de desempenho mais complexa: a **Sales Per Sq Ft** (Vendas por Pé Quadrado). A fórmula calcula a razão entre as vendas totais deste ano (`TotalSalesTY`) e a área de venda total, ajustada pelo número de meses. O formato de exibição é configurado como Moeda para facilitar a análise financeira.
+
+```dax
+Sales Per Sq Ft = ([TotalSalesTY]/(DISTINCTCOUNT('Time'[MonthID])*SUM('Store'[SellingAreaSize])))*12
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h57m41s471.jpg" alt="" width="840">
+</p>
+
+Aqui visualizamos a tabela `District` no modo de exibição de dados. A coluna selecionada é a **DM** (District Manager), que contém o nome dos gerentes distritais associados a cada código de distrito (como FD-01, FD-02). Observa-se também a presença de colunas com URLs de imagens (`DM Pic`), que serão utilizadas para enriquecer visualmente os relatórios com as fotos dos responsáveis.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h57m43s421.jpg" alt="" width="840">
+</p>
+
+Nesta tela, configuramos a categoria de dados para a coluna **DMimage**. Embora o tipo de dado seja identificado como binário no sistema, a categoria de dados é definida especificamente como **Image** (Imagem) nas propriedades de formatação. Isso é fundamental para que o Power BI interprete o conteúdo como um elemento visual e não apenas como texto ou código bruto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h57m46s149.jpg" alt="" width="840">
+</p>
+
+A imagem foca na coluna **Buyer** da tabela `Item`. O menu de contexto mostra as opções de ordenação (Crescente e Decrescente) e os filtros de texto disponíveis. Esta coluna identifica os compradores responsáveis por diferentes categorias de produtos, como "Womens" (Moda Feminina), permitindo segmentar as análises de estoque e vendas por responsável.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h57m49s305.jpg" alt="" width="840">
+</p>
+
+Aqui é exibido o filtro aplicado à coluna **Category**. O painel de seleção permite escolher entre diversas categorias de produtos, como Mens, Kids, Shoes e Home. Esta organização é essencial para a estrutura hierárquica do dataset, permitindo que o analista filtre os resultados de vendas por departamentos específicos da loja.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h57m52s724.jpg" alt="" width="840">
+</p>
+
+A interface apresenta a guia "Página Inicial" com foco no gerenciamento de relações. É possível visualizar as ferramentas de obtenção de dados e transformação, destacando que a estrutura atual possui múltiplas tabelas integradas. O painel lateral direito exibe os campos disponíveis nas tabelas `Sales`, `District`, `Item`, `Store` e `Time`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h57m58s173.jpg" alt="" width="840">
+</p>
+
+Nesta visão da tabela `Store`, analisamos a coluna **Selling AreaSize** (Tamanho da Área de Venda). A imagem mostra detalhes como a cidade, o estado (OH, VA, PA), a data de abertura da loja e o tamanho físico em pés quadrados. Esta coluna está configurada para realizar um resumo automático por soma (`Sum`), sendo um componente vital para o cálculo da métrica de vendas por pé quadrado vista anteriormente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-19h58m01s280.jpg" alt="" width="840">
+</p>
+
+A última imagem detalha a coluna **Chain** (Cadeia/Rede) na tabela `Store`. Esta coluna classifica as lojas entre diferentes bandeiras, como "Fashions Direct" e "Lindseys". O modo de exibição de dados permite verificar a consistência das informações geográficas (City, Territory) e a associação correta entre cada loja e seu respectivo Gerente Distrital (DM).      
 
 
 ### 🟩 Vídeo 12 - Gráficos de Mapas
@@ -488,7 +555,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/bca5d999-e8dd-4aa5-b920-913b7c77dcad?autoplay=1
 
 ### 🟩 Vídeo 13 - Utilizando Gráficos de Dispersão, Donut Chart e Cartões
 <video width="60%" controls>
