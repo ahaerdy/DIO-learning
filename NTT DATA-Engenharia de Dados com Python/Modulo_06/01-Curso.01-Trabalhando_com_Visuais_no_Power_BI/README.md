@@ -349,6 +349,29 @@ Ao configurar um novo relacionamento, a janela **Criar relacionamento** permite 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/e34a2796-7bdf-43ab-95fd-d2118b8abaa7?autoplay=1
 
+Este guia resume as principais técnicas de visualização de dados apresentadas no vídeo, focando na escolha estratégica de gráficos, design de relatórios e a criação de dashboards interativos para análise financeira.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-16h19m52s242.jpg" alt="" width="840">
+</p>
+
+O **gráfico em cascata** (Waterfall chart) é apresentado como uma ferramenta visual estratégica para demonstrar a evolução de valores ao longo de um período específico, como o **trimestre** (quarter). Este tipo de visualização é particularmente útil para entender como um valor inicial é afetado por uma série de variações positivas ou negativas, permitindo uma visão cumulativa dos dados.
+
+No exemplo visual, o gráfico exibe o **Total Invoice** distribuído por períodos:
+
+* **Barras Verdes**: Indicam o aumento (subida) do valor total acumulado em cada trimestre.
+* **Barra Azul (Total)**: Representa o resultado final consolidado após todas as variações apresentadas.
+* **Interatividade**: A imagem demonstra o foco no elemento visual, permitindo identificar o impacto de cada categoria no montante final.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-16h19m54s521.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, a análise do gráfico destaca o viés cumulativo da informação ao longo do tempo. O visual revela a progressão do faturamento através dos trimestres (**Q1, Q2, Q3, Q4**), expondo também a presença de dados categorizados como **"Em branco"**. Essa ocorrência sinaliza a necessidade de processos futuros de limpeza e transformação, garantindo que o relatório não apresente informações inconsistentes.
+
+O gráfico funciona como um demonstrador de métricas de variação, sendo ideal para contextos de prestação de contas onde se deseja observar como receitas ou margens brutas evoluem. Através da codificação de cores padrão, o gestor consegue diferenciar aumentos de eventuais reduções, culminando na coluna de **Total** que encerra a visualização consolidada.
 
 
 ### 🟩 Vídeo 09 - Trabalhando com Árvore Hierárquica, Segmentadores e outros Visuais
@@ -357,7 +380,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/3b5b8165-3eb6-4e33-b182-465b542a4c7e?autoplay=1
 
 ### 🟩 Vídeo 10 - Onde estão as Samples do Power BI que iremos utilizar?
 <video width="60%" controls>
