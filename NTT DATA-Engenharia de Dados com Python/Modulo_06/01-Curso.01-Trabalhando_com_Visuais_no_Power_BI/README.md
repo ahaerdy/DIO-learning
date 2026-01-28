@@ -42,13 +42,42 @@ O objetivo final é garantir que a escolha de cada visual seja estratégica, evi
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/a6c48aca-cdec-4b4b-b29c-e2d97b879bc5?autoplay=1
 
+Este guia detalha as diferenças fundamentais entre as ferramentas do ecossistema Power BI, focando em quando e como utilizar o Power BI Desktop e o Power BI Service.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-14h20m33s940.jpg" alt="" width="840">
+</p>
+
+A interface inicial apresentada é a do **Power BI Desktop**, ferramenta voltada primordialmente para a criação local de relatórios e dashboards. Na imagem, observa-se a aba "Spend Overview", que exibe um gráfico de barras comparando gastos em categorias como Hardware, Logística e Matérias-primas. Neste estágio, o trabalho é estritamente individual e reside na máquina do desenvolvedor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-14h20m39s737.jpg" alt="" width="840">
+</p>
+
+Nesta visão detalhada do Power BI Desktop, é possível visualizar o ambiente completo de manipulação de dados. À direita, encontram-se os painéis de **Visualizações** e **Campos** (Fields), que permitem ao usuário arrastar métricas e dimensões para o relatório. O dashboard em questão apresenta mapas e gráficos que auxiliam na análise de compras e fornecedores, evidenciando as capacidades de coleta e transformação de dados da versão Desktop.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-14h20m44s338.jpg" alt="" width="840">
+</p>
+
+A interface apresentada é a do **Power BI Serviço**, acessada via navegador (app.powerbi.com). O foco desta plataforma é a visualização e o compartilhamento de dashboards com outros usuários. No menu "Meu workspace", observa-se uma lista de conteúdos publicados, incluindo relatórios como "Sales Analysis" e "Customer Profitability Sample", além de conjuntos e fluxos de dados prontos para consumo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-14h20m52s382.jpg" alt="" width="840">
+</p>
+
+Embora o Power BI Serviço seja focado em visualização, a imagem demonstra a possibilidade de **edição direta no browser**. Ao abrir o relatório "Sales Analysis", o usuário tem acesso a menus de visualização e campos muito semelhantes aos do Desktop. Essa funcionalidade é útil para ajustes rápidos e interações pontuais quando o usuário não possui o software instalado localmente, embora a versão web apresente recursos mais limitados que a ferramenta Desktop original.      
+
+
 ### 🟩 Vídeo 03 - Criando Alguns gráficos publicando relatório no Power BI Service
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_03.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/0eabe78f-0a5e-443b-9b70-6a6b0e88a9a6?autoplay=1
 
 ### 🟩 Vídeo 04 - Ajustando Relatório para criar um Layout Mobile
 <video width="60%" controls>
