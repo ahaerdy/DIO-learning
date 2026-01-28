@@ -250,13 +250,44 @@ O **Gráfico de Linha** é essencial para demonstrar tendências e variações a
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/ec38dd46-9b21-49a8-99b8-5d096f600c9f?autoplay=1
 
+Este resumo explora os componentes fundamentais que compõem o ecossistema do Power BI, desde a base de dados até a entrega final de relatórios interativos
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h41m19s325.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta o conceito fundamental de **conjunto de dados** (dataset) no Power BI. Através de uma tabela detalhada, observa-se como as informações brutas são organizadas para fomentar a criação de relatórios e visuais. Os dados exibidos referem-se a estatísticas de natalidade, estruturadas em colunas como "Ano", "Nome do Mês", "Nascimentos" e "Nascimentos por Dia". Este bloco de construção é essencial para entender a organização da informação antes da manipulação gráfica.
+
+| Ano | Mês | Nome do Mês | Mês do Calendário | Nascimentos | Nascimentos por Dia | Nascimentos (Norm.) |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2004 | 1 | Janeiro | 01/01/2004 | 2937 | 94,7 | 2842 |
+| 2004 | 2 | Fevereiro | 01/02/2004 | 2824 | 97,4 | 2921 |
+| 2004 | 3 | Março | 01/03/2004 | 3128 | 100,9 | 3027 |
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h41m25s309.jpg" alt="" width="840">
+</p>
+
+A interface demonstra a aplicação prática dos **Reports (Relatórios)**, que constituem o objetivo final do trabalho analítico. Aqui, os dados são transformados em múltiplos componentes visuais interativos, permitindo a manipulação de cores e a organização de diferentes tipos de gráficos em uma única página. O ambiente de edição revela painéis de "Visualizações" e "Campos", onde o usuário pode configurar filtros e métricas específicas para cada elemento do relatório.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-15h41m27s569.jpg" alt="" width="840">
+</p>
+
+Nesta visualização, destaca-se o conceito de **Bloco** (Tile) como a unidade individual de construção de um dashboard. Um gráfico específico, como o de "Vendas por Metro Quadrado" ou "Lojas Abertas Este Ano", funciona como um componente visual independente dentro do ecossistema do Power BI. A imagem ilustra como esses blocos, incluindo gráficos de dispersão, indicadores de vendas totais e gráficos de pizza, são organizados para fornecer uma análise contextualizada de métricas como a variação de vendas e público.
+
+
 ### 🟩 Vídeo 07 - Utilizando o Modelo para Analisar o conjunto de dados da Sample do Power BI
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_07.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/8caa4bb3-1d84-4b23-bef5-28842c08d74f?autoplay=1
 
 ### 🟩 Vídeo 08 - Entendendo os Tipos de gráficos Construindo um Relatório no Power BI
 <video width="60%" controls>
