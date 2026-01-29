@@ -93,7 +93,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Lógica Condicional e Controle de Fluxos em Java](Modulo_06/04-Curso.04-Logica_Condicional_e_Controle_de_Fluxos_em_Java)
 - [ ] Curso: [Estruturas de Repetição e Arrays em Java](Modulo_06/05-Curso.05-Estruturas_de_Repeticao_e_Arrays_em_Java)
 - [ ] Curso: [Trabalhando com Collections Java](Modulo_06/06-Cursos.06-Trabalhando_com_Collections_Java)
-- [ ] Curso: Estruturas de Dados em Java: Principais Implementações
+- [ ] Curso: [Estruturas de Dados em Java: Principais Implementações](Modulo_06/07-Curso.07-Estruturas_de_Dados_em_Java-Principais_Implementacoes)
 - [ ] Curso: Debugging Java
 - [ ] Curso: Tratamento de Exceções em Java
 - [ ] Curso: Desafios TQI - Java
