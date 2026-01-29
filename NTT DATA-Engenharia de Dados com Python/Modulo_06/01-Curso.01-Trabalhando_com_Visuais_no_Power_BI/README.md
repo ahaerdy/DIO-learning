@@ -859,68 +859,64 @@ Este guia foca na expansão das capacidades nativas do Power BI através do uso 
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m37s261.jpg" alt="" width="840">
 </p>
 
-Nesta etapa, exploramos a galeria de visuais do Power BI (AppSource) para identificar ferramentas que auxiliam na exibição de imagens dentro dos relatórios. Entre as opções populares listadas, destacam-se o **Image Pro by CloudScope**, o **Chiclet Slicer** da Microsoft e o **Simple Image**. Esses visuais permitem ampliar os insights de negócios ao associar dados textuais ou numéricos a elementos visuais diretos.
+Nesta etapa, exploramos a galeria de visuais do Power BI no AppSource. A imagem destaca a categoria "Image", mostrando diferentes suplementos disponíveis para manipulação de figuras, como o **Image Pro**, o **Simple Image** e o **Chiclet Slicer**. Esses visuais personalizados permitem expandir as capacidades nativas do Power BI para lidar com elementos visuais e cartões de informação.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m39s222.jpg" alt="" width="840">
 </p>
 
-O visual **Image Grid**, desenvolvido por Fredrik Hedenström, é uma opção interessante para quem precisa exibir uma série de imagens de forma dinâmica. Ele permite que o tamanho das imagens seja proporcional à ordem de classificação ou ao valor de uma medida específica (weighted list). É ideal para mostrar produtos mais vendidos ou categorias selecionadas, ajustando a grade conforme os filtros aplicados no relatório.
+O visual **Image Grid**, desenvolvido por Fredrik Hedenström, é uma ferramenta interessante para quem precisa exibir uma série de imagens diferentes dentro de um relatório. Com ele, é possível selecionar categorias ou produtos específicos e mostrar as imagens relacionadas de forma dinâmica. O tamanho das imagens pode ser configurado para ser proporcional a uma medida ou seguir uma ordem de classificação, facilitando a visualização de catálogos ou portfólios.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m41s125.jpg" alt="" width="840">
 </p>
 
-A interface do Power BI Desktop permite a navegação entre diferentes páginas de relatório, facilitando a organização de diversos visuais personalizados que serão instalados conforme a necessidade do projeto.
+Após a análise dos visuais de imagem, retornamos à interface principal do Power BI Desktop para prosseguir com a exploração de outros visuais personalizados que podem agregar valor às análises de dados, mantendo o foco em ferramentas que auxiliam na distinção de categorias e performance.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m48s880.jpg" alt="" width="840">
 </p>
 
-Ao pesquisar por "Radar" no AppSource, encontramos diversas opções de gráficos de radar (Radar Charts). Note que os três primeiros resultados exibidos — **Radar Chart** (Microsoft), **Radar/Polar Chart** (xViz) e **Radar Chart by MAQ Software** — possuem o selo de certificação da Microsoft, o que garante maior segurança e conformidade com os padrões da plataforma.
+Ao pesquisar por "Radar" no AppSource, encontramos opções como o **Radar Chart** da Microsoft Corporation e o **Radar/Polar Chart** da xViz. O Radar Chart é um tipo de visual muito utilizado para comparar diversos atributos (multivariáveis) em um gráfico bidimensional, onde três ou mais variáveis quantitativas são representadas em eixos que partem de um mesmo ponto central.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m57s808.jpg" alt="" width="840">
 </p>
 
-O **Radar Chart** da Microsoft é um método gráfico para exibir dados multivariados em um gráfico bidimensional. Ele utiliza três ou mais variáveis quantitativas representadas em eixos que partem de um mesmo ponto central. Este visual é particularmente útil para comparar atributos ou analisar o desempenho, como o mapeamento de habilidades de funcionários (Skill Analysis) ou comparação de produtos.
+O **Radar Chart** oficial da Microsoft é um visual certificado, o que garante maior segurança e integração com as funcionalidades do Power BI. Ele é ideal para exibir métricas de desempenho, como análise de habilidades de funcionários ou comparação de produtos, conectando os valores de cada eixo para formar um polígono que facilita a identificação de pontos fortes e fracos em um conjunto de dados.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m06s381.jpg" alt="" width="840">
 </p>
 
-A configuração do gráfico de radar inclui opções para ajustar a legenda (Legend) e as cores dos dados. No exemplo visualizado, diferentes categorias (como "IT Department") podem ter suas cores personalizadas para facilitar a distinção entre as variáveis plotadas ao longo dos eixos radiais.
+Aqui vemos as configurações de formatação do Radar Chart, incluindo opções de legenda e cores de dados. O visual permite plotar múltiplas medidas sobre um eixo categórico, sendo extremamente útil para comparar atributos de diferentes departamentos ou categorias, como exemplificado no painel lateral de campos e propriedades.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m14s040.jpg" alt="" width="840">
 </p>
 
-O visual **Word Cloud** (Nuvem de Palavras) da Microsoft transforma frequências de texto em uma representação visual atraente. Ele permite identificar instantaneamente os termos mais proeminentes em grandes volumes de dados, eliminando a necessidade de análises manuais tediosas. É possível configurar a rotação das palavras e utilizar "stop words" para remover termos comuns que não agregam valor à análise.
+O **Word Cloud** da Microsoft é outra ferramenta visual poderosa que cria uma representação da frequência de palavras. Ele permite obter insights instantâneos sobre os termos mais importantes em grandes volumes de texto, eliminando a necessidade de análises manuais tediosas. É possível configurar a rotação das palavras, ângulos e até habilitar "stop words" para remover termos comuns que possam poluir o visual.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m18s851.jpg" alt="" width="840">
 </p>
 
-O **Tag Cloud by xViz** oferece recursos avançados para visualização de termos, como controle de orientação das palavras e suporte para categorias com valores negativos. É uma ferramenta eficaz para analisar o feedback de clientes ou medir o sentimento dos funcionários em relação à empresa, permitindo uma percepção rápida da porcentagem relativa de itens em uma população.
+Uma alternativa avançada ao Word Cloud tradicional é o **Tag Cloud** da xViz. Este visual oferece opções adicionais de configuração, como faixas de cores, controle de orientação das tags e a capacidade de tratar categorias com valores negativos. É especialmente útil para analisar feedbacks de clientes e identificar rapidamente sentimentos ou temas predominantes em uma população.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m21s089.jpg" alt="" width="840">
 </p>
 
-Através do visual da xViz, é possível controlar rigorosamente a orientação das tags para tornar o visual mais atraente. No exemplo, palavras relacionadas a filmes como "FALLOUT", "AVENGERS" e "BLACK PANTHER" são organizadas para destacar os termos com maior frequência ou relevância nos dados.
+A imagem demonstra o Tag Cloud em ação, exibindo termos como "AVENGERS", "FALLOUT" e "MISSION IMPOSSIBLE" com diferentes orientações e tamanhos. O controle de orientação torna o visual mais atraente e ajuda a destacar termos específicos de acordo com a frequência ou uma medida de peso definida pelo usuário.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m22s009.jpg" alt="" width="840">
 </p>
 
-Além da orientação, o visual permite a aplicação de diferentes temas de cores (Power BI theme, Single colour ou Colour range). Essa flexibilidade possibilita que o desenvolvedor do relatório adapte a estética da nuvem de tags à identidade visual do projeto ou utilize cores para representar diferentes escalas de desempenho.
-Outros nomes, pessoal, que eu vou deixar aqui para vocês são... Deixa eu pegar aqui, visuais. Aí vocês vão pegando conforme eu vou falando, tá? É o Image Grid, esse cara aqui. Ele não tem o selinho, vocês perceberam, né? Mas enfim, o que que eu consigo com este carinha aqui? Vou pegar até por essa imagem. Eu consigo selecionar uma série de imagens diferentes e utilizá-las dentro do meu relatório, tá? Então eu consigo, tô falando, por exemplo, de vendas de um determinado produto, eu posso nomear essas imagens e na hora que eu estou selecionando uma categoria, um produto específico ou até uma categoria, eu mostro as imagens relacionadas àqueles meus produtos, tá? Então esse daqui também é um...
-...tipo de, esqueci a palavra, visual. Visual personalizado bem interessante de ser utilizado, tá? Para quem necessita das imagens e tal. Eu vou deixar só para usar quando eu realmente for usar, ou seja, deixar para instalar só depois que realmente houver necessidade, porque toda vez que a gente coloca alguma coisa, a gente está adicionando mais armazenamento, né? Então quando a gente coloca radar aqui, gente, tem uma outra que é bem interessante, se você perceber, todas essas três aqui têm o avalzinho da Microsoft, né? Então esse primeiro Radar Chart aqui, ele é interessante porque eu consigo utilizar esse tipo de visual que é bem legal e está bastante, sendo bastante utilizado aí por diversas      
+Por fim, observamos as opções de temas de cores para o visual da xViz. O usuário pode escolher entre temas baseados no Power BI, cores únicas ou faixas de cores (color range) para representar diferentes intensidades de dados. Essa flexibilidade estética é fundamental para manter a consistência visual do relatório enquanto se destaca informações críticas através das cores das tags.      
 
 
-##  Materiais de Apoio
-
-# Certificado: 
+# Certificado: Trabalhando com Visuais no Power BI
 
 - Link na plataforma: 
 - Certificado em pdf: 
