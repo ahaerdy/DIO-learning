@@ -918,5 +918,5 @@ Por fim, observamos as opções de temas de cores para o visual da xViz. O usuá
 
 # Certificado: Trabalhando com Visuais no Power BI
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/EMSMVOV4.pdf
+- Certificado em pdf: [Certificado-Trabalhando_com_Visuais_no_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Trabalhando_com_Visuais_no_Power_BI.pdf)
