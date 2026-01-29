@@ -302,7 +302,85 @@ import java.util.Stack; // Importa a classe Stack do pacote utilitário do Java.
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/3a5d7a0a-cb88-456a-8854-342a3bb6d1d5?autoplay=1
+
+Este resumo aborda a Etapa 3 da Aula 8 do curso de Estrutura de Dados em Java, focando na interface Queue (Filas). O tutorial demonstra como implementar e manipular filas utilizando a classe LinkedList.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-15h39m18s900.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, iniciamos o estudo da interface **Queue** dentro das estruturas de dados do Java. As filas seguem a lógica onde o primeiro elemento a entrar é o primeiro a sair. Para colocar esses conceitos em prática, utilizaremos a classe `LinkedList` como implementação principal para gerenciar os elementos da fila.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-15h39m20s681.jpg" alt="" width="840">
+</p>
+
+A interface Queue disponibiliza métodos específicos para a manipulação de dados, permitindo adicionar, consultar e remover elementos. A documentação oficial pode ser acessada via QR Code para detalhes técnicos aprofundados. Abaixo, os métodos que serão explorados:
+
+* **add**: Adiciona um elemento (lança exceção se falhar).
+* **offer**: Adiciona um elemento (retorna falso se falhar).
+* **element**: Consulta a cabeça da fila (lança exceção se vazia).
+* **peek**: Consulta a cabeça da fila (retorna nulo se vazia).
+* **remove**: Remove o primeiro elemento (lança exceção se vazia).
+* **poll**: Remove o primeiro elemento (retorna nulo se vazia).
+* **isEmpty**: Verifica se a fila está vazia.
+
+```java
+Queue<Carro> queueCarros = new LinkedList<Carro>();
+
+queueCarros.add(new Carro("Fiat"));
+queueCarros.element();
+queueCarros.offer(new Carro("Renault"));
+queueCarros.peek();
+queueCarros.remove();
+queueCarros.poll();
+queueCarros.isEmpty();
+
+```
+
+No código prático, instanciamos a fila utilizando `LinkedList` e adicionamos veículos (Ford, Chevrolet, Fiat). Observamos que o método `add` retorna um booleano confirmando o sucesso da operação. Ao utilizar o método `peek`, visualizamos o primeiro elemento ("Ford") sem removê-lo. Já o método `poll` é demonstrado realizando a remoção efetiva do elemento da cabeça da fila, alterando o estado da estrutura.
+
+```java
+package one.digitalinnovation;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+    public static void main(String args[]){
+        Queue<Carro> queueCarros = new LinkedList<Carro>();
+
+        queueCarros.add(new Carro("Ford"));
+        queueCarros.add(new Carro("Chevrolet"));
+        queueCarros.add(new Carro("Fiat"));
+
+        System.out.println(queueCarros.add(new Carro("Peugeot"))); 
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.element());
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.offer(new Carro("Renault"))); 
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.peek());
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.remove()); 
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.poll()); 
+        System.out.println(queueCarros);
+
+        System.out.println(queueCarros.isEmpty());
+    }
+}
+
+```      
+
 
 ### 🟩 Vídeo 04 - List (ArrayList)
 
@@ -311,7 +389,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/254eae85-f5bb-43bb-8085-af58ca016c81?autoplay=1
 
 ### 🟩 Vídeo 05 - Set (HashSet)
 
