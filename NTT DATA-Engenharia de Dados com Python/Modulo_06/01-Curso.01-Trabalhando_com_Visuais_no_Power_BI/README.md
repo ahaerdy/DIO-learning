@@ -851,6 +851,71 @@ A customização estética do Chiclet Slicer é abrangente, permitindo ajustar c
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/e5aa84ec-97a5-4691-a6a5-35680b1905d7?autoplay=1
 
+Este guia foca na expansão das capacidades nativas do Power BI através do uso de visuais personalizados (Custom Visuals), demonstrando como transformar dados brutos em narrativas visuais complexas e intuitivas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m37s261.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos a galeria de visuais do Power BI (AppSource) para identificar ferramentas que auxiliam na exibição de imagens dentro dos relatórios. Entre as opções populares listadas, destacam-se o **Image Pro by CloudScope**, o **Chiclet Slicer** da Microsoft e o **Simple Image**. Esses visuais permitem ampliar os insights de negócios ao associar dados textuais ou numéricos a elementos visuais diretos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m39s222.jpg" alt="" width="840">
+</p>
+
+O visual **Image Grid**, desenvolvido por Fredrik Hedenström, é uma opção interessante para quem precisa exibir uma série de imagens de forma dinâmica. Ele permite que o tamanho das imagens seja proporcional à ordem de classificação ou ao valor de uma medida específica (weighted list). É ideal para mostrar produtos mais vendidos ou categorias selecionadas, ajustando a grade conforme os filtros aplicados no relatório.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m41s125.jpg" alt="" width="840">
+</p>
+
+A interface do Power BI Desktop permite a navegação entre diferentes páginas de relatório, facilitando a organização de diversos visuais personalizados que serão instalados conforme a necessidade do projeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m48s880.jpg" alt="" width="840">
+</p>
+
+Ao pesquisar por "Radar" no AppSource, encontramos diversas opções de gráficos de radar (Radar Charts). Note que os três primeiros resultados exibidos — **Radar Chart** (Microsoft), **Radar/Polar Chart** (xViz) e **Radar Chart by MAQ Software** — possuem o selo de certificação da Microsoft, o que garante maior segurança e conformidade com os padrões da plataforma.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h55m57s808.jpg" alt="" width="840">
+</p>
+
+O **Radar Chart** da Microsoft é um método gráfico para exibir dados multivariados em um gráfico bidimensional. Ele utiliza três ou mais variáveis quantitativas representadas em eixos que partem de um mesmo ponto central. Este visual é particularmente útil para comparar atributos ou analisar o desempenho, como o mapeamento de habilidades de funcionários (Skill Analysis) ou comparação de produtos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m06s381.jpg" alt="" width="840">
+</p>
+
+A configuração do gráfico de radar inclui opções para ajustar a legenda (Legend) e as cores dos dados. No exemplo visualizado, diferentes categorias (como "IT Department") podem ter suas cores personalizadas para facilitar a distinção entre as variáveis plotadas ao longo dos eixos radiais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m14s040.jpg" alt="" width="840">
+</p>
+
+O visual **Word Cloud** (Nuvem de Palavras) da Microsoft transforma frequências de texto em uma representação visual atraente. Ele permite identificar instantaneamente os termos mais proeminentes em grandes volumes de dados, eliminando a necessidade de análises manuais tediosas. É possível configurar a rotação das palavras e utilizar "stop words" para remover termos comuns que não agregam valor à análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m18s851.jpg" alt="" width="840">
+</p>
+
+O **Tag Cloud by xViz** oferece recursos avançados para visualização de termos, como controle de orientação das palavras e suporte para categorias com valores negativos. É uma ferramenta eficaz para analisar o feedback de clientes ou medir o sentimento dos funcionários em relação à empresa, permitindo uma percepção rápida da porcentagem relativa de itens em uma população.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m21s089.jpg" alt="" width="840">
+</p>
+
+Através do visual da xViz, é possível controlar rigorosamente a orientação das tags para tornar o visual mais atraente. No exemplo, palavras relacionadas a filmes como "FALLOUT", "AVENGERS" e "BLACK PANTHER" são organizadas para destacar os termos com maior frequência ou relevância nos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h56m22s009.jpg" alt="" width="840">
+</p>
+
+Além da orientação, o visual permite a aplicação de diferentes temas de cores (Power BI theme, Single colour ou Colour range). Essa flexibilidade possibilita que o desenvolvedor do relatório adapte a estética da nuvem de tags à identidade visual do projeto ou utilize cores para representar diferentes escalas de desempenho.
+Outros nomes, pessoal, que eu vou deixar aqui para vocês são... Deixa eu pegar aqui, visuais. Aí vocês vão pegando conforme eu vou falando, tá? É o Image Grid, esse cara aqui. Ele não tem o selinho, vocês perceberam, né? Mas enfim, o que que eu consigo com este carinha aqui? Vou pegar até por essa imagem. Eu consigo selecionar uma série de imagens diferentes e utilizá-las dentro do meu relatório, tá? Então eu consigo, tô falando, por exemplo, de vendas de um determinado produto, eu posso nomear essas imagens e na hora que eu estou selecionando uma categoria, um produto específico ou até uma categoria, eu mostro as imagens relacionadas àqueles meus produtos, tá? Então esse daqui também é um...
+...tipo de, esqueci a palavra, visual. Visual personalizado bem interessante de ser utilizado, tá? Para quem necessita das imagens e tal. Eu vou deixar só para usar quando eu realmente for usar, ou seja, deixar para instalar só depois que realmente houver necessidade, porque toda vez que a gente coloca alguma coisa, a gente está adicionando mais armazenamento, né? Então quando a gente coloca radar aqui, gente, tem uma outra que é bem interessante, se você perceber, todas essas três aqui têm o avalzinho da Microsoft, né? Então esse primeiro Radar Chart aqui, ele é interessante porque eu consigo utilizar esse tipo de visual que é bem legal e está bastante, sendo bastante utilizado aí por diversas      
 
 
 ##  Materiais de Apoio
