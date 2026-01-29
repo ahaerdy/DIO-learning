@@ -212,44 +212,43 @@ Para trabalhar com pilhas em Java, a classe `Stack` oferece métodos fundamentai
 Para exemplificar o uso da pilha, utiliza-se a classe `Carro`. Além dos atributos, *getters* e *setters* básicos, é essencial a implementação dos métodos `equals()` e `hashCode()` para permitir a comparação correta entre objetos, e o método `toString()` para facilitar a visualização dos dados no console durante a execução dos testes.
 
 ```java
-import java.util.Objects;
+import java.util.Objects; // Importação necessária para utilizar métodos utilitários de comparação e hash[cite: 26].
 
-public class Carro {
-    private String marca;
+public class Carro { // Definição da classe de modelo "Carro" utilizada nos exemplos de Stack[cite: 29].
+    private String marca; // Atributo privado que define a propriedade única do objeto[cite: 32].
 
-    public Carro (String marca) {
-        this.marca = marca;
+    public Carro (String marca) { // Construtor da classe para inicializar o objeto com uma marca[cite: 36].
+        this.marca = marca; // Atribuição do valor recebido ao atributo da instância[cite: 36].
     }
 
-    public String getMarca() {
-        return marca;
+    public String getMarca() { // Método Getter para acessar o valor da marca[cite: 41].
+        return marca; // Retorna o conteúdo da variável marca[cite: 43].
     }
 
-    public void setMarca (String marca) {
-        this.marca = marca;
+    public void setMarca (String marca) { // Método Setter para modificar o valor da marca[cite: 48].
+        this.marca = marca; // Atualiza o atributo com o novo valor fornecido[cite: 50].
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Carro)) return false;
-        Carro carro = (Carro) o;
-        return Objects.equals(getMarca(), carro.getMarca());
+    @Override // Sobrescrita de método para garantir o comportamento correto em coleções[cite: 55].
+    public boolean equals(Object o) { // Implementação do método equals para comparar logicamente dois carros[cite: 60].
+        if (this == o) return true; // Se forem a mesma referência de memória, são iguais[cite: 58].
+        if (!(o instanceof Carro)) return false; // Valida se o objeto comparado é do tipo Carro[cite: 61].
+        Carro carro = (Carro) o; // Faz o cast do objeto para o tipo Carro[cite: 63].
+        return Objects.equals(getMarca(), carro.getMarca()); // Compara se as marcas dos carros são idênticas[cite: 65].
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getMarca());
+    @Override // Sobrescrita necessária para o funcionamento de tabelas hash e buscas[cite: 70].
+    public int hashCode() { // Implementação do método hashCode[cite: 72].
+        return Objects.hash(getMarca()); // Gera um código numérico baseado no conteúdo da marca[cite: 74].
     }
 
-    @Override
-    public String toString() {
-        return "Carro{" +
-                "marca='" + marca + '\'' +
-                '}';
+    @Override // Sobrescrita do método toString, conforme solicitado pelo professor.
+    public String toString() { // Método para permitir a visualização textual do objeto no console.
+        return "Carro{" + // Início da formatação da String de saída[cite: 83].
+                "marca='" + marca + '\'' + // Exibição amigável do conteúdo do atributo marca[cite: 86].
+                '}'; // Fechamento da representação do objeto[cite: 86].
     }
 }
-
 ```
 
 #### Execução e Manipulação da Pilha
@@ -257,27 +256,42 @@ public class Carro {
 A classe `Main` demonstra a pilha em ação. Ao inserir os carros Ford, Chevrolet e Fiat (nesta ordem), o Fiat torna-se o topo. O método `pop()` remove o Fiat, restando Ford e Chevrolet. O método `peek()` permite visualizar o Chevrolet (novo topo) sem removê-lo, e o `empty()` confirma que a estrutura ainda contém elementos, retornando `false`.
 
 ```java
-import java.util.Stack;
+import java.util.Stack; // Importa a classe Stack do pacote utilitário do Java.
 
-public class Main {
-    public static void main(String args[]){
-        Stack<Carro> stackCarros = new Stack<>();
-
-        stackCarros.push(new Carro("Ford"));
-        stackCarros.push(new Carro("Chevrolet"));
-        stackCarros.push(new Carro ("Fiat"));
-
-        System.out.println(stackCarros);
-        System.out.println(stackCarros.pop());
-        System.out.println(stackCarros);
-
-        System.out.println(stackCarros.peek());
-        System.out.println(stackCarros);
+[cite_start]public class Main { // Define a classe principal para execução do programa[cite: 100].
+    [cite_start]public static void main(String args[]){ // Ponto de entrada (método main) para rodar o código[cite: 101].
         
-        System.out.println(stackCarros.empty());
+        // Instancia uma nova pilha (Stack) que armazenará objetos do tipo Carro.
+        Stack<Carro> stackCarros = new Stack<>(); 
+
+        // Adiciona o carro "Ford" na base da pilha.
+        stackCarros.push(new Carro("Ford")); 
+        
+        // Adiciona "Chevrolet" sobre o carro anterior.
+        stackCarros.push(new Carro("Chevrolet")); 
+        
+        // Adiciona "Fiat" no topo da pilha; ele é o último a entrar.
+        stackCarros.push(new Carro ("Fiat")); 
+
+        // Imprime a pilha completa: [Ford, Chevrolet, Fiat].
+        System.out.println(stackCarros); 
+        
+        // O método pop() remove e retorna o elemento que está no topo (Fiat).
+        System.out.println(stackCarros.pop()); 
+        
+        // Imprime a pilha após o pop; agora resta apenas [Ford, Chevrolet].
+        System.out.println(stackCarros); 
+
+        // O método peek() apenas exibe o elemento do topo (Chevrolet) sem removê-lo.
+        System.out.println(stackCarros.peek()); 
+        
+        // Imprime a pilha novamente para mostrar que o Chevrolet continua nela.
+        System.out.println(stackCarros); 
+        
+        // O método empty() testa se a pilha está vazia; retorna false neste caso.
+        System.out.println(stackCarros.empty()); 
     }
 }
-
 ```      
 
 
