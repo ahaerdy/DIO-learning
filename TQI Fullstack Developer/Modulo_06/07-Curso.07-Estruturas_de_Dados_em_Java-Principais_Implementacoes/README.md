@@ -165,7 +165,121 @@ public class Main {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/c9e01c6c-8d88-4b0a-88f2-3a3093ca9e5f?autoplay=1
+
+Este guia resume a aula prática sobre a classe Stack da biblioteca java.util. O foco é entender como gerenciar uma pilha de objetos, utilizando o exemplo de uma lista de carros, e as implicações de performance ao lidar com grandes volumes de dados.
+
+### Anotações
+
+#### Introdução à Implementação de Stack em Java
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-14h59m59s309.jpg" alt="" width="840">
+</p>
+
+Esta etapa aborda as principais implementações das estruturas de dados na linguagem Java, focando especificamente na classe **Stack** (Pilha). O objetivo é demonstrar como utilizar as ferramentas nativas da linguagem para manipular coleções de dados que seguem o princípio LIFO (*Last In, First Out*), onde o último elemento a entrar é o primeiro a sair.
+
+#### Principais Métodos e Documentação
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-15h00m02s773.jpg" alt="" width="840">
+</p>
+
+Para trabalhar com pilhas em Java, a classe `Stack` oferece métodos fundamentais que permitem gerenciar os elementos de forma eficiente. Um QR Code é disponibilizado para acesso direto à documentação oficial da Oracle. Os métodos destacados incluem:
+
+* **push()**: Adiciona um item ao topo da pilha.
+* **pop()**: Remove e retorna o objeto no topo da pilha.
+* **peek()**: Retorna o objeto no topo da pilha sem removê-lo.
+* **empty()**: Verifica se a pilha está vazia.
+* **search()**: Busca por um objeto na pilha e retorna sua posição baseada em 1.
+
+```java
+1 Stack<Carro> stackCarros = new Stack  <>();
+2
+3 stackCarros.push(new Carro("Ford"));
+4 stackCarros.push(new Carro("Chevrolet"));
+5 stackCarros.push(new Carro("Fiat"));
+6 stackCarros.search(new Carro("Chevrolet"))
+7
+8 stackCarros.pop()
+9 stackCarros.peek()
+10 stackCarros.empty()
+
+```
+
+#### A Classe de Modelo: Carro
+
+Para exemplificar o uso da pilha, utiliza-se a classe `Carro`. Além dos atributos, *getters* e *setters* básicos, é essencial a implementação dos métodos `equals()` e `hashCode()` para permitir a comparação correta entre objetos, e o método `toString()` para facilitar a visualização dos dados no console durante a execução dos testes.
+
+```java
+import java.util.Objects;
+
+public class Carro {
+    private String marca;
+
+    public Carro (String marca) {
+        this.marca = marca;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca (String marca) {
+        this.marca = marca;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Carro)) return false;
+        Carro carro = (Carro) o;
+        return Objects.equals(getMarca(), carro.getMarca());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getMarca());
+    }
+
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "marca='" + marca + '\'' +
+                '}';
+    }
+}
+
+```
+
+#### Execução e Manipulação da Pilha
+
+A classe `Main` demonstra a pilha em ação. Ao inserir os carros Ford, Chevrolet e Fiat (nesta ordem), o Fiat torna-se o topo. O método `pop()` remove o Fiat, restando Ford e Chevrolet. O método `peek()` permite visualizar o Chevrolet (novo topo) sem removê-lo, e o `empty()` confirma que a estrutura ainda contém elementos, retornando `false`.
+
+```java
+import java.util.Stack;
+
+public class Main {
+    public static void main(String args[]){
+        Stack<Carro> stackCarros = new Stack<>();
+
+        stackCarros.push(new Carro("Ford"));
+        stackCarros.push(new Carro("Chevrolet"));
+        stackCarros.push(new Carro ("Fiat"));
+
+        System.out.println(stackCarros);
+        System.out.println(stackCarros.pop());
+        System.out.println(stackCarros);
+
+        System.out.println(stackCarros.peek());
+        System.out.println(stackCarros);
+        
+        System.out.println(stackCarros.empty());
+    }
+}
+
+```      
+
 
 ### 🟩 Vídeo 03 - Queue (Fila, LikedList)
 
