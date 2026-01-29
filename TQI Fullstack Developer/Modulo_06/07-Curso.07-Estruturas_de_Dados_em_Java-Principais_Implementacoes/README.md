@@ -402,6 +402,80 @@ public class Main { // Declaração da classe principal[cite: 39].
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/254eae85-f5bb-43bb-8085-af58ca016c81?autoplay=1
 
+Este tutorial faz parte de um curso de Estrutura de Dados em Java e foca na implementação e manipulação de listas, utilizando a classe ArrayList. O vídeo demonstra desde operações básicas até a importância crítica da sobrescrita de métodos fundamentais para o funcionamento correto das coleções.
+
+### Anotações
+
+#### Introdução às Listas em Java
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-16h16m30s907.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, iniciamos o estudo sobre a interface `List` dentro do ecossistema de estruturas de dados do Java. As listas são coleções ordenadas que permitem o armazenamento de elementos duplicados e oferecem controle preciso sobre onde cada elemento é inserido. O instrutor disponibiliza um repositório no GitHub, acessível via QR Code, para o acompanhamento prático do projeto.
+
+#### Métodos da Interface List e Documentação
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-16h17m02s560.jpg" alt="" width="840">
+</p>
+
+A interface `List` possui uma vasta gama de métodos para manipulação de coleções. A imagem apresenta a documentação oficial (acessível por QR Code) e uma tabela com as assinaturas dos principais métodos, destacando o tipo de retorno e a função:
+
+* **Adição**: `add(E e)`, `add(int index, E element)`.
+* **Busca e Verificação**: `contains(Object o)`, `indexOf(Object o)`, `get(int index)`.
+* **Remoção**: `remove(int index)`, `remove(Object o)`.
+* **Informação**: `size()`, `isEmpty()`.
+
+#### Implementação Prática: Operações Básicas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-16h17m10s424.jpg" alt="" width="840">
+</p>
+
+Neste exemplo de código, vemos a aplicação dos métodos discutidos anteriormente utilizando uma lista de objetos do tipo `Carro`. O código demonstra a criação de uma `ArrayList`, a adição de um elemento, a verificação de existência com `contains`, a recuperação de um item pelo índice com `get`, a busca da posição com `indexOf` e a remoção de um item.
+
+```java
+List<Carro> listCarros = new ArrayList<>();
+
+listCarros.add(new Carro("Peugeot"));
+listCarros.contains(new Carro("Ford"));
+listCarros.get(2);
+listCarros.indexOf(new Carro("Fiat"));
+listCarros.remove(2);
+
+```
+
+#### Execução e Comportamento do Equals
+
+O código completo demonstra o fluxo de manipulação da lista e revela um comportamento importante do Java: a dependência do método `equals` para buscas e remoções. Durante a execução, observa-se que o método `indexOf` pode retornar resultados inesperados (como o índice 0 para uma busca de "Fiat") se o método `equals` na classe `Carro` estiver mal implementado (retornando `true` indiscriminadamente). Ao corrigir a lógica de comparação na classe de origem, os métodos da `List` passam a identificar corretamente os objetos pelos seus atributos reais.
+
+```java
+package one.digitalinnovation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String args[]){
+        List<Carro> listCarros = new ArrayList<>();
+        
+        listCarros.add(new Carro("Ford"));
+        listCarros.add(new Carro("Chevrolet"));
+        listCarros.add(new Carro("Fiat"));
+        listCarros.add(new Carro("Peugeot"));
+
+        System.out.println(listCarros.contains(new Carro("Ford")));
+        System.out.println(listCarros.get(2));
+        System.out.println(listCarros.indexOf(new Carro("Fiat")));
+        System.out.println(listCarros.remove(2));
+        System.out.println(listCarros);
+    }
+}
+
+```      
+
+
 ### 🟩 Vídeo 05 - Set (HashSet)
 
 <video width="60%" controls>
@@ -409,7 +483,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/0ce2dae5-e946-461c-8874-51d0043f706c?autoplay=1
 
 ### 🟩 Vídeo 06 - Map (HashMap)
 
