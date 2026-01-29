@@ -451,28 +451,41 @@ listCarros.remove(2);
 O código completo demonstra o fluxo de manipulação da lista e revela um comportamento importante do Java: a dependência do método `equals` para buscas e remoções. Durante a execução, observa-se que o método `indexOf` pode retornar resultados inesperados (como o índice 0 para uma busca de "Fiat") se o método `equals` na classe `Carro` estiver mal implementado (retornando `true` indiscriminadamente). Ao corrigir a lógica de comparação na classe de origem, os métodos da `List` passam a identificar corretamente os objetos pelos seus atributos reais.
 
 ```java
-package one.digitalinnovation;
+package one.digitalinnovation; [cite_start]// Define o pacote onde a classe está localizada[cite: 37].
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.ArrayList; [cite_start]// Importa a implementação ArrayList da biblioteca padrão do Java[cite: 39].
+import java.util.List;      [cite_start]// Importa a interface List para garantir o polimorfismo e boas práticas[cite: 40].
 
 public class Main {
     public static void main(String args[]){
+        [cite_start]// Instancia uma lista de objetos do tipo Carro utilizando a implementação ArrayList[cite: 44].
         List<Carro> listCarros = new ArrayList<>();
         
-        listCarros.add(new Carro("Ford"));
-        listCarros.add(new Carro("Chevrolet"));
-        listCarros.add(new Carro("Fiat"));
-        listCarros.add(new Carro("Peugeot"));
+        [cite_start]// Adiciona quatro novos objetos Carro à lista; o índice é gerado automaticamente (0, 1, 2, 3)[cite: 45, 46, 48, 50].
+        listCarros.add(new Carro("Ford"));      // Índice 0
+        listCarros.add(new Carro("Chevrolet")); // Índice 1
+        listCarros.add(new Carro("Fiat"));      // Índice 2
+        listCarros.add(new Carro("Peugeot"));   // Índice 3
 
+        // Verifica se existe um objeto "Ford" na lista. [cite_start]Retorna true se encontrar[cite: 53].
+        [cite_start]// O professor alerta que isso depende da implementação correta do método equals na classe Carro[cite: 29].
         System.out.println(listCarros.contains(new Carro("Ford")));
+
+        [cite_start]// Recupera e imprime o objeto que está na posição de índice 2 (neste caso, o Fiat)[cite: 56].
         System.out.println(listCarros.get(2));
+
+        [cite_start]// Procura o índice da primeira ocorrência de "Fiat"[cite: 59].
+        [cite_start]// Se o equals estiver modificado para retornar sempre true, ele trará o índice do primeiro item (0)[cite: 29].
+        [cite_start]// Com o equals padrão comparando o conteúdo, ele retorna o índice correto (2)[cite: 29].
         System.out.println(listCarros.indexOf(new Carro("Fiat")));
+
+        [cite_start]// Remove o objeto presente no índice 2 (Fiat) e imprime o objeto removido para confirmar[cite: 62].
         System.out.println(listCarros.remove(2));
+
+        [cite_start]// Imprime o estado atual da lista após a remoção; o Fiat não deve mais aparecer[cite: 65].
         System.out.println(listCarros);
     }
 }
-
 ```      
 
 
