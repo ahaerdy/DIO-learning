@@ -605,6 +605,33 @@ A utilidade principal deste visual é verificar se existe uma tendência ou conv
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/37ca113b-5eba-4543-9303-82d5ed2119c2?autoplay=1
 
+Este vídeo demonstra a construção iterativa de um relatório de vendas, focando na escolha e configuração de visualizações para apresentar dados de forma eficaz. O objetivo é criar uma "linha de raciocínio" e "continuidade" no relatório, começando com uma visão geográfica e progredindo para detalhes de segmentação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-21h07m01s935.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da construção do relatório, exploramos as capacidades do **gráfico de mapa** no Power BI para visualizar dados geográficos. Ao selecionar o campo de **Territory** e associá-lo à medida **This Year Sales**, o mapa identifica automaticamente os pontos de venda, concentrados principalmente nos Estados Unidos e na região norte do Brasil.
+
+Para tornar a visualização mais informativa, ajustamos as seguintes configurações no painel de **Formatar visual**:
+
+* **Bolhas**: Aumentamos a proporção das bolhas para destacar visualmente a diferença de volume entre as localidades, como o território do Pará (mais de 4 milhões) e Ohio (mais de 5 milhões).
+* **Estilo do Mapa**: Optamos pelo estilo **Rodoviário** para facilitar a localização das cidades e estados.
+* **Controles**: Ativamos os **Botões de zoom** e a ferramenta de **Laço**, que permite selecionar áreas específicas do mapa para filtrar os demais visuais do relatório em tempo real.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-28-21h07m20s375.jpg" alt="" width="840">
+</p>
+
+Para analisar a performance de vendas em relação às metas por canal de distribuição (**Chain**), utilizamos o gráfico de **Rosca** (Donut chart). Este visual permite comparar a proporção de vendas entre diferentes categorias, como as lojas *Fashions Direct* e *Lindseys*.
+
+A configuração do visual focou na clareza dos dados:
+
+* **Espaçamento**: Aumentamos o raio interno da fatia (espaçamento) para 80% para criar um design mais moderno e limpo.
+* **Rótulos de Detalhes**: Configuramos os rótulos para exibir os valores absolutos (como **$22.051.952** e **$23.132.001**) e as porcentagens, permitindo identificar rapidamente o quão próximo cada canal está de atingir seus objetivos anuais.
+* **Limpeza Visual**: O título do gráfico foi removido para economizar espaço, já que os dados são facilmente identificáveis através da legenda e da interação direta com as fatias.
 
 
 ### 🟩 Vídeo 14 - Criando um Gráfico de Funil e Realizando Interação com Relatório Criado
@@ -613,7 +640,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/3543489e-4ff5-4644-b550-e9cac8ffe06a?autoplay=1
+
+
 
 ### 🟩 Vídeo 15 - Ajustando disposição dos gráficos no Relatório e Utilizando Medidores para Metas
 <video width="60%" controls>
