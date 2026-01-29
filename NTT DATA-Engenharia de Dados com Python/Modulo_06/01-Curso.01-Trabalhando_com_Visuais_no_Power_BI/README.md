@@ -642,20 +642,51 @@ A configuração do visual focou na clareza dos dados:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/3543489e-4ff5-4644-b550-e9cac8ffe06a?autoplay=1
 
+Este guia explora a implementação do gráfico de Indicador, analisando suas funcionalidades técnicas, a configuração de metas e os desafios de design relacionados ao aproveitamento de espaço em relatórios de dados.
+
+### Anotações
+
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-07h15m55s349.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-07h25m40s235.jpg" alt="" width="840">
 </p>
 
-Neste módulo da **Formação Power BI Analyst** , a instrutora **Juliana Mascarenhas** , que atua como **Tech Education Specialist na DIO** e possui mestrado em **modelagem computacional**, além de ser **cientista de dados** , apresenta o curso focado em **Explorando Dados e Relatórios com Power BI**.
+O visual de **Indicador** (também conhecido como *Gauge*) é introduzido como uma ferramenta para monitorar o progresso em relação a uma meta específica. No Power BI, sua configuração básica exige a definição de um valor atual e um valor de destino ou máximo para contextualizar a performance.
 
-A aula introduz conceitos fundamentais para a construção de dashboards interativos, abordando:
+Neste cenário, o campo **This Year Sales** é utilizado como o valor principal para representar as vendas efetivadas. Para estabelecer os parâmetros do gráfico, são utilizados campos de variância e metas, permitindo visualizar o quanto do objetivo já foi atingido. Apesar de sua clareza visual, observa-se que este componente ocupa um espaço considerável no relatório, o que exige cautela no planejamento do layout para não sacrificar outras informações importantes.
 
-* **Definição de Blocos**: Compreensão da estrutura organizacional e de construção dentro do Power BI.
-* **Visualizações e Dados**: Orientação sobre o uso correto de visuais variados, como gráficos de funil, pizza, donuts, árvore hierárquica e treemap, aplicados em três contextos de relatórios distintos para evitar a monotonia visual.
-* **Dicas de Ferramenta (Tooltips)**: Implementação de janelas de informações extras que surgem ao posicionar o cursor sobre os elementos gráficos.
-* **Extensões de Visuais**: Exploração de componentes que vão além dos nativos instalados por padrão no Power BI Desktop, utilizando referências externas para pesquisa e aplicação.
+Os principais campos de dados identificados para a construção das medidas de performance são:
 
-O objetivo é garantir que o analista saiba não apenas criar relatórios, mas escolher o visual mais adequado para cada cenário de análise de dados.
+```text
+TotalSales
+TotalSales LY
+TotalSalesTY
+TotalUnits
+Total Sales Var
+Total Sales Var %
+Total Sales Variance
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-07h25m47s114.jpg" alt="" width="840">
+</p>
+
+Para otimizar a entrega de informações sem sobrecarregar o visual, utiliza-se o recurso de **Dicas de ferramentas** (*Tooltips*). Isso permite que dados complementares, como o volume de unidades vendidas (**Total Units**) ou o preço médio, sejam exibidos apenas quando o usuário interage com o gráfico, mantendo a interface limpa.
+
+A organização do painel é reestruturada para criar uma área de **Overview** (Visão Geral), onde o gráfico de indicador é reposicionado junto a outros elementos, como mapas. Essa reorganização visa melhorar o fluxo de leitura dos dados, garantindo que as métricas de vendas e margens — como **Gross Margin This Year %** — fiquem acessíveis e integradas logicamente no painel de controle.
+
+Os campos disponíveis para análise e filtros adicionais incluem:
+
+```text
+Gross Margin Last Year %
+Gross Margin This Year
+Gross Margin This Year %
+Last Year Sales
+Markdown Sales Dollars
+Regular Sales Dollars
+Store Count
+
+```
 
 
 ### 🟩 Vídeo 15 - Ajustando disposição dos gráficos no Relatório e Utilizando Medidores para Metas
@@ -664,7 +695,9 @@ O objetivo é garantir que o analista saiba não apenas criar relatórios, mas e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/a6c48aca-cdec-4b4b-b29c-e2d97b879bc5?autoplay=1
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/55e08092-d6b2-46ce-be51-87862ed85c72?autoplay=1
+
+
 
 ### 🟩 Vídeo 16 - Criando um Dica de Ferramenta Paginada
 <video width="60%" controls>
