@@ -755,7 +755,7 @@ Para configurar uma página de relatório como uma dica de ferramenta, deve-se s
 Como demonstrado no relatório de vendas, essa configuração torna os gráficos dinâmicos: ao interagir com o gráfico de "Soma de Profit por Ano e Mês", a dica de ferramenta revela instantaneamente qual país teve o melhor desempenho naquele período. Por exemplo, é possível identificar variações de lucro entre países como México, Canadá, França, Alemanha e Estados Unidos, fornecendo contexto geográfico e financeiro detalhado de forma instantânea.
 
 
-### 🟩 Vídeo 17 - Quando Podemos utilizar o Treemap (Gráficos de Área)?
+### 🟩 Vídeo 17 - Quando Podemos utilizar o Treemap (Gráfico de Área)?
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_17.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
@@ -801,6 +801,45 @@ Nesta visualização, aplicamos a Treemap para analisar a "Soma de Profit por Co
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/2f9339d3-846c-4596-bf0e-2b779cb792db?autoplay=1
 
+Este tutorial explora como expandir as capacidades nativas do Power BI através da biblioteca de visuais personalizados da Microsoft, destacando o Chiclet Slicer como uma alternativa elegante e funcional aos segmentadores de dados padrão.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h34m40s871.jpg" alt="" width="840">
+</p>
+
+Para expandir as possibilidades analíticas além dos recursos nativos, o Power BI permite o acesso ao **AppSource**, uma vitrine de visuais personalizados desenvolvidos pela Microsoft e por parceiros. Ao explorar essa galeria, é fundamental observar a presença do **selo de certificação** (ícone de check azul), que garante que o componente segue rigorosas diretrizes de segurança, desempenho e experiência do usuário estabelecidas pela Microsoft.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h34m46s971.jpg" alt="" width="840">
+</p>
+
+Um exemplo notável de visual personalizado é o **Chiclet Slicer**. Inspirado nos controles de segmentação do Excel, este componente transforma filtros de dados em botões altamente customizáveis. Ele se destaca pela versatilidade, permitindo a organização dos botões de forma horizontal, vertical ou em matriz, além de suportar a inclusão de imagens dentro dos próprios botões de seleção para tornar o relatório mais intuitivo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h35m02s146.jpg" alt="" width="840">
+</p>
+
+Ao selecionar um visual no AppSource, o usuário tem a opção de adicioná-lo diretamente ao relatório ou **baixar uma amostra** (sample). O download da amostra fornece um arquivo `.pbix` pré-configurado que demonstra as funcionalidades, configurações de campos e as capacidades estéticas do visual, servindo como um guia prático para a implementação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h35m51s967.jpg" alt="" width="840">
+</p>
+
+Uma vez importado, o novo visual aparece no painel de visualizações do Power BI. Para facilitar o uso recorrente, é possível clicar com o botão direito sobre o ícone e selecionar a opção para **fixar no painel**, garantindo que o componente personalizado esteja sempre disponível em futuras sessões de desenvolvimento do relatório.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h36m21s786.jpg" alt="" width="840">
+</p>
+
+Na prática, o **Chiclet Slicer** oferece uma interface muito mais limpa e moderna para a filtragem de dados, como demonstrado na seleção de trimestres (Quarters). Diferente do segmentador padrão que costuma apresentar listas simples, este visual permite criar uma barra de botões horizontal no topo do relatório, facilitando a navegação do usuário final e otimizando o espaço em tela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-12h36m25s504.jpg" alt="" width="840">
+</p>
+
+A customização estética do Chiclet Slicer é abrangente, permitindo ajustar cores de fundo, cores do texto e estados de seleção. No painel de formatação, é possível definir a **cor da focalização**, a cor para itens não selecionados e até o formato dos botões (quadrados, arredondados ou recortados). Essas configurações permitem que o segmentador se integre perfeitamente à identidade visual do dashboard, mantendo a elegância e a clareza visual.      
 
 
 ### 🟩 Vídeo 19 - Explorando Visuais Personalizados com Power BI – parte 2
@@ -810,7 +849,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/e5aa84ec-97a5-4691-a6a5-35680b1905d7?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
