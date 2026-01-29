@@ -736,6 +736,23 @@ Destaques da interface:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/79af84b9-3030-4ee1-9f98-4f12f84c5559?autoplay=1
 
+Este guia foca na criação e configuração de Dicas de Ferramenta Personalizadas, uma funcionalidade avançada do Power BI que permite exibir informações detalhadas e gráficos adicionais ao passar o mouse sobre um elemento visual, sem poluir o relatório principal.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-09h04m59s994.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é introduzido o conceito de **Dica de Ferramenta (Tooltip)** personalizada no Power BI. O objetivo é enriquecer a experiência do usuário, permitindo que, ao passar o mouse sobre um elemento de um gráfico, informações adicionais detalhadas sejam exibidas em uma janela flutuante. No exemplo inicial, busca-se integrar dados de lucro por país dentro de visuais que exibem outras métricas, garantindo que o relatório principal permaneça limpo e visualmente organizado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-09h05m26s136.jpg" alt="" width="840">
+</p>
+
+Para configurar uma página de relatório como uma dica de ferramenta, deve-se selecionar o visual desejado e acessar as propriedades no painel de formatação. O caminho consiste em ir até a aba **Geral**, expandir a seção **Dicas de ferramentas** e alterar o campo "Página" para o nome da página criada especificamente para esta função.
+
+Como demonstrado no relatório de vendas, essa configuração torna os gráficos dinâmicos: ao interagir com o gráfico de "Soma de Profit por Ano e Mês", a dica de ferramenta revela instantaneamente qual país teve o melhor desempenho naquele período. Por exemplo, é possível identificar variações de lucro entre países como México, Canadá, França, Alemanha e Estados Unidos, fornecendo contexto geográfico e financeiro detalhado de forma instantânea.
 
 
 ### 🟩 Vídeo 17 - Quando Podemos utilizar Gráficos de Área?
@@ -744,7 +761,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/62fc5693-0922-4321-be35-1143b7d7fc78?autoplay=1
+
+
 
 ### 🟩 Vídeo 18 - Analisando a Diferença entre Gráficos de Barras e Colunas
 <video width="60%" controls>
