@@ -61,40 +61,59 @@ public class Carro {
 A implementação robusta do método `equals` envolve várias etapas: primeiro, verifica-se se a referência de memória é a mesma; depois, se o objeto passado é nulo ou pertence a uma classe diferente. Por fim, é realizado um *casting* para comparar o atributo `marca`. O `hashCode` é gerado a partir do mesmo atributo utilizando a classe `Objects`.
 
 ```java
+// Declaração do pacote para organizar a classe dentro da estrutura do projeto[cite: 46, 102].
 package one.digitalinnovation;
 
+// Importação da classe utilitária Objects, necessária para implementar equals e hashCode de forma segura[cite: 48].
 import java.util.Objects;
 
+// Definição da classe Carro, que servirá de modelo para os nossos objetos[cite: 27, 51].
 public class Carro {
 
+    // Atributo privado que define a característica "marca" do carro[cite: 28, 54].
     private String marca;
 
+    // Construtor da classe que permite instanciar um Carro já definindo sua marca[cite: 57].
     public Carro (String marca) {
+        // Atribui o valor recebido por parâmetro ao atributo de instância da classe[cite: 59].
         this.marca = marca;
     }
 
+    // Método Getter para acessar o valor do atributo privado 'marca'[cite: 64].
     public String getMarca() {
         return marca;
     }
 
+    // Método Setter para modificar o valor do atributo 'marca'[cite: 71].
     public void setMarca (String marca) {
         this.marca = marca;
     }
 
+    // Indica que estamos sobrescrevendo o método equals da classe superior (Object)[cite: 29, 83].
     @Override
     public boolean equals(Object o) {
+        // Testa se a referência de memória de ambos os objetos é a mesma; se sim, são iguais[cite: 85].
         if (this == o) return true;
+        
+        // Verifica se o objeto comparado é uma instância de Carro; se não for, não podem ser iguais[cite: 86].
         if (!(o instanceof Carro)) return false;
+        
+        // Faz o casting do objeto genérico 'o' para o tipo específico 'Carro'[cite: 87].
         Carro carro = (Carro) o;
+        
+        // Retorna a comparação final baseada no conteúdo do atributo marca[cite: 88].
+        // O professor explica que, nesta regra de negócio, carros são iguais se as marcas forem iguais [00:01:00, 00:03:00].
         return Objects.equals(getMarca(), carro.getMarca());
     }
 
+    // Indica a sobrescrita do método hashCode para gerar o código identificador do objeto[cite: 37, 94].
     @Override
     public int hashCode() {
+        // Gera um número inteiro (hash) a partir do atributo marca[cite: 98].
+        // Esse número facilita a organização e busca rápida em estruturas de dados [00:04:00].
         return Objects.hash(getMarca());
     }
 }
-
 ```
 
 #### Teste Prático com Listas e Objetos
@@ -102,26 +121,41 @@ public class Carro {
 No método `main`, validamos o comportamento da classe. Ao adicionar instâncias de `Carro` em uma `ArrayList`, o método `contains` utiliza a implementação de `equals` para verificar a existência de um item. Além disso, observamos que dois objetos diferentes com a mesma marca ("Ford") geram o mesmo `hashCode`, garantindo que a estrutura de dados os reconheça como logicamente equivalentes para fins de busca e organização.
 
 ```java
+// Define o pacote onde a classe de execução está localizada.
 package one.digitalinnovation;
 
+// Importa a implementação de lista dinâmica ArrayList da biblioteca padrão do Java.
 import java.util.ArrayList;
+// Importa a interface List, que define o contrato para coleções ordenadas.
 import java.util.List;
 
+// Declaração da classe principal que contém o ponto de entrada do programa.
 public class Main {
+    // Método de entrada (main) onde a execução do código começa.
     public static void main(String[] args){
 
+        // Instancia uma nova lista de objetos do tipo Carro usando ArrayList.
         List<Carro> listaCarros = new ArrayList<>();
 
+        // Adiciona um novo objeto Carro com a marca "Ford" à lista.
         listaCarros.add(new Carro("Ford"));
+        // Adiciona um novo objeto Carro com a marca "Chevrolet" à lista.
         listaCarros.add(new Carro("Chevrolet"));
+        // Adiciona um novo objeto Carro com a marca "Volkswagen" à lista.
         listaCarros.add(new Carro("Volkswagen"));
 
+        // O método 'contains' usa internamente o equals() para verificar se um carro "Ford" existe na lista.
+        // Como implementamos equals() baseado na marca, isso retornará 'true', mesmo sendo uma nova instância.
         System.out.println(listaCarros.contains(new Carro("Ford")));
+
+        // Imprime o código hash (hashCode) de uma nova instância de Carro com a marca "Ford".
         System.out.println(new Carro("Ford").hashCode());
+        
+        // Imprime o hashCode de outra instância "Ford". O valor será idêntico ao anterior.
+        // O professor explica que instâncias diferentes com atributos iguais geram o mesmo hash.
         System.out.println(new Carro("Ford").hashCode());
     }
 }
-
 ```
 
 ### 🟩 Vídeo 02 - Stack (Pilha)
