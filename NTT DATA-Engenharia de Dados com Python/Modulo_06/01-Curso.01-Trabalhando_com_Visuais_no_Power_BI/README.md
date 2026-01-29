@@ -755,7 +755,7 @@ Para configurar uma página de relatório como uma dica de ferramenta, deve-se s
 Como demonstrado no relatório de vendas, essa configuração torna os gráficos dinâmicos: ao interagir com o gráfico de "Soma de Profit por Ano e Mês", a dica de ferramenta revela instantaneamente qual país teve o melhor desempenho naquele período. Por exemplo, é possível identificar variações de lucro entre países como México, Canadá, França, Alemanha e Estados Unidos, fornecendo contexto geográfico e financeiro detalhado de forma instantânea.
 
 
-### 🟩 Vídeo 17 - Quando Podemos utilizar Gráficos de Área?
+### 🟩 Vídeo 17 - Quando Podemos utilizar o Treemap (Gráficos de Área)?
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_17.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
@@ -763,23 +763,54 @@ Como demonstrado no relatório de vendas, essa configuração torna os gráficos
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/62fc5693-0922-4321-be35-1143b7d7fc78?autoplay=1
 
+Este resumo explora as melhores práticas e cenários ideais para a utilização de Treemaps na visualização de dados, destacando como essa ferramenta facilita a compreensão de hierarquias e proporções em grandes volumes de informações.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-09h34m56s234.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos a utilização do visual **Treemap** (ou mapa de árvore) no Power BI. Este recurso é ideal para visualizar grandes volumes de **dados hierárquicos**, pois organiza as informações em retângulos proporcionais ao seu valor. A hierarquia é respeitada visualmente: os dados com maior peso ou importância são posicionados automaticamente no canto **superior esquerdo**, e a importância diminui conforme avançamos para a direita e para baixo. No exemplo, vemos o gráfico de "Lucro por Produto", onde a área ocupada por cada cor facilita a compreensão imediata da contribuição de cada item para o lucro total.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-09h35m03s132.jpg" alt="" width="840">
+</p>
+
+A interface demonstra a versatilidade das Treemaps em comparar diferentes categorias e demonstrar **proporções** entre as partes e o todo. Diferente de um gráfico de barras convencional, a Treemap permite identificar padrões de distribuição e exceções de forma mais compacta. Aqui, observamos a aplicação de **codificação por cores** para distinguir segmentos de mercado, como "Government", "Small Business" e "Enterprise". Essa diferenciação visual clara permite que o usuário identifique rapidamente quais grupos possuem maior impacto nas métricas analisadas, como a média de lucro ou vendas por segmento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-09h35m07s786.jpg" alt="" width="840">
+</p>
+
+Ao detalhar o gráfico de "Lucro por Segmento", percebemos como a ferramenta destaca os "colaboradores" ou elementos mais importantes do conjunto de dados. No exemplo selecionado, o segmento **GOVERNMENT** aparece com um destaque significativo, apresentando uma soma de lucro de **11.388.173,17**. O Power BI permite que, ao interagir com o visual, tenhamos acesso a esses valores precisos, consolidando a ideia de que a Treemap é excelente para mostrar a importância relativa de cada categoria dentro de um contexto específico de negócio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-09h35m09s006.jpg" alt="" width="840">
+</p>
+
+Nesta visualização, aplicamos a Treemap para analisar a "Soma de Profit por Country" (Lucro por País). É possível identificar rapidamente que **França**, **Alemanha** (Germany) e **Canadá** estão posicionados lado a lado, indicando que possuem níveis de importância similares dentro do contexto de lucro total da empresa. Por exemplo, ao destacar a Alemanha, vemos um lucro de **3.680.388,82**. Esse tipo de análise é fundamental para reconhecer quais regiões ou atributos geográficos são os principais motores dos resultados financeiros, preparando o terreno para análises mais profundas, como a *Decomposition Tree*, que será explorada a seguir.
 
 
-### 🟩 Vídeo 18 - Analisando a Diferença entre Gráficos de Barras e Colunas
+### 🟩 Vídeo 18 - Explorando Visuais Personalizados com Power BI – parte 1
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_18.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/2f9339d3-846c-4596-bf0e-2b779cb792db?autoplay=1
 
-### 🟩 Vídeo 19 - Conclusão e Próximos Passos
+
+
+### 🟩 Vídeo 19 - Explorando Visuais Personalizados com Power BI – parte 2
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_19.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ##  Materiais de Apoio
 
