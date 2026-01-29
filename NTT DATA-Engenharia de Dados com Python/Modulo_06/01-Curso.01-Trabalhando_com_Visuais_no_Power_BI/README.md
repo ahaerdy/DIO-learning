@@ -642,6 +642,20 @@ A configuração do visual focou na clareza dos dados:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/3543489e-4ff5-4644-b550-e9cac8ffe06a?autoplay=1
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-07h15m55s349.jpg" alt="" width="840">
+</p>
+
+Neste módulo da **Formação Power BI Analyst** , a instrutora **Juliana Mascarenhas** , que atua como **Tech Education Specialist na DIO** e possui mestrado em **modelagem computacional**, além de ser **cientista de dados** , apresenta o curso focado em **Explorando Dados e Relatórios com Power BI**.
+
+A aula introduz conceitos fundamentais para a construção de dashboards interativos, abordando:
+
+* **Definição de Blocos**: Compreensão da estrutura organizacional e de construção dentro do Power BI.
+* **Visualizações e Dados**: Orientação sobre o uso correto de visuais variados, como gráficos de funil, pizza, donuts, árvore hierárquica e treemap, aplicados em três contextos de relatórios distintos para evitar a monotonia visual.
+* **Dicas de Ferramenta (Tooltips)**: Implementação de janelas de informações extras que surgem ao posicionar o cursor sobre os elementos gráficos.
+* **Extensões de Visuais**: Exploração de componentes que vão além dos nativos instalados por padrão no Power BI Desktop, utilizando referências externas para pesquisa e aplicação.
+
+O objetivo é garantir que o analista saiba não apenas criar relatórios, mas escolher o visual mais adequado para cada cenário de análise de dados.
 
 
 ### 🟩 Vídeo 15 - Ajustando disposição dos gráficos no Relatório e Utilizando Medidores para Metas
@@ -650,7 +664,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/a6c48aca-cdec-4b4b-b29c-e2d97b879bc5?autoplay=1
 
 ### 🟩 Vídeo 16 - Criando um Dica de Ferramenta Paginada
 <video width="60%" controls>
