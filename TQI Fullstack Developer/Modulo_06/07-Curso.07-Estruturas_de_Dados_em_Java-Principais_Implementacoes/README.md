@@ -344,41 +344,52 @@ queueCarros.isEmpty();
 No código prático, instanciamos a fila utilizando `LinkedList` e adicionamos veículos (Ford, Chevrolet, Fiat). Observamos que o método `add` retorna um booleano confirmando o sucesso da operação. Ao utilizar o método `peek`, visualizamos o primeiro elemento ("Ford") sem removê-lo. Já o método `poll` é demonstrado realizando a remoção efetiva do elemento da cabeça da fila, alterando o estado da estrutura.
 
 ```java
-package one.digitalinnovation;
+package one.digitalinnovation; // Define o pacote do projeto[cite: 24].
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.LinkedList; // Importa a implementação LinkedList para ser usada como fila[cite: 26, 30].
+import java.util.Queue; // Importa a interface Queue da estrutura de dados do Java[cite: 27].
 
-public class Main {
-    public static void main(String args[]){
+public class Main { // Declaração da classe principal[cite: 39].
+    public static void main(String args[]){ // Método de entrada do programa[cite: 28].
+        
+        // Instancia uma fila do tipo Carro usando LinkedList como implementação[cite: 14, 30].
         Queue<Carro> queueCarros = new LinkedList<Carro>();
 
+        // Adiciona três novos objetos Carro à fila (Ford, Chevrolet e Fiat)[cite: 31, 32, 33].
         queueCarros.add(new Carro("Ford"));
         queueCarros.add(new Carro("Chevrolet"));
         queueCarros.add(new Carro("Fiat"));
 
+        // Adiciona o Peugeot e imprime o resultado (true/false) do sucesso da adição[cite: 34].
         System.out.println(queueCarros.add(new Carro("Peugeot"))); 
+        
+        // Exibe a fila atualizada na ordem: Ford (primeiro), Chevrolet, Fiat e Peugeot (último)[cite: 35].
         System.out.println(queueCarros);
 
+        // Pega o elemento da cabeça da fila (primeiro carro) sem removê-lo[cite: 17, 36].
         System.out.println(queueCarros.element());
-        System.out.println(queueCarros);
+        System.out.println(queueCarros); // Mostra que a fila permanece inalterada[cite: 36].
 
+        // Tenta adicionar Renault; o offer retorna 'false' se falhar em vez de lançar erro como o 'add'[cite: 18, 71].
         System.out.println(queueCarros.offer(new Carro("Renault"))); 
-        System.out.println(queueCarros);
+        System.out.println(queueCarros); // Exibe a fila com o novo elemento inserido[cite: 71].
 
+        // peek() retorna o elemento da cabeça da fila; se estiver vazia, retorna 'null'[cite: 19, 72].
         System.out.println(queueCarros.peek());
-        System.out.println(queueCarros);
+        System.out.println(queueCarros); // O peek não remove elementos da fila[cite: 72].
 
+        // remove() retira o primeiro elemento da fila (neste caso, o Ford)[cite: 20, 73].
         System.out.println(queueCarros.remove()); 
-        System.out.println(queueCarros);
+        System.out.println(queueCarros); // Mostra a fila após a remoção do primeiro carro[cite: 74].
 
+        // poll() também remove o primeiro, mas retorna 'null' se a fila estiver vazia[cite: 21, 75].
         System.out.println(queueCarros.poll()); 
-        System.out.println(queueCarros);
+        System.out.println(queueCarros); // Exibe a fila sem o elemento removido pelo poll[cite: 75].
 
+        // Verifica se a fila está vazia (retorna true ou false)[cite: 22, 76].
         System.out.println(queueCarros.isEmpty());
     }
 }
-
 ```      
 
 
