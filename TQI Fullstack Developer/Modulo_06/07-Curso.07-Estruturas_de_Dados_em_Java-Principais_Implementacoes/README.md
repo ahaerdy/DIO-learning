@@ -1,8 +1,3 @@
-Entendido. Como seu editor Markdown, processei a replicação dos blocos de vídeo seguindo rigorosamente a numeração de cada seção e mantendo a estrutura original do documento.
-
-Aqui está o conteúdo atualizado:
-
-```markdown
 ## Instrutor
 
 - João Dutra (Analista de Sistemas no Bradesco)
@@ -79,7 +74,3 @@ link do vídeo:
 
 - Link na plataforma: 
 - Certificado em pdf: 
-
-```
-
-Deseja que eu realize essa mesma automação em outro arquivo ou seção da sua documentação?
