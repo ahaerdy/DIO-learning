@@ -688,7 +688,6 @@ Store Count
 
 ```
 
-
 ### 🟩 Vídeo 15 - Ajustando disposição dos gráficos no Relatório e Utilizando Medidores para Metas
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_15.webm" type="video/webm">
@@ -697,15 +696,47 @@ Store Count
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/55e08092-d6b2-46ce-be51-87862ed85c72?autoplay=1
 
+Este guia resume as técnicas de criação de dashboards interativos, focando em gráficos de funil, rosca e a importância da estética e interatividade para a análise de dados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-08h04m36s993.jpg" alt="" width="840">
+</p>
+
+O gráfico de funil é utilizado para representar a proporção de um elemento dentro de um contexto específico, permitindo uma visualização clara do afunilamento de dados. Nesta configuração, o campo **Category** (Categoria) é utilizado para segmentar os dados , enquanto a medida **This Year Sales** (Vendas Deste Ano) define os valores que determinam o tamanho de cada seção do funil.
+
+Na estrutura apresentada:
+
+* A categoria **020-Mens** aparece com destaque como a de maior volume de vendas, registrando 54 milhões.
+* Seguem-se categorias como **050-Shoes**, **090 Home**, e **040-Juniors**.
+* O painel de visualizações indica que o campo **This Year Sales** está configurado no eixo de **Valores**.
+
+Para melhorar a estética e o destaque do relatório, o visual recebeu ajustes de formatação, incluindo a alteração de cores e a aplicação de uma **fronteira visual** com **sombra** para criar um efeito de realce em relação ao fundo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-29-08h04m50s783.jpg" alt="" width="840">
+</p>
+
+O relatório consolidado, ajustado para o título **Overview das metas de vendas**, apresenta uma visão gerencial do desempenho comercial. O painel utiliza gráficos de rosca (donuts) para comparar o desempenho individual de cadeias de lojas em relação às suas metas estabelecidas.
+
+Destaques da interface:
+
+* **Indicadores de Meta**: Os visuais de rosca permitem visualizar de forma explícita o valor efetivo nominal em comparação à meta. Por exemplo, são exibidos valores como **$22.051.952** para as vendas deste ano.
+* **Interatividade Geográfica**: O mapa integrado permite filtrar todo o dashboard por localização. Ao selecionar uma região específica no mapa, como o Brasil ou os Estados Unidos, todos os outros visuais são atualizados automaticamente para refletir a proporção de vendas daquela localidade.
+* **Barra de Ferramentas**: A interface do Power BI Desktop mostra as abas de **Página Inicial**, **Inserir** e **Modelagem**, indicando o ambiente de edição e publicação do relatório.      
 
 
 ### 🟩 Vídeo 16 - Criando um Dica de Ferramenta Paginada
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.01-video_16.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/trabalhando-com-visuais-no-power-bi/learning/79af84b9-3030-4ee1-9f98-4f12f84c5559?autoplay=1
+
+
 
 ### 🟩 Vídeo 17 - Quando Podemos utilizar Gráficos de Área?
 <video width="60%" controls>
