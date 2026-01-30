@@ -168,6 +168,25 @@ No exemplo apresentado, as tarefas são monitoradas através de:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/9d4c2fa1-83f9-4628-8ee1-78cff3d7908d?autoplay=1
 
+Este guia resume os pontos fundamentais abordados no vídeo sobre a utilização de KPIs, focando nas perguntas essenciais que toda empresa ou gestor deve fazer para garantir que suas métricas estejam alinhadas aos objetivos de negócio.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h25m15s901.jpg" alt="" width="840">
+</p>
+
+Para definir ou compreender a finalidade de um **KPI (Key Performance Indicator)** em uma organização, é fundamental aplicar um filtro de questionamentos que validem a importância da métrica escolhida. Esses indicadores não devem ser apenas números isolados, mas ferramentas que respondam a objetivos estratégicos claros.
+
+As seguintes perguntas auxiliam no entendimento do propósito de uma métrica:
+
+* **Por que esse resultado é importante?** Avalia-se o impacto financeiro ou estratégico. Por exemplo, em uma campanha de vendas, uma baixa taxa de conversão significa desperdício de investimento (dinheiro jogado fora).
+* **Quem é o responsável pelo resultado?** Identifica qual área ou equipe está diretamente ligada ao indicador, como o departamento de Marketing sendo o responsável por campanhas de aquisição de novos produtos.
+* **Como o resultado pode ser influenciado?** Analisa quais fatores internos ou externos afetam a métrica. No contexto de dados (*data-driven*), isso envolve identificar quais canais (como Instagram, LinkedIn ou Facebook) trazem maior retorno para direcionar esforços de forma assertiva.
+* **Como você vai medir o progresso?** Define a metodologia de coleta, como a verificação da quantidade de novos clientes ou assinantes.
+* **Com que frequência você medirá o progresso?** Estabelece a periodicidade da análise, que pode ser mensal (comum para metas de vendas), quinzenal, por trimestre (*quarter*) ou semestre.
+* **Como você saberá se atingiu seus objetivos?** Determina o valor quantitativo que define o sucesso da meta estabelecida.
+
 ### 🟩 Vídeo 05 - Considerações sobre KPIs
 
 <video width="60%" controls>
@@ -175,7 +194,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/4dfe44b7-f977-4c09-a5a5-d4ba8d2f28af?autoplay=1
+
+
 
 ### 🟩 Vídeo 06 - Qual a diferença entre Métricas e KPIs?
 
