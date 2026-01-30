@@ -249,9 +249,57 @@ Essa estrutura permite identificar rapidamente se uma meta está sendo atingida 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/f7b4d931-b923-4169-9f03-6a774e1b3a51?autoplay=1
 
-##  Materiais de Apoio
+Este guia resume as principais diferenças entre indicadores-chave de desempenho (KPIs) e métricas de negócios, ilustrando como cada um contribui para a tomada de decisão e qual o fluxo de trabalho de um profissional de Business Intelligence (BI).
 
-# Certificado: 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h59m00s442.jpg" alt="" width="840">
+</p>
+
+### Diferenças entre KPIs e Métricas
+
+A compreensão da distinção entre **KPIs (Key Performance Indicators)** e **Métricas** é fundamental para a análise de negócios. Embora ambos sejam medidas quantitativas, eles operam em níveis de importância e escopos diferentes dentro de uma organização:
+
+* **KPIs (Indicadores-Chave de Desempenho):**
+* **Foco:** Medir o progresso em relação a metas de negócio críticas e essenciais para o sucesso.
+* **Perspectiva:** Possuem uma visão de alto nível (estratégica).
+* **Abrangência:** São relevantes para múltiplos departamentos e auxiliam diretamente na tomada de decisões estratégicas.
+
+
+* **Métricas:**
+* **Foco:** Rastrear o desempenho de processos ou atividades de negócios específicos.
+* **Perspectiva:** Atuam em um nível mais baixo, operacional ou tático.
+* **Abrangência:** Geralmente são restritas a áreas ou departamentos específicos, fornecendo contexto para as metas principais, mas sem o peso estratégico de um KPI.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h59m07s866.jpg" alt="" width="840">
+</p>
+
+### Exemplos Práticos: KPI vs. Métrica
+
+Para ilustrar a aplicação desses conceitos em um cenário real de vendas, podemos observar como os dados são visualizados em um relatório:
+
+* **Exemplo de KPI (Sales Growth):** O crescimento das vendas é um indicador de alto nível. No dashboard, ele é representado por medidores de progresso, comparação de valores totais entre o período atual (€ 1.475.446) e o anterior (€ 1.180.357), além do acompanhamento da performance de vendas por representante (Max, Anna e Dan) ao longo de 12 semanas.
+* **Exemplo de Métrica (Lead Conversion Ratio):** A taxa de conversão de leads (ex: 16:1 ou 7%) é uma medida mais específica e operacional. Ela detalha a eficiência da equipe em transformar contatos em clientes. Embora essencial para entender o processo de vendas, ela serve como um dado tático que alimenta o objetivo maior de crescimento da empresa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h59m12s237.jpg" alt="" width="840">
+</p>
+
+### As Tarefas do Analista de Dados
+
+O fluxo de trabalho de um analista, especialmente voltado para Business Intelligence (BI), envolve cinco pilares fundamentais para transformar dados brutos em decisões inteligentes:
+
+1. **Prepare (Preparar):** Consiste em coletar e limpar os dados para que estejam prontos para uso.
+2. **Analyze (Analisar):** Explorar a base de dados para entender o comportamento das informações antes de qualquer modelagem.
+3. **Model (Modelar):** Definir a estrutura, o padrão e as relações dos dados que servirão de referência para o acompanhamento das métricas.
+4. **Manage (Gerenciar):** Garantir a consistência e a acurácia do modelo conforme novos dados são integrados.
+5. **Visualize (Visualizar):** Criar relatórios e dashboards interativos (utilizando ferramentas como Power BI e SQL) que facilitem a interpretação das informações e a experiência do usuário final.
+
+# Certificado: Fundamentos de BI - KPIs e Métricas
 
 - Link na plataforma: 
 - Certificado em pdf:
