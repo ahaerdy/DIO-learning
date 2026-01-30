@@ -535,26 +535,38 @@ A interface **Set** define um contrato com diversos métodos essenciais para a m
 A implementação prática demonstra a criação de conjuntos utilizando `HashSet` e `TreeSet` para gerenciar objetos do tipo `Carro`. Enquanto o `HashSet` armazena os elementos sem uma ordem definida, o `TreeSet` é utilizado para organizar os dados em uma estrutura de árvore, exigindo que a classe `Carro` implemente a interface `Comparable` para estabelecer critérios de ordenação.
 
 ```java
-package one.digitalinnovation;
+package one.digitalinnovation; // Declaração do pacote onde a classe está localizada.
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.HashSet; // Importação da classe HashSet, uma implementação da interface Set.
+import java.util.Set; // Importação da interface Set, que do inglês significa "conjunto".
+import java.util.TreeSet; // Importação da classe TreeSet, implementação que organiza elementos em estruturas de árvore.
 
 public class Main {
     public static void main(String args[]){
+        // Criação de um conjunto de carros utilizando HashSet.
         Set<Carro> hashSetCarros = new HashSet<>();
 
+        // Adição de diversos objetos Carro ao conjunto HashSet.
         hashSetCarros.add(new Carro("Ford"));
         hashSetCarros.add(new Carro("Chevrolet"));
         hashSetCarros.add(new Carro("Fiat"));
         hashSetCarros.add(new Carro("Peugeot"));
-        hashSetCarros.add(new Carro("Zip"));
-        hashSetCarros.add(new Carro("Alfa Romeo"));
+        hashSetCarros.add(new Carro("Zip")); // Adicionado para testar a ordenação pela última letra.
+        hashSetCarros.add(new Carro("Alfa Romeo")); // Adicionado para testar a ordenação pela primeira letra.
 
+        // Saída na tela para o HashSet.
         System.out.println(hashSetCarros);
+        /* Saída esperada: Os carros impressos em uma ordem imprevisível (ex: [Zip, Fiat, Alfa Romeo, ...]).
+           Porquê: O professor explica que o Set (especificamente o HashSet) não preserva a ordem de inserção dos elementos.
+        */
 
+        // Criação de um conjunto de carros utilizando TreeSet.
         Set<Carro> treeSetCarros = new TreeSet<>();
+        /* Observação técnica: O professor destaca que, para usar o TreeSet, a classe Carro DEVE implementar 
+           a interface Comparable, caso contrário ocorrerá um erro de 'ClassCastException' por falta de um 
+           parâmetro de comparação para organizar a árvore.
+        */
+        
         treeSetCarros.add(new Carro("Ford"));
         treeSetCarros.add(new Carro("Chevrolet"));
         treeSetCarros.add(new Carro("Fiat"));
@@ -562,10 +574,15 @@ public class Main {
         treeSetCarros.add(new Carro("Zip"));
         treeSetCarros.add(new Carro("Alfa Romeo"));
         
+        // Saída na tela para o TreeSet.
         System.out.println(treeSetCarros);
+        /* Saída esperada: [Alfa Romeo, Chevrolet, Fiat, Ford, Peugeot, Zip].
+           Porquê: O TreeSet ordena os elementos automaticamente no ato da inserção. De acordo com a 
+           última implementação mostrada pelo professor, a comparação foi feita por ordem alfabética 
+           da marca utilizando o método compareTo da classe String.
+        */
     }
 }
-
 ```
 
 
