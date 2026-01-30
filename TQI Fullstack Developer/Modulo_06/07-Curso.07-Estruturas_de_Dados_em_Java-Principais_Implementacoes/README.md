@@ -691,7 +691,6 @@ public class Main { // Declaração da classe principal[cite: 25].
 }
 ```      
 
-
 ### 🟩 Vídeo 07 - Conclusão
 
 <video width="60%" controls>
@@ -701,9 +700,41 @@ public class Main { // Declaração da classe principal[cite: 25].
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/52a595a1-30f6-4acf-970e-897b5a7c2db5?autoplay=1
 
+Este vídeo marca a conclusão do curso de Estrutura de Dados em Java (Etapa 7 da Aula 8). O instrutor faz uma retrospectiva completa de todo o conteúdo aprendido, reforça a importância de entender o funcionamento interno das estruturas e disponibiliza recursos práticos para os alunos.
+
+### Anotações
+
+Aqui está a versão do documento sem a transcrição ao final:
+
+#### Conclusão e Principais Implementações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-12h52m31s891.jpg" alt="" width="840">
+</p>
+
+Esta etapa final do curso, especificamente a etapa 7 da aula 8, foca na conclusão dos estudos sobre as principais implementações das estruturas de dados na linguagem Java. O objetivo é consolidar o conhecimento adquirido ao longo das aulas, fazendo uma ponte entre as implementações manuais realizadas e as ferramentas otimizadas que a linguagem oferece nativamente.
+
+---
+
+#### Repositório e Materiais de Apoio no GitHub
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-12h52m47s753.jpg" alt="" width="840">
+</p>
+
+O repositório oficial do curso no GitHub centraliza todo o conteúdo didático, incluindo apresentações de slides, projetos de código-fonte e a ementa detalhada. Através dele, é possível revisar a progressão do aprendizado, que abrangeu desde conceitos fundamentais como memória, atribuição e referência, até estruturas complexas como:
+
+* **Conceito de Nó e Generics**: A base para a construção de estruturas dinâmicas e flexíveis.
+* **Pilhas (LIFO) e Filas (FIFO)**: Entendimento das regras de entrada e saída de dados.
+* **Listas**: Implementações de listas encadeadas, duplamente encadeadas e circulares.
+* **Árvores Binárias**: Aprofundamento na estrutura mais complexa abordada no curso.
+
+O repositório demonstra que, embora o Java possua classes prontas como o `TreeSet`, o domínio da "engine" interna dessas estruturas permite ao desenvolvedor diagnosticar erros e utilizar a linguagem de forma muito mais eficiente e profissional.      
+
+
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Estruturas de Dados em Java - Principais Implementações
 
 - Link na plataforma: 
 - Certificado em pdf: 
