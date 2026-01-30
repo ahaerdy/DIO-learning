@@ -113,6 +113,50 @@ Por fim, os KPIs são essenciais para **avaliar a saúde da empresa** através d
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/b1bca51f-2e8c-4e22-8533-552040d393c5?autoplay=1
 
+Este guia explora a fundo os Indicadores Chave de Desempenho (KPIs), detalhando como eles são classificados, em quais níveis da organização operam e como a visualização de dados pode acelerar o crescimento de uma empresa.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h15m02s231.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, exploramos as **Categorias e Levels** (níveis) relacionados aos KPIs (**Key Performance Indicators**). A compreensão dessas divisões é fundamental para definir corretamente o que se pretende medir em uma organização. Os KPIs são classificados em diferentes grupos, como operacional, estratégico, leading/lagging e qualitativo/quantitativo, variando conforme a necessidade de análise e o prazo de execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h15m05s979.jpg" alt="" width="840">
+</p>
+
+As KPIs podem ser segmentadas em quatro grandes categorias principais que auxiliam na Inteligência de Negócios:
+
+* **Operacional:** Focada no dia a dia e na rotina da empresa (curto prazo), medindo a eficiência de processos internos.
+* **Estratégica:** Relacionada a objetivos amplos e de longo prazo, como crescimento de receita ou engajamento de usuários, sendo essencial para cargos de liderança (C-Level).
+* **Leading ou Lagging:** Refere-se a indicadores antecipados (previsões de futuro, como satisfação do cliente) ou atrasados (conquistas passadas, como vendas do ano anterior).
+* **Qualitativa ou Quantitativa:** Divide-se entre métricas mensuráveis numericamente (leads, metas) e métricas subjetivas (nível de satisfação de funcionários ou clientes).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h15m12s540.jpg" alt="" width="840">
+</p>
+
+Além das categorias, os KPIs são organizados em uma hierarquia de níveis (**KPIs levels**) dentro da estrutura organizacional:
+
+1. **Company-level (Nível Organizacional):** Foca na saúde geral da empresa e desempenho macro.
+2. **Department-level (Nível de Departamento):** Atende a requisitos específicos de equipes como Marketing, RH ou Produto, já que cada setor possui objetivos distintos.
+3. **Project-level (Nível de Projeto):** O nível mais granular, voltado para o desempenho de execuções específicas, prazos e planejamentos.
+
+Como destaca a citação de Thomas Monson: *"When performance is measured and reported, the rate of improvement accelerates"* (Quando o desempenho é medido e relatado, a taxa de aprimoramento acelera).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h15m16s956.jpg" alt="" width="840">
+</p>
+
+Para facilitar a gestão, utiliza-se o acompanhamento de **Objetivos Trimestrais (Quarterly Objectives)**. O uso de recursos visuais e ferramentas de gestão (como o exemplo da Monday.com) permite padronizar cores para **Status** e **Prioridade**, aumentando a legibilidade dos indicadores.
+
+No exemplo apresentado, as tarefas são monitoradas através de:
+
+* **Status:** Categorias como *Working on it*, *Ongoing*, *Waiting for review* ou *Done*.
+* **Priority:** Classificações de criticidade como *High*, *Medium* ou *Low*.
+* **Exemplos de Metas:** Planejamento de marketing, revisões de interface (UI) de websites e análises de crescimento de clientes (*Customer Growth*).
 
 
 ### 🟩 Vídeo 04 - O que Devemos Considerar com Uso das KPIs?
@@ -122,7 +166,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/9d4c2fa1-83f9-4628-8ee1-78cff3d7908d?autoplay=1
 
 ### 🟩 Vídeo 05 - Considerações sobre KPIs
 
