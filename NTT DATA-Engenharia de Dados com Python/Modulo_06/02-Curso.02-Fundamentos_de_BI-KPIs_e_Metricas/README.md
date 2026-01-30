@@ -301,5 +301,5 @@ O fluxo de trabalho de um analista, especialmente voltado para Business Intellig
 
 # Certificado: Fundamentos de BI - KPIs e Métricas
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/QKIF6XI1.pdf
+- Certificado em pdf: [Certificado-Fundamentos_de_BI-KPIs_e_Metricas.pdf](000-Midia_e_Anexos/Certificado-Fundamentos_de_BI-KPIs_e_Metricas.pdf)
