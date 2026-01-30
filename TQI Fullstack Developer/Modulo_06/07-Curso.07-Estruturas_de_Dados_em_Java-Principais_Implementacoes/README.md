@@ -610,69 +610,85 @@ Nesta introdução à etapa 6 da aula 8, iniciamos o estudo sobre a interface **
 
 A interface `Map` disponibiliza um conjunto robusto de métodos para manipular as entradas de dados. Abaixo, estão listadas as principais operações disponíveis na documentação oficial:
 
-| Retorno | Método | Descrição 
+| Retorno      | Método                               |
+|--------------|--------------------------------------|
+| `boolean`    | `add(E e)`                           |
+| `boolean`    | `addAll(Collection<? extends E> c)`  |
+| `void`       | `clear()`                            |
+| `boolean`    | `contains(Object o)`                 |
+| `boolean`    | `containsAll(Collection<?> c)`       |
+| `boolean`    | `equals(Object o)`                   |
+| `int`        | `hashCode()`                         |
+| `boolean`    | `isEmpty()`                          |
+| `Iterator<E>`| `iterator()`                         |
+| `boolean`    | `remove(Object o)`                   |
+| `boolean`    | `removeAll(Collection<?> c)`         |
+| `boolean`    | `retainAll(Collection<?> c)`         |
+| `int`        | `size()`                             |
+| `Object[]`   | `toArray()`                          |
+| `<T> T[]`    | `toArray(T[] a)`                     |
 
- |
-| --- | --- | --- |
-| `void` | `clear()` | Remove todos os elementos do Map. |
-| `boolean` | `containsKey(Object key)` | Verifica se existe uma chave específica. |
-| `boolean` | `containsValue(Object value)` | Verifica se existe um valor específico. |
-| `Set<Map.Entry<K,V>>` | `entrySet()` | Retorna uma visão em Set das associações contidas. |
-| `V` | `get(Object key)` | Retorna o valor associado à chave informada. |
-| `boolean` | `isEmpty()` | Verifica se o Map está vazio. |
-| `Set<K>` | `keySet()` | Retorna um Set contendo todas as chaves. |
-| `V` | `put(K key, V value)` | Associa o valor à chave especificada. |
-| `V` | `remove(Object key)` | Remove a associação da chave informada. |
-| `int` | `size()` | Retorna a quantidade de elementos (pares). |
-| `Collection<V>` | `values()` | Retorna uma coleção com todos os valores. |
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-12h08m11s407.jpg" alt="" width="840">
-</p>
 
 Nesta implementação prática, utilizamos a classe `HashMap` para gerenciar dados de alunos. O exemplo demonstra como criar um Map onde as chaves e valores são do tipo `String`, simulando uma estrutura de registro. Também é demonstrado como aninhar essas estruturas dentro de uma `List`, permitindo armazenar múltiplos objetos Map em uma única coleção indexada.
 
 ```java
-package one.digitalinnovation;
+package one.digitalinnovation; // Define o pacote do projeto, seguindo a estrutura de diretórios criada[cite: 18].
 
-import java.util.ArrayList;
+// Importações das classes necessárias para trabalhar com Collections (Listas e Mapas)[cite: 20, 21, 22, 23].
+import java.util.ArrayList; 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Main {
+public class Main { // Declaração da classe principal[cite: 25].
 
-    public static void main(String args[]){
-        // Instanciando o primeiro aluno
-        Map<String, String> aluno = new HashMap<>();
-        aluno.put("Nome", "João");
-        aluno.put("Idade", "17");
-        aluno.put("Media", "8.5");
-        aluno.put("Turma", "3a");
+    public static void main(String args[]){ // Método principal de execução do programa[cite: 30].
+        
+        // Instanciação de um Map que associa uma chave (String) a um valor (String)[cite: 31].
+        // O professor faz uma analogia deste modelo com um "struct" do C++[cite: 10].
+        Map<String, String> aluno = new HashMap<>(); 
+        
+        // O método .put associa uma informação única (chave) a um dado (valor)[cite: 8, 10].
+        aluno.put("Nome", "João");   // Define a chave "Nome" com o valor "João"[cite: 34, 35].
+        aluno.put("Idade", "17");    // Define a chave "Idade"[cite: 37, 38].
+        aluno.put("Media", "8.5");   // Define a chave "Media"[cite: 40, 41].
+        aluno.put("Turma", "3a");    // Define a chave "Turma"[cite: 43, 44].
 
-        System.out.println(aluno);
-        // Exibindo apenas as chaves do Map
+        // SAÍDA: {Turma=3a, Idade=17, Media=8.5, Nome=João}
+        // PORQUÊ: Imprime o objeto Map completo. A ordem pode variar pois o HashMap não garante ordenação[cite: 55, 10].
+        System.out.println(aluno); 
+        
+        // SAÍDA: [Turma, Idade, Media, Nome]
+        // PORQUÊ: O método .keySet() retorna um Set (grupo) contendo apenas as chaves da estrutura[cite: 56, 10].
         System.out.println(aluno.keySet());
 
-        // Criando uma lista para armazenar Maps de alunos
+        // Cria uma lista onde cada elemento é um Map (um "objeto" aluno)[cite: 57].
+        // O professor explica que isso permite ter uma lista de estruturas complexas[cite: 10].
         List<Map<String, String>> listaAlunos = new ArrayList<>();
+        
+        // Adiciona o Map do primeiro aluno à lista[cite: 58].
         listaAlunos.add(aluno);
 
-        // Instanciando o segundo aluno
+        // Instanciação e preenchimento do segundo aluno (aluno2)[cite: 59, 62].
         Map<String, String> aluno2 = new HashMap<>();
         aluno2.put("Nome", "Maria");
         aluno2.put("Idade", "18");
         aluno2.put("Media", "8.9");
         aluno2.put("Turma", "3b");
 
+        // Adiciona o segundo Map à lista de alunos[cite: 78].
         listaAlunos.add(aluno2);
+        
+        // SAÍDA: [{Turma=3a, Idade=17, Media=8.5, Nome=João}, {Turma=3b, Idade=18, Media=8.9, Nome=Maria}]
+        // PORQUÊ: Imprime a lista contendo os dois Maps de alunos adicionados anteriormente[cite: 79, 10].
         System.out.println(listaAlunos);
 
-        // Verificando a existência de uma chave
+        // SAÍDA: true
+        // PORQUÊ: O método .containsKey("Nome") verifica se o Map possui a chave especificada. 
+        // Como "Nome" foi inserido no primeiro aluno, o retorno é verdadeiro[cite: 80, 10].
         System.out.println(aluno.containsKey("Nome"));
     }
 }
-
 ```      
 
 
