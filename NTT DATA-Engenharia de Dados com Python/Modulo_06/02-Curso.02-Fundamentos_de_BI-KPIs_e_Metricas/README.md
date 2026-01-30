@@ -74,6 +74,36 @@ A utilização de KPIs oferece vantagens estratégicas superiores às métricas 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/fce1fd79-772c-45ed-940c-274b17125230?autoplay=1
 
+
+Este vídeo explora como os Indicadores-Chave de Desempenho (KPIs) funcionam como ferramentas essenciais para a gestão estratégica, permitindo desde o rastreamento individual de performance até a avaliação da saúde cultural de uma organização.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-13h57m25s142.jpg" alt="" width="840">
+</p>
+
+Os **KPIs (Key Performance Indicators)** oferecem a vantagem estratégica de **contabilizar a performance dos colaboradores**. Essa análise permite que a organização realize um rastreamento (*track*) do progresso individual , descendo o nível hierárquico da empresa desde a organização e setores até chegar a cada colaborador. Um exemplo prático dessa aplicação é a mensuração do número de vendas mensais por pessoa, o que ajuda a entender o desempenho específico de cada time e integrante.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-13h57m28s247.jpg" alt="" width="840">
+</p>
+
+A utilização de indicadores **permite o ajuste por parte dos gerentes** através da **adequação da estratégia**. Quando os resultados esperados não são alcançados, os KPIs ajudam a identificar "dores" ou impeditivos, como falhas em processos internos, sobrecarga de trabalho ou falta de comunicação. Com esses dados, a liderança pode tomar medidas assertivas para alavancar a performance, como a execução de treinamentos específicos ou reciclagens técnicas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-13h57m31s172.jpg" alt="" width="840">
+</p>
+
+Outro benefício fundamental é manter **todos na mesma página** , estabelecendo um **alvo comum** e uma **mesma perspectiva**. Como a percepção de sucesso pode ser subjetiva entre diferentes áreas, o KPI serve como um objetivo único e objetivo. Isso facilita a determinação de prioridades e expectativas, garantindo que diferentes setores trabalhem de forma alinhada para alcançar o mesmo resultado organizacional.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-13h57m34s321.jpg" alt="" width="840">
+</p>
+
+Por fim, os KPIs são essenciais para **avaliar a saúde da empresa** através de uma **visão objetiva** da performance global. Eles permitem monitorar indicadores financeiros de lucratividade e taxas de retenção, tanto de clientes quanto de funcionários. Essa análise da retenção de colaboradores, por exemplo, reflete a força da cultura e o engajamento do time, permitindo que a gestão mude posturas ou aplique medidas corretivas sempre que identificar cenários desfavoráveis.      
+
+
 ### 🟩 Vídeo 03 - Categorias e Níveis dos KPIs
 
 <video width="60%" controls>
@@ -81,7 +111,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/b1bca51f-2e8c-4e22-8533-552040d393c5?autoplay=1
+
+
 
 ### 🟩 Vídeo 04 - O que Devemos Considerar com Uso das KPIs?
 
