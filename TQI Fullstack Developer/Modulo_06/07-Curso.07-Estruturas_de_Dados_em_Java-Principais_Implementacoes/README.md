@@ -736,5 +736,5 @@ O repositório demonstra que, embora o Java possua classes prontas como o `TreeS
 
 # Certificado: Estruturas de Dados em Java - Principais Implementações
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/NY0DYQDC.pdf
+- Certificado em pdf: [bootcamp_tqi_fullstack-modulo.06-curso.07-video_07.webm](000-Midia_e_Anexos/Certificado-Trabalhando_com_Collections_Java.pdf)
