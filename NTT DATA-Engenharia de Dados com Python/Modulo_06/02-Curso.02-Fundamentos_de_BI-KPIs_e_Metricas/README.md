@@ -196,6 +196,48 @@ As seguintes perguntas auxiliam no entendimento do propósito de uma métrica:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/4dfe44b7-f977-4c09-a5a5-d4ba8d2f28af?autoplay=1
 
+Este guia explora a importância dos Indicadores Chave de Desempenho (KPIs), a aplicação da metodologia SMART para definição de metas e como o monitoramento contínuo impacta o sucesso organizacional, especialmente em áreas como marketing e atendimento ao cliente.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h43m38s607.jpg" alt="" width="840">
+</p>
+
+Para que a Gestão de Indicadores seja eficiente, é fundamental que as **KPIs sejam simples e claras**. A complexidade excessiva prejudica a compreensão; por isso, o indicador deve ser objetivo o suficiente para que todos os colaboradores — seja em nível organizacional, de departamento ou individual — entendam o que está sendo medido.
+
+Além da simplicidade, o sucesso dessa estratégia depende de três pilares:
+
+* **KPIs simples e claros:** Facilidade de explicação e entendimento.
+* **Comunicação para divulgar os KPIs:** Garantir que a informação chegue aos envolvidos de forma assertiva para que se sintam engajados com as metas.
+* **Refinamento ao longo do tempo:** As KPIs não são estáticas. Elas devem ser revisadas e ajustadas conforme os objetivos da empresa mudam ou fatores externos (como crises econômicas) impactam a viabilidade das metas agressivas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h43m46s129.jpg" alt="" width="840">
+</p>
+
+A definição de uma meta (**Goal**) atrelada a um indicador deve seguir a metodologia **SMART**, servindo como um guia para garantir que o objetivo seja bem estruturado. Os componentes são:
+
+* **S (Specific):** A meta deve ser específica.
+* **M (Measurable):** Deve ser possível medir o progresso.
+* **A (Achievable):** A meta precisa ser alcançável, evitando desmotivação por metas impossíveis.
+* **R (Realistic):** Deve ser realista dentro do contexto e recursos disponíveis.
+* **T (Timely):** Deve possuir um prazo ou limite de tempo definido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-14h43m53s144.jpg" alt="" width="840">
+</p>
+
+A aplicação prática dos KPIs pode ser visualizada em ferramentas de gestão de projetos (como o Monday.com), onde os objetivos são segmentados por períodos (Q1, Q2, Q3) e acompanhados por métricas financeiras e de desempenho. Abaixo, um exemplo de organização de dados extraído da interface:
+
+| Período | Projeto/Campanha | Objetivo (Goal) | Prioridade | Orçamento (Budget) | Orçamento Restante |
+| --- | --- | --- | --- | --- | --- |
+| **Q1** | Winter clearance sale | Reach monthly target | High | $175 | $121 |
+| **Q1** | Marketing best practices summit | Lead generation | Medium | $5,000 | -$200 |
+| **Q2** | Summer is here campaign | Increase website vis... | Medium | $1,000 | -$550 |
+| **Q3** | 30% summer madness discount | Increase purchases... | Low | $500 | $150 |
+
+Essa estrutura permite identificar rapidamente se uma meta está sendo atingida e se o uso dos recursos (budget) está dentro do planejado ou apresentando déficit.      
 
 
 ### 🟩 Vídeo 06 - Qual a diferença entre Métricas e KPIs?
@@ -205,7 +247,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-bi-kpis-e-metricas/learning/f7b4d931-b923-4169-9f03-6a774e1b3a51?autoplay=1
 
 ##  Materiais de Apoio
 
