@@ -585,7 +585,6 @@ public class Main {
 }
 ```
 
-
 ### 🟩 Vídeo 06 - Map (HashMap)
 
 <video width="60%" controls>
@@ -595,6 +594,88 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/8ebf899b-4fc9-4dbd-a579-3b9c3188aa39?autoplay=1
 
+Este guia aborda a **Etapa 6 da Aula 8** do curso de Estrutura de Dados em Java, focando especificamente na interface `Map`. O conteúdo explora desde os métodos fundamentais da interface até a implementação prática utilizando `HashMap`, demonstrando como gerenciar coleções de pares chave-valor e como integrar essas estruturas em listas para representar dados complexos (como registros de alunos).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-12h07m59s096.jpg" alt="" width="840">
+</p>
+
+Nesta introdução à etapa 6 da aula 8, iniciamos o estudo sobre a interface **Map** no ecossistema de estruturas de dados do Java. Diferente de outras coleções, o Map trabalha com o conceito de chave-valor, permitindo associar uma informação única (chave) a um determinado dado (valor). O material destaca que as implementações prontas da linguagem facilitam o desenvolvimento, mas exigem a compreensão teórica de como esses dados são organizados internamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-12h08m01s199.jpg" alt="" width="840">
+</p>
+
+A interface `Map` disponibiliza um conjunto robusto de métodos para manipular as entradas de dados. Abaixo, estão listadas as principais operações disponíveis na documentação oficial:
+
+| Retorno | Método | Descrição 
+
+ |
+| --- | --- | --- |
+| `void` | `clear()` | Remove todos os elementos do Map. |
+| `boolean` | `containsKey(Object key)` | Verifica se existe uma chave específica. |
+| `boolean` | `containsValue(Object value)` | Verifica se existe um valor específico. |
+| `Set<Map.Entry<K,V>>` | `entrySet()` | Retorna uma visão em Set das associações contidas. |
+| `V` | `get(Object key)` | Retorna o valor associado à chave informada. |
+| `boolean` | `isEmpty()` | Verifica se o Map está vazio. |
+| `Set<K>` | `keySet()` | Retorna um Set contendo todas as chaves. |
+| `V` | `put(K key, V value)` | Associa o valor à chave especificada. |
+| `V` | `remove(Object key)` | Remove a associação da chave informada. |
+| `int` | `size()` | Retorna a quantidade de elementos (pares). |
+| `Collection<V>` | `values()` | Retorna uma coleção com todos os valores. |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-12h08m11s407.jpg" alt="" width="840">
+</p>
+
+Nesta implementação prática, utilizamos a classe `HashMap` para gerenciar dados de alunos. O exemplo demonstra como criar um Map onde as chaves e valores são do tipo `String`, simulando uma estrutura de registro. Também é demonstrado como aninhar essas estruturas dentro de uma `List`, permitindo armazenar múltiplos objetos Map em uma única coleção indexada.
+
+```java
+package one.digitalinnovation;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Main {
+
+    public static void main(String args[]){
+        // Instanciando o primeiro aluno
+        Map<String, String> aluno = new HashMap<>();
+        aluno.put("Nome", "João");
+        aluno.put("Idade", "17");
+        aluno.put("Media", "8.5");
+        aluno.put("Turma", "3a");
+
+        System.out.println(aluno);
+        // Exibindo apenas as chaves do Map
+        System.out.println(aluno.keySet());
+
+        // Criando uma lista para armazenar Maps de alunos
+        List<Map<String, String>> listaAlunos = new ArrayList<>();
+        listaAlunos.add(aluno);
+
+        // Instanciando o segundo aluno
+        Map<String, String> aluno2 = new HashMap<>();
+        aluno2.put("Nome", "Maria");
+        aluno2.put("Idade", "18");
+        aluno2.put("Media", "8.9");
+        aluno2.put("Turma", "3b");
+
+        listaAlunos.add(aluno2);
+        System.out.println(listaAlunos);
+
+        // Verificando a existência de uma chave
+        System.out.println(aluno.containsKey("Nome"));
+    }
+}
+
+```      
+
+
 ### 🟩 Vídeo 07 - Conclusão
 
 <video width="60%" controls>
@@ -602,7 +683,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/52a595a1-30f6-4acf-970e-897b5a7c2db5?autoplay=1
 
 ##  Materiais de Apoio
 
