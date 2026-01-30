@@ -514,54 +514,23 @@ Esta etapa do curso de estrutura de dados em Java foca na interface **Set**, que
 
 A interface **Set** define um contrato com diversos métodos essenciais para a manipulação de conjuntos. Além de disponibilizar um QR Code para acesso à documentação oficial, a aula destaca os seguintes métodos principais:
 
-| Retorno | Método |
-| --- | --- |
-| `boolean` | <br>`add(E e)` 
-
- |
-| `boolean` | <br>`addAll(Collection<? extends E> c)` 
-
- |
-| `void` | <br>`clear()` 
-
- |
-| `boolean` | <br>`contains(Object o)` 
-
- |
-| `boolean` | <br>`containsAll(Collection<?> c)` 
-
- |
-| `boolean` | <br>`equals(Object o)` 
-
- |
-| `int` | <br>`hashCode()` 
-
- |
-| `boolean` | <br>`isEmpty()` 
-
- |
-| `Iterator<E>` | <br>`iterator()` 
-
- |
-| `boolean` | <br>`remove(Object o)` 
-
- |
-| `boolean` | <br>`removeAll(Collection<?> c)` 
-
- |
-| `boolean` | <br>`retainAll(Collection<?> c)` 
-
- |
-| `int` | <br>`size()` 
-
- |
-| `Object[]` | <br>`toArray()` 
-
- |
-| `<T> T[]` | <br>`toArray(T[] a)` 
-
- |
-
+| Retorno      | Método                                |
+|--------------|---------------------------------------|
+| `boolean`    | `add(E e)`                            |
+| `boolean`    | `addAll(Collection<? extends E> c)`   |
+| `void`       | `clear()`                             |
+| `boolean`    | `contains(Object o)`                  |
+| `boolean`    | `containsAll(Collection<?> c)`        |
+| `boolean`    | `equals(Object o)`                    |
+| `int`        | `hashCode()`                          |
+| `boolean`    | `isEmpty()`                           |
+| `Iterator<E>`| `iterator()`                          |
+| `boolean`    | `remove(Object o)`                    |
+| `boolean`    | `removeAll(Collection<?> c)`          |
+| `boolean`    | `retainAll(Collection<?> c)`          |
+| `int`        | `size()`                              |
+| `Object[]`   | `toArray()`                           |
+| `<T> T[]`    | `toArray(T[] a)`                      |
 
 A implementação prática demonstra a criação de conjuntos utilizando `HashSet` e `TreeSet` para gerenciar objetos do tipo `Carro`. Enquanto o `HashSet` armazena os elementos sem uma ordem definida, o `TreeSet` é utilizado para organizar os dados em uma estrutura de árvore, exigindo que a classe `Carro` implemente a interface `Comparable` para estabelecer critérios de ordenação.
 
