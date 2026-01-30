@@ -731,9 +731,6 @@ O repositório oficial do curso no GitHub centraliza todo o conteúdo didático,
 
 O repositório demonstra que, embora o Java possua classes prontas como o `TreeSet`, o domínio da "engine" interna dessas estruturas permite ao desenvolvedor diagnosticar erros e utilizar a linguagem de forma muito mais eficiente e profissional.      
 
-
-##  Materiais de Apoio
-
 # Certificado: Estruturas de Dados em Java - Principais Implementações
 
 - Link na plataforma: https://hermes.dio.me/certificates/NY0DYQDC.pdf
