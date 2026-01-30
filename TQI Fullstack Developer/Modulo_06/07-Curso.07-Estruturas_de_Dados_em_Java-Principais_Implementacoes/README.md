@@ -498,6 +498,108 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/0ce2dae5-e946-461c-8874-51d0043f706c?autoplay=1
 
+Este guia aborda a utilização da interface `Set` no ecossistema Java, explorando as diferenças fundamentais entre as implementações `HashSet` e `TreeSet`, além de destacar a importância da interface `Comparable` para a ordenação de dados.
+
+### Anotações
+      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-09h51m23s243.jpg" alt="" width="840">
+</p>
+
+Esta etapa do curso de estrutura de dados em Java foca na interface **Set**, que traduzida do inglês significa "conjunto". O objetivo principal é explorar as principais implementações das estruturas de dados fundamentais do Java voltadas para coleções que não permitem elementos duplicados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-30-09h51m27s873.jpg" alt="" width="840">
+</p>
+
+A interface **Set** define um contrato com diversos métodos essenciais para a manipulação de conjuntos. Além de disponibilizar um QR Code para acesso à documentação oficial, a aula destaca os seguintes métodos principais:
+
+| Retorno | Método |
+| --- | --- |
+| `boolean` | <br>`add(E e)` 
+
+ |
+| `boolean` | <br>`addAll(Collection<? extends E> c)` 
+
+ |
+| `void` | <br>`clear()` 
+
+ |
+| `boolean` | <br>`contains(Object o)` 
+
+ |
+| `boolean` | <br>`containsAll(Collection<?> c)` 
+
+ |
+| `boolean` | <br>`equals(Object o)` 
+
+ |
+| `int` | <br>`hashCode()` 
+
+ |
+| `boolean` | <br>`isEmpty()` 
+
+ |
+| `Iterator<E>` | <br>`iterator()` 
+
+ |
+| `boolean` | <br>`remove(Object o)` 
+
+ |
+| `boolean` | <br>`removeAll(Collection<?> c)` 
+
+ |
+| `boolean` | <br>`retainAll(Collection<?> c)` 
+
+ |
+| `int` | <br>`size()` 
+
+ |
+| `Object[]` | <br>`toArray()` 
+
+ |
+| `<T> T[]` | <br>`toArray(T[] a)` 
+
+ |
+
+
+A implementação prática demonstra a criação de conjuntos utilizando `HashSet` e `TreeSet` para gerenciar objetos do tipo `Carro`. Enquanto o `HashSet` armazena os elementos sem uma ordem definida, o `TreeSet` é utilizado para organizar os dados em uma estrutura de árvore, exigindo que a classe `Carro` implemente a interface `Comparable` para estabelecer critérios de ordenação.
+
+```java
+package one.digitalinnovation;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+    public static void main(String args[]){
+        Set<Carro> hashSetCarros = new HashSet<>();
+
+        hashSetCarros.add(new Carro("Ford"));
+        hashSetCarros.add(new Carro("Chevrolet"));
+        hashSetCarros.add(new Carro("Fiat"));
+        hashSetCarros.add(new Carro("Peugeot"));
+        hashSetCarros.add(new Carro("Zip"));
+        hashSetCarros.add(new Carro("Alfa Romeo"));
+
+        System.out.println(hashSetCarros);
+
+        Set<Carro> treeSetCarros = new TreeSet<>();
+        treeSetCarros.add(new Carro("Ford"));
+        treeSetCarros.add(new Carro("Chevrolet"));
+        treeSetCarros.add(new Carro("Fiat"));
+        treeSetCarros.add(new Carro("Peugeot"));
+        treeSetCarros.add(new Carro("Zip"));
+        treeSetCarros.add(new Carro("Alfa Romeo"));
+        
+        System.out.println(treeSetCarros);
+    }
+}
+
+```
+
+
 ### 🟩 Vídeo 06 - Map (HashMap)
 
 <video width="60%" controls>
@@ -505,7 +607,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutur
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/estrutura-de-dados-em-java-principais-implementacoes/learning/8ebf899b-4fc9-4dbd-a579-3b9c3188aa39?autoplay=1
 
 ### 🟩 Vídeo 07 - Conclusão
 
