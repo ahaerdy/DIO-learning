@@ -81,36 +81,71 @@ O fluxo de execução segue uma lógica de empilhamento onde:
 A conclusão de um método depende da finalização dos métodos que ele chamou. Assim, o programa só finaliza o `main` após o método `a` terminar, que por sua vez aguarda o `b`, e este aguarda o `c`. Ao analisar o **stack trace** (as mensagens em vermelho no console), a leitura deve ser feita de baixo para cima para entender a ordem de chamada dos métodos.
 
 ```java
-package br.com.dio.debbuging;
+package br.com.dio.debbuging; // Define o pacote do projeto.
 
-public class Main {
+public class Main { // Declaração da classe principal.
 
-    public static void main(String[] args) {
-        System.out.println("Iniciou do programa no método main.");
-        a();
+    public static void main(String[] args) { 
+        // Ponto de entrada: O Java sempre procura primeiro o método main para iniciar a execução.
+        
+        System.out.println("Iniciou do programa no método main."); 
+        // Saída: "Iniciou do programa no método main."
+        // Porquê: É a primeira instrução executada assim que o programa inicia.
+
+        a(); 
+        // O programa "pula" para o método a(), pausando a execução do main até que a() retorne.
+
         System.out.println("Finalizou do programa no método main.");
+        // Saída: "Finalizou do programa no método main."
+        // Porquê: Esta linha só é executada após o método a() (e todos os seus sub-métodos) finalizar.
     }
 
-    static void a() {
+    static void a() { 
+        // Método com modificador 'public' omitido (default), o que é permitido no Java.
+        
         System.out.println("Entrou no método a.");
-        b();
+        // Saída: "Entrou no método a."
+        // Porquê: Confirmar que o fluxo saiu do main e entrou na execução do método a.
+
+        b(); 
+        // Chama o método b(), empilhando-o sobre o método a.
+
         System.out.println("Finalizou o método a.");
+        // Saída: "Finalizou o método a."
+        // Porquê: Só executa após b() ser totalmente finalizado e removido da pilha.
     }
 
     static void b() {
         System.out.println("Entrou no método b.");
+        // Saída: "Entrou no método b."
+        // Porquê: Indica o início da execução do terceiro nível da pilha.
+
         for(int i=0; i<=4; i++) System.out.println(i);
-        c();
+        // Saída: 0, 1, 2, 3, 4 (um em cada linha).
+        // Porquê: O laço imprime o valor de 'i' enquanto ele for menor ou igual a 4.
+
+        c(); 
+        // Chama o método c(), o último nível de profundidade desta pilha.
+
         System.out.println("Finalizou o método b.");
+        // Saída: "Finalizou o método b."
+        // Porquê: O programa volta para esta linha assim que o método c() termina.
     }
 
     static void c(){
         System.out.println("Entrou no método c.");
-        Thread.dumpStack();
+        // Saída: "Entrou no método c."
+        // Porquê: Identifica a entrada no último método da cadeia de chamadas.
+
+        Thread.dumpStack(); 
+        // Saída: Uma trilha de exceção (Stack Trace) em vermelho no console.
+        // Porquê: Imprime o estado atual da pilha. Ao ler de baixo para cima, vemos a ordem: main -> a -> b -> c.
+
         System.out.println("Finalizou o método c.");
+        // Saída: "Finalizou o método c."
+        // Porquê: Última instrução do método c antes de começar o processo de "desempilhar" a execução.
     }
 }
-
 ```
 
 ## Parte 3 - Debugging na IDE IntelliJ
