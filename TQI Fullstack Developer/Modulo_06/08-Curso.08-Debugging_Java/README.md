@@ -63,7 +63,55 @@ Para depurar com eficiência, é crucial compreender como o Java gerencia a exec
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-java/learning/55263056-2fcd-4b2d-a2dc-f51c233d2eb8?autoplay=1
+
+Este guia explora os fundamentos da execução de programas Java, focando na estrutura da Pilha de Execução (Call Stack). Através de um exemplo prático, o tutorial demonstra como os métodos são empilhados e desempilhados, além de fornecer orientações sobre ferramentas de desenvolvimento e leitura de erros.
+
+### Anotações
+
+Nesta aula, é apresentada a estrutura de execução de um programa Java utilizando a IDE IntelliJ IDEA e o JDK 17 (embora versões a partir da 8 sejam suficientes). O foco inicial é compreender a **pilha de execução (stack)** através de um exemplo prático com quatro métodos encadeados: `main`, `a`, `b` e `c`.
+
+O fluxo de execução segue uma lógica de empilhamento onde:
+
+1. **Método main**: É o ponto de entrada e saída do programa. Ele inicia e chama o método `a`.
+2. **Método a**: Imprime uma mensagem e chama o método `b`.
+3. **Método b**: Executa um laço `for` que imprime valores de 0 a 4 e, em seguida, chama o método `c`.
+4. **Método c**: É o último nível da pilha neste exemplo, onde é utilizado o método `Thread.dumpStack()` para exibir a trilha de execução (stack trace) no console.
+
+A conclusão de um método depende da finalização dos métodos que ele chamou. Assim, o programa só finaliza o `main` após o método `a` terminar, que por sua vez aguarda o `b`, e este aguarda o `c`. Ao analisar o **stack trace** (as mensagens em vermelho no console), a leitura deve ser feita de baixo para cima para entender a ordem de chamada dos métodos.
+
+```java
+package br.com.dio.debbuging;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Iniciou do programa no método main.");
+        a();
+        System.out.println("Finalizou do programa no método main.");
+    }
+
+    static void a() {
+        System.out.println("Entrou no método a.");
+        b();
+        System.out.println("Finalizou o método a.");
+    }
+
+    static void b() {
+        System.out.println("Entrou no método b.");
+        for(int i=0; i<=4; i++) System.out.println(i);
+        c();
+        System.out.println("Finalizou o método b.");
+    }
+
+    static void c(){
+        System.out.println("Entrou no método c.");
+        Thread.dumpStack();
+        System.out.println("Finalizou o método c.");
+    }
+}
+
+```
 
 ## Parte 3 - Debugging na IDE IntelliJ
 
@@ -74,7 +122,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-java/learning/be8d3b90-484b-4f7c-bc6f-91a90c32c7b4?autoplay=1
 
 ## Parte 4 - Debugging na IDE Eclipse
 
