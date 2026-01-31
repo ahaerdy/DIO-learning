@@ -80,6 +80,62 @@ Nesta visualização, destaca-se a interface de interação com o dashboard, inc
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/86f55f0a-0d00-4185-b2b0-19f939e4369f?autoplay=1
 
+Este tutorial foca na transição entre relatórios detalhados e a criação de um Painel (Dashboard) no ambiente online do Power BI. O objetivo é consolidar informações críticas de diferentes fontes em uma única página estratégica.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-17h15m07s568.jpg" alt="" width="840">
+</p>
+
+Nesta tela inicial do Power BI Service (ambiente online), visualizamos o "Meu Workspace", que funciona como a área de trabalho pessoal do usuário. Na parte central, há um menu de acesso rápido para a criação de novos conteúdos, permitindo iniciar um **Relatório**, um **Relatório paginado** ou um **Scorecard** para acompanhamento de métricas. Abaixo, é apresentada uma lista dos itens trabalhados recentemente, facilitando a navegação entre os diferentes painéis, relatórios e conjuntos de dados já existentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-17h15m18s097.jpg" alt="" width="840">
+</p>
+
+Ao acessar um painel (dashboard) existente, como o "Dash de Vendas - Fantasia", a barra de ferramentas superior oferece opções de gerenciamento. Ao clicar no menu **Arquivo**, o usuário tem acesso a funções administrativas e de organização, como **Salvar uma cópia** do painel, gerenciar permissões de acesso, imprimir a página ou acessar as configurações específicas desse dashboard.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-17h15m27s756.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra o processo de personalização de um dashboard através da opção **Editar** > **Adicionar um bloco**. Este menu lateral permite inserir elementos que não vêm diretamente de relatórios, divididos em:
+
+* **Mídia**: Inserção de conteúdo externo (Web), Imagens, Caixas de texto ou Vídeos.
+* **Dados em tempo real**: Adição de blocos de Streaming personalizados, permitindo que o painel exiba informações atualizadas instantaneamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-17h15m39s302.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, visualizamos um relatório aberto ("sample financial") onde o usuário utiliza o ícone de **fixar** (representado por um percevejo) em um visual específico. Ao acionar essa função, abre-se a janela "Fixar no painel", permitindo que o gráfico seja enviado para um **Dashboard existente** (neste caso, selecionando o "Dash de Vendas - Fantasia") ou para um novo painel. Essa é a forma padrão de construir dashboards, consolidando visuais importantes de diferentes relatórios em uma única tela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-17h15m47s026.jpg" alt="" width="840">
+</p>
+
+Após a fixação dos elementos, vemos o dashboard resultante com diversos blocos organizados. O painel agora consolida indicadores de diferentes naturezas, como o total de vendas (**Soma de Sales**), distribuição por produto, lucro por segmento (**Soma de Profit**) e uma análise geográfica por país. Esta visualização é otimizada para consumo rápido de informações estratégicas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-17h15m50s724.jpg" alt="" width="840">
+</p>
+
+A imagem destaca a interatividade nativa dos blocos no dashboard. Ao passar o mouse sobre os pontos de dados no gráfico de área ("Soma de Sales por Segmento e Mês"), o sistema exibe um *tooltip* com informações detalhadas, como o valor exato da soma de vendas para um determinado segmento e mês específico (ex: Julho de 2014), demonstrando como o painel permite explorar os dados sem sair da visão consolidada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-17h15m56s095.jpg" alt="" width="840">
+</p>
+
+A interface mostra a capacidade de filtragem e detalhamento. Ao interagir com o gráfico de "Soma de Sales", é possível observar o destaque para o segmento **SMALL BUSINESS** no mês de agosto de 2014, onde o valor da soma de vendas atingiu **2.454.816,00**. Isso evidencia como o dashboard responde às seleções do usuário para isolar métricas de interesse.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-17h16m00s080.jpg" alt="" width="840">
+</p>
+
+Finalmente, visualizamos o dashboard em seu estado atualizado após as edições. O layout exibe de forma clara o KPI principal de **Soma de Sales** no valor de **118,73 Mi**, juntamente com gráficos de barras e áreas que distribuem o lucro e as vendas ao longo do tempo (meses de janeiro a dezembro) e entre as regiões geográficas (América do Norte e Europa).      
+
+
 ### 🟩 Vídeo 03 - Modificando Tema do Dashboard no Power BI Service
 
 <video width="60%" controls>
@@ -87,7 +143,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/577e5a3e-5bd7-4268-a6e0-59590840acac?autoplay=1
 
 ### 🟩 Vídeo 04 - Criando Blocos com P e R no Power BI
 
