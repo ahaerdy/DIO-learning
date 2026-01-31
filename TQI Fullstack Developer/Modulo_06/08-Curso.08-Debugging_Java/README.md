@@ -159,6 +159,138 @@ public class Main { // Declaração da classe principal.
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-java/learning/be8d3b90-484b-4f7c-bc6f-91a90c32c7b4?autoplay=1
 
+Este guia resume a aula prática sobre como utilizar ferramentas de depuração (debug) no IntelliJ IDEA para identificar erros lógicos e inconsistências em códigos Java, exemplificado através de um sistema simples de cálculo de médias escolares.
+
+### Anotações
+
+```java
+package br.com.dio.debbuging;
+
+import java.util.Scanner;
+
+public class CalculadoraDeMedias {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String[] alunos = {"Camila", "Lucas", "Bruna", "Pedro"};
+
+        double media = calculaMediaDaTurma(alunos, scan);
+
+        System.out.printf("Média da turma %.1f", media);
+    }
+
+    public static double calculaMediaDaTurma(String[] alunos, Scanner scanner) {
+
+        double soma = 0;
+        for(String aluno : alunos) {
+            System.out.printf("Nota do aluno %s: ", aluno);
+            double nota = scanner.nextDouble();
+            soma += nota;
+        }
+
+        return soma / alunos.length;
+    }
+
+}
+```
+
+Nesta aula, exploramos a classe `CalculadoraDeMedias`, desenvolvida para calcular a média das notas de uma turma. O código utiliza um array de strings para os nomes dos alunos e um objeto `Scanner` para capturar as entradas do teclado. O fluxo principal ocorre no método `main`, que invoca o método `calculaMediaDaTurma` para processar a lógica de soma e divisão.
+
+```java
+package br.com.dio.debbuging;
+
+import java.util.Scanner;
+
+public class CalculadoraDeMedias {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String[] alunos = {"Camila", "Lucas", "Bruna", "Pedro"};
+
+        double media = calculaMediaDaTurma(alunos, scan);
+
+        System.out.printf("Média da turma %.1f", media);
+    }
+
+    public static double calculaMediaDaTurma(String[] alunos, Scanner scanner) {
+        double soma = 0;
+        for(String aluno : alunos) {
+            System.out.printf("Nota do aluno %s: ", aluno);
+            double nota = scanner.nextDouble();
+            soma += nota;
+        }
+        return soma / alunos.length;
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-14h55m38s689.jpg" alt="" width="840">
+</p>
+
+Ao executar o programa inicialmente, as notas inseridas (7, 6, 5 e 4) resultaram em uma média de **5**. No entanto, um teste de mesa manual revela que a soma dessas notas é 22, o que deveria resultar em uma média de **5.5** (). Essa discrepância indica uma inconsistência lógica no código, provavelmente relacionada à forma como os tipos numéricos (inteiros vs. decimais) estão sendo manipulados durante a divisão.
+
+```java
+// Exemplo da execução com erro lógico
+Nota do aluno Camila: 7
+Nota do aluno Lucas: 6
+Nota do aluno Bruna: 5
+Nota do aluno Pedro: 4
+Média da turma 5
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-14h56m36s287.jpg" alt="" width="840">
+</p>
+
+Para investigar a causa do erro, iniciamos o modo de **Debug** da IDE colocando um **breakpoint** na linha de retorno do método. A ferramenta de debug permite inspecionar o estado das variáveis em tempo real. Na aba *Variables*, observamos que o array `alunos` contém os quatro nomes e que o programa está parado no ponto exato onde o cálculo final da média será realizado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-14h56m50s085.jpg" alt="" width="840">
+</p>
+
+Ao avançar passo a passo (utilizando o *Step Over*), validamos que a variável `soma` acumulou corretamente o valor **22**. O painel de debug confirma que `soma` é 22 e `alunos.length` é 4. O erro torna-se evidente ao perceber que, embora os valores estejam corretos, a operação está sendo tratada como uma divisão de inteiros, o que descarta as casas decimais e resulta no valor truncado 5 em vez de 5.5.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-14h57m06s419.jpg" alt="" width="840">
+</p>
+
+A solução para a inconsistência é a refatoração dos tipos de dados. Alteramos as variáveis `soma`, `nota` e o retorno do método de `int` para `double`. No método `main`, a variável `media` também passa a ser `double` e o formatador do `printf` é ajustado de `%d` (inteiro) para `%f` (ponto flutuante). Com essas mudanças, o Java preserva a precisão decimal durante o cálculo.
+
+```java
+double media = calculaMediaDaTurma(alunos, scan);
+System.out.printf("Média da turma %.1f", media);
+
+public static double calculaMediaDaTurma(String[] alunos, Scanner scanner) {
+    double soma = 0;
+    for (String aluno : alunos) {
+        System.out.printf("Nota do aluno %s: ", aluno);
+        double nota = scanner.nextDouble();
+        soma += nota;
+    }
+    return soma / alunos.length;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-14h57m16s362.jpg" alt="" width="840">
+</p>
+
+Além de erros lógicos, o debug auxilia na identificação de exceções em tempo de execução. Ao inserir um texto (como o nome "Camila") onde o programa espera um valor numérico para a nota, o sistema lança uma `java.util.InputMismatchException`. O console exibe a **stack trace**, indicando que o erro ocorreu no método `nextDouble()` da classe `Scanner` na linha 20, permitindo ao desenvolvedor planejar tratamentos de erro como blocos `try-catch`.
+
+```bash
+Exception in thread "main" java.util.InputMismatchException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
+	at java.base/java.util.Scanner.next(Scanner.java:1594)
+	at java.base/java.util.Scanner.nextDouble(Scanner.java:2564)
+	at br.com.dio.debbuging.CalculadoraDeMedias.calculaMediaDaTurma(CalculadoraDeMedias.java:20)
+	at br.com.dio.debbuging.CalculadoraDeMedias.main(CalculadoraDeMedias.java:10)
+
+```      
+
+
 ## Parte 4 - Debugging na IDE Eclipse
 
 ### 🟩 Vídeo 04 - Debugging na IDE Eclipse
@@ -168,7 +300,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debuggin
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-java/learning/58e50b89-f0ae-4f77-ab52-8517cef5ae2e?autoplay=1
 
 
 ##  Materiais de Apoio
