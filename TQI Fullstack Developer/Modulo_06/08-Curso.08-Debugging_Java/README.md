@@ -323,18 +323,9 @@ O Eclipse oferece funcionalidades avançadas para o controle de interrupções, 
 
 Ao ativar o modo de depuração, o Eclipse exibe a pilha de chamadas na visão **Debug**, mostrando quais métodos estão aguardando para serem desempilhados (como `Main.a` e `Main.main`). Painéis como **Variables** e **Expressions** permitem monitorar o valor de variáveis em tempo real. No exemplo, o código foi ajustado para que o laço `for` ocupe múltiplas linhas, permitindo que os comandos de controle de fluxo funcionem individualmente:
 
-* 
-**Step Into (F5):** Utilizado para entrar no método `c()` e inspecionar sua execução interna.
-
-
-* 
-**Step Over (F6):** Avança para a próxima linha, permitindo observar cada iteração do valor de `i` no console.
-
-
-* 
-**Step Return (F7):** Finaliza o método atual e retorna ao ponto onde ele foi chamado.
-
-
+* **Step Into (F5):** Utilizado para entrar no método `c()` e inspecionar sua execução interna.
+* **Step Over (F6):** Avança para a próxima linha, permitindo observar cada iteração do valor de `i` no console.
+* **Step Return (F7):** Finaliza o método atual e retorna ao ponto onde ele foi chamado.
 
 ```java
 static void b() {
@@ -353,7 +344,7 @@ static void c(){
 
 ```
 
-# Certificado: 
+# Certificado: Debugging Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/SV52QE67.pdf
+- Certificado em pdf: [Certificado-Debugging_Java.pdf](000-Midia_e_Anexos/Certificado-Debugging_Java.pdf)
