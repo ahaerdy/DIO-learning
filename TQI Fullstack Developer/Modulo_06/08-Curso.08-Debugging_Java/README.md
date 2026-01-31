@@ -2,6 +2,7 @@
 
 - Camila Cavalcante (Software Developer @ Reclame AQUI | Full Stack | Java | Kotlin | Go | TypeScript | PHP)
 - Contato Linkedin: / [cami-la](https://www.linkedin.com/in/cami-la/)
+- Repositório com os Códigos usados neste curso: https://github.com/ahaerdy/fork-DIO-debugging-java/tree/master
 
 ## Parte 1 - Apresentação e Visão Geral
 
@@ -275,8 +276,82 @@ Exception in thread "main" java.util.InputMismatchException
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-java/learning/58e50b89-f0ae-4f77-ab52-8517cef5ae2e?autoplay=1
 
+Este guia resume as principais funcionalidades e técnicas para depurar código Java utilizando o Eclipse, desde a configuração de breakpoints até o uso de condições avançadas para otimizar o fluxo de trabalho
 
-##  Materiais de Apoio
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-15h38m38s014.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, a interface do **Eclipse IDE** é utilizada para demonstrar o fluxo de execução de um programa Java. O código foca na classe `Main`, que coordena a execução de diferentes métodos (`a` e `b`) para ilustrar o empilhamento de chamadas. Para iniciar a análise detalhada, é inserido um **breakpoint** (representado por um pequeno ponto na calha lateral) antes da linha 18, permitindo interromper o programa e observar seu comportamento interno.
+
+```java
+package br.com.dio.debbuging;
+
+public class Main {
+    public static void main(String[] args) {
+        [cite_start]System.out.println("Iniciou do programa no método main."); [cite: 13]
+        [cite_start]a(); [cite: 13]
+        [cite_start]System.out.println("Finalizou do programa no método main."); [cite: 14]
+    }
+
+    static void a() {
+        [cite_start]System.out.println("Entrou no método a."); [cite: 16]
+        [cite_start]b(); [cite: 17]
+        [cite_start]System.out.println("Finalizou o método a."); [cite: 48]
+    }
+
+    static void b() {
+        [cite_start]System.out.println("Entrou no método b."); [cite: 50]
+        [cite_start]for(int i=0; j<=4; i++) System.out.println(i); [cite: 51]
+        [cite_start]System.out.println("Finalizou o método b."); [cite: 52]
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-15h39m09s423.jpg" alt="" width="840">
+</p>
+
+O Eclipse oferece funcionalidades avançadas para o controle de interrupções, como o **Conditional Breakpoint**. Através da janela de propriedades do breakpoint (`Breakpoint Properties`), o desenvolvedor pode habilitar a opção "Conditional" e inserir uma expressão lógica específica. Isso faz com que a execução do programa seja suspensa apenas quando a condição definida for verdadeira (como `Suspend when true`), o que é ideal para analisar comportamentos específicos em laços de repetição ou grandes volumes de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-01-31-15h39m39s986.jpg" alt="" width="840">
+</p>
+
+Ao ativar o modo de depuração, o Eclipse exibe a pilha de chamadas na visão **Debug**, mostrando quais métodos estão aguardando para serem desempilhados (como `Main.a` e `Main.main`). Painéis como **Variables** e **Expressions** permitem monitorar o valor de variáveis em tempo real. No exemplo, o código foi ajustado para que o laço `for` ocupe múltiplas linhas, permitindo que os comandos de controle de fluxo funcionem individualmente:
+
+* 
+**Step Into (F5):** Utilizado para entrar no método `c()` e inspecionar sua execução interna.
+
+
+* 
+**Step Over (F6):** Avança para a próxima linha, permitindo observar cada iteração do valor de `i` no console.
+
+
+* 
+**Step Return (F7):** Finaliza o método atual e retorna ao ponto onde ele foi chamado.
+
+
+
+```java
+static void b() {
+    [cite_start]System.out.println("Entrou no método b."); [cite: 195]
+    [cite_start]for(int i=0; i <= 4; i++) [cite: 197]
+    {
+        [cite_start]System.out.println(i); [cite: 199]
+    }
+    [cite_start]c(); [cite: 201]
+    [cite_start]System.out.println("Finalizou o método b."); [cite: 204]
+}
+
+static void c(){
+    [cite_start]System.out.println("Entrou no método c."); [cite: 211]
+}
+
+```
 
 # Certificado: 
 
