@@ -278,6 +278,35 @@ Arquivo JSON com a formatação de estilo do painel apresentado acima:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/1be94240-82bb-401d-9c03-288aae9bfe7a?autoplay=1
 
+Este vídeo tutorial foca na utilização da funcionalidade de P&R (Perguntas e Respostas) do Power BI para criar dashboards dinâmicos e personalizados. O objetivo central é mostrar como a Inteligência Artificial e o Processamento de Linguagem Natural podem facilitar a vida do analista de dados e do usuário final, permitindo consultas rápidas sem a necessidade de criar novos relatórios manualmente.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-10h38m54s689.jpg" alt="" width="840">
+</p>
+
+O Power BI oferece o recurso de **P&R (Perguntas e Respostas)**, que utiliza Inteligência Artificial para permitir que o usuário interaja com os dados através de linguagem natural. Ao digitar uma consulta como `total sale by country`, a ferramenta interpreta o processamento de linguagem natural e gera automaticamente um visual correspondente, como um gráfico de barras horizontais mostrando as vendas por nação (Estados Unidos, Canadá, França, Alemanha e México), facilitando a obtenção de insights rápidos sem a necessidade de configurar manualmente cada gráfico.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-10h38m57s379.jpg" alt="" width="840">
+</p>
+
+A flexibilidade do recurso de P&R permite refinar as perguntas para obter visões mais detalhadas. No exemplo, ao utilizar a sentença `total sale by segment and country`, a IA do Power BI renderiza um gráfico de barras agrupadas. Esse visual segmenta as vendas por categoria (Government, Small Business, Enterprise, Midmarket e Channel Partners) e as correlaciona com os países, permitindo que diferentes perfis de usuários, como equipes de marketing ou vendas, encontrem preferências e insights específicos de forma dinâmica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-10h39m06s362.jpg" alt="" width="840">
+</p>
+
+Além de gráficos complexos, a IA pode responder perguntas diretas de contagem e métricas simples. Ao pesquisar por `count countries`, o sistema identifica a necessidade de uma contagem distinta e exibe um cartão com o resultado (neste caso, o valor 5). Esses visuais gerados por pergunta podem ser fixados diretamente no dashboard principal através da opção **Fixar visual**, otimizando o tempo do analista e permitindo que o usuário final responda suas próprias dúvidas sem a necessidade de abertura de chamados ou e-mails.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-10h39m27s696.jpg" alt="" width="840">
+</p>
+
+O dashboard finalizado consolida os visuais fixados a partir das perguntas e respostas, apresentando métricas críticas como a **Soma de Sales** (118.73 Mi), o lucro por país em um mapa mundi e o desempenho temporal das vendas. A interface exibe a distribuição por segmento e mês no ano de 2014, além de indicadores específicos como o **Máximo de Units Sold** (4493). Este modelo de entrega facilita a absorção de informações, pois foca na estética e na clareza visual, herdando as configurações definidas previamente no Power BI Desktop.      
+
+
 ### 🟩 Vídeo 05 - Criando Alertas em Dashboards do Power BI
 
 <video width="60%" controls>
@@ -285,7 +314,10 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/0c108e21-9db6-4427-8fc2-3640873b2c55?autoplay=1
+
+
+
 
 ### 🟩 Vídeo 06 - Explorando Submenus dos Blocos contidos no Dashboard
 
