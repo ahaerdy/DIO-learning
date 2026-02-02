@@ -454,6 +454,13 @@ A tela de **Configurações do Painel** permite gerenciar funcionalidades intera
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/f7a3a255-3779-4f3e-b461-b7674abca853?autoplay=1
 
+Este guia resume as principais funcionalidades do Power BI Service discutidas no vídeo, focando na distinção estratégica entre dashboards e relatórios, além de recursos avançados de visualização e interatividade.
+
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 09 - Editando Layout Mobile para Acesso ao Dashboard via Celular
 
 <video width="60%" controls>
@@ -461,7 +468,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/255c7785-1e5e-4b90-aacd-1d5da0f5632a?autoplay=1
 
 ### 🟩 Vídeo 10 - Streaming no Power BI
 
