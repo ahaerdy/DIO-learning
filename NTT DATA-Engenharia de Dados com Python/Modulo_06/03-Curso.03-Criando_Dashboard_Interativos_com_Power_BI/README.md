@@ -580,10 +580,69 @@ A ferramenta de **Assinatura de e-mails** automatiza o envio de relatórios atua
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/9c51e683-fd01-4284-bb5c-8d30c00f0b7d?autoplay=1
 
+Este vídeo aborda a funcionalidade de streaming em tempo real no Power BI, destacando como conectar fontes de dados heterogêneas (redes sociais, sensores IoT, métricas de negócios) para criar dashboards dinâmicos que refletem mudanças instantâneas. O conteúdo foca na arquitetura de dados, integração com o ecossistema Azure e a distinção crucial entre dashboards e relatórios.
 
-##  Materiais de Apoio
+### Anotações
 
-# Certificado: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h34m52s052.jpg" alt="" width="840">
+</p>
+
+O conceito de **streaming no Power BI** permite a expansão do alcance de coleta de dados para além das fontes tradicionais. Através dessa funcionalidade, é possível capturar informações de fontes heterogêneas e dinâmicas, como:
+
+* **Mídias Sociais:** Captura de interações e engajamento em tempo real.
+* **Métricas de Negócios:** Acompanhamento instantâneo de KPIs fundamentais.
+* **Sensores (IoT):** Monitoramento de dispositivos físicos e telemetria.
+
+Essa capacidade garante que o dashboard reflita os registros assim que eles são atualizados no sistema de origem, mantendo a análise sempre sincronizada com o momento atual.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h34m54s253.jpg" alt="" width="840">
+</p>
+
+A utilização de streaming traz características técnicas e funcionais específicas para o ambiente de Business Intelligence:
+
+* **Exibição em Tempo Real:** Capacidade de transmitir e visualizar dados no instante em que são gerados.
+* **Volume e Velocidade:** Suporte para o processamento de grandes fluxos de dados (Big Data) que exigem resposta rápida.
+* **Narrativa Visual:** Dashboards são compreendidos como "telas de histórias" que perdem sua utilidade para a tomada de decisão se as informações estiverem desatualizadas.
+* **Armazenamento em Cache Temporário:** Diferente do modelo padrão de importação do Power BI Desktop, os dados de streaming são mantidos em um cache temporário, otimizado para a natureza volátil e contínua desse tipo de análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h34m55s431.jpg" alt="" width="840">
+</p>
+
+A arquitetura de uma solução de streaming geralmente envolve a integração de serviços de nuvem para o processamento do fluxo. Em um cenário típico de **Internet das Coisas (IoT)**, o fluxo de dados segue o seguinte caminho:
+
+1. **IoT Hub:** Atua como o ponto central de ingestão, recebendo dados de diversos sensores.
+2. **Azure Stream Analytics:** Realiza o processamento dos dados, permitindo a limpeza de ruídos e a agregação de mensagens em tempo real para gerar insights.
+3. **Power BI:** Recebe os dados processados via streaming para a visualização final em relatórios e dashboards.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h34m59s164.jpg" alt="" width="840">
+</p>
+
+Para implementar a recepção de dados em tempo real no serviço do Power BI, o usuário deve configurar um **Novo conjunto de dados de streaming**. Existem três origens principais disponíveis para essa configuração:
+
+* **API:** Permite o envio de dados diretamente para o Power BI através de endpoints.
+* **PubNub:** Integração com o serviço de mensageria em tempo real.
+* **Azure Stream Analytics:** Integração direta com o motor de análise de fluxo da Microsoft Azure.
+
+No ambiente do Power BI Service, o acesso é feito através da opção "Editar" em um dashboard, selecionando "Adicionar um bloco" e escolhendo "Dados de streaming personalizados".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h35m01s164.jpg" alt="" width="840">
+</p>
+
+Para aprofundamento no gerenciamento de dashboards e personalização, a documentação oficial da Microsoft fornece diretrizes sobre tópicos avançados:
+
+* **Temas de Dashboard:** Customização visual e galerias de temas da comunidade.
+* **Blocos (Tiles):** Configuração individual de cada elemento visual do painel.
+* **Alertas de Dados:** Configuração de notificações automáticas quando métricas atingem valores específicos.
+* **Visualização Mobile:** Ajuste de layouts para visualização otimizada em smartphones.
+
+A compreensão dessas diferenças entre relatórios (detalhados e estáticos) e dashboards (focados em métricas de alto nível e tempo real) é fundamental para profissionais que buscam certificações como a **PL-300**.
+
+# Certificado: Criando Dashboard Interativos com Power BI
 
 - Link na plataforma: 
 - Certificado em pdf:
