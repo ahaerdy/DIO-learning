@@ -380,6 +380,71 @@ A conclusão do processo de comentário mostra a postagem finalizada no painel l
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/017d19cf-4b7d-41aa-9b5f-8586d855085b?autoplay=1
 
+Este resumo explora as funcionalidades avançadas do Power BI Service, desde a gestão de armazenamento e custos até a integração com serviços externos como o GitHub e configurações de governança de dados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h03m00s489.jpg" alt="" width="840">
+</p>
+
+A interface inicial do **Meu workspace** no Power BI Service apresenta uma visão consolidada dos ativos de dados disponíveis. Na lista, é possível visualizar o nome, tamanho, tipo e a data da última atualização de diversos elementos, como os conjuntos de dados "Supplier Quality Analysis Sample", "SaleAnalyst" e "Customer Profitability Sample". Esta tela serve como o hub principal para a gestão de conteúdos pessoais antes da organização em áreas de trabalho compartilhadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h03m02s989.jpg" alt="" width="840">
+</p>
+
+A imagem detalha as diferenças entre as versões do Power BI, destacando os benefícios da licença **Power BI Pro**. Diferente da versão gratuita, a licença Pro permite a criação de workspaces colaborativos, o compartilhamento de dashboards e relatórios com outros usuários Pro, além da integração total com o Microsoft Teams e funcionalidades avançadas de análise inteligente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h03m26s803.jpg" alt="" width="840">
+</p>
+
+A seção **Obter Dados** no Power BI Service oferece diferentes caminhos para a ingestão de conteúdo. O usuário pode descobrir aplicativos publicados pela organização, conectar-se a serviços online (SaaS), importar arquivos locais (como Excel, CSV ou arquivos do Power BI Desktop) ou conectar-se diretamente a bancos de dados como o Azure SQL. Há também uma seção dedicada a "Amostras" (Samples) para exploração rápida das funcionalidades da plataforma.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h03m28s616.jpg" alt="" width="840">
+</p>
+
+O marketplace de **Aplicativos do Power BI** permite a instalação de pacotes de conteúdo pré-configurados que fornecem insights imediatos. A imagem exibe diversas opções de modelos prontos desenvolvidos pela Microsoft e parceiros, como o "Cost Management", "Salesforce Analytics", "Intune Compliance" e conectores para "Google Analytics" e "GitHub", facilitando a criação de dashboards complexos sem a necessidade de começar do zero.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h03m34s990.jpg" alt="" width="840">
+</p>
+
+Exemplo de um **Dashboard** gerado a partir do aplicativo do GitHub. Esta visualização de alto nível consolida métricas críticas em "tiles" (blocos), como o número de Pull Requests da semana, o tempo médio para realizar um pull e a quantidade de problemas (Issues) abertos. Diferente de um relatório, o dashboard foca em indicadores-chave de performance (KPIs) de forma resumida para tomada de decisão rápida.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h03m39s024.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a interface de um **Relatório (Report)** detalhado do GitHub dentro do Power BI. Ao contrário do dashboard, o relatório possui múltiplas páginas (Pull Requests, Traffic, Issues, etc.) e permite interações profundas, como a aplicação de filtros laterais por repositório ou data, além de possibilitar a exportação de dados e a análise detalhada de tendências mensais através de gráficos de linhas e colunas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h03m56s268.jpg" alt="" width="840">
+</p>
+
+Nesta página do relatório, o foco é a análise de **Contribuidores (Top 100 Contributors)**. O visual apresenta um gráfico de dispersão ou bolhas que correlaciona o volume de commits ao longo do tempo por usuário, permitindo identificar quem são os membros mais ativos do projeto e como a colaboração evoluiu historicamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h03m58s724.jpg" alt="" width="840">
+</p>
+
+A visualização de **Punch Card** apresentada é utilizada para identificar padrões temporais de atividade. Ela cruza os dias da semana com as horas do dia, mostrando através do tamanho dos círculos os períodos de maior volume de commits. Complementarmente, um gráfico de barras exibe o total de commits por hora, revelando os horários de pico de produtividade da equipe de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h04m06s259.jpg" alt="" width="840">
+</p>
+
+A **Página Inicial** do Power BI Service foi redesenhada para facilitar o acesso rápido. Ela exibe uma seção de itens recomendados e uma lista de "Recentes" e "Favoritos". No detalhe da lista inferior, vemos o histórico de acesso a diferentes tipos de artefatos: o aplicativo "Github", o painel "Dash de Vendas Fantasia" e o relatório "sample financial", organizados por tempo desde a última abertura e localização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h04m17s166.jpg" alt="" width="840">
+</p>
+
+A tela de **Configurações do Painel** permite gerenciar funcionalidades interativas. O destaque aqui é o recurso de "P&R" (Perguntas e Respostas), que possibilita aos usuários finais utilizarem linguagem natural para interrogar os dados e gerar novos visuais instantaneamente. Além disso, é possível configurar alertas, assinaturas de e-mail e o fluxo de peças para organização automática dos blocos no dashboard.      
+
+
 ### 🟩 Vídeo 08 - O que são Live Pages? Quando utilizar um Dashboard?
 
 <video width="60%" controls>
@@ -387,7 +452,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/f7a3a255-3779-4f3e-b461-b7674abca853?autoplay=1
 
 ### 🟩 Vídeo 09 - Editando Layout Mobile para Acesso ao Dashboard via Celular
 
