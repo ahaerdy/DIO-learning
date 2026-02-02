@@ -145,6 +145,128 @@ Finalmente, visualizamos o dashboard em seu estado atualizado após as edições
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/577e5a3e-5bd7-4268-a6e0-59590840acac?autoplay=1
 
+Este guia explora as diversas maneiras de modificar a estética e a funcionalidade visual de um dashboard no Power BI, desde ajustes simples de cores até a importação de temas complexos via arquivos JSON e o uso de recursos da comunidade.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h51m35s084.jpg" alt="" width="840">
+</p>
+
+O processo de customização avançada do dashboard é iniciado através da opção de carregar um arquivo de tema em formato JSON. Ao selecionar "Carregar tema JSON", o sistema permite navegar pelos arquivos locais para aplicar configurações visuais pré-definidas, como o arquivo selecionado "Nowalls Analytics Theme". Esta funcionalidade possibilita a importação de paletas de cores e estilos complexos que não estão disponíveis nativamente na interface básica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h51m41s097.jpg" alt="" width="840">
+</p>
+
+A interface de edição permite alternar rapidamente entre os modos de exibição "Claro" e "Escuro". A escolha pelo tema escuro é frequentemente preferida por profissionais devido ao menor esforço visual proporcionado pelo contraste suave. Ao aplicar e salvar esta configuração, o fundo do dashboard é alterado enquanto os elementos visuais mantêm as cores específicas definidas para os dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h51m45s860.jpg" alt="" width="840">
+</p>
+
+É possível encontrar resistência na aplicação do tema se houver personalizações manuais anteriores que influenciem o resultado final. Para que o arquivo JSON externo reflita exatamente o design planejado, recomenda-se limpar personalizações prévias ou garantir que o modo base (claro ou escuro) esteja alinhado com o esperado pelo arquivo de estilo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h51m54s412.jpg" alt="" width="840">
+</p>
+
+Após a importação bem-sucedida, o dashboard assume uma estética profissional com fundo totalmente preto e elementos em alto contraste. Os gráficos, como o treemap de vendas, passam a utilizar a paleta de cores importada, destacando automaticamente os dados conforme as regras contidas no arquivo JSON.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h51m56s757.jpg" alt="" width="840">
+</p>
+
+Embora temas personalizados tragam sofisticação visual, é necessário validar se a ênfase dada às cores faz sentido analítico. Por vezes, o tema pode destacar itens de menor valor, como o segmento "Channel Partners" no treemap, o que pode confundir a interpretação imediata dos resultados se o objetivo for priorizar os maiores volumes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h51m59s331.jpg" alt="" width="840">
+</p>
+
+Para obter novos estilos, os usuários podem acessar a galeria de temas oficial da comunidade Power BI. Esse espaço funciona como um repositório onde criadores compartilham diversos temas, permitindo que outros usuários visualizem e baixem gratuitamente designs diferenciados para seus próprios dashboards.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h52m11s870.jpg" alt="" width="840">
+</p>
+
+A galeria oferece visualizações interativas que mostram como o tema se aplica a diferentes tipos de gráficos, botões e menus. Alguns temas avançados incluem até texturas de fundo e estilizações de bordas arredondadas, o que ajuda a transformar um relatório técnico em uma ferramenta de visualização mais engajadora e intuitiva.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h52m39s085.jpg" alt="" width="840">
+</p>
+
+O download de um tema é realizado diretamente na página da galeria ao localizar o ícone ou link para o arquivo JSON. É recomendável manter uma padronização entre diferentes relatórios que tratam do mesmo contexto de negócio, garantindo que o usuário tenha uma experiência visual coerente ao navegar entre eles.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h52m50s539.jpg" alt="" width="840">
+</p>
+
+Ao abrir o arquivo JSON em um editor de texto convencional, observa-se que o conteúdo está em uma linha contínua, o que dificulta a leitura e edição manual dos parâmetros. Esse arquivo contém todas as definições técnicas de cores e estilos que o motor de renderização do Power BI interpreta para construir a interface visual.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h52m55s318.jpg" alt="" width="840">
+</p>
+
+Para facilitar a compreensão do código, pode-se utilizar ferramentas online de formatação e validação de JSON. Ao processar o texto bruto nessas ferramentas, o código é organizado em uma estrutura hierárquica legível, permitindo identificar as seções responsáveis por cores de dados e estilos de visuais específicos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-09h53m36s782.jpg" alt="" width="840">
+</p>
+
+A estrutura formatada do arquivo revela as chaves principais utilizadas pelo Power BI, como `visualStyles` para comportamentos globais e `dataColors` para a sequência de cores aplicadas às séries de dados. A lista de códigos hexadecimais em `dataColors` define exatamente quais tons serão usados em cada gráfico do dashboard.
+
+```json
+{
+  "name": "My Theme",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "color": {
+          "solid": {
+          }
+        }
+      }
+    }
+  },
+  "dataColors": [
+    "#5BBEFF",
+    "#0A5FB4",
+    "#2AB6CA",
+    "#2DCCCD",
+    "#004481",
+    "#8AD4EB",
+    "#D8BE75",
+    "#F7893B",
+    "#359988",
+    "#DFBFBF",
+    "#4AC5BB",
+    "#5F6B6D",
+    "#FB8281",
+    "#F4D25A",
+    "#7F898A",
+    "#A4DDEE",
+    "#FDA889",
+    "#8687AC",
+    "#28738A",
+    "#A78F8F",
+    "#168980",
+    "#293537",
+    "#BB4A4A",
+    "#859525",
+    "#475052",
+    "#6A9FB0",
+    "#BD7150",
+    "#7B4F71",
+    "#184050",
+    "#706060",
+    "#0F5C55",
+    "#1C2325"
+  ]
+}
+
+```      
+
+
 ### 🟩 Vídeo 04 - Criando Blocos com P e R no Power BI
 
 <video width="60%" controls>
@@ -152,7 +274,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/1be94240-82bb-401d-9c03-288aae9bfe7a?autoplay=1
 
 ### 🟩 Vídeo 05 - Criando Alertas em Dashboards do Power BI
 
