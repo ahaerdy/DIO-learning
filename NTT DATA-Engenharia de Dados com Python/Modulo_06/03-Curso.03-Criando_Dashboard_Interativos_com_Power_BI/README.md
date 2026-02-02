@@ -316,6 +316,27 @@ O dashboard finalizado consolida os visuais fixados a partir das perguntas e res
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/0c108e21-9db6-4427-8fc2-3640873b2c55?autoplay=1
 
+Este vídeo explora o recurso de Alertas no Power BI, uma funcionalidade essencial para transformar dashboards estáticos em ferramentas de monitoramento proativo. O instrutor detalha desde as permissões necessárias até a configuração prática de regras de notificação baseadas em metas e KPIs.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-10h54m30s211.jpg" alt="" width="840">
+</p>
+
+O recurso de alertas em dashboards do Power BI Service funciona como uma notificação de usuário configurável para monitorar mudanças nos dados. Essa funcionalidade é restrita a elementos visuais específicos, sendo aplicada em **medidores (gauges), cartões e KPIs**. Ao configurar uma regra de alerta, define-se um título, a condição (como "Acima" ou "Abaixo") e um valor de **limiar (Threshold)**. Além disso, é possível determinar a frequência máxima de notificação, permitindo que o usuário seja avisado a cada 24 horas ou uma vez por hora, dependendo da criticidade do indicador monitorado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-10h54m33s320.jpg" alt="" width="840">
+</p>
+
+A utilização de temas em dashboards é fundamental para garantir a coerência visual e a padronização estética dos relatórios. O Power BI permite a aplicação geral de estilos, muitas vezes gerenciados através de **templates JSON**, que definem paletas de cores e formatos para todos os elementos visuais de uma só vez. Exemplos de galerias de temas mostram como a mesma base de dados pode ser apresentada com diferentes identidades visuais, como o "Dark Mode" ou temas institucionais específicos, facilitando a leitura e o alinhamento com a marca da organização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-10h54m39s536.jpg" alt="" width="840">
+</p>
+
+Na prática, a gestão de alertas pode ser feita diretamente no dashboard através do menu de reticências de um cartão ou KPI. No exemplo do dashboard "Vendas Fantasia", ao selecionar a opção **Gerenciar alertas** no cartão de "Máximo de Units Sold", o painel lateral permite ativar a regra e definir um limite específico — como, por exemplo, ser notificado quando as vendas ultrapassarem 5.000 unidades. Além das notificações nativas do serviço, o sistema oferece a opção de enviar um e-mail automático ao usuário sempre que a condição estabelecida for atingida e os dados forem alterados.
 
 
 
@@ -326,7 +347,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/206d6892-57cf-43ca-91da-99faf36d7853?autoplay=1
 
 ### 🟩 Vídeo 07 - Recursos Disponíveis no Free e no Power BI Pro e Configurações
 
