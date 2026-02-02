@@ -215,6 +215,8 @@ Para facilitar a compreensão do código, pode-se utilizar ferramentas online de
 
 A estrutura formatada do arquivo revela as chaves principais utilizadas pelo Power BI, como `visualStyles` para comportamentos globais e `dataColors` para a sequência de cores aplicadas às séries de dados. A lista de códigos hexadecimais em `dataColors` define exatamente quais tons serão usados em cada gráfico do dashboard.
 
+Arquivo JSON com a formatação de estilo do painel apresentado acima:
+
 ```json
 {
   "name": "My Theme",
