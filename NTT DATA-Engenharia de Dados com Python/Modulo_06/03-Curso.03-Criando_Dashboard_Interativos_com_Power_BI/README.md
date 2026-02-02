@@ -644,5 +644,5 @@ A compreensão dessas diferenças entre relatórios (detalhados e estáticos) e 
 
 # Certificado: Criando Dashboard Interativos com Power BI
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/RL4WWELN.pdf
+- Certificado em pdf: [Certificado-Criando Dashboard Interativos com Power BI.pdf](<000-Midia_e_Anexos/Certificado-Criando Dashboard Interativos com Power BI.pdf>)
