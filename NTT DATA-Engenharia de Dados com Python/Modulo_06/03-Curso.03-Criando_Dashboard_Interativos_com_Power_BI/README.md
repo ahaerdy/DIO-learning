@@ -524,6 +524,53 @@ Essas ferramentas permitem uma exploração aprofundada dos dados sem a necessid
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/255c7785-1e5e-4b90-aacd-1d5da0f5632a?autoplay=1
 
+Este guia explora as funcionalidades avançadas do Power BI Service, focando em como monitorar o uso, adaptar visualizações para dispositivos móveis, gerenciar permissões de compartilhamento e automatizar o recebimento de relatórios.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h21m17s347.jpg" alt="" width="840">
+</p>
+
+O Power BI permite acessar a visualização de **conteúdo relacionado** para identificar as conexões de um dashboard específico. Nesta interface, é possível visualizar os relatórios e os conjuntos de dados que alimentam o painel, como o "sample financial" , garantindo que o usuário saiba exatamente onde os dados estão armazenados dentro do seu workspace.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h21m24s326.jpg" alt="" width="840">
+</p>
+
+O relatório de métricas de uso (**Dashboard Usage Metrics Report**) fornece uma análise detalhada do desempenho do conteúdo compartilhado. Ele apresenta indicadores como o total de visualizações, visualizadores únicos e compartilhamentos realizados , permitindo também filtrar os dados pelo método de distribuição e plataforma de acesso para entender como os usuários interagem com as informações.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h21m27s766.jpg" alt="" width="840">
+</p>
+
+A funcionalidade de **Layout móvel** permite adaptar a visualização do dashboard para dispositivos como smartphones. Nesta etapa de edição, é possível organizar os blocos de dados essenciais, como os cartões de "Sales" apresentando 118,73 Mi e o "Máximo de Units Sold" atingindo 4493, assegurando que a leitura das métricas principais seja clara em telas reduzidas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h21m37s098.jpg" alt="" width="840">
+</p>
+
+Durante a configuração do layout para dispositivos móveis, elementos visuais mais complexos, como o gráfico de "Soma de Profit por Segment" e o gráfico de rosca que detalha o lucro por país , podem ser posicionados verticalmente. A interface de edição oferece opções para desativar ou redefinir blocos desafixados, permitindo que apenas as informações mais relevantes para o contexto móvel permaneçam visíveis.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h21m45s806.jpg" alt="" width="840">
+</p>
+
+O painel de compartilhamento do Power BI permite gerenciar as permissões de acesso ao dashboard. É possível definir se os destinatários poderão compartilhar o painel com outros usuários ou se terão autorização para criar novos conteúdos utilizando os dados originais associados ao projeto. Além disso, a ferramenta permite incluir uma mensagem personalizada e enviar uma notificação direta por e-mail.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h21m50s480.jpg" alt="" width="840">
+</p>
+
+As configurações avançadas do dashboard oferecem opções para aumentar o engajamento e a acessibilidade. É possível habilitar o recurso de **linguagem natural**, que permite aos usuários fazerem perguntas diretas sobre os dados para criar novos visuais , além de permitir a inserção de comentários e destacar o painel na página inicial para facilitar o acesso rápido pela equipe.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-17h21m54s751.jpg" alt="" width="840">
+</p>
+
+A ferramenta de **Assinatura de e-mails** automatiza o envio de relatórios atualizados diretamente para a caixa de entrada dos interessados. O usuário pode configurar a frequência, como envios diários , definir o horário exato de disparo e optar por incluir um link de acesso direto para o dashboard no ambiente do Power BI.
+
+
 ### 🟩 Vídeo 10 - Streaming no Power BI
 
 <video width="60%" controls>
@@ -531,7 +578,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/9c51e683-fd01-4284-bb5c-8d30c00f0b7d?autoplay=1
 
 
 ##  Materiais de Apoio
