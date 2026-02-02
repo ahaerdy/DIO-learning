@@ -339,7 +339,6 @@ A utilização de temas em dashboards é fundamental para garantir a coerência 
 Na prática, a gestão de alertas pode ser feita diretamente no dashboard através do menu de reticências de um cartão ou KPI. No exemplo do dashboard "Vendas Fantasia", ao selecionar a opção **Gerenciar alertas** no cartão de "Máximo de Units Sold", o painel lateral permite ativar a regra e definir um limite específico — como, por exemplo, ser notificado quando as vendas ultrapassarem 5.000 unidades. Além das notificações nativas do serviço, o sistema oferece a opção de enviar um e-mail automático ao usuário sempre que a condição estabelecida for atingida e os dados forem alterados.
 
 
-
 ### 🟩 Vídeo 06 - Explorando Submenus dos Blocos contidos no Dashboard
 
 <video width="60%" controls>
@@ -349,6 +348,29 @@ Na prática, a gestão de alertas pode ser feita diretamente no dashboard atrav�
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/206d6892-57cf-43ca-91da-99faf36d7853?autoplay=1
 
+Este guia explora como as funcionalidades nativas do Power BI Service transformam dashboards estáticos em ferramentas de colaboração dinâmica, permitindo que equipes discutam dados em tempo real e tomem decisões baseadas em contextos específicos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-12h38m04s079.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, são exploradas as opções de interatividade disponíveis ao selecionar o menu de opções (os três pontinhos) em um visual do dashboard. A plataforma permite que o usuário realize diversas ações colaborativas, como adicionar comentários, iniciar chats no Teams ou editar detalhes do bloco. Essa interatividade é fundamental para que o dashboard funcione como uma ferramenta de comunicação entre os membros da empresa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-12h38m16s243.jpg" alt="" width="840">
+</p>
+
+Ao utilizar a ferramenta de comentários, é possível fazer menções específicas para chamar a atenção de outros colaboradores. No exemplo visual, é solicitada uma análise mais detalhada sobre o relatório de vendas por países. Essa funcionalidade permite que a comunicação fique registrada lateralmente, mantendo o contexto dos dados analisados e permitindo o acompanhamento de pendências ou sugestões diretamente na interface do dashboard.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-12h38m27s345.jpg" alt="" width="840">
+</p>
+
+A conclusão do processo de comentário mostra a postagem finalizada no painel lateral. Um ponto importante da interatividade é que o Power BI consegue vincular o comentário a uma visão ou visual específico que estava selecionado no momento da criação. Assim, ao clicar na interação, o sistema identifica de onde veio a observação, facilitando a colaboração remota e garantindo que todos os envolvidos compreendam exatamente qual métrica está sendo discutida.
+
+
 ### 🟩 Vídeo 07 - Recursos Disponíveis no Free e no Power BI Pro e Configurações
 
 <video width="60%" controls>
@@ -356,7 +378,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/criando-dashboard-interativos-com-power-bi/learning/017d19cf-4b7d-41aa-9b5f-8586d855085b?autoplay=1
 
 ### 🟩 Vídeo 08 - O que são Live Pages? Quando utilizar um Dashboard?
 
