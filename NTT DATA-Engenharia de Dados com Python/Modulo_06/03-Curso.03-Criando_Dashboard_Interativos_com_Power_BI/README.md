@@ -458,7 +458,61 @@ Este guia resume as principais funcionalidades do Power BI Service discutidas no
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h23m27s666.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos a funcionalidade de **Pin a Live Page** (Fixar Página em Tempo Real) no Power BI. Diferente de fixar um visual estático, essa opção permite levar uma página inteira do relatório para o dashboard, garantindo a dinâmica dos dados. Ao utilizar este recurso, as atualizações de informações e a interatividade original do relatório (como filtros e segmentações) são preservadas diretamente no painel de controle.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h23m30s708.jpg" alt="" width="840">
+</p>
+
+A definição estratégica de quando utilizar Dashboards é fundamental. Eles devem ser compreendidos como uma coleção de várias fontes de dados e não apenas uma "plataforma de lançamento" para relatórios individuais. O objetivo central é consolidar métricas críticas de diferentes origens em uma única visualização de alto nível para facilitar a tomada de decisão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h23m40s853.jpg" alt="" width="840">
+</p>
+
+Visualização da interface do **Meu Workspace** no Power BI Service. Aqui é possível gerenciar todos os ativos de dados, incluindo conjuntos de dados (datasets), fluxos de dados, relatórios e painéis (dashboards). A interface exibe colunas com o nome do item, tipo de conteúdo, proprietário e o status da última atualização, servindo como o hub central para a organização dos projetos de análise.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h23m45s446.jpg" alt="" width="840">
+</p>
+
+Exemplo de um relatório de **Executive Scorecard** com diversos indicadores de performance. A página apresenta cartões com métricas como o número de clientes (83), número de produtos (7) e margem bruta (42,5%). Além disso, inclui gráficos de linha para análise de receita ao longo do tempo (Revenue TY) e um mapa geográfico mostrando a distribuição global por regiões como América do Norte, Europa e América do Sul.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h23m48s135.jpg" alt="" width="840">
+</p>
+
+Análise detalhada da variância de receita em relação ao orçamento (**Revenue Variance to Budget**) segmentada por executivos. Os dados destacam o desempenho individual em períodos específicos, como o mês de abril:
+
+* Andrew Ma: 10,43%
+* Annelie Zuber: -0,97%
+* Carlos Grilo: 0,69%
+* Tina Lassila: 9,82%
+* Valery Ushakov: 1,70%
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h23m52s251.jpg" alt="" width="840">
+</p>
+
+Demonstração do painel de filtros e segmentações aplicados a um visual específico. É possível observar que filtros de "Indústria" (selecionando setores como Finanças, Seguros e Semicondutores) e o ano de "2014" estão influenciando os dados exibidos. O Power BI permite que o usuário veja exatamente quais filtros estão afetando cada gráfico através do ícone de funil no cabeçalho do visual.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-02-13h23m56s711.jpg" alt="" width="840">
+</p>
+
+Menu de opções contextuais de um visual dentro do relatório. Ao clicar nos três pontos (mais opções), o usuário tem acesso a funcionalidades como:
+
+* Exportar dados
+* Mostrar como uma tabela
+* Obter insights automáticos
+* Destacar o visual
+* Classificar eixos e legendas
+
+Essas ferramentas permitem uma exploração aprofundada dos dados sem a necessidade de criar um novo dashboard para cada análise pontual.      
 
 
 ### 🟩 Vídeo 09 - Editando Layout Mobile para Acesso ao Dashboard via Celular
