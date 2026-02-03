@@ -951,8 +951,9 @@ A execução final demonstra a coexistência de diferentes exceções. Além da 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/17fae692-a878-478b-93b2-ac6f7bd185a7?autoplay=1
 
+Este guia consolida os principais pontos abordados no encerramento do curso, focando na organização do código prático, conceitos teóricos fundamentais e recursos adicionais para o aprendizado contínuo.
 
 # Certificado: Tratamento de Exceções em Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/05S7WVB6.pdf
+- Certificado em pdf: [Certificado-Tratamento_de_Excecoes_em_Java.pdf](000-Midia_e_Anexos/Certificado-Tratamento_de_Excecoes_em_Java.pdf)
