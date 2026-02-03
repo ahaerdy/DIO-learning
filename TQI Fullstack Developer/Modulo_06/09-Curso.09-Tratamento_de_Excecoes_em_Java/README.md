@@ -698,6 +698,150 @@ catch (FileNotFoundException e) {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/d6f87416-4278-47c8-b50f-9efee60f2abe?autoplay=1
 
+Este guia aborda a criação e o gerenciamento de exceções personalizadas no Java, focando em boas práticas de programação, como o desacoplamento de código e a melhoria da legibilidade do sistema de erros.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h23m13s534.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, iniciamos o estudo sobre **exceptions customizadas** (ou personalizadas) no Java. Uma exceção nada mais é do que uma classe comum que estende as capacidades do sistema de tratamento de erros da linguagem. O exemplo prático utiliza um método chamado `imprimirArquivoNoConsole`, que foi refatorado para separar a lógica de impressão da lógica de leitura de arquivos, promovendo o desacoplamento do código.
+
+```java
+public static void imprimirArquivoNoConsole (String nomeDoArquivo) {
+    try {
+        BufferedReader br = lerArquivo(nomeDoArquivo);
+        String line = br.readLine();
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        do {
+            bw.write(line);
+            bw.newLine();
+            line = br.readLine();
+        } while (line != null);
+        bw.flush();
+        br.close();
+    } catch (IOException ex) {
+        JOptionPane.showMessageDialog(null,
+            "Ocorreu um erro não esperado, por favor, fale com o suporte." + ex.getMessage());
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h24m00s626.jpg" alt="" width="840">
+</p>
+
+O método `main` solicita ao usuário o nome do arquivo a ser exibido através de um `JOptionPane`. Após a execução da lógica de impressão, o programa exibe uma mensagem no console confirmando que, independentemente da ocorrência de uma exceção, o fluxo de execução continua.
+
+```java
+public static void main(String[] args) {
+    String nomeDoArquivo = JOptionPane.showInputDialog("Nome do arquivo a ser exibido: ");
+    imprimirArquivoNoConsole(nomeDoArquivo);
+    System.out.println("\nCom exception ou não, o programa continua...");
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h24m45s090.jpg" alt="" width="840">
+</p>
+
+Ao utilizar a classe `FileReader`, o Java identifica uma **checked exception** do tipo `FileNotFoundException`. O ambiente de desenvolvimento (IDE) sinaliza que essa exceção precisa ser obrigatoriamente tratada ou lançada (utilizando a cláusula `throws`). Neste ponto, preparamos o terreno para substituir o tratamento genérico por uma exceção personalizada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h25m16s045.jpg" alt="" width="840">
+</p>
+
+Para criar uma exceção customizada, definimos uma nova classe. No exemplo, a classe é criada dentro do mesmo arquivo para facilitar a visualização, logo abaixo da classe principal. É uma boa prática de programação incluir o sufixo `Exception` no nome da classe. Para que ela funcione como uma exceção legítima no Java, ela deve obrigatoriamente herdar de `Exception`.
+
+```java
+class ImpossivelAberturaDeArquivoException extends Exception {
+    private String nomeDoArquivo;
+    private String diretorio;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h25m18s300.jpg" alt="" width="840">
+</p>
+
+Como a exceção customizada é uma classe Java, podemos definir atributos específicos para enriquecer o erro. Aqui, foram adicionados os campos `nomeDoArquivo` e `diretorio`. Através do atalho `Alt+Insert`, define-se um construtor que utiliza o método `super` para passar uma mensagem personalizada à classe pai (`Exception`), detalhando em qual diretório o arquivo não foi encontrado.
+
+```java
+public ImpossivelAberturaDeArquivoException(String nomeDoArquivo, String diretorio) {
+    super("O arquivo " + nomeDoArquivo + " não foi encontrado no diretório " + diretorio);
+    this.nomeDoArquivo = nomeDoArquivo;
+    this.diretorio = diretorio;
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h26m34s791.jpg" alt="" width="840">
+</p>
+
+Além do construtor, é possível sobrescrever o método `toString()` da classe. Isso permite definir exatamente como a exceção será representada textualmente quando for impressa ou exibida em logs, exibindo os valores dos atributos customizados (`nomeDoArquivo` e `diretorio`).
+
+```java
+@Override
+public String toString() {
+    return "ImpossivelAberturaDeArquivoException{" +
+            "nomeDoArquivo='" + nomeDoArquivo + '\'' +
+            ", diretorio='" + diretorio + '\'' +
+            '}';
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h26m52s199.jpg" alt="" width="840">
+</p>
+
+No método `lerArquivo`, quando a `FileNotFoundException` é capturada, o programa agora lança a nossa exceção customizada utilizando a palavra-chave `throw`. Para isso, instanciamos a `ImpossivelAberturaDeArquivoException` passando o nome e o caminho do arquivo obtidos através da classe `File`.
+
+```java
+public static BufferedReader lerArquivo (String nomeDoArquivo) {
+    File file = new File(nomeDoArquivo);
+    try {
+        return new BufferedReader(new FileReader(nomeDoArquivo));
+    } catch (FileNotFoundException e) {
+        throw new ImpossivelAberturaDeArquivoException(file.getName(), file.getPath());
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h31m01s359.jpg" alt="" width="840">
+</p>
+
+Após lançar a nova exceção, a assinatura do método `lerArquivo` precisa ser atualizada com `throws ImpossivelAberturaDeArquivoException`. Isso obriga o método chamador (`imprimirArquivoNoConsole`) a tratar essa nova exceção específica. Na estrutura de `catch`, é crucial posicionar a exceção mais específica antes da mais genérica (`IOException`) para garantir que o erro seja capturado corretamente.
+
+```java
+public static BufferedReader lerArquivo (String nomeDoArquivo) throws ImpossivelAberturaDeArquivoException {
+    File file = new File(nomeDoArquivo);
+    try {
+        return new BufferedReader(new FileReader(nomeDoArquivo));
+    } catch (FileNotFoundException e) {
+        throw new ImpossivelAberturaDeArquivoException(file.getName(), file.getPath());
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-18h31m12s554.jpg" alt="" width="840">
+</p>
+
+Ao executar o programa e inserir um nome de arquivo inexistente (como "camila.txt"), a exceção customizada é disparada. O console exibe a mensagem formatada no construtor da nossa classe, indicando exatamente o que falhou e onde. O rastreamento da pilha (stack trace) permite identificar que a exceção foi lançada no método `lerArquivo` e capturada no bloco `try-catch` do método `imprimirArquivoNoConsole`.
+
+> [!IMPORTANT]
+> A mensagem exibida via `getMessage()` será exatamente aquela definida no `super` do construtor da exceção personalizada: "O arquivo [nome] não foi encontrado no diretório [caminho]".
+
+
 ### 🟩 Vídeo 08 - Exception Personalizada 2
 
 <video width="60%" controls>
@@ -705,7 +849,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/1c35fa8e-885a-42b5-9fa6-b7140072c0dd?autoplay=1
 
 ## Parte 5 - Encerramento do Curso
 
