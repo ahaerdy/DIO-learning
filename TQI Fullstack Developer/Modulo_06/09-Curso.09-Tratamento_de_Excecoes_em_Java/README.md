@@ -586,6 +586,107 @@ O resultado da execução com o nome errado é uma `FileNotFoundException`. O co
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/40daa1d6-add6-408e-917b-b09c03aa06c9?autoplay=1
 
+Este resumo aborda as melhores práticas para capturar e tratar erros em Java, focando na diferenciação entre exceções genéricas e específicas, além de melhorar a experiência do usuário com interfaces visuais.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-17h52m21s415.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, inicia-se o tratamento da exceção diretamente no método chamador em vez de apenas lançá-la (usando `throws`). Através dos recursos da IDE, é implementado um bloco **try-catch-finally** para envolver a chamada do método `imprimirArquivoNoConsole`.
+
+* **Try**: Tenta executar a leitura do arquivo.
+* **Catch**: Captura uma `IOException` e exibe uma caixa de diálogo informativa para o usuário através do `JOptionPane`.
+* **Finally**: Bloco opcional que executa um trecho de código independentemente de ter ocorrido uma exceção ou não.
+
+```java
+String nomeDoArquivo = "romancesblake-crouch.txt";
+
+try {
+    imprimirArquivoNoConsole(nomeDoArquivo);
+} catch (IOException e) {
+    e.printStackTrace();
+    JOptionPane.showMessageDialog(null, "Revise o nome do arquivo que você deseja imprimir!");
+} finally {
+    System.out.println("Chegou no finally!");
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-17h53m10s460.jpg" alt="" width="840">
+</p>
+
+Aqui, o tratamento é refinado para fornecer mais detalhes sobre o erro. O método `e.printStackTrace()` é comentado para evitar a poluição do console, e utiliza-se o método `e.getCause()` para tentar identificar a origem da exceção dentro da mensagem exibida ao usuário. O sistema demonstra que, mesmo após o erro e o fechamento da mensagem de alerta, o fluxo do programa continua, executando as instruções após o bloco de tratamento.
+
+```java
+catch (IOException e) {
+    //e.printStackTrace();
+    JOptionPane.showMessageDialog(null,
+            "Revise o nome do arquivo que você deseja imprimir!" + e.getCause());
+} finally {
+    System.out.println("Chegou no finally!");
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-17h53m14s693.jpg" alt="" width="840">
+</p>
+
+Nesta visualização, observa-se o comportamento do programa quando o nome do arquivo fornecido está correto. Como nenhuma exceção é lançada, o conteúdo do arquivo "romances-blake-crouch.txt" é devidamente processado e exibido no console da IDE, listando as obras do autor.
+
+```text
+Romances Blake Crouch
+Abandon (July 7, 2009)
+Famous (April 15, 2010)
+Snowbound (June 22, 2010)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-17h55m15s597.jpg" alt="" width="840">
+</p>
+
+Para tornar o código mais eficiente e específico, o tratamento é dividido em múltiplas cláusulas `catch`. Isso permite diferenciar erros de arquivo não encontrado de outros erros genéricos de entrada e saída.
+
+* **FileNotFoundException**: Captura especificamente o erro de nome de arquivo incorreto ou inexistente.
+* **IOException**: Atua como um "coringa" para capturar outros problemas que podem ocorrer durante a leitura, escrita ou fechamento do arquivo, exibindo uma mensagem de erro inesperado.
+
+```java
+try {
+    imprimirArquivoNoConsole(nomeDoArquivo);
+} catch (FileNotFoundException e) {
+    JOptionPane.showMessageDialog(null,
+            "Revise o nome do arquivo que você deseja imprimir! " + e.getCause());
+} catch (IOException e) {
+    JOptionPane.showMessageDialog(null,
+            "Ocorreu um erro inesperado! Entre em contato com o suporte! " + e.getCause());
+    e.printStackTrace();
+} finally {
+    System.out.println("Chegou no finally!");
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-17h55m38s731.jpg" alt="" width="840">
+</p>
+
+A organização dos blocos `catch` segue a hierarquia de classes de exceção em Java. As exceções mais específicas (como `FileNotFoundException`) devem sempre ser declaradas antes das exceções mais genéricas (como `IOException`). Caso a ordem fosse invertida, a exceção genérica capturaria todos os erros, tornando o bloco da exceção específica inacessível, o que resultaria em um erro de compilação.
+
+```java
+// Estrutura correta: Específica antes da Genérica
+catch (FileNotFoundException e) {
+    // Trata erro de arquivo não encontrado
+} catch (IOException e) {
+    // Trata outros erros de IO
+}
+
+```      
+
+
 ## Parte 4 - Exception Personalizada
 
 ### 🟩 Vídeo 07 - Exception Personalizada 1
@@ -595,7 +696,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/d6f87416-4278-47c8-b50f-9efee60f2abe?autoplay=1
 
 ### 🟩 Vídeo 08 - Exception Personalizada 2
 
