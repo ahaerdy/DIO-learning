@@ -395,23 +395,212 @@ O estudo das *Unchecked Exceptions* mostra que, embora o compilador não obrigue
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 03-Recursos/00-Inbox_Recursos/02-ReadItLater
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/b86d1b01-1427-4238-b2c2-f279346cb8f5?autoplay=1
 
-## Parte 4 - Exception Personalizada
+Este guia explora o conceito de exceções verificadas (Checked Exceptions) através de um exemplo prático de leitura e escrita de arquivos. O foco principal é entender como o compilador Java obriga o desenvolvedor a lidar com riscos previsíveis e as diferentes formas de propagar esses erros.
 
-### 🟩 Vídeo 05 - Exception Personalizada 1
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h36m47s909.jpg" alt="" width="840">
+</p>
+
+Nesta introdução às **Checked Exceptions** (exceções verificadas), o código inicial é apresentado totalmente comentado. O objetivo desta classe é realizar a leitura de um arquivo de texto e imprimir seu conteúdo no console. Como o Java exige o tratamento obrigatório de certas exceções ao lidar com entrada e saída de arquivos (I/O), o estado inicial do código serve para preparar a explicação sobre como essas exceções se comportam e como o compilador as identifica.
+
+```java
+public class CheckedException {
+    public static void main(String[] args) {
+        String nomeDoArquivo = "romances-blake-crouch.txt";
+        //imprimirArquivoNoConsole(nomeDoArquivo);
+
+        System.out.println("Apesar da exception ou não, o programa continua...");
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h37m41s782.jpg" alt="" width="840">
+</p>
+
+Ao descomentar o código, a IDE (IntelliJ) imediatamente sinaliza diversos erros de compilação, representados pelas linhas onduladas vermelhas. Isso acontece porque os métodos utilizados para manipulação de arquivos lançam exceções verificadas que o desenvolvedor é obrigado a tratar ou declarar antes mesmo de tentar rodar o programa. O compilador "avisa" que o código não é seguro para execução sem o devido gerenciamento dessas possíveis falhas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h38m57s286.jpg" alt="" width="840">
+</p>
+
+Para realizar a leitura, é definido o nome do arquivo "Romances de Blake Crouch.txt" e iniciado um objeto do tipo `File`. A implementação utiliza o padrão *Decorator* com a classe `BufferedReader` para criar um buffer que armazenará o conteúdo do documento, facilitando a leitura linha por linha para a posterior impressão no console.
+
+```java
+public static void imprimirArquivoNoConsole(String nomeDoArquivo) {
+    File file = new File(nomeDoArquivo);
+
+    BufferedReader br = new BufferedReader(new FileReader(file.getName()));
+    String line = br.readLine();
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h39m46s600.jpg" alt="" width="840">
+</p>
+
+O processo de impressão utiliza um laço `do-while` para ler cada linha contida no buffer através do método `readLine()`. Enquanto a linha lida não for nula (indicando que ainda há conteúdo), ela é escrita no console. Ao final do processo, o método `flush()` é chamado para garantir o descarregamento total dos dados do buffer e, em seguida, o fluxo de leitura é encerrado com `close()`.
+
+```java
+    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+    do {
+        bw.write(line);
+        bw.newLine();
+        line = br.readLine();
+    } while (line != null);
+    bw.flush();
+    br.close();
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h40m15s006.jpg" alt="" width="840">
+</p>
+
+No método `main`, além da chamada para a execução do método de impressão, existe uma instrução final que deve ser impressa independentemente do sucesso da operação. Contudo, devido às exceções verificadas não tratadas nos métodos internos, o compilador impede a execução, pois não há garantia de que o fluxo chegará a esse ponto sem interrupções críticas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h40m21s359.jpg" alt="" width="840">
+</p>
+
+O motivo técnico da sinalização de erro reside na assinatura da classe `FileReader`. Como mostrado na análise visual, a IDE destaca que o construtor desta classe lança uma exceção específica quando o arquivo indicado não é localizado, exigindo uma ação preventiva do programador.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h40m31s124.jpg" alt="" width="840">
+</p>
+
+Ao detalhar a exceção lançada pelo `FileReader`, identifica-se a `FileNotFoundException`. Esta é uma exceção verificada clássica: o sistema operacional pode não encontrar o arquivo (por erro de digitação no nome ou diretório inexistente), e o Java obriga que essa possibilidade seja tratada no código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h40m37s399.jpg" alt="" width="840">
+</p>
+
+Além do `FileReader`, outros métodos na mesma rotina também apresentam riscos. O método `readLine()`, responsável por ler o conteúdo do buffer, lança uma `IOException`. Como esta exceção é mais genérica (abrange erros de entrada e saída em geral), ela também é considerada uma *Checked Exception* que impede a compilação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h40m42s099.jpg" alt="" width="840">
+</p>
+
+A operação de escrita no console através do método `write(String s)` também é um ponto de falha potencial. Assim como a leitura, a escrita lança uma `IOException`, reforçando que toda a cadeia de entrada e saída de dados precisa de uma estratégia de tratamento de erros definida.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h41m05s822.jpg" alt="" width="840">
+</p>
+
+Se tentarmos forçar a execução do programa sem resolver essas pendências, o compilador falha. O painel de saída demonstra que o Java não permite a execução enquanto existirem exceções verificadas não capturadas ou não declaradas na assinatura dos métodos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h42m24s413.jpg" alt="" width="840">
+</p>
+
+Uma das formas de resolver o erro de compilação é "relançar" a exceção para quem chamou o método. A IDE oferece a opção "Add exception to method signature", que insere a cláusula `throws` na assinatura do método, delegando a responsabilidade do tratamento para o nível superior da pilha de execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h42m32s085.jpg" alt="" width="840">
+</p>
+
+Ao aplicar a sugestão da IDE, a assinatura do método passa a ser: `public static void imprimirArquivoNoConsole(String nomeDoArquivo) throws FileNotFoundException`. Isso resolve o erro especificamente para o `FileReader`, informando ao compilador que este método pode lançar essa exceção específica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h42m56s788.jpg" alt="" width="840">
+</p>
+
+Entretanto, ao adicionar o `throws` no método `imprimirArquivoNoConsole`, o erro se desloca para o método `main`. Como o `main` é o chamador, ele agora recebe a "bomba" da exceção e também precisa decidir se a trata com um bloco `try-catch` ou se a relança novamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h44m28s742.jpg" alt="" width="840">
+</p>
+
+Como existem várias exceções do tipo `IOException` (para leitura, escrita, nova linha e fechamento de arquivo), é mais eficiente utilizar a classe pai `IOException` na assinatura do método. Isso abrange tanto a `FileNotFoundException` (que é uma subclasse) quanto os demais erros de fluxo de dados em uma única declaração genérica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h44m34s154.jpg" alt="" width="840">
+</p>
+
+A assinatura do método agora está consolidada com `throws IOException`. Visualmente, percebe-se que todas as linhas vermelhas de erro dentro do método desapareceram, pois o compilador agora entende que o programador está ciente dos riscos e optou por propagar a exceção.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h45m28s468.jpg" alt="" width="840">
+</p>
+
+Para que o programa finalmente compile e rode, o método `main` também recebe a declaração `throws IOException`. Como o `main` é o último método na pilha de execução antes da própria JVM (Java Virtual Machine), relançar a exceção aqui significa que, se houver um erro, a execução será interrompida e o rastro da pilha (*stack trace*) será exibido.
+
+```java
+public static void main(String[] args) throws IOException {
+    String nomeDoArquivo = "romances-blake-crouch.txt";
+    imprimirArquivoNoConsole(nomeDoArquivo);
+
+    System.out.println("Apesar da exception ou não, o programa continua...");
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h46m18s472.jpg" alt="" width="840">
+</p>
+
+Com o nome do arquivo correto e as exceções devidamente declaradas, o programa executa com sucesso. O console exibe a lista de romances contidos no arquivo, demonstrando que o fluxo de leitura e escrita funcionou conforme o esperado em uma situação ideal.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h46m23s871.jpg" alt="" width="840">
+</p>
+
+Para testar o comportamento em caso de erro, o nome do arquivo é alterado propositalmente para "romanes-blake-crouch.txt" (um arquivo inexistente). Como apenas declaramos as exceções com `throws` e não as tratamos com `try-catch`, o comportamento esperado é que o programa interrompa sua execução assim que encontrar a falha.
+
+```java
+public static void main(String[] args) throws IOException {
+    String nomeDoArquivo = "romanes-blake-crouch.txt";
+    imprimirArquivoNoConsole(nomeDoArquivo);
+
+    System.out.println("Apesar da exception ou não, o programa continua...");
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h47m00s357.jpg" alt="" width="840">
+</p>
+
+O resultado da execução com o nome errado é uma `FileNotFoundException`. O console exibe o rastro do erro, apontando exatamente para a linha 18, onde o `FileReader` tentou abrir o arquivo e falhou. Isso confirma que o `throws` apenas repassa o problema adiante até que alguém o trate ou o programa "estoure".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-15h47m30s562.jpg" alt="" width="840">
+</p>
+
+É importante notar que, como a exceção foi lançada e não tratada, a última linha de código ("Apesar da exception ou não, o programa continua...") nunca chegou a ser executada. O programa encerrou prematuramente devido à exceção verificada. Isso serve de gancho para o aprendizado do tratamento real com blocos `try-catch`.      
+
+
+### 🟩 Vídeo 05 - Checked exception parte 2
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.09-video_05.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/40daa1d6-add6-408e-917b-b09c03aa06c9?autoplay=1
 
-### 🟩 Vídeo 06 - Exception Personalizada 2
+## Parte 4 - Exception Personalizada
+
+### 🟩 Vídeo 07 - Exception Personalizada 1
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.09-video_06.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.09-video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 08 - Exception Personalizada 2
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.09-video_08.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -419,10 +608,10 @@ link do vídeo:
 
 ## Parte 5 - Encerramento do Curso
 
-### 🟩 Vídeo 07 - Final
+### 🟩 Vídeo 09 - Final
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.09-video_07.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.09-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
