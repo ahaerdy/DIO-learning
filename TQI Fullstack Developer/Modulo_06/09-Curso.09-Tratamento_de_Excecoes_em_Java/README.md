@@ -195,6 +195,195 @@ O curso de Tratamento de Exceções em Java está estruturado em quatro módulos
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/4eb0f87b-e0e2-4cbe-96c0-ab019e26a7e0?autoplay=1
 
+Este guia resume a aula prática sobre como lidar com erros em tempo de execução, focando em capturar falhas de entrada de dados e operações matemáticas inválidas, garantindo que o programa não "trave" inesperadamente.
+
+### Anotações
+
+Este documento apresenta uma aula prática focada no tratamento de exceções não verificadas (*Unchecked Exceptions*) em Java, demonstrando como lidar com erros de entrada de dados e operações matemáticas inválidas utilizando blocos `try-catch-finally` e lógica de repetição.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h14m02s271.jpg" alt="" width="840">
+</p>
+
+A aula inicia com a apresentação de um código base para realizar a divisão de dois números inteiros. O programa utiliza a classe `JOptionPane` para capturar as entradas do usuário (`numerador` e `denominador`) como strings, realiza a conversão para inteiros através de `Integer.parseInt` e chama um método dedicado para a operação.
+
+```java
+package br.com.dio.exceptions;
+
+import javax.swing.*;
+
+public class UncheckedException {
+    public static void main(String[] args) {
+        String a = JOptionPane.showInputDialog("Numerador: ");
+        String b = JOptionPane.showInputDialog("Denominador: ");
+
+        int resultado = dividir(Integer.parseInt(a), Integer.parseInt(b));
+        System.out.println("Resultado: " + resultado);
+
+        System.out.println("O código continua...");
+    }
+
+    public static int dividir(int a, int b) {
+        return a / b;
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h15m09s921.jpg" alt="" width="840">
+</p>
+
+Ao executar o programa com entradas válidas (numerador 4 e denominador 2), o código funciona conforme o esperado, exibindo o resultado "2" no console. Este cenário representa o fluxo normal de execução sem a ocorrência de exceções.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h16m36s570.jpg" alt="" width="840">
+</p>
+
+Quando o usuário fornece uma entrada inválida, como um nome (ex: "Camila") em vez de um número, o programa interrompe a execução e lança uma `NumberFormatException`. O console exibe o *stack trace*, indicando que a causa do erro foi a tentativa de converter a string "Camila" em um valor inteiro.
+
+```bash
+Exception in thread "main" java.lang.NumberFormatException: For input string: "Camila"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at br.com.dio.exceptions.UncheckedException.main(UncheckedException.java:11)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h16m42s174.jpg" alt="" width="840">
+</p>
+
+A análise do erro aponta diretamente para a linha 11 do código. É neste ponto que o método `Integer.parseInt(a)` tenta processar a string recebida do input, falhando ao encontrar caracteres não numéricos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h16m56s908.jpg" alt="" width="840">
+</p>
+
+Para diagnosticar o problema, deve-se ler o *stack trace* de baixo para cima. A base da pilha mostra onde o erro foi originado no contexto do nosso projeto (`UncheckedException.main` na linha 11), subindo pelas classes internas da biblioteca padrão do Java até chegar na exceção específica que foi disparada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h18m36s132.jpg" alt="" width="840">
+</p>
+
+Para evitar a interrupção abrupta do programa, é implementado o bloco `try-catch`. O código propenso a erro é colocado dentro do `try`, enquanto o `catch` captura a `NumberFormatException`. Adicionalmente, o bloco `finally` é introduzido, garantindo que seu conteúdo seja executado independentemente da ocorrência de uma exceção.
+
+```java
+        try {
+            int resultado = dividir(Integer.parseInt(a), Integer.parseInt(b));
+            System.out.println("Resultado: " + resultado);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println("Chegou no finally!");
+        }
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h19m30s662.jpg" alt="" width="840">
+</p>
+
+Em vez de apenas imprimir a pilha de erro no console, o tratamento é aprimorado para exibir uma mensagem didática ao usuário final. Utiliza-se `JOptionPane.showMessageDialog` para informar que a entrada é inválida e solicitar um número inteiro.
+
+```java
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Entrada inválida, informe um número inteiro! ");
+        } finally {
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h19m53s916.jpg" alt="" width="840">
+</p>
+
+Ao rodar o programa com o tratamento implementado, o usuário agora vê uma caixa de diálogo amigável em vez de um erro técnico no console. A mensagem "Entrada inválida, informe um número inteiro!" orienta o usuário sobre como corrigir seu input.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h19m58s631.jpg" alt="" width="840">
+</p>
+
+Mesmo após o erro de entrada e a exibição do alerta, o programa não trava. O console mostra que o bloco `finally` foi executado ("Chegou no finally!") e que o fluxo principal prosseguiu ("O código continua...").
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h20m26s299.jpg" alt="" width="840">
+</p>
+
+Um novo problema surge quando as entradas são numéricas, mas matematicamente impossíveis, como dividir por zero. Nesse caso, uma `ArithmeticException` é lançada, revelando outra vulnerabilidade no código que ainda não foi tratada.
+
+```bash
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at br.com.dio.exceptions.UncheckedException.dividir(UncheckedException.java:21)
+	at br.com.dio.exceptions.UncheckedException.main(UncheckedException.java:12)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h20m32s926.jpg" alt="" width="840">
+</p>
+
+O erro de aritmética ocorre especificamente dentro do método `dividir`. Quando o valor do denominador (`b`) é zero, a operação de divisão falha, disparando a exceção que se propaga de volta para o método principal.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h20m45s735.jpg" alt="" width="840">
+</p>
+
+Para lidar com essa nova situação, adicionamos um segundo bloco `catch` especificamente para `ArithmeticException`. Isso permite que o programa trate diferentes tipos de erros de formas distintas, fornecendo feedback adequado para cada caso.
+
+```java
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Entrada inválida, informe um número inteiro! ");
+        } catch (ArithmeticException e) {
+            JOptionPane.showMessageDialog(null, "Impossível dividir um número por 0! ");
+        }
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h20m55s384.jpg" alt="" width="840">
+</p>
+
+Com o novo tratamento, ao tentar dividir por zero, o programa exibe uma mensagem específica: "Impossível dividir um número por 0!". Novamente, o programa permanece estável e continua sua execução após o fechamento do diálogo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h21m15s126.jpg" alt="" width="840">
+</p>
+
+Para tornar o programa mais robusto, é adicionado um laço `do-while`. Utilizando uma variável de controle `continueLoop`, o programa continuará solicitando entradas ao usuário até que uma operação seja concluída com sucesso (sem exceções). No momento em que a divisão é bem-sucedida, a flag é alterada para `false`, encerrando o loop.
+
+```java
+        boolean continueLoop = true;
+        do {
+            String a = JOptionPane.showInputDialog("Numerador: ");
+            String b = JOptionPane.showInputDialog("Denominador: ");
+
+            try {
+                int resultado = dividir(Integer.parseInt(a), Integer.parseInt(b));
+                System.out.println("Resultado: " + resultado);
+                continueLoop = false;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Entrada inválida, informe um número inteiro! ");
+            } catch (ArithmeticException e) {
+                JOptionPane.showMessageDialog(null, "Impossível dividir um número por 0! ");
+            } finally {
+                System.out.println("Chegou no finally!");
+            }
+        } while (continueLoop);
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h21m34s223.jpg" alt="" width="840">
+</p>
+
+A execução final demonstra o poder dessa abordagem: o usuário pode errar a entrada (digitando texto) ou tentar uma divisão inválida (por zero) múltiplas vezes. Em todas as tentativas falhas, o programa captura a exceção, mostra o alerta, executa o `finally` e reinicia o loop, só finalizando quando uma divisão válida é finalmente processada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-13h21m37s563.jpg" alt="" width="840">
+</p>
+
+O estudo das *Unchecked Exceptions* mostra que, embora o compilador não obrigue o tratamento dessas falhas (que geralmente decorrem de erros de lógica ou inputs inadequados), tratá-las é essencial para a experiência do usuário e a estabilidade da aplicação. Na sequência, o curso abordará as *Checked Exceptions*.      
 
 
 ## Parte 3 - Checked exception
@@ -206,7 +395,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 03-Recursos/00-Inbox_Recursos/02-ReadItLater
 
 ## Parte 4 - Exception Personalizada
 
