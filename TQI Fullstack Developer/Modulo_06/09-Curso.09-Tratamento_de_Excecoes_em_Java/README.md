@@ -851,6 +851,95 @@ Ao executar o programa e inserir um nome de arquivo inexistente (como "camila.tx
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/1c35fa8e-885a-42b5-9fa6-b7140072c0dd?autoplay=1
 
+Este resumo aborda a criação de exceções personalizadas para atender regras de negócio específicas, o tratamento de erros aritméticos e de arrays, e boas práticas de interface e fluxo de código.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-19h01m14s013.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, iniciamos a estrutura de um novo exemplo para explorar exceções customizadas. O objetivo é realizar a divisão entre elementos de dois arrays: um contendo numeradores e outro contendo denominadores. O código percorre os arrays utilizando um laço `for` , mas a estrutura inicial é vulnerável a erros como divisões por zero ou índices fora do limite, já que os arrays possuem tamanhos diferentes.
+
+```java
+public class ExceptionCustomizada_2 {
+    public static void main(String[] args) {
+        [cite_start]int[] numerador = {4, 5, 8, 10}; [cite: 16]
+        [cite_start]int[] denominador = {2, 4, 0, 2, 8}; [cite: 17]
+
+        [cite_start]for (int i = 0; i < denominador.length; i++) { [cite: 18]
+            [cite_start]int resultado = numerador[i] / denominador[i]; [cite: 19]
+            [cite_start]System.out.println(resultado); [cite: 19]
+        }
+
+        [cite_start]System.out.println("O programa continua..."); [cite: 26]
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-19h01m33s062.jpg" alt="" width="840">
+</p>
+
+Para lidar com regras de negócio específicas, criamos a classe `DivisaoNaoExataException`. Ela estende a classe `Exception`, o que a caracteriza como uma **checked exception** (exceção verificada). A classe armazena o numerador e o denominador que causaram o erro , permitindo um rastreamento detalhado do problema.
+
+```java
+[cite_start]public class DivisaoNaoExataException extends Exception { [cite: 57]
+    [cite_start]private int numerado; [cite: 58]
+    [cite_start]private int denominador; [cite: 59]
+
+    [cite_start]public DivisaoNaoExataException(String message, int numerado, int denominador) { [cite: 63]
+        [cite_start]super(message); [cite: 67]
+        [cite_start]this.numerado = numerado; [cite: 68]
+        [cite_start]this.denominador = denominador; [cite: 69]
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-19h01m36s339.jpg" alt="" width="840">
+</p>
+
+Retornamos à classe principal para preparar a implementação da lógica de lançamento da nossa exceção customizada. O foco aqui é identificar situações onde a divisão não resultaria em um número inteiro exato antes mesmo da operação ser concluída.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-19h01m55s968.jpg" alt="" width="840">
+</p>
+
+Implementamos o bloco `try-catch` dentro do laço de repetição. Antes de realizar a divisão, verificamos se o numerador é ímpar em relação à lógica proposta. Caso a condição seja verdadeira, a exceção `DivisaoNaoExataException` é lançada manualmente com a palavra-chave `throw`. No bloco `catch`, capturamos essa exceção específica para exibir o rastreamento do erro e uma mensagem via `JOptionPane`.
+
+```java
+[cite_start]for (int i = 0; i < denominador.length; i++) { [cite: 141]
+    [cite_start]try { [cite: 142]
+        [cite_start]if (numerador[i] % 2 != 0) [cite: 143]
+            [cite_start]throw new DivisaoNaoExataException("Divisão não exata!", numerador[i], denominador[i]); [cite: 144]
+
+        [cite_start]int resultado = numerador[i] / denominador[i]; [cite: 145]
+        [cite_start]System.out.println(resultado); [cite: 146]
+    [cite_start]} catch (DivisaoNaoExataException e) { [cite: 147]
+        [cite_start]e.printStackTrace(); [cite: 168]
+        [cite_start]JOptionPane.showMessageDialog(null, e.getMessage()); [cite: 170]
+    }
+}
+[cite_start]System.out.println("O programa continua..."); [cite: 171]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-19h02m05s735.jpg" alt="" width="840">
+</p>
+
+Ao executar o programa, a primeira exceção é disparada quando o laço atinge o numerador `5`. Como ele não atende aos critérios de divisão exata definidos, o programa interrompe o fluxo normal do `try`, entra no `catch` e exibe a caixa de diálogo com a mensagem personalizada: "Divisão não exata!".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-03-19h02m18s164.jpg" alt="" width="840">
+</p>
+
+A execução final demonstra a coexistência de diferentes exceções. Além da nossa `DivisaoNaoExataException` , o console exibe um erro de `java.lang.ArithmeticException: / by zero`. Isso ocorre porque não tratamos especificamente a divisão por zero no bloco `catch` , evidenciando que exceções customizadas funcionam em conjunto com as exceções nativas da linguagem Java.
+
+
 ## Parte 5 - Encerramento do Curso
 
 ### 🟩 Vídeo 09 - Final
@@ -860,7 +949,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/tratamento-de-excecoes-em-java/learning/17fae692-a878-478b-93b2-ac6f7bd185a7?autoplay=1
 
 
 # Certificado: Tratamento de Exceções em Java
