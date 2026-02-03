@@ -95,7 +95,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: [Trabalhando com Collections Java](Modulo_06/06-Cursos.06-Trabalhando_com_Collections_Java)
 - [ ] Curso: [Estruturas de Dados em Java: Principais Implementações](Modulo_06/07-Curso.07-Estruturas_de_Dados_em_Java-Principais_Implementacoes)
 - [ ] Curso: [Debugging Java](Modulo_06/08-Curso.08-Debugging_Java)
-- [ ] Curso: [Tratamento de Exceções em Java]()
+- [ ] Curso: [Tratamento de Exceções em Java](Modulo_06/09-Curso.09-Tratamento_de_Excecoes_em_Java)
 - [ ] Curso: Desafios TQI - Java
 - [ ] Curso: Programação Orientada a Objetos com Java
 - [ ] Curso: Trabalhando com Banco de Dados utilizando JDBC e JPA
