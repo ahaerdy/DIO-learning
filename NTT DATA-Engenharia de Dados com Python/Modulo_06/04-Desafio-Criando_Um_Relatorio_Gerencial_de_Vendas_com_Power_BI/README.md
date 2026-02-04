@@ -269,6 +269,43 @@ Com o dashboard estruturado, demonstra-se o poder de interatividade do Power BI.
 
 link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/04960d21-e3fb-4765-90bf-26024871691f
 
+Este tutorial foca na etapa de polimento e organização de um dashboard no Power BI. O conteúdo abrange desde a criação de filtros (segmentadores) e botões personalizados até a estruturação lógica das camadas do relatório para facilitar a interatividade futura.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h27m25s849.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco está na organização dos elementos que compõem o filtro de data. Após criar o segmentador de dados, remover cabeçalhos e ajustar a formatação, foi inserida uma caixa de texto com o título "Selecione a data" e um ícone de borracha (imagem "Clean") sobreposto por um botão transparente para limpar os filtros.
+
+A imagem destaca o painel **Seleção** à direita, onde todos esses elementos — o botão, a caixa de texto, o segmentador ("Date") e a imagem — foram selecionados e unidos em um único grupo nomeado como **"Filtro por data"**. Esse agrupamento é essencial para manter o relatório organizado e facilitar a manipulação conjunta desses objetos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h27m35s239.jpg" alt="" width="840">
+</p>
+
+Aqui, inicia-se o processo de criação de visuais alternativos para permitir a troca dinâmica de gráficos posteriormente. Foi criada uma cópia do gráfico de barras de vendas por segmento, que foi alterada para um gráfico de Pizza (ou Donut).
+
+No painel de **Seleção**, observa-se a renomeação cuidadosa dos itens para diferenciar as visualizações. O novo gráfico foi nomeado como **"Pie"** (ou similar), enquanto o original de barras foi identificado como **"Sales Segment Bar"**. Essa distinção de nomenclatura é fundamental para a configuração correta dos indicadores (bookmarks) que controlarão qual gráfico é exibido para o usuário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h27m43s908.jpg" alt="" width="840">
+</p>
+
+Seguindo a lógica de visuais alternativos, esta imagem mostra a manipulação do gráfico de vendas por país ("Sales x Country"). A instrutora mantém o visual de Mapa para uma das visões, permitindo a análise geográfica da distribuição de vendas.
+
+O painel de formatação e o painel de seleção estão sendo utilizados para ajustar as propriedades e garantir que este elemento esteja devidamente identificado (neste caso, como **"Map"**). Isso prepara o terreno para que ele possa ser alternado com outro tipo de visualização (como um *Tree Map* ou gráfico de barras) dependendo da interação do usuário com os botões de navegação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h27m59s972.jpg" alt="" width="840">
+</p>
+
+A imagem final desta sequência exibe a organização avançada no painel **Seleção**. Todos os pares de gráficos criados (o original e sua alternativa) foram organizados em grupos hierárquicos.
+
+Podemos ver grupos como **"Sales por país"** (contendo o mapa e sua alternativa) e **"Sales Segmento"** (contendo o gráfico de barras e o gráfico de pizza). Essa estrutura de agrupamento é o passo final de preparação antes da criação dos *Bookmarks* (Indicadores), pois permite controlar a visibilidade de conjuntos inteiros de visuais de forma lógica e estruturada.      
+
+
 ### 🟩 Vídeo 05 - Criando os Botões do Relatórios e utilizando Indicadores para Gravar Estado do Relatório
 
 <video width="60%" controls>
@@ -276,7 +313,9 @@ link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/657f2b8b-f566-42bb-89f9-3b2735d96129
+
+
 
 ### 🟩 Vídeo 06 - Criando a Interação por Botões com a Segunda Página do Relatório
 
