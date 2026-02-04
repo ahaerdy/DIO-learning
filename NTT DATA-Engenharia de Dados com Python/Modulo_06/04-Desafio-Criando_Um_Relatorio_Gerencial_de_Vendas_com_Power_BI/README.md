@@ -77,6 +77,13 @@ Para avançar na customização do relatório, podem ser criados menus laterais 
 
 link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/cc4d0da6-799a-466d-9589-d8f4732595c5
 
+Este tutorial foca na construção da interface visual (UI) de um dashboard no Power BI, utilizando formas, cores e organização de elementos para criar um relatório profissional e intuitivo. O instrutor demonstra como preparar o "esqueleto" do dashboard antes de inserir os dados e gráficos reais.
+
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 03 - Criando Gráficos da Primeira Página do Relatório
 
 <video width="60%" controls>
