@@ -451,12 +451,73 @@ link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/3d122e34-d704-4a6a-a51c-7f376d83ecd7?back=/play
+
+Este vídeo demonstra o processo de publicação de um relatório Power BI Desktop para o serviço Power BI, abordando desafios comuns com visuais personalizados e a importância da resolução de problema
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-18h41m41s422.jpg" alt="" width="840">
+</p>
+
+O processo de publicação de um relatório no Power BI Desktop começa pela guia **Página Inicial**, selecionando a opção **Publicar**. Antes de concluir o envio para a nuvem, o sistema solicita que as alterações recentes sejam salvas no arquivo local (neste caso, o arquivo `relatório criativo`). Após salvar, o usuário deve selecionar o destino da publicação, como o "Meu workspace" ou outros workspaces disponíveis caso possua uma licença Pro ou esteja em um período de teste gratuito.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-18h41m43s951.jpg" alt="" width="840">
+</p>
+
+Após o término do carregamento, o Power BI exibe uma mensagem de sucesso confirmando a publicação. A partir desse momento, o relatório deixa de ser apenas um arquivo local `.pbix` e passa a estar disponível no **Power BI Serviço (Web)**. O diálogo de confirmação oferece links diretos para abrir o relatório no navegador ou obter insights rápidos sobre os dados publicados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-18h42m12s323.jpg" alt="" width="840">
+</p>
+
+No ambiente web, é comum encontrar desafios com **visuais personalizados** (como o Radar Chart). Caso um visual não seja exibido corretamente por questões de permissão ou configuração de segurança, o usuário pode entrar no modo **Editar** diretamente no navegador. Muitas vezes, uma simples interação ou ajuste no segmentador de dados força a atualização do componente visual, normalizando a exibição para o modo de leitura e permitindo a navegação completa entre as páginas do relatório.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-18h42m19s239.jpg" alt="" width="840">
+</p>
+
+Para concluir o projeto e submetê-lo para análise, o arquivo deve ser organizado em um repositório no **GitHub**. É fundamental incluir não apenas o arquivo `.pbix` salvo na pasta local sincronizada, mas também elementos que comprovem a execução, como capturas de tela do relatório publicado no Power BI Serviço e a base de dados utilizada. A estrutura do repositório deve refletir os módulos do curso, garantindo que todos os visuais, botões e indicadores criados estejam devidamente documentados no arquivo README.
+
+```bash
+# Exemplo de caminho de diretório para organização do desafio
+julianazanelatto / power_bi_analyst
+└── Módulo 2
+    └── Desafio de Projeto
+        ├── relatrio criativo.pbix
+        ├── figuras/
+        └── base_de_dados/
+
+```      
+
+## Detalhes o Desafio
+ 
+Agora é a sua hora de brilhar e construir um perfil de destaque na DIO! Explore todos os conceitos explorados até aqui e replique (ou melhore, porque não?) este projeto prático. Para isso, crie seu próprio repositório e aumente ainda mais seu portfólio de projetos no GitHub, o qual pode fazer toda diferença em suas entrevistas técnicas 😎
+ 
+Neste repositório, insira todos os links e arquivos necessários para seu projeto, seja um arquivo de banco de dados ou um link para o template no Figma.
+ 
+Dica: Se o expert forneceu um repositório Github, você pode dar um "fork" no repositório dele para organizar suas alterações e evoluções mantendo uma referência direta ao código-fonte original.
+ 
+Instruções de Entrega do Desafio
+Descrição do desafio: Você irá criar um relatório mais elaborado com base na sample financials do Power BI. Os arquivos de dados estão disponíveis no github: 
+
+https://github.com/julianazanelatto/power_bi_analyst 
+
+Fiquem atentos a: 
+
+- Estrutura definida 
+- Botões de navegação que fornecem navegabilidade 
+- Segmentadores utilizados e botões com imagem associado 
+- Utilize os indicadores e botões para selecionar diferentes visuais sobre um mesmo assunto 
+- Utilize os vídeos de passo a passo para criação dos elementos que compõem a primeira página do relatório: 
+- Objetos que definem o layout do relatório 
+- Gráficos (visuais) e os campos que os compõem 
+- Botões para navegabilidade 
+- Segmentadores de dados 
 
 
-##  Materiais de Apoio
+# Entrega do Desafio 
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf:
+- Link do repositório: 
