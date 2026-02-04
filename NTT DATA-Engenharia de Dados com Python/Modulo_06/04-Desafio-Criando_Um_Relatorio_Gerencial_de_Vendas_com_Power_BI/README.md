@@ -181,7 +181,72 @@ O "esqueleto" visual do relatório está concluído. Com todas as formas, contai
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/e08d4a53-fe11-4c42-a8a7-3a92063c6058?back=/track/engenharia-dados-python
+
+Este guia resume o processo de construção de um relatório dinâmico, desde a escolha dos gráficos iniciais até a personalização estética e funcional para uma melhor experiência do usuário.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h42m27s818.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, a interface do Power BI Desktop exibe a configuração de um gráfico de combinação (colunas e linhas) que analisa a **Soma de Sales** e a **Soma de Profit** distribuídas por **Mês**. No painel lateral de campos, observamos a tabela `financials` com suas colunas prontas para uso, enquanto o gráfico principal começa a delinear a sazonalidade dos dados financeiros ao longo do ano.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h43m21s821.jpg" alt="" width="840">
+</p>
+
+A visualização foca na preparação da área de trabalho para a inclusão de novos elementos de análise. O painel de **Visualizações** está aberto, destacando a capacidade de arrastar campos da tabela `financials`, como `Country`, `Product` e `Segment`, para criar representações visuais que permitam o detalhamento (drill-through) e a filtragem cruzada entre os relatórios.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h43m37s827.jpg" alt="" width="840">
+</p>
+
+O relatório começa a tomar forma com a inserção de um cartão de destaque apresentando a **Soma de Sales** total de **118,73 Mi**. Logo abaixo, o gráfico de linhas detalha a evolução das vendas mês a mês, permitindo identificar picos de desempenho, como o observado no mês de dezembro, facilitando a análise temporal do faturamento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h43m46s452.jpg" alt="" width="840">
+</p>
+
+Neste momento, o foco está na formatação estética e funcional dos visuais. Através do painel **Formatar visual**, são ajustadas as propriedades do "Valor do balão", incluindo a fonte (DIN), o tamanho (35) e a exibição de unidades. Essas configurações garantem que os indicadores-chave, como o total de vendas, sejam legíveis e visualmente consistentes com a identidade do relatório.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h44m16s191.jpg" alt="" width="840">
+</p>
+
+A expansão do dashboard continua com a adição de um segundo cartão informativo, desta vez focado na métrica de **Unidades Vendidas**, que totaliza **1,13 Mi**. Esta adição permite confrontar o volume de vendas com o valor financeiro (Soma de Sales) exibido anteriormente, oferecendo uma visão mais completa da operação comercial.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h44m35s553.jpg" alt="" width="840">
+</p>
+
+Para aprofundar a análise de rentabilidade, é inserido um novo cartão exibindo a **Soma de Discounts** (9,21 Mi). No painel de campos à direita, vemos a seleção ativa do campo `Discounts` da tabela `financials`, reforçando como o Power BI facilita o monitoramento de variáveis que impactam diretamente a margem de lucro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h45m02s610.jpg" alt="" width="840">
+</p>
+
+A tela demonstra a criação de uma análise por segmento de mercado. Um gráfico de barras horizontais é introduzido para mostrar a **Soma de Sales por Segment**, permitindo comparar o desempenho entre os setores *Government*, *Small Business*, *Enterprise*, *Midmarket* e *Channel Partners*. Observa-se também a inclusão da métrica de **Soma de COGS** (101,83 Mi) em um novo cartão, essencial para entender o custo das mercadorias vendidas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h45m23s815.jpg" alt="" width="840">
+</p>
+
+Esta visualização foca no gerenciamento das camadas e elementos do relatório através do painel de **Seleção**. É possível visualizar a organização de todos os objetos inseridos — cartões, gráficos de pizza, formas e caixas de texto. Essa estrutura organizada é fundamental para garantir que a interatividade e a sobreposição dos elementos funcionem corretamente no design final.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h46m43s309.jpg" alt="" width="840">
+</p>
+
+O relatório atinge um nível avançado de detalhamento com a inclusão do gráfico de **Soma de Sales por Product**. Esta visualização de barras permite identificar quais produtos, como *Paseo* e *VTT*, lideram as vendas. A interface mostra como os eixos X (Soma de Sales) e Y (Product) estão configurados para gerar este ranking de performance por item.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h46m52s744.jpg" alt="" width="840">
+</p>
+
+A imagem final demonstra a capacidade de análise geográfica e interativa do Power BI. Ao selecionar o produto *Paseo*, o relatório filtra automaticamente todos os outros visuais para mostrar apenas os dados relativos a esse item. Além disso, a configuração do mapa está visível no painel lateral, pronta para receber campos de localização como `Country`, permitindo a visualização espacial da distribuição das vendas globais.      
+
 
 ### 🟩 Vídeo 04 - Criando o Segmentador e Visuais Alternativos
 
@@ -190,7 +255,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/04960d21-e3fb-4765-90bf-26024871691f
 
 ### 🟩 Vídeo 05 - Criando os Botões do Relatórios e utilizando Indicadores para Gravar Estado do Relatório
 
