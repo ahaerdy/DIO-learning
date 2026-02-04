@@ -191,61 +191,73 @@ Este guia resume o processo de construção de um relatório dinâmico, desde a 
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h42m27s818.jpg" alt="" width="840">
 </p>
 
-Nesta etapa inicial, a interface do Power BI Desktop exibe a configuração de um gráfico de combinação (colunas e linhas) que analisa a **Soma de Sales** e a **Soma de Profit** distribuídas por **Mês**. No painel lateral de campos, observamos a tabela `financials` com suas colunas prontas para uso, enquanto o gráfico principal começa a delinear a sazonalidade dos dados financeiros ao longo do ano.
+Para iniciar a construção do relatório de vendas, utiliza-se um gráfico de linhas para demonstrar a evolução dos dados ao longo do tempo. Neste cenário, as vendas (*Sales*) são plotadas mensalmente. É possível adicionar um eixo Y secundário para comparar métricas com grandezas diferentes, como *Sales* e *Profit*. Embora as curvas possam apresentar tendências similares, a diferença de escala (ordem de grandeza) entre o lucro e o valor total de vendas pode dificultar a visualização se não forem ajustadas adequadamente.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h43m21s821.jpg" alt="" width="840">
 </p>
 
-A visualização foca na preparação da área de trabalho para a inclusão de novos elementos de análise. O painel de **Visualizações** está aberto, destacando a capacidade de arrastar campos da tabela `financials`, como `Country`, `Product` e `Segment`, para criar representações visuais que permitam o detalhamento (drill-through) e a filtragem cruzada entre os relatórios.
+Opta-se por simplificar a visualização removendo a métrica de lucro (*Profit*) para focar exclusivamente nas vendas ao longo do período. O tipo de gráfico é alterado para um gráfico de área. Essa escolha visual permite não apenas acompanhar a variação temporal, mas também fornece uma noção mais clara da magnitude e intensidade do volume de vendas acumulado mês a mês.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h43m37s827.jpg" alt="" width="840">
 </p>
 
-O relatório começa a tomar forma com a inserção de um cartão de destaque apresentando a **Soma de Sales** total de **118,73 Mi**. Logo abaixo, o gráfico de linhas detalha a evolução das vendas mês a mês, permitindo identificar picos de desempenho, como o observado no mês de dezembro, facilitando a análise temporal do faturamento.
+O próximo passo é a inserção de métricas de alto nível utilizando o visual de "Cartão" (*Card*). O objetivo é apresentar informações consolidadas de forma direta e simples. Inicialmente, cria-se um cartão para exibir o valor total de vendas (*Soma de Sales*), permitindo que o usuário obtenha o dado agregado instantaneamente ao visualizar o painel.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h43m46s452.jpg" alt="" width="840">
 </p>
 
-Neste momento, o foco está na formatação estética e funcional dos visuais. Através do painel **Formatar visual**, são ajustadas as propriedades do "Valor do balão", incluindo a fonte (DIN), o tamanho (35) e a exibição de unidades. Essas configurações garantem que os indicadores-chave, como o total de vendas, sejam legíveis e visualmente consistentes com a identidade do relatório.
+Após inserir o cartão, realiza-se a formatação visual para adequá-lo ao layout do relatório. No painel de formatação, ajustam-se as propriedades do "Valor do balão" (*Callout value*), como a redução do tamanho da fonte (neste caso, para 35) e a configuração das unidades de exibição. O cartão é redimensionado para ocupar o espaço reservado no topo do dashboard, preparando-o para ser replicado para outras métricas.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h44m16s191.jpg" alt="" width="840">
 </p>
 
-A expansão do dashboard continua com a adição de um segundo cartão informativo, desta vez focado na métrica de **Unidades Vendidas**, que totaliza **1,13 Mi**. Esta adição permite confrontar o volume de vendas com o valor financeiro (Soma de Sales) exibido anteriormente, oferecendo uma visão mais completa da operação comercial.
+Para ganhar eficiência, o cartão já formatado é copiado e colado ao lado. Em seguida, altera-se apenas o campo de dados que alimenta o visual. O segundo cartão passa a exibir as "Unidades Vendidas" (*Units Sold*), mantendo a consistência visual de tamanho e fonte definida anteriormente. O título ou rótulo também pode ser ajustado para refletir a nova métrica.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h44m35s553.jpg" alt="" width="840">
 </p>
 
-Para aprofundar a análise de rentabilidade, é inserido um novo cartão exibindo a **Soma de Discounts** (9,21 Mi). No painel de campos à direita, vemos a seleção ativa do campo `Discounts` da tabela `financials`, reforçando como o Power BI facilita o monitoramento de variáveis que impactam diretamente a margem de lucro.
+O processo de replicação continua para incluir outras métricas essenciais. Um terceiro cartão é adicionado para mostrar a "Soma de Discounts" (Total de descontos concedidos). Essa métrica permite analisar o volume de concessões financeiras realizadas ao longo do período analisado, compondo a linha de KPIs (*Key Performance Indicators*) no topo do relatório.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h45m02s610.jpg" alt="" width="840">
 </p>
 
-A tela demonstra a criação de uma análise por segmento de mercado. Um gráfico de barras horizontais é introduzido para mostrar a **Soma de Sales por Segment**, permitindo comparar o desempenho entre os setores *Government*, *Small Business*, *Enterprise*, *Midmarket* e *Channel Partners*. Observa-se também a inclusão da métrica de **Soma de COGS** (101,83 Mi) em um novo cartão, essencial para entender o custo das mercadorias vendidas.
+Com a linha de cartões finalizada (incluindo *Sales*, *Units Sold*, *Discounts* e *COGS*), inicia-se o preenchimento da área principal com gráficos detalhados. O primeiro visual adicionado é um gráfico de barras clusterizado para analisar as vendas por segmento (*Sales por Segment*). Inicialmente, o gráfico apresenta todas as barras na mesma cor, o que permite a visualização dos dados, mas ainda carece de refinamento estético para facilitar a leitura.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h45m23s815.jpg" alt="" width="840">
 </p>
 
-Esta visualização foca no gerenciamento das camadas e elementos do relatório através do painel de **Seleção**. É possível visualizar a organização de todos os objetos inseridos — cartões, gráficos de pizza, formas e caixas de texto. Essa estrutura organizada é fundamental para garantir que a interatividade e a sobreposição dos elementos funcionem corretamente no design final.
+Para melhorar a legibilidade e destacar a hierarquia dos dados, aplica-se uma formatação condicional manual nas cores das barras. Define-se uma tonalidade mais escura para o segmento com maior volume de vendas (*Government*) e clareia-se gradualmente a cor para os segmentos subsequentes. Essa técnica visual torna evidente a classificação dos dados, permitindo que o usuário identifique rapidamente quais segmentos têm melhor e pior desempenho sem precisar ler os eixos detalhadamente.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h46m43s309.jpg" alt="" width="840">
 </p>
 
-O relatório atinge um nível avançado de detalhamento com a inclusão do gráfico de **Soma de Sales por Product**. Esta visualização de barras permite identificar quais produtos, como *Paseo* e *VTT*, lideram as vendas. A interface mostra como os eixos X (Soma de Sales) e Y (Product) estão configurados para gerar este ranking de performance por item.
+Adiciona-se mais um gráfico de barras, desta vez orientado horizontalmente, para analisar as vendas por produto (*Sales por Product*). A orientação horizontal é frequentemente preferida quando há rótulos de categorias mais longos, facilitando a leitura. O gráfico é posicionado ao lado do gráfico de segmentos.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h46m52s744.jpg" alt="" width="840">
 </p>
 
-A imagem final demonstra a capacidade de análise geográfica e interativa do Power BI. Ao selecionar o produto *Paseo*, o relatório filtra automaticamente todos os outros visuais para mostrar apenas os dados relativos a esse item. Além disso, a configuração do mapa está visível no painel lateral, pronta para receber campos de localização como `Country`, permitindo a visualização espacial da distribuição das vendas globais.      
+Seguindo a mesma lógica aplicada anteriormente, as cores do gráfico de produtos são personalizadas. Utiliza-se uma paleta de roxos/rosas, onde o produto com maior venda (*Paseo*) recebe a cor mais forte, criando um gradiente visual até o produto com menor venda. Isso mantém a consistência de design do relatório, onde a intensidade da cor reflete a magnitude do valor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h47m07s798.jpg" alt="" width="840">
+</p>
+
+O último elemento visual adicionado à página é um gráfico de mapa (*Map*). Ele é configurado para mostrar as vendas por país (*Sales por Country*), utilizando o tamanho das bolhas para representar o volume de vendas em cada localidade. Esse visual fornece uma perspectiva geográfica dos dados, complementando as análises temporal, por segmento e por produto já existentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-15h47m22s730.jpg" alt="" width="840">
+</p>
+
+Com o dashboard estruturado, demonstra-se o poder de interatividade do Power BI. Ao clicar em um item específico, como o produto "Paseo" no gráfico de barras central, todos os outros visuais (mapa, gráfico de linha, cartões e gráfico de segmentos) são automaticamente filtrados e realçados para refletir apenas os dados correspondentes a essa seleção (*cross-filtering*). Isso permite uma análise profunda (*dig in*) e transparente das proporções e do desempenho específico de cada elemento dentro do contexto geral.      
 
 
 ### 🟩 Vídeo 04 - Criando o Segmentador e Visuais Alternativos
