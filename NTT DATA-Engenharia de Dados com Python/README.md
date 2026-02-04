@@ -123,7 +123,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [ ] Curso: [Trabalhando com Visuais no Power BI](Modulo_06/01-Curso.01-Trabalhando_com_Visuais_no_Power_BI)
 - [ ] Curso: [Fundamentos de BI: KPIs e Métricas](Modulo_06/02-Curso.02-Fundamentos_de_BI-KPIs_e_Metricas)
 - [ ] Curso: [Criando Dashboard Interativos com Power BI](Modulo_06/03-Curso.03-Criando_Dashboard_Interativos_com_Power_BI)
-- [ ] Desafio: Criando Um Relatório Gerencial de Vendas com Power BI
+- [ ] Desafio: [Criando Um Relatório Gerencial de Vendas com Power BI](Modulo_06/04-Desafio-Criando_Um_Relatorio_Gerencial_de_Vendas_com_Power_BI)
 - [ ] Curso: Materiais complementares - Visualização de Dados e Relatórios com Power BI
 - [ ] Curso: Dominando Filtragem e Extração de Dados com Python
 
