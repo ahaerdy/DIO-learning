@@ -383,6 +383,58 @@ O resultado final apresenta o dashboard interativo em pleno funcionamento. Ao te
 
 link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/56b095fb-8ba6-4dfe-94c7-c4d2e5616195
 
+O vídeo descreve a finalização de um desafio de criação de relatórios interativos, focando em duas funcionalidades essenciais: a navegação entre páginas e a implementação de um botão para limpar filtros e seleções. O objetivo é criar uma experiência de usuário fluida e eficiente.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-18h22m29s275.jpg" alt="" width="840">
+</p>
+
+Nesta etapa do relatório de vendas (**Sales Report**), o foco é a implementação de interatividade através da navegação entre páginas. Para facilitar a experiência do usuário, utiliza-se um ícone de seta que servirá como botão de navegação. A configuração é feita selecionando o objeto e acessando o painel de **Formato**, onde a seção **Ação** é ativada.
+
+Para configurar o redirecionamento:
+
+* **Tipo**: Selecione **Navegação na página**.
+* **Destino**: Defina a **Página 2**.
+
+Essa abordagem é preferível em relação ao uso de indicadores para mudanças simples de tela, permitindo que o usuário transite entre diferentes visões do relatório de forma direta.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-18h22m49s193.jpg" alt="" width="840">
+</p>
+
+O **Report de Lucro Detalhado** (Página 2) apresenta visuais complementares que exploram a rentabilidade. Entre os destaques estão:
+
+* **Soma de Profit por Product**: Um gráfico de radar (radar chart) que demonstra a proporção do volume de lucro entre diferentes produtos, facilitando a identificação de tendências e predominâncias.
+* **Soma de Profit por Segment**: Um gráfico de compartimentação (*treemap*) que organiza o lucro por categorias como *Government* e *Small Business*.
+* **Soma de Profit por Trimestre**: Um gráfico de cascata que exibe as variações positivas e negativas do lucro ao longo dos períodos.
+
+A árvore hierárquica à esquerda permite filtrar esses dados por ano (2013/2014) e país, ajustando dinamicamente todos os visuais da página.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-18h22m53s377.jpg" alt="" width="840">
+</p>
+
+Ao interagir com a árvore hierárquica, é possível observar mudanças drásticas na composição do lucro. Por exemplo, ao selecionar o ano de **2014**, nota-se uma predominância muito acentuada do segmento governamental (*Government*) em comparação ao ano de **2013**, onde a distribuição entre os segmentos era mais equilibrada.
+
+Para retornar à página principal, utiliza-se o botão de seta invertida posicionado no canto inferior esquerdo, configurado com uma **Ação** de **Navegação na página** apontando para a **Página 1**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-18h23m18s174.jpg" alt="" width="840">
+</p>
+
+Para gerenciar filtros complexos, como intervalos de datas e seleções múltiplas, utiliza-se o recurso de **Indicadores** (Bookmarks). Nesta interface, foi criado um indicador chamado **Clean data**, associado a um ícone de borracha.
+
+A configuração do botão de reset segue estes passos:
+
+1. Limpe todos os filtros e seleções para deixar o relatório no estado inicial.
+2. No painel de **Indicadores**, adicione um novo e nomeie-o como `Clean data`.
+3. Selecione o botão da borracha e, em **Formato** > **Ação**, defina o tipo como **Indicador** e escolha o `Clean data`.
+
+Isso permite que o usuário resete instantaneamente todas as visualizações do dashboard para o estado original, independentemente de quantas segmentações tenham sido aplicadas.      
+
+
 ### 🟩 Vídeo 07 - Publicando Relatório no Power BI Service e Considerações Finais
 
 <video width="60%" controls>
@@ -390,7 +442,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/3d122e34-d704-4a6a-a51c-7f376d83ecd7
 
 ### 🟩 Vídeo 08 - Entendendo o desafio
 
