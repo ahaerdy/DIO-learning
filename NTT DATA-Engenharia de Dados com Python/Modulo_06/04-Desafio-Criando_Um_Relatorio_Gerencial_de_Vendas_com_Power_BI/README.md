@@ -81,7 +81,97 @@ Este tutorial foca na construção da interface visual (UI) de um dashboard no P
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-13h35m48s049.jpg" alt="" width="840">
+</p>
+
+O processo de criação do dashboard começa com a validação dos dados na **Exibição de Tabela**. O conjunto de dados utilizado é o *Financial Sample*, que contém informações de vendas, segmentos e países. Antes de iniciar o design, é fundamental conferir se as colunas (como *Segment*, *Country*, *Product* e *Sales*) foram importadas corretamente.
+
+```csv
+"Segment","Country","Product","Discount Band","Units Sold","Manufacturing Price","Sale Price","Gross Sales","Discounts","Sales","COGS","Profit","Date"
+"Government","Germany","Carretera","None","1513","3","350","529550","0","529550","393380","136170","segunda-feira, 1 de dezembro"
+"Government","Germany","Paseo","None","1006","10","350","352100","0","352100","261560","90540","domingo, 1 de dezembro"
+"Government","Canada","Paseo","None","1725","10","350","603750","0","603750","448500","155250","sexta-feira, 1 de novembro"
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-13h36m32s241.jpg" alt="" width="840">
+</p>
+
+Após a conferência dos dados, acessamos a **Exibição de Relatório** (Canvas). Neste estágio inicial, a tela está em branco, servindo como a área de trabalho onde utilizaremos os elementos do menu "Inserir", como formas e caixas de texto, para estruturar o layout visual antes de adicionar os gráficos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-13h38m28s990.jpg" alt="" width="840">
+</p>
+
+A construção do fundo do relatório é feita utilizando uma **Forma Retangular**. No painel de formatação, o raio dos cantos é ajustado (em aproximadamente 35) para criar um visual arredondado. A cor de preenchimento é definida como um cinza neutro e uma leve sombra é aplicada para dar profundidade ao elemento, destacando-o do fundo da página.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-13h38m46s858.jpg" alt="" width="840">
+</p>
+
+Para compor o cabeçalho, é inserida uma forma com o **canto superior direito arredondado**. Como a orientação original da forma nem sempre atende ao layout, utiliza-se a propriedade de **Rotação** (ajustada para 270°) no painel de Formato para inverter a posição da curva e encaixá-la no topo do dashboard.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-13h39m03s123.jpg" alt="" width="840">
+</p>
+
+A identidade visual é reforçada com a sobreposição de formas. Utiliza-se um tom de azul mais escuro para a base do cabeçalho e uma forma menor, em azul mais claro, posicionada logo acima. Essa técnica de camadas ajuda a criar um design mais sofisticado e dinâmico para a área de identificação do relatório.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-13h39m17s699.jpg" alt="" width="840">
+</p>
+
+O logotipo da DIO é inserido para identificar o projeto. Diferente das formas nativas, imagens não possuem a mesma flexibilidade de rotação dentro do Power BI, portanto, o logo é redimensionado manualmente para se integrar perfeitamente ao espaço delimitado pelas formas azuis do cabeçalho.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-13h39m22s817.jpg" alt="" width="840">
+</p>
+
+Uma faixa branca horizontal é adicionada abaixo do cabeçalho azul para servir de base para o título. Nela, insere-se uma **Caixa de Texto** com as informações "Formação Power BI Analyst" e "Desafio de Projeto da DIO", utilizando ajustes de tamanho de fonte e negrito para garantir a hierarquia da informação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-13h39m29s162.jpg" alt="" width="840">
+</p>
+
+Com o aumento do número de elementos na tela, o **Painel de Seleção** (Menu Exibição > Seleção) torna-se essencial. Ele permite gerenciar todos os objetos inseridos (formas, imagens e caixas de texto), permitindo renomeá-los, alterar a ordem de sobreposição (frente/trás) ou ocultar itens temporariamente para facilitar o ajuste do layout.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-14h47m53s819.jpg" alt="" width="840">
+</p>
+
+A fase seguinte envolve a criação de áreas para as métricas principais. O título principal do relatório, "**Sales Report**", é inserido em destaque. Abaixo dele, pequenas formas brancas retangulares são posicionadas horizontalmente para servir de base para os cartões de indicadores (KPIs) que exibirão os números totais das vendas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-14h47m56s341.jpg" alt="" width="840">
+</p>
+
+Para manter o projeto organizado, os elementos que compõem as métricas de topo são selecionados e **agrupados** através do painel de seleção. O grupo é renomeado para "Cartões", facilitando futuras manutenções ou a criação de interações que envolvam todo esse conjunto de objetos simultaneamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-14h47m59s053.jpg" alt="" width="840">
+</p>
+
+Uma **linha de separação** horizontal é inserida logo abaixo da área de títulos e métricas iniciais. Esse detalhe visual ajuda a delimitar as diferentes seções do dashboard, separando as informações de resumo (cabeçalho) da área de análise detalhada (corpo do relatório).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-14h48m04s400.jpg" alt="" width="840">
+</p>
+
+Containers principais são adicionados ao corpo do relatório utilizando formas retangulares brancas sem borda. Estes espaços são dimensionados para abrigar os futuros gráficos. Um destaque especial é dado ao container central, que recebe uma leve sombra para sobressair em relação aos demais, criando um ponto focal para a análise mais importante.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-14h48m06s726.jpg" alt="" width="840">
+</p>
+
+Um ícone de borracha azul é inserido no layout. Este elemento gráfico funcionará como um **botão de reset**, permitindo que o usuário limpe todos os filtros aplicados (como segmentações de dados) com um único clique, melhorando a experiência de navegação e usabilidade do dashboard.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-14h48m09s709.jpg" alt="" width="840">
+</p>
+
+O "esqueleto" visual do relatório está concluído. Com todas as formas, containers, títulos e ícones de navegação devidamente posicionados e agrupados, o ambiente está preparado para a etapa final: a inserção dos visuais de dados e a configuração das métricas calculadas.
 
 
 ### 🟩 Vídeo 03 - Criando Gráficos da Primeira Página do Relatório
@@ -91,7 +181,7 @@ Este tutorial foca na construção da interface visual (UI) de um dashboard no P
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 04 - Criando o Segmentador e Visuais Alternativos
 
