@@ -315,6 +315,63 @@ Podemos ver grupos como **"Sales por país"** (contendo o mapa e sua alternativa
 
 link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/657f2b8b-f566-42bb-89f9-3b2735d96129
 
+Este tutorial foca na criação de uma interface de usuário dinâmica dentro do Power BI. O objetivo principal é permitir que o usuário alterne entre diferentes tipos de visualizações (gráficos de mapa, treemap, pizza e barras) usando botões personalizados e a funcionalidade de Indicadores (Bookmarks).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h53m34s602.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, é inserida uma seta que servirá como botão de navegação para a próxima página do relatório. No painel de formato, as propriedades do ícone são ajustadas, alterando a cor para branco para garantir contraste e visibilidade sobre o plano de fundo do dashboard. O objetivo é que este elemento aponte claramente a direção da continuidade do fluxo de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h53m44s340.jpg" alt="" width="840">
+</p>
+
+Após a configuração da seta, inicia-se a criação dos botões em branco que atuarão como seletores de visuais. O foco aqui é a formatação do estilo do botão, especificamente para a visualização de "Map Chart". São definidos detalhes como o texto do botão e ajustes na fonte, preparando a interface para receber múltiplos seletores que, embora possam variar levemente em proporção manual, manterão a funcionalidade de alternância.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h54m01s124.jpg" alt="" width="840">
+</p>
+
+Os botões "Map Chart" e "Treemap Chart" são posicionados e formatados com textos claros. A configuração busca manter um design reto e consistente com os demais elementos do relatório. Estes botões servirão de gatilho para trocar a visualização de vendas por país ("Sales x Country"), permitindo que o usuário escolha entre a representação em mapa geográfico ou em blocos proporcionais (treemap).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h54m11s109.jpg" alt="" width="840">
+</p>
+
+Além dos botões de mapa, são criados os botões "Pie Chart" e "Bar Chart" para a seção de vendas por segmento ("Sales by Segment"). O processo de formatação é repetido, adicionando texto e ajustando o tamanho da fonte. Com todos os botões posicionados, a interface agora possui os elementos físicos necessários para a implementação da interatividade via indicadores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h54m22s456.jpg" alt="" width="840">
+</p>
+
+Nesta fase, o painel de "Indicadores" (bookmarks) é utilizado para criar estados específicos do relatório. São adicionados os indicadores "Grafico Pie" e "Grafico Barra". O procedimento consiste em usar o painel de "Seleção" para ocultar um gráfico e mostrar outro, capturando esse estado exato para que os botões possam alternar entre a visão de pizza e a visão de barras dinamicamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h54m27s257.jpg" alt="" width="840">
+</p>
+
+A lista de indicadores é expandida para contemplar as visões geográficas, com a criação dos nomes "Gráfico Tremap" (sic) e "Grafico Map". A organização no painel de seleção é crucial aqui: para o indicador de mapa, o visual de treemap deve estar oculto, e vice-versa. Essa gestão de camadas garante que um gráfico não fique sobreposto ao outro de forma desordenada durante a navegação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h54m43s981.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a atualização do indicador para o "Gráfico Tremap". Com o visual de Treemap devidamente selecionado e visível no palco do Power BI, o indicador registra essa configuração. Nomes explicativos são fundamentais neste momento para facilitar a associação posterior entre o botão físico e a ação que ele deve executar.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h55m07s727.jpg" alt="" width="840">
+</p>
+
+Neste ponto, realiza-se a ativação da "Ação" para os botões. Ao selecionar um botão, como o de Treemap, define-se o tipo de ação como "Indicador" e seleciona-se o destino correspondente (ex: "Gráfico Tremap"). Este passo conecta a interface visual à lógica de exibição configurada nos passos anteriores, permitindo que o clique do usuário execute a troca de visuais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-04-17h55m18s705.jpg" alt="" width="840">
+</p>
+
+O resultado final apresenta o dashboard interativo em pleno funcionamento. Ao testar os botões (utilizando Ctrl + Clique no Desktop), os gráficos alternam instantaneamente. A configuração de "apenas visão selecionada" nos indicadores é destacada como uma boa prática, pois permite que a troca de um gráfico (como mudar de pizza para barra) ocorra sem interferir em outros filtros ou seleções ativos no restante do relatório.      
 
 
 ### 🟩 Vídeo 06 - Criando a Interação por Botões com a Segunda Página do Relatório
@@ -324,7 +381,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-relatorio-de-vendas-elegante-com-power-bi/learning/56b095fb-8ba6-4dfe-94c7-c4d2e5616195
 
 ### 🟩 Vídeo 07 - Publicando Relatório no Power BI Service e Considerações Finais
 
