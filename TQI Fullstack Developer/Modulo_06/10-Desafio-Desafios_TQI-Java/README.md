@@ -17,11 +17,11 @@ A entrada será composta na primeira linha pelo tamanho da array e nas linhas su
 A saída deverá retornar as idades que não são permitidas a entrada, conforme exemplo abaixo.
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-02-05-14-32-41.png" alt="" width="640">
+  <img src="000-Midia_e_Anexos/2026-02-05-14-32-41.png" alt="" width="480">
 </p>
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-02-05-14-33-07.png" alt="" width="640">
+  <img src="000-Midia_e_Anexos/2026-02-05-14-33-07.png" alt="" width="480">
 </p>
 
 ## Solução
