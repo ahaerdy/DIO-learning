@@ -1,12 +1,28 @@
-# Desafio 1 -
+# Desafio 1 - Proibido a entrada de menores!
 
 ## Descrição
 
+O objetivo deste desafio é resolvê-lo utilizando o seu conhecimento sobre Arrays, uma estrutura de dados que armazena uma coleção de dados em um bloco de memória.
+
+Você está desenvolvendo um sistema para um local de eventos, neste local, é necessário que a entrada seja permitida apenas para pessoas acima de 18 anos. Faça um programa para ler um número N, a idade de N pessoas. Depois disso, coloque a idade mínima permitida  para se entrar no local, conforme exemplo.
+
+Retorne às idades de quem não puder entrar.
+
 ## Entrada
 
+A entrada será composta na primeira linha pelo tamanho da array e nas linhas subsequentes pelas idades que preenchem essa array
 
 ## Saída
 
+A saída deverá retornar as idades que não são permitidas a entrada, conforme exemplo abaixo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-02-05-14-32-41.png" alt="" width="640">
+</p>
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-02-05-14-33-07.png" alt="" width="640">
+</p>
 
 ## Solução
 
@@ -17,9 +33,3 @@
 ## Descrição
 
 
-##  Materiais de Apoio
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
