@@ -123,18 +123,55 @@ Calcule e imprima o valor da distância segundo a fórmula fornecida, com 4 casa
 ## Solução 
 
 ```java
+// implemente sua solução aqui
+// Desafio 3 - Distância entre dois pontos
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Lê as coordenadas do primeiro ponto (x1, y1)
+        double x1 = sc.nextDouble();
+        double y1 = sc.nextDouble();
+        
+        // Lê as coordenadas do segundo ponto (x2, y2)
+        double x2 = sc.nextDouble();
+        double y2 = sc.nextDouble();
+        
+        // Calcula a distância usando a fórmula:
+        // Distancia = √((x2-x1)² + (y2-y1)²)
+        double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        
+        // Exibe o resultado com 4 casas decimais
+        System.out.printf("%.4f%n", distancia);
+        
+        sc.close();
+    }
+}
 ```
 
 ---
 
-# Desafio 4 - 
+# Desafio 4 - De quem é a vez?
 
 ## Descrição
 
+O jogo PAR ou ÍMPAR vem decidindo o destino de pessoas ao longo de décadas. As regras são simples: dois jogadores informam um número e se a soma desses números for par o jogador que escolheu PAR ganha e vice-versa. Em um jogo que as crianças do bairro estão jogando, eles não conseguem decidir quem será o próximo a escolher as regras da brincadeira. Para solucionar esse problema, você foi chamado.
+
+Basicamente a brincadeira só poderá ser jogada de dois em dois jogadores e para escolher o próximo jogador uma das  crianças pediu sua ajuda para desenvolver um programa que, dado o nome dos jogadores, suas respectivas escolhas PAR ou IMPAR e os números, informe quem foi o vencedor
+
 ## Entrada 
 
+A primeira linha de entrada contém um número inteiro QT (1 ≤ QT ≤ 100), indicando a quantidade de casos de teste que vem a seguir. Cada caso de teste contém duas linhas. Na primeira linha será informado o nome do jogador 1 seguido de sua escolha, “PAR” ou “IMPAR” e logo após, o nome do jogador 2 seguido de sua escolha, “PAR” ou “IMPAR”. Na segunda linha de entrada, contém 2 números inteiros N (1 ≤ N ≤ 10⁹) e M (1 ≤ M ≤ 10⁹), representando respectivamente os números escolhidos pelo jogador 1 e pelo jogador 2. É garantido que a escolha (PAR ou IMPAR) do jogador 1 será diferente da escolha (PAR ou IMPAR) do jogador 2 e que o nome dos jogares são formados somente por letras e não ultrapassarão 100 caracteres.
+
 ## Saída
+
+Para cada caso de teste, imprima uma única linha contendo o nome do jogador vencedor.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-02-05-15-32-49.png" alt="" width="480">
+</p>
 
 ## Solução
 
