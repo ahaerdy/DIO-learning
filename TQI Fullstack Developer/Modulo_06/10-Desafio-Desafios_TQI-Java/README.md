@@ -83,7 +83,19 @@ A saída deverá ser uma mensagem "VOLUME" conforme o exemplo fornecido abaixo, 
 ## Solução
 
 ```java
-
+// Abaixo segue um exemplo de código que você pode ou não utilizar
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+  		Scanner sc = new Scanner(System.in);
+ //TODO: Complete os espaços em branco com uma possível solução para o desafio 
+  		double pi = 3.14159;
+  		double R = sc.nextDouble();
+  		double volume = (4.0/3.0) * pi * (Math.pow(R, 3.0));
+  		System.out.printf("VOLUME = %.3f%n", volume);
+    }
+	
+}
 ```
 
 ---
@@ -92,9 +104,21 @@ A saída deverá ser uma mensagem "VOLUME" conforme o exemplo fornecido abaixo, 
 
 ## Descrição
 
+Leia os quatro valores correspondentes aos eixos x e y de dois pontos quaisquer no plano, p1(x1,y1) e p2(x2,y2) e calcule a distância entre eles, mostrando 4 casas decimais após a vírgula, conforme a fórmula:
+
+Distancia = raiz((x2-x1)^2 + (y2-y1)^2)
+
 ## Entrada 
 
+O arquivo de entrada contém duas linhas de dados. A primeira linha contém dois valores de ponto flutuante: x1 y1 e a segunda linha contém dois valores de ponto flutuante x2 y2.
+
 ## Saída
+
+Calcule e imprima o valor da distância segundo a fórmula fornecida, com 4 casas após o ponto decimal.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-02-05-15-00-58.png" alt="" width="480">
+</p>
 
 ## Solução 
 
