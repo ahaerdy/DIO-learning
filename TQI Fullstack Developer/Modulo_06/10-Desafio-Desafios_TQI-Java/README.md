@@ -26,7 +26,37 @@ A saída deverá retornar as idades que não são permitidas a entrada, conforme
 
 ## Solução
 
-
+```java
+// Abaixo segue um exemplo de código que você pode ou não utilizar
+import java.util.*;
+ 
+    public class DIO{
+	// TODO: complete os espaços em branco com sua solução para o problema
+         public static void main(String[] args) {
+           
+	    //a classe Scanner auxilia na leitura dos dados de entrada
+            Scanner scan = new Scanner(System.in);
+             int N= scan.nextInt();
+	    
+	    //quebra string em várias substrings a partir de um caractere
+            double[] idade = new double[N];
+ 
+            for (int i = 0; i < N; i++)
+            {
+                idade[i] = scan.nextDouble();
+            }
+ 
+            System.out.println("Nao poderao entrar as idades: ");
+            for (int i = 0; i < N; i++)
+            {
+                if (idade[i] < 18)
+                {
+                    System.out.println((int)idade[i]);
+                }
+            }
+        }
+    }
+```
 
 # Desafio 2 - 
 
