@@ -237,7 +237,7 @@ Seu programa deverá imprimir "possible" se for possível devolver o troco exato
 // TODO: complete os espaços em branco com sua solução para o problema
 // Abaixo segue um exemplo de código que você pode ou não utilizar
 import java.util.*;
-public class DIO{
+public class DIO {
 	 
     public static void main(String[] args) {
 		//a classe Scanner auxilia na leitura dos dados de entrada
