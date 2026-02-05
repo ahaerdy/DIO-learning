@@ -176,7 +176,63 @@ Para cada caso de teste, imprima uma única linha contendo o nome do jogador ven
 ## Solução
 
 ```java
-
+// TODO: complete os espaços em branco com sua solução para o problema
+// Abaixo segue um exemplo de código que você pode ou não utilizar
+import java.util.*;
+public class DIO{
+	 
+    public static void main(String[] args) {
+		//a classe Scanner auxilia na leitura dos dados de entrada
+		Scanner leitor = new Scanner(System.in);
+		int QT = Integer.parseInt(leitor.nextLine());
+		String linha1[], linha2[], nome1, escolha1, nome2, escolha2;
+		int N, M;
+		
+		for (int i = 0; i < QT; i++) {
+			//quebra string em várias substrings a partir de um caracter
+			linha1 = leitor.nextLine().split(" ");
+			linha2 = leitor.nextLine().split(" ");
+			
+			N = Integer.parseInt(linha2[0]);
+			M = Integer.parseInt(linha2[1]);
+		
+			nome1 = linha1[0];
+			escolha1 = linha1[1];
+			nome2 = linha1[2];
+			escolha2 = linha1[3];
+			
+			 
+			if (((N + M) % 2 == 0 && escolha1.equalsIgnoreCase("PAR")) ||
+			    ((N + M) % 2 != 0 && escolha1.equalsIgnoreCase("IMPAR"))) System.out.println(nome1);
+			else System.out.println(nome2);
+		}
+    }
+	
+}
 ```
 
+# Desafio 4 - De quem é a vez?
 
+## Descrição
+
+Gilberto é um famoso vendedor de esfirras na região. Porém, apesar de todos gostarem de suas esfirras, ele só sabe dar o troco com duas notas, ou seja, nem sempre é possível receber o troco certo. Para facilitar a vida de Gil, escreva um programa para ele que determine se é possível ou não devolver o troco exato utilizando duas notas.
+
+As notas disponíveis são: 2, 5, 10, 20, 50 e 100.
+
+## Entrada
+
+A entrada deve conter o valor inteiro N da compra realizada pelo cliente e, em seguida, o valor inteiro M pago pelo cliente (N < M ≤ 104). A entrada termina com N = M = 0.
+
+## Saída
+
+Seu programa deverá imprimir "possible" se for possível devolver o troco exato ou "impossible" se não for possível.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-02-05-15-41-36.png" alt="" width="480">
+</p>
+
+## Solução
+
+```javas
+
+```
