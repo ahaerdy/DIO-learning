@@ -124,6 +124,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [ ] Curso: [Fundamentos de BI: KPIs e Métricas](Modulo_06/02-Curso.02-Fundamentos_de_BI-KPIs_e_Metricas)
 - [ ] Curso: [Criando Dashboard Interativos com Power BI](Modulo_06/03-Curso.03-Criando_Dashboard_Interativos_com_Power_BI)
 - [ ] Desafio: [Criando Um Relatório Gerencial de Vendas com Power BI](Modulo_06/04-Desafio-Criando_Um_Relatorio_Gerencial_de_Vendas_com_Power_BI)
+  - Repositório: [DIO-powerbi-financial-analysis](https://github.com/ahaerdy/DIO-powerbi-financial-analysis)
+  - Descrição: Este projeto consiste na criação de um ecossistema de dados no Power BI utilizando o dataset Financial Sample. O foco foi unir Design de Interface (UI) com Inteligência de Negócios (BI), criando um relatório onde a navegabilidade orienta a descoberta de insights estratégicos.
 - [ ] Curso: Materiais complementares - Visualização de Dados e Relatórios com Power BI
 - [ ] Curso: Dominando Filtragem e Extração de Dados com Python
 
