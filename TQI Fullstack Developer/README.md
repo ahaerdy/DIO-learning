@@ -92,11 +92,11 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Entendendo Métodos Java](Modulo_06/03-Curso.03-Entendendo.Metodos.Java)
 - [x] Curso: [Lógica Condicional e Controle de Fluxos em Java](Modulo_06/04-Curso.04-Logica_Condicional_e_Controle_de_Fluxos_em_Java)
 - [ ] Curso: [Estruturas de Repetição e Arrays em Java](Modulo_06/05-Curso.05-Estruturas_de_Repeticao_e_Arrays_em_Java)
-- [ ] Curso: [Trabalhando com Collections Java](Modulo_06/06-Cursos.06-Trabalhando_com_Collections_Java)
-- [ ] Curso: [Estruturas de Dados em Java: Principais Implementações](Modulo_06/07-Curso.07-Estruturas_de_Dados_em_Java-Principais_Implementacoes)
-- [ ] Curso: [Debugging Java](Modulo_06/08-Curso.08-Debugging_Java)
-- [ ] Curso: [Tratamento de Exceções em Java](Modulo_06/09-Curso.09-Tratamento_de_Excecoes_em_Java)
-- [ ] Desafio: Desafios TQI - Java
+- [x] Curso: [Trabalhando com Collections Java](Modulo_06/06-Cursos.06-Trabalhando_com_Collections_Java)
+- [x] Curso: [Estruturas de Dados em Java: Principais Implementações](Modulo_06/07-Curso.07-Estruturas_de_Dados_em_Java-Principais_Implementacoes)
+- [x] Curso: [Debugging Java](Modulo_06/08-Curso.08-Debugging_Java)
+- [x] Curso: [Tratamento de Exceções em Java](Modulo_06/09-Curso.09-Tratamento_de_Excecoes_em_Java)
+- [ ] Desafio: [Desafios TQI - Java](Modulo_06/10-Desafio-Desafios_TQI-Java)
 - [ ] Curso: Programação Orientada a Objetos com Java
 - [ ] Curso: Trabalhando com Banco de Dados utilizando JDBC e JPA
 - [ ] Curso: Persistência de Dados com Java, JPA e Hibernate
