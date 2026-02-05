@@ -518,7 +518,6 @@ Fiquem atentos a:
 - Botões para navegabilidade 
 - Segmentadores de dados 
 
-
 # Entrega do Desafio 
 
-- Link do repositório: 
+- Link do repositório: https://github.com/ahaerdy/DIO-powerbi-financial-analysis#
