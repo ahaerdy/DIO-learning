@@ -2,6 +2,7 @@
 
 - Juliana Mascarenhas (Tech Education Specialist / Sócia (Content Creator) @SimplificandoRedes / Me Modelagem Computacional / Cientista de dados)
 - Contato Linkedin: / [juliana-mascarenhas-ds](https://www.linkedin.com/in/juliana-mascarenhas-ds/)
+- Repositório deste curso (e pasta): https://github.com/ahaerdy/fork-DIO-power_bi_analyst/tree/main/M%C3%B3dulo%202/Desafio%20de%20Projeto
 
 ### 🟩 Vídeo 01 - Entendendo o que deve ser Criado no Relatório do Desafio
 
