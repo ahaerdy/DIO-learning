@@ -267,6 +267,92 @@ Para colocar os conceitos em prática, propõe-se um exercício de modelagem: co
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/186a82bb-3a19-49f9-b7bd-b05ea071f644?autoplay=1
 
+Este guia explora o processo de abstração e modelagem de dados, utilizando o exemplo de um "Livro". O foco principal é entender como o contexto de um sistema determina quais características de um objeto do mundo real devem ser transformadas em atributos de código.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h22m16s033.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial do exercício, o objetivo é realizar a modelagem de uma entidade chamada **Livro**, simulando o cenário de uma loja on-line. O processo de modelagem começa com a identificação das características e propriedades que definem o objeto no mundo real para que ele possa ser representado adequadamente dentro de um sistema de software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h22m18s466.jpg" alt="" width="840">
+</p>
+
+Ao realizar o levantamento inicial de atributos para a entidade **Livro**, é possível identificar uma vasta gama de características técnicas e descritivas. Nesta fase de "brainstorming", foram listados os seguintes atributos:
+
+* Quantidade de páginas
+* Tema
+* Edição
+* Ano de publicação
+* Tipo de Capa
+* Peso
+* Editora
+* Tipo de Papel
+* ISBN
+* Autor
+* Idioma
+* Assunto
+* Gramatura
+* Dimensões
+* Acabamento
+* Quantidade de capítulos
+* Coloração
+
+Embora essa lista seja abrangente, o excesso de informações pode não ser eficiente dependendo do problema que se deseja resolver.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h22m21s098.jpg" alt="" width="840">
+</p>
+
+Considerando especificamente o contexto de uma **loja on-line**, a modelagem deve focar no que é relevante para o consumidor final. Atributos técnicos de fabricação são descartados em favor de informações que auxiliam na decisão de compra. Os atributos selecionados para este nicho são:
+
+* Autor
+* Tema
+* Editora
+* Sub-Título
+* Edição
+* ISBN
+* Ano de publicação
+* Assunto
+* Título
+* Quantidade de páginas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h22m23s237.jpg" alt="" width="840">
+</p>
+
+A modelagem de uma entidade muda drasticamente conforme a necessidade do sistema. Se o objetivo fosse atender a uma **editora** (responsável pela impressão e logística), atributos que foram descartados para a loja tornam-se essenciais, pois influenciam no custo de produção e frete:
+
+* Quantidade de páginas
+* Acabamento
+* Tipo de Papel
+* ISBN
+* Tipo de Capa
+* Peso
+* Coloração
+* Gramatura
+* Sub-Título
+* Dimensões
+
+Isso demonstra que a modelagem não é estática; ela depende diretamente de quem irá manipular a entidade e qual a finalidade do software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h22m27s389.jpg" alt="" width="840">
+</p>
+
+Para finalizar o exercício de modelagem focada no presente e na simplicidade, propõe-se uma estrutura enxuta para a entidade **Livro**. A boa prática de programação sugere que não se deve tentar prever todas as necessidades futuras, evitando o desperdício de tempo e recursos em características que podem nunca ser utilizadas. O modelo final simplificado contém:
+
+* Título
+* Autor
+* Editora
+* ISBN
+* Assunto
+* Quantidade de páginas
+
+Caso novas necessidades surjam com a evolução do software, o modelo pode receber manutenções evolutivas para a adição de novos atributos.      
 
 
 ## Parte 4 - Estrutura básica da OO
@@ -278,7 +364,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/091c2441-1f88-432b-9319-4f3b777a9e1d?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Classe - Exercício
 
