@@ -1,11 +1,11 @@
-## Instrutor
+# Instrutor
 
 - Thiago Leite e Carvalho (Senior Java Developer and Software Engineer | Java Tech Lead | University Professor | Writer | Speaker | Instructor)
 - Contato Linkedin: / [thiago-leite-e-carvalho-1b337b127](https://www.linkedin.com/in/thiago-leite-e-carvalho-1b337b127/)
 
-## Parte 1 - Introdução
+# Parte 1 - Introdução
 
-### 🟩 Vídeo 01 - Apresentação inicial
+## 🟩 Vídeo 01 - Apresentação inicial
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_01.webm" type="video/webm">
@@ -54,7 +54,7 @@ Para acompanhar o trabalho do instrutor e acessar materiais complementares, est�
 * **GitHub Pessoal:** Espaço onde disponibiliza componentes e códigos referentes aos seus artigos publicados.
 * **GitHub DIO (tlcdio):** Repositório exclusivo para os exemplos práticos desenvolvidos especificamente para os cursos da Digital Innovation One.
 
-### 🟩 Vídeo 02 - Objetivos do curso
+## 🟩 Vídeo 02 - Objetivos do curso
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_02.webm" type="video/webm">
@@ -113,9 +113,9 @@ Para um bom aproveitamento das aulas, são necessários dois requisitos principa
 Embora não seja obrigatório, recomenda-se familiaridade com linguagens como Java, C# ou Python. Durante o curso, os exemplos práticos serão demonstrados utilizando **Java 11** e a IDE **IntelliJ**.
 
 
-## Parte 2 - Por que usar?
+# Parte 2 - Por que usar?
 
-### 🟩 Vídeo 03 - Por que usar?
+## 🟩 Vídeo 03 - Por que usar?
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_03.webm" type="video/webm">
@@ -197,9 +197,9 @@ A imagem ilustra a diferença estrutural entre os dois modelos:
 * No lado da **Programação Orientada a Objetos**, o sistema é composto por **Objetos** que encapsulam estado e comportamento. Estes objetos interagem entre si, representando um nível de abstração mais alto e uma facilidade maior na solução de problemas complexos.      
 
 
-## Parte 3 - Fundamentos
+# Parte 3 - Fundamentos
 
-### 🟩 Vídeo 04 - Fundamentos
+## 🟩 Vídeo 04 - Fundamentos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_04.webm" type="video/webm">
@@ -258,7 +258,7 @@ O **Encapsulamento** refere-se à habilidade de ocultar complexidades internas e
 Para colocar os conceitos em prática, propõe-se um exercício de modelagem: considerando o cenário de uma **loja on-line de livros**, o desafio é modelar uma **entidade livro**. Este exercício incentiva a aplicação imediata dos pilares de abstração, encapsulamento e reuso para representar um objeto do mundo real no contexto computacional.      
 
 
-### 🟩 Vídeo 05 - Exercício
+## 🟩 Vídeo 05 - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_05.webm" type="video/webm">
@@ -355,9 +355,9 @@ Para finalizar o exercício de modelagem focada no presente e na simplicidade, p
 Caso novas necessidades surjam com a evolução do software, o modelo pode receber manutenções evolutivas para a adição de novos atributos.      
 
 
-## Parte 4 - Estrutura básica da OO
+# Parte 4 - Estrutura básica da OO
 
-### 🟩 Vídeo 06 - Classe - Conceitos
+## 🟩 Vídeo 06 - Classe - Conceitos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_06.webm" type="video/webm">
@@ -374,7 +374,7 @@ Este guia resume os conceitos fundamentais apresentados na Aula 3, focando na Cl
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m02s072.jpg" alt="" width="840">
 </p>
 
-## Aula 3: A Estrutura da Orientação a Objetos
+#### Aula 3: A Estrutura da Orientação a Objetos
 
 Esta aula introduz os conceitos que compõem as estruturas básicas do paradigma orientado a objetos. Essas estruturas são fundamentais, pois servem como o "pontapé inicial" e o alicerce necessário para o desenvolvimento de sistemas e para a compreensão de conceitos mais avançados que serão explorados posteriormente.
 
@@ -382,7 +382,7 @@ Esta aula introduz os conceitos que compõem as estruturas básicas do paradigma
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m03s852.jpg" alt="" width="840">
 </p>
 
-### Objetivos de Aprendizagem
+#### Objetivos de Aprendizagem
 
 O foco central é apresentar as cinco estruturas básicas que permitem a criação de sistemas orientados a objetos:
 
@@ -398,7 +398,7 @@ Esses elementos são considerados essenciais porque tudo na orientação a objet
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m11s891.jpg" alt="" width="840">
 </p>
 
-### O Conceito de Classe
+#### O Conceito de Classe
 
 A **Classe** é a unidade mínima e básica de implementação no paradigma orientado a objetos. Ela funciona como uma estrutura que abstrai um conjunto de objetos com características similares, definindo:
 
@@ -411,7 +411,7 @@ Em termos práticos, a classe atua como um "molde" para a criação de entidades
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m21s354.jpg" alt="" width="840">
 </p>
 
-### Exemplos de Classes
+#### Exemplos de Classes
 
 As classes podem representar tanto entidades concretas quanto abstratas do mundo real. Alguns exemplos comuns incluem:
 
@@ -424,7 +424,7 @@ Independentemente da natureza da entidade, a classe serve para representar esses
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m27s101.jpg" alt="" width="840">
 </p>
 
-### Dicas para Identificação de Classes
+#### Dicas para Identificação de Classes
 
 Para identificar corretamente quais classes devem ser criadas em um sistema, deve-se considerar:
 
@@ -436,7 +436,7 @@ Para identificar corretamente quais classes devem ser criadas em um sistema, dev
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m34s295.jpg" alt="" width="840">
 </p>
 
-### Implementação em Código
+#### Implementação em Código
 
 A forma de declarar uma classe varia conforme a linguagem de programação utilizada. Abaixo, exemplos da estrutura mínima (classe vazia) em Java, C# e Python:
 
@@ -472,7 +472,7 @@ Enquanto Java e C# utilizam chaves para delimitar o escopo, o Python utiliza a i
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m41s848.jpg" alt="" width="840">
 </p>
 
-### Exercitando 1
+#### Exercitando 1
 
 Para fixar o conteúdo inicial, o desafio proposto é:
 
@@ -480,7 +480,7 @@ Para fixar o conteúdo inicial, o desafio proposto é:
 * **Observação:** Utilize a linguagem de sua preferência (Java, C# ou Python), aplicando as dicas de nomenclatura e as estruturas sintáticas apresentadas.     
 
 
-### 🟩 Vídeo 07 - Classe - Exercício
+## 🟩 Vídeo 07 - Classe - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_07.webm" type="video/webm">
@@ -518,7 +518,7 @@ class Carro {
 Este código representa a resolução do primeiro exercício: a definição da entidade básica que será "recheada" com atributos e métodos nas aulas subsequentes.
 
 
-### 🟩 Vídeo 08 - Atributo - Conceitos
+## 🟩 Vídeo 08 - Atributo - Conceitos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_08.webm" type="video/webm">
@@ -612,7 +612,7 @@ Nota: Em Java e C#, o tipo de dado (int) deve ser declarado explicitamente. Em P
 O objetivo é evoluir a classe "Carro" criada anteriormente, adicionando três atributos específicos: **cor**, **modelo** e **capacidade do tanque**. Deve-se aplicar as boas práticas de nomenclatura e tipos de dados adequados na linguagem de sua preferência.
 
 
-### 🟩 Vídeo 09 - Atributo - Exercício
+## 🟩 Vídeo 09 - Atributo - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_09.webm" type="video/webm">
@@ -623,7 +623,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
 
 
 
-### 🟩 Vídeo 10 - Método - Conceito
+## 🟩 Vídeo 10 - Método - Conceito
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_10.webm" type="video/webm">
@@ -632,7 +632,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
 
 link do vídeo:
 
-### 🟩 Vídeo 11 - Método - Exercício
+## 🟩 Vídeo 11 - Método - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_11.webm" type="video/webm">
@@ -641,7 +641,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 12 - Objeto e Mensagem - Conceito
+## 🟩 Vídeo 12 - Objeto e Mensagem - Conceito
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_12.webm" type="video/webm">
@@ -650,7 +650,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 13 - Objeto e Mensagem - Exercício
+## 🟩 Vídeo 13 - Objeto e Mensagem - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_13.webm" type="video/webm">
@@ -659,9 +659,9 @@ link do vídeo:
 
 link do vídeo:
 
-## Parte 5 - As relações: Herança, Associação e Interface
+# Parte 5 - As relações: Herança, Associação e Interface
 
-### 🟩 Vídeo 14 - Herança - Conceito
+## 🟩 Vídeo 14 - Herança - Conceito
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_14.webm" type="video/webm">
@@ -670,7 +670,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 15 - Herança - Exercício 1
+## 🟩 Vídeo 15 - Herança - Exercício 1
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_15.webm" type="video/webm">
@@ -679,7 +679,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 16 - Herança - Tipos
+## 🟩 Vídeo 16 - Herança - Tipos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_16.webm" type="video/webm">
@@ -688,7 +688,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 17 - Herança - Upcast e Downcast
+## 🟩 Vídeo 17 - Herança - Upcast e Downcast
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_17.webm" type="video/webm">
@@ -697,7 +697,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 18 - Herança - Polimorfismo e Sobrescrita
+## 🟩 Vídeo 18 - Herança - Polimorfismo e Sobrescrita
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_18.webm" type="video/webm">
@@ -706,7 +706,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 19 - Herança - Proposta de Exercício 2
+## 🟩 Vídeo 19 - Herança - Proposta de Exercício 2
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_19.webm" type="video/webm">
@@ -715,7 +715,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 20 - Herança - Resolução do exercício 2 - Parte 1
+## 🟩 Vídeo 20 - Herança - Resolução do exercício 2 - Parte 1
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_20.webm" type="video/webm">
@@ -724,7 +724,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 21 - Herança - Resolução do exercício 2 - Parte 2
+## 🟩 Vídeo 21 - Herança - Resolução do exercício 2 - Parte 2
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_21.webm" type="video/webm">
@@ -733,7 +733,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 22 - Associação - Conceito
+## 🟩 Vídeo 22 - Associação - Conceito
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_22.webm" type="video/webm">
@@ -742,7 +742,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 23 - Associação - Tipos
+## 🟩 Vídeo 23 - Associação - Tipos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_23.webm" type="video/webm">
@@ -751,7 +751,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 24 - Associação - Exercício
+## 🟩 Vídeo 24 - Associação - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_24.webm" type="video/webm">
@@ -760,7 +760,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 25 - Interface - Conceito
+## 🟩 Vídeo 25 - Interface - Conceito
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_25.webm" type="video/webm">
@@ -769,7 +769,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 26 - Interface - Exercício
+## 🟩 Vídeo 26 - Interface - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_26.webm" type="video/webm">
@@ -778,9 +778,9 @@ link do vídeo:
 
 link do vídeo:
 
-## Parte 6 - A Organização de Pacotes e Visibilidades
+# Parte 6 - A Organização de Pacotes e Visibilidades
 
-### 🟩 Vídeo 27 - Pacotes - Conceitos
+## 🟩 Vídeo 27 - Pacotes - Conceitos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_27.webm" type="video/webm">
@@ -789,7 +789,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 28 - Pacotes - Exercício
+## 🟩 Vídeo 28 - Pacotes - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_28.webm" type="video/webm">
@@ -798,7 +798,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 29 - Visibilidades - Conceitos
+## 🟩 Vídeo 29 - Visibilidades - Conceitos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_29.webm" type="video/webm">
@@ -807,7 +807,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 30 - Visibilidades - Exercício
+## 🟩 Vídeo 30 - Visibilidades - Exercício
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_30.webm" type="video/webm">
@@ -816,7 +816,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 31 - Conclusão
+## 🟩 Vídeo 31 - Conclusão
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.11-video_31.webm" type="video/webm">
