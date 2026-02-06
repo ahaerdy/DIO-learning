@@ -54,59 +54,6 @@ Para acompanhar o trabalho do instrutor e acessar materiais complementares, est�
 * **GitHub Pessoal:** Espaço onde disponibiliza componentes e códigos referentes aos seus artigos publicados.
 * **GitHub DIO (tlcdio):** Repositório exclusivo para os exemplos práticos desenvolvidos especificamente para os cursos da Digital Innovation One.
 
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m36s267.jpg" alt="" width="840">
-</p>
-
-#### Objetivo do Curso
-
-O curso visa possibilitar que o aluno compreenda todos os conceitos relativos à **Orientação a Objetos (OO)**. O conteúdo foi estruturado com base no livro publicado pelo instrutor e em seus nove anos de experiência lecionando essa disciplina, focando em resolver as principais dúvidas de alunos iniciantes e profissionais.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m39s003.jpg" alt="" width="840">
-</p>
-
-#### Percurso do Aprendizado (Parte 1)
-
-O cronograma inicial do curso abrange os seguintes tópicos fundamentais:
-
-* **Aula 1 - Porque usar?:** Explicação sobre a importância e os benefícios do paradigma.
-* **Aula 2 - Os fundamentos:** Apresentação dos pilares que sustentam a OO.
-* **Aula 3 - A estrutura:** Detalhamento dos componentes estruturais básicos.
-* **Aula 4 - As relações:** Como os objetos e conceitos interagem entre si.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m40s212.jpg" alt="" width="840">
-</p>
-
-#### Percurso do Aprendizado (Parte 2)
-
-A finalização do conteúdo teórico e prático inclui:
-
-* **Aula 5 - A Organização:** Melhores práticas para organizar o código orientado a objetos.
-* **Aula 6 - Próximos passos:** Orientações sobre como continuar os estudos em tópicos avançados após concluir esta base essencial.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m43s931.jpg" alt="" width="840">
-</p>
-
-#### Requisitos Necessários
-
-Para um bom desempenho durante as aulas, o aluno deve atender aos seguintes pontos:
-
-* **Lógica de Programação:** É fundamental ter uma base prévia de lógica, adquirida em cursos anteriores ou livros.
-* **Vontade de aprender:** O paradigma OO exige dedicação e prática constante para a fixação dos conceitos.
-* **Ambiente Técnico:** Embora o foco seja conceitual, o instrutor utilizará **Java 11** e a IDE **IntelliJ** para demonstrações, sendo útil ter familiaridade básica com alguma linguagem orientada a objetos.
-
-
 ### 🟩 Vídeo 02 - Objetivos do curso
 
 <video width="60%" controls>
@@ -175,7 +122,80 @@ Embora não seja obrigatório, recomenda-se familiaridade com linguagens como Ja
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/266d45df-69ea-4692-b460-925fa49cb7bb?autoplay=1
+
+
+Este guia explora os fundamentos da POO, comparando-a com o paradigma estruturado e destacando por que ela se tornou o padrão da indústria para o desenvolvimento de softwares complexos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m06s564.jpg" alt="" width="840">
+</p>
+
+Esta aula inicial aborda os fundamentos da **Orientação a Objetos (OO)**, focando em compreender as razões pelas quais este paradigma é amplamente utilizado no desenvolvimento de software moderno. O objetivo é estabelecer uma base conceitual sólida antes de aprofundar na prática da programação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m12s032.jpg" alt="" width="840">
+</p>
+
+O foco central desta etapa é explicar a importância de programar utilizando a orientação a objetos. Para isso, será estabelecido um comparativo direto com o **Paradigma Estruturado (PE)**, que era o modelo predominante antes da ascensão da OO e que possui representantes de peso na história da computação, como a linguagem C (utilizada na construção de sistemas como Linux e Windows).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m17s529.jpg" alt="" width="840">
+</p>
+
+### PE vs POO: Realismo e Abstração
+
+Uma das distinções fundamentais entre os paradigmas reside na forma como representam o mundo:
+
+* **Paradigma Estruturado (PE):** Possui uma representação mais **simplista**, muitas vezes limitada pelos mecanismos técnicos da linguagem.
+* **Paradigma Orientado a Objetos (POO):** Oferece uma representação mais **realista**. Graças a mecanismos mais avançados, a POO consegue transpor conceitos do mundo real para o código de forma fiel.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m19s486.jpg" alt="" width="840">
+</p>
+
+### Foco em Entidades vs. Operações
+
+A diferença de foco entre as abordagens altera como o desenvolvedor estrutura a solução:
+
+* **Paradigma Estruturado:** O foco está nas **operações (funções) e nos dados**. Por trabalhar em um nível mais baixo, a atenção é voltada para a manipulação de dados brutos.
+* **Paradigma Orientado a Objetos:** O foco recai na **modelagem de entidades** e nas **interações** entre elas. Isso proporciona um nível de abstração superior, aproximando o código da lógica de negócio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m21s625.jpg" alt="" width="840">
+</p>
+
+### Abordagem: "Como" vs. "O Que"
+
+* **Programação Estruturada:** Concentra-se no **"como fazer"**. O programador precisa se preocupar detalhadamente com os passos técnicos para resolver um problema.
+* **Programação Orientada a Objetos:** Concentra-se no **"o que fazer"**. Com abstrações mais potentes, o desenvolvedor foca no problema que deseja resolver, tornando a atividade de programação mais intuitiva e eficiente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m24s101.jpg" alt="" width="840">
+</p>
+
+### Vantagens da POO
+
+A Orientação a Objetos traz benefícios técnicos que melhoram a qualidade do software:
+
+* **Melhor Coesão:** Facilita a criação de unidades de código com responsabilidades bem definidas, evitando a mistura de funções desconexas.
+* **Melhor Acoplamento:** Permite criar conexões mais flexíveis entre as partes do sistema, ao contrário do acoplamento rígido comum no paradigma estruturado.
+* **Diminuição do Gap Semântico:** Reduz a distância entre o mundo real e o mundo computacional, tornando a representação sistêmica mais clara.
+* **Coletor de Lixo (Garbage Collector):** Automatiza a gestão de memória, liberando o programador da tarefa manual de gerenciar recursos brutos do computador.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m32s083.jpg" alt="" width="840">
+</p>
+
+### Resumo Comparativo
+
+A imagem ilustra a diferença estrutural entre os dois modelos:
+
+* No lado da **Programação Estruturada**, observa-se a separação entre **Funções/Procedimentos** e os **Dados**, caracterizando uma abordagem de baixo nível focada no processo de manipulação.
+* No lado da **Programação Orientada a Objetos**, o sistema é composto por **Objetos** que encapsulam estado e comportamento. Estes objetos interagem entre si, representando um nível de abstração mais alto e uma facilidade maior na solução de problemas complexos.      
+
 
 ## Parte 3 - Fundamentos
 
