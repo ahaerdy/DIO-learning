@@ -14,6 +14,97 @@
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/ff0c41a5-8adc-496c-8ff7-7ae1f83ffa49?autoplay=1
 
+Este curso é uma introdução abrangente aos conceitos fundamentais da Orientação a Objetos (OO), ministrado por Thiago Leite, um desenvolvedor com vasta experiência no mercado e na academia. O conteúdo é baseado em anos de ensino universitário e na prática de desenvolvimento de sistemas governamentais de alta complexidade.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m16s870.jpg" alt="" width="840">
+</p>
+
+#### Introdução à Orientação a Objetos
+
+Este curso é focado nos fundamentos da **Orientação a Objetos (OO)**. O treinamento é ministrado por **Thiago Leite e Carvalho**, que atua como Engenheiro de Software, professor e escritor. Ele traz sua experiência acadêmica e profissional para guiar o aprendizado sobre como modelar sistemas utilizando esse paradigma.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m25s460.jpg" alt="" width="840">
+</p>
+
+#### Sobre o Instrutor
+
+Thiago Leite possui uma trajetória de 18 anos no desenvolvimento de software, com especialidade em **Java** e sistemas **backend**.
+
+* **Experiência Acadêmica:** É mestre em Engenharia de Software e já lecionou diversas disciplinas universitárias, incluindo Orientação a Objetos e Estrutura de Dados.
+* **Atuação Profissional:** Atualmente trabalha no **SERPRO**, desenvolvendo soluções tecnológicas para o governo federal brasileiro.
+* **Motivação e Hobbies:** É motivado por novos desafios e projetos dinâmicos. Fora do trabalho, dedica-se à culinária (massas e pizzas), aprecia cervejas artesanais e torce pelo Flamengo.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m30s987.jpg" alt="" width="840">
+</p>
+
+#### Canais de Contato e Portfólio
+
+Para acompanhar o trabalho do instrutor e acessar materiais complementares, estão disponíveis os seguintes links:
+
+* **LinkedIn:** Perfil para conexões profissionais, onde compartilha artigos e conteúdos sobre a rotina de desenvolvimento.
+* **GitHub Pessoal:** Espaço onde disponibiliza componentes e códigos referentes aos seus artigos publicados.
+* **GitHub DIO (tlcdio):** Repositório exclusivo para os exemplos práticos desenvolvidos especificamente para os cursos da Digital Innovation One.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m36s267.jpg" alt="" width="840">
+</p>
+
+#### Objetivo do Curso
+
+O curso visa possibilitar que o aluno compreenda todos os conceitos relativos à **Orientação a Objetos (OO)**. O conteúdo foi estruturado com base no livro publicado pelo instrutor e em seus nove anos de experiência lecionando essa disciplina, focando em resolver as principais dúvidas de alunos iniciantes e profissionais.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m39s003.jpg" alt="" width="840">
+</p>
+
+#### Percurso do Aprendizado (Parte 1)
+
+O cronograma inicial do curso abrange os seguintes tópicos fundamentais:
+
+* **Aula 1 - Porque usar?:** Explicação sobre a importância e os benefícios do paradigma.
+* **Aula 2 - Os fundamentos:** Apresentação dos pilares que sustentam a OO.
+* **Aula 3 - A estrutura:** Detalhamento dos componentes estruturais básicos.
+* **Aula 4 - As relações:** Como os objetos e conceitos interagem entre si.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m40s212.jpg" alt="" width="840">
+</p>
+
+#### Percurso do Aprendizado (Parte 2)
+
+A finalização do conteúdo teórico e prático inclui:
+
+* **Aula 5 - A Organização:** Melhores práticas para organizar o código orientado a objetos.
+* **Aula 6 - Próximos passos:** Orientações sobre como continuar os estudos em tópicos avançados após concluir esta base essencial.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-08h49m43s931.jpg" alt="" width="840">
+</p>
+
+#### Requisitos Necessários
+
+Para um bom desempenho durante as aulas, o aluno deve atender aos seguintes pontos:
+
+* **Lógica de Programação:** É fundamental ter uma base prévia de lógica, adquirida em cursos anteriores ou livros.
+* **Vontade de aprender:** O paradigma OO exige dedicação e prática constante para a fixação dos conceitos.
+* **Ambiente Técnico:** Embora o foco seja conceitual, o instrutor utilizará **Java 11** e a IDE **IntelliJ** para demonstrações, sendo útil ter familiaridade básica com alguma linguagem orientada a objetos.
 
 
 ### 🟩 Vídeo 02 - Objetivos do curso
