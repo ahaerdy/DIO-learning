@@ -527,6 +527,125 @@ Este código representa a resolução do primeiro exercício: a definição da e
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/eb733290-d5bb-467b-af86-7c47a8959a0e?autoplay=1
 
+Este guia explora o conceito fundamental de atributos, os elementos responsáveis por definir a estrutura de dados e as características de uma classe e seus objetos. Entender atributos é o primeiro passo para transformar conceitos do mundo real em código funcional e organizado.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m29s797.jpg" alt="" width="840">
+</p>
+
+O **Atributo** é definido como o elemento de uma classe responsável por definir sua **estrutura de dados**. Ele representa as características de uma classe, e o conjunto desses atributos comporá os objetos criados a partir dela. Na modelagem de software, o atributo é a ferramenta utilizada para caracterizar conceitos do mundo real de forma fiel dentro do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m35s695.jpg" alt="" width="840">
+</p>
+
+Para ilustrar a aplicação prática dos atributos, podem-se observar exemplos de entidades e suas respectivas características:
+
+* 
+**Bola**: possui o atributo **diâmetro**.
+
+
+* 
+**Carro**: possui o atributo **cor**.
+
+
+* 
+**Venda**: possui o atributo **valor**.
+
+
+* 
+**Viagem**: possui o atributo **distância**.
+
+
+* 
+**Comprador**: possui o atributo **nome**.
+
+
+* 
+**Computador**: possui o atributo **memória**.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m37s018.jpg" alt="" width="840">
+</p>
+
+Embora tratados de forma semelhante pelo computador, existe uma diferença conceitual importante entre **Atributo** e **Variável**:
+
+* 
+**Atributo (A)**: É o que é próprio e peculiar a algo; serve para caracterizar entidades e é definido dentro da classe.
+
+
+* 
+**Variável (V)**: Sujeito a variações, mudanças ou instabilidades; possui um ciclo de vida mais curto, geralmente definida dentro de métodos para auxiliar em operações.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m41s303.jpg" alt="" width="840">
+</p>
+
+Dicas essenciais para a definição de atributos:
+
+* 
+**Substantivos e adjetivos**: Utilize substantivos para nomear o atributo e pense em como adjetivos irão caracterizá-lo (ex: Carro -> cor).
+
+
+* 
+**Nomes significativos e Contexto**: O nome deve ser claro e condizente com o nicho de negócio.
+
+
+* 
+**Abstração**: Não defina todos os atributos possíveis, apenas os necessários para o contexto atual do sistema.
+
+
+* 
+**Tipos adequados**: Escolha o tipo de dado (inteiro, string, float) que melhor represente a finalidade do atributo.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m44s637.jpg" alt="" width="840">
+</p>
+
+Abaixo, a comparação da sintaxe para definição de atributos em diferentes linguagens:
+
+**Java** 
+
+```java
+class Carro {
+    int portas;
+}
+
+```
+
+**C#** 
+
+```csharp
+class Carro {
+    int portas;
+}
+
+```
+
+**Python** 
+
+```python
+class Carro:
+    portas = 0
+
+```
+
+Nota: Em Java e C#, o tipo de dado (int) deve ser declarado explicitamente. Em Python, o tipo é inferido a partir do valor atribuído.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m46s613.jpg" alt="" width="840">
+</p>
+
+**Exercitando 2**:
+O objetivo é evoluir a classe "Carro" criada anteriormente, adicionando três atributos específicos: **cor**, **modelo** e **capacidade do tanque**. Deve-se aplicar as boas práticas de nomenclatura e tipos de dados adequados na linguagem de sua preferência.
 
 
 ### 🟩 Vídeo 09 - Atributo - Exercício
@@ -536,7 +655,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/9bc3a147-ff37-4427-b3da-37be729b2008?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Método - Conceito
 
