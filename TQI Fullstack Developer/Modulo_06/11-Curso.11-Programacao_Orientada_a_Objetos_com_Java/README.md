@@ -114,7 +114,57 @@ Para um bom desempenho durante as aulas, o aluno deve atender aos seguintes pont
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/0790beac-ac26-4331-bd7f-a523ee37b6b1?autoplay=1
+
+Este documento resume os objetivos, a estrutura e os requisitos do curso de POO, baseado na experiência de 9 anos de docência do instrutor e em sua obra publicada pela editora Casa do Código.
+
+### Anotações
+
+#### Introdução ao Curso de Orientação a Objetos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h04m48s229.jpg" alt="" width="840">
+</p>
+
+O curso tem como objetivo principal capacitar o aluno a compreender todos os conceitos fundamentais da **Orientação a Objetos (OO)**. O conteúdo é fundamentado no livro do instrutor publicado pela editora Casa do Código, que condensa nove anos de experiência no ensino dessa disciplina. O material busca sanar as dúvidas mais comuns de iniciantes e profissionais, oferecendo uma base sólida para quem deseja dominar este paradigma de programação.
+
+#### Percurso do Aprendizado (Parte 1)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h04m52s327.jpg" alt="" width="840">
+</p>
+
+A estrutura do curso foi organizada para cobrir os pontos essenciais da Orientação a Objetos de forma didática. O percurso inicial está dividido em quatro aulas fundamentais:
+
+* **Aula 1:** Justificativa sobre a importância e o porquê de utilizar a OO.
+* **Aula 2:** Apresentação dos fundamentos e pilares que sustentam o paradigma.
+* **Aula 3:** Exploração das estruturas básicas necessárias para o desenvolvimento.
+* **Aula 4:** Estudo das relações existentes entre os conceitos de Orientação a Objetos.
+
+#### Percurso do Aprendizado (Parte 2)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h04m54s101.jpg" alt="" width="840">
+</p>
+
+Dando continuidade ao cronograma, o curso aborda a organização e o encerramento do conteúdo básico:
+
+* **Aula 5:** Foco na organização e em conceitos organizacionais que otimizam o trabalho com objetos.
+* **Aula 6:** Orientações sobre os próximos passos, indicando caminhos e tópicos avançados para quem deseja aprofundar o conhecimento além dos conceitos básicos apresentados.
+
+#### Requisitos e Ferramentas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h04m59s096.jpg" alt="" width="840">
+</p>
+
+Para um bom aproveitamento das aulas, são necessários dois requisitos principais:
+
+1. **Lógica de Programação:** É fundamental que o aluno já possua uma base prévia em lógica, obtida através de cursos anteriores ou estudos autodidatas.
+2. **Vontade de aprender:** A dedicação é essencial para absorver a teoria e praticar os conceitos.
+
+Embora não seja obrigatório, recomenda-se familiaridade com linguagens como Java, C# ou Python. Durante o curso, os exemplos práticos serão demonstrados utilizando **Java 11** e a IDE **IntelliJ**.
+
 
 ## Parte 2 - Por que usar?
 
