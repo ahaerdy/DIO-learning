@@ -543,30 +543,12 @@ O **Atributo** é definido como o elemento de uma classe responsável por defini
 
 Para ilustrar a aplicação prática dos atributos, podem-se observar exemplos de entidades e suas respectivas características:
 
-* 
-**Bola**: possui o atributo **diâmetro**.
-
-
-* 
-**Carro**: possui o atributo **cor**.
-
-
-* 
-**Venda**: possui o atributo **valor**.
-
-
-* 
-**Viagem**: possui o atributo **distância**.
-
-
-* 
-**Comprador**: possui o atributo **nome**.
-
-
-* 
-**Computador**: possui o atributo **memória**.
-
-
+* **Bola**: possui o atributo **diâmetro**.
+* **Carro**: possui o atributo **cor**.
+* **Venda**: possui o atributo **valor**.
+* **Viagem**: possui o atributo **distância**.
+* **Comprador**: possui o atributo **nome**.
+* **Computador**: possui o atributo **memória**.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m37s018.jpg" alt="" width="840">
@@ -574,14 +556,8 @@ Para ilustrar a aplicação prática dos atributos, podem-se observar exemplos d
 
 Embora tratados de forma semelhante pelo computador, existe uma diferença conceitual importante entre **Atributo** e **Variável**:
 
-* 
-**Atributo (A)**: É o que é próprio e peculiar a algo; serve para caracterizar entidades e é definido dentro da classe.
-
-
-* 
-**Variável (V)**: Sujeito a variações, mudanças ou instabilidades; possui um ciclo de vida mais curto, geralmente definida dentro de métodos para auxiliar em operações.
-
-
+* **Atributo (A)**: É o que é próprio e peculiar a algo; serve para caracterizar entidades e é definido dentro da classe.
+* **Variável (V)**: Sujeito a variações, mudanças ou instabilidades; possui um ciclo de vida mais curto, geralmente definida dentro de métodos para auxiliar em operações.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m41s303.jpg" alt="" width="840">
@@ -589,22 +565,10 @@ Embora tratados de forma semelhante pelo computador, existe uma diferença conce
 
 Dicas essenciais para a definição de atributos:
 
-* 
-**Substantivos e adjetivos**: Utilize substantivos para nomear o atributo e pense em como adjetivos irão caracterizá-lo (ex: Carro -> cor).
-
-
-* 
-**Nomes significativos e Contexto**: O nome deve ser claro e condizente com o nicho de negócio.
-
-
-* 
-**Abstração**: Não defina todos os atributos possíveis, apenas os necessários para o contexto atual do sistema.
-
-
-* 
-**Tipos adequados**: Escolha o tipo de dado (inteiro, string, float) que melhor represente a finalidade do atributo.
-
-
+* **Substantivos e adjetivos**: Utilize substantivos para nomear o atributo e pense em como adjetivos irão caracterizá-lo (ex: Carro -> cor).
+* **Nomes significativos e Contexto**: O nome deve ser claro e condizente com o nicho de negócio.
+* **Abstração**: Não defina todos os atributos possíveis, apenas os necessários para o contexto atual do sistema.
+* **Tipos adequados**: Escolha o tipo de dado (inteiro, string, float) que melhor represente a finalidade do atributo.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-15h10m44s637.jpg" alt="" width="840">
