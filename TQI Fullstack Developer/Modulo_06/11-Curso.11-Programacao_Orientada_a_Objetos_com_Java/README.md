@@ -517,10 +517,6 @@ class Carro {
 
 Este código representa a resolução do primeiro exercício: a definição da entidade básica que será "recheada" com atributos e métodos nas aulas subsequentes.
 
----
-
-Quanto ao que posso fazer a seguir, **você gostaria que eu detalhasse quais seriam os próximos atributos lógicos (como cor ou modelo) para adicionarmos a essa classe Carro?**
-
 
 ### 🟩 Vídeo 08 - Atributo - Conceitos
 
