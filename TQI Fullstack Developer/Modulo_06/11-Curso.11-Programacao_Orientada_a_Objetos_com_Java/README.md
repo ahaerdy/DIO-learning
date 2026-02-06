@@ -487,7 +487,40 @@ Para fixar o conteúdo inicial, o desafio proposto é:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/ba57cf6e-400d-4341-a4f8-10ebc1fdaf45?autoplay=1
+
+Este resumo aborda a transição do pensamento teórico para a prática de programação orientada a objetos (POO), focando na criação de uma classe "Carro" utilizando a IDE IntelliJ IDEA.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h56m38s853.jpg" alt="" width="840">
+</p>
+
+Nesta etapa prática, o foco é a implementação da classe **Carro** utilizando a linguagem Java no ambiente de desenvolvimento IntelliJ IDEA. A estrutura do projeto já se encontra organizada, exibindo a classe dentro do pacote de desenvolvimento.
+
+Para quem está iniciando o projeto do zero, o processo consiste em acessar `File > New > Project` e atribuir um nome ao trabalho. Uma vez que o projeto esteja estruturado, a criação da classe propriamente dita é feita clicando com o botão direito sobre o diretório **src** (source), selecionando a opção de nova classe Java e nomeando-a como "Carro".
+
+A classe inicial apresenta a estrutura básica com a palavra reservada `class` seguida do nome do identificador. No topo do arquivo, observa-se a declaração do pacote (`package`), que organiza a localização do arquivo no sistema de arquivos do projeto.
+
+```java
+package one.digitalinnovation.oo;
+
+/**
+ * Classe de exemplo para o exercício da Aula 3 de Orientação a Objetos.
+ */
+class Carro {
+
+}
+
+```
+
+Este código representa a resolução do primeiro exercício: a definição da entidade básica que será "recheada" com atributos e métodos nas aulas subsequentes.
+
+---
+
+Quanto ao que posso fazer a seguir, **você gostaria que eu detalhasse quais seriam os próximos atributos lógicos (como cor ou modelo) para adicionarmos a essa classe Carro?**
+
 
 ### 🟩 Vídeo 08 - Atributo - Conceitos
 
@@ -496,7 +529,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/eb733290-d5bb-467b-af86-7c47a8959a0e?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Atributo - Exercício
 
