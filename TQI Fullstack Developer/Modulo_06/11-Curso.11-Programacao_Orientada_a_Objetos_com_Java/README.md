@@ -633,14 +633,8 @@ Nesta etapa, o foco é a resolução do exercício prático para a criação de 
 
 A definição dos atributos deve seguir uma escolha criteriosa dos tipos de dados para representar fielmente a informação:
 
-* 
-**Cor e Modelo:** Como ambos são representados por palavras ou conjuntos de caracteres, utiliza-se o tipo de dado `String`.
-
-
-* 
-**Capacidade do Tanque:** Por representar um valor numérico inteiro, utiliza-se o tipo de dado `int`.
-
-
+* **Cor e Modelo:** Como ambos são representados por palavras ou conjuntos de caracteres, utiliza-se o tipo de dado `String`.
+* **Capacidade do Tanque:** Por representar um valor numérico inteiro, utiliza-se o tipo de dado `int`.
 
 Os atributos são declarados dentro do corpo da classe, delimitados pelo abrir e fechar de chaves `{ }`, conforme demonstrado na estrutura do código abaixo:
 
@@ -660,9 +654,7 @@ class Carro {
 
 ```
 
-Essa organização conclui a estruturação básica dos dados da classe, permitindo que o desenvolvimento avance para a inclusão de novos conceitos de Orientação a Objetos nas próximas etapas.
-
----      
+Essa organização conclui a estruturação básica dos dados da classe, permitindo que o desenvolvimento avance para a inclusão de novos conceitos de Orientação a Objetos nas próximas etapas.    
 
 
 ## 🟩 Vídeo 10 - Método - Conceito
@@ -674,6 +666,145 @@ Essa organização conclui a estruturação básica dos dados da classe, permiti
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/a102d2d3-feee-40b1-9375-c94d295d76fb?autoplay=1
 
+Este guia explora a definição, aplicação e as nuances técnicas dos métodos, os componentes responsáveis por dar "vida" e comportamento aos objetos no paradigma orientado a objetos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h11m17s200.jpg" alt="" width="840">
+</p>
+
+Na orientação a objetos, os **métodos** representam as ações ou serviços que uma entidade pode realizar. Através de exemplos práticos, observamos comportamentos associados a diferentes classes: um **Carro** possui a ação de *ligar*, uma **Venda** pode *calcular o total*, um **Comprador** é capaz de *realizar uma troca* e um **Computador** pode ser *desligado*. Esses comportamentos são modelados apenas quando há uma necessidade lógica e essencial dentro do contexto do sistema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h11m47s003.jpg" alt="" width="840">
+</p>
+
+Um método é definido tecnicamente como uma porção de código, ou sub-rotina, disponibilizada por uma classe e executada mediante uma requisição. Ele é o mecanismo responsável por definir e realizar o comportamento de um objeto, identificando quais serviços e ações a classe oferece aos seus usuários.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h11m51s957.jpg" alt="" width="840">
+</p>
+
+Diferente dos atributos, que são feitos para caracterizar um conceito, os métodos são usados para prover as ações que podem ser realizadas com essa entidade. Na prática, os métodos manipulam os atributos da classe e variáveis para executar as funcionalidades esperadas, como o acionamento de um motor ou o processamento de um cálculo financeiro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h11m59s071.jpg" alt="" width="840">
+</p>
+
+A estrutura de criação de um método varia conforme a linguagem de programação:
+
+* **Java e C#**: Exigem obrigatoriamente a definição da visibilidade, o tipo de retorno, o nome do método e os parâmetros.
+* **Python**: Utiliza a palavra-chave `def`, seguida pelo nome e os parâmetros.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h12m04s342.jpg" alt="" width="840">
+</p>
+
+Para a criação de métodos eficazes, devem-se seguir algumas diretrizes fundamentais:
+
+* **Use verbos**: Como os métodos representam ações, a nomenclatura deve refletir isso (ex: ligar, calcular).
+* **Nomes significativos**: O nome deve deixar claro o que o método faz.
+* **Contexto**: A necessidade de um método (como "frear") depende do tipo de sistema que está sendo desenvolvido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h12m06s869.jpg" alt="" width="840">
+</p>
+
+A implementação prática do método `frear` na classe `Carro` demonstra as distinções sintáticas entre as linguagens:
+
+**Java**
+
+```java
+class Carro {
+    void frear(){
+    }
+}
+
+```
+
+**C#**
+
+```csharp
+class Carro {
+    void frear(){
+    }
+}
+
+```
+
+**Python**
+
+```python
+class Carro:
+    def frear(self):
+        pass
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h12m14s954.jpg" alt="" width="840">
+</p>
+
+Existem dois métodos com propósitos especiais no ciclo de vida de um objeto: o **Construtor**, acionado no momento da criação da instância, e o **Destrutor**, que auxilia na finalização do objeto e liberação de recursos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h13m07s915.jpg" alt="" width="840">
+</p>
+
+O método **Construtor** é executado sempre que um objeto é instanciado (através do comando `new`).
+
+* **Java e C#**: O construtor possui obrigatoriamente o mesmo nome da classe.
+* **Python**: Utiliza-se o método especial `__init__` para a inicialização.
+
+```python
+class Carro:
+    def __init__(self):
+        pass
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h13m33s970.jpg" alt="" width="840">
+</p>
+
+O método **Destrutor** é utilizado para auxiliar na destruição do objeto. O gerenciamento de memória (como o *Garbage Collector*) varia entre linguagens, refletindo-se na sintaxe:
+
+**Java**
+
+```java
+void finalize(){ }
+
+```
+
+**C#**
+
+```csharp
+~Carro(){ }
+
+```
+
+**Python**
+
+```python
+def __del__(self):
+    pass
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h13m41s618.jpg" alt="" width="840">
+</p>
+
+A **Sobrecarga** permite alterar a assinatura de um método (seu nome + parâmetros) para atender diferentes necessidades. Isso possibilita ter múltiplos métodos com o mesmo nome, desde que recebam tipos ou quantidades de parâmetros diferentes para realizar ações similares. O Python não suporta sobrecarga de métodos da mesma forma que Java ou C#.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-19h17m46s640.jpg" alt="" width="840">
+</p>
+
+O exercício proposto consiste em evoluir a classe `Carro` criando um método para calcular o valor total necessário para encher o tanque, utilizando o atributo de capacidade e recebendo o preço da gasolina como parâmetro. Também é sugerida a implementação de métodos `get` e `set` para manipulação dos atributos, respeitando as boas práticas de cada linguagem.
+
+
 ## 🟩 Vídeo 11 - Método - Exercício
 
 <video width="60%" controls>
@@ -681,7 +812,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/53559ee4-ac3c-48ab-a756-ff60b23a8dc7?autoplay=1
 
 ## 🟩 Vídeo 12 - Objeto e Mensagem - Conceito
 
