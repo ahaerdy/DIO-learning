@@ -145,7 +145,7 @@ O foco central desta etapa é explicar a importância de programar utilizando a 
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m17s529.jpg" alt="" width="840">
 </p>
 
-### PE vs POO: Realismo e Abstração
+#### PE vs POO: Realismo e Abstração
 
 Uma das distinções fundamentais entre os paradigmas reside na forma como representam o mundo:
 
@@ -156,7 +156,7 @@ Uma das distinções fundamentais entre os paradigmas reside na forma como repre
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m19s486.jpg" alt="" width="840">
 </p>
 
-### Foco em Entidades vs. Operações
+#### Foco em Entidades vs. Operações
 
 A diferença de foco entre as abordagens altera como o desenvolvedor estrutura a solução:
 
@@ -167,7 +167,7 @@ A diferença de foco entre as abordagens altera como o desenvolvedor estrutura a
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m21s625.jpg" alt="" width="840">
 </p>
 
-### Abordagem: "Como" vs. "O Que"
+##### Abordagem: "Como" vs. "O Que"
 
 * **Programação Estruturada:** Concentra-se no **"como fazer"**. O programador precisa se preocupar detalhadamente com os passos técnicos para resolver um problema.
 * **Programação Orientada a Objetos:** Concentra-se no **"o que fazer"**. Com abstrações mais potentes, o desenvolvedor foca no problema que deseja resolver, tornando a atividade de programação mais intuitiva e eficiente.
@@ -176,7 +176,7 @@ A diferença de foco entre as abordagens altera como o desenvolvedor estrutura a
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m24s101.jpg" alt="" width="840">
 </p>
 
-### Vantagens da POO
+#### Vantagens da POO
 
 A Orientação a Objetos traz benefícios técnicos que melhoram a qualidade do software:
 
@@ -189,7 +189,7 @@ A Orientação a Objetos traz benefícios técnicos que melhoram a qualidade do 
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-13h21m32s083.jpg" alt="" width="840">
 </p>
 
-### Resumo Comparativo
+#### Resumo Comparativo
 
 A imagem ilustra a diferença estrutural entre os dois modelos:
 
@@ -366,6 +366,118 @@ Caso novas necessidades surjam com a evolução do software, o modelo pode receb
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/091c2441-1f88-432b-9319-4f3b777a9e1d?autoplay=1
 
+Este guia resume os conceitos fundamentais apresentados na Aula 3, focando na Classe como o pilar central da Programação Orientada a Objetos. O objetivo é entender como transformar conceitos do mundo real em estruturas de código sólidas e reutilizáveis.
+
+### Anotações
+
+ <p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m02s072.jpg" alt="" width="840">
+</p>
+
+## Aula 3: A Estrutura da Orientação a Objetos
+
+Esta aula introduz os conceitos que compõem as estruturas básicas do paradigma orientado a objetos. Essas estruturas são fundamentais, pois servem como o "pontapé inicial" e o alicerce necessário para o desenvolvimento de sistemas e para a compreensão de conceitos mais avançados que serão explorados posteriormente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m03s852.jpg" alt="" width="840">
+</p>
+
+### Objetivos de Aprendizagem
+
+O foco central é apresentar as cinco estruturas básicas que permitem a criação de sistemas orientados a objetos:
+
+1. **Classe**
+2. **Atributo**
+3. **Método**
+4. **Objeto**
+5. **Mensagem**
+
+Esses elementos são considerados essenciais porque tudo na orientação a objetos começa a partir da definição e interação entre esses conceitos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m11s891.jpg" alt="" width="840">
+</p>
+
+### O Conceito de Classe
+
+A **Classe** é a unidade mínima e básica de implementação no paradigma orientado a objetos. Ela funciona como uma estrutura que abstrai um conjunto de objetos com características similares, definindo:
+
+* **Comportamento:** Estabelecido através dos **métodos** (serviços providos pelos objetos).
+* **Estado:** Definido através dos **atributos** (informações que os objetos podem armazenar).
+
+Em termos práticos, a classe atua como um "molde" para a criação de entidades, permitindo modelar conceitos do mundo real focando em suas características essenciais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m21s354.jpg" alt="" width="840">
+</p>
+
+### Exemplos de Classes
+
+As classes podem representar tanto entidades concretas quanto abstratas do mundo real. Alguns exemplos comuns incluem:
+
+* **Concretas:** Bola, Carro, Computador.
+* **Abstratas:** Viagem, Venda, Comprador.
+
+Independentemente da natureza da entidade, a classe serve para representar esses conceitos dentro de um sistema de software, permitindo a futura criação de objetos baseados nessas definições.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m27s101.jpg" alt="" width="840">
+</p>
+
+### Dicas para Identificação de Classes
+
+Para identificar corretamente quais classes devem ser criadas em um sistema, deve-se considerar:
+
+* **Substantivos:** Classes são quase sempre representadas por substantivos presentes no domínio do problema.
+* **Nomes Significativos:** O nome deve refletir claramente o papel da classe.
+* **Contexto:** O ambiente do software influencia o nome. Por exemplo, em vez de uma classe genérica "Pessoa", pode ser mais adequado usar "Cliente" em um sistema de vendas ou "Aluno" em um sistema acadêmico, garantindo maior clareza semântica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m34s295.jpg" alt="" width="840">
+</p>
+
+### Implementação em Código
+
+A forma de declarar uma classe varia conforme a linguagem de programação utilizada. Abaixo, exemplos da estrutura mínima (classe vazia) em Java, C# e Python:
+
+**Java**
+
+```java
+class Carro {
+
+}
+
+```
+
+**C#**
+
+```csharp
+class Carro {
+
+}
+
+```
+
+**Python**
+
+```python
+class Carro:
+    pass
+
+```
+
+Enquanto Java e C# utilizam chaves para delimitar o escopo, o Python utiliza a indentação e a palavra reservada `pass` para indicar que a classe, embora definida, não possui conteúdo interno no momento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h45m41s848.jpg" alt="" width="840">
+</p>
+
+### Exercitando 1
+
+Para fixar o conteúdo inicial, o desafio proposto é:
+
+* **Tarefa:** Crie a classe "Carro".
+* **Observação:** Utilize a linguagem de sua preferência (Java, C# ou Python), aplicando as dicas de nomenclatura e as estruturas sintáticas apresentadas.     
 
 
 ### 🟩 Vídeo 07 - Classe - Exercício
