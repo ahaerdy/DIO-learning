@@ -206,7 +206,57 @@ A imagem ilustra a diferença estrutural entre os dois modelos:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/186a82bb-3a19-49f9-b7bd-b05ea071f644?autoplay=1
+
+Nesta aula, exploramos a definição de Orientação a Objetos e os três pilares fundamentais que sustentam esse paradigma: Abstração, Reuso e Encapsulamento. O objetivo é entender como a OO aproxima o mundo real do mundo computacional, facilitando o desenvolvimento de sistemas complexos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h10m57s538.jpg" alt="" width="840">
+</p>
+
+Nesta segunda aula sobre fundamentos, o foco central é a **Orientação a Objetos (OO)**. O objetivo é estabelecer uma base sólida sobre os conceitos que regem este paradigma, preparando o terreno para entender como as unidades de software interagem entre si.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h11m28s060.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais desta etapa consistem em:
+
+1. **Definir o que é a OO**: Estabelecer uma compreensão teórica clara do paradigma.
+2. **Entender os pilares**: Identificar as bases fundamentais que sustentam a Orientação a Objetos e permitem sua aplicação prática no desenvolvimento de sistemas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h11m30s279.jpg" alt="" width="840">
+</p>
+
+A definição de Orientação a Objetos destaca que se trata de um paradigma que abrange a **análise, o projeto e a programação** de sistemas. A estrutura é fundamentada na composição e na interação entre unidades de software denominadas **objetos**. Esta abordagem visa diminuir a distância entre o mundo real (o problema de negócio) e o mundo computacional (a solução técnica).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h11m44s955.jpg" alt="" width="840">
+</p>
+
+Dentre os fundamentos apresentados, a **Abstração** é o processo de isolar as características essenciais de um objeto. Ao focar no que é comum a certos grupos de objetos e ignorar detalhes acidentais ou específicos, o desenvolvedor consegue criar modelos base que podem ser aplicados em diferentes contextos do sistema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h11m47s935.jpg" alt="" width="840">
+</p>
+
+O **Reuso** é a capacidade de construir novas unidades de código aproveitando estruturas já existentes. Diferente de paradigmas estruturados, a Orientação a Objetos oferece mecanismos de alto nível que facilitam essa prática, tornando o desenvolvimento mais eficiente e permitindo que conceitos base (como uma abstração de "cadeira") sejam estendidos para necessidades específicas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h11m49s724.jpg" alt="" width="840">
+</p>
+
+O **Encapsulamento** refere-se à habilidade de ocultar complexidades internas e garantir a proteção dos dados. Através de mecanismos específicos, o paradigma permite criar camadas que evitam acessos indevidos às informações, expondo apenas o que é estritamente necessário para a interação entre os objetos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-14h11m52s081.jpg" alt="" width="840">
+</p>
+
+Para colocar os conceitos em prática, propõe-se um exercício de modelagem: considerando o cenário de uma **loja on-line de livros**, o desafio é modelar uma **entidade livro**. Este exercício incentiva a aplicação imediata dos pilares de abstração, encapsulamento e reuso para representar um objeto do mundo real no contexto computacional.      
+
 
 ### 🟩 Vídeo 05 - Exercício
 
@@ -215,7 +265,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/186a82bb-3a19-49f9-b7bd-b05ea071f644?autoplay=1
+
+
 
 ## Parte 4 - Estrutura básica da OO
 
