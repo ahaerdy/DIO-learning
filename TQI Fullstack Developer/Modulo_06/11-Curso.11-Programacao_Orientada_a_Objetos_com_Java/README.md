@@ -621,6 +621,48 @@ O objetivo é evoluir a classe "Carro" criada anteriormente, adicionando três a
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/9bc3a147-ff37-4427-b3da-37be729b2008?autoplay=1
 
+Este guia resume a aula prática focada na definição de estados (atributos) para uma classe em Java, utilizando o exemplo de um carro. O objetivo é entender como traduzir características do mundo real em código, escolhendo os tipos de dados adequados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-06-18h46m00s446.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco é a resolução do exercício prático para a criação de atributos dentro da classe `Carro`. Os atributos representam as características que definem o estado dos objetos que serão instanciados a partir desta classe. Para este exemplo, são definidos três atributos fundamentais: a cor, o modelo e a capacidade do tanque de combustível.
+
+A definição dos atributos deve seguir uma escolha criteriosa dos tipos de dados para representar fielmente a informação:
+
+* 
+**Cor e Modelo:** Como ambos são representados por palavras ou conjuntos de caracteres, utiliza-se o tipo de dado `String`.
+
+
+* 
+**Capacidade do Tanque:** Por representar um valor numérico inteiro, utiliza-se o tipo de dado `int`.
+
+
+
+Os atributos são declarados dentro do corpo da classe, delimitados pelo abrir e fechar de chaves `{ }`, conforme demonstrado na estrutura do código abaixo:
+
+```java
+package one.digitalinnovation.oo;
+
+/**
+ * Classe de exemplo para o exercício da Aula 3 de Orientação a Objetos.
+ */
+class Carro {
+
+    String cor;
+    String modelo;
+    int capacidadeTanque;
+
+}
+
+```
+
+Essa organização conclui a estruturação básica dos dados da classe, permitindo que o desenvolvimento avance para a inclusão de novos conceitos de Orientação a Objetos nas próximas etapas.
+
+---      
 
 
 ## 🟩 Vídeo 10 - Método - Conceito
@@ -630,7 +672,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/a102d2d3-feee-40b1-9375-c94d295d76fb?autoplay=1
 
 ## 🟩 Vídeo 11 - Método - Exercício
 
