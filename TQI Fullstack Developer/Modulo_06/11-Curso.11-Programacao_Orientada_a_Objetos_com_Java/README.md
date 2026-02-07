@@ -1342,6 +1342,75 @@ B b = (B) new A();
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/8b707a92-14d5-4d77-a439-286ee25cb5fe?autoplay=1
 
+Este resumo explora os conceitos de Polimorfismo e Sobrescrita (Overriding), dois pilares fundamentais da Programação Orientada a Objetos (POO), destacando suas definições, exemplos práticos e as diferenças conceituais que os distinguem.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h59m27s042.jpg" alt="" width="840">
+</p>
+
+O **polimorfismo** é apresentado como um dos conceitos mais fundamentais e, simultaneamente, complexos da Orientação a Objetos. Sua definição central reside na ideia de **"a mesma ação se comportando diferente"**.
+
+Em termos técnicos, isso significa que um mesmo método (ação) pode ter implementações e comportamentos distintos. Embora seja comumente utilizado em conjunto com a **herança** para proporcionar flexibilidade ao sistema, o uso da herança não obriga o programador a implementar o polimorfismo, mas é através dele que se extrai o potencial máximo da estrutura de objetos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h59m32s216.jpg" alt="" width="840">
+</p>
+
+Para ilustrar o polimorfismo, utiliza-se o exemplo de uma entidade de **Pagamento**. O diagrama demonstra uma estrutura de herança onde diferentes subtipos especializam a ação de processar o pagamento:
+
+* **Classe Pai:** `Pagamento` com o método `processar()`.
+* **Subtipos (Especializações):** `Boleto`, `Credito`, `Debito` e `PIX`.
+
+Neste cenário, a ação `processar()` é a mesma para todos, porém, o comportamento interno de cada uma é drasticamente diferente. O polimorfismo permite que o sistema execute o método baseado na instância real do objeto (se é um PIX ou um Boleto), garantindo que a ação correta seja disparada de acordo com o contexto do subtipo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h59m38s877.jpg" alt="" width="840">
+</p>
+
+O conceito de polimorfismo será explorado de forma prática em momentos posteriores. Devido à sua complexidade técnica, a aplicação direta no código e a demonstração de como essa flexibilidade se manifesta na programação serão detalhadas em exercícios específicos para facilitar a compreensão plena do aluno.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h59m42s770.jpg" alt="" width="840">
+</p>
+
+A **Sobrescrita** é outro conceito vital relacionado à herança e aos métodos. Ela é definida como **"a mesma ação, podendo se comportar diferente"**.
+
+A sutil diferença em relação ao polimorfismo reside na palavra "podendo": enquanto no polimorfismo a natureza da ação frequentemente exige comportamentos distintos para cada tipo, na sobrescrita existe a opção de manter um comportamento padrão ou alterá-lo conforme a necessidade da subclasse.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h59m43s918.jpg" alt="" width="840">
+</p>
+
+O exemplo de uma **Conta Bancária** ajuda a diferenciar onde a sobrescrita ocorre e onde ela é desnecessária:
+
+* **Classe Mãe (`Conta`):** Possui o atributo `double saldo` e o método `exibirSaldo()`. O comportamento padrão é simplesmente mostrar o valor do saldo.
+* **Classes `Corrente` e `Universitaria`:** Não sobrescrevem o método. Elas herdam e utilizam o comportamento padrão da classe mãe, pois apenas exibem o valor nominal.
+* **Classes `Poupanca` e `Especial`:** Realizam a **sobrescrita** do método `exibirSaldo()`.
+* A **Poupança** precisa calcular o rendimento (juros) sobre o valor.
+* A **Conta Especial** precisa exibir o saldo somado ao limite do cheque especial.
+
+
+
+Nesses casos, a sobrescrita permite que a subclasse use a base da classe mãe, mas acrescente ou modifique o comportamento para atender sua especificidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h59m49s299.jpg" alt="" width="840">
+</p>
+
+Assim como no polimorfismo, a implementação técnica da sobrescrita será demonstrada através de exemplos de código. Isso é fundamental porque, visualmente, a escrita do código para ambos os conceitos pode parecer idêntica, embora suas finalidades filosóficas no design do software sejam distintas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h59m50s847.jpg" alt="" width="840">
+</p>
+
+A distinção conceitual entre **Polimorfismo** e **Sobrescrita** pode ser resumida pela natureza da abstração:
+
+1. **Polimorfismo:** A ação é geralmente tão abstrata (como "processar pagamento") que não há um comportamento padrão viável. Ela **sempre** se comporta de forma diferente em cada subtipo.
+2. **Sobrescrita:** Existe um comportamento padrão funcional (como "exibir saldo"), mas as subclasses **podem** escolher especializar ou alterar esse comportamento se necessário.
+
+Não há uma regra de "qual é melhor"; a escolha depende do contexto e da necessidade do sistema. A maestria em identificar quando usar cada um vem com o estudo contínuo e a prática da programação orientada a objetos.      
 
 
 ## 🟩 Vídeo 19 - Herança - Proposta de Exercício 2
@@ -1351,7 +1420,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/7acf2370-4448-43eb-92bd-74b5f2519c3d?autoplay=1
 
 ## 🟩 Vídeo 20 - Herança - Resolução do exercício 2 - Parte 1
 
@@ -1360,7 +1429,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ## 🟩 Vídeo 21 - Herança - Resolução do exercício 2 - Parte 2
 
