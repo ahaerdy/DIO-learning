@@ -1013,57 +1013,48 @@ Este guia resume a resolução de um exercício prático focado na criação de 
 
 ### Anotações
 
-Nesta etapa, é apresentada a implementação da classe `RodarAplicacao`, que serve como o ponto de entrada principal para a execução do programa em Java através do método `public static void main`. O objetivo central é demonstrar a instanciação e manipulação de objetos baseados na classe `Carro`.
+Esta etapa final do exercício demonstra a instanciação e manipulação de objetos na prática, utilizando a classe `Carro` como base para a criação de instâncias reais dentro do paradigma de Orientação a Objetos. O código é executado através da classe `RodarAplicacao`, que contém o método `public static void main`, ponto de entrada essencial para a execução de aplicações Java.
 
-A implementação foca em duas formas distintas de criação de objetos:
+A implementação apresenta duas abordagens distintas para a criação de objetos:
 
-* **Instanciação com Construtor Padrão**: O objeto `carro1` é criado sem parâmetros iniciais. Seus atributos (cor, modelo e capacidade do tanque) são definidos individualmente através dos métodos *set*.
-* **Instanciação com Sobrecarga de Construtor**: O objeto `carro2` é criado já recebendo todos os dados diretamente no construtor. Esta abordagem simplifica o código ao eliminar a necessidade de chamadas subsequentes aos métodos *set* para a inicialização básica.
+* **Instanciação via Construtor Padrão (Default)**: O objeto `carro1` é criado sem parâmetros iniciais. Seus atributos são definidos individualmente através dos métodos **set** (`setCor`, `setModelo`, `setCapacidadeTanque`).
+* **Instanciação via Sobrecarga de Construtor**: O objeto `carro2` é criado já recebendo valores diretamente no construtor (cor, modelo e capacidade), eliminando a necessidade de chamadas sucessivas aos métodos set para a inicialização.
 
-Após a criação, o código utiliza o método `totalValorTanque` para calcular o custo de abastecimento com base em um valor de combustível fornecido, exibindo os resultados finais no console.
+Após a criação, o código utiliza os métodos **get** para recuperar e exibir as informações no console, além de invocar o método de negócio `totalValorTanque`, que calcula o custo para encher o tanque com base no preço do combustível fornecido. Ao final da execução, o console exibe os dados processados para uma BMW Série 3 e uma Mercedes-Benz Classe C.
 
 ```java
-package one.digitalinnovation.o00; // Define o pacote onde a classe está inserida
+package one.digitalinnovation.oo; [cite_start]// Define o pacote da classe [cite: 2]
 
-/**
- * Classe de exemplo para o exercício da Aula 2 de Orientação a Objetos.
- */
-class RodarAplicacao { // Declaração da classe que contém a lógica de execução
-    public static void main(String[] args) { // Método principal, ponto de entrada do Java
+[cite_start]class RodarAplicacao { // Declaração da classe principal para execução [cite: 9]
+    [cite_start]public static void main(String[] args) { // Método principal, ponto de entrada do Java [cite: 10]
         
-        // Criação do objeto 'carro1' usando o construtor padrão (sem parâmetros)
-        Carro carro1 = new Carro(); 
-
-        // Atribuição de valores aos atributos do objeto através dos métodos setters
-        carro1.setCor("Azul"); 
-        carro1.setModelo("BMW Série 3"); 
-        carro1.setCapacidadeTanque(59); 
-
-        // Exibição dos dados armazenados no objeto carro1 utilizando os getters
-        System.out.println(carro1.getModelo());
-        System.out.println(carro1.getCor());
-        System.out.println(carro1.getCapacidadeTanque());
+        // Exemplo 1: Usando o construtor padrão (sem parâmetros)
+        Carro carro1 = new Carro(); // Cria uma instância vazia de Carro
         
-        // Chamada do método de negócio para calcular o valor total do tanque (preço x capacidade)
-        System.out.println(carro1.totalValorTanque(6.39));
-
-        // Criação do objeto 'carro2' utilizando a sobrecarga de construtor (passagem direta de dados)
-        Carro carro2 = new Carro("Cinza", "Mercedes-Benz Classe C ", 66);
-
-        // Exibição dos dados do objeto carro2 (inicializados diretamente na criação)
-        System.out.println(carro2.getModelo());
-        System.out.println(carro2.getCor());
-        System.out.println(carro2.getCapacidadeTanque());
+        carro1.setCor("Azul"); // Define a cor do objeto carro1
+        carro1.setModelo("BMW Série 3"); // Define o modelo do objeto carro1
+        carro1.setCapacidadeTanque(59); // Define a capacidade do tanque
         
-        // Cálculo do valor total do tanque para o segundo objeto com um preço de combustível distinto
-        System.out.println(carro2.totalValorTanque(6.46));
-    }
-}
+        // Exibição dos dados do primeiro objeto usando métodos Get
+        System.out.println(carro1.getModelo()); [cite_start]// Imprime o modelo definido [cite: 39]
+        System.out.println(carro1.getCor()); [cite_start]// Imprime a cor definida [cite: 40]
+        System.out.println(carro1.getCapacidadeTanque()); [cite_start]// Imprime a capacidade [cite: 41]
+        System.out.println(carro1.totalValorTanque(6.39)); // Calcula e imprime o valor para encher o tanque
+        
+        // Exemplo 2: Usando sobrecarga de construtor (com parâmetros)
+        [cite_start]// O objeto é criado e inicializado em uma única linha [cite: 43]
+        Carro carro2 = new Carro("Cinza", "Mercedes-Benz Classe C", 66); 
+        
+        // Exibição dos dados do segundo objeto
+        System.out.println(carro2.getModelo()); [cite_start]// Imprime o modelo inicializado no construtor [cite: 44]
+        System.out.println(carro2.getCor()); [cite_start]// Imprime a cor inicializada no construtor [cite: 45]
+        System.out.println(carro2.getCapacidadeTanque()); [cite_start]// Imprime a capacidade inicializada [cite: 46]
+        System.out.println(carro2.totalValorTanque(6.46)); [cite_start]// Calcula o valor do tanque com outro preço de combustível [cite: 47]
+        
+    [cite_start]} // Fundo do método main [cite: 33]
+[cite_start]} // Fundo da classe RodarAplicacao [cite: 34]
 
 ```
-
-O resultado da execução exibe os detalhes de cada veículo, comprovando que ambos os métodos de inicialização produzem objetos funcionais e corretamente estruturados dentro do paradigma de Orientação a Objetos.
-
 
 # Parte 5 - As relações: Herança, Associação e Interface
 
@@ -1075,6 +1066,8 @@ O resultado da execução exibe os detalhes de cada veículo, comprovando que am
 </video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/9f51eaff-a764-4003-a174-f268bc3dcdfc?autoplay=1
+
+
 
 ## 🟩 Vídeo 15 - Herança - Exercício 1
 
