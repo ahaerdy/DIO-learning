@@ -1009,6 +1009,60 @@ O **Exercitando 4** propõe a evolução dos conceitos anteriores através da cr
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/50e688cf-cbf9-46bf-824c-f8409058acec?autoplay=1
 
+Este guia resume a resolução de um exercício prático focado na criação de objetos a partir de uma classe pré-definida (Carro), explorando conceitos fundamentais como instanciacão, métodos e sobrecarga.
+
+### Anotações
+
+Nesta etapa, é apresentada a implementação da classe `RodarAplicacao`, que serve como o ponto de entrada principal para a execução do programa em Java através do método `public static void main`. O objetivo central é demonstrar a instanciação e manipulação de objetos baseados na classe `Carro`.
+
+A implementação foca em duas formas distintas de criação de objetos:
+
+* **Instanciação com Construtor Padrão**: O objeto `carro1` é criado sem parâmetros iniciais. Seus atributos (cor, modelo e capacidade do tanque) são definidos individualmente através dos métodos *set*.
+* **Instanciação com Sobrecarga de Construtor**: O objeto `carro2` é criado já recebendo todos os dados diretamente no construtor. Esta abordagem simplifica o código ao eliminar a necessidade de chamadas subsequentes aos métodos *set* para a inicialização básica.
+
+Após a criação, o código utiliza o método `totalValorTanque` para calcular o custo de abastecimento com base em um valor de combustível fornecido, exibindo os resultados finais no console.
+
+```java
+package one.digitalinnovation.o00; // Define o pacote onde a classe está inserida
+
+/**
+ * Classe de exemplo para o exercício da Aula 2 de Orientação a Objetos.
+ */
+class RodarAplicacao { // Declaração da classe que contém a lógica de execução
+    public static void main(String[] args) { // Método principal, ponto de entrada do Java
+        
+        // Criação do objeto 'carro1' usando o construtor padrão (sem parâmetros)
+        Carro carro1 = new Carro(); 
+
+        // Atribuição de valores aos atributos do objeto através dos métodos setters
+        carro1.setCor("Azul"); 
+        carro1.setModelo("BMW Série 3"); 
+        carro1.setCapacidadeTanque(59); 
+
+        // Exibição dos dados armazenados no objeto carro1 utilizando os getters
+        System.out.println(carro1.getModelo());
+        System.out.println(carro1.getCor());
+        System.out.println(carro1.getCapacidadeTanque());
+        
+        // Chamada do método de negócio para calcular o valor total do tanque (preço x capacidade)
+        System.out.println(carro1.totalValorTanque(6.39));
+
+        // Criação do objeto 'carro2' utilizando a sobrecarga de construtor (passagem direta de dados)
+        Carro carro2 = new Carro("Cinza", "Mercedes-Benz Classe C ", 66);
+
+        // Exibição dos dados do objeto carro2 (inicializados diretamente na criação)
+        System.out.println(carro2.getModelo());
+        System.out.println(carro2.getCor());
+        System.out.println(carro2.getCapacidadeTanque());
+        
+        // Cálculo do valor total do tanque para o segundo objeto com um preço de combustível distinto
+        System.out.println(carro2.totalValorTanque(6.46));
+    }
+}
+
+```
+
+O resultado da execução exibe os detalhes de cada veículo, comprovando que ambos os métodos de inicialização produzem objetos funcionais e corretamente estruturados dentro do paradigma de Orientação a Objetos.
 
 
 # Parte 5 - As relações: Herança, Associação e Interface
@@ -1020,7 +1074,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/9f51eaff-a764-4003-a174-f268bc3dcdfc?autoplay=1
 
 ## 🟩 Vídeo 15 - Herança - Exercício 1
 
