@@ -1066,6 +1066,73 @@ class RodarAplicacao { // Declaração da classe principal para execução
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/9f51eaff-a764-4003-a174-f268bc3dcdfc?autoplay=1
 
+Este resumo aborda os conceitos fundamentais de como entidades podem ser construídas a partir de outras, elevando o nível da programação orientada a objetos para além das estruturas básicas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-10h56m11s957.jpg" alt="" width="840">
+</p>
+
+Nesta introdução da Aula 4, o foco recai sobre as **relações** na Orientação a Objetos. O objetivo central é explorar como a computação permite a criação de novas entidades a partir de estruturas já existentes, elevando o nível de desenvolvimento para além das estruturas básicas discutidas anteriormente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-10h56m17s448.jpg" alt="" width="840">
+</p>
+
+Para atingir o objetivo de criar entidades a partir de outras, são apresentados três conceitos fundamentais de relacionamento:
+
+* **Herança**
+* **Associação**
+* **Interface**
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-10h56m19s648.jpg" alt="" width="840">
+</p>
+
+A **Herança** é definida como o relacionamento onde uma classe (subclasse, filha ou derivada) estende uma superclasse (classe pai, mãe ou base). A principal finalidade deste conceito é a criação de **subtipos** ou tipos especializados. Como consequência direta dessa relação, a subclasse herda e reaproveita atributos e métodos da superclasse, podendo também definir seus próprios membros (o conjunto de atributos e métodos).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-10h56m24s689.jpg" alt="" width="840">
+</p>
+
+A implementação da herança varia conforme a sintaxe de cada linguagem de programação, embora o comportamento conceitual de criar um subtipo permaneça o mesmo:
+
+**Java**
+
+```java
+class A extends B {
+...
+}
+
+```
+
+**C#**
+
+```csharp
+class A : B {
+...
+}
+
+```
+
+**Python**
+
+```python
+class A (B):
+...
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-10h56m27s702.jpg" alt="" width="840">
+</p>
+
+Para fixar o conhecimento, propõe-se um exercício prático de modelagem:
+
+* Crie as classes: **Veiculo**, **Carro**, **Moto** e **Caminhao**.
+* Estabeleça a relação de herança que considerar mais adequada entre elas, aplicando as boas práticas de criação de classes na linguagem de sua preferência.
 
 
 ## 🟩 Vídeo 15 - Herança - Exercício 1
@@ -1075,7 +1142,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/14cfe0b9-ca1c-4e19-a348-6070583b35dd?autoplay=1
+
+
 
 ## 🟩 Vídeo 16 - Herança - Tipos
 
