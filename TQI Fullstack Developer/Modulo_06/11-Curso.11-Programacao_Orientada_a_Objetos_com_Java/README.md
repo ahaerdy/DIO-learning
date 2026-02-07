@@ -1285,6 +1285,52 @@ Neste exemplo de código, a classe `A` herda simultaneamente das classes `B` e `
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/8d92b14b-79be-4816-9f10-c4a9841f57d2?autoplay=1
 
+Este guia explora os conceitos de conversão de tipos em hierarquias de herança, focando em como as linguagens Java, C# e Python lidam com a subida e descida de níveis entre superclasses e subclasses.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h29m11s555.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos os conceitos de **Upcast** e **Downcast** dentro da hierarquia de classes da orientação a objetos. Para ilustrar, utilizamos uma estrutura onde a superclasse é **Funcionario** e as subclasses (especializações) são **Gerente**, **Vendedor** e **Faxineiro**.
+
+* **Upcast:** Consiste em "subir" na hierarquia. É o processo de transformar uma subclasse em uma superclasse (ex: tratar um Gerente como um Funcionario). Como um Gerente *é um* Funcionario, essa operação é segura e comum.
+* **Downcast:** É o movimento oposto, ou seja, "descer" na hierarquia. Ocorre quando tentamos transformar uma superclasse em uma de suas especializações (ex: transformar Funcionario em Faxineiro). Por se aprofundar em tipos específicos, é uma operação que exige cautela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h29m15s741.jpg" alt="" width="840">
+</p>
+
+A implementação do **Upcast** em linguagens como Java e C# ocorre de forma **implícita**. Isso significa que o compilador aceita a atribuição diretamente, sem necessidade de comandos especiais, pois a relação de herança garante que a subclasse possua os requisitos da superclasse.
+
+```java
+// Exemplo de Upcast (implícito)
+A a = new B();
+
+```
+
+Em contrapartida, a linguagem Python utiliza o **Duck Typing** (tipagem de pato). Por ser uma linguagem dinâmica e flexível, Python não aplica formalmente os conceitos de upcast e downcast da mesma maneira que as linguagens estáticas, tratando as interações de forma mais simplificada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-14h29m20s433.jpg" alt="" width="840">
+</p>
+
+Diferente do upcast, o **Downcast** deve ser realizado de forma **explícita** em Java e C#. O desenvolvedor precisa declarar manualmente para qual subtipo deseja converter o objeto.
+
+```java
+// Exemplo de Downcast em Java (explícito)
+B b = (B) new A();
+
+```
+
+```csharp
+// Exemplo de Downcast em C# (explícito)
+B b = (B) new A();
+
+```
+
+É importante ressaltar que o downcast é considerado uma **operação perigosa**. Na maioria dos casos, ele pode resultar em erros de compilação ou falhas durante a execução (runtime), sendo recomendado apenas em situações muito específicas, como no uso da classe *Object*. Assim como no caso anterior, o conceito de downcast não se aplica ao Python devido à sua natureza dinâmica.      
 
 
 ## 🟩 Vídeo 18 - Herança - Polimorfismo e Sobrescrita
@@ -1294,7 +1340,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/8b707a92-14d5-4d77-a439-286ee25cb5fe?autoplay=1
+
+
 
 ## 🟩 Vídeo 19 - Herança - Proposta de Exercício 2
 
