@@ -911,6 +911,95 @@ class Carro { // Definição da classe para criar objetos
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/54653771-9a8a-4ce7-b12c-b2426f747172?autoplay=1
 
+Este módulo foca na transição da teoria (classes e atributos) para a prática (objetos e interação). O objeto é a unidade central do paradigma POO, representando entidades do mundo real que ganham vida na memória do computador. Além disso, exploramos como esses objetos se comunicam através de "mensagens", que nada mais são do que a ativação de métodos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-09h39m56s045.jpg" alt="" width="840">
+</p>
+
+O conceito de **Objeto** é o pilar central do paradigma de Programação Orientada a Objetos (POO). Um objeto funciona como a representação de uma entidade do mundo real dentro do software, podendo ser algo físico, como um carro ou uma árvore, ou algo conceitual, como uma compra ou um estoque. Enquanto a classe atua como um molde estático, o objeto é a instância viva que armazena valores e executa os métodos na memória do computador.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-09h40m01s045.jpg" alt="" width="840">
+</p>
+
+A criação (instanciação) de objetos varia sutilmente entre as linguagens, mas mantém a mesma lógica de alocação de memória. Em Java e C#, utiliza-se a palavra-chave `new` seguida do construtor da classe. No Python, a sintaxe é mais direta, dispensando o `new` e a declaração explícita de tipos.
+
+**Java**
+
+```java
+Carro carro = new Carro();
+
+```
+
+**C#**
+
+```csharp
+Carro carro = new Carro();
+
+```
+
+**Python**
+
+```python
+carro = Carro()
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-09h40m04s924.jpg" alt="" width="840">
+</p>
+
+O conceito de **Mensagem** na POO refere-se ao processo de ativação de um método. Quando o software solicita que um objeto execute um comportamento, ocorre uma "troca de mensagens". Essa requisição dispara a execução da lógica descrita na classe, podendo ser direcionada a uma instância específica ou diretamente à classe, no caso de métodos estáticos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-09h40m07s329.jpg" alt="" width="840">
+</p>
+
+A prática de envio de mensagens é demonstrada através da chamada de métodos via notação de ponto. É possível interagir com o objeto (instância) ou com a classe (membros estáticos).
+
+**Java / C#**
+
+```java
+// Via objeto
+carro.<método>;
+
+// Via classe (Estático)
+Carro.<método>;
+
+```
+
+**Python**
+
+```python
+# Via objeto
+carro.<método>
+
+# Via classe (Estático)
+Carro.<método>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-09h40m11s826.jpg" alt="" width="840">
+</p>
+
+Para aprofundar o domínio da estrutura de objetos, é fundamental explorar conceitos avançados que definem o comportamento e a gestão de dados:
+
+* **Instância x Estático:** Diferenciação entre atributos/métodos que pertencem ao objeto individual e aqueles que pertencem à classe como um todo.
+* **Estado de um Objeto:** Refere-se ao conjunto de valores dos seus atributos em um determinado momento.
+* **Identidade de um Objeto:** A necessidade de identificar cada instância de forma única no sistema.
+* **Representação Numérica e Padrão:** Formas de representar o objeto de maneira simplificada ou compreensível para o sistema e o desenvolvedor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-09h40m17s128.jpg" alt="" width="840">
+</p>
+
+O **Exercitando 4** propõe a evolução dos conceitos anteriores através da criação prática de objetos da classe "Carro". O objetivo é aplicar métodos `set` e `get` para manipular atributos e realizar a chamada de métodos (passagem de mensagem) para funcionalidades como o cálculo do valor necessário para encher o tanque, utilizando os comandos de saída específicos de cada linguagem (`System.out.println`, `Console.WriteLine` ou `print`).      
+
+
 ## 🟩 Vídeo 13 - Objeto e Mensagem - Exercício
 
 <video width="60%" controls>
@@ -918,7 +1007,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/50e688cf-cbf9-46bf-824c-f8409058acec?autoplay=1
+
+
 
 # Parte 5 - As relações: Herança, Associação e Interface
 
