@@ -818,11 +818,7 @@ Este guia resume a resolução de um exercício prático focado na criação de 
 
 ### Anotações
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-09h14m34s100.jpg" alt="" width="840">
-</p>
-
-Esta imagem apresenta a implementação da classe **Carro** em Java, estruturada para demonstrar conceitos fundamentais de Orientação a Objetos. A explicação a seguir detalha os componentes da classe conforme as observações do professor:
+Esta vídeo apresenta a implementação da classe **Carro** em Java, estruturada para demonstrar conceitos fundamentais de Orientação a Objetos. A explicação a seguir detalha os componentes da classe conforme as observações do professor:
 
 #### Atributos e Encapsulamento
 
