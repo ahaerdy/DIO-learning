@@ -1144,7 +1144,79 @@ Para fixar o conhecimento, propõe-se um exercício prático de modelagem:
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/14cfe0b9-ca1c-4e19-a348-6070583b35dd?autoplay=1
 
+Este guia resume a explicação de um exercício prático sobre Herança em Programação Orientada a Objetos (POO). O foco é demonstrar como estruturar classes de forma hierárquica, utilizando o exemplo de veículos para ilustrar a relação entre uma "classe mãe" e suas "subclasses".
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-11h04m28s151.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, estabelecemos a estrutura base para o exercício de herança em Orientação a Objetos. O foco é a criação da classe mãe, denominada `Veiculo`, que servirá como o progenitor para as demais especializações. Para fins didáticos, a classe é definida de forma simplificada, focando na estrutura de declaração antes de avançarmos para a implementação de atributos e métodos específicos.
+
+```java
+package one.digitalinnovation.oo;
+
+/**
+ * Classe de exemplo para o exercício da Aula 4 de Orientação a Objetos.
+ */
+class Veiculo {
+
+    //Atributos e métodos
+
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-11h04m42s455.jpg" alt="" width="840">
+</p>
+
+Dando continuidade à aplicação do conceito de herança, definimos a classe `Moto`. No raciocínio de Orientação a Objetos, a moto é identificada como um tipo ou subtipo de veículo. Para expressar essa relação de herança em Java, utilizamos a palavra-chave `extends`, indicando que `Moto` herda as características da classe pai `Veiculo`.
+
+```java
+package one.digitalinnovation.oo;
+
+/**
+ * Classe de exemplo para o exercício da Aula 4 de Orientação a Objetos.
+ */
+class Moto extends Veiculo {
+
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-11h04m47s768.jpg" alt="" width="840">
+</p>
+
+Seguindo a mesma lógica de especialização, a classe `Carro` também é configurada como um subtipo de `Veiculo`. Ao utilizar a herança, garantimos que o carro compartilhe a mesma base estrutural definida na classe mãe, reforçando o conceito de que "Carro é um Veículo".
+
+```java
+package one.digitalinnovation.oo;
+
+/**
+ * Classe de exemplo para o exercício da Aula 4 de Orientação a Objetos.
+ */
+class Carro extends Veiculo {
+
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-11h04m50s835.jpg" alt="" width="840">
+</p>
+
+Por fim, implementamos a classe `Caminhao`, consolidando o exercício. Assim como a moto e o carro, o caminhão estende a classe `Veiculo`. Esta estrutura permite que as três subclasses tenham acesso aos atributos e métodos da classe mãe, embora existam restrições de visibilidade que dependem da organização e dos modificadores de acesso, conceitos que aprofundam a relação entre superclasses e subclasses.
+
+```java
+package one.digitalinnovation.oo;
+
+/**
+ * Classe de exemplo para o exercício da Aula 4 de Orientação a Objetos.
+ */
+class Caminhao extends Veiculo {
+
+}
+```      
 
 ## 🟩 Vídeo 16 - Herança - Tipos
 
@@ -1153,7 +1225,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/53eff84b-b134-4855-bb8b-f997de9b3e92?autoplay=1
 
 ## 🟩 Vídeo 17 - Herança - Upcast e Downcast
 
