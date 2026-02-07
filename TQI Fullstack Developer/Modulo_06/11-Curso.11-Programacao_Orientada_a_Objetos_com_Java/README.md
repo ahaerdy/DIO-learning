@@ -818,7 +818,7 @@ Este guia resume a resolução de um exercício prático focado na criação de 
 
 ### Anotações
 
-Esta vídeo apresenta a implementação da classe **Carro** em Java, estruturada para demonstrar conceitos fundamentais de Orientação a Objetos. A explicação a seguir detalha os componentes da classe conforme as observações do professor:
+O vídeo apresenta a implementação da classe **Carro** em Java, estruturada para demonstrar conceitos fundamentais de Orientação a Objetos. A explicação a seguir detalha os componentes da classe conforme as observações didáticas do professor:
 
 #### Atributos e Encapsulamento
 
@@ -829,52 +829,49 @@ A classe define os atributos `cor`, `modelo` e `capacidadeTanque`, que represent
 
 #### Método de Negócio
 
-Diferente dos métodos de acesso simples, o método `totalValorTanque` é considerado um "método de negócio" por executar uma operação lógica.
+Diferente dos métodos de acesso simples, o método `totalValorTanque` é considerado um "método de negócio" por executar uma operação lógica real do sistema.
 
 * Ele utiliza o tipo `double` para garantir precisão em valores monetários e decimais.
 * A lógica consiste em multiplicar a capacidade do tanque pelo valor do combustível passado como parâmetro.
 
 #### Construtores e a Palavra-chave `this`
 
-A classe demonstra a **sobrecarga** de construtores, que é ter o mesmo nome de método com assinaturas (parâmetros) diferentes:
+A classe demonstra a **sobrecarga** de construtores, que consiste em manter o mesmo nome de método com assinaturas (parâmetros) diferentes:
 
 * **Construtor sem parâmetros**: Cria um objeto "vazio", sem informações iniciais.
 * **Construtor com parâmetros**: Define o estado inicial do objeto no momento da criação.
-* **Uso do `this**`: É uma forma de diferenciar o que pertence ao objeto (atributo) do que é apenas um parâmetro do método, evitando ambiguidades no código.
+* **Uso do `this**`: É uma forma de diferenciar o que pertence ao objeto (atributo) do que é apenas um parâmetro do método, eliminando ambiguidades.
 
 #### Código Comentado (Observações do Professor)
 
 ```java
 package one.digitalinnovation.oo;
 
-/**
- * Classe de exemplo para o exercício da Aula 2 de Orientação a Objetos.
- */
-[cite_start]class Carro { // Definição da classe base para criação de objetos [cite: 2]
+class Carro { // Definição da classe para criar objetos
 
-    [cite_start]// Atributos que definem as características do carro [cite: 2]
+    // Atributos: definem o estado inicial e as características
     String cor;
     String modelo;
     int capacidadeTanque;
 
-    [cite_start]// Construtor mais simples: cria o carro "vazio", sem informações [cite: 2]
+    // Construtor padrão: cria o objeto vazio, sem nenhuma informação
     Carro() {
     }
 
-    [cite_start]// Sobrecarga: construtor que solicita o estado inicial do carro [cite: 2]
+    // Sobrecarga: construtor que já solicita os dados iniciais do carro
     Carro(String cor, String modelo, int capacidadeTanque) {
-        this.cor = cor; [cite_start]// 'this' diferencia o atributo do objeto do parâmetro [cite: 2]
+        this.cor = cor; // 'this' diferencia o atributo da classe do parâmetro recebido
         this.modelo = modelo; 
         this.capacidadeTanque = capacidadeTanque;
     }
 
-    [cite_start]// Métodos Set: usados para colocar um valor no atributo [cite: 2]
-    [cite_start]void setCor(String cor) { // 'void' porque a ideia é só guardar o valor, sem retornar nada [cite: 2]
+    // Métodos Set: usados para 'setar' ou guardar um valor no atributo
+    void setCor(String cor) { // 'void' pois a finalidade é apenas guardar o valor
         this.cor = cor;
     }
 
-    [cite_start]// Métodos Get: usados para retornar/devolver o valor para quem chamou [cite: 2]
-    [cite_start]String getCor() { // Deve retornar String para ser compatível com o atributo cor [cite: 2]
+    // Métodos Get: usados para 'pegar' ou retornar o valor do atributo
+    String getCor() { // O tipo de retorno (String) deve ser compatível com o atributo
         return cor;
     }
 
@@ -887,7 +884,7 @@ package one.digitalinnovation.oo;
     }
 
     void setCapacidadeTanque(int capacidadeTanque) {
-        [cite_start]// Parâmetro 'int' deve ser compatível com o tipo do atributo [cite: 2]
+        // Atribui o parâmetro inteiro ao atributo capacidadeTanque do objeto
         this.capacidadeTanque = capacidadeTanque;
     }
 
@@ -895,14 +892,14 @@ package one.digitalinnovation.oo;
         return capacidadeTanque;
     }
 
-    [cite_start]// Método de negócio: executa uma operação lógica real [cite: 2]
+    // Método de negócio: executa uma operação lógica (cálculo financeiro)
     double totalValorTanque(double valorCombustivel) { 
-        [cite_start]// Retorna a multiplicação da capacidade pelo preço do combustível [cite: 2]
+        // Multiplica a capacidade total pelo preço informado do combustível
         return capacidadeTanque * valorCombustivel;
     }
 }
 
-```      
+```
 
 
 ## 🟩 Vídeo 12 - Objeto e Mensagem - Conceito
