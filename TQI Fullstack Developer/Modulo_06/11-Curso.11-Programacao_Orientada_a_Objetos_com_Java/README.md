@@ -1023,10 +1023,10 @@ A implementação apresenta duas abordagens distintas para a criação de objeto
 Após a criação, o código utiliza os métodos **get** para recuperar e exibir as informações no console, além de invocar o método de negócio `totalValorTanque`, que calcula o custo para encher o tanque com base no preço do combustível fornecido. Ao final da execução, o console exibe os dados processados para uma BMW Série 3 e uma Mercedes-Benz Classe C.
 
 ```java
-package one.digitalinnovation.oo; [cite_start]// Define o pacote da classe [cite: 2]
+package one.digitalinnovation.oo; // Define o pacote da classe 
 
-[cite_start]class RodarAplicacao { // Declaração da classe principal para execução [cite: 9]
-    [cite_start]public static void main(String[] args) { // Método principal, ponto de entrada do Java [cite: 10]
+class RodarAplicacao { // Declaração da classe principal para execução 
+    public static void main(String[] args) { // Método principal, ponto de entrada do Java 
         
         // Exemplo 1: Usando o construtor padrão (sem parâmetros)
         Carro carro1 = new Carro(); // Cria uma instância vazia de Carro
@@ -1036,24 +1036,23 @@ package one.digitalinnovation.oo; [cite_start]// Define o pacote da classe [cite
         carro1.setCapacidadeTanque(59); // Define a capacidade do tanque
         
         // Exibição dos dados do primeiro objeto usando métodos Get
-        System.out.println(carro1.getModelo()); [cite_start]// Imprime o modelo definido [cite: 39]
-        System.out.println(carro1.getCor()); [cite_start]// Imprime a cor definida [cite: 40]
-        System.out.println(carro1.getCapacidadeTanque()); [cite_start]// Imprime a capacidade [cite: 41]
+        System.out.println(carro1.getModelo()); // Imprime o modelo definido 
+        System.out.println(carro1.getCor()); // Imprime a cor definida 
+        System.out.println(carro1.getCapacidadeTanque()); // Imprime a capacidade 
         System.out.println(carro1.totalValorTanque(6.39)); // Calcula e imprime o valor para encher o tanque
         
         // Exemplo 2: Usando sobrecarga de construtor (com parâmetros)
-        [cite_start]// O objeto é criado e inicializado em uma única linha [cite: 43]
+        // O objeto é criado e inicializado em uma única linha 
         Carro carro2 = new Carro("Cinza", "Mercedes-Benz Classe C", 66); 
         
         // Exibição dos dados do segundo objeto
-        System.out.println(carro2.getModelo()); [cite_start]// Imprime o modelo inicializado no construtor [cite: 44]
-        System.out.println(carro2.getCor()); [cite_start]// Imprime a cor inicializada no construtor [cite: 45]
-        System.out.println(carro2.getCapacidadeTanque()); [cite_start]// Imprime a capacidade inicializada [cite: 46]
-        System.out.println(carro2.totalValorTanque(6.46)); [cite_start]// Calcula o valor do tanque com outro preço de combustível [cite: 47]
+        System.out.println(carro2.getModelo()); // Imprime o modelo inicializado no construtor 
+        System.out.println(carro2.getCor()); // Imprime a cor inicializada no construtor 
+        System.out.println(carro2.getCapacidadeTanque()); // Imprime a capacidade inicializada 
+        System.out.println(carro2.totalValorTanque(6.46)); // Calcula o valor do tanque com outro preço de combustível 
         
-    [cite_start]} // Fundo do método main [cite: 33]
-[cite_start]} // Fundo da classe RodarAplicacao [cite: 34]
-
+    } // Fundo do método main 
+} // Fundo da classe RodarAplicacao
 ```
 
 # Parte 5 - As relações: Herança, Associação e Interface
