@@ -814,6 +814,101 @@ O exercício proposto consiste em evoluir a classe `Carro` criando um método pa
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/53559ee4-ac3c-48ab-a756-ff60b23a8dc7?autoplay=1
 
+Este guia resume a resolução de um exercício prático focado na criação de métodos e na estruturação de uma classe `Carro` em Java. O conteúdo abrange desde a manipulação básica de atributos até conceitos mais avançados como sobrecarga de construtores e a palavra-chave `this`.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-09h14m34s100.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta a implementação da classe **Carro** em Java, estruturada para demonstrar conceitos fundamentais de Orientação a Objetos. A explicação a seguir detalha os componentes da classe conforme as observações do professor:
+
+#### Atributos e Encapsulamento
+
+A classe define os atributos `cor`, `modelo` e `capacidadeTanque`, que representam o estado do objeto. Para manipulá-los, utilizam-se métodos de acesso:
+
+* **Setters (`set`)**: Servem para colocar (setar) um valor em um atributo. São definidos como `void` pois sua única finalidade é o armazenamento, não exigindo retorno.
+* **Getters (`get`)**: Servem para recuperar (pegar) um valor. O tipo de retorno deve ser obrigatoriamente compatível com o tipo do atributo (ex: se o atributo é `int`, o get retorna `int`).
+
+#### Método de Negócio
+
+Diferente dos métodos de acesso simples, o método `totalValorTanque` é considerado um "método de negócio" por executar uma operação lógica.
+
+* Ele utiliza o tipo `double` para garantir precisão em valores monetários e decimais.
+* A lógica consiste em multiplicar a capacidade do tanque pelo valor do combustível passado como parâmetro.
+
+#### Construtores e a Palavra-chave `this`
+
+A classe demonstra a **sobrecarga** de construtores, que é ter o mesmo nome de método com assinaturas (parâmetros) diferentes:
+
+* **Construtor sem parâmetros**: Cria um objeto "vazio", sem informações iniciais.
+* **Construtor com parâmetros**: Define o estado inicial do objeto no momento da criação.
+* **Uso do `this**`: É uma forma de diferenciar o que pertence ao objeto (atributo) do que é apenas um parâmetro do método, evitando ambiguidades no código.
+
+#### Código Comentado (Observações do Professor)
+
+```java
+package one.digitalinnovation.oo;
+
+/**
+ * Classe de exemplo para o exercício da Aula 2 de Orientação a Objetos.
+ */
+[cite_start]class Carro { // Definição da classe base para criação de objetos [cite: 2]
+
+    [cite_start]// Atributos que definem as características do carro [cite: 2]
+    String cor;
+    String modelo;
+    int capacidadeTanque;
+
+    [cite_start]// Construtor mais simples: cria o carro "vazio", sem informações [cite: 2]
+    Carro() {
+    }
+
+    [cite_start]// Sobrecarga: construtor que solicita o estado inicial do carro [cite: 2]
+    Carro(String cor, String modelo, int capacidadeTanque) {
+        this.cor = cor; [cite_start]// 'this' diferencia o atributo do objeto do parâmetro [cite: 2]
+        this.modelo = modelo; 
+        this.capacidadeTanque = capacidadeTanque;
+    }
+
+    [cite_start]// Métodos Set: usados para colocar um valor no atributo [cite: 2]
+    [cite_start]void setCor(String cor) { // 'void' porque a ideia é só guardar o valor, sem retornar nada [cite: 2]
+        this.cor = cor;
+    }
+
+    [cite_start]// Métodos Get: usados para retornar/devolver o valor para quem chamou [cite: 2]
+    [cite_start]String getCor() { // Deve retornar String para ser compatível com o atributo cor [cite: 2]
+        return cor;
+    }
+
+    void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    String getModelo() {
+        return modelo;
+    }
+
+    void setCapacidadeTanque(int capacidadeTanque) {
+        [cite_start]// Parâmetro 'int' deve ser compatível com o tipo do atributo [cite: 2]
+        this.capacidadeTanque = capacidadeTanque;
+    }
+
+    int getCapacidadeTanque() {
+        return capacidadeTanque;
+    }
+
+    [cite_start]// Método de negócio: executa uma operação lógica real [cite: 2]
+    double totalValorTanque(double valorCombustivel) { 
+        [cite_start]// Retorna a multiplicação da capacidade pelo preço do combustível [cite: 2]
+        return capacidadeTanque * valorCombustivel;
+    }
+}
+
+```      
+
+
 ## 🟩 Vídeo 12 - Objeto e Mensagem - Conceito
 
 <video width="60%" controls>
@@ -821,7 +916,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/54653771-9a8a-4ce7-b12c-b2426f747172?autoplay=1
 
 ## 🟩 Vídeo 13 - Objeto e Mensagem - Exercício
 
