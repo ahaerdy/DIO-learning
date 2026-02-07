@@ -1455,6 +1455,104 @@ A resolução foca em fornecer exemplos palpáveis para tornar clara a aplicaç�
 
 link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/4b2af323-517b-4418-9989-c28b7629d04c?autoplay=1
 
+Este vídeo explora os conceitos de Upcasting e Downcasting em Java, utilizando um exemplo prático de hierarquia de classes para ilustrar seu funcionamento e as melhores práticas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-15h34m22s488.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial do exercício, estabelecemos a estrutura de classes necessária para explorar os conceitos de herança e polimorfismo. A classe base é denominada `Funcionario`, servindo como a superclasse do sistema. A partir dela, são criadas três subclasses específicas: `Faxineiro`, `Gerente` e `Vendedor`.
+
+Essa organização reflete a hierarquia de tipos onde as classes filhas herdam as características da classe mãe, permitindo que objetos dessas subclasses sejam tratados como instâncias de `Funcionario`.
+
+```java
+class Funcionario {
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-15h34m25s474.jpg" alt="" width="840">
+</p>
+
+A implementação da classe `Faxineiro` demonstra a aplicação prática da herança através da palavra-chave `extends`. Ao definir `class Faxineiro extends Funcionario`, estabelecemos que `Faxineiro` é um subtipo de `Funcionario`. Esta relação é fundamental para permitir operações de Upcast, pois a linguagem reconhece que todo faxineiro é, inerentemente, um funcionário.
+
+```java
+class Faxineiro extends Funcionario {
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-15h34m28s397.jpg" alt="" width="840">
+</p>
+
+Seguindo a mesma lógica de especialização, a classe `Gerente` também é definida como uma extensão de `Funcionario`. No contexto da orientação a objetos, isso significa que a classe `Gerente` herda o comportamento da superclasse, sendo classificada como uma subclasse ou tipo derivado.
+
+```java
+class Gerente extends Funcionario {
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-15h34m30s875.jpg" alt="" width="840">
+</p>
+
+A classe `Vendedor` completa o conjunto de subtipos do exercício. Assim como as anteriores, ela estende `Funcionario`. Esta estrutura prepara o ambiente para testar como o Java lida com a conversão entre esses tipos, especialmente quando tentamos mover um objeto para cima (Upcast) ou para baixo (Downcast) na hierarquia de classes.
+
+```java
+class Vendedor extends Funcionario {
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-15h35m01s469.jpg" alt="" width="840">
+</p>
+
+A classe `RodarAplicacao` contém o método `main`, onde as instanciacões e conversões de tipo são executadas. O código exemplifica três situações distintas:
+
+1. **Instanciação Simples:** Criação de um objeto `Funcionario` atribuído a uma variável do mesmo tipo.
+2. **Upcast:** Objetos das subclasses (`Gerente`, `Vendedor`, `Faxineiro`) são atribuídos a variáveis do tipo `Funcionario`. O Upcast é implícito, o que significa que o Java realiza a conversão automaticamente sem necessidade de sintaxe adicional, pois não há risco de perda de dados ao tratar um subtipo como seu supertipo.
+3. **Downcast:** Tentativa de converter uma referência de superclasse para uma subclasse, como em `Vendedor vendedor = (Vendedor) new Funcionario();`. Diferente do Upcast, o Downcast exige uma declaração explícita do tipo alvo entre parênteses.
+
+```java
+class RodarAplicacao {
+    public static void main(String[] args) {
+        Funcionario funcionario = new Funcionario();
+
+        // Upcasts implícitos
+        Funcionario gerente = new Gerente();
+        Funcionario vendedor = new Vendedor();
+        Funcionario faxineiro = new Faxineiro();
+
+        // Downcast explícito
+        Vendedor vendedor_down = (Vendedor) new Funcionario();
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-15h35m10s312.jpg" alt="" width="840">
+</p>
+
+Ao executar a aplicação, o console do sistema exibe um erro de execução: `java.lang.ClassCastException`. Este erro ocorre especificamente na linha onde o Downcast foi tentado.
+
+O problema reside no fato de que, embora a sintaxe do Downcast esteja correta (explícita), a operação é semanticamente perigosa. O objeto criado é um `Funcionario` genérico, que não possui as informações específicas que um `Vendedor` teria. Como a linguagem não sabe como preencher os dados ausentes na subclasse, ela interrompe a execução para evitar inconsistências. Por esse motivo, o Downcast deve ser evitado na orientação a objetos, enquanto o Upcast é encorajado por facilitar o polimorfismo.
+
+```bash
+Exception in thread "main" java.lang.ClassCastException: class one.digitalinnovation.oo.Funcionario cannot be cast to class one.digitalinnovation.oo.Vendedor
+    at one.digitalinnovation.oo.RodarAplicacao.main(RodarAplicacao.java:17)
+
+Process finished with exit code 1
+
+```      
+
+
 ## 🟩 Vídeo 21 - Herança - Resolução do exercício 2 - Parte 2
 
 <video width="60%" controls>
@@ -1462,7 +1560,7 @@ link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/program
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/0d734e0a-3464-4869-b0e6-8d8d67f7979c?autoplay=1
 
 ## 🟩 Vídeo 22 - Associação - Conceito
 
