@@ -1422,6 +1422,30 @@ Não há uma regra de "qual é melhor"; a escolha depende do contexto e da neces
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/7acf2370-4448-43eb-92bd-74b5f2519c3d?autoplay=1
 
+O vídeo introduz a resolução de dois exercícios práticos focados em conceitos fundamentais de Programação Orientada a Objetos (POO), visando aprofundar o entendimento de hierarquias de classes, manipulação de tipos e comportamento de métodos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-15h14m22s746.jpg" alt="" width="840">
+</p>
+
+Nesta etapa prática, o foco é a implementação de uma estrutura de herança para exercitar a manipulação de tipos em Programação Orientada a Objetos. O exercício propõe a criação de uma hierarquia organizacional onde a classe **Funcionario** atua como a superclasse, servindo de base para as especializações **Gerente**, **Vendedor** e **Faxineiro**.
+
+A atividade consiste em realizar as seguintes operações:
+
+* **Upcast**: Tratar um objeto de uma subclasse (como Gerente) como se fosse do tipo genérico Funcionario.
+* **Downcast**: Retornar uma referência que já passou por um upcast para o seu tipo específico original.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-15h14m31s473.jpg" alt="" width="840">
+</p>
+
+Este segundo exercício visa aprofundar a compreensão técnica sobre o **Polimorfismo** e a **Sobrescrita** através da análise de comportamento no código. Enquanto a teoria define esses conceitos, a prática demonstrará como o sistema identifica qual método executar quando diferentes objetos respondem a uma mesma mensagem.
+
+A resolução foca em fornecer exemplos palpáveis para tornar clara a aplicação da sobrescrita (quando uma subclasse redefine um método da superclasse) e do polimorfismo (a capacidade de um objeto ser referenciado de várias formas), preenchendo lacunas conceituais com demonstrações de execução.
+
+
 ## 🟩 Vídeo 20 - Herança - Resolução do exercício 2 - Parte 1
 
 <video width="60%" controls>
@@ -1429,7 +1453,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/4b2af323-517b-4418-9989-c28b7629d04c?autoplay=1
 
 ## 🟩 Vídeo 21 - Herança - Resolução do exercício 2 - Parte 2
 
