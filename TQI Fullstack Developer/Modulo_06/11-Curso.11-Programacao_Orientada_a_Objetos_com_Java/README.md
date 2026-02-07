@@ -1227,6 +1227,55 @@ class Caminhao extends Veiculo {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/53eff84b-b134-4855-bb8b-f997de9b3e92?autoplay=1
 
+Este guia explora as nuances entre herança simples e múltipla, as diferenças de implementação entre as principais linguagens de programação (Python, C++, Java e C#) e os desafios técnicos, como o "Problema do Diamante", que influenciam o design de softwares modernos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-13h46m40s465.jpg" alt="" width="840">
+</p>
+
+Nesta introdução aos conceitos intrínsecos da herança, o foco recai sobre os **tipos de herança**, especificamente a distinção entre **herança simples** e **herança múltipla**. A herança é um pilar fundamental da programação orientada a objetos que permite a criação de subconceitos e especializações a partir de classes base.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-13h46m45s537.jpg" alt="" width="840">
+</p>
+
+A **herança simples** ocorre quando uma classe filha (subclasse) possui apenas uma classe mãe (superclasse). No exemplo apresentado no diagrama:
+
+* **Funcionario** é a classe mãe.
+* **Gerente**, **Vendedor** e **Faxineiro** são as classes filhas.
+
+Embora existam três especializações diferentes, cada uma delas herda individualmente de apenas uma fonte. Portanto, temos três instâncias de herança simples, onde cada subclasse estende as propriedades e comportamentos exclusivamente da classe `Funcionario`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-13h46m48s182.jpg" alt="" width="840">
+</p>
+
+A **herança múltipla** é caracterizada por uma classe filha que deriva de uma ou mais classes mães. O diagrama ilustra essa relação através do exemplo do **Estagiário**:
+
+* O **Estagiario** é definido como um subtipo de **Estudante**.
+* Simultaneamente, o **Estagiario** é um subtipo de **Funcionario**.
+
+Neste cenário, a classe filha consolida características de duas classes independentes, permitindo que o objeto comporte-se e possua atributos de ambas as origens.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-07-13h46m58s822.jpg" alt="" width="840">
+</p>
+
+A implementação da herança múltipla varia conforme a linguagem de programação. Enquanto linguagens como **Java** e **C#** não permitem herança múltipla de classes (devido a riscos como o conflito de nomes ou "problema do diamante"), linguagens como **Python** e **C++** oferecem suporte nativo.
+
+Em Python, a herança múltipla é declarada listando as classes mães entre parênteses, separadas por vírgulas:
+
+```python
+class A (B, C):
+    pass
+
+```
+
+Neste exemplo de código, a classe `A` herda simultaneamente das classes `B` e `C`.      
+
+
 ## 🟩 Vídeo 17 - Herança - Upcast e Downcast
 
 <video width="60%" controls>
@@ -1234,7 +1283,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/8d92b14b-79be-4816-9f10-c4a9841f57d2?autoplay=1
+
+
 
 ## 🟩 Vídeo 18 - Herança - Polimorfismo e Sobrescrita
 
