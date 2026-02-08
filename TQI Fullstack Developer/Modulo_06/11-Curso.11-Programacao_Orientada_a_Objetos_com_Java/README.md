@@ -1552,7 +1552,6 @@ Process finished with exit code 1
 
 ```      
 
-
 ## 🟩 Vídeo 21 - Herança - Resolução do exercício 2 - Parte 2
 
 <video width="60%" controls>
@@ -1562,6 +1561,120 @@ Process finished with exit code 1
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/0d734e0a-3464-4869-b0e6-8d8d67f7979c?autoplay=1
 
+Este guia explora a implementação prática de Polimorfismo e Sobrescrita (Override). Através de um exemplo com classes "Mãe" e "Filha", o vídeo demonstra como o Java decide qual método executar em tempo de execução, dependendo da instância do objeto, mesmo quando referenciado por um tipo comum.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-08h53m35s320.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é apresentada a criação da **ClasseMae**, que serve como a classe base para o exercício de Orientação a Objetos. Ela define dois métodos simples, `metodo1()` e `metodo2()`, que exibem mensagens no console identificando sua origem. Esta estrutura inicial estabelece o comportamento padrão que será herdado pelas classes filhas.
+
+```java
+package one.digitalinnovation.oo; [cite_start]// Define o pacote de organização das classes [cite: 1]
+
+[cite_start]class ClasseMae { // Declaração da classe base chamada ClasseMae [cite: 1]
+
+    [cite_start]void metodo1() { // Define o primeiro método sem retorno (void) [cite: 1]
+        System.out.println("Metodo 1 da Classe Mãe"); [cite_start]// Exibe a identificação do método 1 da mãe [cite: 1]
+    [cite_start]} // Encerra o escopo do metodo1 [cite: 1]
+
+    [cite_start]void metodo2() { // Define o segundo método sem retorno [cite: 1]
+        System.out.println("Metodo 2 da Classe Mãe"); [cite_start]// Exibe a identificação do método 2 da mãe [cite: 1]
+    [cite_start]} // Encerra o escopo do metodo2 [cite: 1]
+[cite_start]} // Encerra a definição da classe [cite: 1]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-08h53m56s037.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a implementação da **ClasseFilha1**, que utiliza o conceito de **Herança** ao estender a `ClasseMae`. Observa-se o uso da anotação `@Override` para realizar a **sobrescrita** do `metodo1()`. Ao fazer isso, a classe filha altera o comportamento original para exibir uma mensagem específica, enquanto herda o `metodo2()` da mãe sem modificações.
+
+```java
+package one.digitalinnovation.oo; [cite_start]// Mantém o mesmo pacote para visibilidade [cite: 4]
+
+[cite_start]class ClasseFilha1 extends ClasseMae { // Define que ClasseFilha1 herda características de ClasseMae [cite: 4]
+
+    [cite_start]@Override // Indica explicitamente que este método está sobrescrevendo um método da superclasse [cite: 4]
+    [cite_start]void metodo1() { // Redefine o metodo1 para esta classe específica [cite: 4]
+        System.out.println("Metodo 1 da Classe Filha 1"); [cite_start]// Exibe a mensagem personalizada da primeira filha [cite: 4]
+    [cite_start]} // Encerra a sobrescrita do metodo1 [cite: 4]
+[cite_start]} // Encerra a definição da classe [cite: 4]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-08h54m20s433.jpg" alt="" width="840">
+</p>
+
+Neste ponto, é introduzida a **ClasseFilha2**, que também herda de `ClasseMae`. Diferente da anterior, a `ClasseFilha2` opta por sobrescrever ambos os métodos: `metodo1()` e `metodo2()`. Isso ilustra como uma subclasse pode redefinir completamente as funcionalidades herdadas para adaptar-se às suas necessidades.
+
+```java
+package one.digitalinnovation.oo; [cite_start]// Continuidade no pacote do projeto [cite: 7]
+
+[cite_start]class ClasseFilha2 extends ClasseMae { // Estabelece a relação de herança com a ClasseMae [cite: 7]
+
+    [cite_start]@Override // Anotação de sobrescrita para o primeiro método [cite: 7]
+    [cite_start]void metodo1() { // Redefinição do metodo1 [cite: 7]
+        System.out.println("Método 1 da Classe Filha 2"); [cite_start]// Mensagem específica da segunda filha [cite: 7]
+    [cite_start]} // Encerra o escopo do metodo1 [cite: 7]
+
+    [cite_start]@Override // Anotação de sobrescrita para o segundo método [cite: 7]
+    [cite_start]void metodo2() { // Redefinição do metodo2 [cite: 7]
+        System.out.println("Método 2 da Classe Filha 2"); [cite_start]// Mensagem específica da segunda filha [cite: 7]
+    [cite_start]} // Encerra o escopo do metodo2 [cite: 7]
+[cite_start]} // Encerra a definição da classe [cite: 7]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-08h54m39s914.jpg" alt="" width="840">
+</p>
+
+A imagem detalha a classe **RodarAplicacao**, onde os conceitos de **Polimorfismo** são executados. É criado um vetor do tipo `ClasseMae[]` que armazena instâncias de diferentes tipos (Filha 1, Filha 2 e a própria Mãe). Através de laços `for-each`, o programa percorre o vetor chamando os métodos, permitindo que o Java identifique em tempo de execução qual implementação deve ser acionada.
+
+```java
+[cite_start]class RodarAplicacao { // Classe destinada à execução principal do programa [cite: 10, 19]
+
+    [cite_start]public static void main(String[] args) { // Ponto de entrada (método main) para o sistema [cite: 10, 19]
+
+        [cite_start]// Cria um array do tipo ClasseMae contendo três objetos de tipos diferentes [cite: 19]
+        ClasseMae[] classes = new ClasseMae[] {new ClasseFilha1(), new ClasseFilha2(), new ClasseMae()};
+
+        [cite_start]for (ClasseMae classe: classes) { // Percorre cada objeto dentro do array 'classes' [cite: 19]
+            classe.metodo1(); [cite_start]// Chama o metodo1 de cada objeto (Polimorfismo em ação) [cite: 19]
+        [cite_start]} // Encerra o primeiro laço de repetição [cite: 19]
+
+        System.out.println(""); [cite_start]// Imprime uma linha em branco para organizar a saída [cite: 19]
+
+        [cite_start]for (ClasseMae classe: classes) { // Percorre novamente o array para o segundo método [cite: 19]
+            classe.metodo2(); [cite_start]// Chama o metodo2 de cada objeto [cite: 19]
+        [cite_start]} // Encerra o segundo laço de repetição [cite: 19]
+
+        System.out.println(""); [cite_start]// Imprime outra linha em branco [cite: 19]
+
+        ClasseFilha2 classeFilha2 = new ClasseFilha2(); [cite_start]// Cria uma instância direta da ClasseFilha2 [cite: 10]
+        classeFilha2.metodo2(); [cite_start]// Chama o metodo2 diretamente da instância da filha [cite: 10]
+    [cite_start]} // Fecha o método main [cite: 10]
+[cite_start]} // Fecha a classe RodarAplicacao [cite: 10]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-08h54m54s540.jpg" alt="" width="840">
+</p>
+
+Esta imagem exibe o resultado da execução no console. Os resultados confirmam o comportamento polimórfico:
+
+* Para o **Metodo 1**: Foram executadas as versões da Filha 1, Filha 2 e Classe Mãe, conforme cada instância no vetor.
+* Para o **Metodo 2**: A Filha 1 executou o método da Mãe (herança), enquanto a Filha 2 executou sua própria versão (sobrescrita).
+
+A última linha apresenta a execução da chamada direta feita no final do código.
+
+
 ## 🟩 Vídeo 22 - Associação - Conceito
 
 <video width="60%" controls>
@@ -1569,7 +1682,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/c949cc7d-caba-46fb-81d4-390588cd142f?autoplay=1
 
 ## 🟩 Vídeo 23 - Associação - Tipos
 
