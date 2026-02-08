@@ -2139,6 +2139,112 @@ Essa estrutura de pastas física é uma característica marcante do Java (difere
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/03eb0391-d627-4166-8604-79db356daeef?autoplay=1
 
+Este resumo aborda o papel fundamental dos modificadores de acesso na estruturação de softwares, detalhando como eles controlam a exposição de classes, atributos e métodos, e por que são essenciais para o encapsulamento.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h53m49s028.jpg" alt="" width="840">
+</p>
+
+Os **modificadores de acesso**, também conhecidos como visibilidades, têm como objetivo principal determinar o nível de exposição de uma classe, atributo ou método dentro de um sistema. O uso correto desses modificadores é um pilar fundamental para a aplicação efetiva da Orientação a Objetos, permitindo que boas práticas de design e segurança de dados sejam implementadas.
+
+Embora a visibilidade possa ser aplicada a classes, atributos e métodos, seu uso é mais frequente em atributos e métodos. No caso das classes, a vasta maioria é definida como pública, exceto em cenários específicos envolvendo classes internas (inner classes).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h53m56s516.jpg" alt="" width="840">
+</p>
+
+Existem três tipos principais de visibilidades providas pela teoria da Orientação a Objetos: **Private**, **Protected** e **Public**.
+
+Vale ressaltar que linguagens específicas podem implementar modificadores adicionais para atender necessidades próprias de arquitetura, como o modificador *default* no Java ou o *internal* no C#. Já o Python adota uma filosofia diferente, onde, por padrão, todos os elementos são públicos. Embora existam convenções em Python para sinalizar que um membro deve ser tratado como privado, a linguagem apenas sugere essa restrição sem impô-la rigidamente como ocorre em outras linguagens.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h53m58s473.jpg" alt="" width="840">
+</p>
+
+A visibilidade **Private** é a mais restritiva de todas. Quando um atributo ou método é definido como privado, ele só pode ser acessado ou utilizado de dentro da própria classe onde foi criado, permanecendo invisível para qualquer outra parte do sistema.
+
+Abaixo, a comparação da sintaxe para declaração de membros privados:
+
+**Java**
+
+```java
+private int i;
+private void do();
+```
+
+**C#**
+
+```csharp
+private int i;
+private void Do();
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h54m00s193.jpg" alt="" width="840">
+</p>
+
+A visibilidade **Protected** (protegido) oferece um nível intermediário de acesso. Os membros marcados como protegidos são visíveis dentro da própria classe, por outras classes que pertençam ao mesmo pacote e também por suas subclasses (através do mecanismo de herança), mesmo que estas estejam em pacotes diferentes.
+
+Abaixo, a comparação da sintaxe para declaração de membros protegidos:
+
+**Java**
+
+```java
+protected int i;
+protected void do();
+```
+
+**C#**
+
+```csharp
+protected int i;
+protected void Do();
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h54m02s986.jpg" alt="" width="840">
+</p>
+
+A visibilidade **Public** é a mais aberta de todas. Um atributo ou método definido como público pode ser acessado de qualquer lugar da aplicação, sem restrições de pacote ou hierarquia de classes.
+
+Abaixo, a comparação da sintaxe para declaração de membros públicos:
+
+**Java**
+
+```java
+public int i;
+public void do();
+```
+
+**C#**
+
+```csharp
+public int i;
+public void Do();
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h54m05s265.jpg" alt="" width="840">
+</p>
+
+A escolha de qual modificador utilizar depende da finalidade de cada componente. Não se deve pensar que a visibilidade pública é "melhor" por permitir acesso total, ou que a privada é "ruim" por ser restritiva.
+
+O segredo reside no **Encapsulamento**:
+
+* **Atributos** geralmente devem ser **privados** para garantir a proteção dos dados.
+* **Métodos** que permitem a comunicação entre diferentes partes do software costumam ser **públicos** ou **protegidos**.
+
+O desenvolvimento de um software robusto exige o uso conjunto dessas visibilidades para equilibrar proteção e funcionalidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h54m09s848.jpg" alt="" width="840">
+</p>
+
+Para consolidar esses conceitos, recomenda-se a análise prática através de projetos de exemplo. Observar como as classes interagem quando os modificadores são alterados ajuda a tornar os impactos de cada nível de visibilidade mais palpáveis e compreensíveis no fluxo de desenvolvimento.      
+
+
 ## 🟩 Vídeo 30 - Visibilidades - Exercício
 
 <video width="60%" controls>
@@ -2146,7 +2252,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/4d6fc777-c3e8-4f18-b728-0c0e0927b242?autoplay=1
 
 ## 🟩 Vídeo 31 - Conclusão
 
