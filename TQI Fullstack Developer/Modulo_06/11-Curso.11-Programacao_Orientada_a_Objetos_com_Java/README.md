@@ -1792,6 +1792,92 @@ Para consolidar o conhecimento sobre associações (composição, agregação e 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/2f60d3e7-07b4-4366-b159-532178bbfa24?autoplay=1
 
+Este resumo explora as diferentes formas de conectar classes em um sistema, detalhando como objetos interagem e dependem uns dos outros, seja por uma relação de "posse" ou de "uso".
+
+### Anotações
+
+#### Associação Estrutural: Composição
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h47m49s255.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é apresentada a implementação de uma associação estrutural do tipo **composição**. O exemplo utiliza as classes `Pessoa` e `Endereco`, onde a existência do endereço está estritamente vinculada à existência da pessoa. No código, isso se materializa definindo a classe `Endereco` como um atributo dentro da classe `Pessoa`.
+
+```java
+package one.digitalinnovation.oo;
+
+class Pessoa {
+    Endereco endereco;
+}
+```
+
+#### Definição da Classe Endereço
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h48m09s480.jpg" alt="" width="840">
+</p>
+
+Para viabilizar a composição demonstrada anteriormente, define-se a classe `Endereco`. Embora o código dessa classe seja simples, sua relação com a classe `Pessoa` é o que define o conceito de negócio: se a pessoa deixar de existir, o endereço associado a ela nesta estrutura também deixa de existir.
+
+```java
+package one.digitalinnovation.oo;
+
+class Endereco {
+}
+```
+
+#### Associação Estrutural: Agregação
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h48m47s843.jpg" alt="" width="840">
+</p>
+
+Aqui é demonstrada a **agregação** utilizando as classes `Disciplina` e `Aluno`. Diferente da composição, na agregação o objeto associado pode existir independentemente do objeto principal. No exemplo, um `Aluno` pode estar vinculado a uma `Disciplina`, mas se a disciplina for excluída, o aluno permanece existindo no sistema, podendo estar vinculado a outras disciplinas.
+
+Note que, embora o conceito semântico seja diferente da composição, a implementação técnica no Java permanece idêntica, utilizando um atributo para referenciar a outra classe.
+
+```java
+package one.digitalinnovation.oo;
+
+class Disciplina {
+    Aluno aluno;
+}
+```
+
+#### Associação Comportamental: Dependência
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h49m46s843.jpg" alt="" width="840">
+</p>
+
+A associação **comportamental**, ou **dependência**, é exemplificada através da classe `Compra`. Diferente das associações estruturais onde uma classe é atributo da outra, aqui a relação ocorre dentro de um método. O método `finalizar` depende da classe `Cupom` para executar sua lógica, recebendo-a como um parâmetro.
+
+```java
+package one.digitalinnovation.oo;
+
+class Compra {
+    void finalizar(Cupom cupom) {
+    }
+}
+```
+
+#### Entidade de Dependência: Cupom
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h49m56s243.jpg" alt="" width="840">
+</p>
+
+A classe `Cupom` é apresentada como a entidade que serve de suporte para a dependência demonstrada na classe `Compra`. Ela representa o objeto que é passado por parâmetro, evidenciando que a classe de negócio (Compra) necessita desta classe específica apenas para o momento da execução de um comportamento específico (finalizar).
+
+```java
+package one.digitalinnovation.oo;
+
+public class Cupom {
+}
+```
+
+
 ## 🟩 Vídeo 25 - Interface - Conceito
 
 <video width="60%" controls>
@@ -1799,7 +1885,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/41b7ac6d-1b37-4a46-88d6-f2623326dea6?autoplay=1
 
 ## 🟩 Vídeo 26 - Interface - Exercício
 
