@@ -1877,7 +1877,6 @@ public class Cupom {
 }
 ```
 
-
 ## 🟩 Vídeo 25 - Interface - Conceito
 
 <video width="60%" controls>
@@ -1887,6 +1886,59 @@ public class Cupom {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/41b7ac6d-1b37-4a46-88d6-f2623326dea6?autoplay=1
 
+Este guia explora o conceito de Interfaces, o último pilar relacional da POO discutido na série, após Herança e Associação. A interface é apresentada como um "contrato" fundamental que garante a consistência entre diferentes partes de um software.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-10h01m41s840.jpg" alt="" width="840">
+</p>
+
+Uma **interface** funciona como um **contrato** formal no desenvolvimento de software. Ela define um conjunto de comportamentos que uma classe deve obrigatoriamente seguir ao implementá-la. Ao assumir esse contrato, a classe se compromete a realizar todos os comportamentos que a interface disponibiliza, garantindo uma padronização na comunicação entre diferentes componentes do sistema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-10h01m46s288.jpg" alt="" width="840">
+</p>
+
+A implementação de interfaces varia conforme a sintaxe de cada linguagem de programação. Em **Java**, utiliza-se a palavra-chave `interface` para a definição e `implements` para que uma classe a utilize. No **C#**, a definição também usa `interface`, mas a implementação na classe é feita através do símbolo de dois pontos (`:`). Já em **Python**, o conceito de interface nativa não existe da mesma forma.
+
+```java
+[cite_start]// Exemplo em Java [cite: 7, 8, 15]
+interface A {
+}
+
+class B implements A {
+}
+```
+
+```csharp
+[cite_start]// Exemplo em C# [cite: 11, 12, 15]
+interface A {
+}
+
+class B : A {
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-10h01m49s137.jpg" alt="" width="840">
+</p>
+
+Para praticar a fixação do conceito, propõe-se o exercício de criar uma interface denominada `OperacaoMatematica`. Esta interface deve conter as assinaturas para as quatro operações básicas: soma, subtração, multiplicação e divisão. O objetivo é utilizar a linguagem de preferência seguindo as dicas de criação de classes e observar o que acontece ao tentar não implementar algum dos métodos exigidos pelo contrato.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-10h01m53s078.jpg" alt="" width="840">
+</p>
+
+Para dar continuidade aos estudos em Orientação a Objetos, é fundamental explorar tópicos avançados que complementam o uso de interfaces e herança:
+
+* **Tipos de classe:** Entender as diferenças entre classes Abstratas e Concretas.
+* **Métodos abstratos:** Estudar a aplicação de métodos sem implementação prévia.
+* **Características das associações:** Aprofundar-se nas peculiaridades das relações entre objetos.
+* **Palavras coringas:** Aprender o uso de `super`, `base` e `super()` para manipulação de hierarquias.
+* **Relações entre classes e interface:** Compreender as distinções práticas entre o uso de `extends` e `implements`.      
+
+
 ## 🟩 Vídeo 26 - Interface - Exercício
 
 <video width="60%" controls>
@@ -1894,7 +1946,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/4a64f758-df6a-4ec6-bfe0-d69430f9eb0c?autoplay=1
 
 # Parte 6 - A Organização de Pacotes e Visibilidades
 
