@@ -2268,7 +2268,6 @@ Nesta etapa inicial, é apresentada a **Classe1**, que serve como base para demo
 * `atributo1`: Privado (`private`), acessível apenas dentro da própria classe.
 * `atributo2`: Protegido (`protected`), acessível pela classe, suas subclasses e classes no mesmo pacote.
 * `atributo3`: Público (`public`), acessível de qualquer lugar do projeto.
-
 * **Métodos**: Seguem a mesma lógica de visibilidade dos atributos (`metodo1` privado, `metodo2` protegido e `metodo3` público).
 
 ```java
