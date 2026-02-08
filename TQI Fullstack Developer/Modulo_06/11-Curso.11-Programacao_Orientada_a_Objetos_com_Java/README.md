@@ -2453,7 +2453,6 @@ https://github.com/tlcdio/OOAula04.5.git
 https://github.com/tlcdio/OOAUla05.1.git
 https://github.com/tlcdio/OOAula05.2.git
 
-Bons estudos! wink
 
 # Certificado: Programação Orientada a Objetos com Java
 
