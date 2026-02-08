@@ -1675,6 +1675,26 @@ A última imagem mostra o console com o resultado final da execução. Note que 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/c949cc7d-caba-46fb-81d4-390588cd142f?autoplay=1
 
+Este guia explora o conceito de Associação, um pilar fundamental da Programação Orientada a Objetos que permite a colaboração entre diferentes classes e objetos. Diferente da Herança, que foca em hierarquia e subtipos, a Associação foca na interação e cooperação para atingir objetivos comuns e representar conceitos complexos de forma completa.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h20m14s371.jpg" alt="" width="840">
+</p>
+
+A **Associação** é um tipo de relacionamento entre classes e objetos que permite que eles interajam entre si para atingir seus objetivos. Diferente da herança, que trata de subtipos, a associação foca no uso mútuo: ela possibilita que os objetos peçam ajuda a outras classes para representar de forma completa o conceito ao qual se destinam.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h20m18s956.jpg" alt="" width="840">
+</p>
+
+Existem basicamente dois tipos principais de associação, classificados de acordo com a forma como se manifestam no sistema:
+
+* **Estrutural**: Esta associação manifesta-se na estrutura das classes e objetos, especificamente nos seus atributos. Ela pode ser do tipo **Composição** ou **Agregação**.
+* **Comportamental**: Este tipo está relacionado aos comportamentos ou métodos das classes. Essa forma de associação é chamada de **Dependência**.      
+
+
 ## 🟩 Vídeo 23 - Associação - Tipos
 
 <video width="60%" controls>
@@ -1682,7 +1702,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/d79f9295-3df7-470e-8c98-fd2458eb8bc1?autoplay=1
+
+
 
 ## 🟩 Vídeo 24 - Associação - Exercício
 
