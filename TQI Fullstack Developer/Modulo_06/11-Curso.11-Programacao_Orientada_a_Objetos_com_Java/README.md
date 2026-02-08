@@ -1704,6 +1704,83 @@ Existem basicamente dois tipos principais de associação, classificados de acor
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/d79f9295-3df7-470e-8c98-fd2458eb8bc1?autoplay=1
 
+Este guia explora as nuances das relações entre objetos, diferenciando como eles se estruturam, se comportam e quando escolher entre a rigidez da herança ou a flexibilidade da associação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h34m47s421.jpg" alt="" width="840">
+</p>
+
+A **Composição** é um tipo de associação estrutural caracterizada pela relação de "**Parte-Todo**". Nesse cenário, existe uma dependência de existência muito forte entre os objetos: a "parte" só faz sentido e só pode existir enquanto o "todo" existir.
+
+No exemplo apresentado de **Pessoa** e **Endereço**, o endereço é tratado como uma parte integrante e exclusiva daquela pessoa dentro do sistema. Se o objeto Pessoa for removido ou deixar de existir, o endereço associado a ela perde sua razão de ser e também deve ser excluído, evidenciando que um é composto especificamente pelo outro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h34m51s195.jpg" alt="" width="840">
+</p>
+
+A implementação da composição no código é feita através da criação de um atributo na classe principal que referencia a classe que representa a "parte". No exemplo em Java, a classe `Pessoa` possui um atributo do tipo `Endereco`.
+
+```java
+class Pessoa {
+    Endereco endereco;
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h34m53s947.jpg" alt="" width="840">
+</p>
+
+A **Agregação** funciona como o oposto da composição, sendo definida como uma relação "**Sem Parte-Todo**". Nela, a relação de dependência é fraca, o que significa que as partes podem existir de forma independente do todo.
+
+Utilizando o exemplo de **Disciplina** e **Aluno**, percebe-se que, embora um aluno esteja vinculado a uma disciplina, a existência do aluno não depende dela. Se a disciplina de "Orientação a Objetos" for excluída do sistema, o objeto Aluno permanece ativo, pois ele pode estar vinculado a outras disciplinas ou simplesmente existir de forma autônoma na base de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h34m58s452.jpg" alt="" width="840">
+</p>
+
+Embora a **Agregação** e a **Composição** possuam conceitos distintos sobre o ciclo de vida dos objetos, a implementação técnica em linguagens como Java, C# ou Python é idêntica: ambas utilizam atributos de classe para estabelecer o vínculo.
+
+A grande diferença não reside na sintaxe do código-fonte, mas sim na semântica e no comportamento do software durante a execução. Definir corretamente entre uma ou outra é crucial para modelar entidades do mundo real de forma fidedigna, garantindo que a gestão da memória e a persistência dos dados respeitem as regras de negócio.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h35m01s566.jpg" alt="" width="840">
+</p>
+
+A **Dependência** é um tipo de associação **comportamental**, definida pela relação "**Depende de**". Diferente da estrutural, onde um objeto contém outro como atributo, na dependência o vínculo ocorre através dos métodos (comportamentos).
+
+No exemplo da classe **Compra**, o método `finalizar` depende da existência de um objeto **Cupom** para realizar sua lógica, como calcular descontos ou validar a expiração. Aqui, a classe Compra não "possui" o Cupom de forma permanente, ela apenas o utiliza pontualmente para completar uma ação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h35m06s417.jpg" alt="" width="840">
+</p>
+
+Em termos de codificação, a dependência se manifesta quando uma classe recebe outra como parâmetro em um de seus métodos. No exemplo abaixo, a classe `Compra` utiliza a classe `Cupom` dentro da assinatura do método `finalizar`.
+
+```java
+class Compra {
+    finalizar(Cupom cupom, ...) {
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h35m07s401.jpg" alt="" width="840">
+</p>
+
+Ao comparar **Herança** e **Associação**, a principal diferença reside na rigidez versus flexibilidade. A herança define uma relação "é um" (subtipo) estabelecida em tempo de desenvolvimento, sendo muito mais rígida. Já a associação define uma relação "usa um", permitindo que os valores e vínculos sejam alterados dinamicamente durante a execução do software através de atributos ou métodos.
+
+Para decidir qual utilizar, deve-se aplicar a "pergunta mágica":
+
+* **Uma coisa É a outra?** Se for um subtipo, utiliza-se herança.
+* **Uma coisa USA a outra?** Se não for um subtipo, mas precisar interagir com ela, utiliza-se associação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-09h35m13s997.jpg" alt="" width="840">
+</p>
+
+Para consolidar o conhecimento sobre associações (composição, agregação e dependência), é proposto um exercício prático de codificação. O objetivo é replicar os exemplos conceituais apresentados nos slides utilizando a linguagem de programação de sua preferência, seguindo as boas práticas de criação de classes e estruturação de atributos e métodos.      
 
 
 ## 🟩 Vídeo 24 - Associação - Exercício
@@ -1713,7 +1790,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/2f60d3e7-07b4-4366-b159-532178bbfa24?autoplay=1
 
 ## 🟩 Vídeo 25 - Interface - Conceito
 
