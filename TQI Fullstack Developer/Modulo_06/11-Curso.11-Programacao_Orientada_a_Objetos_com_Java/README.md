@@ -2254,6 +2254,151 @@ Para consolidar esses conceitos, recomenda-se a análise prática através de pr
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/4d6fc777-c3e8-4f18-b728-0c0e0927b242?autoplay=1
 
+Este guia resume a demonstração prática sobre como os modificadores de acesso (private, protected e public) controlam a interação entre classes, subclasses e pacotes no desenvolvimento de software.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m04s660.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, é apresentada a **Classe1**, que serve como base para demonstrar os diferentes níveis de visibilidade em Java. A classe define três atributos e três métodos com modificadores distintos: `private`, `protected` e `public`.
+
+* **Atributos**:
+* `atributo1`: Privado (`private`), acessível apenas dentro da própria classe.
+* `atributo2`: Protegido (`protected`), acessível pela classe, suas subclasses e classes no mesmo pacote.
+* `atributo3`: Público (`public`), acessível de qualquer lugar do projeto.
+
+* **Métodos**: Seguem a mesma lógica de visibilidade dos atributos (`metodo1` privado, `metodo2` protegido e `metodo3` público).
+
+```java
+package one.digitalinnovation.oo;
+
+public class Classel {
+
+    private String atributol;
+    protected String atributo2;
+    public String atributo3;
+
+    private void metodol() {
+        // visível apenas internamente
+    }
+
+    protected void metode2() {
+        // visível para subclasses e mesmo pacote
+    }
+
+    public void metodn3() {
+        // visível globalmente
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m09s817.jpg" alt="" width="840">
+</p>
+
+A **Classe2** é introduzida como uma subclasse de `Classe1` (utilizando a palavra-chave `extends`). Por ser uma subclasse e estar situada no mesmo pacote (`one.digitalinnovation.oo`), ela herda membros da classe pai, mas respeita as restrições de visibilidade. Aqui, observa-se que ela possui acesso aos membros protegidos e públicos, mas é impedida de acessar o que é privado.
+
+```java
+package one.digitalinnovation.oo;
+
+class Classe2 extends Classe1 {
+    // Esta classe herda de Classe1
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m12s763.jpg" alt="" width="840">
+</p>
+
+Dentro de um método na **Classe2**, demonstra-se o acesso direto aos atributos herdados. Como `Classe2` é um subtipo de `Classe1`, ela consegue enxergar o `atributo2` (protected) e o `atributo3` (public). O `atributo1` não aparece nas opções de preenchimento automático pois, por ser privado, pertence exclusivamente à `Classe1`.
+
+```java
+void metodo() {
+    // Acesso permitido aos atributos 2 e 3
+    atributo2;
+    atributo3;
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m16s002.jpg" alt="" width="840">
+</p>
+
+Da mesma forma que ocorreu com os atributos, a visibilidade dos métodos na **Classe2** é filtrada. A IDE sugere o `metodo2` (protected) e o `metodo3` (public) para uso dentro da subclasse. O `metodo1` permanece oculto por ser privado na superclasse.
+
+```java
+void metodo() {
+    // Chamadas permitidas
+    metodo2();
+    metodo3();
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m33s966.jpg" alt="" width="840">
+</p>
+
+A **Classe3** apresenta um cenário diferente: ela pertence ao mesmo pacote que a `Classe1`, mas **não é uma subclasse** (não utiliza `extends`). Para acessar os membros da `Classe1`, ela utiliza uma associação (instanciação do objeto `classe1`).
+
+```java
+package one.digitalinnovation.oo;
+
+class Classe3 {
+    Classel classel;
+
+    void metodo() {
+        // Acesso via associação
+        classel.
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m36s074.jpg" alt="" width="840">
+</p>
+
+Ao tentar acessar os atributos da `Classe1` através do objeto instanciado na **Classe3**, o IntelliSense do IntelliJ mostra que `atributo2` e `atributo3` estão disponíveis. O acesso ao `atributo2` (protected) é possível aqui porque, embora a `Classe3` não seja uma subclasse, ela reside no **mesmo pacote** que a `Classe1`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m41s270.jpg" alt="" width="840">
+</p>
+
+A mesma regra de "mesmo pacote" se aplica aos métodos na **Classe3**. Ao digitar `classe1.m`, a IDE sugere o `metodo2()` e o `metodo3()`. O `metodo1()` continua inacessível por ser privado. Isso reforça que o modificador `protected` permite visibilidade tanto por herança quanto por vizinhança de pacote.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m44s961.jpg" alt="" width="840">
+</p>
+
+A **Classe4** introduz o cenário de restrição máxima: ela está em um pacote diferente (`outro.pacote`) e não possui relação de herança com a `Classe1`. Por estar fora do pacote original, é necessário realizar o `import` da `Classe1` para utilizá-la via associação.
+
+```java
+package outro.pacote;
+
+import one.digitalinnovation.oo.Classel;
+
+class Classe4 {
+    Classel classel;
+
+    void matado() {
+        // Tentativa de acesso em pacote diferente
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h05m48s522.jpg" alt="" width="840">
+</p>
+
+Neste último exemplo, ao tentar acessar os membros de `classe1` a partir da **Classe4**, apenas o `atributo3` e o `metodo3` são visíveis.
+
+* O `atributo1` (private) é bloqueado por ser de outra classe.
+* O `atributo2` (protected) é bloqueado porque a `Classe4` **não é subclasse** e **não está no mesmo pacote**.
+* Apenas o que é **public** (membro 3) permanece acessível neste contexto externo.      
+
+
 ## 🟩 Vídeo 31 - Conclusão
 
 <video width="60%" controls>
@@ -2261,7 +2406,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/f0f03fc6-8f1c-4922-948e-612bd01eaaf3?autoplay=1
 
 
 
