@@ -2457,5 +2457,5 @@ Bons estudos! wink
 
 # Certificado: Programação Orientada a Objetos com Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/HRBMNOZW.pdf
+- Certificado em pdf: [Certificado-Programacao_Orientada_a_Objetos_com_Java.pdf](000-Midia_e_Anexos/Certificado-Programacao_Orientada_a_Objetos_com_Java.pdf)
