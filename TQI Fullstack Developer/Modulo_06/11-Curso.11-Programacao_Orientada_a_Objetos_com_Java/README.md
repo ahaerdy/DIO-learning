@@ -1948,6 +1948,75 @@ Para dar continuidade aos estudos em Orientação a Objetos, é fundamental expl
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/4a64f758-df6a-4ec6-bfe0-d69430f9eb0c?autoplay=1
 
+Este guia resume a aula prática sobre a criação e implementação de interfaces em Java. O foco é entender como as interfaces funcionam como um "contrato" que obriga as classes a seguirem uma estrutura pré-definida, garantindo consistência e abstração no desenvolvimento de software.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h13m25s625.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é apresentada a criação de uma **interface** em Java. Diferente das classes convencionais, uma interface funciona como um contrato que define apenas as assinaturas dos métodos, sem possuir um corpo de implementação (abertura e fechamento de chaves). A interface `OperacaoMatematica` estabelece quatro operações básicas: soma, subtração, multiplicação e divisão.
+
+Os métodos são declarados de forma simplificada, contendo o tipo de retorno (`void`), o nome e os parâmetros necessários, terminando obrigatoriamente com ponto e vírgula. Essa estrutura define o que uma classe deve fazer, deixando o "como fazer" para a classe que decidir implementá-la.
+
+```java
+package one.digitalinnovation.oo;
+
+/**
+ * Interface de exemplo para o exercício da Aula 4 de Orientação a Objetos.
+ */
+interface OperacaoMatematica {
+
+    void soma(double operando1, double operando2);
+
+    void subtracao(double operando1, double operando2);
+
+    void multiplicacao(double operando1, double operando2);
+
+    void divisao(double operando1, double operando2);
+
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h13m34s557.jpg" alt="" width="840">
+</p>
+
+Aqui, observa-se a aplicação prática da interface através da classe `Calculadora`, que utiliza a palavra reservada `implements`. Ao implementar `OperacaoMatematica`, a classe assume a responsabilidade de fornecer o código funcional para todos os métodos declarados na interface, utilizando a anotação `@Override` para garantir a sobrescrita correta.
+
+O exemplo destaca o comportamento do compilador quando um método obrigatório é omitido. Ao comentar o método `divisao`, a IDE exibe um erro informando que a classe deve implementar todos os métodos abstratos da interface ou ser declarada como abstrata. Isso reforça a segurança do código, garantindo que qualquer objeto do tipo `OperacaoMatematica` possua todas as funcionalidades previstas no contrato.
+
+```java
+class Calculadora implements OperacaoMatematica {
+
+    @Override
+    public void soma(double operando1, double operando2) {
+        System.out.println("Soma: " + (operando1 + operando2));
+    }
+
+    @Override
+    public void subtracao(double operando1, double operando2) {
+        System.out.println("subtracao: " + (operando1 - operando2));
+    }
+
+    @Override
+    public void multiplicacao(double operando1, double operando2) {
+        System.out.println("multiplicacao: " + (operando1 * operando2));
+    }
+
+    // O erro ocorre se o método abaixo não for implementado:
+    // @Override
+    // public void divisao(double operando1, double operando2) {
+    //     System.out.println("divisao: " + (operando1 / operando2));
+    // }
+
+}
+
+```
+
+
 # Parte 6 - A Organização de Pacotes e Visibilidades
 
 ## 🟩 Vídeo 27 - Pacotes - Conceitos
@@ -1957,7 +2026,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/635817c5-c96f-450d-976e-1235f37f5821?autoplay=1
 
 ## 🟩 Vídeo 28 - Pacotes - Exercício
 
