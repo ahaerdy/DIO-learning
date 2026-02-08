@@ -2028,6 +2028,70 @@ class Calculadora implements OperacaoMatematica {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/635817c5-c96f-450d-976e-1235f37f5821?autoplay=1
 
+Este guia resume os conceitos fundamentais para "colocar ordem na casa" em projetos de software, explorando como os pacotes ajudam a separar responsabilidades e como diferentes linguagens (Java, C# e Python) lidam com essa estrutura.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h25m56s920.jpg" alt="" width="840">
+</p>
+
+Esta aula marca o início do módulo sobre a organização dentro da orientação a objetos. O foco principal é compreender como estruturar o desenvolvimento de software para manter a ordem e o controle sobre as classes criadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h26m00s625.jpg" alt="" width="840">
+</p>
+
+Os objetivos centrais desta etapa consistem em apresentar os mecanismos que permitem "colocar ordem na casa". Para isso, serão explorados dois conceitos fundamentais:
+
+* **Pacotes:** Ferramentas de organização para agrupar elementos relacionados.
+* **Visibilidades:** Definições de quem pode acessar ou enxergar determinados componentes dentro do sistema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h26m01s980.jpg" alt="" width="840">
+</p>
+
+Os pacotes são definidos como uma organização física ou lógica estabelecida para separar classes que possuem responsabilidades distintas. O intuito é tornar a aplicação mais organizada, permitindo a separação de classes com finalidades e representatividades diferentes, como entidades de negócio, classes utilitárias e componentes de integração.
+
+Fisicamente, os pacotes costumam se traduzir em pastas e subpastas no sistema operacional. Logicamente, eles funcionam como divisões virtuais que ajudam a gerenciar o software mesmo quando muitas classes compartilham o mesmo espaço físico.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h26m06s797.jpg" alt="" width="840">
+</p>
+
+A implementação de pacotes varia conforme a linguagem de programação, embora o conceito permaneça constante. Abaixo estão as palavras-chave e estruturas utilizadas em Java, C# e Python:
+
+```java
+// Em Java
+package ...;
+import ...;
+
+```
+
+```csharp
+// Em C#
+namespace {...}
+using ...;
+
+```
+
+```python
+# Em Python
+# Versão 2.x exigia o arquivo __init__.py nas pastas
+from ... import ...
+import ...
+
+```
+
+Em Java e C#, a separação por pacotes (ou namespaces) exige a importação explícita para que uma classe consiga "enxergar" outra em uma localização diferente. No Python, a partir da versão 3.0, a necessidade do arquivo `__init__.py` tornou-se opcional, mas as instruções `from` e `import` continuam sendo as ferramentas para gerenciar essa visibilidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h26m13s722.jpg" alt="" width="840">
+</p>
+
+Para consolidar o conhecimento, a etapa final consiste na análise de um projeto prático de exemplo. O objetivo é observar como a criação de pacotes impacta diretamente na visibilidade das classes e na estrutura geral da aplicação, utilizando o Java como base para a demonstração.
+
+
 ## 🟩 Vídeo 28 - Pacotes - Exercício
 
 <video width="60%" controls>
@@ -2035,7 +2099,36 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/e5ec1fb5-26a6-42ff-a688-368f7aeba156?autoplay=1
+
+Este guia explora a relação prática entre a declaração de pacotes no código Java e a organização física de pastas no sistema operacional, demonstrando como o gerenciamento de dependências internas funciona através de importações.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-13h33m58s886.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos a organização de um projeto Java utilizando a IDE IntelliJ IDEA para compreender o funcionamento prático dos **pacotes** (packages). Em Java, a declaração de um pacote no topo do arquivo não é apenas uma classificação lógica, mas reflete diretamente a estrutura de diretórios no sistema operacional.
+
+Como observado na interface do projeto, as classes são organizadas em uma hierarquia de pastas. Por exemplo, a classe `ExemploPacotes` está situada em um nível específico, enquanto a classe `ExemploPacotes1` reside em um subpacote (um nível mais profundo na árvore de diretórios). Para que uma classe consiga utilizar outra que está em um pacote diferente ou em um nível abaixo, é obrigatório o uso do comando `import`.
+
+O exemplo prático demonstra a classe `ExemplosPacotes3` pertencente ao pacote `qualquer.outro.pacote`, que precisa importar explicitamente a classe `ExemploPacotes1` para utilizá-la como atributo, já que elas não compartilham o mesmo nível hierárquico.
+
+```java
+package qualquer.outro.pacote;
+
+import one.digitalinnovation.oo.outropacote.ExemploPacotes1;
+
+class ExemplosPacotes {
+    
+    ExemploPacotes1 exemploPacotes1;
+    
+}
+```
+
+Essa estrutura de pastas física é uma característica marcante do Java (diferente de linguagens como C#, onde a separação pode ser puramente lógica), facilitando a organização e o encapsulamento dos componentes do sistema.
+
 
 ## 🟩 Vídeo 29 - Visibilidades - Conceitos
 
@@ -2044,7 +2137,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/03eb0391-d627-4166-8604-79db356daeef?autoplay=1
 
 ## 🟩 Vídeo 30 - Visibilidades - Exercício
 
