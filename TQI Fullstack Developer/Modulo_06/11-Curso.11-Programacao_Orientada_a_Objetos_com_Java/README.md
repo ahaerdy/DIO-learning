@@ -2408,10 +2408,54 @@ Neste último exemplo, ao tentar acessar os membros de `classe1` a partir da **C
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/programacao-orientada-a-objetos/learning/f0f03fc6-8f1c-4922-948e-612bd01eaaf3?autoplay=1
 
 
+Este resumo sintetiza as orientações finais do curso de POO, focando na transição do conhecimento teórico para a maestria prática e o desenvolvimento de softwares de alta qualidade.
+
+### Anotações
+
+#### Aula 6: Próximos passos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h17m39s620.jpg" alt="" width="840">
+</p>
+
+Nesta etapa de encerramento, compreendemos que o domínio dos conceitos fundamentais é apenas o ponto de partida. Para alcançar a excelência no desenvolvimento de softwares, a teoria apresentada deve ser consolidada através da prática constante. Embora os pilares da **Orientação a Objetos** tenham sido estabelecidos, a construção de sistemas robustos e profissionais exige a exploração de camadas adicionais de conhecimento que vão além da sintaxe e dos conceitos básicos.
+
+#### Próximos Passos na Programação Orientada a Objetos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-08-14h17m41s171.jpg" alt="" width="840">
+</p>
+
+Para evoluir na carreira e garantir a entrega de softwares de alta qualidade, é fundamental aprofundar-se nos seguintes tópicos:
+
+* **Padrões de Projeto (Design Patterns):** Essenciais para criar sistemas fáceis de manter e evoluir, aplicando soluções consagradas para problemas recorrentes.
+* **Boas Práticas e SOLID:** O estudo de princípios como o SOLID e técnicas de codificação limpa garantem que a orientação a objetos seja aplicada de forma eficiente.
+* **Refatoração:** O processo de melhorar a estrutura interna do código sem alterar seu comportamento externo é vital para a longevidade do software.
+* **UML (Unified Modeling Language):** Uma linguagem de modelagem padrão que auxilia na visualização e documentação da estrutura do sistema.
+* **Frameworks:** Ferramentas que aceleram o desenvolvimento e ajudam a implementar padrões de mercado de maneira mais simples e eficaz.
+* **Prática e Estudo:** O aperfeiçoamento contínuo é o único caminho para a especialização, exigindo dedicação constante aos estudos e à aplicação prática dos conhecimentos adquiridos.      
+
 
 ##  Materiais de Apoio
 
-# Certificado: 
+GitHub
+Todo código-fonte desenvolvido durante o curso foi versionado no GitHub, nos seguintes endereços:
+
+https://github.com/tlcdio/OOAula03.1.git
+https://github.com/tlcdio/OOAula03.2.git
+https://github.com/tlcdio/OOAula03.3.git
+https://github.com/tlcdio/OOAula03.4.git
+https://github.com/tlcdio/OOAula04.1.git
+https://github.com/tlcdio/OOAula04.2.git
+https://github.com/tlcdio/OOAula04.3.git
+https://github.com/tlcdio/OOAula04.4.git
+https://github.com/tlcdio/OOAula04.5.git
+https://github.com/tlcdio/OOAUla05.1.git
+https://github.com/tlcdio/OOAula05.2.git
+
+Bons estudos! wink
+
+# Certificado: Programação Orientada a Objetos com Java
 
 - Link na plataforma: 
 - Certificado em pdf:
