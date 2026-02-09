@@ -98,7 +98,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Tratamento de Exceções em Java](Modulo_06/09-Curso.09-Tratamento_de_Excecoes_em_Java)
 - [ ] Desafio: [Desafios TQI - Java](Modulo_06/10-Desafio-Desafios_TQI-Java)
 - [ ] Curso: [Programação Orientada a Objetos com Java](Modulo_06/11-Curso.11-Programacao_Orientada_a_Objetos_com_Java)
-- [ ] Curso: Trabalhando com Banco de Dados utilizando JDBC e JPA
+- [ ] Curso: [Trabalhando com Banco de Dados utilizando JDBC e JPA](Modulo_06/12-Curso.12-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA)
 - [ ] Curso: Persistência de Dados com Java, JPA e Hibernate
 - [ ] Projeto: Criando um Banco Digital com Java e Orientação a Objetos 
 - [ ] Curso: Testes Unitários Com JUnit
