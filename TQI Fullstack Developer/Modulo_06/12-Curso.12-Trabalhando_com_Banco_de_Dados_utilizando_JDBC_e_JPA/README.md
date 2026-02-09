@@ -794,10 +794,6 @@ As anotações permitem customizar a relação entre o código Java e o banco:
 
 #### Configuração e Dependências
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m31s779.jpg" alt="" width="840">
-</p>
-
 Para utilizar o JPA, os passos fundamentais incluem:
 
 1. Download da API do JPA e do driver JDBC (ex: MySQL) via Maven ou Gradle.
@@ -813,17 +809,43 @@ Para utilizar o JPA, os passos fundamentais incluem:
 O exemplo abaixo demonstra as dependências necessárias em um arquivo `build.gradle`:
 
 ```gradle
-dependencies {
-    // API do JPA (Apenas especificações)
-    // compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+plugins {
+    id 'java'
+}
 
-    // Driver JDBC para MySQL
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // ======= Necessarios para a parte 1 do curso. =========
+
+    // Notar que essa API nao faz o programa rodar, apenas valida as annotations (pois sao so as especificacoes)
+    // https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
+    //compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+
+    // Drive JDBC que sera utilizado pelos frameworks que implementam o JPA
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
 
-    // Implementação Hibernate (Necessária para execução)
+    // === Necessarios para a parte 2 do curso. Essas sao as implementacoes do JPA (Hibernate e EclipseLink) e o automatizador de criacao de Metamodels ===
+
+    // Implementacao Hibernate
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.12.Final'
 
-    // Gerador de Metamodels
+    // Implementacao EclipseLink
+    // https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink
+    //compile group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.7.6'
+
+    // Automatizador de criacao de Metamodels
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen
     annotationProcessor('org.hibernate:hibernate-jpamodelgen:5.4.13.Final')
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
@@ -832,34 +854,74 @@ dependencies {
 
 #### O Arquivo persistence.xml
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h24m03s984.jpg" alt="" width="840">
-</p>
-
 O arquivo `persistence.xml` centraliza as configurações da Unidade de Persistência (`persistence-unit`). Ele define o provedor (ex: Hibernate), as classes mapeadas e as propriedades de conexão com o banco de dados:
 
 ```xml
-<persistence-unit name="part2-DIO">
-    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    <class>classes.Aluno</class>
-    <class>classes.Estado</class>
-    <properties>
-        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/digital_innovation_one" />
-        <property name="javax.persistence.jdbc.user" value="root" />
-        <property name="javax.persistence.jdbc.password" value="password" />
-        <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
-        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
-        <property name="hibernate.show_sql" value="true" />
-        <property name="hibernate.hbm2ddl.auto" value="create" />
-    </properties>
-</persistence-unit>
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <!-- Unidade de persistencia da parte 1 do curso (Somente JPA) -->
+    <persistence-unit name="part1-DIO">
+        <description>Unidade de persistencia da parte 1 do tutorial basico de JPA da Digital Innovation One sem implementacoes (Somente JPA) </description>
+
+        <!-- Classes (entidades) que serao mapeadas -->
+        <class>classes.Aluno</class>
+        <class>classes.Estado</class>
+
+        <!-- Configuracoes de conexao ao banco de dados -->
+        <properties>
+            <!-- Configuracoes do banco de dados -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/digital_innovation_one" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="password" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+        </properties>
+    </persistence-unit>
+
+    <!-- ================================================================ -->
+    <!-- Unidade de persistencia da parte 2 do curso (Com implementacao Hibernate ou EclipseLink) -->
+    <persistence-unit name="part2-DIO">
+        <description>Unidade de persistencia da parte 2 do tutorial basico de JPA da Digital Innovation One com implementacoes (Hibernate ou EclipseLink) </description>
+
+        <!-- Implementacao do JPA -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider> -->
+
+        <!-- Classes (entidades) que serao mapeadas -->
+        <class>classes.Aluno</class>
+        <class>classes.Estado</class>
+
+        <!-- Configuracoes de conexao ao banco de dados e do Hibernate/EclipseLink -->
+        <properties>
+            <!-- Configuracoes do banco de dados -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/digital_innovation_one" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="password" />
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+
+            <!-- Configuracoes do Hibernate (as propriedades sao reconhecidas se estiver usando a implementacao do Hibernate) -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <!-- Possible values for hibernate.hbm2ddl.auto are: validate, update, create, create-drop -->
+
+            <!-- Configuracoes do EclipseLink (as propriedades sao reconhecidas se estiver usando a implementacao do EclipseLink) -->
+            <!-- <property name="eclipselink.target-database" value="MySQL" /> -->
+            <!-- <property name="eclipselink.logging.level.sql" value="FINE" /> -->
+            <!-- <property name="eclipselink.ddl-generation" value="create-tables" /> -->
+            <!-- <property name="eclipselink.ddl-generation.output-mode" value="database" /> -->
+            <!-- <property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
+        </properties>
+    </persistence-unit>
+</persistence>
+
 ```
 
 #### Implementação da Classe Entidade: Aluno
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h25m06s723.jpg" alt="" width="840">
-</p>
 
 Abaixo, a implementação da classe `Aluno` utilizando as anotações do JPA para definir chaves primárias e relacionamentos:
 
@@ -872,7 +934,7 @@ import javax.persistence.*;
 public class Aluno {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
 
     @Column(nullable = false)
@@ -886,15 +948,62 @@ public class Aluno {
 
     public Aluno() { }
 
-    // Getters e Setters omitidos...
+    public Aluno(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public Aluno(String nome, int idade, Estado estado) {
+        this.nome = nome;
+        this.idade = idade;
+        this.estado = estado;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+            "id=" + id +
+            ", nome='" + nome + '\'' +
+            ", idade=" + idade +
+            ", estado=" + estado +
+            '}';
+    }
 }
 ```
 
 #### Implementação da Classe Entidade: Estado
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h27m15s228.jpg" alt="" width="840">
-</p>
 
 A classe `Estado` demonstra um relacionamento um-para-muitos com a entidade `Aluno`:
 
@@ -909,7 +1018,7 @@ import java.util.List;
 public class Estado {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
 
     @Column(nullable = false)
@@ -918,41 +1027,111 @@ public class Estado {
     @Column(nullable = false)
     private String sigla;
 
-    @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(
+        mappedBy = "estado",
+        cascade = CascadeType.ALL,
+        orphanRemoval = true
+    )
     private List<Aluno> alunos = new ArrayList<>();
 
     public Estado() { }
 
-    // Getters e Setters omitidos...
+    public Estado(String nome, String sigla) {
+        this.nome = nome;
+        this.sigla = sigla;
+    }
+
+    public Estado(String nome, String sigla, List<Aluno> alunos) {
+        this.nome = nome;
+        this.sigla = sigla;
+        this.alunos = alunos;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+
+    @Override
+    public String toString() {
+        return "Estado{" +
+            "id=" + id +
+            ", nome='" + nome + '\'' +
+            ", sigla='" + sigla + '\'' +
+            ", alunos=" + alunos +
+            '}';
+    }
 }
 ```
 
 #### Execução e Persistência de Dados
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h29m06s237.jpg" alt="" width="840">
-</p>
-
 O código abaixo exemplifica o uso do `EntityManager` para persistir objetos no banco de dados. Note que a execução requer uma implementação (como Hibernate) presente no projeto.
 
 ```java
+package part1;
+
+import classes.Aluno;
+import classes.Estado;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 public class ExecutionPart1 {
     public static void main(String[] args) {
-        // Inicialização
+
+        // OBS: Esse codigo pode ou nao funcionar de acordo com a biblioteca que foi baixada. Se estiver somente com o JPA baixado, o codigo NAO IRA funcionar.
+        // porem se estiver com a biblioteca de algum framework com implementacao JPA (Hibernate ou Eclipselink), o JPA ira automaticamente utiliza-lo.
+
+        // O ideal eh que nessa parte (Parte 1) o codigo EXECUTE COM ERROR (Ao tentar executar ira mostrar um error afirmando que nao foi encontrado nenhuma implementacao do JPA).
+        // pois aqui nao deveria ter nenhuma implementacao JPA sendo utilizada, apenas o JPA puro para demonstrar que atraves dele eh possivel definir a estrutura do codigo e depois escolher
+        // a implementacao que ira utilizar. Apenas na parte 2 do curso sera escolhida uma implementacao para o codigo executar sem error
+
+        // 1 - Passos iniciais para criar um gerenciador de entidades com o banco de dados especificado no arquivo "persistence.xml"
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("part1-DIO");
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-        // Criação de instâncias
+        // 2.1 - Criar instancias para serem adicionadas no banco de dados
         Estado estadoParaAdicionar = new Estado("Rio de Janeiro", "RJ");
         Aluno alunoParaAdicionar = new Aluno("Daniel", 29, estadoParaAdicionar);
 
-        // Transação e Persistência
+        // 2.2 - Iniciar uma trasacao para adicionar as instancias no banco de dados
         entityManager.getTransaction().begin();
+
         entityManager.persist(estadoParaAdicionar);
         entityManager.persist(alunoParaAdicionar);
+
         entityManager.getTransaction().commit();
 
-        // Encerramento
+        // 3 - Encerrar o gerenciador de entidades e encerrar a fabrica de gerenciadores de entidade.
         entityManager.close();
         entityManagerFactory.close();
     }
