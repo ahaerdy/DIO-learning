@@ -411,10 +411,6 @@ O **ResultSet** funciona como um cursor que aponta para as linhas retornadas pel
 * O método `.next()` move o cursor para a próxima linha e retorna `true` enquanto houver dados.
 * Para obter o conteúdo das colunas, utilizamos os métodos "get" tipados (ex: `.getInt()`, `.getString()`), passando o nome da coluna ou seu índice como parâmetro.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h12m05s613.jpg" alt="" width="840">
-</p>
-
 Abaixo, a classe de modelo `Aluno`, que representa a entidade do banco de dados no mundo Java:
 
 ```java
@@ -472,10 +468,6 @@ public class Aluno {
 }
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h19m30s938.jpg" alt="" width="840">
-</p>
-
 O arquivo `connection.properties` armazena as configurações de acesso ao banco de forma externa ao código compilado:
 
 ```properties
@@ -485,10 +477,6 @@ db.name=digital_innovation_one # Nome do esquema/banco de dados
 db.user.login=root           # Usuário para autenticação
 db.user.password=password    # Senha para autenticação
 ```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h19m31s931.jpg" alt="" width="840">
-</p>
 
 A classe `ConnectionFactory` centraliza a lógica de criação de conexões:
 
@@ -551,10 +539,6 @@ public class ConnectionFactory {
 }
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h19m32s794.jpg" alt="" width="840">
-</p>
-
 O padrão DAO isola a lógica de persistência. Abaixo, o detalhamento do método de listagem:
 
 ```java
@@ -591,10 +575,6 @@ public List<Aluno> list() {
     return alunos; // Retorna a lista populada ou vazia
 }
 ```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h19m33s567.jpg" alt="" width="840">
-</p>
 
 A classe `QueriesExecution` demonstra o uso prático de todas as camadas construídas:
 
@@ -638,10 +618,6 @@ public class QueriesExecution {
     }
 }
 ```
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h35m29s484.jpg" alt="" width="840">
-</p>
 
 Abaixo, o detalhamento do método `update` dentro da classe `AlunoDAO`, demonstrando a atribuição de parâmetros:
 
