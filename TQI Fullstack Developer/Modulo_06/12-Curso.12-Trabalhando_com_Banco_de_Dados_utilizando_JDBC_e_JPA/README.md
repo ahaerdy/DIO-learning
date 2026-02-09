@@ -279,7 +279,7 @@ public class ConnectionJDBC {
 
 O uso do bloco `try-catch` (especificamente o **try-with-resources**) no código de conexão JDBC não é apenas uma boa prática, mas uma medida de segurança e estabilidade para a aplicação.
 
-Aqui está a análise detalhada da sua necessidade e finalidade:
+Análise detalhada da sua necessidade e finalidade:
 
 #### 1. A Natureza da Operação (Por que o Try?)
 
@@ -289,7 +289,7 @@ Conectar-se a um banco de dados é uma operação considerada "instável" por na
 * A rede pode oscilar.
 * As credenciais (usuário/senha) podem estar incorretas.
 
-Por isso, o Java **obriga** o uso de tratamento de exceções. Se você tentar usar o `DriverManager.getConnection` sem um bloco `try-catch`, o código nem sequer compilará. O bloco `try` sinaliza ao programa: *"Tente executar este conjunto de instruções que podem falhar a qualquer momento"*.
+Por isso, o Java **obriga** o uso de tratamento de exceções. Se você tentar usar o `DriverManager.getConnection` sem um bloco `try-catch`, o código *NEM SEQUER COMPILARÁ*. O bloco `try` sinaliza ao programa: *"Tente executar este conjunto de instruções que podem falhar a qualquer momento"*.
 
 #### 2. O Recurso "With-Resources" (A finalidade do parêntese)
 
