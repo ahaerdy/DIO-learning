@@ -667,7 +667,55 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/ebd9f64e-cce8-4993-a283-3e7f5476b386?autoplay=1
+
+Este vídeo serve como uma introdução à aula de JPA (Java Persistence API) dentro do curso de Java e Banco de Dados, apresentando o instrutor, a agenda da aula e os pré-requisitos para o ambiente de desenvolvimento.
+
+### Anotações
+
+#### Introdução ao Curso
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h55m33s705.jpg" alt="" width="840">
+</p>
+
+Esta aula apresenta os conceitos fundamentais de **Java e o Banco de Dados**, focando especificamente no **Java JPA Básico**. O instrutor Daniel Karam, Desenvolvedor de Software Sênior, inicia a jornada de aprendizado sobre como a linguagem Java se integra às camadas de persistência de dados.
+
+#### Objetivos da Aula
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h55m37s609.jpg" alt="" width="840">
+</p>
+
+O conteúdo está estruturado para cobrir três pilares essenciais para o domínio da persistência de dados em Java:
+
+1. **Entendendo o JPA**: Uma visão conceitual sobre a Java Persistence API.
+2. **Implementações do JPA**: O uso de frameworks de mercado como **Hibernate** e **EclipseLink**.
+3. **Linguagens de consulta**: Foco em consultas orientadas a objetos para manipulação eficiente do banco de dados.
+
+#### Requisitos Básicos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h55m38s921.jpg" alt="" width="840">
+</p>
+
+Para acompanhar as atividades práticas, é necessário configurar o ambiente de desenvolvimento com as seguintes ferramentas:
+
+* **MySQL (SGBD)**: Sistema de gerenciamento de banco de dados e noções básicas de SQL.
+* **Java Development Kit (JDK)**: Versão 1.8 ou superior.
+* **IntelliJ 2019.2.3 IDE**: Ambiente de desenvolvimento sugerido (podendo ser substituído por Eclipse ou NetBeans).
+* **Gradle 5.3.1**: Ferramenta de automação de compilação para gerenciar e baixar as APIs necessárias do projeto.
+
+#### Materiais de Apoio
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h55m41s444.jpg" alt="" width="840">
+</p>
+
+Todo o material utilizado, incluindo códigos-fonte das aulas práticas e slides para diferentes sistemas operacionais (Windows e Linux), está disponível publicamente no GitHub:
+
+* **Link do Repositório**: [https://github.com/danielkv7/digital-innovation-one/tree/master/Aula_JPA_basico](https://www.google.com/search?q=https://github.com/danielkv7/digital-innovation-one/tree/master/Aula_JPA_basico)      
+
 
 ### 🟩 Vídeo 07 - Entendendo o JPA e começando o mapeamento do banco
 
@@ -676,7 +724,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/a6896637-d037-4534-82a8-3f651535fbe4?autoplay=1
 
 ### 🟩 Vídeo 08 - Implementações do JPA
 
