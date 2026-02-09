@@ -362,6 +362,316 @@ Para consolidar o aprendizado, os exercícios finais propõem:
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/f0c8a11c-cb6c-474b-bb44-fac4b5d575ef?autoplay=1
 
+Este guia resume a parte 3 do curso de Java e Banco de Dados, focando na execução de consultas SQL através da aplicação Java, utilizando a biblioteca JDBC. O conteúdo aborda desde a teoria das interfaces de consulta até a implementação prática de um CRUD completo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h05m34s805.jpg" alt="" width="840">
+</p>
+
+Esta imagem marca o início da terceira parte do treinamento, focada especificamente em **Consultas com JDBC**. O objetivo central é capacitar o desenvolvedor a interagir com bancos de dados relacionais utilizando a linguagem Java, permitindo que a aplicação envie comandos SQL e receba os dados processados de forma eficiente e segura.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h05m37s919.jpg" alt="" width="840">
+</p>
+
+O JDBC disponibiliza três interfaces fundamentais para a execução de comandos SQL. A escolha de cada uma depende da necessidade técnica da consulta:
+
+* **Statement**: Utilizada para executar instruções SQL simples e estáticas, onde não há necessidade de passar parâmetros dinâmicos.
+* **PreparedStatement**: Uma extensão do Statement que permite a execução de consultas parametrizáveis (com o uso do caractere `?`), sendo a opção mais segura e performática.
+* **CallableStatement**: Interface específica para a execução de *Stored Procedures* (procedimentos armazenados) no banco de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h05m40s924.jpg" alt="" width="840">
+</p>
+
+O uso de **PreparedStatement** é fortemente recomendado em relação ao Statement comum por três pilares críticos:
+
+1. **Previne SQL Injection**: Ao tratar os parâmetros separadamente do comando SQL, evita-se que códigos maliciosos inseridos por usuários sejam executados como comandos.
+2. **Melhora a legibilidade**: O código fica mais limpo, sem a necessidade de concatenações complexas de strings para formar o comando SQL.
+3. **Melhora o desempenho**: O banco de dados pode pré-compilar a estrutura da consulta, reaproveitando-a para diferentes valores de parâmetros.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h05m50s580.jpg" alt="" width="840">
+</p>
+
+Existem três métodos principais para disparar as execuções no banco:
+
+* **execute**: Método genérico que pode executar qualquer tipo de instrução SQL.
+* **executeQuery**: Utilizado exclusivamente para instruções `SELECT`. Ele retorna um objeto `ResultSet` contendo os dados encontrados.
+* **executeUpdate**: Utilizado para comandos que modificam dados ou a estrutura do banco (`INSERT`, `UPDATE`, `DELETE`, `CREATE`, `ALTER`). Ele retorna um inteiro representando o número de linhas afetadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h05m58s942.jpg" alt="" width="840">
+</p>
+
+O **ResultSet** funciona como um cursor que aponta para as linhas retornadas pelo banco de dados.
+
+* O método `.next()` move o cursor para a próxima linha e retorna `true` enquanto houver dados.
+* Para obter o conteúdo das colunas, utilizamos os métodos "get" tipados (ex: `.getInt()`, `.getString()`), passando o nome da coluna ou seu índice como parâmetro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h12m05s613.jpg" alt="" width="840">
+</p>
+
+Abaixo, a classe de modelo `Aluno`, que representa a entidade do banco de dados no mundo Java:
+
+```java
+package part3; // Define o pacote da classe
+
+public class Aluno {
+    // Atributos privados que correspondem às colunas da tabela 'aluno'
+    private int id;
+    private String nome;
+    private int idade;
+    private String estado;
+
+    // Construtor completo para quando já temos o ID (ex: ao buscar do banco)
+    public Aluno(int id, String nome, int idade, String estado) {
+        this.id = id;
+        this.nome = nome;
+        this.idade = idade;
+        this.estado = estado;
+    }
+
+    // Construtor sem ID (ex: para novas inserções onde o banco gera o ID)
+    public Aluno(String nome, int idade, String estado) {
+        this.nome = nome;
+        this.idade = idade;
+        this.estado = estado;
+    }
+
+    // Construtor vazio (padrão JavaBean)
+    public Aluno(){}
+
+    // Métodos Getter e Setter para acesso e modificação controlada dos dados
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+
+    public int getIdade() { return idade; }
+    public void setIdade(int idade) { this.idade = idade; }
+
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
+
+    // Sobrescrita do método toString para facilitar a impressão do objeto no console
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Aluno{");
+        sb.append("id=").append(id);
+        sb.append(", nome='").append(nome).append('\'');
+        sb.append(", idade=").append(idade);
+        sb.append(", estado= ").append(estado).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h19m30s938.jpg" alt="" width="840">
+</p>
+
+O arquivo `connection.properties` armazena as configurações de acesso ao banco de forma externa ao código compilado:
+
+```properties
+jdbc.driver=mysql            # Define que o banco utilizado é MySQL
+db.address=localhost         # Endereço do servidor onde o banco está hospedado
+db.name=digital_innovation_one # Nome do esquema/banco de dados
+db.user.login=root           # Usuário para autenticação
+db.user.password=password    # Senha para autenticação
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h19m31s931.jpg" alt="" width="840">
+</p>
+
+A classe `ConnectionFactory` centraliza a lógica de criação de conexões:
+
+```java
+package part3;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverMana---
+
+Olá alunos, bem-vindos à parte três do curso Java e Banco de Dados...
+
+...Agradeço aí a atenção e qualquer dúvida pode entrar em contato. Obrigado.      
+
+ger;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class ConnectionFactory {
+    // Construtor privado para evitar que a classe seja instanciada (utilitária)
+    private ConnectionFactory() {
+        throw new UnsupportedOperationException();
+    }
+
+    // Método estático que fornece a conexão ativa
+    public static Connection getConnection() {
+        Connection connection = null;
+        // Try-with-resources para carregar o arquivo de propriedades da pasta resources
+        try (InputStream input = ConnectionFactory.class.getClassLoader().getResourceAsStream("connection.properties")) {
+            Properties prop = new Properties();
+            prop.load(input); // Carrega as chaves e valores do arquivo
+
+            // Recupera cada propriedade individualmente
+            String driver = prop.getProperty("jdbc.driver");
+            String dataBaseAddress = prop.getProperty("db.address");
+            String dataBaseName = prop.getProperty("db.name");
+            String user = prop.getProperty("db.user.login");
+            String password = prop.getProperty("db.user.password");
+
+            // Monta a String de conexão JDBC (Ex: jdbc:mysql://localhost/digital_innovation_one)
+            StringBuilder sb = new StringBuilder("jdbc:")
+                    .append(driver).append("://")
+                    .append(dataBaseAddress).append("/")
+                    .append(dataBaseName);
+            
+            String connectionUrl = sb.toString();
+            // Solicita a conexão ao Driver Manager usando a URL, usuário e senha
+            connection = DriverManager.getConnection(connectionUrl, user, password);
+
+        } catch (SQLException e) {
+            System.out.println("FALHA ao tentar criar conexão");
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            System.out.println("FALHA ao tentar carregar arquivos de propriedades");
+            e.printStackTrace();
+        }
+        return connection; // Retorna o objeto Connection pronto para uso
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h19m32s794.jpg" alt="" width="840">
+</p>
+
+O padrão DAO isola a lógica de persistência. Abaixo, o detalhamento do método de listagem:
+
+```java
+// Dentro da classe AlunoDAO
+public List<Aluno> list() {
+    // Cria uma lista vazia para armazenar os resultados
+    List<Aluno> alunos = new ArrayList<>();
+    
+    // Abre a conexão automaticamente usando try-with-resources
+    try (Connection conn = ConnectionFactory.getConnection()) {
+        String sql = "SELECT * FROM aluno"; // SQL de consulta
+        
+        // Prepara a execução do comando SQL
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        
+        // Executa a consulta e recebe o ResultSet
+        ResultSet rs = stmt.executeQuery();
+
+        // Enquanto houver linhas no ResultSet...
+        while (rs.next()) {
+            // Extrai os valores das colunas pelo nome
+            int id = rs.getInt("id");
+            String nome = rs.getString("nome");
+            int idade = rs.getInt("idade");
+            String estado = rs.getString("estado");
+            
+            // Cria o objeto Aluno e o adiciona na lista
+            alunos.add(new Aluno(id, nome, idade, estado));
+        }
+    } catch (SQLException e) {
+        System.out.println("Listagem de alunos FALHOU");
+        e.printStackTrace();
+    }
+    return alunos; // Retorna a lista populada ou vazia
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h19m33s567.jpg" alt="" width="840">
+</p>
+
+A classe `QueriesExecution` demonstra o uso prático de todas as camadas construídas:
+
+```java
+package part3;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class QueriesExecution {
+    public static void main(String[] args) {
+        // Instancia o objeto de acesso a dados
+        AlunoDAO alunoDAO = new AlunoDAO();
+
+        // 1 - Operação de Consulta (Read)
+        List<Aluno> alunos = alunoDAO.list(); // Chama o método list() do DAO
+        // Imprime cada aluno da lista usando Stream API do Java 8+
+        alunos.stream().forEach(System.out::println);
+
+        // 1.1 - Consulta com filtro (Read by ID)
+        // Busca o aluno com ID 1 no banco
+        Aluno alunoParaConsulta = alunoDAO.getById(1);
+
+        // 2 - Operação de Inserção (Create)
+        // Cria um novo objeto Aluno (ID será gerado pelo banco)
+        Aluno alunoParaInsercao = new Aluno("Matheus", 43, "SP");
+        // alunoDAO.create(alunoParaInsercao); // Comentado para evitar inserções repetidas em testes
+
+        // 3 - Operação de Exclusão (Delete)
+        // Remove o aluno de ID 1 (exemplo comentado)
+        // alunoDAO.delete(1);
+
+        // 4 - Operação de Atualização (Update)
+        // Primeiro recupera o objeto existente, altera os valores em memória e depois salva
+        Aluno alunoParaAtualizar = alunoDAO.getById(3);
+        alunoParaAtualizar.setNome("Joaquim");
+        alunoParaAtualizar.setIdade(18);
+        alunoParaAtualizar.setEstado("RS");
+        // alunoDAO.update(alunoParaAtualizar); // Envia as alterações para o banco
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-14h35m29s484.jpg" alt="" width="840">
+</p>
+
+Abaixo, o detalhamento do método `update` dentro da classe `AlunoDAO`, demonstrando a atribuição de parâmetros:
+
+```java
+// Método dentro de AlunoDAO para atualizar registros
+public void update(Aluno aluno) {
+    try (Connection conn = ConnectionFactory.getConnection()) {
+        // SQL com placeholders '?' para os parâmetros
+        String sql = "UPDATE aluno SET nome = ?, idade = ?, estado = ? WHERE id = ?";
+        
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        
+        // Define os valores de cada '?' seguindo a ordem numérica (iniciando em 1)
+        stmt.setString(1, aluno.getNome());   // Primeiro ? (nome)
+        stmt.setInt(2, aluno.getIdade());    // Segundo ? (idade)
+        stmt.setString(3, aluno.getEstado()); // Terceiro ? (estado)
+        stmt.setInt(4, aluno.getId());       // Quarto ? (id no WHERE)
+
+        // Executa a atualização e retorna o número de linhas modificadas
+        int rowsAffected = stmt.executeUpdate();
+
+        System.out.println("Atualização BEM SUCEDIDA! Foi atualizada: " + rowsAffected + " linha(s)");
+
+    } catch (SQLException e) {
+        System.out.println("Atualização FALHOU!");
+        e.printStackTrace();
+    }
+}
+```
+
 ### 🟩 Vídeo 05 - Java JDBC Básico
 
 <video width="60%" controls>
