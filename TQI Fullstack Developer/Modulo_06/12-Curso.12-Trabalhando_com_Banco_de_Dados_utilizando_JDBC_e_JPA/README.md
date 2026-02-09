@@ -289,7 +289,7 @@ Conectar-se a um banco de dados é uma operação considerada "instável" por na
 * A rede pode oscilar.
 * As credenciais (usuário/senha) podem estar incorretas.
 
-🔴 O Java **obriga** o uso de tratamento de exceções. Se você tentar usar o `DriverManager.getConnection` sem um bloco `try-catch`, o código *NEM SEQUER COMPILARÁ*. O bloco `try` sinaliza ao programa: *"Tente executar este conjunto de instruções que podem falhar a qualquer momento"*.
+🔴 O Java **obriga** o uso de tratamento de exceções. Se você tentar usar o `DriverManager.getConnection` sem um bloco `try-catch`, o código **NEM SEQUER COMPILARÁ**. O bloco `try` sinaliza ao programa: *"Tente executar este conjunto de instruções que podem falhar a qualquer momento"*.
 
 #### 2. O Recurso "With-Resources" (A finalidade do parêntese)
 
