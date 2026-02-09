@@ -748,9 +748,9 @@ O desenvolvimento de aplicações Web Java enfrentava gargalos de produtividade 
 
 Para solucionar o conflito de paradigmas, surgiu o **ORM (Object-Relational Mapping)**. Este modelo permite representar tabelas de um banco de dados relacional diretamente através de classes Java. As equivalências básicas são:
 
-* **Tabela**  **Classe**
-* **Coluna**  **Atributo**
-* **Registro**  **Objeto**
+* **Tabela** <---> **Classe**
+* **Coluna** <---> **Atributo**
+* **Registro** <---> **Objeto**
 
 #### JPA: A Especificação Oficial
 
