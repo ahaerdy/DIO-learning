@@ -705,7 +705,7 @@ Para acompanhar as atividades práticas, é necessário configurar o ambiente de
 
 Todo o material utilizado, incluindo códigos-fonte das aulas práticas e slides para diferentes sistemas operacionais (Windows e Linux), está disponível publicamente no GitHub:
 
-* **Link do Repositório**: [https://github.com/danielkv7/digital-innovation-one/tree/master/Aula_JPA_basico](https://www.google.com/search?q=https://github.com/danielkv7/digital-innovation-one/tree/master/Aula_JPA_basico)      
+* **Link do Repositório (autor)**: [https://github.com/danielkv7/digital-innovation-one/tree/master/Aula_JPA_basico](https://www.google.com/search?q=https://github.com/danielkv7/digital-innovation-one/tree/master/Aula_JPA_basico)      
 
 
 ### 🟩 Vídeo 06 - Entendendo o JPA e começando o mapeamento do banco
@@ -717,6 +717,255 @@ Todo o material utilizado, incluindo códigos-fonte das aulas práticas e slides
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/a6896637-d037-4534-82a8-3f651535fbe4?autoplay=1
 
+Este módulo introduz o JPA (Java Persistence API), explorando os problemas históricos que levaram à sua criação, o conceito de ORM (Object-Relational Mapping) e como configurar a especificação em um projeto Java. O ponto central da aula é entender que o JPA é uma especificação (interface) e não uma implementação funcional por si só.
+
+### Anotações
+
+#### Entendendo o JPA: Java e o Banco de Dados
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m03s242.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o **JPA (Java Persistence API)**, focando em como a linguagem Java interage com bancos de dados. O objetivo inicial é compreender os conceitos fundamentais e os motivadores que levaram à criação desta especificação para o desenvolvimento de aplicações.
+
+#### Problemas de Produtividade e Mudança de Paradigma
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m04s788.jpg" alt="" width="840">
+</p>
+
+O desenvolvimento de aplicações Web Java enfrentava gargalos de produtividade devido ao uso direto de JDBC. Os principais problemas identificados foram:
+
+* **Excesso de tempo em SQL:** Desenvolvedores gastavam a maior parte do tempo escrevendo queries manuais via JDBC em vez de focar na lógica de negócio.
+* **Conflito de Paradigmas:** A Programação Orientada a Objetos (Java) difere do modelo Entidade-Relacional (SGBDs), exigindo que o desenvolvedor mantenha dois esquemas distintos para o mesmo sistema.
+
+#### O Conceito de ORM (Mapeamento Objeto Relacional)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m10s331.jpg" alt="" width="840">
+</p>
+
+Para solucionar o conflito de paradigmas, surgiu o **ORM (Object-Relational Mapping)**. Este modelo permite representar tabelas de um banco de dados relacional diretamente através de classes Java. As equivalências básicas são:
+
+* **Tabela**  **Classe**
+* **Coluna**  **Atributo**
+* **Registro**  **Objeto**
+
+#### JPA: A Especificação Oficial
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m13s802.jpg" alt="" width="840">
+</p>
+
+O JPA (Java Persistence API) é uma **especificação oficial** criada para padronizar as interfaces das implementações ORM. É importante destacar que o JPA descreve o comportamento esperado, mas não executa as operações por si só; ele define como os frameworks devem ser implementados.
+
+#### Artefatos e Abstração no JPA
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m23s441.jpg" alt="" width="840">
+</p>
+
+Embora seja apenas uma especificação, o JPA disponibiliza o pacote `javax.persistence`. Ele contém classes, interfaces e anotações que permitem ao desenvolvedor abstrair o código, mantendo-o independente da implementação (framework) escolhida para realizar o trabalho de persistência.
+
+#### Principais Artefatos: @Entity e EntityManager
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m27s343.jpg" alt="" width="840">
+</p>
+
+Dentro do ecossistema JPA, destacam-se componentes essenciais para o mapeamento e gestão de dados:
+
+* **`@Entity`:** Anotação que identifica uma classe cujos objetos devem ser persistidos no banco de dados.
+* **Anotações auxiliares:** `@Id`, `@Column`, `@Table`, `@OneToMany` e `@ManyToOne`.
+* **`EntityManager`:** Interface responsável por gerenciar o ciclo de vida das entidades, utilizando métodos como `find`, `persist` e `remove`.
+
+#### Detalhando as Anotações de Mapeamento
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m30s200.jpg" alt="" width="840">
+</p>
+
+As anotações permitem customizar a relação entre o código Java e o banco:
+
+* **`@Table`:** Opcional; usada quando o nome da classe difere do nome da tabela no banco.
+* **`@Column`:** Opcional; usada quando o nome do atributo difere do nome da coluna.
+* **`@Id`:** **Obrigatória**; define a chave primária da entidade.
+
+#### Configuração e Dependências
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h17m31s779.jpg" alt="" width="840">
+</p>
+
+Para utilizar o JPA, os passos fundamentais incluem:
+
+1. Download da API do JPA e do driver JDBC (ex: MySQL) via Maven ou Gradle.
+2. Criação do arquivo `persistence.xml` para configurar a URL de conexão, usuário, senha e as classes mapeadas.
+3. Uso de anotações nas classes e configuração do `EntityManager`.
+
+#### Arquivo de Configuração Build (Gradle)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h18m37s969.jpg" alt="" width="840">
+</p>
+
+O exemplo abaixo demonstra as dependências necessárias em um arquivo `build.gradle`:
+
+```gradle
+dependencies {
+    // API do JPA (Apenas especificações)
+    // compile group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
+
+    // Driver JDBC para MySQL
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+
+    // Implementação Hibernate (Necessária para execução)
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.12.Final'
+
+    // Gerador de Metamodels
+    annotationProcessor('org.hibernate:hibernate-jpamodelgen:5.4.13.Final')
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+```
+
+#### O Arquivo persistence.xml
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h24m03s984.jpg" alt="" width="840">
+</p>
+
+O arquivo `persistence.xml` centraliza as configurações da Unidade de Persistência (`persistence-unit`). Ele define o provedor (ex: Hibernate), as classes mapeadas e as propriedades de conexão com o banco de dados:
+
+```xml
+<persistence-unit name="part2-DIO">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>classes.Aluno</class>
+    <class>classes.Estado</class>
+    <properties>
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/digital_innovation_one" />
+        <property name="javax.persistence.jdbc.user" value="root" />
+        <property name="javax.persistence.jdbc.password" value="password" />
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+        <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+        <property name="hibernate.show_sql" value="true" />
+        <property name="hibernate.hbm2ddl.auto" value="create" />
+    </properties>
+</persistence-unit>
+```
+
+#### Implementação da Classe Entidade: Aluno
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h25m06s723.jpg" alt="" width="840">
+</p>
+
+Abaixo, a implementação da classe `Aluno` utilizando as anotações do JPA para definir chaves primárias e relacionamentos:
+
+```java
+package classes;
+
+import javax.persistence.*;
+
+@Entity
+public class Aluno {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(nullable = false)
+    private String nome;
+
+    @Column(nullable = false)
+    private int idade;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Estado estado;
+
+    public Aluno() { }
+
+    // Getters e Setters omitidos...
+}
+```
+
+#### Implementação da Classe Entidade: Estado
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h27m15s228.jpg" alt="" width="840">
+</p>
+
+A classe `Estado` demonstra um relacionamento um-para-muitos com a entidade `Aluno`:
+
+```java
+package classes;
+
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+public class Estado {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(nullable = false)
+    private String nome;
+
+    @Column(nullable = false)
+    private String sigla;
+
+    @OneToMany(mappedBy = "estado", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Aluno> alunos = new ArrayList<>();
+
+    public Estado() { }
+
+    // Getters e Setters omitidos...
+}
+```
+
+#### Execução e Persistência de Dados
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h29m06s237.jpg" alt="" width="840">
+</p>
+
+O código abaixo exemplifica o uso do `EntityManager` para persistir objetos no banco de dados. Note que a execução requer uma implementação (como Hibernate) presente no projeto.
+
+```java
+public class ExecutionPart1 {
+    public static void main(String[] args) {
+        // Inicialização
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("part1-DIO");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        // Criação de instâncias
+        Estado estadoParaAdicionar = new Estado("Rio de Janeiro", "RJ");
+        Aluno alunoParaAdicionar = new Aluno("Daniel", 29, estadoParaAdicionar);
+
+        // Transação e Persistência
+        entityManager.getTransaction().begin();
+        entityManager.persist(estadoParaAdicionar);
+        entityManager.persist(alunoParaAdicionar);
+        entityManager.getTransaction().commit();
+
+        // Encerramento
+        entityManager.close();
+        entityManagerFactory.close();
+    }
+}
+```
+
+#### Exercício Final e Validação
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-16h30m21s294.jpg" alt="" width="840">
+</p>
+
+Para consolidar o aprendizado, deve-se configurar uma aplicação JPA conforme os passos anteriores. É crucial entender que a IDE validará as anotações através da **API do JPA**, porém o código **não executará** sem uma **API de implementação** (como Hibernate ou EclipseLink) configurada corretamente.
 
 
 ### 🟩 Vídeo 07 - Implementações do JPA
@@ -726,7 +975,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/97345f86-4a31-4472-affe-387918710985?autoplay=1
 
 ### 🟩 Vídeo 08 - Linguagens de consulta orientada a objetos
 
