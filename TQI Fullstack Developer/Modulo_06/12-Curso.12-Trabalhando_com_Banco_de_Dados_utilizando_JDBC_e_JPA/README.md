@@ -350,14 +350,8 @@ No IntelliJ IDEA, a dependência é adicionada dentro do bloco `dependencies` no
 Para consolidar o aprendizado, os exercícios finais propõem:
 
 1. Criar um novo usuário no banco de dados e conectar-se com ele via JDBC.
-
-
 2. Explorar os métodos das classes `DriverManager` e `Connection` através da IDE ou documentação oficial.
-
-
 3. Configurar um banco de dados diferente (PostgreSQL ou H2) e realizar a conexão utilizando o driver apropriado.      
-
-
 
 ### 🟩 Vídeo 04 - Consultas com JDBC
 
