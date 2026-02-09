@@ -649,21 +649,12 @@ public void update(Aluno aluno) {
 }
 ```
 
-### 🟩 Vídeo 05 - Java JDBC Básico
+## Parte 2 - Trabalhando com JPA
+
+### 🟩 Vídeo 05 - Introdução da aula
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.12-video_05.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
-
-## Parte 2 - Trabalhando com JPA
-
-### 🟩 Vídeo 06 - Introdução da aula
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.12-video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -717,28 +708,30 @@ Todo o material utilizado, incluindo códigos-fonte das aulas práticas e slides
 * **Link do Repositório**: [https://github.com/danielkv7/digital-innovation-one/tree/master/Aula_JPA_basico](https://www.google.com/search?q=https://github.com/danielkv7/digital-innovation-one/tree/master/Aula_JPA_basico)      
 
 
-### 🟩 Vídeo 07 - Entendendo o JPA e começando o mapeamento do banco
+### 🟩 Vídeo 06 - Entendendo o JPA e começando o mapeamento do banco
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.12-video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/a6896637-d037-4534-82a8-3f651535fbe4?autoplay=1
+
+
+
+### 🟩 Vídeo 07 - Implementações do JPA
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.12-video_07.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/a6896637-d037-4534-82a8-3f651535fbe4?autoplay=1
+link do vídeo:
 
-### 🟩 Vídeo 08 - Implementações do JPA
+### 🟩 Vídeo 08 - Linguagens de consulta orientada a objetos
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.12-video_08.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
-
-### 🟩 Vídeo 09 - Linguagens de consulta orientada a objetos
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.12-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
