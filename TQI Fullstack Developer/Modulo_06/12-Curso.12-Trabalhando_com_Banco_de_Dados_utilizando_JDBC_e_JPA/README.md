@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Daniel Karam Venceslau (Software Engineer | Elixir)
+- Contato Linkedin: / [daniel-kv](https://www.linkedin.com/in/daniel-kv/)
 
 ## Parte 1 - Introdução ao JDBC
 
