@@ -483,16 +483,11 @@ A classe `ConnectionFactory` centraliza a lógica de criação de conexões:
 ```java
 package part3;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
-import java.sql.DriverMana---
-
-Olá alunos, bem-vindos à parte três do curso Java e Banco de Dados...
-
-...Agradeço aí a atenção e qualquer dúvida pode entrar em contato. Obrigado.      
-
-ger;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
