@@ -411,10 +411,10 @@ O **ResultSet** funciona como um cursor que aponta para as linhas retornadas pel
 * O método `.next()` move o cursor para a próxima linha e retorna `true` enquanto houver dados.
 * Para obter o conteúdo das colunas, utilizamos os métodos "get" tipados (ex: `.getInt()`, `.getString()`), passando o nome da coluna ou seu índice como parâmetro.
 
-Captura da interface (IntelliJ) com a organização dos arquivos do projeto:
+Captura da interface (IntelliJ) mostrando a organização das pastas:
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-02-09-14-47-50.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-02-09-14-47-50.png" alt="" width="1024">
 </p>
 
 Abaixo, a classe de modelo `Aluno`, que representa a entidade do banco de dados no mundo Java:
