@@ -1156,6 +1156,50 @@ Para consolidar o aprendizado, deve-se configurar uma aplicação JPA conforme o
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/97345f86-4a31-4472-affe-387918710985?autoplay=1
 
+Este guia resume a segunda parte do curso de JPA (Java Persistence API), focando na resolução do erro de "falta de provider", na escolha entre Hibernate e EclipseLink, e na execução prática de operações de banco de dados.
+
+### Anotações
+
+ <p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-19h35m33s145.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz a segunda parte do estudo sobre **Java Persistence API (JPA)**, focando especificamente nas suas implementações práticas. Como o JPA é uma especificação (um conjunto de regras e interfaces), ele não possui funcionalidade própria sem um motor de execução. Nesta etapa, exploramos o **Hibernate** e o **EclipseLink**, as duas ferramentas de Mapeamento Objeto-Relacional (ORM) mais difundidas no ecossistema Java, que dão vida às interfaces do JPA.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-19h35m35s039.jpg" alt="" width="840">
+</p>
+
+Para utilizar o JPA, é mandatório escolher uma implementação, já que a especificação define apenas o "quê" deve ser feito, enquanto a implementação define "como" será executado.
+
+* **Hibernate:** É a ferramenta ORM líder de mercado. Curiosamente, o Hibernate nasceu antes do próprio JPA e serviu de inspiração para a criação da especificação oficial. Embora possua métodos nativos próprios, as versões atuais são totalmente compatíveis com o padrão JPA.
+* **EclipseLink:** É um projeto da Eclipse Foundation e detém o título de **implementação de referência** do JPA. Além do suporte ao banco de dados, ele oferece integração com Web Services, OXM (Object XML mapping) e suporta padrões como JAXB e JCA.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-19h35m43s360.jpg" alt="" width="840">
+</p>
+
+Embora o uso das APIs do JPA (como `EntityManager`) seja o padrão recomendado por ser mais simples e portável, é comum encontrar sistemas legados que utilizam as APIs nativas do Hibernate. Existe uma correspondência direta entre os componentes:
+
+| JPA | Hibernate Nativo |
+| --- | --- |
+| `EntityManagerFactory` | `SessionFactory` |
+| `EntityManager` | `Session` |
+
+É importante notar que, mesmo quando utilizamos o JPA com Hibernate, o framework opera internamente "envelopando" (wrapping) as classes nativas `Session` e `SessionFactory`. As APIs nativas ainda existem e oferecem maior flexibilidade, porém com uma curva de complexidade superior.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-19h35m47s787.jpg" alt="" width="840">
+</p>
+
+Para integrar uma implementação ao projeto, o desenvolvedor deve seguir este fluxo de configuração:
+
+1. **Dependências:** Realizar o download da API de implementação desejada através do Maven ou Gradle.
+2. **Arquivo persistence.xml:** Configurar a tag `<provider>` indicando a classe exata da implementação (ex: `org.hibernate.jpa.HibernatePersistenceProvider`).
+3. **Parâmetros Específicos:** Definir propriedades detalhadas como o **dialeto do banco de dados**, exibição de logs SQL e a estratégia de **DDL automático** (como o `hibernate.hbm2ddl.auto`), que permite ao framework gerenciar a criação e atualização das tabelas automaticamente.
+
 ### 🟩 Vídeo 08 - Linguagens de consulta orientada a objetos
 
 <video width="60%" controls>
