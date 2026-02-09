@@ -81,6 +81,84 @@ A interface do GitHub exibe a organização dos arquivos na pasta `Aula_JDBC_bas
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/a069a2bd-5368-46df-8af1-7a65fd602296?autoplay=1
 
+Este guia prático detalha o processo de instalação, configuração e manipulação inicial de um banco de dados MySQL, preparando o ambiente para integração com sistemas Java.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-08h34m54s442.jpg" alt="" width="840">
+</p>
+
+Esta etapa inicial foca na configuração do ambiente de banco de dados. O objetivo é preparar o ecossistema para que uma aplicação Java consiga se comunicar e persistir informações de forma eficiente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-08h34m57s545.jpg" alt="" width="840">
+</p>
+
+Um Banco de Dados (BD) é um software especializado em armazenar dados de forma estruturada. Essa organização aumenta a eficiência computacional, reduzindo o consumo de memória e o tempo de processamento durante operações de busca e atualização. Para este aprendizado, utilizaremos o MySQL, um sistema de gerenciamento de banco de dados (SGBD) relacional amplamente adotado no mercado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-08h35m00s076.jpg" alt="" width="840">
+</p>
+
+O processo de configuração está dividido em cinco passos fundamentais:
+
+1. **Instalação do MySQL**: Preparação do SGBD na máquina local.
+2. **Configuração de Credenciais**: Definição de usuário e senha para acesso seguro.
+3. **Instalação do MySQL Workbench**: Adição de uma interface gráfica (GUI) para facilitar a visualização dos dados.
+4. **Criação do Banco de Dados**: Instanciação do ambiente onde as tabelas residirão.
+5. **Criação de Tabela**: Definição da estrutura de dados que será manipulada pela aplicação Java.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-08h35m03s856.jpg" alt="" width="840">
+</p>
+
+Para criar a estrutura necessária para a aula, utilizamos scripts SQL que definem o banco de dados e a tabela de alunos, especificando tipos de dados como inteiros e caracteres, além de restrições como chaves primárias e campos obrigatórios.
+
+```sql
+CREATE database digital_innovation_one;
+
+USE digital_innovation_one;
+
+CREATE TABLE aluno (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(80) NOT NULL,
+    idade INTEGER NOT NULL,
+    estado CHARACTER(2) NOT NULL
+);
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-08h35m08s297.jpg" alt="" width="840">
+</p>
+
+A instalação no ambiente Ubuntu 18.04 é realizada via terminal, começando pela atualização dos repositórios e seguindo para a instalação do servidor MySQL. Após a instalação, é necessário configurar a senha do usuário `root` para permitir acessos futuros via aplicação ou interface gráfica.
+
+```bash
+# Atualizar repositórios do sistema
+sudo apt update
+
+# Instalar o servidor MySQL
+sudo apt install mysql-server
+
+# Verificar a versão instalada para confirmar o sucesso
+mysql --version
+
+# Acessar o MySQL e configurar a senha (dentro do prompt MySQL)
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+FLUSH PRIVILEGES;
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-08h35m27s545.jpg" alt="" width="840">
+</p>
+
+O MySQL Workbench oferece uma visão clara da estrutura criada e dos dados inseridos. Através da interface, é possível executar comandos SQL e visualizar o resultado em formato de grade, o que é especialmente útil para validar se as inserções de dados (como os registros de Pedro, Maria, João e Ana) foram realizadas corretamente antes de iniciar a integração com o código Java.
+
+```sql
+-- Selecionar todos os registros da tabela para validação
+SELECT * FROM aluno;
+```      
 
 
 ### 🟩 Vídeo 03 - JDBC e drivers de conexão
@@ -90,7 +168,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalha
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/efa48762-3c2f-44a4-befc-3ac7fb124e99?autoplay=1
 
 ### 🟩 Vídeo 04 - Consultas com JDBC
 
