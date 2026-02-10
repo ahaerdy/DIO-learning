@@ -1198,7 +1198,7 @@ Para integrar uma implementação ao projeto, o desenvolvedor deve seguir este f
 2. **Arquivo persistence.xml:** Configurar a tag `<provider>` indicando a classe exata da implementação (ex: `org.hibernate.jpa.HibernatePersistenceProvider`).
 3. **Parâmetros Específicos:** Definir propriedades detalhadas como o **dialeto do banco de dados**, exibição de logs SQL e a estratégia de **DDL automático** (como o `hibernate.hbm2ddl.auto`), que permite ao framework gerenciar a criação e atualização das tabelas automaticamente.
 
-🟡 Detalhes do códigos-exemplo implementados no vídeo.
+🟡 Para detalhes da implementação, ver o vídeo.
 
 ### 🟩 Vídeo 08 - Linguagens de consulta orientada a objetos
 
@@ -1307,7 +1307,7 @@ Para iniciar as consultas, é necessário um objeto `EntityManager`. Os métodos
 
 Para facilitar o trabalho com o Metamodel, utiliza-se o artefato `hibernate-jpamodelgen` (via Maven ou Gradle), que automatiza a criação das classes de metamodelo, evitando o trabalho manual exaustivo de mapear cada atributo de persistência.
 
-🟡 Detalhes do códigos-exemplo implementados no vídeo.
+🟡 Para detalhes da implementação, ver o vídeo.
 
 # Certificado: Trabalhando com Banco de Dados utilizando JDBC e JPA
 
