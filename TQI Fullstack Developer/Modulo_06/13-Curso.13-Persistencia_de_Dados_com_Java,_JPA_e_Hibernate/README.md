@@ -184,6 +184,13 @@ O arquivo `README.md` do projeto detalha os pré-requisitos e instruções para 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/ad5fc6b4-496d-4d3f-829b-fe6f8d81d15d?autoplay=1
 
+Este guia explora a implementação prática de conexões com bancos de dados relacionais usando Java. O foco está na criação de uma arquitetura robusta, gerenciamento de conexões e manipulação de dados através do padrão DAO.
+
+### Anotações
+
+      
+
+
 ## 🟩 Vídeo 04 - O que são ORM, JPA e Hibernate
 
 <video width="60%" controls>
@@ -191,7 +198,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/3174d9aa-2160-4f76-9b88-2825d38278c1?autoplay=1
 
 ## 🟩 Vídeo 05 - Estrutura do código - Parte 2
 
