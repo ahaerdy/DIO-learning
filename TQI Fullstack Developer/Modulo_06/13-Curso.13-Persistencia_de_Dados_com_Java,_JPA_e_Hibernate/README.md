@@ -336,6 +336,61 @@ public class IserirUmNovoClienteExecute {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/3174d9aa-2160-4f76-9b88-2825d38278c1?autoplay=1
 
+
+Este guia explora a evolução da persistência de dados em Java, saindo do modelo manual e repetitivo do JDBC para as abstrações modernas que facilitam a vida do desenvolvedor.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-17h25m58s835.jpg" alt="" width="840">
+</p>
+
+**ORM (Object Relational Mapper)** é uma técnica de mapeamento objeto-relacional que estabelece uma relação direta entre os objetos da aplicação e os dados armazenados em um banco de dados. O objetivo central dessa técnica é reduzir a necessidade de códigos verbosos e repetitivos, como o uso manual de iterações em um `ResultSet` para preencher atributos de uma classe toda vez que dados são buscados. Com o ORM, busca-se tratar as classes do sistema como espelhos exatos das tabelas do banco de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-17h26m00s557.jpg" alt="" width="840">
+</p>
+
+Em um ambiente de banco de dados relacional tradicional, as informações são organizadas em tabelas com colunas e linhas. Abaixo está a representação da tabela **PRODUTO** apresentada no exemplo:
+
+| ID | NOME | DESCRIÇÃO | PREÇO |
+| --- | --- | --- | --- |
+| 12 | BICICLETA | ENGRENAGEM FIXA, AZUL, RÁPIDA | R$800 |
+| 13 | CAPACETE | PRETO, AJUSTÁVEL | R$20,99 |
+| 14 | UNIFORME | PEQUENO (FEMININO), VERDE E BRANCO | R$35 |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-17h26m01s760.jpg" alt="" width="840">
+</p>
+
+O conceito de ORM permite transformar uma linha específica de uma tabela em um **objeto programático** correspondente. No exemplo visualizado, a linha de ID 12 da tabela é mapeada para um objeto Java onde os atributos (nome, preço, descrição) coincidem exatamente com os dados da coluna. Essa sincronia elimina a necessidade de transformações manuais de dados entre o banco e o código da aplicação, permitindo que o desenvolvedor manipule o objeto como se estivesse interagindo diretamente com a tabela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-17h26m14s743.jpg" alt="" width="840">
+</p>
+
+A **Java Persistence API (JPA)** é a API padrão da linguagem Java que define uma interface comum para frameworks que realizam a persistência de dados. A JPA especifica os meios para realizar o mapeamento objeto-relacional de forma padronizada, transformando dados de tabelas em objetos Java simples (POJOs). Essencialmente, a JPA funciona como um contrato que define como os frameworks de ORM devem se comportar dentro do ecossistema Java.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-17h26m34s675.jpg" alt="" width="840">
+</p>
+
+É comum haver confusão entre JPA e Hibernate. O **Hibernate** foi a tecnologia pioneira de ORM para Java. Com seu sucesso, a Oracle convidou seus criadores para desenvolverem a **JPA**, que atua como a **especificação** (o padrão) para garantir que qualquer framework ORM trabalhe de forma uniforme para o desenvolvedor final. Assim, enquanto a JPA fornece as interfaces, frameworks como o Hibernate e o **EclipseLink** fornecem as implementações reais desses padrões.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-17h26m38s597.jpg" alt="" width="840">
+</p>
+
+A arquitetura moderna de persistência organiza a comunicação com o banco de dados em camadas para facilitar o desenvolvimento:
+
+* **Application Code**: Onde reside a lógica de negócio que utiliza os objetos.
+* **JPA Layer**: Atua como a camada de abstração orientada a objetos que facilita a interação com o banco.
+* **JDBC (SQL) Layer**: Camada inferior para onde o JPA traduz as operações antes de enviá-las ao driver do banco.
+* **Relational Database**: O destino final onde os dados são efetivamente armazenados e gerenciados.
+
+Essa estrutura permite que o desenvolvedor foque na orientação a objetos enquanto o framework lida com a tradução para a linguagem SQL.
+
+
 ## 🟩 Vídeo 05 - Estrutura do código - Parte 2
 
 <video width="60%" controls>
@@ -343,7 +398,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/ad80dea5-85ad-4924-920e-36299d882298?autoplay=1
 
 ## Parte 2 - Desenvolvimento da comunicação com banco de dados
 
