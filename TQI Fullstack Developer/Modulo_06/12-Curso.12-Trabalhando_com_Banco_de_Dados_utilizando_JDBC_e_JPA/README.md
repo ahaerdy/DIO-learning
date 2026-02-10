@@ -1312,4 +1312,4 @@ Para facilitar o trabalho com o Metamodel, utiliza-se o artefato `hibernate-jpam
 # Certificado: Trabalhando com Banco de Dados utilizando JDBC e JPA
 
 - Link na plataforma: https://hermes.dio.me/certificates/LNCB3QWX.pdf
-- Certificado em pdf: [tCertificado-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA.pdft](000-Midia_e_Anexos/Certificado-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA.pdf)
+- Certificado em pdf: [Certificado-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA.pdft](000-Midia_e_Anexos/Certificado-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA.pdf)
