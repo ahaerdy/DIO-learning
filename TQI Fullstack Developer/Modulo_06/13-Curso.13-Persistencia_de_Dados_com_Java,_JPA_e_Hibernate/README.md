@@ -188,8 +188,144 @@ Este guia explora a implementação prática de conexões com bancos de dados re
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-16h02m55s981.jpg" alt="" width="840">
+</p>
 
+O desenvolvimento de aplicações que utilizam JDBC exige a criação de uma estrutura organizada para gerenciar a comunicação com o banco de dados. Um ponto crítico abordado é o controle do número de conexões abertas. Abrir múltiplas conexões sem o devido fechamento pode sobrecarregar o banco de dados, levando à queda do serviço. Por isso, a arquitetura apresentada foca em manter e validar a conexão antes de realizar novas operações. O projeto está estruturado com pacotes específicos para configuração, objetos de acesso a dados (DAO) e entidades, garantindo uma separação clara de responsabilidades.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-16h03m03s426.jpg" alt="" width="840">
+</p>
+
+A classe `DB` é responsável por centralizar a lógica de obtenção da conexão com o banco de dados. Ela utiliza o padrão de verificar se uma conexão já existe (não nula) para retorná-la, evitando aberturas desnecessárias. Caso não exista, ela utiliza o `DriverManager` para estabelecer o vínculo com o MySQL através de uma URL que define o protocolo, o host, a porta e o nome do banco de dados (`db_cadastro_cliente`), além das credenciais de acesso.
+
+```java
+package one.digitalinnovation.jdbc.configuration;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DB {
+
+    private static Connection connection;
+
+    public static Connection getConnection() throws SQLException {
+        if (connection != null) {
+            return connection;
+        }
+
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/db_cadastro_cliente", "root", "root");
+    }
+}
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-16h03m07s378.jpg" alt="" width="840">
+</p>
+
+A classe `ClienteDAO` implementa o padrão Data Access Object, separando a lógica de negócio do acesso aos dados. O método `buscarTodosOsClientes` executa uma consulta SQL `SELECT *`, percorrendo o `ResultSet` para transformar cada linha da tabela em um objeto `Cliente` adicionado a uma lista. Já o método `inserirNovoCliente` utiliza um `PreparedStatement` com um parâmetro variável (`?`), o que garante segurança e flexibilidade na inserção de novos nomes no banco.
+
+```java
+package one.digitalinnovation.jdbc.dao;
+
+import one.digitalinnovation.jdbc.entity.Cliente;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ClienteDAO {
+    private final Connection connection;
+
+    public ClienteDAO (Connection connection) {
+        this.connection = connection;
+    }
+
+    public List<Cliente> buscarTodosOsClientes() throws SQLException {
+        String SQL = "SELECT * FROM tb_cliente";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        List<Cliente> clientes = new ArrayList<>();
+
+        while (resultSet.next()){
+            Cliente cliente = new Cliente();
+            cliente.setId(resultSet.getInt("id"));
+            cliente.setNome(resultSet.getString("nome"));
+            clientes.add(cliente);
+        }
+        return clientes;
+    }
+
+    public void inserirNovoCliente (String nome) throws SQLException {
+        String SQL = "INSERT INTO tb_cliente (nome) values (?)";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+        preparedStatement.setString(1, nome);
+        preparedStatement.executeUpdate();
+    }
+}
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-16h03m16s690.jpg" alt="" width="840">
+</p>
+
+Esta classe de execução demonstra como recuperar dados do banco. Através de um bloco `try-with-resources`, a conexão é obtida da classe `DB` e passada para o `ClienteDAO`. O método de busca é chamado e o resultado, que neste caso retorna o cliente "Diego Fontinelle" com ID 2, é impresso no console.
+
+```java
+package one.digitalinnovation.jdbc;
+
+import one.digitalinnovation.jdbc.configuration.DB;
+import one.digitalinnovation.jdbc.dao.ClienteDAO;
+import one.digitalinnovation.jdbc.entity.Cliente;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
+
+public class BucarTodosClientesExecute {
+    public static void main(String[] args) throws SQLException {
+        try(Connection connection = DB.getConnection()) {
+            ClienteDAO clienteDAO = new ClienteDAO (connection);
+            List<Cliente> clientes = clienteDAO.buscarTodosOsClientes();
+            System.out.println(clientes);
+        }
+    }
+}
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-16h03m25s273.jpg" alt="" width="840">
+</p>
+
+A classe `IserirUmNovoClienteExecute` foca na persistência de novos dados. Seguindo o mesmo fluxo de obtenção de conexão e instância do DAO, ela chama o método `inserirNovoCliente` passando o nome "Joao". Essa operação atualiza a tabela no banco de dados, permitindo que consultas subsequentes já retornem o novo registro inserido.
+
+```java
+package one.digitalinnovation.jdbc;
+
+import one.digitalinnovation.jdbc.configuration.DB;
+import one.digitalinnovation.jdbc.dao.ClienteDAO;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class IserirUmNovoClienteExecute {
+    public static void main(String[] args) throws SQLException {
+        try(Connection connection = DB.getConnection()) {
+            ClienteDAO clienteDAO = new ClienteDAO (connection);
+            clienteDAO.inserirNovoCliente("Joao");
+        }
+    }
+}
+
+```
 
 ## 🟩 Vídeo 04 - O que são ORM, JPA e Hibernate
 
