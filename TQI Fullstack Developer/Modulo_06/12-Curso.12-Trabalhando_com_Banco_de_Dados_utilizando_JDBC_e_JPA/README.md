@@ -1166,8 +1166,6 @@ Este guia resume a segunda parte do curso de JPA (Java Persistence API), focando
 
 Esta aula introduz a segunda parte do estudo sobre **Java Persistence API (JPA)**, focando especificamente nas suas implementações práticas. Como o JPA é uma especificação (um conjunto de regras e interfaces), ele não possui funcionalidade própria sem um motor de execução. Nesta etapa, exploramos o **Hibernate** e o **EclipseLink**, as duas ferramentas de Mapeamento Objeto-Relacional (ORM) mais difundidas no ecossistema Java, que dão vida às interfaces do JPA.
 
----
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-19h35m35s039.jpg" alt="" width="840">
 </p>
@@ -1200,6 +1198,8 @@ Para integrar uma implementação ao projeto, o desenvolvedor deve seguir este f
 2. **Arquivo persistence.xml:** Configurar a tag `<provider>` indicando a classe exata da implementação (ex: `org.hibernate.jpa.HibernatePersistenceProvider`).
 3. **Parâmetros Específicos:** Definir propriedades detalhadas como o **dialeto do banco de dados**, exibição de logs SQL e a estratégia de **DDL automático** (como o `hibernate.hbm2ddl.auto`), que permite ao framework gerenciar a criação e atualização das tabelas automaticamente.
 
+🟡 Detalhes do códigos-exemplo implementados no vídeo.
+
 ### 🟩 Vídeo 08 - Linguagens de consulta orientada a objetos
 
 <video width="60%" controls>
@@ -1207,13 +1207,109 @@ Para integrar uma implementação ao projeto, o desenvolvedor deve seguir este f
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/trabalhando-com-banco-de-dados-utilizando-jdbc-e-jpa/learning/55af078a-a1d7-4313-835d-f4ee369164ec?autoplay=1
 
+Esta aula foca na transição das operações básicas do EntityManager para consultas mais complexas e poderosas utilizando JPQL (Java Persistence Query Language) e Criteria API. O objetivo é entender como interagir com o banco de dados mantendo o paradigma da Orientação a Objetos.
 
+### Anotações
 
-##  Materiais de Apoio
+#### Parte 3: Linguagens de Consulta Orientada a Objetos
 
-# Certificado: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m13s966.jpg" alt="" width="840">
+</p>
 
-- Link na plataforma: 
-- Certificado em pdf:
+Esta etapa da aula introduz as linguagens de consulta orientadas a objetos no contexto do Java e Bancos de Dados. Após compreender os conceitos de JPA e as implementações práticas com Hibernate e EclipseLink, o foco agora volta-se para a forma como interagimos com os dados de maneira eficiente e integrada ao paradigma da orientação a objetos.
+
+#### JPQL (Java Persistence Query Language)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m16s490.jpg" alt="" width="840">
+</p>
+
+O **JPQL** é uma linguagem de consulta independente, definida pela especificação JPA. Embora sua sintaxe seja inspirada no SQL, existe uma diferença fundamental de paradigma: enquanto o SQL interage diretamente com tabelas e colunas do banco de dados relacional, o JPQL interage com as **entidades do JPA** (classes Java mapeadas). Isso permite que o desenvolvedor utilize propriedades de orientação a objetos, como a **herança**, diretamente em suas consultas.
+
+#### Vantagens do JPQL sobre o EntityManager
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m19s202.jpg" alt="" width="840">
+</p>
+
+O uso do JPQL oferece recursos que superam os métodos básicos de gestão de entidade do `EntityManager`:
+
+1. **Operações em Massa:** Permite buscar, atualizar ou remover grandes volumes de entidades simultaneamente, ao contrário dos métodos tradicionais que operam em uma instância por vez via chave primária.
+2. **Complexidade:** Facilita a realização de consultas mais robustas e elaboradas.
+3. **Agregação:** Possibilita o uso de funções de agregação (como somas ou médias) que não são acessíveis via métodos básicos.
+
+#### JPQL vs SQL
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m21s703.jpg" alt="" width="840">
+</p>
+
+Em comparação ao SQL tradicional, o JPQL oferece benefícios de produtividade e performance:
+
+* **Joins Automáticos:** Não é necessário realizar "joins" explícitos entre entidades que possuem anotações de relacionamento; o JPA cria essas junções automaticamente com base no mapeamento.
+* **Eficiência de Carregamento:** Utiliza as estratégias de carregamento *lazy* (preguiçoso) ou *eager* (ansioso) definidas nos relacionamentos para otimizar a aplicação.
+* **Caching:** As consultas podem ser armazenadas em cache, melhorando sensivelmente o desempenho global do sistema.
+
+#### Outras Linguagens: HQL e EQL
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m25s942.jpg" alt="" width="840">
+</p>
+
+Além do padrão JPQL, existem linguagens específicas de frameworks ORM:
+
+* **HQL (Hibernate Query Language):** Linguagem própria do Hibernate que inspirou o JPQL. Requer o uso de anotações e classes nativas do Hibernate (`session` e `sessionFactory`).
+* **EQL (EclipseLink Query Language):** Provê extensões para o JPQL padrão, permitindo o acesso a funcionalidades específicas do EclipseLink e recursos adicionais do SQL.
+
+#### JPA Criteria API
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m33s749.jpg" alt="" width="840">
+</p>
+
+Introduzida no JPA 2.0, a **JPA Criteria API** surge como uma alternativa ao JPQL, especialmente para a construção de **consultas dinâmicas**. A principal diferença reside na validação:
+
+* **JPQL:** As consultas são strings; erros de sintaxe ou de mapeamento só são detectados em **tempo de execução**.
+* **Criteria API:** As consultas são definidas como instâncias de objetos Java. Isso permite que o compilador detecte erros ainda em **tempo de compilação**, aumentando a segurança do código.
+
+#### Comparativo de Uso
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m40s761.jpg" alt="" width="840">
+</p>
+
+Apesar das vantagens de segurança, a Criteria API é significativamente mais complexa de implementar que o JPQL. Em termos de eficiência e poder de processamento, ambas são equivalentes. Por isso, a recomendação prática é:
+
+* Utilizar **JPQL** para consultas estáticas e simples (maior rapidez de desenvolvimento).
+* Utilizar **Criteria API** para consultas dinâmicas (maior segurança e flexibilidade).
+
+#### JPA Metamodel
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m44s569.jpg" alt="" width="840">
+</p>
+
+Para que a Criteria API valide erros em tempo de compilação, ela utiliza o **JPA Metamodel**. Ele permite examinar o modelo de persistência para consultar detalhes das entidades. Para cada entidade, é gerada uma classe de metamodelo correspondente (geralmente identificada pelo nome da classe precedido por um *underscore* `_`), contendo atributos estáticos que representam os campos de persistência. Sem o Metamodel, os atributos seriam referenciados por Strings, perdendo-se o benefício da validação do compilador.
+
+#### Implementação Prática
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-09-21h09m48s082.jpg" alt="" width="840">
+</p>
+
+Para iniciar as consultas, é necessário um objeto `EntityManager`. Os métodos principais são:
+
+* `createQuery()`: Para consultas JPQL.
+* `getCriteriaBuilder()`: Para iniciar o processo da Criteria API.
+
+Para facilitar o trabalho com o Metamodel, utiliza-se o artefato `hibernate-jpamodelgen` (via Maven ou Gradle), que automatiza a criação das classes de metamodelo, evitando o trabalho manual exaustivo de mapear cada atributo de persistência.
+
+🟡 Detalhes do códigos-exemplo implementados no vídeo.
+
+# Certificado: Trabalhando com Banco de Dados utilizando JDBC e JPA
+
+- Link na plataforma: https://hermes.dio.me/certificates/LNCB3QWX.pdf
+- Certificado em pdf: [tCertificado-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA.pdft](000-Midia_e_Anexos/Certificado-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA.pdf)
