@@ -400,6 +400,69 @@ Essa estrutura permite que o desenvolvedor foque na orientação a objetos enqua
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/ad80dea5-85ad-4924-920e-36299d882298?autoplay=1
 
+Este guia aborda a transição do JDBC para o JPA/Hibernate, detalhando as dependências necessárias, a estrutura de pastas e a configuração do arquivo persistence.xml para automação de banco de dados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-19h12m22s945.jpg" alt="" width="840">
+</p>
+
+Para iniciar o desenvolvimento com **JPA (Java Persistence API)** ou **Hibernate**, o ponto de partida é a estruturação de um projeto **Maven**. A organização de pastas segue um padrão rigoroso para que o framework localize os metadados necessários. Dentro da estrutura do projeto, no diretório `src/main/resources`, deve-se criar obrigatoriamente uma pasta chamada **META-INF**. É dentro desta pasta que reside o arquivo **persistence.xml**, responsável por toda a configuração da camada de persistência.
+
+Além da estrutura de pastas, o projeto depende de duas bibliotecas principais declaradas no `pom.xml`:
+
+* **hibernate-core**: A implementação do JPA que gerencia o mapeamento objeto-relacional.
+* **Driver de Conexão**: O driver específico para o Sistema Gerenciador de Banco de Dados (SGBD) utilizado, como o MySQL ou Postgres.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-19h12m27s395.jpg" alt="" width="840">
+</p>
+
+O arquivo **persistence.xml** utiliza o formato XML para definir a **unidade de persistência** (`persistence-unit`). Cada unidade de persistência pode representar uma conexão distinta, permitindo que a aplicação se comunique com múltiplos bancos de dados simultaneamente.
+
+Abaixo, o conteúdo técnico detalhado das propriedades de configuração:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="Clientes-PU">
+        <properties>
+            <!-- Url de conexao do banco de dados -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/db_cadastro_cliente" />
+            <!-- Usuario de conexao do banco de dados -->
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <!-- Senha do usuario de conexao do banco de dados -->
+            <property name="javax.persistence.jdbc.password" value="root" />
+            <!-- Driver do SGBD para conectar ao banco -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <!-- Dialeto é responsavel por traduzir o mapeamento do hibernate para a linguagem SQL nativa do SGBD -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <!-- Cria o banco de dados e encerra no final da sessao -->
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <!-- Imprimir as consultas no log -->
+            <property name="hibernate.show_sql" value="true" />
+            <!-- Formatar a impressão das consultas no Log -->
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.connection.autocommit" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
+
+```
+
+As principais propriedades configuradas incluem:
+
+* **Conexão JDBC**: Define o endpoint (`url`), credenciais (`user`, `password`) e a classe do `driver`.
+* **Dialect**: Informa ao Hibernate qual linguagem SQL nativa utilizar para traduzir as entidades Java em comandos específicos do MySQL.
+* **HBM2DDL**: A opção `update` automatiza a gestão do banco, criando tabelas inexistentes ou atualizando a estrutura conforme as alterações nas classes da aplicação.
+* **Logging**: Ativa a exibição (`show_sql`) e a formatação amigável (`format_sql`) das consultas SQL no console para fins de depuração.
+
+
+
 ## Parte 2 - Desenvolvimento da comunicação com banco de dados
 
 ## 🟩 Vídeo 06 - Estrutura básica do banco de dados
