@@ -3,11 +3,14 @@
 - Renan Oliveira (26 Year in Technology | CTO at Hypetech Games | M.Sc. in Software Engineering. at ITA | Specialist in IA and Automations | Leadership & Management Expert | Postgraduate Professor)
 - Contato Linkedin: / [renan-a](https://www.linkedin.com/in/renan-a/)
 
+## 🟩 Vídeo 01 - Explicação sobre os materiais complementares
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.06-curso.05-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+Este vídeo apresenta Renan, Head de Educação da DIO (Digital Innovation One), reforçando o compromisso da plataforma com o sucesso do aluno após a conclusão de cursos e trilhas de aprendizado. O foco central é a disponibilização de materiais extras para consolidar o conhecimento.
 
 ##  Materiais de Apoio
 
