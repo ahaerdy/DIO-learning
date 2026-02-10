@@ -10,6 +10,8 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/materiais-complementares-visualizacao-de-dados-e-relatorios-com-power-bi/learning/cc47ed36-fc78-4558-a482-1cb5a88afe3f?autoplay=1
+
 Este vídeo apresenta Renan, Head de Educação da DIO (Digital Innovation One), reforçando o compromisso da plataforma com o sucesso do aluno após a conclusão de cursos e trilhas de aprendizado. O foco central é a disponibilização de materiais extras para consolidar o conhecimento.
 
 ##  Materiais de Apoio
