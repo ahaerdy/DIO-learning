@@ -415,10 +415,6 @@ Além da estrutura de pastas, o projeto depende de duas bibliotecas principais d
 * **hibernate-core**: A implementação do JPA que gerencia o mapeamento objeto-relacional.
 * **Driver de Conexão**: O driver específico para o Sistema Gerenciador de Banco de Dados (SGBD) utilizado, como o MySQL ou Postgres.
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-10-19h12m27s395.jpg" alt="" width="840">
-</p>
-
 O arquivo **persistence.xml** utiliza o formato XML para definir a **unidade de persistência** (`persistence-unit`). Cada unidade de persistência pode representar uma conexão distinta, permitindo que a aplicação se comunique com múltiplos bancos de dados simultaneamente.
 
 Abaixo, o conteúdo técnico detalhado das propriedades de configuração:
