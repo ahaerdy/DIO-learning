@@ -473,29 +473,96 @@ Este guia prático explora como traduzir diagramas de relacionamento de banco de
 
 ### Anotações
 
-Modelagem de Relacionamentos no Hibernate 
+#### Modelagem de Relacionamentos no Hibernate
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-09h47m05s593.jpg" alt="" width="840">
 </p>
 
-A modelagem inicial do sistema é apresentada através de um diagrama de fluxo que define as regras de negócio e os relacionamentos entre as entidades. O modelo estabelece que um **Cliente** pode possuir um ou vários **Carros**, e cada **Carro** pode estar vinculado a várias **Multas**. Essa estrutura caracteriza relacionamentos do tipo **One-to-Many** (um para muitos). No sentido inverso, o modelo garante a integridade ao definir que uma multa pertence a apenas um carro e um carro pertence a apenas um cliente.
+A modelagem inicial do sistema é apresentada através de um diagrama que define as regras de negócio e os relacionamentos entre as entidades. O modelo estabelece que um **Cliente** pode possuir um ou vários **Carros**, e cada **Carro** pode estar vinculado a várias **Multas**. Essa estrutura caracteriza relacionamentos do tipo **One-to-Many** (um para muitos). No sentido inverso, o sistema garante a integridade ao definir que uma multa pertence obrigatoriamente a apenas um carro e um carro pertence a apenas um cliente.
 
-Estrutura do Projeto e Entidades JPA 
+#### Estrutura do Projeto e Entidades JPA
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-09h47m15s954.jpg" alt="" width="840">
 </p>
 
-A organização das classes no ambiente de desenvolvimento reflete o mapeamento das entidades para o banco de dados. Dentro do pacote `com.digitalinnovationone.jpa.model`, as entidades principais — **Carro**, **Cliente** e **Multa** — são criadas como classes Java. Além delas, o projeto conta com classes específicas para testes de operações de persistência, como `CadastroCarro`, `CadastroCascade` e o tratamento de exceções como `ClienteLazyInitializerException`, essenciais para validar o comportamento do Hibernate durante a manipulação dos dados.
+A organização das classes no ambiente de desenvolvimento reflete o mapeamento das entidades para o banco de dados relacional. Dentro do pacote `com.digitalinnovationone.jpa.model`, as entidades principais — **Carro**, **Cliente** e **Multa** — são implementadas como classes Java. Além das entidades, o projeto inclui classes para testes de persistência, como `CadastroCarro` e `CadastroCascade`, além do tratamento de exceções específicas, como `ClienteLazyInitializerException`, fundamentais para validar o comportamento do Hibernate.
 
-Implementação da Classe Cliente com Anotações 
+#### Implementação da Classe Cliente com Anotações
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-09h50m47s106.jpg" alt="" width="840">
 </p>
 
-A implementação da entidade **Cliente** demonstra o uso das anotações do JPA para mapear a classe para o banco de dados. A anotação `@Entity` sinaliza ao Hibernate que a classe representa uma tabela, enquanto `@Table` define o nome físico como `tb_cliente`. O mapeamento do relacionamento **One-to-Many** é configurado para ser carregado de forma preguiçosa (`FetchType.LAZY`) e com persistência em cascata total (`CascadeType.ALL`), garantindo que operações no cliente reflita      
+A implementação da entidade **Cliente** utiliza as anotações do JPA para converter a classe em uma tabela do banco de dados. A anotação `@Entity` identifica a classe como uma entidade gerenciada, enquanto `@Table` define o nome da tabela como `tb_cliente`. O relacionamento **One-to-Many** é configurado com `mappedBy = "cliente"`, indicando o lado inverso da associação, e utiliza `FetchType.LAZY` para carregamento sob demanda, além de `CascadeType.ALL` para propagar as operações de persistência para a lista de carros.
+
+```java
+package com.digitalinnovationone.jpa.model;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+@Table(name = "tb_cliente")
+public class Cliente {
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = "nome", nullable = false)
+    private String nome;
+
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Carro> carros;
+
+    public List<Carro> getCarros() {
+        return carros;
+    }
+
+    public void setCarros(List<Carro> carros) {
+        this.carros = carros;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+        Cliente other = (Cliente) obj;
+        if (id == null) {
+            if (other.id != null) return false;
+        } else if (!id.equals(other.id)) return false;
+        return true;
+    }
+}
+```      
 
 
 ## 🟩 Vídeo 07 - Desenvolvendo o código de persistência de dados
