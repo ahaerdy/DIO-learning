@@ -613,6 +613,7 @@ Além do básico, o Hibernate oferece formas poderosas de buscar dados:
 
 **Conclusão:** O Hibernate transforma a complexidade do SQL em manipulação de objetos, mas exige que o desenvolvedor compreenda conceitos de performance (Fetch Types) e integridade (Transactions) para criar aplicações robustas.      
 
+🟡 Detalhes da implementação no vídeo.
 
 ## 🟩 Vídeo 08 - Como funciona uma transação
 
@@ -623,6 +624,31 @@ Além do básico, o Hibernate oferece formas poderosas de buscar dados:
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/b61582fc-931c-49ef-b220-2e2117885708?autoplay=1
 
+Este resumo aborda os conceitos fundamentais de transações em sistemas de gerenciamento de banco de dados, utilizando um exemplo prático em Java com JPA (Java Persistence API). O foco principal é entender como garantir a integridade dos dados através do conceito de "Tudo ou Nada".
+
+### Anotações
+
+#### 1. O Conceito de Transação
+Uma transação é uma unidade lógica de trabalho que agrupa múltiplas operações no banco de dados. No vídeo, o instrutor demonstra a criação de um **Cliente** e de um **Carro** como parte de um processo único.
+*   **Objetivo:** Garantir que operações dependentes sejam executadas de forma coesa.
+
+#### 2. O Princípio "Tudo ou Nada" (ACID)
+O instrutor menciona o acrônimo **ACID** (Atomicidade, Consistência, Isolamento e Durabilidade), focando especialmente na **Atomicidade**:
+*   **Funcionamento:** Ou todas as operações dentro da transação são confirmadas (*commit*), ou nenhuma delas é aplicada ao banco (*rollback*).
+*   **Exemplo prático:** Se o sistema salvar o cliente, mas ocorrer um erro ao salvar o carro, a transação reverte a criação do cliente para evitar dados incompletos.
+
+#### 3. Demonstração de Erro e Consistência
+Para provar o conceito, o instrutor força uma exceção (`throw new Exception`) entre a persistência do cliente e do carro:
+*   **Cenário A (Transação Única):** O cliente é "salvo" no código, mas como o erro ocorre antes do fim da transação, nada aparece no banco de dados.
+*   **Cenário B (Transações Separadas):** Ao abrir e fechar uma transação especificamente para o cliente e outra para o carro, o cliente permanece salvo mesmo que a operação do carro falhe.
+
+#### 4. Analogia com o Mundo Real: O Setor Bancário
+O instrutor utiliza o exemplo de um banco (como o Banco Inter) para ilustrar a importância das transações:
+*   Imagine cadastrar os dados de um cliente, mas o sistema falhar na hora de criar a conta bancária.
+*   Sem transações, você teria um "cliente fantasma" no sistema sem uma conta associada, o que gera inconsistência nos relatórios e na regra de negócio.      
+
+🟡 Detalhes da implementação no vídeo.
+
 ## 🟩 Vídeo 09 - Por que utilizar o Hibernate?
 
 <video width="60%" controls>
@@ -630,7 +656,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/5482c8ea-b758-4444-82d0-d53171f06863?autoplay=1
+
+
 
 ## 🟩 Vídeo 10 - Dúvidas e comentários finais
 
