@@ -765,7 +765,7 @@ A preferência clara pelo PostgreSQL sobre o MySQL reflete uma tendência atual 
 **Conclusão:** O diálogo reforça que ser um desenvolvedor backend moderno exige entender não apenas a linguagem (Java), mas como as camadas de abstração (Hibernate) interagem com a infraestrutura (Bancos de Dados) e a importância de se manter atualizado com as versões mais recentes das ferramentas.
 
 
-# Certificado: 
+# Certificado: Persistência de Dados com Java, JPA e Hibernate
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/5KTKNXA0.pdf
+- Certificado em pdf: [Certificado-Persistencia_de_Dados_com_Java,_JPA_e_Hibernate.pdf](000-Midia_e_Anexos/Certificado-Persistencia_de_Dados_com_Java,_JPA_e_Hibernate.pdf)
