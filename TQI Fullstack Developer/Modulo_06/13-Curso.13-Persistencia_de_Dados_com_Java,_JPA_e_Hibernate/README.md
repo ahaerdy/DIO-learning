@@ -658,7 +658,63 @@ O instrutor utiliza o exemplo de um banco (como o Banco Inter) para ilustrar a i
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/5482c8ea-b758-4444-82d0-d53171f06863?autoplay=1
 
+Este guia resume os conceitos fundamentais sobre o uso do Hibernate e do framework Spring Boot para a interação com bancos de dados em Java. O conteúdo abrange desde a teoria do mapeamento objeto-relacional (ORM) até soluções práticas para problemas comuns de desenvolvimento.
 
+ ### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-11h07m06s700.jpg" alt="" width="840">
+</p>
+
+O Hibernate é destacado como a implementação mais utilizada do JPA (Java Persistence API) para realizar o mapeamento objeto-relacional (ORM). Ele facilita a interação com o banco de dados ao mapear tabelas diretamente para classes Java, permitindo que o desenvolvedor realize operações de busca e persistência sem a necessidade de escrever queries SQL complexas manualmente. 
+
+As principais vantagens de sua utilização incluem:
+
+* **Mapeamento Automático**: Sincronização entre tabelas do banco e classes do projeto. 
+* **Produtividade**: Uso de pacotes utilitários e métodos prontos, como o `find()` para seleções e `persist()` para salvar dados. 
+* **Abstração do Banco**: Facilita migrações de banco de dados, pois, seguindo as especificações, não é necessário alterar o código-fonte da aplicação para trocar o fornecedor do banco (Dialeto SQL). 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-11h07m17s504.jpg" alt="" width="840">
+</p>
+
+O fluxo de funcionamento de uma aplicação Java moderna, utilizando o ecossistema Spring, segue uma arquitetura em camadas que isola a lógica de negócio do acesso aos dados. O processo inicia-se com uma requisição externa e percorre os seguintes componentes: 
+
+1. **Client**: Envia uma requisição HTTP (como um GET) para o servidor. 
+2. **Controller**: Recebe a requisição e gerencia os endereços (endpoints) da aplicação. 
+3. **Repository**: Camada que contém a lógica de acesso aos dados, utilizando abstrações de alto nível. 
+4. **JPA / Hibernate**: Realiza a ponte entre os objetos Java e o banco de dados. 
+5. **JDBC**: A camada de baixo nível que executa a comunicação direta. 
+6. **Banco de Dados**: Onde as informações são efetivamente armazenadas. 
+
+O desenvolvedor atua principalmente até a camada do Repository, sendo as camadas inferiores processadas automaticamente pelo framework. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-11h07m24s789.jpg" alt="" width="840">
+</p>
+
+Para configurar e iniciar um projeto Spring Boot, utiliza-se a ferramenta **Spring Initializr**. Ela permite definir os metadados do projeto, como o gerenciador de dependências (Maven ou Gradle), a linguagem (Java, Kotlin ou Groovy) e a versão do Spring Boot. 
+
+No exemplo visual, os metadados configurados são:
+
+* **Group**: `com.example` 
+* **Artifact / Name**: `demo` 
+* **Packaging**: `War` 
+* **Java Version**: `16` 
+
+Esta interface simplifica a criação da estrutura base da aplicação, gerando os arquivos necessários como o `application.properties`, onde são definidas as credenciais de acesso ao banco de dados e URLs de conexão. 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-11h07m49s438.jpg" alt="" width="840">
+</p>
+
+Os exemplos práticos apresentados na aula e as implementações de referência podem ser consultados nos repositórios oficiais. Eles cobrem desde o uso básico de JDBC até a abstração avançada com Spring Data JPA. 
+
+* **JDBC**: Focado na conexão direta e execução de comandos SQL. `https://github.com/jpbaterabsb/jdbc-dio` 
+* **PURE-JPA**: Demonstra o uso do JPA puro, com configurações manuais de `EntityManager`. `https://github.com/jpbaterabsb/jpa-dio` 
+* **SPRING-JPA**: Exemplifica a integração moderna, utilizando interfaces de repositório e injeção de dependência. `https://github.com/jpbaterabsb/spring-jpa`      
+
+🟡 Detalhes da implementação no vídeo.
 
 ## 🟩 Vídeo 10 - Dúvidas e comentários finais
 
@@ -667,10 +723,47 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/7d60c0e9-a747-495f-9402-8cadddfea215?autoplay=1
 
+Este resumo aborda uma sessão de perguntas e respostas focada em tecnologias de backend, especificamente sobre a performance de bancos de dados, mapeamento objeto-relacional (ORM) com JPA/Hibernate e a evolução das versões do Java em ambientes corporativos (como o Banco Inter).
 
-##  Materiais de Apoio
+### Anotações
+
+#### 1. Comparativo de Performance: PostgreSQL vs. MySQL
+* **O papel do Hibernate:** O Hibernate atua como uma camada de abstração genérica. Embora facilite o desenvolvimento, ele pode introduzir um pequeno *overhead* de performance em comparação ao SQL nativo.
+* **Veredito do Banco de Dados:** Entre MySQL e PostgreSQL, o **PostgreSQL** é destacado como superior em termos de robustez, funcionalidades e performance em aplicações recentes.
+* **Custo-benefício:** O PostgreSQL é citado como uma opção "mais barata" (em termos de eficiência de recursos) e tecnicamente mais avançada que o MySQL.
+
+#### 2. Herança com JPA (Java Persistence API)
+* **Modelagem:** É perfeitamente possível implementar herança no banco de dados usando JPA. O exemplo clássico é uma classe `Pessoa` que se ramifica em `PessoaFisica` e `PessoaJuridica`.
+* **Estratégias de Tabela:** Existem diferentes formas de gerar essas tabelas (como Tabela Única, Tabelas Unidas ou Tabela por Classe Concreta), dependendo da necessidade do projeto.
+* **Dica de Estudo:** O palestrante recomenda o portal *DevMedia* para exemplos práticos e detalhados sobre as anotações específicas de herança.
+
+#### 3. Evolução do Java no Mercado (Caso Banco Inter)
+* **Convivência de Versões:** O uso do Java 8 ainda é comum em sistemas legados ou frameworks mais antigos baseados em Spring.
+* **Modernização:** Projetos mais novos utilizam o framework **Micronaut** com **Java 11** ou versões superiores (como Java 16).
+* **Cultura de Atualização:** Empresas de tecnologia de ponta buscam não ficar presas ao Java 8, tentando acompanhar as evoluções da linguagem para ganhar performance e novos recursos.
+
+#### 4. Automação de Banco de Dados com Hibernate
+* **Criação Automática (DDL):** O Hibernate tem a capacidade de criar a estrutura do banco de dados (tabelas, índices) automaticamente a partir do código Java.
+* **Independência de Dialeto:** A grande vantagem é escrever o código uma vez e poder alternar entre bancos (ex: de Oracle para MySQL) apenas mudando o "dialeto" nas configurações, sem alterar a lógica de negócio.
+
+#### 💡 Insights e Análises (Estilo NotebookLM)
+
+##### 🚀 O Dilema da Abstração vs. Performance
+Um insight crucial é que o Hibernate prioriza a **produtividade e a portabilidade** do código. No entanto, para sistemas que exigem performance extrema, o uso de banco de dados nativo (SQL puro) pode ser preferível. A escolha da ferramenta deve ser ditada pelo equilíbrio entre a velocidade de desenvolvimento e a carga de processamento esperada.
+
+#### ⚠️ O Perigo da Automação em Produção
+Embora o Hibernate possa criar e deletar tabelas automaticamente (`create-drop`), isso é estritamente recomendado apenas para **ambientes de desenvolvimento, TCCs ou Hackathons**. Em produção, o controle do banco de dados deve ser manual ou via ferramentas de migração (como Flyway ou Liquibase), para evitar a perda acidental de dados críticos.
+
+#### 🛠️ Diversificação de Frameworks
+O resumo revela que o ecossistema Java moderno não gira apenas em torno do Spring. O surgimento e a adoção do **Micronaut** no Banco Inter mostram uma tendência de busca por frameworks mais leves e modulares, que facilitam a atualização para versões mais recentes do Java (11, 16+).
+
+#### 📈 PostgreSQL como Padrão de Indústria
+A preferência clara pelo PostgreSQL sobre o MySQL reflete uma tendência atual no desenvolvimento backend. O PostgreSQL é visto não apenas como um banco relacional, mas como uma plataforma robusta capaz de lidar com tipos de dados complexos e alta concorrência de forma mais eficiente que seus concorrentes diretos.
+
+**Conclusão:** O diálogo reforça que ser um desenvolvedor backend moderno exige entender não apenas a linguagem (Java), mas como as camadas de abstração (Hibernate) interagem com a infraestrutura (Bancos de Dados) e a importância de se manter atualizado com as versões mais recentes das ferramentas.
+
 
 # Certificado: 
 
