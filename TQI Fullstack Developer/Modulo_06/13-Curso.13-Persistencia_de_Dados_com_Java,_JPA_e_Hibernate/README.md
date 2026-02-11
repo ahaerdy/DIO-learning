@@ -491,10 +491,6 @@ A organização das classes no ambiente de desenvolvimento reflete o mapeamento 
 
 #### Implementação da Classe Cliente com Anotações
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-09h50m47s106.jpg" alt="" width="840">
-</p>
-
 A implementação da entidade **Cliente** utiliza as anotações do JPA para converter a classe em uma tabela do banco de dados. A anotação `@Entity` identifica a classe como uma entidade gerenciada, enquanto `@Table` define o nome da tabela como `tb_cliente`. O relacionamento **One-to-Many** é configurado com `mappedBy = "cliente"`, indicando o lado inverso da associação, e utiliza `FetchType.LAZY` para carregamento sob demanda, além de `CascadeType.ALL` para propagar as operações de persistência para a lista de carros.
 
 ```java
