@@ -458,7 +458,6 @@ As principais propriedades configuradas incluem:
 * **Logging**: Ativa a exibição (`show_sql`) e a formatação amigável (`format_sql`) das consultas SQL no console para fins de depuração.
 
 
-
 ## Parte 2 - Desenvolvimento da comunicação com banco de dados
 
 ## 🟩 Vídeo 06 - Estrutura básica do banco de dados
@@ -468,7 +467,36 @@ As principais propriedades configuradas incluem:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/bc541851-02a5-4794-9099-cd241c76a485?autoplay=1
+
+Este guia prático explora como traduzir diagramas de relacionamento de banco de dados para o código Java utilizando o framework Hibernate. O exemplo central utiliza um sistema de gestão de trânsito envolvendo Clientes, Carros e Multas, demonstrando como configurar anotações para garantir a integridade e a persistência dos dados.
+
+### Anotações
+
+Modelagem de Relacionamentos no Hibernate 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-09h47m05s593.jpg" alt="" width="840">
+</p>
+
+A modelagem inicial do sistema é apresentada através de um diagrama de fluxo que define as regras de negócio e os relacionamentos entre as entidades. O modelo estabelece que um **Cliente** pode possuir um ou vários **Carros**, e cada **Carro** pode estar vinculado a várias **Multas**. Essa estrutura caracteriza relacionamentos do tipo **One-to-Many** (um para muitos). No sentido inverso, o modelo garante a integridade ao definir que uma multa pertence a apenas um carro e um carro pertence a apenas um cliente.
+
+Estrutura do Projeto e Entidades JPA 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-09h47m15s954.jpg" alt="" width="840">
+</p>
+
+A organização das classes no ambiente de desenvolvimento reflete o mapeamento das entidades para o banco de dados. Dentro do pacote `com.digitalinnovationone.jpa.model`, as entidades principais — **Carro**, **Cliente** e **Multa** — são criadas como classes Java. Além delas, o projeto conta com classes específicas para testes de operações de persistência, como `CadastroCarro`, `CadastroCascade` e o tratamento de exceções como `ClienteLazyInitializerException`, essenciais para validar o comportamento do Hibernate durante a manipulação dos dados.
+
+Implementação da Classe Cliente com Anotações 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-11-09h50m47s106.jpg" alt="" width="840">
+</p>
+
+A implementação da entidade **Cliente** demonstra o uso das anotações do JPA para mapear a classe para o banco de dados. A anotação `@Entity` sinaliza ao Hibernate que a classe representa uma tabela, enquanto `@Table` define o nome físico como `tb_cliente`. O mapeamento do relacionamento **One-to-Many** é configurado para ser carregado de forma preguiçosa (`FetchType.LAZY`) e com persistência em cascata total (`CascadeType.ALL`), garantindo que operações no cliente reflita      
+
 
 ## 🟩 Vídeo 07 - Desenvolvendo o código de persistência de dados
 
@@ -477,7 +505,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/jpa-com-hibernate/learning/353d3dfc-0929-4864-869f-6519b8687627?autoplay=1
 
 ## 🟩 Vídeo 08 - Como funciona uma transação
 
