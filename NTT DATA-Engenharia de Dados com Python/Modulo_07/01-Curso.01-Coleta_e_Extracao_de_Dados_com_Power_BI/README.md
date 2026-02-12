@@ -457,6 +457,71 @@ Item = "project"
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/162643b1-fb9c-4e4c-a00d-90a858f361e3?autoplay=1
 
+Este tutorial foca na etapa de limpeza e refinamento de dados utilizando o Power Query e a visualização de Modelagem no Power BI. O objetivo principal é otimizar o modelo de dados, removendo informações redundantes (metadados), corrigindo relacionamentos entre tabelas e garantindo que a estrutura esteja pronta para a criação de relatórios e análises com DAX.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h47m43s699.jpg" alt="" width="840">
+</p>
+
+Nesta visualização do modelo no Power BI, observamos a estrutura das tabelas importadas do banco de dados relacional. O foco recai sobre as **constraints** (restrições) de integridade e referência que definem como as tabelas se conectam. No centro, o destaque é para a tabela `employee_depent`, onde o sistema exibe metadados sobre o modo de armazenamento (Importar) e a última data de atualização dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h47m53s117.jpg" alt="" width="840">
+</p>
+
+Abaixo, os dados brutos extraídos da tabela de dependentes. Note que colunas como "Age" (Idade) ou metadados de relacionamento podem ser redundantes se já possuímos a data de nascimento ou se a integridade referencial já está garantida pelas chaves primárias e estrangeiras.
+
+| Name (Frame) | Ssn (Salt) | Dependent_name |
+| --- | --- | --- |
+| John | 123456789 | Abner |
+| John | 123456789 | Theodore |
+| John | 123456789 | Joy |
+| Amanda | 123769824 | Alice |
+| Franklin | 333445555 | Michael |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h48m02s518.jpg" alt="" width="840">
+</p>
+
+O Power BI permite gerenciar as relações de forma automatizada. A ferramenta **"Gerenciar relações"** exibe quais tabelas estão conectadas (ex: `departament` para `employee` via `Mgr_ssn` ou `Ssn`). A função **"Detectar automaticamente"** é utilizada para que o sistema identifique novos relacionamentos com base nos nomes das colunas e nos dados, facilitando a configuração inicial do modelo sem a necessidade de criar cada ligação manualmente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h48m25s215.jpg" alt="" width="840">
+</p>
+
+Após a detecção, o diagrama do modelo reflete as conexões estabelecidas. É possível visualizar as cardinalidades (1:1, 1:N) representadas pelas linhas que unem as tabelas. Neste estágio, o objetivo é garantir que o modelo esteja limpo, removendo colunas de metadados ou informações desnecessárias que apenas ocupam espaço de processamento, mantendo a integridade das relações intacta.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h49m16s388.jpg" alt="" width="840">
+</p>
+
+Ao importar novas tabelas, como a `works_on` (que atua como uma tabela associativa entre funcionários e projetos), o Navegador exibe uma prévia dos dados. Observamos colunas de valores numéricos (Horas) e as chaves que fazem referência a outras entidades.
+
+| Pno | Hours | company_constraints.employee |
+| --- | --- | --- |
+| 1 | 32,5 | Value |
+| 2 | 7,5 | Value |
+| 3 | 10 | Value |
+| 30 | 10 | Value |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h50m00s125.jpg" alt="" width="840">
+</p>
+
+No **Editor do Power Query**, realizamos o tratamento fino dos dados. Na barra de fórmulas, vemos a navegação específica dentro da tabela `works_on`. À direita, o painel de **Etapas Aplicadas** registra as transformações, como a remoção de colunas desnecessárias para otimizar o desempenho do modelo.
+
+```powerquery
+= company_constraints_works_on{[Essn="123456789", Pno=1]}[company_constraints.employee]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h51m15s552.jpg" alt="" width="840">
+</p>
+
+O resultado final apresenta o modelo de dados consolidado com a inclusão da tabela `works_on`. Com as transformações aplicadas e as colunas irrelevantes removidas, o modelo está pronto para ser utilizado em relatórios. A integridade referencial é preservada através das chaves, permitindo cálculos complexos entre funcionários, departamentos e projetos de forma eficiente.      
 
 
 ### 🟩 Vídeo 08 - Quando utilizar o SQL para Importar Dados de um Banco de Dados?
@@ -466,7 +531,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/81bc702f-b0d2-4e17-8dc3-a5acc4f550dc?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Criando um Relatório Simples para Entender os Dados Recuperados do MySQL
 
