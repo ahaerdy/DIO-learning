@@ -345,10 +345,109 @@ Este guia resume o processo de conexão entre o Power BI e um banco de dados MyS
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h28m19s044.jpg" alt="" width="840">
+</p>
 
+A interface inicial apresenta a funcionalidade de obtenção de dados no Power BI, destacando a capacidade de realizar consultas customizadas via SQL. No campo "Instrução SQL", é possível observar um exemplo de consulta para extrair informações específicas de uma base de dados de vendas.
+
+```sql
+SELECT
+    ID,
+    NAME,
+    SALESAMOUNT
+FROM SALES
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h28m24s344.jpg" alt="" width="840">
+</p>
+
+O MySQL Workbench é apresentado como a ferramenta oficial de interface gráfica (GUI) para o MySQL. Ele permite que o usuário projete, crie e navegue por esquemas de banco de dados, trabalhe com objetos de banco de dados, insira dados e execute consultas SQL. Além disso, a ferramenta oferece suporte para a migração de esquemas e dados de outros fornecedores de bancos de dados para o MySQL.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h28m59s327.jpg" alt="" width="840">
+</p>
+
+Dentro do ambiente do MySQL Workbench, são executados comandos básicos para a exploração do servidor de banco de dados. O comando `show databases;` é utilizado para listar os bancos de dados disponíveis, como o `company_constraints` e o `sakila`. Na sequência, o comando `use sakila;` seleciona o banco de dados para uso, e `show tables;` exibe todas as tabelas contidas nele, como `actor`, `address` e `category`.
+
+```sql
+show databases;
+use sakila;
+show tables;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h29m05s001.jpg" alt="" width="840">
+</p>
+
+Após a exploração inicial, o foco muda para o banco de dados `company_constraints`. Ao selecioná-lo e listar suas tabelas, identificamos as entidades que compõem este esquema, como `departament`, `employee`, `project` e `works_on`. Essas tabelas contêm as restrições e relacionamentos que serão trabalhados durante a aula.
+
+```sql
+show databases;
+use company_constraints;
+show tables;
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h29m15s731.jpg" alt="" width="840">
+</p>
+
+De volta ao Power BI Desktop, acessamos a janela "Obter Dados" para selecionar o conector específico para o MySQL. Esta etapa é fundamental para estabelecer a comunicação entre a ferramenta de Business Intelligence e o banco de dados local onde as tabelas de exemplo foram criadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h29m39s385.jpg" alt="" width="840">
+</p>
+
+Na configuração da conexão com o banco de dados MySQL, definimos o servidor como `localhost:3306` e especificamos o banco de dados `company_constraints`. Esta ação direciona o Power BI para a instância correta do MySQL instalada na máquina local, preparando a importação dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h29m47s500.jpg" alt="" width="840">
+</p>
+
+O "Navegador" exibe a lista de tabelas disponíveis no banco `company_constraints`. Nesta interface, é possível visualizar as tabelas como `departament`, `dependent`, `dept_locations`, `employee`, `project` e `works_on`. O usuário pode selecionar quais tabelas deseja carregar para o modelo ou transformar antes da importação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h29m50s212.jpg" alt="" width="840">
+</p>
+
+Ao entrar no Editor do Power Query (Transformar Dados), visualizamos a estrutura da tabela `works_on`. O Power BI identifica automaticamente a fonte e a navegação dentro do esquema. Aqui, os dados brutos são apresentados em colunas como `Essn`, `Pno` e `Hours`, permitindo o tratamento inicial das informações.
+
+```sql
+Fonte = MySQL.Database("localhost:3306", "company_constraints"),
+Item = "works_on"
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h29m52s796.jpg" alt="" width="840">
+</p>
+
+Ao analisar os detalhes de uma linha específica (como um registro de funcionário), o Power Query mostra os metadados e os valores associados. No exemplo, vemos detalhes do funcionário "John Smith", incluindo seu SSN, data de nascimento, endereço e salário, além de referências a outras tabelas relacionadas, indicadas como `Table` ou `Value`.
+
+```sql
+Fname: John
+Lname: Smith
+Ssn: 123456789
+Salary: 30000
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-09h30m04s645.jpg" alt="" width="840">
+</p>
+
+A imagem final detalha a tabela `project` dentro do Power Query. É possível observar as colunas `Pname` (nome do projeto), `Pnumber` (número), `Plocation` (localização) e `Dnum` (número do departamento). Além dos dados da própria tabela, o Power BI sinaliza as relações de "constraints" com outras tabelas, como `departament` e `works_on`, representadas por colunas que podem ser expandidas.
+
+```sql
+Fonte = MySQL.Database("localhost:3306", "company_constraints"),
+Item = "project"
+
+```      
  
-
 ### 🟩 Vídeo 07 - Analisando os Dados Importados do MySQL com Power Query
 
 <video width="60%" controls>
@@ -357,6 +456,8 @@ Este guia resume o processo de conexão entre o Power BI e um banco de dados MyS
 </video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/162643b1-fb9c-4e4c-a00d-90a858f361e3?autoplay=1
+
+
 
 ### 🟩 Vídeo 08 - Quando utilizar o SQL para Importar Dados de um Banco de Dados?
 
