@@ -533,7 +533,51 @@ O resultado final apresenta o modelo de dados consolidado com a inclusão da tab
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/81bc702f-b0d2-4e17-8dc3-a5acc4f550dc?autoplay=1
 
+Este tutorial foca na transição entre o uso básico de conectores e a implementação de consultas SQL para otimizar a performance e a precisão no tratamento de dados dentro do Power BI. O vídeo explora desde a alteração de origens de dados até estratégias avançadas para lidar com grandes volumes de informações.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-10h59m53s306.jpg" alt="" width="840">
+</p>
+
+A interface "Obter Dados" é o ponto de partida para a integração de diferentes fontes de informação no Power BI. Através dela, é possível selecionar conectores específicos para arquivos locais, como Excel e CSV, ou estabelecer conexões com diversos sistemas de gerenciamento de bancos de dados e serviços em nuvem. Essa etapa inicial é fundamental para definir de onde os dados serão extraídos antes de qualquer processo de modelagem ou visualização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-10h59m54s584.jpg" alt="" width="840">
+</p>
+
+Para gerenciar conexões existentes, o Power BI oferece a opção de "Definições da origem" dentro do menu "Transformar dados". Este recurso é essencial quando há necessidade de alterar o caminho de um arquivo ou migrar a fonte de dados, como trocar um banco de dados local por uma instância na nuvem (Azure), garantindo que o relatório aponte para a origem correta sem a necessidade de reconstruir todas as transformações já realizadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-10h59m58s965.jpg" alt="" width="840">
+</p>
+
+A utilização de instruções SQL diretamente na conexão é uma estratégia eficaz para otimizar a performance. Em cenários onde a base de dados possui registros históricos extensos (por exemplo, desde 2009), mas o objetivo do relatório é analisar apenas um período recente ou metas específicas, o SQL permite realizar uma seleção prévia dos dados. Isso resulta em um carregamento parcial, trazendo para o Power BI apenas o subconjunto necessário de informações e evitando o processamento desnecessário de volumes massivos de dados no Power Query.
+
+```sql
+SELECT
+ID,
+NAME,
+SALESAMOUNT
+FROM SALES
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-11h00m03s676.jpg" alt="" width="840">
+</p>
+
+Nas configurações avançadas da conexão com o SQL Server, é possível inserir a instrução SQL que delimitará o conjunto de dados. Além de definir a consulta, o usuário pode configurar o tempo limite do comando para evitar que processos excessivamente longos travem a aplicação. Uma recomendação importante é validar a consulta em ferramentas externas, como o MySQL Workbench, antes de aplicá-la no Power BI, garantindo que o código retorne exatamente o esperado e poupando recursos de processamento do servidor.
+
+```sql
+SELECT
+ID,
+NAME,
+SALESAMOUNT
+FROM SALES
+
+```      
 
 ### 🟩 Vídeo 09 - Criando um Relatório Simples para Entender os Dados Recuperados do MySQL
 
@@ -542,7 +586,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/1434c4b2-6248-4eae-9915-1e8414a8c192?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Utilizando SQL para Restringir os Dados Recuperados do MySQL com Power BI
 
