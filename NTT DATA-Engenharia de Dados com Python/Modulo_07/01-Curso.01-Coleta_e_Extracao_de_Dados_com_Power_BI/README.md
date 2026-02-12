@@ -205,6 +205,64 @@ O **Armazenamento de dados** (Storage Mode) define como o Power BI lida com as i
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/68ece6ae-b2f4-4f47-bc46-eb4376eeb671?autoplay=1
 
+Este tutorial foca em uma tarefa essencial para analistas de dados: migrar a fonte de um relatório do Power BI de um caminho local (computador) para um caminho na nuvem (OneDrive Business ou SharePoint), garantindo maior colaboração e disponibilidade dos dados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h19m56s433.jpg" alt="" width="840">
+</p>
+
+A aula inicia com a abertura do Power BI Desktop e o carregamento do "Relatório de Vendas Considerando Produtos e Segmento". O dashboard exibe visualizações preliminares de vendas por produto e segmento, preparando o ambiente para a demonstração de como alterar a origem desses dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h19m58s967.jpg" alt="" width="840">
+</p>
+
+Ao acessar as configurações da fonte de dados, identifica-se que o arquivo de exemplo (`Financial Sample.xlsx`) está localizado localmente no diretório de instalação. O objetivo central é modificar esse caminho para uma fonte baseada em nuvem para facilitar a colaboração.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h20m01s423.jpg" alt="" width="840">
+</p>
+
+A interface do Editor do Power Query é apresentada, exibindo as etapas de transformação já aplicadas aos dados, como classificação de linhas e ajustes relacionados aos dados. Este ambiente é utilizado para gerenciar consultas e parâmetros antes de consolidar as alterações na fonte.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h20m06s599.jpg" alt="" width="840">
+</p>
+
+Dentro do Power Query, a janela de "Configurações da fonte de dados" é aberta novamente para realizar a troca da origem local. É a partir desta etapa que o usuário inicia o processo de substituição do caminho físico pelo endereço de rede.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h20m10s253.jpg" alt="" width="840">
+</p>
+
+Para realizar a conexão com a nuvem, acessa-se o OneDrive for Business. O procedimento envolve localizar o arquivo desejado na pasta "dataset_powerbi" para obter suas informações de caminho detalhadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h20m12s589.jpg" alt="" width="840">
+</p>
+
+No painel de detalhes do arquivo no OneDrive, deve-se copiar o link direto que aponta para a localização do arquivo na estrutura do SharePoint. Esse link, encontrado na seção de caminho dos detalhes, servirá como o novo endereço de origem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h20m17s435.jpg" alt="" width="840">
+</p>
+
+O endereço URL copiado é colado na configuração de origem do arquivo no Power BI. O sistema processa o caminho do OneDrive e permite a importação dos dados de forma automatizada via web.
+
+```bash
+https://academiapme-my.sharepoint.com/personal/juliana_mascarenhas_dio_me/Documents/dataset_powerbi/Financial%20Sample.xlsx
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h20m25s229.jpg" alt="" width="840">
+</p>
+
+Após aplicar as mudanças, as configurações da fonte de dados confirmam que o relatório agora está consumindo informações diretamente do OneDrive. Isso garante a disponibilidade total dos dados e permite atualizações automáticas sem dependência de arquivos locais no computador.      
+
+
 ### 🟩 Vídeo 05 - Obtendo dados do excel com Power BI no Onedrive (Outra maneira)
 
 <video width="60%" controls>
@@ -212,7 +270,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporte vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/81595e7f-22d5-438f-aff7-96a9c6a47ae2?autoplay=1
+
+
 
 ### 🟩 Vídeo 06 - Conectando ao MySQL Local Utilizando o Power BI Desktop
 
