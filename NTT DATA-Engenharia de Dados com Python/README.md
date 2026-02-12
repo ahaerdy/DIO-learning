@@ -112,26 +112,26 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Fundamentos de Business Intelligence (BI)](Modulo_05/01-Curso.01-Fundamentos.de.Business.Intelligence.BI)
 - [x] Curso: [Introdução a Análise de Dados com SQL](Modulo_05/02-Curso.02-Introducao.a.Analise.de.Dados.com.SQL)
 - [x] Curso: [Fundamentos Teóricos Sobre ETL](Modulo_05/03-Curso.03-Fundamentos_Teoricos_Sobre_ETL)
-- [ ] Curso: [Primeiros Passos com Power BI](Modulo_05/04-Curso.04-Primeiros_Passos_com_Power_BI)
-- [ ] Projeto: [Analisando dados de um Dashboard de Vendas no Power BI](Modulo_05/05-Projeto-Analisando_dados_de_um_Dashboard_de_Vendas_no_Power_BI)
+- [x] Curso: [Primeiros Passos com Power BI](Modulo_05/04-Curso.04-Primeiros_Passos_com_Power_BI)
+- [x] Projeto: [Analisando dados de um Dashboard de Vendas no Power BI](Modulo_05/05-Projeto-Analisando_dados_de_um_Dashboard_de_Vendas_no_Power_BI)
   - Repositório: [Relatório de Vendas e Lucro com Power BI](https://github.com/ahaerdy/DIO-projeto-powerbi-financials)
   - Descrição: Desenvolvimento de um dashboard estratégico no Power BI para análise de performance comercial, transformando os dados do arquivo financials.csv em insights acionáveis sobre vendas e lucratividade global. Através da criação de três páginas de relatórios, incluindo uma análise geoespacial autônoma com mapas de bolhas, foi possível identificar disparidades entre volume de vendas e lucro real, destacando a eficiência por segmento e país para suporte à tomada de decisão.
-- [ ] Desafio: [Desvendando o Power BI com Python](Modulo_05/06-Desafio-Desvendando_o_Power_BI_com_Python)
+- [x] Desafio: [Desvendando o Power BI com Python](Modulo_05/06-Desafio-Desvendando_o_Power_BI_com_Python)
 
 ### Módulo 6: Visualização de Dados e Relatórios com Power BI  
 
-- [ ] Curso: [Trabalhando com Visuais no Power BI](Modulo_06/01-Curso.01-Trabalhando_com_Visuais_no_Power_BI)
-- [ ] Curso: [Fundamentos de BI: KPIs e Métricas](Modulo_06/02-Curso.02-Fundamentos_de_BI-KPIs_e_Metricas)
-- [ ] Curso: [Criando Dashboard Interativos com Power BI](Modulo_06/03-Curso.03-Criando_Dashboard_Interativos_com_Power_BI)
-- [ ] Desafio: [Criando Um Relatório Gerencial de Vendas com Power BI](Modulo_06/04-Desafio-Criando_Um_Relatorio_Gerencial_de_Vendas_com_Power_BI)
+- [x] Curso: [Trabalhando com Visuais no Power BI](Modulo_06/01-Curso.01-Trabalhando_com_Visuais_no_Power_BI)
+- [x] Curso: [Fundamentos de BI: KPIs e Métricas](Modulo_06/02-Curso.02-Fundamentos_de_BI-KPIs_e_Metricas)
+- [x] Curso: [Criando Dashboard Interativos com Power BI](Modulo_06/03-Curso.03-Criando_Dashboard_Interativos_com_Power_BI)
+- [x] Desafio: [Criando Um Relatório Gerencial de Vendas com Power BI](Modulo_06/04-Desafio-Criando_Um_Relatorio_Gerencial_de_Vendas_com_Power_BI)
   - Repositório: [DIO-powerbi-financial-analysis](https://github.com/ahaerdy/DIO-powerbi-financial-analysis)
   - Descrição: Este projeto consiste na criação de um ecossistema de dados no Power BI utilizando o dataset Financial Sample. O foco foi unir Design de Interface (UI) com Inteligência de Negócios (BI), criando um relatório onde a navegabilidade orienta a descoberta de insights estratégicos.
-- [ ] Curso: [Materiais complementares - Visualização de Dados e Relatórios com Power BI](Modulo_06/05-Curso.05-Materiais_complementares-Visualizacao_de_Dados_e_Relatorios_com_Power_BI)
-- [ ] Desafio: [Dominando Filtragem e Extração de Dados com Python](Modulo_06/06-Desafio-Dominando_Filtragem_e_Extracao_de_Dados_com_Python)
+- [x] Curso: [Materiais complementares - Visualização de Dados e Relatórios com Power BI](Modulo_06/05-Curso.05-Materiais_complementares-Visualizacao_de_Dados_e_Relatorios_com_Power_BI)
+- [x] Desafio: [Dominando Filtragem e Extração de Dados com Python](Modulo_06/06-Desafio-Dominando_Filtragem_e_Extracao_de_Dados_com_Python)
 
 ### Módulo 7: Processamento de Dados com Power BI  
 
-- [ ] Curso: Coleta e Extração de Dados com Power BI
+- [x] Curso: [Coleta e Extração de Dados com Power BI](Modulo_07/01-Curso.01-Coleta_e_Extracao_de_Dados_com_Power_BI)
 - [ ] Curso: Limpeza e Transformação de Dados com Power BI
 - [ ] Curso: Criando um Dashboard corporativo com integração com MySQL e Azure
 
