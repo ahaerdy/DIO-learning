@@ -272,6 +272,62 @@ Após aplicar as mudanças, as configurações da fonte de dados confirmam que o
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/81595e7f-22d5-438f-aff7-96a9c6a47ae2?autoplay=1
 
+Este vídeo demonstra duas abordagens principais para obter dados no Power BI, com foco especial na importação de dados a partir da web, destacando a importância da correta especificação do caminho do arquivo versus o caminho da pasta para uma autenticação bem-sucedida.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h32m52s487.jpg" alt="" width="840">
+</p>
+
+O processo de obtenção de dados externos inicia-se pela interface principal do Power BI Desktop, utilizando a opção **Obter dados**. No exemplo apresentado, utiliza-se o conector **Web**, onde é necessário inserir a URL que aponta diretamente para o arquivo de dados hospedado, neste caso, um arquivo Excel armazenado no OneDrive/SharePoint.
+
+```text
+mascarenhas_dio_me/Documents/dataset power Financial%20Sample.xlsx
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h33m01s361.jpg" alt="" width="840">
+</p>
+
+Após inserir a URL e confirmar, o Power BI abre a janela do **Navegador**. Esta tela exibe uma prévia dos dados contidos na fonte (tabela `financials`), permitindo verificar a estrutura das colunas como `Segment`, `Country`, `Product` e `Units Sold` antes de realizar a importação definitiva para o modelo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h33m04s987.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a localização do arquivo `Financial Sample.xlsx` dentro do ambiente do **OneDrive for Business**. Para que a conexão via Web funcione corretamente no Power BI, é fundamental identificar o caminho exato onde o conjunto de dados está armazenado na nuvem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h33m06s783.jpg" alt="" width="840">
+</p>
+
+O Power BI oferece uma vasta gama de conectores de dados. Na janela **Obter Dados**, é possível visualizar categorias como Arquivo (Excel, Texto/CSV, XML, JSON, PDF), Banco de Dados (SQL Server, Access, Oracle), Power Platform e Serviços Online, permitindo a integração de diversas fontes de informação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h33m09s691.jpg" alt="" width="840">
+</p>
+
+Ao configurar o acesso a conteúdos da Web que exigem autenticação, como arquivos no SharePoint, o Power BI solicita a definição do nível de acesso. Nesta etapa, deve-se selecionar **Conta organizacional** para garantir que as credenciais do usuário sejam validadas corretamente antes da conexão ser estabelecida.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h33m13s429.jpg" alt="" width="840">
+</p>
+
+A janela de login da Microsoft é apresentada para que o usuário insira sua senha e complete o processo de autenticação. Este passo é obrigatório quando o acesso organizacional foi selecionado anteriormente, garantindo a segurança dos dados acessados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h33m18s720.jpg" alt="" width="840">
+</p>
+
+Uma vez autenticado, o Power BI confirma que o usuário está conectado ("Você está conectado no momento"). Agora, é possível selecionar o nível de aplicação das configurações de URL e clicar em **Conectar** para prosseguir com a importação dos dados da Web.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h33m33s497.jpg" alt="" width="840">
+</p>
+
+Ao carregar os dados novamente ou de uma fonte duplicada, podem surgir múltiplas tabelas no modelo, como `financials` e `financials (2)`. O Power BI permite gerenciar essas fontes através das **Configurações da fonte de dados**, onde é possível excluir tabelas redundantes ou corrigir caminhos de arquivos para manter o relatório organizado.      
 
 
 ### 🟩 Vídeo 06 - Conectando ao MySQL Local Utilizando o Power BI Desktop
@@ -281,7 +337,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/0f3c847b-e1a8-4c01-8877-00e24d631910?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Analisando os Dados Importados do MySQL com Power Query
 
