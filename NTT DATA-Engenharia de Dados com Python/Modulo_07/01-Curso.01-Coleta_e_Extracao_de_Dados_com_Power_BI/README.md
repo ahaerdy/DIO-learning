@@ -49,7 +49,53 @@ O **Objetivo Geral** desta etapa do treinamento é capacitar o analista a domina
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/687b5b43-185f-493a-b575-a39620d71ba5?autoplay=1
 
+Este vídeo aborda a versatilidade do Power BI em conectar-se a uma infinidade de fontes de dados heterogêneas. O foco principal é entender como realizar a integração desses dados, o papel fundamental do Power Query no processo de ETL (Extração, Transformação e Carregamento) e o fluxo de trabalho padrão, desde a coleta bruta até a publicação de relatórios e dashboards no Power BI Service.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-07h34m20s411.jpg" alt="" width="840">
+</p>
+
+O cenário atual de análise de dados é caracterizado pela geração constante de uma infinidade de informações. Diversas fontes de dados, cada uma com estruturas peculiares e contextos distintos, criam uma necessidade crescente de integração para que esses dados brutos possam ser devidamente processados e transformados em conhecimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-07h34m23s950.jpg" alt="" width="840">
+</p>
+
+Na prática, as organizações lidam com fontes heterogêneas de dados que precisam ser integradas ao Microsoft Power BI para análise. Essas fontes podem variar significativamente em formato e origem:
+
+* **Microsoft SQL Server:** Utilizado geralmente para armazenar dados estruturados de vendas em bancos de dados relacionais.
+* **Microsoft Excel:** Ainda vastamente utilizado por setores como RH e Marketing devido à sua simplicidade e flexibilidade.
+* **Cosmos DB:** Um banco de dados NoSQL orientado a documentos, onde os dados são comumente tratados em formato JSON.
+* **Azure Analysis Services:** Focado em finanças e modelagem dimensional, trabalhando com cubos de servidor.
+* **SharePoint:** Ambiente corporativo para compartilhamento de documentos e controle de objetivos de vendas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-07h34m35s207.jpg" alt="" width="840">
+</p>
+
+O **Power Query** é o motor de conectividade e preparação de dados que permite ao Power BI Desktop se comunicar com esses sistemas distintos. Ele atua na organização dos dados, oferecendo recursos para:
+
+* **Manipular dados:** Realizar ajustes estruturais e transformações necessárias.
+* **Remover erros:** Limpar a base de dados de inconsistências e valores nulos.
+* **Combinar resultados:** Integrar tabelas e fontes diferentes para criar um conjunto de dados unificado.
+
+Essa ferramenta permite realizar operações complexas sem a necessidade de escrever código, embora suporte o uso de **DAX (Data Analysis Expressions)** para a criação de medidas e colunas calculadas mais avançadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-07h34m46s690.jpg" alt="" width="840">
+</p>
+
+O fluxo de trabalho dentro do Power BI segue uma lógica sequencial que garante a integridade da informação:
+
+1. **Coleta:** A fase inicial onde os dados são extraídos das fontes originais.
+2. **Transformação (Power Query):** Onde os dados brutos são limpos e tratados.
+3. **Criação do Dashboard/Relatório:** Desenvolvimento das visualizações a partir dos dados já tratados.
+4. **Publicação do relatório:** Envio do trabalho para o Power BI Serviço para compartilhamento.
+5. **Inserção em um Dashboard:** Consolidação de visuais importantes em uma visão única de alto nível.
+
+Atualmente, o foco principal do aprendizado está concentrado nas etapas de **Coleta** e **Transformação**, fundamentais para garantir que os relatórios subsequentes sejam precisos.      
 
 ### 🟩 Vídeo 03 - Como podemos importar os dados de diferentes fontes?
 
@@ -58,7 +104,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/51d8922c-5934-4dca-aa6b-bb059c775040?autoplay=1
 
 ### 🟩 Vídeo 04 - Substituindo Origem do Dataset local para Onedrive no Power BI Desktop
 
