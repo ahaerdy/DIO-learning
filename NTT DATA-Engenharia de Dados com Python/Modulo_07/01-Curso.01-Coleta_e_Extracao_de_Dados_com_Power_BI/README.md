@@ -106,6 +106,96 @@ Atualmente, o foco principal do aprendizado está concentrado nas etapas de **Co
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/51d8922c-5934-4dca-aa6b-bb059c775040?autoplay=1
 
+O vídeo aborda o papel fundamental do Power BI como um intermediário capaz de consolidar informações de fontes heterogêneas para análise estratégica. O foco principal é entender como dados de diferentes origens (locais, nuvem, bancos de dados) e formatos (Excel, SQL, CSV) podem ser harmonizados para criar relatórios coesos e eficientes.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h06m46s277.jpg" alt="" width="840">
+</p>
+
+O Power Query é apresentado como o motor primordial para a obtenção e tratamento de dados no ecossistema Microsoft. Uma das formas mais fundamentais de iniciar um projeto é através da conexão com **Ficheiros** (arquivos) locais. Os formatos mais comuns e suportados nativamente incluem arquivos de texto plano como **CSV** e **txt**, além de planilhas do **Excel**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h06m52s494.jpg" alt="" width="840">
+</p>
+
+A versatilidade do Power Query reside na diversidade de suas fontes de origem. Os dados podem ser extraídos de:
+
+* **Local:** Arquivos armazenados na própria máquina ou rede local.
+* **Nuvem:** Serviços de armazenamento como **OneDrive** (pessoal ou corporativo) e **SharePoint**.
+* **Estruturas Complexas:** Conexões diretas com **Bancos de Dados**, integração com **Sistemas** de gestão (ERP/CRM) e consumo de dados via **APIs**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h06m58s673.jpg" alt="" width="840">
+</p>
+
+É comum que, durante o desenvolvimento de um projeto, ocorram mudanças na infraestrutura ou no local onde os dados estão salvos. O Power BI permite lidar com a **Mudança durante projeto** através da **Atualização do local do dataset**. Esse ajuste é realizado nas **Definições da origem de dados**, garantindo que o relatório aponte para o novo caminho correto sem comprometer o trabalho de modelagem já realizado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h07m01s283.jpg" alt="" width="840">
+</p>
+
+Para integrar informações provenientes de ambientes corporativos robustos, utiliza-se a opção de **Obter Dados** voltada para bancos relacionais. O exemplo destaca a conexão com uma **Base de dados do SQL Server**, onde é possível configurar o acesso ao servidor e ao banco específico para realizar a extração.
+
+```sql
+SELECT
+  ID,
+  NAME,
+  SALESAMOUNT
+FROM SALES
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h07m04s405.jpg" alt="" width="840">
+</p>
+
+A conexão com um banco de dados SQL funciona como uma ponte direta. Enquanto o **SQL Database** atua como o repositório centralizado de dados brutos, o **Power BI** consome essa fonte para processar os volumes financeiros e operacionais (como demonstrado pelos valores de faturamento e quantidades), transformando registros de banco de dados em indicadores visuais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h07m08s028.jpg" alt="" width="840">
+</p>
+
+Ao trabalhar com outros sistemas, como o **MySQL**, o Power BI pode apresentar um aviso de que "este conector exige que um ou mais componentes adicionais sejam instalados". Isso ocorre porque drivers específicos de comunicação (como conectores .NET ou ODBC) precisam estar presentes no sistema operacional para que o Power BI consiga "conversar" com o banco de dados. Uma vez estabelecida a conexão, é possível aplicar instruções SQL para refinar a busca:
+
+```sql
+SELECT
+  ID,
+  NAME,
+  SALESAMOUNT
+FROM SALES
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h07m11s620.jpg" alt="" width="840">
+</p>
+
+Para gerenciar as conexões existentes, o usuário deve navegar até a guia **Home** e selecionar **Definições da origem de dados** (ou *Transformar dados* -> *Definições da origem*). Nesta interface, é possível **Alterar a origem** para apontar para um novo arquivo ou servidor, além de editar permissões de acesso e credenciais de login.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h07m13s751.jpg" alt="" width="840">
+</p>
+
+O uso de scripts SQL (através da opção "Instrução SQL") é recomendado em cenários específicos, como:
+
+* **Volume Histórico:** Quando há uma base de dados muito antiga (ex: desde 2009) e você deseja filtrar apenas o necessário antes de carregar no Power BI.
+* **Foco no Negócio:** Para relatórios de metas de vendas onde o processamento de agregação de dados pode ser feito de forma mais eficiente pelo próprio servidor do banco de dados (SQL Server).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-08h07m20s568.jpg" alt="" width="840">
+</p>
+
+O **Armazenamento de dados** (Storage Mode) define como o Power BI lida com as informações. Existem três modalidades principais que equilibram facilidade de uso e disponibilidade:
+
+1. **Importar:** Os dados são carregados para a memória do Power BI (mais rápido para análises, mas exige atualização manual/agendada).
+2. **DirectQuery:** O Power BI consulta o banco de dados em tempo real (ideal para grandes volumes que não cabem na memória).
+3. **Composto:** Uma combinação dos dois métodos anteriores.
+
+É importante ressaltar que o desenvolvimento e a execução plena dessas funcionalidades estão atrelados ao sistema operacional Windows, ambiente nativo da ferramenta.      
+
+
 ### 🟩 Vídeo 04 - Substituindo Origem do Dataset local para Onedrive no Power BI Desktop
 
 <video width="60%" controls>
@@ -113,7 +203,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/68ece6ae-b2f4-4f47-bc46-eb4376eeb671?autoplay=1
 
 ### 🟩 Vídeo 05 - Obtendo dados do excel com Power BI no Onedrive (Outra maneira)
 
