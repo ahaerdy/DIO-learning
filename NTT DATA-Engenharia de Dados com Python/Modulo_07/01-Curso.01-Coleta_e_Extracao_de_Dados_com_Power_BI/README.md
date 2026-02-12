@@ -339,7 +339,15 @@ Ao carregar os dados novamente ou de uma fonte duplicada, podem surgir múltipla
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/0f3c847b-e1a8-4c01-8877-00e24d631910?autoplay=1
 
+### Anotações
 
+Este guia resume o processo de conexão entre o Power BI e um banco de dados MySQL, abordando desde a preparação do ambiente até a visualização inicial dos dados no Power Query.
+
+### Anotações
+
+      
+
+ 
 
 ### 🟩 Vídeo 07 - Analisando os Dados Importados do MySQL com Power Query
 
@@ -348,7 +356,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/162643b1-fb9c-4e4c-a00d-90a858f361e3?autoplay=1
 
 ### 🟩 Vídeo 08 - Quando utilizar o SQL para Importar Dados de um Banco de Dados?
 
