@@ -14,6 +14,30 @@
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/0ed1f1c5-601d-402b-9230-eccb791a184d?autoplay=1
 
+Este vídeo serve como introdução ao curso de Coleta e Extração de Dados utilizando o Power BI. O instrutor desmistifica a ideia de que o Power BI é apenas uma ferramenta de visualização, enfatizando que a base de qualquer relatório ou dashboard de alta qualidade reside na capacidade de conectar, extrair e integrar dados de fontes diversas e complexas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-07h03m03s564.jpg" alt="" width="840">
+</p>
+
+Esta introdução marca o início do curso focado em **Coleta e Extração de Dados com Power BI**. A formação, denominada **Power BI Analyst**, é conduzida por **Juliana Mascarenhas**, especialista em educação tecnológica e mestre em modelagem computacional. O conteúdo aborda a necessidade fundamental de coletar informações de diversas fontes para sustentar a criação de relatórios e dashboards integrados a diferentes sistemas. A instrutora destaca a versatilidade da ferramenta, que permite conexões com:
+
+* **Bancos de dados heterogêneos**, incluindo relacionais e NoSQL.
+* **Arquivos locais** nos formatos Excel, CSV e ficheiros SQL.
+* **Serviços de nuvem**, como sistemas de analytics na Azure e instâncias Cloud em plataformas como AWS.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-12-07h03m07s401.jpg" alt="" width="840">
+</p>
+
+O **Objetivo Geral** desta etapa do treinamento é capacitar o analista a dominar o fluxo inicial de dados dentro do ecossistema Microsoft. Os tópicos principais incluem:
+
+* **Identificação e conexão** eficiente a qualquer origem de dados.
+* **Obtenção de dados** provenientes de bases de dados de diferentes fontes e do **Azure Analysis Services**.
+* **Seleção de modos de armazenamento**, como o método de "importar", compreendendo as vantagens técnicas de cada escolha.
+* **Otimização e suporte**, focando em corrigir problemas de desempenho e resolver erros comuns de importação.      
 
 
 ### 🟩 Vídeo 02 - Conversando sobre Integração do Power Bi com outros Sistemas
@@ -23,7 +47,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/687b5b43-185f-493a-b575-a39620d71ba5?autoplay=1
+
+
 
 ### 🟩 Vídeo 03 - Como podemos importar os dados de diferentes fontes?
 
