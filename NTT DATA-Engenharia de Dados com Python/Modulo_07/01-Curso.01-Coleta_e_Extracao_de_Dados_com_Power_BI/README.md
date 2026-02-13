@@ -952,7 +952,6 @@ Além da dobragem de consultas, outras boas práticas são fundamentais para gar
 3. **Separar data e hora:** Dividir campos de *DateTime* em colunas distintas de data e de hora para tornar a indexação e a pesquisa mais eficientes.
 4. **Manter a base atualizada:** Garantir a manutenção constante da base de dados utilizada para sustentar o desempenho ao longo do tempo.      
 
-
 ### 🟩 Vídeo 15 - Integrando Power BI com SQL Server na Azure com DirectQuery
 
 <video width="60%" controls>
@@ -962,9 +961,9 @@ Além da dobragem de consultas, outras boas práticas são fundamentais para gar
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/1cf45d76-d80f-4ce9-b951-f9ce80d1a677?autoplay=1
 
-##  Materiais de Apoio
+Este guia prático detalha o processo de conexão, transformação e visualização de dados entre o Power BI e uma instância de banco de dados SQL hospedada no Azure. O foco principal está na utilização do método DirectQuery e nas nuances de autenticação e modelagem.
 
-# Certificado: 
+# Certificado: Coleta e Extração de Dados com Power BI
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/2FW0YSCV.pdf
+- Certificado em pdf: [tCertificado-Coleta_e_Extracao_de_Dados_com_Power_BI.pdf](<000-Midia_e_Anexos/Certificado-Coleta e Extração de Dados com Power BI.pdf>)
