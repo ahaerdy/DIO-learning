@@ -845,7 +845,46 @@ Ao iniciar a conexão com o Power BI, é exibida a janela de configuração de a
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/92e36d2b-3431-4eaa-9c0e-b8e853bc6783?autoplay=1
 
+Este resumo aborda as estratégias de conexão do Power BI com diferentes fontes de dados, destacando as diferenças entre bancos relacionais e não relacionais, além de explorar os métodos de armazenamento de dados e suas implicações em segurança e performance.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h56m11s987.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, a interface do Power BI exibe a janela **Obter Dados**, destacando a categoria **Azure**. A ferramenta oferece uma ampla gama de conectores nativos para o ecossistema de nuvem da Microsoft, permitindo a integração com diversos serviços de armazenamento e processamento de dados. Entre as opções visíveis, destacam-se:
+
+* **Base de dados SQL do Azure**: Para conexões com bancos de dados relacionais.
+* **Azure SQL Data Warehouse**: Para grandes volumes de dados estruturados.
+* **Azure Analysis Services**: Para modelos de dados tabulares.
+* **Base de Dados do Azure para PostgreSQL**: Refletindo a flexibilidade da plataforma em suportar diferentes tecnologias de banco de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h56m14s351.jpg" alt="" width="840">
+</p>
+
+A imagem detalha o menu suspenso de **Origens de dados comuns** dentro da guia "Home Page". Este menu de acesso rápido lista as fontes mais frequentes utilizadas em projetos de Business Intelligence, como Excel, SQL Server, Analysis Services e feeds de dados Web/OData. A opção **Mais...** na parte inferior é o caminho necessário para abrir a janela completa de conectores (como a do Azure vista anteriormente), caso a fonte desejada não esteja na lista de atalhos iniciais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h56m16s490.jpg" alt="" width="840">
+</p>
+
+Neste ponto, o foco volta-se para as bases **NoSQL**, especificamente o **Azure Cosmos DB**. Ao contrário dos bancos relacionais tradicionais que utilizam tabelas, o Cosmos DB trabalha com um modelo orientado a documentos (**Document Model**), onde as informações são frequentemente persistidas no formato **JSON**.
+
+Apesar de ser uma estrutura não relacional, ele oferece o que é chamado de **SQL Flavor**: uma linguagem de consulta que possui uma sintaxe similar ao SQL tradicional, facilitando a extração de dados por profissionais que já possuem experiência com bancos relacionais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h56m19s662.jpg" alt="" width="840">
+</p>
+
+A escolha de como os dados serão armazenados no Power BI é uma decisão estratégica que equilibra **facilidade versus disponibilidade**. As principais modalidades visíveis na interface são:
+
+* **Importar (Import)**: Os dados são carregados e armazenados no ficheiro do Power BI, garantindo alta performance de interação, mas exigindo publicação conjunta com o relatório.
+* **DirectQuery**: O Power BI não armazena os dados, realizando consultas diretamente à origem sem importar os dados originais. É ideal para garantir a versão mais atualizada ou lidar com requisitos de segurança de dados sensíveis.
+* **Dual (Misto)**: Permite que o modo de armazenamento varie de acordo com o recurso ou necessidade específica.
+
+Essa definição impacta o acesso aos dados, o tempo de carregamento e as permissões de acesso necessárias para os usuários. Enquanto o SQL Server permite as opções Importar e DirectQuery, outros conectores, como o MySQL, podem suportar apenas a importação direta.      
 
 ### 🟩 Vídeo 14 - Como lidar com Problemas de Desempenho no Power BI
 
@@ -854,7 +893,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/1458b942-0e31-4476-8ddb-d013900a097a?autoplay=1
+
+
 
 ### 🟩 Vídeo 15 - Integrando Power BI com SQL Server na Azure com DirectQuery
 
