@@ -895,6 +895,62 @@ Essa definição impacta o acesso aos dados, o tempo de carregamento e as permis
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/1458b942-0e31-4476-8ddb-d013900a097a?autoplay=1
 
+Este guia resume as estratégias para melhorar o desempenho de relatórios no Power BI, focando na técnica de Dobragem de Consulta (Query Folding) e em boas práticas de manipulação de dados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-13h18m40s600.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, o foco recai sobre a análise de performance em projetos de Business Intelligence. Após a compreensão técnica de como conectar diversas fontes de dados — como Excel, CSV, APIs e bancos de dados SQL — o analista deve se preocupar com o impacto direto que o processamento dessas informações causa na renderização dos relatórios no Power BI.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-13h18m43s184.jpg" alt="" width="840">
+</p>
+
+Existem diversos problemas técnicos (issues) que podem comprometer a experiência do usuário final. Entre os principais gargalos identificados, destacam-se:
+
+* **Gargalo de acesso:** Dificuldade ou demora na conexão com a fonte de dados.
+* **Tempo de execução:** Consultas complexas que levam muito tempo para retornar resultados.
+* **Lentidão no carregamento:** Impacto causado pela importação de grandes volumes de dados (milhares de linhas).
+* **Erros de importação e falhas físicas:** Problemas relacionados a integridade de arquivos, falhas em discos ou servidores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-13h18m45s117.jpg" alt="" width="840">
+</p>
+
+Uma das principais soluções para otimizar o desempenho é a técnica de **Dobragem de Consultas** (Query Folding). Este processo permite que as transformações aplicadas no Power Query sejam convertidas em instruções que a fonte de origem entende, resultando em:
+
+* **Aumento de desempenho:** Otimização do tempo de resposta.
+* **Transformações controladas pela tool:** O Power BI gerencia como a consulta será enviada.
+* **Execução no servidor (SQL):** A carga de processamento é empurrada para o banco de dados original, evitando sobrecarga local.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-13h18m50s096.jpg" alt="" width="840">
+</p>
+
+De acordo com a definição da Microsoft, o objetivo central da dobragem de consultas é garantir que as transformações de dados ocorram diretamente no servidor de origem. Isso libera os recursos computacionais do Power BI, que não precisará processar cada etapa de limpeza e edição localmente, utilizando a capacidade de processamento do hardware onde os dados residem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-13h18m52s885.jpg" alt="" width="840">
+</p>
+
+A aplicação da dobragem de consultas traz benefícios práticos em todo o ecossistema de ferramentas, do Excel ao Power BI:
+
+* **Mais eficiência em atualizações de dados:** O Power BI aloca melhor os recursos e atualiza as tabelas de forma acelerada.
+* **Compatibilidade automática com modos de armazenamento:** Essencial para o funcionamento de conexões do tipo **DirectQuery** e **Dual** (Duplo), que dependem da capacidade do back-end para processar as solicitações em tempo real.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-13h18m58s208.jpg" alt="" width="840">
+</p>
+
+Além da dobragem de consultas, outras boas práticas são fundamentais para garantir a performance máxima:
+
+1. **Processar dados na origem:** Realizar o máximo de filtros e tratamentos antes dos dados chegarem ao Power BI.
+2. **Utilizar SQL nativo:** Priorizar consultas diretas em bancos relacionais, evitando procedimentos armazenados ou expressões de tabela muito complexas que impeçam o folding.
+3. **Separar data e hora:** Dividir campos de *DateTime* em colunas distintas de data e de hora para tornar a indexação e a pesquisa mais eficientes.
+4. **Manter a base atualizada:** Garantir a manutenção constante da base de dados utilizada para sustentar o desempenho ao longo do tempo.      
 
 
 ### 🟩 Vídeo 15 - Integrando Power BI com SQL Server na Azure com DirectQuery
@@ -904,7 +960,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/1cf45d76-d80f-4ce9-b951-f9ce80d1a677?autoplay=1
 
 ##  Materiais de Apoio
 
