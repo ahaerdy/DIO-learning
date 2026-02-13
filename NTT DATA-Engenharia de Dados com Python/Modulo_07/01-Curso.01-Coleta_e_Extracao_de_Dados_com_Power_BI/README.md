@@ -588,6 +588,38 @@ FROM SALES
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/1434c4b2-6248-4eae-9915-1e8414a8c192?autoplay=1
 
+Este guia resume o processo de criação de um dashboard no Power BI voltado para a otimização de processos e caracterização de uma base de dados (originada de testes em SQL). O foco é transformar dados brutos em informações visuais sobre horas trabalhadas, distribuição de funcionários e dependentes.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-10h57m39s362.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, é apresentado o desenvolvimento de um gráfico de barras empilhadas para analisar a distribuição de colaboradores e projetos por departamento. O visual revela uma discrepância nos dados de teste: uma coluna proeminente classificada como "Blank" (em branco), indicando que muitos colaboradores no banco de dados não possuem um departamento associado. Esta visualização é utilizada para demonstrar como o Power BI ajuda a identificar lacunas de dados e inconsistências em um dataset, comparando o volume de projetos (legenda clara) em relação ao número de funcionários (legenda escura) dentro de setores como *Research* e *Administration*.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-10h57m44s111.jpg" alt="" width="840">
+</p>
+
+A imagem detalha a configuração de um gráfico de Radar (Radar Chart), um visual personalizado utilizado para detectar tendências e forças entre diferentes categorias. No contexto da aula, o gráfico mapeia a soma de horas trabalhadas por colaborador. A disposição radial permite visualizar o equilíbrio da carga horária entre nomes como Franklin, John, Alice e Ahmad, destacando que a maioria mantém um nível de horas similar, com exceção de Jennifer, que apresenta um volume menor. O instrutor ressalta que este tipo de gráfico é ideal para análises de perfil e identificação de comportamentos dominantes em grupos pequenos de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-10h57m48s178.jpg" alt="" width="840">
+</p>
+
+Aqui observa-se a interface de configuração do campo de dados para o gráfico de Radar. O foco está na associação entre a categoria (neste caso, o nome do colaborador, `Fname`) e o eixo de valores (Soma de `Hours`). O gráfico ilustra graficamente a distribuição de esforço, permitindo uma comparação visual rápida da "área" ocupada por cada funcionário no radar de horas. A explicação enfatiza que, embora o gráfico mostre nomes individuais, em cenários com grandes volumes de dados, a categoria poderia ser substituída por departamentos (`Dname`) para manter a legibilidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-10h57m56s203.jpg" alt="" width="840">
+</p>
+
+O estágio final do relatório apresenta a consolidação de diferentes visuais para a caracterização da base de dados. O painel inclui:
+
+* **Gráfico de Donut**: Mostrando a distribuição de horas por departamento, com um destaque central para o "Total de Horas" (275,00) via cartão.
+* **Cartão de Linha Múltipla**: Localizado à direita, fornecendo métricas rápidas como Total de Departamentos, Projetos, Colaboradores e Dependentes.
+* **Segmentadores (Slicers)**: Utilização do visual personalizado *Chiclet Slicer* para filtrar o relatório por Departamento e Localização, permitindo uma navegação interativa pelos dados da empresa.
+* **Descrição Textual**: Um bloco de texto inserido para contextualizar o relatório de caracterização da base de dados teste "Company".      
 
 
 ### 🟩 Vídeo 10 - Utilizando SQL para Restringir os Dados Recuperados do MySQL com Power BI
@@ -597,7 +629,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/b81b6595-80d7-42ed-8ff9-bf60cde0c3d8?autoplay=1
 
 ### 🟩 Vídeo 11 - Instanciando um Banco de Dados com SQL Server na Azure
 
