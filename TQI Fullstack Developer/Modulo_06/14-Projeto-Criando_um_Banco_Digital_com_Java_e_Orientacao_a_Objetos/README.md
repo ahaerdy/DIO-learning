@@ -176,6 +176,94 @@ public class ContaPoupanca {
 
 link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/b6aaafb2-9b38-440f-a14a-a99779980623
 
+Este resumo explora o pilar do Encapsulamento, detalhando sua definição, a importância de uma interface de uso coesa e exemplos práticos de implementação em Java.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-17h01m26s415.jpg" alt="" width="840">
+</p>
+
+Neste ponto da aula, o foco é o pilar do **Encapsulamento** na Programação Orientada a Objetos (POO). Diferente da crença comum de que o encapsulamento se resume apenas a métodos de acesso (getters e setters), o conceito central é o **esconderijo da implementação**.
+
+Encapsular significa proteger a lógica interna dos objetos, expondo apenas o que é estritamente necessário através de interfaces concisas. Isso garante que o usuário do objeto interaja com ele de forma simples e segura, sem precisar conhecer a complexidade interna. Os principais benefícios dessa prática são:
+
+* **Manutenção:** Facilita correções internas sem impactar quem utiliza a classe.
+* **Evolução:** Permite que o sistema cresça e mude suas regras internas mantendo a compatibilidade da interface de uso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-17h01m36s205.jpg" alt="" width="840">
+</p>
+
+Ao aplicar o encapsulamento na prática dentro do Java, a primeira regra fundamental é restringir a visibilidade dos atributos. No código abaixo, as propriedades da classe `ContaCorrente` são definidas como `private`, garantindo que não sejam acessadas ou modificadas diretamente de fora da classe.
+
+```java
+public class ContaCorrente {
+
+    private int agencia;
+    private int numero;
+    private double saldo;
+
+    public void sacar() {
+        
+    }
+
+    public void depositar() {
+        
+    }
+
+    public void transferir(){
+        
+    }
+}
+
+```
+
+A ideia é que os métodos `sacar()`, `depositar()` e `transferir()` funcionem como a "interface de uso" da conta. No Java, o padrão é manter os atributos privados até que surja uma necessidade real de expô-los, priorizando a segurança da integridade dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-17h01m54s243.jpg" alt="" width="840">
+</p>
+
+Após definir os atributos como privados, utilizamos métodos assessores (**getters**) para permitir a leitura controlada dessas informações. Neste exemplo, optou-se por criar apenas os métodos `get`, sem os métodos de atribuição (`set`), para proteger a consistência da conta. Isso evita que sistemas externos alterem arbitrariamente o número da agência ou o saldo sem passar pelas regras de negócio da classe.
+
+```java
+public class ContaCorrente {
+
+    private int agencia;
+    private int numero;
+    private double saldo;
+
+    public void sacar() {
+
+    }
+
+    public void depositar() {
+
+    }
+
+    public void transferir() {
+
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+}
+
+```
+
+Essa abordagem reforça que o encapsulamento define a forma como o objeto é utilizado: agência e número podem ser definidos no momento da criação, enquanto o saldo deve ser manipulado apenas através das operações de saque, depósito e transferência.      
+
+
 ### 🟩 Vídeo 04 - Pilares da orientação a objetos - Herança
 
 <video width="60%" controls>
@@ -183,7 +271,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orien
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/7fce6cb4-f125-4fec-8927-435eec7c89eb
 
 ### 🟩 Vídeo 05 - Pilares da orientação a objetos - Polimorfismo
 
