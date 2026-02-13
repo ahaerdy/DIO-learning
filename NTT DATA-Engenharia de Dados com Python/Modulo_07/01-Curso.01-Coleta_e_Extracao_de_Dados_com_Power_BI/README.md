@@ -631,6 +631,62 @@ O estágio final do relatório apresenta a consolidação de diferentes visuais 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/b81b6595-80d7-42ed-8ff9-bf60cde0c3d8?autoplay=1
 
+Este tutorial demonstra como utilizar consultas SQL avançadas para importar dados de forma seletiva para o Power BI. O foco principal é a eficiência: em vez de carregar tabelas inteiras e tratá-las no Power BI, o instrutor mostra como realizar junções (joins), filtragens e agregações diretamente na fonte de dados (MySQL), resultando em um modelo de dados mais leve e rápido.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-11h14m30s815.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, a instrutora demonstra a configuração da conexão entre o **Power BI Desktop** e o banco de dados **MySQL**. Na janela de diálogo, são preenchidos os parâmetros de conectividade essenciais: o servidor (`localhost:3306`) e o nome do banco de dados (`company_constraints`).
+
+Além das configurações padrão, é explorada a seção de **Opções avançadas**, que permite a inserção de uma **Instrução SQL** personalizada. Esta funcionalidade é fundamental para otimizar a performance, permitindo que apenas um subconjunto específico de dados (como um cenário restrito de gerentes com dependentes) seja importado, em vez de carregar todas as tabelas da base.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-11h14m41s297.jpg" alt="" width="840">
+</p>
+
+Para definir exatamente quais dados levar ao Power BI, a consulta é validada no **MySQL Workbench**. O objetivo é realizar um `INNER JOIN` entre as tabelas `employee` e `dependent` para retornar apenas os colaboradores que possuem dependentes, utilizando funções de agregação para sumarizar as informações.
+
+O código SQL desenvolvido e testado no Workbench é:
+
+```sql
+SELECT 
+    CONCAT(Fname, ' ', Minit, ' ', Lname) AS Nome, 
+    Dno AS Departamento, 
+    COUNT(*) AS Total_dependentes
+FROM employee AS e
+INNER JOIN dependent AS d ON e.Ssn = d.Essn 
+GROUP BY Nome, Departamento;
+
+```
+
+A imagem exibe o **Result Grid** com o retorno da query, confirmando nomes como Amanda B. Teixeira e Joyce A. English, cada uma associada ao seu respectivo departamento e contagem de dependentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-11h14m44s787.jpg" alt="" width="840">
+</p>
+
+Após a validação no banco de dados, a instrução SQL é copiada e colada diretamente no campo **Instrução SQL (opcional, requer banco de dados)** dentro do Power BI.
+
+Este método garante que a lógica de filtragem e junção de tabelas ocorra no nível do servidor de banco de dados, resultando em uma importação mais rápida e em um modelo de dados mais enxuto, contendo apenas as colunas "Nome", "Departamento" e "Total_dependentes" conforme definido na query.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-11h15m03s508.jpg" alt="" width="840">
+</p>
+
+Com os dados importados, a interface do Power BI exibe a nova tabela (inicialmente nomeada como "Consulta 1", posteriormente renomeada para "gerentes com dependentes"). A instrutora utiliza esses dados para criar um visual de **Gráfico de Área** para análise da magnitude dos dependentes por colaborador.
+
+No painel de **Campos**, observa-se a estrutura simplificada resultante da query personalizada:
+
+* **Departamento**
+* **Nome**
+* **Total de dependentes**
+
+O gráfico gerado no relatório permite visualizar rapidamente a distribuição, evidenciando que, nesta base de testes específica, os gerentes listados possuem uma contagem uniforme de três dependentes cada.      
+
+
 ### 🟩 Vídeo 11 - Instanciando um Banco de Dados com SQL Server na Azure
 
 <video width="60%" controls>
@@ -638,7 +694,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/2c7b7f47-2290-4882-9ef4-f450149c4921?autoplay=1
+
+
 
 ### 🟩 Vídeo 12 - Analisando as Configurações da nossa Instância do SQL Server na Azure
 
