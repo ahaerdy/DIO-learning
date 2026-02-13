@@ -696,6 +696,57 @@ O gráfico gerado no relatório permite visualizar rapidamente a distribuição,
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/2c7b7f47-2290-4882-9ef4-f450149c4921?autoplay=1
 
+Este guia descreve o processo passo a passo para configurar um banco de dados SQL na nuvem Microsoft Azure, focado em um ambiente de teste para integração com o Power BI. O tutorial abrange desde a criação da conta até a implantação final com dados de exemplo.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h33m30s254.jpg" alt="" width="840">
+</p>
+
+A interface inicial do portal do Microsoft Azure apresenta o **Centro de Início Rápido**, onde é possível visualizar diversas opções de serviços para iniciar um projeto. Entre as alternativas em destaque, encontra-se a opção **Configurar um banco de dados**, que permite explorar as opções para gerenciar bancos de dados relacionais e não relacionais na nuvem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h33m37s733.jpg" alt="" width="840">
+</p>
+
+Ao acessar a seção de **Bancos de dados SQL**, o portal exibe uma lista (atualmente vazia) dos recursos disponíveis. Nesta tela, o usuário tem acesso a comandos principais como **Criar**, para instanciar um novo banco de dados, além de opções para gerenciar reservas e atualizar a visualização da lista de recursos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h33m46s865.jpg" alt="" width="840">
+</p>
+
+Na etapa de criação do servidor do Banco de Dados SQL, é necessário definir configurações básicas como o **Nome do servidor** (neste exemplo, `powerbiserverclient`) e a **Localização** geográfica do data center, selecionada como `(South America) Brazil South`. Abaixo, iniciam-se as configurações de **Autenticação**, onde o usuário deve escolher o método de acesso ao servidor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h33m49s452.jpg" alt="" width="840">
+</p>
+
+Ao optar pelo método **Usar autenticação SQL**, o sistema exige a criação de um **Logon do administrador do servidor** (definido como `powerbi`) e uma senha robusta. O Azure valida se a senha atende aos requisitos de segurança, como ter pelo menos 8 caracteres e incluir letras maiúsculas, minúsculas, números e caracteres especiais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h33m52s572.jpg" alt="" width="840">
+</p>
+
+Nas configurações de **Computação e Armazenamento**, define-se a camada de preço e a capacidade do banco de dados. No exemplo, foi selecionada a camada **Standard S0** com **10 DTUs** e **250 GB** de armazenamento. Também é possível configurar a redundância do armazenamento de backup para garantir a recuperação de dados em caso de interrupções regionais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h34m00s190.jpg" alt="" width="840">
+</p>
+
+A aba de **Rede** permite configurar as **Regras de Firewall** e a conectividade. Duas opções críticas são apresentadas: **Permitir que serviços e recursos do Azure acessem este servidor** e **Adicionar o endereço IP do cliente atual**. Além disso, a **Política de conexão** pode ser definida como "Padrão", que utiliza redirecionamento para conexões internas ao Azure e Proxy para conexões externas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h34m18s101.jpg" alt="" width="840">
+</p>
+
+A tela de **Visão Geral da Implantação** mostra o progresso da criação dos recursos. O sistema lista os componentes sendo instanciados no servidor `powerbiserverclient`, incluindo o banco de dados `Azure_BD_PowerBI`, as configurações de firewall para o IP do cliente e as regras para IPs do Windows Azure, indicando o status de cada operação como "Created" ou "Accepted".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h34m20s737.jpg" alt="" width="840">
+</p>
+
+Após a conclusão, a página do recurso exibe os **Fundamentos** do banco de dados `Azure_BD_PowerBI`. Estão visíveis o nome do servidor (`powerbiserverclient.database.windows.net`), o status "Online", a localização em "Brazil South" e a camada de preços configurada. O painel lateral oferece ferramentas para monitoramento, configuração de acesso e o editor de consultas para manipulação direta dos dados.      
 
 
 ### 🟩 Vídeo 12 - Analisando as Configurações da nossa Instância do SQL Server na Azure
@@ -705,7 +756,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/575ae1d4-72cc-44b0-ad1a-ccc521cf1553?autoplay=1
+
+
 
 ### 🟩 Vídeo 13 - Considerações sobre Integração com NoSQL e Armazenamento de Dados do Power BI
 
