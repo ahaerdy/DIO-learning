@@ -100,7 +100,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [ ] Curso: [Programação Orientada a Objetos com Java](Modulo_06/11-Curso.11-Programacao_Orientada_a_Objetos_com_Java)
 - [ ] Curso: [Trabalhando com Banco de Dados utilizando JDBC e JPA](Modulo_06/12-Curso.12-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA)
 - [ ] Curso: [Persistência de Dados com Java, JPA e Hibernate](Modulo_06/13-Curso.13-Persistencia_de_Dados_com_Java%2C_JPA_e_Hibernate)
-- [ ] Projeto: Criando um Banco Digital com Java e Orientação a Objetos 
+- [ ] Projeto: [Criando um Banco Digital com Java e Orientação a Objetos](Modulo_06/14-Projeto-Criando_um_Banco_Digital_com_Java_e_Orientacao_a_Objetos) 
 - [ ] Curso: Testes Unitários Com JUnit
 
 ### Módulo 7: Spring Framework
