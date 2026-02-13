@@ -758,6 +758,82 @@ Após a conclusão, a página do recurso exibe os **Fundamentos** do banco de da
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/575ae1d4-72cc-44b0-ad1a-ccc521cf1553?autoplay=1
 
+Este guia resume os passos para explorar as configurações de um banco de dados SQL no Azure, as ferramentas de desenvolvimento disponíveis e o processo de integração direta com o Power BI.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h44m10s004.jpg" alt="" width="840">
+</p>
+
+A interface inicial apresenta a visão geral do banco de dados SQL no Azure, identificado como **Azure_BD_PowerBI**. Nesta tela, é possível visualizar informações fundamentais como o **nome do servidor** (`powerbiserverclient.database.windows.net`), o status operacional **Online**, e a localização configurada em **Brazil South**. O menu lateral destaca as opções de configuração e as plataformas de integração, como a **Power Platform**, essenciais para o gerenciamento do recurso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h44m17s284.jpg" alt="" width="840">
+</p>
+
+Esta seção detalha as **Cadeias de conexão** (Connection Strings) necessárias para que aplicações externas se comuniquem com o banco de dados. O exemplo visual foca na linguagem **Go**, fornecendo um esqueleto de código para criar um pool de conexões utilizando o driver `go-mssqldb`.
+
+```go
+// Go connection Sample Code:
+package main
+
+import (
+    "github.com/microsoft/go-mssqldb"
+    "database/sql"
+    "context"
+    "log"
+    "errors"
+)
+
+var db *sql.DB
+var server = "powerbiserverclient.database.windows.net"
+var port = 1433
+var user = "powerbi"
+var password = "<your_password>"
+var database = "Azure_BD_PowerBI"
+
+func main() {
+    // Build connection string
+    connString := fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d;database=%s;",
+        server, user, password, port, database)
+    
+    var err error
+    // Create connection pool
+
+```
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h44m20s595.jpg" alt="" width="840">
+</p>
+
+Na aba de **Introdução**, o Azure facilita o fluxo de trabalho inicial oferecendo atalhos para configurar o acesso à rede (firewall) e ferramentas de desenvolvimento. São disponibilizadas opções para abrir o banco diretamente no **Azure Data Studio** ou no **Visual Studio**, além de links rápidos para visualizar as cadeias de conexão em diferentes linguagens.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h44m24s413.jpg" alt="" width="840">
+</p>
+
+A seção de **Monitoramento** exibe o status dos alertas do banco de dados. No momento capturado, não há alertas ativos ("Nenhum alerta"), mas a plataforma permite a criação de regras personalizadas para notificar o administrador sobre eventos importantes de desempenho ou segurança através do botão **Criar regra de alerta**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h44m25s886.jpg" alt="" width="840">
+</p>
+
+A interface de **Integrações** demonstra a capacidade de expansão do ecossistema Azure. É possível conectar o banco de dados a serviços como o **Azure Stream Analytics**, para análise de dados em tempo real, e o **Azure Search**, para tornar os dados indexáveis e pesquisáveis, além das ferramentas da **Power Platform**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h44m27s919.jpg" alt="" width="840">
+</p>
+
+Focando especificamente na integração com o **Power BI**, esta tela permite transformar tabelas SQL em relatórios visuais. O usuário pode baixar um arquivo de conexão (`.pbids`) clicando em **Introdução**, facilitando a abertura do projeto diretamente no Power BI Desktop para iniciar a visualização dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-13-12h44m31s511.jpg" alt="" width="840">
+</p>
+
+Ao iniciar a conexão com o Power BI, é exibida a janela de configuração de acesso ao banco de dados SQL Server. Nela, deve-se confirmar o endereço do servidor e escolher o método de autenticação, como o uso de **credenciais do Windows**, **Banco de Dados** ou **Conta da Microsoft**, além de definir o nível de aplicação das configurações para o servidor especificado.      
 
 
 ### 🟩 Vídeo 13 - Considerações sobre Integração com NoSQL e Armazenamento de Dados do Power BI
@@ -767,7 +843,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/coleta-e-extracao-de-dados-com-power-bi/learning/92e36d2b-3431-4eaa-9c0e-b8e853bc6783?autoplay=1
+
+
 
 ### 🟩 Vídeo 14 - Como lidar com Problemas de Desempenho no Power BI
 
