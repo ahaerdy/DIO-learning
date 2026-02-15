@@ -96,11 +96,13 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Estruturas de Dados em Java: Principais Implementações](Modulo_06/07-Curso.07-Estruturas_de_Dados_em_Java-Principais_Implementacoes)
 - [x] Curso: [Debugging Java](Modulo_06/08-Curso.08-Debugging_Java)
 - [x] Curso: [Tratamento de Exceções em Java](Modulo_06/09-Curso.09-Tratamento_de_Excecoes_em_Java)
-- [ ] Desafio: [Desafios TQI - Java](Modulo_06/10-Desafio-Desafios_TQI-Java)
-- [ ] Curso: [Programação Orientada a Objetos com Java](Modulo_06/11-Curso.11-Programacao_Orientada_a_Objetos_com_Java)
-- [ ] Curso: [Trabalhando com Banco de Dados utilizando JDBC e JPA](Modulo_06/12-Curso.12-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA)
-- [ ] Curso: [Persistência de Dados com Java, JPA e Hibernate](Modulo_06/13-Curso.13-Persistencia_de_Dados_com_Java%2C_JPA_e_Hibernate)
-- [ ] Projeto: [Criando um Banco Digital com Java e Orientação a Objetos](Modulo_06/14-Projeto-Criando_um_Banco_Digital_com_Java_e_Orientacao_a_Objetos) 
+- [x] Desafio: [Desafios TQI - Java](Modulo_06/10-Desafio-Desafios_TQI-Java)
+- [x] Curso: [Programação Orientada a Objetos com Java](Modulo_06/11-Curso.11-Programacao_Orientada_a_Objetos_com_Java)
+- [x] Curso: [Trabalhando com Banco de Dados utilizando JDBC e JPA](Modulo_06/12-Curso.12-Trabalhando_com_Banco_de_Dados_utilizando_JDBC_e_JPA)
+- [x] Curso: [Persistência de Dados com Java, JPA e Hibernate](Modulo_06/13-Curso.13-Persistencia_de_Dados_com_Java%2C_JPA_e_Hibernate)
+- [x] Projeto: [Criando um Banco Digital com Java e Orientação a Objetos](Modulo_06/14-Projeto-Criando_um_Banco_Digital_com_Java_e_Orientacao_a_Objetos) 
+    - **Repositório**: https://github.com/ahaerdy/lab-java-banco-digital
+    - **Descrição**: Neste projeto, foi implementado um sistema de banco digital em Java com foco na aplicação prática dos quatro pilares da Programação Orientada a Objetos: a abstração do domínio bancário em classes e interface (`IConta`), o encapsulamento da lógica de saldo e numeração de contas, a herança entre a classe base Conta e as subclasses `ContaCorrente` e `ContaPoupanca`, e o polimorfismo na forma como cada tipo de conta exibe seu próprio extrato. O sistema permite criar clientes, abrir contas, realizar depósitos, saques e transferências entre contas da mesma instituição, com numeração sequencial automática. 
 - [ ] Curso: Testes Unitários Com JUnit
 
 ### Módulo 7: Spring Framework
