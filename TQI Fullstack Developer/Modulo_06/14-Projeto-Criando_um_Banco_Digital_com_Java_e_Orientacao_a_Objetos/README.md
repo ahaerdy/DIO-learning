@@ -625,6 +625,6 @@ Neste projeto, será disponibilizado no GitHub um projeto de referência que uti
 - [Slides](https://docs.google.com/presentation/d/1sGnTlpJK0F08hSZebk8LNTsOkHVBivVu/edit?usp=sharing&ouid=105300330738120646134&rtpof=true&sd=true)
 - [Repositório no GitHub](https://github.com/falvojr/dio-live-20210802) (implementação de referência)
 
-# Repositório do projeto
+# Repositório do projeto entregue
 
-link: 
+link: https://github.com/ahaerdy/lab-java-banco-digital
