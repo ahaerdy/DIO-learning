@@ -273,6 +273,59 @@ Essa abordagem reforça que o encapsulamento define a forma como o objeto é uti
 
 link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/7fce6cb4-f125-4fec-8927-435eec7c89eb
 
+Este resumo explora a transição de um código redundante para uma arquitetura robusta utilizando os pilares da Programação Orientada a Objetos (POO). O foco principal é a aplicação prática desses conceitos em um sistema bancário (Contas Correntes e Poupança).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-14h53m05s669.jpg" alt="" width="840">
+</p>
+
+Nesta introdução ao pilar de **Herança**, o foco é a reutilização de código e a eficiência na modelagem de sistemas. O conceito permite a definição de uma **classe filha** que reutiliza (herda), estende ou modifica o comportamento de uma **classe pai**, também chamada de classe base.
+
+Essa abordagem é fundamental para aplicar o princípio **DRY (Don't Repeat Yourself)**. Em vez de replicar atributos e métodos idênticos em classes como "Conta Corrente" e "Conta Poupança", cria-se uma superclasse genérica que centraliza essas características, tornando o código mais elegante e fácil de manter.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-14h54m05s686.jpg" alt="" width="840">
+</p>
+
+A implementação prática no ambiente de desenvolvimento demonstra a criação de uma **classe abstrata** chamada `Conta`, que implementa a interface `IConta`. Uma classe abstrata é utilizada de forma estratégica: ela serve como um molde que não pode ser instanciado diretamente, pois faz sentido apenas que as classes filhas específicas, como Corrente ou Poupança, existam como objetos reais.
+
+O uso da interface `IConta` estabelece um **contrato**, obrigando a classe a implementar métodos essenciais como saque, depósito e transferência. Abaixo, observa-se a estrutura base com os atributos privados e os métodos de acesso (getters):
+
+```java
+public abstract class Conta implements IConta {
+    private int agencia;
+    private int numero;
+    private double saldo;
+
+    @Override
+    public void sacar(double valor) {
+    }
+
+    @Override
+    public void depositar(double valor) {
+    }
+
+    @Override
+    public void transferir(double valor, Conta contaDestino) {
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+}
+
+```      
+
 ### 🟩 Vídeo 05 - Pilares da orientação a objetos - Polimorfismo
 
 <video width="60%" controls>
@@ -280,7 +333,9 @@ link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orien
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/7d6eeed8-9dfa-4710-bb0c-eb82a0f55bee
+
+
 
 ### 🟩 Vídeo 06 - Desenvolvendo saque, depósito, transferência e extrato
 
