@@ -541,8 +541,7 @@ public class Main {
 ```
 
 O teste final demonstra a interação entre os objetos. Primeiro, realiza-se um depósito de 100 reais na conta corrente. Em seguida, esse valor é transferido para a conta poupança. Internamente, o método `transferir` executa um saque na origem (`this.sacar`) e um depósito no destino (`contaDestino.depositar`). O resultado final mostra a conta corrente com saldo zero e a conta poupança com os 100 reais, confirmando o sucesso da operação.
-
-   
+  
 
 ### 🟩 Vídeo 07 - Proposta de desafio de projeto
 
@@ -584,6 +583,11 @@ O objetivo é que cada desenvolvedor utilize sua criatividade para tornar a solu
 
 link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/d7137654-11c5-44d9-bf99-c1584cec9ee2
 
+Este vídeo documenta o processo de criação de um repositório no GitHub para o projeto "Everis SRE Essentials", focado em um desafio de sistema bancário da DIO. Além da parte técnica de versionamento, o instrutor aborda conceitos fundamentais de Programação Orientada a Objetos (POO) em resposta às dúvidas dos alunos.
+
+### Anotações
+
+      
 
 
 ### 🟩 Vídeo 09 - Entendendo o Desafio
@@ -595,6 +599,7 @@ link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orien
 
 link do vídeo:
 
+Este vídeo documenta o processo de criação de um repositório no GitHub para o projeto "Everis SRE Essentials", focado em um desafio de sistema bancário da DIO. Além da parte técnica de versionamento, o instrutor aborda conceitos fundamentais de Programação Orientada a Objetos (POO) em resposta às dúvidas dos alunos.
 
 ##  Materiais de Apoio
 
