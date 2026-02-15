@@ -540,27 +540,9 @@ public class Main {
 
 ```
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h04m02s607.jpg" alt="" width="840">
-</p>
-
 O teste final demonstra a interação entre os objetos. Primeiro, realiza-se um depósito de 100 reais na conta corrente. Em seguida, esse valor é transferido para a conta poupança. Internamente, o método `transferir` executa um saque na origem (`this.sacar`) e um depósito no destino (`contaDestino.depositar`). O resultado final mostra a conta corrente com saldo zero e a conta poupança com os 100 reais, confirmando o sucesso da operação.
 
-```java
-public class Main {
-    public static void main(String[] args) {
-        Conta cc = new ContaCorrente();
-        IConta poupanca = new ContaPoupanca();
-
-        cc.depositar(100);
-        cc.transferir(100, poupanca);
-
-        cc.imprimirExtrato();
-        poupanca.imprimirExtrato();
-    }
-}
-
-```      
+   
 
 ### 🟩 Vídeo 07 - Proposta de desafio de projeto
 
