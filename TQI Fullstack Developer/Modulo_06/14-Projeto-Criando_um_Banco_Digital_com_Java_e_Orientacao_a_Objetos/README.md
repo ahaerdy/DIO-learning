@@ -587,23 +587,44 @@ Este vídeo documenta o processo de criação de um repositório no GitHub para 
 
 ### Anotações
 
-      
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h51m12s852.jpg" alt="" width="840">
+</p>
+
+O processo de compartilhamento do código-fonte começa com a criação de um novo repositório público no GitHub. O instrutor define o nome do repositório como `dio-live-20210802` e adiciona uma descrição contextualizada ao bootcamp "everis SRE Essentials", focada em sanar dúvidas sobre Orientação a Objetos. Esta etapa prepara o ambiente remoto para receber os arquivos do projeto que serão enviados via linha de comando.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h51m25s066.jpg" alt="" width="840">
+</p>
+
+Após a execução dos comandos de inicialização, commit e push, o repositório `falvojr/dio-live-20210802` apresenta a estrutura completa do projeto sincronizada. É possível observar a presença das pastas de código-fonte (`src`), arquivos de configuração do Eclipse (`.settings`, `.classpath`, `.project`) e o arquivo `README.md`. O registro do commit "Expert Talk 02/08/2021" confirma a disponibilização bem-sucedida da implementação do desafio para consulta.      
 
 
-### 🟩 Vídeo 09 - Entendendo o Desafio
+## Entendendo o Desafio
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.06-curso.14-video_09.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+### Descrição do Desafio
 
-link do vídeo:
+Reforce seu conhecimento em Programação Orientada a Objetos (POO) em Java com um desafio de projeto totalmente prático. Para isso, os pilares da orientação a objetos são devidamente explorados no contexto bancário, onde o expert implementa um projeto de referência (disponibilizado no GitHub) de forma prática e interativa. Sendo assim, você poderá desenvolver sua capacidade de abstração reproduzindo essa solução. Além disso, caso queira ir além, implemente suas próprias evoluções e melhorias ;)
 
-Este vídeo documenta o processo de criação de um repositório no GitHub para o projeto "Everis SRE Essentials", focado em um desafio de sistema bancário da DIO. Além da parte técnica de versionamento, o instrutor aborda conceitos fundamentais de Programação Orientada a Objetos (POO) em resposta às dúvidas dos alunos.
+### Objetivo
+O objetivo deste projeto prático hands-on é reforçar o conhecimento em Programação Orientada a Objetos (POO) em Java, através da implementação de um banco digital.
 
-##  Materiais de Apoio
+### Descrição
+Neste projeto, será disponibilizado no GitHub um projeto de referência que utiliza os conceitos de POO e Java para criar um banco digital. O contexto bancário será explorado para explorar os pilares da orientação a objetos, e assim, os participantes poderão reproduzir a solução e desenvolver sua capacidade de abstração.
 
-# Certificado: 
+### Requisitos Técnicos
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Conhecimentos básicos de Programação Orientada a Objetos em Java;
+- Ambiente de desenvolvimento Java configurado;
+- Acesso à internet para acesso ao projeto de referência no GitHub;
+- Familiaridade com o uso de repositórios Git (opcional, mas recomendado);
+- Capacidade de abstração para reproduzir a solução proposta e implementar melhorias.
+
+## Links Úteis
+
+- [Slides](https://docs.google.com/presentation/d/1sGnTlpJK0F08hSZebk8LNTsOkHVBivVu/edit?usp=sharing&ouid=105300330738120646134&rtpof=true&sd=true)
+- [Repositório no GitHub](https://github.com/falvojr/dio-live-20210802) (implementação de referência)
+
+# Repositório do projeto
+
+link: 
