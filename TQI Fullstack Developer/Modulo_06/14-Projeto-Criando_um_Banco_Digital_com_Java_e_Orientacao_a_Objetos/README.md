@@ -335,6 +335,72 @@ public abstract class Conta implements IConta {
 
 link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/7d6eeed8-9dfa-4710-bb0c-eb82a0f55bee
 
+Este vídeo explora o conceito de polimorfismo, demonstrando como objetos podem ser referenciados de diferentes formas dentro de uma hierarquia de classes. Além disso, aborda a implementação prática de construtores, o uso de variáveis estáticas para contadores sequenciais e a importância dos modificadores de acesso.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-15h13m32s013.jpg" alt="" width="840">
+</p>
+
+O polimorfismo é definido como a capacidade de um objeto ser referenciado de múltiplas formas. Na prática da Programação Orientada a Objetos, isso significa que podemos tratar objetos criados a partir de classes específicas (como uma conta corrente) como se fossem objetos de uma classe genérica (como uma conta comum), dependendo da necessidade do contexto.
+
+É fundamental destacar que o polimorfismo não implica na transformação do objeto em si. Um objeto mantém o tipo com o qual foi instanciado durante todo o seu ciclo de vida; o que se altera é a forma como nos referimos a ele através das variáveis de referência. Essa técnica é poderosa para evitar códigos repetitivos, permitindo que utilizemos métodos genéricos da hierarquia de classes sempre que possível, recorrendo à tipagem específica apenas quando comportamentos exclusivos são necessários.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-15h13m56s020.jpg" alt="" width="840">
+</p>
+
+A implementação técnica demonstra a transição do uso de modificadores de acesso para otimizar a herança. Ao alterar os atributos de `private` para `protected`, permitimos que as classes filhas visualizem e manipulem as propriedades da classe pai, como `agencia` e `numero`, sem expô-las publicamente.
+
+O código também introduz uma lógica de automação para a criação de contas, utilizando uma constante para a agência padrão e um campo estático `SEQUENCIAL` para garantir que cada nova conta receba um número único e incremental, funcionando de forma análoga a uma chave primária.
+
+```java
+public abstract class Conta implements IConta {
+
+    private static final int AGENCIA_PADRAO = 1;
+    private static int SEQUENCIAL = 1;
+
+    protected int agencia;
+    protected int numero;
+    protected double saldo;
+
+    public Conta() {
+        this.agencia = Conta.AGENCIA_PADRAO;
+        this.numero = SEQUENCIAL++;
+    }
+
+    @Override
+    public void sacar(double valor) {
+
+    }
+
+    @Override
+    public void depositar(double valor) {
+
+    }
+
+    @Override
+    public void transferir(double valor, Conta contaDestino) {
+
+    }
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+}
+
+```
+
+Para facilitar a memorização da visibilidade dos modificadores, podemos analisar os padrões de acesso da seguinte forma:
+
+* **Private:** Informação restrita apenas à própria classe (o que só o "pai" sabe).
+* **Protected:** Informação compartilhada dentro da hierarquia de herança (o que o "pai" conta para os filhos).
+* **Public:** Informação acessível a qualquer outra classe do sistema (o que os "vizinhos" sabem).      
 
 
 ### 🟩 Vídeo 06 - Desenvolvendo saque, depósito, transferência e extrato
@@ -344,7 +410,9 @@ link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orien
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/5394cef5-5bd3-4a54-8c6e-64a33e4b1ea0
+
+
 
 ### 🟩 Vídeo 07 - Proposta de desafio de projeto
 
