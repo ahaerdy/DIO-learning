@@ -412,7 +412,155 @@ Para facilitar a memorização da visibilidade dos modificadores, podemos analis
 
 link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/5394cef5-5bd3-4a54-8c6e-64a33e4b1ea0
 
+Este vídeo apresenta uma aula prática sobre como finalizar a implementação de um sistema bancário, explorando conceitos avançados de Java. O foco principal é a aplicação real de encapsulamento, herança, polimorfismo e composição para criar um código limpo, reutilizável e fácil de manter. O instrutor demonstra a criação de métodos de saque, depósito e transferência, além de refatorar o código para evitar duplicidade.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h02m28s557.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, a classe abstrata `Conta` define a lógica base para as operações bancárias. O método `sacar` é implementado subtraindo o valor solicitado do saldo atual. A utilização do operador `-=` simplifica a atribuição, garantindo que o estado interno do objeto seja atualizado corretamente. Além disso, o construtor da classe automatiza a atribuição da agência padrão e incrementa um número sequencial para cada nova conta criada.
+
+```java
+public abstract class Conta implements IConta {
+    private static final int AGENCIA_PADRAO = 1;
+    private static int SEQUENCIAL = 1;
+
+    protected int agencia;
+    protected int numero;
+    protected double saldo;
+
+    public Conta() {
+        this.agencia = Conta.AGENCIA_PADRAO;
+        this.numero = SEQUENCIAL++;
+    }
+
+    @Override
+    public void sacar(double valor) {
+        saldo -= valor;
+    }
+
+    public void depositar(double valor) {
+        saldo += valor;
+    }
+
+    public void transferir(double valor, Conta contaDestino) {
+        this.sacar(valor);
+        contaDestino.depositar(valor);
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h02m33s892.jpg" alt="" width="840">
+</p>
+
+Para validar a implementação, é criada uma classe `Main` que servirá como ponto de entrada do sistema. Aqui, explora-se o conceito de polimorfismo ao instanciar objetos do tipo `ContaCorrente` e `ContaPoupanca`, mas referenciando-os através da classe pai `Conta`. Isso permite tratar diferentes tipos de contas de forma genérica, facilitando a manipulação de instâncias que compartilham a mesma base.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Conta cc = new ContaCorrente();
+        Conta poupanca = new ContaPoupanca();
+
+        System.out.println();
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h02m58s862.jpg" alt="" width="840">
+</p>
+
+A interface `IConta` estabelece o contrato que todas as classes de conta devem seguir. Ela define as assinaturas dos métodos essenciais: `sacar`, `depositar`, `transferir` e a nova funcionalidade `imprimirExtrato`. Como `Conta` é uma classe abstrata que implementa esta interface, ela não é obrigada a fornecer o corpo para `imprimirExtrato`, delegando essa responsabilidade para as classes filhas que terão implementações específicas.
+
+```java
+public interface IConta {
+    void sacar(double valor);
+    void depositar(double valor);
+    void transferir(double valor, Conta contaDestino);
+    void imprimirExtrato();
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h03m31s171.jpg" alt="" width="840">
+</p>
+
+Na classe `ContaCorrente`, o método `imprimirExtrato` é sobrescrito para exibir um cabeçalho personalizado. Para evitar a duplicidade de código na exibição dos dados (como agência, número e saldo), é aplicado um refactoring que extrai essas instruções para o método `imprimirInfosComuns`. Este método é definido com o modificador de acesso `protected` na classe pai, permitindo que apenas as subclasses tenham acesso a essa funcionalidade utilitária.
+
+```java
+public class ContaCorrente extends Conta {
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("=== Extrato Conta Corrente ===");
+        super.imprimirInfosComuns();
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h03m42s431.jpg" alt="" width="840">
+</p>
+
+De forma análoga à conta corrente, a classe `ContaPoupanca` implementa seu próprio extrato. Ao chamar `super.imprimirInfosComuns()`, ela reaproveita toda a lógica de formatação de strings e exibição de dados protegidos definida na superclasse. Essa abordagem demonstra a eficiência da herança em reduzir a manutenção de código repetitivo.
+
+```java
+public class ContaPoupanca extends Conta {
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("=== Extrato Conta Poupança ===");
+        super.imprimirInfosComuns();
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h03m48s659.jpg" alt="" width="840">
+</p>
+
+Ao executar o método principal, o console exibe os extratos de ambas as contas. É possível observar que a lógica de incremento sequencial funcionou: a primeira conta (Corrente) recebeu o número 1, enquanto a segunda (Poupança) recebeu o número 2. Ambas iniciam com o saldo zerado e pertencem à agência padrão 1, validando os valores iniciais definidos no construtor.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Conta cc = new ContaCorrente();
+        Conta poupanca = new ContaPoupanca();
+
+        cc.imprimirExtrato();
+        poupanca.imprimirExtrato();
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h04m02s607.jpg" alt="" width="840">
+</p>
+
+O teste final demonstra a interação entre os objetos. Primeiro, realiza-se um depósito de 100 reais na conta corrente. Em seguida, esse valor é transferido para a conta poupança. Internamente, o método `transferir` executa um saque na origem (`this.sacar`) e um depósito no destino (`contaDestino.depositar`). O resultado final mostra a conta corrente com saldo zero e a conta poupança com os 100 reais, confirmando o sucesso da operação.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Conta cc = new ContaCorrente();
+        IConta poupanca = new ContaPoupanca();
+
+        cc.depositar(100);
+        cc.transferir(100, poupanca);
+
+        cc.imprimirExtrato();
+        poupanca.imprimirExtrato();
+    }
+}
+
+```      
 
 ### 🟩 Vídeo 07 - Proposta de desafio de projeto
 
@@ -421,7 +569,9 @@ link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orien
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/6e2d97db-4d86-4eda-b918-cd0ad7b5dfaf
+
+
 
 ### 🟩 Vídeo 08 - Subindo o código no Github e comentários finais
 
