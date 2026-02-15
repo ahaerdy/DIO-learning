@@ -571,6 +571,26 @@ public class Main {
 
 link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/6e2d97db-4d86-4eda-b918-cd0ad7b5dfaf
 
+Este resumo aborda a etapa prática e os desafios propostos após a introdução aos pilares da Orientação a Objetos (OO) em Java. O foco é a aplicação do conhecimento em um cenário real de sistema bancário, incentivando a criatividade e a otimização do código.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h13m05s182.jpg" alt="" width="840">
+</p>
+
+O instrutor Venilton Falvo Jr., da Digital Innovation One (DIO), apresenta o encerramento da etapa de fundamentos sobre Programação Orientada a Objetos aplicada ao projeto. Após percorrer a introdução e os pilares do paradigma, o foco volta-se para a consolidação do conhecimento prático através de um desafio de evolução do sistema bancário desenvolvido durante a mentoria.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-15-16h13m11s405.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o desafio proposto consiste em aplicar a capacidade de Java e Orientação a Objetos para evoluir o projeto. As sugestões de melhoria incluem:
+
+* **Extensão do Domínio**: Utilizar o conhecimento para incluir novas classes, atributos e métodos ao domínio do projeto.
+* **Redução de Verbosidade**: Incluir o Lombok ao projeto para diminuir a quantidade de código repetitivo.
+
+O objetivo é que cada desenvolvedor utilize sua criatividade para tornar a solução mais robusta e efetiva.      
 
 
 ### 🟩 Vídeo 08 - Subindo o código no Github e comentários finais
@@ -580,7 +600,9 @@ link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orien
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-um-banco-digital-com-java-e-orientacao-objetos/learning/d7137654-11c5-44d9-bf99-c1584cec9ee2
+
+
 
 ### 🟩 Vídeo 09 - Entendendo o Desafio
 
