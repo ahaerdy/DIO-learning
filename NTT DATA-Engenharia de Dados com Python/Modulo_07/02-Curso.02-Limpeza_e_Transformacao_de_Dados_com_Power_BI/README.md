@@ -230,7 +230,60 @@ A estrutura dos dados influencia diretamente as funções matemáticas que o Pow
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/d7b40444-f4eb-4a5c-a49b-dff8aad693f7?autoplay=1
 
+Este guia foca na técnica de "Unpivot" (Transformar Colunas em Linhas), uma das etapas mais cruciais na preparação de dados. O objetivo é converter planilhas no "estilo Excel" (onde os dados estão espalhados horizontalmente) em tabelas no "estilo Banco de Dados" (onde os dados estão organizados verticalmente), facilitando cálculos e visualizações.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-15h01m43s107.jpg" alt="" width="840">
+</p>
+
+A estrutura inicial apresentada no Excel exibe uma organização comum de dados, onde o **Mês** ocupa as linhas e os anos (**2018** e **2019**) estão dispostos como cabeçalhos de colunas. Embora visualmente clara para humanos, essa disposição cria dificuldades no Power BI para a execução de funções matemáticas de agregação, como somatórios e contagens, pois as vendas não estão consolidadas em um único campo, mas sim distribuídas por colunas de anos distintos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-15h01m59s536.jpg" alt="" width="840">
+</p>
+
+Ao importar os dados para o Editor do Power Query, é aplicada a operação de **Transformar Colunas em Linhas** (Unpivot). O objetivo é "rotacionar" a tabela para que os anos deixem de ser cabeçalhos e passem a ser valores dentro de uma coluna de atributos, permitindo que cada linha represente uma combinação única de mês, ano e valor de venda.
+
+```powerquery
+= Table.UnpivotOtherColumns("Colunas Reordenadas", {"Ano"}, "Atributo", "Valor")
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-15h02m15s288.jpg" alt="" width="840">
+</p>
+
+Além do unpivot, o editor permite explorar outras formas de reorganização, como a função **Transpor**, que inverte totalmente a orientação de linhas e colunas. No entanto, se os cabeçalhos não forem tratados corretamente, a tabela pode resultar em uma estrutura confusa com inúmeras colunas numeradas (Coluna 1, Coluna 2, etc.), o que dificulta a agregação e análise automática dos dados pelo Power BI.
+
+```powerquery
+Table.Unpivot("Colunas Renomeadas", {"Mês"}, "Atributo", "Valor")
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-15h02m34s444.jpg" alt="" width="840">
+</p>
+
+Nesta visualização de relatório, observa-se o comportamento do Power BI quando os dados ainda estão organizados com os anos em colunas separadas. O gráfico de área resultante precisa lidar com a **Soma de 2018** e a **Soma de 2019** como dois campos de dados independentes, em vez de uma única métrica de "Vendas" filtrada por uma dimensão de "Ano".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-15h02m35s676.jpg" alt="" width="840">
+</p>
+
+O painel de **Visualizações** e **Campos** detalha como essa estrutura "amarrada" limita a flexibilidade do analista. Como as vendas estão diretamente conectadas aos campos fixos de cada ano (**Σ 2018** e **Σ 2019**), torna-se mais complexo criar visões comparativas dinâmicas ou adicionar novas métricas, como lucros, que precisariam ser repetidas para cada nova coluna de ano inserida na planilha original.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-15h02m44s886.jpg" alt="" width="840">
+</p>
+
+A solução definitiva consiste em renomear as colunas geradas após o unpivot para nomes semanticamente corretos: **Ano** (antigo Atributo) e **Vendas** (antigo Valor). Com essa estrutura normalizada, os elementos Ano, Mês e Vendas tornam-se independentes na estrutura de dados, mas interconectados para a visualização, permitindo que o Power BI gere relatórios muito mais dinâmicos e fáceis de manter.
+
+```powerquery
+Table.RenameColumns("Outras Colunas Não Dinâmicas", {{"Atributo", "Ano"}, {"Valor", "Vendas"}})
+
+```      
 
 ### 🟩 Vídeo 05 - Colunas Dinâmicas – Pivot Column
 
@@ -239,7 +292,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 06 - Explorando Diversos Recursos de Transformação de Dados com Power BI
 
