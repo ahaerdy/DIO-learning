@@ -163,6 +163,62 @@ Table.RenameColumns(#"Tipo Alterado1", {{"Column2", "Nome"}})
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/5cc8bf28-8b75-45cb-b355-ae45a06d37d3?autoplay=1
 
+Este guia aborda a importância da limpeza de dados, focando na remoção de colunas desnecessárias para melhorar a performance e a clareza dos relatórios. O conteúdo explora como a estrutura dos dados influencia diretamente as visualizações e as funções matemáticas aplicadas pelo Power BI.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-14h14m34s158.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial dentro do **Editor do Power Query**, observamos a base de dados bruta antes das principais limpezas. A interface apresenta colunas de identificação e valores distribuídos mensalmente. O foco recai sobre a coluna `SubCategoriaProdutoID`, que contém identificadores numéricos que, embora úteis para o sistema, podem ser irrelevantes para o consumidor final do relatório.
+
+Um ponto crítico destacado é a **performance**: carregar colunas desnecessárias em bases de dados com milhares ou milhões de linhas exige mais processamento para renderizar o relatório, afetando o desempenho geral da ferramenta.
+
+```powerquery
+Table.TransformColumnTypes("Linhas Inferiores Removidas", {{"SubCategoriaProdutoID", Int64.Type}})
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-14h14m42s178.jpg" alt="" width="840">
+</p>
+
+Aqui é executada a ação de **remover colunas** que não agregam valor à análise de negócio. Ao eliminar o ID do produto, simplificamos o modelo de dados. Esta é uma boa prática de design de relatórios: priorizar atributos e nomes que o usuário consiga entender imediatamente ao "bater o olho", como o nome da categoria ou o valor das vendas.
+
+A remoção precoce de dados não utilizados facilita a etapa de **modelagem**, pois reduz a complexidade dos relacionamentos que o Power BI criará automaticamente entre as tabelas.
+
+```powerquery
+Table.RemoveColumns("Tipo Alterado2", {"SubCategoriaProdutoID"})
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-14h14m56s171.jpg" alt="" width="840">
+</p>
+
+Após aplicar as transformações e carregar os dados para o Power BI Desktop, visualizamos a tabela tratada. Os dados estão estruturados de forma que cada linha representa uma categoria de produto e cada coluna representa um mês do ano (Janeiro, Fevereiro, Março, etc.), com seus respectivos valores formatados em moeda (R$).
+
+Nesta visualização, é possível renomear campos diretamente na estrutura do modelo para tornar a interface mais intuitiva, como alterar o nome da coluna principal para **Categoria**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-14h15m13s568.jpg" alt="" width="840">
+</p>
+
+No painel de **Campos**, observamos como o Power BI interpreta a estrutura da tabela carregada. Note o símbolo de somatório () ao lado de cada mês. Isso indica que, devido à forma como os dados foram importados (com meses em colunas separadas), a ferramenta entende cada mês como um campo numérico individual passível de agregação.
+
+Essa estrutura dita como os visuais serão construídos, tratando cada mês como uma métrica de valor independente no relatório atual.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-14h15m25s025.jpg" alt="" width="840">
+</p>
+
+Para fins de comparação, este exemplo utiliza a tabela `financials` para demonstrar uma estrutura de dados diferente. Diferente do exemplo anterior, aqui temos:
+
+* **Coluna de Data única:** Em vez de colunas para cada mês, existe uma coluna `Date` que permite criar hierarquias (ano, trimestre, mês e dia).
+* **Métricas Consolidadas:** Campos como `Sales` (Vendas) e `Profit` (Lucro) aparecem como colunas únicas.
+
+A estrutura dos dados influencia diretamente as funções matemáticas que o Power BI aplicará e a flexibilidade das visões que podem ser geradas.      
 
 
 ### 🟩 Vídeo 04 - Transformando Colunas em Linhas com Power BI
@@ -172,7 +228,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/d7b40444-f4eb-4a5c-a49b-dff8aad693f7?autoplay=1
+
+
 
 ### 🟩 Vídeo 05 - Colunas Dinâmicas – Pivot Column
 
