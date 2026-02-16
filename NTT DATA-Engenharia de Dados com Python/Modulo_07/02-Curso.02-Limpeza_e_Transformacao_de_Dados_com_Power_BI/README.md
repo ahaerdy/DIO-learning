@@ -292,7 +292,9 @@ Table.RenameColumns("Outras Colunas Não Dinâmicas", {{"Atributo", "Ano"}, {"Va
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/46a3f29c-caa4-4250-9419-b5932d7035c0?autoplay=1
+
+
 
 ### 🟩 Vídeo 06 - Explorando Diversos Recursos de Transformação de Dados com Power BI
 
@@ -301,7 +303,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/efb10386-e56f-48a1-97de-51c934f19ed5?autoplay=1
 
 ### 🟩 Vídeo 07 - Transformando a Estrutura de Dados com Terceiro Exemplo
 
