@@ -295,7 +295,6 @@ Table.RenameColumns("Outras Colunas Não Dinâmicas", {{"Atributo", "Ano"}, {"Va
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/46a3f29c-caa4-4250-9419-b5932d7035c0?autoplay=1
 
 
-
 ### 🟩 Vídeo 06 - Explorando Diversos Recursos de Transformação de Dados com Power BI
 
 <video width="60%" controls>
@@ -305,6 +304,43 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/efb10386-e56f-48a1-97de-51c934f19ed5?autoplay=1
 
+Este guia resume as técnicas essenciais para reorganizar e limpar dados usando o Power Query no Power BI, com foco na função de Dinamização de Colunas (Pivot) e na Substituição de Valores.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-16h12m14s001.jpg" alt="" width="840">
+</p>
+
+A interface do **Editor do Power Query** apresenta o recurso de **Coluna Dinâmica** (ou *Pivot Column*) , localizado na guia **Transformar**. Esta funcionalidade é essencial para reestruturar tabelas onde os dados estão dispostos de forma simples, permitindo usar nomes na coluna selecionada para criar novas colunas.
+
+No exemplo visualizado, há uma lista de artigos esportivos divididos por categorias como "Bikes", "Roupas", "Acessrios" e "Componentes". O objetivo é preparar essa estrutura para uma análise organizada através de funções de agregação. Antes de aplicar a dinamização, é necessário realizar o ajuste dos cabeçalhos, utilizando a opção **Usar a Primeira Linha como Cabeçalho**  para garantir que os nomes das colunas sejam identificados corretamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-16h12m23s645.jpg" alt="" width="840">
+</p>
+
+Ao configurar a **Coluna Dinâmica** , o sistema permite definir como a nova estrutura será montada através da seleção de uma **Coluna de valores**. Dentro das **Opções avançadas** , o usuário pode escolher a função de agregação desejada, como a **Contagem** (seja de tudo ou de itens não vazios) ou a opção de **Não agregar**.
+
+As **Etapas Aplicadas** mostram a progressão do tratamento de dados, incluindo a navegação e a promoção de cabeçalhos. O código M gerado automaticamente para a tipagem dos dados após a promoção é visível na barra de fórmulas:
+
+```powerquery
+Table.TransformColumnTypes("Cabeçalhos Promovidos", {{"Categoria", type text}, {"Subcategoria", type text}})
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-16h12m33s556.jpg" alt="" width="840">
+</p>
+
+Além da dinamização, o tratamento de inconsistências é realizado através da ferramenta **Substituir Valores** , que permite trocar um valor por outro nas colunas selecionadas. No exemplo, o termo digitado incorretamente, "Acessrios" , é localizado para ser substituído pela grafia correta, "Acessórios".
+
+A interface de substituição oferece **Opções avançadas**, como a capacidade de **Coincidir conteúdo da célula inteira** ou usar caracteres especiais. Essa etapa é crucial para garantir a integridade dos dados antes de qualquer processo de pivotação ou agrupamento, evitando que erros ortográficos fragmentem as categorias no relatório final.
+
+```powerquery
+Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Categoria", type text}, {"Subcategoria", type text}})
+```      
+
 ### 🟩 Vídeo 07 - Transformando a Estrutura de Dados com Terceiro Exemplo
 
 <video width="60%" controls>
@@ -312,7 +348,56 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/3ee837cc-4bb0-4e62-be67-e962895fe1da?autoplay=1
+
+Este guia resume as principais técnicas de manipulação de dados apresentadas no tutorial, focando em como preparar bases de dados para análises eficientes no Power BI.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-19h58m38s184.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial do tratamento de dados no Power Query, o foco está na organização estrutural da tabela. O processo envolve o ajuste dos nomes das colunas para "Categoria" e "ID Categoria", seguido pela remoção de linhas desnecessárias que não compõem o corpo de dados útil. A aplicação da função para pular linhas é visível na barra de fórmulas, visando limpar o topo da planilha para que os cabeçalhos fiquem corretamente posicionados.
+
+```powerquery
+Table.Skip(#"Colunas Renomeadas", 1)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-19h58m50s613.jpg" alt="" width="840">
+</p>
+
+Após a estruturação básica, identifica-se a presença de valores nulos que podem comprometer a análise. Uma das abordagens para lidar com esses dados é a filtragem direta na coluna, onde se opta por remover as linhas que contêm valores vazios ou `null`. Esta ação garante que apenas registros completos para os meses analisados, como Janeiro, permaneçam na base de dados ativa.
+
+```powerquery
+Table.SelectRows(#"Tipo Alterado1", each ([Janeiro] <> null))
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-19h59m15s216.jpg" alt="" width="840">
+</p>
+
+Alternativamente à remoção de linhas, o Power Query permite a substituição de valores para manter a integridade do volume de dados. Quando um valor `null` é identificado em colunas numéricas ou de categoria, pode-se utilizar a interface de "Substituir Valores" para localizar o termo `null` e substituí-lo por `0` (ou outro valor padrão). Isso é essencial para que cálculos matemáticos subsequentes não retornem erro devido a células vazias.
+
+```powerquery
+Table.ReplaceValue("Linhas Filtradas", null, "0", Replacer.ReplaceValue, {"Categoria"})
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-19h59m37s562.jpg" alt="" width="840">
+</p>
+
+Para análises de frequência ou consolidação, utiliza-se a funcionalidade "Agrupar por". Nesta interface, define-se uma coluna de agrupamento (como "Categoria") e a operação desejada, como a contagem de linhas. O resultado é uma nova coluna, geralmente nomeada como "Contagem", que resume quantas vezes cada item aparece na base original, facilitando a identificação de redundâncias ou o volume de estoque por classe de produto.
+
+```powerquery
+Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Categoria", type text}})
+
+```      
+
 
 ### 🟩 Vídeo 08 - Mesclando Colunas com Power Query
 
@@ -321,7 +406,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/2aa9daf0-d880-4023-a2d2-b8e4df379727?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Explorando Exibição de Estatísticas da Base de Dados com Power Query
 
