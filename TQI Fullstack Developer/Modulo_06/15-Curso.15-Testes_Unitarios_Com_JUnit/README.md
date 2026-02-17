@@ -338,7 +338,14 @@ A estrutura de diretórios segue o padrão convencional da indústria: classes d
 
 Para aprofundamento, os recursos oficiais são fundamentais. O repositório oficial no GitHub e o guia do usuário do JUnit 5 oferecem detalhes técnicos avançados, exemplos de extensões e melhores práticas para a escrita de testes robustos.
 
+#### Referências
 
+- https://junit.org/junit5/
+- https://github.com/junit-team/junit5/
+- https://www.baeldung.com/junit-5-gradle
+- https://github.com/junit-team/junit5/
+- https://www.baeldung.com/junit-5-gradle
+- https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html
 
 
 ## Parte 4 - Aprofundando nos recursos
