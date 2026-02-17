@@ -103,7 +103,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Projeto: [Criando um Banco Digital com Java e Orientação a Objetos](Modulo_06/14-Projeto-Criando_um_Banco_Digital_com_Java_e_Orientacao_a_Objetos) 
     - **Repositório**: https://github.com/ahaerdy/lab-java-banco-digital
     - **Descrição**: Neste projeto, foi implementado um sistema de banco digital em Java com foco na aplicação prática dos quatro pilares da Programação Orientada a Objetos: a abstração do domínio bancário em classes e interface (`IConta`), o encapsulamento da lógica de saldo e numeração de contas, a herança entre a classe base Conta e as subclasses `ContaCorrente` e `ContaPoupanca`, e o polimorfismo na forma como cada tipo de conta exibe seu próprio extrato. O sistema permite criar clientes, abrir contas, realizar depósitos, saques e transferências entre contas da mesma instituição, com numeração sequencial automática. 
-- [ ] Curso: Testes Unitários Com JUnit
+- [x] Curso: [Testes Unitários Com JUnit](Modulo_06/15-Curso.15-Testes_Unitarios_Com_JUnit)
 
 ### Módulo 7: Spring Framework
 
