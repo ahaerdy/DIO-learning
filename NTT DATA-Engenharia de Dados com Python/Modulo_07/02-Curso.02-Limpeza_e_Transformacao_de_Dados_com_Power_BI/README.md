@@ -599,5 +599,5 @@ in
 
 # Certificado: Limpeza e Transformação de Dados com Power BI
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/4CIQ1GMA.pdf
+- Certificado em pdf: [Certificado-Limpeza_e_Transformacao_de_Dados_com_Power_BI_.pdf](000-Midia_e_Anexos/Certificado-Limpeza_e_Transformacao_de_Dados_com_Power_BI_.pdf)
