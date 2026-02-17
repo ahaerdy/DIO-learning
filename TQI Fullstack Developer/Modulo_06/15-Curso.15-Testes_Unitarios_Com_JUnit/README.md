@@ -76,6 +76,84 @@ A fase final do curso aborda a integração e a evolução da prática de testes
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/f1526efd-2e98-4c3d-931e-3e9e889867e8?autoplay=1
 
+Este guia resume a primeira aula do curso de testes unitários, abordando desde a definição fundamental até a importância estratégica de implementar testes no ciclo de vida de desenvolvimento de software.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h21m16s727.jpg" alt="" width="840">
+</p>
+
+Esta é a aula inaugural do curso voltado para o aprendizado de testes unitários utilizando o framework JUnit. O foco inicial desta sessão é explorar as motivações e a importância de se escrever esses testes dentro do fluxo de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h21m20s931.jpg" alt="" width="840">
+</p>
+
+Os objetivos centrais desta etapa consistem em fornecer uma compreensão clara sobre a definição de testes unitários e demonstrar a relevância fundamental dessa prática para a qualidade e estabilidade do software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h21m23s649.jpg" alt="" width="840">
+</p>
+
+Testes unitários, também conhecidos como testes de unidade, focam em validar a menor parte funcional de uma aplicação. Isso implica testar isoladamente componentes como funções, métodos ou classes. Tradicionalmente, esses testes são elaborados simultaneamente ao desenvolvimento do código-fonte.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h21m28s739.jpg" alt="" width="840">
+</p>
+
+Abaixo, apresenta-se um exemplo prático de uma regra de negócio simples e seu respectivo teste unitário utilizando JUnit:
+
+```java
+class Pessoa {
+    //construtor, atributos e outros métodos
+    public boolean ehMaiorDeIdade() {
+        return idade > 18;
+    }
+}
+
+class PessoaTeste {
+    @Test
+    void validaVerificacaoDeMaioridade() {
+        Pessoa joaozinho = new Pessoa ("João", LocalDate.of (2004, 1, 1));
+        Assertions.assertTrue(joaozinho.ehMaiorDeIdade());
+    }
+}
+
+```
+
+Neste exemplo, a classe de teste verifica se a lógica do método `ehMaiorDeIdade` retorna o valor esperado ao instanciar um objeto com uma data de nascimento específica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h21m34s821.jpg" alt="" width="840">
+</p>
+
+A importância dos testes unitários se manifesta em diversas situações críticas do cotidiano de um desenvolvedor:
+
+* **Compreensão do código:** Facilitam o entendimento da lógica interna por novos membros da equipe.
+* **Correção de bugs:** Permitem ajustar falhas com a segurança de que o comportamento esperado será mantido.
+* **Refatoração segura:** Oferecem suporte para melhorar a estrutura do código sem introduzir novos defeitos.
+* **Entrega de funcionalidades:** Garantem que novas features cheguem ao usuário final com maior confiabilidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h21m42s817.jpg" alt="" width="840">
+</p>
+
+Além dos benefícios diretos no código, os testes unitários fundamentam conceitos avançados de engenharia de software:
+
+* **Pirâmide de Testes:** Representam a base sólida e volumosa de uma estratégia de testes eficiente.
+* **Métricas de Qualidade:** Servem como indicadores de confiabilidade e cobertura do sistema.
+* **Automação e Agilidade:** São essenciais para processos de execução automatizada e para a manutenção de uma cultura ágil de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h21m47s809.jpg" alt="" width="840">
+</p>
+
+Para aprofundamento nos temas de cultura de qualidade e práticas de DevSecOps, são sugeridas as seguintes referências externas:
+
+* Artigos sobre a importância dos testes unitários no iMasters.
+* Guias práticos sobre definição e implementação de testes no Medium.
+* Estudos sobre a promoção de qualidade no desenvolvimento de software ágil.      
 
 
 ## Parte 3 - Hello world, JUnit!
@@ -87,7 +165,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/311d5f09-9441-4802-8bca-c48e767a74b1?autoplay=1
+
+
 
 ## Parte 4 - Aprofundando nos recursos
 
