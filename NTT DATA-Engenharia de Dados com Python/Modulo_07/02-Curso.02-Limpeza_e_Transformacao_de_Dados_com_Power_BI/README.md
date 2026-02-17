@@ -132,10 +132,6 @@ Ao importar o arquivo para o Power BI, a janela de Navegador revela que a ferram
 
 Dentro do Power Query, as transformações são aplicadas sobre uma visão dos dados, sem alterar o arquivo original. Uma das primeiras ações de saneamento é a definição correta dos tipos de dados. Como os valores de vendas por mês são numéricos, é possível alterar o tipo da coluna para **Número Decimal** ou **Decimal Fixo** através do menu de contexto ou da guia Transformar, garantindo que o Power BI consiga realizar cálculos de agregação (soma, média, etc.) posteriormente.
 
-```powerquery
-Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Column1", type any}, {"Column2", type text}})
-
-```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-13h34m19s410.jpg" alt="" width="840">
@@ -148,11 +144,6 @@ Para corrigir problemas de posicionamento de cabeçalhos, o Power Query oferece 
 </p>
 
 Além do tratamento de linhas, a gestão de colunas é essencial para otimizar o modelo de dados. Através do menu **Gerenciar Colunas**, é possível remover colunas desnecessárias ou selecionar especificamente quais devem ser mantidas (como o nome do produto e os meses de um trimestre específico). Caso a tabela seja muito extensa, a função **Ir para a coluna** facilita a navegação rápida entre campos distantes, como localizar a coluna de "Dezembro" sem a necessidade de rolagem manual.
-
-```powerquery
-Table.RenameColumns(#"Tipo Alterado1", {{"Column2", "Nome"}})
-
-```
 
 ### 🟩 Vídeo 03 - Quando Devemos Remover Dados do Projeto com Power BI
 
@@ -175,11 +166,6 @@ Nesta etapa inicial dentro do **Editor do Power Query**, observamos a base de da
 
 Um ponto crítico destacado é a **performance**: carregar colunas desnecessárias em bases de dados com milhares ou milhões de linhas exige mais processamento para renderizar o relatório, afetando o desempenho geral da ferramenta.
 
-```powerquery
-Table.TransformColumnTypes("Linhas Inferiores Removidas", {{"SubCategoriaProdutoID", Int64.Type}})
-
-```
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-14h14m42s178.jpg" alt="" width="840">
 </p>
@@ -187,11 +173,6 @@ Table.TransformColumnTypes("Linhas Inferiores Removidas", {{"SubCategoriaProduto
 Aqui é executada a ação de **remover colunas** que não agregam valor à análise de negócio. Ao eliminar o ID do produto, simplificamos o modelo de dados. Esta é uma boa prática de design de relatórios: priorizar atributos e nomes que o usuário consiga entender imediatamente ao "bater o olho", como o nome da categoria ou o valor das vendas.
 
 A remoção precoce de dados não utilizados facilita a etapa de **modelagem**, pois reduz a complexidade dos relacionamentos que o Power BI criará automaticamente entre as tabelas.
-
-```powerquery
-Table.RemoveColumns("Tipo Alterado2", {"SubCategoriaProdutoID"})
-
-```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-14h14m56s171.jpg" alt="" width="840">
@@ -246,21 +227,11 @@ A estrutura inicial apresentada no Excel exibe uma organização comum de dados,
 
 Ao importar os dados para o Editor do Power Query, é aplicada a operação de **Transformar Colunas em Linhas** (Unpivot). O objetivo é "rotacionar" a tabela para que os anos deixem de ser cabeçalhos e passem a ser valores dentro de uma coluna de atributos, permitindo que cada linha represente uma combinação única de mês, ano e valor de venda.
 
-```powerquery
-= Table.UnpivotOtherColumns("Colunas Reordenadas", {"Ano"}, "Atributo", "Valor")
-
-```
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-15h02m15s288.jpg" alt="" width="840">
 </p>
 
 Além do unpivot, o editor permite explorar outras formas de reorganização, como a função **Transpor**, que inverte totalmente a orientação de linhas e colunas. No entanto, se os cabeçalhos não forem tratados corretamente, a tabela pode resultar em uma estrutura confusa com inúmeras colunas numeradas (Coluna 1, Coluna 2, etc.), o que dificulta a agregação e análise automática dos dados pelo Power BI.
-
-```powerquery
-Table.Unpivot("Colunas Renomeadas", {"Mês"}, "Atributo", "Valor")
-
-```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-15h02m34s444.jpg" alt="" width="840">
@@ -280,10 +251,6 @@ O painel de **Visualizações** e **Campos** detalha como essa estrutura "amarra
 
 A solução definitiva consiste em renomear as colunas geradas após o unpivot para nomes semanticamente corretos: **Ano** (antigo Atributo) e **Vendas** (antigo Valor). Com essa estrutura normalizada, os elementos Ano, Mês e Vendas tornam-se independentes na estrutura de dados, mas interconectados para a visualização, permitindo que o Power BI gere relatórios muito mais dinâmicos e fáceis de manter.
 
-```powerquery
-Table.RenameColumns("Outras Colunas Não Dinâmicas", {{"Atributo", "Ano"}, {"Valor", "Vendas"}})
-
-```      
 
 ### 🟩 Vídeo 05 - Colunas Dinâmicas – Pivot Column
 
@@ -324,11 +291,6 @@ Ao configurar a **Coluna Dinâmica** , o sistema permite definir como a nova est
 
 As **Etapas Aplicadas** mostram a progressão do tratamento de dados, incluindo a navegação e a promoção de cabeçalhos. O código M gerado automaticamente para a tipagem dos dados após a promoção é visível na barra de fórmulas:
 
-```powerquery
-Table.TransformColumnTypes("Cabeçalhos Promovidos", {{"Categoria", type text}, {"Subcategoria", type text}})
-
-```
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-16h12m33s556.jpg" alt="" width="840">
 </p>
@@ -337,9 +299,6 @@ Além da dinamização, o tratamento de inconsistências é realizado através d
 
 A interface de substituição oferece **Opções avançadas**, como a capacidade de **Coincidir conteúdo da célula inteira** ou usar caracteres especiais. Essa etapa é crucial para garantir a integridade dos dados antes de qualquer processo de pivotação ou agrupamento, evitando que erros ortográficos fragmentem as categorias no relatório final.
 
-```powerquery
-Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Categoria", type text}, {"Subcategoria", type text}})
-```      
 
 ### 🟩 Vídeo 07 - Transformando a Estrutura de Dados com Terceiro Exemplo
 
@@ -371,11 +330,6 @@ Para consolidar as informações de clientes, fornecedores e funcionários em um
 </p>
 
 Após a execução do comando de acrescentar consultas, uma nova tabela é criada contendo todos os registros. Observa-se que a coluna de ID pode apresentar valores repetidos, já que cada fonte original tinha sua própria sequência numérica. Essa visualização confirma a necessidade de uma tomada de decisão de modelagem, como a remoção do ID original ou a criação de um novo campo de identificação único que combine o tipo de relacionamento com o código.
-
-```powerquery
-Table.Combine({Clientes, Fornecedores, Funcionários})
-
-```
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m10s958.jpg" alt="" width="840">
@@ -413,11 +367,6 @@ Para extrair o tipo de relacionamento embutido no código de identificação (co
 
 Após a divisão dos códigos, utiliza-se a função **Substituir Valores** para padronizar os prefixos que foram segmentados incorretamente (ex: corrigir "cus" para "cust"). Esse refinamento garante que a coluna "Tipo de Relacionamento" contenha categorias claras e agrupáveis, permitindo uma análise estatística correta de quantos registros pertencem a cada categoria do RH.
 
-```powerquery
-Table.ReplaceValue("Tipo Alterado2", "cus", "cust", Replacer.ReplaceText, {"Identificação.1"})
-
-```
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m45s616.jpg" alt="" width="840">
 </p>
@@ -446,7 +395,71 @@ Outra opção de visualização demonstrada é o Treemap, que exibe as categoria
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/2aa9daf0-d880-4023-a2d2-b8e4df379727?autoplay=1
 
+Este guia prático detalha o processo de Mesclar Consultas no Power BI, uma funcionalidade essencial para consolidar dados de diferentes fontes. O vídeo foca na equivalência entre a mesclagem do Power Query e os Joins do SQL, demonstrando como transformar tabelas isoladas em uma visão única e rica em informações.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m06s796.jpg" alt="" width="840">
+</p>
+
+A interface inicial do Power Query exibe a tabela **Status**, contendo as colunas `ID`, `Status` e `Prioridade`. Nesta etapa preparatória, os dados foram carregados e o sistema aplicou a detecção automática de tipos. Este é o ponto de partida para a operação de mesclagem, que funciona como o *join* do SQL, permitindo consolidar informações entre diferentes tabelas.
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m12s233.jpg" alt="" width="840">
+</p>
+
+Ao selecionar a funcionalidade **Mesclar Consultas**, o Power Query abre uma janela para configurar a relação entre as tabelas. No exemplo, a tabela **Status** é definida como a fonte principal, e a tabela **Pedidos** é selecionada para a junção, visando unificar os detalhes de vendas com suas respectivas categorias de status.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m15s541.jpg" alt="" width="840">
+</p>
+
+O sistema apresenta diversos **Tipos de Junção** para definir como as linhas serão combinadas:
+
+* **Externa esquerda**: Mantém todas as linhas da primeira tabela e apenas as correspondentes da segunda.
+* **Externa direita**: Mantém todas as linhas da segunda tabela e apenas as correspondentes da primeira.
+* **Externa completa**: Preserva todas as linhas de ambas as tabelas.
+* **Interna**: Mantém apenas os registros que possuem correspondência em ambas.
+* **Anti-esquerda/Anti-direita**: Filtra apenas as linhas que não possuem par na outra tabela.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m19s829.jpg" alt="" width="840">
+</p>
+
+Para efetivar a mesclagem, é necessário selecionar as colunas que servem de chave de ligação, neste caso, a coluna **ID** em ambas as tabelas. Uma mensagem de validação na parte inferior confirma que a seleção corresponde a "13 de 13 linhas da primeira tabela", indicando uma integridade completa entre os dados selecionados para o cruzamento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m25s060.jpg" alt="" width="840">
+</p>
+
+Após a confirmação, uma nova coluna é criada contendo objetos do tipo `Table`. Estes objetos guardam os dados da tabela relacionada que ainda serão expandidos. O painel lateral de **Etapas Aplicadas** registra as transformações, incluindo a reordenação das colunas para organizar a visualização dos dados combinados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m28s392.jpg" alt="" width="840">
+</p>
+
+Utilizando a opção **Mesclar consultas como novas**, cria-se uma consulta independente denominada **Pedidos Completos**. Nesta abordagem, a tabela de pedidos é cruzada com a de status para gerar uma visão consolidada, garantindo que a tabela de fatos principal receba os atributos descritivos de forma organizada em um novo objeto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m31s137.jpg" alt="" width="840">
+</p>
+
+A tabela final consolidada apresenta os dados expandidos e limpos. O painel de **Etapas Aplicadas** detalha o fluxo de trabalho: a origem dos dados, a expansão das colunas da tabela relacionada, a remoção de informações redundantes (como IDs duplicados) e a reordenação final para facilitar a leitura.
+
+```powerquery
+"Fonte"
+"Pedidos Expandido"
+"Colunas Removidas"
+"Colunas Reordenadas"
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m38s094.jpg" alt="" width="840">
+</p>
+
+Após aplicar as transformações no Power Query e retornar ao ambiente do Power BI Desktop, os dados consolidados estão prontos para análise visual. A imagem demonstra a criação de um gráfico de barras que utiliza a nova estrutura para exibir a **Contagem de ID por Status**, permitindo uma visão rápida do volume de pedidos em cada estágio operacional.      
 
 
 ### 🟩 Vídeo 09 - Explorando Exibição de Estatísticas da Base de Dados com Power Query
