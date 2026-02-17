@@ -408,6 +408,100 @@ Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Categoria", type text}}
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/2aa9daf0-d880-4023-a2d2-b8e4df379727?autoplay=1
 
+Este guia explora como consolidar informações de diferentes fontes no Power BI utilizando a função Mesclar (Merge) do Power Query. O objetivo é transformar tabelas isoladas em um conjunto de dados único e coerente para facilitar a criação de relatórios.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h11m01s983.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, exploramos o conceito de **Mesclar Consultas** no Power BI, uma operação fundamental para consolidar dados distribuídos em diferentes tabelas. O processo de mesclagem é o equivalente funcional ao **JOIN** em SQL, permitindo unir informações com base em uma coluna comum.
+
+O cenário apresentado utiliza duas tabelas base:
+
+* **Pedidos:** Contém dados transacionais como ID, Data, Origem, Produto e Quantidade.
+* **Status:** Contém detalhes complementares sobre o andamento de cada pedido.
+
+O objetivo é transformar e carregar esses dados para que a equipe de vendas tenha uma visão unificada, evitando a necessidade de consultar múltiplas fontes separadamente.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h11m05s083.jpg" alt="" width="840">
+</p>
+
+Ao observar a tabela de **Status**, identificamos colunas específicas como `ID`, `Status` e `Prioridade`. Note que, embora os dados estejam visualmente simples no editor, por trás de cada etapa de transformação o Power BI utiliza a **Linguagem M** (a linguagem de fórmulas do Power Query).
+
+A intenção aqui é aglutinar essas informações para que, em vez de termos entidades separadas, possamos visualizar um consolidado que relacione diretamente a prioridade e o estado de cada pedido ao seu registro original de venda.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h11m48s375.jpg" alt="" width="840">
+</p>
+
+Para realizar a união, acessamos a opção **Mesclar Consultas**. É crucial distinguir esta operação de "Acrescentar": enquanto o acréscimo empilha linhas (vertical), a mesclagem combina colunas (horizontal) com base em correspondências.
+
+No Power Query, as opções de junção seguem a lógica dos joins de bancos de dados:
+
+* **Externa Esquerda (Left Outer):** Mantém todas as linhas da primeira tabela e traz apenas as correspondentes da segunda.
+* **Externa Completa (Full Outer):** Mantém todas as linhas de ambas as tabelas.
+* **Interna (Inner):** Mantém apenas as linhas que possuem correspondência em ambas.
+* **Anti-Esquerda/Direita:** Filtra apenas o que *não* possui correspondência no lado oposto.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h12m23s029.jpg" alt="" width="840">
+</p>
+
+Para habilitar o botão de confirmação da mesclagem, é obrigatório selecionar as **colunas de junção** em ambas as pré-visualizações das tabelas. No exemplo, selecionamos a coluna `ID` na tabela superior e a coluna `ID` na tabela inferior.
+
+Essa seleção define a "cláusula de junção", garantindo que o Power BI saiba exatamente qual linha de status pertence a qual linha de pedido. Sem essa definição explícita, o sistema não consegue calcular a correspondência das linhas.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h12m30s569.jpg" alt="" width="840">
+</p>
+
+Após confirmar a mesclagem, o Power Query cria uma nova coluna no final da tabela original. Inicialmente, o conteúdo desta coluna aparece como um objeto do tipo `Table`.
+
+Isso ocorre porque o Power BI "empacota" todas as informações da tabela relacionada dentro de cada linha. Para visualizar os dados de fato (como o status e a prioridade), precisamos realizar o processo de expansão dessa estrutura aninhada.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h12m42s337.jpg" alt="" width="840">
+</p>
+
+Para "destrinchar" os dados, clicamos no ícone de expansão (as duas setas divergentes) no cabeçalho da coluna de tabela.
+
+Nesta interface, podemos escolher exatamente quais colunas da tabela de origem queremos trazer. É recomendável desmarcar a opção "Usar o nome da coluna original como prefixo" se desejar nomes de colunas mais limpos, ou mantê-la para evitar conflitos de nomes (ambiguidade) entre as tabelas originais.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h12m45s676.jpg" alt="" width="840">
+</p>
+
+Com a expansão concluída, a tabela agora exibe as informações integradas. Neste momento, realizamos a limpeza de dados (data cleaning):
+
+1. **Remover Duplicidade:** Como já temos o `ID` original, a coluna de `ID` vinda da segunda tabela torna-se redundante e pode ser removida.
+2. **Reordenar Colunas:** As colunas de `Status` e `Prioridade` podem ser movidas para posições que façam mais sentido lógico no relatório.
+
+Dessa forma, transformamos dois conjuntos distintos em uma única visão consolidada, denominada **Pedidos Completos**.
+
+---
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h13m03s981.jpg" alt="" width="840">
+</p>
+
+Ao retornar para a interface principal do Power BI e aplicar as alterações, observamos a diferença estrutural. Embora fosse possível criar um relatório usando as tabelas separadas e criando relacionamentos, a criação de uma tabela consolidada simplifica drasticamente a construção de visuais.
+
+Em cenários reais com dezenas de tabelas, essa prática de aglutinar informações comuns facilita a localização de campos e otimiza a performance do modelo de dados, permitindo que o analista arraste campos como "Status" e "Quantidade" de um único lugar para gerar gráficos e tabelas agregadas.      
 
 
 ### 🟩 Vídeo 09 - Explorando Exibição de Estatísticas da Base de Dados com Power Query
@@ -417,7 +511,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/b7a273df-2f4f-41a2-b4d0-867045840ea8?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Explorando a Linguagem M com Power Query
 
