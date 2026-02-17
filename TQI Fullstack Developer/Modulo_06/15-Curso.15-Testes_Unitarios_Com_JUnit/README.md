@@ -155,6 +155,12 @@ Para aprofundamento nos temas de cultura de qualidade e práticas de DevSecOps, 
 * Guias práticos sobre definição e implementação de testes no Medium.
 * Estudos sobre a promoção de qualidade no desenvolvimento de software ágil.      
 
+#### Referências
+
+- https://imasters.com.br/devsecops/testes-unitarios-qual-a-importancia  
+- https://dayvsonlima.medium.com/entenda-de-uma-vez-por-todas-o-que-s%C3%A3o-testes-unit%C3%A1rios-para-que-servem-e-como-faz%C3%AA-los-2a6f645bab3  
+- https://medium.com/cesar-update/aprendendo-a-promover-uma-cultura-de-qualidade-no-desenvolvimento-de-software-%C3%A1gil-f5a3444dd
+
 
 ## Parte 3 - Hello world, JUnit!
 
