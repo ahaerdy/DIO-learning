@@ -448,13 +448,6 @@ Utilizando a opção **Mesclar consultas como novas**, cria-se uma consulta inde
 
 A tabela final consolidada apresenta os dados expandidos e limpos. O painel de **Etapas Aplicadas** detalha o fluxo de trabalho: a origem dos dados, a expansão das colunas da tabela relacionada, a remoção de informações redundantes (como IDs duplicados) e a reordenação final para facilitar a leitura.
 
-```powerquery
-"Fonte"
-"Pedidos Expandido"
-"Colunas Removidas"
-"Colunas Reordenadas"
-```
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h25m38s094.jpg" alt="" width="840">
 </p>
@@ -471,6 +464,40 @@ Após aplicar as transformações no Power Query e retornar ao ambiente do Power
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/b7a273df-2f4f-41a2-b4d0-867045840ea8?autoplay=1
 
+Este resumo aborda as funcionalidades do Power Query voltadas para a análise profunda da estrutura de dados, detecção de anomalias e garantia da qualidade das informações antes da visualização final.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h13m50s759.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a interface principal do Power BI Desktop com um relatório de vendas ("Sales Report") já populado com diversos visuais, como cartões de valores totais e gráficos de segmentação. O foco inicial é compreender que, antes de realizar as análises visuais, é fundamental entender como os dados estão organizados na estrutura de tabelas subjacente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h13m52s609.jpg" alt="" width="840">
+</p>
+
+Ao acionar a opção "Transformar dados", o sistema abre o Editor do Power Query. Nesta interface, visualizamos a tabela `financials` e o painel de "Etapas Aplicadas" à direita, que registra as transformações iniciais de navegação e tipagem de dados necessárias para preparar a base.
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h13m57s650.jpg" alt="" width="840">
+</p>
+
+O foco é direcionado para a guia **Exibição** no Power Query. Este menu contém ferramentas cruciais para auditar a saúde dos dados, como a "Qualidade da coluna", que permite identificar rapidamente a presença de erros ou campos vazios em cada coluna da estrutura.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h14m04s570.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a ativação do recurso **Perfil da coluna**. Na parte inferior da tela, surge um painel de estatísticas detalhadas que exibe a contagem total de linhas (700), a ausência de erros e a quantidade de valores distintos, oferecendo um diagnóstico técnico preciso sobre a composição da coluna selecionada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h14m05s992.jpg" alt="" width="840">
+</p>
+
+A verificação final mostra que a base de dados está íntegra ("tinindo"), sem erros ou valores vazios. Além das estatísticas numéricas, o Power Query apresenta a distribuição visual dos valores (como os diferentes segmentos ou produtos), facilitando a identificação de padrões e a validação da estrutura antes do fechamento e aplicação das alterações.
 
 
 ### 🟩 Vídeo 10 - Explorando a Linguagem M com Power Query
@@ -480,12 +507,97 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/943a9b8b-0064-460a-839a-c3def3216a8b?autoplay=1
 
+Este vídeo explora os bastidores do Power Query no Power BI, focando na Linguagem M. A instrutora demonstra como a interface gráfica se traduz em código e como o domínio desse "baixo nível" permite maior flexibilidade e eficiência na manipulação de grandes bases de dados.
 
-##  Materiais de Apoio
+### Anotações
 
-# Certificado: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h45m44s526.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, observamos a interface do **Power Query** exibindo a análise de qualidade e distribuição das colunas de uma tabela (neste caso, a `financials`). O editor apresenta metadados importantes sobre a estrutura dos dados, como o percentual de valores válidos, erros e vazios para cada campo (Segment, Country, Product, Units Sold, etc.).
+
+Abaixo do cabeçalho de cada coluna, há um gráfico de barras que indica a distribuição de frequência dos valores. O instrutor destaca que essa estrutura é definida por funções de transformação de tipos, onde cada coluna é associada a um tipo de dado específico (como `type text` ou `type number`), formando a base para as etapas de limpeza subsequentes.
+
+```powerquery
+Table.TransformColumnTypes(financials_Table, {
+    {"Segment", type text}, 
+    {"Country", type text}, 
+    {"Product", type text},
+    {"Discount Band", type text}, 
+    {"Units Sold", type number}, 
+    {"Manufacturing Price", Int64.Type}, 
+    {"Sale Price", Int64.Type}, 
+    {"Gross Sales", type number}, 
+    {"Discounts", type number}, 
+    {"Sales", type number}, 
+    {"COGS", type number}, 
+    {"Profit", type number}, 
+    {"Date", type date}, 
+    {"Month Number", Int64.Type}, 
+    {"Month Name", type text},
+    {"Year", Int64.Type}
+})
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h45m49s206.jpg" alt="" width="840">
+</p>
+
+A imagem detalha o **Editor Avançado** do Power Query, revelando o código por trás da interface gráfica. Este código utiliza a **Linguagem M** (mencionada no áudio como suporte às transformações, embora o instrutor faça uma breve confusão nominal com R, ele foca na estrutura de funções `Table.X`).
+
+Aqui, vemos a definição da `Fonte`, que busca um arquivo Excel em um caminho local, e a navegação até a tabela específica. O bloco `let` define as variáveis e etapas do processo (como a alteração de tipos), enquanto o bloco `in` determina qual o resultado final que será carregado no modelo de dados.
+
+```powerquery
+let
+    Fonte = Excel.Workbook(File.Contents("C:\Users\julia\OneDrive\Área de trabalho\POWER BI\dataset\Financial Sample.xlsx"), null, true),
+    financials_Table = Fonte{[Item="financials",Kind="Table"]}[Data],
+    #"Tipo Alterado" = Table.TransformColumnTypes(financials_Table, {{"Segment", type text}, {"Country", type text}, {"Product", type text}})
+in
+    #"Tipo Alterado"
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h46m12s401.jpg" alt="" width="840">
+</p>
+
+Este exemplo demonstra um script de Linguagem M muito mais complexo, resultante de um projeto de **Combinação de Tabelas**. A imagem ilustra como múltiplas operações de tratamento de dados são registradas sequencialmente.
+
+Entre as transformações visíveis no código, destacam-se a combinação de diferentes fontes (Clientes, Fornecedores e Funcionários), a remoção e renomeação de colunas, a divisão de colunas por delimitadores (como o campo "Endereço") e a inserção de colunas condicionais ou literais (como a cidade "Rio de Janeiro"). O uso do Editor Avançado permite que o desenvolvedor ajuste parâmetros diretamente, como o nome de uma tabela ou um delimitador, sem precisar refazer todos os cliques na interface.
+
+```powerquery
+let
+    Fonte = Table.Combine({Clientes, Fornecedores, Funcionários}),
+    #"Colunas Removidas" = Table.RemoveColumns(Fonte, {"id"}),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Colunas Removidas", {{"empresa", "Identificação"}, {"nome", "Nome"}, {"telefone", "Contato"}}),
+    #"Dividir Coluna por Delimitador" = Table.SplitColumn(#"Colunas Renomeadas", "Endereço", Splitter.SplitTextByDelimiter("-", QuoteStyle.None)),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador", {{"Endereço.1", type text}, {"Endereço.2", Int64.Type}}),
+    #"Colunas Renomeadas1" = Table.RenameColumns(#"Tipo Alterado", {{"Endereço.1", "Rua"}, {"Endereço.2", "Número"}}),
+    #"Literal inserido" = Table.AddColumn(#"Colunas Renomeadas1", "Cidade", each "Rio de Janeiro", type text),
+    #"Texto Substituído inserido" = Table.AddColumn(#"Literal inserido", "UF", each Text.Replace([Cidade], "Rio de Janeiro", "RJ"), type text)
+in
+    #"Colunas Renomeadas3"
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-12h46m20s987.jpg" alt="" width="840">
+</p>
+
+A última imagem foca na integração com **bancos de dados externos (MySQL)**. O Editor Avançado mostra os parâmetros de conexão, incluindo o servidor (`localhost:3306`) e o banco de dados (`company_constraints`).
+
+O instrutor utiliza este exemplo para demonstrar a utilidade prática de conhecer a Linguagem M: caso a porta de conexão ou o nome do servidor mude, basta alterar o valor diretamente no código. Uma pequena modificação na string de conexão (como alterar a porta 3306) pode causar erros de acesso, que são rapidamente corrigidos editando o script diretamente no editor, garantindo a manutenção da infraestrutura de dados sem a necessidade de reimportar todas as tabelas e perder as transformações já realizadas.
+
+```powerquery
+let
+    Fonte = MySQL.Database("localhost:3306", "company_constraints", [ReturnSingleDatabase=true]),
+    company_constraints_employee_depent = Fonte{[Schema="company_constraints", Item="employee_depent"]}[Data]
+in
+    company_constraints_employee_depent
+```      
+
+# Certificado: Limpeza e Transformação de Dados com Power BI
 
 - Link na plataforma: 
 - Certificado em pdf:
