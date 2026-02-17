@@ -173,6 +173,172 @@ Para aprofundamento nos temas de cultura de qualidade e práticas de DevSecOps, 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/311d5f09-9441-4802-8bca-c48e767a74b1?autoplay=1
 
+Esta aula marca o início prático no mundo dos testes unitários com Java, cobrindo desde a base histórica e arquitetural do JUnit até a configuração de projetos reais utilizando Maven e Gradle.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h39m27s459.jpg" alt="" width="840">
+</p>
+
+Nesta aula introdutória de prática, o foco é a criação do primeiro teste unitário utilizando o **JUnit**. O framework é uma ferramenta *open source* fundamental para o ecossistema Java, tendo sido criado por figuras icônicas da engenharia de software: **Erich Gamma** (coautor do livro *Design Patterns* e membro do *Gang of Four*) e **Kent Beck** (pioneiro do *Extreme Programming* e do TDD). A proposta é integrar a prática de testes massivos ao ciclo de desenvolvimento ágil.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h39m29s579.jpg" alt="" width="840">
+</p>
+
+Embora o JUnit 4 ainda seja encontrado em muitos projetos legados, o mercado converge para o **JUnit 5**, que é o foco deste estudo. A arquitetura da versão 5 é modular e se divide em três pilares principais:
+
+* **JUnit Platform**: O motor responsável por lançar e executar os testes na JVM.
+* **JUnit Jupiter**: Contém o novo modelo de programação e extensão para a escrita de testes no JUnit 5 (inclui as anotações e classes principais).
+* **JUnit Vintage**: Um motor de teste que permite a execução de testes escritos nas versões 3 e 4, garantindo a retrocompatibilidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h39m30s941.jpg" alt="" width="840">
+</p>
+
+Para configurar o JUnit em um projeto, o primeiro passo é localizar a dependência correta em repositórios públicos, como o **Maven Repository**. A dependência recomendada para iniciar projetos modernos é o `junit-jupiter-engine`, que traz as implementações necessárias do motor Jupiter para rodar os testes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h39m33s832.jpg" alt="" width="840">
+</p>
+
+A imagem reforça a distinção entre os módulos. Enquanto o **Jupiter** é onde escrevemos nosso código de teste moderno, o **Platform** atua como a infraestrutura de execução e o **Vintage** serve como uma "ponte" para que códigos antigos não quebrem ao serem migrados para o ambiente do JUnit 5.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h39m39s027.jpg" alt="" width="840">
+</p>
+
+No gerenciador de dependências **Gradle**, a configuração é feita no arquivo `build.gradle`. Deve-se adicionar a biblioteca do motor Jupiter dentro do bloco de dependências para que o projeto reconheça as classes do JUnit.
+
+```groovy
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h39m43s556.jpg" alt="" width="840">
+</p>
+
+Um detalhe crucial na configuração do Gradle é informar explicitamente que o projeto deve utilizar a plataforma JUnit para a execução das tarefas de teste. Sem a instrução `useJUnitPlatform()`, o Gradle pode não identificar ou executar os testes corretamente.
+
+```groovy
+test {
+    useJUnitPlatform()
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h39m48s749.jpg" alt="" width="840">
+</p>
+
+Para exemplificar o uso, temos uma classe simples chamada `Pessoa`. Ela possui atributos básicos como nome e data de nascimento, além de um método que calcula a idade baseando-se na data atual.
+
+```java
+public class Pessoa {
+    private String nome;
+    private LocalDateTime nascimento;
+
+    public Pessoa(String nome, LocalDateTime nascimento) {
+        this.nome = nome;
+        this.nascimento = nascimento;
+    }
+
+    public int getIdade() {
+        return (int) ChronoUnit.YEARS.between(nascimento, LocalDateTime.now());
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h40m01s023.jpg" alt="" width="840">
+</p>
+
+Ao criar a classe de teste `PessoaTest`, utilizamos a anotação `@Test` para marcar o método que validará o comportamento. Neste cenário, instanciamos uma pessoa chamada "Júlia" com data de nascimento em 01/01/2020.
+
+```java
+class PessoaTest {
+
+    @Test
+    void validarCalculoDeIdade() {
+        Pessoa pessoa = new Pessoa("Júlia", LocalDateTime.of(2020, 1, 1, 15, 0, 0));
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h40m12s986.jpg" alt="" width="840">
+</p>
+
+O coração do teste é a asserção. Utilizamos a classe `Assertions.assertEquals` para comparar o valor esperado (neste caso, 2 anos) com o resultado retornado pelo método `getIdade()`.
+
+```java
+@Test
+void validarCalculoDeIdade() {
+    Pessoa pessoa = new Pessoa("Júlia", LocalDateTime.of(2020, 1, 1, 15, 0, 0));
+    Assertions.assertEquals(2, pessoa.getIdade());
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h40m28s185.jpg" alt="" width="840">
+</p>
+
+Após a execução no ambiente IntelliJ utilizando Gradle, o painel de testes indica sucesso. O ícone verde ao lado do nome do método `validarCalculoDeIdade` confirma que o valor calculado pelo sistema condiz com o valor esperado pela asserção.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h40m54s620.jpg" alt="" width="840">
+</p>
+
+Para projetos que utilizam o **Maven**, a configuração ocorre no arquivo `pom.xml`. Adicionamos o artefato `junit-jupiter-engine` dentro da seção `<dependencies>`. O Maven gerencia o download automático das bibliotecas necessárias.
+
+```xml
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.8.2</version>
+    <scope>test</scope>
+</dependency>
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h41m03s067.jpg" alt="" width="840">
+</p>
+
+Mesmo em um projeto Maven, a estrutura do teste permanece idêntica. A IDE integra-se ao gerenciador de dependências para compilar e rodar os testes da mesma forma, garantindo que a lógica de negócio (como a classe `Conta` ou `Pessoa`) esteja protegida por verificações automatizadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h41m08s376.jpg" alt="" width="840">
+</p>
+
+Durante o processo de execução no Maven, é possível observar no console o download das dependências transitivas e a inicialização do motor de testes. O Maven coordena o ciclo de vida do projeto, garantindo que os testes sejam executados antes de qualquer empacotamento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h41m11s723.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra o resultado final de uma bateria de testes sendo concluída. A interface da IDE agrupa os testes por classe e método, facilitando a identificação visual de qualquer falha.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h41m19s970.jpg" alt="" width="840">
+</p>
+
+A estrutura de diretórios segue o padrão convencional da indústria: classes de produção ficam em `src/main/java`, enquanto as classes de teste, como `PessoaTest`, residem obrigatoriamente em `src/test/java`. Isso separa o código que vai para o cliente final do código utilizado apenas durante o desenvolvimento e garantia de qualidade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-14h41m29s068.jpg" alt="" width="840">
+</p>
+
+Para aprofundamento, os recursos oficiais são fundamentais. O repositório oficial no GitHub e o guia do usuário do JUnit 5 oferecem detalhes técnicos avançados, exemplos de extensões e melhores práticas para a escrita de testes robustos.
+
+
 
 
 ## Parte 4 - Aprofundando nos recursos
@@ -184,7 +350,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/38ef08ba-4873-48a8-8ed6-16db79698496?autoplay=1
 
 ### 🟩 Vídeo 05 - Mais algumas asserções
 
