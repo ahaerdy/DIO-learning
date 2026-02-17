@@ -350,54 +350,92 @@ Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Categoria", type text},
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/3ee837cc-4bb0-4e62-be67-e962895fe1da?autoplay=1
 
-Este guia resume as principais técnicas de manipulação de dados apresentadas no tutorial, focando em como preparar bases de dados para análises eficientes no Power BI.
+Este guia resume o processo de transformação de dados brutos em um modelo relacional eficiente, utilizando o Power Query. O foco principal é a consolidação de diferentes entidades (clientes, fornecedores e funcionários) em uma única base para análise de RH.
 
 ### Anotações
 
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-19h58m38s184.jpg" alt="" width="840">
+ <p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h00m55s923.jpg" alt="" width="840">
 </p>
 
-Nesta etapa inicial do tratamento de dados no Power Query, o foco está na organização estrutural da tabela. O processo envolve o ajuste dos nomes das colunas para "Categoria" e "ID Categoria", seguido pela remoção de linhas desnecessárias que não compõem o corpo de dados útil. A aplicação da função para pular linhas é visível na barra de fórmulas, visando limpar o topo da planilha para que os cabeçalhos fiquem corretamente posicionados.
+O processo de transformação de dados começa com a análise individual das tabelas no Editor do Power Query. Nesta etapa, a tabela de funcionários é carregada com colunas como ID, matrícula, nome, telefone e endereço. O objetivo inicial é preparar esses campos para que fiquem consistentes com as outras entidades (clientes e fornecedores), garantindo que as nomenclaturas sejam as mesmas para permitir uma futura combinação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m01s591.jpg" alt="" width="840">
+</p>
+
+Para consolidar as informações de clientes, fornecedores e funcionários em um único conjunto de dados, utiliza-se a função **Acrescentar Consultas como Novas**. Na interface, seleciona-se a opção "Três ou mais tabelas" para aglutinar os dados das três abas distintas. Esse processo exige que as colunas tenham nomes idênticos para que o Power BI consiga alinhar as linhas corretamente na nova tabela gerada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m04s483.jpg" alt="" width="840">
+</p>
+
+Após a execução do comando de acrescentar consultas, uma nova tabela é criada contendo todos os registros. Observa-se que a coluna de ID pode apresentar valores repetidos, já que cada fonte original tinha sua própria sequência numérica. Essa visualização confirma a necessidade de uma tomada de decisão de modelagem, como a remoção do ID original ou a criação de um novo campo de identificação único que combine o tipo de relacionamento com o código.
 
 ```powerquery
-Table.Skip(#"Colunas Renomeadas", 1)
+Table.Combine({Clientes, Fornecedores, Funcionários})
 
 ```
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-19h58m50s613.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m10s958.jpg" alt="" width="840">
 </p>
 
-Após a estruturação básica, identifica-se a presença de valores nulos que podem comprometer a análise. Uma das abordagens para lidar com esses dados é a filtragem direta na coluna, onde se opta por remover as linhas que contêm valores vazios ou `null`. Esta ação garante que apenas registros completos para os meses analisados, como Janeiro, permaneçam na base de dados ativa.
+Uma prática recomendada é transformar atributos compostos em atributos atômicos (indivisíveis). Para separar a rua do número no campo de endereço, utiliza-se a ferramenta **Dividir Coluna por Delimitador**. Configura-se um delimitador personalizado, neste caso o hífen ("-"), garantindo que a informação seja segmentada em colunas distintas para facilitar análises granulares.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m18s036.jpg" alt="" width="840">
+</p>
+
+O resultado da divisão de colunas permite a renomeação dos novos campos para "Rua" e "Número". Além disso, é demonstrado como adicionar novas colunas de exemplo para preencher informações faltantes, como Cidade e UF (Estado), enriquecendo a base de dados consolidada com informações que não estavam presentes originalmente em todas as tabelas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m22s684.jpg" alt="" width="840">
+</p>
+
+De forma análoga ao endereço, a coluna de nome completo também é dividida para separar o nome do sobrenome. Aqui, o delimitador utilizado é o "Espaço". Essa atomização dos dados é fundamental para situações em que o banco de dados original não seguiu padrões ideais de modelagem, permitindo manipulações posteriores mais eficientes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m26s984.jpg" alt="" width="840">
+</p>
+
+Durante a divisão de nomes, problemas comuns podem surgir, como nomes compostos (ex: "Maria de Andrade") que geram colunas extras ou valores nulos. A imagem mostra o uso de filtros para identificar e tratar essas inconsistências, selecionando valores específicos para realizar substituições manuais ou ajustes de limpeza, garantindo a integridade dos dados finais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m31s833.jpg" alt="" width="840">
+</p>
+
+Para extrair o tipo de relacionamento embutido no código de identificação (como "cust", "sup" ou "emp"), exploram-se outras opções de divisão, como a **Divisão por Número de Caracteres**. Como os prefixos têm tamanhos diferentes, essa operação exige um ajuste fino subsequente para garantir que a separação entre as letras e os números ocorra de forma precisa.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m36s372.jpg" alt="" width="840">
+</p>
+
+Após a divisão dos códigos, utiliza-se a função **Substituir Valores** para padronizar os prefixos que foram segmentados incorretamente (ex: corrigir "cus" para "cust"). Esse refinamento garante que a coluna "Tipo de Relacionamento" contenha categorias claras e agrupáveis, permitindo uma análise estatística correta de quantos registros pertencem a cada categoria do RH.
 
 ```powerquery
-Table.SelectRows(#"Tipo Alterado1", each ([Janeiro] <> null))
+Table.ReplaceValue("Tipo Alterado2", "cus", "cust", Replacer.ReplaceText, {"Identificação.1"})
 
 ```
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-19h59m15s216.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m45s616.jpg" alt="" width="840">
 </p>
 
-Alternativamente à remoção de linhas, o Power Query permite a substituição de valores para manter a integridade do volume de dados. Quando um valor `null` é identificado em colunas numéricas ou de categoria, pode-se utilizar a interface de "Substituir Valores" para localizar o termo `null` e substituí-lo por `0` (ou outro valor padrão). Isso é essencial para que cálculos matemáticos subsequentes não retornem erro devido a células vazias.
-
-```powerquery
-Table.ReplaceValue("Linhas Filtradas", null, "0", Replacer.ReplaceValue, {"Categoria"})
-
-```
+Uma vez aplicadas as transformações e fechado o Power Query, os dados são carregados no ambiente de relatório do Power BI. A imagem ilustra a criação de um gráfico de barras que exibe a contagem de pessoas por tipo de relacionamento. Este visual é o resultado direto da limpeza e segmentação dos dados, permitindo ver a distribuição entre empregados, clientes e fornecedores de forma clara.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-16-19h59m37s562.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m47s153.jpg" alt="" width="840">
 </p>
 
-Para análises de frequência ou consolidação, utiliza-se a funcionalidade "Agrupar por". Nesta interface, define-se uma coluna de agrupamento (como "Categoria") e a operação desejada, como a contagem de linhas. O resultado é uma nova coluna, geralmente nomeada como "Contagem", que resume quantas vezes cada item aparece na base original, facilitando a identificação de redundâncias ou o volume de estoque por classe de produto.
+Além do gráfico de barras, os dados transformados permitem a exploração de outros visuais, como o gráfico de pizza. Este formato é útil para visualizar a proporção percentual de cada entidade dentro do conjunto total de dados gerenciados pelo RH, facilitando a percepção visual do peso de cada categoria.
 
-```powerquery
-Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Categoria", type text}})
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-11h01m49s197.jpg" alt="" width="840">
+</p>
 
-```      
-
+Outra opção de visualização demonstrada é o Treemap, que exibe as categorias como blocos proporcionais ao volume de dados. O uso de atributos atômicos e simples, obtidos através das etapas de transformação, é o que possibilita a criação desses visuais agregadores, agregando valor real ao relatório final.     
+ 
 
 ### 🟩 Vídeo 08 - Mesclando Colunas com Power Query
 
@@ -408,100 +446,7 @@ Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Categoria", type text}}
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/limpeza-e-transformacao-de-dados-com-power-bi/learning/2aa9daf0-d880-4023-a2d2-b8e4df379727?autoplay=1
 
-Este guia explora como consolidar informações de diferentes fontes no Power BI utilizando a função Mesclar (Merge) do Power Query. O objetivo é transformar tabelas isoladas em um conjunto de dados único e coerente para facilitar a criação de relatórios.
 
-### Anotações
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h11m01s983.jpg" alt="" width="840">
-</p>
-
-Nesta etapa inicial, exploramos o conceito de **Mesclar Consultas** no Power BI, uma operação fundamental para consolidar dados distribuídos em diferentes tabelas. O processo de mesclagem é o equivalente funcional ao **JOIN** em SQL, permitindo unir informações com base em uma coluna comum.
-
-O cenário apresentado utiliza duas tabelas base:
-
-* **Pedidos:** Contém dados transacionais como ID, Data, Origem, Produto e Quantidade.
-* **Status:** Contém detalhes complementares sobre o andamento de cada pedido.
-
-O objetivo é transformar e carregar esses dados para que a equipe de vendas tenha uma visão unificada, evitando a necessidade de consultar múltiplas fontes separadamente.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h11m05s083.jpg" alt="" width="840">
-</p>
-
-Ao observar a tabela de **Status**, identificamos colunas específicas como `ID`, `Status` e `Prioridade`. Note que, embora os dados estejam visualmente simples no editor, por trás de cada etapa de transformação o Power BI utiliza a **Linguagem M** (a linguagem de fórmulas do Power Query).
-
-A intenção aqui é aglutinar essas informações para que, em vez de termos entidades separadas, possamos visualizar um consolidado que relacione diretamente a prioridade e o estado de cada pedido ao seu registro original de venda.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h11m48s375.jpg" alt="" width="840">
-</p>
-
-Para realizar a união, acessamos a opção **Mesclar Consultas**. É crucial distinguir esta operação de "Acrescentar": enquanto o acréscimo empilha linhas (vertical), a mesclagem combina colunas (horizontal) com base em correspondências.
-
-No Power Query, as opções de junção seguem a lógica dos joins de bancos de dados:
-
-* **Externa Esquerda (Left Outer):** Mantém todas as linhas da primeira tabela e traz apenas as correspondentes da segunda.
-* **Externa Completa (Full Outer):** Mantém todas as linhas de ambas as tabelas.
-* **Interna (Inner):** Mantém apenas as linhas que possuem correspondência em ambas.
-* **Anti-Esquerda/Direita:** Filtra apenas o que *não* possui correspondência no lado oposto.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h12m23s029.jpg" alt="" width="840">
-</p>
-
-Para habilitar o botão de confirmação da mesclagem, é obrigatório selecionar as **colunas de junção** em ambas as pré-visualizações das tabelas. No exemplo, selecionamos a coluna `ID` na tabela superior e a coluna `ID` na tabela inferior.
-
-Essa seleção define a "cláusula de junção", garantindo que o Power BI saiba exatamente qual linha de status pertence a qual linha de pedido. Sem essa definição explícita, o sistema não consegue calcular a correspondência das linhas.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h12m30s569.jpg" alt="" width="840">
-</p>
-
-Após confirmar a mesclagem, o Power Query cria uma nova coluna no final da tabela original. Inicialmente, o conteúdo desta coluna aparece como um objeto do tipo `Table`.
-
-Isso ocorre porque o Power BI "empacota" todas as informações da tabela relacionada dentro de cada linha. Para visualizar os dados de fato (como o status e a prioridade), precisamos realizar o processo de expansão dessa estrutura aninhada.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h12m42s337.jpg" alt="" width="840">
-</p>
-
-Para "destrinchar" os dados, clicamos no ícone de expansão (as duas setas divergentes) no cabeçalho da coluna de tabela.
-
-Nesta interface, podemos escolher exatamente quais colunas da tabela de origem queremos trazer. É recomendável desmarcar a opção "Usar o nome da coluna original como prefixo" se desejar nomes de colunas mais limpos, ou mantê-la para evitar conflitos de nomes (ambiguidade) entre as tabelas originais.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h12m45s676.jpg" alt="" width="840">
-</p>
-
-Com a expansão concluída, a tabela agora exibe as informações integradas. Neste momento, realizamos a limpeza de dados (data cleaning):
-
-1. **Remover Duplicidade:** Como já temos o `ID` original, a coluna de `ID` vinda da segunda tabela torna-se redundante e pode ser removida.
-2. **Reordenar Colunas:** As colunas de `Status` e `Prioridade` podem ser movidas para posições que façam mais sentido lógico no relatório.
-
-Dessa forma, transformamos dois conjuntos distintos em uma única visão consolidada, denominada **Pedidos Completos**.
-
----
-
-<p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-17-10h13m03s981.jpg" alt="" width="840">
-</p>
-
-Ao retornar para a interface principal do Power BI e aplicar as alterações, observamos a diferença estrutural. Embora fosse possível criar um relatório usando as tabelas separadas e criando relacionamentos, a criação de uma tabela consolidada simplifica drasticamente a construção de visuais.
-
-Em cenários reais com dezenas de tabelas, essa prática de aglutinar informações comuns facilita a localização de campos e otimiza a performance do modelo de dados, permitindo que o analista arraste campos como "Status" e "Quantidade" de um único lugar para gerar gráficos e tabelas agregadas.      
 
 
 ### 🟩 Vídeo 09 - Explorando Exibição de Estatísticas da Base de Dados com Power Query
