@@ -463,6 +463,11 @@ class PessoaTeste {
 
 Para aprofundar os conhecimentos em testes unitários, recomenda-se a consulta à documentação oficial da classe `Assertions` no site do JUnit. Recursos adicionais, como tutoriais práticos sobre o uso de asserções, são fundamentais para entender as diversas possibilidades de validação de dados.      
 
+#### Referências
+
+- https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html  
+- https://www.tutorialspoint.com/junit/junit_using_assertion.htm
+
 
 ### 🟩 Vídeo 05 - Mais algumas asserções
 
@@ -473,6 +478,84 @@ Para aprofundar os conhecimentos em testes unitários, recomenda-se a consulta �
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/67185e7a-6484-4e73-9caf-2cb6690b1b3b?autoplay=1
 
+Este guia explora o uso da classe Assertions do JUnit, demonstrando como validar diferentes cenários de dados, desde arrays complexos até a nulidade de objetos, além de dicas para manter o código de teste limpo e eficiente.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-14h41m40s856.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, daremos continuidade ao estudo de testes unitários com JUnit, focando na exploração prática da classe **Assertions**. O objetivo é analisar cenários reais, como a comparação de arrays e a validação de referências nulas, para compreender como a API nos ajuda a assegurar o comportamento esperado do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-14h41m51s049.jpg" alt="" width="840">
+</p>
+
+Um dos recursos da classe `Assertions` é o método `assertArrayEquals`, utilizado para comparar se dois arrays são idênticos. É importante notar que a ordem dos parâmetros importa: primeiro passamos o valor esperado e depois o valor atual. No exemplo abaixo, o teste resultará em erro caso os arrays possuam tamanhos diferentes ou conteúdos distintos em seus respectivos índices.
+
+```java
+@Test
+void validarLancamentos() {
+    int[] primeiroLancamento = {10, 20, 30, 40, 50};
+    int[] segundoLancamento = {-1, 5, 2, 3, 10, 16, 17};
+
+    Assertions.assertArrayEquals(primeiroLancamento, segundoLancamento);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-14h42m14s474.jpg" alt="" width="840">
+</p>
+
+Para lidar com referências de objetos, o JUnit oferece os métodos `assertNull` e `assertNotNull`. Eles são essenciais para garantir que um objeto foi (ou não) instanciado corretamente após a execução de uma lógica de negócio. No exemplo, validamos inicialmente que a variável `pessoa` é nula e, após a instanciação, garantimos que ela contém uma referência válida.
+
+```java
+@Test
+void validarSeObjetoEstaNulo() {
+    Pessoa pessoa = null;
+    Assertions.assertNull(pessoa);
+
+    pessoa = new Pessoa("Luciano", LocalDateTime.now());
+    Assertions.assertNotNull(pessoa);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-14h42m23s252.jpg" alt="" width="840">
+</p>
+
+Abaixo, vemos o ajuste dos arrays para que o teste de lançamentos seja bem-sucedido, igualando seus conteúdos. Além disso, a API do JUnit é versátil ao lidar com diferentes tipos numéricos através de sobrecargas do método `assertEquals`. Isso permite comparar valores de tipos como `int`, `double`, `float` e outros, garantindo que a precisão e a igualdade sejam mantidas conforme a documentação da IDE sugere.
+
+```java
+@Test
+void validarLancamentos() {
+    int[] primeiroLancamento = {10, 20, 30, 40, 50};
+    int[] segundoLancamento = {10, 20, 30, 40, 50};
+
+    Assertions.assertArrayEquals(primeiroLancamento, segundoLancamento);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-14h42m25s388.jpg" alt="" width="840">
+</p>
+
+Uma prática comum no desenvolvimento de testes para tornar o código mais limpo e legível é a utilização de **importações estáticas**. Ao importar os métodos da classe `Assertions` de forma estática, eliminamos a necessidade de repetir o prefixo `Assertions.` antes de cada chamada, deixando as asserções mais diretas.
+
+```java
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+// Ou utilizando o curinga para todos os métodos
+import static org.junit.jupiter.api.Assertions.*;
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-14h42m31s313.jpg" alt="" width="840">
+</p>
+
+Para aprofundar os conhecimentos sobre as asserções disponíveis no JUnit 5, recomenda-se a consulta à documentação oficial da API e a guias de referência rápida. Compreender a variedade de métodos disponíveis na classe `Assertions` é fundamental para realizar validações precisas e garantir a integridade dos testes unitários.      
 
 
 ### 🟩 Vídeo 06 - After e Before
@@ -482,7 +565,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/dc153cc9-20a0-4907-8cc4-10b6c8f4c4b9?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Assumptions e Testes condicionais
 
