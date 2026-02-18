@@ -359,6 +359,111 @@ Para aprofundamento, os recursos oficiais são fundamentais. O repositório ofic
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/38ef08ba-4873-48a8-8ed6-16db79698496?autoplay=1
 
+Esta aula foca no aprofundamento dos recursos do JUnit, demonstrando na prática como estruturar testes para uma aplicação Java Maven e como utilizar as principais asserções para validar o comportamento do código.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-13h34m12s253.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial da aula, o foco é estabelecer os objetivos principais, que consistem em explorar detalhadamente os recursos fornecidos pelo framework JUnit. A proposta é capacitar o desenvolvedor a utilizar essas ferramentas de forma eficiente no cotidiano profissional para garantir a qualidade do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-13h34m20s330.jpg" alt="" width="840">
+</p>
+
+Para ilustrar os testes na prática, utiliza-se um projeto Java estruturado com Maven, contendo a classe de domínio `Pessoa`. Esta classe possui atributos para nome e data de nascimento, além de métodos que calculam a idade baseada na data atual e verificam a maioridade do indivíduo.
+
+```java
+public class Pessoa {
+    private String nome;
+    private LocalDateTime nascimento;
+
+    public Pessoa(String nome, LocalDateTime nascimento) {
+        this.nome = nome;
+        this.nascimento = nascimento;
+    }
+
+    public int getIdade() {
+        return (int) ChronoUnit.YEARS.between(nascimento, LocalDateTime.now());
+    }
+
+    public boolean ehMaiorDeIdade() {
+        return getIdade() >= 18;
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-13h34m43s157.jpg" alt="" width="840">
+</p>
+
+A estrutura de testes exige uma separação rigorosa de pastas: o código de produção fica em `src/main/java`, enquanto os testes devem residir em `src/test/java`. O exemplo abaixo demonstra o uso da anotação `@Test` e do método `Assertions.assertEquals` para validar se o cálculo da idade da classe `Pessoa` está retornando o valor esperado.
+
+```java
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import java.time.LocalDateTime;
+
+public class PessoaTeste {
+
+    @Test
+    void deveCalcularIdadeCorretamente() {
+        Pessoa jessica = new Pessoa("Jéssica", LocalDateTime.of(2000, 1, 1, 15, 0));
+        Assertions.assertEquals(22, jessica.getIdade());
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-13h34m55s181.jpg" alt="" width="840">
+</p>
+
+Além de validar igualdades, o JUnit permite testar condições booleanas através de métodos como `assertTrue` e `assertFalse`. É possível incluir múltiplas validações dentro de um mesmo método de teste para cobrir diferentes cenários de um comportamento, como testar tanto um caso positivo quanto um negativo de maioridade.
+
+```java
+@Test
+void deveRetornarSeEhMaiorDeIdade() {
+    Pessoa jessica = new Pessoa("Jéssica", LocalDateTime.of(2000, 1, 1, 15, 0));
+    Assertions.assertTrue(jessica.ehMaiorDeIdade());
+
+    Pessoa joao = new Pessoa("João", LocalDateTime.now());
+    Assertions.assertFalse(joao.ehMaiorDeIdade());
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-13h34m57s868.jpg" alt="" width="840">
+</p>
+
+A execução dos testes é monitorada diretamente pela IDE, que fornece um feedback visual sobre o sucesso ou falha das operações. Neste caso, o JUnit 5 gerenciou a execução do teste `deveRetornarSeEhMaiorDeIdade`, confirmando que as condições de maioridade foram validadas corretamente conforme o planejado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-13h35m01s359.jpg" alt="" width="840">
+</p>
+
+A estrutura básica de um teste unitário bem definido compreende o uso da anotação `@Test`, a construção de um cenário (preparação dos dados) e a execução das asserções. Por padrão, os métodos de teste não devem retornar valores, utilizando sempre o tipo `void`.
+
+```java
+class PessoaTeste {
+    @Test //--> Anotação é primordial para testar
+    void validaVerificacaoDeMaioridade() {
+        // cria um cenário
+        Pessoa joaozinho = new Pessoa("João", LocalDate.of(2004, 1, 1)); 
+        // Executa as validações
+        Assertions.assertTrue(joaozinho.ehMaiorDeIdade()); 
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-13h35m03s499.jpg" alt="" width="840">
+</p>
+
+Para aprofundar os conhecimentos em testes unitários, recomenda-se a consulta à documentação oficial da classe `Assertions` no site do JUnit. Recursos adicionais, como tutoriais práticos sobre o uso de asserções, são fundamentais para entender as diversas possibilidades de validação de dados.      
+
+
 ### 🟩 Vídeo 05 - Mais algumas asserções
 
 <video width="60%" controls>
@@ -366,7 +471,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/67185e7a-6484-4e73-9caf-2cb6690b1b3b?autoplay=1
+
+
 
 ### 🟩 Vídeo 06 - After e Before
 
