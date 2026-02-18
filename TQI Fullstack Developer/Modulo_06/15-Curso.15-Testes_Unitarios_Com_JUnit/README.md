@@ -799,6 +799,80 @@ void validarCenarioDeExcecaoNaTransferencia() {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/d42c3721-ace3-4561-931f-5af4ee59be31?autoplay=1
 
+Este guia resume as principais técnicas e anotações para controlar a ordem de execução dos testes unitários no JUnit, conforme apresentado na aula. Embora o ideal seja que testes unitários sejam independentes, existem cenários específicos onde a ordenação é necessária ou útil para a organização do fluxo de desenvolvimento.
+
+### Anotações
+
+#### Ordenação de Testes no JUnit 5
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h03m36s770.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco é o controle sobre a ordem de execução dos testes unitários. Por padrão, o JUnit não garante uma ordem específica, o que pode ser problemático em cenários onde a visualização lógica ou a organização dos testes facilitam a depuração. Para demonstrar essas funcionalidades, foi estruturada uma classe de teste básica com quatro métodos representativos: `validaFluxoA`, `validaFluxoB`, `validaFluxoC` e `validaFluxoD`.
+
+---
+
+#### Execução Aleatória com MethodOrderer.Random
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h03m47s151.jpg" alt="" width="840">
+</p>
+
+Uma das formas de configurar a ordenação é através da anotação `@TestMethodOrder`. No exemplo visualizado, utiliza-se o `MethodOrderer.Random.class`, que instrui o JUnit a executar os métodos de teste em uma ordem pseudo-aleatória a cada nova execução. Esta abordagem é útil para garantir que os testes sejam independentes entre si, evitando que o sucesso de um teste dependa do estado deixado por um teste anterior.
+
+```java
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.Assertions;
+
+@TestMethodOrder(MethodOrderer.Random.class)
+public class EscolhendoAOrdemTeste {
+
+    @Test
+    void validaFluxoA() {
+        Assertions.assertTrue(true);
+    }
+
+    @Test
+    void validaFluxoB() {
+        Assertions.assertTrue(true);
+    }
+}
+```
+
+---
+
+#### Ordenação por DisplayName
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h04m01s056.jpg" alt="" width="840">
+</p>
+
+Outra possibilidade é ordenar os testes com base no nome de exibição definido pela anotação `@DisplayName`. Ao configurar a classe com `@TestMethodOrder(MethodOrderer.DisplayName.class)`, o JUnit seguirá a ordem alfabética dos textos fornecidos dentro das anotações `@DisplayName`. Este recurso é amplamente utilizado para melhorar a legibilidade dos relatórios de teste, permitindo descrições em linguagem natural (como "Teste que valida se o usuário foi criado") enquanto mantém a organização desejada no painel de resultados.
+
+```java
+package one.digitalinnovation.junit;
+
+import org.junit.jupiter.api.*;
+
+@TestMethodOrder(MethodOrderer.DisplayName.class)
+public class EscolhendoAOrdemTeste {
+
+    @DisplayName("Teste que valida se o usuário foi criado")
+    @Test
+    void validaFluxoA() {
+        Assertions.assertTrue(true);
+    }
+
+    @DisplayName("B")
+    @Test
+    void validaFluxoB() {
+        Assertions.assertTrue(true);
+    }
+}
+```      
 
 
 
@@ -811,7 +885,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/c3f5e0e8-f3eb-4277-bea0-eb1d7fceff3e?autoplay=1
 
 ### 🟩 Vídeo 11 - Eclipse
 
