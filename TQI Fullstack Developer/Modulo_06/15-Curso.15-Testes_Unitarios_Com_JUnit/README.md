@@ -980,6 +980,117 @@ https://code.visualstudio.com/docs/java/java-testing
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/84f74a25-321a-4ff9-83c2-3fbcbdc4c541?autoplay=1
 
+Este resumo aborda a quarta aula do curso de JUnit, focada na utilização prática do Eclipse IDE como ferramenta principal para desenvolvimento, execução e depuração de testes unitários em projetos Java.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h28m17s397.jpg" alt="" width="840">
+</p>
+
+Nesta etapa do curso de testes unitários com JUnit, o foco é a utilização do **Eclipse IDE**, uma das ferramentas mais tradicionais e utilizadas pela comunidade Java e no mercado de trabalho. A aula aborda como realizar a importação de projetos Maven e como navegar pelos recursos específicos voltados para a execução e análise de testes dentro deste ambiente de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h28m25s307.jpg" alt="" width="840">
+</p>
+
+Ao importar um projeto Maven no Eclipse, a estrutura de pastas é organizada de forma a separar o código-fonte principal (`src/main/java`) dos arquivos de teste (`src/test/java`). Para executar os testes, basta clicar com o botão direito sobre o arquivo ou pacote desejado e selecionar a opção **Run As > JUnit Test**.
+
+O Eclipse oferece uma aba visual do JUnit que indica o progresso e o resultado da execução:
+
+* **Barra Verde:** Indica que todos os testes foram executados com sucesso.
+* **Runs:** Mostra a quantidade de testes executados (ex: 3/3).
+* **Errors/Failures:** Contabiliza problemas técnicos ou asserções que falharam.
+
+```java
+package one.digitalinnovation.junit;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AssertionsTeste {
+
+    @Test
+    void validarLancamentos() {
+        int[] primeiroLancamento = {10, 20, 30, 40, 50};
+        int[] segundoLancamento = {10, 20, 30, 40, 50};
+        assertArrayEquals(primeiroLancamento, segundoLancamento);
+    }
+
+    @Test
+    void validarSeObjetoEstaNulo() {
+        Pessoa pessoa = null;
+        assertNull(pessoa);
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h28m27s621.jpg" alt="" width="840">
+</p>
+
+Quando um teste falha, a barra de status do JUnit torna-se **vermelha**, sinalizando que uma ou mais asserções não foram atendidas ou que o método `fail()` foi invocado manualmente. No painel "Failure Trace", é possível identificar a causa exata do erro. Ao clicar duas vezes sobre o teste que falhou na lista, a IDE redireciona automaticamente o cursor para a linha exata do código-fonte onde o problema ocorreu, facilitando a correção.
+
+```java
+    @Test
+    void validarSeObjetoEstaNulo() {
+        Pessoa pessoa = null;
+        assertNull(pessoa);
+        
+        pessoa = new Pessoa("Luciano", LocalDateTime.now());
+        fail("Error"); // Força a falha do teste para demonstração
+    }
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h28m31s584.jpg" alt="" width="840">
+</p>
+
+O Eclipse possui uma poderosa ferramenta de **Debug** para testes. Para utilizá-la, basta inserir um *breakpoint* clicando duas vezes à esquerda do número da linha. Ao executar com **Debug As > JUnit Test**, a IDE altera sua perspectiva para exibir a pilha de execução (esquerda), o console (centro) e as variáveis e referências ativas (direita).
+
+Comandos principais de controle:
+
+* **F6 (Step Over):** Avança linha a linha na execução atual.
+* **F5 (Step Into):** Entra dentro do método que está sendo chamado na linha.
+* **F8 (Resume):** Continua a execução até o próximo breakpoint ou até o fim do teste.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h29m11s065.jpg" alt="" width="840">
+</p>
+
+Um recurso avançado do modo debug é a capacidade de inspecionar e alterar valores de variáveis em tempo de execução para simular diferentes cenários. Através da aba **Variables**, é possível selecionar uma instância (como `contaOrigem`), clicar com o botão direito e usar a opção **Change Value**. No exemplo visualizado, utiliza-se a asserção `assertDoesNotThrow` para garantir que uma transferência entre contas ocorra sem disparar exceções inesperadas.
+
+```java
+package one.digitalinnovation.junit;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+public class ExceptionsTeste {
+
+    @Test
+    void validarCenarioDeExcecaoNaTransferencia() {
+        Conta contaOrigem = new Conta("123456", 0);
+        Conta contaDestino = new Conta("456548", 100);
+        
+        TransferenciaEntreContas transferenciaEntreContas = new TransferenciaEntreContas();
+        
+        Assertions.assertDoesNotThrow(() -> 
+            transferenciaEntreContas.transfere(contaOrigem, contaDestino, 20)
+        );
+    }
+}
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h29m22s160.jpg" alt="" width="840">
+</p>
+
+Para aprofundar o domínio da IDE Eclipse e suas funcionalidades de teste, recomenda-se a consulta às documentações oficiais e materiais complementares. O aprendizado contínuo sobre atalhos e configurações de ambiente é essencial para aumentar a produtividade no desenvolvimento Java orientado a testes.
+
 
 
 ### 🟩 Vídeo 12 - IntelliJ IDEA
@@ -989,7 +1100,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/1e138856-fb8f-442a-82bc-d9ed541ee956?autoplay=1
 
 ## Parte 6 - Boas práticas
 
