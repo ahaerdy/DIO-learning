@@ -1107,6 +1107,66 @@ Para aprofundar o domínio da IDE Eclipse e suas funcionalidades de teste, recom
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/1e138856-fb8f-442a-82bc-d9ed541ee956?autoplay=1
 
+Este guia resume as principais funcionalidades e fluxos de trabalho para realizar testes unitários utilizando a versão Community do IntelliJ IDEA, focando em produtividade, análise de falhas e técnicas de depuração.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h41m51s367.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, iniciamos a exploração do **IntelliJ IDEA**, uma das IDEs mais utilizadas no mercado para o desenvolvimento Java. A demonstração foca na versão **Community**, que, apesar de possuir menos recursos que a versão Ultimate/Enterprise, atende perfeitamente às necessidades de execução e gerenciamento de testes unitários com JUnit. O foco aqui é preparar o ambiente para importar o projeto de exemplos e entender como a ferramenta organiza visualmente o código e as dependências.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h42m01s608.jpg" alt="" width="840">
+</p>
+
+O IntelliJ permite a execução de testes de forma granular: é possível rodar uma classe inteira ou métodos específicos através dos ícones de "Play" ao lado do código. Na interface, observamos o comportamento da IDE quando um teste falha. Ao inserir intencionalmente o método `fail()`, o painel inferior de resultados sinaliza o erro imediatamente, mudando o ícone para indicar a falha e permitindo que o desenvolvedor clique no erro para ser levado diretamente à linha problemática.
+
+```java
+@Test
+void validarLancamentos() {
+    int[] primeiroLancamento = {10, 20, 30, 40, 50};
+    int[] segundoLancamento = {10, 20, 30, 40, 50};
+    
+    assertArrayEquals(primeiroLancamento, segundoLancamento);
+    fail("Erro no teste");
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h42m06s444.jpg" alt="" width="840">
+</p>
+
+Uma funcionalidade essencial demonstrada é o **Debug**. Ao definir um *breakpoint* (a marcação azul na linha do código), a execução é pausada, permitindo a inspeção detalhada do estado atual da aplicação. No painel de variáveis, conseguimos validar o conteúdo de estruturas complexas, como os valores contidos em um array no exato momento da verificação. As ferramentas de navegação, como o *Step Over* (caminhar pelo fluxo) e *Step Into* (adentrar em métodos), são fundamentais para entender a pilha de execução.
+
+```java
+// Exemplo de inspeção de variáveis durante o debug
+int[] primeiroLancamento = {10, 20, 30, 40, 50};
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h42m11s564.jpg" alt="" width="840">
+</p>
+
+A IDE oferece um relatório detalhado de asserções. Quando utilizamos um `assertEquals`, o IntelliJ fornece uma visualização clara da discrepância entre o valor esperado e o valor real processado pelo código. No exemplo visualizado, o teste falha ao comparar a expectativa (5) com o resultado de uma operação (3 + 3 = 6). Esse feedback visual facilita a correção rápida de bugs lógicos nos testes ou no código fonte.
+
+```java
+// Demonstração de falha em asserção
+assertEquals(5, 3 + 3);
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h42m13s804.jpg" alt="" width="840">
+</p>
+
+Para aprofundar os conhecimentos sobre as capacidades de teste da IDE, é recomendada a consulta à documentação oficial da JetBrains. O material auxilia tanto na criação de novos testes quanto no domínio avançado das ferramentas de produtividade integradas ao ambiente de desenvolvimento.
+
+**Referências Adicionais:**
+
+* [Testes no IntelliJ IDEA - Documentação Oficial](https://www.jetbrains.com/help/idea/tests-in-ide.html)      
+
+
 ## Parte 6 - Boas práticas
 
 ### 🟩 Vídeo 13 - Boas práticas
@@ -1116,7 +1176,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/fa651ad6-65a8-4653-88f6-c7ccd25d56a5?autoplay=1
 
 ## Parte 7 - Conclusão do curso
 
