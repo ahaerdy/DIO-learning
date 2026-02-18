@@ -966,6 +966,9 @@ public class AssertionsTeste {
 
 Para aprofundamento nos recursos de teste específicos do Visual Studio Code, recomenda-se a consulta à documentação oficial da ferramenta. Este guia prático serve como base para que o aluno comece a explorar as capacidades de teste e depuração em ambiente Java.      
 
+#### Referências
+
+https://code.visualstudio.com/docs/java/java-testing
 
 
 ### 🟩 Vídeo 11 - Eclipse
@@ -975,7 +978,9 @@ Para aprofundamento nos recursos de teste específicos do Visual Studio Code, re
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/84f74a25-321a-4ff9-83c2-3fbcbdc4c541?autoplay=1
+
+
 
 ### 🟩 Vídeo 12 - IntelliJ IDEA
 
