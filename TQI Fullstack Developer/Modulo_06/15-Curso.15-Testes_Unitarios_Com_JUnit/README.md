@@ -1091,6 +1091,11 @@ public class ExceptionsTeste {
 
 Para aprofundar o domínio da IDE Eclipse e suas funcionalidades de teste, recomenda-se a consulta às documentações oficiais e materiais complementares. O aprendizado contínuo sobre atalhos e configurações de ambiente é essencial para aumentar a produtividade no desenvolvimento Java orientado a testes.
 
+#### Referências
+
+- https://wiki.eclipse.org/Eclipse/Testing  
+- https://nglauber.medium.com/junit-no-eclipse-ebd134fcf6d4  
+- https://edisciplinas.usp.br/pluginfile.php/5768433/mod_resource/content/0/Utilizando%20JUnit%20no%20Eclipse.pdf
 
 
 ### 🟩 Vídeo 12 - IntelliJ IDEA
