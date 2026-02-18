@@ -729,6 +729,12 @@ Para aprofundamento nos temas de assumptions e execuções condicionais, as refe
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/da5e03c2-caef-446e-a73c-ed274e47e6fd?autoplay=1
 
+#### Referências
+
+- https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assumptions.html  
+- https://www.baeldung.com/junit-5#2-assumptions  
+- https://mkyong.com/junit5/junit-5-assumptions-examples/  
+- https://junit.org/junit5/docs/current/user-guide/#writing-tests-conditional-execution
 
 
 ### 🟩 Vídeo 09 - Ordenando testes
