@@ -613,8 +613,6 @@ public class BancoDeDados {
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-15h17m57s539.jpg" alt="" width="840">
 </p>
 
-*Conteúdo não identificado com segurança a partir do material disponível.*
-
 ```java
 package one.digitalinnovation.junit;
 
@@ -650,6 +648,78 @@ public class ConsultarDadosDePessoaTest {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/212ae840-ea88-4ab8-a6ee-ca1ed26c1342?autoplay=1
 
+Este guia aborda como controlar a execução de testes unitários baseando-se em condições específicas do ambiente, como variáveis de sistema, sistema operacional e versão do Java, utilizando os recursos de Assumptions (Suposições) e Testes Condicionais do JUnit 5.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h10m59s244.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da aula, introduzimos os conceitos de **Assumptions** (suposições) e **testes condicionais** no JUnit. O termo *assumption* refere-se a uma hipótese ou presunção que deve ser satisfeita para que um teste seja executado. Diferente das asserções comuns, se uma condição presumida não for atendida, o teste não falha, mas é interrompido ou ignorado, permitindo que o código valide se o ambiente ou contexto é adequado para aquela execução específica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h11m10s074.jpg" alt="" width="840">
+</p>
+
+Para implementar essas validações programaticamente, utilizamos a classe `Assumptions`. No exemplo prático, o método `assumeFalse` é utilizado para verificar se o usuário logado no sistema operacional não é o "root". Caso a condição seja verdadeira (ou seja, o usuário logado seja "root"), o restante do teste, incluindo a `Assertions.assertEquals`, não será processado.
+
+```java
+@Test
+void validarAlgoSomenteNoUsuarioWillyan() {
+    Assumptions.assumeFalse("root".equals(System.getenv("USER")));
+    Assertions.assertEquals(10, 5 + 5);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h11m18s497.jpg" alt="" width="840">
+</p>
+
+O JUnit 5 oferece uma forma mais declarativa de lidar com condições através de anotações. A anotação `@EnabledIfEnvironmentVariable` permite especificar que um teste só deve ser habilitado se uma variável de ambiente específica (neste caso, `USER`) corresponder a um valor determinado (`willyan`). Isso elimina a necessidade de lógica condicional manual dentro do corpo do método do teste.
+
+```java
+@Test
+@EnabledIfEnvironmentVariable(named = "USER", matches = "willyan")
+void validarAlgoSomenteNoUsuarioWillyan() {
+    Assertions.assertEquals(10, 5 + 5);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h11m26s680.jpg" alt="" width="840">
+</p>
+
+Além de variáveis de ambiente, é possível condicionar a execução baseando-se no **Sistema Operacional (OS)**. Através da anotação `@EnabledOnOs`, podemos restringir o teste para rodar apenas em plataformas específicas, como o MacOS. Se o teste for executado em um ambiente Linux, como demonstrado no console da imagem, o JUnit identifica a incompatibilidade e pula a execução do teste.
+
+```java
+@Test
+@EnabledOnOs(OS.MAC)
+void validarAlgoSomenteNoUsuarioWillyan() {
+    Assertions.assertEquals(10, 5 + 5);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h11m37s339.jpg" alt="" width="840">
+</p>
+
+Outra funcionalidade poderosa é o filtro por versão do **JRE (Java Runtime Environment)**. Utilizando `@EnabledOnJre`, o desenvolvedor pode garantir que o teste execute apenas em versões específicas do Java (como o Java 8 ou Java 17). No exemplo visual, o teste foi ignorado porque o ambiente de execução atual estava utilizando o JRE 17.0.1, enquanto o teste estava configurado para habilitar-se apenas no `JAVA_8`.
+
+```java
+@Test
+@EnabledOnJre(JAVA_8)
+void validarAlgoSomenteNoUsuarioWillyan() {
+    Assertions.assertEquals(10, 5 + 5);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h11m42s100.jpg" alt="" width="840">
+</p>
+
+Para aprofundamento nos temas de assumptions e execuções condicionais, as referências oficiais do JUnit 5 e guias da comunidade como Baeldung e Mkyong são recursos fundamentais. Estes materiais detalham casos mais complexos, como o uso de intervalos de versões de JRE e combinações de múltiplas condições de execução.
+
 ### 🟩 Vídeo 08 - Testando exceptions
 
 <video width="60%" controls>
@@ -657,7 +727,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/da5e03c2-caef-446e-a73c-ed274e47e6fd?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Ordenando testes
 
