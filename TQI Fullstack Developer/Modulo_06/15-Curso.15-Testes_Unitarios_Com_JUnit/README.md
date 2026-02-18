@@ -557,6 +557,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 Para aprofundar os conhecimentos sobre as asserções disponíveis no JUnit 5, recomenda-se a consulta à documentação oficial da API e a guias de referência rápida. Compreender a variedade de métodos disponíveis na classe `Assertions` é fundamental para realizar validações precisas e garantir a integridade dos testes unitários.      
 
+#### Referências
+
+- https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html  
+- https://www.tutorialspoint.com/junit/junit_using_assertion.htm
+
 
 ### 🟩 Vídeo 06 - After e Before
 
@@ -567,7 +572,74 @@ Para aprofundar os conhecimentos sobre as asserções disponíveis no JUnit 5, r
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/dc153cc9-20a0-4907-8cc4-10b6c8f4c4b9?autoplay=1
 
+Este guia resume a terceira etapa da aula sobre testes unitários com JUnit, focando em como gerenciar o estado dos testes e recursos do sistema (como conexões de banco de dados) utilizando as anotações de configuração e limpeza.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-15h17m29s273.jpg" alt="" width="840">
+</p>
+
+Nesta terceira etapa da aula de testes unitários com JUnit, o foco é o aprofundamento nos recursos de **After e Before**. Estas anotações são fundamentais para gerenciar o ciclo de vida dos testes, permitindo a configuração e a limpeza de ambientes de forma automatizada e organizada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-15h17m45s704.jpg" alt="" width="840">
+</p>
+
+Para exemplificar o uso dessas ferramentas, é criada uma classe hipotética chamada `BancoDeDados`. Esta classe simula um gerenciador de conexões, contendo métodos estáticos para iniciar e finalizar a comunicação com o banco de dados. Para rastrear essas operações, utiliza-se a classe `Logger`, que registra no console o momento em que a conexão é estabelecida ou encerrada.
+
+```java
+package one.digitalinnovation.junit;
+
+import java.util.logging.Logger;
+
+public class BancoDeDados {
+
+    private static final Logger LOGGER = Logger.getLogger(BancoDeDados.class.getName());
+
+    public static void iniciarConexao() {
+        //fez algo
+        LOGGER.info("Iniciou conexao");
+    }
+
+    public static void finalizarConexao() {
+        //fez algo
+        LOGGER.info("finalizou conexao");
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-15h17m57s539.jpg" alt="" width="840">
+</p>
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+```java
+package one.digitalinnovation.junit;
+
+import org.junit.jupiter.api.*;
+
+public class ConsultarDadosDePessoaTest {
+
+    @BeforeAll
+    static void configuraConexao() {
+        BancoDeDados.iniciarConexao();
+        System.out.println("rodou configuraConexao");
+    }
+
+    @Test
+    void validarDadosDeRetorno() {
+        Assertions.assertTrue(true);
+    }
+
+    @AfterAll
+    static void finalizarConexao() {
+        BancoDeDados.finalizarConexao();
+        System.out.println("rodou finalizarConexao");
+    }
+}
+```
 
 ### 🟩 Vídeo 07 - Assumptions e Testes condicionais
 
@@ -576,7 +648,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/212ae840-ea88-4ab8-a6ee-ca1ed26c1342?autoplay=1
 
 ### 🟩 Vídeo 08 - Testando exceptions
 
