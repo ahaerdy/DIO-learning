@@ -720,6 +720,13 @@ void validarAlgoSomenteNoUsuarioWillyan() {
 
 Para aprofundamento nos temas de assumptions e execuções condicionais, as referências oficiais do JUnit 5 e guias da comunidade como Baeldung e Mkyong são recursos fundamentais. Estes materiais detalham casos mais complexos, como o uso de intervalos de versões de JRE e combinações de múltiplas condições de execução.
 
+#### Referências
+
+- https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assumptions.html  
+- https://www.baeldung.com/junit-5#2-assumptions  
+- https://mkyong.com/junit5/junit-5-assumptions-examples/  
+- https://junit.org/junit5/docs/current/user-guide/#writing-tests-conditional-execution
+
 ### 🟩 Vídeo 08 - Testando exceptions
 
 <video width="60%" controls>
@@ -729,13 +736,59 @@ Para aprofundamento nos temas de assumptions e execuções condicionais, as refe
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/da5e03c2-caef-446e-a73c-ed274e47e6fd?autoplay=1
 
-#### Referências
+Este documento resume a quinta etapa da terceira aula do curso de Testes Unitários, focada em como validar comportamentos inesperados ou erros de lógica de negócio através do tratamento de exceções.
 
-- https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assumptions.html  
-- https://www.baeldung.com/junit-5#2-assumptions  
-- https://mkyong.com/junit5/junit-5-assumptions-examples/  
-- https://junit.org/junit5/docs/current/user-guide/#writing-tests-conditional-execution
+### Anotações
 
+#### Testando Exceções com JUnit 5
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h49m23s340.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco é o aprofundamento nos testes de cenários excepcionais. O objetivo é validar o comportamento do sistema quando uma operação não segue o fluxo feliz e resulta no lançamento de uma exceção. Para exemplificar essa necessidade, considera-se uma operação de transferência bancária onde certas condições — como o valor da transferência — devem ser validadas obrigatoriamente antes da execução da lógica de negócio.
+
+#### Validação de Cenários de Erro com `assertThrows`
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h50m03s018.jpg" alt="" width="840">
+</p>
+
+Para testar se uma exceção é lançada corretamente, utiliza-se o método `Assertions.assertThrows`. No exemplo prático, é criada uma classe de teste `ExceptionsTeste` para validar a lógica da classe `TransferenciaEntreContas`. O teste verifica se, ao tentar transferir um valor inválido (menor ou igual a zero), o sistema lança uma `IllegalArgumentException`.
+
+```java
+@Test
+void validarCenarioDeExcecaoNaTransferencia() {
+    Conta contaOrigem = new Conta("123456", 0);
+    Conta contaDestino = new Conta("456548", 100);
+
+    TransferenciaEntreContas transferenciaEntreContas = new TransferenciaEntreContas();
+
+    Assertions.assertThrows(IllegalArgumentException.class, () ->
+            transferenciaEntreContas.transfere(contaOrigem, contaDestino, -1));
+}
+```
+
+#### Garantindo a Ausência de Exceções com `assertDoesNotThrow`
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-16h50m14s522.jpg" alt="" width="840">
+</p>
+
+Uma variação importante é o método `Assertions.assertDoesNotThrow`, utilizado para garantir que um bloco de código seja executado sem lançar nenhuma exceção. No exemplo visualizado, ao alterar o valor da transferência para um número positivo (como 20), o teste espera que a execução ocorra com sucesso. Caso uma exceção seja lançada inesperadamente nesse cenário, o JUnit falhará o teste, indicando que o comportamento observado divergiu do esperado.
+
+```java
+@Test
+void validarCenarioDeExcecaoNaTransferencia() {
+    Conta contaOrigem = new Conta("123456", 0);
+    Conta contaDestino = new Conta("456548", 100);
+
+    TransferenciaEntreContas transferenciaEntreContas = new TransferenciaEntreContas();
+
+    Assertions.assertDoesNotThrow(() -> 
+            transferenciaEntreContas.transfere(contaOrigem, contaDestino, 20));
+}
+```      
 
 ### 🟩 Vídeo 09 - Ordenando testes
 
@@ -744,7 +797,10 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/d42c3721-ace3-4561-931f-5af4ee59be31?autoplay=1
+
+
+
 
 ## Parte 5 - Recursos de testes nas IDEs
 
