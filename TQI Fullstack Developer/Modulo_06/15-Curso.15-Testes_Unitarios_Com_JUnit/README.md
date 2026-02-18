@@ -874,8 +874,6 @@ public class EscolhendoAOrdemTeste {
 }
 ```      
 
-
-
 ## Parte 5 - Recursos de testes nas IDEs
 
 ### 🟩 Vídeo 10 - Visual Studio Code
@@ -886,6 +884,89 @@ public class EscolhendoAOrdemTeste {
 </video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/c3f5e0e8-f3eb-4277-bea0-eb1d7fceff3e?autoplay=1
+
+Este resumo foca na quarta aula do curso de Testes Unitários com JUnit, onde o objetivo principal é familiarizar o desenvolvedor com as ferramentas de execução e depuração de testes nas IDEs mais populares do mercado, com ênfase inicial no Visual Studio Code (VS Code).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h14m31s525.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz os recursos de testes integrados às IDEs utilizadas no desenvolvimento cotidiano. O foco inicial estabelece que o uso de ferramentas adequadas no ambiente de desenvolvimento facilita a execução e o gerenciamento de testes unitários com JUnit.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h14m33s080.jpg" alt="" width="840">
+</p>
+
+O objetivo principal é fornecer uma visão geral básica sobre como executar testes unitários nas IDEs mais populares do mercado. A abordagem foca em um panorama simples e funcional para habilitar o desenvolvedor a operar as ferramentas essenciais sem necessariamente aprofundar em todos os recursos complexos de cada uma.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h14m35s241.jpg" alt="" width="840">
+</p>
+
+A primeira etapa prática foca no **Visual Studio Code (VS Code)**. Para que o ambiente Java funcione corretamente nesta IDE, é necessário garantir a instalação das extensões verificadas, que habilitam funcionalidades como a leitura de projetos Maven e a execução de testes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h14m49s109.jpg" alt="" width="840">
+</p>
+
+No VS Code, os testes são identificados por ícones de "play" (run test) localizados ao lado das classes e métodos. É possível executar um teste individual ou rodar todos os testes de um pacote completo. A interface também permite visualizar a estrutura do projeto através do Explorer e gerenciar dependências via Maven.
+
+```java
+import java.time.LocalDateTime;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AssertionsTeste {
+
+    @Test
+    void validarLancamentos() {
+        int[] primeiroLancamento = {10, 20, 30, 40, 50};
+        int[] segundoLancamento = {10, 20, 30, 40, 50};
+        assertArrayEquals(primeiroLancamento, segundoLancamento);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h14m52s222.jpg" alt="" width="840">
+</p>
+
+Além da execução simples, a IDE oferece suporte a **breakpoints**, permitindo a depuração (debug) do código. Ao clicar com o botão direito sobre os ícones de teste, o desenvolvedor pode iniciar o modo de debug, que interrompe a execução na linha marcada para análise detalhada do estado da aplicação.
+
+```java
+@Test
+void validarLancamentos() {
+    int[] primeiroLancamento = {10, 20, 30, 40, 50};
+    int[] segundoLancamento = {10, 20, 30, 40, 50};
+    assertArrayEquals(primeiroLancamento, segundoLancamento);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h14m53s797.jpg" alt="" width="840">
+</p>
+
+Durante a depuração, o VS Code exibe um painel de controle com funções como "Continue" (F5), "Step Over" (F10) e "Restart". O painel lateral **Run and Debug** detalha as variáveis locais, a pilha de chamadas (*Call Stack*) e os *Breakpoints* ativos, auxiliando na identificação de falhas lógicas nos testes.
+
+```java
+public class AssertionsTeste {
+    @Test
+    void validarLancamentos() {
+        int[] primeiroLancamento = {10, 20, 30, 40, 50};
+        int[] segundoLancamento = {10, 20, 30, 40, 50};
+        assertArrayEquals(primeiroLancamento, segundoLancamento);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-18-17h15m02s742.jpg" alt="" width="840">
+</p>
+
+Para aprofundamento nos recursos de teste específicos do Visual Studio Code, recomenda-se a consulta à documentação oficial da ferramenta. Este guia prático serve como base para que o aluno comece a explorar as capacidades de teste e depuração em ambiente Java.      
+
+
 
 ### 🟩 Vídeo 11 - Eclipse
 
