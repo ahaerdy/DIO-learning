@@ -1299,5 +1299,5 @@ Para dar continuidade aos estudos, recomenda-se a exploração de tópicos avan�
 
 # Certificado: Testes Unitários Com JUnit
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/5VEVVQBI.pdf
+- Certificado em pdf: [Certificado-Testes_Unitarios_Com_JUnit.pdf](000-Midia_e_Anexos/Certificado-Testes_Unitarios_Com_JUnit.pdf)
