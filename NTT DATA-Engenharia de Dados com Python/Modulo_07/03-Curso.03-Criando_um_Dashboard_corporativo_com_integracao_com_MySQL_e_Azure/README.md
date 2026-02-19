@@ -512,7 +512,6 @@ Ao iniciar a conexão, o sistema solicita a **senha** do usuário `company` vinc
 ```bash
 # Exemplo de comando de conexão via terminal (CLI)
 mysql -h desafio-projeto-dio.mysql.database.azure.com -u company -p
-
 ```
 
 <p align="center">
@@ -531,19 +530,105 @@ A etapa final é validada pela mensagem de sucesso: **"Successfully made the MyS
 
 link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/41abd05a-9076-4b03-a310-be58a6cafe1e
 
-### 🟩 Vídeo 08 - Entendendo o desafio
+Este guia prático detalha o processo de integração entre o Power BI e um banco de dados MySQL hospedado no Azure, focando na extração, limpeza e preparação de dados para análise.
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.07-curso.03-video_08.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+### Anotações
 
-link do vídeo:
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h44m31s911.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, visualizamos o painel de controle do **Microsoft Azure**, onde estão centralizadas as informações fundamentais para o estabelecimento da conexão. É necessário identificar o nome do servidor e as credenciais administrativas para prosseguir com a integração no Power BI.
+
+As informações principais extraídas do portal para configuração são:
+
+* 
+**Servidor**: `desafio-projeto-dio.mysql.database.azure.com`.
 
 
-##  Materiais de Apoio
+* 
+**Nome de logon do administrador**: `company`.
 
-# Certificado: 
+
+* 
+**Status**: Disponível.
+
+
+* 
+**Localização**: East US.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h44m36s819.jpg" alt="" width="840">
+</p>
+
+Após abrir o **Power BI Desktop**, o primeiro passo para a ingestão de dados é selecionar a opção "Obter Dados" e escolher o conector específico para o **Banco de dados MySQL**. Na janela de configuração, inserimos o endereço do servidor obtido anteriormente e o nome do banco de dados alvo para iniciar a tentativa de conexão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h44m56s087.jpg" alt="" width="840">
+</p>
+
+Um ponto importante de manutenção ocorre quando há erros de autenticação ou trocas de senha. Através do menu de **Configurações da fonte de dados**, é possível gerenciar as permissões globais e as fontes conectadas ao arquivo atual. Para corrigir falhas de acesso, utilizamos a opção **Limpar Permissões**, o que permite que o sistema solicite novamente as credenciais na próxima tentativa de acesso, garantindo que informações obsoletas não bloqueiem o fluxo de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h45m01s379.jpg" alt="" width="840">
+</p>
+
+Com as permissões limpas, reiniciamos o processo de busca de conectores. Dentro da categoria de **Banco de Dados**, localizamos novamente o item **Banco de dados MySQL**. Este conector é robusto e permite a comunicação direta entre o ambiente local do Power BI e o servidor hospedado na nuvem Azure.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h45m15s361.jpg" alt="" width="840">
+</p>
+
+Reinserimos os parâmetros de conexão na janela do conector MySQL. É crucial que o nome do servidor esteja exatamente igual ao configurado no Azure para evitar erros de DNS ou de rota. O campo do banco de dados, neste caso definido como `company`, direciona o Power BI para o esquema específico que contém as tabelas de interesse.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h45m16s986.jpg" alt="" width="840">
+</p>
+
+No momento da autenticação, o Power BI oferece diferentes modalidades de acesso. A aba **Windows** seria utilizada caso o banco estivesse integrado ao serviço de diretório do sistema operacional. No entanto, para conexões com servidores MySQL na nuvem, geralmente optamos por credenciais específicas do banco de dados, as quais definem privilégios diretamente no motor do MySQL.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h45m24s162.jpg" alt="" width="840">
+</p>
+
+Selecionamos a aba **Banco de Dados** para inserir as credenciais de acesso persistentes. O nome de usuário utilizado é `company`, acompanhado da senha definida durante a criação do recurso no Azure. Este nível de segurança garante que apenas usuários autorizados possam ler ou transformar os dados armazenados na instância do MySQL.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h45m32s867.jpg" alt="" width="840">
+</p>
+
+Uma vez estabelecida a conexão, a janela do **Navegador** é exibida. Aqui, podemos visualizar a estrutura do banco de dados e selecionar as tabelas para importação. Note que, embora a tabela `company.employee` esteja visível, ela pode aparecer vazia caso a persistência de dados ainda não tenha sido executada no banco.
+
+Após selecionar a tabela, o próximo passo recomendado é utilizar a opção **Transformar Dados** para iniciar o processo de limpeza e tratamento no Power Query, abordando questões como valores nulos, redundâncias e formatação de colunas.
+
+
+## Entendendo o desafio
+
+### Entendendo o Desafio
+
+Agora é a sua hora de brilhar e construir um perfil de destaque na DIO!  
+Explore todos os conceitos explorados até aqui e replique (ou melhor, porque não?) este projeto prático.  
+Para isso, crie seu próprio repositório e aumente ainda mais seu portfólio de projetos no GitHub, o qual pode fazer toda diferença em suas entrevistas técnicas 😎
+
+Neste repositório, insira todos os links e arquivos necessários para seu projeto, seja um arquivo de banco de dados ou um link para o template no Figma.
+
+*Dica: Se o expert forneceu um repositório Github, você pode dar um "fork" no repositório dele para organizar suas alterações e evoluções mantendo uma referência direta ao código-fonte original.*
+
+### Instruções de Desenvolvimento do Projeto
+
+[Desafio de Projeto - Processando e Transformando Dados com Power BI - Instruções.docx](https://hermes.dio.me/files/assets/a8bf65e2-a503-46c9-9453-bd6bdf329e83.docx)
+
+### Slides
+
+[Desafio de Projeto - Processando e Transformando Dados com Power BI.pptx](https://hermes.dio.me/files/assets/e7d723b3-fe92-42fa-b12c-cd33b56d81c8.pptx)
+
+
+Bons estudos 😉
+
+
+# Certificado: Criando um Dashboard corporativo com integração com MySQL e Azure
 
 - Link na plataforma: 
 - Certificado em pdf:
