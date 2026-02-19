@@ -423,6 +423,41 @@ Query OK, 0 rows affected (0.27 sec)
 
 link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/2d2ec838-3976-45c0-a5bb-e04a1aec7b29
 
+Este guia detalha os passos críticos para configurar o acesso externo a uma instância de banco de dados MySQL hospedada na nuvem Azure, garantindo que ferramentas como Power BI e MySQL Workbench possam se comunicar com os dados de forma segura e eficiente.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h18m21s680.jpg" alt="" width="840">
+</p>
+
+Para permitir o acesso externo ao **Servidor Flexível do Banco de Dados do Azure para MySQL**, é necessário configurar as **Regras de Firewall**. Por padrão, o ambiente de nuvem é restritivo e nenhum endereço IP público possui permissão de entrada.
+
+Nesta etapa, é criada uma regra denominada **AllowAll 2022-11-16 21-45-58** para liberar o tráfego de entrada na porta **3306**. A configuração utiliza o seguinte intervalo de IPs para permitir conexões de qualquer origem:
+
+* 
+**Endereço IP inicial**: `0.0.0.0` 
+
+
+* 
+**Endereço IP final**: `255.255.255.255` 
+
+
+
+O portal exibe a mensagem **"Atualizando as configurações de segurança da conexão"** para o recurso `desafio-projeto-dio`. Conforme mencionado em aula, expor o banco de dados a qualquer IP público pode ser um risco de segurança; por isso, em cenários reais, recomenda-se restringir o acesso apenas ao seu IP atual ou utilizar uma **VPN** para mascarar a conexão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h18m29s075.jpg" alt="" width="840">
+</p>
+
+Após o processamento, o Azure confirma a alteração com a notificação: **"Éxito ao atualizar as configurações de segurança de conexão"**. Esse status garante que as barreiras de rede foram ajustadas corretamente e o servidor agora aceita requisições externas.
+
+Com essa configuração concluída, o ambiente está pronto para:
+
+1. Realizar a conexão remota através do **MySQL Workbench**.
+2. Integrar os dados com o **Power BI** utilizando o domínio do servidor.
+
+A interface também destaca que a assinatura possui um crédito restante de **R$ 1.058,79**, reforçando a importância de monitorar o uso dos recursos para não esgotar o saldo disponível na conta.
 
 
 ### 🟩 Vídeo 06 - Conectando ao MySQL na Azure utilizando Workbench
@@ -432,7 +467,7 @@ link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-pow
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/419c616f-b982-4a6a-88a1-6c331a7cf8e7
 
 ### 🟩 Vídeo 07 - Integrando Power BI com MySQL na Azure
 
