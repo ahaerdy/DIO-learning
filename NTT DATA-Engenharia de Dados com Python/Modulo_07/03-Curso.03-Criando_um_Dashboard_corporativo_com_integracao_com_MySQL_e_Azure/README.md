@@ -105,6 +105,65 @@ A etapa final consiste em agrupar os dados para contabilizar quantos colaborador
 
 link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/5d36411a-b5d9-416c-b759-2dde3cc8348d
 
+Este guia resume o processo de provisionamento de um servidor MySQL na nuvem Microsoft Azure, destacando as etapas de configuração, segurança e gestão de custos para ambientes de desenvolvimento.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m03s837.jpg" alt="" width="840">
+</p>
+
+A jornada no Microsoft Azure começa pela sua página principal, onde é apresentado o conceito de "inventar com propósito". O portal destaca a flexibilidade da plataforma, permitindo que novos usuários explorem os serviços gratuitamente por até 30 dias ou iniciem com o modelo de pagamento conforme o uso, sem compromissos iniciais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m09s404.jpg" alt="" width="840">
+</p>
+
+Uma vez autenticado no console do Azure, o usuário tem acesso ao Dashboard principal. A partir desta interface, é possível gerenciar recursos recentes e navegar por categorias de serviços essenciais, como Máquinas Virtuais, Serviços de Aplicativos e Bancos de Dados SQL. Para iniciar a configuração de um novo banco de dados, utiliza-se a barra de pesquisa ou o botão "Criar um recurso".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m14s750.jpg" alt="" width="840">
+</p>
+
+Ao acessar a área de Bancos de Dados SQL, o portal exibe a listagem de instâncias existentes. Caso não haja recursos configurados, o sistema orienta o usuário a criar um novo banco de dados. Para este cenário específico, o objetivo é localizar e selecionar o serviço dedicado para instâncias MySQL.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m18s515.jpg" alt="" width="840">
+</p>
+
+Na seleção da opção de implantação para o MySQL, o Azure oferece dois caminhos distintos: o **Servidor Flexível** e o **Servidor Único**. O Servidor Flexível é a opção recomendada por proporcionar maior controle sobre as janelas de manutenção, otimização de custos e alta disponibilidade com zonas de resiliência, enquanto o Servidor Único é mantido apenas para suporte a aplicações legadas, estando em processo de desativação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m34s641.jpg" alt="" width="840">
+</p>
+
+A etapa de configuração dos "Detalhes do servidor" exige a definição de parâmetros fundamentais. É necessário nomear o servidor (ex: `desafio-projeto-dio`), selecionar a região geográfica (como East US) e a versão do motor MySQL (como a 5.7). Na seção de computação e armazenamento, escolhe-se o tipo de carga de trabalho; para projetos iniciais ou de estudo, a opção "Intermitente" (Burstable) é ideal por oferecer um custo reduzido com recursos básicos de CPU e memória.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m37s841.jpg" alt="" width="840">
+</p>
+
+Ainda nas configurações de infraestrutura, é possível ajustar as zonas de disponibilidade. Dependendo da região escolhida, como `eastus`, o sistema pode informar limitações sobre o suporte a múltiplas zonas. A alta disponibilidade garante que o servidor possua resiliência adicional em caso de falhas na zona local, permitindo ao usuário decidir se deseja habilitar esse recurso com base na criticidade da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m44s532.jpg" alt="" width="840">
+</p>
+
+Para garantir o acesso administrativo, deve-se configurar a "Conta de administrador". Esta seção requer a criação de um nome de usuário (ex: `company`) e a definição de uma senha segura. No painel lateral, o Azure apresenta um resumo do custo total estimado por mês com base em todas as especificações técnicas selecionadas até o momento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m52s502.jpg" alt="" width="840">
+</p>
+
+Em termos de segurança, a plataforma aborda a criptografia de dados. Por padrão, o armazenamento utilizado para o banco de dados e seus respectivos backups é criptografado utilizando chaves gerenciadas pelo próprio serviço do Azure. Isso assegura que as informações estejam protegidas em repouso sem que o desenvolvedor precise realizar alterações manuais no código da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h55m58s207.jpg" alt="" width="840">
+</p>
+
+Após a revisão final e o início do processo, o portal exibe a tela de "Implantação em andamento". Nesta fase, o Azure provisiona todos os componentes necessários, informando o ID de correlação e o status de cada recurso. O tempo de conclusão pode variar, e o usuário deve aguardar até que a mensagem de sucesso confirme que a instância de MySQL está pronta para receber conexões.      
+
+
 ### 🟩 Vídeo 03 - Explorando o Recurso - Instância do MySQL
 
 <video width="60%" controls>
@@ -112,7 +171,7 @@ link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-pow
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/f75be1fe-4c9f-4a46-9eeb-50c8bea4ec4b
 
 ### 🟩 Vídeo 04 - Se conectando ao Banco de Dados com Cloud Shell
 
