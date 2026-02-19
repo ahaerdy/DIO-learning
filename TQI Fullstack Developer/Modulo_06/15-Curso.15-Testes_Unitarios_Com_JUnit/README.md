@@ -1178,6 +1178,69 @@ Para aprofundar os conhecimentos sobre as capacidades de teste da IDE, é recome
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/fa651ad6-65a8-4653-88f6-c7ccd25d56a5?autoplay=1
 
+Este guia resume as diretrizes fundamentais para escrever testes unitários eficientes, legíveis e sustentáveis, conforme apresentado na 5ª aula do curso de JUnit.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h05m59s327.jpg" alt="" width="840">
+</p>
+
+Esta quinta aula do curso de testes unitários com JUnit é dedicada ao estudo de boas práticas. O objetivo central é apresentar diretrizes que auxiliem o desenvolvedor a escrever testes mais eficientes e de fácil manutenção para suas aplicações.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h06m01s410.jpg" alt="" width="840">
+</p>
+
+A busca pela simplicidade é um pilar fundamental. Isso reflete-se na preocupação com nomes de métodos que facilitem o entendimento do que está sendo testado e na garantia de uma leitura fluida do código. Escrever testes legíveis ajuda tanto na compreensão atual quanto em futuras manutenções ou melhorias do recurso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h06m05s590.jpg" alt="" width="840">
+</p>
+
+Recomenda-se começar a testar o mais cedo possível, escrevendo o código de teste paralelamente ao código de execução. No ambiente Java, isso significa manter a simetria entre as pastas `src/main/java` (código real) e `src/test/java` (testes). Testar precocemente permite encontrar problemas de forma antecipada e amadurecer a solução técnica durante o desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h06m09s649.jpg" alt="" width="840">
+</p>
+
+O TDD (*Test Driven Development*) é uma metodologia que incentiva a escrita do teste antes mesmo da funcionalidade. O ciclo consiste em:
+
+* **RED:** Escrever um teste que falhe.
+* **GREEN:** Fazer o código funcionar para que o teste passe.
+* **REFACTOR:** Refatorar o código eliminando redundâncias.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h06m14s927.jpg" alt="" width="840">
+</p>
+
+A padronização, especialmente na nomenclatura de classes e métodos, é essencial para manter a coesão entre diferentes projetos e membros da equipe. Embora os padrões possam variar (uso de inglês, português ou BDD), é vital que o time siga uma convenção única para evitar inconsistências no código de teste.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h06m16s743.jpg" alt="" width="840">
+</p>
+
+Testes precisam ser determinísticos, o que significa que devem produzir sempre o mesmo resultado para o mesmo cenário. Deve-se evitar testes que dependam de variáveis instáveis ou aleatórias que possam causar falhas intermitentes sem que tenha havido mudança real no código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h06m20s802.jpg" alt="" width="840">
+</p>
+
+A automatização poupa tempo e é fundamental para projetos com grande volume de testes. Ferramentas como o Maven facilitam esse processo através de plugins que executam todo o ciclo de testes automaticamente:
+
+```bash
+mvn test
+mvn install
+```
+
+Complementarmente, ferramentas de cobertura de código podem ser usadas para analisar quais partes da aplicação estão sendo efetivamente testadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h06m25s001.jpg" alt="" width="840">
+</p>
+
+Como referências adicionais para o estudo de boas práticas, são sugeridos materiais que abordam padrões e dicas para escrita de testes unitários de qualidade, como os blogs Testim.io, DevPorAi e o artigo de Jeziel Lago no Medium.      
+
 ## Parte 7 - Conclusão do curso
 
 ### 🟩 Vídeo 14 - Conclusão do curso
@@ -1187,11 +1250,54 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-u
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/testes-unitarios-com-junit/learning/7a427727-d1aa-4225-88cb-f3b14a95fc4f?autoplay=1
 
-##  Materiais de Apoio
+Este documento resume os pontos fundamentais abordados na sexta e última aula do curso de JUnit, servindo como uma retrospectiva e um guia de recursos para aprofundamento na área de testes de software.
 
-# Certificado: 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h35m48s882.jpg" alt="" width="840">
+</p>
+
+Nesta aula de encerramento do curso de testes unitários com JUnit, o foco é consolidar o aprendizado adquirido ao longo das sessões anteriores. O objetivo é revisar os conceitos fundamentais e fornecer diretrizes para que desenvolvedores e desenvolvedoras continuem aprofundando seus conhecimentos e evoluindo suas habilidades técnicas na área de qualidade de software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h35m50s791.jpg" alt="" width="840">
+</p>
+
+A trajetória do curso abrangeu desde os fundamentos teóricos até a aplicação prática em ambientes de desenvolvimento reais. Os tópicos revisitados incluem:
+
+* **Motivação:** A importância dos testes para garantir a confiabilidade, a legibilidade e a qualidade da entrega técnica.
+* **Configuração:** O processo de integração das dependências do JUnit em projetos utilizando gerenciadores de build como **Gradle** e **Maven**.
+* **Principais recursos:** Exploração das funcionalidades essenciais da ferramenta para a criação de cenários de teste.
+* **Uso de IDEs:** Demonstração prática de como navegar, importar projetos e executar testes nas principais ferramentas de mercado.
+* **Boas práticas:** Diretrizes essenciais para a escrita de testes eficientes e sustentáveis.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h35m53s726.jpg" alt="" width="840">
+</p>
+
+Como material de apoio e referência contínua, foi disponibilizado um repositório no GitHub contendo roteiros e exemplos práticos. Este repositório serve como um guia para consultar asserções e outros recursos do JUnit 5 explorados durante as aulas.
+
+```markdown
+# Testes unitários com JUnit
+Respositório com roteiros e exemplos de como utilizar JUnit no seu dia a dia como dev
+Foi utilizado para os exemplos a versão 5.8.2, mais atual até o momento (29/01/2022)
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-07h35m55s147.jpg" alt="" width="840">
+</p>
+
+Para dar continuidade aos estudos, recomenda-se a exploração de tópicos avançados e fontes oficiais. As principais sugestões para o próximo passo na carreira são:
+
+* **Documentação Oficial:** Consultar o portal oficial (junit.org/junit5) para dúvidas técnicas e atualizações, devido à sua clareza e objetividade.
+* **Princípios FIRST:** Aprofundar-se nos conceitos que definem testes de excelência (Fast, Independent, Repeatable, Self-validating, Timely).
+* **Automação de Testes:** Pesquisar sobre a implementação de testes automatizados para aumentar a produtividade e a segurança nos ciclos de deploy.
+
+
+# Certificado: Testes Unitários Com JUnit
 
 - Link na plataforma: 
 - Certificado em pdf:
