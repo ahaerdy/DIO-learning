@@ -469,6 +469,59 @@ A interface também destaca que a assinatura possui um crédito restante de **R$
 
 link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/419c616f-b982-4a6a-88a1-6c331a7cf8e7
 
+Este tutorial prático demonstra como estabelecer uma conexão segura entre uma instância de banco de dados MySQL no Azure e o software de gerenciamento MySQL Workbench. O vídeo aborda desde a configuração dos parâmetros de rede até a verificação de latência e criação de schemas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h31m37s723.jpg" alt="" width="840">
+</p>
+
+O Portal do Azure disponibiliza as diretrizes para a conexão com o **Servidor Flexível do Banco de Dados do Azure para MySQL**. Para configurar o acesso via **MySQL Workbench**, é necessário iniciar uma nova conexão utilizando o método **Standard (TCP/IP)**. As informações fundamentais incluem o **nome do host** (`desafio-projeto-dio.mysql.database.azure.com`) e o **nome de usuário** definido como `company`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h31m42s779.jpg" alt="" width="840">
+</p>
+
+Dando continuidade à configuração no portal, deve-se ajustar os parâmetros de segurança para garantir a integridade dos dados. O campo **Usar SSL** deve ser obrigatoriamente alterado para **Exigir**. Além disso, o usuário deve indicar o caminho do arquivo de certificado **DigiCertGlobalRootCA.crt.pem** no campo correspondente à Autoridade de Certificação (AC) antes de realizar o teste de conexão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h32m02s715.jpg" alt="" width="840">
+</p>
+
+Na interface do **MySQL Workbench**, a janela **Setup New Connection** é utilizada para transpor os dados obtidos no Azure. Define-se um nome para a conexão, como `azure_mysql`, e insere-se o endereço do servidor no campo **Hostname**, mantendo a porta padrão **3306**. O nome de usuário `company` é preenchido para que a autenticação seja solicitada no momento do acesso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h32m07s897.jpg" alt="" width="840">
+</p>
+
+Dentro da aba **SSL** nas configurações de conexão do Workbench, a opção **Use SSL** deve ser configurada como **Require**. Esta etapa é crucial, pois a conexão falhará se o servidor exigir criptografia e o cliente não estiver devidamente configurado. É necessário apontar o caminho do arquivo de Autoridade Certificadora no campo **SSL CA File** para validar a identidade do servidor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h33m27s207.jpg" alt="" width="840">
+</p>
+
+O gerenciamento de conexões permite consolidar múltiplos perfis de acesso. Além das credenciais básicas, é possível definir um **Default Schema**, como `azure_company`, para que o Workbench selecione esse banco de dados automaticamente ao abrir a sessão. Isso otimiza o fluxo de trabalho, eliminando a necessidade de selecionar o banco manualmente após o login bem-sucedido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h33m37s926.jpg" alt="" width="840">
+</p>
+
+Ao iniciar a conexão, o sistema solicita a **senha** do usuário `company` vinculada ao serviço MySQL no Azure. Em paralelo, observa-se no terminal o processo de obtenção do certificado via rede, garantindo que o arquivo `DigiCertGlobalRoot` esteja presente para validar a cadeia de confiança exigida pelo servidor remoto durante a autenticação.
+
+```bash
+# Exemplo de comando de conexão via terminal (CLI)
+mysql -h desafio-projeto-dio.mysql.database.azure.com -u company -p
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h33m40s852.jpg" alt="" width="840">
+</p>
+
+A etapa final é validada pela mensagem de sucesso: **"Successfully made the MySQL connection"**. O resumo informativo confirma que a conexão está utilizando criptografia **SSL habilitada** com a cifra `ECDHE-RSA-AES128-GCM-SHA256`, assegurando que o túnel de dados entre o Workbench e o banco de dados na nuvem está operando de forma protegida.
+
+
 ### 🟩 Vídeo 07 - Integrando Power BI com MySQL na Azure
 
 <video width="60%" controls>
@@ -476,7 +529,7 @@ link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-pow
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/41abd05a-9076-4b03-a310-be58a6cafe1e
 
 ### 🟩 Vídeo 08 - Entendendo o desafio
 
