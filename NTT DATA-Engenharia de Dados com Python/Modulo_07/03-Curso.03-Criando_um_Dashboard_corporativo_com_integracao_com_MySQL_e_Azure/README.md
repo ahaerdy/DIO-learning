@@ -43,20 +43,10 @@ O fluxo de trabalho padrão no Power BI é dividido em etapas críticas: primeir
 Para executar o desafio, o aluno deve seguir os seguintes passos práticos:
 
 * Utilizar a base de dados de teste denominada "Company".
-
-
 * Criar uma instância de MySQL no portal Azure.
-
-
 * Configurar o banco de dados utilizando o script disponível no GitHub.
-
-
 * Realizar a integração entre o Power BI e o banco MySQL hospedado na Azure.
-
-
 * Verificar a base de dados para identificar anomalias antes de iniciar a transformação.
-
-
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m08s846.jpg" alt="" width="840">
