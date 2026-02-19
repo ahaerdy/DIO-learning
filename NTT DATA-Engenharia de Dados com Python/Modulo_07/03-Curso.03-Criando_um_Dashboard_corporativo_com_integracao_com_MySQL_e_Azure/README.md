@@ -289,7 +289,6 @@ Por fim, logo abaixo do comando de dump, a Azure expõe o comando correspondente
 mysql -h desafio-projeto-dio.mysql.database.azure.com -u company -p --ssl-mode=REQUIRE my_database < my_backup.sql
 ```      
 
-
 ### 🟩 Vídeo 04 - Se conectando ao Banco de Dados com Cloud Shell
 
 <video width="60%" controls>
@@ -299,6 +298,122 @@ mysql -h desafio-projeto-dio.mysql.database.azure.com -u company -p --ssl-mode=R
 
 link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/e37368a6-4fb3-4ac7-bdbb-b40ddb49b6ac
 
+Este guia resume os procedimentos para acessar, configurar e manipular um banco de dados MySQL diretamente pelo portal da Azure, utilizando a interface de linha de comando (CLI) integrada.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h04m26s513.jpg" alt="" width="840">
+</p>
+
+Para acessar o banco de dados diretamente pelo portal do Azure, podemos utilizar o recurso Cloud Shell. Ele está disponível no menu superior da interface de gerenciamento do servidor flexível MySQL.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h04m28s385.jpg" alt="" width="840">
+</p>
+
+Ao iniciar o Cloud Shell, o ambiente solicita a escolha da interface de linha de comando preferida. As opções disponíveis são Bash e PowerShell. Neste caso, a opção escolhida para o ambiente de terminal foi o Bash.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h04m32s913.jpg" alt="" width="840">
+</p>
+
+Após a seleção, o Azure inicia o processo de requisição e provisionamento do terminal. É necessário aguardar a conexão ser estabelecida para começar a interagir e inserir os comandos.
+
+```bash
+Requesting a Cloud Shell.Succeeded.
+Connecting terminal...
+Welcome to Azure Cloud Shell
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h04m35s006.jpg" alt="" width="840">
+</p>
+
+Com o terminal conectado, é possível utilizar comandos básicos de sistemas Unix. A execução do comando `help` exibe uma mensagem de boas-vindas e informações úteis de suporte para o uso do Azure CLI e do Bash.
+
+```bash
+juliana [ ~ ]$ help
+Welcome to Azure Cloud Shell, a browser-based shell experience to manage Azure resources.
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h05m06s316.jpg" alt="" width="840">
+</p>
+
+Para estabelecer a conexão com o banco de dados MySQL, utiliza-se o comando de cliente definindo o host (`-h`), o usuário (`-u`) e solicitando a inserção da senha (`-p`). Após o login bem-sucedido, o comando `show databases;` lista os bancos de dados padrões já existentes no servidor.
+
+```bash
+juliana [~]$ mysql -h desafio-projeto-dio.mysql.database.azure.com -u company -p
+Enter password:
+mysql> show databases;
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h05m20s352.jpg" alt="" width="840">
+</p>
+
+O próximo passo é criar o banco de dados específico para o projeto utilizando a instrução `create database`. Em seguida, o comando `use` seleciona este novo banco de dados para uso. A verificação com `show tables;` confirma que ele acaba de ser criado e ainda está vazio.
+
+```sql
+mysql> create database if not exists azure_company;
+Query OK, 1 row affected (0.03 sec)
+mysql> use azure_company;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h05m22s685.jpg" alt="" width="840">
+</p>
+
+Com o banco de dados selecionado, inicia-se a criação da estrutura de tabelas. A tabela `employee` é criada definindo seus atributos, tipos de dados e restrições estruturais, como a chave primária (`Ssn`) e a validação de salário (`chk_salary_employee`).
+
+```sql
+mysql> CREATE TABLE employee (
+    -> Fname varchar(15) not null,
+    -> Minit char,
+    -> Lname varchar(15) not null,
+    -> Ssn char(9) not null,
+    -> Bdate date,
+    -> Address varchar(30),
+    -> Sex char,
+    -> Salary decimal(10,2),
+    -> Super_ssn char(9),
+    -> Dno int not null,
+    -> constraint chk_salary_employee check (Salary> 2000.0),
+    -> constraint pk_employee primary key (Ssn)
+    -> );
+Query OK, 0 rows affected (0.12 sec)
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h05m24s755.jpg" alt="" width="840">
+</p>
+
+Para validar a criação correta, o comando `show tables;` é executado novamente, listando agora a tabela recém-criada. O comando `desc employee;` detalha a estrutura da tabela, exibindo as colunas, tipos esperados e chaves configuradas.
+
+```sql
+mysql> show tables;
+mysql> desc employee;
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h05m30s033.jpg" alt="" width="840">
+</p>
+
+Por fim, a estrutura da tabela é modificada com o comando `alter table` para incluir uma nova restrição. Uma chave estrangeira (`fk_employee`) é adicionada referenciando a própria tabela (relacionando `Super_ssn` com `Ssn`) e configurando os comportamentos de exclusão (`on delete set null`) e atualização (`on update cascade`).
+
+```sql
+mysql> alter table employee
+    -> add constraint fk_employee
+    -> foreign key (Super_ssn) references employee (Ssn)
+    -> on delete set null
+    -> on update cascade;
+Query OK, 0 rows affected (0.27 sec)
+```      
+
 ### 🟩 Vídeo 05 - Criando Regra no Firewall na Azure para Acesso ao banco de dados
 
 <video width="60%" controls>
@@ -306,7 +421,9 @@ link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-pow
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/2d2ec838-3976-45c0-a5bb-e04a1aec7b29
+
+
 
 ### 🟩 Vídeo 06 - Conectando ao MySQL na Azure utilizando Workbench
 
