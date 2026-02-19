@@ -181,43 +181,43 @@ O vídeo demonstra o processo de gerenciamento e conexão a um servidor flexíve
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h31m46s579.jpg" alt="" width="840">
 </p>
 
-Esta interface apresenta a visão geral do recurso de banco de dados no portal do Azure. É possível visualizar os fundamentos da instância, como o nome do servidor (`desafio-projeto-dio.mysql.database.azure.com`), o ID da assinatura ("Azure subscription 1"), o grupo de recursos ("Teste") e a localização ("East US"). Além disso, são exibidos detalhes técnicos como a versão do MySQL (8.0) e o status atual do recurso, que se encontra disponível.
+Nesta tela, visualizamos a página de "Visão geral" (Overview) do servidor flexível MySQL recém-criado na Azure, nomeado como `desafio-projeto-dio`. Aqui estão consolidadas as informações principais do recurso, permitindo o gerenciamento do banco de dados. Podemos identificar o grupo de recursos associado ("Teste"), o status ("Disponível"), a localização geográfica do servidor ("East US"), o nome completo do servidor, o login do administrador e a versão do MySQL (8.0).
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h31m51s734.jpg" alt="" width="840">
 </p>
 
-Nesta seção de configurações do servidor flexível MySQL, o portal destaca as opções de gerenciamento e manutenção. As funcionalidades apresentadas incluem o agendamento de manutenção para atualizações de serviço, o ajuste de parâmetros do servidor para otimização de carga de trabalho e a configuração de backup e restauração automática. Esses recursos permitem que o administrador configure a rede, agende janelas de manutenção e gerencie a persistência dos dados.
+Rolando a mesma página de visão geral, encontramos atalhos para configurações adicionais essenciais do servidor. É possível acessar opções de configuração rápida como o acesso à rede, além de menus para agendamento de manutenção do servidor, ajuste de parâmetros para otimização de carga de trabalho e configurações de backup e restauração automatizados.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h31m58s338.jpg" alt="" width="840">
 </p>
 
-A imagem exibe o perfil público da instrutora no GitHub (`julianazanelatto`), onde estão centralizados os repositórios de suporte para as aulas. Entre os projetos visíveis, destaca-se o repositório `power_bi_analyst`, que será utilizado para obter os scripts necessários para o prosseguimento da atividade prática.
+Para dar continuidade ao projeto prático e obter os scripts necessários para a criação e inserção de dados no banco, é necessário acessar o repositório público no GitHub. A imagem mostra a página de repositórios do perfil `julianazanelatto`.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m01s519.jpg" alt="" width="840">
 </p>
 
-A visualização detalha a estrutura interna do repositório `power_bi_analyst`. O repositório está organizado em diretórios por módulos, facilitando a localização do material de estudo. O foco atual da instrução reside no conteúdo disponibilizado dentro da pasta do Módulo 3.
+Dentro do perfil do GitHub, o repositório específico que contém o material do curso é o `power_bi_analyst`. A página inicial deste repositório exibe sua estrutura principal, com os arquivos divididos em pastas por módulos de estudo.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m42s540.jpg" alt="" width="840">
 </p>
 
-Dentro do Módulo 3, o repositório separa as etapas do processo de análise de dados. Estão presentes pastas dedicadas à "Coleta e extração de dados", "Limpeza e transformação de dados" e ao "Desafio de Projeto". Esta organização lógica guia o aluno através das fases necessárias para a implementação do projeto de banco de dados.
+Navegando pela estrutura do repositório, entramos no diretório correspondente ao `Módulo 3`. Esta pasta guarda todos os arquivos, conteúdos e subpastas relacionados à etapa atual do projeto.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m45s238.jpg" alt="" width="840">
 </p>
 
-Ao acessar a pasta "Desafio de Projeto", são encontrados os arquivos SQL fundamentais para a atividade. Os arquivos listados são `script_bd_company.sql`, responsável pela criação do esquema e definição das restrições (constraints), e `insercao_de_dadose_queries_sql.sql`, utilizado para popular as tabelas e realizar consultas de teste.
+Ao acessar a subpasta `Desafio de Projeto` dentro do Módulo 3, encontramos os scripts de banco de dados que devem ser utilizados no servidor Azure criado anteriormente. Os dois principais arquivos SQL disponibilizados são o `insercao_de_dados_e_queries_sql.sql` e o `script_bd_company.sql`.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m53s831.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m49s812.jpg" alt="" width="840">
 </p>
 
-A imagem exibe o conteúdo inicial do arquivo `script_bd_company.sql`. Este script define a criação de um novo esquema (database) e verifica as restrições de tabela existentes no metadados do MySQL.
+O conteúdo do arquivo `script_bd_company.sql` revela os comandos iniciais de DDL (Data Definition Language). Este script é responsável por criar o schema principal do banco de dados (caso ele ainda não exista) e selecioná-lo para uso. Em seguida, ele executa uma consulta para listar as "constraints" (restrições) criadas no schema da companhia.
 
 ```sql
 create schema if not exists company_constraints;
@@ -228,29 +228,65 @@ where constraint_schema = 'company_constraints';
 ```
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m58s104.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h33m02s847.jpg" alt="" width="840">
 </p>
 
-Este trecho do arquivo `insercao_de_dadose_queries_sql.sql` mostra o comando `INSERT` para popular a tabela `employee`. Os dados incluem informações como nome, sobrenome, SSN, data de nascimento, endereço, sexo e salário dos funcionários.
+O segundo arquivo visualizado é o `insercao_de_dados_e_queries_sql.sql`. Ele contém os comandos DML (Data Manipulation Language) de inserção (`INSERT INTO`) projetados para povoar as tabelas do banco de dados com registros de exemplo. A imagem ilustra a inserção de dados fictícios na tabela `employee`, fornecendo nomes, números de identificação, datas de nascimento, endereços e salários.
 
 ```sql
 use company_constraints;
-
 insert into employee values ('John', 'B', 'Smith', 123456789, '1965-01-09', '731-Fondren-Houston-TX', 'M', 30000, 333445555, 5),
- ('Franklin', 'T', 'Wong', 333445555, '1955-12-08', '638-Voss-Houston-TX', 'M', 40000, 888665555, 5),
- ('Alicia', 'J', 'Zelaya', 999887777, '1968-01-19', '3321-Castle-Spring-TX', 'F', 25000, 987654321, 4),
- ('Jennifer', 'S', 'Wallace', 987654321, '1941-06-20', '291-Berry-Bellaire-TX', 'F', 43000, 888665555, 4);
+('Franklin', 'T', 'Wong', 333445555, '1955-12-08', '638-Voss-Houston-TX', 'M', 40000, 888665555, 5),
+('Alicia', 'J', 'Zelaya', 999887777, '1968-01-19', '3321-Castle-Spring-TX', 'F', 25000, 987654321, 4),
+('Jennifer', 'S', 'Wallace', 987654321, '1941-06-20', '291-Berry-Bellaire-TX', 'F', 43000, 888665555, 4);
 ```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h33m12s181.jpg" alt="" width="840">
+</p>
+
+Retornando ao portal da Azure, acessamos a aba "Conectar" localizada no menu lateral. Esta seção fornece todos os parâmetros e credenciais necessários para estabelecer uma comunicação externa com o banco de dados. Em destaque, estão os detalhes básicos da conexão, informando o endereço do host (`hostname`), o usuário administrador (`username`) e a configuração obrigatória de segurança indicando a exigência de certificado SSL (`ssl-mode`).
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h33m15s285.jpg" alt="" width="840">
 </p>
 
-A página de conexão do portal Azure detalha os pré-requisitos e métodos para acessar o servidor MySQL. São apresentadas as informações de host (`desafio-projeto-dio.mysql.database.azure.com`) e nome de usuário (`company`), além da exigência de SSL (`ssl-mode require`). O portal também fornece o comando de linha de conexão para uso imediato no terminal ou Azure Cloud Shell.
+Explorando ainda a página "Conectar", a interface da Azure facilita o acesso via terminal ao fornecer o comando exato necessário para conectar-se ao banco. Este comando pode ser copiado e colado em um cliente de linha de comando MySQL local ou no próprio Azure Cloud Shell.
 
 ```bash
 mysql -h desafio-projeto-dio.mysql.database.azure.com -u company -p
+```
 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h33m20s015.jpg" alt="" width="840">
+</p>
+
+A Azure também fornece instruções específicas para conexões via clientes gráficos. Ao expandir a seção "MySQL Workbench", é exibido um passo a passo detalhado para configurar a conexão nesta ferramenta. As orientações cobrem o preenchimento do Nome da conexão, a configuração do tipo de conexão (Standard TCP/IP), a inserção do Hostname e Username, e, crucialmente, as configurações na aba SSL, exigindo o fornecimento do caminho para o arquivo de autoridade certificadora (CA) devido à imposição de SSL do servidor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h33m22s566.jpg" alt="" width="840">
+</p>
+
+Aqui visualizamos a aplicação prática das instruções anteriores diretamente no aplicativo MySQL Workbench. A janela "Setup New Connection" está aberta, demonstrando onde os parâmetros fornecidos pela Azure, como o endereço IP ou Hostname e a porta padrão (3306), devem ser inseridos para preparar a comunicação com o servidor flexível.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h33m27s498.jpg" alt="" width="840">
+</p>
+
+A página "Conectar" no portal Azure também traz orientações sobre rotinas de administração. Na aba "Importar e exportar dados", a interface disponibiliza o comando completo utilizando o utilitário `mysqldump`. Este comando permite realizar um backup lógico do banco de dados inteiro pela linha de comando, já incluindo nativamente as exigências de conexão SSL e os parâmetros de host.
+
+```bash
+mysqldump -h desafio-projeto-dio.mysql.database.azure.com -u company -p --ssl-mode=REQUIRE --set-gtid-purged=OFF my_database > my_backup.sql
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h33m32s788.jpg" alt="" width="840">
+</p>
+
+Por fim, logo abaixo do comando de dump, a Azure expõe o comando correspondente para executar uma restauração de dados via linha de comando. Utilizando o cliente `mysql`, este comando é configurado para ler um arquivo de backup (`my_backup.sql`) e restaurá-lo diretamente no banco de dados hospedado na nuvem, respeitando o modo SSL obrigatório.
+
+```bash
+mysql -h desafio-projeto-dio.mysql.database.azure.com -u company -p --ssl-mode=REQUIRE my_database < my_backup.sql
 ```      
 
 
