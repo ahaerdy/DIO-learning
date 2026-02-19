@@ -173,6 +173,87 @@ Após a revisão final e o início do processo, o portal exibe a tela de "Implan
 
 link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/f75be1fe-4c9f-4a46-9eeb-50c8bea4ec4b
 
+O vídeo demonstra o processo de gerenciamento e conexão a um servidor flexível de banco de dados MySQL no Azure, utilizando o portal do Azure e diversas ferramentas e métodos de conexão. Ele também faz referência a recursos externos, como um repositório GitHub com scripts de banco de dados e um curso de especialização em SQL.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h31m46s579.jpg" alt="" width="840">
+</p>
+
+Esta interface apresenta a visão geral do recurso de banco de dados no portal do Azure. É possível visualizar os fundamentos da instância, como o nome do servidor (`desafio-projeto-dio.mysql.database.azure.com`), o ID da assinatura ("Azure subscription 1"), o grupo de recursos ("Teste") e a localização ("East US"). Além disso, são exibidos detalhes técnicos como a versão do MySQL (8.0) e o status atual do recurso, que se encontra disponível.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h31m51s734.jpg" alt="" width="840">
+</p>
+
+Nesta seção de configurações do servidor flexível MySQL, o portal destaca as opções de gerenciamento e manutenção. As funcionalidades apresentadas incluem o agendamento de manutenção para atualizações de serviço, o ajuste de parâmetros do servidor para otimização de carga de trabalho e a configuração de backup e restauração automática. Esses recursos permitem que o administrador configure a rede, agende janelas de manutenção e gerencie a persistência dos dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h31m58s338.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o perfil público da instrutora no GitHub (`julianazanelatto`), onde estão centralizados os repositórios de suporte para as aulas. Entre os projetos visíveis, destaca-se o repositório `power_bi_analyst`, que será utilizado para obter os scripts necessários para o prosseguimento da atividade prática.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m01s519.jpg" alt="" width="840">
+</p>
+
+A visualização detalha a estrutura interna do repositório `power_bi_analyst`. O repositório está organizado em diretórios por módulos, facilitando a localização do material de estudo. O foco atual da instrução reside no conteúdo disponibilizado dentro da pasta do Módulo 3.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m42s540.jpg" alt="" width="840">
+</p>
+
+Dentro do Módulo 3, o repositório separa as etapas do processo de análise de dados. Estão presentes pastas dedicadas à "Coleta e extração de dados", "Limpeza e transformação de dados" e ao "Desafio de Projeto". Esta organização lógica guia o aluno através das fases necessárias para a implementação do projeto de banco de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m45s238.jpg" alt="" width="840">
+</p>
+
+Ao acessar a pasta "Desafio de Projeto", são encontrados os arquivos SQL fundamentais para a atividade. Os arquivos listados são `script_bd_company.sql`, responsável pela criação do esquema e definição das restrições (constraints), e `insercao_de_dadose_queries_sql.sql`, utilizado para popular as tabelas e realizar consultas de teste.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m53s831.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o conteúdo inicial do arquivo `script_bd_company.sql`. Este script define a criação de um novo esquema (database) e verifica as restrições de tabela existentes no metadados do MySQL.
+
+```sql
+create schema if not exists company_constraints;
+use company_constraints;
+
+select * from information_schema.table_constraints
+where constraint_schema = 'company_constraints';
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h32m58s104.jpg" alt="" width="840">
+</p>
+
+Este trecho do arquivo `insercao_de_dadose_queries_sql.sql` mostra o comando `INSERT` para popular a tabela `employee`. Os dados incluem informações como nome, sobrenome, SSN, data de nascimento, endereço, sexo e salário dos funcionários.
+
+```sql
+use company_constraints;
+
+insert into employee values ('John', 'B', 'Smith', 123456789, '1965-01-09', '731-Fondren-Houston-TX', 'M', 30000, 333445555, 5),
+ ('Franklin', 'T', 'Wong', 333445555, '1955-12-08', '638-Voss-Houston-TX', 'M', 40000, 888665555, 5),
+ ('Alicia', 'J', 'Zelaya', 999887777, '1968-01-19', '3321-Castle-Spring-TX', 'F', 25000, 987654321, 4),
+ ('Jennifer', 'S', 'Wallace', 987654321, '1941-06-20', '291-Berry-Bellaire-TX', 'F', 43000, 888665555, 4);
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-14h33m15s285.jpg" alt="" width="840">
+</p>
+
+A página de conexão do portal Azure detalha os pré-requisitos e métodos para acessar o servidor MySQL. São apresentadas as informações de host (`desafio-projeto-dio.mysql.database.azure.com`) e nome de usuário (`company`), além da exigência de SSL (`ssl-mode require`). O portal também fornece o comando de linha de conexão para uso imediato no terminal ou Azure Cloud Shell.
+
+```bash
+mysql -h desafio-projeto-dio.mysql.database.azure.com -u company -p
+
+```      
+
+
 ### 🟩 Vídeo 04 - Se conectando ao Banco de Dados com Cloud Shell
 
 <video width="60%" controls>
@@ -180,7 +261,7 @@ link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-pow
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/processando-e-transformando-dados-com-power-bi/learning/e37368a6-4fb3-4ac7-bdbb-b40ddb49b6ac
 
 ### 🟩 Vídeo 05 - Criando Regra no Firewall na Azure para Acesso ao banco de dados
 
