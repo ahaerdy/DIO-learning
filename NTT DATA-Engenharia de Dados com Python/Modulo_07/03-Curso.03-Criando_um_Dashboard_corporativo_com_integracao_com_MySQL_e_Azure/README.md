@@ -16,78 +16,95 @@ link do vídeo: https://web.dio.me/project/processando-e-transformando-dados-com
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h03m44s437.jpg" alt="" width="840">
 </p>
 
-Este módulo marca o início do desafio de projeto focado na coleta e processamento de dados utilizando o Power BI, inserido na formação de Power BI Analyst. O objetivo central é conduzir o desenvolvimento desde a infraestrutura inicial até a preparação dos dados para análise, sob a orientação técnica para garantir a integridade dos processos de ETL (Extração, Transformação e Carregamento).
+Nesta aula introdutória, Juliana Mascarenhas apresenta o desafio de projeto focado na coleta e processamento de dados utilizando o Power BI. O objetivo é capacitar o analista na manipulação de dados desde a sua origem até a sua preparação para análise, integrando conhecimentos de modelagem computacional e ciência de dados.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h03m48s063.jpg" alt="" width="840">
 </p>
 
-Os objetivos gerais deste desafio prático estão divididos em quatro pilares fundamentais:
-
-1. **Configuração de setup:** Instanciação e configuração de um banco de dados na plataforma Azure.
-2. **População de dados:** Utilização de scripts fornecidos para carregar as tabelas e registros no servidor.
-3. **Integração:** Conexão direta entre o MySQL (hospedado na nuvem) e o Power BI Desktop.
-4. **Transformação:** Execução de etapas de limpeza e modelagem dos dados, indo além do básico para preparar o ambiente para módulos futuros.
+Os objetivos gerais deste desafio incluem a configuração de um ambiente de banco de dados na nuvem via Azure, o povoamento deste servidor utilizando scripts SQL fornecidos e a integração direta do MySQL com o Power BI. Além disso, o foco principal reside na execução das transformações de dados indicadas para refinar a base de informações.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h03m56s861.jpg" alt="" width="840">
 </p>
 
-No cenário real de análise de dados, é comum lidar com fontes heterogêneas. O ecossistema do Power BI, através do Power Query, permite a conexão com diversas origens simultaneamente, como bancos de dados relacionais (SQL Server), arquivos de planilhas (Excel), bancos NoSQL (Cosmos DB), repositórios de colaboração (SharePoint) e serviços analíticos (Azure Analysis Services). Essa capacidade de integração é essencial para consolidar informações de diferentes setores, como Vendas, RH e Finanças, em um único modelo de dados.
+A realidade da análise de dados frequentemente envolve fontes heterogêneas. O diagrama ilustra como o Power Query atua como o motor de integração, conectando-se a diversas origens como Microsoft SQL Server (vendas), planilhas Excel (RH), Cosmos DB (armazém), SharePoint e Azure Analysis Services (finanças) para unificar essas informações dentro do ecossistema do Microsoft Power BI.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m00s244.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m03s254.jpg" alt="" width="840">
 </p>
 
-O fluxo de trabalho padrão no Power BI segue uma progressão lógica para transformar dados brutos em insights:
-
-* **Coleta:** A ingestão dos dados a partir das fontes identificadas.
-* **Transformação:** Limpeza e tratamento dos dados no Power Query.
-* **Modelagem:** Estabelecimento de relacionamentos entre tabelas e criação de métricas.
-* **Visualização:** Criação de relatórios e dashboards interativos para o usuário final.
+O fluxo de trabalho padrão no Power BI é dividido em etapas críticas: primeiro a coleta dos dados, seguida pela transformação e limpeza através do Power Query. Após o tratamento, os dados são utilizados na criação do dashboard, que é então publicado como um relatório final para consumo e inserção em painéis de indicadores.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m04s864.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m06s346.jpg" alt="" width="840">
 </p>
 
-Ao iniciar a transformação de dados no Power Query, visualizamos a estrutura das tabelas importadas do banco de dados MySQL. A tabela `employee`, por exemplo, apresenta colunas fundamentais como nomes (`Fname`, `Lname`), identificadores (`Ssn`), datas de nascimento (`Bdate`), endereços, salários e chaves de relacionamento como `Super_ssn` (ID do supervisor) e `Dno` (número do departamento). O foco inicial é verificar se a importação ocorreu corretamente e se os cabeçalhos estão devidamente identificados.
+Para executar o desafio, o aluno deve seguir os seguintes passos práticos:
+
+* Utilizar a base de dados de teste denominada "Company".
+
+
+* Criar uma instância de MySQL no portal Azure.
+
+
+* Configurar o banco de dados utilizando o script disponível no GitHub.
+
+
+* Realizar a integração entre o Power BI e o banco MySQL hospedado na Azure.
+
+
+* Verificar a base de dados para identificar anomalias antes de iniciar a transformação.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m08s846.jpg" alt="" width="840">
+</p>
+
+A primeira fase da transformação de dados no Power BI consiste na verificação de cabeçalhos e na correção dos tipos de dados. Valores monetários devem ser ajustados para o tipo "double preciso". É fundamental analisar a existência de valores nulos; especificamente, nota-se que colaboradores com o campo `Super_ssn` vazio geralmente representam os gerentes da organização.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m11s899.jpg" alt="" width="840">
 </p>
 
-As etapas críticas de verificação na base de dados incluem:
-
-* **Verificação de tipos:** Garantir que colunas de valores financeiros sejam numéricas, datas sejam reconhecidas como tal e textos permaneçam como strings.
-* **Tratamento de nulos:** Identificar e tratar valores nulos, especialmente em colunas como o `Super_ssn`, onde um valor nulo pode indicar que o colaborador é o gestor principal.
-* **Análise de complexidade:** Avaliar colunas que contenham dados compostos que precisem ser separados para facilitar a análise, como horas de projetos ou endereços detalhados.
+Dando continuidade à limpeza, deve-se verificar se existem departamentos sem gerentes designados, preenchendo as lacunas caso os dados estejam disponíveis. Outro ponto de atenção é a análise da contagem de horas dedicadas aos projetos e a separação de colunas complexas para facilitar a análise posterior.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m18s270.jpg" alt="" width="840">
 </p>
 
-Para enriquecer a tabela de colaboradores, realizamos a mescla de consultas entre `employee` e `department`. O objetivo é associar o nome dos departamentos diretamente aos colaboradores. A base para esta junção deve ser a tabela `employee`, garantindo que nenhum colaborador seja perdido no processo. Após a mescla, é importante eliminar colunas redundantes ou desnecessárias para manter o modelo otimizado e focado nos requisitos do relatório.
+Nesta etapa, deve-se mesclar as consultas de colaboradores (`employee`) e departamentos (`department`) para que cada registro de funcionário contenha o nome do departamento associado. A operação deve utilizar a tabela `employee` como base, exigindo atenção cuidadosa ao tipo de junção (join) selecionado para não perder informações, além da exclusão de colunas redundantes após a mescla.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m23s323.jpg" alt="" width="840">
 </p>
 
-A organização hierárquica e a legibilidade dos dados são aprimoradas através de dois processos:
-
-1. **Identificação de Gerentes:** Realizar a junção para associar cada colaborador ao nome de seu respectivo gerente. Isso pode ser feito via Power BI (interface visual) ou através de queries SQL customizadas no momento da importação.
-2. **Consolidação de Nomes:** Mesclar as colunas de "Nome" e "Sobrenome" para criar uma única coluna de nome completo, facilitando a identificação visual nos relatórios e a usabilidade dos filtros.
+O processo segue com a junção entre colaboradores e seus respectivos gerentes, o que pode ser realizado via mescla no Power BI ou através de uma consulta SQL customizada. Além disso, é solicitado que as colunas de "Nome" e "Sobrenome" sejam mescladas em uma única coluna para padronizar a identificação dos colaboradores na base.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m28s039.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m26s224.jpg" alt="" width="840">
 </p>
 
-Uma etapa essencial para a futura modelagem em esquema estrela (Star Schema) é a criação de chaves únicas baseadas em contexto. Ao mesclar os nomes dos departamentos com suas respectivas localizações, criamos combinações únicas de "departamento-local". Esta técnica resolve ambiguidades caso um departamento opere em múltiplos locais e prepara o terreno para uma distribuição de dados mais eficiente em modelos dimensionais.
+Para auxiliar na criação de um modelo estrela (star schema) futuro, deve-se mesclar os nomes de departamentos e suas localizações. Essa ação garante que cada combinação de departamento e local seja única dentro do modelo. É importante que o aluno saiba justificar por que, neste cenário específico, utiliza-se a operação de mesclagem em vez da atribuição.
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m33s489.jpg" alt="" width="840">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m30s157.jpg" alt="" width="840">
 </p>
 
-Por fim, utiliza-se o recurso de agrupamento de dados para realizar análises quantitativas. Ao agrupar os dados por gerente, é possível verificar rapidamente quantos colaboradores estão associados a cada líder. Além de fornecer uma métrica direta de gestão, esse processo ajuda a identificar inconsistências, como colaboradores que não possuem gerentes atribuídos, validando se a estrutura organizacional refletida nos dados condiz com a realidade da empresa.
+Neste ponto, a explicação foca na diferenciação entre as operações de "Mesclar" e "Atribuir/Acrescentar" no Power Query. A justificativa para o uso da mesclagem deve ser documentada no arquivo README do projeto, detalhando como essa escolha técnica impacta a estrutura final da base de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m31s371.jpg" alt="" width="840">
+</p>
+
+Ao lidar com relacionamentos muitos-para-muitos, o Power BI pode identificar automaticamente essa complexidade na base. O analista deve estar atento a como essas conexões são interpretadas pela ferramenta para garantir que as métricas calculadas reflitam a realidade organizacional sem distorções.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-13h04m36s762.jpg" alt="" width="840">
+</p>
+
+A etapa final consiste em agrupar os dados para contabilizar quantos colaboradores estão associados a cada gerente. Este procedimento permite validar a estrutura de gestão e identificar rapidamente anomalias, como gerentes sem subordinados ou colaboradores sem uma gerência definida, garantindo a integridade do relatório final.
 
 ### 🟩 Vídeo 02 - Criando uma instância do MySQL na Azure
 
