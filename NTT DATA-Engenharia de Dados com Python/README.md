@@ -133,7 +133,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 - [x] Curso: [Coleta e Extração de Dados com Power BI](Modulo_07/01-Curso.01-Coleta_e_Extracao_de_Dados_com_Power_BI)
 - [x] Curso: [Limpeza e Transformação de Dados com Power BI](Modulo_07/02-Curso.02-Limpeza_e_Transformacao_de_Dados_com_Power_BI)
-- [x] Desafio: [Criando um Dashboard corporativo com integração com MySQL e Azure](Modulo_07/03-Curso.03-Criando_um_Dashboard_corporativo_com_integracao_com_MySQL_e_Azure)
+- [x] Projeto: [Criando um Dashboard corporativo com integração com MySQL e Azure](Modulo_07/03-Curso.03-Criando_um_Dashboard_corporativo_com_integracao_com_MySQL_e_Azure)
 
 ### Módulo 8: Modelagem de Dados com Power BI  
 
