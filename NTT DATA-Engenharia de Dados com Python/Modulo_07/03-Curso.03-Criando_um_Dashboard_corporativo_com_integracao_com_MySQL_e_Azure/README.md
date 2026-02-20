@@ -591,10 +591,7 @@ Uma vez estabelecida a conexão, a janela do **Navegador** é exibida. Aqui, pod
 
 Após selecionar a tabela, o próximo passo recomendado é utilizar a opção **Transformar Dados** para iniciar o processo de limpeza e tratamento no Power Query, abordando questões como valores nulos, redundâncias e formatação de colunas.
 
-
 ## Entendendo o desafio
-
-### Entendendo o Desafio
 
 Agora é a sua hora de brilhar e construir um perfil de destaque na DIO!  
 Explore todos os conceitos explorados até aqui e replique (ou melhor, porque não?) este projeto prático.  
