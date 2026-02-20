@@ -542,22 +542,10 @@ Nesta etapa inicial, visualizamos o painel de controle do **Microsoft Azure**, o
 
 As informações principais extraídas do portal para configuração são:
 
-* 
-**Servidor**: `desafio-projeto-dio.mysql.database.azure.com`.
-
-
-* 
-**Nome de logon do administrador**: `company`.
-
-
-* 
-**Status**: Disponível.
-
-
-* 
-**Localização**: East US.
-
-
+* **Servidor**: `desafio-projeto-dio.mysql.database.azure.com`.
+* **Nome de logon do administrador**: `company`.
+* **Status**: Disponível.
+* **Localização**: East US.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-19-19h44m36s819.jpg" alt="" width="840">
@@ -628,7 +616,7 @@ Neste repositório, insira todos os links e arquivos necessários para seu proje
 Bons estudos 😉
 
 
-# Certificado: Criando um Dashboard corporativo com integração com MySQL e Azure
+# Certificado: Criando um Dashboard corporativo com integração com MySQL e Azure    
 
 - Link na plataforma: 
 - Certificado em pdf:
