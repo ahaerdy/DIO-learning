@@ -376,6 +376,225 @@ Sintese dos gargalos primários que maculam a arquitetura original do HTTP 1.1. 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/a9046513-4103-428b-a010-57c3a35926fe?autoplay=1
 
+Este guia explora as nuances das mensagens HTTP, detalhando como as requisições (requests) e respostas (responses) são estruturadas, os diversos métodos disponíveis, a lógica por trás dos códigos de status e a extensão WebDAV para colaboração.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m13s352.jpg" alt="" width="840">
+</p>
+
+Apresentação do percurso de aprendizado. O foco atual (Etapa 2) é entender como estão estruturadas as mensagens HTTP, especificamente *Request* e *Response*, dando continuidade ao estudo de como o protocolo funciona e antecedendo o tópico de Cookies e Cache.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m16s149.jpg" alt="" width="840">
+</p>
+
+Visão geral dos dois tipos principais de mensagens HTTP: *Request* (requisição) e *Response* (resposta). A imagem exibe exemplos práticos de como essas mensagens são estruturadas em texto puro para a comunicação entre o cliente e o servidor.
+
+```http
+Get: /somedir/page.html HTTP/1.1
+Host: www.someschool.edu
+Connection: close
+User-agent: Mozilla/5.0
+Accept-language: fr
+
+```
+
+```http
+HTTP/1.1 200 OK
+Connection: close
+Date: Tue, 09 Aug 2011 15:44:04 GMT
+Server: Apache/2.2.3 (CentOS)
+Last-Modified: Tue, 09 Aug 2011 15:11:03 GMT
+Content-Length: 6821
+Content-Type: text/html
+
+(data, data, ....)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m19s034.jpg" alt="" width="840">
+</p>
+
+Detalhamento da estrutura de uma mensagem de requisição HTTP (*Request*). O conteúdo é redigido em texto ASCII e é dividido primariamente em duas partes: a **Request Line** (linha de requisição inicial com as informações base do pedido) e as **Header Lines** (linhas de cabeçalho contendo informações adicionais e propriedades da requisição).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m28s004.jpg" alt="" width="840">
+</p>
+
+Mapeamento detalhado dos campos de uma requisição. Na linha principal, identificamos o **Método HTTP** (`GET`), a **URL** do recurso solicitado e a **Versão** do protocolo (`HTTP/1.1`). No cabeçalho subsequente, observamos o **Tipo de conexão** (encerrada após a resposta), o **Agente** (identificação do navegador ou ferramenta, como Mozilla) e a **Preferência do cliente** (como o idioma francês aceito).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m34s398.jpg" alt="" width="840">
+</p>
+
+Apresentação dos métodos HTTP mais utilizados: **GET** e **POST**. O método GET recebe um destaque visual intencional por ser majoritário na web (cerca de 90% das requisições), servindo primordialmente para buscar e consumir informações, enquanto o POST é focado no envio de entidades.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m35s732.jpg" alt="" width="840">
+</p>
+
+Exemplo mais elaborado de uma requisição `GET`. A solicitação é feita para o destino raiz (`/`), indicando a página inicial do servidor local (`localhost:8080`). O cabeçalho inclui campos extras de negociação, como `Accept` (tipos de mídia que o cliente suporta), `Accept-Language` (idiomas aceitos) e `Accept-Encoding` (formatos de compressão desejados).
+
+```http
+GET / HTTP/1.1
+Host: localhost:8080
+Connection: close
+User-agent: Mozilla/5.0 (linux;...) Firefox 51.0
+Accept: text/html, application/xhtml+xml, ..., */*; q=0.8
+Accept-language: en-US, en;q=0.5
+Accept-Encoding: gzip, deflate
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m40s899.jpg" alt="" width="840">
+</p>
+
+Visão ampliada dos diversos métodos HTTP disponíveis além de GET e POST. Cada método possui uma finalidade semântica específica, indo desde a solicitação de apenas cabeçalhos (`HEAD`), envio de dados para processamento (`POST`), substituição de recursos (`PUT`), remoção (`DELETE`), até testes de rede e tunelamento (`TRACE`, `OPTION`, `CONNECT`).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m46s844.jpg" alt="" width="840">
+</p>
+
+Destaque para o método `PATCH`, utilizado para aplicar modificações parciais a um recurso no servidor. Uma particularidade notável do PATCH é que ele foi formalizado e definido em um documento separado (RFC 5789), ao contrário da maioria dos outros métodos clássicos que integram as especificações principais do protocolo HTTP.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m48s991.jpg" alt="" width="840">
+</p>
+
+Introdução ao conceito de "Métodos Seguros" (Safe Methods). São categorizados como seguros os métodos HTTP que não têm o objetivo de alterar o estado do servidor. Ao serem executados, a intenção é estritamente consultar e buscar dados sem causar modificações no recurso alvo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m51s367.jpg" alt="" width="840">
+</p>
+
+Os métodos seguros caracterizam-se por realizarem primariamente uma operação de leitura (*Read-only*). O slide evidencia a natureza inofensiva desses métodos, garantindo que o cliente pode realizar a requisição sem o receio de sobrescrever, deletar ou modificar informações vitais no lado do servidor. *(Nota: Embora POST apareça na lista de métodos ilustrativos, tradicionalmente não é um método seguro)*.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m52s645.jpg" alt="" width="840">
+</p>
+
+Apresentação do conceito de idempotência. Todo método seguro é, por definição, idempotente: realizar a mesma requisição várias vezes produzirá o mesmo estado final no servidor. O diagrama ressalta a assimetria dessa relação: nem todo método idempotente é necessariamente um método seguro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m55s101.jpg" alt="" width="840">
+</p>
+
+Esclarecimento final sobre a classificação dos métodos seguros: eles sinalizam intenções sem mudanças pelo cliente ("S/ MUDANÇAS - CLIENTE"). Ainda que o servidor possa, em seu *backend*, gerar 1ogs de acesso ou realizar métricas (que tecnicamente mudam seu estado interno), não há uma solicitação explícita de modificação pelo usuário na execução desses métodos de leitura.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h06m58s072.jpg" alt="" width="840">
+</p>
+
+Estrutura geral de uma mensagem de resposta HTTP (*Response*). O bloco é dissecado em três áreas cruciais: a linha de status inicial (**Status line**), os metadados de cabeçalho descritivos (**Header lines**) e, caso aplicável, o corpo de dados transmitido (**Entity body**).
+
+```http
+HTTP/1.1 200 OK
+Connection: close
+Date: Tue, 09 Aug 2011 15:44:04 GMT
+Server: Apache/2.2.3 (CentOS)
+Last-Modified: Tue, 09 Aug 2011 15:11:03 GMT
+Content-Length: 6821
+Content-Type: text/html
+
+(data, data, ....)
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m07s060.jpg" alt="" width="840">
+</p>
+
+Foco na avaliação detalhada da **Status Line** da resposta. Esta linha isolada fornece rapidamente três frentes de verificação essenciais para o cliente: a **Versão do protocolo** em uso, o **Status code** (código numérico, como 200) e a descrição literal atrelada, o **Status da mensagem** (como OK).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m08s302.jpg" alt="" width="840">
+</p>
+
+Exemplos usuais dos códigos de status e seus significados reais. Os códigos padronizados cobrem situações de êxito pleno (`200 OK`), avisos de que o recurso mudou de lugar (`301 Moved Permanently`), anomalias nas requisições do lado do cliente (`400 Bad Request` e `404 Not Found`) e problemas ou incompatibilidades nos servidores (`505 HTTP Version Not Supported`).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m12s576.jpg" alt="" width="840">
+</p>
+
+Agrupamento e classificação dos códigos de status por famílias baseadas no dígito inicial. Códigos de 100-199 são apenas informativos; 200-299 refletem sucesso; 300-399 sinalizam redirecionamento; 400-499 representam erros atrelados a pedidos mal formulados pelo cliente; 500-599 indicam falhas críticas de processamento pelo servidor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m15s045.jpg" alt="" width="840">
+</p>
+
+Introdução à extensão WebDAV (*Web Distributed Authoring and Versioning*), desenhada sobre o HTTP. Para acomodar necessidades complexas de gerenciamento de arquivos remotos, o WebDAV utiliza códigos de status estendidos, como *102 Processing* para tempo de espera e *423 Locked* ou *424 Failed Dependency* para gestão de falhas em edições colaborativas simultâneas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m17s686.jpg" alt="" width="840">
+</p>
+
+Diagrama de interação ilustrando o fluxo seguro de autoria em redes através do WebDAV. Um cliente trava um documento (LOCK) para evitar sobreposições de edição, consulta metadados adicionais (PROPFIND), baixa o conteúdo original (GET), aplica atualizações (PUT) e, finalmente, destrava o arquivo (UNLOCK) para torná-lo disponível aos demais usuários do servidor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m21s341.jpg" alt="" width="840">
+</p>
+
+Resumo das principais capacidades (features) agregadas pelo WebDAV. Ele permite que as páginas web sirvam mais ativamente como repositórios read/write centralizados, viabilizando operações diretas de adicionar, deletar, copiar e mover conjuntos inteiros de documentos, sempre acompanhado de um sistema de trancas (lock) robusto para controle de edições concorrentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m23s502.jpg" alt="" width="840">
+</p>
+
+Inspeção detalhada de metadados transportados dentro das **Header lines** da resposta HTTP. Observam-se campos responsáveis pelo gerenciamento da continuidade do fluxo (a decisão da **Conexão encerrada** após o recebimento), atributos de tempo vitais para armazenamento e cache (a **Data** de requisição e última modificação) e o controle específico sobre a formatação do conteúdo da mensagem (como o **Tipo de dado** HTML).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m26s877.jpg" alt="" width="840">
+</p>
+
+Separação semântica entre cabeçalhos de controle e cabeçalhos voltados para a "Entidade" (*Entity*). Os campos localizados na parte inferior dos headers em conjunto com o conteúdo final enviado (o payload) constituem essa entidade, separando-se estruturalmente da linha de status primária ou cabeçalhos de rede puramente sistêmicos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m27s972.jpg" alt="" width="840">
+</p>
+
+Levantamento técnico das definições atreladas exclusivamente ao **Entity Header**. Elementos como `Content-Encoding`, `Content-Length`, limites expiatórios (`Expires`) ou assinaturas numéricas para validação de dados limpos (`Content-MD5`) figuram como instâncias projetadas especialmente para detalhar as características restritas do recurso encapsulado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m31s065.jpg" alt="" width="840">
+</p>
+
+Aprofundamento na sintaxe e nas formalizações do parâmetro de cabeçalho especial **Accept**. A especificação permite ditar os níveis estruturados de exigência e suporte dos tipos MIME entre as partes (ex: `type/subtype`), facilitando um controle rígido do que exatamente uma aplicação remota é programada para ler com tolerância.
+
+```http
+Accept           = "Accept" ":"
+                   #( media-range [ accept-params ] )
+media-range      = ( "*/*"
+                   | ( type "/" "*" )
+                   | ( type "/" subtype )
+                   ) *( ";" parameter )
+accept-params    = ";" "q" "=" qvalue *( accept-extension )
+accept-extension = ";" token [ "=" ( token | quoted-string ) ]
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m33s749.jpg" alt="" width="840">
+</p>
+
+Múltiplas aplicações do campo *Accept*, explorando a flexibilidade de preferências numéricas qualitativas (*q-values*). Diferentes instâncias expõem desde requisições de idiomas combinados (`Accept-Language`), preferência por métodos restritivos de compressão gzip (`Accept-Encoding`), mapeamento de codificação para caracteres Unicode (`Accept-Charset`) e pesos priorizados por formatações específicas em multimídia e texto.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m36s957.jpg" alt="" width="840">
+</p>
+
+Ampliação do leque de definições de cabeçalhos de controle logísticos além do conteúdo. Parâmetros como `Authorization` definem chaves credenciais operacionais, enquanto conjuntos envolvendo a restrição de armazenamento `Cache-Control`, tolerâncias etárias dinâmicas `Age` e delimitações restritas `Allow` regulam efetivamente o tratamento sistêmico periférico à entrega do arquivo web em si.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h07m38s586.jpg" alt="" width="840">
+</p>
+
+Evidência agrupada dos atributos restritos da família **Content** para validação estrita do *Entity*. Destaca-se como todo o agrupamento que se inicia com o prefixo "Content-" — como `Content-Type`, `Content-Language` e `Content-Length` — age de maneira interligada para informar, formatar, validar integridade e processar localmente o pacote massivo contendo a essência da comunicação.      
+
+
 ### 🟩 Vídeo 04 - Para que servem os Cookies e Cache?
 
 <video width="60%" controls>
@@ -383,7 +602,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/23702386-8fc9-42cb-8f11-8268d18117c2?autoplay=1
 
 ### 🟩 Vídeo 05 - HTTP 2.0 - Atualizações do protocolo
 
