@@ -594,7 +594,6 @@ Ampliação do leque de definições de cabeçalhos de controle logísticos alé
 
 Evidência agrupada dos atributos restritos da família **Content** para validação estrita do *Entity*. Destaca-se como todo o agrupamento que se inicia com o prefixo "Content-" — como `Content-Type`, `Content-Language` e `Content-Length` — age de maneira interligada para informar, formatar, validar integridade e processar localmente o pacote massivo contendo a essência da comunicação.      
 
-
 ### 🟩 Vídeo 04 - Para que servem os Cookies e Cache?
 
 <video width="60%" controls>
@@ -604,6 +603,134 @@ Evidência agrupada dos atributos restritos da família **Content** para valida�
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/23702386-8fc9-42cb-8f11-8268d18117c2?autoplay=1
 
+Este resumo explora como o protocolo HTTP gerencia a identificação de usuários e a eficiência na transferência de dados através de cookies e mecanismos de cache.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m08s244.jpg" alt="" width="840">
+</p>
+
+O estudo foca no papel dos cookies e do cache no contexto das redes, iniciando pela compreensão do Protocolo HTTP, que é a base da comunicação na internet.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m11s368.jpg" alt="" width="840">
+</p>
+
+O protocolo HTTP opera no modelo cliente-servidor e possui a característica de ser *stateless*, ou seja, não guarda o estado ou as informações do cliente. Embora isso traga vantagens de performance e economia de recursos para o servidor, existem diversos cenários onde identificar o cliente é essencial, como para exibição de publicidade direcionada, preenchimento de formulários ou para proporcionar uma melhor experiência de usuário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m20s832.jpg" alt="" width="840">
+</p>
+
+Para resolver a necessidade de identificação em um protocolo *stateless*, utilizam-se os cookies. O objetivo de um cookie é rastrear (*track*) as informações do cliente. Eles consistem em pequenos blocos de dados criados e utilizados pelo servidor para persistir essas informações no dispositivo do usuário. O padrão técnico oficial que normatiza e especifica o funcionamento dos cookies é a RFC 6265.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m24s802.jpg" alt="" width="840">
+</p>
+
+Esses cookies não trafegam de forma isolada; eles estão presentes dentro do cabeçalho das mensagens HTTP (*Header File*). Dessa forma, tanto as requisições quanto as respostas podem carregar informações de cookies para atualizar o arquivo local no cliente ou o banco de dados no servidor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m28s348.jpg" alt="" width="840">
+</p>
+
+Na prática, a comunicação baseada em cookies inicia-se com uma requisição HTTP padrão. Quando ocorre o primeiro acesso de um cliente a um site (como uma loja virtual, por exemplo), a solicitação chega até o servidor web correspondente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m29s376.jpg" alt="" width="840">
+</p>
+
+Ao receber essa requisição, o servidor consulta o seu banco de dados (*back-end DB*) para verificar se já existe um identificador (*User ID*) associado àquele usuário na base de registros.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m30s782.jpg" alt="" width="840">
+</p>
+
+Como se trata de um primeiro acesso e o identificador ainda não existe na máquina do cliente, o servidor responde enviando uma instrução no cabeçalho HTTP de resposta (`Set-cookie: ID`). Essa instrução comanda o navegador do usuário a salvar esse identificador gerado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m33s091.jpg" alt="" width="840">
+</p>
+
+O navegador do cliente recebe essa instrução e armazena os dados em um arquivo local (*File cookie*), associado ao histórico de navegação. A estrutura técnica enviada pelo servidor para configurar o cookie segue um formato específico que define nome, data de expiração, caminho e domínio:
+
+```http
+Set-Cookie: NAME=VALUE; expires=DATE; path=PATH; domain=DOMAIN_NAME
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m36s429.jpg" alt="" width="840">
+</p>
+
+Esses arquivos de cookies são gravados fisicamente na estrutura de diretórios do sistema operacional do cliente. Um exemplo de caminho clássico de armazenamento no Windows (utilizando o Internet Explorer) seria:
+
+```text
+C:\Users\username\AppData\Roaming\Microsoft\Windows\Cookies
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m38s772.jpg" alt="" width="840">
+</p>
+
+Existem dois tipos principais de cookies: os **cookies de sessão**, que são mantidos apenas na memória e deletados assim que o navegador é fechado; e os **cookies persistentes**, que permanecem salvos no computador por longos períodos (meses ou anos) até expirarem. Abaixo está um exemplo do conteúdo de um cookie persistente, contendo metadados detalhados da persistência:
+
+```text
+Site: Rediff.com Cookie name: RMID
+Name: RMID (Name of the cookie)
+Content: 1d11c8ec44bf49e0... (Encrypted content)
+Domain: .rediff.com
+Path: / (Any path after the domain name)
+Send For: Any type of connection
+Expires: Thursday, December 31, 2020, 11:59:59 PM
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m44s072.jpg" alt="" width="840">
+</p>
+
+A utilização de cookies persistentes viabiliza recursos vitais para a navegação cotidiana, proporcionando comodidade ao usuário. Três aplicações clássicas incluem: a capacidade de manter logins ativos após fechar a página, o armazenamento de informações e configurações do website e a persistência dos itens em um carrinho de e-commerce.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m45s120.jpg" alt="" width="840">
+</p>
+
+Contudo, os cookies levantam questões críticas em relação à privacidade e à segurança. Devido à natureza invasiva do rastreamento do perfil de navegação, legislações como a **LGPD** passaram a exigir o consentimento explícito dos usuários. Adicionalmente, há riscos de **Hacking**: invasores que comprometem a máquina do cliente podem utilizar cookies válidos para roubar acessos autenticados e executar ataques maliciosos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m50s700.jpg" alt="" width="840">
+</p>
+
+Partindo para as estratégias de otimização no protocolo HTTP 1.1, observa-se o esforço para contornar problemas como a repetição constante de dados transferidos e gargalos como o bloqueio sequencial de pacotes (*HOL - Head of Line Blocking*). Soluções de eficiência envolvem minimizar o tamanho de arquivos estruturais (focando em CSS, JS e compressão gzip) e aplicar técnicas de **caching**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h32m57s126.jpg" alt="" width="840">
+</p>
+
+A implementação técnica do cache ocorre muitas vezes por meio de um **Web Cache**, estruturado sobre um servidor intermediário chamado **Proxy server**. Essa entidade posiciona-se entre o cliente e o servidor de destino, gerenciando a guarda temporária e a entrega de recursos recorrentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h33m27s880.jpg" alt="" width="840">
+</p>
+
+Quando o cliente realiza uma requisição, ela é interceptada primeiramente pelo Proxy Server. Ele executa uma busca local (*Searching*) em seu armazenamento para verificar se possui a informação solicitada. Se não a possuir (ou se o dado estiver obsoleto), o proxy abre uma nova conexão e aciona o Servidor HTTP para buscar o recurso, realizando em seguida a atualização (*UPDATE*) no seu próprio armazenamento antes de entregá-lo ao cliente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h33m35s686.jpg" alt="" width="840">
+</p>
+
+O uso do Proxy Server para Web Cache resulta em dois grandes ganhos de infraestrutura: a **redução do tempo de resposta** (uma vez que o proxy geralmente encontra-se numa rota física e lógica mais curta até o cliente) e a **redução do tráfego** (já que as requisições recorrentes não precisam mais atravessar todos os nós da rede até o servidor primário, economizando largura de banda).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-23-16h33m38s421.jpg" alt="" width="840">
+</p>
+
+Em sistemas robustos, a internet emprega topologias de **caches distribuídos**. Nessa arquitetura, múltiplos Web Caches operam de forma interligada e são alocados de maneira estratégica por regiões ou provedores. Isso garante que o conteúdo esteja sempre o mais próximo possível das bordas da rede, minimizando drasticamente a latência e aprofundando os benefícios de economia de tráfego.      
+
+
 ### 🟩 Vídeo 05 - HTTP 2.0 - Atualizações do protocolo
 
 <video width="60%" controls>
@@ -611,7 +738,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/a6040244-48ba-4539-bc00-02b93f7ec71f?autoplay=1
 
 ### 🟩 Vídeo 06 - Servidores/Sistemas de aplicação
 
