@@ -1519,6 +1519,95 @@ Em suma, a filosofia do WebSocket baseia-se na segurança por origem e no aprove
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/86349652-7dea-4f69-bbd9-d94937656cd1?autoplay=1
 
+Este resumo explora os mecanismos fundamentais que permitem a comunicação entre um cliente e um servidor na web, detalhando o papel de intermediários e protocolos essenciais.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h30m21s549.jpg" alt="" width="840">
+</p>
+
+### Etapa 3: Comunicação na Internet
+
+Esta fase foca em detalhar o funcionamento real das conexões dentro do ambiente da rede mundial de computadores. O objetivo é aprofundar o conhecimento sobre os principais protocolos de comunicação, com ênfase especial no protocolo **WebSocket**, compreendendo como os dados trafegam entre os diferentes pontos da rede.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h30m35s978.jpg" alt="" width="840">
+</p>
+
+#### Percurso de Aprendizado
+
+Para concluir o estudo, o roteiro define três etapas fundamentais:
+
+1. **Contextualização:** Base teórica inicial.
+2. **Como funciona o WebSocket?:** Funcionamento técnico do protocolo.
+3. **Como funciona a comunicação na internet?:** Visão sistêmica integrando todos os componentes, que é o foco atual deste módulo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h30m37s685.jpg" alt="" width="840">
+</p>
+
+#### Componentes da Arquitetura de Rede
+
+Uma comunicação na internet envolve diversos atores que trabalham de forma coordenada. Os principais conceitos apresentados para este cenário são:
+
+* **DNS (Domain Name System):** Responsável pela resolução de nomes de domínio.
+* **Proxy:** Intermediário nas requisições entre cliente e servidor.
+* **HTTP Server (Apache):** O servidor que hospeda e entrega o conteúdo web.
+* **Socket:** O ponto final de uma conexão de comunicação.
+* **Load Balancer:** Distribuidor de carga para otimizar o desempenho do servidor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h30m44s596.jpg" alt="" width="840">
+</p>
+
+#### O Modelo TCP/IP e o Socket TCP
+
+A comunicação entre o cliente e o servidor Apache ocorre através de camadas estruturadas, conforme o modelo **TCP/IP**:
+
+* **Aplicação:** Onde reside a Conexão HTTP.
+* **Transporte:** Onde opera o **Socket TCP**.
+* **Rede:** Responsável pelo endereçamento.
+* **Enlace:** Camada física e de dados.
+
+O **Socket TCP** funciona como uma conexão na camada de transporte que identifica o destino através da combinação de um **IP** e um número de porta (**port_number**), permitindo que o cliente estabeleça um canal de comunicação direto para realizar requisições.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h30m48s324.jpg" alt="" width="840">
+</p>
+
+#### O Papel do Proxy e o Cache
+
+O **Proxy** atua como um intermediário estratégico entre o dispositivo do cliente e o servidor final (Apache). Uma de suas funções primordiais é o armazenamento de **objetos web em cache**. Isso permite que requisições repetidas sejam atendidas mais rapidamente pelo próprio Proxy, sem a necessidade de buscar os dados novamente no servidor de origem, otimizando o tráfego de rede.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h30m49s975.jpg" alt="" width="840">
+</p>
+
+#### Interação com o DNS
+
+Antes de iniciar qualquer troca de dados com o servidor, o cliente precisa saber para onde enviar os pacotes. Ele realiza uma consulta ao **DNS (Domain Name Server)** perguntando qual endereço IP está associado ao domínio/URL que deseja acessar. O DNS processa a requisição e responde com o endereçamento correto, permitindo que o cliente atualize seu conhecimento sobre o destino e prossiga com a conexão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h30m55s155.jpg" alt="" width="840">
+</p>
+
+#### Fluxo Completo de Comunicação
+
+Com as informações do DNS em mãos, o cliente é capaz de estabelecer a rota através da "nuvem" de roteadores da internet. O fluxo pode passar pelo Proxy para verificação de cache e, finalmente, atingir o servidor HTTP (Apache). Este diagrama ilustra a natureza bidirecional da comunicação, onde requisições e respostas trafegam de forma contínua entre as pontas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h31m02s475.jpg" alt="" width="840">
+</p>
+
+#### Gerenciamento com Load Balancer
+
+Em cenários com múltiplos clientes acessando o servidor simultaneamente, utiliza-se o **Load Balancer** (Balanceador de Carga). Ele desempenha duas funções críticas:
+
+* **Multiplexação:** Gerencia múltiplas conexões de entrada de diversos clientes.
+* **Distribuição de carga:** Reparte as requisições de forma eficiente para o servidor Apache, evitando sobrecargas e garantindo que o sistema permaneça disponível e performático.      
+
+
 ## Parte 5 - Conclusão e considerações finais
 
 ### 🟩 Vídeo 13 - Conclusão e próximos passos
@@ -1528,7 +1617,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/018c4183-7c05-4a78-8b50-f9890512c25c?autoplay=1
 
 
 
