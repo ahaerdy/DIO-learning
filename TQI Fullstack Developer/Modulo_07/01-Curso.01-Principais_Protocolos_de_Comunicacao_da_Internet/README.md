@@ -1330,6 +1330,70 @@ Para fiscalizar e balizar a lei, foi criada a ANPD (Agência Nacional de Proteç
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/e9f322ac-2039-423d-9c77-8f33512c5e16?autoplay=1
 
+Este resumo aborda a transição das comunicações tradicionais via HTTP para o protocolo WebSocket, explorando por que essa tecnologia surgiu, como ela resolve problemas de latência e quais são suas aplicações práticas no mundo real.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h05m54s640.jpg" alt="" width="840">
+</p>
+
+Início da terceira e última aula da série, focada especificamente no protocolo **WebSocket**. O objetivo central é explorar suas características, entender as diferenças fundamentais em relação ao protocolo HTTP e compreender como ele se posiciona no ecossistema dos principais protocolos de comunicação da internet.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h05m55s837.jpg" alt="" width="840">
+</p>
+
+Apresentação do percurso pedagógico da aula, dividido em três etapas principais:
+
+1. **Contextualização:** O cenário que motivou o surgimento do WebSocket.
+2. **Funcionamento:** A mecânica interna do protocolo.
+3. **Comunicação na Internet:** Uma visão sistêmica envolvendo conceitos como DNS, proxies e load balancers para ilustrar o fluxo da comunicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h05m58s367.jpg" alt="" width="840">
+</p>
+
+Representação visual do cenário utilizando **HTTP 1.1 Polling**. Em aplicações baseadas em web browser, para manter os dados atualizados e a conexão ativa, ocorre uma "inundação" ou enxurrada de requisições HTTP sucessivas. Esse modelo é ineficiente pois o cliente pode ficar bloqueado enquanto aguarda a resposta do servidor para cada uma dessas múltiplas chamadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h06m01s831.jpg" alt="" width="840">
+</p>
+
+Análise dos problemas críticos ao tentar utilizar HTTP para comunicações que exigem tempo real:
+
+* **Conexões subjacentes:** Necessidade de criar múltiplas conexões para sustentar a troca de informações.
+* **Alto overhead:** O peso excessivo dos cabeçalhos HTTP (Headers) em cada requisição gera desperdício de banda.
+* **Mapeamento via script:** A complexidade recai sobre o cliente, que deve gerenciar via script qual resposta pertence a qual recurso ou requisição original.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h06m05s290.jpg" alt="" width="840">
+</p>
+
+Apresentação do **WebSocket** como a solução viável para os problemas de latência e overhead. Ele implementa uma conexão estritamente **bidirecional** através de uma API específica, permitindo que tanto o cliente quanto o servidor enviem dados a qualquer momento sem a necessidade de novas requisições HTTP para cada atualização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h06m07s166.jpg" alt="" width="840">
+</p>
+
+Exemplos práticos de aplicações que utilizam a API do WebSocket para viabilizar experiências de tempo real:
+
+* **Redes Sociais:** Twitter, para atualizações instantâneas de feed.
+* **Ferramentas de Colaboração:** Trello, para edição simultânea entre usuários.
+* **Mercado Financeiro:** *Stock tickers* (ex: Yahoo Finance), onde os preços das ações mudam a cada segundo.
+* **Jogos Online:** Games baseados em browser como *Agar.io*, *Slither.io* e *Krunker*, que exigem sincronização constante entre jogadores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h06m11s977.jpg" alt="" width="840">
+</p>
+
+O WebSocket opera de forma encapsulada no HTTP, funcionando como um **upgrade** da conexão original. Ele utiliza a infraestrutura de rede já existente, aproveitando as portas **80** (HTTP) e **443** (HTTPS/WebSocket Seguro). Isso permite que o protocolo se beneficie de recursos já estabelecidos, como:
+
+* **Proxies** e intermediários de rede.
+* Sistemas de **Autenticação**.
+* Mecanismos de **Filtragem** de pacotes.      
+
+
 ### 🟩 Vídeo 11 - Como funciona o WebSocket?
 
 <video width="60%" controls>
@@ -1337,7 +1401,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/d789f11e-f6ac-43fb-bcc6-fd119dcc5148?autoplay=1
 
 ### 🟩 Vídeo 12 - Como ocorre a comunicação dentro da internet?
 
