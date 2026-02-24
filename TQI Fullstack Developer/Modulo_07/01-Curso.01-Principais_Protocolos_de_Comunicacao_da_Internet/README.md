@@ -1120,6 +1120,74 @@ Com estes conceitos básicos de criptografia simétrica/assimétrica e certifica
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/ff236da7-4de8-46f2-b7f2-fc7a88914bf5?autoplay=1
 
+Este vídeo resume os conceitos fundamentais do protocolo SSL (Secure Sockets Layer) e sua evolução, o TLS (Transport Layer Security), abordando seu funcionamento, importância e como ele protege as comunicações na rede contra ataques maliciosos.
+
+### Anotações
+
+#### Introdução ao Protocolo SSL
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h42m42s531.jpg" alt="" width="840">
+</p>
+
+O **SSL (Secure Socket Layer)** é um protocolo fundamental para a segurança em redes, operando como uma camada de proteção para conexões **TCP**. Ele é projetado para garantir três pilares essenciais na comunicação entre *end-points*:
+
+* **Confidencialidade:** Proteção dos dados contra acesso não autorizado.
+* **Integridade:** Garantia de que as informações não foram alteradas durante o trajeto.
+* **Autenticidade:** Verificação da identidade das partes envolvidas na conexão.
+
+Atualmente, a evolução deste protocolo em sua terceira versão é conhecida como **TLS (Transport Layer Security)**, sendo documentada e padronizada pela **RFC 4346**.
+
+#### Aplicações Práticas e Ubiquidade
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h42m43s727.jpg" alt="" width="840">
+</p>
+
+A utilização da criptografia baseada em SSL/TLS é ampla e indispensável para a navegação segura na internet. Diversas plataformas e serviços de renome utilizam esse protocolo para proteger as transações e dados de seus usuários, manifestando-se visualmente através do prefixo **https://** no navegador. Entre os exemplos de aplicações que dependem dessa tecnologia estão:
+
+* Plataformas de e-commerce como **eBay** e **Lojas Americanas**.
+* Serviços de conteúdo e redes sociais como o **YouTube**.
+
+#### Vulnerabilidades em Redes Desprotegidas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h42m44s922.jpg" alt="" width="840">
+</p>
+
+Em um ambiente de rede comum, coexistem usuários legítimos e agentes **maliciosos**. Sem a proteção de protocolos de segurança, a comunicação entre o dispositivo do usuário e o servidor fica exposta. Um atacante posicionado na rede pode interceptar o tráfego de dados, explorando o fato de que as requisições transitam por infraestruturas compartilhadas (nuvem/internet) antes de atingirem o destino final.
+
+#### Cenários de Ataque: Listening e Ataque Ativo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h42m50s978.jpg" alt="" width="840">
+</p>
+
+A ausência de criptografia possibilita dois cenários principais de comprometimento:
+
+1. **Cenário 1 - Listening (Ataque Passivo):** O invasor configura sua interface de rede em modo promíscuo para capturar pacotes que não lhe são destinados. O objetivo aqui é apenas "ouvir" e extrair informações sensíveis, como dados de cartão de crédito ou credenciais, para uso posterior em fraudes ou *phishing*.
+2. **Cenário 2 - Ataque Ativo:** Diferente da escuta passiva, neste cenário o atacante intercepta a **Request HTTP** e promove a alteração direta dos dados. O **Pacote com os dados** é modificado em trânsito para beneficiar o criminoso, podendo alterar destinatários de pagamentos ou valores de transações.
+
+#### A Proteção via HTTPS
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h42m52s046.jpg" alt="" width="840">
+</p>
+
+A implementação do SSL transforma a comunicação de uma simples **Request HTTP** para uma **Request HTTPS**. Esta camada adicional de segurança neutraliza as tentativas de ataques ativos e passivos descritas anteriormente. Ao criptografar o canal, o protocolo impede que o usuário malicioso consiga realizar modificações nos dados ou aplicar técnicas de *phishing* de forma eficaz durante o tráfego da conexão.
+
+#### Garantias de Segurança do SSL
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h42m53s362.jpg" alt="" width="840">
+</p>
+
+O funcionamento do SSL garante que a operação de autenticação e segurança seja mantida através de restrições técnicas rigorosas:
+
+* **Read (Leitura):** Torna-se impossível (*unable*) para terceiros lerem o conteúdo, garantindo que o dado seja estritamente **Confidencial**. Apenas quem possui a chave relacionada pode decifrar a informação.
+* **Edit (Edição):** A modificação dos dados por agentes externos é bloqueada (*unable*), assegurando a integridade do pacote desde a origem até o destino. 
+
+
 ### 🟩 Vídeo 09 - Operação do SSL e considerações finais
 
 <video width="60%" controls>
@@ -1127,7 +1195,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/aa271268-ce67-48bb-9eca-6c8269676f28?autoplay=1
 
 ## Parte 4 - Protocolo de comunicação WebSocket
 
