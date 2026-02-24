@@ -1197,6 +1197,128 @@ O funcionamento do SSL garante que a operação de autenticação e segurança s
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/aa271268-ce67-48bb-9eca-6c8269676f28?autoplay=1
 
+
+Este guia resume os processos fundamentais que garantem a confidencialidade e integridade das comunicações na web, além de abordar a estrutura legal brasileira para proteção de dados.
+
+### Anotações
+
+Aqui está o documento final preenchido, respeitando rigorosamente a estrutura original, a ordem das imagens e o escopo semântico de cada trecho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m01s863.jpg" alt="" width="840">
+</p>
+
+Inicia a introdução sobre as operações do protocolo SSL e HTTPS. O processo abrange desde o estabelecimento da conexão, passando pelo *handshake*, até a fase de transferência efetiva das informações.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m04s325.jpg" alt="" width="840">
+</p>
+
+As operações estruturais do SSL são divididas em três fases principais: o *handshake* (aperto de mãos), a derivação de chaves (*key derivation*) e a transferência de dados (*data transfer*).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m05s599.jpg" alt="" width="840">
+</p>
+
+A etapa inicial do *handshake* é baseada na conexão TCP de três vias (assim como no HTTP convencional). O cliente inicia o processo enviando um sinal ("TCP starts"), o servidor retorna uma resposta ("TCP response") e o cliente finaliza enviando uma confirmação para estabelecer de fato a comunicação ("TCP confirmation").
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m06s926.jpg" alt="" width="840">
+</p>
+
+Com a conexão estabelecida, ocorre a verificação de autenticidade. O cliente envia uma mensagem de identificação chamada "SSL Hello". Em resposta, o servidor envia a sua certificação digital. Essa certificação contém a chave pública que será essencial para a criação da chave criptográfica mestre nos passos seguintes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m08s684.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o cliente gera a *Encrypt Master Secret Key* (EMS) e a envia para o servidor. Conforme demonstrado pela fórmula $EMS = K_{B} + MS$, a EMS é o resultado da combinação da chave pública do servidor com a *Master Secret Key* gerada pelo lado do cliente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m09s917.jpg" alt="" width="840">
+</p>
+
+A *Master Secret Key* (MS) atua como uma chave simétrica presente tanto no cliente quanto no servidor. Ela é utilizada para descriptografar os dados trafegados. Vale ressaltar que a MS só tem validade e funciona para a sessão SSL corrente em que foi especificamente criada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m15s479.jpg" alt="" width="840">
+</p>
+
+A etapa de derivação de chaves (*Key Derivation*) ocorre após a criação da chave mestre. Durante esta fase, é criada uma *Section Encryption Key* (SEK) gerada exclusivamente para criptografar a sessão atual. Em seguida, as chaves são verificadas através da troca de mensagens com código de autenticação (MAC) entre as partes.
+
+```text
+M_A = MAC de Alice para Bob
+E_B = SEK de Bob para Alice
+M_B = MAC de Bob para Alice
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m16s824.jpg" alt="" width="840">
+</p>
+
+Na fase final das operações do SSL, ocorre a transferência efetiva de dados (*Data Transfer*). O *data stream* (fluxo contínuo de dados) é segmentado em blocos que unem a informação real (*Record*) com o código de verificação (*MAC*), formando a estrutura $Record + Mac + \dots + Record$, o que garante a integridade da mensagem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m18s237.jpg" alt="" width="840">
+</p>
+
+Os dados chegam ao usuário no formato exato de $Record + Mac$. Isso assegura que cada fragmento de informação transferido no decorrer da comunicação esteja protegido, integro e devidamente assinado pela chave simétrica exclusiva daquela sessão SSL.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m20s898.jpg" alt="" width="840">
+</p>
+
+O protocolo HTTPS é essencialmente a junção do protocolo HTTP com a camada SSL. Ele provê segurança na comunicação sobre o protocolo de rede TCP. Essa verificação de autenticidade é garantida pelos certificados digitais, operando de maneira padronizada pela porta de rede 443.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m23s119.jpg" alt="" width="840">
+</p>
+
+Introdução à Lei Geral de Proteção de Dados (LGPD) no Brasil. Promulgada como a Lei nº 13.709/2018, trata-se da principal lei de segurança e proteção da informação do país. Ela foi concebida no ano de 2018 e entrou em vigor de forma efetiva em agosto de 2020.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m25s644.jpg" alt="" width="840">
+</p>
+
+O esquema ilustra visualmente o tráfego do HTTPS de ponta a ponta. Através da porta 443 e dos certificados digitais, a troca de informações entre os clientes e as interfaces web no servidor acontece de maneira encapsulada e totalmente segura pelo SSL.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m26s859.jpg" alt="" width="840">
+</p>
+
+Retomando as definições primárias, a LGPD atua como o alicerce regulatório para o tratamento de dados pessoais no Brasil, reforçando as diretrizes aprovadas e vigentes desde o ano de 2020.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m37s195.jpg" alt="" width="840">
+</p>
+
+Embora alguns sites na internet ainda não utilizem o HTTPS, a grande maioria já adota a versão segura do protocolo. O seu uso é essencial para assegurar a proteção contra armadilhas virtuais, como o *phishing*, e para resguardar as informações sensíveis e a privacidade dos usuários.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m40s148.jpg" alt="" width="840">
+</p>
+
+Reforço visual do tema da LGPD, preparando a contextualização sobre os motivos e inspirações legislativas de fora do país que culminaram na formatação da lei brasileira.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m41s279.jpg" alt="" width="840">
+</p>
+
+A construção da LGPD utilizou modelos jurídicos internacionais avançados como referência. Suas diretrizes são fundamentadas principalmente na legislação europeia (a GDPR – *General Data Protection Regulation*) e em premissas originadas na legislação do estado da Califórnia, nos Estados Unidos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m42s280.jpg" alt="" width="840">
+</p>
+
+A lei é responsável por proteger dados de identificação comuns (como CPF e CNPJ) e dados sensíveis dos indivíduos. A LGPD define rigorosamente como o tratamento desses dados deve acontecer nas diversas operações. Ela torna obrigatório o livre consentimento, reforça os direitos primários do titular e estabelece sanções para as organizações e empresas que descumprirem a regulamentação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h58m45s115.jpg" alt="" width="840">
+</p>
+
+Para fiscalizar e balizar a lei, foi criada a ANPD (Agência Nacional de Proteção de Dados). O órgão tem como responsabilidades zelar pelas informações, elaborar diretrizes para a política nacional, promover a disseminação das normas, editar os regulamentos necessários e realizar auditorias ativas no mercado.
+
+
 ## Parte 4 - Protocolo de comunicação WebSocket
 
 ### 🟩 Vídeo 10 - Contextualização
@@ -1206,7 +1328,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/e9f322ac-2039-423d-9c77-8f33512c5e16?autoplay=1
 
 ### 🟩 Vídeo 11 - Como funciona o WebSocket?
 
