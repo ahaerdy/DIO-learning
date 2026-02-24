@@ -960,6 +960,157 @@ Inspeção direta da carga útil (payload) dentro do Wireshark. Ao analisar a ca
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/553ba1e1-67f6-451a-8b0d-c49a82edc8ea?autoplay=1
 
+Este guia explora os fundamentos da segurança da informação, detalhando como a criptografia e os certificados digitais protegem a integridade e a confidencialidade dos dados na web.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h27m47s573.jpg" alt="" width="840">
+</p>
+
+Nesta introdução, o foco recai sobre as mudanças que a criptografia impõe aos protocolos de comunicação. O objetivo é estabelecer uma base sólida em segurança da informação antes de aprofundar no protocolo SSL. A agenda apresentada define o caminho de aprendizado:
+
+1. **Conceitos Básicos**: Criptografia por chave e certificados digitais.
+2. **SSL (Secure Sockets Layer)**: O funcionamento do protocolo.
+3. **Operações SSL e Considerações Finais**: Impacto no HTTP (HTTPS) e uma breve introdução à LGPD.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h27m53s599.jpg" alt="" width="840">
+</p>
+
+A criptografia por chave é apresentada como uma ferramenta para garantir a confidencialidade. Partindo de um arquivo de dados legível, utiliza-se uma cifra ou mapeamento para transformá-lo em um texto ilegível para quem não possui a chave. O acesso ao conteúdo original só é possível através da aplicação da chave correspondente para reverter o mapeamento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h27m55s369.jpg" alt="" width="840">
+</p>
+
+Existem duas categorias principais de criptografia baseada em chaves:
+
+* **Criptografia Assimétrica**: Utiliza um par de chaves (pública e privada). A chave pública é usada para assinar ou criptografar, e apenas o detentor da chave privada correspondente pode descriptografar os dados.
+* **Criptografia Simétrica**: Utiliza a mesma chave tanto para criptografar quanto para descriptografar. Este método exige que ambas as partes envolvidas conheçam a chave previamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m02s247.jpg" alt="" width="840">
+</p>
+
+A **Cifra de César** é um exemplo clássico de criptografia simétrica. Ela opera através da substituição de cada letra por outra que se encontra $k$ posições adiante no alfabeto (rotatividade).
+
+No exemplo visualizado, utiliza-se uma chave $k = 3$:
+
+* **Texto Original**: `Bob, I love you, Alice`
+* **Lógica**: A letra 'B' torna-se 'E' (B → C, D, E).
+* **Resultado**: O mapeamento altera a frase para uma forma não inteligível à primeira vista.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m04s048.jpg" alt="" width="840">
+</p>
+
+Dentro do universo da criptografia simétrica, existem duas abordagens principais para o tratamento dos dados:
+
+1. **Cifra de Fluxo (Stream Cipher)**: O mapeamento ocorre bit a bit, gerando uma sequência pseudoaleatória.
+2. **Cifra de Bloco (Block Cipher)**: Os dados são divididos em blocos de tamanho fixo para serem processados. Este é o método adotado por protocolos como SSL, PGP e IPsec.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m05s939.jpg" alt="" width="840">
+</p>
+
+A cifra de fluxo realiza uma operação bit a bit. Dada uma entrada e uma função geradora de fluxo de bits, os dados são transformados em texto cifrado através de uma permutação simples e direta de cada bit individual (0 ou 1).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m08s563.jpg" alt="" width="840">
+</p>
+
+Na cifra de bloco, a permutação ocorre em grupos de bits (ex: blocos de 64 bits). O mapeamento é feito de bloco para bloco, utilizando uma tabela de permutação que deve ser conhecida apenas pelas partes autorizadas. Isso permite mascarar a informação original através da troca sistemática dos valores do bloco.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m13s402.jpg" alt="" width="840">
+</p>
+
+Este slide demonstra um exemplo prático de uma tabela de permutação para blocos de 3 bits ($k=3$):
+
+* A entrada `000` é mapeada para a saída `110`.
+* A entrada `010` é mapeada para `101`.
+
+Existem múltiplas variações possíveis para essas tabelas, e a escolha da tabela adequada depende do cenário de segurança aplicado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m15s132.jpg" alt="" width="840">
+</p>
+
+Ao aplicar a tabela de permutação mencionada anteriormente em uma sequência de dados, os blocos são transformados individualmente. No exemplo visual:
+
+* Uma sequência de três zeros (`000`) resulta em `110`.
+* Uma sequência de três uns (`111`) resulta em `001`.
+Esta técnica permite fragmentar e mascarar o valor real dos dados originais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m17s460.jpg" alt="" width="840">
+</p>
+
+A segurança de uma cifra de bloco reside na complexidade combinatória. Para um bloco de $k$ bits, existem $2^k$ representações possíveis. O número de tabelas de permutação distintas é o fatorial desse valor ($2^k!$).
+No caso de $k=3$, temos $8! = 40.320$ possibilidades. Embora pareça alto, este valor ainda é vulnerável a ataques de força bruta em sistemas computacionais modernos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m19s458.jpg" alt="" width="840">
+</p>
+
+Na prática, para garantir a segurança, utiliza-se um $k$ superior a 64 bits, o que gera um número astronômico de combinações. Devido à impossibilidade de gerenciar tabelas físicas desse tamanho, a permutação é realizada através de funções matemáticas. Além disso, utiliza-se o **encadeamento de cifras** para aumentar a robustez do processo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m21s212.jpg" alt="" width="840">
+</p>
+
+A certificação de chave pública é essencial para resolver o problema da identidade (autenticidade). Ela garante que, em uma comunicação, a pessoa (ou entidade) é realmente quem diz ser. O SSL/TLS e o IPsec dependem dessa verificação para evitar que atacantes se passem por usuários legítimos (como o "Bob" do exemplo).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m25s043.jpg" alt="" width="840">
+</p>
+
+A **Entidade Certificadora (CA)** é a instituição de confiança que garante a autenticidade das chaves. O processo assemelha-se à obtenção de um CNPJ ou certificado para emissão de notas fiscais: você fornece seus dados à certificadora, que valida sua identidade e emite um certificado digital vinculado a uma chave específica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m29s871.jpg" alt="" width="840">
+</p>
+
+As responsabilidades da Entidade Certificadora incluem:
+
+* Verificar a identidade da entidade solicitante.
+* Garantir que a chave pertence legitimamente àquela pessoa ou empresa.
+* Emitir certificados que vinculem a chave à identidade de forma confiável.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m31s648.jpg" alt="" width="840">
+</p>
+
+O funcionamento das CAs é regido por padrões e recomendações técnicas, principalmente do IETF (Internet Engineering Task Force). A RFC 1422, por exemplo, especifica o gerenciamento de chaves baseadas em certificados para e-mails seguros e define a sintaxe e o serviço de autenticação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m33s711.jpg" alt="" width="840">
+</p>
+
+Este slide resume o papel da CA como o elo de confiança que une a Identidade à Chave Pública, permitindo que terceiros confiem que a chave utilizada em uma conexão realmente pertence à entidade com a qual desejam se comunicar.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m41s359.jpg" alt="" width="840">
+</p>
+
+Na navegação web, a presença de um certificado digital é sinalizada pelo navegador. Se um site tenta utilizar criptografia sem um certificado reconhecido por uma entidade certificadora confiável, o navegador emitirá um alerta de segurança, indicando que a conexão pode não ser autêntica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m42s836.jpg" alt="" width="840">
+</p>
+
+Além da segurança do certificado, as ferramentas de inspeção dos navegadores permitem visualizar outras informações importantes, como os cookies. É possível verificar quantos cookies estão sendo utilizados por cada recurso ou servidor web durante a navegação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-12h28m46s244.jpg" alt="" width="840">
+</p>
+
+Esta imagem exemplifica a visualização técnica de um certificado digital e dos cookies em um navegador (como o Chrome). Através do ícone de cadeado e das ferramentas do desenvolvedor, o usuário pode confirmar a validade do certificado emitido para o domínio e gerenciar as informações de rastreamento (cookies) armazenadas pelo site.
+
+Com estes conceitos básicos de criptografia simétrica/assimétrica e certificação digital, conclui-se a base necessária para entender o funcionamento do SSL.      
+
+
 ### 🟩 Vídeo 08 - Protocolo SSL - Secure Socket Layer
 
 <video width="60%" controls>
@@ -967,7 +1118,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/ff236da7-4de8-46f2-b7f2-fc7a88914bf5?autoplay=1
 
 ### 🟩 Vídeo 09 - Operação do SSL e considerações finais
 
