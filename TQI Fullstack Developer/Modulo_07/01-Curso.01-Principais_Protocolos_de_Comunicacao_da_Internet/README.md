@@ -1403,6 +1403,113 @@ O WebSocket opera de forma encapsulada no HTTP, funcionando como um **upgrade** 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/d789f11e-f6ac-43fb-bcc6-fd119dcc5148?autoplay=1
 
+O WebSocket é uma tecnologia fundamental para a web moderna, permitindo uma comunicação fluida e instantânea entre clientes (navegadores) e servidores. Este resumo explora seu funcionamento, desde o aperto de mão inicial até as camadas de segurança e encerramento da conexão.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m15s988.jpg" alt="" width="840">
+</p>
+
+O WebSocket é uma API que opera sobre o protocolo HTTP, permitindo estabelecer uma conexão bidirecional entre cliente e servidor. Diferente do modelo tradicional de requisição, este formato permite que ambos os lados enviem e recebam dados simultaneamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m17s170.jpg" alt="" width="840">
+</p>
+
+O funcionamento do WebSocket é dividido em duas fases fundamentais: o *handshake* (aperto de mão) e o *data transfer* (transferência de dados). O protocolo utiliza a infraestrutura do HTTP para iniciar a comunicação antes de migrar para o modo bidirecional.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m18s430.jpg" alt="" width="840">
+</p>
+
+Diferente do *handshake* de três vias convencional do TCP, o WebSocket utiliza um processo simplificado de duas vias. O cliente envia um pacote `SYN` para solicitar a conexão e o servidor responde com um `SYN-ACK` para confirmar, tornando o processo mais ágil para múltiplas requisições.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m20s307.jpg" alt="" width="840">
+</p>
+
+Para iniciar o WebSocket, o cliente realiza uma chamada HTTP solicitando um `Upgrade`. O servidor, ao aceitar a transição, responde com o status `101 Switching Protocols`, indicando que a conexão passará a seguir as regras da API WebSocket.
+
+```http
+GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+Origin: http://example.com
+Sec-WebSocket-Protocol: chat, superchat
+Sec-WebSocket-Version: 13
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+x0o=
+Sec-WebSocket-Protocol: chat
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m29s913.jpg" alt="" width="840">
+</p>
+
+Após o *handshake*, inicia-se a fase de transferência de dados. Neste estágio, a conexão bidirecional permite a troca de informações com baixa latência, aproveitando elementos como *cookies* para otimizar a experiência.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m31s364.jpg" alt="" width="840">
+</p>
+
+O modelo de segurança utilizado é o *Origin-Based Security*, implementado pela maioria dos navegadores. Ele visa proteger a comunicação ao lidar com códigos não confiáveis que executam no ambiente do navegador (web browser).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m33s352.jpg" alt="" width="840">
+</p>
+
+O WebSocket é agnóstico ao conteúdo, mas possui restrições em campos específicos, como o `routeSelectionExpression`, que aceita exclusivamente o formato JSON. O campo `Sec-WebSocket-Protocol` é utilizado para definir o protocolo da camada de aplicação, como um chat.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m35s200.jpg" alt="" width="840">
+</p>
+
+A segurança baseada na origem implica que o CORS (*Cross-Origin Resource Sharing*) não é habilitado por padrão. Ao definir o campo `Origin`, o sistema restringe o tráfego apenas à fonte autorizada, impedindo redirecionamentos indesejados de URL.
+
+```http
+GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+Origin: http://example.com
+Sec-WebSocket-Protocol: chat, superchat
+Sec-WebSocket-Version: 13
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m37s529.jpg" alt="" width="840">
+</p>
+
+Dada a natureza persistente da conexão, é necessário um procedimento formal para fechá-la. O cliente inicia o processo enviando uma mensagem com uma sequência de encerramento para o servidor.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m39s439.jpg" alt="" width="840">
+</p>
+
+Após o envio da mensagem de encerramento, o servidor envia uma confirmação. A partir desse momento, o cliente não solicita nem recebe mais informações relacionadas aos recursos HTTP daquela sessão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m40s718.jpg" alt="" width="840">
+</p>
+
+Para garantir a integridade, os campos de controle iniciados com `Sec-` não podem ser modificados por scripts (JavaScript) ou HTML maliciosos. O protocolo utiliza a porta 443 e é tecnicamente independente do TCP, podendo operar sobre outros protocolos de transporte como o UDP.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-14h33m48s977.jpg" alt="" width="840">
+</p>
+
+Em suma, a filosofia do WebSocket baseia-se na segurança por origem e no aproveitamento da infraestrutura HTTP para endereçamento e enquadramento. Como é fundamentado em uma API, ele permite uma transição eficiente para comunicações de alta performance na internet.      
+
+
 ### 🟩 Vídeo 12 - Como ocorre a comunicação dentro da internet?
 
 <video width="60%" controls>
@@ -1410,7 +1517,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/86349652-7dea-4f69-bbd9-d94937656cd1?autoplay=1
 
 ## Parte 5 - Conclusão e considerações finais
 
