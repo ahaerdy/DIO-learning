@@ -1684,5 +1684,5 @@ Para que a comunicação entre cliente e servidor seja efetiva, é necessário d
 
 # Certificado: Principais Protocolos de Comunicação da Internet
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/M7VCSDLD.pdf
+- Certificado em pdf: [tCerificado-Principais_Protocolos_de_Comunicacao_da_Internet.pdft](000-Midia_e_Anexos/Cerificado-Principais_Protocolos_de_Comunicacao_da_Internet.pdf>)
