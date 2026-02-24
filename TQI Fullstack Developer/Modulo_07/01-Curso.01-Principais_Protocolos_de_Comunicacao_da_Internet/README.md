@@ -740,6 +740,100 @@ Em sistemas robustos, a internet emprega topologias de **caches distribuídos**.
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/a6040244-48ba-4539-bc00-02b93f7ec71f?autoplay=1
 
+Este guia explora as principais mudanças e melhorias introduzidas pelo HTTP 2.0 em relação à versão 1.1, focando em como essas atualizações otimizam a comunicação entre cliente e servidor, reduzem a latência e melhoram a experiência do usuário.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h04m40s037.jpg" alt="" width="840">
+</p>
+
+O ponto de partida para entender o HTTP/2.0 é revisitar as limitações críticas da versão 1.1. O principal vilão aqui é o **Head-of-line (HOL) blocking**, um fenômeno onde uma única requisição lenta ou pesada "tranca" a fila, impedindo que o cliente realize novas solicitações até receber a resposta anterior. Além disso, o HTTP/1.1 sofre com o overhead de abrir múltiplas conexões TCP paralelas para tentar mitigar essa lentidão, o que consome recursos desnecessários.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h04m45s910.jpg" alt="" width="840">
+</p>
+
+A grande virada do HTTP/2.0 é o estabelecimento de uma **única conexão persistente** entre o cliente e o servidor. Diferente do `keep-alive` do 1.1, que apenas mantinha o canal aberto para requisições sequenciais, o 2.0 introduz o conceito de **streams**. Dentro dessa conexão única, as requisições são enviadas de forma independente, permitindo que as respostas cheguem em ordens diferentes, sem que uma trave a outra.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h04m46s776.jpg" alt="" width="840">
+</p>
+
+Este modelo de comunicação baseia-se na **multiplexação de canais**. As requisições são segmentadas em frames e tratadas como streams distintos dentro do mesmo túnel TCP. Isso significa que o servidor pode intercalar pedaços de um arquivo de imagem com pedaços de um arquivo CSS, otimizando o uso da largura de banda e garantindo que recursos menores não fiquem presos atrás de objetos gigantescos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h04m48s527.jpg" alt="" width="840">
+</p>
+
+Um recurso extremamente elegante para o desenvolvedor é a **priorização de recursos via pesos**. Ao carregar uma página, o cliente pode informar ao servidor quais objetos são mais relevantes. Por exemplo, você pode configurar para que o menu de navegação (barra fixa) receba um peso maior e seja carregado antes do conteúdo do rodapé. Isso permite criar uma experiência de usuário (UX) muito mais fluida, entregando o que é visualmente crítico primeiro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h04m54s314.jpg" alt="" width="840">
+</p>
+
+Para entender a mudança técnica, observe o formato padrão de uma requisição no HTTP/1.1. Ele é baseado em texto (ASCII) e estruturado em três blocos principais:
+
+```http
+GET /index.html HTTP/1.1          <-- Request Line
+Host: www.exemplo.com.br          <-- Header Lines
+User-Agent: Mozilla/5.0
+...
+(Linha em branco)
+[Corpo da mensagem opcional]      <-- Entity Body
+```
+
+No 1.1, os cabeçalhos (Headers) são enviados integralmente em toda requisição, o que gera um overhead considerável, especialmente em aplicações modernas com muitos cookies e metadados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h04m57s194.jpg" alt="" width="840">
+</p>
+
+No HTTP/2.0, essa estrutura muda para uma **Camada de Frame Binário**. Em vez de texto puro, a mensagem é dividida em frames de **Header** e frames de **Data**. Cada frame recebe um ID de stream. Essa segmentação binária é o que permite a multiplexação e a compressão eficiente, tornando o protocolo muito mais "compreensível" e rápido para as máquinas processarem.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h05m02s748.jpg" alt="" width="840">
+</p>
+
+Além da segmentação, o 2.0 introduz a **compressão de cabeçalho (HPACK)**. Frequentemente, várias requisições para o mesmo servidor possuem cabeçalhos idênticos. O protocolo agora permite reutilizar esses dados: o servidor armazena o cabeçalho enviado anteriormente e o cliente só precisa referenciar o ID daquele Header para os próximos pacotes. É uma lógica similar à reutilização de código por funções; você não precisa reescrever (ou reenviar) tudo novamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h05m04s046.jpg" alt="" width="840">
+</p>
+
+Outra funcionalidade poderosa é o **Server Push**. Imagine que o cliente pede o `index.html`. O servidor, sabendo que para renderizar essa página o cliente precisará inevitavelmente de um `style.css` e de um `script.js`, antecipa-se e "empurra" esses arquivos para o cache do cliente antes mesmo de serem solicitados. Isso economiza o tempo de ida e volta (RTT) das requisições subsequentes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h05m06s388.jpg" alt="" width="840">
+</p>
+
+Apesar de ser uma vantagem incrível para a performance, o **Server Push** exige cautela. Ele não vem habilitado por padrão e requer configuração tanto no servidor quanto no suporte do cliente. Se o cliente não estiver preparado para receber esse "empurrão" de dados não solicitados, a comunicação pode falhar. O ganho aqui é a economia de processamento no cliente e de largura de banda que seria gasta com novos headers de requisição.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h05m11s037.jpg" alt="" width="840">
+</p>
+
+| Característica | HTTP/1.1 | HTTP/2.0 |
+| --- | --- | --- |
+| **Conexões** | Múltiplas conexões paralelas | Única conexão persistente (Streams) |
+| **Cabeçalhos** | Texto plano, sem compressão (Overhead) | Compressão e Reutilização (HPACK) |
+| **Envio de Dados** | Sequencial (sujeito a HOL Blocking) | Multiplexado (Independente) |
+| **Iniciativa** | Sempre do Cliente | Suporte a Server Push |
+| **Segurança** | TLS Opcional | HTTPS (TLS) como padrão de mercado |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h05m20s137.jpg" alt="" width="840">
+</p>
+
+Como o cliente sabe se deve usar o 2.0? A **negociação da versão** ocorre durante o *handshake* inicial. Ao estabelecer a conexão, o servidor informa as versões que suporta. Se o cliente também suportar o 2.0, eles fecham o acordo e passam a utilizar as novas funcionalidades. Caso contrário, ocorre o *fallback* para a versão 1.1, garantindo que a comunicação não seja interrompida, mesmo em navegadores antigos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h05m24s110.jpg" alt="" width="840">
+</p>
+
+Nem tudo são flores: o HTTP/2.0 também possui seus pontos de atenção. Se o **Server Push** for configurado de maneira equivocada, ele pode desperdiçar banda enviando recursos que o cliente já possui em cache. Ambientes com um mix de versões (1.1 e 2.0) podem sofrer latências inesperadas. Além disso, muitos **Load Balancers** legados ainda operam apenas com o 1.1, o que pode anular as vantagens do protocolo se houver um gargalo nesse intermediário.
+
+
 ### 🟩 Vídeo 06 - Servidores/Sistemas de aplicação
 
 <video width="60%" controls>
@@ -747,7 +841,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/a4c70668-7b15-43a9-a7cd-6e5825fe278c?autoplay=1
+
+
 
 ## Parte 3 - HTTPS - O que muda no protocolo?
 
