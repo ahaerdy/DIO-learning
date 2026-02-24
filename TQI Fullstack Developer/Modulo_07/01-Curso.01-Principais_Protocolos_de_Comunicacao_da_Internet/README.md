@@ -1619,11 +1619,70 @@ Em cenários com múltiplos clientes acessando o servidor simultaneamente, utili
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/018c4183-7c05-4a78-8b50-f9890512c25c?autoplay=1
 
+O fechamento do curso aborda a evolução dos protocolos de comunicação web, com foco em HTTP/2.0 e WebSocket, além de explorar arquiteturas de comunicação mais avançadas e a importância da comunicação síncrona versus assíncrona. O conteúdo também oferece uma vasta gama de recursos para aprofundamento.
 
+### Anotações
 
-##  Materiais de Apoio
+#### Referências e Documentações Oficiais
 
-# Certificado: 
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h55m59s970.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, são apresentadas as bases técnicas fundamentais para o aprimoramento no estudo de protocolos de comunicação. O foco inicial reside nas **RFCs (Request for Comments)**, que são os documentos oficiais que definem os padrões da internet. As referências listadas cobrem:
+
+* **HTTP/1.1 e HTTP/2.0:** Documentação essencial para compreender a evolução da comunicação web e as melhorias de performance entre as versões.
+* **WebSocket:** Referência específica para o protocolo de comunicação bidirecional.
+* **Repositório GitHub:** Um exemplo prático de implementação utilizando o `HttpClient` do Java, permitindo a exploração do código de forma aplicada.
+
+#### Bibliografia Acadêmica de Redes de Computadores
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h56m09s625.jpg" alt="" width="840">
+</p>
+
+Para uma compreensão teórica sólida sobre a **Camada de Aplicação**, onde operam o HTTP e o WebSocket, são recomendadas as duas obras mais conceituadas na literatura de redes:
+
+* **Kurose (Redes de Computadores e a Internet):** O Capítulo 2 é indicado para o estudo detalhado da camada de aplicação.
+* **Tanenbaum (Redes de Computadores):** O Capítulo 7 aborda a mesma temática sob a perspectiva deste autor clássico, oferecendo uma visão complementar sobre o funcionamento dos protocolos.
+
+#### Recursos Práticos para o Protocolo HTTP e Sockets
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h56m11s808.jpg" alt="" width="840">
+</p>
+
+Este bloco de referências direciona para conteúdos práticos e detalhados sobre o ecossistema HTTP e a base da comunicação em rede via Sockets. Os tópicos incluem:
+
+* **Métodos e Cookies:** Artigos que explicam o funcionamento dos verbos HTTP e o gerenciamento de estado através de cookies.
+* **Servidores Web:** Guias de instalação e configuração do servidor Apache em ambientes Windows e Linux.
+* **Sockets:** Indicação de conteúdo audiovisual para entender como a comunicação direta entre pontos da rede é estabelecida antes mesmo da abstração do protocolo HTTP.
+
+#### Ecossistema WebSocket e Tecnologias Correlatas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h56m16s442.jpg" alt="" width="840">
+</p>
+
+Aprofundando no protocolo **WebSocket**, as referências listadas exploram a sua infraestrutura, que muitas vezes aproveita a base do próprio HTTP para estabelecer conexões persistentes. O conteúdo engloba:
+
+* **API e Headers:** Detalhes sobre o suporte a subprotocolos e cabeçalhos de segurança (`Sec-WebSocket-Protocol`).
+* **WebDAV:** Extensões do HTTP que permitem a colaboração e edição de arquivos remotamente.
+* **Web Workers:** Documentação da MDN sobre o processamento em segundo plano no navegador, frequentemente utilizado em conjunto com WebSockets para manter a interface responsiva durante comunicações em tempo real.
+
+#### Formatos de Intercâmbio de Dados: XML e JSON
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-15h56m17s648.jpg" alt="" width="840">
+</p>
+
+Para que a comunicação entre cliente e servidor seja efetiva, é necessário definir como os dados são estruturados. As referências finais abordam os dois formatos mais utilizados:
+
+* **XML (Extensible Markup Language):** Documentação sobre suas aplicações e estrutura de marcação.
+* **JSON (JavaScript Object Notation):** Introdução ao formato leve de troca de dados, amplamente preferido em APIs modernas pela sua facilidade de leitura e parsing.
+* **Comparativo XML vs JSON:** Material focado em auxiliar na escolha do melhor formato dependendo do contexto do projeto, comparando verbosidade e eficiência.
+
+# Certificado: Principais Protocolos de Comunicação da Internet
 
 - Link na plataforma: 
 - Certificado em pdf:
