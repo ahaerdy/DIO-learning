@@ -843,6 +843,110 @@ Nem tudo são flores: o HTTP/2.0 também possui seus pontos de atenção. Se o *
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/a4c70668-7b15-43a9-a7cd-6e5825fe278c?autoplay=1
 
+Este guia explora os principais servidores HTTP do mercado (Apache, Nginx e XAMPP), suas características técnicas e como visualizar a comunicação entre cliente e servidor na prática utilizando a ferramenta Wireshark.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h34m58s559.jpg" alt="" width="840">
+</p>
+
+Introdução aos servidores e sistemas de aplicação no contexto da comunicação HTTP, destacando as atualizações do protocolo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m01s302.jpg" alt="" width="840">
+</p>
+
+Visão geral da comunicação entre cliente e servidor, apresentando os principais servidores HTTP e pacotes de mercado abordados nesta etapa: o Apache, o NGINX e o ambiente XAMPP.
++3
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m03s093.jpg" alt="" width="840">
+</p>
+
+Características históricas e fundamentais do servidor Apache. O projeto foi criado em 1995 e contribuiu ativamente para o surgimento da World Wide Web (WWW). Trata-se de uma solução de código aberto (Open Source) e gratuita , mantida globalmente pela comunidade através da fundação Apache Software Foundation.
++2
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m04s853.jpg" alt="" width="840">
+</p>
+
+Detalhamento das capacidades técnicas do Apache. O servidor possui arquitetura modular, dinâmica e carregável, permitindo o uso exclusivo dos recursos necessários. Ele suporta múltiplos modos de processamento de requisições (MPMs) e é altamente escalável, lidando facilmente com mais de 10.000 conexões simultâneas. Além disso, processa nativamente arquivos estáticos, indexação automática e negociação de conteúdo.
++1
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m06s670.jpg" alt="" width="840">
+</p>
+
+Recursos avançados de conectividade e segurança do Apache. O servidor suporta criptografia TLS/SSL através de bibliotecas como OpenSSL ou wolfSSL. É possível configurar servidores virtuais baseados em nome ou endereço IP. O sistema garante total compatibilidade com o protocolo IPv6 , suporta a versão 2.0 do HTTP e pode atuar operando proxy reverso e conexões WebSocket.
++4
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m08s878.jpg" alt="" width="840">
+</p>
+
+Apresentação do XAMPP, um pacote de desenvolvimento cruzado compatível com Linux, Windows e macOS. Ele agrupa diversas ferramentas e vem pré-configurado com o Apache Server , o banco de dados MariaDB e interpretadores de script para as linguagens PHP e Perl. O ambiente também disponibiliza diversos módulos prontos, como OpenSSL, phpMyAdmin, MediaWiki, Joomla e WordPress.
++4
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m14s132.jpg" alt="" width="840">
+</p>
+
+O foco de utilização do ambiente XAMPP. Por vir com uma série de parâmetros de segurança desabilitados para facilitar o uso, ele é indicado exclusivamente para cenários de teste e desenvolvimento. O ambiente deve rodar preferencialmente em redes isoladas, sem acesso direto à internet, garantindo a segurança das aplicações.
++2
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m16s986.jpg" alt="" width="840">
+</p>
+
+Introdução ao servidor NGINX , solução consolidada lançada em 2004. Ele possui múltiplas atuações, funcionando como um servidor web tradicional , proxy reverso , balanceador de carga (load balancer) , proxy de e-mail e oferecendo recursos robustos de cache HTTP.
++4
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m19s427.jpg" alt="" width="840">
+</p>
+
+Comparativo da fatia de mercado entre os principais servidores, baseando-se em dados da W3Techs. Apesar da idade e consolidação, o Apache domina uma margem ligeiramente maior, com 35% de adoção. O NGINX, com adoção crescente, segue muito próximo, figurando em 33% dos ambientes pesquisados.
++4
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m22s432.jpg" alt="" width="840">
+</p>
+
+Principais especificações técnicas do servidor NGINX. Ele também é altamente escalável, suportando mais de 10.000 conexões simultâneas. A ferramenta lida nativamente com arquivos estáticos e auto-indexing , suporta configurações nativas de proxy reverso e load balance , além de integrar TLS/SSL com SNI via OpenSSL e ter suporte completo ao HTTP 2.0.
++4
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m24s619.jpg" alt="" width="840">
+</p>
+
+Continuação das características do NGINX. A solução traz compatibilidade integrada ao IPv6 e suporta protocolos focados em performance, como FastCGI, SCGI e uWSGI com mecanismos de cache. A ferramenta fornece compatibilidade ao gRPC, a criação de servidores virtuais baseados tanto em IP quanto em nome, além de disponibilizar suporte nativo a WebSocket e recursos avançados para reescrita (rewriting) e redirecionamento de URLs.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m26s303.jpg" alt="" width="840">
+</p>
+
+Transição para a análise prática da comunicação de rede. A captura do tráfego entre cliente e servidor será realizada através do analisador de protocolos Wireshark, que é iniciado via linha de comando no sistema Linux utilizando privilégios de administrador:
+
+Bash
+sudo wireshark
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m32s937.jpg" alt="" width="840">
+</p>
+
+Tela inicial do Wireshark, exibindo a listagem de interfaces de rede ativas. É a partir desta listagem que se seleciona a interface desejada (no caso, a conexão sem fio wlp1s0) para dar início à escuta e captura dos pacotes em tempo real.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m43s529.jpg" alt="" width="840">
+</p>
+
+Visualização do tráfego de rede sendo analisado no Wireshark. Um filtro rápido de exibição foi aplicado utilizando a sintaxe tcp.port == 443, que permite visualizar exclusivamente a comunicação na porta padrão para tráfego seguro HTTP. Nota-se o estabelecimento das conexões via TCP e o envio dos pacotes TLS para o "handshake" criptográfico (como Client Hello e Server Hello).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-24-11h35m51s348.jpg" alt="" width="840">
+</p>
+
+Inspeção direta da carga útil (payload) dentro do Wireshark. Ao analisar a camada de aplicação, constata-se que o encapsulamento dos dados pela camada de transporte segura (TLS) esconde as informações transacionadas. Devido à comunicação estar criptografada, o tráfego HTTP torna-se ilegível no detalhamento do analisador, exibindo apenas cadeias de dados não decifráveis sem a chave correspondente.      
 
 
 ## Parte 3 - HTTPS - O que muda no protocolo?
@@ -854,7 +958,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/principais-protocolos-de-comunicacao-da-internet/learning/553ba1e1-67f6-451a-8b0d-c49a82edc8ea?autoplay=1
 
 ### 🟩 Vídeo 08 - Protocolo SSL - Secure Socket Layer
 
