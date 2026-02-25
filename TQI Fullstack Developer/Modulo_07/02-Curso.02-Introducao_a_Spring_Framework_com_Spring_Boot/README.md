@@ -519,8 +519,336 @@ Para aprofundar os conhecimentos sobre a diferença entre Spring Framework e Spr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/7f7f12d6-7eb4-4e06-b0a4-316b2e44c6c4?autoplay=1
 
+Este guia aborda a configuração inicial, a estrutura de arquivos e os conceitos fundamentais de Inversão de Controle (IoC) e Injeção de Dependências (DI) no ecossistema Spring Boot.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h33m45s974.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a tela inicial do **Spring Initializer**, ambiente utilizado para gerar a estrutura base de um projeto Spring Boot. Nela é possível observar as principais opções de configuração:
+
+* Tipo de projeto (Maven ou Gradle)
+* Linguagem (Java)
+* Versão do Spring Boot
+* Metadados do projeto (Group, Artifact, Name, Description)
+* Tipo de empacotamento (jar)
+* Versão do Java
+
+Esse é o ponto de partida para criação de aplicações Spring Boot, permitindo gerar automaticamente um projeto já estruturado conforme convenções do ecossistema.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h33m47s733.jpg" alt="" width="840">
+</p>
+
+Nesta imagem observa-se a configuração detalhada do projeto antes da geração:
+
+* Definição do **Group ID** (identificação organizacional)
+* Nome do artefato
+* Nome do projeto
+* Pacote raiz
+* Tipo de empacotamento como **jar**
+* Versão do Java
+* Área de seleção de dependências (starters)
+
+Esse momento é importante porque define a identidade estrutural do projeto Maven e o pacote base da aplicação — elemento fundamental para o funcionamento do mecanismo de varredura automática de componentes do Spring Boot.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h34m16s558.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o arquivo `pom.xml` aberto na IDE após a importação do projeto Maven. Observa-se:
+
+* A declaração do `spring-boot-starter-parent`
+* Informações como `groupId`, `artifactId`, `version`
+* Propriedade da versão do Java
+* Dependência `spring-boot-starter`
+
+Essa estrutura demonstra que o projeto herda configurações do parent do Spring Boot, o que simplifica o gerenciamento de dependências e versões.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h35m49s564.jpg" alt="" width="840">
+</p>
+
+Aqui é exibida a estrutura de diretórios do projeto:
+
+```
+src
+ └── main
+     ├── java
+     └── resources
+```
+
+Dentro de `java`, encontra-se o pacote raiz configurado no Initializer, e dentro dele a classe principal da aplicação.
+
+Essa organização segue a convenção padrão de projetos Maven.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h36m38s459.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe principal da aplicação, responsável por iniciar o contexto Spring Boot.
+
+```java
+@SpringBootApplication
+public class PrimeirosPassosApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(PrimeirosPassosApplication.class, args);
+    }
+}
+```
+
+A anotação `@SpringBootApplication` indica que esta classe é o ponto de partida da aplicação.
+O método `main` executa o contêiner Spring, inicializando o contexto e carregando os componentes.
+---
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h36m55s086.jpg" alt="" width="840">
+</p>
+
+Nesta imagem é apresentado o arquivo `application.properties`, localizado em:
+
+```
+src/main/resources
+```
+
+Esse arquivo centraliza todas as configurações da aplicação, como:
+
+* Porta do servidor
+* Configurações de banco de dados
+* Configurações de segurança
+* Parâmetros personalizados
+
+Ele é o ponto único de definição de propriedades da aplicação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h37m30s362.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a execução da aplicação pela IDE utilizando a opção **Run**.
+O console exibe o log de inicialização do Spring Boot, indicando:
+
+* Compilação
+* Carregamento de dependências
+* Inicialização do contexto
+
+Como não há comportamento adicional implementado, a aplicação inicia e finaliza imediatamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h37m37s879.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a criação de uma classe chamada `Calculadora`.
+
+```java
+public class Calculadora {
+
+    public int somar(int numero1, int numero2) {
+        return numero1 + numero2;
+    }
+}
+```
+
+Essa classe contém um método simples responsável por realizar a soma de dois números inteiros.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h37m40s017.jpg" alt="" width="840">
+</p>
+
+Aqui é demonstrada a instanciação manual da classe `Calculadora` utilizando `new`, seguida da execução do método:
+
+```java
+Calculadora calculadora = new Calculadora();
+System.out.println("Resultado é " + calculadora.somar(2, 7));
+```
+
+A execução imprime o valor 9 no console.
+Contudo, essa abordagem não utiliza o gerenciamento de objetos pelo contêiner Spring.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h41m24s107.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a criação de uma nova classe que implementa `CommandLineRunner`.
+
+```java
+public class MyApp implements CommandLineRunner {
+
+    @Override
+    public void run(String... args) throws Exception {
+
+    }
+}
+```
+
+A interface `CommandLineRunner` permite executar código automaticamente após o contexto Spring Boot ser inicializado.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h42m05s698.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, a classe é anotada como componente:
+
+```java
+@Component
+public class MyApp implements CommandLineRunner {
+```
+
+A anotação `@Component` indica que essa classe será gerenciada pelo contêiner Spring como um bean.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h42m49s938.jpg" alt="" width="840">
+</p>
+
+A classe `Calculadora` também passa a ser anotada como componente:
+
+```java
+@Component
+public class Calculadora {
+```
+
+Isso permite que o objeto seja criado e gerenciado automaticamente pelo Spring.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h42m52s802.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a tentativa de utilizar a dependência sem injeção adequada, o que gera erro de referência nula durante a execução.
+
+Esse erro ocorre porque o objeto não foi corretamente injetado pelo contêiner.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h42m54s830.jpg" alt="" width="840">
+</p>
+
+Para corrigir o problema, é utilizada a anotação `@Autowired`:
+
+```java
+@Autowired
+private Calculadora calculadora;
+```
+
+Com isso, o Spring injeta automaticamente a instância gerenciada da classe `Calculadora`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h43m51s402.jpg" alt="" width="840">
+</p>
+
+O método `run` passa a utilizar a dependência injetada:
+
+```java
+@Override
+public void run(String... args) throws Exception {
+    System.out.println("Resultado é " + calculadora.somar(2, 7));
+}
+```
+
+Agora não há mais uso do `new`, pois o objeto é fornecido pelo contêiner.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h44m38s695.jpg" alt="" width="840">
+</p>
+
+A imagem mostra novamente a execução da aplicação via IDE, iniciando o contexto Spring Boot.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h44m56s763.jpg" alt="" width="840">
+</p>
+
+O console exibe o log de inicialização, indicando que os componentes foram carregados corretamente.
+
+-<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h45m05s759.jpg" alt="" width="840">
+</p>
+
+Nesta execução, o método `run` é disparado automaticamente após a inicialização do contexto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h45m33s112.jpg" alt="" width="840">
+</p>
+
+O console imprime:
+
+```
+Resultado é 9
+```
+
+Indicando que a injeção de dependência funcionou corretamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h45m57s720.jpg" alt="" width="840">
+</p>
+
+A aplicação finaliza após executar o comando definido no `CommandLineRunner`, já que não se trata de uma aplicação web.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h47m07s889.jpg" alt="" width="840">
+</p>
+
+A imagem reforça o comportamento do ciclo de execução: inicialização do contêiner, execução do comando e encerramento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h47m34s364.jpg" alt="" width="840">
+</p>
+
+Destaca-se que componentes devem ser gerenciados pelo Spring, evitando instanciações manuais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h48m32s175.jpg" alt="" width="840">
+</p>
+
+A aplicação mantém o padrão de inversão de controle, onde o contêiner é responsável por fornecer dependências.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h50m23s695.jpg" alt="" width="840">
+</p>
+
+O log demonstra execução bem-sucedida sem erros de injeção.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h51m48s830.jpg" alt="" width="840">
+</p>
+
+A execução mostra claramente o ciclo completo da aplicação não-web utilizando `CommandLineRunner`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h52m09s045.jpg" alt="" width="840">
+</p>
+
+Reforça-se o uso correto da anotação `@Autowired` para resolução de dependências.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h53m55s500.jpg" alt="" width="840">
+</p>
+
+A aplicação segue o padrão recomendado de não utilizar `new` para componentes gerenciados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h54m12s249.jpg" alt="" width="840">
+</p>
+
+O ciclo de execução demonstra o funcionamento do contêiner Spring como responsável por criar e injetar objetos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h54m34s452.jpg" alt="" width="840">
+</p>
+
+Encerramento do exemplo prático, consolidando:
+
+* Uso do Spring Initializer
+* Estrutura padrão Maven
+* Classe principal com `@SpringBootApplication`
+* Criação de componentes
+* Injeção de dependência com `@Autowired`
+* Execução via `CommandLineRunner`
+
+A aplicação executa corretamente, imprime o resultado esperado e demonstra os conceitos fundamentais de inversão de controle e gerenciamento de beans pelo Spring Boot.
+      
 ### 🟩 Vídeo 06 - Beans versus Components
 
 <video width="60%" controls>
@@ -528,7 +856,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/581be567-8798-4738-948b-1721ca823ac3?autoplay=1
 
 ### 🟩 Vídeo 07 - Scopes - Singleton ou Prototype
 
