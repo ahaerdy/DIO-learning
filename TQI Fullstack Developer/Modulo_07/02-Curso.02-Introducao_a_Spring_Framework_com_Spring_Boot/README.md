@@ -343,14 +343,38 @@ Geralmente é utilizado para armazenar informações específicas daquela intera
 | **Session** | Enquanto durar a sessão do usuário (múltiplas requisições). |
 
 
--->
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m39s338.jpg" alt="" width="840">
 </p>
 
+A imagem aborda o conceito de **Application Scope** (Escopo de Aplicação) dentro do ecossistema Java, especificamente no framework Spring Boot.
 
-Este slide explica o escopo **Singleton**. É o escopo padrão do Spring. Quando um bean é definido com escopo singleton, o container Spring IoC cria uma **única instância** desse objeto para toda a aplicação. Todas as solicitações posteriores para esse bean retornarão a mesma instância, que é compartilhada globalmente. É ideal para objetos sem estado ou que podem ser compartilhados com segurança.
+Aqui está um resumo do que isso significa na prática:
+
+#### O que é o Application Scope?
+
+No Spring, o escopo de um *bean* (um objeto gerenciado pelo framework) define quanto tempo ele vive e quem pode acessá-lo. O **Application Scope** é um dos escopos web e funciona da seguinte forma:
+
+* **Ciclo de Vida Único:** O bean é criado uma única vez quando a aplicação inicia e é destruído apenas quando ela é desligada.
+* **Compartilhamento Global:** Como diz o texto na imagem ("Objetos compartilhados por toda a aplicação"), qualquer usuário ou requisição HTTP que acesse o sistema verá a **mesma instância** desse objeto.
+* **Contexto:** Ele é armazenado no `ServletContext`.
+
+#### Diferença Prática (Singleton vs. Application)
+
+Embora pareça com o escopo padrão do Spring (*Singleton*), há uma sutil diferença técnica:
+
+1. **Singleton:** É um por "Contexto do Spring" (ApplicationContext).
+2. **Application Scope:** É um por "Contexto de Servlet" (ServletContext). Em uma aplicação web padrão, eles costumam ser equivalentes.
+
+#### Exemplo de Uso
+
+Geralmente é usado para armazenar informações que precisam estar disponíveis para todos os usuários em qualquer parte do sistema, como:
+
+* Configurações globais carregadas do banco de dados.
+* Contadores de visitas globais.
+* Metadados da aplicação que não mudam entre sessões de usuários diferentes.
+
+-->
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m40s829.jpg" alt="" width="840">
