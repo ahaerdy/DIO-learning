@@ -1035,7 +1035,148 @@ public class Beans {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/13a57341-f406-463b-ac6c-037a08d8ee2f?autoplay=1
 
+Este guia explora as diferenças fundamentais entre os escopos Singleton e Prototype no Spring Framework, demonstrando como a escolha do escopo afeta o comportamento da aplicação e a integridade dos dados.
 
+#### Introdução ao Spring Framework
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-18h15m11s047.jpg" alt="" width="840">
+</p>
+
+Nesta aula, o instrutor Gleyson Sampaio apresenta os conceitos fundamentais de escopo de objetos dentro do ecossistema **Spring e Spring Boot Framework**. O foco principal é entender como o container do Spring gerencia a criação e a disponibilidade dos Beans para a aplicação.
+
+#### Singleton ou Prototype?
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-18h15m13s774.jpg" alt="" width="840">
+</p>
+
+Uma das perguntas mais relevantes ao projetar uma aplicação com Spring é determinar a quantidade de instâncias necessárias para um objeto. A escolha entre **Singleton** e **Prototype** define se a aplicação utilizará uma única instância compartilhada ou se novas instâncias serão criadas conforme a demanda.
+
+#### Conceitos de Escopo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-18h15m15s099.jpg" alt="" width="840">
+</p>
+
+O planejamento da aula foca em três pilares essenciais para o gerenciamento de objetos:
+
+* **Conceito de Scope:** Definição da estratégia de ciclo de vida do Bean.
+* **Configurando objeto Singleton:** Onde um único objeto é utilizado para toda a aplicação.
+* **Configurando objetos Prototype:** Onde cada solicitação ou injeção de dependência resulta em uma instância exclusiva.
+
+#### Implementação da Classe Principal
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-18h15m20s559.jpg" alt="" width="840">
+</p>
+
+A classe principal da aplicação utiliza o `CommandLineRunner` para executar a lógica de negócio logo após a inicialização. No exemplo, o `SistemaMensagem` é injetado para realizar operações de cadastro e boas-vindas.
+
+```java
+package dio.springboot;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class SpringPrimeirosPassosApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringPrimeirosPassosApplication.class, args);
+    }
+
+    @Bean
+    public CommandLineRunner run(SistemaMensagem sistema) throws Exception {
+        return args -> {
+            sistema.enviarConfirmacaoCadastro();
+            sistema.enviarMensagemBoasVindas();
+        };
+    }
+}
+```
+
+#### O Problema do Escopo Singleton
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-18h15m27s167.jpg" alt="" width="840">
+</p>
+
+No componente `SistemaMensagem`, são injetados dois objetos do tipo `Remetente`: `noreply` e `financeiro`. Quando o escopo padrão (Singleton) é utilizado, ambos os atributos podem acabar apontando para a mesma instância física na memória. Isso causa efeitos colaterais: ao alterar o e-mail no método de boas-vindas, a alteração reflete em todas as outras referências do objeto na aplicação.
+
+```java
+@Component
+public class SistemaMensagem {
+    @Autowired
+    private Remetente noreply;
+    
+    @Autowired
+    private Remetente financeiro;
+
+    public void enviarConfirmacaoCadastro(){
+        System.out.println(noreply);
+        System.out.println("Seu cadastro foi aprovado");
+    }
+
+    public void enviarMensagemBoasVindas(){
+        financeiro.setEmail("tech@dio.com.br");
+        System.out.println(financeiro);
+        System.out.println("Bem-vindo à Tech Elite");
+    }
+}
+```
+
+#### Configuração de Beans e Escopo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-18h15m31s325.jpg" alt="" width="840">
+</p>
+
+Para resolver o conflito de instâncias, utiliza-se a classe de configuração onde o Bean é definido. Inicialmente, o objeto é criado de forma global. Para transformar esse comportamento em **Prototype**, deve-se adicionar a anotação `@Scope("prototype")`, garantindo que o Spring crie uma nova instância de `Remetente` para cada ponto de injeção.
+
+```java
+package dio.springboot.app;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+@Configuration
+public class Beans {
+
+    @Bean
+    @Scope("prototype")
+    public Remetente remetente() {
+        System.out.println("CRIANDO UM OBJETO REMETENTE");
+        Remetente remetente = new Remetente();
+        remetente.setEmail("noreply@dio.com.br");
+        remetente.setNome("Digital Innovation One");
+        return remetente;
+    }
+}
+```
+
+#### Resultado da Execução no Console
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-18h15m34s754.jpg" alt="" width="840">
+</p>
+
+O log de execução demonstra o comportamento do Spring. Ao definir o escopo como Prototype, observa-se que a mensagem "CRIANDO UM OBJETO REMETENTE" aparece múltiplas vezes. Isso confirma que cada serviço recebeu sua própria instância, permitindo que o e-mail do "financeiro" fosse alterado para `tech@dio.com.br` sem afetar o e-mail do remetente de "confirmação de cadastro".
+
+*Saída do Console:*
+
+```text
+CRIANDO UM OBJETO REMETENTE
+CRIANDO UM OBJETO REMETENTE
+Remetente{nome='Digital Innovation One', email='noreply@dio.com.br'}
+Seu cadastro foi aprovado
+Remetente{nome='Digital Innovation One', email='tech@dio.com.br'}
+Bem-vindo à Tech Elite
+
+```
 
 ### 🟩 Vídeo 08 - Properties Value
 
