@@ -374,12 +374,29 @@ Geralmente é usado para armazenar informações que precisam estar disponíveis
 * Contadores de visitas globais.
 * Metadados da aplicação que não mudam entre sessões de usuários diferentes.
 
--->
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m40s829.jpg" alt="" width="840">
 </p>
 
+A imagem apresenta o conceito da anotação **`@Autowired`**, que é o mecanismo central do Spring Framework para realizar a **Injeção de Dependência (DI)** de forma automática.
+
+Em vez de você instanciar manualmente as classes (usando `new`), o Spring gerencia o ciclo de vida dos objetos (Beans) e "entrega" as dependências necessárias para cada componente.
+
+A imagem detalha os três modos principais como essa resolução pode ocorrer:
+
+#### Modos de Injeção de Dependência
+
+| Modo | Descrição |
+| --- | --- |
+| **byName** | O Spring procura um Bean cujo **ID/Nome** coincida exatamente com o nome da variável ou do método *setter*. |
+| **byType** | É o comportamento padrão mais comum. O Spring procura um Bean que seja do **mesmo tipo (classe ou interface)** da variável declarada. |
+| **byConstructor** | A dependência é injetada diretamente através do **construtor** da classe. É a prática mais recomendada atualmente, pois garante que o objeto seja criado com todas as dependências obrigatórias. |
+
+#### Por que isso é importante?
+
+O uso do `@Autowired` promove o **desacoplamento** do código. Seguindo a sua própria filosofia de "Engenharia de Mim Mesmo" (basear-se em padrões factuais), o uso dessa anotação automatiza a conexão entre componentes baseando-se em padrões de estrutura e tipo, eliminando a necessidade de configurações manuais extensas e reduzindo erros de montagem do sistema.
+
+-->
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m46s162.jpg" alt="" width="840">
