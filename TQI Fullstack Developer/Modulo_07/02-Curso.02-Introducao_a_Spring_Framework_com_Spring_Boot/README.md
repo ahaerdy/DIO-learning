@@ -149,7 +149,7 @@ A imagem introduz formalmente o padrão de **Injeção de Dependências**. Este 
 
 A imagem ilustra o conceito de **Injeção de Dependências (DI)**, um padrão fundamental no ecossistema Spring Boot para promover o baixo acoplamento.
 
-Aqui está o resumo do fluxo apresentado:
+Segue o resumo do fluxo apresentado:
 
 #### 1. O Problema: Acoplamento
 
@@ -258,8 +258,7 @@ Estão disponíveis apenas em aplicações que utilizam o contexto Web (como Spr
 
 A imagem refere-se ao escopo **Singleton**, que é o comportamento padrão (*default*) para os objetos (Beans) gerenciados pelo Spring Framework.
 
-Aqui está uma explicação resumida do conceito:
-
+Segue uma explicação resumida do conceito:
 
 #### O que é o Singleton no Spring?
 
@@ -316,7 +315,7 @@ public class MeuComponente {
 
 A imagem refere-se ao **Request Scope** (Escopo de Requisição), um dos tipos de ciclos de vida de um bean dentro do ecossistema Spring Framework.
 
-Aqui está o resumo técnico do que isso significa no dia a dia do desenvolvimento:
+Segue o resumo técnico do que isso significa no dia a dia do desenvolvimento:
 
 #### O que é o Escopo de Request?
 
@@ -349,7 +348,7 @@ Geralmente é utilizado para armazenar informações específicas daquela intera
 
 A imagem aborda o conceito de **Application Scope** (Escopo de Aplicação) dentro do ecossistema Java, especificamente no framework Spring Boot.
 
-Aqui está um resumo do que isso significa na prática:
+Segue um resumo do que isso significa na prática:
 
 #### O que é o Application Scope?
 
@@ -409,7 +408,9 @@ O uso do `@Autowired` promove o **desacoplamento** do código. Seguindo a sua pr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/18d9fa8b-ea50-4922-a848-182dbbede06f?autoplay=1
+
+
 
 ### 🟩 Vídeo 05 - Primeiros passos
 
