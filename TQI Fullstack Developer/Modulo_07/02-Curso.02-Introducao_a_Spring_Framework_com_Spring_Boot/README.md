@@ -101,26 +101,11 @@ O **Spring Framework** é definido como um framework *open source* para a plataf
 
 A imagem ilustra a arquitetura modular do **Spring Framework Runtime**, dividida em camadas principais:
 
-* 
-**Core Container**: Contendo os módulos Beans, Core, Context e Expression Language, que formam a base do framework.
-
-
-* 
-**Data Access/Integration**: Módulos para lidar com persistência e transações, como JDBC, ORM, OXM, JMS e Transactions.
-
-
-* 
-**Web**: Suporte para aplicações web através de Servlet, Portlet e integração com Struts.
-
-
-* 
-**AOP, Aspects e Instrumentation**: Camadas para Programação Orientada a Aspectos e instrumentação.
-
-
-* 
-**Test**: Módulo dedicado para testes unitários e de integração.
-
-
+* **Core Container**: Contendo os módulos Beans, Core, Context e Expression Language, que formam a base do framework.
+* **Data Access/Integration**: Módulos para lidar com persistência e transações, como JDBC, ORM, OXM, JMS e Transactions.
+* **Web**: Suporte para aplicações web através de Servlet, Portlet e integração com Struts.
+* **AOP, Aspects e Instrumentation**: Camadas para Programação Orientada a Aspectos e instrumentação.
+* **Test**: Módulo dedicado para testes unitários e de integração.
 
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h22m51s859.jpg" alt="" width="840">
