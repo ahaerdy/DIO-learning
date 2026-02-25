@@ -137,15 +137,14 @@ Em um cenário **sem Inversão de Controle (IoC)**, a própria aplicação é re
 
 No cenário **com Inversão de Controle (IoC)**, a aplicação delega a responsabilidade de criação para um **Container**. O container assume a tarefa de criar as instâncias necessárias ("Deixa comigo"), permitindo que a aplicação apenas utilize os objetos, o que resulta em um código mais coeso e menos acoplado.
 
----> ...
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m10s603.jpg" alt="" width="840">
 </p>
 
-
 A imagem introduz formalmente o padrão de **Injeção de Dependências**. Este é o mecanismo prático que viabiliza a Inversão de Controle. O slide define a injeção de dependências como um padrão de desenvolvimento cuja finalidade é manter baixo o nível de acoplamento entre os módulos de um sistema. Em vez de um objeto criar suas dependências internamente, as dependências são "injetadas" nele por um agente externo (o container Spring), promovendo maior coesão e reuso.
 
+
+---> ...
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m14s852.jpg" alt="" width="840">
