@@ -173,14 +173,25 @@ As seringas simbolizam o ato de injetar. O Spring olha para a sua classe, vê qu
 * **Container (Spring):** Fabrica o objeto real e o entrega pronto para uso.
 * **Resultado:** Código fácil de testar (você pode injetar um objeto "falso" ou *mock* nos testes) e de manter.
 
-
----> ...
-
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m18s271.jpg" alt="" width="840">
 </p>
 
+A imagem define o conceito fundamental de **Beans** dentro do ecossistema Java, especificamente no framework **Spring**.
+
+Em termos simples, um **Spring Bean** é qualquer objeto que o Spring gerencia para você. Em vez de você criar o objeto manualmente usando `new Objeto()`, você deixa essa tarefa para o Spring.
+
+Aqui estão os três pilares mencionados na imagem explicados no contexto do Spring Boot:
+
+* **Instanciado (Criado):** O Spring Container (IoC Container) decide quando criar o objeto.
+* **Montado:** O Spring resolve as dependências desse objeto. Se o seu Bean "A" precisa do Bean "B" para funcionar, o Spring injeta o "B" dentro do "A" automaticamente.
+* **Gerenciado:** O Spring cuida do ciclo de vida do objeto (desde a sua criação até o momento em que ele é destruído).
+
+#### A Inversão de Controle (IoC)
+
+A imagem menciona que isso ocorre através do princípio da **Inversão de Controle**. No desenvolvimento tradicional, você controla o fluxo e a criação dos objetos. No Spring, você "inverte" esse controle: você apenas anota sua classe (com `@Component`, `@Service`, ou `@Bean`) e o framework assume a responsabilidade de gerenciar essas instâncias.
+
+---> ...
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m19s761.jpg" alt="" width="840">
