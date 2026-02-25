@@ -108,7 +108,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ### Módulo 7: Spring Framework
 
 - [ ] Curso: [Principais Protocolos de Comunicação da Internet](Modulo_07/01-Curso.01-Principais_Protocolos_de_Comunicacao_da_Internet)
-- [ ] Curso: Introdução a Spring Framework com Spring Boot
+- [ ] Curso: [Introdução a Spring Framework com Spring Boot](Modulo_07/02-Curso.02-Introducao_a_Spring_Framework_com_Spring_Boot)
 - [ ] Curso: Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework
 - [ ] Curso: Adicionando Segurança a uma API REST com Spring Security
 - [ ] Desafio: Desenvolvimento de Testes Unitários para Validar uma API REST de Gerenciamento Estoques de Cerveja 
