@@ -252,14 +252,30 @@ Estão disponíveis apenas em aplicações que utilizam o contexto Web (como Spr
 | **Request** | Um por requisição HTTP | Dados de formulário, logs de request |
 | **Session** | Um por usuário logado | Carrinho de compras, perfil de usuário |
 
--->
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m33s762.jpg" alt="" width="840">
 </p>
 
-O slide apresenta o conceito de **Beans** no contexto do Spring. Um bean é um objeto que é instanciado, montado e gerenciado pelo container Spring IoC. Em outras palavras, qualquer objeto POJO (Plain Old Java Object) que tem seu ciclo de vida controlado pelo container é considerado um bean. Isso é uma consequência direta da aplicação do princípio da Inversão de Controle, onde o container assume a responsabilidade de criar e gerenciar esses objetos.
+A imagem refere-se ao escopo **Singleton**, que é o comportamento padrão (*default*) para os objetos (Beans) gerenciados pelo Spring Framework.
 
+Aqui está uma explicação resumida do conceito:
+
+
+#### O que é o Singleton no Spring?
+
+No Spring Boot, quando você define uma classe como um Componente (usando `@Component`, `@Service`, `@Repository`, etc.), o **Contêiner IoC** (Inversão de Controle) cria e mantém **apenas uma única instância** desse objeto para toda a aplicação.
+
+#### Como funciona na prática:
+
+* **Instância Única:** Independentemente de quantas vezes você injete esse Bean (via `@Autowired`) em diferentes partes do código, o Spring fornecerá sempre a mesma referência de memória.
+* **Eficiência:** Isso economiza recursos (memória e CPU), pois evita a criação repetitiva de objetos que não mantêm estado específico de um usuário (como serviços de lógica de negócio ou repositórios de banco de dados).
+* **Compartilhamento:** Por ser uma instância única, é importante que esses objetos sejam *stateless* (sem estado), para evitar problemas de concorrência quando múltiplos usuários acessarem o sistema simultaneamente.
+
+#### Diferença Importante
+
+Vale lembrar que o Singleton do Spring é ligeiramente diferente do **Design Pattern Singleton** clássico (do GoF). Enquanto o padrão clássico garante uma instância por *Classloader*, o Singleton do Spring garante uma instância **por contêiner (ApplicationContext)**.
+
+-->
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m34s765.jpg" alt="" width="840">
