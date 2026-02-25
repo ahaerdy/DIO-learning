@@ -220,14 +220,39 @@ O ícone da seringa simboliza a **Injeção**.
 * O Spring identifica que seu "App" precisa de uma "Interface".
 * Ele vai até o seu catálogo de objetos, instancia o "Real Object" e o **injeta** automaticamente onde ele é solicitado (geralmente através da anotação `@Autowired`).
 
-
----> ...
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m28s806.jpg" alt="" width="840">
 </p>
 
+A imagem apresenta os **Bean Scopes** (escopos de beans) no ecossistema **Spring Framework**. No Spring, um "bean" é um objeto que é instanciado, montado e gerenciado pelo container do Spring IoC (Inversão de Controle).
 
+O escopo define o **tempo de vida** e a **visibilidade** de uma instância de bean. A imagem divide os escopos em duas categorias principais:
+
+#### 1. Escopos Padrão (Core)
+
+Estão disponíveis em qualquer aplicação Spring (console, desktop ou web):
+
+* **Singleton (Padrão):** O Spring cria apenas **uma única instância** do bean para todo o container. Sempre que o bean for solicitado, a mesma instância será retornada. É o ideal para serviços sem estado (*stateless*).
+* **Prototype:** Uma **nova instância** é criada toda vez que o bean é solicitado ao container. Útil para objetos que mantêm estado específico de uma operação.
+
+#### 2. Escopos Web (HTTP)
+
+Estão disponíveis apenas em aplicações que utilizam o contexto Web (como Spring MVC ou Spring Boot Web):
+
+* **Request:** Uma nova instância é criada para cada **requisição HTTP**. O bean "morre" assim que a resposta é enviada ao cliente.
+* **Session:** Uma instância é criada para cada **sessão de usuário** (Session ID). O objeto persiste enquanto a sessão do navegador estiver ativa (ex: um carrinho de compras).
+* **Global (Application):** O bean é compartilhado por todas as requisições e sessões dentro do ciclo de vida do `ServletContext`. É similar ao Singleton, mas focado no contexto da aplicação web.
+
+#### Resumo Comparativo
+
+| Escopo | Ciclo de Vida | Uso Comum |
+| --- | --- | --- |
+| **Singleton** | Um por container | Services, Repositories |
+| **Prototype** | Novo a cada chamada | Objetos com estado (stateful) |
+| **Request** | Um por requisição HTTP | Dados de formulário, logs de request |
+| **Session** | Um por usuário logado | Carrinho de compras, perfil de usuário |
+
+-->
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m33s762.jpg" alt="" width="840">
