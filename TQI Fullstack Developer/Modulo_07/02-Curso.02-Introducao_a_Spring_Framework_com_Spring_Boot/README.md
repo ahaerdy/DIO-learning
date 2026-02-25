@@ -308,7 +308,6 @@ public class MeuComponente {
     // Cada vez que injetado, será um objeto novo na memória
 }
 ```
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m36s130.jpg" alt="" width="840">
 </p>
@@ -340,7 +339,6 @@ Geralmente é utilizado para armazenar informações específicas daquela intera
 | **Singleton** | Durante toda a execução da aplicação (padrão). |
 | **Request** | Apenas enquanto a requisição HTTP durar. |
 | **Session** | Enquanto durar a sessão do usuário (múltiplas requisições). |
-
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m39s338.jpg" alt="" width="840">
@@ -410,6 +408,108 @@ O uso do `@Autowired` promove o **desacoplamento** do código. Seguindo a sua pr
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/18d9fa8b-ea50-4922-a848-182dbbede06f?autoplay=1
 
+Este documento explora o ecossistema do Spring Boot, um framework revolucionário para o desenvolvimento Java. O foco principal é entender como ele automatiza configurações complexas, permitindo que o desenvolvedor se concentre na lógica de negócio em vez de perder tempo com "boilerplate" (código repetitivo) e gerenciamento manual de dependências.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h05m35s358.jpg" alt="" width="840">
+</p>
+
+Nesta aula introdutória, exploramos o ecossistema e as vantagens do **Spring Boot Framework**. O roteiro de aprendizado abrange desde a definição fundamental do que é o Spring Boot até detalhes técnicos sobre configurações manuais, o conceito de *Starters* e as configurações de fábrica. O objetivo principal é compreender como essa ferramenta otimiza a jornada do desenvolvedor Java.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h05m37s969.jpg" alt="" width="840">
+</p>
+
+É fundamental distinguir os papéis do Spring Framework e do Spring Boot. Enquanto o **Spring Framework** é centrado no padrão de injeção de dependências e inversão de controle, o **Spring Boot** foca na **configuração automática**. Ele atua como uma camada que promove produtividade ao adotar convenções de estruturação de projetos, evitando que o desenvolvedor precise lidar com configurações exaustivas para iniciar uma aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h05m41s026.jpg" alt="" width="840">
+</p>
+
+Antes do surgimento do Spring Boot, o desenvolvimento enfrentava desafios significativos na configuração de projetos:
+
+* **Dependência individual e manual**: Cada biblioteca precisava ser adicionada uma a uma.
+* **Verbosidade**: Arquivos de configuração (como o `pom.xml`) tornavam-se extensos e difíceis de ler.
+* **Incompatibilidade de versões**: Havia um risco constante de conflitos entre versões de bibliotecas dependentes.
+* **Complexidade de gestão**: Manter e replicar configurações homologadas entre diferentes projetos gerava um esforço repetitivo e desgastante.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h05m46s019.jpg" alt="" width="840">
+</p>
+
+A diferença de abordagem entre Spring e Spring Boot pode ser ilustrada pela analogia da preparação de um suco. No Spring tradicional, o desenvolvedor precisa reunir todos os componentes e realizar as configurações manuais para obter o resultado final. Já o Spring Boot fornece todas as ferramentas e pré-configurações necessárias de imediato, permitindo que o foco total seja direcionado apenas às regras de negócio da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h05m52s447.jpg" alt="" width="840">
+</p>
+
+A filosofia do Spring Boot baseia-se em uma pergunta simples: se a maioria das configurações de início de projeto são idênticas, por que não iniciá-las já definidas?. O Spring Boot não substitui o Spring Framework na injeção de dependência, mas sim o complementa ao oferecer estruturas predefinidas que aumentam drasticamente a produtividade.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h05m55s250.jpg" alt="" width="840">
+</p>
+
+Os **Starters** são descritores de dependência que encapsulam diversos módulos em uma única instrução. Na forma tradicional, seria necessário listar manualmente o núcleo do Spring, o Hibernate, o driver do banco e bibliotecas auxiliares (como Joda-Time). Com o Spring Boot, basta declarar o starter correspondente ao contexto desejado, reduzindo drasticamente a quantidade de código no descritor do projeto.
+
+```xml
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.3.4.RELEASE</version>
+    <relativePath/> </parent>
+
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql.connector.version}</version>
+    </dependency>
+</dependencies>
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h06m04s080.jpg" alt="" width="840">
+</p>
+
+O uso de Starters traz benefícios diretos para o desenvolvimento:
+
+* **Coesão e Configuração simples**: Uma única dependência gerencia subdependências relacionadas.
+* **Versões compatíveis**: O Spring Boot homologa as versões de todas as bibliotecas dependentes para garantir que funcionem juntas sem conflitos.
+* **Otimização do tempo e Foco no negócio**: Reduz-se o tempo gasto com infraestrutura, permitindo dedicação total à implementação dos requisitos do usuário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h06m12s920.jpg" alt="" width="840">
+</p>
+
+Existem diversos starters para diferentes propósitos:
+
+* **data-jpa**: Para integração com bancos de dados via JPA e Hibernate.
+* **data-mongodb**: Destinado à interação com bancos de dados NoSQL MongoDB.
+* **web**: Inclui o container Tomcat para a criação de aplicações RESTful.
+* **web-services**: Utilizado para serviços baseados na arquitetura SOAP.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h06m15s622.jpg" alt="" width="840">
+</p>
+
+Outros starters recorrentes na comunidade incluem:
+
+* **batch**: Para implementação de jobs e processamento em lote.
+* **test**: Disponibiliza recursos fundamentais para testes unitários, como o JUnit.
+* **openfeign**: Um cliente HTTP baseado em interfaces, altamente produtivo para consumo de APIs externas.
+* **actuator**: Ferramenta essencial para o gerenciamento e monitoramento da saúde da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-10h06m19s505.jpg" alt="" width="840">
+</p>
+
+Para aprofundar os conhecimentos sobre a diferença entre Spring Framework e Spring Boot, bem como as arquiteturas SOAP e REST, recomenda-se a consulta aos materiais complementares e referências da comunidade.      
 
 
 ### 🟩 Vídeo 05 - Primeiros passos
