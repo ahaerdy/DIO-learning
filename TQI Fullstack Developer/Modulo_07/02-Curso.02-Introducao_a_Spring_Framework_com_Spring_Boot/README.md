@@ -310,14 +310,40 @@ public class MeuComponente {
 }
 ```
 
--->
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m36s130.jpg" alt="" width="840">
 </p>
 
+A imagem refere-se ao **Request Scope** (Escopo de Requisição), um dos tipos de ciclos de vida de um bean dentro do ecossistema Spring Framework.
 
-A imagem introduz o tópico "Scopes" (Escopos). O escopo de um bean define o ciclo de vida e a visibilidade de uma instância dentro do container Spring. Dependendo da configuração, o container pode criar uma única instância para toda a aplicação ou uma nova instância a cada solicitação. Este slide serve como um índice para os tipos de escopo que serão detalhados em seguida.
+Aqui está o resumo técnico do que isso significa no dia a dia do desenvolvimento:
+
+#### O que é o Escopo de Request?
+
+No Spring, por padrão, os beans são `Singletons` (uma única instância para toda a aplicação). No entanto, ao definir um bean como `@RequestScope`, o comportamento muda para o que está descrito na imagem:
+
+* **Instanciação por Demanda:** Para cada nova requisição HTTP que chega ao servidor, o Spring Container cria uma instância específica desse objeto.
+* **Isolamento:** Duas requisições simultâneas terão objetos diferentes, garantindo que os dados de uma não "vazem" para a outra.
+* **Ciclo de Vida Curto:** Assim que a resposta HTTP é enviada de volta ao cliente e o processamento termina, o bean é descartado e se torna elegível para o *Garbage Collector*.
+
+#### Exemplo de Uso
+
+Geralmente é utilizado para armazenar informações específicas daquela interação atual, como:
+
+1. **Dados de autenticação** do usuário logado naquela requisição.
+2. **Logs de auditoria** que precisam rastrear o caminho de uma chamada específica.
+3. **Carrinhos de compra** em fluxos onde o estado não deve persistir além daquela ação.
+
+#### Comparação Rápida
+
+| Escopo | Duração |
+| --- | --- |
+| **Singleton** | Durante toda a execução da aplicação (padrão). |
+| **Request** | Apenas enquanto a requisição HTTP durar. |
+| **Session** | Enquanto durar a sessão do usuário (múltiplas requisições). |
+
+
+-->
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m39s338.jpg" alt="" width="840">
