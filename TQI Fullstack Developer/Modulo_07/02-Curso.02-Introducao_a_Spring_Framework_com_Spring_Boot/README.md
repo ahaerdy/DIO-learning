@@ -396,38 +396,9 @@ A imagem detalha os três modos principais como essa resolução pode ocorrer:
 
 O uso do `@Autowired` promove o **desacoplamento** do código. Seguindo a sua própria filosofia de "Engenharia de Mim Mesmo" (basear-se em padrões factuais), o uso dessa anotação automatiza a conexão entre componentes baseando-se em padrões de estrutura e tipo, eliminando a necessidade de configurações manuais extensas e reduzindo erros de montagem do sistema.
 
--->
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m46s162.jpg" alt="" width="840">
 </p>
-
-O slide detalha o escopo **Prototype**. Diferentemente do singleton, o escopo prototype faz com que o container Spring crie uma **nova instância** do bean toda vez que ele for solicitado pela aplicação. Esse escopo é apropriado para beans que mantêm estado e não podem ser compartilhados entre diferentes requisições ou operações.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m33s762.jpg" alt="" width="840">
-</p>
-
-Este slide explica o escopo **Request**. Válido apenas em aplicações web, este escopo faz com que uma nova instância de bean seja criada para cada requisição HTTP. O objeto existe e é único durante o processamento de uma única requisição, sendo descartado ao final dela. É útil para armazenar dados que são específicos de uma interação do usuário.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m34s765.jpg" alt="" width="840">
-</p>
-
-
-O slide aborda os escopos de nível de aplicação web, especificamente o **Session** e o **Application**. O escopo **Session** (embora não explicitamente nomeado, é inferido pelo contexto HTTP) vincula o ciclo de vida do bean ao de uma sessão HTTP do usuário. Já o escopo **Application** (ou Global) cria um bean que vive durante todo o ciclo de vida do contexto da aplicação, sendo compartilhado por todos os usuários e sessões, similar ao singleton, mas ligado ao `ServletContext`.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m36s130.jpg" alt="" width="840">
-</p>
-
-
-A imagem apresenta a anotação `@Autowired`. Esta é uma das principais anotações do Spring e serve como uma marcação para indicar ao container onde uma injeção automática de dependência deve ocorrer. O slide lista as três principais estratégias que o Spring pode usar para resolver qual bean injetar:
-- **byName**: Busca um bean cujo nome corresponda ao nome da propriedade (geralmente o nome do método setter).
-- **byType**: Considera o tipo da classe da propriedade para encontrar um bean compatível.
-- **byConstructor**: Usa o construtor da classe para injetar as dependências necessárias.
-
-
 
 ## Parte 2 - Projeto Springboot
 
