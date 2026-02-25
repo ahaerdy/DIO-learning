@@ -771,7 +771,260 @@ Aferindo mais uma vez a inicialização, confirmamos nos logs do sistema console
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/581be567-8798-4738-948b-1721ca823ac3?autoplay=1
 
+Este resumo explora as nuances entre as anotações @Bean e @Component no ecossistema Spring Boot, detalhando quando utilizar cada uma para otimizar a Inversão de Controle (IoC) e a Injeção de Dependência (DI).
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h04m06s901.jpg" alt="" width="840">
+</p>
+
+Introdução ao tema da aula, focando na distinção fundamental entre Beans e Components no contexto do Spring Boot. O objetivo inicial é entender quando utilizar a anotação `@Bean` e quando utilizar `@Component`. Ambas têm a finalidade de gerar objetos que serão gerenciados pelo container do Spring, aplicando os conceitos fundamentais de Inversão de Controle (IoC) e Injeção de Dependências (DI).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h04m22s671.jpg" alt="" width="840">
+</p>
+
+Apresentação da classe de domínio `ViaCepResponse`, que representa a estrutura de dados esperada como retorno da requisição web para a API do ViaCEP. Esta classe contém os atributos básicos necessários (`cep`, `logradouro` e `localidade`) para armazenar os dados de CEP obtidos.
+
+```java
+package dio.springboot.app;
+
+public class ViaCepResponse {
+    private String cep;
+    private String logradouro;
+    private String localidade;
+
+    public String getCep() { return cep; }
+    public void setCep(String cep) { this.cep = cep; }
+    public String getLogradouro() { return logradouro; }
+    public void setLogradouro(String logradouro) { this.logradouro = logradouro; }
+    public String getLocalidade() { return localidade; }
+    public void setLocalidade(String localidade) { this.localidade = localidade; }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h04m58s746.jpg" alt="" width="840">
+</p>
+
+Criação inicial da classe `ConversorJson`. O propósito desta classe é receber uma string no formato JSON e convertê-la no objeto de domínio `ViaCepResponse`. Para isso, a implementação utiliza o framework externo `Gson`, desenvolvido pela Google.
+
+```java
+package dio.springboot.app;
+
+import com.google.gson.Gson;
+
+public class ConversorJson {
+    private Gson gson = new Gson();
+    
+    public ViaCepResponse converter(String json){
+        ViaCepResponse response = gson.fromJson(json, ViaCepResponse.class);
+        return response;
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h05m00s475.jpg" alt="" width="840">
+</p>
+
+A classe `ConversorJson` ainda é mostrada em sua forma pura, sem as anotações do framework. O instrutor levanta o questionamento de como gerenciar este conversor dentro do ecossistema do Spring Boot, preparando o terreno para a aplicação da anotação `@Component`.
+
+```java
+package dio.springboot.app;
+
+import com.google.gson.Gson;
+
+public class ConversorJson {
+    private Gson gson = new Gson();
+    
+    public ViaCepResponse converter(String json){
+        ViaCepResponse response = gson.fromJson(json, ViaCepResponse.class);
+        return response;
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h06m14s557.jpg" alt="" width="840">
+</p>
+
+A anotação `@Component` é adicionada à classe `ConversorJson`. A regra prática apresentada é: utiliza-se `@Component` quando se tem acesso direto ao código-fonte da classe. Ao anotar a classe desta forma, instruímos o Spring a escanear este componente e gerenciá-lo, eliminando a necessidade de usar a palavra reservada `new` para criar instâncias deste conversor.
+
+```java
+package dio.springboot.app;
+
+import com.google.gson.Gson;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ConversorJson {
+    private Gson gson = new Gson();
+    
+    public ViaCepResponse converter(String json){
+        ViaCepResponse response = gson.fromJson(json, ViaCepResponse.class);
+        return response;
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h06m53s762.jpg" alt="" width="840">
+</p>
+
+Na classe principal da aplicação, `SpringPrimeirosPassosApplication`, o instrutor cria um método que retorna um `CommandLineRunner` e o anota com `@Bean`. O objetivo é simular a execução da aplicação injetando o nosso componente `ConversorJson` no método `run`. Através dessa injeção, o conversor recebe uma string JSON estática simulando um CEP e realiza a conversão para testar o funcionamento.
+
+```java
+package dio.springboot;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import dio.springboot.app.ConversorJson;
+import dio.springboot.app.ViaCepResponse;
+
+@SpringBootApplication
+public class SpringPrimeirosPassosApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringPrimeirosPassosApplication.class, args);
+    }
+
+    @Bean
+    public CommandLineRunner run(ConversorJson conversor) throws Exception {
+        return args -> {
+            String json = "{\"cep\": \"01001-000\",\"logradouro\": \"Praça da Sé\",\"localidade\": \"São Paulo\"}";
+            ViaCepResponse response = conversor.converter(json);
+            System.out.println("Dados do CEP: " + response);
+        };
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h07m18s362.jpg" alt="" width="840">
+</p>
+
+A visualização do código-fonte da interface `CommandLineRunner` (pertencente ao pacote do Spring Boot) serve para ilustrar um conceito essencial: por ser uma biblioteca externa à qual não temos controle do código-fonte, não podemos simplesmente ir até ela e colocar um `@Component`. Por isso, o recurso deve ser provido ao container através de um método construtor anotado com `@Bean`.
+
+```java
+@FunctionalInterface
+public interface CommandLineRunner {
+    void run(String... args) throws Exception;
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h07m48s270.jpg" alt="" width="840">
+</p>
+
+Retorno ao método `run` na classe principal da aplicação para preparar a execução do projeto. A expectativa é verificar se a conversão funcionará e se os dados estruturados pelo JSON serão impressos corretamente através do comando `System.out.println`.
+
+```java
+@Bean
+public CommandLineRunner run(ConversorJson conversor) throws Exception {
+    return args -> {
+        String json = "{\"cep\": \"01001-000\",\"logradouro\": \"Praça da Sé\",\"localidade\": \"São Paulo\"}";
+        ViaCepResponse response = conversor.converter(json);
+        System.out.println("Dados do CEP: " + response);
+    };
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h08m38s583.jpg" alt="" width="840">
+</p>
+
+O console do terminal exibe o resultado da execução bem-sucedida do programa. É possível observar a impressão da mensagem `"Dados do CEP: ViaCepResponse{cep='01001-000', logradouro='Praça da Sé', localidade='São Paulo'}"`, comprovando que o componente conversor foi injetado corretamente pelo Spring e desempenhou o seu papel.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h09m38s966.jpg" alt="" width="840">
+</p>
+
+Uma refatoração crítica é feita na classe `ConversorJson`: a remoção da instanciação explícita do objeto `Gson` (`new Gson()`). No lugar, o instrutor utiliza a anotação `@Autowired` para que o próprio Spring Boot passe a prover essa dependência. Isso resolve a "fuga" do paradigma da Inversão de Controle, delegando totalmente a responsabilidade de criação ao container.
+
+```java
+package dio.springboot.app;
+
+import com.google.gson.Gson;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class ConversorJson {
+
+    @Autowired
+    private Gson gson;
+
+    public ViaCepResponse converter(String json){
+        ViaCepResponse response = gson.fromJson(json, ViaCepResponse.class);
+        return response;
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h10m36s525.jpg" alt="" width="840">
+</p>
+
+No entanto, como `Gson` é uma biblioteca externa do Google sem a anotação `@Component` em seu código-fonte, o `@Autowired` anterior falharia se não ensinássemos o Spring a instanciar o objeto. Para contornar isso, o instrutor adiciona um método construtor dentro da classe `SpringPrimeirosPassosApplication` anotado com `@Bean`, que retorna explicitamente a instância `new Gson()`.
+
+```java
+@Bean
+public Gson gson() {
+    return new Gson();
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h11m04s657.jpg" alt="" width="840">
+</p>
+
+Uma nova execução da aplicação valida as refatorações. O terminal confirma a inicialização e o log imprime novamente os dados convertidos do CEP, indicando que a resolução da injeção de dependências do Gson utilizando a anotação `@Bean` funcionou conforme esperado.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h11m50s056.jpg" alt="" width="840">
+</p>
+
+Visando boas práticas de projeto, o instrutor explica que não é aconselhável poluir a classe principal da aplicação com as definições de Beans. Portanto, o código de criação do `Gson` é movido para uma nova classe dedicada, comumente chamada de `Beans` ou `BeansFactory`, organizando estruturalmente as dependências externas.
+
+```java
+package dio.springboot.app;
+
+import com.google.gson.Gson;
+import org.springframework.context.annotation.Bean;
+
+public class Beans {
+    @Bean
+    public Gson gson() {
+        return new Gson();
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-16h12m01s296.jpg" alt="" width="840">
+</p>
+
+Para finalizar as configurações e evitar problemas em diferentes versões do framework, a classe `Beans` é anotada com `@Configuration`. Isso indica explicitamente ao Spring Boot que esta é uma classe de configuração cujo propósito é declarar Beans gerenciados pelo contexto da aplicação, solidificando o princípio de IoC/DI de forma limpa e organizada.
+
+```java
+package dio.springboot.app;
+
+import com.google.gson.Gson;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class Beans {
+    @Bean
+    public Gson gson() {
+        return new Gson();
+    }
+}
+```      
 
 ### 🟩 Vídeo 07 - Scopes - Singleton ou Prototype
 
@@ -780,7 +1033,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/13a57341-f406-463b-ac6c-037a08d8ee2f?autoplay=1
+
+
 
 ### 🟩 Vídeo 08 - Properties Value
 
