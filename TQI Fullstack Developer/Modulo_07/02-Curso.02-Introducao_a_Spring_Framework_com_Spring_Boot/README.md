@@ -143,12 +143,39 @@ No cenário **com Inversão de Controle (IoC)**, a aplicação delega a responsa
 
 A imagem introduz formalmente o padrão de **Injeção de Dependências**. Este é o mecanismo prático que viabiliza a Inversão de Controle. O slide define a injeção de dependências como um padrão de desenvolvimento cuja finalidade é manter baixo o nível de acoplamento entre os módulos de um sistema. Em vez de um objeto criar suas dependências internamente, as dependências são "injetadas" nele por um agente externo (o container Spring), promovendo maior coesão e reuso.
 
-
----> ...
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m14s852.jpg" alt="" width="840">
 </p>
+
+A imagem ilustra o conceito de **Injeção de Dependências (DI)**, um padrão fundamental no ecossistema Spring Boot para promover o baixo acoplamento.
+
+Aqui está o resumo do fluxo apresentado:
+
+#### 1. O Problema: Acoplamento
+
+Em um sistema tradicional, a classe `App` criaria manualmente suas próprias dependências (usando `new Objeto()`). Isso gera um acoplamento forte: se o objeto mudar, a `App` precisa ser alterada.
+
+#### 2. A Solução: Inversão de Controle (IoC)
+
+Na imagem, a `App` não cria mais nada. Ela apenas define que precisa de uma funcionalidade através de uma **Interface** (as caixas azuis na base).
+
+* **O Container (Spring IoC Container):** É o "cérebro" representado pelo círculo branco. Ele é responsável por instanciar, configurar e gerenciar o ciclo de vida dos objetos (chamados de **Beans**).
+* **Real Object (Componentes):** São as implementações concretas (anotadas com `@Service`, `@Repository`, etc.).
+
+#### 3. A "Injeção" (Seringas)
+
+As seringas simbolizam o ato de injetar. O Spring olha para a sua classe, vê que ela precisa de uma interface (geralmente via `@Autowired` no construtor) e, em tempo de execução, fornece o `Real Object` correto para preencher aquela lacuna.
+
+**Resumo da lógica no Java/Spring:**
+
+* **App:** Solicita a dependência.
+* **Interface:** Define o contrato (o que deve ser feito).
+* **Container (Spring):** Fabrica o objeto real e o entrega pronto para uso.
+* **Resultado:** Código fácil de testar (você pode injetar um objeto "falso" ou *mock* nos testes) e de manter.
+
+
+---> ...
+
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m18s271.jpg" alt="" width="840">
