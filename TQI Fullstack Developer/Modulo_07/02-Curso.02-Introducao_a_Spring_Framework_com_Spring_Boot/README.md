@@ -275,12 +275,42 @@ No Spring Boot, quando você define uma classe como um Componente (usando `@Comp
 
 Vale lembrar que o Singleton do Spring é ligeiramente diferente do **Design Pattern Singleton** clássico (do GoF). Enquanto o padrão clássico garante uma instância por *Classloader*, o Singleton do Spring garante uma instância **por contêiner (ApplicationContext)**.
 
--->
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m34s765.jpg" alt="" width="840">
 </p>
 
+A imagem refere-se ao **Escopo Prototype** (um dos "Bean Scopes") no ecossistema Spring Framework.
+
+Em termos simples, o Spring Boot utiliza o conceito de Injeção de Dependência, onde o "Container" gerencia o ciclo de vida dos objetos (Beans). Existem dois escopos principais:
+
+#### 1. O que é o Escopo Prototype?
+
+Diferente do escopo padrão (**Singleton**), onde apenas uma única instância do objeto é criada para toda a aplicação, no escopo **Prototype**:
+
+* **Nova Instância:** O Spring cria uma **nova instância** do Bean toda vez que ele é solicitado pelo código (via `getBean()` ou injeção em outro componente).
+* **Estado Único:** É ideal para objetos que mantêm estado (variáveis que mudam) e que não devem ser compartilhados entre diferentes partes da aplicação ou usuários.
+
+#### 2. Comparação Rápida
+
+| Característica | Singleton (Padrão) | Prototype |
+| --- | --- | --- |
+| **Instâncias** | Uma única por container. | Uma nova a cada requisição. |
+| **Uso comum** | Services, Repositories, Controllers. | Objetos com estado, processamento de dados únicos. |
+| **Ciclo de Vida** | Gerenciado totalmente pelo Spring. | O Spring cria, mas não gerencia a destruição. |
+
+#### Como definir no código?
+
+No Java, você utiliza a anotação `@Scope`:
+
+```java
+@Component
+@Scope("prototype")
+public class MeuComponente {
+    // Cada vez que injetado, será um objeto novo na memória
+}
+```
+
+-->
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m36s130.jpg" alt="" width="840">
