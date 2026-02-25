@@ -191,15 +191,43 @@ Aqui estão os três pilares mencionados na imagem explicados no contexto do Spr
 
 A imagem menciona que isso ocorre através do princípio da **Inversão de Controle**. No desenvolvimento tradicional, você controla o fluxo e a criação dos objetos. No Spring, você "inverte" esse controle: você apenas anota sua classe (com `@Component`, `@Service`, ou `@Bean`) e o framework assume a responsabilidade de gerenciar essas instâncias.
 
----> ...
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m19s761.jpg" alt="" width="840">
 </p>
 
+A imagem ilustra o conceito de **Injeção de Dependências (DI)**, um padrão fundamental no ecossistema Java e Spring Boot.
+
+Segue um resumo do que cada componente representa nesse fluxo:
+
+#### 1. O App e a Interface
+
+No desenvolvimento moderno, o seu código (**App**) não deve depender de classes concretas, mas sim de **Interfaces**. Isso permite que o sistema seja flexível. O "App" sabe *o que* precisa ser feito, mas não *como* ou *quem* fará.
+
+#### 2. O Container (Spring IoC)
+
+O círculo rotulado como **Container** representa o **Spring IoC Container** (Inversion of Control). Ele é o "cérebro" do framework. Em vez de você criar os objetos manualmente usando `new Objeto()`, o Spring assume essa responsabilidade.
+
+* Ele gerencia o ciclo de vida dos objetos (chamados de **Beans**).
+
+#### 3. Real Object (A Implementação)
+
+O **Real Object** é a classe concreta que implementa a interface. É aqui que está a lógica de negócio real (ex: uma classe que acessa o banco de dados).
+
+#### 4. O Ato da Injeção (A Seringa)
+
+O ícone da seringa simboliza a **Injeção**.
+
+* O Spring identifica que seu "App" precisa de uma "Interface".
+* Ele vai até o seu catálogo de objetos, instancia o "Real Object" e o **injeta** automaticamente onde ele é solicitado (geralmente através da anotação `@Autowired`).
+
+
+---> ...
+
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m28s806.jpg" alt="" width="840">
 </p>
+
+
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-02-25-08h23m33s762.jpg" alt="" width="840">
