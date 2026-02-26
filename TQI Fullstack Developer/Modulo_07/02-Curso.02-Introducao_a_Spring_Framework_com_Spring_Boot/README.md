@@ -1185,7 +1185,187 @@ Bem-vindo à Tech Elite
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/5aa5f15f-4466-4302-afc0-e7c6f90f12ed?autoplay=1
+
+O vídeo explora como gerenciar configurações de forma dinâmica e centralizada em aplicações Spring Boot, utilizando o arquivo application.properties e a anotação @Value.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h24m37s833.jpg" alt="" width="840">
+</p>
+
+Nesta introdução ao conceito de **Properties** no Spring Boot, exploramos como o framework permite que as atribuições de valores não precisem ser sempre explícitas ou declarativas diretamente no código-fonte. O foco central é o uso do arquivo `application.properties`, da anotação `@Value` e da definição de **Default values** para garantir flexibilidade e centralização de estados e configurações da aplicação que não sofrem iteração constante durante a execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h24m47s247.jpg" alt="" width="840">
+</p>
+
+Apresentação da estrutura inicial da classe `SistemaMensagem`. Ela é anotada com `@Component` e implementa `CommandLineRunner`, preparando o terreno para a execução de lógica assim que a aplicação Spring iniciar. Inicialmente, as variáveis de instância estão apenas declaradas, sem valores atribuídos.
+
+```java
+package dio.springboot.app;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+import java.util.List;
+
+@Component
+public class SistemaMensagem implements CommandLineRunner {
+    private String nome;
+    private String email;
+    private List<Long> telefones;
+
+    @Override
+    public void run(String... args) throws Exception {
+        // Lógica de impressão será implementada aqui
+    }
+}
+```
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h24m54s277.jpg" alt="" width="840">
+</p>
+
+Exibição da classe principal do projeto, `SpringPrimeirosPassosApplication`. Esta classe possui a anotação `@SpringBootApplication`, que sinaliza o ponto de entrada da aplicação Spring Boot e aciona a varredura de componentes (como o `SistemaMensagem` criado anteriormente) para que sejam gerenciados pelo container do Spring.
+
+```java
+package dio.springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringPrimeirosPassosApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringPrimeirosPassosApplication.class, args);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h25m30s364.jpg" alt="" width="840">
+</p>
+
+Implementação do método `run` na classe `SistemaMensagem`. O objetivo aqui é demonstrar a saída no console utilizando as variáveis de instância. Neste ponto, os valores ainda não foram injetados ou definidos, preparando o cenário para a demonstração da atribuição manual (declarativa) antes de evoluir para o uso de propriedades.
+
+```java
+@Override
+public void run(String... args) throws Exception {
+    System.out.println("Mensagem enviada por: " + nome 
+        + "\nE-mail:" + email 
+        + "\nCom telefones para contato: " + telefones);
+    System.out.println("Seu cadastro foi aprovado");
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h25m43s819.jpg" alt="" width="840">
+</p>
+
+Demonstração do modelo de atribuição **declarativa e explícita**. Os valores são inseridos diretamente no código-fonte através da inicialização das variáveis. Embora funcional, essa abordagem torna a aplicação rígida, dificultando mudanças de configuração sem a necessidade de recompilar o código.
+
+```java
+@Component
+public class SistemaMensagem implements CommandLineRunner {
+    private String nome = "GLEYSON SAMPAIO";
+    private String email = "gleyson@dio.com";
+    private List<Long> telefones = new ArrayList<>(Arrays.asList(new Long[]{11956781254L}));
+    
+    // ... restante do código
+}
+```
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h25m56s135.jpg" alt="" width="840">
+</p>
+
+Resultado da execução da aplicação no console com os valores fixados no código. O Spring Boot inicializa o contexto e o `CommandLineRunner` executa o método `run`, exibindo as informações de "GLEYSON SAMPAIO".
+
+```bash
+Mensagem enviada por: GLEYSON SAMPAIO
+E-mail:gleyson@dio.com
+Com telefones para contato: [11956781254]
+Seu cadastro foi aprovado
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h26m10s436.jpg" alt="" width="840">
+</p>
+
+Introdução do arquivo `application.properties`, localizado na pasta `src/main/resources`. Este arquivo centraliza as configurações da aplicação em pares de chave-valor, permitindo que as informações de negócio (como nome e e-mail do sistema) sejam separadas da lógica de execução Java.
+
+```properties
+nome=Digital Innovation One
+email=noreply@dio.com.br
+telefones=1145651725, 1187651343
+```
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h26m17s517.jpg" alt="" width="840">
+</p>
+
+Refatoração da classe para utilizar a anotação **`@Value`**. Através de expressões SpEL (Spring Expression Language), o Spring busca as chaves definidas no `application.properties` e injeta os valores diretamente nas variáveis. Nota-se um erro proposital na chave `telefone` (no singular), que causaria uma falha na inicialização do Bean caso a propriedade exata não fosse encontrada.
+
+```java
+@Value("${nome}")
+private String nome;
+
+@Value("${email}")
+private String email;
+
+@Value("${telefones}")
+private List<Long> telefones;
+```
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h26m27s785.jpg" alt="" width="840">
+</p>
+
+Retorno à classe de inicialização para reexecutar o projeto após a configuração das propriedades. O Spring agora tentará resolver as dependências de valor externas antes de subir o serviço.
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h26m37s434.jpg" alt="" width="840">
+</p>
+
+Logs de execução demonstrando o sucesso da injeção de dependência via propriedades. Observe que o nome exibido agora é "Digital Innovation One", provando que o Spring obteve a informação do arquivo externo e não mais do valor fixo anteriormente definido no código.
+
+```bash
+2021-09-07 08:50:59.172 INFO 22804 --- [main] d.s.SpringPrimeirosPassosApplication : Started...
+Mensagem enviada por: Digital Innovation One
+E-mail:noreply@dio.com.br
+Com telefones para contato: [1145651725, 1187651343]
+Seu cadastro foi aprovado
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h26m53s485.jpg" alt="" width="840">
+</p>
+
+Demonstração do recurso de **Default Value** na anotação `@Value`. Ao utilizar a sintaxe `${chave:valor_padrao}`, instruímos o Spring a usar um valor alternativo caso a propriedade não seja encontrada no arquivo de configuração. Isso evita erros de inicialização e torna a aplicação mais resiliente.
+
+```java
+@Value("${name:no-reply-dio}")
+private String nome;
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-07h26m55s940.jpg" alt="" width="840">
+</p>
+
+Validação final do uso de valores padrão. Como a propriedade `name` (em inglês) não existia no arquivo (que continha apenas `nome`), o Spring adotou o valor "no-reply-dio". Isso ilustra como o framework prevê cenários de ausência de configuração para manter a estabilidade do sistema.
+
+```bash
+Mensagem enviada por: no-reply-dio
+E-mail:noreply@dio.com.br
+Com telefones para contato: [1145651725, 1187651343]
+Seu cadastro foi aprovado
+```      
 
 ### 🟩 Vídeo 09 - Configuration Properties
 
@@ -1194,7 +1374,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/76c0fe87-be0c-40cd-8028-91025f00882b?autoplay=1
 
 ### 🟩 Vídeo 10 - Conceito de ORM e JPA
 
