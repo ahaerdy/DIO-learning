@@ -2021,6 +2021,140 @@ A verificação final é realizada em uma ferramenta de gerenciamento de banco d
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/c05f9e2c-3906-4f25-ade6-9174ca6c57cc?autoplay=1
 
+Este guia explora como o framework Spring Data JPA simplifica a camada de persistência de dados em aplicações Java, eliminando a necessidade de código repetitivo e aumentando a produtividade do desenvolvedor através do padrão Repository e consultas customizadas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h05m36s848.jpg" alt="" width="840">
+</p>
+
+O **Repository Pattern** é um padrão de projeto que visa abstrair o acesso a dados de forma genérica, assemelhando-se ao padrão DAO (Data Access Object). O objetivo central é permitir que o modelo da aplicação interaja com os dados sem se preocupar com a complexidade da persistência.
+
+O **Spring Data JPA** facilita a implementação desse padrão utilizando Programação Orientada a Aspectos (AOP). Ao definir apenas uma interface, o framework gera dinamicamente a implementação dos métodos de acesso. Estender interfaces como `JpaRepository` é uma prática recomendada, pois disponibiliza automaticamente diversos métodos de CRUD (Create, Read, Update, Delete) sem a necessidade de codificação manual.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h05m50s472.jpg" alt="" width="840">
+</p>
+
+Quando os métodos padrão de CRUD não são suficientes, podemos recorrer às consultas customizadas. Uma das abordagens mais poderosas é o **Query Method**. Nele, o Spring Data JPA interpreta a assinatura do método (seu nome e parâmetros) para montar automaticamente a consulta JPQL correspondente.
+
+```java
+public interface UserRepository extends Repository<User, Long> {
+    List<User> findByEmailAddressAndLastname(String emailAddress, String lastname);
+}
+```
+
+No exemplo acima, ao declarar o método seguindo a convenção de nomenclatura, o framework entende que deve realizar um filtro pelos atributos `emailAddress` e `lastname` da entidade `User`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h05m58s113.jpg" alt="" width="840">
+</p>
+
+A documentação oficial do Spring Data JPA fornece uma tabela de palavras-chave (keywords) que podem ser utilizadas na construção dos nomes dos métodos para gerar diferentes filtros SQL. Algumas das instruções suportadas incluem:
+
+| Keyword | Sample | JPQL snippet |
+| --- | --- | --- |
+| **Distinct** | findDistinctByLastnameAndFirstname | select distinct ... where x.lastname = ?1 and x.firstname = ?2 |
+| **And** | findByLastnameAndFirstname | where x.lastname = ?1 and x.firstname = ?2 |
+| **Or** | findByLastnameOrFirstname | where x.lastname = ?1 or x.firstname = ?2 |
+| **Between** | findByStartDateBetween | where x.startDate between ?1 and ?2 |
+| **LessThan** | findByAgeLessThan | where x.age < ?1 |
+| **GreaterThan** | findByAgeGreaterThan | where x.age > ?1 |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h06m01s760.jpg" alt="" width="840">
+</p>
+
+Em cenários onde a consulta é muito complexa para ser expressa apenas pelo nome do método, utilizamos o **Query Override**. Através da anotação `@Query`, definimos manualmente a instrução JPQL que será executada.
+
+```java
+public interface UserRepository extends JpaRepository<User, Integer> {
+    // Query Method: Retorna a lista de usuários contendo parte do nome
+    List<User> findByNameContaining(String name);
+
+    // Query Override: Realiza a mesma instrução de forma manual
+    @Query("SELECT u FROM User u WHERE u.name LIKE %:name%")
+    List<User> filtrarPorNome(@Param("name") String name);
+
+    // Query Method: Retorna um usuário pelo username
+    User findByUsername(String username);
+}
+```
+
+Ambas as abordagens no código acima podem realizar tarefas similares, como o uso do operador `LIKE`, mas o Query Override oferece total controle sobre a sintaxe da consulta.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h06m08s741.jpg" alt="" width="840">
+</p>
+
+Para validar as implementações, utiliza-se uma base de dados (ex: PostgreSQL via pgAdmin). A tabela `tab_user` apresentada contém registros para testes, incluindo campos como `user_id`, `name`, `password` e `username`. Ter dados previamente populados, como os usuários "GLEYSON" e "GABRIEL NUNES", permite verificar se os métodos de consulta estão filtrando os resultados corretamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h06m18s797.jpg" alt="" width="840">
+</p>
+
+Na classe de inicialização da aplicação (`StartApp.java`), o repositório é injetado para que os métodos possam ser testados em tempo de execução. O código abaixo demonstra a chamada do método customizado `filtrarPorNome`.
+
+```java
+@Autowired
+private UserRepository repository;
+
+@Override
+public void run(String... args) throws Exception {
+    List<User> users = repository.filtrarPorNome("GLEYSON");
+    for (User u : users) {
+        System.out.println(u);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h06m20s337.jpg" alt="" width="840">
+</p>
+
+Além das consultas, o repositório gerencia a persistência de novos dados. Através de um método auxiliar, é possível instanciar um novo objeto da entidade e salvá-lo no banco de dados utilizando o método herdado `.save()`.
+
+```java
+private void insertUser() {
+    User user = new User();
+    user.setName("GABRIEL NUNES");
+    user.setUsername("gabriel");
+    user.setPassword("santos");
+    
+    repository.save(user);
+
+    for (User u : repository.findAll()) {
+        System.out.println(u);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h06m24s088.jpg" alt="" width="840">
+</p>
+
+A interface `UserRepository` consolidada demonstra a coexistência de diferentes estratégias de busca. O Spring Data JPA é capaz de distinguir quando deve retornar uma lista de entidades ou um único registro com base no tipo de retorno definido no método.
+
+```java
+public interface UserRepository extends JpaRepository<User, Integer> {
+    // Query Method
+    List<User> findByNameContaining(String name);
+
+    // Query Method
+    User findByUsername(String username);
+
+    // Query Override
+    @Query("SELECT u FROM User u WHERE u.name LIKE %:name%")
+    List<User> filtrarPorNome(@Param("name") String name);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-12h06m32s280.jpg" alt="" width="840">
+</p>
+
+Ao executar a aplicação, o console exibe o log do Hibernate, mostrando a conversão da JPQL em SQL nativo. É possível observar a cláusula `where user0_.name like ?` sendo aplicada, confirmando que o Spring Data JPA injetou a lógica corretamente e recuperou os registros que atendem ao critério estabelecido (ex: usuários que contêm "GLEYSON" no nome).
 
 
 ## Parte 3 - Conclusão
