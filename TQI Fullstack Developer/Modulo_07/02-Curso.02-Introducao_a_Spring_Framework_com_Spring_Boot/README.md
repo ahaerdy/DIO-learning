@@ -1846,7 +1846,171 @@ Ao executar a aplicação, o console exibe o log de inicialização do Spring Bo
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/862fa7d5-4a3c-4f79-89ed-1a2c7042e365?autoplay=1
 
+Este guia resume o processo de transição de uma aplicação Spring Boot que utiliza um banco de dados em memória (H2) para um banco de dados relacional robusto e persistente (PostgreSQL), utilizando Spring Data JPA.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h43m00s762.jpg" alt="" width="840">
+</p>
+
+A configuração de uma aplicação Spring Boot para interagir com um banco de dados relacional, como o PostgreSQL, é centralizada no arquivo `application.properties`. As configurações são divididas entre parâmetros opcionais e obrigatórios:
+
+* **Opcionais:** `spring.jpa.show-sql` permite visualizar no console as instruções SQL geradas pelo Hibernate, enquanto `spring.jpa.hibernate.ddl-auto` (com valor `update`) permite que o JPA gerencie a estrutura das tabelas, criando-as ou atualizando-as automaticamente conforme o mapeamento das entidades.
+* **Obrigatórios:** Definem a plataforma de interpretação do banco (`dialect`), o driver de conexão, a URL de acesso (`jdbc:postgresql://localhost:5432/nome_do_banco`), além das credenciais de usuário e senha.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h43m37s350.jpg" alt="" width="840">
+</p>
+
+No ambiente de desenvolvimento, as propriedades discutidas anteriormente são transpostas para o arquivo real do projeto. No exemplo, a conexão é direcionada para um banco de dados local chamado `dio_db`, utilizando as credenciais padrão do PostgreSQL.
+
+```properties
+#Opcional
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+
+#Obrigatorio de acordo com o seu banco de dados
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.url=jdbc:postgresql://localhost:5432/dio_db
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h43m42s414.jpg" alt="" width="840">
+</p>
+
+Além das configurações de propriedades, é fundamental que o projeto possua o driver de conexão específico para o banco de dados escolhido. Para o PostgreSQL, deve-se adicionar a dependência correspondente, garantindo que a aplicação consiga se comunicar com o motor do banco em tempo de execução.
+
+```xml
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h43m51s816.jpg" alt="" width="840">
+</p>
+
+A inclusão da dependência é realizada no arquivo `pom.xml` do Maven. Ela deve coexistir com o starter do Spring Data JPA, permitindo que o framework utilize o driver do PostgreSQL para realizar a persistência dos dados de forma transparente, sem a necessidade de alterar a lógica de negócio já implementada.
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h44m10s593.jpg" alt="" width="840">
+</p>
+
+A classe `StartApp` atua como um componente de inicialização que utiliza a interface `CommandLineRunner`. Ao iniciar a aplicação, ela injeta o repositório de usuários, cria uma nova instância da entidade `User`, define seus atributos e realiza a persistência através do método `save`. Ao final, executa um `findAll` para listar e imprimir no console todos os usuários cadastrados.
+
+```java
+@Component
+public class StartApp implements CommandLineRunner {
+    @Autowired
+    private UserRepository repository;
+
+    @Override
+    public void run(String... args) throws Exception {
+        User user = new User();
+        user.setName("GLEYSON");
+        user.setUsername("glysns");
+        user.setPassword("dio123");
+        
+        repository.save(user);
+
+        for (User u: repository.findAll()){
+            System.out.println(u);
+        }
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h44m14s132.jpg" alt="" width="840">
+</p>
+
+A entidade `User` representa o mapeamento objeto-relacional (ORM) da tabela no banco de dados. Utiliza anotações do JPA para definir a chave primária com geração automática de identidade e especifica restrições para as colunas, como tamanho máximo (`length`) e a obrigatoriedade de preenchimento (`nullable = false`).
+
+```java
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private Integer id;
+
+    @Column(length = 50, nullable = false)
+    private String name;
+
+    @Column(length = 20, nullable = false)
+    private String username;
+
+    @Column(length = 100, nullable = false)
+    private String password;
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+    // Outros getters e setters...
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h44m20s674.jpg" alt="" width="840">
+</p>
+
+O `UserRepository` é uma interface que estende `JpaRepository`, fornecendo automaticamente os métodos de CRUD (Criar, Ler, Atualizar e Deletar) para a entidade `User`. Esta camada de abstração permite que a aplicação interaja com o banco de dados sem a necessidade de escrever queries SQL manuais para operações comuns.
+
+```java
+package dio.aula.repository;
+
+import dio.aula.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Integer>{
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h45m10s372.jpg" alt="" width="840">
+</p>
+
+Durante a execução, pode ocorrer um erro de sintaxe caso o nome da tabela seja uma palavra reservada (como `user`). Para corrigir, utiliza-se a anotação `@Table(name = "tab_user")` na entidade. Após o ajuste, o log do Hibernate demonstra a criação da tabela, a inserção dos dados e a recuperação bem-sucedida do objeto cadastrado.
+
+```bash
+Hibernate: drop table if exists tab_user cascade
+Hibernate: create table tab_user (user_id  serial not null, name varchar(50) not null, password varchar(100) not null, username varchar(20) not null, primary key (user_id))
+Hibernate: insert into tab_user (name, password, username) values (?, ?, ?)
+User{id=1, name='GLEYSON', username='glysns', password='dio123'}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-10h45m14s181.jpg" alt="" width="840">
+</p>
+
+A verificação final é realizada em uma ferramenta de gerenciamento de banco de dados, como o DBeaver. O registro inserido pela aplicação Spring Boot aparece persistido na tabela `tab_user` dentro do esquema público do banco `dio_db`, confirmando que a integração entre o código Java e o PostgreSQL está funcionando corretamente.
 
 ### 🟩 Vídeo 13 - JPA Repository
 
@@ -1855,7 +2019,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/c05f9e2c-3906-4f25-ade6-9174ca6c57cc?autoplay=1
+
+
 
 ## Parte 3 - Conclusão
 
