@@ -1643,6 +1643,198 @@ A arquitetura de persistência envolve múltiplas camadas de abstração. No ní
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/d6f975a9-9bcd-4384-b5c6-37c7bdba3a12?autoplay=1
 
+Este guia aborda os conceitos fundamentais, a configuração e a implementação prática do Spring Data JPA, um dos frameworks mais poderosos do ecossistema Spring para persistência de dados.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h55m21s703.jpg" alt="" width="840">
+</p>
+
+O Spring Data JPA é um recurso do Spring Framework que adiciona uma camada adicional sobre a especificação JPA (Java Persistence API). Ele herda todos os conceitos de mapeamento de entidades e persistência baseada em interfaces e anotações, mas com o objetivo de reduzir o código repetitivo e complexo frequentemente encontrado em implementações puras de ORM (Object-Relational Mapping). Através de mecanismos como inversão de controle e injeção de dependência, o framework permite a criação de consultas ao banco de dados e a implementação do padrão de repositórios sem a necessidade de escrita manual de código SQL ou iterações complexas com o `EntityManager`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h55m33s361.jpg" alt="" width="840">
+</p>
+
+Para iniciar um projeto Spring Boot com suporte ao Spring Data JPA, utiliza-se o Spring Initializr (start.spring.io). Esta ferramenta facilita a configuração inicial, permitindo definir o gerenciador de dependências (como Maven), a linguagem (Java) e a versão do framework, preparando o terreno para a inclusão dos módulos necessários.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h55m41s543.jpg" alt="" width="840">
+</p>
+
+Dentro do Initializr, seleciona-se a dependência "Spring Data JPA". Ao contrário do desenvolvimento tradicional, onde as dependências eram inseridas manualmente uma a uma, o Spring utiliza "starters" que auxiliam na inicialização rápida do projeto, trazendo consigo todas as bibliotecas necessárias para a persistência de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h55m51s540.jpg" alt="" width="840">
+</p>
+
+Além do Spring Data JPA, é fundamental definir o banco de dados que será utilizado. Para fins de desenvolvimento e testes rápidos, o H2 Database é uma escolha comum por ser um banco de dados em memória que dispensa configurações complexas. Nesta etapa, também são definidos os metadados do projeto, como o Group ID (`dio`) e o Artifact ID (`aula-spring-data-jpa`).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h56m26s228.jpg" alt="" width="840">
+</p>
+
+Após gerar o projeto no Initializr e realizar o download, o arquivo compactado deve ser extraído em um diretório de trabalho. Essa estrutura contém os arquivos fundamentais do Maven, incluindo o arquivo de configuração `pom.xml`, pronta para ser importada em um ambiente de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h56m35s648.jpg" alt="" width="840">
+</p>
+
+O projeto extraído é importado para a IDE (como o IntelliJ IDEA). Durante o processo de importação, o ambiente de desenvolvimento reconhece a estrutura Maven e inicia a indexação e o download de dependências adicionais, organizando o projeto para que se possa começar a definir a lógica de negócio e as camadas de persistência.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h56m38s129.jpg" alt="" width="840">
+</p>
+
+A análise do arquivo `pom.xml` revela a estrutura de gerenciamento do Spring Boot. Um ponto central é a definição do `<parent>`, que aponta para o `spring-boot-starter-parent`, garantindo que o projeto utilize versões compatíveis e estáveis do framework e suas bibliotecas relacionadas.
+
+```xml
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.5.4</version>
+    <relativePath/> </parent>
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h56m41s939.jpg" alt="" width="840">
+</p>
+
+Ainda no `pom.xml`, verificam-se os starters incluídos. O `spring-boot-starter-data-jpa` habilita os recursos de persistência, enquanto a dependência do `h2` provê o banco de dados em memória para execução da aplicação.
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+</dependencies>
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h56m44s015.jpg" alt="" width="840">
+</p>
+
+O desenvolvimento começa pela criação da camada de modelo. Um novo pacote chamado `model` é criado para conter as classes POJO (Plain Old Java Objects), como a classe `User`, que representará os dados dos usuários no sistema antes de ser mapeada para o banco de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h56m51s687.jpg" alt="" width="840">
+</p>
+
+A classe `User` é definida com atributos privados básicos como `name`, `username` e `password`. Como um POJO padrão, ela inclui métodos acessores (getters e setters) para permitir a manipulação desses dados pela aplicação.
+
+```java
+package dio.aula.model;
+
+public class User {
+    private String name;
+    private String username;
+    private String password;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    // Outros getters e setters...
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h57m02s390.jpg" alt="" width="840">
+</p>
+
+Para transformar o POJO em uma entidade persistente, utilizam-se anotações do pacote `javax.persistence`. A anotação `@Entity` marca a classe para o JPA, enquanto `@Id` e `@GeneratedValue` definem a chave primária e sua estratégia de geração automática (`IDENTITY`). A anotação `@Column` é aplicada para customizar detalhes físicos das colunas no banco de dados, como nomes específicos, restrições de nulidade e tamanhos máximos de caracteres.
+
+```java
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private Integer id;
+
+    @Column(length = 50, nullable = false)
+    private String name;
+
+    @Column(length = 20, nullable = false)
+    private String username;
+
+    @Column(length = 100, nullable = false)
+    private String password;
+    
+    // Getters e Setters...
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h57m45s663.jpg" alt="" width="840">
+</p>
+
+A criação da interface `UserRepository` demonstra o poder do Spring Data JPA. Ao estender `JpaRepository<User, Integer>`, a aplicação ganha automaticamente acesso a uma vasta gama de métodos de CRUD (como salvar, listar, deletar e buscar por ID) sem a necessidade de escrever qualquer implementação manual. O framework identifica a entidade (`User`) e o tipo de seu identificador (`Integer`) para gerenciar as operações no banco.
+
+```java
+package dio.aula.repository;
+
+import dio.aula.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h57m53s172.jpg" alt="" width="840">
+</p>
+
+Para testar a persistência durante a inicialização, cria-se uma classe (ex: `StartApp`) que implementa `CommandLineRunner`. Esta interface obriga a implementação do método `run`, que funciona de forma análoga ao método `main`, sendo disparado automaticamente pelo Spring assim que o container está pronto. Utiliza-se a anotação `@Component` para que a classe seja gerenciada pelo framework e `@Autowired` para realizar a injeção de dependência do repositório.
+
+```java
+@Component
+public class StartApp implements CommandLineRunner {
+    @Autowired
+    private UserRepository repository;
+
+    @Override
+    public void run(String... args) throws Exception {
+        // Lógica de teste
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h58m10s920.jpg" alt="" width="840">
+</p>
+
+No método `run`, um objeto `User` é instanciado e seus atributos são preenchidos. Em seguida, chama-se o método `repository.save(user)` para persistir os dados no H2 Database. Para confirmar o sucesso, utiliza-se o método `findAll()` dentro de uma estrutura de repetição para listar e imprimir no console todos os usuários salvos no banco.
+
+```java
+User user = new User();
+user.setName("Gleyson");
+user.setUsername("glysons");
+user.setPassword("dio123");
+
+repository.save(user);
+
+for(User u: repository.findAll()){
+    System.out.println(u);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h58m23s434.jpg" alt="" width="840">
+</p>
+
+Ao executar a aplicação, o console exibe o log de inicialização do Spring Boot e a carga do banco de dados em memória. A instrução do método `run` é disparada, realizando a inserção e exibindo o usuário com seu ID devidamente atribuído pelo banco (ex: ID 1), confirmando a integração bem-sucedida entre o mapeamento de entidades e o repositório do Spring Data JPA.      
 
 
 ### 🟩 Vídeo 12 - Conexão com Postgres
@@ -1652,7 +1844,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/862fa7d5-4a3c-4f79-89ed-1a2c7042e365?autoplay=1
+
+
 
 ### 🟩 Vídeo 13 - JPA Repository
 
