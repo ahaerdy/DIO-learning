@@ -2166,11 +2166,37 @@ Ao executar a aplicação, o console exibe o log do Hibernate, mostrando a conve
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/928e636c-af63-4580-8f4f-91e54426812a?autoplay=1
 
-## Materiais de Apoio
+Este guia consolida os aprendizados de uma jornada imersiva no ecossistema Spring, destacando desde os conceitos fundamentais até as práticas essenciais para o desenvolvimento de aplicações robustas e flexíveis.
 
-# Certificado: 
+#### Conclusão e Revisão de Conteúdo
 
-- Link na plataforma: 
-- Certificado em pdf:
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-13h21m03s984.jpg" alt="" width="840">
+</p>
+
+Esta etapa consolida o aprendizado sobre o ecossistema Spring Boot Framework. Ao concluir a jornada, os seguintes marcos de conhecimento foram atingidos:
+
+* **Domínio do Framework**: Consolidação do conhecimento sobre o Spring Boot Framework.
+* **Prática de Projeto**: Criação efetiva de um projeto.
+* **Fundamentos Core**: Exploração dos conceitos de Inversão de Controle (IoC) e Injeção de Dependência (DI).
+* **Configuração**: Compreensão sobre o funcionamento da central de propriedades.
+* **Persistência**: Interação prática com bancos de dados.
+
+#### Materiais Complementares e Links Úteis
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-13h21m07s599.jpg" alt="" width="840">
+</p>
+
+Para aprofundar os estudos e buscar referências adicionais, os seguintes recursos são recomendados:
+
+* **Exemplos Práticos**: Guia passo a passo de um exemplo "Hello World" com Spring no Java Eclipse.
+* **Injeção de Dependência**: Artigos detalhados sobre a anotação `@Autowired` e os mecanismos de injeção de dependência do Spring.
+* **Diferenciação Técnica**: Documentação sobre as principais diferenças entre o Spring tradicional e o Spring Boot.
+
+# Certificado: Introdução a Spring Framework com Spring Boot
+
+- Link na plataforma: https://hermes.dio.me/certificates/3SW1NBOL.pdf
+- Certificado em pdf: [Certificado-Introducao_a_Spring_Framework_com_Spring_Boot.pdf](000-Midia_e_Anexos/Certificado-Introducao_a_Spring_Framework_com_Spring_Boot.pdf)
