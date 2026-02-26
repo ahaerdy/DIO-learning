@@ -1376,6 +1376,148 @@ Seu cadastro foi aprovado
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/76c0fe87-be0c-40cd-8028-91025f00882b?autoplay=1
 
+Este resumo aborda a transição do uso de configurações simples com @Value para uma abordagem mais robusta e organizada utilizando @ConfigurationProperties. O foco é centralizar informações pertinentes a um contexto específico (como dados de um remetente de e-mail) em um único objeto gerenciado pelo Spring.
+
+### Anotações
+
+Aqui está a versão do documento sem as marcações de citação, mantendo a estrutura original e as explicações técnicas:
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-08h22m53s347.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o conceito de **Configuration Properties** no ecossistema Spring Boot. O foco é demonstrar como centralizar informações e configurações de forma estruturada, facilitando a manutenção e a escalabilidade do código ao lidar com parâmetros externos que definem o comportamento da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-08h22m55s138.jpg" alt="" width="840">
+</p>
+
+A base dessa funcionalidade reside no arquivo `application.properties`, que atua como o repositório central de configurações. Para otimizar o acesso a esses dados, utiliza-se a anotação `@ConfigurationProperties`, permitindo o agrupamento de propriedades relacionadas através do uso de um **prefixo** comum, o que evita a dispersão de configurações pelo código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-08h23m08s841.jpg" alt="" width="840">
+</p>
+
+Abaixo, observa-se a estrutura inicial da classe `SistemaMensagem`, que implementa `CommandLineRunner` para execução de lógica no console. Neste estágio, a classe utiliza a anotação `@Value` para tentar obter dados, mas ainda de forma manual e menos escalável para grandes conjuntos de dados.
+
+```java
+package dio.springboot.app;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
+import java.util.List;
+
+@Component
+public class SistemaMensagem implements CommandLineRunner {
+    @Value("${nome}")
+    private String nome;
+    private String email;
+    private List<Long> telefones;
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("Mensagem enviada por: " + nome
+                + "\nE-mail:" + email + "\ncom telefones para contato: " + telefones);
+        System.out.println("Seu cadastro foi aprovado");
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-08h23m16s578.jpg" alt="" width="840">
+</p>
+
+No arquivo `application.properties`, as chaves de configuração são organizadas utilizando o prefixo `remetente`. Isso cria um "namespace" para as informações de nome, e-mail e telefones, permitindo que o Spring as identifique como um conjunto lógico.
+
+```properties
+remetente.nome=Digital Innovation One
+remetente.email=noreply@dio.com.br
+remetente.telefones=1145651725,1187651343
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-08h23m18s962.jpg" alt="" width="840">
+</p>
+
+A classe `SistemaMensagem` é atualizada para mapear as chaves do arquivo de propriedades. Cada atributo agora utiliza a anotação `@Value` apontando para o caminho completo definido anteriormente (`remetente.nome`, por exemplo), garantindo que os valores externos sejam injetados corretamente.
+
+```java
+@Component
+public class SistemaMensagem implements CommandLineRunner {
+    @Value("${remetente.nome}")
+    private String nome;
+    
+    @Value("${remetente.email}")
+    private String email;
+    
+    @Value("${remetente.telefones}")
+    private List<Long> telefones;
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("Mensagem enviada por: " + nome
+                + "\nE-mail:" + email + "\nCom telefones para contato: " + telefones);
+        System.out.println("Seu cadastro foi aprovado");
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-08h23m38s055.jpg" alt="" width="840">
+</p>
+
+Para elevar o nível de abstração, é utilizado um objeto de configuração (classe `Rementente`). Em vez de mapear variável por variável, a classe `SistemaMensagem` agora recebe o objeto completo via `@Autowired`. Essa é a abordagem recomendada para centralizar configurações de um mesmo contexto.
+
+```java
+@Component
+public class SistemaMensagem implements CommandLineRunner {
+    @Autowired
+    private Rementente rementente;
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("Mensagem enviada por: " + rementente.getNome()
+                + "\nE-mail:" + rementente.getEmail() 
+                + "\nCom telefones para contato: " + rementente.getTelefones());
+        System.out.println("Seu cadastro foi aprovado");
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-08h24m34s094.jpg" alt="" width="840">
+</p>
+
+A classe principal, `SpringPrimeirosPassosApplication`, inicializa o ecossistema Spring. Com o uso de `@SpringBootApplication`, o framework realiza a varredura automática, encontrando os componentes e as propriedades configuradas para montar o sistema em tempo de execução.
+
+```java
+package dio.springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringPrimeirosPassosApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringPrimeirosPassosApplication.class, args);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-08h24m40s794.jpg" alt="" width="840">
+</p>
+
+A execução no console confirma o sucesso da implementação. Os logs mostram que o Spring Boot carregou as propriedades do arquivo, injetou-as no objeto e o método `run` do `SistemaMensagem` exibiu as informações corretamente formatadas.
+
+```text
+Mensagem enviada por: Digital Innovation One
+E-mail:noreply@dio.com.br
+Com telefones para contato: [1145651725, 1187651343]
+Seu cadastro foi aprovado
+```
+
 ### 🟩 Vídeo 10 - Conceito de ORM e JPA
 
 <video width="60%" controls>
@@ -1383,7 +1525,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/bd2fdc2c-d767-4d3a-962c-a90b1dec0b7a?autoplay=1
 
 ### 🟩 Vídeo 11 - Spring Data JPA
 
