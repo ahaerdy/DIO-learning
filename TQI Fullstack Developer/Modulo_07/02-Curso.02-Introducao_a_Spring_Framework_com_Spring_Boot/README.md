@@ -1527,6 +1527,113 @@ Seu cadastro foi aprovado
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/bd2fdc2c-d767-4d3a-962c-a90b1dec0b7a?autoplay=1
 
+Este guia aborda os conceitos fundamentais de persistência de dados em Java, focando na ponte entre o paradigma de Orientação a Objetos e os Bancos de Dados Relacionais, utilizando JPA e o framework Spring Boot.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h24m40s156.jpg" alt="" width="840">
+</p>
+
+Nesta introdução, o instrutor Gleyson Sampaio apresenta o curso de Java focado em **Spring Boot** e **Java Persistence API (JPA)**. O objetivo inicial é estabelecer uma base sólida sobre os conceitos de persistência antes de aprofundar no uso do framework Spring.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h24m42s575.jpg" alt="" width="840">
+</p>
+
+A segunda aula do módulo foca especificamente nos conceitos fundamentais de **ORM (Object-Relational Mapping)** e na especificação **JPA**. Essa etapa é crucial para entender como o Java lida com a persistência de dados dentro do ecossistema Spring Boot.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h24m43s900.jpg" alt="" width="840">
+</p>
+
+A programação deste primeiro momento abrange quatro tópicos essenciais para o domínio da interação com bancos de dados:
+
+* Definição de **ORM**;
+* O que é a **Java Persistence API**;
+* O funcionamento dos **Mapeamentos**;
+* O papel do **EntityManager**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h24m49s001.jpg" alt="" width="840">
+</p>
+
+O **ORM (Object-Relational Mapping)**, ou mapeamento objeto-relacional, é um recurso tecnológico utilizado para aproximar o paradigma da Orientação a Objetos ao contexto de bancos de dados relacionais. Ele resolve a complexidade histórica de transformar classes e objetos em tabelas e registros, tarefa que anteriormente exigia grande esforço de implementação com JDBC. O uso do ORM é viabilizado por bibliotecas ou frameworks que realizam essa ponte de forma automatizada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h24m51s906.jpg" alt="" width="840">
+</p>
+
+A estrutura do ORM funciona como um ciclo de sincronização entre o modelo de objetos (Diagrama de Classes) e o modelo de dados (DER). Através de uma camada de mapeamento (**OR-Mapping Layer**), onde o **Hibernate** atua como uma das principais ferramentas, objetos Java são convertidos em dados relacionais. Esse processo permite que a aplicação manipule e recupere informações do banco de dados tratando-as diretamente como objetos na memória da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h24m55s739.jpg" alt="" width="840">
+</p>
+
+A **JPA** é definida como uma especificação baseada em interfaces. Ela atua como um descritor que padroniza como as operações de persistência devem ser realizadas em Java. Por ser apenas uma especificação (um conjunto de regras e contratos), ela necessita de um framework real para executar o trabalho pesado de persistência de objetos.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h24m57s718.jpg" alt="" width="840">
+</p>
+
+Existem diversas implementações no mercado que atendem à especificação JPA. Embora o **Hibernate** seja o mais predominante — e a implementação oficial padrão dentro do Spring Boot — existem outras alternativas relevantes:
+
+* **EclipseLink** (da Eclipse Foundation);
+* **TopLink** (da Oracle);
+* **OpenJPA**.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h24m59s463.jpg" alt="" width="840">
+</p>
+
+O mapeamento no JPA é realizado através de anotações que definem o comportamento dos atributos e classes em relação ao banco de dados (DDL). Os principais aspectos incluem:
+
+* **Identificação**: Define chaves primárias;
+* **Definição**: Determina restrições como campos obrigatórios, comprimento máximo e precisão;
+* **Relacionamento**: Representa ligações entre tabelas;
+* **Herança**: Mantém a compatibilidade da estrutura de classes com o banco relacional;
+* **Persistência**: Automatiza a atribuição de valores a determinados campos durante a gravação no banco.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h25m05s516.jpg" alt="" width="840">
+</p>
+
+Na prática, o mapeamento transforma um **POJO** (Plain Old Java Object) em uma entidade persistente. As anotações `@Entity` e `@Table` vinculam a classe à tabela física. A anotação `@Id` combinada com `@GeneratedValue` gerencia a chave primária de forma automática pelo banco. O uso de `@Column(name="...")` permite que o nome do atributo no código Java seja diferente do nome da coluna na tabela do banco de dados.
+
+```java
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="tb_usuario")
+public class Usuario {
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name="id_usuario")
+    private Long id;
+    
+    private String nome;
+
+    @Column(name="login_usuario")
+    private String login;
+
+    @Column(name="senha_usuario")
+    private String senha;
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-26-09h25m11s391.jpg" alt="" width="840">
+</p>
+
+A arquitetura de persistência envolve múltiplas camadas de abstração. No nível mais baixo, o Java utiliza o **JDBC** (com implementações como o pool de conexões Hikari) para se conectar ao banco de dados (ex: H2). Acima disso, o **EntityManager** do JPA gerencia o ciclo de vida das entidades, sendo implementado por classes como o `SessionImpl` do Hibernate. No topo da cadeia, o **Spring Data JPA** simplifica ainda mais o processo através da interface `JpaRepository`, que automatiza as operações CRUD e consultas.      
+
+
 ### 🟩 Vídeo 11 - Spring Data JPA
 
 <video width="60%" controls>
@@ -1534,7 +1641,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/imersao-no-spring-framework-com-spring-boot/learning/d6f975a9-9bcd-4384-b5c6-37c7bdba3a12?autoplay=1
+
+
 
 ### 🟩 Vídeo 12 - Conexão com Postgres
 
