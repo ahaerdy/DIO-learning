@@ -90,6 +90,256 @@ Para o nosso desafio prático, focaremos em um representante de cada categoria: 
 link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/fed94247-3cf7-4b04-a9b2-ead7bfd1c51a
 
 
+O vídeo aborda a implementação prática do padrão de projeto Singleton utilizando Java puro. O Singleton é um dos padrões "Gang of Four" (GoF) e tem como objetivo principal garantir que uma classe tenha apenas uma instância durante todo o ciclo de vida da aplicação, fornecendo um ponto de acesso global a ela.
+
+### Anotações
+
+#### Percurso do Aprendizado
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-09h59m00s012.jpg" alt="" width="840">
+</p>
+
+Apresentação do roteiro de aprendizado focado na prática de padrões de projeto. O objetivo desta etapa é realizar a implementação manual utilizando Java "puro", sem o auxílio de frameworks, para consolidar a compreensão dos mecanismos internos de cada padrão antes de avançar para o Spring.
+
+#### Conceito de Singleton
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-09h59m01s763.jpg" alt="" width="840">
+</p>
+
+Introdução teórica ao padrão **Singleton**, um padrão criacional que garante a existência de uma única instância de uma determinada classe em toda a aplicação, fornecendo um ponto de acesso global a ela. O diagrama UML destaca que a classe mantém uma referência estática de si mesma e utiliza um método estático para gerenciar o acesso a essa instância única.
+
+#### Criação do Projeto no Eclipse
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-09h59m22s410.jpg" alt="" width="840">
+</p>
+
+Início da implementação prática no Eclipse IDE. O processo começa com a criação de um novo *Java Project* nomeado `Lab Padrões de Projeto Java`, configurado para utilizar as definições padrão do ambiente de execução (JRE).
+
+#### Organização de Pacotes
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-09h59m36s389.jpg" alt="" width="840">
+</p>
+
+Estruturação do projeto através da criação do pacote `one.digitalinnovation.gof`. O sufixo "gof" remete ao termo *Gang of Four*, referência aos autores originais que catalogaram os padrões de projeto.
+
+#### Interface de Desenvolvimento
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-09h59m42s366.jpg" alt="" width="840">
+</p>
+
+Utilização do menu de contexto da IDE para a criação da primeira classe do projeto, preparando o terreno para a codificação das variantes do Singleton.
+
+#### Definição da Classe SingletonLazy
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-09h59m48s622.jpg" alt="" width="840">
+</p>
+
+Configuração da classe `SingletonLazy`. Esta versão é denominada "preguiçosa" porque a instância não é criada imediatamente; ela só será alocada na memória quando for solicitada pela primeira vez.
+
+#### Estrutura Inicial do Código
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-09h59m53s990.jpg" alt="" width="840">
+</p>
+
+Esqueleto inicial da classe dentro do pacote definido, antes da inclusão da lógica de controle de instância.
+
+```java
+package one.digitalinnovation.gof;
+
+public class SingletonLazy {
+
+}
+```
+
+#### Atributo de Instância Estática
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h00m05s057.jpg" alt="" width="840">
+</p>
+
+Inclusão do atributo estático `instancia` do tipo `SingletonLazy`. Este campo é privado para garantir que o controle de criação seja restrito à própria classe, seguindo os princípios do padrão.
+
+```java
+package one.digitalinnovation.gof;
+
+/**
+ * Singleton "preguicoso".
+ * * @author falvojr
+ */
+public class SingletonLazy {
+
+	private static SingletonLazy instancia;
+
+}
+```
+
+#### Implementação do Método de Acesso
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h00m41s941.jpg" alt="" width="840">
+</p>
+
+Finalização do Singleton Lazy. O mecanismo consiste em tornar o construtor `private` e implementar o método `getInstancia()`. Este método verifica se a variável `instancia` é nula; se for, cria o objeto. Em chamadas subsequentes, ele apenas retorna o objeto já criado.
+
+```java
+package one.digitalinnovation.gof;
+
+/**
+ * Singleton "preguicoso".
+ * * @author falvojr
+ */
+public class SingletonLazy {
+
+	private static SingletonLazy instancia;
+
+	private SingletonLazy() {
+		super();
+	}
+
+	public static SingletonLazy getInstancia() {
+		if (instancia == null) {
+			instancia = new SingletonLazy();
+		}
+		return instancia;
+	}
+}
+```
+
+#### Transição para Outras Variantes
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h01m33s433.jpg" alt="" width="840">
+</p>
+
+Demonstração da criação de novas classes para explorar diferentes abordagens do Singleton, como a variante "apressada" (Eager), que lida com a inicialização de forma distinta.
+
+#### Singleton Eager (Apressado)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h03m04s452.jpg" alt="" width="840">
+</p>
+
+Implementação do **Singleton Eager**. Diferente do Lazy, esta versão instancia o objeto no momento em que a classe é carregada pela JVM. É uma abordagem simples quando se tem certeza de que a instância será sempre utilizada durante a execução.
+
+```java
+package one.digitalinnovation.gof;
+
+/**
+ * Singleton "apressado".
+ * * @author falvojr
+ */
+public class SingletonEager {
+
+	private static SingletonEager instancia = new SingletonEager();
+
+	private SingletonEager() {
+		super();
+	}
+
+	public static SingletonEager getInstancia() {
+		return instancia;
+	}
+}
+```
+
+#### Otimização com Lazy Holder
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h04m01s428.jpg" alt="" width="840">
+</p>
+
+Preparação para implementar o **Singleton Lazy Holder**, uma técnica que combina a inicialização tardia com segurança em ambientes de múltiplas threads (*thread-safe*).
+
+#### Implementação do Lazy Holder
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h04m26s519.jpg" alt="" width="840">
+</p>
+
+O `SingletonLazyHolder` utiliza uma classe interna estática (`InstanceHolder`) para encapsular a instância. A instância só é criada quando `InstanceHolder` é acessado pela primeira vez, garantindo eficiência.
+
+```java
+package one.digitalinnovation.gof;
+
+/**
+ * Singleton "Lazy Holder".
+ * * @see <a href="https://stackoverflow.com/a/15019331">Referência</a>
+ * * @author falvojr
+ */
+public class SingletonLazyHolder {
+
+	private static class InstanceHolder {
+		public static SingletonLazyHolder instancia = new SingletonLazyHolder();
+	}
+
+	private SingletonLazyHolder() {
+		super();
+	}
+
+	public static SingletonLazyHolder getInstancia() {
+		return InstanceHolder.instancia;
+	}
+}
+```
+
+#### Testes de Validação
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h04m48s859.jpg" alt="" width="840">
+</p>
+
+Criação da classe `Test` no pacote para verificar se todas as implementações do Singleton estão retornando corretamente a mesma instância de objeto.
+
+#### Execução dos Testes
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h05m16s325.jpg" alt="" width="840">
+</p>
+
+No método `main`, cada variante do Singleton é chamada duas vezes. Os objetos retornados são impressos no console para que se possa comparar seus endereços de memória.
+
+```java
+package one.digitalinnovation.gof;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		// Testes relacionados ao Design Pattern Singleton:
+		
+		SingletonLazy lazy = SingletonLazy.getInstancia();
+		System.out.println(lazy);
+		lazy = SingletonLazy.getInstancia();
+		System.out.println(lazy);
+		
+		SingletonEager eager = SingletonEager.getInstancia();
+		System.out.println(eager);
+		eager = SingletonEager.getInstancia();
+		System.out.println(eager);
+		
+		SingletonLazyHolder lazyHolder = SingletonLazyHolder.getInstancia();
+		System.out.println(lazyHolder);
+		lazyHolder = SingletonLazyHolder.getInstancia();
+		System.out.println(lazyHolder);
+	}
+}
+```
+
+#### Resultados no Console
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-10h05m26s113.jpg" alt="" width="840">
+</p>
+
+O resultado da execução confirma o sucesso da implementação. Como visto no console, para cada tipo de Singleton, as duas referências impressas possuem o mesmo ID de objeto (ex: `@7d6226db`), provando que a instância retornada é única.      
+
 
 ### 🟩 Vídeo 04 - Praticando com Java Puro: Strategy
 
@@ -98,7 +348,7 @@ link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/9fb47191-db28-4fe2-894b-274f8c5cd24f
 
 ### 🟩 Vídeo 05 - Praticando com Java Puro: Facade
 
