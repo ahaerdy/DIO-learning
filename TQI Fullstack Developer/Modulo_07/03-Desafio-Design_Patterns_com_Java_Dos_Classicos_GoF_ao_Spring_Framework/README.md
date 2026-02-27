@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
+- Contato Linkedin: / [falvojr](https://www.linkedin.com/in/falvojr/)
 
 ### 🟩 Vídeo 01 - Apresentação inicial
 
@@ -11,6 +11,8 @@
 </video>
 
 link do vídeo: https://web.dio.me/project/explorando-padroes-de-projetos-na-pratica-com-java/learning/e86281ce-844c-46d6-970f-6badc1a59f23?back=/track/tqi-fullstack-developer&tab=undefined&moduleId=undefined
+
+
 
 ### 🟩 Vídeo 02 - Padrões de Projeto
 
