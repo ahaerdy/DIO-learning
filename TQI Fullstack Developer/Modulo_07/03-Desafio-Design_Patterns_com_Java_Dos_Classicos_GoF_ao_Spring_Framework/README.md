@@ -540,6 +540,125 @@ robo.mover();
 
 link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/b85aef03-dad2-4e21-bbbf-e40aa02a9519
 
+O vídeo apresenta uma explanação teórica e prática sobre o padrão de projeto Facade (Fachada). O objetivo central é demonstrar como esse padrão pode simplificar a interação com sistemas complexos, provendo uma interface única e amigável para o desenvolvedor.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-16h24m45s635.jpg" alt="" width="840">
+</p>
+
+O padrão de projeto **Facade** é classificado como um **Padrão Estrutural**. Sua principal finalidade é prover uma interface unificada e simplificada que reduza a complexidade nas integrações com diversos subsistemas. No diagrama, observa-se que o **Client** interage apenas com a **Facade**, que por sua vez gerencia a comunicação com múltiplos componentes internos de um sistema complexo, abstraindo as chamadas necessárias para realizar uma operação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-16h27m42s535.jpg" alt="" width="840">
+</p>
+
+Para iniciar a implementação prática, o ambiente de desenvolvimento é preparado para a criação de um novo pacote voltado ao padrão Facade. A imagem demonstra a conclusão de exemplos anteriores baseados no padrão Strategy, onde um objeto do tipo `Robo` teve comportamentos alterados dinamicamente. Agora, o foco volta-se para a criação da classe `Facade` dentro da estrutura do projeto Java.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-16h28m40s522.jpg" alt="" width="840">
+</p>
+
+A classe `Facade` é definida no pacote `one.digitalinnovation.gof.facade`. O ponto central desta implementação é o método `migrarCliente`, que recebe parâmetros simples: o nome e o CEP do cliente. O objetivo é que esta interface oculte a complexidade de obter dados adicionais e realizar gravações em diferentes sistemas.
+
+```java
+package one.digitalinnovation.gof.facade;
+
+public class Facade {
+
+    public void migrarCliente(String nome, String cep) {
+        
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-16h29m33s755.jpg" alt="" width="840">
+</p>
+
+Para simular a complexidade que a Facade deve gerenciar, são criados subsistemas externos. O primeiro deles é o `CrmService`, localizado no pacote `subsistema1.crm`. Este componente representará um sistema de CRM (Customer Relationship Management) responsável pelo armazenamento definitivo dos dados dos clientes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-16h29m48s466.jpg" alt="" width="840">
+</p>
+
+A implementação do `CrmService` utiliza um método estático chamado `gravarCliente`. Nota-se que a interface deste subsistema é mais exigente que a da Facade, requerendo não apenas o nome e o CEP, mas também cidade e estado. O uso de métodos estáticos permite o consumo sem a necessidade de instanciar a classe, centralizando a lógica de persistência simulada.
+
+```java
+package subsistema1.crm;
+
+public class CrmService {
+
+    private CrmService() {
+        super();
+    }
+
+    public static void gravarCliente(String nome, String cep, String cidade, String estado) {
+        System.out.println("Cliente salvo no sistema de CRM.");
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-16h30m12s647.jpg" alt="" width="840">
+</p>
+
+O segundo subsistema, `CepApi`, é implementado no pacote `subsistema2.cep` seguindo o padrão **Singleton**. Ele simula uma API de busca de CEP, fornecendo os métodos `recuperarCidade` e `recuperarEstado`. Esta implementação distinta — uma usando Singleton e outra métodos estáticos — exemplifica as diferentes formas de integração que uma Facade pode consolidar em uma interface única.
+
+```java
+package subsistema2.cep;
+
+public class CepApi {
+
+    private static CepApi instancia = new CepApi();
+
+    private CepApi() {
+        super();
+    }
+
+    public static CepApi getInstancia() {
+        return instancia;
+    }
+
+    public String recuperarCidade(String cep) {
+        return "Araraquara";
+    }
+
+    public String recuperarEstado(String cep) {
+        return "SP";
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-16h30m31s867.jpg" alt="" width="840">
+</p>
+
+O `CrmService` é complementado com instruções de saída no console para validar a recepção correta das informações. O método agora imprime o nome, CEP, cidade e estado, permitindo verificar se a integração realizada pela Facade obteve os dados corretamente a partir da API de CEP e os repassou ao sistema de CRM.
+
+```java
+public static void gravarCliente(String nome, String cep, String cidade, String estado) {
+    System.out.println("Cliente salvo no sistema de CRM:");
+    System.out.println(nome);
+    System.out.println(cep);
+    System.out.println(cidade);
+    System.out.println(estado);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-16h30m42s611.jpg" alt="" width="840">
+</p>
+
+Na fase de testes, a classe `Test` instancia a `Facade` e executa o método `migrarCliente`. O resultado no console confirma que a Facade abstraiu com sucesso a complexidade: a partir de apenas um nome e um CEP, ela consultou a `CepApi` para obter "Araraquara" e "SP", e então acionou o `CrmService` para salvar o cliente com os dados completos.
+
+```java
+// Facade
+Facade facade = new Facade();
+facade.migrarCliente("Venilton", "14801788");
+```
+
 ### 🟩 Vídeo 06 - Praticando com Spring: Introdução
 
 <video width="60%" controls>
@@ -547,7 +666,9 @@ link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/5da490c2-92d1-4976-a718-dd49d1b1c061
+
+
 
 ### 🟩 Vídeo 07 - Praticando com Spring: Conhecendo o Projeto Base
 
