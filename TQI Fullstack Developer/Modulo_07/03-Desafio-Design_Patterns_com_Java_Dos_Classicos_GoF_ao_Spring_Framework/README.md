@@ -350,6 +350,187 @@ O resultado da execução confirma o sucesso da implementação. Como visto no c
 
 link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/9fb47191-db28-4fe2-894b-274f8c5cd24f
 
+Este guia explora o padrão de projeto Strategy, um padrão comportamental que permite definir uma família de algoritmos, encapsulá-los e torná-los intercambiáveis. O vídeo utiliza um exemplo prático de um robô com diferentes comportamentos de movimentação para ilustrar como o padrão facilita a variação de algoritmos através de uma interface comum.
+
+### Anotações
+
+#### Organização de Pacotes no Eclipse
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h02m39s990.jpg" alt="" width="840">
+</p>
+
+Para iniciar a implementação do padrão **Strategy**, é necessário organizar o projeto criando novos pacotes. A interface do Eclipse mostra a criação de um pacote específico para separar as implementações de estratégia das demais, como o Singleton, garantindo uma estrutura de diretórios limpa e coerente com as responsabilidades de cada classe.
+
+#### Ajuste de Visualização Hierárquica
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h02m52s614.jpg" alt="" width="840">
+</p>
+
+A visualização do **Package Explorer** é alterada para o modo hierárquico. Essa configuração permite visualizar a árvore de pacotes de forma mais organizada, facilitando a identificação da relação entre o pacote principal e os subpacotes criados para o Strategy e o Singleton.
+
+#### Criação de Novos Componentes
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h03m59s855.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote de estratégia, o menu de contexto do Eclipse é utilizado para criar os elementos que comporão o padrão. O objetivo é definir uma interface que servirá como o contrato para as diferentes variações de algoritmos que serão implementadas a seguir.
+
+#### Conceitos do Padrão Strategy
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h04m09s672.jpg" alt="" width="840">
+</p>
+
+O diagrama UML apresenta a estrutura do padrão comportamental **Strategy**. Sua função principal é simplificar a variação de algoritmos para a resolução de um mesmo problema. No diagrama, observamos:
+
+* **Client**: O componente que utiliza o contexto.
+* **Context**: A classe que mantém uma referência para uma instância de Strategy.
+* **Interface (Strategy)**: Define o contrato comum para todos os algoritmos suportados.
+* **Implementações (One/Two)**: As variações concretas do algoritmo.
+
+#### Definição da Interface de Comportamento
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h04m16s800.jpg" alt="" width="840">
+</p>
+
+A interface `Comportamento` é criada para atuar como a nossa **Strategy**. Ela define o contrato que todas as variações de movimentação do robô devem seguir, estabelecendo o método base que será implementado pelas classes concretas.
+
+#### Implementação do Comportamento Agressivo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h07m09s243.jpg" alt="" width="840">
+</p>
+
+Esta classe representa uma variação específica da estratégia. Ao implementar a interface `Comportamento`, a classe `ComportamentoAgressivo` é obrigada a fornecer sua própria lógica para o método `mover()`.
+
+```java
+package one.digitalinnovation.gof.strategy;
+
+public class ComportamentoAgressivo implements Comportamento {
+
+	@Override
+	public void mover() {
+		System.out.println("Movendo-se agressivamente...");
+	}
+}
+```
+
+#### Implementação do Comportamento Defensivo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h09m36s485.jpg" alt="" width="840">
+</p>
+
+Seguindo o mesmo padrão de variação de algoritmos, a classe `ComportamentoDefensivo` implementa a interface de estratégia com uma lógica de movimentação distinta.
+
+```java
+package one.digitalinnovation.gof.strategy;
+
+public class ComportamentoDefensivo implements Comportamento {
+
+	@Override
+	public void mover() {
+		System.out.println("Movendo-se defensivamente...");
+	}
+}
+```
+
+#### Implementação do Comportamento Normal
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h10m03s701.jpg" alt="" width="840">
+</p>
+
+A classe `ComportamentoNormal` finaliza as nossas implementações de estratégia iniciais, fornecendo a movimentação padrão do robô.
+
+```java
+package one.digitalinnovation.gof.strategy;
+
+public class ComportamentoNormal implements Comportamento {
+
+	@Override
+	public void mover() {
+		System.out.println("Movendo-se normalmente...");
+	}
+}
+```
+
+#### Criação da Classe de Contexto
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h10m12s557.jpg" alt="" width="840">
+</p>
+
+Após definir as estratégias, cria-se a classe `Robo`, que funcionará como o **Contexto** no padrão Strategy. Esta classe será responsável por utilizar as diferentes implementações de comportamento.
+
+#### Estrutura da Classe Robo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h10m24s857.jpg" alt="" width="840">
+</p>
+
+A classe `Robo` possui um atributo do tipo da interface `Comportamento`. Isso permite o uso de polimorfismo, onde o robô pode receber qualquer implementação da estratégia. O método `mover()` do robô delega a execução para a estratégia atualmente atribuída.
+
+```java
+package one.digitalinnovation.gof.strategy;
+
+public class Robo {
+	
+	private Comportamento comportamento;
+
+	public void setComportamento(Comportamento comportamento) {
+		this.comportamento = comportamento;
+	}
+	
+	public void mover() {
+		comportamento.mover();
+	}
+}
+```
+
+#### Configuração do Cenário de Teste
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h10m38s700.jpg" alt="" width="840">
+</p>
+
+No código de teste, as instâncias das estratégias são criadas e o robô é inicializado. O exemplo demonstra a atribuição de um comportamento inicial (Normal) e a execução da ação de movimento.
+
+```java
+// Strategy
+Comportamento defensivo = new ComportamentoDefensivo();
+Comportamento normal = new ComportamentoNormal();
+Comportamento agressivo = new ComportamentoAgressivo();
+
+Robo robo = new Robo();
+robo.setComportamento(normal);
+
+robo.mover();
+robo.mover();
+```
+
+#### Alternância de Estratégias em Tempo de Execução
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-27-11h11m32s293.jpg" alt="" width="840">
+</p>
+
+A flexibilidade do padrão é demonstrada ao alterar o comportamento do robô durante a execução. Ao trocar a estratégia via `setComportamento`, o mesmo método `robo.mover()` passa a produzir resultados diferentes, conforme exibido no console.
+
+```java
+robo.setComportamento(defensivo);
+robo.mover();
+
+robo.setComportamento(agressivo);
+robo.mover();
+robo.mover();
+robo.mover();
+```      
+
 ### 🟩 Vídeo 05 - Praticando com Java Puro: Facade
 
 <video width="60%" controls>
@@ -357,7 +538,7 @@ link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/b85aef03-dad2-4e21-bbbf-e40aa02a9519
 
 ### 🟩 Vídeo 06 - Praticando com Spring: Introdução
 
