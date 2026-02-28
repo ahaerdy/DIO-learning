@@ -668,6 +668,36 @@ facade.migrarCliente("Venilton", "14801788");
 
 link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/5da490c2-92d1-4976-a718-dd49d1b1c061
 
+O vídeo explica como os conceitos teóricos de Design Patterns são aplicados na prática dentro do Spring Framework. O objetivo é correlacionar funcionalidades nativas do framework com padrões clássicos, otimizando o desenvolvimento e a manutenção de software.
+
+### Anotações
+
+#### Percurso de Aprendizado: Padrões de Projeto no Ecossistema Java 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-08h33m25s009.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta o roteiro estruturado para o domínio de padrões de projeto, dividindo a jornada em quatro etapas fundamentais:
+
+* **Passo 1:** Foco inicial nos conceitos teóricos e padrões de projeto fundamentais.
+* **Passo 2:** Prática de implementação utilizando Java "Puro", permitindo consolidar o entendimento estrutural sem abstrações de frameworks.
+* **Passo 3:** Transição para o **Spring Framework**, correlacionando os padrões aprendidos com as funcionalidades automáticas do ecossistema.
+* **Passo 4:** Consolidação final através de um **Desafio de Projeto** prático.
+
+#### Mapeamento de Padrões GoF no Spring Framework 
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-08h33m28s467.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos como o Spring Framework implementa nativamente padrões clássicos de projeto para otimizar o desenvolvimento:
+
+* **Singleton:** Gerenciado pelo container de Inversão de Controle do Spring através das anotações `@Bean` e `@Autowired`. Por padrão, o framework entrega instâncias únicas (beans) para otimizar o consumo de memória,].
+* **Strategy:** Aplicado por meio de `@Service` e `@Repository`. O `@Service` atua como a implementação concreta de uma estratégia de negócio], enquanto o `@Repository` abstrai a estratégia de persistência de dados].
+* **Facade:** Uma **API REST** é utilizada como uma fachada para expor uma interface simples e coesa]. Ela abstrai a complexidade de integrações como o **Spring Data JPA** e o consumo de serviços externos como o **ViaCEP** via **Feign**].
+* 
+**Persistência:** Utiliza-se o banco de dados em memória **H2**. Essa escolha simplifica o projeto ao evitar configurações complexas de *connection strings* e drivers manuais durante a fase de aprendizado].
 
 
 ### 🟩 Vídeo 07 - Praticando com Spring: Conhecendo o Projeto Base
@@ -677,7 +707,7 @@ link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/975a7cad-08ec-43be-9f34-5c3c65aa6ba7
 
 ### 🟩 Vídeo 08 - Praticando com Spring: Padrões de Projeto em uma API REST
 
