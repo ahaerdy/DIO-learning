@@ -709,6 +709,260 @@ Nesta etapa, exploramos como o Spring Framework implementa nativamente padrões 
 
 link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/975a7cad-08ec-43be-9f34-5c3c65aa6ba7
 
+### Anotações
+
+#### Spring Initializr
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h26m14s536.jpg" alt="" width="840">
+</p>
+
+O ponto de partida para a criação do projeto é o **Spring Initializr** (`start.spring.io`), uma interface visual que permite selecionar as dependências necessárias e configurar a estrutura base de um projeto **Spring Boot**. A premissa dessa ferramenta é abstrair a complexidade inicial de configuração do Spring Framework, permitindo a escolha rápida de módulos para APIs REST, persistência e integração.
+
+Neste projeto específico, foram selecionadas as seguintes dependências:
+
+* **Spring Web:** Para prover a interface REST.
+* **Spring Data JPA:** Para abstração da persistência em bancos relacionais.
+* **H2 Database:** Banco de dados em memória para simplificar o desenvolvimento.
+* **OpenFeign:** Cliente REST declarativo para consumo de APIs externas.
+
+#### Classe Application e EnableFeignClients
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h26m21s546.jpg" alt="" width="840">
+</p>
+
+A classe principal do projeto, `Application`, é o ponto de entrada da aplicação Spring Boot. Além da anotação padrão `@SpringBootApplication`, foi incluída a anotação `@EnableFeignClients`. Esta configuração é essencial para habilitar o uso do **OpenFeign** dentro do projeto, permitindo que as interfaces anotadas como clientes sejam detectadas e injetadas pelo Spring.
+
+```java
+@EnableFeignClients
+@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+
+```
+
+#### Metadados do Projeto no pom.xml
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h28m26s082.jpg" alt="" width="840">
+</p>
+
+O arquivo `pom.xml` gerencia as dependências e configurações do Maven. Nele, definimos o projeto pai (`spring-boot-starter-parent`), que fornece configurações padrão do Spring Boot, e os metadados do projeto, como o **Artifact ID** (`lab-padroes-projeto-spring`) e a versão do **Java 11**, utilizada como base para este desenvolvimento.
+
+```xml
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.5.4</version>
+    <relativePath/>
+</parent>
+<groupId>digitalinnovation.one</groupId>
+<artifactId>lab-padroes-projeto-spring</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+<name>lab-padroes-projeto-spring</name>
+```
+
+#### Dependências do Projeto no pom.xml
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h28m41s737.jpg" alt="" width="840">
+</p>
+
+As dependências listadas no `pom.xml` incluem os módulos selecionados no Initializr e adições manuais para documentação. Destacam-se o **Spring Boot Starter Data JPA** para persistência, o **OpenFeign** para comunicação HTTP e o **Springdoc OpenAPI (Swagger)**, incluído manualmente para gerar a interface visual de testes da API.
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-openfeign</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springdoc</groupId>
+    <artifactId>springdoc-openapi-ui</artifactId>
+    <version>${openapi.version}</version>
+</dependency>
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
+```
+
+#### Modelo Cliente (Entity)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h29m06s443.jpg" alt="" width="840">
+</p>
+
+A classe `Cliente` representa uma entidade no banco de dados. Ela utiliza anotações do JPA para definir o mapeamento objeto-relacional (ORM), com um ID auto-gerado e uma relação de muitos para um (`@ManyToOne`) com a classe `Endereco`. Essa estrutura permite que múltiplos clientes compartilhem o mesmo registro de endereço baseado no CEP.
+
+```java
+@Entity
+public class Cliente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String nome;
+    @ManyToOne
+    private Endereco endereco;
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+}
+```
+
+#### Modelo Endereco e jsonschema2pojo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h29m08s324.jpg" alt="" width="840">
+</p>
+
+A entidade `Endereco` foi estruturada para refletir os dados retornados pela API do ViaCEP. Para agilizar o desenvolvimento, os atributos desta classe foram gerados automaticamente a partir do formato JSON, utilizando a ferramenta **jsonschema2pojo**. No Java, as anotações do JPA garantem que esses dados sejam persistidos de forma consistente no banco de dados H2.
+
+```java
+@Entity
+public class Endereco {
+    @Id
+    private String cep;
+    private String logradouro;
+    private String complemento;
+    private String bairro;
+    private String localidade;
+    private String uf;
+    private String ibge;
+    private String gia;
+    private String ddd;
+    private String siafi;
+
+    public String getCep() { return cep; }
+    public void setCep(String cep) { this.cep = cep; }
+}
+```
+
+#### Documentação ViaCEP
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h30m09s719.jpg" alt="" width="840">
+</p>
+
+O serviço **ViaCEP** é utilizado como fonte externa para consulta de endereços. A documentação técnica do webservice especifica que as requisições devem seguir o formato de 8 dígitos para o CEP, permitindo retornos em diversos formatos, como JSON e XML. Este serviço é a base para o enriquecimento dos dados do cliente durante o cadastro.
+
+#### Formatos de Retorno (JSON)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h30m13s688.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra o formato de retorno **JSON** da API ViaCEP. Este objeto contém campos como `logradouro`, `bairro`, `localidade` e `uf`. É exatamente esta estrutura que foi copiada para servir de modelo na geração automática da classe Java, garantindo que o mapeamento dos campos seja compatível com a resposta do webservice.
+
+#### Interface do jsonschema2pojo
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h30m17s780.jpg" alt="" width="840">
+</p>
+
+O site **jsonschema2pojo.org** é uma ferramenta utilitária que converte esquemas JSON ou instâncias JSON diretamente em POJOs (Plain Old Java Objects). Configurações como o estilo de anotação (Jackson, Gson), inclusão de getters/setters e construtores podem ser definidas na interface para automatizar a criação de classes de transporte de dados.
+
+#### Preview de Código Gerado
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h30m21s345.jpg" alt="" width="840">
+</p>
+
+Após a inserção do JSON, a ferramenta gera uma visualização do código Java resultante. Este processo evita o trabalho repetitivo de digitação e mapeamento manual de campos de APIs externas, fornecendo uma base sólida que pode ser copiada diretamente para o projeto e enriquecida com anotações de persistência do Spring Data JPA.
+
+#### Interface ClienteRepository
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h30m30s915.jpg" alt="" width="840">
+</p>
+
+A interface `ClienteRepository` estende `CrudRepository`. Ao fazer isso, o Spring Data JPA injeta automaticamente as implementações concretas para operações básicas de banco de dados (inserir, buscar, deletar). Este padrão é um exemplo de como o Spring utiliza o padrão **Strategy** para definir comportamentos de acesso a dados.
+
+```java
+package one.digitalinnovation.gof.model;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface ClienteRepository extends CrudRepository<Cliente, Long> {
+}
+```
+
+#### Interface CrudRepository (Spring Data)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h30m41s809.jpg" alt="" width="840">
+</p>
+
+A interface genérica `CrudRepository` do Spring Data fornece os métodos padrão para operações de CRUD. Ela recebe como parâmetros o tipo da entidade (`T`) e o tipo do identificador (`ID`). Métodos como `save(S entity)` e `findAll()` são definidos aqui e utilizados pelas interfaces de repositório do projeto para interagir com o banco H2.
+
+#### Interface ClienteService (Strategy)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h30m49s875.jpg" alt="" width="840">
+</p>
+
+A camada de serviço utiliza uma interface para definir o contrato de operações de negócio. A interface `ClienteService` representa o padrão **Strategy**, definindo os métodos necessários para o gerenciamento de clientes. A implementação concreta dessas regras será realizada em uma classe separada, permitindo a troca de estratégias de implementação se necessário.
+
+```java
+public interface ClienteService {
+    Iterable<Cliente> buscarTodos();
+    Cliente buscarPorId(Long id);
+    void inserir(Cliente cliente);
+    void atualizar(Long id, Cliente cliente);
+    void deletar(Long id);
+}
+```
+
+#### ClienteRestController e Endpoints REST
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h31m06s315.jpg" alt="" width="840">
+</p>
+
+O `ClienteRestController` é o componente responsável por expor os endpoints da API. Ele utiliza anotações como `@RestController` e `@RequestMapping("clientes")`. O controlador delega as operações para o `ClienteService`, seguindo o padrão **Facade** para abstrair a complexidade da lógica de negócio e oferecer uma interface simples para o consumo via HTTP.
+
+```java
+@RestController
+@RequestMapping("clientes")
+public class ClienteRestController {
+    @Autowired
+    private ClienteService clienteService;
+
+    @GetMapping
+    public ResponseEntity<Iterable<Cliente>> buscarTodos() {
+        return ResponseEntity.ok(clienteService.buscarTodos());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Cliente> buscarPorId(@PathVariable Long id) {
+        return ResponseEntity.ok(clienteService.buscarPorId(id));
+    }
+}
+```
+
+#### Interface Visual Swagger UI (OpenAPI)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-02-28-09h31m10s873.jpg" alt="" width="840">
+</p>
+
+Ao executar a aplicação, a dependência do OpenAPI expõe automaticamente uma documentação interativa no endereço `localhost:8080/swagger-ui.html`. Esta interface lista todos os endpoints definidos no controlador, permitindo testar requisições GET, POST, PUT e DELETE diretamente do navegador, facilitando a validação das funcionalidades sem ferramentas externas como o Postman.
+
+
 ### 🟩 Vídeo 08 - Praticando com Spring: Padrões de Projeto em uma API REST
 
 <video width="60%" controls>
@@ -716,7 +970,7 @@ link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/5393f0ce-16cc-4132-9285-77743f5c6bb3
 
 ### 🟩 Vídeo 09 - Desafio de Projeto
 
