@@ -1286,18 +1286,73 @@ Concluídas as manipulações sistêmicas, a execução de uma requisição gene
 
 link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/fd169729-dfdd-4bc5-af7c-8bd74bbfc145
 
+O vídeo resume as orientações finais para a conclusão do desafio de projeto sobre Padrões de Projeto (Design Patterns). O objetivo é consolidar o aprendizado prático, explorando desde implementações puras em Java até a utilização de frameworks robustos como o Spring Boot.
+
+### Anotações
+
+#### Percurso e Etapas do Desafio
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-15h03m55s924.jpg" alt="" width="840">
+</p>
+
+O roteiro de aprendizado para o domínio de padrões de projeto é estruturado em quatro etapas progressivas:
+
+* **Passo 1**: Introdução aos conceitos e padrões de projeto.
+* **Passo 2**: Prática de implementação utilizando Java "Puro".
+* **Passo 3**: Desenvolvimento e abstração utilizando o framework Spring.
+* **Passo 4**: Realização do Desafio de Projeto final.
+
+#### Orientações para o Desafio de Projeto
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-15h03m57s958.jpg" alt="" width="840">
+</p>
+
+O desafio final propõe que o aluno crie uma solução prática explorando o conceito de Padrões de Projeto. Para a entrega, é possível seguir dois caminhos:
+
+* Reproduzir e evoluir um dos projetos apresentados durante as aulas.
+* Desenvolver uma nova ideia do zero, caso se sinta preparado para o desafio.
+
+Como recomendação adicional, sugere-se a pesquisa por termos como "java design patterns github" e "java design patterns examples" para conhecer novas implementações de referência e aprofundar o domínio técnico.
+
+#### Repositórios e Referências Técnicas
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-15h04m02s639.jpg" alt="" width="840">
+</p>
+
+Para apoiar o desenvolvimento do projeto, são disponibilizados dois repositórios oficiais no GitHub que contêm os exemplos práticos trabalhados:
+
+* **Java Puro**: `github.com/digitalinnovationone/lab-padroes-projeto-java`.
+* **Spring Framework**: `github.com/digitalinnovationone/lab-padroes-projeto-spring`.
+
+Esses repositórios servem como base para consultas técnicas e para o enriquecimento do portfólio pessoal do desenvolvedor.
+
+
 ### 🟩 Vídeo 10 - Entendendo o Desafio
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.07-curso.03-video_10.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+#### Descrição do Desafio
 
-link do vídeo:
+Chegamos à etapa final da nossa jornada de aprendizado sobre Design Patterns.  
+Agora é hora de aplicar os conceitos na prática e criar algo que agregue valor ao seu portfólio.
 
-##  Materiais de Apoio
+#### O Que Entregar?
 
-# Certificado: 
+- **Reproduzir e Evoluir**: Replique o projeto feito em sala e evolua com seus próprios toques.  
+- **Criar do Zero**: Desenvolva uma nova ideia ou API utilizando os padrões aprendidos, com Java ou Spring.  
+- **Focar em um Padrão**: Escolha um padrão específico para implementar ou reproduza exemplos usando Java puro.
 
-- Link na plataforma: 
-- Certificado em pdf:
+#### Dicas
+
+- **Pesquise Referências**: Busque por "java design patterns github" ou "java design patterns examples" para se inspirar e encontrar implementações de referência.  
+- **Use o GitHub**: Faça fork dos repositórios oficiais dos labs para iniciar e evoluir o código.
+
+#### Links Úteis
+
+- [Slides da Apresentação](https://docs.google.com/presentation/d/1WU8gLHbB1s9XCIGsQ87gD36kt398qLch/edit?usp=sharing&ouid=116800384344091292704&rtpof=true&sd=true)  
+- GitHub: [Padrões de Projeto com Java Puro](https://github.com/digitalinnovationone/lab-padroes-projeto-java) (implementação de referência)  
+- GitHub: [Padrões de Projeto com Spring](https://github.com/digitalinnovationone/lab-padroes-projeto-spring) (implementação de referência)
+
+
+- Link do repositório do projeto entregue: 
