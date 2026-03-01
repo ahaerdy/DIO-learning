@@ -972,6 +972,311 @@ Ao executar a aplicação, a dependência do OpenAPI expõe automaticamente uma 
 
 link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/5393f0ce-16cc-4132-9285-77743f5c6bb3
 
+Aqui está o documento Markdown preenchido rigorosamente conforme solicitado. As explicações foram integradas logo após cada bloco visual, mantendo a estrutura original imutável e aplicando os conceitos abordados no contexto didático.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h16m54s132.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a interface gráfica do Swagger, gerada automaticamente pelo OpenAPI. Esta ferramenta fornece uma documentação interativa e amigável da API REST, listando os endpoints disponíveis para a entidade "clientes" , incluindo as operações HTTP padrão: `GET` para busca, `POST` para criação, `PUT` para atualização e `DELETE` para remoção de registros. O servidor local utilizado para acesso está rodando na porta 8080 (`127.0.0.1:8080`).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h16m56s057.jpg" alt="" width="840">
+</p>
+
+A visualização na IDE exibe o arquivo de configuração de dependências do projeto (o arquivo `pom.xml` no Maven). É destacada a adição manual da dependência `springdoc-openapi-ui`, responsável por importar a biblioteca do OpenAPI para o ecossistema Spring Boot, habilitando a interface visual explorada anteriormente.
+
+```xml
+<dependency>
+    <groupId>org.springdoc</groupId> [cite: 88]
+    <artifactId>springdoc-openapi-ui</artifactId> [cite: 89]
+    <version>${openapi.version}</version> [cite: 90]
+</dependency>
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h19m19s055.jpg" alt="" width="840">
+</p>
+
+O código apresenta a estrutura base da classe `ClienteRestController`, que atua como o ponto de entrada principal para o recebimento das requisições externas na API. Utilizando as anotações semânticas do Spring MVC, como `@GetMapping` , `@PostMapping` , `@PutMapping` e `@DeleteMapping` , ela mapeia os verbos HTTP correspondentes para a rota principal `/clientes` definida em nível de classe.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h19m29s891.jpg" alt="" width="840">
+</p>
+
+Durante o processo de execução inicial do servidor local embutido para fins de depuração (debug), é exibido um aviso de segurança do Windows Defender Firewall. Este alerta indica que regras de rede internas precisam de permissão para permitir que a IDE libere o tráfego nas portas de comunicação da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h19m57s180.jpg" alt="" width="840">
+</p>
+
+A aplicação se encontra em estado de depuração. Um ponto de interrupção (breakpoint) foi inserido e atingido na linha de retorno do método `buscarTodos()`, dentro do controlador REST. Esse mecanismo pausa a execução em tempo real, permitindo a inspeção detalhada do fluxo de processamento e das variáveis instanciadas naquele momento exato.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h20m08s197.jpg" alt="" width="840">
+</p>
+
+A interface do Swagger encontra-se bloqueada em um estado de "LOADING" após o acionamento de um endpoint (no caso, a URL de requisição `/clientes` ). Isso é o reflexo visual da interrupção causada pelo ponto de depuração (breakpoint) estabelecido no código-fonte; a resposta da requisição não foi finalizada e entregue de volta ao cliente HTTP.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h20m11s446.jpg" alt="" width="840">
+</p>
+
+Pela inspeção flutuante na IDE durante o modo debug, nota-se que a variável `clienteService` foi injetada corretamente pelo contêiner do Spring. Em vez de uma interface abstrata, a injeção proveu uma classe concreta que implementa o comportamento esperado. O identificador numérico interno e final da referência de memória indica a instância específica desse objeto sendo administrada pelo framework.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h20m20s310.jpg" alt="" width="840">
+</p>
+
+A visão consolidada na IDE demonstra o código do `ClienteRestController` na parte superior, onde o controlador realiza chamadas diretas para os métodos expostos pelo contrato de serviço (como `clienteService.buscarTodos()`). Na parte inferior, o painel de log (Console) registra eventos normais de execução, como inicialização de pools de threads  e mapeamento interno do Tomcat subjacente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h21m04s157.jpg" alt="" width="840">
+</p>
+
+Inspecionando a variável injetada novamente após uma nova requisição, a referência do objeto instanciado visualizada via tooltip na IDE (`one.digitalinnovation.gof.service.impl.ClienteServiceImpl@1a8b22b5`)  continua idêntica. Isso evidencia na prática o padrão Singleton adotado como padrão pelo Spring: a mesma instância exata do componente de serviço gerencia e atende a chamadas repetidas no ciclo de vida da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h22m30s205.jpg" alt="" width="840">
+</p>
+
+A estrutura inicial da classe `ClienteServiceImpl`, que implementa as regras de negócio definidas na interface base. São listadas as marcações semânticas via comentários "TODO", definindo os passos arquiteturais para compor a solução com injeção de dependências (Singleton), cumprimento de contratos (Strategy) e ocultação da complexidade das integrações (Facade).
+
+```java
+// TODO Singleton: Injetar os componentes do Spring com @Autowired. [cite: 508]
+// TODO Strategy: Implementar os métodos definidos na interface. [cite: 511]
+// TODO Facade: Abstrair integrações com subsistemas, provendo uma interfe [cite: 513]
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h22m34s218.jpg" alt="" width="840">
+</p>
+
+O contexto visual retorna brevemente à interface web de requisição, preparando as fundações mentais para iniciar a implementação da lógica. Reforça-se a ligação entre o painel de teste do Swagger e o impacto do código que deve ser redigido nos passos estipulados pelos indicadores de tarefa "TODO".
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h23m08s364.jpg" alt="" width="840">
+</p>
+
+A perspectiva retorna à classe de infraestrutura web, reavaliando o controlador de rotas. Fica evidente que as diretrizes estruturais da lógica de negócio na retaguarda serão moldadas para suprir precisamente as necessidades de roteamento solicitadas na borda externa do sistema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h23m38s912.jpg" alt="" width="840">
+</p>
+
+O instrutor destaca a anotação `@Autowired`, evidenciada via contextualização da IDE. Esse mecanismo chave do Spring realiza a configuração e a conexão autônoma de objetos geridos pelo framework, poupando a codificação manual e fortalecendo a adoção dos paradigmas fundamentais de Inversão de Controle e Injeção de Dependências.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h25m15s113.jpg" alt="" width="840">
+</p>
+
+O foco centraliza-se em dar andamento prático ao primeiro item dos lembretes inseridos no escopo do serviço de clientes. O bloco selecionado define o alvo imediato de codificação: acoplar componentes fundamentais de manipulação de dados em bancos (como repositórios) na lógica central do negócio de clientes.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h26m13s310.jpg" alt="" width="840">
+</p>
+
+Linhas de espaçamento são inseridas imediatamente abaixo da meta estabelecida de injeção de dependências no `ClienteServiceImpl`. É o momento exato de estruturação antes da digitação das declarações para referenciar os artefatos de persistência através de anotações específicas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h26m32s668.jpg" alt="" width="840">
+</p>
+
+A injeção do primeiro componente chave, `ClienteRepository`, é devidamente codificada como um campo restrito (`private`). Em seguida, a IDE apresenta funções autocompletadas na primeira requisição funcional (buscar todos). O repositório é invocado delegando a operação padronizada de buscar dados generalistas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h26m56s146.jpg" alt="" width="840">
+</p>
+
+As duas operações simplificadas de consulta são estabelecidas. No contexto global da coleção, o repositório consome `findAll()`. Para as buscas individuais através de identificador único, um recurso semântico moderno do Java — classe empacotadora de contingência `Optional` — é acionado juntamente com o método utilitário nativo `findById()`.
+
+```java
+@Override
+public Iterable<Cliente> buscarTodos() {
+    return clienteRepository.findAll();
+}
+
+@Override
+public Cliente buscarPorId(Long id) {
+    Optional<Cliente> cliente = clienteRepository.findById(id);
+    return null;
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h27m35s778.jpg" alt="" width="840">
+</p>
+
+Complementando o escopo da operação pontual, o bloco de encapsulamento `Optional` tem seus limites transpassados com a evocação do comando `.get()`. Na prática adotada, priorizou-se de forma direta a remoção do invólucro para extrair o objeto purificado e enviá-lo de volta através da fronteira arquitetural.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h28m12s422.jpg" alt="" width="840">
+</p>
+
+A atenção recai estrategicamente nas regras de criação de novas entidades. O instrutor seleciona o descritivo da lógica para verificar existência de registros complementares (endereços) anexos ao cliente principal através de suas chaves identificadoras exclusivas antes de aplicar comandos fixos no banco de dados local.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h28m31s584.jpg" alt="" width="840">
+</p>
+
+O componente responsável pelas rotinas de gestão isolada de endereços é instanciado. O recurso referenciado pelo identificador de repositório de endereço atuará lado a lado com a manipulação de objetos clientes primários para concretizar lógicas compostas.
+
+```java
+@Autowired
+private EnderecoRepository enderecoRepository;
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h29m11s799.jpg" alt="" width="840">
+</p>
+
+Uma infraestrutura de mensageria externa via REST (`ViaCepService` ) é providenciada e integrada nativamente no ambiente do Spring sob o guarda-chuva de cliente Feign. Com o acesso embutido, a função de salvamento avança resgatando a identificação (CEP) para uma varredura interna (Via repositório de endereço ). Um cenário alternativo de execução imperativa baseada na função utilitária `orElseGet` é planejado na contingência do endereço inexistir localmente.
+
+```java
+@Autowired
+private ViaCepService viaCepService;
+
+//...
+@Override
+public void inserir(Cliente cliente) {
+    String cep = cliente.getEndereco().getCep();
+    Endereco endereco = enderecoRepository.findById(cep).orElseGet(() -> {
+        // ...
+        return null;
+    });
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h29m34s179.jpg" alt="" width="840">
+</p>
+
+O acionamento inteligente deFallback toma formato completo no interior do lambda acoplado ao `orElseGet`. Conectando os limites do negócio (Facade), a falta de dado pré-existente engatilha a captação externa do dado atualizado nos correios, seguida imperativamente de sua submissão compulsória à unidade local de banco para posterior reúso futuro.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h29m58s865.jpg" alt="" width="840">
+</p>
+
+Concluídas as verificações colaterais e consolidadas as amarras de dados, encerra-se o procedimento primário fixando o dado auxiliar no modelo da entidade base. Por consequência natural e de forma encadeada, submete-se toda a estrutura de negócio (O cliente enriquecido) para a unidade responsável pelo registro final através da instrução de salvamento global.
+
+```java
+        return novoEndereco;
+    });
+    cliente.setEndereco(endereco);
+    // Inserir Cliente, vinculando o Endereco (novo ou existente).
+    clienteRepository.save(cliente);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h30m17s154.jpg" alt="" width="840">
+</p>
+
+Passa-se o escopo ao bloco de atualização de entidades previamente existentes na base. Exibe-se que a mecânica fundamental para garantir que dados falsos não corrompam a fonte (verificando antes a integridade via identificador numérico com um teste booleano em caso de valor verdadeiro da empacotadora de resultados `Optional`). Após as garantias de viabilidade, o resto será rigorosamente espelhado ao salvamento primário.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h30m49s324.jpg" alt="" width="840">
+</p>
+
+Adotando diretrizes essenciais (Don't Repeat Yourself), o agrupamento lógico maciço que compõe toda a complexa engenharia de preenchimento e busca externa de informações foi recortado em sua inteireza. Transformou-se todo esse volume numa conveniente declaração rotineira provada e nomeada sinteticamente como `salvarClienteComCep`.
+
+```java
+private void salvarClienteComCep(Cliente cliente) {
+    // Verificar se o Endereco do Cliente já existe (pelo CEP).
+    String cep = cliente.getEndereco().getCep();
+    Endereco endereco = enderecoRepository.findById(cep).orElseGet(() -> {
+        // Caso não exista, integrar com o ViaCEP e persistir o retorno.
+        Endereco novoEndereco = viaCepService.consultarCep(cep);
+        enderecoRepository.save(novoEndereco);
+        return novoEndereco;
+    });
+    cliente.setEndereco(endereco);
+    // Inserir Cliente, vinculando o Endereco (novo ou existente).
+    clienteRepository.save(cliente);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h30m55s023.jpg" alt="" width="840">
+</p>
+
+Os contratos definidores dos métodos ganharam elegância com a integração do auxílio prático contido no bloco segregado anterior. Tanto no segmento encarregado de injetar clientes novos, quanto no segmento responsável pelas alterações mediante constatação de registros precedentes, a robusta e agora reusada estrutura se faz presente diminuindo incertezas estruturais e simplificando os comandos.
+
+```java
+@Override
+public void atualizar(Long id, Cliente cliente) {
+    // Buscar Cliente por ID, caso exista
+    Optional<Cliente> clienteBd = clienteRepository.findById(id);
+    if (clienteBd.isPresent()) {
+        salvarClienteComCep(cliente);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h31m06s968.jpg" alt="" width="840">
+</p>
+
+Para suprir os deveres finais definidos, despacha-se o requerimento simples que tem o condão de neutralizar permanentemente registros do armazenamento relacional subjacente. A unidade gerenciadora recebe via chave identificadora de transição primária a solicitação peremptória de exclusão de dados correspondente (`deleteById`).
+
+```java
+@Override
+public void deletar(Long id) {
+    // FIXME Deletar Cliente por ID.
+    clienteRepository.deleteById(id);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h31m32s939.jpg" alt="" width="840">
+</p>
+
+Finalizadas as implementações de dependência na retaguarda, um "restart" generalizado impulsiona novamente todo o emaranhado sistêmico do projeto Spring Boot. Informações na central consolidadora atestam o refazer bem sucedido de tramas cruciais do contêiner e a completa transição pacífica para uma situação estabilizada e receptiva do servidor embutido.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h32m09s850.jpg" alt="" width="840">
+</p>
+
+O teste dinâmico e visual da API tem início na porta de entrada da requisição de inserção (POST). Em demonstração direta, envia-se à matriz uma solicitação simples encapsulando dados elementares formatados em linguagem padrão (JSON), contendo puramente o nome fictício e o correspondente referencial numérico dos correios brasileiros (CEP).
+
+```json
+{
+  "nome": "Venilton",
+  "endereco": {
+    "cep": "14801-788"
+  }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h32m16s333.jpg" alt="" width="840">
+</p>
+
+Como fruto da operação submetida e processada pelas lógicas de fachada e serviço consolidadas (Facade + ViaCepService), a devolução da camada restritiva comprova a metamorfose das informações. O fragmento elementar enviado desdobrou-se gerando no retorno não apenas um cliente instanciado (status 200 OK), como todos os predicativos espaciais e descritivos em cascata inerentes a referida localização extraídos confiavelmente de fonte exterior (logradouro, bairro, etc).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h32m44s271.jpg" alt="" width="840">
+</p>
+
+A averiguação evolui testando fluxos alternativos da implementação, acionando-se dessa vez o recurso normativo para alterações integrais do HTTP (Verbo PUT). Informando referencial numérico primário que indica o objeto gravado e transmitindo na retaguarda do modelo um identificador CEP levemente modificado (`14835-000`), a intenção é provar a robustez em atualizar informações anexas aos modelos.
+
+```json
+{
+  "id": 1,
+  "nome": "Venilton",
+  "endereco": {
+    "cep": "14835-000"
+  }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-01-13h32m59s878.jpg" alt="" width="840">
+</p>
+
+Concluídas as manipulações sistêmicas, a execução de uma requisição generalista explorando a amplitude de recursos (GET em lista) demonstra perfeitamente os efeitos combinados e o grau de consistência persistida. A modificação solicitada para a localidade da primeira inserção produziu resultado certeiro (localidade "Motuca", CEP "14835-000"), coexistindo com os demais registros sem quebras da base relacional.
+
+
 ### 🟩 Vídeo 09 - Desafio de Projeto
 
 <video width="60%" controls>
@@ -979,7 +1284,7 @@ link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/explorando-padroes-de-projetos-na-pratica-com-java/learning/fd169729-dfdd-4bc5-af7c-8bd74bbfc145
 
 ### 🟩 Vídeo 10 - Entendendo o Desafio
 
