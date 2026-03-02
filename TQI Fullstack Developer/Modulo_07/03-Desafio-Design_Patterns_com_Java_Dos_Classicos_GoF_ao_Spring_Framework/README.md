@@ -1356,6 +1356,6 @@ Agora é hora de aplicar os conceitos na prática e criar algo que agregue valor
 
 # Certificado: Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework
 
-- Link do repositório do projeto entregue: 
+- Link do repositório do projeto entregue: https://github.com/ahaerdy/dio-design-patterns-java
 - Link do certificado: https://hermes.dio.me/certificates/EVFM2OQR.pdf
 - Link do PDF local: [Certificado-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework.pdf](000-Midia_e_Anexos/Certificado-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework.pdf)
