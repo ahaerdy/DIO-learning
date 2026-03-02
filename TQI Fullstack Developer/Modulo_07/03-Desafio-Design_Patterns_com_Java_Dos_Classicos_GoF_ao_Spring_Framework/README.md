@@ -1354,5 +1354,8 @@ Agora é hora de aplicar os conceitos na prática e criar algo que agregue valor
 - GitHub: [Padrões de Projeto com Java Puro](https://github.com/digitalinnovationone/lab-padroes-projeto-java) (implementação de referência)  
 - GitHub: [Padrões de Projeto com Spring](https://github.com/digitalinnovationone/lab-padroes-projeto-spring) (implementação de referência)
 
+# Certificado: Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework
 
 - Link do repositório do projeto entregue: 
+- Link do certificado: https://hermes.dio.me/certificates/EVFM2OQR.pdf
+- Link do PDF local: [Certificado-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework.pdf](000-Midia_e_Anexos/Certificado-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework.pdf)
