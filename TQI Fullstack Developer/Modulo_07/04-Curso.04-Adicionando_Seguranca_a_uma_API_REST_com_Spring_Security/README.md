@@ -180,7 +180,248 @@ Em resumo, o comportamento padrão do Spring Security consiste em criar um usuá
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/d3b4b5e7-f007-4a09-a5ce-a61923eef4f8?autoplay=1
+
+Este guia resume as etapas para configurar autenticação e autorização em aplicações Spring Boot, desde o comportamento padrão até a customização avançada de perfis de acesso.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h43m12s498.jpg" alt="" width="840">
+</p>
+
+Ao incluir a dependência do Spring Security em um projeto Spring Boot, a segurança é habilitada automaticamente. Durante a inicialização da aplicação, o framework gera uma senha de segurança temporária e a exibe no console (como visto no log do terminal), que será necessária para o primeiro acesso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h43m17s304.jpg" alt="" width="840">
+</p>
+
+Com a segurança ativa por padrão, qualquer tentativa de acesso às rotas ou recursos da aplicação resultará na intercepção pelos filtros do Spring Security, que solicitarão um usuário e senha através de uma interface de login básica no navegador.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h43m28s946.jpg" alt="" width="840">
+</p>
+
+Mesmo que a aplicação ainda não possua rotas ou páginas desenvolvidas, a exibição da página de erro padrão (Whitelabel Error Page) após a autenticação confirma que o Spring Security já ativou seus filtros de proteção com sucesso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h43m37s006.jpg" alt="" width="840">
+</p>
+
+Para evitar a geração de senhas temporárias a cada execução, é possível configurar um usuário e senha padrão diretamente no arquivo de configuração da aplicação. Essa abordagem é útil para demonstrações simples e testes rápidos sem a necessidade de um banco de dados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h43m40s690.jpg" alt="" width="840">
+</p>
+
+A configuração de credenciais no arquivo `application.properties` utiliza parâmetros específicos para definir o nome do usuário, a senha e o papel (role) de acesso.
+
+```properties
+spring.security.user.name=user
+spring.security.user.password=user123
+spring.security.user.roles=USERS
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h43m48s641.jpg" alt="" width="840">
+</p>
+
+Neste exemplo, as credenciais são alteradas para personalizar o acesso, permitindo validar se o Spring Security passará a considerar estas novas definições em vez do padrão gerado automaticamente.
+
+```properties
+spring.security.user.name=Gleyson
+spring.security.user.password=dio123
+spring.security.user.roles=USERS
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h43m52s378.jpg" alt="" width="840">
+</p>
+
+Ao reiniciar a aplicação com as configurações manuais no `application.properties`, observa-se no log do terminal que a senha aleatória temporária não é mais gerada, indicando que o Spring assumiu a responsabilidade das credenciais configuradas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m01s058.jpg" alt="" width="840">
+</p>
+
+Ao tentar realizar o login com o usuário padrão anterior ("user"), o sistema nega o acesso, comprovando que as novas configurações de segurança foram aplicadas com sucesso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m04s119.jpg" alt="" width="840">
+</p>
+
+O acesso é concedido apenas ao informar as credenciais personalizadas ("Gleyson" e "dio123") que foram centralizadas no arquivo de propriedades da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m09s475.jpg" alt="" width="840">
+</p>
+
+Para cenários que exigem mais de um usuário ou perfis de acesso distintos (como administradores e usuários comuns), a configuração via `application.properties` torna-se limitada. Nesses casos, utiliza-se a autenticação em memória definida programaticamente em uma classe de configuração.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m11s585.jpg" alt="" width="840">
+</p>
+
+Inicia-se a criação de uma classe componente chamada `WebSecurityConfig`, que será responsável por centralizar as definições de segurança customizadas da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m20s855.jpg" alt="" width="840">
+</p>
+
+A classe é marcada com a anotação `@Configuration`, indicando ao Spring que ela contém definições de beans e configurações que devem ser processadas durante a inicialização.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m23s244.jpg" alt="" width="840">
+</p>
+
+Para habilitar a segurança web customizada, a classe deve estender `WebSecurityConfigurerAdapter` e ser anotada com `@EnableWebSecurity`, permitindo a sobreposição dos métodos de configuração padrão.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m34s633.jpg" alt="" width="840">
+</p>
+
+Sobrescrevendo o método `configure(AuthenticationManagerBuilder auth)`, é criada uma cadeia de usuários em memória. São definidos dois usuários com perfis e credenciais específicas:
+
+```java
+@Override
+protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    auth.inMemoryAuthentication()
+        .withUser("user")
+        .password("{noop}user123")
+        .roles("USERS")
+        .and()
+        .withUser("admin")
+        .password("{noop}master123")
+        .roles("MANAGERS");
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m41s050.jpg" alt="" width="840">
+</p>
+
+O prefixo `{noop}` utilizado nas senhas indica ao Spring Security que não deve ser aplicada nenhuma criptografia (No-op Encoder). Isso é utilizado apenas para simplificar exemplos didáticos e demonstrações iniciais.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h44m52s051.jpg" alt="" width="840">
+</p>
+
+Realizando o teste com as novas credenciais definidas via código, o usuário "admin" com a senha "master123" agora é validado corretamente pela configuração em memória.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h45m46s477.jpg" alt="" width="840">
+</p>
+
+Para demonstrar os conceitos de autorização por perfil, é criado um controlador REST chamado `WelcomeController`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h45m52s153.jpg" alt="" width="840">
+</p>
+
+A classe é anotada com `@RestController`, permitindo a definição de endpoints que retornarão respostas diretas para as requisições HTTP.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h45m58s725.jpg" alt="" width="840">
+</p>
+
+São mapeadas três rotas principais: a raiz (`/`), uma rota para usuários comuns (`/users`) e uma rota para gerentes (`/managers`), cada uma retornando uma mensagem de autorização correspondente.
+
+```java
+@RestController
+public class WelcomeController {
+    @GetMapping("/")
+    public String welcome() {
+        return "Welcome to My Web API";
+    }
+    @GetMapping("/users")
+    public String users() {
+        return "User Authorized";
+    }
+    @GetMapping("/managers")
+    public String managers() {
+        return "Manager Authorized";
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h46m02s671.jpg" alt="" width="840">
+</p>
+
+O objetivo agora é determinar quais perfis de acesso terão permissão para visualizar cada um desses recursos, aplicando os conceitos de autorização do Spring Security.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h46m16s153.jpg" alt="" width="840">
+</p>
+
+Sobrescrevendo o método `configure(HttpSecurity http)`, definem-se as regras de acesso: a página inicial e o login são públicos, enquanto as rotas de usuários e gerentes exigem permissões específicas (Roles).
+
+```java
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+    http.authorizeRequests()
+        .antMatchers("/").permitAll()
+        .antMatchers("/login").permitAll()
+        .antMatchers("/users").hasAnyRole("USERS", "MANAGERS")
+        .antMatchers("/managers").hasRole("MANAGERS")
+        .anyRequest().authenticated().and().formLogin();
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h46m21s689.jpg" alt="" width="840">
+</p>
+
+É fundamental garantir a consistência entre o nome das roles definidas no gerenciamento de usuários em memória e as roles verificadas nas regras de autorização das rotas HTTP, respeitando inclusive a diferenciação entre maiúsculas e minúsculas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h46m25s621.jpg" alt="" width="840">
+</p>
+
+A aplicação é reiniciada para que as novas regras de autorização por endpoint entrem em vigor, permitindo o teste prático de acesso baseado em perfis.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h46m34s703.jpg" alt="" width="840">
+</p>
+
+Ao logar como um usuário comum ("user"), o acesso à rota principal da API é concedido, demonstrando que o login básico continua funcionando corretamente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h46m41s829.jpg" alt="" width="840">
+</p>
+
+A lógica de autorização define que o perfil "USERS" pode acessar apenas as rotas de usuário, enquanto o perfil "MANAGERS" possui acesso tanto às suas rotas específicas quanto às rotas de usuário comum.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h46m46s871.jpg" alt="" width="840">
+</p>
+
+Quando o usuário logado com o perfil "USERS" tenta acessar a rota `/managers`, o Spring Security retorna um erro "Forbidden" (403), pois ele não possui a role necessária para esse recurso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h46m52s025.jpg" alt="" width="840">
+</p>
+
+Para testar o acesso restrito, realiza-se o login com o usuário "admin", que possui o perfil de gerente ("MANAGERS").
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h47m03s981.jpg" alt="" width="840">
+</p>
+
+Identifica-se um possível gap de segurança ou erro de configuração caso as roles no controlador não coincidam exatamente com as roles atribuídas aos usuários no gerenciamento de memória.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h47m06s538.jpg" alt="" width="840">
+</p>
+
+A correção consiste em tornar as informações de roles coerentes em toda a configuração, garantindo que o gerenciamento de usuários e as regras de autorização de rotas utilizem a mesma convenção.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-09h47m27s506.jpg" alt="" width="840">
+</p>
+
+Com as configurações ajustadas, o usuário administrador consegue acessar com sucesso tanto a rota de usuários quanto a rota de gerentes, confirmando o funcionamento pleno do sistema de autorização por perfil.      
+
 
 ### 🟩 Vídeo 04 - Configure Adapter
 
