@@ -430,7 +430,93 @@ Com as configurações ajustadas, o usuário administrador consegue acessar com 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/ccb8fdb1-aa70-4145-b18d-736872a4c164?autoplay=1
+
+Este vídeo aborda a transição de configurações de segurança espalhadas pelos *controllers* para uma abordagem centralizada e robusta utilizando o `WebSecurityConfigurerAdapter`. O objetivo é facilitar a manutenção do código e permitir um controle mais granular sobre quem acessa o quê na aplicação.
+
+### Anotações
+
+#### Centralização da Configuração de Segurança
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-10h40m28s689.jpg" alt="Configuração do WebSecurityConfig" width="840">
+</p>
+
+Nesta etapa, o foco é a centralização da segurança na classe `WebSecurityConfig`. O objetivo é remover a carga de configuração dos controllers, evitando que cada recurso precise gerenciar perfis de acesso de forma dispersa. Para isso, utilizamos a sobrescrita do método `configure(HttpSecurity http)`, que permite definir o comportamento de autorização de requisições de forma global na aplicação.
+
+```java
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+    http.authorizeRequests()
+        .antMatchers("/").permitAll(); [cite_start]// Define acesso público à rota raiz [cite: 13, 14]
+```
+
+#### Controle de Acesso por Perfis (Roles)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-10h40m42s154.jpg" alt="Mapeamento de Rotas e Roles" width="840">
+</p>
+
+O Spring Security permite o encadeamento de regras de acesso através de `antMatchers`. Aqui, definimos permissões granulares: rotas de boas-vindas e login são públicas, enquanto rotas específicas como `/managers` e `/users` exigem perfis (roles) determinados. Caso o usuário tente acessar qualquer outra rota não especificada, o sistema exigirá autenticação via formulário padrão (`formLogin`).
+
+```java
+http.authorizeRequests()
+    [cite_start].antMatchers("/").permitAll() // Público [cite: 39]
+    [cite_start].antMatchers("/login").permitAll() // Público [cite: 39]
+    [cite_start].antMatchers("/managers").hasAnyRole("MANAGERS") // Restrito a Managers [cite: 40]
+    [cite_start].antMatchers("/users").hasAnyRole("USERS", "MANAGERS") // Restrito a Users e Managers [cite: 41]
+    .anyRequest().authenticated().and().formLogin(); [cite_start]// Exige autenticação para o restante [cite: 38]
+```
+
+#### Autenticação em Memória (In-Memory Authentication)
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-10h41m52s906.jpg" alt="Configuração de Usuários em Memória" width="840">
+</p>
+
+Para testar as permissões sem um banco de dados, configuramos o `AuthenticationManagerBuilder` para criar usuários em memória. Foram definidos dois usuários: um com perfil "USERS" e outro com perfil "MANAGERS", utilizando a estratégia `noop` para senhas (indicando que não há criptografia, apenas para fins didáticos).
+
+```java
+@Override
+protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    auth.inMemoryAuthentication()
+        [cite_start].withUser("user").password("{noop}user123").roles("USERS") // Usuário comum [cite: 90, 91]
+        .and()
+        .withUser("admin").password("{noop}master123").roles("MANAGERS"); [cite_start]// Administrador [cite: 93, 94, 95]
+}
+```
+
+#### Inicialização e Logs do Spring Boot
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-10h42m06s089.jpg" alt="Logs de Inicialização" width="840">
+</p>
+
+Ao iniciar a aplicação, o log do console confirma a inicialização do Tomcat na porta 8080. É possível observar que o Spring Security registra o filtro de segurança padrão (`DefaultSecurityFilterChain`) para proteger as requisições. Embora tenhamos configurado usuários específicos, o Spring ainda gera uma senha de segurança temporária caso não detecte uma configuração de autenticação completa.
+
+#### Verificação de Acesso Público
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-10h42m22s969.jpg" alt="Acesso à Rota Raiz" width="840">
+</p>
+
+O primeiro teste consiste em acessar `localhost:8080`. Como configuramos a rota "/" como `permitAll()`, a API retorna a mensagem de boas-vindas sem solicitar credenciais, validando que a regra de acesso público está operacional.
+
+#### Interface de Autenticação Padrão
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-10h42m33s675.jpg" alt="Página de Login do Spring" width="840">
+</p>
+
+Ao tentar acessar um recurso protegido ou a rota `/login`, o Spring Security redireciona o usuário para sua interface padrão de "Sign in". Aqui, o usuário deve inserir as credenciais cadastradas no `AuthenticationManagerBuilder` para obter o token de sessão e as roles necessárias para navegar.
+
+#### Validação de Usuário Autorizado
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-10h42m41s989.jpg" alt="Acesso Autorizado" width="840">
+</p>
+
+Após realizar o login com um usuário que possui a role "USERS", o acesso à rota `/users` é liberado. O navegador exibe a mensagem "Authorized user", confirmando que o sistema de autorização reconheceu o perfil do usuário e permitiu a visualização do recurso protegido.
 
 ### 🟩 Vídeo 05 - Autenticação com Banco de dados
 
@@ -439,7 +525,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/4cab2ab5-48a8-48f2-93ab-2e3d61f7d449?autoplay=1
 
 ### 🟩 Vídeo 06 - JWT - JSON Web Token - Parte 1
 
