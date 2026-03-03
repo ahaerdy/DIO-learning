@@ -1113,6 +1113,183 @@ Ao acessar `localhost:8080` após a inicialização, o Spring Security apresenta
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/4e65bb58-8aa2-4e26-868d-d9b37d662638?autoplay=1
 
+Este guia aborda a fase de estruturação de um projeto Spring Boot focado em segurança. O objetivo principal é preparar o ambiente para autenticação via JWT (JSON Web Token), estabelecendo as dependências necessárias, a organização de pacotes por camadas e a implementação da lógica de persistência e criptografia de usuários
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h45m28s948.jpg" alt="" width="840">
+</p>
+
+Nesta etapa inicial, o projeto Spring Security com ênfase em JWT já foi criado e importado para a IDE. A aplicação está devidamente configurada e rodando, apresentando a estrutura base necessária para a implementação da autenticação. Como comportamento padrão do Spring Security, a aplicação já solicita usuário e senha ao ser inicializada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h45m48s876.jpg" alt="" width="840">
+</p>
+
+Para viabilizar a geração de tokens, é necessário incluir as dependências específicas no arquivo `pom.xml`. Além dos starters padrão como Data JPA, Security e Web, adicionamos a biblioteca **jjwt** para manipulação do JSON Web Token e o driver do banco de dados H2.
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+</dependency>
+
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.7.0</version>
+</dependency>
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h46m15s355.jpg" alt="" width="840">
+</p>
+
+Seguindo as boas práticas de desenvolvimento, a aplicação é organizada em camadas através de pacotes específicos. Cada pacote possui uma responsabilidade clara dentro da arquitetura do projeto:
+
+| Pacote | Descrição |
+| --- | --- |
+| **model** | Camada que contém as entidades da aplicação. |
+| **dto** | Camada que contém os DTOs (Data Transfer Objects) da aplicação. |
+| **repository** | Camada que contém os repositórios com base no Spring Data JPA. |
+| **service** | Camada que detém a regra de negócio e comunicação com a base de dados via repository. |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h46m38s091.jpg" alt="" width="840">
+</p>
+
+A criação dos pacotes é realizada dentro da estrutura de pastas do Java (`src/main/java/dio.dio.spring.security.jwt`). Este processo de organização inicial garante que, à medida que novas classes forem inseridas, a aplicação mantenha um padrão aderente aos contextos de desenvolvimento profissional.
+
+```java
+package dio.dio.spring.security.jwt;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DioSpringSecurityJwtApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DioSpringSecurityJwtApplication.class, args);
+    }
+
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h47m21s512.jpg" alt="" width="840">
+</p>
+
+A estrutura final de pacotes após a criação manual na IDE inclui: `controller`, `dtos`, `model`, `repository`, `security` e `service`. Esta distribuição facilita a manutenção e a escalabilidade da aplicação à medida que novas funcionalidades são implementadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h47m28s541.jpg" alt="" width="840">
+</p>
+
+Para lidar com a segurança baseada em tokens, definimos classes de suporte que auxiliam na documentação e na representação da estrutura do JWT:
+
+| Classe | Descrição |
+| --- | --- |
+| **SwaggerConfig** | Classe responsável pela documentação da API. |
+| **JWTObject** | Classe que representa um Objeto correspondente à estrutura JWT. |
+| **JWTCreator** | Classe responsável por gerar o Token com base no Objeto e ou instanciar o Objeto JWT com base no Token. |
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h47m50s673.jpg" alt="" width="840">
+</p>
+
+Iniciamos a implementação da camada de modelo com a classe `User.java`. Esta entidade JPA define a estrutura da tabela `tab_user` no banco de dados, incluindo campos para identificação, nome, credenciais e uma coleção de papéis (roles) para controle de acesso.
+
+```java
+@Entity
+@Table(name = "tab_user")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_user")
+    private Integer id;
+
+    @Column(length = 50, nullable = false)
+    private String name;
+
+    @Column(length = 20, nullable = false)
+    private String username;
+
+    @Column(length = 100, nullable = false)
+    private String password;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "tab_user_roles", joinColumns = @JoinColumn(name = "user_id"))
+    @Column(name = "role_id")
+    private List<String> roles = new ArrayList<>();
+
+    // Getters and Setters
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h47m56s410.jpg" alt="" width="840">
+</p>
+
+A interface `UserRepository.java` é criada estendendo `JpaRepository`. Além dos métodos CRUD padrão, adicionamos consultas personalizadas para buscar usuários pelo `username` e verificar a existência de um usuário no sistema, utilizando JPQL para garantir que as roles sejam carregadas via `JOIN FETCH`.
+
+```java
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+public interface UserRepository extends JpaRepository<User, Integer> {
+    @Query("SELECT e FROM User e JOIN FETCH e.roles WHERE e.username= (:username)")
+    public User findByUsername(@Param("username") String username);
+
+    boolean existsByUsername(String username);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h48m04s601.jpg" alt="" width="840">
+</p>
+
+Visualização da interface `UserRepository` integrada à estrutura do projeto no IntelliJ IDEA. O código destaca a utilização das anotações do Spring Data JPA para definir o contrato de persistência da entidade `User`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h48m12s711.jpg" alt="" width="840">
+</p>
+
+A classe `UserService.java` é implementada para concentrar as regras de negócio. Ela possui dependências do `UserRepository` para persistência e do `PasswordEncoder` para garantir a segurança das credenciais. O método `createUser` intercepta a senha em texto puro, criptografa-a e então solicita o salvamento do usuário.
+
+```java
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository repository;
+
+    @Autowired
+    private PasswordEncoder encoder;
+
+    public void createUser(User user) {
+        String pass = user.getPassword();
+        // Criptografando antes de salvar no banco
+        user.setPassword(encoder.encode(pass));
+        repository.save(user);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h48m23s496.jpg" alt="" width="840">
+</p>
+
+Demonstração final do método `createUser` dentro da IDE. O foco desta implementação é garantir que as senhas nunca sejam armazenadas de forma explícita no banco de dados, utilizando o mecanismo de codificação do framework para validar a coerência das senhas em requisições futuras.      
+
+
 ### 🟩 Vídeo 08 - JWT - JSON Web Token - Parte 3
 
 <video width="60%" controls>
@@ -1120,7 +1297,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adiciona
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/2a204035-6b86-48ad-ab5f-b9c46fb9b244?autoplay=1
 
 ### 🟩 Vídeo 09 - JWT - JSON Web Token - Parte 4
 
