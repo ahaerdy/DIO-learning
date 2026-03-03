@@ -1000,6 +1000,108 @@ Para finalizar toda a validação de forma impecável, testa-se a conta que poss
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/cfc7d590-9a2d-4643-bdaf-171ad5265cc4?autoplay=1
 
+Este guia resume a introdução e a configuração inicial de uma aplicação Java utilizando Spring Boot Security e a tecnologia JWT (JSON Web Token) para gestão de segurança e autenticação.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h08m37s559.jpg" alt="" width="840">
+</p>
+
+O JWT (JSON Web Token) é apresentado como um padrão de mercado independente, não limitado ao ecossistema Spring, utilizado para a criação de dados com assinatura opcional e criptografia. Sua estrutura é baseada em JSON para transmitir declarações (*claims*) entre partes de forma segura, sendo assinado por uma chave secreta ou um par de chaves pública/privada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h08m42s193.jpg" alt="" width="840">
+</p>
+
+A estrutura fundamental de um JWT é composta por três partes distintas: **Header**, **Payload** e **Signature**. Cada seção desempenha um papel específico na composição do token, permitindo que as informações trafegadas nas requisições sejam validadas e autenticadas pelo sistema de segurança da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h08m47s358.jpg" alt="" width="840">
+</p>
+
+O cabeçalho (**Header**) do token define os aspectos técnicos da estrutura, especificando o tipo do token e o algoritmo de assinatura utilizado na criptografia, como o HMAC SHA256 ou RSA.
+
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h09m17s056.jpg" alt="" width="840">
+</p>
+
+O **Payload** constitui o corpo do token e carrega as informações de autenticação e autorização do usuário. Nele são definidos dados como a identificação do sujeito (*subject*), o nome do usuário e seus respectivos perfis de acesso (*roles*).
+
+```json
+{
+  "sub": "glysns",
+  "name": "GLEYSON SAMPAIO",
+  "roles": ["USERS", "MANAGERS"]
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h09m47s952.jpg" alt="" width="840">
+</p>
+
+A geração do token final ocorre com a junção das três partes mencionadas (Header, Payload e Signature), codificadas e separadas por pontos. A camada de assinatura (**Signature**) é crucial para garantir que as credenciais utilizadas na geração sejam as mesmas na verificação de cada requisição.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h09m54s984.jpg" alt="" width="840">
+</p>
+
+No contexto do Spring Security, o JWT atua fornecendo o token enquanto o framework habilita filtros para interceptar as requisições. Esses filtros executam algoritmos de validação para verificar a autenticidade do usuário, a validade temporal (expiração) e as permissões de acesso conforme as regras da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h10m19s666.jpg" alt="" width="840">
+</p>
+
+A criação do projeto prático inicia-se através do **Spring Initializr**, onde são configuradas as propriedades base, incluindo o gerenciador de dependências (Maven), a linguagem (Java) e a descrição do sistema para demonstração de uma API segura com JWT.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h10m31s777.jpg" alt="" width="840">
+</p>
+
+Nesta etapa do Initializr, definem-se os metadados do projeto, como o **Group** (identificado como `dio`) e o **Artifact** (nomeado como `dio-spring-security-jwt`), estabelecendo a estrutura de pacotes inicial da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h10m34s593.jpg" alt="" width="840">
+</p>
+
+As definições de empacotamento e ambiente são configuradas selecionando-se o formato **JAR** e a versão do **Java 8**. Embora a aplicação utilize o Tomcat, o empacotamento JAR é preferido devido ao servidor embutido fornecido pelo Spring Web.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h10m42s645.jpg" alt="" width="840">
+</p>
+
+Para viabilizar as funcionalidades do projeto, são adicionadas as dependências essenciais: **Spring Web** para a criação da API REST, **Spring Security** para o controle de acesso, **Spring Data JPA** para a persistência de dados e o **H2 Database** para consulta de dados em memória.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h11m01s038.jpg" alt="" width="840">
+</p>
+
+Após o download e importação na IDE, o projeto é inicializado. É necessário aguardar que o Maven realize a sincronização e o download de todos os *starters* e bibliotecas configurados no passo anterior.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h11m08s664.jpg" alt="" width="840">
+</p>
+
+O arquivo **pom.xml** centraliza todas as configurações de dependências injetadas pelo Initializr. Nele é possível confirmar as versões dos *starters* do Spring Boot e os recursos de segurança que comporão a base do sistema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h11m45s615.jpg" alt="" width="840">
+</p>
+
+Na primeira execução da aplicação, seleciona-se a classe principal para iniciar o processo de compilação. O acompanhamento dos logs no console é fundamental para garantir que o projeto suba sem erros e que as configurações de segurança padrão sejam ativadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-03-14h11m47s916.jpg" alt="" width="840">
+</p>
+
+Ao acessar `localhost:8080` após a inicialização, o Spring Security apresenta automaticamente um formulário de login padrão. Esse comportamento confirma que a camada de segurança já está ativa, exigindo autenticação antes de permitir o acesso aos recursos da aplicação.      
 
 
 ### 🟩 Vídeo 07 - JWT - JSON Web Token - Parte 2
@@ -1009,7 +1111,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adiciona
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/4e65bb58-8aa2-4e26-868d-d9b37d662638?autoplay=1
 
 ### 🟩 Vídeo 08 - JWT - JSON Web Token - Parte 3
 
