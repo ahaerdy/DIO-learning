@@ -59,8 +59,6 @@ A stack tecnológica necessária para acompanhar o desenvolvimento do projeto in
 
 O projeto prático consiste no desenvolvimento de testes unitários para validar uma API REST voltada ao gerenciamento de estoques de cerveja. Durante a sessão, são aplicados conceitos de TDD para funcionalidades de incremento e decremento de itens no sistema.
 
-Após a execução, a listagem de cervejas pode ser acessada através do endpoint local `http://localhost:8080/api/v1/beers`.
-
 
 ### 🟩 Vídeo 03 - Apresentação do Projeto no IntelliJ
 
