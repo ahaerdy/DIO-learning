@@ -1860,21 +1860,10 @@ Nesta etapa de encerramento, revisamos os pilares fundamentais para a proteção
 
 Os tópicos consolidados incluem:
 
-* 
-**Habilitação e Configuração:** O processo de ativar a segurança na API e explorar as diversas formas de configuração que o framework oferece.
-
-
-* 
-**Configuração Manual:** A aplicação prática da flexibilidade para ajustar regras de segurança específicas manualmente.
-
-
-* 
-**Integração com Banco de Dados:** A implementação da consulta de usuários diretamente em camadas de persistência.
-
-
-* 
-**Otimização com JWT:** A evolução para um modelo de segurança baseado em **JWT**, permitindo a tokenização nas APIs.
-
+* **Habilitação e Configuração:** O processo de ativar a segurança na API e explorar as diversas formas de configuração que o framework oferece.
+* **Configuração Manual:** A aplicação prática da flexibilidade para ajustar regras de segurança específicas manualmente.
+* **Integração com Banco de Dados:** A implementação da consulta de usuários diretamente em camadas de persistência.
+* **Otimização com JWT:** A evolução para um modelo de segurança baseado em **JWT**, permitindo a tokenização nas APIs.
 
 
 <p align="center">
