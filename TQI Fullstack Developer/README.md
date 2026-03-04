@@ -113,7 +113,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
     - **Repositório**: [dio-design-patterns-java](https://github.com/ahaerdy/dio-design-patterns-java)
     - **Descrição**: Este projeto explora na prática os principais Padrões de Projeto do Gang of Four (GoF) utilizando Java, dividido em duas partes complementares: na primeira, os padrões Singleton, Strategy e Facade são implementados manualmente com Java puro, sem frameworks, permitindo compreender os mecanismos internos de cada solução; na segunda, os mesmos padrões são aplicados com Spring Boot, onde o @Service gerencia o Singleton automaticamente, o Spring Data JPA gera as implementações do Repository/Strategy em tempo de execução, e o OpenFeign cria o cliente HTTP da Facade para integração com a API pública ViaCEP — resultando em uma API REST completa de gerenciamento de clientes com consulta automática de endereço por CEP. A comparação direta entre as duas abordagens evidencia como o Spring Boot abstrai padrões consolidados, reduzindo drasticamente a quantidade de código sem abrir mão dos princípios de design orientado a objetos.
 - [x] Curso: [Adicionando Segurança a uma API REST com Spring Security](Modulo_07/04-Curso.04-Adicionando_Seguranca_a_uma_API_REST_com_Spring_Security)
-- [ ] Desafio: Desenvolvimento de Testes Unitários para Validar uma API REST de Gerenciamento Estoques de Cerveja 
+- [x] Desafio: [Desenvolvimento de Testes Unitários para Validar uma API REST de Gerenciamento Estoques de Cerveja](Modulo_07/05-Desafio-Desenvolvimento_de_Testes_Unitarios_para_Validar_uma_API_REST_de_Gerenciamento_Estoques_de_Cerveja) 
 
 ### Módulo 8: QA
 
