@@ -1890,7 +1890,7 @@ Para expandir o domínio técnico sobre segurança e a implementação de padrõ
 * **Baeldung:** [https://www.baeldung.com/spring-enablewebsecurity-vs-enableglobalmethodsecurity](https://www.baeldung.com/spring-enablewebsecurity-vs-enableglobalmethodsecurity) 
 * **Gitbook:** [https://app.gitbook.com/s/-MgwMOcm4UygF4VcCNlq/spring-security/spring-security-e-jwt](https://www.google.com/search?q=https://app.gitbook.com/s/-MgwMOcm4UygF4VcCNlq/spring-security/spring-security-e-jwt)
 
-# Certificado: 
+# Certificado: Adicionando Segurança a uma API REST com Spring Security
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/JPCDWL0B.pdf
+- Certificado em pdf: [Certificado-Adicionando_Seguranca_a_uma_API_REST_com_Spring_Security.pdf](000-Midia_e_Anexos/Certificado-Adicionando_Seguranca_a_uma_API_REST_com_Spring_Security.pdf)
