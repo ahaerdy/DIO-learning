@@ -1299,6 +1299,273 @@ Demonstração final do método `createUser` dentro da IDE. O foco desta impleme
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/2a204035-6b86-48ad-ab5f-b9c46fb9b244?autoplay=1
 
+Este guia resume o processo de configuração de autenticação e autorização em uma aplicação Java com Spring Boot, focando na criação de tokens JWT, filtros de interceptação e regras de acesso.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h06m23s749.jpg" alt="" width="840">
+</p>
+
+A classe `UserService` é responsável pela lógica de negócio na criação de novos usuários. Para garantir a segurança das credenciais, utiliza-se a interface `PasswordEncoder`, que realiza a criptografia da senha antes que o objeto seja persistido no banco de dados através do `UserRepository`.
+
+```java
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository repository;
+    @Autowired
+    private PasswordEncoder encoder;
+
+    public void createUser(User user) {
+        String pass = user.getPassword();
+        //criptografando antes de salvar no banco
+        user.setPassword(encoder.encode(pass));
+        repository.save(user);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h06m35s197.jpg" alt="" width="840">
+</p>
+
+O `UserController` atua como o ponto de entrada para requisições HTTP relacionadas a usuários. Ele é mapeado com o prefixo `/users` e possui um método `postUser` anotado com `@PostMapping`, que recebe um objeto `User` no corpo da requisição e delega a criação ao `UserService`.
+
+```java
+@RestController
+@RequestMapping("/users")
+public class UserController {
+    @Autowired
+    private UserService service;
+
+    @PostMapping
+    public void postUser(@RequestBody User user) {
+        service.createUser(user);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h07m14s218.jpg" alt="" width="840">
+</p>
+
+Visualização da estrutura do projeto no ambiente de desenvolvimento (IDE), evidenciando a organização dos pacotes em camadas: `controller`, `dtos`, `model`, `repository`, `security` e `service`. Esta arquitetura facilita a manutenção e a separação de responsabilidades no ecossistema Spring Boot.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h08m29s707.jpg" alt="" width="840">
+</p>
+
+A classe `JWTObject` define a estrutura de dados que será encapsulada no token JWT. Ela contém campos fundamentais como o `subject` (identificador do usuário), as datas de emissão (`issuedAt`) e expiração (`expiration`), além de uma lista de permissões ou perfis de acesso (`roles`).
+
+```java
+public class JWTObject {
+    private String subject; //nome do usuario
+    private Date issuedAt; //data de criação do token
+    private Date expiration; // data de expiração do token
+    private List<String> roles; //perfis de acesso
+
+    public void setRoles(String... roles) {
+        this.roles = Arrays.asList(roles);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h09m27s318.jpg" alt="" width="840">
+</p>
+
+Implementação técnica do `JWTObject` no pacote `security`. Esta classe servirá de base para que o mecanismo de segurança possa converter objetos Java em tokens criptografados e realizar o processo inverso durante a validação de acesso.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h09m48s983.jpg" alt="" width="840">
+</p>
+
+Utilização de recursos de automação da IDE para a geração de métodos acessores (Getters e Setters) na classe `JWTObject`. Esta etapa é padrão em classes de modelo ou objetos de transferência para permitir o acesso controlado aos atributos privados.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h10m53s541.jpg" alt="" width="840">
+</p>
+
+A classe `SecurityConfig` utiliza a anotação `@ConfigurationProperties` para mapear configurações definidas externamente para variáveis estáticas. Atributos como o prefixo do token (`Bearer`), a chave secreta de criptografia e o tempo de expiração são centralizados aqui para facilitar a gestão da segurança.
+
+```java
+@Configuration
+@ConfigurationProperties(prefix = "security.config")
+public class SecurityConfig {
+    public static String PREFIX;
+    public static String KEY;
+    public static Long EXPIRATION;
+
+    public void setPrefix(String prefix) {
+        PREFIX = prefix;
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h11m06s134.jpg" alt="" width="840">
+</p>
+
+Criação da classe de configuração no diretório de segurança do projeto. Este componente é essencial para desacoplar as chaves de segurança do código-fonte, permitindo que as credenciais variem conforme o ambiente (desenvolvimento, produção, etc.).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h11m13s450.jpg" alt="" width="840">
+</p>
+
+Implementação completa da `SecurityConfig`, apresentando os métodos `set` necessários para que o Spring injete os valores lidos do arquivo de propriedades. O uso de campos estáticos permite que estas configurações sejam acessadas de forma global por outros componentes do JWT.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h11m22s395.jpg" alt="" width="840">
+</p>
+
+Documentação de referência para o preenchimento do arquivo `application.properties`. Nele, devem ser definidas as chaves `security.config.prefix`, `security.config.key` e `security.config.expiration`, que alimentam a classe de configuração criada anteriormente.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h11m29s464.jpg" alt="" width="840">
+</p>
+
+Introdução da classe `JWTCreator`. Este recurso centraliza a lógica de interação entre o Spring Security e a especificação JWT, sendo encarregado de assinar novos tokens e validar a integridade de tokens recebidos em requisições futuras.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h11m41s107.jpg" alt="" width="840">
+</p>
+
+A implementação do `JWTCreator` demonstra o uso da biblioteca JJWT para construir o token. O método `create` utiliza o padrão *builder* para definir o assunto, datas e roles, assinando o conjunto com um algoritmo de criptografia (como HS512) e a chave privada configurada.
+
+```java
+public class JWTCreator {
+    public static final String HEADER_AUTHORIZATION = "Authorization";
+    public static final String ROLES_AUTHORITIES = "authorities";
+
+    public static String create(String prefix, String key, JWTObject jwtObject) {
+        String token = Jwts.builder()
+                .setSubject(jwtObject.getSubject())
+                .setIssuedAt(jwtObject.getIssuedAt())
+                .setExpiration(jwtObject.getExpiration())
+                .claim(ROLES_AUTHORITIES, checkRoles(jwtObject.getRoles()))
+                .signWith(SignatureAlgorithm.HS512, key)
+                .compact();
+        return prefix + " " + token;
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h11m51s593.jpg" alt="" width="840">
+</p>
+
+A classe `JWTFilter` estende `OncePerRequestFilter` para garantir que a lógica de segurança seja aplicada exatamente uma vez por requisição HTTP. Ela atua como um interceptador que verifica a presença do token no cabeçalho antes que a requisição chegue ao controller.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h11m57s354.jpg" alt="" width="840">
+</p>
+
+O método `doFilterInternal` extrai o token do cabeçalho `Authorization`. Se válido, ele reconstrói as permissões do usuário e as insere no contexto de segurança do Spring (`SecurityContextHolder`), permitindo que a aplicação reconheça o usuário autenticado.
+
+```java
+public class JWTFilter extends OncePerRequestFilter {
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
+        String token = request.getHeader(JWTCreator.HEADER_AUTHORIZATION);
+        try {
+            if (token != null && !token.isEmpty()) {
+                JWTObject tokenObject = JWTCreator.parse(token, SecurityConfig.PREFIX, SecurityConfig.KEY);
+                List<SimpleGrantedAuthority> authorities = authorities(tokenObject.getRoles());
+                UsernamePasswordAuthenticationToken userToken = 
+                        new UsernamePasswordAuthenticationToken(tokenObject.getSubject(), null, authorities);
+                SecurityContextHolder.getContext().setAuthentication(userToken);
+            } else {
+                SecurityContextHolder.clearContext();
+            }
+            filterChain.doFilter(request, response);
+        } catch (Exception e) {
+            response.setStatus(HttpStatus.FORBIDDEN.value());
+            return;
+        }
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h12m03s913.jpg" alt="" width="840">
+</p>
+
+Criação da classe `WebSecurityConfig`, que substitui a configuração de segurança padrão do Spring Framework. Este é o local onde serão definidas as regras de autorização de rotas e a integração de filtros personalizados como o `JWTFilter`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h12m09s140.jpg" alt="" width="840">
+</p>
+
+Configuração inicial da `WebSecurityConfig` utilizando as anotações `@EnableWebSecurity` e `@EnableGlobalMethodSecurity`. Estas habilitam as funcionalidades de segurança da web e permitem o uso de anotações de pré-verificação nos métodos de serviço ou controllers.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h12m31s299.jpg" alt="" width="840">
+</p>
+
+Definição de um `@Bean` para o `BCryptPasswordEncoder`. Ao expor este componente como um bean do Spring, ele torna-se disponível para injeção de dependência em toda a aplicação, garantindo que o mesmo algoritmo de hash seja usado para criar e validar senhas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h12m58s904.jpg" alt="" width="840">
+</p>
+
+No método `configure(HttpSecurity http)`, definem-se as rotas públicas (como Swagger, console H2 e endpoints de login/cadastro) que não exigem autenticação. Além disso, configura-se a política de sessão como `STATELESS`, adequada para arquiteturas que utilizam tokens JWT.
+
+```java
+@Override
+protected void configure(HttpSecurity http) throws Exception {
+    http.headers().frameOptions().disable();
+    http.cors().and().csrf().disable()
+        .addFilterAfter(new JWTFilter(), UsernamePasswordAuthenticationFilter.class)
+        .authorizeRequests()
+        .antMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll()
+        .antMatchers("/h2-console/**").permitAll()
+        .antMatchers(HttpMethod.POST, "/login").permitAll()
+        .antMatchers(HttpMethod.POST, "/users").permitAll()
+        .anyRequest().authenticated()
+        .and()
+        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h13m08s128.jpg" alt="" width="840">
+</p>
+
+Configuração adicional para o console do banco de dados H2. Através do `ServletRegistrationBean`, habilita-se o acesso ao console via navegador, permitindo a inspeção de dados durante o desenvolvimento sem a necessidade de credenciais de segurança complexas para esta interface específica.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h13m11s526.jpg" alt="" width="840">
+</p>
+
+Exemplo de um erro comum de compilação ao tentar importar a classe `WebServlet` do H2. Isso ocorre frequentemente quando a dependência está configurada com escopo apenas de execução, impedindo que a IDE a localize durante a fase de desenvolvimento.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h13m14s254.jpg" alt="" width="840">
+</p>
+
+Identificação da causa do erro no arquivo `pom.xml`. A dependência do banco de dados H2 está marcada com `<scope>runtime</scope>`, o que restringe sua disponibilidade apenas para o momento em que a aplicação está rodando.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h13m17s810.jpg" alt="" width="840">
+</p>
+
+Solução do problema de importação através da remoção da tag `<scope>runtime</scope>` na dependência do H2. Com essa alteração, a biblioteca torna-se disponível para compilação, permitindo que as classes de configuração do console sejam reconhecidas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h13m29s405.jpg" alt="" width="840">
+</p>
+
+Confirmação do sucesso na importação após a atualização das dependências do Maven. O erro desaparece, validando a integração correta do console H2 nas configurações de segurança da aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-09h13m48s181.jpg" alt="" width="840">
+</p>
+
+Estado final da estrutura de arquivos após a implementação de todos os componentes de segurança e JWT. O projeto está devidamente configurado e pronto para os testes de cadastro e autenticação de usuários via API.     
+
+
 ### 🟩 Vídeo 09 - JWT - JSON Web Token - Parte 4
 
 <video width="60%" controls>
@@ -1306,7 +1573,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adiciona
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/ba854725-76d4-4ffc-8890-a31acca94a8e?autoplay=1
+
+
 
 ## Parte 3 - Conclusão e para saber mais
 
