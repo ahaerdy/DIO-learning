@@ -1837,7 +1837,6 @@ Para obter acesso, é necessário incluir no cabeçalho da requisição o campo 
 
 O teste final demonstra a eficácia da autorização baseada em roles. Usuários com apenas o perfil "USERS" conseguem acessar recursos de usuário, mas recebem um `Forbidden` ao tentar acessar rotas exclusivas de "MANAGERS", validando todo o ecossistema de segurança com JWT.      
 
-
 ## Parte 3 - Conclusão e para saber mais
 
 ### 🟩 Vídeo 10 - Conclusão e para saber mais
@@ -1847,9 +1846,49 @@ O teste final demonstra a eficácia da autorização baseada em roles. Usuários
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/320082f5-4e65-4781-81e4-ee1e789ebb3a?autoplay=1
 
-##  Materiais de Apoio
+Este vídeo serve como uma retrospectiva e consolidação dos conhecimentos adquiridos sobre como habilitar e aprimorar a segurança em APIs, utilizando ferramentas e conceitos modernos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-13h21m04s582.jpg" alt="" width="840">
+</p>
+
+Nesta etapa de encerramento, revisamos os pilares fundamentais para a proteção de aplicações desenvolvidas com o ecossistema **SpringBoot Security**. O aprendizado baseia-se na transição da segurança padrão para uma implementação personalizada e robusta, focada em padrões factuais de acesso.
+
+Os tópicos consolidados incluem:
+
+* 
+**Habilitação e Configuração:** O processo de ativar a segurança na API e explorar as diversas formas de configuração que o framework oferece.
+
+
+* 
+**Configuração Manual:** A aplicação prática da flexibilidade para ajustar regras de segurança específicas manualmente.
+
+
+* 
+**Integração com Banco de Dados:** A implementação da consulta de usuários diretamente em camadas de persistência.
+
+
+* 
+**Otimização com JWT:** A evolução para um modelo de segurança baseado em **JWT**, permitindo a tokenização nas APIs.
+
+
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-04-13h21m09s529.jpg" alt="" width="840">
+</p>
+
+Para expandir o domínio técnico sobre segurança e a implementação de padrões de autenticação modernos, foram selecionadas fontes de referência que aprofundam os conceitos discutidos.
+
+**Recursos recomendados:**
+
+* **Toptal:** [https://www.toptal.com/spring/spring-security-tutorial](https://www.toptal.com/spring/spring-security-tutorial) 
+* **Marco Behler:** [https://www.marcobehler.com/guides/spring-security](https://www.marcobehler.com/guides/spring-security) 
+* **Baeldung:** [https://www.baeldung.com/spring-enablewebsecurity-vs-enableglobalmethodsecurity](https://www.baeldung.com/spring-enablewebsecurity-vs-enableglobalmethodsecurity) 
+* **Gitbook:** [https://app.gitbook.com/s/-MgwMOcm4UygF4VcCNlq/spring-security/spring-security-e-jwt](https://www.google.com/search?q=https://app.gitbook.com/s/-MgwMOcm4UygF4VcCNlq/spring-security/spring-security-e-jwt)
 
 # Certificado: 
 
