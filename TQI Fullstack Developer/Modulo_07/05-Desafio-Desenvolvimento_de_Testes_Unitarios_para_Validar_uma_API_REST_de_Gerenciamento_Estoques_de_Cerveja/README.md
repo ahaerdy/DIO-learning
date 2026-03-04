@@ -72,7 +72,7 @@ A estrutura do projeto inclui:
 * **Suporte a Testes:** Inclusão de uma coleção do Postman para facilitar a validação das rotas da API.
 * **Histórico:** O repositório conta com diversos commits detalhando desde a criação do projeto até o desenvolvimento de serviços específicos para a criação de cervejas.
 
-Link do repositório: https://gemini.google.com/app/b2e60fdff7d0c517?hl=pt-BR
+Link do repositório: https://github.com/rpeleias-v1/beer_api_digital_innovation_one
 
 ### 🟩 Vídeo 03 - Apresentação do Projeto no IntelliJ
 
