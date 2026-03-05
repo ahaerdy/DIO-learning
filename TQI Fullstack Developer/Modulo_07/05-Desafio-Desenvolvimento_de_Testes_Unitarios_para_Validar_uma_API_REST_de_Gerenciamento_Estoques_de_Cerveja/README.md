@@ -406,6 +406,7 @@ Para medir o nível de aderência aos princípios REST, utiliza-se o **Modelo de
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/cb7cccbc-238e-48bd-844a-6c955bd56979
 
+
 ### 🟩 Vídeo 06 - Frameworks de testes unitários
 
 <video width="60%" controls>
@@ -413,7 +414,123 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/868d63ee-6953-4151-a272-017dc4ca047a
+
+O vídeo explica os conceitos fundamentais de testes unitários (Nível 1), abordando desde a filosofia de desenvolvimento até as ferramentas práticas como JUnit 5, Mockito e Hamcrest, integradas ao ecossistema Spring Boot.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-09h00m00s385.jpg" alt="" width="840">
+</p>
+
+Os testes unitários representam o primeiro nível da pirâmide de testes, sendo fundamentais para o desenvolvimento de software com qualidade. Suas principais características incluem:
+
+* **Eficiência e Custo:** Possuem o maior volume de execução, apresentando o menor custo e tempo de implementação.
+* **Responsabilidade:** São desenvolvidos pelo próprio programador como parte integrante da funcionalidade.
+* **Velocidade:** São execuções rápidas focadas diretamente nas linhas de código.
+* **Abrangência:** Permitem a cobertura de múltiplos cenários de saída para a lógica implementada.
+* **Isolamento:** A integração com outros componentes do sistema é realizada de forma controlada através do uso de **mocks**.
+
+O objetivo central é que o teste não seja uma tarefa separada, mas sim parte do cronograma e do "mindset" de desenvolvimento, garantindo que cada método cubra todos os cenários possíveis de execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-09h00m06s269.jpg" alt="" width="840">
+</p>
+
+O **JUnit 5** é um dos principais frameworks utilizados para a criação de testes no ecossistema Java. A estrutura básica consiste em criar classes específicas dentro do pacote de testes, utilizando anotações como `@Test` para identificar os métodos que devem ser executados pelo framework. Para validar se o resultado de uma operação está correto, utiliza-se o método `assertEquals`.
+
+```java
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import example.util.Calculator;
+import org.junit.jupiter.api.Test;
+
+class MyFirstJUnitJupiterTests {
+    private final Calculator calculator = new Calculator();
+
+    @Test
+    void addition() {
+        assertEquals(2, calculator.add(1, 1));
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-09h00m08s725.jpg" alt="" width="840">
+</p>
+
+A página oficial do JUnit 5 detalha a nova geração do framework, que foi redesenhada para suportar funcionalidades do Java 8 (como expressões Lambda) e permitir diferentes estilos de teste na JVM. No portal, o desenvolvedor encontra recursos essenciais como:
+
+* **Guia do Usuário:** Instruções detalhadas de configuração.
+* **Javadoc:** Documentação técnica da API.
+* **Repositório GitHub:** Acesso ao código-fonte e acompanhamento de problemas (issues).
+* **Versões Atuais:** Informações sobre os artefatos disponíveis no Maven Central, incluindo os módulos Jupiter, Vintage e Platform.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-09h00m13s535.jpg" alt="" width="840">
+</p>
+
+O **Mockito** é a ferramenta padrão para a criação de objetos dublês (**mocks**). Ele permite simular o comportamento de dependências externas (como um repositório ou serviço) para que o teste unitário foque exclusivamente na lógica da classe atual.
+
+As duas principais funcionalidades demonstradas são:
+
+1. **Verificação de Interações:** Validar se um método específico foi chamado dentro do objeto mocado através do comando `verify`.
+2. **Stubbing (Simulação):** Instruir o objeto dublê a retornar um valor específico quando um método for acionado, utilizando a estrutura `when(...).thenReturn(...)`.
+
+```java
+// Exemplo de verificação
+verify(mockedList).clear();
+
+// Exemplo de stubbing
+when(mockedList.get(0)).thenReturn("first");
+System.out.println(mockedList.get(0)); // Imprimirá "first"
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-09h00m18s230.jpg" alt="" width="840">
+</p>
+
+O site oficial do projeto Mockito apresenta a ferramenta como um framework de "mocking saboroso" para Java. A documentação centralizada no portal auxilia na configuração inicial via Maven ou Gradle e oferece notas de lançamento sobre a compatibilidade das versões (como a necessidade do Java 8 a partir da versão 3.x).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-09h00m22s801.jpg" alt="" width="840">
+</p>
+
+O **Hamcrest** é uma biblioteca de matchers que complementa os testes, tornando-os mais fluentes e legíveis, aproximando a escrita do código da linguagem natural. Ao utilizar o método `assertThat` em conjunto com matchers como `equalTo`, a intenção do teste torna-se muito mais clara do que nas asserções tradicionais.
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+public class BiscuitTest {
+    @Test
+    public void testEquals() {
+        Biscuit theBiscuit = new Biscuit("Ginger");
+        Biscuit myBiscuit = new Biscuit("Ginger");
+        assertThat(theBiscuit, equalTo(myBiscuit));
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-09h00m28s329.jpg" alt="" width="840">
+</p>
+
+Para facilitar o gerenciamento de dependências, o ecossistema Spring Boot oferece o **spring-boot-starter-test**. Ao adicionar apenas esta dependência no arquivo de configuração do projeto (pom.xml), o desenvolvedor passa a ter acesso imediato a todas as ferramentas essenciais mencionadas anteriormente.
+
+As bibliotecas incluídas automaticamente são:
+
+* **JUnit:** Motor principal de execução.
+* **Mockito:** Para criação de mocks.
+* **Hamcrest:** Para asserções fluentes.
+* **Spring Test & Spring Core:** Para suporte ao contexto do framework.
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
+```
 
 ### 🟩 Vídeo 07 - Revisando as dependências do arquivo pom.xml
 
@@ -422,7 +539,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/ce86cba9-edcc-42e7-8707-59c147683b28
+
+
 
 ### 🟩 Vídeo 08 - Testando os métodos das classes BeerService e BeerController - parte 1
 
