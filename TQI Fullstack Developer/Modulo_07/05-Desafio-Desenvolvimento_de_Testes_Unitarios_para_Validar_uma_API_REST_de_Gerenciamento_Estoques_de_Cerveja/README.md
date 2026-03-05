@@ -575,7 +575,323 @@ As bibliotecas incluídas automaticamente são:
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/ce86cba9-edcc-42e7-8707-59c147683b28
 
+O vídeo aborda a configuração de ambientes de teste utilizando JUnit 5 e Mockito, a implementação de regras de negócio na camada de serviço e a otimização do código através do mapeamento automático com MapStruct.
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h05m08s914.jpg" alt="" width="840">
+</p>
+
+O projeto utiliza o `spring-boot-starter-test` como dependência base para a implementação de testes. Conforme configurado no `pom.xml`, o escopo é definido como `test` e há uma exclusão explícita do `junit-vintage-engine` para garantir que apenas o JUnit 5 (Jupiter) seja utilizado, removendo o suporte à versão 4.
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+    <exclusions>
+        <exclusion>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h05m24s922.jpg" alt="" width="840">
+</p>
+
+Ao detalhar as dependências internas do starter de teste do Spring Boot, observa-se a inclusão automática de bibliotecas fundamentais como Hamcrest, AssertJ e o próprio JUnit Jupiter (versão 5). Essas ferramentas fornecem os matchers e o framework necessários para a execução de testes unitários e de integração de forma padronizada.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h06m51s367.jpg" alt="" width="840">
+</p>
+
+A entidade `Beer` representa a estrutura de dados no banco de dados. Ela utiliza anotações do Lombok (`@Data`, `@NoArgsConstructor`, `@AllArgsConstructor`) para reduzir a verbosidade e anotações JPA para o mapeamento objeto-relacional. O atributo `name` é marcado como único no banco de dados para evitar duplicidade.
+
+```java
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+public class Beer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false, unique = true)
+    private String name;
+
+    @Column(nullable = false)
+    private String brand;
+
+    @Column(nullable = false)
+    private int max;
+
+    @Column(nullable = false)
+    private int quantity;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private BeerType type;
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h07m07s932.jpg" alt="" width="840">
+</p>
+
+A classe `BeerService` contém a lógica de negócio do sistema. O método `createBeer` ilustra o fluxo de criação: primeiro valida se a cerveja já existe, depois converte o DTO em entidade usando o `beerMapper`, salva através do repositório e, por fim, retorna o objeto persistido convertido novamente em DTO.
+
+```java
+@Service
+@AllArgsConstructor(onConstructor = @__(@Autowired))
+public class BeerService {
+
+    private final BeerRepository beerRepository;
+    private final BeerMapper beerMapper = BeerMapper.INSTANCE;
+
+    public BeerDTO createBeer(BeerDTO beerDTO) throws BeerAlreadyRegisteredException {
+        verifyIfIsAlreadyRegistered(beerDTO.getName());
+        Beer beer = beerMapper.toModel(beerDTO);
+        Beer savedBeer = beerRepository.save(beer);
+        return beerMapper.toDTO(savedBeer);
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h07m25s494.jpg" alt="" width="840">
+</p>
+
+O `BeerDTO` (Data Transfer Object) é utilizado para validar os inputs de entrada antes que eles cheguem à entidade. Ele utiliza anotações do `javax.validation` como `@NotNull`, `@Size` e `@Max` para garantir que as regras de negócio básicas (como campos obrigatórios e limites de quantidade) sejam respeitadas logo na requisição.
+
+```java
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class BeerDTO {
+
+    private Long id;
+
+    @NotNull
+    @Size(min = 1, max = 200)
+    private String name;
+
+    @NotNull
+    @Size(min = 1, max = 200)
+    private String brand;
+
+    @NotNull
+    @Max(500)
+    private Integer max;
+
+    @NotNull
+    @Max(100)
+    private Integer quantity;
+
+    @Enumerated(EnumType.STRING)
+    @NotNull
+    private BeerType type;
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h07m52s581.jpg" alt="" width="840">
+</p>
+
+Além da criação, a `BeerService` implementa funcionalidades de listagem e deleção. O método `listAll` utiliza Streams do Java 8 para mapear todas as entidades encontradas no banco para DTOs, mantendo a separação entre a camada de persistência e a de apresentação.
+
+```java
+public List<BeerDTO> listAll() {
+    return beerRepository.findAll().stream()
+            .map(beerMapper::toDTO)
+            .collect(Collectors.toList());
+}
+
+public void deleteById(Long id) throws BeerNotFoundException {
+    verifyIfExists(id);
+    beerRepository.deleteById(id);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h07m57s202.jpg" alt="" width="840">
+</p>
+
+O `BeerRepository` estende `JpaRepository`, fornecendo operações padrão de CRUD. Foi adicionado o método customizado `findByName`, que retorna um `Optional<Beer>`, utilizado pela service para verificar a existência de registros duplicados pelo nome da cerveja.
+
+```java
+public interface BeerRepository extends JpaRepository<Beer, Long> {
+
+    Optional<Beer> findByName(String name);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h08m11s763.jpg" alt="" width="840">
+</p>
+
+Dentro da `BeerService`, métodos privados auxiliam na validação de integridade. O `verifyIfIsAlreadyRegistered` consulta o repositório pelo nome e lança uma exceção caso o registro já exista. Já o `verifyIfExists` garante que operações de deleção ou busca por ID só ocorram se o registro for encontrado, disparando um erro caso contrário.
+
+```java
+private void verifyIfIsAlreadyRegistered(String name) throws BeerAlreadyRegisteredException {
+    Optional<Beer> optSavedBeer = beerRepository.findByName(name);
+    if (optSavedBeer.isPresent()) {
+        throw new BeerAlreadyRegisteredException(name);
+    }
+}
+
+private Beer verifyIfExists(Long id) throws BeerNotFoundException {
+    return beerRepository.findById(id)
+            .orElseThrow(() -> new BeerNotFoundException(id));
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h08m15s374.jpg" alt="" width="840">
+</p>
+
+A exceção customizada `BeerAlreadyRegisteredException` é anotada com `@ResponseStatus(HttpStatus.BAD_REQUEST)`. Isso instrui o Spring Boot a retornar automaticamente o código de status HTTP 400 quando essa exceção for lançada, padronizando a resposta de erro para o cliente da API.
+
+```java
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class BeerAlreadyRegisteredException extends Exception {
+
+    public BeerAlreadyRegisteredException(String beerName) {
+        super(String.format("Beer with name %s already registered in the system.", beerName));
+    }
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h08m24s028.jpg" alt="" width="840">
+</p>
+
+O `BeerController` expõe os endpoints REST da aplicação. Ele delega as chamadas para a `BeerService` e utiliza anotações como `@PostMapping`, `@GetMapping` e `@DeleteMapping` para mapear os verbos HTTP. A anotação `@Valid` no método de criação garante que as restrições definidas no DTO sejam verificadas.
+
+```java
+@RestController
+@RequestMapping("/api/v1/beers")
+@AllArgsConstructor(onConstructor = @__(@Autowired))
+public class BeerController {
+
+    private final BeerService beerService;
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public BeerDTO createBeer(@RequestBody @Valid BeerDTO beerDTO) throws BeerAlreadyRegisteredException {
+        return beerService.createBeer(beerDTO);
+    }
+    
+    // ... outros métodos mapeados
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h11m45s674.jpg" alt="" width="840">
+</p>
+
+Para validar manualmente a API antes da automação dos testes, utiliza-se o Postman. Na imagem, observa-se a configuração de uma requisição `POST` com um corpo JSON contendo os dados da cerveja "Colorado", simulando o preenchimento de campos obrigatórios como marca, quantidade máxima e tipo.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h13m08s607.jpg" alt="" width="840">
+</p>
+
+A execução da requisição no Postman resulta em sucesso, retornando o status `201 Created`. O corpo da resposta exibe a cerveja criada com um `id` gerado pelo sistema (ID 1), confirmando que o fluxo completo, desde a controller até a persistência no banco de dados, está operante.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h13m12s636.jpg" alt="" width="840">
+</p>
+
+Ao tentar cadastrar novamente a mesma cerveja ("Colorado"), a API retorna `400 Bad Request`. A mensagem de erro detalha que a cerveja já está registrada, validando na prática o funcionamento da exceção `BeerAlreadyRegisteredException` e da lógica de verificação implementada na service.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h13m31s014.jpg" alt="" width="840">
+</p>
+
+A estrutura do projeto para testes é organizada dentro da pasta `src/test/java`. Segue-se a mesma estrutura de pacotes da aplicação principal para facilitar a localização e a injeção de dependências durante a execução dos testes unitários com JUnit.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h13m39s851.jpg" alt="" width="840">
+</p>
+
+A classe `BeerServiceTest` é inicializada com a anotação `@ExtendWith(MockitoExtension.class)`. Essa configuração informa ao JUnit que os testes utilizarão a extensão do Mockito para gerenciar a criação de objetos simulados (mocks), permitindo isolar a classe `BeerService` de suas dependências reais.
+
+```java
+@ExtendWith(MockitoExtension.class)
+public class BeerServiceTest {
+
+    @Mock
+    private BeerRepository beerRepository;
+
+    private BeerMapper beerMapper = BeerMapper.INSTANCE;
+
+    @InjectMocks
+    private BeerService beerService;
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h14m44s488.jpg" alt="" width="840">
+</p>
+
+No contexto do teste, `@Mock` cria uma versão dublê do `BeerRepository`, enquanto `@InjectMocks` garante que esse mock seja injetado automaticamente na instância de `BeerService` que está sendo testada. Isso permite simular o comportamento do banco de dados sem a necessidade de uma conexão real.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h17m34s830.jpg" alt="" width="840">
+</p>
+
+O `BeerMapper` é uma interface que utiliza a biblioteca MapStruct para automatizar a conversão entre DTOs e entidades. A anotação `@Mapper` sinaliza que o framework deve gerar a implementação dessa interface durante o processo de compilação.
+
+```java
+@Mapper
+public interface BeerMapper {
+
+    BeerMapper INSTANCE = Mappers.getMapper(BeerMapper.class);
+
+    Beer toModel(BeerDTO beerDTO);
+
+    BeerDTO toDTO(Beer beer);
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h17m54s057.jpg" alt="" width="840">
+</p>
+
+O uso do mapper resolve o problema de verbosidade no código. Em vez de realizar múltiplos `setID`, `setName`, etc., manualmente para cada conversão, os métodos `toModel` e `toDTO` realizam o mapeamento de todos os atributos correspondentes de forma automática e performática.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-05-11h18m00s039.jpg" alt="" width="840">
+</p>
+
+Para que o MapStruct funcione corretamente com o Lombok, é necessário configurar o `maven-compiler-plugin` no `pom.xml`. Adicionam-se os caminhos dos processadores de anotação (`annotationProcessorPaths`) tanto para o Lombok quanto para o `mapstruct-processor`, permitindo que ambos coexistam e gerem código durante a build.
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <configuration>
+        <annotationProcessorPaths>
+            <path>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </path>
+            <path>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>1.3.1.Final</version>
+            </path>
+        </annotationProcessorPaths>
+    </configuration>
+</plugin>
+```      
 
 ### 🟩 Vídeo 08 - Testando os métodos das classes BeerService e BeerController - parte 1
 
@@ -584,7 +900,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/a8bc625a-5f37-40c2-a310-90221d3bacb7
 
 ### 🟩 Vídeo 09 - Testando os métodos das classes BeerService e BeerController - parte 2
 
