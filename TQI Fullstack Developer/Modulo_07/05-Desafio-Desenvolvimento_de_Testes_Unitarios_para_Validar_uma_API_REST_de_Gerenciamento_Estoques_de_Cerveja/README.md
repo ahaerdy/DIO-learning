@@ -1415,6 +1415,75 @@ void whenValidBeerNameIsGivenThenReturnABeer() throws BeerNotFoundException {
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/0b1a6821-7b63-4554-99f3-9a426080f5a3
 
+O vídeo foca na implementação de testes automatizados para validar o comportamento de uma API de cervejas. O desenvolvedor demonstra como testar cenários de erro (exceções) na camada de serviço e como validar os endpoints da camada de controle (Controller) utilizando Mockito e MockMvc.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-16h48m47s344.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o arquivo `BeerService.java` aberto no IntelliJ IDEA, com destaque para o método `findByName`. Esse método tenta localizar uma cerveja no repositório pelo nome e, caso não encontre, lança a exceção `BeerNotFoundException` usando o encadeamento `.orElseThrow()`. No painel inferior, o resultado da execução do teste `whenNotRegisteredBeerNameIsGivenThenThrowAnException` é exibido com sucesso — **1 teste aprovado em 3s 958ms** — confirmando que a camada de serviço lança corretamente a exceção quando nenhuma cerveja é encontrada para o nome informado.
+
+```java
+public BeerDTO findByName(String name) throws BeerNotFoundException {
+    Beer foundBeer = beerRepository.findByName(name)
+            .orElseThrow(() -> new BeerNotFoundException(name));
+    return beerMapper.toDTO(foundBeer);
+}
+```
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-16h49m21s270.jpg" alt="" width="840">
+</p>
+A imagem mostra o Postman executando uma requisição `GET` para o endpoint `http://localhost:8080/api/v1/beers/Colorado appia`. A resposta retorna o status **200 OK** com o corpo JSON abaixo, demonstrando que a busca de cerveja por nome está funcionando corretamente na aplicação em execução:
+
+```json
+{
+  "id": 1,
+  "name": "Colorado appia",
+  "brand": "Colorado",
+  "max": 20,
+  "quantity": 10,
+  "type": "LAGER"
+}
+```
+
+Esse teste manual no Postman serve de referência para o comportamento esperado que será validado automaticamente pelo teste unitário da camada de controller.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-16h51m15s571.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o arquivo `BeerControllerTest.java` no IntelliJ IDEA com o método de teste `whenGETIsCalledWithValidNameThenOkStatusIsReturned`. O teste segue o padrão **given / when / then**:
+
+- **given**: um `BeerDTO` é construído via `BeerDTOBuilder`.
+- **when**: o mock do `beerService.findByName()` é configurado para retornar esse DTO quando chamado com o nome da cerveja.
+- **then**: o `mockMvc` executa um `GET` no caminho `BEER_API_URL_PATH + "/" + beerDTO.getName()` e verifica que o status retornado é `200 OK`, além de validar os campos `$.name`, `$.brand` e `$.type` no corpo da resposta JSON.
+
+```java
+@Test
+void whenGETIsCalledWithValidNameThenOkStatusIsReturned() throws Exception {
+    // given
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+
+    //when
+    when(beerService.findByName(beerDTO.getName())).thenReturn(beerDTO);
+
+    // then
+    mockMvc.perform(MockMvcRequestBuilders.get(BEER_API_URL_PATH + "/" + beerDTO.getName())
+                    .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.name", is(beerDTO.getName())))
+            .andExpect(jsonPath("$.brand", is(beerDTO.getBrand())))
+            .andExpect(jsonPath("$.type", is(beerDTO.getType().toString())));
+}
+```
+
+Esse teste valida unitariamente a camada de controller, isolando-a da camada de serviço por meio do Mockito, de forma análoga ao que foi verificado manualmente no Postman.      
+
+
 ### 🟩 Vídeo 15 - Testando os métodos das classes BeerService e BeerController - parte 8
 
 <video width="60%" controls>
@@ -1422,7 +1491,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/51a2c2e3-d82a-4d01-a85c-21c0c5a6d68a
 
 ### 🟩 Vídeo 16 - Testando os métodos das classes BeerService e BeerController - parte 9
 
