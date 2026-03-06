@@ -1045,7 +1045,7 @@ Este vídeo foca na implementação de testes de unidade para a camada de servi�
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-03-06-11-05-44.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-03-06-11-05-44.png" alt="" width="840">
 </p>
 
 Nesta etapa, o foco é a automação de testes unitários para cenários de exceção na camada de serviço (`BeerService`). O objetivo é simular o comportamento do sistema quando um usuário tenta cadastrar uma cerveja que já existe no banco de dados, garantindo que a exceção personalizada `BeerAlreadyRegisteredException` seja lançada corretamente.
