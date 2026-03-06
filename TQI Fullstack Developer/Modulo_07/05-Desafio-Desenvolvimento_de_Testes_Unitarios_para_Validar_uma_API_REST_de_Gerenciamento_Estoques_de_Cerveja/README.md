@@ -1336,6 +1336,34 @@ public class JsonConversionUtils {
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/846c64c2-1959-49eb-8462-c63c71aa31cf
 
+Implementação de testes unitários para uma API de gerenciamento de cervejas, focando na criação de registros (POST) e na validação de regras de negócio através de DTOs (Data Transfer Objects).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-03-06-15-52-38.png" alt="" width="480">
+</p>
+
+Nesta etapa do desenvolvimento, o foco volta-se para a validação de integridade dos dados de entrada na API. O objetivo é garantir que as restrições definidas no DTO (como campos `@NotNull`) sejam respeitadas pelo framework antes mesmo da lógica de negócio ser processada.
+
+O teste implementado simula um cenário de erro onde um campo obrigatório, neste caso a marca (**brand**), é enviado como nulo. Diferente do teste de criação bem-sucedida, aqui não há necessidade de mocar o serviço (`beerService.createBeer`), pois a **Bean Validation** deve interceptar a requisição e impedir que ela avance para a camada de serviço. O resultado esperado para essa operação é o status HTTP **400 Bad Request**.
+
+```java
+@Test
+void whenPOSTIsCalledWithoutRequiredFieldThenAnErrorIsReturned() throws Exception {
+    // given
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    beerDTO.setBrand(null);
+
+    // then
+    mockMvc.perform(post(BEER_API_URL_PATH)
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(asJsonString(beerDTO)))
+            .andExpect(status().isBadRequest());
+}
+```
+
+
 ### 🟩 Vídeo 13 - Testando os métodos das classes BeerService e BeerController - parte 6
 
 <video width="60%" controls>
@@ -1343,7 +1371,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/5d7adb19-026a-4fd4-94b5-d27003c0e690
 
 ### 🟩 Vídeo 14 - Testando os métodos das classes BeerService e BeerController - parte 7
 
