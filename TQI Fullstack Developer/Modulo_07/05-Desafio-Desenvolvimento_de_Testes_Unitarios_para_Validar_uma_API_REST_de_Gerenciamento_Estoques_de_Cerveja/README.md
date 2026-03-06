@@ -1341,7 +1341,7 @@ Implementação de testes unitários para uma API de gerenciamento de cervejas, 
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-03-06-15-52-38.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-03-06-15-52-38.png" alt="" width="840">
 </p>
 
 Nesta etapa do desenvolvimento, o foco volta-se para a validação de integridade dos dados de entrada na API. O objetivo é garantir que as restrições definidas no DTO (como campos `@NotNull`) sejam respeitadas pelo framework antes mesmo da lógica de negócio ser processada.
@@ -1363,7 +1363,6 @@ void whenPOSTIsCalledWithoutRequiredFieldThenAnErrorIsReturned() throws Exceptio
 }
 ```
 
-
 ### 🟩 Vídeo 13 - Testando os métodos das classes BeerService e BeerController - parte 6
 
 <video width="60%" controls>
@@ -1373,6 +1372,40 @@ void whenPOSTIsCalledWithoutRequiredFieldThenAnErrorIsReturned() throws Exceptio
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/5d7adb19-026a-4fd4-94b5-d27003c0e690
 
+Este vídeo foca na implementação e nos testes unitários da funcionalidade de busca de cervejas pelo nome em uma aplicação Java com Spring Boot. O instrutor demonstra desde a validação no Postman até a codificação da lógica de serviço, tratamento de exceções e automação de testes usando Mockito e Hamcrest
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-03-06-16-12-22.png" alt="" width="840">
+</p>
+
+Nesta etapa, o foco recai sobre a implementação de testes unitários na classe `BeerServiceTest` para validar a busca de cervejas por nome. O ambiente de desenvolvimento (IntelliJ IDEA) exibe a estrutura do projeto e o código responsável por garantir que as regras de negócio de consulta estejam funcionando corretamente.
+
+O teste utiliza o padrão **Given/When/Then** para organizar a lógica:
+
+* **Given (Dado):** Prepara-se um `BeerDTO` esperado através de um builder e converte-se para o modelo de entidade correspondente.
+* **When (Quando):** Configura-se o comportamento do mock (`beerRepository`) para retornar um `Optional` contendo a cerveja quando o nome for consultado.
+* Em seguida, o método `findByName` do serviço é efetivamente chamado.
+* **Then (Então):** Utiliza-se o `assertThat` do Hamcrest para verificar se o objeto retornado pelo serviço é igual ao DTO esperado, validando a integridade da busca e da conversão de dados.
+
+```java
+@Test
+void whenValidBeerNameIsGivenThenReturnABeer() throws BeerNotFoundException {
+    // given
+    BeerDTO expectedFoundBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedFoundBeer = beerMapper.toModel(expectedFoundBeerDTO);
+
+    // when
+    when(beerRepository.findByName(expectedFoundBeer.getName())).thenReturn(Optional.of(expectedFoundBeer));
+
+    // then
+    BeerDTO foundBeerDTO = beerService.findByName(expectedFoundBeerDTO.getName());
+
+    assertThat(foundBeerDTO, is(equalTo(expectedFoundBeerDTO)));
+}
+```
+
 ### 🟩 Vídeo 14 - Testando os métodos das classes BeerService e BeerController - parte 7
 
 <video width="60%" controls>
@@ -1380,7 +1413,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/0b1a6821-7b63-4554-99f3-9a426080f5a3
 
 ### 🟩 Vídeo 15 - Testando os métodos das classes BeerService e BeerController - parte 8
 
