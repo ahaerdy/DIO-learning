@@ -1039,6 +1039,36 @@ A última imagem mostra a execução final dos testes após a alteração para H
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/3ed42823-3f3f-4b14-9844-b0990256823f
 
+
+Este vídeo foca na implementação de testes de unidade para a camada de serviço (BeerService) de uma aplicação Java. O objetivo principal é automatizar a validação de cenários de erro, especificamente quando se tenta cadastrar uma cerveja que já existe no sistema, garantindo que a exceção correta seja lançada.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-03-06-11-05-44.png" alt="" width="480">
+</p>
+
+Nesta etapa, o foco é a automação de testes unitários para cenários de exceção na camada de serviço (`BeerService`). O objetivo é simular o comportamento do sistema quando um usuário tenta cadastrar uma cerveja que já existe no banco de dados, garantindo que a exceção personalizada `BeerAlreadyRegisteredException` seja lançada corretamente.
+
+O teste utiliza o padrão **Given/When/Then** e faz uso de **Mocks** para isolar a dependência do repositório. Ao configurar o `beerRepository.findByName` para retornar um `Optional` contendo uma cerveja (em vez de vazio), força-se o fluxo de erro na lógica de negócio. Para validar o lançamento da exceção, utiliza-se o método `assertThrows` do JUnit 5, que verifica se a chamada ao método `createBeer` resulta na exceção esperada.
+
+```java
+@Test
+void whenAlreadyRegisteredBeerInformedThenAnExceptionShouldBeThrown() {
+    // given
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer duplicatedBeer = beerMapper.toModel(expectedBeerDTO);
+
+    // when
+    when(beerRepository.findByName(expectedBeerDTO.getName())).thenReturn(Optional.of(duplicatedBeer));
+
+    // then
+    assertThrows(BeerAlreadyRegisteredException.class, () -> beerService.createBeer(expectedBeerDTO));
+}
+```
+ 
+
+
 ### 🟩 Vídeo 11 - Testando os métodos das classes BeerService e BeerController - parte 4
 
 <video width="60%" controls>
@@ -1046,7 +1076,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/7d465124-8a02-4f3e-9bdd-e7f7c931b638
 
 ### 🟩 Vídeo 12 - Testando os métodos das classes BeerService e BeerController - parte 5
 
