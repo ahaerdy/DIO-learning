@@ -907,7 +907,7 @@ O vĩdeo descreve o processo de criação de um teste unitário para a camada de
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-03-06-07-14-31.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-03-06-07-14-31.png" alt="" width="840">
 </p>
 
 Nesta etapa, é demonstrada a construção do primeiro teste unitário para o serviço de cervejas, focando no cenário onde uma nova cerveja é cadastrada com sucesso. O método de teste utiliza o padrão de nomenclatura `whenBeerInformedThenItShouldBeCreated`, seguindo a convenção de comportamento (quando algo acontece, então este deve ser o resultado).
