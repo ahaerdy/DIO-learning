@@ -1085,39 +1085,30 @@ Este vídeo apresenta uma sessão prática de codificação focada no refinament
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h38m51s178.jpg" alt="" width="840">
 </p>
 
-Esta captura mostra o fluxo do método de serviço responsável pela criação de uma cerveja e o uso do **mapper** para converter entre `BeerDTO` e `Beer`. O trecho central é a chamada que verifica se já existe uma cerveja com o mesmo nome antes de salvar; se não houver duplicata, o objeto é salvo no repositório e o DTO resultante é retornado.  
-Trecho do material: “Quando eu vou chamar a cerveja, ele vai verificar se foi chamada. Olha só, aqui ó, eu chamei o findByName, ele verificou e foi positivo, tá presente essa cerveja, ou seja, significa que ela está duplicada no nosso sistema.”
+A imagem exibe o método `createBeer` dentro da classe `BeerService`. Este método é central para a lógica de negócio de criação de uma nova cerveja. A primeira ação do método é chamar `verifyIfIsAlreadyRegistered`, garantindo que não haja duplicidade de cervejas com o mesmo nome no sistema. Se a cerveja não existir, ela é salva no repositório e, em seguida, o DTO correspondente é retornado.
+
+```java
+public BeerDTO createBeer(BeerDTO beerDTO) throws BeerAlreadyRegisteredException {
+    verifyIfIsAlreadyRegistered(beerDTO.getName());
+    Beer beer = beerMapper.toModel(beerDTO);
+    Beer savedBeer = beerRepository.save(beer);
+    return beerMapper.toDTO(savedBeer);
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h38m56s426.jpg" alt="" width="840">
 </p>
 
-A imagem exibe partes do serviço (`BeerService`) com métodos auxiliares e a configuração do **beerMapper**. Observa-se a implementação de `findByName` que usa `beerRepository.findByName(name).orElseThrow(...)` para lançar `BeerNotFoundException` quando não encontra a entidade — padrão comum para transformar `Optional` em exceção controlada. A presença de `listALL()` indica também a conversão de lista de entidades para DTOs via `beerMapper::toDTO`.
-s
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h39m23s726.jpg" alt="" width="840">
-</p>
+Esta imagem detalha o método `verifyIfIsAlreadyRegistered`, que é responsável por verificar a existência de uma cerveja pelo nome antes de permitir sua criação. Ele utiliza o `beerRepository.findByName` para consultar o banco de dados. Caso a cerveja já esteja registrada, uma exceção `BeerAlreadyRegisteredException` é lançada, impedindo a duplicação. A imagem também mostra o método `findByName` que busca uma cerveja pelo nome e lança `BeerNotFoundException` se não encontrar.
 
-Aqui vemos o método `listALL()` com a pipeline de *streams*: a transformação funcional de `List<Beer>` para `List<BeerDTO>`, garantindo que a camada de serviço exponha apenas DTOs ao controlador.
-
-**Código transcrito (Java):**
 ```java
-public List<BeerDTO> listALL() {
-    return beerRepository.findAll()
-        .stream()
-        .map(beerMapper::toDTO)
-        .collect(Collectors.toList());
+public BeerDTO findByName(String name) throws BeerNotFoundException {
+    Beer foundBeer = beerRepository.findByName(name)
+            .orElseThrow(() -> new BeerNotFoundException(name));
+    return beerMapper.toDTO(foundBeer);
 }
-```
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h39m42s183.jpg" alt="" width="840">
-</p>
-
-A captura mostra o método de validação que consulta o repositório por nome e lança `BeerAlreadyRegisteredException` caso o `Optional` esteja presente. Esse é o ponto de validação de negócio que impede duplicidade antes de persistir uma nova cerveja.
-
-**Código transcrito (Java):**
-```java
 private void verifyIfIsAlreadyRegistered(String name) throws BeerAlreadyRegisteredException {
     Optional<Beer> optSavedBeer = beerRepository.findByName(name);
     if (optSavedBeer.isPresent()) {
@@ -1127,15 +1118,20 @@ private void verifyIfIsAlreadyRegistered(String name) throws BeerAlreadyRegister
 ```
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h40m12s661.jpg" alt="" width="840">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h39m23s726.jpg" alt="" width="840">
 </p>
 
-Mostra a declaração da exceção customizada `BeerAlreadyRegisteredException` anotada com `@ResponseStatus(HttpStatus.BAD_REQUEST)`. Isso mapeia automaticamente a exceção para um HTTP 400 quando propagada até a camada web, alinhando comportamento de API com as regras de negócio.
+A imagem apresenta a definição da classe `BeerAlreadyRegisteredException`, uma exceção personalizada utilizada para indicar que uma cerveja com o mesmo nome já se encontra registrada no sistema. Esta classe estende `Exception` e é anotada com `@ResponseStatus(HttpStatus.BAD_REQUEST)`, o que garante que, ao ser lançada, a API retorne um status HTTP 400 (Bad Request), conforme o padrão REST para problemas no lado do cliente.
 
-**Código transcrito (Java):**
 ```java
+package one.digitalinnovation.beerstock.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class BeerAlreadyRegisteredException extends Exception {
+
     public BeerAlreadyRegisteredException(String beerName) {
         super(String.format("Beer with name %s already registered in the system.", beerName));
     }
@@ -1143,59 +1139,193 @@ public class BeerAlreadyRegisteredException extends Exception {
 ```
 
 <p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h39m42s183.jpg" alt="" width="840">
+</p>
+
+Esta imagem ilustra o teste `whenAlreadyRegisteredInformedThenAnExceptionShouldBeThrown` na classe `BeerServiceTest`. O teste verifica se, ao tentar criar uma cerveja que já existe, a exceção `BeerAlreadyRegisteredException` é corretamente lançada. A seção `when` simula a chamada ao `beerService.createBeer` com um DTO de cerveja já existente, e a seção `then` valida que a exceção esperada é disparada.
+
+```java
+@Test
+void whenAlreadyRegisteredInformedThenAnExceptionShouldBeThrown() {
+    // given
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build();
+
+    // when
+    when(beerRepository.findByName(expectedBeerDTO.getName()))
+            .thenReturn(Optional.of(duplicatedBeer));
+
+    // then
+    assertThrows(BeerAlreadyRegisteredException.class, () -> beerService.createBeer(expectedBeerDTO));
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h40m12s661.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra o processo de depuração (`debug`) do método `createBeer` na `BeerService`. É possível observar o fluxo de execução, onde o `verifyIfIsAlreadyRegistered` é chamado e, ao encontrar uma cerveja com o mesmo nome (`Brahma`), a exceção `BeerAlreadyRegisteredException` é preparada para ser lançada. Os detalhes do `beerDTO` e do `beerRepository` são visíveis no painel de variáveis, confirmando a detecção da duplicidade.
+
+<p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h40m18s929.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta o fluxo de depuração do teste unitário que verifica o lançamento da exceção quando uma cerveja duplicada é informada. Observa-se o *mock* do `beerRepository` retornando um `Optional` preenchido, o que faz com que o serviço lance `BeerAlreadyRegisteredException` e o teste valide esse comportamento.
-
+Esta imagem continua a depuração, focando no momento exato em que a exceção `BeerAlreadyRegisteredException` é lançada. O debugger aponta para a linha `throw new BeerAlreadyRegisteredException(name);` dentro do método `verifyIfIsAlreadyRegistered`, confirmando que a lógica de validação de duplicidade está funcionando conforme o esperado. A variável `beerName` exibe o valor "Brahma", indicando a cerveja que causou a exceção.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h40m39s178.jpg" alt="" width="840">
 </p>
 
-Captura do depurador mostrando variáveis em tempo de execução: `beerDTO`, `beerRepository` (mock) e `beerMapper`. Isso ilustra como o teste injeta dependências e inspeciona o estado interno durante a execução do método `createBeer`, útil para entender por que a exceção é lançada.
+Esta imagem exibe uma requisição HTTP POST realizada via Postman para a API de cervejas (`/api/v1/beers`). O corpo da requisição JSON tenta criar uma cerveja chamada "Colorado". A resposta da API, com status `400 Bad Request`, indica que a operação falhou porque "Beer with name Colorado already registered in the system.", confirmando o tratamento da exceção de cerveja já registrada no nível da API.
+
+```json
+// Request Body
+{
+    "name": "Colorado",
+    "brand": "Colorado",
+    "max": 50,
+    "quantity": 10,
+    "type": "LAGER"
+}
+
+// Response
+{
+    "timestamp": "2020-09-01T21:05:06.000+00:00",
+    "status": 400,
+    "error": "Bad Request",
+    "message": "Beer with name Colorado already registered in the system.",
+    "path": "/api/v1/beers"
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h48m05s506.jpg" alt="" width="840">
 </p>
 
-Mostra a interação com o Postman e a resposta de erro JSON retornada pela API quando tenta criar uma cerveja já existente: status **400 Bad Request** e mensagem com o texto da exceção. Esse exemplo confirma o mapeamento `@ResponseStatus` e a mensagem formatada definida na exceção customizada.
+A imagem apresenta a estrutura inicial da classe `BeerControllerTest`, responsável por testar a camada de controle da aplicação. São definidas constantes importantes para os testes, como a URL base da API (`API_URL_PATH`), IDs de cervejas válidas e inválidas, e subcaminhos para operações de incremento e decremento. A classe estende `MockitoExtension.class`, indicando o uso do framework Mockito para simulação de dependências.
 
-**Trecho de resposta exibido:**
-```json
-{
-  "timestamp": "2020-06-16T23:55:28.584+00:00",
-  "status": 400,
-  "error": "Bad Request",
-  "message": "Beer with name Colorado appia already registered in the system.",
-  "path": "/api/v1/beers"
-}
+```java
+package one.digitalinnovation.beerstock.controller;
+
+import one.digitalinnovation.beerstock.builder.BeerDTOBuilder;
+import one.digitalinnovation.beerstock.dto.BeerDTO;
+import one.digitalinnovation.beerstock.exception.BeerAlreadyRegisteredException;
+import one.digitalinnovation.beerstock.exception.BeerNotFoundException;
+import one.digitalinnovation.beerstock.service.BeerService;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
+
+import java.util.Collections;
+
+import static one.digitalinnovation.beerstock.utils.JsonConversionUtils.asJsonString;
+import static org.hamcrest.core.Is.is;
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+@ExtendWith(MockitoExtension.class)
+public class BeerControllerTest {
+
+    private static final String BEER_API_URL_PATH = "/api/v1/beers";
+    private static final long VALID_BEER_ID = 1L;
+    private static final long INVALID_BEER_ID = 2L;
+    private static final String BEER_API_SUBPATH_INCREMENT_URL = "/increment";
+    private static final String BEER_API_SUBPATH_DECREMENT_URL = "/decrement";
+
+    @Mock
+    private BeerService beerService;
+
+    @InjectMocks
+    private BeerController beerController;
+
+    private MockMvc mockMvc;
+
+    @BeforeEach
+    void setUp() {
+        mockMvc = MockMvcBuilders.standaloneSetup(beerController)
+                .setCustomArgumentResolvers(new PageableHandlerMethodArgumentResolver())
+                .setViewResolvers((s, locale) -> new MappingJackson2JsonView().build())
+                .build();
+    }
 ```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h49m22s470.jpg" alt="" width="840">
 </p>
 
-Esta imagem mostra o teste de controlador (`BeerControllerTest`) que usa `MockMvc` para simular um `POST /api/v1/beers`. O teste configura o `beerService` como *mock* para retornar o DTO esperado e então valida o status `201 Created` e os campos JSON de resposta via `jsonPath`. É um padrão de teste de integração leve para a camada web.
+Esta imagem detalha o teste `whenPOSTIsCalledThenABeerIsCreated` na classe `BeerControllerTest`. Este teste verifica o cenário de sucesso na criação de uma cerveja via requisição POST. Ele configura um `BeerDTO` válido, simula o comportamento do `beerService.createBeer` para retornar o DTO criado, e então utiliza o `mockMvc.perform` para executar uma requisição POST para `/api/v1/beers`. As asserções (`andExpect`) verificam se o status HTTP é 201 (Created) e se os campos do JSON de resposta correspondem aos dados da cerveja criada.
 
-**Pontos importantes para o teste de controller**
-- Configurar `MockMvc` com `standaloneSetup(controller)` e `MappingJackson2JsonView` para serialização JSON.  
-- Mockar `beerService.createBeer(beerDTO)` para retornar o DTO esperado.  
-- Usar `mockMvc.perform(post(...).contentType(MediaType.APPLICATION_JSON).content(asJsonString(beerDTO)))` e validar com `andExpect(status().isCreated())` e `jsonPath(...)`.
+```java
+@Test
+void whenPOSTIsCalledThenABeerIsCreated() throws Exception {
+    // given
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build();
+
+    // when
+    when(beerService.createBeer(expectedBeerDTO)).thenReturn(expectedBeerDTO);
+
+    // then
+    mockMvc.perform(post(BEER_API_URL_PATH)
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(asJsonString(expectedBeerDTO)))
+            .andExpect(status().isCreated())
+            .andExpect(jsonPath("$.name", is(expectedBeerDTO.getName())))
+            .andExpect(jsonPath("$.brand", is(expectedBeerDTO.getBrand())))
+            .andExpect(jsonPath("$.type", is(expectedBeerDTO.getType().toString())));
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h49m57s149.jpg" alt="" width="840">
 </p>
 
-A última captura mostra um erro comum ao executar o teste de controller: **415 UNSUPPORTED_MEDIA_TYPE**. No material o autor identifica que o problema foi causado por passar `contentType` duas vezes e não fornecer o `content` corretamente. A correção indicada é garantir que o `content` (JSON do DTO) seja passado uma única vez e que `contentType(MediaType.APPLICATION_JSON)` esteja presente apenas como cabeçalho, não duplicado.
+Esta imagem exibe um cenário de falha em um teste de controlador, especificamente um erro `415 UNSUPPORTED_MEDIA_TYPE`. Este erro ocorre quando o tipo de mídia (`Content-Type`) enviado na requisição HTTP não é suportado pelo servidor ou não corresponde ao esperado. No contexto do teste, isso pode indicar um problema na configuração do `contentType(MediaType.APPLICATION_JSON)` ou na conversão do `BeerDTO` para JSON usando `asJsonString`, resultando em uma requisição malformada ou com um cabeçalho `Content-Type` incorreto.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h51m38s720.jpg" alt="" width="840">
+</p>
 
-**Observação técnica**
+Esta imagem mostra o método `asJsonString` da classe `JsonConversionUtils`, que é uma utilidade para converter objetos Java em strings JSON. Este método é crucial para os testes de integração do controlador, pois permite simular o corpo de requisições HTTP POST e PUT com objetos DTOs serializados corretamente. A implementação utiliza a biblioteca `Jackson` (`ObjectMapper`) para realizar a serialização, garantindo que os dados sejam formatados de acordo com o padrão JSON esperado pela API.
 
-- **Validações de negócio** (como duplicidade por nome) devem ocorrer na camada de serviço e lançar exceções específicas que a camada web converte em códigos HTTP apropriados (`400` no caso).  
-- **Testes unitários de serviço** devem mockar repositórios e verificar exceções via `assertThrows`.  
-- **Testes de controller com MockMvc** exigem atenção ao `contentType` e ao `content` (JSON) para evitar `415` — sempre converter o DTO para JSON e passar esse JSON como `content`.  
+```java
+package one.digitalinnovation.beerstock.utils;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
+public class JsonConversionUtils {
+
+    public static String asJsonString(Object beerDTO) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+            objectMapper.registerModules(new JavaTimeModule());
+
+            return objectMapper.writeValueAsString(beerDTO);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+```
 
 ### 🟩 Vídeo 12 - Testando os métodos das classes BeerService e BeerController - parte 5
 
