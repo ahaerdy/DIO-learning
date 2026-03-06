@@ -1377,7 +1377,7 @@ Este vídeo foca na implementação e nos testes unitários da funcionalidade de
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-03-06-16-13-54.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-03-06-16-13-54.png" alt="" width="840">
 </p>
 
 Nesta etapa, o foco recai sobre a implementação de testes unitários na classe `BeerServiceTest` para validar a busca de cervejas por nome. O ambiente de desenvolvimento (IntelliJ IDEA) exibe a estrutura do projeto e o código responsável por garantir que as regras de negócio de consulta estejam funcionando corretamente.
