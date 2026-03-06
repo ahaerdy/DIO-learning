@@ -902,6 +902,42 @@ Para que o MapStruct funcione corretamente com o Lombok, é necessário configur
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/a8bc625a-5f37-40c2-a310-90221d3bacb7
 
+O vĩdeo descreve o processo de criação de um teste unitário para a camada de serviço (BeerService) em uma aplicação Java, utilizando ferramentas modernas como JUnit, Mockito e Lombok. O foco é garantir que, ao informar os dados de uma nova cerveja, ela seja criada e salva corretamente no sistema.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-03-06-07-14-31.png" alt="" width="480">
+</p>
+
+Nesta etapa, é demonstrada a construção do primeiro teste unitário para o serviço de cervejas, focando no cenário onde uma nova cerveja é cadastrada com sucesso. O método de teste utiliza o padrão de nomenclatura `whenBeerInformedThenItShouldBeCreated`, seguindo a convenção de comportamento (quando algo acontece, então este deve ser o resultado).
+
+Para facilitar a criação dos objetos de teste, é utilizado o padrão **Builder** através da classe `BeerDTOBuilder`, que permite instanciar um `BeerDTO` com dados pré-definidos (como a marca "Brahma" e o tipo "Lager") de forma fluente. A lógica de teste segue a estrutura:
+
+1. **Given (Dado):** Preparação dos dados de entrada (`BeerDTO`) e a conversão para a entidade de modelo (`Beer`) utilizando um Mapper.
+2. **When (Quando):** Configuração do comportamento dos Mocks. O `beerRepository.findByName` é instruído a retornar um `Optional` vazio (indicando que a cerveja não existe) e o `beerRepository.save` é configurado para retornar o objeto esperado.
+3. **Then (Então):** Execução da chamada ao método `createBeer` da service e a validação dos resultados através de `assertEquals`, garantindo que o ID e o nome da cerveja retornada correspondam aos dados enviados.
+
+```java
+@Test
+void whenBeerInformedThenItShouldBeCreated() throws BeerAlreadyRegisteredException {
+    // given
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedSavedBeer = beerMapper.toModel(beerDTO);
+
+    // when
+    when(beerRepository.findByName(beerDTO.getName())).thenReturn(Optional.empty());
+    when(beerRepository.save(expectedSavedBeer)).thenReturn(expectedSavedBeer);
+
+    // then
+    BeerDTO createdBeerDTO = beerService.createBeer(beerDTO);
+
+    assertEquals(beerDTO.getId(), createdBeerDTO.getId());
+    assertEquals(beerDTO.getName(), createdBeerDTO.getName());
+}
+```
+
+
 ### 🟩 Vídeo 09 - Testando os métodos das classes BeerService e BeerController - parte 2
 
 <video width="60%" controls>
@@ -909,7 +945,9 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/9dca85b1-ba31-4dd9-bb88-f3d074e5d50d
+
+
 
 ### 🟩 Vídeo 10 - Testando os métodos das classes BeerService e BeerController - parte 3
 
