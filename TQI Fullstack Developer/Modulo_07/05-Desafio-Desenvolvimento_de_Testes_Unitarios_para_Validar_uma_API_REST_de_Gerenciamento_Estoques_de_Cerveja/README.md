@@ -1027,7 +1027,7 @@ assertThat(createdBeerDTO.getQuantity(), is(greaterThan(2)));
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h27m25s586.jpg" alt="" width="840">
 </p>
 
-A última imagem mostra a execução final dos testes após a alteração para Hamcrest: o teste continua passando e o console confirma "Tests passed: 1". O professor usa esse momento para reforçar boas práticas de testes unitários: organizar o teste em `given/when/then`, usar mocks para isolar dependências, empregar mappers para conversão entre DTO e entidade, e preferir matchers fluentes para asserções mais claras.
+A última imagem mostra a execução final dos testes após a alteração para Hamcrest: o teste continua passando e o console confirma "Tests passed: 1". O professor usa esse momento para reforçar boas práticas de testes unitários: organizar o teste em `given/when/then`, usar mocks para isolar dependências, empregar mappers para conversão entre DTO e entidade, e matchers para asserções mais claras.
 
 
 ### 🟩 Vídeo 10 - Testando os métodos das classes BeerService e BeerController - parte 3
