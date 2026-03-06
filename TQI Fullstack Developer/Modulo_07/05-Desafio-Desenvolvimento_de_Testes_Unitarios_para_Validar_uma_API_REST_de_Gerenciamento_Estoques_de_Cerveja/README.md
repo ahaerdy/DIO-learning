@@ -950,59 +950,84 @@ O vídeo demonstra como aprimorar a qualidade e a legibilidade de testes unitár
 
 ### Anotações
 
-Nesta etapa, o foco recai sobre a garantia de que o método de criação de cerveja está sendo retornado com sucesso. Para observar o comportamento detalhado do fluxo, prepara-se a execução do teste unitário `whenBeerInformedThenItShouldBeCreated` utilizando a ferramenta de *debugger* da IDE, permitindo uma análise linha a linha.
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h20m50s859.jpg" alt="" width="840">
+</p>
 
-Com o *debugger* ativo e a execução pausada no *breakpoint*, é possível inspecionar a interação dos *mocks*. O objeto `beerDTO` aparece totalmente preenchido com os dados de teste. Este momento é crucial para validar se os dados de entrada estão corretos antes de passarem pela lógica de conversão do MapStruct.
-
-Na inspeção de variáveis, observa-se a "magia" do MapStruct: o objeto `beerDTO` é convertido com sucesso para a entidade `expectedSavedBeer`. O painel do *debugger* mostra que as instâncias do repositório e do mapeador são *proxies* gerenciados pelo Mockito, garantindo que o teste permaneça isolado de dependências externas reais.
-
-```java
-// given
-BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
-Beer expectedSavedBeer = beerMapper.toModel(beerDTO);
-```
-
-Ainda sob depuração, define-se o comportamento das simulações (bloco `// when`). Através do método `when`, o repositório é instruído a retornar um `Optional.empty()` ao buscar pelo nome da cerveja (simulando que ela não existe) e a retornar a própria entidade preenchida quando o método `save` for invocado.
+Esta captura mostra o método de teste responsável por verificar a criação de uma cerveja quando os dados são informados ao serviço. O teste prepara um `BeerDTO`, converte-o para a entidade esperada, simula o comportamento do repositório com `when(...).thenReturn(...)` e, por fim, chama `beerService.createBeer(...)` para validar o fluxo de criação.  
+Trecho de código transcrito fielmente a partir do material visual:
 
 ```java
-// when
-when(beerRepository.findByName(beerDTO.getName())).thenReturn(Optional.empty());
-when(beerRepository.save(expectedSavedBeer)).thenReturn(expectedSavedBeer);
-```
+void whenBeerInformedThenItShouldBeCreated() throws BeerAlreadyRegisteredException {
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedSavedBeer = beerMapper.toModel(beerDTO);
 
-O fluxo de execução entra na classe `BeerService`. O primeiro passo da lógica de negócio é invocar `verifyIfIsAlreadyRegistered`. O *debugger* mostra o sistema consultando o repositório *mocado*; como nenhum registro é encontrado, o código prossegue normalmente sem lançar a exceção de duplicidade.
+    when(beerRepository.findByName(beerDTO.getName())).thenReturn(Optional.empty());
+    when(beerRepository.save(expectedSavedBeer)).thenReturn(expectedSavedBeer);
 
-Concluída a validação de existência, o serviço mapeia o DTO para a entidade, chama o `save` do repositório e converte o resultado de volta para DTO. Este teste de nível de código valida se todo o encadeamento de chamadas e conversões entre as camadas de serviço e persistência está operando conforme o esperado.
+    BeerDTO createdBeerDTO = beerService.createBeer(beerDTO);
 
-```java
-public BeerDTO createBeer(BeerDTO beerDTO) throws BeerAlreadyRegisteredException {
-    verifyIfIsAlreadyRegistered(beerDTO.getName());
-    Beer beer = beerMapper.toModel(beerDTO);
-    Beer savedBeer = beerRepository.save(beer);
-    return beerMapper.toDTO(savedBeer);
+    assertEquals(beerDTO.getId(), createdBeerDTO.getId());
+    assertEquals(beerDTO.getName(), createdBeerDTO.getName());
 }
 ```
 
-Ao retornar para a classe de teste, as asserções finais são executadas. Embora o uso de `assertEquals` do JUnit funcione para validar o ID e o nome, nota-se que a legibilidade pode ser melhorada. Isso introduz a necessidade de utilizar bibliotecas que permitam asserções mais fluentes, como o Hamcrest.
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h20m57s888.jpg" alt="" width="840">
+</p>
 
-O código é refatorado para utilizar o Hamcrest, tornando as verificações muito mais próximas da linguagem natural. Substitui-se o padrão do JUnit pelo `assertThat` combinado com os matchers `is` e `equalTo`. Além disso, a variável é renomeada para `expectedBeerDTO` para dar maior clareza semântica ao que está sendo comparado.
+A imagem mostra a execução do teste em modo *debug* dentro do IntelliJ: o professor destaca o uso do debugger para inspecionar o DTO criado, a conversão pelo MapStruct e a simulação das chamadas ao repositório (mocks). Observe que o repositório foi mocado com Mockito, portanto a chamada `findByName` retorna `Optional.empty()` conforme o cenário "não existe ainda". A intenção é validar o fluxo completo de criação sem acessar a camada de persistência real.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h21m22s362.jpg" alt="" width="840">
+</p>
+
+Aqui vemos o painel do *Debugger* com variáveis instanciadas durante a execução do teste: `beerDTO` preenchido, `beerMapper` (implementação do MapStruct) e o mock `beerRepository`. A captura evidencia que o DTO contém valores reais (ex.: `name=Brahma`, `brand=Ambev`, `quantity=10`) e que a conversão para `Beer` foi realizada antes da chamada ao `save`. Esse passo confirma que o mapeamento e os valores esperados estão corretos antes da persistência simulada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h21m28s300.jpg" alt="" width="840">
+</p>
+
+A captura mostra trechos do código da `BeerService` durante o debug, especificamente a execução do método `createBeer`. É possível ver as variáveis locais `beerDTO`, `beer` (entidade resultante do mapeamento) e `savedBeer` (resultado do `save` simulado). O foco didático é demonstrar como o serviço chama `verifyIfIsAlreadyRegistered(...)`, converte o DTO para entidade, salva e retorna o DTO mapeado do objeto persistido.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h21m56s592.jpg" alt="" width="840">
+</p>
+
+Nesta imagem aparece o método `verifyIfIsAlreadyRegistered` sendo inspecionado: o professor mostra que a verificação consulta `beerRepository.findByName(name)` e, caso exista, lança a exceção `BeerAlreadyRegisteredException`. A captura enfatiza a importância de checar duplicidade antes de persistir, garantindo que o teste cubra o caminho "não existe" (mock retorna `Optional.empty()`), permitindo que o fluxo de criação prossiga.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h22m40s690.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o trecho do serviço onde ocorre a conversão e o `save` efetivo (simulado). Visualmente, nota-se a sequência: `verifyIfIsAlreadyRegistered(beerDTO.getName());` → `Beer beer = beerMapper.toModel(beerDTO);` → `Beer savedBeer = beerRepository.save(beer);` → `return beerMapper.toDTO(savedBeer);`. Esse padrão deixa claro o papel do mapper e do repositório no fluxo de criação.
+ 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h22m47s016.jpg" alt="" width="840">
+</p>
+
+A captura exibe o console de execução dos testes e o resultado: o teste `whenBeerInformedThenItShouldBeCreated` foi executado com sucesso. O professor usa isso para mostrar que, com os mocks corretamente configurados e asserções apropriadas, o teste valida o comportamento esperado do serviço sem dependências externas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h26m27s764.jpg" alt="" width="840">
+</p>
+
+Aqui o foco é a refatoração dasserções para usar Hamcrest, tornando os asserts mais fluentes e legíveis. O instrutor substitui `assertEquals(...)` por `MatcherAssert.assertThat(...)` com `Matchers.is(equalTo(...))` e também demonstra matchers adicionais como `greaterThan(...)` para validar propriedades numéricas (por exemplo, quantidade maior que um valor). Essa mudança melhora a expressividade dos testes e facilita leitura e manutenção.
+
+Trecho ilustrativo (forma fluente com Hamcrest):
 
 ```java
-// then
-BeerDTO createdBeerDTO = beerService.createBeer(expectedBeerDTO);
-
 assertThat(createdBeerDTO.getId(), is(equalTo(expectedBeerDTO.getId())));
 assertThat(createdBeerDTO.getName(), is(equalTo(expectedBeerDTO.getName())));
-assertThat(createdBeerDTO.getQuantity(), is(equalTo(expectedBeerDTO.getQuantity())));
+assertThat(createdBeerDTO.getQuantity(), is(greaterThan(2)));
 ```
 
-A execução dos testes com Hamcrest confirma o sucesso ("Tests passed: 1"). A estrutura agora reflete claramente o padrão BDD (*Behavior Driven Development*), dividindo o teste visualmente em "Dado que" (given), "Quando" (when) e "Então" (then), o que facilita a manutenção e o entendimento do propósito do teste.
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h27m25s586.jpg" alt="" width="840">
+</p>
 
-Para demonstrar a versatilidade do Hamcrest, adiciona-se uma validação lógica. Além da igualdade, utiliza-se o matcher `greaterThan` para verificar se a quantidade de cervejas criada é maior do que um valor específico (neste caso, 2). Isso exemplifica como criar testes mais robustos e expressivos com pouco esforço.
+A última imagem mostra a execução final dos testes após a alteração para Hamcrest: o teste continua passando e o console confirma "Tests passed: 1". O professor usa esse momento para reforçar boas práticas de testes unitários: organizar o teste em `given/when/then`, usar mocks para isolar dependências, empregar mappers para conversão entre DTO e entidade, e preferir matchers fluentes para asserções mais claras.
 
-```java
-assertThat(createdBeerDTO.getQuantity(), is(greaterThan(2)));
-```      
 
 ### 🟩 Vídeo 10 - Testando os métodos das classes BeerService e BeerController - parte 3
 
@@ -1012,8 +1037,6 @@ assertThat(createdBeerDTO.getQuantity(), is(greaterThan(2)));
 </video>
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/3ed42823-3f3f-4b14-9844-b0990256823f
-
-
 
 ### 🟩 Vídeo 11 - Testando os métodos das classes BeerService e BeerController - parte 4
 
