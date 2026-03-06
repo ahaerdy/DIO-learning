@@ -1088,7 +1088,6 @@ Este vídeo apresenta uma sessão prática de codificação focada no refinament
 Esta captura mostra o fluxo do método de serviço responsável pela criação de uma cerveja e o uso do **mapper** para converter entre `BeerDTO` e `Beer`. O trecho central é a chamada que verifica se já existe uma cerveja com o mesmo nome antes de salvar; se não houver duplicata, o objeto é salvo no repositório e o DTO resultante é retornado.  
 Trecho do material: “Quando eu vou chamar a cerveja, ele vai verificar se foi chamada. Olha só, aqui ó, eu chamei o findByName, ele verificou e foi positivo, tá presente essa cerveja, ou seja, significa que ela está duplicada no nosso sistema.”
 
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-13h38m56s426.jpg" alt="" width="840">
 </p>
@@ -1190,7 +1189,6 @@ Esta imagem mostra o teste de controlador (`BeerControllerTest`) que usa `MockMv
 
 A última captura mostra um erro comum ao executar o teste de controller: **415 UNSUPPORTED_MEDIA_TYPE**. No material o autor identifica que o problema foi causado por passar `contentType` duas vezes e não fornecer o `content` corretamente. A correção indicada é garantir que o `content` (JSON do DTO) seja passado uma única vez e que `contentType(MediaType.APPLICATION_JSON)` esteja presente apenas como cabeçalho, não duplicado.
 
-Trecho do material: “Ah tá, já sei. Na verdade eu tô passando contentType, eu preciso passar somente a chamada do content, né? Eu passei duas vezes o contentType e eu não tô passando o conteúdo do corpo do meu objeto aqui.”
 
 **Observação técnica**
 
