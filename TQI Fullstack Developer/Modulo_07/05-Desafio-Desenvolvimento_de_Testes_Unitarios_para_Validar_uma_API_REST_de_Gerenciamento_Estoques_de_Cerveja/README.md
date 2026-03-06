@@ -954,8 +954,9 @@ O vídeo demonstra como aprimorar a qualidade e a legibilidade de testes unitár
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-06-09h20m50s859.jpg" alt="" width="840">
 </p>
 
-Esta captura mostra o método de teste responsável por verificar a criação de uma cerveja quando os dados são informados ao serviço. O teste prepara um `BeerDTO`, converte-o para a entidade esperada, simula o comportamento do repositório com `when(...).thenReturn(...)` e, por fim, chama `beerService.createBeer(...)` para validar o fluxo de criação.  
-Trecho de código transcrito fielmente a partir do material visual:
+A imagem mostra o método de teste responsável por verificar a criação de uma cerveja quando os dados são informados ao serviço. O teste prepara um `BeerDTO`, converte-o para a entidade esperada, simula o comportamento do repositório com `when(...).thenReturn(...)` e, por fim, chama `beerService.createBeer(...)` para validar o fluxo de criação. 
+
+Trecho de código:
 
 ```java
 void whenBeerInformedThenItShouldBeCreated() throws BeerAlreadyRegisteredException {
