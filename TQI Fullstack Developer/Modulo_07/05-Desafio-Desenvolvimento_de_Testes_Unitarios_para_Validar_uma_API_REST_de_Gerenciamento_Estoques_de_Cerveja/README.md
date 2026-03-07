@@ -2,6 +2,8 @@
 
 - Rodrigo D'Agostini Peleias (Tech Lead | Staff Software Engineer | Senior Software Engineer | Backend | Java | Spring Boot | 3x AWS Certified)
 - Contato Linkedin: / [rodrigopeleias](https://www.linkedin.com/in/rodrigopeleias/)
+- Link do projeto no github: https://github.com/rpeleias-v1/beer_api_digital_innovation_one
+- fork: https://github.com/ahaerdy/fork-DIO-beer_api_digital_innovation_one
 
 ## Parte 1 - Testes Unitários e Qualidade de Software
 
@@ -2150,14 +2152,72 @@ assertThrows(BeerStockExceededException.class, () -> beerService.increment(expec
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/b68c33c8-41b0-4bed-b3bd-55fbad8b7518
 
-### 🟩 Vídeo 23 - Objetivo do projeto
+Fase final da implementação de uma funcionalidade de incremento de estoque em uma API de gerenciamento de cervejas, utilizando TDD (Test-Driven Development). O apresentador foca na validação prática das regras de negócio e na organização do código via Git/GitHub.
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.07-curso.05-video_23.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+### Anotações
 
-link do vídeo:
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-15h42m00s979.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta código fonte em Java, especificamente métodos de teste unitário para validar o comportamento de um endpoint PATCH em uma API de gerenciamento de cervejas. O código simula cenários onde o incremento no estoque excede o limite máximo, lançando uma exceção e retornando um status HTTP de bad request. Há também um teste comentado para o caso de ID inválido resultando em not found.
+
+No contexto da aula sobre desenvolvimento orientado a testes (TDD), esta seção demonstra como criar testes para garantir que as regras de negócio sejam respeitadas, focando na integração com o serviço e verificação de respostas HTTP usando MockMvc. O professor ajusta o código para simular a exceção BeerStockExceededException, enfatizando a importância de testes para manutenção e funcionalidade robusta.
+
+```java
+@Test
+void whenPATCHIsCalledToIncrementGreaterThanMaxThenBadRequestStatusIsReturned() throws Exception {
+    QuantityDTO quantityDTO = QuantityDTO.builder()
+        .quantity(30)
+        .build();
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    beerDTO.setQuantity(beerDTO.getQuantity() + quantityDTO.getQuantity());
+    when(beerService.increment(VALID_BEER_ID, quantityDTO.getQuantity())).thenThrow(BeerStockExceededException.class);
+    mockMvc.perform.patch(urlTemplate: BEER_API_URL_PATH + "/" + VALID_BEER_ID + BEER_API_SUBPATH_INCREMENT_URL)
+        .contentType(MediaType.APPLICATION_JSON)
+        .content(asJsonString(quantityDTO))
+        .andExpect(status().isBadRequest());
+}
+
+@Test // void whenPATCHIsCalledWithInvalidBeerIdToIncrementThenNotFoundStatusIsReturned() throws Exception { 
+// QuantityDTO quantityDTO = QuantityDTO.builder() 
+// .quantity(10) 
+// .build(); 
+// BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO(); 
+// beerDTO.setQuantity(beerDTO.getQuantity() + quantityDTO.getQuantity()); 
+// when(beerService.increment(VALID_BEER_ID, quantityDTO.getQuantity())).thenThrow(BeerStockExceededException.class); 
+// mockMvc.perform.patch(urlTemplate: BEER_API_URL_PATH + "/" + VALID_BEER_ID + BEER_API_SUBPATH_INCREMENT_URL) 
+// .contentType(MediaType.APPLICATION_JSON) 
+// .content(asJsonString(quantityDTO)) 
+// .andExpect(status().isNotFound()); 
+} 
+```
+
+
+### 🔴 23 - Objetivo do projeto
+
+link do descritivo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/df366920-d30b-482c-9263-df3eab2c8691
+
+
+# Descrição do Desafio
+
+Neste Labs você irá aprender a testar, unitariamente, uma API REST para o gerenciamento de estoques de cerveja. Vamos construir testes unitários para validar o nosso sistema de gerenciamento de estoques de cerveja desenvolvido em Spring Boot, e também apresentar os principais conceitos e vantagens de criar testes unitários com JUnit e Mockito. Além disso, vamos também mostrar como desenvolver funcionalidades da nossa API através da prática do TDD.
+
+Neste desafio, você irá aprender ao mesmo tempo que desenvolve algo prático para o seu portfólio! Sendo assim, as seguintes tarefas serão realizadas:
+
+- Entender sobre testes unitários;
+- Entender os principais frameworks para testes unitários;
+- Desenvolver testes unitários para validação de funcionalidades básicas: criação, listagem, consulta por nome e exclusão;
+- TDD: apresentação e exemplo prático com 2 funcionalidades importantes.
+
+**Dica:** você pode dar um "fork" no repositório para organizar melhor as suas alterações e evoluções, mantendo uma referência direta ao código original.
+
+## Links Úteis
+
+- [Repositório no GitHub](https://github.com/rpeleias-v1/beer_api_digital_innovation_one) (implementação de referência)
+
 
 # Certificado: 
 
