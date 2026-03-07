@@ -1634,6 +1634,78 @@ void whenGETListWithBeersIsCalledThenOkStatusIsReturned() throws Exception {
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/d1eb84f8-a09b-4472-a179-51beec8a885e
 
+Este documento detalha o processo de implementação do método de exclusão de registros em uma aplicação Java, seguindo padrões REST, e a criação de testes unitários robustos utilizando Mockito para validar comportamentos em métodos que não possuem retorno (void).
+
+### Anotações
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-13h29m12s626.jpg" alt="" width="840">
+</p>
+
+Nesta seção da aula, é apresentado o código da classe BeerService, focando nos métodos responsáveis pela busca, listagem e exclusão de cervejas. O método `findById` recupera uma cerveja pelo ID, convertendo-a para DTO e lançando uma exceção se não encontrada. O `listAll` retorna uma lista de todas as cervejas como DTOs. O `deleteById` verifica a existência da cerveja antes de deletá-la, alinhando com o padrão REST para retornar status 204 No Content em exclusões bem-sucedidas. Os métodos auxiliares `verifyIfIsAlreadyRegistered` e `verifyIfExists` garantem integridade, evitando duplicatas e confirmando existência.
+
+```java
+return beerMapper.toDTO(foundBeer);
+}
+
+public List<BeerDTO> listAll() {
+    return beerRepository.findAll().stream()
+        .map(beerMapper::toDTO)
+        .collect(Collectors.toList());
+}
+
+public void deleteById(Long id) throws BeerNotFoundException {
+    verifyIfExists(id);
+    beerRepository.deleteById(id);
+}
+
+private void verifyIfIsAlreadyRegistered(String name) throws BeerAlreadyRegisteredException {
+    Optional<Beer> optSavedBeer = beerRepository.findByName(name);
+    if (optSavedBeer.isPresent()) {
+        throw new BeerAlreadyRegisteredException(name);
+    }
+}
+
+private Beer verifyIfExists(Long id) throws BeerNotFoundException {
+    return beerRepository.findById(id)
+        .orElseThrow(() -> new BeerNotFoundException(id));
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-13h29m47s294.jpg" alt="" width="840">
+</p>
+
+Aqui, são demonstrados testes unitários para o BeerService usando Mockito. O teste `whenListBeerIsCalledThenReturnAnEmptyListOfBeers` verifica se a listagem retorna uma lista vazia quando o repositório está vazio. O teste `whenExclusionIsCalledWithValidIdThenABeerShouldBeDeleted` simula a exclusão de uma cerveja válida, mockando a busca e a deleção, e usando `verify` para confirmar que os métodos do repositório foram chamados exatamente uma vez cada.
+
+```java
+@Test
+void whenListBeerIsCalledThenReturnAnEmptyListOfBeers() {
+    when(beerRepository.findAll()).thenReturn(Collections.emptyList());
+    List<BeerDTO> foundListBeersDTO = beerService.listAll();
+    assertThat(foundListBeersDTO, is(empty()));
+}
+
+@Test
+void whenExclusionIsCalledWithValidIdThenABeerShouldBeDeleted() throws BeerNotFoundException {
+    // given
+    BeerDTO expectedDeletedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedDeletedBeer = beerMapper.toModel(expectedDeletedBeerDTO);
+
+    // when
+    when(beerRepository.findById(expectedDeletedBeerDTO.getId())).thenReturn(Optional.of(expectedDeletedBeer));
+    doNothing().when(beerRepository).deleteById(expectedDeletedBeerDTO.getId());
+
+    // then
+    beerService.deleteById(expectedDeletedBeerDTO.getId());
+    verify(beerRepository, times(1)).findById(expectedDeletedBeerDTO.getId());
+    verify(beerRepository, times(1)).deleteById(expectedDeletedBeerDTO.getId());
+}
+```      
+
+
 ### 🟩 Vídeo 18 - Testando os métodos das classes BeerService e BeerController - parte 11
 
 <video width="60%" controls>
@@ -1641,7 +1713,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/f14b87a1-0fe8-44ad-8f34-944813896e44
 
 ### 🟩 Vídeo 19 - Testando os métodos das classes BeerService e BeerController - parte 12
 
