@@ -1862,7 +1862,6 @@ void whenIncrementIsCalledThenIncrementBeerStock() throws BeerNotFoundException,
     Beer expectedBeer = beerMapper.toModel(expectedBeerDTO);
 ```
 
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-14h19m59s421.jpg" alt="" width="840">
 </p>
@@ -1908,7 +1907,6 @@ void whenIncrementIsGreaterThanMaxThenThrowException() {
 }
 ```      
 
-
 ### 🟩 Vídeo 20 - Testando os métodos das classes BeerService e BeerController - parte 13
 
 <video width="60%" controls>
@@ -1918,6 +1916,173 @@ void whenIncrementIsGreaterThanMaxThenThrowException() {
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/f5ade97b-f9b9-4fc2-8388-3fbdac1b14f6
 
+Este vídeo tutorial foca na implementação da lógica de negócio para incrementar o estoque de cervejas em uma aplicação Java com Spring Boot. O desenvolvedor demonstra o ciclo de codificação, desde a busca no repositório até a validação de regras de negócio complexas, como o limite máximo de estoque, utilizando testes unitários para guiar o desenvolvimento.
+
+### Anotações
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-15h00m39s151.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, é apresentado um trecho de código Java de um serviço relacionado a gerenciamento de estoque de cervejas. O método mostrado é `deleteById`, que verifica a existência de uma cerveja pelo ID antes de deletá-la, lançando uma exceção se não encontrada. Em seguida, há métodos privados para verificação de registro duplicado por nome e existência por ID. Por fim, inicia o método `increment`, que busca uma cerveja pelo ID, incrementa sua quantidade e salva as alterações, retornando um DTO atualizado ou lançando exceção se não encontrada.
+
+```java
+public void deleteById(Long id) throws BeerNotFoundException {
+    verifyIfExists(id);
+    beerRepository.deleteById(id);
+}
+
+private void verifyIfIsAlreadyRegistered(String name) throws BeerAlreadyRegisteredException {
+    Optional<Beer> optSavedBeer = beerRepository.findByName(name);
+    if (optSavedBeer.isPresent()) {
+        throw new BeerAlreadyRegisteredException(name);
+    }
+}
+
+private Beer verifyIfExists(Long id) throws BeerNotFoundException {
+    return beerRepository.findById(id)
+            .orElseThrow(() -> new BeerNotFoundException(id));
+}
+
+public BeerDTO increment(Long id, int quantityToIncrement) throws BeerNotFoundException {
+    Optional<Beer> optBeer = beerRepository.findById(id);
+    if (optBeer.isPresent()) {
+        Beer beerToIncrementStock = optBeer.get();
+        beerToIncrementStock.setQuantity(beerToIncrementStock.getQuantity() + quantityToIncrement);
+        Beer incrementedBeerStock = beerRepository.save(beerToIncrementStock);
+        return beerMapper.toDTO(incrementedBeerStock);
+    }
+    throw new BeerNotFoundException(id);
+}
+```
+
+Este código ilustra a implementação inicial de incremento no estoque, focando na busca e atualização da entidade, sem validações adicionais de limite máximo ainda.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-15h00m56s853.jpg" alt="" width="840">
+</p>
+
+Aqui, a imagem exibe um builder para um objeto de teste relacionado a BeerDTO, definindo valores padrão para atributos como nome, marca, máximo e quantidade de estoque, e tipo de cerveja. Inclui um método para converter o builder em um BeerDTO.
+
+```java
+@Builder.Default
+private String name = "Brahma";
+@Builder.Default
+private String brand = "Ambev";
+@Builder.Default
+private int max = 50;
+@Builder.Default
+private int quantity = 10;
+@Builder.Default
+private BeerType type = BeerType.LAGER;
+
+public BeerDTO toBeerDTO() {
+    return new BeerDTO(id, name, brand, max, quantity, type);
+}
+```
+
+Este trecho é usado para criar instâncias padronizadas em testes, facilitando a configuração de cenários iniciais para verificações de incremento no estoque.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-15h00m59s909.jpg" alt="" width="840">
+</p>
+
+A imagem mostra testes unitários para o método de incremento no serviço de cervejas. O primeiro teste verifica se o incremento ocorre corretamente sem exceder o máximo, usando mocks para o repositório. O segundo teste verifica o lançamento de exceção quando o incremento excede o máximo.
+
+```java
+void whenIncrementIsCalledThenIncrementBeerStock() throws BeerNotFoundException, BeerStockExceededException {
+    //given
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedBeer = beerMapper.toModel(expectedBeerDTO);
+
+    //when
+    when(beerRepository.findById(expectedBeerDTO.getId())).thenReturn(Optional.of(expectedBeer));
+    when(beerRepository.save(expectedBeer)).thenReturn(expectedBeer);
+
+    int quantityToIncrement = 45;
+    int expectedQuantityAfterIncrement = expectedBeerDTO.getQuantity() + quantityToIncrement;
+
+    // then
+    BeerDTO incrementedBeerDTO = beerService.increment(expectedBeerDTO.getId(), quantityToIncrement);
+
+    assertThat(expectedQuantityAfterIncrement, equalTo(incrementedBeerDTO.getQuantity()));
+    assertThat(expectedQuantityAfterIncrement, lessThan(expectedBeerDTO.getMax()));
+}
+
+@Test
+void whenIncrementIsGreaterThanMaxThenThrowException() {
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedBeer = beerMapper.toModel(expectedBeerDTO);
+
+    when(beerRepository.findById(expectedBeerDTO.getId())).thenReturn(Optional.of(expectedBeer));
+
+    int quantityToIncrement = 80;
+    assertThrows(BeerStockExceededException.class, () -> beerService.increment(expectedBeerDTO.getId(), quantityToIncrement));
+}
+```
+
+Esses testes garantem que o incremento funcione dentro dos limites e falhe apropriadamente quando excedido, validando a lógica de negócios.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-15h01m59s125.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta métodos privados de verificação em um serviço de cervejas, semelhantes aos vistos anteriormente, e uma versão atualizada do método `increment` que inclui uma verificação para não exceder o máximo antes de salvar.
+
+```java
+private void verifyIfIsAlreadyRegistered(String name) throws BeerAlreadyRegisteredException {
+    Optional<Beer> optSavedBeer = beerRepository.findByName(name);
+    if (optSavedBeer.isPresent()) {
+        throw new BeerAlreadyRegisteredException(name);
+    }
+}
+
+private Beer verifyIfExists(Long id) throws BeerNotFoundException {
+    return beerRepository.findById(id)
+            .orElseThrow(() -> new BeerNotFoundException(id));
+}
+
+public BeerDTO increment(Long id, int quantityToIncrement) throws BeerNotFoundException {
+    Beer beerToIncrementStock = verifyIfExists(id);
+    if (quantityToIncrement <= beerToIncrementStock.getMax()) {
+        beerToIncrementStock.setQuantity(beerToIncrementStock.getQuantity() + quantityToIncrement);
+        Beer incrementedBeerStock = beerRepository.save(beerToIncrementStock);
+        return beerMapper.toDTO(incrementedBeerStock);
+    }
+    throw new BeerStockExceededException(id, quantityToIncrement);
+}
+```
+
+O foco está na refatoração para reutilizar verificações existentes e adicionar a condição de limite máximo, prevenindo estoques inválidos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-15h02m22s511.jpg" alt="" width="840">
+</p>
+
+Aqui, é mostrado um teste unitário para o caso em que o incremento excede o máximo, usando mocks e verificando o lançamento de `BeerStockExceededException`. Há também o início de outro teste para ID inválido.
+
+```java
+@Test
+void whenIncrementIsGreaterThanMaxThenThrowException() {
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedBeer = beerMapper.toModel(expectedBeerDTO);
+
+    when(beerRepository.findById(expectedBeerDTO.getId())).thenReturn(Optional.of(expectedBeer));
+
+    int quantityToIncrement = 10;
+    assertThrows(BeerStockExceededException.class, () -> beerService.increment(expectedBeerDTO.getId(), quantityToIncrement));
+}
+
+@Test
+void whenIncrementIsCalledWithInvalidIdThenThrowException() {
+    int quantityToIncrement = 10;
+```
+
+Este teste reforça a validação de limites no incremento, garantindo que exceções sejam tratadas corretamente em cenários de falha.
+
+
 ### 🟩 Vídeo 21 - Testando os métodos das classes BeerService e BeerController - parte 14
 
 <video width="60%" controls>
@@ -1925,7 +2090,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/bb555b56-cca1-498c-8e3e-990edc5f8df4
 
 ### 🟩 Vídeo 22 - Finalizando o curso e explicando os testes comentados no GitHub
 
