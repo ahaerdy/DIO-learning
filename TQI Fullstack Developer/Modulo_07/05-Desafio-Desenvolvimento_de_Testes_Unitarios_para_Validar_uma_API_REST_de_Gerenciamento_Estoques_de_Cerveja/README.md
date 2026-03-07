@@ -2219,7 +2219,7 @@ Neste desafio, você irá aprender ao mesmo tempo que desenvolve algo prático p
 - [Repositório no GitHub](https://github.com/rpeleias-v1/beer_api_digital_innovation_one) (implementação de referência)
 
 
-# Certificado: 
+# Certificado: Desenvolvimento de Testes Unitários para Validar uma API REST de Gerenciamento Estoques de Cerveja
 
-- Link na plataforma: 
+- Link do projeto entregue: 
 - Certificado em pdf:
