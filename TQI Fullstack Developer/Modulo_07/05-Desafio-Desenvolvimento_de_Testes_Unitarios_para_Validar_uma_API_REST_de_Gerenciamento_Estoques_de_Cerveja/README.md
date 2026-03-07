@@ -1498,7 +1498,7 @@ Este vídeo tutorial foca na implementação de testes unitários para uma aplic
 ### Anotações
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h03m07s027.jpg" alt="" width="840">
+   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h03m07s027.jpg" alt="" width="840">
 </p>
 
 Nesta etapa, o foco é validar o comportamento da API quando uma cerveja não é encontrada pelo nome. O teste unitário na camada de controller é configurado para simular essa exceção. Utilizando o framework de mock, instruímos o serviço a lançar uma `BeerNotFoundException` quando o método `findByName` for chamado.
@@ -1523,7 +1523,7 @@ void whenGETIsCalledWithoutRegisteredNameThenNotFoundStatusIsReturned() throws E
 ```
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h04m00s758.jpg" alt="" width="840">
+   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h04m00s758.jpg" alt="" width="840">
 </p>
 
 Após a implementação do teste para o cenário de não encontrado, a execução é realizada para confirmar o sucesso da validação. O ambiente de desenvolvimento indica que o teste passou corretamente, validando a lógica de retorno do status 404.
@@ -1537,7 +1537,7 @@ git push origin master
 ```
 
 <p align="center">
-<img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h14m30s357.jpg" alt="" width="840">
+   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h14m30s357.jpg" alt="" width="840">
 </p>
 
 Agora a atenção se volta para a camada de serviço, especificamente para a operação de listagem de todas as cervejas. O teste unitário é criado para garantir que o método `listAll` retorne corretamente uma lista de objetos DTO.
