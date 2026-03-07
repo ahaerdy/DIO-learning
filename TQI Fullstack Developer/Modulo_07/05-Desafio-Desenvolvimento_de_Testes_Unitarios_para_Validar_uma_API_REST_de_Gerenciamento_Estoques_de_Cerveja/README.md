@@ -1823,6 +1823,91 @@ void whenPATCHIsCalledToIncrementDiscountThenOkStatusIsReturned() throws Excepti
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/ab33eb1d-8cd2-4bc9-b495-e72a25542b25
 
+Este vídeo tutorial foca na consolidação de testes unitários para uma API de gerenciamento de cervejas e na introdução da prática de TDD (Test Driven Development) para implementar uma nova funcionalidade de incremento de estoque.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-14h18m08s632.jpg" alt="" width="840">
+</p>
+
+A imagem exibe um trecho de código fonte em um editor de texto, mostrando o final de um método de teste unitário em Java para exclusão de uma cerveja no serviço BeerService, incluindo chamadas ao serviço e verificações com Mockito.
+
+Este conteúdo visual corresponde ao segmento inicial da aula onde o instrutor discute a execução de testes unitários para métodos como criação, busca por nome, listagem e exclusão, enfatizando a importância de rodar todos os testes incrementais.
+
+Nesta seção da aula, estamos vendo a implementação de testes unitários para o serviço de gerenciamento de cervejas. O teste verifica se o método de exclusão é chamado corretamente, simulando a interação com o repositório e confirmando que as operações de busca e deleção ocorrem exatamente uma vez, garantindo que a lógica de negócio funcione sem erros reais no banco de dados.
+
+```java
+beerService.deleteById(expectedDeletedBeerDTO.getId());
+verify(beerRepository, times(wantedNumberOfInvocations: 1)).findById(expectedDeletedBeerDTO.getId());
+verify(beerRepository, times(wantedNumberOfInvocations: 1)).deleteById(expectedDeletedBeerDTO.getId());
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-14h18m37s618.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta código fonte em Java, iniciando um novo método de teste unitário para incrementar o estoque de uma cerveja, com seções de given para setup de objetos DTO e modelo.
+
+Este visual alinha-se com o momento da aula em que o instrutor introduz a funcionalidade de incremento no estoque, contextualizando o máximo e a quantidade atual da cerveja, e começa a aplicar TDD para desenvolver o método.
+
+Aqui, a aula avança para o desenvolvimento de funcionalidades de estoque usando TDD. O teste é estruturado em given-when-then: prepara os dados esperados para uma cerveja, simula o repositório, e define a quantidade a incrementar, preparando para validar se o estoque é atualizado corretamente sem exceder o limite máximo.
+
+```java
+@Test
+void whenIncrementIsCalledThenIncrementBeerStock() throws BeerNotFoundException, BeerStockExceededException {
+    //given
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedBeer = beerMapper.toModel(expectedBeerDTO);
+```
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-14h19m59s421.jpg" alt="" width="840">
+</p>
+
+A imagem mostra continuação do código de teste em Java, com a seção when configurando mocks para o repositório e calculando a quantidade esperada após incremento, seguida da chamada ao serviço e asserções no then.
+
+O conteúdo relaciona-se ao ponto da aula onde o instrutor explica o uso de TDD para o incremento, descrevendo como configurar mocks, executar o incremento e validar que a quantidade atualizada é correta e inferior ao máximo.
+
+Nesta etapa, focamos na simulação de comportamentos do repositório com Mockito e nas asserções com AssertJ. Isso garante que o incremento adicione a quantidade especificada ao estoque existente, mantendo a integridade dos limites de estoque definidos para cada cerveja.
+
+```java
+    //when
+    when(beerRepository.findById(expectedBeerDTO.getId())).thenReturn(Optional.of(expectedBeer));
+    when(beerRepository.save(expectedBeer)).thenReturn(expectedBeer);
+
+    int quantityToIncrement = 10;
+    int expectedQuantityAfterIncrement = expectedBeerDTO.getQuantity() + quantityToIncrement;
+
+    //then
+    BeerDTO incrementedBeerDTO = beerService.increment(expectedBeerDTO.getId(), quantityToIncrement);
+
+    assertThat(expectedQuantityAfterIncrement, equalTo(incrementedBeerDTO.getQuantity()));
+    assertThat(expectedQuantityAfterIncrement, lessThan(expectedBeerDTO.getMax()));
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-14h20m10s665.jpg" alt="" width="840">
+</p>
+
+A imagem exibe um método de teste comentado em Java para o caso em que o incremento excede o estoque máximo, com setup inicial de objetos DTO e modelo.
+
+Este visual corresponde à menção na aula sobre o tratamento de exceções quando o incremento ultrapassa o máximo, embora o instrutor note que deixará alguns testes comentados para foco no incremento básico.
+
+A aula destaca a importância de testar cenários de erro no TDD, como quando adicionar mais itens ao estoque violaria o limite máximo definido, preparando para lançar uma exceção apropriada e garantindo robustez no serviço.
+
+```java
+// @Test
+void whenIncrementIsGreaterThanMaxThenThrowException() {
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedBeer = beerMapper.toModel(expectedBeerDTO);
+    // 
+}
+```      
+
 
 ### 🟩 Vídeo 20 - Testando os métodos das classes BeerService e BeerController - parte 13
 
@@ -1831,7 +1916,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/f5ade97b-f9b9-4fc2-8388-3fbdac1b14f6
 
 ### 🟩 Vídeo 21 - Testando os métodos das classes BeerService e BeerController - parte 14
 
