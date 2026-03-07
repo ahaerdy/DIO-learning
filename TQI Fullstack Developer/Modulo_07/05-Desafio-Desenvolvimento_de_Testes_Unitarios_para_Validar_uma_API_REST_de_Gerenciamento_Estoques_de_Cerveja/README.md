@@ -1705,7 +1705,6 @@ void whenExclusionIsCalledWithValidIdThenABeerShouldBeDeleted() throws BeerNotFo
 }
 ```      
 
-
 ### 🟩 Vídeo 18 - Testando os métodos das classes BeerService e BeerController - parte 11
 
 <video width="60%" controls>
@@ -1715,6 +1714,106 @@ void whenExclusionIsCalledWithValidIdThenABeerShouldBeDeleted() throws BeerNotFo
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/f14b87a1-0fe8-44ad-8f34-944813896e44
 
+Este vídeo tutorial foca na implementação de testes unitários para a funcionalidade de exclusão (DELETE) de uma API de cervejas, utilizando JUnit, Mockito e MockMVC. O instrutor demonstra como validar tanto o cenário de sucesso (quando o ID existe) quanto o cenário de erro (quando o ID não é encontrado), seguindo princípios de TDD (Test-Driven Development).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-13h49m02s247.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta trechos de código de testes unitários em Java para um controller de API, focando em verificações de chamadas HTTP. O primeiro teste simula uma requisição GET para listar itens (cervejas), mocando o serviço para retornar uma lista e esperando um status OK. O segundo teste inicia a configuração para uma requisição DELETE, mocando o serviço para não executar ação e esperando status No Content. Isso ilustra a abordagem inicial para testar endpoints de leitura e exclusão em um ambiente controlado com mocks, garantindo que o controller responda corretamente sem depender de um banco de dados real.
+
+```java
+@Test
+void whenGETListWithoutBeersIsCalledThenOkStatusIsReturned() throws Exception {
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    //when
+    when(beerService.listAll()).thenReturn(Collections.singletonList(beerDTO));
+    //then
+    mockMvc.perform(MockMvcRequestBuilders.get(BEER_API_URL_PATH)
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk());
+}
+
+@Test
+void whenDELETEIsCalled() throws Exception {
+    Debug 'whenDELETEIsCalled()'
+    Run 'whenDELETEIsCalled() with Coverage
+    Create 'whenDELETEIsCalled()...
+    //when
+    doNothing().when(beerService).deleteById(beerDTO.getId());
+    //then
+    mockMvc.perform(MockMvcRequestBuilders.delete(urlTemplate: BEER_API_URL_PATH + "/" + beerDTO.getId())
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isNoContent());
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-13h51m28s730.jpg" alt="" width="840">
+</p>
+
+Esta imagem exibe testes unitários em Java para o endpoint DELETE de um controller de API. O primeiro teste configura um cenário de sucesso para exclusão com ID válido, mocando o serviço para não executar ação (doNothing) e verificando se o status HTTP retornado é No Content (204). O segundo teste simula um erro para ID inválido, mocando o serviço para lançar uma exceção BeerNotFoundException e esperando status Not Found (404). Essa estrutura demonstra como validar fluxos positivos e negativos no controller, promovendo uma cobertura robusta de casos de uso em desenvolvimento orientado a testes.
+
+```java
+@Test
+void whenDELETEIsCalledWithValidIdThenNoContentStatusIsReturned() throws Exception {
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    // when
+    doNothing().when(beerService).deleteById(beerDTO.getId());
+    // then
+    mockMvc.perform(MockMvcRequestBuilders.delete(urlTemplate: BEER_API_URL_PATH + "/" + beerDTO.getId())
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isNoContent());
+}
+
+@Test
+void whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned() throws Exception {
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    // when
+    doThrow(BeerNotFoundException.class).when(beerService).deleteById(beerDTO.getId());
+    // then
+    mockMvc.perform(MockMvcRequestBuilders.delete(urlTemplate: BEER_API_URL_PATH + "/" + beerDTO.getId())
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isNotFound());
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-13h51m56s428.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a continuação de testes unitários em Java para o controller, com foco no endpoint DELETE. Inclui a configuração para um teste de exclusão com ID válido, usando doNothing no mock do serviço e verificando status No Content. Em seguida, um teste para ID inválido, lançando BeerNotFoundException com um ID constante específico (INVALID_BEER_ID) e esperando status Not Found. Há também um comentário sobre um teste futuro para PATCH, ilustrando a progressão no desenvolvimento de testes para cobrir cenários de erro e atualizações parciais.
+
+```java
+// given 
+BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO(); 
+// when 
+doNothing().when(beerService).deleteById(beerDTO.getId()); 
+// then 
+mockMvc.perform(MockMvcRequestBuilders.delete(urlTemplate: BEER_API_URL_PATH + "/" + beerDTO.getId()) 
+        .contentType(MediaType.APPLICATION_JSON)) 
+        .andExpect(status().isNoContent()); 
+} 
+@Test 
+void whenDELETEIsCalledWithInvalidIdThenNotFoundStatusIsReturned() throws Exception { 
+    //when 
+    doThrow(BeerNotFoundException.class).when(beerService).deleteById(INVALID_BEER_ID); 
+    // then 
+    mockMvc.perform(MockMvcRequestBuilders.delete(urlTemplate: BEER_API_URL_PATH + "/" + INVALID_BEER_ID) 
+            .contentType(MediaType.APPLICATION_JSON)) 
+            .andExpect(status().isNotFound()); 
+} 
+// @Test 
+void whenPATCHIsCalledToIncrementDiscountThenOkStatusIsReturned() throws Exception { 
+    // QuantityDTO quantityDTO = QuantityDTO.builder() 
+    .quantity(10) 
+    .build(); 
+    // BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO(); 
+    // beerDTO.setQuantity(beerDTO.getQuantity() + quantityDTO.netQuantity()); 
+```
+
 ### 🟩 Vídeo 19 - Testando os métodos das classes BeerService e BeerController - parte 12
 
 <video width="60%" controls>
@@ -1722,7 +1821,8 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/ab33eb1d-8cd2-4bc9-b495-e72a25542b25
+
 
 ### 🟩 Vídeo 20 - Testando os métodos das classes BeerService e BeerController - parte 13
 
