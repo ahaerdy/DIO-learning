@@ -1571,6 +1571,60 @@ void whenListBeerIsCalledThenReturnAListOfBeers() {
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/7baadb5f-5dca-4a0f-9e4b-bf420b5391e3
 
+Este vídeo foca na implementação e validação de testes automatizados para uma API de gerenciamento de cervejas, utilizando Java, Spring Boot, Mockito e JUnit. O desenvolvedor demonstra como testar cenários de sucesso (com dados) e cenários de lista vazia, tanto na camada de serviço/repositório quanto na camada de controle (Controller).
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h50m11s666.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o teste unitário para o controller está sendo estruturado para validar o endpoint de listagem de cervejas. O método de teste `whenGETListWithBeersIsCalledThenOkStatusIsReturned` configura um cenário onde um objeto `BeerDTO` é criado e o serviço é mockado para retornar esse objeto. A requisição GET é executada contra a URL da API e valida-se não apenas o status HTTP 200 (OK), mas também o conteúdo do JSON retornado.
+
+Utiliza-se o `jsonPath` para assegurar que os atributos do primeiro elemento da lista (nome, marca e tipo) correspondam aos dados do objeto esperado. Note que, neste momento inicial, a configuração do mock ainda reflete uma chamada específica por nome (`findByName`), que será ajustada para refletir corretamente uma listagem geral.
+
+```java
+@Test
+void whenGETListWithBeersIsCalledThenOkStatusIsReturned() throws Exception {
+    // given
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    // when
+    when(beerService.findByName(beerDTO.getName())).thenReturn(beerDTO);
+    // then
+    mockMvc.perform(MockMvcRequestBuilders.get(BEER_API_URL_PATH)
+                .contentType(MediaType.APPLICATION_JSON))
+          .andExpect(status().isOk())
+          .andExpect(jsonPath("$[0].name", is(beerDTO.getName())))
+          .andExpect(jsonPath("$[0].brand", is(beerDTO.getBrand())))
+          .andExpect(jsonPath("$[0].type", is(beerDTO.getType().toString())));
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h50m38s536.jpg" alt="" width="840">
+</p>
+
+Aqui observa-se a correção aplicada ao teste de listagem. Para que o teste reflita corretamente o comportamento de listar todas as cervejas, o método mockado do serviço foi alterado de `findByName` para `listAll`. Além disso, o retorno do mock agora utiliza `Collections.singletonList(beerDTO)`, garantindo que o serviço retorne uma lista contendo o objeto criado, em vez do objeto isolado.
+
+Essa alteração alinha a configuração do teste (bloco *given*) com a operação de listagem geral que está sendo validada na requisição GET. Os logs no console inferior indicam a execução dos testes e as validações internas do framework, confirmando que o ajuste no código permite que o teste prossiga para validação correta do status e do conteúdo da resposta.
+
+```java
+@Test
+void whenGETListWithBeersIsCalledThenOkStatusIsReturned() throws Exception {
+    // given
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    // when
+    when(beerService.listAll()).thenReturn(Collections.singletonList(beerDTO));
+    // then
+    mockMvc.perform(MockMvcRequestBuilders.get(BEER_API_URL_PATH)
+                .contentType(MediaType.APPLICATION_JSON))
+          .andExpect(status().isOk())
+          .andExpect(jsonPath("$[0].name", is(beerDTO.getName())))
+          .andExpect(jsonPath("$[0].brand", is(beerDTO.getBrand())))
+          .andExpect(jsonPath("$[0].type", is(beerDTO.getType().toString())));
+}
+```     
+
 ### 🟩 Vídeo 17 - Testando os métodos das classes BeerService e BeerController - parte 10
 
 <video width="60%" controls>
@@ -1578,7 +1632,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/d1eb84f8-a09b-4472-a179-51beec8a885e
 
 ### 🟩 Vídeo 18 - Testando os métodos das classes BeerService e BeerController - parte 11
 
