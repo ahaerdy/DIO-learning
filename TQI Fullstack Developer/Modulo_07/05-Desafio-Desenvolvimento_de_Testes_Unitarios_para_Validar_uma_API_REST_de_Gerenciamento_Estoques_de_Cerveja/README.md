@@ -1493,6 +1493,75 @@ Esse teste valida unitariamente a camada de controller, isolando-a da camada de 
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/51a2c2e3-d82a-4d01-a85c-21c0c5a6d68a
 
+Este vídeo tutorial foca na implementação de testes unitários para uma aplicação Spring Boot (API de Cervejas), utilizando ferramentas como JUnit, Mockito e Hamcrest. O instrutor demonstra como simular cenários de erro (404 Not Found), testar listagens de recursos e manter o fluxo de trabalho integrado com o Git.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h03m07s027.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco é validar o comportamento da API quando uma cerveja não é encontrada pelo nome. O teste unitário na camada de controller é configurado para simular essa exceção. Utilizando o framework de mock, instruímos o serviço a lançar uma `BeerNotFoundException` quando o método `findByName` for chamado.
+
+Em seguida, a requisição HTTP é performada e espera-se explicitamente que o status de resposta seja `404 Not Found`. Isso garante que a camada de controle esteja tratando corretamente as exceções de negócio e retornando o código de status adequado ao cliente.
+
+```java
+@Test
+void whenGETIsCalledWithoutRegisteredNameThenNotFoundStatusIsReturned() throws Exception {
+    // given
+    BeerDTO beerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    
+    // when
+    when(beerService.findByName(beerDTO.getName())).thenThrow(BeerNotFoundException.class);
+    
+    // then
+    mockMvc.perform(MockMvcRequestBuilders.get(
+            BEER_API_URL_PATH + "/" + beerDTO.getName())
+            .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isNotFound());
+}
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h04m00s758.jpg" alt="" width="840">
+</p>
+
+Após a implementação do teste para o cenário de não encontrado, a execução é realizada para confirmar o sucesso da validação. O ambiente de desenvolvimento indica que o teste passou corretamente, validando a lógica de retorno do status 404.
+
+Com a funcionalidade testada e validada, o próximo passo é versionar o código. O commit é realizado com uma mensagem descritiva que resume as alterações: implementação de testes unitários para as operações de serviço e controllers relacionadas aos métodos POST e GET por nome. Isso assegura que o progresso seja salvo no repositório remoto.
+
+```bash
+git add .
+git commit -m "developed unit tests for service and controllers for post and get by name operation"
+git push origin master
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-10h14m30s357.jpg" alt="" width="840">
+</p>
+
+Agora a atenção se volta para a camada de serviço, especificamente para a operação de listagem de todas as cervejas. O teste unitário é criado para garantir que o método `listAll` retorne corretamente uma lista de objetos DTO.
+
+O repositório é mockado para retornar uma lista contendo um elemento esperado quando o método `findAll` é chamado. A validação utiliza asserções fluentes para confirmar que a lista retornada não está vazia e que o primeiro elemento corresponde exatamente ao DTO esperado, garantindo a integridade da conversão e dos dados retornados pelo serviço.
+
+```java
+@Test
+void whenListBeerIsCalledThenReturnAListOfBeers() {
+    // given
+    BeerDTO expectedFoundBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO();
+    Beer expectedFoundBeer = beerMapper.toModel(expectedFoundBeerDTO);
+    
+    // when
+    when(beerRepository.findAll()).thenReturn(Collections.singletonList(expectedFoundBeer));
+    
+    // then
+    List<BeerDTO> foundListBeersDTO = beerService.listAll();
+    
+    assertThat(foundListBeersDTO, is(not(empty())));
+    assertThat(foundListBeersDTO.get(0), is(equalTo(expectedFoundBeerDTO)));
+}
+```      
+
 ### 🟩 Vídeo 16 - Testando os métodos das classes BeerService e BeerController - parte 9
 
 <video width="60%" controls>
@@ -1500,7 +1569,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/7baadb5f-5dca-4a0f-9e4b-bf420b5391e3
 
 ### 🟩 Vídeo 17 - Testando os métodos das classes BeerService e BeerController - parte 10
 
