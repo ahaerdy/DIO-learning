@@ -2092,6 +2092,55 @@ Este teste reforça a validação de limites no incremento, garantindo que exce�
 
 link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/bb555b56-cca1-498c-8e3e-990edc5f8df4
 
+Este vídeo demonstra o processo prático de refatoração de uma regra de negócio e a implementação de um endpoint REST para incrementar o estoque de cervejas. O desenvolvedor utiliza a metodologia TDD (Test-Driven Development) para garantir que o sistema se comporte corretamente, especialmente em cenários de erro, como exceder o limite máximo de estoque.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-15h20m54s185.jpg" alt="" width="840">
+</p>
+
+Nesta seção da aula, o instrutor demonstra o código do método `increment` em uma classe de serviço para gerenciamento de estoque de cervejas. O método verifica se a adição da quantidade especificada ao estoque atual não excede o limite máximo definido para o item. Caso exceda, uma exceção é lançada para prevenir a atualização inválida. Isso ilustra uma regra de negócio essencial para manter a integridade do estoque.
+
+```java
+public BeerDTO increment(Long id, int quantityToIncrement) throws BeerNotFoundException, BeerStockExceededException { 
+    Beer beerToIncrementStock = verifyIfExists(id); 
+    int quantityAfterIncrement = quantityToIncrement + beerToIncrementStock.getQuantity(); 
+    if (quantityAfterIncrement <= beerToIncrementStock.getMax()) { 
+        beerToIncrementStock.setQuantity(beerToIncrementStock.getQuantity() + quantityToIncrement); 
+        Beer incrementedBeerStock = beerRepository.save(beerToIncrementStock); 
+        return beerMapper.toDTO(incrementedBeerStock); 
+    } 
+    throw new BeerStockExceededException(id, quantityToIncrement); 
+} 
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-07-15h21m48s304.jpg" alt="" width="840">
+</p>
+
+Nesta parte da aula, são exibidos testes unitários para o método `increment`. O primeiro teste valida o cenário em que a soma da quantidade a incrementar com o estoque atual excede o máximo, lançando uma `BeerStockExceededException`. Os testes subsequentes verificam o comportamento quando um ID inválido é fornecido, resultando em uma `BeerNotFoundException`. Esses testes garantem que o método lide corretamente com condições de erro.
+
+```java
+BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO(); 
+Beer expectedBeer = beerMapper.toModel(expectedBeerDTO); 
+when(beerRepository.findById(expectedBeerDTO.getId())).thenReturn(Optional.of(expectedBeer)); 
+int quantityToIncrement = 80; 
+assertThrows(BeerStockExceededException.class, () -> beerService.increment(expectedBeerDTO.getId(), quantityToIncrement)); 
+} 
+@Test void whenIncrementAfterSumIsGreaterThanMaxThenThrowException() { 
+    BeerDTO expectedBeerDTO = BeerDTOBuilder.builder().build().toBeerDTO(); 
+    Beer expectedBeer = beerMapper.toModel(expectedBeerDTO); 
+    when(beerRepository.findById(INVALID_BEER_ID)).thenReturn(Optional.empty()); 
+    assertThrows(BeerNotFoundException.class, () -> beerService.increment(INVALID_BEER_ID, quantityToIncrement)); 
+} 
+@Test void whenIncrementIsCalledWithInvalidIdThenThrowException() { 
+    int quantityToIncrement = 10; 
+    when(beerRepository.findById(INVALID_BEER_ID)).thenReturn(Optional.empty()); 
+    assertThrows(BeerNotFoundException.class, () -> beerService.increment(INVALID_BEER_ID, quantityToIncrement)); 
+} 
+```
+
 ### 🟩 Vídeo 22 - Finalizando o curso e explicando os testes comentados no GitHub
 
 <video width="60%" controls>
@@ -2099,7 +2148,7 @@ link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvimento-de-testes-unitarios-para-validar-uma-api-rest-de-gerenciamento-estoques-de-cerveja/learning/b68c33c8-41b0-4bed-b3bd-55fbad8b7518
 
 ### 🟩 Vídeo 23 - Objetivo do projeto
 
