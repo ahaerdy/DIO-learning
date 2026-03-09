@@ -2221,5 +2221,6 @@ Neste desafio, você irá aprender ao mesmo tempo que desenvolve algo prático p
 
 # Certificado: Desenvolvimento de Testes Unitários para Validar uma API REST de Gerenciamento Estoques de Cerveja
 
-- Link do projeto entregue: 
-- Certificado em pdf:
+- Link do projeto entregue: https://github.com/ahaerdy/dio-beer-stock-api-testes-unitarios 
+- Certificado em pdf: https://hermes.dio.me/certificates/J4EVVJA7.pdf
+- Link local do certificado: [Certificado-Desenvolvimento_de_Testes_Unitarios_para_Validar_uma_API_REST_de_Gerenciamento_Estoques_de_Cerveja.pdf](000-Midia_e_Anexos/Certificado-Desenvolvimento_de_Testes_Unitarios_para_Validar_uma_API_REST_de_Gerenciamento_Estoques_de_Cerveja.pdf)
