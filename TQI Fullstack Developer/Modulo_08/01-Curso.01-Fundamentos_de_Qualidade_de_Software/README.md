@@ -375,6 +375,44 @@ A imagem encerra o bloco conceitual e prepara o terreno para o próximo tema: o 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/ec066b99-618c-4308-a649-84b1c4723d8a?autoplay=1
 
+Este resumo aborda a importância de identificar e analisar erros durante o ciclo de desenvolvimento de software, diferenciando terminologias técnicas e explorando as raízes comuns que levam a falhas no produto final.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h40m40s398.jpg" alt="" width="840">
+</p>
+
+O slide apresenta os principais objetivos do rastreamento de defeitos no contexto da qualidade de software. A primeira finalidade é o **entendimento do produto e dos tipos de defeitos encontrados** – ao registrar e analisar os problemas, a equipe ganha visibilidade sobre quais áreas ou funcionalidades são mais suscetíveis a falhas, direcionando melhor os esforços de teste e melhoria. Em seguida, o rastreamento **facilita a correção do processo ou do produto**, pois com dados concretos é possível identificar se o defeito tem origem na codificação, na documentação, nos requisitos ou até no próprio processo de desenvolvimento, permitindo ações corretivas mais eficazes. Outro ponto crucial é o **reporte de status do produto** – ter um histórico rastreável de defeitos possibilita comunicar de forma transparente a qualidade atual do software para clientes, gestores e outras partes interessadas. Por fim, o rastreamento promove o **alinhamento de revisões pelo time de desenvolvimento**, já que os dados sobre os erros mais frequentes ou críticos ajudam os desenvolvedores a focarem suas revisões de código e a prevenirem problemas recorrentes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h40m43s712.jpg" alt="" width="840">
+</p>
+
+Este slide aborda a definição formal de defeito e diferencia termos que muitas vezes são usados como sinônimos no dia a dia, mas que possuem significados distintos na engenharia de software. De forma genérica, "defeito" pode ser entendido como qualquer anomalia no produto, porém a norma técnica detalha três conceitos importantes:
+
+- **Erro**: é uma ação humana que resulta em um resultado incorreto. Por exemplo, um analista que interpreta mal uma necessidade do cliente comete um erro, o que pode gerar requisitos errados.
+- **Defeito**: é uma imperfeição ou deficiência no produto em relação aos requisitos ou especificações. Geralmente é consequência de um erro humano (como o exemplo anterior) e está presente no artefato produzido (código, documento, modelo).
+- **Falha de sistema**: é um evento em que o sistema não executa uma função dentro dos limites especificados, podendo ser causada por um defeito que se manifesta em determinadas condições de execução (por exemplo, falta de memória ou pico de acesso).
+
+A ênfase final do slide está na **importância de padronizar definições na equipe** – ter um vocabulário comum evita mal-entendidos, melhora a comunicação entre os membros do time e assegura que todos classifiquem os problemas da mesma maneira, o que é essencial para uma gestão de qualidade eficiente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h40m48s116.jpg" alt="" width="840">
+</p>
+
+O slide lista as principais causas que levam à introdução de erros no desenvolvimento de software, servindo como um alerta para os pontos que a equipe deve monitorar e mitigar:
+
+- **Pressão do tempo**: prazos apertados e entregas urgentes podem fazer com que atividades formais de garantia da qualidade sejam negligenciadas, aumentando a probabilidade de falhas.
+- **Falha humana**: inclui desde enganos simples até erros de raciocínio lógico durante a codificação, algo inerente ao trabalho humano.
+- **Inexperiência e/ou falta de qualificação**: membros da equipe que ainda estão aprendendo determinada tecnologia ou processo podem, sem intenção, introduzir problemas que não reconhecem como erros.
+- **Falta de comunicação**: falhas na troca de informações entre clientes, Product Owners, desenvolvedores e testadores geram inconsistências e requisitos mal compreendidos.
+- **Complexidade de código, modelagem, arquitetura**: sistemas intrincados ou decisões arquiteturais complexas escondem armadilhas que nem sempre são previstas pelos profissionais.
+- **Complexidade de tecnologia**: o uso de tecnologias novas ou muito sofisticadas pode trazer desafios não dominados pela equipe.
+- **Condições ambientes inesperadas**: situações como picos de acesso, ataques ou limitações de recursos de hardware que não foram consideradas no planejamento podem provocar falhas em produção.
+
+Identificar essas origens ajuda a equipe a implementar ações preventivas, como treinamentos, melhorias na comunicação, revisões sistemáticas e testes mais abrangentes, reduzindo assim a incidência de erros.      
+
 ### 🟩 Vídeo 08 - Ciclo de vida do bug
 
 <video width="60%" controls>
@@ -382,7 +420,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/2202c676-3c8d-4e9b-be15-edd5fe403385?autoplay=1
 
 ### 🟩 Vídeo 09 - Ferramentas de suporte
 
