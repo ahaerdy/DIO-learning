@@ -422,6 +422,40 @@ Identificar essas origens ajuda a equipe a implementar ações preventivas, como
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/2202c676-3c8d-4e9b-be15-edd5fe403385?autoplay=1
 
+O vídeo resume o processo de rastreamento, correção e reporte de defeitos em software, destacando que um bug possui um ciclo de vida próprio, assim como o software que ele habita.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h02m41s802.jpg" alt="" width="840">
+</p>
+
+Este slide introduz o conceito de **Ciclo de Vida do Bug (ou Defeito)**. Assim como o software passa por fases de desenvolvimento e manutenção, cada bug identificado também percorre uma jornada dentro do processo de qualidade. O objetivo é rastrear o defeito desde o seu nascimento (quando é percebido pela primeira vez) até o seu encerramento (quando é corrigido, validado e aceito). O ciclo de vida do bug não é um padrão fixo, mas sim um fluxo de estados que a equipe define e adota para garantir transparência, organização e comunicação eficiente sobre o status de cada problema encontrado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h02m46s199.jpg" alt="" width="840">
+</p>
+
+Este slide detalha os possíveis estados que um defeito pode assumir ao longo de seu ciclo de vida. O fluxo inicia com **New** (defeito cadastrado), passa para **Assigned** (atribuído a um desenvolvedor) e **Open** (em análise). Após a correção, o desenvolvedor marca como **Fixed** e o defeito entra em espera (**Pending Retest**) para ser retestado pela equipe de testes (**Retest**). Se a correção for validada, vai para **Verified** e, finalmente, **Closed**. Se o problema persistir, é **Reopen** e reinicia o ciclo. Existem também estados para situações especiais: **Duplicate** (já reportado anteriormente), **Rejected** (não é um defeito novo ou válido), **Deferred** (será corrigido em versão futura) e **Not a Bug** (a anomalia não se confirmou como erro, podendo ser um falso positivo ou problema de ambiente).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h03m01s730.jpg" alt="" width="840">
+</p>
+
+Aqui são apresentadas considerações fundamentais sobre a gestão de defeitos. Primeiro, reforça-se que o fluxo de vida do bug **deve ser adaptado à realidade do time e do produto**, não existindo uma regra única obrigatória. O mais importante é que toda a equipe (desenvolvedores, testadores, product owners) esteja alinhada e compreenda o fluxo definido para o rastreamento. Além disso, os defeitos podem e devem ser reportados **em qualquer momento do ciclo de desenvolvimento**, não apenas em fases específicas de teste. Os principais objetivos dos relatórios de defeitos incluem: fornecer informações detalhadas para reprodução e correção do problema; permitir o rastreamento da qualidade do produto e o impacto nas atividades de teste; e gerar insights para melhoria contínua dos processos de desenvolvimento e teste.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h03m07s875.jpg" alt="" width="840">
+</p>
+
+Esta sequência de considerações destaca os fatores humanos e ferramentais essenciais para uma gestão eficaz de defeitos. A **comunicação clara e constante** entre todos os envolvidos é a base para que os bugs sejam compreendidos e resolvidos adequadamente. O uso eficiente de **ferramentas de rastreamento** (como Jira, Trello, GitHub Issues, etc.) é crucial para centralizar as informações, garantir o histórico e facilitar o acompanhamento. Por fim, exige-se um **comprometimento proativo de toda a equipe**: não apenas os testadores devem se preocupar com os defeitos, mas os desenvolvedores também devem usar essas informações para melhorar a qualidade do código, criando testes unitários, refatorando e prevenindo problemas futuros.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h03m10s740.jpg" alt="" width="840">
+</p>
+
+O último slide lista os campos essenciais que um bom relatório de defeito deve conter. Essas informações garantem que o problema seja compreendido, reproduzido e priorizado corretamente. Os principais itens incluem: **identificador único**, **título resumido**, **data e autor**, **descrição do ambiente e do item testado**, **fase do ciclo em que foi encontrado**, **descrição detalhada dos passos para reprodução**, **evidências** (logs, screenshots, vídeos), **resultado esperado versus resultado obtido**, **severidade** (impacto no sistema), **urgência/prioridade**, **estado atual**, **conclusões/sugestões**, **impactos em outras áreas**, **histórico de alterações** e **referência ao caso de teste que originou o defeito**. Um relato completo e rico em detalhes acelera a correção e aumenta a qualidade do produto final.      
+
 ### 🟩 Vídeo 09 - Ferramentas de suporte
 
 <video width="60%" controls>
@@ -429,7 +463,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/d6705a48-c781-434c-829e-504acbf20afe?autoplay=1
 
 ## Parte 3 - Introdução aos testes de software
 
