@@ -206,6 +206,52 @@ Esta família foi criada para substituir a antiga ISO 9126, trazendo conceitos a
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/bb50b57a-47dc-45b5-b98c-367f96b4737e?autoplay=1
 
+Este guia explora a visão holística da qualidade de software, indo além da simples execução de testes. Ele detalha como a qualidade é construída desde a definição dos processos internos até a percepção final do usuário, utilizando como base as normas ISO 9126 e ISO 25010.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m07s065.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o título “Processo da qualidade”, indicando que a qualidade em software não é um evento isolado, mas um conjunto de atividades que permeiam todo o ciclo de desenvolvimento. O processo de qualidade envolve desde a definição dos requisitos, passando pela padronização de código, metodologias de trabalho, até os testes e a entrega. A ideia central é que a qualidade deve ser incorporada em cada etapa, e não apenas verificada ao final. Assim, todos os envolvidos no projeto – analistas, desenvolvedores, testadores e gestores – são responsáveis por garantir que o produto atenda às expectativas, contribuindo com sugestões e melhorias contínuas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m12s697.jpg" alt="" width="840">
+</p>
+
+O slide introduz o conceito de **qualidade interna**, que se refere às características do software observadas do ponto de vista interno, ou seja, antes de o produto estar executável. As **métricas internas** são aplicadas a artefatos como especificações, modelos e código-fonte, permitindo avaliar a qualidade ainda nas fases iniciais. Exemplos dessas métricas incluem complexidade ciclomática, cobertura de testes unitários, aderência a padrões de codificação e modularidade. Uma boa qualidade interna influencia diretamente a qualidade externa, pois um código bem estruturado tende a gerar menos defeitos durante a execução.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m16s867.jpg" alt="" width="840">
+</p>
+
+A imagem aborda a **qualidade externa**, que corresponde ao comportamento do software quando executado, considerando requisitos funcionais e não funcionais derivados das necessidades do usuário. As **métricas externas** são obtidas por meio de testes, observação do sistema em ambiente de homologação ou produção, e medições de desempenho, segurança e confiabilidade. Diferentemente das métricas internas, as externas já refletem a interação do software com o ambiente e podem ser percebidas indiretamente pelo usuário, como a quantidade de falhas ou o tempo de resposta.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m18s823.jpg" alt="" width="840">
+</p>
+
+Aqui é apresentada a **qualidade em uso**, que representa a visão do usuário final em um contexto específico. Ela avalia o quanto o software atende às necessidades reais do negócio, considerando fatores como eficácia, produtividade, segurança e satisfação. As **métricas de qualidade em uso** medem o resultado da interação do usuário com o sistema, por exemplo, a taxa de conclusão de tarefas, o número de erros cometidos ou o nível de confiança do usuário. Essa perspectiva é fundamental para garantir que o produto entregue realmente agregue valor ao cliente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m20s441.jpg" alt="" width="840">
+</p>
+
+O slide resume a estrutura dos modelos de qualidade segundo a norma ISO/IEC 25010, que sucede a ISO 9126. São definidos dois modelos: o **modelo de qualidade de produto de software**, composto por 8 características e suas subcaracterísticas, e o **modelo de qualidade em uso**, formado por 5 características. Essa separação facilita a medição e o gerenciamento da qualidade sob diferentes perspectivas: uma mais técnica (produto) e outra mais voltada à experiência do usuário (em uso).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m22s241.jpg" alt="" width="840">
+</p>
+
+A imagem detalha o **modelo de qualidade de produto** da ISO/IEC 25010, que estabelece oito características principais: adequação funcional, confiabilidade, usabilidade, eficiência de desempenho, manutenibilidade, portabilidade, compatibilidade e segurança. Cada uma dessas características é desdobrada em subcaracterísticas que permitem uma avaliação mais granular. Por exemplo, usabilidade inclui acessibilidade, estética da interface e operabilidade. Esse modelo orienta a definição de métricas internas e externas ao longo do desenvolvimento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m26s066.jpg" alt="" width="840">
+</p>
+
+Por fim, a imagem apresenta o **modelo de qualidade em uso** da ISO/IEC 25010, que foca na interação do usuário com o sistema em seu ambiente real. As cinco características são: eficácia, eficiência, satisfação, liberdade de risco e cobertura de contexto. A satisfação, por exemplo, abrange utilidade, confiança, prazer e conforto. Esse modelo reflete o que o usuário efetivamente experimenta: se o software é útil, seguro e agradável de usar, independentemente de como foi construído internamente. A qualidade em uso é o resultado final de todas as outras qualidades e determina o sucesso do produto no mercado.      
+
 ### 🟩 Vídeo 05 - Processos de gerenciamento de qualidade
 
 <video width="60%" controls>
@@ -213,7 +259,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/5d7639a1-ef21-482d-aada-8299afc26367?autoplay=1
 
 ## Parte 2 - Gerenciamento de defeitos
 
