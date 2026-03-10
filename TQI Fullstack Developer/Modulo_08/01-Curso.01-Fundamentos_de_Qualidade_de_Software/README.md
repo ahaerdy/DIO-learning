@@ -465,6 +465,83 @@ O último slide lista os campos essenciais que um bom relatório de defeito deve
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/d6705a48-c781-434c-829e-504acbf20afe?autoplay=1
 
+O vídeo aborda a etapa final da Aula 2 sobre ferramentas que auxiliam no ciclo de vida dos defeitos. O foco vai além do simples registro de bugs, explorando como plataformas modernas integram o rastreamento ao gerenciamento de projetos e à colaboração entre equipes.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m13s167.jpg" alt="" width="840">
+</p>
+
+Este slide introduz o tema das ferramentas de suporte ao rastreamento de defeitos. A professora destaca que, embora algumas ferramentas sejam específicas para essa finalidade, muitas são plataformas completas de gerenciamento de projetos, como Jira e Azure DevOps. Essas plataformas permitem não apenas o rastreamento de defeitos, mas também o gerenciamento de equipes e projetos, com a possibilidade de integrar plugins e extensões para otimizar o processo. Além disso, é mencionado que ferramentas externas de execução de testes podem ter integração direta com soluções como Jira e Azure DevOps, facilitando o registro de bugs.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m19s478.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página "About" do Bugzilla, uma ferramenta de rastreamento de bugs. A professora explica que o Bugzilla é uma ferramenta gratuita e de código aberto, popular entre os entusiastas de open source. Ela menciona que grandes empresas, como a Mozilla, utilizam o Bugzilla para gerenciar os bugs de seus produtos, permitindo que os próprios usuários reportem problemas encontrados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m28s054.jpg" alt="" width="840">
+</p>
+
+Esta imagem exibe a funcionalidade de "Advanced Search" (Busca Avançada) do Bugzilla, especificamente no projeto da Mozilla. A professora demonstra como a ferramenta permite filtrar buscas por componente, tipo de produto e status do bug. Ela ressalta que o Bugzilla é um produto focado no rastreio e cadastro de bugs, e que para criar um novo bug, o usuário precisa estar logado na plataforma.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m33s086.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a página inicial do Jira Software, da Atlassian. A professora o descreve como uma ferramenta de desenvolvimento completa, voltada para equipes ágeis, e que o rastreamento de bugs está integrado ao seu fluxo de trabalho. Ela também menciona que o Jira possui uma versão gratuita, que pode ser utilizada para testes e aprendizado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m37s749.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página do projeto Trac, uma ferramenta de código aberto para gerenciamento de projetos e de defeitos. A professora destaca que o Trac é gratuito e também uma boa opção para quem busca uma solução open source.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m42s376.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a página de funcionalidades e preços da Asana. A professora comenta que a Asana é uma ferramenta de gerenciamento de projetos bem conhecida no mercado, que oferece planos gratuitos e pagos para corporações, sendo uma solução bastante completa.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m44s662.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página inicial do Trello. A professora explica que o Trello é uma ferramenta muito popular para gerenciamento de tarefas, baseada no sistema de quadros Kanban, que permite uma visualização clara do fluxo de trabalho. Ela acrescenta que o Trello também pode ser adaptado para o reporte de bugs.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m49s364.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a documentação do Azure DevOps, focando na gestão de bugs. A professora detalha como o reporte de bugs é completo na plataforma, permitindo customização e incluindo informações como título, ID, status, rastreamento de branch, discussões, passos para reprodução e critérios de aceite. Ela menciona que, embora exista uma versão de trial, os maiores benefícios são obtidos com a licença paga.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m57s798.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página inicial da ferramenta Backlog. A professora explica que o Backlog, assim como outras ferramentas mencionadas, é uma plataforma de gerenciamento de projetos que inclui um fluxo para o gerenciamento de defeitos, e que possui versões gratuita e paga.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h25m01s914.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a página da ferramenta Lighthouse. A professora informa que o Lighthouse é uma plataforma paga, específica para o gerenciamento de defeitos. Ela menciona que a ferramenta oferece um período de trial, mas que seu modelo de negócio é diferente de outras que limitam o uso por número de usuários.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h25m04s565.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página da Axosoft, que agora faz parte do GitKraken. A professora comenta que softwares mais completos, com muitas funcionalidades, raramente são gratuitos. Ela destaca que as ferramentas pagas, de ponta, geralmente se preocupam mais com a intuitividade e a estética da interface, o que pode ser notado em ferramentas como essa.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h25m20s912.jpg" alt="" width="840">
+</p>
+
+O slide final retorna à lista de "Algumas ferramentas úteis". A professora conclui a aula incentivando os alunos a pesquisarem sobre as ferramentas apresentadas e a refletirem sobre como elas podem agilizar os processos nas empresas. Ela deixa perguntas no ar para estimular a discussão e a reflexão dos alunos.      
+
+
 ## Parte 3 - Introdução aos testes de software
 
 ### 🟩 Vídeo 10 - Conceitos e objetivos
@@ -474,7 +551,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/31d13a45-dbcd-4596-82d6-51cabf7f2c78?autoplay=1
 
 ### 🟩 Vídeo 11 - Processo de teste
 
