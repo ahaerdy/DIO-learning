@@ -688,6 +688,53 @@ A **conclusão** do processo de teste envolve a coleta de dados de todas as ativ
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/fcefda6d-3860-4f9b-85e6-cf7335b98810?autoplay=1
 
+O vídeo aborda os diferentes níveis de teste no desenvolvimento de software, explicando o propósito e a importância de cada um, e finaliza com a apresentação da pirâmide de testes ideal versus a pirâmide invertida.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h50m53s896.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o conceito de níveis de teste, definindo-os como grupos de atividades de teste organizados e gerenciados de acordo com o nível de desenvolvimento. São listados os quatro níveis principais: Teste de Componentes, Teste de Integração, Teste de Sistema e Teste de Aceite. Essa visão introdutória estabelece a base para o detalhamento de cada nível ao longo da aula.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h50m57s268.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra a correlação entre os níveis de desenvolvimento e os respectivos níveis de teste. Da esquerda para a direita, temos os artefatos de requisitos e design (User Requirements, Software Specification, High Level Design, Low Level Design) e, alinhados a eles, os planos e tipos de teste: Unit Test Plan e Unit Testing para baixo nível, Integration Test Plan para design de alto nível, System Test Plan e System Testing para especificação de software, e Acceptance Testing para requisitos de usuário. Essa correspondência mostra como cada fase de desenvolvimento possui uma estratégia de teste específica.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h51m07s578.jpg" alt="" width="840">
+</p>
+
+A imagem detalha o teste de componente (ou teste de unidade), enfatizando seu foco em testar partes independentes do código. São listados os principais objetivos: reduzir riscos, verificar requisitos funcionais e não funcionais, construir confiança no componente, encontrar defeitos precocemente e evitar que esses defeitos se propaguem para níveis mais avançados de teste. Esse nível é essencial para garantir a qualidade da base de código desde o início.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h51m12s444.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o teste de integração, que visa verificar a comunicação entre componentes ou sistemas. Seus benefícios incluem a redução de riscos, a validação de interfaces e a detecção de defeitos nas interações, impedindo que problemas de integração cheguem a estágios posteriores. Esse nível é crucial quando há dependências entre módulos ou sistemas externos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h51m16s351.jpg" alt="" width="840">
+</p>
+
+A imagem descreve o teste de sistema, que tem como foco a validação dos requisitos de ponta a ponta do sistema. Diferente dos níveis anteriores, aqui se testa o sistema como um todo, incluindo funcionalidades e fluxos completos. Os objetivos são reduzir riscos, validar o comportamento global, descobrir defeitos não identificados em testes menores e prevenir que falhas cheguem ao ambiente de produção.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h51m17s922.jpg" alt="" width="840">
+</p>
+
+A imagem aborda o teste de aceite, que valida o sistema sob a ótica do usuário e das regras de negócio. Embora também foque em requisitos de ponta a ponta, seu diferencial é a perspectiva de conformidade com as necessidades do cliente e critérios de aceitação. Os benefícios incluem redução de riscos, validação completa, descoberta de defeitos residuais e garantia de que o sistema está pronto para produção antes da entrega final.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h51m19s707.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta duas representações da pirâmide de testes. À esquerda, uma pirâmide invertida, considerada antipadrão, onde há grande quantidade de testes manuais no topo e poucos testes automatizados na base. À direita, a pirâmide ideal, com ampla base de testes de unidade, camada intermediária de testes de integração e API, e no topo uma pequena quantidade de testes de interface e manuais, destacando a importância da automação e da cobertura de código desde os níveis mais baixos.      
+
+
 ### 🟩 Vídeo 13 - Tipos de teste
 
 <video width="60%" controls>
@@ -695,7 +742,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/1b1b4b70-8d16-4101-bcbc-be4826a1692a?autoplay=1
 
 ### 🟩 Vídeo 14 - Técnicas de teste
 
