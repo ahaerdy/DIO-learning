@@ -151,7 +151,7 @@ Este slide introduz o conceito fundamental de **normas técnicas**. Como vimos, 
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h23m58s593.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta as siglas e os nomes de três das mais importantes organizações mundiais que publicam normas técnicas. Vamos conhecer cada uma:
+O slide apresenta as siglas e os nomes de três das mais importantes organizações mundiais que publicam normas técnicas. Vamos conhecer cada uma:
 
 *   **IEEE:** *Institute of Electrical and Electronics Engineers* (Instituto de Engenheiros Eletricistas e Eletrônicos). É uma organização extremamente relevante para a engenharia e a academia, publicando diversos padrões e pesquisas.
 *   **ISO:** *International Organization for Standardization* (Organização Internacional de Normalização). Como o próprio nome indica, seu foco principal é a criação de padrões internacionais para uma vasta gama de áreas.
@@ -214,7 +214,7 @@ Este guia explora a visão holística da qualidade de software, indo além da si
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m07s065.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta o título “Processo da qualidade”, indicando que a qualidade em software não é um evento isolado, mas um conjunto de atividades que permeiam todo o ciclo de desenvolvimento. O processo de qualidade envolve desde a definição dos requisitos, passando pela padronização de código, metodologias de trabalho, até os testes e a entrega. A ideia central é que a qualidade deve ser incorporada em cada etapa, e não apenas verificada ao final. Assim, todos os envolvidos no projeto – analistas, desenvolvedores, testadores e gestores – são responsáveis por garantir que o produto atenda às expectativas, contribuindo com sugestões e melhorias contínuas.
+O slide apresenta o título “Processo da qualidade”, indicando que a qualidade em software não é um evento isolado, mas um conjunto de atividades que permeiam todo o ciclo de desenvolvimento. O processo de qualidade envolve desde a definição dos requisitos, passando pela padronização de código, metodologias de trabalho, até os testes e a entrega. A ideia central é que a qualidade deve ser incorporada em cada etapa, e não apenas verificada ao final. Assim, todos os envolvidos no projeto – analistas, desenvolvedores, testadores e gestores – são responsáveis por garantir que o produto atenda às expectativas, contribuindo com sugestões e melhorias contínuas.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m12s697.jpg" alt="" width="840">
@@ -226,7 +226,7 @@ O slide introduz o conceito de **qualidade interna**, que se refere às caracter
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m16s867.jpg" alt="" width="840">
 </p>
 
-A imagem aborda a **qualidade externa**, que corresponde ao comportamento do software quando executado, considerando requisitos funcionais e não funcionais derivados das necessidades do usuário. As **métricas externas** são obtidas por meio de testes, observação do sistema em ambiente de homologação ou produção, e medições de desempenho, segurança e confiabilidade. Diferentemente das métricas internas, as externas já refletem a interação do software com o ambiente e podem ser percebidas indiretamente pelo usuário, como a quantidade de falhas ou o tempo de resposta.
+O slide aborda a **qualidade externa**, que corresponde ao comportamento do software quando executado, considerando requisitos funcionais e não funcionais derivados das necessidades do usuário. As **métricas externas** são obtidas por meio de testes, observação do sistema em ambiente de homologação ou produção, e medições de desempenho, segurança e confiabilidade. Diferentemente das métricas internas, as externas já refletem a interação do software com o ambiente e podem ser percebidas indiretamente pelo usuário, como a quantidade de falhas ou o tempo de resposta.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m18s823.jpg" alt="" width="840">
@@ -244,7 +244,7 @@ O slide resume a estrutura dos modelos de qualidade segundo a norma ISO/IEC 2501
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m22s241.jpg" alt="" width="840">
 </p>
 
-A imagem detalha o **modelo de qualidade de produto** da ISO/IEC 25010, que estabelece oito características principais: adequação funcional, confiabilidade, usabilidade, eficiência de desempenho, manutenibilidade, portabilidade, compatibilidade e segurança. Cada uma dessas características é desdobrada em subcaracterísticas que permitem uma avaliação mais granular. Por exemplo, usabilidade inclui acessibilidade, estética da interface e operabilidade. Esse modelo orienta a definição de métricas internas e externas ao longo do desenvolvimento.
+O slide detalha o **modelo de qualidade de produto** da ISO/IEC 25010, que estabelece oito características principais: adequação funcional, confiabilidade, usabilidade, eficiência de desempenho, manutenibilidade, portabilidade, compatibilidade e segurança. Cada uma dessas características é desdobrada em subcaracterísticas que permitem uma avaliação mais granular. Por exemplo, usabilidade inclui acessibilidade, estética da interface e operabilidade. Esse modelo orienta a definição de métricas internas e externas ao longo do desenvolvimento.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h43m26s066.jpg" alt="" width="840">
@@ -333,7 +333,7 @@ Esses pontos guiarão a discussão sobre como o gerenciamento de defeitos se int
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h25m09s354.jpg" alt="" width="840">
 </p>
 
-A imagem estabelece a diferença entre análise estática e dinâmica, além dos conceitos de verificação e validação:
+O slide estabelece a diferença entre análise estática e dinâmica, além dos conceitos de verificação e validação:
 
 - **Análise estática**: avaliação da documentação e do código-fonte sem executar o programa. Inclui métodos formais, code review e uso de ferramentas automáticas de verificação.  
 - **Análise dinâmica**: técnicas aplicadas com o código em execução, como os testes (funcionais, de desempenho, etc.).  
@@ -364,7 +364,7 @@ O último slide sintetiza a **análise dinâmica** e sua relação com os testes
 - **Análise dinâmica** envolve a execução do código para observar seu comportamento em tempo real. É o momento em que os testes (unitários, de integração, sistema, aceitação) são aplicados.  
 - A frase “Finalmente nossos queridos testes!” destaca que é na análise dinâmica que a atividade de teste se concretiza, seja manual ou automatizada.  
 
-A imagem encerra o bloco conceitual e prepara o terreno para o próximo tema: o gerenciamento de defeitos – o que fazer quando os testes revelam erros.      
+O slide encerra o bloco conceitual e prepara o terreno para o próximo tema: o gerenciamento de defeitos – o que fazer quando os testes revelam erros.      
 
 ### 🟩 Vídeo 07 - Caracterizando defeitos
 
@@ -479,68 +479,67 @@ Este slide introduz o tema das ferramentas de suporte ao rastreamento de defeito
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m19s478.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a página "About" do Bugzilla, uma ferramenta de rastreamento de bugs. A professora explica que o Bugzilla é uma ferramenta gratuita e de código aberto, popular entre os entusiastas de open source. Ela menciona que grandes empresas, como a Mozilla, utilizam o Bugzilla para gerenciar os bugs de seus produtos, permitindo que os próprios usuários reportem problemas encontrados.
+O slide mostra a página "About" do Bugzilla, uma ferramenta de rastreamento de bugs. A professora explica que o Bugzilla é uma ferramenta gratuita e de código aberto, popular entre os entusiastas de open source. Ela menciona que grandes empresas, como a Mozilla, utilizam o Bugzilla para gerenciar os bugs de seus produtos, permitindo que os próprios usuários reportem problemas encontrados.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m28s054.jpg" alt="" width="840">
 </p>
 
-Esta imagem exibe a funcionalidade de "Advanced Search" (Busca Avançada) do Bugzilla, especificamente no projeto da Mozilla. A professora demonstra como a ferramenta permite filtrar buscas por componente, tipo de produto e status do bug. Ela ressalta que o Bugzilla é um produto focado no rastreio e cadastro de bugs, e que para criar um novo bug, o usuário precisa estar logado na plataforma.
+O slide exibe a funcionalidade de "Advanced Search" (Busca Avançada) do Bugzilla, especificamente no projeto da Mozilla. A professora demonstra como a ferramenta permite filtrar buscas por componente, tipo de produto e status do bug. Ela ressalta que o Bugzilla é um produto focado no rastreio e cadastro de bugs, e que para criar um novo bug, o usuário precisa estar logado na plataforma.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m33s086.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta a página inicial do Jira Software, da Atlassian. A professora o descreve como uma ferramenta de desenvolvimento completa, voltada para equipes ágeis, e que o rastreamento de bugs está integrado ao seu fluxo de trabalho. Ela também menciona que o Jira possui uma versão gratuita, que pode ser utilizada para testes e aprendizado.
+O slide apresenta a página inicial do Jira Software, da Atlassian. A professora o descreve como uma ferramenta de desenvolvimento completa, voltada para equipes ágeis, e que o rastreamento de bugs está integrado ao seu fluxo de trabalho. Ela também menciona que o Jira possui uma versão gratuita, que pode ser utilizada para testes e aprendizado.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m37s749.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a página do projeto Trac, uma ferramenta de código aberto para gerenciamento de projetos e de defeitos. A professora destaca que o Trac é gratuito e também uma boa opção para quem busca uma solução open source.
+O slide mostra a página do projeto Trac, uma ferramenta de código aberto para gerenciamento de projetos e de defeitos. A professora destaca que o Trac é gratuito e também uma boa opção para quem busca uma solução open source.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m42s376.jpg" alt="" width="840">
 </p>
 
-A imagem exibe a página de funcionalidades e preços da Asana. A professora comenta que a Asana é uma ferramenta de gerenciamento de projetos bem conhecida no mercado, que oferece planos gratuitos e pagos para corporações, sendo uma solução bastante completa.
+O slide exibe a página de funcionalidades e preços da Asana. A professora comenta que a Asana é uma ferramenta de gerenciamento de projetos bem conhecida no mercado, que oferece planos gratuitos e pagos para corporações, sendo uma solução bastante completa.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m44s662.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a página inicial do Trello. A professora explica que o Trello é uma ferramenta muito popular para gerenciamento de tarefas, baseada no sistema de quadros Kanban, que permite uma visualização clara do fluxo de trabalho. Ela acrescenta que o Trello também pode ser adaptado para o reporte de bugs.
+O slide mostra a página inicial do Trello. A professora explica que o Trello é uma ferramenta muito popular para gerenciamento de tarefas, baseada no sistema de quadros Kanban, que permite uma visualização clara do fluxo de trabalho. Ela acrescenta que o Trello também pode ser adaptado para o reporte de bugs.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m49s364.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta a documentação do Azure DevOps, focando na gestão de bugs. A professora detalha como o reporte de bugs é completo na plataforma, permitindo customização e incluindo informações como título, ID, status, rastreamento de branch, discussões, passos para reprodução e critérios de aceite. Ela menciona que, embora exista uma versão de trial, os maiores benefícios são obtidos com a licença paga.
+O slide apresenta a documentação do Azure DevOps, focando na gestão de bugs. A professora detalha como o reporte de bugs é completo na plataforma, permitindo customização e incluindo informações como título, ID, status, rastreamento de branch, discussões, passos para reprodução e critérios de aceite. Ela menciona que, embora exista uma versão de trial, os maiores benefícios são obtidos com a licença paga.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h24m57s798.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a página inicial da ferramenta Backlog. A professora explica que o Backlog, assim como outras ferramentas mencionadas, é uma plataforma de gerenciamento de projetos que inclui um fluxo para o gerenciamento de defeitos, e que possui versões gratuita e paga.
+O slide mostra a página inicial da ferramenta Backlog. A professora explica que o Backlog, assim como outras ferramentas mencionadas, é uma plataforma de gerenciamento de projetos que inclui um fluxo para o gerenciamento de defeitos, e que possui versões gratuita e paga.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h25m01s914.jpg" alt="" width="840">
 </p>
 
-A imagem exibe a página da ferramenta Lighthouse. A professora informa que o Lighthouse é uma plataforma paga, específica para o gerenciamento de defeitos. Ela menciona que a ferramenta oferece um período de trial, mas que seu modelo de negócio é diferente de outras que limitam o uso por número de usuários.
+O slide exibe a página da ferramenta Lighthouse. A professora informa que o Lighthouse é uma plataforma paga, específica para o gerenciamento de defeitos. Ela menciona que a ferramenta oferece um período de trial, mas que seu modelo de negócio é diferente de outras que limitam o uso por número de usuários.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h25m04s565.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a página da Axosoft, que agora faz parte do GitKraken. A professora comenta que softwares mais completos, com muitas funcionalidades, raramente são gratuitos. Ela destaca que as ferramentas pagas, de ponta, geralmente se preocupam mais com a intuitividade e a estética da interface, o que pode ser notado em ferramentas como essa.
+O slide mostra a página da Axosoft, que agora faz parte do GitKraken. A professora comenta que softwares mais completos, com muitas funcionalidades, raramente são gratuitos. Ela destaca que as ferramentas pagas, de ponta, geralmente se preocupam mais com a intuitividade e a estética da interface, o que pode ser notado em ferramentas como essa.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-14h25m20s912.jpg" alt="" width="840">
 </p>
 
 O slide final retorna à lista de "Algumas ferramentas úteis". A professora conclui a aula incentivando os alunos a pesquisarem sobre as ferramentas apresentadas e a refletirem sobre como elas podem agilizar os processos nas empresas. Ela deixa perguntas no ar para estimular a discussão e a reflexão dos alunos.      
-
 
 ## Parte 3 - Introdução aos testes de software
 
@@ -552,6 +551,51 @@ O slide final retorna à lista de "Algumas ferramentas úteis". A professora con
 </video>
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/31d13a45-dbcd-4596-82d6-51cabf7f2c78?autoplay=1
+
+
+Este resumo aborda os conceitos essenciais do teste de software, seus objetivos estratégicos, a distinção entre testar e depurar, e os princípios fundamentais que regem a área. O foco é fornecer uma visão estruturada para quem deseja entender a formalidade e as habilidades técnicas por trás da garantia de qualidade.
+
+### Anotações 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h05m51s752.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta a estrutura da aula, listando os principais tópicos que serão abordados sobre teste de software. Começamos com os conceitos e objetivos, passando pelo processo, níveis, tipos e técnicas de teste. É um roteiro que mostra a abrangência do tema, desde a fundamentação até a prática, preparando o terreno para os detalhes que veremos a seguir.
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h05m54s945.jpg" alt="" width="840">
+</p>
+
+A imagem descreve a definição conceitual de teste de software. Ele é um processo que visa avaliar e reduzir o risco de falhas quando o software está em operação, fazendo parte do controle de qualidade. Além disso, destaca que o teste não se resume apenas à execução: envolve planejamento, preparação, análise de resultados e outras atividades que garantem a efetividade da avaliação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h05m58s969.jpg" alt="" width="840">
+</p>
+
+Aqui são apresentados os objetivos gerais do teste de software. Entre eles estão: evitar defeitos e avaliar produtos de trabalho; verificar se os requisitos foram cumpridos; validar se o produto atende às expectativas do cliente; gerar confiança na qualidade; reduzir riscos; e apoiar o cliente na tomada de decisões. Esses objetivos mostram que o teste vai além da 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h06m01s501.jpg" alt="" width="840">
+</p>
+
+Este slide diferencia a execução de testes da atividade de depuração. Enquanto o teste evidencia falhas causadas por defeitos no software, a depuração é o processo de investigação e correção desses defeitos no código-fonte. A forma como essas atividades são realizadas pode variar conforme a metodologia adotada pela equipe (por exemplo, em métodos ágeis, pode haver maior colaboração entre testadores e desenvolvedores).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h06m05s342.jpg" alt="" width="840">
+</p>
+
+São apresentados os sete princípios fundamentais do teste de software:
+1. O teste mostra a presença de defeitos, não sua ausência.
+2. Testes exaustivos são impossíveis.
+3. Testar no início economiza tempo e dinheiro.
+4. Defeitos tendem a se agrupar.
+5. O mesmo teste não encontra novos defeitos (cuidado com regressão).
+6. O teste depende do contexto.
+7. A ausência de erros é uma ilusão.
+Esses princípios orientam a atividade de teste, lembrando que devemos sempre considerar limitações, riscos e a necessidade de adaptar as estratégias a cada situação.      
 
 ### 🟩 Vídeo 11 - Processo de teste
 
