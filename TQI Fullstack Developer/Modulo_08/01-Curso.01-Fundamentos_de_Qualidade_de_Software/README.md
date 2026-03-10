@@ -563,8 +563,6 @@ Este resumo aborda os conceitos essenciais do teste de software, seus objetivos 
 
 Este slide apresenta a estrutura da aula, listando os principais tópicos que serão abordados sobre teste de software. Começamos com os conceitos e objetivos, passando pelo processo, níveis, tipos e técnicas de teste. É um roteiro que mostra a abrangência do tema, desde a fundamentação até a prática, preparando o terreno para os detalhes que veremos a seguir.
 
-#### 
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h05m54s945.jpg" alt="" width="840">
 </p>
@@ -604,7 +602,82 @@ Esses princípios orientam a atividade de teste, lembrando que devemos sempre co
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/4bb00894-8f15-4661-927b-2068566f7dcb?autoplay=1
+
+Este resumo explora a complexidade do processo de teste de software, enfatizando que testar vai muito além da simples execução. O conteúdo detalha os fatores influenciadores, as estratégias de abordagem e as sete etapas fundamentais que compõem um ciclo de teste eficiente.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h25m37s146.jpg" alt="" width="840">
+</p>
+
+O processo de teste não é uma atividade isolada; ele é fortemente influenciado por diversos fatores contextuais. O slide apresenta os principais elementos que moldam a forma como planejamos e executamos os testes. O **modelo de ciclo de vida** do projeto (se ágil, cascata, etc.) determina a integração das atividades de teste. Os **níveis e tipos de teste** definem o escopo – por exemplo, testes unitários, de integração ou de sistema. O **risco do produto e do projeto** direciona esforços para áreas críticas. O **domínio do negócio** exige conhecimento específico para criar cenários relevantes. **Restrições operacionais** (como acesso a bancos de dados ou ambientes limitados) impõem adaptações nas técnicas. Por fim, **políticas organizacionais** e **normas internas/externas** (padrões de qualidade, regulamentações) estabelecem diretrizes obrigatórias. Todos esses fatores devem ser considerados no início do planejamento para que a estratégia de teste seja viável e eficaz.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h25m42s655.jpg" alt="" width="840">
+</p>
+
+O processo de teste estruturado é composto por sete atividades principais, apresentadas em sequência lógica. O **Planejamento** define objetivos, recursos e cronograma. O **Monitoramento e controle** acompanha a execução comparando com o plano e toma ações corretivas. A **Análise** examina a base de teste (requisitos, documentos) para identificar o que testar. A **Modelagem** transforma condições de teste em casos de teste concretos. A **Implementação** prepara os dados, scripts e procedimentos necessários. A **Execução** roda os testes e registra resultados. Por fim, a **Conclusão** consolida os achados, gera relatórios e arquiva a documentação. Essas atividades não são necessariamente lineares em métodos ágeis, mas representam o fluxo completo de qualquer iniciativa de teste bem-sucedida.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h25m46s381.jpg" alt="" width="840">
+</p>
+
+Durante o planejamento, é essencial definir os **propósitos do teste** (o que se quer alcançar) e a **abordagem** mais adequada, considerando restrições do contexto. Também são especificadas as tarefas e as estimativas de prazo. O slide introduz três estratégias comuns:  
+- **Analítica**: baseia-se na análise de fatores como riscos ou requisitos para direcionar os testes.  
+- **Baseada em modelo**: utiliza modelos do produto (ex.: diagramas de estado, processos de negócio) para derivar casos de teste.  
+- **Metódica**: aplica um conjunto pré-definido de testes, frequentemente alinhado a características de qualidade importantes (como funcionalidade, usabilidade).  
+Cada estratégia tem vantagens específicas e a escolha depende do contexto do projeto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h25m50s148.jpg" alt="" width="840">
+</p>
+
+Complementando as estratégias anteriores, o slide apresenta outras abordagens:  
+- **Compatível com processo**: segue padrões organizacionais já estabelecidos, garantindo conformidade com políticas internas.  
+- **Dirigida**: orientada pelos stakeholders, que definem prioridades e áreas de foco.  
+- **Regressão**: visa evitar a introdução de defeitos em funcionalidades existentes quando há mudanças no sistema.  
+- **Reativo**: os testes são definidos dinamicamente, reagindo ao comportamento do sistema e a eventos durante a execução (como em exploração).  
+Essas estratégias podem ser combinadas para atender necessidades específicas do projeto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h25m53s854.jpg" alt="" width="840">
+</p>
+
+A atividade de **monitoramento e controle** consiste em comparar continuamente o progresso real com o plano de teste. Para isso, utilizam-se **critérios de avaliação de saídas** – ou seja, métricas que indicam quando uma atividade está realmente concluída (o famoso “done”). Relatórios de progresso são ferramentas fundamentais nessa etapa, pois documentam desvios, avanços e problemas, permitindo decisões gerenciais informadas. Sem esse acompanhamento, o projeto de teste pode perder o rumo e comprometer a qualidade final.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h25m56s470.jpg" alt="" width="840">
+</p>
+
+Na fase de **análise**, a base de teste (documentos como especificações de requisitos, diagramas de arquitetura, casos de uso e até código-fonte) é examinada para determinar **o que testar**. O objetivo é identificar condições de teste relevantes, priorizando-as conforme critérios pré-estabelecidos (por exemplo, risco ou complexidade). Além disso, avalia-se **quais tipos de defeitos** podem ser encontrados em cada parte do sistema, direcionando a criação de casos de teste mais eficazes. Essa etapa é crucial para garantir cobertura adequada e evitar retrabalho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h25m59s588.jpg" alt="" width="840">
+</p>
+
+A **modelagem** responde à pergunta “como testar?”. As condições de teste identificadas na análise são agora elaboradas em **casos de teste de alto nível**, que descrevem o que será verificado sem detalhar passos de execução. É também o momento de priorizar esses casos e agrupá-los em conjuntos lógicos. Outro aspecto fundamental é verificar a infraestrutura necessária e **projetar o ambiente de teste**, garantindo que ele esteja disponível e configurado corretamente para a futura execução.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h26m01s461.jpg" alt="" width="840">
+</p>
+
+Na **implementação**, os casos de teste de alto nível são transformados em **procedimentos de teste** detalhados, com passos concretos e, quando aplicável, **scripts automatizados**. São criadas **suítes de testes** – agrupamentos organizados que facilitam a execução eficiente. Também se preparam os **dados de teste** necessários para cada cenário. Essa fase materializa todo o planejamento anterior em artefatos prontos para serem executados, garantindo que a execução ocorra sem imprevistos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h26m04s471.jpg" alt="" width="840">
+</p>
+
+A **execução** é a fase em que os conjuntos de testes são rodados, manualmente ou por automação, conforme planejado. Durante a execução, os resultados reais são comparados com os esperados para identificar **anomalias**. Cada anomalia é analisada para estabelecer prováveis causas (defeitos no código, problemas nos dados, etc.). Em seguida, essas ocorrências são **reportadas e registradas** em ferramentas de gestão. Por fim, quando o defeito é corrigido, realiza-se o **reteste** para verificar se a correção foi eficaz e não introduziu novos problemas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-15h26m06s719.jpg" alt="" width="840">
+</p>
+
+A **conclusão** do processo de teste envolve a coleta de dados de todas as atividades realizadas, permitindo revisar e consolidar a experiência adquirida. É gerado um **relatório de resumo de teste** que sintetiza os resultados, métricas e lições aprendidas. Os dados e registros dos testes são então finalizados e arquivados para referência futura. Por fim, essa reflexão contribui para **melhorar a maturidade do processo de teste** da organização, alimentando um ciclo contínuo de aperfeiçoamento.      
+
 
 ### 🟩 Vídeo 12 - Níveis de teste
 
@@ -613,7 +686,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/fcefda6d-3860-4f9b-85e6-cf7335b98810?autoplay=1
 
 ### 🟩 Vídeo 13 - Tipos de teste
 
