@@ -313,6 +313,59 @@ Este slide apresenta um conjunto de atividades operacionais que dão suporte ao 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/696c20c0-3a82-4ea5-869d-84ba28c8e164?autoplay=1
 
+Este resumo aborda os fundamentos do controle de qualidade no desenvolvimento de software, focando nas distinções entre análise estática e dinâmica, a diferença crucial entre verificação e validação, e o ciclo de vida dos defeitos (bugs).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h25m05s329.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta os objetivos da aula, organizados em quatro tópicos principais:  
+- **Falando em controle de qualidade** – introdução ao papel do controle de qualidade no ciclo de desenvolvimento.  
+- **Caracterizando defeitos** – como identificar, classificar e descrever os problemas encontrados.  
+- **Ciclo de vida do bug** – as etapas que um defeito percorre desde sua detecção até o encerramento.  
+- **Ferramentas de suporte** – exemplos de softwares utilizados para gerenciar e rastrear defeitos de forma eficiente.  
+
+Esses pontos guiarão a discussão sobre como o gerenciamento de defeitos se integra às atividades de garantia da qualidade.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h25m09s354.jpg" alt="" width="840">
+</p>
+
+A imagem estabelece a diferença entre análise estática e dinâmica, além dos conceitos de verificação e validação:
+
+- **Análise estática**: avaliação da documentação e do código-fonte sem executar o programa. Inclui métodos formais, code review e uso de ferramentas automáticas de verificação.  
+- **Análise dinâmica**: técnicas aplicadas com o código em execução, como os testes (funcionais, de desempenho, etc.).  
+
+- **Verificação**: “Garantir que o produto está sendo construído corretamente” – ou seja, se o desenvolvimento segue as especificações técnicas.  
+- **Validação**: “O produto correto está sendo construído” – verificar se o software atende às reais necessidades do usuário.  
+
+Embora relacionados, verificação e validação respondem a perguntas diferentes: a primeira foca na conformidade com os requisitos documentados; a segunda, na adequação ao contexto do cliente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h25m19s548.jpg" alt="" width="840">
+</p>
+
+Este slide aprofunda a **análise estática**, listando suas principais atividades:
+
+- **Code review** – revisão sistemática do código por outros desenvolvedores para identificar falhas, más práticas ou melhorias.  
+- **Ferramentas de automação de processos de verificação de código** – softwares que analisam o código estaticamente (ex.: linters, analisadores de complexidade, cobertura estática) e podem ser integrados a pipelines de CI/CD.  
+- **Análise de histórias e modelagens** – exame de artefatos como histórias de usuário, casos de uso, diagramas e fluxogramas para garantir que representem corretamente os requisitos e processos de negócio.  
+
+Essas técnicas ajudam a prevenir defeitos antes mesmo da execução do código, reduzindo custos de correção e retrabalho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h25m20s847.jpg" alt="" width="840">
+</p>
+
+O último slide sintetiza a **análise dinâmica** e sua relação com os testes:
+
+- **Análise dinâmica** envolve a execução do código para observar seu comportamento em tempo real. É o momento em que os testes (unitários, de integração, sistema, aceitação) são aplicados.  
+- A frase “Finalmente nossos queridos testes!” destaca que é na análise dinâmica que a atividade de teste se concretiza, seja manual ou automatizada.  
+
+A imagem encerra o bloco conceitual e prepara o terreno para o próximo tema: o gerenciamento de defeitos – o que fazer quando os testes revelam erros.      
+
 ### 🟩 Vídeo 07 - Caracterizando defeitos
 
 <video width="60%" controls>
@@ -320,7 +373,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/ec066b99-618c-4308-a649-84b1c4723d8a?autoplay=1
 
 ### 🟩 Vídeo 08 - Ciclo de vida do bug
 
