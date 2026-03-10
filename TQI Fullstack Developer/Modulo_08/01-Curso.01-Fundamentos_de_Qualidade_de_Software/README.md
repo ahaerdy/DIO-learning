@@ -137,6 +137,66 @@ Essas visões não são excludentes; na prática, a qualidade de um software é 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/d6a0b597-c96e-41b2-a9c5-bb71f23d436f?autoplay=1
 
+Este resumo explora a importância da padronização no desenvolvimento de software, detalhando as principais organizações normizadoras e as famílias de normas (ISO, IEEE, IEC) que definem o que é qualidade, desde a gestão até a execução técnica.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h23m55s255.jpg" alt="" width="840">
+</p>
+
+Este slide introduz o conceito fundamental de **normas técnicas**. Como vimos, elas são documentos publicados por organizações profissionais com o objetivo de padronizar atividades, processos e produtos. A grande importância da padronização, destacada na aula, é a **comunicação**. Quando uma equipe ou empresa adota as mesmas normas, todos "falam a mesma língua", utilizando as mesmas definições, siglas e termos. Isso minimiza mal-entendidos e garante que todos estejam alinhados, desde a concepção até a entrega de um produto ou serviço.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h23m58s593.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta as siglas e os nomes de três das mais importantes organizações mundiais que publicam normas técnicas. Vamos conhecer cada uma:
+
+*   **IEEE:** *Institute of Electrical and Electronics Engineers* (Instituto de Engenheiros Eletricistas e Eletrônicos). É uma organização extremamente relevante para a engenharia e a academia, publicando diversos padrões e pesquisas.
+*   **ISO:** *International Organization for Standardization* (Organização Internacional de Normalização). Como o próprio nome indica, seu foco principal é a criação de padrões internacionais para uma vasta gama de áreas.
+*   **IEC:** *International Electrotechnical Commission* (Comissão Eletrotécnica Internacional). Atua fortemente na padronização de tecnologias relacionadas à eletricidade, eletrônica e áreas correlatas.
+
+É muito comum vermos essas organizações trabalhando em conjunto. Por isso, é frequente encontrar normas identificadas como **ISO/IEC** ou **ISO/IEC/IEEE**, fruto de um consenso entre elas para criar documentos ainda mais abrangentes e robustos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h24m01s016.jpg" alt="" width="840">
+</p>
+
+Este slide detalha a renomada **Família ISO 9000**, um conjunto de normas focado em sistemas de gestão da qualidade. Vamos explorar os principais componentes apresentados:
+
+*   **ISO 9000:** Descreve os fundamentos e o vocabulário essencial para um sistema de gestão da qualidade. É a base conceitual.
+*   **ISO 9001:** Especifica os **requisitos** que um sistema de gestão da qualidade deve atender. É a norma mais conhecida e usada para certificação.
+*   **ISO 9004:** Fornece **diretrizes** para que as organizações possam alcançar não apenas a conformidade, mas também a eficácia e a eficiência em seus sistemas de gestão da qualidade.
+*   **ISO 9126:** Esta norma é um marco histórico para a área de tecnologia, pois define um **modelo de qualidade para produto de software**. Ela estabelece características e subcaracterísticas para avaliar a qualidade de um software.
+*   **ISO 19011:** Oferece diretrizes sobre como conduzir **auditorias** de sistemas de gestão da qualidade.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h24m05s906.jpg" alt="" width="840">
+</p>
+
+Dando continuidade às normas essenciais para a qualidade de software, este slide apresenta outras três de grande relevância, agora com a participação do IEEE em conjunto com a ISO e IEC:
+
+*   **IEEE 730:2014:** Esta norma é fundamental para a **Garantia da Qualidade de Software** (*Software Quality Assurance* ou SQA). Ela estabelece os requisitos para o planejamento, controle e execução dos processos de garantia da qualidade.
+*   **ISO/IEC/IEEE 15289:2019:** Foca no **gerenciamento da informação** ao longo do ciclo de vida do software. Ela define o conteúdo e a estrutura para a documentação de processos de software e sistemas.
+*   **ISO/IEC/IEEE 29119:2013:** Esta é uma norma de extrema importância para a área de testes de software. Ela define um vocabulário padronizado, processos, modelos e técnicas para a realização de testes, sendo uma referência crucial para profissionais da área.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-09h24m07s924.jpg" alt="" width="840">
+</p>
+
+Chegamos à família de normas mais moderna e abrangente para a qualidade de produto de software: a **Família SQuaRE** (*System and Software Quality Requirements and Evaluation*), correspondente às normas **ISO/IEC 25000 a 25099**.
+
+Esta família foi criada para substituir a antiga ISO 9126, trazendo conceitos atualizados e uma visão mais completa. Ela cobre cinco áreas principais da qualidade de software, como ilustrado no slide:
+
+*   **Requerimentos de Qualidade:** Define como especificar os requisitos de qualidade para um sistema ou software.
+*   **Modelo de Qualidade:** Apresenta um modelo detalhado com características e subcaracterísticas de qualidade, similar à sua antecessora, mas refinado.
+*   **Gerenciamento de Qualidade:** Estabelece modelos e processos para gerenciar as atividades relacionadas à qualidade.
+*   **Metrificação de Qualidade:** Fornece um conjunto de medidas e métricas para quantificar e avaliar as características de qualidade.
+*   **Avaliação de Qualidade:** Define processos e orientações para a avaliação da qualidade de produtos de software, seja por desenvolvedores, adquirentes ou avaliadores independentes.
+
+É importante lembrar que as normas servem como um guia técnico robusto, mas não são obrigatórias. Elas oferecem um excelente ponto de partida para construir processos sólidos e bem definidos, sempre lembrando que a qualidade deve ser pensada desde o início do projeto.      
+
 ### 🟩 Vídeo 04 - Medindo qualidade
 
 <video width="60%" controls>
@@ -144,7 +204,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/bb50b57a-47dc-45b5-b98c-367f96b4737e?autoplay=1
 
 ### 🟩 Vídeo 05 - Processos de gerenciamento de qualidade
 
