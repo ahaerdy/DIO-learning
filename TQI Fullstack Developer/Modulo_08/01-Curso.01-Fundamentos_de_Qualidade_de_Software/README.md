@@ -261,6 +261,47 @@ Por fim, a imagem apresenta o **modelo de qualidade em uso** da ISO/IEC 25010, q
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/5d7639a1-ef21-482d-aada-8299afc26367?autoplay=1
 
+Este guia explora as atividades fundamentais do gerenciamento de qualidade de software, destacando que o processo vai muito além da simples execução de testes. O foco central é garantir a satisfação do usuário através de um ciclo contínuo de planejamento, garantia, controle e melhoria.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h07m14s939.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta a definição de gerenciamento de qualidade, destacando que se trata do conjunto de processos que garantem que produtos, serviços e o ciclo de vida atendam aos objetivos de qualidade, visando a satisfação do usuário. Além disso, são listadas as quatro atividades principais desse gerenciamento: planejamento, garantia, controle e melhoria de processos, que serão detalhadas nos próximos slides.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h07m18s424.jpg" alt="" width="840">
+</p>
+
+O planejamento da qualidade é a primeira atividade. Envolve definir quais padrões e processos serão adotados, estabelecer metas claras de qualidade para o projeto e planejar o esforço necessário, bem como a organização das atividades que garantirão que essas metas sejam alcançadas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h07m21s702.jpg" alt="" width="840">
+</p>
+
+A garantia da qualidade foca em definir e avaliar a adequação dos processos de software. O objetivo é fornecer evidências que criem confiança de que o produto final será entregue com a qualidade esperada, ou seja, assegurar que os processos estão sendo seguidos corretamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h07m25s033.jpg" alt="" width="840">
+</p>
+
+O controle da qualidade consiste na examinação dos artefatos produzidos ao longo do projeto, verificando se os padrões estabelecidos estão sendo cumpridos. Isso inclui a avaliação tanto de produtos intermediários quanto do produto final, garantindo que cada entrega atenda aos critérios de qualidade definidos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h07m28s114.jpg" alt="" width="840">
+</p>
+
+A melhoria de processos é uma atividade contínua que busca aumentar a eficiência e a efetividade dos processos de desenvolvimento. O foco está em identificar oportunidades de melhoria que impactem positivamente a qualidade do software, seja por meio de ajustes nos processos existentes ou da introdução de novas práticas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-10-10h07m32s067.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta um conjunto de atividades operacionais que dão suporte ao gerenciamento da qualidade. Elas incluem desde a aplicação de métodos técnicos e revisões formais até testes, controle de mudanças, medição e manutenção de registros. Essas práticas ajudam a implementar os processos de garantia e controle no dia a dia do desenvolvimento.      
+
+
 ## Parte 2 - Gerenciamento de defeitos
 
 ### 🟩 Vídeo 06 - Falando em controle de qualidade
@@ -270,7 +311,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/696c20c0-3a82-4ea5-869d-84ba28c8e164?autoplay=1
 
 ### 🟩 Vídeo 07 - Caracterizando defeitos
 
