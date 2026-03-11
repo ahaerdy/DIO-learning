@@ -253,7 +253,37 @@ Por fim, a imagem ilustra o **modelo concorrente**, também conhecido como engen
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_05.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/413e9499-f148-499c-9959-b2e840fd5a4d?autoplay=1
+
+Este vídeo descreve abordagens de engenharia de software que utilizam técnicas e métodos específicos para contextos onde modelos genéricos não são suficientes. Do uso de componentes comerciais à precisão matemática dos métodos formais, entenda como cada modelo otimiza o ciclo de vida do software.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h16m50s642.jpg" alt="" width="840">
+</p>
+
+O modelo **Baseado em Componentes** foca na construção de software através da integração de partes preexistentes, conhecidas como componentes, bibliotecas ou módulos. Esses componentes possuem **interfaces bem definidas**, o que permite que sejam acoplados diretamente ao sistema sem a necessidade de redesenhar sua lógica interna.
+
+Uma característica central deste modelo é a utilização de itens **COTS (Commercial Off-The-Shelf)**, que são produtos comerciais prontos para uso. Esta abordagem é **evolucionária por natureza**, pois o sistema cresce conforme novos componentes são integrados. O principal benefício é o **foco na reutilização**, o que resulta em uma significativa **redução no tempo de desenvolvimento e nos custos**, uma vez que não é necessário gastar tempo modelando ou verificando como implementar funcionalidades que já estão disponíveis no mercado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h16m54s431.jpg" alt="" width="840">
+</p>
+
+O **Modelo de Métodos Formais** é uma abordagem rigorosa baseada em **especificações matemáticas** para o desenvolvimento de software. Ele utiliza notação matemática para descrever o comportamento do sistema, o que permite uma análise profunda que auxilia na **descoberta de ambiguidades ou inconsistências** que passariam despercebidas em métodos convencionais.
+
+Embora seja extremamente eficaz para garantir a correção do sistema, este modelo **consome muito tempo e dinheiro**, e sua complexidade exige **formação e treinamento especializado** da equipe. Por esses motivos, ele é especialmente bem visto e recomendado para o desenvolvimento de **softwares com fatores críticos**, como sistemas de controle de tráfego aéreo ou dispositivos médicos, onde a falha não é uma opção. Esta metodologia está fortemente associada ao conceito de **Engenharia de Software de Sala Limpa (Cleanroom Software Engineering)**, que visa a produção de software com zero defeitos através de verificação rigorosa.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h17m01s066.jpg" alt="" width="840">
+</p>
+
+O **Modelo Orientado a Aspectos (AOP - Aspect-Oriented Programming)** é um paradigma que fornece métodos e processos para definir e construir **aspectos**. Aspectos são pontos de interesse (como segurança, log ou transações) que não pertencem a um único módulo, mas que se **propagam e entrecortam outras partes da aplicação**.
+
+No diagrama apresentado, vemos um exemplo de como um aspecto pode interceptar uma chamada. O fluxo mostra um ator chamando o método `findById(id)`. Em vez de a chamada ir direto para o repositório (`UserRepo`), ela passa por **AOP Components**. O componente de aspecto pode realizar uma ação (como abrir uma conexão ou verificar permissões) antes de encaminhar (`forward`) a requisição para o `UserRepo`. Após o repositório retornar o usuário, o aspecto pode novamente interceptar a resposta para fechar a conexão ou realizar logs antes de devolver o resultado final ao chamador. Isso permite manter o código de negócio limpo, separando as preocupações transversais da lógica principal.
+
 
 ### 🟩 Vídeo 06 - Processo Unificado
 
@@ -261,7 +291,8 @@ link do vídeo:
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/6fcd6f11-3ed4-4a88-b6bb-552fd5615f1e?autoplay=1
 
 ## Parte 2 - Desenvolvimento ágil
 
