@@ -924,9 +924,32 @@ Apesar de sua eficácia, a cobertura alcançada por essas técnicas é difícil 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/644781da-7260-4740-be08-fd37df1c0e89?autoplay=1
 
-##  Materiais de Apoio
+Este vídeo marca a conclusão do curso, onde o instrutor recapitula os principais aprendizados, sugere fontes de estudo aprofundadas e reforça a importância da gestão de defeitos e da padronização no ciclo de vida do desenvolvimento de software.
 
-# Certificado: 
+### Anotações
 
-- Link na plataforma: 
-- Certificado em pdf:
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h50m06s608.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta a abertura do curso **Fundamentos de Qualidade de Software**, ministrado por Carolina Santana Louzada, Engenheira de Qualidade de Software na UOLEdtech. A imagem marca o ponto de partida da jornada, onde serão explorados os conceitos essenciais para entender e aplicar qualidade no desenvolvimento de software, desde definições teóricas até práticas de mercado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h50m08s283.jpg" alt="" width="840">
+</p>
+
+Aqui a instrutora recomenda materiais de aprofundamento. O slide lista recursos fundamentais para quem deseja se especializar: a certificação **CTFL** (BSTQB) – base para profissionais de teste; a família de normas **ISO/IEC 25000-25099 (SQuaRE)** – referência para modelagem e gerenciamento da qualidade; o site de **Martin Fowler** – com artigos sobre engenharia de software e boas práticas em testes; e um artigo da **Medium** por Eduardo Rabelo, que aborda cobertura de código com a biblioteca **Istanbul** (JavaScript), ilustrando a geração de relatórios e métricas em automação de testes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h50m13s089.jpg" alt="" width="840">
+</p>
+
+O slide resume o **percurso do curso** em três aulas:  
+- **Aula 1** – O que é qualidade de software? Aborda definições, normas técnicas e visões da literatura.  
+- **Aula 2** – Gerenciamento de defeitos: destaca a importância do ciclo de vida do defeito para o controle da qualidade.  
+- **Aula 3** – Introdução aos testes de software: apresenta os conceitos iniciais e as principais abordagens de teste, preparando o terreno para aprofundamentos futuros.
+
+# Certificado: Fundamentos de Qualidade de Software
+
+- Link na plataforma: https://hermes.dio.me/certificates/SZUCJRTZ.pdf
+- Certificado em pdf: [Certificado-Fundamentos_de_Qualidade_de_Software.pdf](000-Midia_e_Anexos/Certificado-Fundamentos_de_Qualidade_de_Software.pdf)
