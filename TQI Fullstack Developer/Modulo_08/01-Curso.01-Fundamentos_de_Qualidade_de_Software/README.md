@@ -822,6 +822,99 @@ Ambos são fundamentais para manter a integridade do software ao longo de seu ci
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/0de6c486-b381-4b1c-b1a9-a3384d7de836?autoplay=1
 
+O vídeo aborda as principais estratégias para identificação de condições, casos e dados de teste, divididas em três categorias fundamentais: Caixa Preta, Caixa Branca e Baseada na Experiência.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m26s706.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta os três grandes grupos de técnicas de teste de software: **caixa-preta**, **caixa-branca** e **baseadas em experiência**. Essas técnicas são independentes do nível ou tipo de teste e servem para auxiliar o testador a identificar as condições que devem ser testadas, os casos de teste necessários e os dados que serão utilizados em cada um deles. O objetivo é tornar o processo de teste mais sistemático e eficiente, garantindo uma boa cobertura sem depender apenas de tentativa e erro.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m30s453.jpg" alt="" width="840">
+</p>
+
+A imagem lista as principais técnicas de **teste de caixa-preta**. Elas são fundamentadas em documentos como requisitos, casos de uso e histórias de usuário, e podem ser aplicadas tanto a testes funcionais quanto não funcionais. O foco está nas entradas fornecidas ao sistema e nas saídas produzidas, sem considerar a estrutura interna do software. As técnicas destacadas são: **Particionamento de Equivalência**, **Análise de Valor Limite**, **Tabela de Decisão**, **Transição de Estado** e **Caso de Uso**.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m35s519.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra a técnica de **Particionamento de Equivalência** por meio de um exemplo prático. Um sistema de simulação de investimentos define recomendações de risco com base na idade do cliente:
+- Até 18 anos: risco entre 60 e 80.
+- Entre 18 e 40 anos: risco entre 40 e 60.
+- Acima de 40 anos: risco menor que 40.
+- Idade máxima suportada: 100 anos.
+
+A técnica consiste em dividir os dados de entrada em **partições** (ou classes de equivalência) que são processadas da mesma forma. Aqui, as idades de 0 a 18, 18 a 40 e 40 a 100 formam partições **válidas**. Já idades acima de 100 formam uma partição **inválida**. Testar um único valor de cada partição é suficiente, pois o comportamento esperado é o mesmo para todos os elementos daquela classe.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m42s486.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a técnica de **Análise de Valor Limite**, uma extensão do particionamento de equivalência para partições ordenadas. O exemplo mostra regras para cálculo de frete:
+- Compras acima de R$ 100,00: frete grátis.
+- Compras entre R$ 50,00 e R$ 100,00: frete de R$ 20,00.
+- Compras abaixo de R$ 50,00: frete de R$ 35,00.
+- Compras a partir de R$ 100.000,00: exigem contato com a empresa.
+
+A técnica foca nos valores **mínimos e máximos** de cada partição (os limites), pois erros de implementação costumam ocorrer nessas fronteiras. Por exemplo, testar R$ 49,99, R$ 50,00, R$ 100,00, R$ 100.000,00 e valores inválidos como R$ 1.000.000,00 ou negativos ajuda a garantir que o sistema se comporte corretamente nos extremos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m47s677.jpg" alt="" width="840">
+</p>
+
+A imagem mostra uma **Tabela de Decisão**, técnica útil para requisitos que envolvem combinações de condições que levam a resultados diferentes. O exemplo trata de um saque em caixa eletrônico, considerando três condições: **cartão válido?**, **senha válida?** e **valor solicitado ≤ saldo?**. Para cada combinação (representada pelas colunas 1 a 4), a tabela define a saída esperada: "Cartão Inválido", "Senha inválida", "Saldo Insuficiente" ou "Saque efetuado com sucesso". Essa abordagem garante que todas as combinações relevantes sejam testadas de forma sistemática.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m49s836.jpg" alt="" width="840">
+</p>
+
+A imagem introduz a técnica de **Transição de Estado**, aplicada quando o sistema reage de forma diferente a eventos dependendo do seu estado atual ou histórico. O exemplo ilustra um mecanismo de login com tentativas: o sistema parte de um estado inicial e, a cada evento (PIN correto ou incorreto), transita para um novo estado (primeira tentativa, segunda tentativa, acesso garantido ou conta bloqueada). O diagrama de estados representado na imagem (fonte: Guru99, 2022) ajuda a visualizar essas transições e a planejar os testes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m53s823.jpg" alt="" width="840">
+</p>
+
+A imagem complementa a técnica de transição de estado com uma **tabela de transição**. Nela, os estados (S1 a S6) são listados juntamente com os eventos que podem ocorrer (PIN correto ou incorreto). Cada célula indica para qual estado o sistema deve ir quando um determinado evento acontece a partir de um estado atual. Por exemplo, estando em S1 (início), se o PIN estiver correto, o sistema vai para S5 (acesso garantido); se estiver incorreto, vai para S2 (primeira tentativa). Essa tabela orienta a criação de casos de teste que percorrem todos os caminhos possíveis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m57s080.jpg" alt="" width="840">
+</p>
+
+A imagem descreve a técnica de **Teste de Caso de Uso**. Os casos de teste são derivados naturalmente dos diagramas de caso de uso, associando as ações aos atores envolvidos. A técnica prevê a criação de testes para diferentes fluxos: **casos básicos** (o caminho principal), **casos alternativos** (variações do fluxo principal) e **casos de erro** (situações excepcionais). Dessa forma, garante-se que todas as interações previstas entre atores e sistema sejam exercitadas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h33m59s779.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta as técnicas de **teste de caixa-branca**, que se baseiam na estrutura interna do objeto de teste, como o código-fonte. Embora possam ser usadas em qualquer nível de teste, são mais comuns em testes de componente (unidade). As duas principais técnicas destacadas são: **Cobertura de Instruções** e **Cobertura de Decisões**. Elas permitem medir o quanto do código foi efetivamente exercitado pelos testes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h34m02s224.jpg" alt="" width="840">
+</p>
+
+A imagem foca na técnica de **Cobertura de Instruções**. O objetivo é testar cada instrução executável do código. A métrica de cobertura é calculada como o número de instruções executadas dividido pelo total de instruções. Quanto mais próximo de 100%, maior a garantia de que todas as linhas de código foram pelo menos executadas uma vez. A imagem faz referência a um artigo que explica como gerar relatórios e métricas de cobertura usando ferramentas como Istanbul.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h34m05s523.jpg" alt="" width="840">
+</p>
+
+A imagem explica a técnica de **Cobertura de Decisões**. Ela testa as condicionais do código (como if-else e switch), verificando se cada resultado possível de uma decisão (verdadeiro/falso) é executado. A cobertura é a razão entre o número de resultados de decisão executados e o total de resultados. Uma observação importante: **100% de cobertura de decisões implica 100% de cobertura de instruções**, pois percorrer todos os caminhos das decisões garante que todas as instruções sejam visitadas. O contrário, porém, não é verdadeiro.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-09h34m08s683.jpg" alt="" width="840">
+</p>
+
+A imagem aborda as **técnicas baseadas em experiência**, que dependem do conhecimento e da intuição do testador. Elas são úteis para encontrar situações que os métodos sistemáticos podem não cobrir. As principais abordagens são:
+- **Suposição de erro**: o testador antecipa possíveis falhas com base em experiências anteriores.
+- **Teste exploratório**: realizado sem scripts pré-definidos, com foco em aprender e testar simultaneamente, geralmente em um período limitado.
+- **Baseado em checklist**: utiliza uma lista de itens a serem verificados, servindo como um guia rápido para o teste.
+
+Apesar de sua eficácia, a cobertura alcançada por essas técnicas é difícil de medir e avaliar de forma objetiva.      
+
 ### 🟩 Vídeo 15 - Conclusão
 
 <video width="60%" controls>
@@ -829,7 +922,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/644781da-7260-4740-be08-fd37df1c0e89?autoplay=1
 
 ##  Materiais de Apoio
 
