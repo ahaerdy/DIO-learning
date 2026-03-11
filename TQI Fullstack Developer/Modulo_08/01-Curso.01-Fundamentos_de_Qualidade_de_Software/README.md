@@ -1,7 +1,6 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Carolina Santana Louzada )
 - Perfil no Github: https://github.com/CarolinaSL
 
 ## Parte 1 - O que é qualidade de software?
