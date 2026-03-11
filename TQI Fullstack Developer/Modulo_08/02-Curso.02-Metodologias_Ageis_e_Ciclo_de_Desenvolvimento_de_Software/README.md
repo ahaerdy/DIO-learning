@@ -141,8 +141,56 @@ Este vídeo explora os modelos tradicionais de desenvolvimento, conhecidos como 
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h30m10s242.jpg" alt="" width="840">
+</p>
 
+Os **modelos prescritivos** – também chamados de **modelos tradicionais** – surgiram nos primórdios da engenharia de software, inspirados em processos da manufatura. Eles se caracterizam por **estabelecer uma ordem rígida e uma consistência bem definida** para as atividades de desenvolvimento. Em vez de deixar o fluxo de trabalho livre, esses modelos “prescrevem” um conjunto de etapas, elementos e fluxos que devem ser seguidos como um roteiro, garantindo que tudo ocorra de forma previsível e controlada. Essa abordagem busca trazer disciplina e organização, mas também impõe uma rigidez que pode ser um desafio em projetos com requisitos voláteis.
+ 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h30m19s214.jpg" alt="" width="840">
+</p>
+
+O **Modelo Cascata (ou Clássico)** é o exemplo mais conhecido de modelo prescritivo. Ele organiza o desenvolvimento em fases sequenciais e bem delimitadas: geralmente começa com a **definição de requisitos**, segue para o **projeto** (design), depois para a **implementação**, **testes** e, por fim, a **manutenção**. Cada fase só começa quando a anterior é completamente finalizada, formando uma espécie de “cascata” de atividades. Esse formato linear traz clareza sobre o que deve ser feito em cada momento, mas também exige que tudo seja muito bem planejado desde o início, pois mudanças posteriores são difíceis e custosas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h30m21s188.jpg" alt="" width="840">
+</p>
+
+Esta imagem reforça a estrutura do Modelo Cascata, destacando seu fluxo linear e a ênfase na documentação formal ao final de cada etapa. Na prática, cada fase produz artefatos específicos (como documentos de requisitos, diagramas de projeto, código-fonte, relatórios de teste) que servem de entrada para a fase seguinte. Essa rigidez faz com que o modelo seja adequado para projetos com requisitos muito bem compreendidos e estáveis, onde o risco de mudanças durante o desenvolvimento é baixo. No entanto, ele também pode levar a longos períodos sem uma versão executável do software, já que a implementação só ocorre após a conclusão das fases anteriores.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h30m25s192.jpg" alt="" width="840">
+</p>
+
+O Modelo Cascata é mais indicado quando os **requisitos são bem compreendidos, definidos e estáveis** desde o início do projeto. Como cada etapa depende da conclusão da anterior, é essencial que não haja dúvidas ou mudanças significativas ao longo do caminho. Além disso, ele impõe um **processo linear e sistemático**, onde o progresso é medido pela conclusão de marcos bem definidos. Essa característica facilita o gerenciamento e o controle, mas também torna o modelo pouco flexível para lidar com incertezas ou adaptações constantes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h30m28s813.jpg" alt="" width="840">
+</p>
+
+O **Modelo V** é uma evolução do Cascata que enfatiza a **relação entre as atividades de desenvolvimento e as de garantia de qualidade**. Ele mantém a mesma estrutura sequencial, mas a organiza em formato de “V”: no lado esquerdo, as fases de definição (requisitos, projeto); no lado direito, as fases de verificação e validação (testes unitários, de integração, de sistema). A ideia é que cada etapa de desenvolvimento tenha uma etapa de teste correspondente, garantindo que a qualidade seja construída ao longo de todo o processo. Apesar dessa melhoria, a essência permanece a mesma do Cascata: um fluxo linear e rígido.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h30m31s895.jpg" alt="" width="840">
+</p>
+
+No Modelo V, a ênfase está na **relação direta entre as atividades de garantia de qualidade** (testes) e as atividades restantes do processo. Por exemplo, enquanto os requisitos são definidos, já se planejam os testes de aceitação; durante o projeto, planejam-se os testes de sistema. Isso cria um **paralelismo conceitual** que ajuda a detectar problemas mais cedo. Apesar dessa melhoria, **não há diferença fundamental entre o Cascata e o Modelo V** em termos de rigidez e sequencialidade – ambos exigem que as fases sejam concluídas antes de avançar e são igualmente resistentes a mudanças.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h30m33s617.jpg" alt="" width="840">
+</p>
+
+Apesar de sua utilidade em contextos específicos, os modelos prescritivos (Cascata e V) apresentam limitações importantes na prática:
+
+- **Projetos reais raramente seguem fluxos puramente sequenciais** – iterações e retrabalhos são comuns.
+- **Não lidam bem com mudanças constantes** – qualquer alteração nos requisitos pode exigir retomar fases inteiras.
+- **Os requisitos raramente são completamente estabelecidos na primeira fase** – muitas vezes, eles evoluem com o entendimento do cliente e do time.
+- **O tempo para visualizar a primeira versão funcional do software é muito longo** – o cliente só vê algo executável perto do fim.
+- **Isso pode gerar estados de bloqueio para a equipe** – membros ficam ociosos aguardando a conclusão de fases anteriores ou sobrecarregados quando várias atividades se acumulam.
+
+Essas limitações motivaram o surgimento de abordagens mais flexíveis e iterativas, como os modelos ágeis, que buscam entregar valor continuamente e se adaptar às mudanças.      
 
 ### 🟩 Vídeo 04 - Modelos incremental, iterativo e concorrente
 
