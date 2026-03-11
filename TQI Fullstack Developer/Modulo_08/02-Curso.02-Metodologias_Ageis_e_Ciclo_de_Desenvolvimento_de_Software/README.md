@@ -63,7 +63,70 @@ Essa divisão permite ao aluno evoluir do entendimento dos processos tradicionai
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/27265ac5-f8d0-4c2a-8b0a-1dfa7f305e16?autoplay=1
 
+Este resumo aborda os conceitos iniciais sobre processos de software, destacando que o desenvolvimento vai além da técnica, sendo um esforço social e adaptável que exige organização e responsabilidade compartilhada.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h06m44s943.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta os objetivos da aula, que incluem a definição de processo, fluxo e padrões de software, a compreensão de modelos prescritivos, incremental, evolucionário e concorrente, modelos especializados e o processo unificado (RUP). Esses tópicos serão abordados ao longo da aula para fornecer uma visão geral dos processos de software.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h06m48s312.jpg" alt="" width="840">
+</p>
+
+A primeira etapa da aula foca na definição de processo, fluxo e padrões de software, contextualizando o ciclo de desenvolvimento e as metodologias ágeis. O objetivo é estabelecer a base conceitual para entender como os processos organizam o trabalho de desenvolvimento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h06m49s533.jpg" alt="" width="840">
+</p>
+
+A citação de Howard Baetjer Jr. destaca que o desenvolvimento de software é um processo de aprendizado social, iterativo, onde a ferramenta em evolução serve como meio de comunicação. Isso enfatiza a natureza dinâmica e colaborativa do desenvolvimento, onde o processo se adapta e evolui com a interação entre as pessoas.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h06m53s820.jpg" alt="" width="840">
+</p>
+
+O slide define processo de software como uma metodologia que organiza as atividades, ações e tarefas necessárias para desenvolver um software. É um conjunto estruturado de práticas que guiam a equipe desde a concepção até a entrega do produto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h06m55s824.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta características importantes de um processo de software: envolve todos os participantes, direta ou indiretamente; proporciona estabilidade, controle e organização; e é adaptável conforme o produto a ser construído. Ou seja, 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h07m04s459.jpg" alt="" width="840">
+</p>
+
+O slide compara as atividades principais do processo de software segundo dois autores renomados. Para Pressman, as atividades são: Comunicação, Planejamento, Modelagem, Construção e Entrega. Já Sommerville propõe: Especificação, Projeto e implementação, Validação e Evolução. Ambas as visões refletem etapas essenciais para o desenvolvimento, desde o entendimento do problema até a manutenção do software.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h07m08s820.jpg" alt="" width="840">
+</p>
+
+O conceito de fluxo de processo é introduzido: a organização dos processos e suas relações. O slide mostra um exemplo de fluxo linear, onde as etapas são executadas em sequência. Esse é um dos modelos possíveis de organização das atividades.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h07m12s533.jpg" alt="" width="840">
+</p>
+
+Esta imagem provavelmente ilustra um tipo específico de fluxo de processo, como um diagrama de setas ou iteração. O conteúdo visual, embora não detalhado no texto, sugere a representação gráfica da relação entre as etapas do processo, complementando a explicação anterior sobre fluxos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h07m18s566.jpg" alt="" width="840">
+</p>
+
+O slide reforça que os fluxos de processo são compostos por tarefas. Cada processo pode ser desmembrado em atividades menores e tarefas específicas, que são executadas de acordo com o fluxo definido. Isso ajuda no gerenciamento e na organização do trabalho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-14h07m23s049.jpg" alt="" width="840">
+</p>
+
+O último slide aborda a melhoria de processos, mencionando que se pode descrever um problema de processo e sugerir soluções conforme o contexto. Também lista abordagens de avaliação e aperfeiçoamento, como SCAMPI (para CMMI), CBA IPI, SPICE (ISO/IEC 15504) e ISO 9001:2000. Esses modelos e normas ajudam as organizações a avaliar e melhorar seus processos de software.      
 
 ### 🟩 Vídeo 03 - Modelo Prescritivo
 
@@ -71,7 +134,10 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodolo
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_03.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/c1b073e4-f17f-42a3-9fbc-bb7e612d8d08?autoplay=1
+
+
 
 ### 🟩 Vídeo 04 - Modelos incremental, iterativo e concorrente
 
