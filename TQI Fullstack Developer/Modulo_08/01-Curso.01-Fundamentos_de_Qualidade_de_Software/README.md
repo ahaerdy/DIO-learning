@@ -744,6 +744,75 @@ A imagem apresenta duas representações da pirâmide de testes. À esquerda, um
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/1b1b4b70-8d16-4101-bcbc-be4826a1692a?autoplay=1
 
+O vídeo explora as diferentes categorias de testes de software, focando em objetivos específicos em vez de apenas cronogramas de desenvolvimento. Diferente dos "níveis de teste", os "tipos de teste" verificam características particulares do sistema, desde a funcionalidade até a performance e estrutura interna.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-08h54m00s805.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a definição de **tipos de teste**. Diferentemente dos níveis de teste, que estão ligados às etapas do desenvolvimento (componente, integração, sistema), os tipos de teste são organizados pelo **objetivo da verificação**. Eles formam grupos de atividades que podem ser aplicados em qualquer nível para avaliar aspectos específicos do software, como:
+
+- **Características funcionais** – o que o sistema faz.
+- **Características não funcionais** – como o sistema se comporta (desempenho, usabilidade, segurança).
+- **Estrutura ou arquitetura** – a organização interna do código e dos componentes.
+- **Efeitos de alterações** – impactos causados por modificações no código (regressão).
+
+Essa classificação ajuda a planejar os testes de forma mais direcionada, garantindo que cada aspecto relevante do sistema seja verificado adequadamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-08h54m13s592.jpg" alt="" width="840">
+</p>
+
+Este slide trata dos **testes funcionais**. O foco aqui é responder à pergunta: **“o que o sistema deve executar?”** . Ou seja, validamos se as funções implementadas estão de acordo com o esperado.
+
+As principais fontes para criar esses testes são artefatos de especificação, como:
+- Requisitos funcionais.
+- Histórias de usuário.
+- Casos de uso.
+
+Os testes funcionais podem ser realizados em **todos os níveis de teste** (componente, integração, sistema e aceitação). Eles costumam empregar **técnicas de caixa-preta**, pois não dependem do conhecimento da estrutura interna do código, apenas das entradas e saídas esperadas. Um exemplo comum é o teste de interface, que simula a interação do usuário com o sistema.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-08h54m18s239.jpg" alt="" width="840">
+</p>
+
+A imagem aborda os **testes não funcionais**. Diferentemente dos testes funcionais, que verificam **o que** o sistema faz, os testes não funcionais avaliam **como** o sistema se comporta sob determinadas condições.
+
+Eles contemplam características como:
+- **Usabilidade** – facilidade de uso.
+- **Eficiência de performance** – tempo de resposta, consumo de recursos.
+- **Segurança** – resistência a ataques e proteção de dados.
+- Confiabilidade, portabilidade, manutenibilidade, entre outros.
+
+Assim como os funcionais, os testes não funcionais também podem ser aplicados em **qualquer nível de teste**, desde componentes isolados até o sistema completo. São essenciais para garantir a qualidade da experiência do usuário e a robustez do software em cenários reais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-08h54m21s058.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta os **testes estruturais**, também conhecidos como **testes de caixa-branca**. Aqui o foco está na **estrutura interna** do sistema, e não no comportamento externo.
+
+Os elementos analisados incluem:
+- **Código-fonte** – verificação de lógica, fluxos e decisões.
+- **Arquitetura** – relacionamento entre componentes, camadas e módulos.
+- **Fluxo de dados** – como os dados são manipulados e transmitidos entre as partes do sistema.
+
+Um conceito importante nesse tipo de teste é a **cobertura de código**, que mede quais partes do código foram executadas durante os testes. Os testes estruturais são comumente realizados nos níveis de **unidade e integração**, onde é possível acessar e instrumentar o código diretamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-08h54m25s345.jpg" alt="" width="840">
+</p>
+
+A última imagem trata de dois tipos de teste relacionados a **mudanças no sistema**:
+
+- **Teste de confirmação** (ou re-teste): é executado após a correção de um defeito. O objetivo é verificar se o problema realmente foi resolvido e se a funcionalidade agora se comporta como esperado.
+
+- **Teste de regressão**: é realizado para garantir que as alterações feitas no sistema (correções, novas funcionalidades, ajustes) não introduzam **efeitos colaterais** em partes que já estavam funcionando corretamente. Ele valida se o comportamento existente permanece estável após as modificações.
+
+Ambos são fundamentais para manter a integridade do software ao longo de seu ciclo de evolução, evitando que correções gerem novos problemas.      
+
 ### 🟩 Vídeo 14 - Técnicas de teste
 
 <video width="60%" controls>
@@ -751,7 +820,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/fundamentos-de-qualidade-de-software/learning/0de6c486-b381-4b1c-b1a9-a3384d7de836?autoplay=1
 
 ### 🟩 Vídeo 15 - Conclusão
 
