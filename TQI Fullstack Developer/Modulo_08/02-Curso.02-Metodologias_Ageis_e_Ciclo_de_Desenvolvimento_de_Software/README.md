@@ -201,6 +201,52 @@ Essas limitações motivaram o surgimento de abordagens mais flexíveis e iterat
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/eb23b403-9fc3-4665-b1e6-f7ba682c9d43?autoplay=1
 
+O vídeo descreve os modelos de desenvolvimento que vão além do tradicional "Cascata", focando em abordagens incrementais, evolucionárias e concorrentes. O objetivo é entender como cada modelo lida com a complexidade, os requisitos e a entrega de valor ao cliente.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h03m04s396.jpg" alt="" width="840">
+</p>
+
+Esta imagem introduz o **modelo incremental**. Ela destaca que esse modelo é adequado quando os requisitos iniciais já estão bem definidos, mas ainda precisam ser refinados ao longo do projeto. A ideia é que, a partir de uma base clara, o software seja desenvolvido em partes (incrementos), cada uma entregando funcionalidades adicionais. Dessa forma, é possível obter feedback e ajustar os requisitos sem interromper o fluxo principal de desenvolvimento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h03m08s721.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta uma estratégia complementar ao modelo incremental: o uso de **prototipagem**. Quando os requisitos não são totalmente fechados, a construção de protótipos permite validar ideias rapidamente com o usuário. No contexto incremental, os protótipos podem ser utilizados em cada ciclo para refinar as necessidades antes de desenvolver o incremento final, garantindo maior alinhamento com as expectativas do cliente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h03m11s570.jpg" alt="" width="840">
+</p>
+
+Agora temos a definição do **modelo evolucionário**. Diferente do incremental, que parte de requisitos bem definidos, o evolucionário é indicado para projetos complexos e que exigem adaptação constante. Ele é composto por modelos iterativos, sendo os principais a **prototipagem** e o **modelo espiral**. A ênfase está na capacidade do software de crescer e se modificar à medida que o entendimento do problema evolui.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h03m13s900.jpg" alt="" width="840">
+</p>
+
+Esta imagem detalha a **prototipação** dentro do contexto evolucionário. O protótipo é uma ferramenta poderosa para refinar requisitos, validar a interação com o usuário e obter feedback precoce. Pode ser usado isoladamente ou combinado com outros processos. Uma característica importante é que os protótipos podem ser **descartáveis** (apenas para esclarecimento) ou **evolutivos** (servindo de base para o produto final).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h03m17s086.jpg" alt="" width="840">
+</p>
+
+A imagem alerta para um problema comum na prototipação: a **falta de consideração da qualidade global**. Quando o protótipo é visto como “funcional” pelo cliente, a equipe pode se acomodar com as decisões iniciais (interface, arquitetura) e negligenciar melhorias necessárias para a qualidade de longo prazo. Isso acontece porque o foco excessivo na entrega rápida pode substituir a busca por um software bem estruturado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h03m21s172.jpg" alt="" width="840">
+</p>
+
+Aqui é apresentado o **modelo espiral**, que combina a natureza iterativa da prototipagem com a abordagem sistemática do modelo cascata. Sua principal característica é a ênfase na **análise de riscos** a cada ciclo. O desenvolvimento ocorre em espirais, onde cada volta representa um ciclo de planejamento, análise de riscos, engenharia e avaliação. Isso permite que o software evolua de forma controlada, com constante replanejamento baseado nos riscos identificados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-15h03m25s250.jpg" alt="" width="840">
+</p>
+
+Por fim, a imagem ilustra o **modelo concorrente**, também conhecido como engenharia concorrente. Diferente dos modelos sequenciais, aqui as atividades podem ocorrer em paralelo e em diferentes estados. O diagrama mostra que uma mesma tarefa pode estar, por exemplo, em desenvolvimento, aguardando modificações, em avaliação ou concluída, e pode transitar entre esses estados conforme necessário. Isso reflete a realidade de projetos onde várias atividades acontecem simultaneamente.      
+
 ### 🟩 Vídeo 05 - Modelos especializados
 
 <video width="60%" controls>
