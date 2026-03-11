@@ -137,6 +137,11 @@ O último slide aborda a melhoria de processos, mencionando que se pode descreve
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/c1b073e4-f17f-42a3-9fbc-bb7e612d8d08?autoplay=1
 
+Este vídeo explora os modelos tradicionais de desenvolvimento, conhecidos como "prescritivos", focando em sua estrutura linear, na importância da documentação e nos desafios práticos que levaram ao surgimento das metodologias ágeis.
+
+### Anotações
+
+      
 
 
 ### 🟩 Vídeo 04 - Modelos incremental, iterativo e concorrente
@@ -145,7 +150,8 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodolo
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/eb23b403-9fc3-4665-b1e6-f7ba682c9d43?autoplay=1
 
 ### 🟩 Vídeo 05 - Modelos especializados
 
