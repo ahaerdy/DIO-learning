@@ -294,6 +294,67 @@ No diagrama apresentado, vemos um exemplo de como um aspecto pode interceptar um
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/6fcd6f11-3ed4-4a88-b6bb-552fd5615f1e?autoplay=1
 
+O Processo Unificado representa um marco na engenharia de software, surgindo como uma resposta à rigidez do modelo cascata e aproveitando a ascensão da orientação a objetos. Este resumo explora sua origem, pilares e as fases que compõem seu ciclo de vida.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-16h08m32s955.jpg" alt="" width="840">
+</p>
+
+No início dos anos 90, os engenheiros de software James Rumbaugh, Grady Booch e Ivar Jacobson uniram esforços para criar um “método unificado” que combinasse as melhores características dos processos existentes, resultando na UML (Unified Modeling Language). Esse método deveria ser **dirigido a casos de uso** (para capturar requisitos), **centrado na arquitetura** (para garantir robustez) e **iterativo e incremental** (para entregar valor continuamente). A imagem apresenta esse contexto histórico e os princípios fundamentais que nortearam o desenvolvimento do Processo Unificado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-16h08m36s045.jpg" alt="" width="840">
+</p>
+
+**Fase de Concepção (Inception)**  
+Nesta primeira fase, o foco está nas atividades de **comunicação e planejamento**. Os requisitos são descritos por meio de um conjunto de **casos de uso preliminares**, que ajudam a entender o escopo do sistema. Também são identificados os recursos necessários, os principais riscos do projeto e um cronograma inicial. É o momento de alinhar expectativas com o cliente e definir a viabilidade do software.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-16h08m37s894.jpg" alt="" width="840">
+</p>
+
+**Fase de Elaboração (Elaboration)**  
+Agora entram em cena atividades de **planejamento e modelagem** mais aprofundadas. Os casos de uso são refinados e expandidos, e a arquitetura do sistema é amplamente detalhada. Diversos modelos são produzidos: **modelo de casos de uso** (visão funcional), **modelo de análise** (estrutura conceitual), **modelo de projeto** (solução técnica), **modelo de implementação** (código) e **modelo de disponibilização** (implantação). Essa fase estabelece uma base sólida para a construção.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-16h08m46s125.jpg" alt="" width="840">
+</p>
+
+**Fase de Construção (Construction)**  
+É a fase de **desenvolvimento efetivo** do software, tomando como base os modelos criados na elaboração. A partir desses modelos, é possível gerar uma **suíte de testes de aceitação** que orienta a validação do sistema. Os testes são aplicados conforme o avanço da implementação, garantindo que cada incremento atenda aos requisitos especificados. O código é produzido de forma iterativa, sempre integrado e testado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-16h08m47s713.jpg" alt="" width="840">
+</p>
+
+**Fase de Transição (Transition)**  
+A transição cobre as atividades finais de **construção e entrega**. O software é colocado em produção, geralmente por meio de **testes beta**, para que usuários reais forneçam feedback. Com base nesse retorno, ajustes são realizados e o incremento se torna uma **versão utilizável** do produto. É o momento de preparar o ambiente, treinar usuários e garantir uma implantação suave.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-16h08m49s352.jpg" alt="" width="840">
+</p>
+
+**Fase de Produção (Production)**  
+Após a entrega, o software entra em operação contínua. As atividades principais são: **monitoramento do uso**, **suporte ao usuário** e **coleta de relatórios** sobre defeitos e solicitações de mudança. Métricas de desempenho e estabilidade são obtidas para orientar melhorias e correções. Essa fase se estende por toda a vida útil do sistema, garantindo que ele permaneça alinhado às necessidades dos usuários.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-16h08m50s587.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra a relação entre as **fases do Processo Unificado** (Concepção, Elaboração, Construção, Transição, Produção) e as **disciplinas ou atividades** (Modelagem de Negócios, Requisitos, Análise e Design, Implementação, Teste, Implantação). Cada disciplina tem maior ou menor intensidade ao longo das fases, mas todas estão presentes de forma contínua. Por exemplo, a implementação começa tímida na concepção, cresce na elaboração e atinge o pico na construção, enquanto os testes se intensificam nas fases finais. Esse fluxo iterativo e incremental permite adaptações constantes e entrega progressiva de valor.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-11-16h08m53s740.jpg" alt="" width="840">
+</p>
+
+Como encerramento da aula, são sugeridos temas para aprofundamento:  
+- **Modelo de Processo Pessoal e de Equipe** – abordagens que focam no indivíduo e nas dinâmicas sociais do desenvolvimento.  
+- **Manifesto Ágil** – seus autores e princípios, conectando com a agilidade nos processos.  
+- **Programação Orientada a Aspectos** – paradigma que complementa a orientação a objetos, separando preocupações transversais.  
+Esses tópicos ampliam a visão sobre processos de software e preparam para discussões mais avançadas.      
+
 ## Parte 2 - Desenvolvimento ágil
 
 ### 🟩 Vídeo 07 - O manifesto ágil
@@ -302,7 +363,8 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodolo
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_07.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/b673a949-3620-4c90-9e22-89693fb6d094?autoplay=1
 
 ### 🟩 Vídeo 08 - Extreme Programming
 
