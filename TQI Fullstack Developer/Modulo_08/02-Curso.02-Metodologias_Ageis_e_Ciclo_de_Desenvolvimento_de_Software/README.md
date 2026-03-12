@@ -607,13 +607,106 @@ Essa dinâmica garante que o projeto se adapte rapidamente a mudanças e que o c
 </video>
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/9a11bf24-76f9-43bb-ab6b-2e16b16a898e?autoplay=1
 
+O vídeo apresenta uma visão geral do Scrum, explorando suas origens, fundamentos teóricos, papéis fundamentais, eventos cíclicos e artefatos. O Scrum é definido como um framework leve projetado para ajudar pessoas, times e organizações a gerar valor por meio de soluções adaptativas para problemas complexos.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m14s406.jpg" alt="" width="840">
+</p>
+
+O nome Scrum tem origem no rugby, esporte em que os jogadores se unem com a cabeça baixa e se empurram para disputar a posse da bola. Essa imagem ilustra exatamente esse momento: um grupo compacto de atletas empurrando juntos. A analogia é proposital: no desenvolvimento de software, o time precisa atuar de forma integrada, auto-organizada e com esforço conjunto para alcançar o objetivo, assim como os jogadores no campo. Foi essa ideia de união e empurrar na mesma direção que inspirou Jeff Sutherland no início dos anos 1990 a batizar o framework.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m16s929.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta a base conceitual do Scrum. Ele foi criado por Jeff Sutherland no início dos anos 1990 e é continuamente revisado pela comunidade, resultando no Scrum Guide. O Guia define o Scrum como um framework leve que ajuda times e organizações a gerar valor por meio de soluções adaptativas para problemas complexos. Seus fundamentos são o empirismo (aprender pela experimentação e observação) e o lean thinking (pensamento enxuto, evitar desperdícios). O processo é iterativo e incremental, e conta com eventos formais destinados à inspeção e adaptação contínuas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m21s896.jpg" alt="" width="840">
+</p>
+
+A imagem destaca os três pilares que sustentam o Scrum: transparência, inspeção e adaptação. A transparência garante que todos os aspectos do processo sejam visíveis e compreendidos por quem executa o trabalho. A inspeção permite verificar frequentemente o progresso e os artefatos em direção ao objetivo. A adaptação possibilita ajustes rápidos sempre que algo foge do esperado. Esses pilares funcionam de forma encadeada: só é possível inspecionar o que é transparente, e só se adapta com eficácia aquilo que foi devidamente inspecionado. Além deles, o Scrum também se apoia em valores como coragem, foco, comprometimento, respeito e abertura, que ajudam a construir a cultura da equipe.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m25s354.jpg" alt="" width="840">
+</p>
+
+O slide apresenta uma visão geral do fluxo do processo Scrum. Tudo começa com a visão do produto, que é desdobrada pelo Product Owner em funcionalidades descritas como histórias de usuário e mantidas no Product Backlog. No evento de Planejamento da Sprint (Sprint Planning), o time define a meta da Sprint e seleciona os itens que serão trabalhados, criando o Sprint Backlog. Durante a Sprint (geralmente de duas a quatro semanas), ocorrem reuniões diárias (Daily Scrum) para inspecionar o progresso. Ao final, entrega-se um incremento pronto e realizado, seguido dos eventos de Revisão da Sprint (Sprint Review) e Retrospectiva da Sprint (Sprint Retrospective). O ciclo então se repete.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m29s556.jpg" alt="" width="840">
+</p>
+
+Esta imagem descreve a composição do Scrum Team. Diferente de equipes tradicionais, aqui não existe hierarquia interna — todos são igualmente importantes e responsáveis pelo sucesso do produto. O time é formado por três papéis: o Product Owner, o Scrum Master e os Developers. Eles devem ser multifuncionais (possuir todas as habilidades necessárias para entregar o incremento) e autogerenciáveis (decidir internamente como realizar o trabalho). A responsabilidade por todas as atividades relacionadas ao produto é compartilhada por todo o time.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m32s831.jpg" alt="" width="840">
+</p>
+
+O Product Owner (PO) é o responsável por maximizar o valor do produto resultante do trabalho do time. Sua principal ferramenta é o gerenciamento do Product Backlog, que inclui: desenvolver e comunicar claramente a meta do produto; criar e refinar os itens do backlog; ordenar (priorizar) esses itens conforme o valor de negócio; e garantir que o backlog seja transparente, visível e compreensível para todos os envolvidos. O PO atua como a voz do cliente dentro do time.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m36s153.jpg" alt="" width="840">
+</p>
+
+Os Desenvolvedores (Developers) são os profissionais responsáveis por criar um incremento utilizável a cada Sprint. Eles possuem habilidades diversas, adequadas ao domínio do trabalho, e são coletivamente responsáveis por: elaborar o Sprint Backlog (planejamento detalhado do que será feito); definir e seguir a “Definição de Pronto” (critérios de qualidade); adaptar-se constantemente para atingir a meta da Sprint; e assumir responsabilidade profissional sobre suas entregas. Neste contexto, “desenvolvedores” inclui não só programadores, mas também testadores, analistas e qualquer pessoa que contribua diretamente para a construção do produto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m39s604.jpg" alt="" width="840">
+</p>
+
+O Scrum Master é o guardião do processo, responsável por garantir a eficácia da metodologia. Ele exerce uma liderança de serviço, atuando para: treinar o time em autogerenciamento; manter o foco do time; remover impedimentos que atrapalhem o progresso; assegurar que todos os eventos ocorram e sejam produtivos; e auxiliar o Product Owner com técnicas de gerenciamento do backlog e melhorias contínuas. Seu papel não é de gerente, mas de facilitador e coach.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m42s873.jpg" alt="" width="840">
+</p>
+
+A Sprint é o coração do Scrum: um evento de duração fixa (geralmente entre uma e quatro semanas) no qual um incremento potencialmente utilizável é criado. Durante a Sprint ocorrem os demais eventos: Sprint Planning, Daily Scrum, Sprint Review e Sprint Retrospective. Uma regra importante é que não se fazem mudanças que coloquem em risco a meta da Sprint. A qualidade deve ser mantida e o backlog pode ser refinado conforme necessário. Somente o Product Owner tem autoridade para cancelar uma Sprint, o que é raro e indica que a meta perdeu o sentido.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m48s965.jpg" alt="" width="840">
+</p>
+
+O Sprint Planning é o evento que inicia a Sprint. Nele, o time responde a três perguntas fundamentais: “Por que esta Sprint é valiosa?” (definição da meta), “O que pode ser feito nesta Sprint?” (seleção dos itens do Product Backlog) e “Como o trabalho será realizado?” (planejamento detalhado). O resultado é o Sprint Backlog, um plano composto pela meta da Sprint e pelo conjunto de itens selecionados, além de um plano inicial para entregá-los.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m50s762.jpg" alt="" width="840">
+</p>
+
+A Daily Scrum (reunião diária) é um evento curto, de no máximo 15 minutos, realizado todos os dias da Sprint. Seu objetivo é inspecionar o progresso em direção à meta da Sprint e adaptar o Sprint Backlog conforme necessário. Os desenvolvedores planejam o trabalho das próximas 24 horas, identificam impedimentos e alinham a comunicação. Não é uma reunião de status para gerentes, mas sim uma oportunidade de auto-organização do time.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m52s674.jpg" alt="" width="840">
+</p>
+
+A Sprint Review é realizada ao final da Sprint e tem como objetivo apresentar e inspecionar o incremento produzido. Participam o Scrum Team e os principais stakeholders. O time demonstra o que foi concluído, discute o que funcionou e o que pode ser melhorado, e o Product Owner ajusta o Product Backlog com base no feedback recebido. É um evento colaborativo, não uma simples apresentação; dele podem surgir novas prioridades e direcionamentos para as próximas Sprints.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m54s574.jpg" alt="" width="840">
+</p>
+
+A Sprint Retrospective é o último evento da Sprint, focado na melhoria contínua do time. Nela, o Scrum Team inspeciona seu próprio processo: interações, ferramentas, práticas e comportamentos. As perguntas-chave são: “O que funcionou bem?”, “O que não funcionou?” e “Como resolvemos os problemas?”. O objetivo é identificar ajustes que aumentem a qualidade e a eficácia, gerando um plano de melhorias para a próxima Sprint. Diferente da Review, que olha para o produto, a Retrospective olha para o time e seu modo de trabalho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h06m56s930.jpg" alt="" width="840">
+</p>
+
+O framework estabelece estruturas organizacionais para que o trabalho transcorra com transparência. Essas estruturas são denominadas Artefatos e cada uma é guiada por um elemento fundamental de compromisso:
+
+- O Product Backlog tem o seu foco de direcionamento atrelado e ancorado à Meta do produto.
+- O Sprint Backlog está diretamente associado e tem o compromisso atrelado à Meta da Sprint.
+- O resultado final das Sprints, o Incremento, deve ser julgado e atrelado com base no cumprimento rigoroso da Definição de pronto (Definition of Done).
+
 ### 🟩 Vídeo 10 - Outros modelos ágeis
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_10.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/4bc85417-bfaf-4b2d-ae6e-cdc2416e4218?autoplay=1
 
 ## Parte 3 - Testes no mundo ágil
 
