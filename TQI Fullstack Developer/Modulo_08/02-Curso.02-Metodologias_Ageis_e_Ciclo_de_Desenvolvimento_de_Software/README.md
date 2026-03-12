@@ -420,7 +420,7 @@ A partir dos quatro valores, foram derivados 12 princípios que guiam a aplicaç
 3.  **Entregas frequentes** de software funcionando, em intervalos curtos (de semanas a meses).
 4.  **Trabalho conjunto e diário** entre pessoas de negócio e desenvolvedores durante todo o projeto.
 5.  **Construção de projetos em torno de indivíduos motivados**, fornecendo o ambiente e suporte necessários, e confiando neles para a execução do trabalho.
-6. **O método mais eficiente e eficaz de transmitir informações para e entre uma equipe de desenvolvimento é por meio de conversa face a face** (⭐️ Princípio não citado no vídeo) conversas face a face são a forma mais eficiente e eficaz de compartilhar informações dentro de uma equipe de desenvolvimento.
+6. **O método mais eficiente e eficaz de transmitir informações para e entre uma equipe de desenvolvimento é por meio de conversa face a face** - ⭐️ princípio não citado no vídeo - conversas face a face são a forma mais eficiente e eficaz de compartilhar informações dentro de uma equipe de desenvolvimento.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m27s621.jpg" alt="" width="840">
