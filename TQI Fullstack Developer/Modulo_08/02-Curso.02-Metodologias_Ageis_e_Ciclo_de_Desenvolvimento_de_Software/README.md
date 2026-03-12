@@ -976,8 +976,12 @@ O slide lista algumas "Práticas úteis para testes" no contexto ágil:
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h14m55s521.jpg" alt="" width="840">
 </p>
 
-Conteúdo não identificado com segurança a partir do material disponível.
-(Observação: A imagem parece listar certificações para testes ágeis, conforme o tópico abordado na transcrição, mas o conteúdo visual não é legível para uma transcrição fiel.)
+Este slide aborda as certificações para testes ágeis oferecidas pelo BSTQB:
+
+- **CTFL-AT (Agile Tester)**: voltada para aspectos conceituais e analíticos da agilidade.
+- **CTFL-ATT (Agile Technical Tester)**: foca na parte técnica, integração e infraestrutura dos testes.
+
+Essas certificações ajudam profissionais a se especializarem em práticas ágeis de qualidade de software.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h15m00s925.jpg" alt="" width="840">
