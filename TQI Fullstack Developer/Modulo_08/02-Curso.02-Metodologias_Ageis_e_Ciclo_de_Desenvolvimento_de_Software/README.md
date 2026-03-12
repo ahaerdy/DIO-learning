@@ -992,7 +992,6 @@ O slide final apresenta a seção "Para saber mais" com sugestões de aprofundam
 - **CTFL-AT (bstqb.org.br)** e **CTFL-ATT (bstqb.org.br)**: Indicação dos sites para consultar os syllabi das certificações em testes ágeis, diferenciando a certificação Agile Tester (foco analítico e conceitual) da Agile Technical Tester (foco na implementação técnica e integração dos testes).
 - **Cultura DevOps**: Link para artigo sobre a cultura DevOps e seus benefícios, reforçando a integração com a agilidade.
 
-
 ### 🟩 Vídeo 14 - Conclusão
 
 <video width="60%" controls>
@@ -1002,10 +1001,23 @@ O slide final apresenta a seção "Para saber mais" com sugestões de aprofundam
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/f7bdd349-a063-41d8-aac4-939175c2f91a?autoplay=1
 
+Este curso oferece uma visão panorâmica sobre a evolução dos processos de software, desde os modelos tradicionais até a agilidade moderna, enfatizando a importância da qualidade e da reflexão crítica na carreira do desenvolvedor.
 
-##  Materiais de Apoio
+### Anotações
 
-# Certificado: 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h32m11s262.jpg" alt="" width="840">
+</p>
 
-- Link na plataforma: 
-- Certificado em pdf:
+Este é o slide de abertura do curso, que apresenta o tema central: o ciclo de desenvolvimento de software e as metodologias ágeis. A instrutora Carolina Santana Louzada, Analista de Qualidade (QA) na Venturus, será a guia nesta jornada. Ao longo das aulas, exploraremos desde os processos tradicionais até a aplicação de testes no contexto ágil.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h32m15s102.jpg" alt="" width="840">
+</p>
+
+Aqui temos o percurso do curso, dividido em três aulas. Na **Aula 1**, estudamos os processos de software, incluindo definições, estágios, fluxos e modelos prescritivos tradicionais. Na **Aula 2**, mergulhamos no desenvolvimento ágil, conhecendo o contexto do manifesto ágil, seus valores e princípios, além dos métodos mais utilizados. Por fim, na **Aula 3**, abordamos os testes no mundo ágil, comparando com modelos tradicionais, explorando os quadrantes de testes ágeis e técnicas aplicadas em sprints.      
+
+# Certificado: Metodologias Ágeis e Ciclo de Desenvolvimento de Software
+
+- Link na plataforma: https://hermes.dio.me/certificates/RA5WBUYX.pdf
+- Certificado em pdf: [Certificado-Metodologias Ágeis e Ciclo de Desenvolvimento de Software.pdf](<000-Midia_e_Anexos/Certificado-Metodologias Ágeis e Ciclo de Desenvolvimento de Software.pdf>)
