@@ -916,7 +916,78 @@ Por fim, o slide apresenta as **atividades práticas** que um profissional de qu
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_13.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
+
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/75cfb364-4f7d-46d9-b7ff-a4a8675e2eb4?autoplay=1
+
+O vídeo aborda as principais metodologias de desenvolvimento orientado a testes, a organização estratégica através do Quadrante de Testes Ágeis e a integração com a cultura DevOps e certificações profissionais.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h14m32s313.jpg" alt="" width="840">
+</p>
+
+O slide apresenta o título "TDD - Desenvolvimento orientado por teste". O instrutor explica que o TDD não é exatamente um método de testes, mas sim um método de **desenvolvimento de software** que se inicia pelos testes. O fluxograma ilustra o ciclo: começa com a requisição de uma funcionalidade, passa pela escrita de um teste que inicialmente falha (em vermelho), segue para a codificação da funcionalidade para fazer o teste passar (em verde) e, por fim, entra na fase de refatoração do código (em azul), reiniciando o ciclo para a próxima iteração.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h14m37s866.jpg" alt="" width="840">
+</p>
+
+O slide traz o título "ATDD - Desenvolvimento orientado por teste de aceite". O instrutor complementa que esta abordagem utiliza os **critérios de aceite das histórias de usuário** para guiar o desenvolvimento. O diagrama mostra o fluxo: inicia-se com a proposição e validação dos testes de aceite (nível mais alto), o desenvolvedor então codifica a funcionalidade, possivelmente utilizando ciclos internos de TDD, e por fim os testes de aceite são executados para validar a funcionalidade como um todo. O ATDD não exclui o uso do TDD, eles atuam em conjunto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h14m40s275.jpg" alt="" width="840">
+</p>
+
+O slide exibe o título "BDD - Desenvolvimento orientado a comportamento". O instrutor explica que o BDD foca no **comportamento da funcionalidade** e utiliza uma linguagem compreensível por todos, como o **Gherkin**, com suas palavras-chave (Given, When, Then). O diagrama sugere que o BDD também opera em conjunto com o TDD, permitindo escrever especificações de comportamento em vários níveis de abstração, o que torna o processo mais visível e colaborativo para o time, incluindo Product Owners e clientes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h14m43s545.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra o **Quadrante de Testes Ágeis**, uma ferramenta visual que classifica os diferentes tipos de teste com base em seu propósito e audiência. O quadrante é dividido em quatro áreas:
+- **Q1 (Tecnologia / Suporte ao Time)**: Testes de componente e unidade, geralmente automatizados (ex: TDD).
+- **Q2 (Negócio / Suporte ao Time)**: Testes funcionais, protótipos e simulações, que podem ser manuais ou automatizados.
+- **Q3 (Negócio / Crítico ao Produto)**: Testes exploratórios, cenários, testes alfa/beta e de usabilidade, tipicamente manuais.
+- **Q4 (Tecnologia / Crítico ao Produto)**: Testes não-funcionais como segurança, performance e robustez ("-ilidade tests"), que podem ser automatizados ou usar ferramentas específicas.
+O quadrante ajuda a visualizar como os testes suportam o time (Q1 e Q2) e criticam o produto (Q3 e Q4), sob os pontos de vista do negócio (Q2 e Q3) e da tecnologia (Q1 e Q4).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h14m49s061.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o ciclo infinito da **Cultura DevOps**, integrando as fases de desenvolvimento e operações. O diagrama mostra um fluxo contínuo que conecta:
+- **Planejar** e **Criar/Codar**
+- **Buildar** e **Testar**
+- **Lançar (Deploy)** e **Operar**
+- **Monitorar** e, novamente, **Planejar**
+O instrutor reforça que o DevOps não é um cargo, mas uma cultura e metodologia que se integra à agilidade, utilizando diversas ferramentas para automatizar e integrar todas essas etapas, desde o código até o monitoramento, impactando diretamente a eficiência do processo ágil.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h14m50s924.jpg" alt="" width="840">
+</p>
+
+O slide lista algumas "Práticas úteis para testes" no contexto ágil:
+- **Teste assistido**: Realizar testes em conjunto com outras pessoas, como um desenvolvedor, o Product Owner (PO) ou outro QA, para obter validações mais assertivas e diferentes perspectivas.
+- **Testes incrementais**: Iniciar os testes de forma mais simples e ir refinando e adicionando cenários conforme o entendimento da funcionalidade e os requisitos evoluem durante a sprint.
+- **Mapa mental**: Utilizar mapas mentais (em papel ou software) para estruturar visualmente as estratégias de teste, cenários a serem cobertos e dados a serem utilizados, facilitando o brainstorming e a comunicação rápida com a equipe, especialmente em times pequenos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h14m55s521.jpg" alt="" width="840">
+</p>
+
+Conteúdo não identificado com segurança a partir do material disponível.
+(Observação: A imagem parece listar certificações para testes ágeis, conforme o tópico abordado na transcrição, mas o conteúdo visual não é legível para uma transcrição fiel.)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-14h15m00s925.jpg" alt="" width="840">
+</p>
+
+O slide final apresenta a seção "Para saber mais" com sugestões de aprofundamento:
+- **TDD, ATDD e BDD na prática**: Incentivo a buscar exemplos práticos da aplicação desses métodos.
+- **CTFL-AT (bstqb.org.br)** e **CTFL-ATT (bstqb.org.br)**: Indicação dos sites para consultar os syllabi das certificações em testes ágeis, diferenciando a certificação Agile Tester (foco analítico e conceitual) da Agile Technical Tester (foco na implementação técnica e integração dos testes).
+- **Cultura DevOps**: Link para artigo sobre a cultura DevOps e seus benefícios, reforçando a integração com a agilidade.
+
 
 ### 🟩 Vídeo 14 - Conclusão
 
@@ -924,7 +995,8 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodolo
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_14.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/f7bdd349-a063-41d8-aac4-939175c2f91a?autoplay=1
 
 
 ##  Materiais de Apoio
