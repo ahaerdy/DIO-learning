@@ -833,13 +833,90 @@ O último slide trata do detalhamento da abordagem de teste no contexto ágil. E
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/c1085c75-472f-4e17-8066-1b543417044d?autoplay=1
 
+O vídeo explica como as atividades de teste se integram ao desenvolvimento ágil (especialmente no framework Scrum), destacando a mudança de mentalidade do "testador tradicional" para o "guardião da qualidade" em ciclos curtos e iterativos.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-13h47m04s766.jpg" alt="" width="840">
+</p>
+
+Este slide introduz a ideia fundamental de que as atividades de teste não existem isoladamente; elas estão intrinsecamente ligadas ao processo de desenvolvimento. Por isso, é essencial que o profissional de qualidade conheça diferentes ciclos de vida e processos de software, pois cada empresa adota e customiza suas práticas conforme suas necessidades específicas. A palavra-chave aqui é **adaptação**: não existe uma receita única, e o QA deve ser capaz de ajustar suas abordagens para se adequar ao contexto do projeto e do time.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-13h47m08s787.jpg" alt="" width="840">
+</p>
+
+Neste segundo slide, aprofundamos como as práticas de teste se manifestam no dia a dia ágil. As atividades de qualidade e teste estão **embutidas em cada iteração**, podendo ocorrer em paralelo com outras tarefas, como desenvolvimento e refinamento. Isso significa que todos no time (desenvolvedores, PO, QA) têm participação direta na validação e verificação. O foco se desloca para testes mais estratégicos: **segurança, performance e testes exploratórios**, além do uso intensivo de **automação para testes de regressão**, garantindo que novas entregas não quebrem funcionalidades antigas. A documentação, por sua vez, deve ser **suficiente** – nem excessiva, nem escassa – para manter a qualidade sem burocracia.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-13h47m21s969.jpg" alt="" width="840">
+</p>
+
+A imagem lista os **produtos de trabalho mais comuns** gerados pelas atividades de teste em contextos ágeis. Diferentemente de modelos tradicionais, esses artefatos devem ser objetivos e diretos, pois a agilidade demanda respostas rápidas. Os principais são:
+- **Resultados de testes automatizados** – relatórios sintéticos que mostram falhas e sucessos.
+- **Planos de teste** – mesmo em times ágeis, planeja-se o escopo, mas de forma enxuta.
+- **Análise de risco** – identifica pontos críticos que podem impactar o usuário ou o negócio.
+- **Evidências de testes manuais** – capturas ou logs que comprovam a execução.
+- **Relatórios de defeitos** – registro claro e conciso dos problemas encontrados, facilitando a correção.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-13h47m26s622.jpg" alt="" width="840">
+</p>
+
+No modelo ágil, os níveis de teste não são estanques; eles **se sobrepõem** para garantir detecção precoce de defeitos. O foco principal está em dois níveis:
+- **Testes de unidade** – a base da pirâmide de testes, executados pelos desenvolvedores para verificar partes isoladas do código.
+- **Testes de aceite** – validam se a funcionalidade atende aos critérios definidos com o cliente, envolvendo verificação (o sistema foi construído corretamente?) e validação (construímos o produto certo?).
+
+Além disso, a integração e entrega contínuas (CI/CD) são aliadas essenciais, permitindo que a automação execute esses testes de forma recorrente e dê feedback rápido à equipe.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-13h47m33s771.jpg" alt="" width="840">
+</p>
+
+O acompanhamento do **status dos testes** em times ágeis é dinâmico e transparente. Como o processo é adaptativo, a equipe evolui e revisa constantemente o que significa "concluído" (Definition of Done). Para isso, é necessário:
+- Atualizar com frequência os testes manuais e automatizados, refletindo mudanças no código.
+- Monitorar o andamento de todas as atividades, com **foco no feedback** rápido, não na burocracia.
+- Utilizar as **reuniões diárias** como momento de comunicação, onde cada membro, inclusive o QA, compartilha progressos, impedimentos e descobertas.
+
+Essa prática garante que a qualidade seja inspecionada continuamente e que ajustes sejam feitos em tempo hábil.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-13h47m38s607.jpg" alt="" width="840">
+</p>
+
+Além de técnicas e processos, a atuação em um time ágil exige **atitudes e habilidades** específicas. O slide enumera oito competências essenciais para quem trabalha com qualidade:
+1. **Positividade e pensamento na solução** – colaborar para resolver problemas, não apenas apontá-los.
+2. **Pensamento crítico com foco em qualidade** – questionar e avaliar sob a ótica do usuário.
+3. **Comunicação constante com o cliente** – garantir alinhamento sobre expectativas.
+4. **Feedbacks constantes** – dar e receber retornos de forma contínua.
+5. **Avaliação de cenários que representem os critérios de aceite** – traduzir requisitos em testes significativos.
+6. **Colaboração em tempo integral com programadores** – parceria próxima para evitar retrabalho.
+7. **Adaptação à mudança** – flexibilidade para ajustar prioridades e abordagens.
+8. **Organização e planejamento** – mesmo com dinamismo, é preciso estruturar o trabalho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-13h47m41s958.jpg" alt="" width="840">
+</p>
+
+Por fim, o slide apresenta as **atividades práticas** que um profissional de qualidade desempenha em um ambiente ágil. Elas vão além da execução de testes e incluem:
+- Compreender e atualizar as estratégias de teste conforme o projeto evolui.
+- Medir e informar a cobertura dos testes, garantindo visibilidade.
+- Garantir o uso adequado de ferramentas de automação e apoio.
+- Gerenciar ambientes de teste e os dados necessários para as execuções.
+- Relatar e gerenciar defeitos de forma estruturada.
+- Assegurar que as tarefas de teste sejam bem estimadas e planejadas.
+- Esclarecer continuamente os requisitos junto à equipe, evitando ambiguidades.
+- Sugerir melhorias no processo e no produto, atuando como agente de evolução da qualidade.      
+
+
 ### 🟩 Vídeo 13 - Métodos de testes nos modelos ágeis
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_13.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/75cfb364-4f7d-46d9-b7ff-a4a8675e2eb4?autoplay=1
 
 ### 🟩 Vídeo 14 - Conclusão
 
