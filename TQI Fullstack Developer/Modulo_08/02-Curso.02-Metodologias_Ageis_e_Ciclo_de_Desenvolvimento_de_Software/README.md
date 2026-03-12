@@ -777,6 +777,51 @@ A imagem final traz sugestões de leitura e referências para aprofundamento nos
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/092857c3-3c98-4de9-b259-dde20a489ace?autoplay=1
 
+Esta aula encerra o curso focando na integração das atividades de teste e garantia de qualidade (QA) dentro da metodologia ágil. O objetivo principal é demonstrar que o teste não é uma fase isolada ao final do projeto, mas uma atividade contínua e estratégica que permeia todo o ciclo de desenvolvimento.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-12h58m10s261.jpg" alt="" width="840">
+</p>
+
+O slide apresenta o título da aula: "Testes no mundo ágil". Ele serve como ponto de partida para a discussão, indicando que o foco não é mais o teste em processos tradicionais, mas sim como a atividade de garantia de qualidade se adapta e se insere nos ciclos de desenvolvimento ágeis. A imagem remete ao ciclo de desenvolvimento, reforçando que os testes são uma parte integrante desse fluxo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-12h58m11s978.jpg" alt="" width="840">
+</p>
+
+Este slide lista os três objetivos principais que guiarão a aula. Primeiro, busca-se contextualizar a atividade de teste dentro do universo ágil. Em seguida, o objetivo é compreender as particularidades dos testes em abordagens ágeis e como elas se diferenciam dos modelos tradicionais de desenvolvimento. Por fim, a aula apresentará métodos e práticas de testes específicos para o contexto ágil.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-12h58m43s062.jpg" alt="" width="840">
+</p>
+
+A imagem anuncia o início da primeira etapa da aula, que tem como foco "Contextualizando a atividade de teste". Isso significa que, antes de mergulhar nas práticas específicas, é essencial estabelecer uma base comum sobre o papel e a importância dos testes no ciclo de desenvolvimento de software, preparando o terreno para entender sua aplicação no contexto ágil.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-12h58m44s571.jpg" alt="" width="840">
+</p>
+
+O slide aborda a adoção de testes no ciclo de vida do software, reforçando princípios fundamentais que se aplicam a qualquer metodologia. Ele destaca que a atividade de teste não é um momento isolado, mas sim algo que acompanha todo o desenvolvimento. Cada atividade de desenvolvimento gera uma atividade de teste correspondente, e cada nível de teste (unitário, integração, sistema) possui objetivos específicos. Além disso, a análise e modelagem dos testes devem começar cedo, simultaneamente às atividades de desenvolvimento, com a participação de quem testa desde a fase de requisitos e modelagem.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-12h58m50s817.jpg" alt="" width="840">
+</p>
+
+A imagem detalha a participação do profissional de QA (Quality Assurance) no contexto das histórias de usuário (User Stories). Ela explica que as histórias de usuário representam os requisitos, tanto funcionais quanto não funcionais, e são frequentemente estruturadas pelo conceito dos 3Cs: **Cartão** (a descrição da história), **Conversação** (o diálogo para detalhar a funcionalidade) e **Confirmação** (que se desdobra nos critérios de aceite). O ponto crucial é que a perspectiva de quem testa é diferente da visão do cliente, do Product Owner (PO) e do desenvolvedor, o que torna sua participação desde o início essencial para enxergar cenários que outros podem não perceber.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-12h58m58s612.jpg" alt="" width="840">
+</p>
+
+Este slide lista as atividades práticas de planejamento que envolvem o QA no desenvolvimento ágil. O profissional deve realizar uma análise detalhada das histórias, determinar se são "testáveis" (considerando, por exemplo, a complexidade para automação) e criar os testes de aceite com base nos critérios definidos. Também é sua função criar tarefas de teste, estimar o esforço necessário para executá-las (participando de cerimônias como a Planning), e identificar quais aspectos funcionais e não funcionais merecem uma atenção mais crítica. Por fim, o QA deve participar ativamente do processo de automação de testes, atuando como um "guardião da qualidade" que garante a cobertura e a manutenção dos testes automatizados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-12h59m06s792.jpg" alt="" width="840">
+</p>
+
+O último slide trata do detalhamento da abordagem de teste no contexto ágil. Embora não seja formalizada em um documento extenso e estático como nos modelos tradicionais, a equipe de QA precisa ter clareza sobre diversos aspectos de forma implícita e colaborativa. É necessário determinar o escopo e os objetivos dos testes, quem serão os responsáveis pela execução, quais ambientes e dados de teste são necessários, e considerar também o tempo disponível, dependências, pré-requisitos e, crucialmente, os riscos envolvidos naquilo que será ou não testado. Essa análise, muitas vezes mental ou registrada de forma leve, é fundamental para o sucesso da qualidade em um ambiente ágil.      
 
 
 ### 🟩 Vídeo 12 - Testes nas abordagens ágeis
@@ -785,7 +830,8 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodolo
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_12.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/c1085c75-472f-4e17-8066-1b543417044d?autoplay=1
 
 ### 🟩 Vídeo 13 - Métodos de testes nos modelos ágeis
 
