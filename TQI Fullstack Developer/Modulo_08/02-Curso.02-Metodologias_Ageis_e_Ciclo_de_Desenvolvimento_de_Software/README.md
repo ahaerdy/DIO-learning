@@ -708,6 +708,64 @@ O framework estabelece estruturas organizacionais para que o trabalho transcorra
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/4bc85417-bfaf-4b2d-ae6e-cdc2416e4218?autoplay=1
 
+O vídeo apresenta modelos ágeis menos convencionais, mas altamente eficazes, como o DSDM, o Processo Unificado Ágil (AUP) e o Kanban, destacando suas filosofias, estruturas e aplicações práticas no desenvolvimento de software.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h40m38s353.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o conceito fundamental do Método de Desenvolvimento de Sistemas Dinâmicos (DSDM), que é focado em projetos com restrições de prazo curto. Ela destaca duas ideias principais: a construção e manutenção de sistemas por meio de prototipação em ambiente controlado, e a aplicação do Princípio de Pareto (80/20) ao desenvolvimento de software. Segundo esse princípio, 80% de uma aplicação pode ser entregue em apenas 20% do tempo que seria necessário para entregar a aplicação completa. Isso significa que o DSDM prioriza a entrega rápida do essencial, deixando funcionalidades menos críticas para iterações futuras.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h40m41s564.jpg" alt="" width="840">
+</p>
+
+Aqui são apresentadas as características centrais do DSDM. O método é iterativo e incremental, ou seja, o sistema é construído em partes (incrementos) e cada parte é refinada em ciclos repetitivos (iterações). Uma particularidade é que apenas o trabalho suficiente é requisitado para cada incremento, focando no que é realmente necessário naquele momento. O método é mantido pelo *Agile Business Consortium* e pode ser combinado com Extreme Programming (XP), mostrando sua flexibilidade e alinhamento com outras práticas ágeis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h40m46s377.jpg" alt="" width="840">
+</p>
+
+Esta imagem ilustra uma comparação entre a abordagem tradicional de desenvolvimento e a abordagem DSDM, conforme explicado na videoaula. No modelo tradicional, as funcionalidades (escopo) são fixadas desde o início, enquanto o tempo e o custo podem variar para atingir a qualidade desejada. Já no DSDM, o tempo é fixo (prazo curto) e as funcionalidades tornam-se variáveis, priorizando a entrega do que é mais importante dentro do prazo estabelecido, sem comprometer a qualidade. Essa inversão de prioridades é essencial para projetos com restrições temporais rígidas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h40m48s269.jpg" alt="" width="840">
+</p>
+
+A imagem lista os oito princípios do DSDM, que orientam a aplicação do método. São eles: focar na necessidade do negócio, entregar dentro do prazo, colaborar, nunca comprometer a qualidade, construir incrementalmente a partir de bases sólidas, desenvolver iterativamente, comunicar de forma contínua e clara, e demonstrar controle. Esses princípios reforçam o alinhamento com o Manifesto Ágil, priorizando a entrega de valor, a qualidade e a colaboração, mas com ênfase na gestão rigorosa de prazos e na comunicação constante.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h40m49s493.jpg" alt="" width="840">
+</p>
+
+A imagem descreve as fases do ciclo de vida do DSDM, divididas em três grandes blocos: pré-projeto, ciclo de vida do produto e pós-projeto. No pré-projeto, são definidos orçamento, contrato e avaliação de projetos candidatos. O ciclo de vida efetivo começa com a análise de viabilidade, seguida por iterações de modelo funcional (onde a prototipação é usada para refinar requisitos), iterações de design e construção, e finalmente a implantação. O pós-projeto abrange manutenção, melhorias e ajustes contínuos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h40m52s956.jpg" alt="" width="840">
+</p>
+
+Diferentemente de outros frameworks ágeis mais enxutos, o DSDM define uma estrutura de papéis bem detalhada. A imagem lista os principais papéis envolvidos: gerente executivo, visionário, intermediador, anunciante, gerente de projeto, coordenador técnico, líder de time, desenvolvedor, testador, escrivão e facilitador. Cada um desses papéis tem responsabilidades específicas, o que torna o DSDM adequado para projetos que exigem uma governança mais clara e a participação de múltiplos stakeholders.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h40m54s710.jpg" alt="" width="840">
+</p>
+
+A imagem introduz o Processo Unificado Ágil, uma adaptação do RUP (Rational Unified Process) para contextos ágeis. Sua filosofia combina abordagens sequenciais para o que é amplo (visão macro do projeto) e iterativas para o que é particular (detalhes internos). As atividades principais permanecem as mesmas do processo unificado tradicional: modelagem, implementação, testes, entrega, configuração e gerenciamento, e gerenciamento de ambiente. A diferença está na execução dessas atividades em ciclos iterativos, permitindo maior flexibilidade e adaptação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h40m57s966.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o Kanban, uma metodologia visual de organização de tarefas originária do Japão (a palavra significa "cartão" ou "sinalização"). O Kanban é baseado em um quadro com colunas que representam o fluxo de trabalho, tipicamente "To Do" (a fazer), "Doing" (fazendo) e "Done" (concluído). Sua simplicidade permite que seja facilmente combinado com outros frameworks ágeis, como Scrum, para melhorar a transparência e o gerenciamento do fluxo de tarefas. O Kanban não prescreve papéis ou eventos específicos, sendo uma ferramenta adaptável a diferentes contextos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-09h41m02s681.jpg" alt="" width="840">
+</p>
+
+A imagem final traz sugestões de leitura e referências para aprofundamento nos temas abordados na aula. São indicados: o site do *Agile Business Consortium* (mantenedor do DSDM), um artigo sobre Kanban, o Guia do Scrum (Scrum Guide) e o livro *Extreme Programming Explained*. Esses materiais complementam o estudo das metodologias ágeis apresentadas e são recursos valiosos para quem deseja se aprofundar ou buscar certificações.      
+
 ## Parte 3 - Testes no mundo ágil
 
 ### 🟩 Vídeo 11 - Contextualizando a atividade de teste
@@ -716,7 +774,10 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodolo
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_11.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/092857c3-3c98-4de9-b259-dde20a489ace?autoplay=1
+
+
 
 ### 🟩 Vídeo 12 - Testes nas abordagens ágeis
 
