@@ -476,13 +476,136 @@ Portanto, a agilidade não é uma escolha arbitrária, mas uma estratégia para 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/2cbd24ec-81c2-4c3c-a8e2-0b4550a6bbac?autoplay=1
 
+O Extreme Programming (XP) é uma das metodologias ágeis mais influentes, focada intensamente na qualidade do código e na satisfação do cliente através de ciclos curtos e feedback constante.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h58m49s630.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta os marcos iniciais do Extreme Programming (XP).  
+- **Origem**: os primeiros trabalhos associados a métodos ágeis remontam ao início da década de 1980.  
+- **Criador**: Kent Beck é o responsável por formalizar e dar nome ao XP, a partir de sua experiência em um projeto real.  
+- **Publicação de referência**: o livro *Extreme Programming Explained: Embrace Change* (exibido na imagem) é a obra fundamental que sistematiza a metodologia.  
+- **Variante para grande escala**: existe o IXP (Industrial Extreme Programming), um refinamento do XP para organizações de grande porte e projetos complexos.  
+
+A mensagem central é que o XP não surgiu do nada, mas foi consolidado por Kent Beck a partir de práticas já existentes, sempre com o lema de “abraçar mudanças”.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h58m59s919.jpg" alt="" width="840">
+</p>
+
+O slide destaca dois pilares fundamentais do XP:  
+- **Paradigma orientado a objetos (POO)**: a metodologia foi concebida tendo a orientação a objetos como base, o que influencia diretamente suas práticas de projeto e codificação.  
+- **Regras e práticas constantes**: diferentemente de frameworks genéricos, o XP define um conjunto rigoroso de regras e práticas que devem ser seguidas de forma contínua durante todo o processo de desenvolvimento – não se trata apenas de uma filosofia, mas de uma disciplina concreta.
+
+Essa ênfase na POO e na constância das práticas é o que torna o XP uma metodologia voltada especialmente para a produção de software de qualidade.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h59m03s526.jpg" alt="" width="840">
+</p>
+
+A imagem aborda a fase de **planejamento** no XP, com destaque para:  
+- **Comunicação e escuta ativa**: o cliente é ouvido por meio de técnicas como o *planning poker*, onde a equipe discute e estima o esforço das funcionalidades.  
+- **Criação de histórias do usuário**: o próprio cliente escreve as histórias e também as prioriza.  
+- **Estimativas baseadas em tempo**: os membros da equipe estimam a duração das histórias em semanas de desenvolvimento, com um limite máximo ideal de **3 semanas** por história.  
+
+O *planning poker* promove o consenso entre os desenvolvedores, equilibrando diferentes percepções (juniores e seniores) e garantindo que o planejamento seja realista e colaborativo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h59m11s755.jpg" alt="" width="840">
+</p>
+
+A imagem (classificada como código, mas com conteúdo conceitual) apresenta características da dinâmica de trabalho no XP:  
+- **Flexibilidade para novas histórias**: o planejamento não é engessado; novas histórias podem ser escritas a qualquer momento.  
+- **Compromisso básico**: clientes e desenvolvedores trabalham lado a lado, assegurando comunicação direta e rápida.  
+- **Métrica de velocidade**: a equipe mede a *velocidade* (número de histórias entregues por ciclo) para calibrar o planejamento dos ciclos futuros, tornando as estimativas cada vez mais precisas.
+
+A velocidade funciona como um indicador da capacidade real da equipe, permitindo ajustes contínuos no que pode ser entregue.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h59m15s513.jpg" alt="" width="840">
+</p>
+
+A imagem (com classificação de código) ilustra o **princípio KISS** (*Keep It Simple, Stupid*) e introduz os **cartões CRC** (Classe‑Responsabilidade‑Colaborador).  
+
+- **KISS**: a simplicidade é a chave – deve‑se buscar a solução mais simples que funcione, evitando complexidade desnecessária.  
+- **Cartões CRC**: são uma ferramenta de modelagem rápida e colaborativa, típica da orientação a objetos. Cada cartão contém:  
+  - **Classe**: nome da classe.  
+  - **Responsabilidades**: o que a classe deve fazer.  
+  - **Colaboradores**: outras classes com as quais ela se relaciona.  
+  - **Atributos** (indicados na imagem) e **métodos** complementam a descrição.  
+
+O exemplo visual (com atributos centralizados) mostra como esses cartões ajudam a equipe a projetar a estrutura do sistema de forma leve e compartilhada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h59m19s845.jpg" alt="" width="840">
+</p>
+
+A imagem reforça o princípio **KISS** e o uso de **cartões CRC**, acrescentando a prática de **prototipação**.  
+
+- **Solução pontual a partir de protótipos**: a construção de protótipos (muitas vezes apenas com a interface visual) permite validar ideias com o cliente de forma rápida, antes de investir no desenvolvimento completo.  
+- A prototipação é uma ferramenta de comunicação que se encaixa perfeitamente no espírito ágil, pois entrega feedback imediato e reduz retrabalho.  
+
+Dessa forma, o XP combina modelagem leve (CRC) com experimentação concreta (protótipos) para alinhar as expectativas e simplificar o desenvolvimento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h59m21s779.jpg" alt="" width="840">
+</p>
+
+A imagem aborda práticas essenciais da **codificação** no XP:  
+- **TDD (Test Driven Development)**: desenvolvimento orientado a testes. Primeiro escreve‑se o teste (que falha), depois o código mínimo para passar no teste e, por fim, refatora‑se.  
+- **Refatoração**: aperfeiçoamento contínuo do código sem alterar seu comportamento externo, mantendo‑o limpo e adaptável.  
+- **Programação em pares**: dois desenvolvedores trabalham juntos no mesmo computador; um escreve o código enquanto o outro revisa e sugere melhorias em tempo real. Os papéis podem ser alternados.  
+
+A fonte indicada (Tecmundo, 2020) sugere que a imagem pode conter uma ilustração ou esquema dessas práticas. O TDD e a programação em pares são marcas registradas do XP, aumentando a qualidade e a troca de conhecimento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h59m30s183.jpg" alt="" width="840">
+</p>
+
+A imagem (classificada como código) dá continuidade às práticas de garantia de qualidade no XP:  
+- **TDD** (já apresentado) é novamente destacado.  
+- **Integração contínua**: os desenvolvedores integram seu código ao repositório principal várias vezes ao dia, com builds e testes automatizados, detectando problemas precocemente.  
+- **Testes de aceite**: são criados a partir das histórias do usuário e validam se o sistema atende aos critérios definidos pelo cliente.  
+
+Essas práticas, em conjunto, garantem que o software evolua de forma estável e que as funcionalidades entregues estejam sempre em conformidade com o que foi solicitado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h59m34s455.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta os **cinco valores fundamentais do Extreme Programming**, conforme ilustração da RedSpark (2016):  
+- **Simplicidade**: fazer o necessário, da maneira mais simples possível.  
+- **Respeito**: considerar as ideias e os papéis de todos na equipe.  
+- **Comunicação**: manter diálogo constante, especialmente com o cliente.  
+- **Coragem**: enfrentar problemas, mudar o que precisa ser mudado e assumir decisões difíceis.  
+- **Feedback**: obter retorno rápido e contínuo do código, dos testes e do cliente.  
+
+Esses valores são a base cultural do XP e estão totalmente alinhados com o Manifesto Ágil. Eles guiam as atitudes da equipe e a aplicação prática de todas as regras e práticas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h59m38s002.jpg" alt="" width="840">
+</p>
+
+O último slide conceitual sintetiza a estrutura iterativa do XP por meio dos **ciclos de planejamento e feedback** (*Planning and Feedback Loops*).  
+
+- Cada iteração (tipicamente de uma a três semanas) envolve planejamento, desenvolvimento, testes e entrega de um incremento do software.  
+- Os loops de feedback ocorrem em múltiplos níveis:  
+  - **Diário**: programação em pares e integração contínua.  
+  - **Iteração**: reuniões de planejamento e revisão com o cliente.  
+  - **Projeto**: a cada release, o cliente valida o conjunto de funcionalidades entregues.  
+
+Essa dinâmica garante que o projeto se adapte rapidamente a mudanças e que o cliente tenha visibilidade constante do progresso. O link indicado (*extremeprogramming.org*) oferece uma introdução gentil a esses conceitos.      
+
 ### 🟩 Vídeo 09 - Scrum
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/9a11bf24-76f9-43bb-ab6b-2e16b16a898e?autoplay=1
 
 ### 🟩 Vídeo 10 - Outros modelos ágeis
 
