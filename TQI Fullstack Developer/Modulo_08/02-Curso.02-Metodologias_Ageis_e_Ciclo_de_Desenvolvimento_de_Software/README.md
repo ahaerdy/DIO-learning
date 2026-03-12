@@ -366,13 +366,115 @@ Esses tópicos ampliam a visão sobre processos de software e preparam para disc
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/b673a949-3620-4c90-9e22-89693fb6d094?autoplay=1
 
+Esta introdução aborda a transição dos modelos tradicionais de desenvolvimento de software para as metodologias ágeis. A aula explora a origem do Manifesto Ágil, seus valores fundamentais, princípios e a justificativa econômica e cultural para sua adoção no mercado de TI.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m12s772.jpg" alt="" width="840">
+</p>
+
+**Objetivos da Aula**
+
+Este slide apresenta os quatro objetivos principais que serão abordados ao longo desta aula. Primeiramente, vamos explorar o contexto histórico que levou à criação do Manifesto Ágil e os seus conceitos fundamentais. Em seguida, o foco será compreender duas metodologias ágeis específicas: o Extreme Programming (XP) e o Scrum, que é amplamente adotado no mercado. Por fim, discutiremos a existência e os conceitos básicos de outros modelos ágeis que podem ser encontrados no ambiente de desenvolvimento de software.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m15s280.jpg" alt="" width="840">
+</p>
+
+**Contexto e Surgimento do Manifesto Ágil**
+
+A imagem destaca o movimento de oposição aos métodos tradicionais de desenvolvimento, também chamados de "métodos pesados". Em 2001, um grupo de 17 profissionais, que já aplicavam com sucesso os chamados "métodos leves" em seus projetos, reuniu-se em Utah. O resultado desse encontro foi a criação do Manifesto Ágil, um documento que consolidou práticas e princípios comuns que tornavam o desenvolvimento de software mais eficiente e adaptável, em contraste com a rigidez dos modelos prescritivos da época.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m18s448.jpg" alt="" width="840">
+</p>
+
+**Os Autores do Manifesto Ágil**
+
+Este slide apresenta os 17 profissionais que foram fundamentais na criação do Manifesto Ágil. Figuras como Kent Beck, Martin Fowler, James Grenning e Andrew Hunt são alguns dos nomes que contribuíram com sua vasta experiência em engenharia de software. Muitos deles são autores de livros e pesquisas influentes, especialmente nas áreas de qualidade e testes de software. Conhecer o trabalho desses pioneiros é uma forma de aprofundar o entendimento sobre os fundamentos e a evolução das metodologias ágeis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m20s696.jpg" alt="" width="840">
+</p>
+
+**Os Quatro Valores do Manifesto Ágil**
+
+O núcleo do Manifesto Ágil é composto por quatro valores fundamentais. Eles estabelecem uma nova hierarquia de prioridades no desenvolvimento de software, valorizando:
+*   **Indivíduos e interações** mais que processos e ferramentas.
+*   **Software em funcionamento** mais que documentação abrangente.
+*   **Colaboração com o cliente** mais que negociação de contratos.
+*   **Responder a mudanças** mais que seguir um plano.
+
+É crucial entender que os itens à direita (processos, documentação, contratos e planos) não são desprezados, mas sim, os itens à esquerda são considerados mais valiosos e devem receber maior foco e atenção.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m23s221.jpg" alt="" width="840">
+</p>
+
+**Os 12 Princípios Ágeis (Parte 1)**
+
+A partir dos quatro valores, foram derivados 12 princípios que guiam a aplicação da agilidade. Os cinco primeiros, apresentados aqui, enfatizam:
+1.  **Satisfação do cliente** através da entrega contínua e adiantada de software com valor.
+2.  **Acolhimento de mudanças** nos requisitos, mesmo em fases tardias, para vantagem competitiva do cliente.
+3.  **Entregas frequentes** de software funcionando, em intervalos curtos (de semanas a meses).
+4.  **Trabalho conjunto e diário** entre pessoas de negócio e desenvolvedores durante todo o projeto.
+5.  **Construção de projetos em torno de indivíduos motivados**, fornecendo o ambiente e suporte necessários, e confiando neles para a execução do trabalho.
+6. **O método mais eficiente e eficaz de transmitir informações para e entre uma equipe de desenvolvimento é por meio de conversa face a face** (⭐️ Princípio não citado no vídeo) conversas face a face são a forma mais eficiente e eficaz de compartilhar informações dentro de uma equipe de desenvolvimento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m27s621.jpg" alt="" width="840">
+</p>
+
+**Os 12 Princípios Ágeis (Parte 2)**
+
+A continuação dos 12 princípios aborda aspectos de qualidade, simplicidade e melhoria contínua:
+
+7.  **Software funcionando** como a medida primária de progresso.
+8.  **Desenvolvimento sustentável**, onde patrocinadores, desenvolvedores e usuários conseguem manter um ritmo constante.
+9.  **Excelência técnica e bom design**, que aumentam a agilidade e facilitam a manutenção.
+10. **Simplicidade**, maximizando a quantidade de trabalho não realizado (ou seja, fazer apenas o necessário).
+12. **Equipes auto-organizáveis**, das quais emergem as melhores arquiteturas, requisitos e designs.
+12. **Reflexão e ajuste regulares** da equipe para se tornar mais eficaz, refinando seu comportamento continuamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m34s033.jpg" alt="" width="840">
+</p>
+
+**O Significado de Ser Ágil**
+
+Ser ágil vai além de seguir um processo; trata-se de adotar uma cultura. Os métodos prescritivos, embora úteis, podem falhar ao não considerar as fraquezas e falhas humanas envolvidas no desenvolvimento. A agilidade, por outro lado, é conduzida por três pilares: **adaptação**, **comunicação** e **auto-organização**. A capacidade de se adaptar, comunicar-se constantemente e organizar-se como equipe é o que permite navegar pela complexidade e imprevisibilidade inerentes à criação de software.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m37s724.jpg" alt="" width="840">
+</p>
+
+**Agilidade e o Custo de Mudanças**
+
+Uma das grandes vantagens da agilidade é o impacto no custo de adaptações. Em modelos prescritivos tradicionais, o custo de uma alteração aumenta significativamente com o passar do tempo (linha ascendente). Os processos ágeis, por sua natureza iterativa e adaptativa, conseguem manter o custo das mudanças muito mais próximo da "curva ideal" (linha tracejada), que é baixa e estável. Isso significa que responder a mudanças de requisitos ou de escopo se torna financeiramente mais viável durante todo o ciclo de vida do projeto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-12-07h08m40s004.jpg" alt="" width="840">
+</p>
+
+**A Imprevisibilidade como Motor da Agilidade**
+
+A adoção de métodos ágeis é uma resposta direta à natureza imprevisível do desenvolvimento de software. O slide lista diversas fontes dessa imprevisibilidade que justificam a necessidade de um processo mais flexível:
+*   É difícil prever requisitos de software e suas constantes alterações.
+*   É difícil prever as priorizações do cliente, que podem mudar.
+*   Atividades como análise, projeto e testes são inerentemente imprevisíveis.
+*   As atividades de construção do software (codificação) são notoriamente difíceis de estimar com precisão.
+
+Portanto, a agilidade não é uma escolha arbitrária, mas uma estratégia para lidar com a realidade complexa e mutável da engenharia de software.      
+
 ### 🟩 Vídeo 08 - Extreme Programming
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.02-video_08.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/metodologias-ageis-e-ciclo-de-desenvolvimento-de-software/learning/2cbd24ec-81c2-4c3c-a8e2-0b4550a6bbac?autoplay=1
 
 ### 🟩 Vídeo 09 - Scrum
 
