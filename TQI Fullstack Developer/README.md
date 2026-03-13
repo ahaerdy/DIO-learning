@@ -127,7 +127,3 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 ## 🏆 Certificados Obtidos
 
 ## 💬 Mentorias e Networking
-
-## 🔄 Atualizações
-
-Este repositório será atualizado continuamente conforme o avanço nos módulos do Bootcamp e inclusão de novos projetos.
