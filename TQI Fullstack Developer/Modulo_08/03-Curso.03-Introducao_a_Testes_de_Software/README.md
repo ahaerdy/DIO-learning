@@ -1,7 +1,7 @@
 ## Instrutor
 
-- Carolina Santana Louzada
-- Perfil no Github: https://github.com/CarolinaSL
+- Willyan Guimarães Caetano (Senior Software Engineer | Tech Lead | Java | Backend)
+- Contato Linkedin: / [willyancaetanodev](https://www.linkedin.com/in/willyancaetanodev/)
 
 ## Parte 1 - Introdução
 
@@ -430,7 +430,24 @@ Esta imagem ilustra um antipadrão comum em testes de software, conhecido como *
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/b0f5302b-210a-4467-8c68-62029db464fc?autoplay=1
 
-##  Materiais de Apoio
+Este vídeo sintetiza os principais conceitos abordados no curso, oferecendo uma visão panorâmica da disciplina de testes dentro da engenharia de software, desde os fundamentos teóricos até as estratégias práticas e referências bibliográficas essenciais.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-14h07m29s648.jpg" alt="" width="840">
+</p>
+
+Este slide resume os principais tópicos abordados ao longo do curso. Começamos com os **conceitos básicos** e a **evolução histórica** da disciplina de testes, entendendo como a atividade de testar software se tornou uma prática essencial na engenharia de software. Em seguida, consolidamos a **terminologia** própria da área (como defeito, erro, falha, caso de teste, etc.), fundamental para uma comunicação precisa entre os membros da equipe.
+
+Exploramos os **níveis de teste** (unitário, integração, sistema e aceitação) e as principais **técnicas** (funcional, estrutural e baseada em defeitos), incluindo variações como testes alfa, beta e canary. Também discutimos a importância dos **testes não funcionais** — aqueles que avaliam atributos como desempenho, segurança e usabilidade, diretamente ligados aos requisitos não funcionais do sistema. Por fim, apresentamos a **pirâmide de testes**, um modelo que orienta a distribuição equilibrada entre testes unitários (base), testes de integração e testes de interface (topo), promovendo uma estratégia de automação eficiente e confiável.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-14h07m31s836.jpg" alt="" width="840">
+</p>
+
+Para quem deseja se aprofundar no universo de testes de software, o slide reúne três referências fundamentais. A primeira é o capítulo 8 do livro *Engenharia de Software Moderna*, disponível online, que aborda de forma prática os conceitos de teste, com ênfase em testes unitários e automação. A segunda referência é o site do livro *Introdução ao Teste de Software* (STTP), que combina fundamentos teóricos com exemplos práticos de automação e estratégias de teste. Por fim, o clássico *Introdução ao Teste de Software*, de Delamaro, Maldonado e Jino, oferece uma visão acadêmica aprofundada, relacionando os diferentes níveis e técnicas de teste com fundamentos matemáticos. Essas obras complementam o conteúdo do curso e são pontos de partida ideais para explorar tópicos como testes não funcionais, critérios de cobertura e outras abordagens não discutidas em detalhe nesta introdução.      
+
 
 # Certificado: 
 
