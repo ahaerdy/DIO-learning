@@ -269,8 +269,45 @@ A imagem exibe um trecho de um cenário escrito em **Gherkin**, linguagem usada 
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/22405a0c-b923-4526-841e-a38e64b6d6ca?autoplay=1
 
+O conteúdo aborda os fundamentos das técnicas de teste, explorando como diferentes abordagens (Caixa Branca, Preta e Cinza) são aplicadas em diversos níveis do desenvolvimento de software para garantir a qualidade e a conformidade com os requisitos.
 
+### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h49m55s968.jpg" alt="" width="840">
+</p>
+
+Os níveis de teste representam as diferentes etapas em que podemos verificar a qualidade de um software, desde as menores unidades até o sistema completo. Entre eles estão: **teste de unidade** (foco em componentes individuais), **teste de integração** (verifica a interação entre módulos), **teste de sistema** (avalia o sistema como um todo), **teste de regressão** (garante que mudanças não quebrem funcionalidades existentes) e **teste de aceitação** (valida se o software atende às necessidades do usuário). Cada nível possui objetivos específicos e é executado em momentos distintos do desenvolvimento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h49m58s024.jpg" alt="" width="840">
+</p>
+
+As **técnicas de teste** definem a abordagem utilizada para projetar e executar os testes em cada nível. Enquanto os níveis respondem "o que testar", as técnicas respondem "como testar". Nesta aula, exploraremos três principais técnicas: **caixa branca**, **caixa preta** e **caixa cinza**, que se diferenciam pelo conhecimento que o testador tem sobre a estrutura interna do software.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h50m00s421.jpg" alt="" width="840">
+</p>
+
+O **teste de caixa branca** (ou estrutural) parte do conhecimento do código-fonte. O testador analisa a lógica interna, os fluxos de controle, as chamadas de funções e a cobertura dos caminhos possíveis. É muito aplicado nos níveis de **unidade**, **integração** e **regressão**, pois exige acesso direto ao código para garantir a qualidade da implementação e identificar possíveis falhas estruturais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h50m02s516.jpg" alt="" width="840">
+</p>
+
+No **teste de caixa preta**, o foco está no comportamento externo do software. O testador não conhece a implementação interna; ele fornece entradas e verifica se as saídas estão de acordo com o esperado, baseando-se nos requisitos funcionais. Esse tipo de teste é comum nos níveis de **integração**, **sistema** e **aceitação**, onde se valida se o software atende às necessidades do usuário final.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h50m16s007.jpg" alt="" width="840">
+</p>
+
+O **teste de caixa cinza** combina elementos das duas abordagens anteriores: o testador possui conhecimento parcial da estrutura interna (como documentação ou acesso ao código fonte) e, ao mesmo tempo, realiza testes funcionais. Isso permite uma análise mais aprofundada, como em atividades de **engenharia reversa**, onde se busca entender o funcionamento do software a partir de sua documentação ou comportamento observado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h50m19s262.jpg" alt="" width="840">
+</p>
+
+Aprofunde seus conhecimentos em teste de software com as obras clássicas de **Pressman**, **Sommerville** e **Lewis**. Estes livros abordam desde fundamentos até práticas avançadas de garantia de qualidade e melhoria contínua, sendo referências essenciais para profissionais da área.
 
 ## Parte 4 - Testes não funcionais
 
@@ -281,7 +318,10 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/8853b86a-f2b7-44f7-b492-a4d3a069ee92?autoplay=1
+
+
+
 
 ## Parte 5 - A pirâmide de Testes
 
