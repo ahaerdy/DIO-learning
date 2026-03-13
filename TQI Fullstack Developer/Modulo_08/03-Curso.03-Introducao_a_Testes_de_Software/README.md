@@ -154,6 +154,16 @@ O **desenvolvimento ágil** trouxe uma mudança de paradigma, baseada em ciclos 
 
 Neste slide, são disponibilizados **links complementares** para aprofundamento nos temas abordados: um artigo sobre otimização de projetos com desenvolvimento ágil e outro sobre o modelo cascata. Esses recursos ajudam a consolidar o entendimento sobre os processos de desenvolvimento e a evolução dos testes. O instrutor também reforça o convite para participar do fórum e da comunidade no Discord para tirar dúvidas.      
 
+
+### 🟩 Vídeo 04 - Conceitos básicos
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.03-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/ac4a1a8c-b6a1-4184-9e9b-fad69852fc89?autoplay=1
+
 O vídeo resume os conceitos fundamentais apresentados na primeira aula do curso de Teste de Software, focando na terminologia técnica essencial e nas distinções entre processos de qualidade.
 
 ### Anotações
@@ -183,17 +193,6 @@ O slide apresenta duas perguntas-chave que definem os conceitos de verificação
 A última imagem reúne referências bibliográficas e links para aprofundamento nos tópicos discutidos. O livro "Introdução ao Teste de Software", de Delamaro, Maldonado e Jino (Editora Campus, 2007), é uma obra clássica que aborda de forma completa os fundamentos da área. Os links complementares direcionam para artigos e discussões em comunidades técnicas, onde é possível explorar exemplos práticos e esclarecer dúvidas sobre as diferenças entre defeito, erro e falha. Esses materiais são recomendados para quem deseja consolidar o conhecimento e continuar os estudos em testes de software.      
 
 
-### 🟩 Vídeo 04 - Conceitos básicos
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.03-video_04.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/ac4a1a8c-b6a1-4184-9e9b-fad69852fc89?autoplay=1
-
-
-
 ## Parte 3 - Níveis e técnicas de teste
 
 ### 🟩 Vídeo 05 - Níveis de Teste
@@ -203,7 +202,63 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/ac4a1a8c-b6a1-4184-9e9b-fad69852fc89?autoplay=1
+
+O vídeo resume os principais conceitos da segunda aula do curso de Introdução a Teste de Software, explorando desde as menores unidades de código até a validação final pelo usuário.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h24m27s888.jpg" alt="" width="840">
+</p>
+
+A imagem exibe um trecho de código de teste de unidade escrito em Python, utilizando o módulo `unittest`. Observa-se a definição de uma classe de teste que herda de `unittest.TestCase` e métodos que iniciam com `test_`, cada um verificando uma pequena funcionalidade isolada – como operações matemáticas ou manipulação de strings – por meio de asserções (`assertEqual`, `assertTrue` etc.). Esse é o exemplo típico da primeira etapa de validação de software: garantir que cada unidade (função/método) funcione corretamente de forma independente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h24m31s136.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta os nomes e logotipos de quatro frameworks de teste de unidade amplamente utilizados: **unittest** (Python), **JUnit 5** (Java), **PHPUnit** (PHP) e **Jest** (JavaScript). Cada um deles segue o mesmo princípio: permitir que o desenvolvedor escreva e execute testes automatizados para pequenas partes do código, como funções e métodos. O slide reforça que o conceito de teste unitário é independente de linguagem, existindo ferramentas específicas para cada ecossistema.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h24m35s137.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra a diferença entre **testes de unidade** e **testes de integração** por meio de dois blocos. O bloco menor (unidade) representa os testes focados em partes isoladas do código. O bloco maior (integração) mostra a combinação dessas unidades, frequentemente envolvendo interações com bancos de dados, APIs ou outros componentes externos. O objetivo do teste de integração é validar se os módulos funcionam corretamente quando combinados, garantindo que a comunicação entre eles ocorra sem falhas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h24m38s094.jpg" alt="" width="840">
+</p>
+
+O slide traz o título **Testes de sistema** e remete ao momento em que uma versão estável ou minimamente estável do software é implantada em um ambiente de homologação. Nessa fase, o sistema é testado como um todo, simulando o uso real por usuários ou testadores, que interagem com a interface gráfica, APIs ou linhas de comando para verificar se todas as funcionalidades atendem aos requisitos especificados. É uma validação de mais alto nível, focada no comportamento completo da aplicação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h24m40s222.jpg" alt="" width="840">
+</p>
+
+A imagem aborda o conceito de **testes de regressão**, representado por um ciclo que indica a reavaliação contínua do software. O teste de regressão consiste em executar novamente os testes já existentes (unitários, integração, sistema) sempre que novas funcionalidades ou correções são adicionadas, garantindo que o que já funcionava não seja quebrado pelas alterações. Ferramentas como **Selenium** são citadas como exemplo de automação que permite simular ações do usuário em um navegador para verificar se o sistema continua operando conforme o esperado após mudanças.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h24m44s613.jpg" alt="" width="840">
+</p>
+
+O código mostrado é um exemplo de script de teste automatizado com **Selenium WebDriver**. Nele, vemos comandos para abrir um navegador, acessar uma URL, preencher campos de formulário (como login e senha), clicar em botões e verificar se determinados elementos aparecem na página. Esse tipo de teste é usado tanto para testes de sistema quanto para regressão, pois permite repetir rapidamente cenários completos de uso da aplicação web, assegurando que interações complexas continuem funcionando após alterações no código.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h24m51s836.jpg" alt="" width="840">
+</p>
+
+O slide apresenta as estratégias de **testes alfa, beta e canary**, que são formas de validar o software com usuários reais antes de um lançamento completo.  
+- **Alfa**: versão inicial disponibilizada para um grupo restrito (geralmente interno), ainda com possibilidade de ajustes.  
+- **Beta**: versão mais madura, liberada para um público maior (clientes estratégicos ou comunidade) para obter feedback.  
+- **Canary**: estratégia de deploy onde a nova versão é lançada gradualmente, inicialmente para uma pequena parcela de usuários, enquanto a maioria continua na versão estável; após validação, a atualização é expandida para todos. A imagem ilustra essa ideia com duas versões (1.2.3 e 1.3.0) e diferentes públicos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-12h24m57s136.jpg" alt="" width="840">
+</p>
+
+A imagem exibe um trecho de um cenário escrito em **Gherkin**, linguagem usada no **Behavior Driven Development (BDD)**. O formato segue a estrutura “Dado / Quando / Então” (Given/When/Then), descrevendo o comportamento esperado do sistema em linguagem próxima do natural. Esse tipo de especificação executável automatiza os **testes de aceitação**, permitindo que os requisitos sejam validados diretamente contra a implementação, garantindo que o software atende ao que foi acordado com o cliente ou usuário.
 
 ### 🟩 Vídeo 06 - Técnicas de Teste
 
@@ -212,7 +267,10 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/22405a0c-b923-4526-841e-a38e64b6d6ca?autoplay=1
+
+
+
 
 ## Parte 4 - Testes não funcionais
 
