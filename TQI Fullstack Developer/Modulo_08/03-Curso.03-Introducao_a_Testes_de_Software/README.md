@@ -126,6 +126,33 @@ A seção "Para saber mais" disponibiliza links para artigos e notícias que apr
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/662cb408-c15e-4f5e-b05b-3756579b37be?autoplay=1
 
+O vídeo aborda a transição histórica e metodológica dos testes de software, contrastando o modelo tradicional Cascata com as modernas Metodologias Ágeis. O foco está em como a qualidade deixou de ser uma etapa final para se tornar um processo contínuo e integrado.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-09h04m04s863.jpg" alt="" width="840">
+</p>
+
+Esta é a tela de abertura da aula, apresentando o título **"Evolução de Testes na Engenharia de Software"** e indicando que se trata da **Etapa 2 da Aula 1** do curso de Introdução a Testes de Software. O objetivo desta etapa é compreender como as práticas de teste evoluíram ao longo do tempo, acompanhando as mudanças nos processos de desenvolvimento, desde abordagens tradicionais até as metodologias ágeis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-09h04m06s955.jpg" alt="" width="840">
+</p>
+
+O slide ilustra o **modelo cascata** (*waterfall*), um dos primeiros processos de desenvolvimento de software. Nele, as fases são executadas de forma sequencial e rígida: especificação de requisitos, projeto, implementação, testes e implantação. Cada fase depende da conclusão da anterior, e não há retorno. Nesse contexto, os testes eram realizados apenas no final, geralmente por uma equipe separada, que verificava se o software estava de acordo com a especificação. Essa abordagem limitava a interação entre desenvolvimento e teste, tornando o processo mais lento e sujeito a erros.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-09h04m11s888.jpg" alt="" width="840">
+</p>
+
+O **desenvolvimento ágil** trouxe uma mudança de paradigma, baseada em ciclos iterativos e incrementais. Como mostra o slide, o processo é contínuo: a cada iteração, as atividades de análise, projeto, desenvolvimento e testes são realizadas de forma integrada. Isso aproxima o teste do desenvolvimento, permitindo feedback rápido e correções precoces. Surgem práticas como TDD (*Test-Driven Development*), integração contínua e automação de testes. Além disso, a responsabilidade pela qualidade é compartilhada por todo o time, incluindo desenvolvedores e profissionais de QA (*Quality Assurance*).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-09h04m27s669.jpg" alt="" width="840">
+</p>
+
+Neste slide, são disponibilizados **links complementares** para aprofundamento nos temas abordados: um artigo sobre otimização de projetos com desenvolvimento ágil e outro sobre o modelo cascata. Esses recursos ajudam a consolidar o entendimento sobre os processos de desenvolvimento e a evolução dos testes. O instrutor também reforça o convite para participar do fórum e da comunidade no Discord para tirar dúvidas.      
 
 
 ### 🟩 Vídeo 04 - Conceitos básicos
