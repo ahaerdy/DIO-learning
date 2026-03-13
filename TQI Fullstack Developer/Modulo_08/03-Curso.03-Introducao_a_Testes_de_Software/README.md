@@ -378,7 +378,57 @@ A última imagem reúne uma série de **referências e links úteis** para aprof
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/b7f660b9-2225-47dd-929f-6e6fd500dd89?autoplay=1
 
+O vídeo resume os conceitos fundamentais da Pirâmide de Testes, uma estratégia essencial para o desenvolvimento de software moderno que visa equilibrar qualidade, custo e velocidade.
 
+### Anotações
+
+<!-- ESQUELETO GERADO AUTOMATICAMENTE -->
+<!-- NÃO ALTERAR NOMES DE ARQUIVOS -->
+<!-- A IA DEVE APENAS COMPLETAR OS BLOCOS INDICADOS -->
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h44m00s195.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o título da aula: "Pirâmide de Testes". Este é o conceito central que será explorado. O termo foi cunhido por Mike Cohn e se tornou uma referência fundamental para se pensar em estratégias de testes de software, ajudando a equilibrar diferentes tipos de teste para garantir a qualidade de forma eficiente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h44m10s844.jpg" alt="" width="840">
+</p>
+
+Neste momento, somos apresentados à representação visual da Pirâmide de Testes. A imagem detalha os três níveis principais que a compõem:
+-   **Base (Teste de Unidade):** A camada mais larga e fundamental. Testa as menores unidades de código de forma isolada, como funções e métodos.
+-   **Meio (Teste de Serviço):** A camada intermediária. Representa testes que verificam a interação entre unidades, como testes de integração, de API ou de componentes.
+-   **Topo (Teste de UI):** A camada mais estreita. São os testes que validam o sistema por meio da interface do usuário, também conhecidos como testes de sistema ou end-to-end (E2E).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h44m15s357.jpg" alt="" width="840">
+</p>
+
+A imagem destaca duas características cruciais da Pirâmide de Testes, representadas pelas setas laterais:
+-   **Velocidade e Custo (seta da esquerda):** Os testes de unidade, na base, são os **mais rápidos** e, portanto, **mais baratos** para escrever e executar. Subindo a pirâmide, os testes se tornam progressivamente **mais lentos** e caros.
+-   **Isolamento vs. Integração (seta da direita):** Os testes de unidade são altamente **isolados**, testando componentes de forma independente. No topo, os testes de UI envolvem um alto grau de **integração** entre diversos componentes e sistemas, o que os torna mais complexos e frágeis a mudanças, como as de interface. Por isso, a estratégia ideal é ter uma grande quantidade de testes unitários (base sólida) e uma quantidade menor de testes de UI.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h44m18s860.jpg" alt="" width="840">
+</p>
+
+Esta imagem ilustra um antipadrão comum em testes de software, conhecido como *Ice Cream Cone Antipattern* (ou "Antipadrão do Sorvete"). Ao invés da pirâmide, a representação se assemelha a uma casquinha de sorvete invertida.
+
+-   **O Problema:** Neste cenário, a maior parte do esforço de testes está no topo, com uma grande quantidade de **testes manuais** e/ou testes de interface (UI). Há poucos testes de integração e quase nenhum teste de unidade na base. Isso acontece frequentemente em sistemas legados, onde a automação não foi uma prioridade desde o início.
+-   **Consequências:** Esta abordagem é extremamente **cara, lenta e frágil**. Testes manuais são demorados, propensos a erros humanos e difíceis de replicar. Apoiar-se neles como principal estratégia de validação gera um alto custo e baixa confiabilidade, sendo um padrão a ser evitado.      
+
+
+## Parte 6 - Encerramento
+
+### 🟩 Vídeo 09 - Encerramento
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo.08-curso.03-video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/b0f5302b-210a-4467-8c68-62029db464fc?autoplay=1
 
 ##  Materiais de Apoio
 
