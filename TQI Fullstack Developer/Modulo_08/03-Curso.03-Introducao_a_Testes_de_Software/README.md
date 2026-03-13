@@ -154,6 +154,34 @@ O **desenvolvimento ágil** trouxe uma mudança de paradigma, baseada em ciclos 
 
 Neste slide, são disponibilizados **links complementares** para aprofundamento nos temas abordados: um artigo sobre otimização de projetos com desenvolvimento ágil e outro sobre o modelo cascata. Esses recursos ajudam a consolidar o entendimento sobre os processos de desenvolvimento e a evolução dos testes. O instrutor também reforça o convite para participar do fórum e da comunidade no Discord para tirar dúvidas.      
 
+O vídeo resume os conceitos fundamentais apresentados na primeira aula do curso de Teste de Software, focando na terminologia técnica essencial e nas distinções entre processos de qualidade.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-09h27m20s514.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta o título da primeira aula e sua etapa inicial, introduzindo os conceitos fundamentais que serão abordados no curso de Testes de Software. A imagem funciona como uma abertura, situando o estudante no tema central da aula: os conceitos básicos da área. A partir daqui, serão exploradas as definições essenciais para compreender o universo dos testes, como defeito, erro e falha, além de verificação e validação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-09h27m22s030.jpg" alt="" width="840">
+</p>
+
+O slide destaca três termos frequentemente confundidos no dia a dia, mas que possuem significados técnicos distintos na engenharia de software. **Defeito** (ou bug) é a causa raiz, um problema na implementação – por exemplo, uma linha de código escrita incorretamente. **Erro** é a ação humana que origina o defeito, como um equívoco do desenvolvedor ao interpretar um requisito. Já **falha** é o comportamento incorreto observado pelo usuário quando o sistema executa o trecho com defeito; a clássica "tela azul" do Windows é um exemplo de falha, pois representa a manifestação visível de um erro. Compreender essa hierarquia ajuda a identificar e corrigir problemas de forma mais precisa.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-09h27m27s272.jpg" alt="" width="840">
+</p>
+
+O slide apresenta duas perguntas-chave que definem os conceitos de verificação e validação. **Verificação** pergunta: “Estamos construindo o sistema certo?” – ou seja, o software está sendo desenvolvido de acordo com as especificações técnicas, documentos e requisitos levantados? É um processo mais interno, que checa se o produto foi construído corretamente. **Validação** pergunta: “Estamos construindo o software certo?” – aqui o foco é o usuário e o negócio: o sistema realmente atende às necessidades e expectativas de quem irá utilizá-lo? Um sistema pode ser construído tecnicamente perfeito (verificado), mas não resolver o problema do usuário (não validado). Ambos são complementares e essenciais para a qualidade.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-09h27m32s810.jpg" alt="" width="840">
+</p>
+
+A última imagem reúne referências bibliográficas e links para aprofundamento nos tópicos discutidos. O livro "Introdução ao Teste de Software", de Delamaro, Maldonado e Jino (Editora Campus, 2007), é uma obra clássica que aborda de forma completa os fundamentos da área. Os links complementares direcionam para artigos e discussões em comunidades técnicas, onde é possível explorar exemplos práticos e esclarecer dúvidas sobre as diferenças entre defeito, erro e falha. Esses materiais são recomendados para quem deseja consolidar o conhecimento e continuar os estudos em testes de software.      
+
 
 ### 🟩 Vídeo 04 - Conceitos básicos
 
@@ -162,7 +190,9 @@ Neste slide, são disponibilizados **links complementares** para aprofundamento 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/ac4a1a8c-b6a1-4184-9e9b-fad69852fc89?autoplay=1
+
+
 
 ## Parte 3 - Níveis e técnicas de teste
 
