@@ -64,6 +64,57 @@ Essa estrutura progressiva garante uma aprendizagem sólida e aplicável.
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/da0d3708-1f93-4f86-8661-2fcb26833655?autoplay=1
 
+Esta aula inaugural estabelece a base para o entendimento do teste de software como uma disciplina crítica da Engenharia de Software. O foco vai além da simples detecção de erros, explorando o impacto psicológico e financeiro das falhas no mundo real, além de definir formalmente o que significa "testar" e quais são as limitações intrínsecas dessa atividade.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-08h40m10s691.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta a estrutura geral da aula, listando os três tópicos principais que serão abordados: a definição de teste de software, a evolução dessa disciplina no contexto da engenharia de software e os conceitos básicos que fundamentam a área.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-08h40m12s030.jpg" alt="" width="840">
+</p>
+
+A imagem marca o início da primeira etapa da aula, dedicada à definição de teste de software. O título "Introdução a Testes de Software" contextualiza o espectador para os conceitos introdutórios que serão explorados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-08h40m17s254.jpg" alt="" width="840">
+</p>
+
+Conteúdo não identificado com segurança a partir do material disponível.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-08h40m24s380.jpg" alt="" width="840">
+</p>
+
+O slide levanta a questão central sobre as formas de testar um software. A pergunta "Como podemos testar?" introduz a reflexão sobre metodologias, níveis e tipos de teste que serão detalhados ao longo da disciplina.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-08h40m26s891.jpg" alt="" width="840">
+</p>
+
+A imagem reúne manchetes reais que ilustram falhas em sistemas de software e seus impactos: transtornos para usuários, prejuízos financeiros e bugs de grande repercussão. Esses exemplos concretos evidenciam a relevância dos testes para evitar ou minimizar problemas em produção.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-08h40m29s731.jpg" alt="" width="840">
+</p>
+
+O slide apresenta a definição de teste de software segundo Dias Neto, destacando o teste como um processo de execução do produto para verificar se ele atende às especificações e funciona corretamente no ambiente para o qual foi projetado. Essa definição enfatiza o caráter de validação e verificação da atividade.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-08h40m33s309.jpg" alt="" width="840">
+</p>
+
+A célebre frase de Edsger W. Dijkstra resume uma verdade fundamental sobre testes: eles podem revelar a existência de defeitos, mas jamais provar a ausência total deles. O slide reforça o objetivo dos testes como uma atividade de busca por falhas, não de certificação de correção absoluta.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-08h40m41s053.jpg" alt="" width="840">
+</p>
+
+A seção "Para saber mais" disponibiliza links para artigos e notícias que aprofundam os exemplos de bugs e prejuízos mencionados anteriormente, além de textos introdutórios sobre teste de software. Esses recursos complementares permitem que o aluno explore os casos reais e amplie seu conhecimento sobre a importância dos testes.      
 
 
 ### 🟩 Vídeo 03 - Evolução de Testes na Engenharia de Software
@@ -73,7 +124,9 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/662cb408-c15e-4f5e-b05b-3756579b37be?autoplay=1
+
+
 
 ### 🟩 Vídeo 04 - Conceitos básicos
 
