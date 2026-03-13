@@ -122,7 +122,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 - [x] Curso: [Fundamentos de Qualidade de Software](Modulo_08/01-Curso.01-Fundamentos_de_Qualidade_de_Software)
 - [x] Curso: [Metodologias Ágeis e Ciclo de Desenvolvimento de Software](Modulo_08/02-Curso.02-Metodologias_Ageis_e_Ciclo_de_Desenvolvimento_de_Software)
-- [ ] Curso: [Introdução a Testes de Software](Modulo_08/03-Curso.03-Introducao_a_Testes_de_Software)
+- [x] Curso: [Introdução a Testes de Software](Modulo_08/03-Curso.03-Introducao_a_Testes_de_Software)
 
 ## 🏆 Certificados Obtidos
 

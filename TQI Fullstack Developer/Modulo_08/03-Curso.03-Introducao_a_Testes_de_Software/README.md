@@ -449,9 +449,12 @@ Exploramos os **níveis de teste** (unitário, integração, sistema e aceitaç�
 Para quem deseja se aprofundar no universo de testes de software, o slide reúne três referências fundamentais. A primeira é o capítulo 8 do livro *Engenharia de Software Moderna*, disponível online, que aborda de forma prática os conceitos de teste, com ênfase em testes unitários e automação. A segunda referência é o site do livro *Introdução ao Teste de Software* (STTP), que combina fundamentos teóricos com exemplos práticos de automação e estratégias de teste. Por fim, o clássico *Introdução ao Teste de Software*, de Delamaro, Maldonado e Jino, oferece uma visão acadêmica aprofundada, relacionando os diferentes níveis e técnicas de teste com fundamentos matemáticos. Essas obras complementam o conteúdo do curso e são pontos de partida ideais para explorar tópicos como testes não funcionais, critérios de cobertura e outras abordagens não discutidas em detalhe nesta introdução.      
 
 
-# Certificado: 
+# Certificado: Introdução a Testes de Software
 
+- Link na plataforma: https://hermes.dio.me/certificates/OAOFLKAC.pdf
+- Certificado em pdf: [Certificado-Introducao_a_Testes_de_Software.pdf](000-Midia_e_Anexos/Certificado-Introducao_a_Testes_de_Software.pdf)
 
+# Certificado de conclusão do Bootcamp: TQI Fullstack Developer
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/FPO2Q7J9.pdf
+- Certificado em pdf: [Certificado-TQI_Fullstack_Developer.pdf](../../000-Midia_e_Anexos/Certificado-TQI_Fullstack_Developer.pdf)
