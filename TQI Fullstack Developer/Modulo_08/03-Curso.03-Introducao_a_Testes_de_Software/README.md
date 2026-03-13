@@ -320,7 +320,51 @@ Aprofunde seus conhecimentos em teste de software com as obras clássicas de **P
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/8853b86a-f2b7-44f7-b492-a4d3a069ee92?autoplay=1
 
+Enquanto os testes funcionais focam no "o que" o sistema faz (regras de negócio), os testes não funcionais focam no "como" o sistema se comporta. Eles são baseados em requisitos técnicos que, embora muitas vezes invisíveis para o usuário final, são cruciais para o sucesso e a confiabilidade do software.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h15m07s482.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o conceito de **testes não funcionais** e sua relação com os **requisitos não funcionais**. Enquanto os requisitos funcionais descrevem o que o sistema deve fazer (regras de negócio), os não funcionais definem **como o sistema deve se comportar** em aspectos como: comportamento geral, performance, escalabilidade, segurança e infraestrutura. O exemplo destacado — “Qual plataforma o sistema deverá rodar?” — ilustra uma típica preocupação não funcional, que muitas vezes não é especificada pelo cliente, mas é essencial para o sucesso do software.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h15m17s998.jpg" alt="" width="840">
+</p>
+
+Este slide sintetiza o objetivo dos testes não funcionais: **testar aspectos do software que não estão ligados diretamente às regras de negócio**, mas sim aos requisitos não funcionais. Em outras palavras, enquanto os testes funcionais verificam se as funcionalidades implementadas atendem ao que foi solicitado, os testes não funcionais garantem que o sistema possua as qualidades esperadas de desempenho, segurança, robustez, etc., mesmo sob condições adversas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h15m24s957.jpg" alt="" width="840">
+</p>
+
+A imagem introduz a questão prática: **como** realizar testes não funcionais? A resposta está no uso de **ferramentas especializadas** que aplicam técnicas para avaliar o comportamento do sistema em diferentes circunstâncias. Essas ferramentas permitem simular condições de carga, estresse, ataques de segurança, entre outras, gerando métricas e relatórios que ajudam a identificar gargalos e vulnerabilidades.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h15m26s388.jpg" alt="" width="840">
+</p>
+
+O slide define **teste de carga** e lista pontos fundamentais para sua execução. O objetivo é verificar o volume de transações, acessos simultâneos ou usuários que o sistema suporta sem degradação. Para que o teste seja eficaz, é preciso definir claramente os **objetivos**, preparar um **ambiente** o mais próximo possível do real, elaborar **cenários** representativos, executar os testes de forma controlada e, por fim, **analisar os resultados** obtidos. Ferramentas como Gatling e Apache JMeter são exemplos muito utilizados nesse tipo de teste.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h15m33s414.jpg" alt="" width="840">
+</p>
+
+A imagem aborda o **teste de estresse**, que difere do teste de carga por buscar **situações extremas** até que o sistema atinja seus limites e apresente falhas. Enquanto o teste de carga avalia o comportamento sob carga esperada, o teste de estresse eleva a carga progressivamente para descobrir o ponto de ruptura e observar como o sistema se recupera (ou não). Esse tipo de teste é crucial para planejar estratégias de escalabilidade e tolerância a falhas. A imagem provavelmente ilustra um exemplo de configuração ou resultado de uma ferramenta como o JMeter, também usado para essa finalidade.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h15m35s997.jpg" alt="" width="840">
+</p>
+
+O slide apresenta o **teste de segurança**, definido como um processo crítico para detectar vulnerabilidades em sistemas, software, redes e aplicativos. A imagem do **ZAP (Zed Attack Proxy)** é mencionada como exemplo de ferramenta amplamente utilizada para automatizar a busca por falhas como XSS, SQL injection e outras brechas de segurança. O objetivo é identificar e corrigir esses pontos antes que o software entre em produção, reduzindo riscos de ataques.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-13-13h15m39s780.jpg" alt="" width="840">
+</p>
+
+A última imagem reúne uma série de **referências e links úteis** para aprofundamento nos tópicos abordados: requisitos não funcionais, diferenças entre teste de carga e estresse, ferramentas de teste de segurança, além da referência clássica de engenharia de software (PRESSMAN). Esses materiais complementam a aula e oferecem ao estudante a possibilidade de explorar com mais detalhes cada tipo de teste não funcional, bem como conhecer as ferramentas citadas (Gatling, JMeter, ZAP) e suas aplicações práticas.      
 
 
 ## Parte 5 - A pirâmide de Testes
@@ -332,7 +376,7 @@ link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introduc
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/introducao-a-testes-de-software/learning/b7f660b9-2225-47dd-929f-6e6fd500dd89?autoplay=1
 
 
 
