@@ -227,4 +227,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - / [nathsouza](https://www.linkedin.com/in/nathsouza/) (Nathally Souza / Software Engineer, Startup Founder, Javascript, Typescript, Cloud, Frontend, Backend)
 - / [cami-la](https://www.linkedin.com/in/cami-la/) (Camila Cavalcante / Software Developer @ Reclame AQUI, Full Stack, Java, Kotlin, Go, TypeScript, PHP)
 - / [thiago-leite-e-carvalho-1b337b127](https://www.linkedin.com/in/thiago-leite-e-carvalho-1b337b127/) (Thiago Leite e Carvalho / Senior Java Developer and Software Engineer, Java Tech Lead, University Professor, Writer, Speaker, Instructor)
-- 
+- / [joao-ricardo-dutra](https://www.linkedin.com/in/joao-ricardo-dutra/) (João Dutra / Analista de Sistemas no Bradesco)
+- / [daniel-kv](https://www.linkedin.com/in/daniel-kv/) (Daniel Karam Venceslau / Software Engineer, Elixir)
+- / [desenvolvedorjoaopaul](https://www.linkedin.com/in/desenvolvedorjoaopaul/) (Joao Paulo Oliveira Santos / Senior Fullstack Engineer, Payment Systems (5B txns) + DeFi ($250M TVL), Python•Java•Node.js•Go•React•React Native, Blockchain & Stablecoins, Remote)
+- / [willyancaetanodev](https://www.linkedin.com/in/willyancaetanodev/) (Willyan Guimarães Caetano / Senior Software Engineer, Tech Lead, Java, Backend)
+- / [glysns](https://www.linkedin.com/in/glysns/) (Gleyson Sampaio / Analista Desenvolvedor Java)
+- / [rodrigopeleias](https://www.linkedin.com/in/rodrigopeleias/) (Rodrigo D'Agostini Peleias / Tech Lead, Staff Software Engineer, Senior Software Engineer, Backend, Java, Spring Boot, 3x AWS Certified)
