@@ -214,4 +214,17 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 - / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton Falvo Jr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - / [juliana-mascarenhas-ds](https://www.linkedin.com/in/juliana-mascarenhas-ds/) (Juliana Mascarenhas / Tech Education Specialist, Sócia (Content Creator) @SimplificandoRedes, Me Modelagem Computacional, Cientista de dados)
-- / [operkles](https://www.linkedin.com/in/operkles/) (Otávio Reis Perkles / Desenvolvedor Full-stack Sênior (Python - Java), Líder técnico))
+- / [operkles](https://www.linkedin.com/in/operkles/) (Otávio Reis Perkles / Desenvolvedor Full-stack Sênior (Python - Java), Líder técnico)
+- / [vilaboim](https://www.linkedin.com/in/vilaboim/) (Lucas Vilaboim / Senior Frontend Engineer with 15+ Years of Experience, JavaScript, TypeScript, React, Vue)
+- / [gabrielapinheiro129](https://www.linkedin.com/in/gabrielapinheiro129/) (Gabriela Pinheiro / Software Engineer @ Caju, React.js, Next.js, Typescript, Flutter, ex-Uber)
+- / [stephanynusch](https://www.linkedin.com/in/stephanynusch/) (Stephany Nusch / Software Engineer at Microsoft)
+- / [martineoficial](https://www.linkedin.com/in/martineoficial/) (Diana Pontes / Software Engineering Analyst, React, JavaScript, TypeScript, Web Development, Asynchronous Programming, REST APIs, Agile, Code Quality, Performance Optimization, Git, Jest, SQL)
+- / [brunohvcarneiro](https://www.linkedin.com/in/brunohvcarneiro/) (Bruno Carneiro  / Planning & Business Performance Director na Magazine Luiza)
+- / [devfrontend](https://www.linkedin.com/in/devfrontend/) (Celso Henrique / Engineering Manager @ Stone)
+- / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
+- / [geceduardo](https://www.linkedin.com/in/geceduardo/) (Eduardo Gonçalves / Senior Software Engineer @Gupy, JavaScript Specialist, React, Node.js, Design System, AWS, SQL)
+- / [omatheusbenites](https://www.linkedin.com/in/omatheusbenites/) (Matheus De Amorim Benites / AI-Driven Full Stack Engineer, Co-Founder @Tamy)
+- / [nathsouza](https://www.linkedin.com/in/nathsouza/) (Nathally Souza / Software Engineer, Startup Founder, Javascript, Typescript, Cloud, Frontend, Backend)
+- / [cami-la](https://www.linkedin.com/in/cami-la/) (Camila Cavalcante / Software Developer @ Reclame AQUI, Full Stack, Java, Kotlin, Go, TypeScript, PHP)
+- / [thiago-leite-e-carvalho-1b337b127](https://www.linkedin.com/in/thiago-leite-e-carvalho-1b337b127/) (Thiago Leite e Carvalho / Senior Java Developer and Software Engineer, Java Tech Lead, University Professor, Writer, Speaker, Instructor)
+- 
