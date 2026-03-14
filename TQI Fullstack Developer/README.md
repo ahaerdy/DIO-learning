@@ -211,3 +211,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - 🎓Certificado de conclusão do Bootcamp: [TQI Fullstack Developer](https://hermes.dio.me/certificates/FPO2Q7J9.pdf) ✅
 
 ## 💬 Mentorias e Networking
+
+- / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton Falvo Jr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
+- / [juliana-mascarenhas-ds](https://www.linkedin.com/in/juliana-mascarenhas-ds/) (Juliana Mascarenhas / Tech Education Specialist, Sócia (Content Creator) @SimplificandoRedes, Me Modelagem Computacional, Cientista de dados)
+- 
