@@ -660,7 +660,7 @@ Por isso, todo código-fonte desenvolvido durante este conteúdo foi versionado 
 
 **Bons estudos 😉**
 
-# Certificado: 
+# Certificado: Desenvolvendo um Jogo da Memória
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/D28W57FJ.pdf
+- Certificado em pdf: [Certificado-Desenvolvendo um Jogo da Memória.pdf](<000-Midia_e_Anexos/Certificado-Desenvolvendo um Jogo da Memória.pdf>)

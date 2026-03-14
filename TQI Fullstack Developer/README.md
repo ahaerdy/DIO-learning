@@ -143,7 +143,18 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 3
 
-- Certificado do Módulo: 
+- [Instalação e Configuração do Visual Studio Code](https://hermes.dio.me/certificates/N6B6SQCK.pdf)
+- [Introdução ao JavaScript](https://hermes.dio.me/certificates/W0CKIMQX.pdf)
+- [Sintaxe Básica em JavaScript](https://hermes.dio.me/certificates/BVELTNLG.pdf)
+- [Sintaxe e Operadores JavaScript](https://hermes.dio.me/certificates/AJJTPTOO.pdf)
+- [Variáveis e Tipos com JavaScript](https://hermes.dio.me/certificates/VROIF1HM.pdf)
+- [Dominando Funções em JavaScript](https://hermes.dio.me/certificates/LFBBDDXV.pdf)
+- [Debugging e Error Handling com JavaScript](https://hermes.dio.me/certificates/CZUQLEHO.pdf)
+- [Fundamentos de JavaScript Assíncrono](https://hermes.dio.me/certificates/L1CDGUVR.pdf)
+- [Orientação a Objetos com JavaScript](ttps://hermes.dio.me/certificates/SHWUPNNQ.pdf)
+- [Manipulando a D.O.M. com JavaScript](https://hermes.dio.me/certificates/MGOLDRSH.pdf)
+- [Desenvolvendo um Jogo da Memória](https://hermes.dio.me/certificates/D28W57FJ.pdf)
+- Certificado do Módulo: [Javascript](https://hermes.dio.me/certificates/E0FOEFQD.pdf)
 
 ### Módulo 4
 
