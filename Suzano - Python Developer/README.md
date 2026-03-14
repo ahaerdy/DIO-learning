@@ -205,10 +205,6 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - / [renatoromao](https://www.linkedin.com/in/renatoromao) (Renato Romão de Souza / Microsoft MVP, MCT, Especialista em Copilot & IA)
 - / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/) (Valéria Baptista / Head of Cloud and Cybersecurity | Professora e Mentora em Tecnologia)
 
-## 🔄 Atualizações
-
-Este repositório será atualizado continuamente conforme o avanço nos módulos do Bootcamp e inclusão de novos projetos.
-
 ## Referências:
 
 - [Python - Documentação Oficial](https://docs.python.org/pt-br/3/)
