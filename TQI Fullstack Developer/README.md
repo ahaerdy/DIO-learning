@@ -126,4 +126,40 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ## 🏆 Certificados Obtidos
 
+### Módulo 1
+
+- [Boas-vindas ao TQI Fullstack Developer](https://hermes.dio.me/certificates/YDGD4LZB.pdf)
+- [Seja Protagonista Neste Bootcamp](https://hermes.dio.me/certificates/4MEN8CYF.pdf)
+- [Introdução à Programação e Pensamento Computacional](https://hermes.dio.me/certificates/RTIMPTWK.pdf)
+- [Introdução ao Git e ao GitHub](https://hermes.dio.me/certificates/H5WFFBGL.pdf)
+- [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso](https://hermes.dio.me/certificates/V6ZHUM61.pdf)
+- Certificado do Módulo: [Conteúdo de Abertura](https://hermes.dio.me/certificates/T91OEH2I.pdf)
+
+### Módulo 2
+
+- Certificado do Módulo: 
+
+### Módulo 3
+
+- Certificado do Módulo: 
+
+### Módulo 4
+
+- Certificado do Módulo: 
+
+### Módulo 5
+
+- Certificado do Módulo: 
+
+### Módulo 6
+
+- Certificado do Módulo: 
+
+### Módulo 7
+
+- Certificado do Módulo: 
+
+### Módulo 8
+
+
 ## 💬 Mentorias e Networking

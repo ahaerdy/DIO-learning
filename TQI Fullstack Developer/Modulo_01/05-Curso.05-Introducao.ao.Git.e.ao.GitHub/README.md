@@ -625,4 +625,4 @@ O vídeo explica o conceito e a resolução de **conflitos de merge** no **Git**
 # Certificado: Introdução ao Git e ao GitHub
 
 - Link na plataforma: https://hermes.dio.me/certificates/H5WFFBGL.pdf
-- Certificado em pdf: [[Certificado-Introducao.ao.Git.e.ao.GitHub.pdf]]
+- Certificado em pdf: [Certificado-Introducao.ao.Git.e.ao.GitHub.pdf](000-Midia_e_Anexos/Certificado-Introducao.ao.Git.e.ao.GitHub.pdf)
