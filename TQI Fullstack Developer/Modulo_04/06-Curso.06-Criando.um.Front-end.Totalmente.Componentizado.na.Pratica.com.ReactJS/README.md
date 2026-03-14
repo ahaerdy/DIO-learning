@@ -1079,7 +1079,7 @@ Agora é a sua hora! Crie uma solução que explore os conceitos apresentados em
 - Playlist **Interface Componentizada**
 
 
-# Certificado: 
+# Certificado: Criando um Front-end Totalmente Componentizado na Prática com ReactJS 
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/ZHJQTQJD.pdf
+- Certificado em pdf: [Certificado-Criando_um_Front-end_Totalmente_Componentizado_na_Pratica_com_ReactJS.pdf](000-Midia_e_Anexos/Certificado-Criando_um_Front-end_Totalmente_Componentizado_na_Pratica_com_ReactJS.pdf)

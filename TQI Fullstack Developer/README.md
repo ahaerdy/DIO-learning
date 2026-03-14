@@ -159,13 +159,13 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 4
 
-- [Introdução ao ReactJS]()
-- [Introdução aos React Hooks]()
-- [Trabalhando com States & Effects no ReactJs]()
-- [Desenvolvimento de aplicações para internet com ReactJS]()
-- [Práticas avançadas em projetos com ReactJS]()
-- [Criando um Front-end Totalmente Componentizado na Prática com ReactJS]()
-- Certificado do Módulo: [ReactJS]()
+- [Introdução ao ReactJS](https://hermes.dio.me/certificates/MZPD0CS1.pdf)
+- [Introdução aos React Hooks](https://hermes.dio.me/certificates/5GGK9GCL.pdf)
+- [Trabalhando com States & Effects no ReactJs](https://hermes.dio.me/certificates/HIBCTUY0.pdf)
+- [Desenvolvimento de aplicações para internet com ReactJS](https://hermes.dio.me/certificates/3DAN05X7.pdf)
+- [Práticas avançadas em projetos com ReactJS](https://hermes.dio.me/certificates/68QSK6HS.pdf)
+- [Criando um Front-end Totalmente Componentizado na Prática com ReactJS](https://hermes.dio.me/certificates/ZHJQTQJD.pdf)
+- Certificado do Módulo: [ReactJS](https://hermes.dio.me/certificates/FOBIKB02.pdf)
 
 ### Módulo 5
 
