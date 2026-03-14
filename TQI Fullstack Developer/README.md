@@ -137,7 +137,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 2
 
-- Certificado do Módulo: 
+- [Introdução a Criação de Websites com HTML5 e CSS3](https://hermes.dio.me/certificates/ZRF1FTA7.pdf)
+- [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions](https://hermes.dio.me/certificates/TKBDT5LF.pdf)
+- Certificado do Módulo: [HTML/CSS3](https://hermes.dio.me/certificates/NM594WWB.pdf)
 
 ### Módulo 3
 
