@@ -151,7 +151,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Dominando Funções em JavaScript](https://hermes.dio.me/certificates/LFBBDDXV.pdf)
 - [Debugging e Error Handling com JavaScript](https://hermes.dio.me/certificates/CZUQLEHO.pdf)
 - [Fundamentos de JavaScript Assíncrono](https://hermes.dio.me/certificates/L1CDGUVR.pdf)
-- [Orientação a Objetos com JavaScript](ttps://hermes.dio.me/certificates/SHWUPNNQ.pdf)
+- [Orientação a Objetos com JavaScript](https://hermes.dio.me/certificates/SHWUPNNQ.pdf)
 - [Manipulando a D.O.M. com JavaScript](https://hermes.dio.me/certificates/MGOLDRSH.pdf)
 - [Desenvolvendo um Jogo da Memória](https://hermes.dio.me/certificates/D28W57FJ.pdf)
 - Certificado do Módulo: [Javascript](https://hermes.dio.me/certificates/E0FOEFQD.pdf)
