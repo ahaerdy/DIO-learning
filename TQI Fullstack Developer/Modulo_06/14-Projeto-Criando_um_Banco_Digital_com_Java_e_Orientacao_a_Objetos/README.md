@@ -625,6 +625,8 @@ Neste projeto, será disponibilizado no GitHub um projeto de referência que uti
 - [Slides](https://docs.google.com/presentation/d/1sGnTlpJK0F08hSZebk8LNTsOkHVBivVu/edit?usp=sharing&ouid=105300330738120646134&rtpof=true&sd=true)
 - [Repositório no GitHub](https://github.com/falvojr/dio-live-20210802) (implementação de referência)
 
-# Repositório do projeto entregue
+# Certificado: Criando um Bancoc Digital com Java e Orientacão a Objetos
 
-link: https://github.com/ahaerdy/lab-java-banco-digital
+link do projeto entregue: https://github.com/ahaerdy/lab-java-banco-digital
+Link do Certificado: https://hermes.dio.me/certificates/8VR1IPI7.pdf
+Certificado em PDF: [Certificado-Criando_um_Bancoc_Digital_com_Java_e_Orientacao_a_Objetos.pdf](000-Midia_e_Anexos/Certificado-Criando_um_Bancoc_Digital_com_Java_e_Orientacao_a_Objetos.pdf)

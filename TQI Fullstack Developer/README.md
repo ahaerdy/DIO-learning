@@ -92,7 +92,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Variáveis, Tipos de Dados e Operadores Matemáticos em Java](Modulo_06/02-Curso.02-Variaveis%2C_Tipos_de_Dados_e_Operadores_Matematicos_em_Java)
 - [x] Curso: [Entendendo Métodos Java](Modulo_06/03-Curso.03-Entendendo.Metodos.Java)
 - [x] Curso: [Lógica Condicional e Controle de Fluxos em Java](Modulo_06/04-Curso.04-Logica_Condicional_e_Controle_de_Fluxos_em_Java)
-- [ ] Curso: [Estruturas de Repetição e Arrays em Java](Modulo_06/05-Curso.05-Estruturas_de_Repeticao_e_Arrays_em_Java)
+- [x] Curso: [Estruturas de Repetição e Arrays em Java](Modulo_06/05-Curso.05-Estruturas_de_Repeticao_e_Arrays_em_Java)
 - [x] Curso: [Trabalhando com Collections Java](Modulo_06/06-Cursos.06-Trabalhando_com_Collections_Java)
 - [x] Curso: [Estruturas de Dados em Java: Principais Implementações](Modulo_06/07-Curso.07-Estruturas_de_Dados_em_Java-Principais_Implementacoes)
 - [x] Curso: [Debugging Java](Modulo_06/08-Curso.08-Debugging_Java)
@@ -175,7 +175,21 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 6
 
-- Certificado do Módulo: 
+- [Dominando IDEs Java](https://hermes.dio.me/certificates/UE78VGLQ.pdf)
+- [Variáveis, Tipos de Dados e Operadores Matemáticos em Java](https://hermes.dio.me/certificates/FDOXFRHH.pdf)
+- [Entendendo Métodos Java](https://hermes.dio.me/certificates/N9ZC4NGD.pdf)
+- [Lógica Condicional e Controle de Fluxos em Java](https://hermes.dio.me/certificates/FYPQDIMC.pdf)
+- [Estruturas de Repetição e Arrays em Java](https://hermes.dio.me/certificates/U5PHKGZW.pdf)
+- [Trabalhando com Collections Java](https://hermes.dio.me/certificates/ZQ1FHJ76.pdf)
+- [Estruturas de Dados em Java: Principais Implementações](https://hermes.dio.me/certificates/NY0DYQDC.pdf)
+- [Debugging Java](https://hermes.dio.me/certificates/SV52QE67.pdf)
+- [Tratamento de Exceções em Java](https://hermes.dio.me/certificates/05S7WVB6.pdf)
+- [Programação Orientada a Objetos com Java](https://hermes.dio.me/certificates/HRBMNOZW.pdf)
+- [Trabalhando com Banco de Dados utilizando JDBC e JPA](https://hermes.dio.me/certificates/LNCB3QWX.pdf)
+- [Persistência de Dados com Java, JPA e Hibernate](https://hermes.dio.me/certificates/5KTKNXA0.pdf)
+- [Criando um Banco Digital com Java e Orientação a Objetos](https://hermes.dio.me/certificates/8VR1IPI7.pdf) 
+- [Testes Unitários Com JUnit](https://hermes.dio.me/certificates/5VEVVQBI.pdf)
+- Certificado do Módulo: [Java](https://hermes.dio.me/certificates/XJFHP7SO.pdf)
 
 ### Módulo 7
 
