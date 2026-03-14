@@ -184,7 +184,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Conclusão: 
 
-- 🎓Certificado de conclusão do Bootcamp: [Suzano - Python Developer](https://hermes.dio.me/certificates/T98VICO2.pdf) ✅
+- 🎓Certificado de conclusão do Bootcamp: [Suzano Python Developer](https://hermes.dio.me/certificates/T98VICO2.pdf) ✅
 
 
 ## 🔗 Contribuições Open Source

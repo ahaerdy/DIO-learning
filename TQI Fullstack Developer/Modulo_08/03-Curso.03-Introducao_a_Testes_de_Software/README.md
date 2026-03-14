@@ -453,8 +453,3 @@ Para quem deseja se aprofundar no universo de testes de software, o slide reúne
 
 - Link na plataforma: https://hermes.dio.me/certificates/OAOFLKAC.pdf
 - Certificado em pdf: [Certificado-Introducao_a_Testes_de_Software.pdf](000-Midia_e_Anexos/Certificado-Introducao_a_Testes_de_Software.pdf)
-
-# Certificado de conclusão do Bootcamp: TQI Fullstack Developer
-
-- Link na plataforma: https://hermes.dio.me/certificates/FPO2Q7J9.pdf
-- Certificado em pdf: [Certificado-TQI_Fullstack_Developer.pdf](../../000-Midia_e_Anexos/Certificado-TQI_Fullstack_Developer.pdf)

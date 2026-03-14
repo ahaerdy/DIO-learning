@@ -134,13 +134,13 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Introdução à Programação e Pensamento Computacional](https://hermes.dio.me/certificates/RTIMPTWK.pdf)
 - [Introdução ao Git e ao GitHub](https://hermes.dio.me/certificates/H5WFFBGL.pdf)
 - [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso](https://hermes.dio.me/certificates/V6ZHUM61.pdf)
-- Certificado do Módulo: [Conteúdo de Abertura](https://hermes.dio.me/certificates/T91OEH2I.pdf)
+- Certificado do Módulo: [Conteúdo de Abertura](https://hermes.dio.me/certificates/T91OEH2I.pdf) ✅ 
 
 ### Módulo 2
 
 - [Introdução a Criação de Websites com HTML5 e CSS3](https://hermes.dio.me/certificates/ZRF1FTA7.pdf)
 - [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions](https://hermes.dio.me/certificates/TKBDT5LF.pdf)
-- Certificado do Módulo: [HTML/CSS3](https://hermes.dio.me/certificates/NM594WWB.pdf)
+- Certificado do Módulo: [HTML/CSS3](https://hermes.dio.me/certificates/NM594WWB.pdf) ✅ 
 
 ### Módulo 3
 
@@ -155,7 +155,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Orientação a Objetos com JavaScript](https://hermes.dio.me/certificates/SHWUPNNQ.pdf)
 - [Manipulando a D.O.M. com JavaScript](https://hermes.dio.me/certificates/MGOLDRSH.pdf)
 - [Desenvolvendo um Jogo da Memória](https://hermes.dio.me/certificates/D28W57FJ.pdf)
-- Certificado do Módulo: [Javascript](https://hermes.dio.me/certificates/E0FOEFQD.pdf)
+- Certificado do Módulo: [Javascript](https://hermes.dio.me/certificates/E0FOEFQD.pdf) ✅ 
 
 ### Módulo 4
 
@@ -165,13 +165,13 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Desenvolvimento de aplicações para internet com ReactJS](https://hermes.dio.me/certificates/3DAN05X7.pdf)
 - [Práticas avançadas em projetos com ReactJS](https://hermes.dio.me/certificates/68QSK6HS.pdf)
 - [Criando um Front-end Totalmente Componentizado na Prática com ReactJS](https://hermes.dio.me/certificates/ZHJQTQJD.pdf)
-- Certificado do Módulo: [ReactJS](https://hermes.dio.me/certificates/FOBIKB02.pdf)
+- Certificado do Módulo: [ReactJS](https://hermes.dio.me/certificates/FOBIKB02.pdf) ✅ 
 
 ### Módulo 5
 
 - [MySQL - Trabalhando com suas Primeiras Tabelas](https://hermes.dio.me/certificates/45ZNKMO1.pdf)
 - [MySQL - Consultas com Join](https://hermes.dio.me/certificates/9H0BMMAG.pdf)
-- Certificado do Módulo: [SQL](https://hermes.dio.me/certificates/HTPQIXUQ.pdf) 
+- Certificado do Módulo: [SQL](https://hermes.dio.me/certificates/HTPQIXUQ.pdf) ✅ 
 
 ### Módulo 6
 
@@ -189,13 +189,25 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [Persistência de Dados com Java, JPA e Hibernate](https://hermes.dio.me/certificates/5KTKNXA0.pdf)
 - [Criando um Banco Digital com Java e Orientação a Objetos](https://hermes.dio.me/certificates/8VR1IPI7.pdf) 
 - [Testes Unitários Com JUnit](https://hermes.dio.me/certificates/5VEVVQBI.pdf)
-- Certificado do Módulo: [Java](https://hermes.dio.me/certificates/XJFHP7SO.pdf)
+- Certificado do Módulo: [Java](https://hermes.dio.me/certificates/XJFHP7SO.pdf) ✅ 
 
 ### Módulo 7
 
-- Certificado do Módulo: 
+- [Principais Protocolos de Comunicação da Internet](https://hermes.dio.me/certificates/M7VCSDLD.pdf)
+- [Introdução a Spring Framework com Spring Boot](https://hermes.dio.me/certificates/3SW1NBOL.pdf)
+- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](https://hermes.dio.me/certificates/EVFM2OQR.pdf)
+- [Adicionando Segurança a uma API REST com Spring Security](https://hermes.dio.me/certificates/JPCDWL0B.pdf)
+- [Desenvolvimento de Testes Unitários para Validar uma API REST de Gerenciamento Estoques de Cerveja]() 
+- Certificado do Módulo: [Spring Framework](https://hermes.dio.me/certificates/KCG90QSO.pdf) ✅
 
 ### Módulo 8
 
+- [Fundamentos de Qualidade de Software](https://hermes.dio.me/certificates/SZUCJRTZ.pdf)
+- [Metodologias Ágeis e Ciclo de Desenvolvimento de Software](https://hermes.dio.me/certificates/RA5WBUYX.pdf)
+- [Introdução a Testes de Software](https://hermes.dio.me/certificates/OAOFLKAC.pdf)
+
+### Conclusão: 
+
+- 🎓Certificado de conclusão do Bootcamp: [TQI Fullstack Developer](https://hermes.dio.me/certificates/FPO2Q7J9.pdf) ✅
 
 ## 💬 Mentorias e Networking
