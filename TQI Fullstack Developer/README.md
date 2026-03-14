@@ -169,7 +169,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 ### Módulo 5
 
-- Certificado do Módulo: 
+- [MySQL - Trabalhando com suas Primeiras Tabelas](https://hermes.dio.me/certificates/45ZNKMO1.pdf)
+- [MySQL - Consultas com Join](https://hermes.dio.me/certificates/9H0BMMAG.pdf)
+- Certificado do Módulo: [SQL](https://hermes.dio.me/certificates/HTPQIXUQ.pdf) 
 
 ### Módulo 6
 
