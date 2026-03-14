@@ -214,4 +214,4 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 
 - / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton Falvo Jr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - / [juliana-mascarenhas-ds](https://www.linkedin.com/in/juliana-mascarenhas-ds/) (Juliana Mascarenhas / Tech Education Specialist, Sócia (Content Creator) @SimplificandoRedes, Me Modelagem Computacional, Cientista de dados)
-- 
+- / [operkles](https://www.linkedin.com/in/operkles/) (Otávio Reis Perkles / Desenvolvedor Full-stack Sênior (Python - Java), Líder técnico))
