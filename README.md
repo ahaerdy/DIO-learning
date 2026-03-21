@@ -6,15 +6,26 @@
   <img src="https://img.shields.io/badge/Bootcamps-DIO.me-blueviolet?logo=codeforces" />
   <img src="https://img.shields.io/github/repo-size/ahaerdy/dio-learning" />
   <img src="https://img.shields.io/github/last-commit/ahaerdy/dio-learning" />
+
+  <!-- Backend Principal -->
   <img src="https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Security-6DB33F?logo=springsecurity&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Data_JPA-6DB33F?logo=spring&logoColor=white" />
+
+  <!-- Outras linguagens e frameworks -->
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black" />
   <img src="https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white" />
   <img src="https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=white" />
+
+  <!-- Dados -->
   <img src="https://img.shields.io/badge/Power%20BI-F2CC8F?logo=powerbi&logoColor=black" />
-  
+  <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?logo=microsoftazure&logoColor=white" />
+
   <!-- Links externos -->
   <a href="https://web.dio.me/users/arthur_haerdy?tab=achievements">
     <img src="https://img.shields.io/badge/DIO-arthur__haerdy-success?logo=tryhackme" />
