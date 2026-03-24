@@ -10,6 +10,7 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-poo/learning/9aaf0076-a2e6-4d6e-b106-889460797859?autoplay=1
 
 ### Paradigmas de programação
 
