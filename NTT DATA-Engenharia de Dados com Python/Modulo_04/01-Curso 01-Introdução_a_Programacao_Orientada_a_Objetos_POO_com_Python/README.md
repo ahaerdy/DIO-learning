@@ -5,6 +5,12 @@
 
 ## 🟩 Vídeo 01 - O que é Orientação a Objetos (OO)?
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.01-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+
 ### Paradigmas de programação
 
 - Um paradigma de programação é um estilo e programação. Não é uma linguagem (Python, Java, C, etc), e sim a forma como você soluciona os problemas através do código.
