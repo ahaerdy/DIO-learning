@@ -94,7 +94,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 4: Programação Orientada a Objetos com Python  
 
-- [x] 🔸Curso: [Introdução à Programação Orientada a Objetos (POO) com Python]
+- [x] Curso: [Introdução à Programação Orientada a Objetos (POO) com Python](Modulo_04/01-Curso%2001-Introdu%C3%A7%C3%A3o_a_Programacao_Orientada_a_Objetos_POO_com_Python)
 - [x] 🔸Curso: [Aprendendo o Conceito de Herança com Python]
 - [x] 🔸Curso: [Aplicando Encapsulamento em Python]
 - [x] 🔸Curso: [Conhecendo Polimorfismo em Python]
