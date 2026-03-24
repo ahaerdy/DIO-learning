@@ -130,6 +130,13 @@ b2.correr()
 
 ## 🟩 Vídeo 04 - Construtores e Destrutores
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.01-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-poo/learning/68e9bb9c-c933-462d-b454-da468a1f16df?autoplay=1
+
 ### Objetivo Geral
 
 - Entender o conceito de construtor e destrutor.
