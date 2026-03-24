@@ -34,6 +34,13 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introduc
 
 ## 🟩 Vídeo 02 - Os conceitos de Classes e Objetos  
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.01-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-poo/learning/951aac9e-696c-4d3f-a688-1de9df6018b3?autoplay=1
+
 ### Objetivo Geral
 
 - Aprender a utilizar classes e objetos com Python.
