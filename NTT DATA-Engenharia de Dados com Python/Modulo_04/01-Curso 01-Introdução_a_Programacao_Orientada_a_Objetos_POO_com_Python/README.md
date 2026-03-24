@@ -82,6 +82,13 @@ print(cao_2.acordado)
 
 ## 🟩 Vídeo 03 - Criando seu primeiro Programa com POO
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.01-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/introducao-poo/learning/fc0c80e3-c7b7-4f48-b8b5-595dea75b26a?autoplay=1
+
 ### Nosso primeiro programa POO
 
 - João tem uma bicicletaria e gostaria de registrar as vendas de suas bicicletas. Crie um programa onde João informe: cor, modelo, ano e valor da bicicleta vendida. Uma bicicleta pode: buzinar, parar e correr. Adicione esses comportamentos! 
