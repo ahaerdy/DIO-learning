@@ -74,6 +74,13 @@ class C(A, B):
 
 ## 🟩 Vídeo 03 - Hands-on: Herança Simples
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.02-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/heranca/learning/64be1dc6-8e8a-48c7-beb8-80f85b0a7314?autoplay=1
+
 #### Diagrama 
 
 <p align="center">
