@@ -10,13 +10,20 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/encapsulamento/learning/2efc143d-fd96-4455-a423-aca0409ab954?autoplay=1
 
 ## Proteção de acesso
 
 - O encapsulamento é um dos conceitos fundamentais em programação orientada a objetos. Ele descreve a ideia de agrupar dados e os métodos que manipulam esses dados em uma unidade. Isso impõe restrições ao acesso direto a variáveis e métodos e pode evitar a modificação acidental de dados. Para evitar alterações acidentais, a variável de um objeto só pode ser alterada pelo método desse objeto.
 
 ## 🟩 Vídeo 02 - Recursos públicos e privados
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.03-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/encapsulamento/learning/71edfa27-05cc-46b2-85cf-e83ca2031f5d?autoplay=1
 
 ### Modificadores de acesso
 
