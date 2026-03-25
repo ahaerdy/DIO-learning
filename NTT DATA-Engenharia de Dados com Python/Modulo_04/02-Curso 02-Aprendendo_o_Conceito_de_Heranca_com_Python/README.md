@@ -178,6 +178,13 @@ print(caminhao)
 
 ## 🟩 Vídeo 04 - Hands-on: Herança Múltipla
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.02-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/heranca/learning/5ca57990-9a76-48c4-9f99-946f53972361?autoplay=1
+
 #### Diagrama 
 
 <p align="center">
