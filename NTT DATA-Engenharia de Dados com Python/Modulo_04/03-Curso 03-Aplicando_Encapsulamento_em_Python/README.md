@@ -59,6 +59,13 @@ class Conta:
 
 ## 🟩 Vídeo 03 - Propriedades
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.03-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/encapsulamento/learning/a2c45df6-f00b-45ea-bafa-2c5d8c883181?autoplay=1
+
 ### Para que servem?
 
 - Com o `property()` do Python, você pode criar atributos gerenciados em suas classes. Você pode usar atributos gerenciados, também conhecidos como propriedades, quando precisar modificar sua implementação interna sem alterar a API pública da classe.
