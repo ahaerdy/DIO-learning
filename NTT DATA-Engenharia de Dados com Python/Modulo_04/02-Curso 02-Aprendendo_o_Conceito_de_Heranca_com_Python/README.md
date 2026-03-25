@@ -5,6 +5,13 @@
 
 ## 🟩 Vídeo 01 - Herança em POO  
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.02-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/heranca/learning/7ba96da2-627a-40e6-a063-cb3c8f59f4d2?autoplay=1
+
 ### O que é herança?
 
 - Em programação herança é a capacidade de uma classe filha derivar ou herdar as características e comportamentos da classe pai (base).
@@ -26,6 +33,13 @@ class B(A):
 ```
 
 ## 🟩 Vídeo 02 - Conceituando Herança Simples e Herança Múltipla
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.02-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/heranca/learning/0de7ea69-7629-40a6-a3b5-acf83a559f45?autoplay=1
 
 ### Herança simples
 
