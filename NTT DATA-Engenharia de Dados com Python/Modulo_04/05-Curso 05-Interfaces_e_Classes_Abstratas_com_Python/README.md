@@ -5,6 +5,13 @@
 
 ## 🟩 Vídeo 01 - Variáveis de classe e Variáveis de instância
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.05-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
+
 ### Objetivo Geral
 
 - Entender as diferenças entre variáveis de classe e variáveis de instância.
@@ -31,6 +38,13 @@ gi = Estudante("Giovanna", 17323)
 ```
 
 ## 🟩 Vídeo 02 - Métodos de classe e Métodos estático
+ 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.05-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
 
 ### Objetivo Geral
 
@@ -216,6 +230,13 @@ Pessoa.e_maior_idade(28)  # True
 
 ## 🟩 Vídeo 03 - O que são Interfaces
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.05-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
+
 ### Objetivo Geral
 
 - Aprender o conceito de contrato e como podemos utilizar classes abstratas em Python para implementá-los.
@@ -229,6 +250,13 @@ Pessoa.e_maior_idade(28)  # True
 - O conceito de interface é definir um contrato, onde são declarados os métodos (o que deve ser feito) e suas respectivas assinaturas. Em Python utilizamos classes abstratas para criar contratos. Classes abstratas não podem ser instanciadas.
 
 ## 🟩 Vídeo 04 - Classes Abstratas
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.05-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
 
 ### ABC
 

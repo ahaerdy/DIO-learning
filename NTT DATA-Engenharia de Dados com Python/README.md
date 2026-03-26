@@ -98,7 +98,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Aprendendo o Conceito de Herança com Python](Modulo_04/02-Curso%2002-Aprendendo_o_Conceito_de_Heranca_com_Python)
 - [x] Curso: [Aplicando Encapsulamento em Python](Modulo_04/03-Curso%2003-Aplicando_Encapsulamento_em_Python)
 - [x] Curso: [Conhecendo Polimorfismo em Python](Modulo_04/04-Curso%2004-Conhecendo_Polimorfismo_em_Python)
-- [x] 🔸Curso: [Interfaces e Classes Abstratas com Python]
+- [x] Curso: [Interfaces e Classes Abstratas com Python](Modulo_04/05-Curso%2005-Interfaces_e_Classes_Abstratas_com_Python)
 - [x] 🔸Projeto: [Modelando o Sistema Bancário em POO com Python]
   - Repositório: [DIO-projeto-sistema-bancario-em-poo-com-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python/tree/main#)
   - Descrição: Projeto em Python que implementa um sistema bancário utilizando Programação Orientada a Objetos (POO), com classes abstratas, herança e encapsulamento. Atividade prática dos vídeos 01 e 02 do curso “Modelando o Sistema Bancário em POO com Python” da plataforma DIO.
