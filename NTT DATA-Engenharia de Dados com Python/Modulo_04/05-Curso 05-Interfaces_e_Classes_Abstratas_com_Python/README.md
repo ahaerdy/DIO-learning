@@ -44,7 +44,7 @@ gi = Estudante("Giovanna", 17323)
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/ampliando-o-conhecimento-em-poo/learning/eb1cfc19-96ab-4f5f-8f5a-197b4bce7f01?autoplay=1
 
 ### Objetivo Geral
 
