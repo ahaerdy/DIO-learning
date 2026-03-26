@@ -10,7 +10,7 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/ampliando-o-conhecimento-em-poo/learning/9e2a04d1-4591-43bf-a6d2-56ad7144e69d?autoplay=1
 
 ### Objetivo Geral
 
