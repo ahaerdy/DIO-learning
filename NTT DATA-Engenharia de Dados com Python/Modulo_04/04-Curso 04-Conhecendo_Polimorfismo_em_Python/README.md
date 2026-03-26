@@ -5,6 +5,13 @@
 
 ## 🟩 Vídeo 01 - O que é Polimorfismo?
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.04-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/polimorfismo/learning/9be015a1-3af8-463b-9cda-a9021e1d1fcb?autoplay=1
+
 ### Muitas formas!
 
 - A palavra polimorfismo significa ter muitas formas. Na programação, polimorfismo significa o mesmo nome de função (mas assinaturas diferentes) sendo usado para tipos diferentes.
@@ -16,6 +23,13 @@ len("python")
 len([10, 20, 30])
 ```
 ## 🟩 Vídeo 02 - Polimorfismo com Herança
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.04-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/polimorfismo/learning/7a3fff2c-bc24-4c2f-89a4-009c24bec546?autoplay=1
 
 ### Mesmo método com comportamento diferente
 
