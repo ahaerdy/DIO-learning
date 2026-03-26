@@ -256,7 +256,7 @@ Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/ampliand
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/ampliando-o-conhecimento-em-poo/learning/5734b818-8c66-4599-9b89-875c7565f7ea?autoplay=1
 
 ### ABC
 
