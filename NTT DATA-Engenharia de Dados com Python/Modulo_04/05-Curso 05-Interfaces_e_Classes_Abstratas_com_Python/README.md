@@ -235,7 +235,7 @@ Pessoa.e_maior_idade(28)  # True
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/ampliando-o-conhecimento-em-poo/learning/ad015503-d5fe-4cf5-9250-64acf63b4285?autoplay=1
 
 ### Objetivo Geral
 
