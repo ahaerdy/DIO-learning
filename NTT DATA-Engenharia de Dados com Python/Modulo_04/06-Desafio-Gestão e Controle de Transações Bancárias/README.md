@@ -261,7 +261,7 @@ class Deposito(Transacao):
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/modelando-o-sistema-bancario-em-poo-com-python/learning/f6446775-a88a-4724-901b-09c2237962a4
 
 ### Especificação - Parte 2 do Desafio
 
