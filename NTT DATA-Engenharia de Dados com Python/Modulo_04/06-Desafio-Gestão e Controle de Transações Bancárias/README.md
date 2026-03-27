@@ -18,25 +18,19 @@ O foco principal é a modelagem de dados. O aluno deve converter a lógica anter
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h37m47s567.jpg" alt="" width="840">
 </p>
 
-A primeira tela apresenta o **objetivo geral** do desafio: iniciar a modelagem do sistema bancário utilizando Programação Orientada a Objetos (POO).  
-Até este ponto, o sistema provavelmente utilizava estruturas como dicionários para armazenar dados de clientes e contas. Agora, a proposta é evoluir essa implementação, introduzindo **classes** para representar um **cliente** e as **operações bancárias** fundamentais, que são **depósito** e **saque**.  
-Essa mudança é o primeiro passo para um código mais organizado, reutilizável e alinhado aos princípios de orientação a objetos.
+A primeira tela apresenta o **objetivo geral** do desafio: iniciar a modelagem do sistema bancário utilizando Programação Orientada a Objetos (POO). Agora, a proposta é evoluir essa implementação, introduzindo **classes** para representar um **cliente** e as **operações bancárias** fundamentais, que são **depósito** e **saque**. Essa mudança é o primeiro passo para um código mais organizado, reutilizável e alinhado aos princípios de orientação a objetos.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h37m52s973.jpg" alt="" width="840">
 </p>
 
-Agora temos a descrição clara do **desafio principal**.  
-A tarefa é **atualizar o sistema bancário** para que os dados de clientes e contas sejam armazenados em **objetos**, abandonando o uso de dicionários.  
-O código resultante deve seguir rigorosamente o **modelo de classes UML** que será apresentado na sequência.  
-Isso significa que, além de criar as classes, devemos garantir que todas as associações, heranças e comportamentos descritos no diagrama sejam implementados corretamente.
+A tarefa é **atualizar o sistema bancário** para que os dados de clientes e contas sejam armazenados em **objetos**, abandonando o uso de dicionários. O código resultante deve seguir rigorosamente o **modelo de classes UML** que será apresentado na sequência. Isso significa que, além de criar as classes, devemos garantir que todas as associações, heranças e comportamentos descritos no diagrama sejam implementados corretamente.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h37m57s735.jpg" alt="" width="840">
 </p>
 
-Nesta imagem é apresentado o **diagrama de classes UML** que servirá como guia para a modelagem.  
-Embora não haja código diretamente, a estrutura visual define:
+Nesta imagem é apresentado o **diagrama de classes UML** que servirá como guia para a modelagem. A estrutura visual define:
 
 - **Classe `Conta`** (atributos privados: `saldo`, `número`, `agência`, `cliente`, `histórico`). Métodos:  
   - `saldo()`: retorna o saldo atual.  
@@ -57,16 +51,15 @@ Embora não haja código diretamente, a estrutura visual define:
 
 - **Classe `PessoaFisica`** herda de `Cliente` e acrescenta `cpf`, `nome`, `data_nascimento`.
 
-Essa arquitetura já prepara o sistema para expansões futuras (como novos tipos de conta ou transações) e reforça conceitos de **herança**, **polimorfismo** e **encapsulamento**.
+Essa arquitetura prepara o sistema para expansões futuras (como novos tipos de conta ou transações) e reforça conceitos de **herança**, **polimorfismo** e **encapsulamento**.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h38m14s896.jpg" alt="" width="840">
 </p>
 
-Por fim, temos o **desafio extra**, que leva a modelagem um passo adiante.  
-Após criar todas as classes e implementar os métodos conforme o diagrama, o próximo nível é **adaptar o menu do sistema** para funcionar com essas novas classes.  
-Isso significa que as opções de depósito, saque e exibição de extrato devem agora manipular objetos (em vez de dicionários) e utilizar os métodos definidos nas classes, respeitando a lógica de negócio encapsulada.  
-Embora seja opcional, concluir essa etapa garante que o sistema se torne totalmente funcional dentro do paradigma orientado a objetos.
+Por fim, temos o **desafio extra**, que leva a modelagem um passo adiante. Após criar todas as classes e implementar os métodos conforme o diagrama, o próximo nível é **adaptar o menu do sistema** para funcionar com essas novas classes.  
+
+Isso significa que as opções de depósito, saque e exibição de extrato devem agora manipular objetos (em vez de dicionários) e utilizar os métodos definidos nas classes, respeitando a lógica de negócio encapsulada. Essa etapa garante que o sistema se torne totalmente funcional dentro do paradigma orientado a objetos.
 
 ## 🟩 Vídeo 2 - Resolução do Desafio – Parte 1
 
