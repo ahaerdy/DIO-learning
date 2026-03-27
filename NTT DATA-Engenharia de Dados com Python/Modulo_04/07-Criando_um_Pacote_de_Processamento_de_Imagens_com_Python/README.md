@@ -7,6 +7,13 @@
 
 ## 🟩 Vídeo 01 - Parte 1 - Introdução e Conceitos
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.07-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
+
 ### Objetivos
 
 - Entender conceitos relacionados aos pacotes
@@ -45,6 +52,13 @@
 </p>
 
 ## 🟩 Vídeo 02 - Parte 2 - Criar o projeto e gerar as distribuições
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.07-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
 
 ### Exemplos de estruturas
 
@@ -132,6 +146,13 @@
 
 ## 🟩 Vídeo 03 - Parte 3 - Arquivos do projeto image-processing
 
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.07-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
+
 ### Apresentando os arquivos da estrutura real
 
 <p align="center">
@@ -140,6 +161,13 @@
 
 
 ## 🟩 Vídeo 04 - Parte 4 -  Arquivos do pacote
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.07-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
 
 - Detalhes dos arquivos de configuração (e se devemos usar todos).
 
@@ -180,6 +208,13 @@
 </p>
 
 ## 🟩 Vídeo 05 - Parte 5 - Distribuições
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.07-video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
 
 ### Distribuições
 
@@ -226,6 +261,13 @@ python setup.py sdist bdist_wheel
 
 
 ## 🟩 Vídeo 06 - Parte 6 - Publicando o Pacote
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.07-video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
 
 ### Passos
 
@@ -318,6 +360,13 @@ python -m pip install package_name
 </p>
 
 ## 🟩 Vídeo 07 - Parte 7 - Resumo e Exercício Prático
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.07-video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
 
 ### Resumo
 
