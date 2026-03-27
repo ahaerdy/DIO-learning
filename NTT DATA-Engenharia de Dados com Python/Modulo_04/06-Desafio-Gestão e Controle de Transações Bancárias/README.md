@@ -1,7 +1,81 @@
 - Instrutor: Guilherme Arthur de Carvalho (Analista de Sistemas)
 - Contato Linkedin: https://www.linkedin.com/in/decarvalhogui/
 
-## 🟩 Vídeo 01 - Resolução do Desafio – Parte 1
+## 🟩 Vídeo 01 - Apresentação do Desafio – Parte 1
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.06-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/lab/modelando-o-sistema-bancario-em-poo-com-python/learning/92139fbc-dd1f-44c2-a9dc-61859f246f60?back=/track/engenharia-dados-python
+
+O foco principal é a modelagem de dados. O aluno deve converter a lógica anterior (procedural/dicionários) em classes bem definidas, respeitando os pilares da POO: Herança, Encapsulamento, Polimorfismo e Abstração.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h37m47s567.jpg" alt="" width="840">
+</p>
+
+A primeira tela apresenta o **objetivo geral** do desafio: iniciar a modelagem do sistema bancário utilizando Programação Orientada a Objetos (POO).  
+Até este ponto, o sistema provavelmente utilizava estruturas como dicionários para armazenar dados de clientes e contas. Agora, a proposta é evoluir essa implementação, introduzindo **classes** para representar um **cliente** e as **operações bancárias** fundamentais, que são **depósito** e **saque**.  
+Essa mudança é o primeiro passo para um código mais organizado, reutilizável e alinhado aos princípios de orientação a objetos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h37m52s973.jpg" alt="" width="840">
+</p>
+
+Agora temos a descrição clara do **desafio principal**.  
+A tarefa é **atualizar o sistema bancário** para que os dados de clientes e contas sejam armazenados em **objetos**, abandonando o uso de dicionários.  
+O código resultante deve seguir rigorosamente o **modelo de classes UML** que será apresentado na sequência.  
+Isso significa que, além de criar as classes, devemos garantir que todas as associações, heranças e comportamentos descritos no diagrama sejam implementados corretamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h37m57s735.jpg" alt="" width="840">
+</p>
+
+Nesta imagem é apresentado o **diagrama de classes UML** que servirá como guia para a modelagem.  
+Embora não haja código diretamente, a estrutura visual define:
+
+- **Classe `Conta`** (atributos privados: `saldo`, `número`, `agência`, `cliente`, `histórico`). Métodos:  
+  - `saldo()`: retorna o saldo atual.  
+  - `nova_conta()`: método de classe (fábrica) que cria uma conta associada a um cliente.  
+  - `sacar(valor)`: booleano indicando sucesso ou falha.  
+  - `depositar(valor)`: também booleano.  
+
+- **Classe `ContaCorrente`** herda de `Conta` e adiciona `limite` e `limite_saques`.
+
+- **Classe `Historico`** (atributo `transacoes` do tipo `Transacao`) e método `adicionar_transacao()`.
+
+- **Classe abstrata `Transacao`** (interface) com método `registrar(conta)`.  
+  - Classes concretas: `Deposito` e `Saque` que implementam esse método.
+
+- **Classe `Cliente`** com `endereco` e uma lista de `contas`. Métodos:  
+  - `realizar_transacao(conta, transacao)`  
+  - `adicionar_conta(conta)`
+
+- **Classe `PessoaFisica`** herda de `Cliente` e acrescenta `cpf`, `nome`, `data_nascimento`.
+
+Essa arquitetura já prepara o sistema para expansões futuras (como novos tipos de conta ou transações) e reforça conceitos de **herança**, **polimorfismo** e **encapsulamento**.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h38m14s896.jpg" alt="" width="840">
+</p>
+
+Por fim, temos o **desafio extra**, que leva a modelagem um passo adiante.  
+Após criar todas as classes e implementar os métodos conforme o diagrama, o próximo nível é **adaptar o menu do sistema** para funcionar com essas novas classes.  
+Isso significa que as opções de depósito, saque e exibição de extrato devem agora manipular objetos (em vez de dicionários) e utilizar os métodos definidos nas classes, respeitando a lógica de negócio encapsulada.  
+Embora seja opcional, concluir essa etapa garante que o sistema se torne totalmente funcional dentro do paradigma orientado a objetos.
+
+## 🟩 Vídeo 2 - Resolução do Desafio – Parte 1
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.06-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/lab/modelando-o-sistema-bancario-em-poo-com-python/learning/4b3df149-8428-4dae-b802-c1df17170fc0
 
 ### Especificação - Parte 1 do Desafio
 
@@ -195,7 +269,14 @@ class Deposito(Transacao):
 </details>
 
 
-## 🟩 Vídeo 02 - Resolução do Desafio – Parte 2
+## 🟩 Vídeo 03 - Resolução do Desafio – Parte 2
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.04-curso.06-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: 
 
 ### Especificação - Parte 2 do Desafio
 

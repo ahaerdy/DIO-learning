@@ -99,7 +99,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Aplicando Encapsulamento em Python](Modulo_04/03-Curso%2003-Aplicando_Encapsulamento_em_Python)
 - [x] Curso: [Conhecendo Polimorfismo em Python](Modulo_04/04-Curso%2004-Conhecendo_Polimorfismo_em_Python)
 - [x] Curso: [Interfaces e Classes Abstratas com Python](Modulo_04/05-Curso%2005-Interfaces_e_Classes_Abstratas_com_Python)
-- [x] 🔸Projeto: [Modelando o Sistema Bancário em POO com Python]
+- [x] 🔸Projeto: [Modelando o Sistema Bancário em POO com Python](Modulo_04/06-Desafio-Gest%C3%A3o%20e%20Controle%20de%20Transa%C3%A7%C3%B5es%20Banc%C3%A1rias)
   - Repositório: [DIO-projeto-sistema-bancario-em-poo-com-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python/tree/main#)
   - Descrição: Projeto em Python que implementa um sistema bancário utilizando Programação Orientada a Objetos (POO), com classes abstratas, herança e encapsulamento. Atividade prática dos vídeos 01 e 02 do curso “Modelando o Sistema Bancário em POO com Python” da plataforma DIO.
 - [x] 🔸Projeto: [Criando um Pacote de Processamento de Imagens com Python](https://github.com/ahaerdy/DIO-learning/tree/main/Suzano%20-%20Python%20Developer/Modulo_04/07-Criando_um_Pacote_de_Processamento_de_Imagens_com_Python)
