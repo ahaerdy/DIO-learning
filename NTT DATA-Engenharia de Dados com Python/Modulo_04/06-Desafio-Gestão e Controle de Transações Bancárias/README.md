@@ -34,7 +34,7 @@ Nesta imagem é apresentado o **diagrama de classes UML** que servirá como guia
 
 - **Classe `Conta`** (atributos privados: `saldo`, `número`, `agência`, `cliente`, `histórico`). Métodos:  
   - `saldo()`: retorna o saldo atual.  
-  - `nova_conta()`: método de classe (fábrica) que cria uma conta associada a um cliente.  
+  - `nova_conta()`: método de classe que cria uma conta associada a um cliente.  
   - `sacar(valor)`: booleano indicando sucesso ou falha.  
   - `depositar(valor)`: também booleano.  
 
@@ -57,7 +57,7 @@ Essa arquitetura prepara o sistema para expansões futuras (como novos tipos de 
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-27-09h38m14s896.jpg" alt="" width="840">
 </p>
 
-Por fim, temos o **desafio extra**, que leva a modelagem um passo adiante. Após criar todas as classes e implementar os métodos conforme o diagrama, o próximo nível é **adaptar o menu do sistema** para funcionar com essas novas classes.  
+O **desafio extra** leva a modelagem um passo adiante. Após criar todas as classes e implementar os métodos conforme o diagrama, o próximo nível é **adaptar o menu do sistema** para funcionar com essas novas classes.  
 
 Isso significa que as opções de depósito, saque e exibição de extrato devem agora manipular objetos (em vez de dicionários) e utilizar os métodos definidos nas classes, respeitando a lógica de negócio encapsulada. Essa etapa garante que o sistema se torne totalmente funcional dentro do paradigma orientado a objetos.
 
