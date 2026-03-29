@@ -267,7 +267,7 @@ python setup.py sdist bdist_wheel
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/descomplicando-a-criacao-de-pacotes-de-processamento-de-imagens-em-python/learning/c3b43185-88df-4d70-a018-bfd4cf1ee4e3
 
 ### Passos
 
