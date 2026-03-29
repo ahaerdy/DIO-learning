@@ -105,7 +105,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Projeto: [Criando um Pacote de Processamento de Imagens com Python](Modulo_04/07-Criando_um_Pacote_de_Processamento_de_Imagens_com_Python)
   - Repositório: [processamento-imagens-ahaerdy](https://github.com/ahaerdy/processamento-imagens-ahaerdy)
   - Descrição: Projeto de um pacote Python para processamento de imagens, implementando funções para aplicar filtros (preto e branco) e transformações (redimensionamento), utilizando a biblioteca Pillow. O pacote foi desenvolvido com setuptools para publicação no Test PyPI e no PyPI, incluindo scripts de teste para validação das funcionalidades implementadas.
-- [ ] 🔸Desafio: [Explorando Técnicas de POO com Python]
+- [ ] Desafio: [Explorando Técnicas de POO com Python](Modulo_04/08-Desafio-Explorando_Tecnicas_de_POO_com_Python)
 
 ### Módulo 5: Fundamentos de Power BI
 
