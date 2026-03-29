@@ -214,7 +214,7 @@ Link do vídeo: https://web.dio.me/lab/descomplicando-a-criacao-de-pacotes-de-pr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/descomplicando-a-criacao-de-pacotes-de-processamento-de-imagens-em-python/learning/f9ddfc95-23a0-426c-8e49-b9f7ff51610c
 
 ### Distribuições
 
