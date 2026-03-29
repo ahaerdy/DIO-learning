@@ -366,7 +366,7 @@ python -m pip install package_name
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/descomplicando-a-criacao-de-pacotes-de-processamento-de-imagens-em-python/learning/76e292ac-2f61-4682-a449-340773933f1d
 
 ### Resumo
 
