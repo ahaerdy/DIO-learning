@@ -1,4 +1,4 @@
-# Desafio 1 - Criando uma Conta Bancária
+# Desafio 1 - Criando Classes para Dados de Vendas
 
 ## Descrição
 
@@ -16,20 +16,32 @@ Você está desenvolvendo um sistema para gerenciar dados de vendas que serão p
 
 ## Entrada
 
+A entrada consiste em dados de vendas com as seguintes colunas:  
 
+- Produto (string)  
+- Quantidade (inteiro)  
+- Valor (decimal)
 
 ## Saída
 
-
+A saída é o total de vendas calculado pela classe *Relatorio*.
 
 ## Exemplos
 
+A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-03-29-10-31-17.png" alt="" width="480">
+</p>
+
+> Atenção: É extremamente importante que as entradas e saídas sejam exatamente iguais às descritas na descrição do desafio de código.
 
 ## Solução
 
 
 
-# Desafio 2 - 
+# Desafio 2 - Agrupamento de Vendas por Categoria
+
 
 ## Descrição
 
