@@ -12,7 +12,7 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/project/descomplicando-a-criacao-de-pacotes-de-processamento-de-imagens-em-python/learning/3d3925ad-7a05-4068-9cf9-7f3f7b18e99f?back=/track/engenharia-dados-python&tab=undefined&moduleId=undefined
 
 ### Objetivos
 
@@ -58,7 +58,7 @@ Link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-Link do vídeo: 
+Link do vídeo: https://web.dio.me/lab/descomplicando-a-criacao-de-pacotes-de-processamento-de-imagens-em-python/learning/4dfcac97-0cde-45f2-9932-beeff1a0bd3b
 
 ### Exemplos de estruturas
 
