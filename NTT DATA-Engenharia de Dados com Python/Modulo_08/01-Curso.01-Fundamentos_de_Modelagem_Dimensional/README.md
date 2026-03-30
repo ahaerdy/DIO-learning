@@ -179,7 +179,6 @@ A imagem apresenta um modelo relacional (DER — Diagrama Entidade-Relacionament
 
 Agora temos um exemplo concreto de diagrama relacional obtido a partir de uma ferramenta como o DBeaver, conectada a um banco de dados de exemplo. É possível visualizar as tabelas (como *álbum*, *artista*, *track*, *gênero*), suas colunas e os relacionamentos entre elas — representados por linhas que conectam chaves estrangeiras. Observa-se, inclusive, um autorrelacionamento (um círculo), situação em que uma tabela se relaciona consigo mesma. Esse tipo de diagrama reflete a complexidade de um banco de dados transacional, onde as tabelas são especializadas e os relacionamentos se distribuem entre várias entidades.
 
-
 ### 🟩 Vídeo 05 - Tipos de modelos dimensionais: Start Schema, Snowflake e Constellation
 
 <video width="60%" controls>
@@ -189,6 +188,34 @@ Agora temos um exemplo concreto de diagrama relacional obtido a partir de uma fe
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/beb2b1a4-c34d-4799-86b0-18e426d48098?autoplay=1
 
+Este vídeo explora as diferentes arquiteturas de modelagem de dados utilizadas em Business Intelligence e Data Warehousing, destacando as vantagens de cada uma e por que a modelagem dimensional é preferida em relação à relacional para fins analíticos.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h41m29s698.jpg" alt="" width="840">
+</p>
+  
+Esta imagem mostra um **modelo estrela (star schema)** em zoom: um **fato central** rodeado por várias **tabelas dimensão**. O ponto principal é que a tabela do meio (a *fact table*) concentra as medidas que queremos analisar (por exemplo, vendas, unidades, receita) e cada dimensão (cliente, produto, tempo, companhia) fornece atributos descritivos que enriquecem as análises. A estrutura em “raio” facilita consultas analíticas simples e desempenho em leitura, pois as junções são diretas entre a fact table e cada dimensão. 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h41m34s938.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra a **variação Snowflake** do star schema: as dimensões são **normalizadas** em sub‑tabelas (por exemplo, *Product → Variant*, *Branch → Country*). Em vez de uma única dimensão larga, o snowflake divide atributos em tabelas relacionadas, reduzindo redundância e modelando hierarquias explícitas (Location → Dealer → Branch, Product → Variant). Esse desenho é útil quando se quer manter consistência e economizar espaço, embora aumente o número de junções nas consultas. Elementos visíveis no diagrama incluem *Date Dim*, *Branch Dim*, *Product* e *Variant*, com a fact table central contendo medidas como *Units_Sold* e *Revenue*. 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h41m39s910.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra um **Galaxy schema** (também chamado de *constellation*): múltiplas **fact tables** compartilham dimensões comuns. No exemplo, diferentes fatos de receita/unidades referenciam as mesmas dimensões de *Product*, *Date* e *Branch*, permitindo análises integradas entre processos distintos (por exemplo, vendas por dealer e vendas por filial). O galaxy é indicado quando há vários processos analíticos relacionados que precisam reutilizar dimensões padronizadas, facilitando consistência entre relatórios. 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h41m46s761.jpg" alt="" width="840">
+</p>
+
+O slide contrapõe **OLTP** e **OLAP** para lembrar que, embora bancos relacionais transacionais (OLTP) sejam projetados para operações rápidas e consistentes (inserções/atualizações), eles também podem servir como fonte para análises. Em ambientes analíticos, modelos como star, snowflake e galaxy são usados para organizar dados de forma que consultas OLAP sejam eficientes. Em resumo: **modelos relacionais bem projetados permitem responder perguntas analíticas**, mas a escolha entre normalização (snowflake), desnormalização (star) ou múltiplas facts (galaxy) depende dos requisitos de desempenho, manutenção e consistência. 
+
 ### 🟩 Vídeo 06 - Explorando Brevemente os Modelos Dimensionais
 
 <video width="60%" controls>
@@ -196,7 +223,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/3c4c0e59-829d-4c41-a450-3e61c737f725?autoplay=1
 
 ### 🟩 Vídeo 07 - O que é Granularidade de dados?
 
