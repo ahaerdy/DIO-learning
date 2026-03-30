@@ -106,6 +106,46 @@ Esse é o modelo que usamos em ferramentas como Power BI para construir relatór
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/e56fe8c0-7fef-40c1-aca1-92aef529cf35?autoplay=1
 
+Este vídeo explora o conceito de "Cubo" na ciência de dados, comparando-o com modelos tabulares tradicionais e discutindo as diferenças fundamentais entre sistemas transacionais e analíticos.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h00m13s186.jpg" alt="" width="840">
+</p>
+
+O slide apresenta a estrutura de uma tabela tradicional, com linhas representando registros e colunas representando atributos. A pergunta “Modelo em cubo?” introduz a reflexão sobre como essa representação bidimensional se relaciona com o conceito de cubo, que adiciona uma terceira dimensão para armazenar e analisar dados sob múltiplas perspectivas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h00m19s710.jpg" alt="" width="840">
+</p>
+
+Nesta segunda representação tabular, reforça-se a ideia de que a tabela permite apenas combinações entre duas dimensões (por exemplo, produto e país ou produto e data). Essa limitação bidimensional contrasta com o modelo em cubo, onde uma terceira dimensão (como trimestre fiscal) possibilita análises mais ricas e consolidadas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h00m22s962.jpg" alt="" width="840">
+</p>
+
+Este quadro compara visualmente dois modelos: Tabular (Relacional) e Cubo (Dimensional). No lado tabular aparecem listas de regiões e produtos organizadas como registros; no lado dimensional aparece a noção de trimestre fiscal como uma dimensão adicional, ilustrando como o cubo agrega uma face extra (altura) que permite consultas por produto, região e período fiscal ao mesmo tempo. A imagem enfatiza que o cubo é uma representação orientada à análise, projetada para facilitar múltiplas perspectivas sobre os mesmos dados.
+ 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h00m25s263.jpg" alt="" width="840">
+</p>
+
+O slide formaliza as principais características do cubo:
+- **Eixos:** correspondem aos componentes do esquema (dimensões), como produto, país e data.
+- **Interseção:** ponto de encontro entre os eixos, onde são armazenadas as medidas e os dados do contexto analisado.
+- **Visão consolidada:** o cubo oferece uma perspectiva integrada e mais elaborada que uma tabela isolada.
+- **Análises de perspectivas distintas:** ao dispor de múltiplas faces, permite examinar os dados sob diferentes ângulos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h00m33s508.jpg" alt="" width="840">
+</p>
+
+A imagem compara os ambientes transacional e analítico, destacando que não há um “melhor” — eles coexistem e atendem a objetivos distintos.  
+- **Transacional:** voltado para sistemas operacionais (ex.: vendas), prioriza alta disponibilidade e integridade por meio de restrições e estrutura confiável.  
+- **Analítico:** focado em análise de dados, consolida informações de múltiplas fontes e aceita redundâncias em prol da performance das consultas.  
+Ambos se complementam, sendo a escolha definida pela necessidade do cenário.      
 
 
 ### 🟩 Vídeo 04 - Entendendo Modelagem com Start Schema
@@ -115,7 +155,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/089b141c-5cec-4747-bcdc-eb4168580a41?autoplay=1
 
 ### 🟩 Vídeo 05 - Tipos de modelos dimensionais: Start Schema, Snowflake e Constellation
 
