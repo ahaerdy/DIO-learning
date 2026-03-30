@@ -174,16 +174,10 @@ Este é um esquema estrela (*star schema*), o modelo dimensional mais comum e ma
 A imagem apresenta um modelo relacional (DER — Diagrama Entidade-Relacionamento) gerado por uma ferramenta como o MySQL Workbench. Diferente do esquema estrela, aqui não há uma tabela fato centralizada. As tabelas são organizadas de forma normalizada, com relacionamentos variados (um-para-muitos, muitos-para-muitos) entre diferentes entidades. Essa estrutura é adequada para sistemas transacionais (OLTP), onde a prioridade é a consistência e a redução de redundância de dados, mas exige múltiplas junções em consultas analíticas mais complexas.
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h16m31s428.jpg" alt="" width="840">
-</p>
-
-Agora temos um exemplo concreto de diagrama relacional obtido a partir de uma ferramenta como o DBeaver, conectada a um banco de dados de exemplo. É possível visualizar as tabelas (como *álbum*, *artista*, *track*, *gênero*), suas colunas e os relacionamentos entre elas — representados por linhas que conectam chaves estrangeiras. Observa-se, inclusive, um autorrelacionamento (um círculo), situação em que uma tabela se relaciona consigo mesma. Esse tipo de diagrama reflete a complexidade de um banco de dados transacional, onde as tabelas são especializadas e os relacionamentos se distribuem entre várias entidades.
-
-<p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-30-15h16m38s785.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta os três principais tipos de modelagem dimensional: **Star Schema** (esquema estrela), **Snowflake Schema** (floco de neve) e **Constellation ou Galaxy Schema** (constelação). No *star*, as dimensões estão diretamente ligadas à tabela fato, sem normalização adicional. No *snowflake*, algumas dimensões são normalizadas em subdimensões, economizando espaço mas aumentando o número de junções. Já o *galaxy* reúne múltiplas tabelas fato que compartilham dimensões entre si, formando uma estrutura mais complexa, adequada para ambientes analíticos com diferentes processos de negócio interligados. Cada variação oferece um equilíbrio diferente entre simplicidade de consulta, desempenho e uso de armazenamento.      
+Agora temos um exemplo concreto de diagrama relacional obtido a partir de uma ferramenta como o DBeaver, conectada a um banco de dados de exemplo. É possível visualizar as tabelas (como *álbum*, *artista*, *track*, *gênero*), suas colunas e os relacionamentos entre elas — representados por linhas que conectam chaves estrangeiras. Observa-se, inclusive, um autorrelacionamento (um círculo), situação em que uma tabela se relaciona consigo mesma. Esse tipo de diagrama reflete a complexidade de um banco de dados transacional, onde as tabelas são especializadas e os relacionamentos se distribuem entre várias entidades.
 
 
 ### 🟩 Vídeo 05 - Tipos de modelos dimensionais: Start Schema, Snowflake e Constellation
