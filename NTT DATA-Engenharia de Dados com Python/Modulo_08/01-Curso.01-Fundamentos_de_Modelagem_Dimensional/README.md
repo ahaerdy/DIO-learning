@@ -376,6 +376,29 @@ Esta captura mostra definições de tabelas e colunas exemplares usadas no model
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/107aa7d5-048e-4066-9338-4894ccfdc93f?autoplay=1
 
+Este vídeo explica como construir um modelo de dados relacional focado em um sistema de vendas e pedidos. O instrutor demonstra a criação de entidades, a definição de relacionamentos (1:N e N:M) e boas práticas de organização visual e nomenclatura para facilitar a transição futura para modelos dimensionais.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-15h56m27s496.jpg" alt="" width="840">
+</p>
+
+
+A imagem mostra um diagrama de modelagem relacional extraído do SQLDBM com várias **entidades** e seus **atributos** visíveis, além de anotações sobre **chaves primárias (PK)**, **chaves estrangeiras (FK)** e **relacionamentos**.  
+Os elementos principais identificáveis são **Fornecedor**, **Cliente**, **Produto**, **Pedido**, **Categoria**, **Colaborador** e **Frete**; alguns atributos exibidos incluem **Nome varchar(45)**, **Preço double precision** e **CPF char(9)**.  
+
+**Pontos observáveis**
+- **Relacionamentos N:M** estão anotados entre *Produto ↔ Fornecedor* e *Pedido ↔ Produto*, indicando que essas associações exigem uma tabela associativa (tabela de junção) para modelagem relacional correta.  
+- **Chaves e atributos**: várias tabelas mostram um campo `ID` como inteiro e marcado como **PK**; há também campos identificados como **FK** dentro da tabela *Pedido* (por exemplo, `ID_cliente`, `ID_colab`, `ID_frete`), o que sinaliza dependências entre tabelas.  
+- **Boas práticas sugeridas pela visualização**: evitar redundância (por exemplo, não colocar o ID do pedido dentro da tabela Cliente), renomear atributos com nomes únicos quando o mesmo rótulo aparece em tabelas diferentes (ex.: `ID`, `ID_colab`) e criar tabelas de junção para relacionamentos muitos‑para‑muitos.
+
+**Ações de modelagem recomendadas**
+- **Criar tabelas associativas** para cada relacionamento N:M (por exemplo, `Produto_Fornecedor` e `Pedido_Produto`) contendo as FKs correspondentes e, se necessário, atributos adicionais (quantidade, preço unitário, data).  
+- **Normalizar atributos redundantes**: mover FKs para a tabela que representa o lado “muitos” do relacionamento e remover colunas redundantes da tabela do lado “um”.  
+- **Padronizar nomes de colunas** para evitar ambiguidade (por exemplo, usar `cliente_id`, `colaborador_id`, `frete_id`, `produto_id` em vez de múltiplos `ID` genéricos).  
+- **Documentar as FKs** explicitamente no modelo (origem e destino) para facilitar a geração automática de DDL em ferramentas como Workbench ou SQLDBM.
+
 ### 🟩 Vídeo 11 - Criando o Modelo Dimensional com Base no Relacional
 
 <video width="60%" controls>
@@ -383,7 +406,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 12 - Criando os Relacionamentos do Star Schema
 
