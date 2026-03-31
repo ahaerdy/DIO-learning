@@ -301,7 +301,37 @@ Este slide enfatiza um ponto de atenção crítico: a relação entre granularid
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/570e32ab-f424-43e8-9e86-460e2e9054a2?autoplay=1
 
+Este vídeo explora o conceito de Chaves Artificiais (Surrogate Keys), sua importância na transição de sistemas transacionais para analíticos e como elas otimizam a performance de bancos de dados OLAP.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-15h01m34s434.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o título “Chave Artificial” acompanhado das perguntas “O que isso? Como uso esse trem?”.  
+Os três pontos listados resumem as principais características desse conceito no modelo dimensional:
+
+- **Chave relacionada ao modelo dimensional** – a chave artificial é um elemento próprio da modelagem dimensional (usada em data warehouses e sistemas OLAP), não do sistema transacional original.
+- **Substitui a identificação sem sobreposição** – ela substitui a chave primária do sistema de origem (chave natural) sem apagá‑la ou conflitar com ela; ambas podem coexistir.
+- **Facilita a identificação de registros no modelo atual** – por ser mais simples (geralmente numérica e sequencial), agiliza a localização e a junção dos dados nas tabelas fato e dimensão.
+
+O slide introduz a ideia de que a chave artificial é uma solução para tornar a navegação e a performance do ambiente analítico mais eficientes, mantendo a rastreabilidade dos dados originais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-15h01m40s060.jpg" alt="" width="840">
+</p>
+
+Este segundo slide reforça a pergunta “O que isso? Como usar esse trem?” e destaca a característica central da chave artificial: **Identificador numérico**.
+
+Enquanto os sistemas transacionais podem utilizar chaves complexas (como códigos hexadecimais, sequências alfanuméricas longas ou chaves compostas), a chave artificial simplifica esse identificador para um valor numérico sequencial.  
+Essa conversão traz benefícios diretos:
+
+- Melhor performance em buscas e junções (índices numéricos são mais rápidos que strings grandes);
+- Facilidade de leitura e depuração durante o desenvolvimento;
+- Independência em relação ao sistema de origem – se o código do canal ou do produto mudar no ERP, a chave artificial permanece estável.
+
+Na prática, a chave artificial convive com a chave natural do sistema original, garantindo tanto a eficiência do modelo dimensional quanto a rastreabilidade dos dados.      
 
 ### 🟩 Vídeo 09 - Modelando o Esquema Relacional Base
 
@@ -310,7 +340,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/cfdc47ec-b552-44d9-824e-06051d063ff1?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Definindo os Relacionamentos do Modelo Relacional
 
