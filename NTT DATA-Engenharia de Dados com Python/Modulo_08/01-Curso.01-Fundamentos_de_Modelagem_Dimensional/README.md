@@ -352,21 +352,20 @@ Este vídeo tutorial apresenta o processo inicial de criação de um esquema de 
 
 
 Esta imagem mostra a tela inicial e elementos de navegação do **SQLDBM**, uma plataforma web para modelagem de bancos de dados. É possível identificar menus de acesso a recursos (como *Resources*, *Changelog*, *Pricing*), opções de login/registro e banners de integrações (por exemplo, *databricks*, *Google BigQuery*, *snowflake*), indicando que a ferramenta suporta múltiplos destinos de implementação. A captura contextualiza o uso da plataforma como ambiente para criar projetos e diagramas de banco de dados sem escrever código.  
-“Esse aqui, gente, é o sqldbm.com. Isso aqui é uma plataforma online de banco de dados onde eu tenho, posso criar aí meus projetos e criar os meus bancos de dados aqui.” 
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-15h21m34s578.jpg" alt="" width="840">
 </p>
 
 A imagem apresenta o painel de **Diagramas / Database Explorer** do projeto: lista de diagramas (SubjectArea_1, Diagram_2, etc.), propriedades do diagrama e seções para *Schemas*, *Tables*, *References* e *Virtual References*. Também aparecem nomes de áreas dimensionais e fatos (por exemplo, *Dimensão - Cliente*, *Fato - Vendas*), o que indica que o autor está organizando um modelo relacional com foco posterior em modelagem dimensional. Esse quadro é onde se adicionam, editam e navegam as tabelas antes de criar relacionamentos.  
-“A primeira parte aqui, olha, é a parte de diagramas onde a gente consegue verificar o diagrama principal.” 
+
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-15h21m50s814.jpg" alt="" width="840">
 </p>
 
 Esta captura mostra definições de tabelas e colunas exemplares usadas no modelo: **Produto** (ID int PK; Nome varchar(45); Descrição varchar(45); Avaliação varchar(300); Preço double precision), **Fornecedor** (ID int PK; Nome_sup varchar(45); Tipo varchar(45)), **Cliente** (ID int PK; Nome varchar(45); Sobrenome varchar(45); CPF char(9); Endereço_cliente varbinary(60)) e outras entidades como **Colaborador**, **Frete** e **Categoria**. Note que a interface exibe tipos de dados e chaves primárias, e que o instrutor opta por um modelo simplificado (atributos agregados em vez de normalização completa) para fins didáticos. A imagem também evidencia distinção visual entre tipos numéricos e textuais na ferramenta, ajudando a revisar rapidamente a modelagem.  
-“Percebe que essa plataforma ela difere o que que é numérico em amarelo e o que que é textual em laranja.”      
+    
 
 ### 🟩 Vídeo 10 - Definindo os Relacionamentos do Modelo Relacional
 
