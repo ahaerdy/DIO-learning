@@ -225,6 +225,41 @@ O slide contrapõe **OLTP** e **OLAP** para lembrar que, embora bancos relaciona
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/3c4c0e59-829d-4c41-a450-3e61c737f725?autoplay=1
 
+O vídeo explora os conceitos fundamentais da modelagem dimensional, focando nos modelos Star Schema, Snowflake e Constelação, e como eles são utilizados para otimizar a análise de dados e a tomada de decisões.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-14h25m12s707.jpg" alt="" width="840">
+</p>
+
+O **Modelo Estrela (Star Schema)** é o esquema dimensional mais difundido em *data warehousing*. Seu nome deriva da disposição das tabelas: uma tabela **fato** no centro e diversas tabelas **dimensão** ao redor, formando uma estrutura similar a uma estrela. A tabela fato armazena as métricas ou medidas de negócio (ex.: valor de venda, quantidade), enquanto as tabelas dimensão contêm os atributos descritivos (ex.: cliente, produto, data). Esse formato desnormalizado simplifica as consultas analíticas e proporciona alto desempenho, pois reduz a necessidade de múltiplos junções entre tabelas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-14h25m15s477.jpg" alt="" width="840">
+</p>
+
+A imagem detalha os componentes principais do Modelo Estrela. A **tabela fato** é a tabela principal; ela contém as chaves estrangeiras que se conectam às dimensões e as medidas quantitativas de interesse. Frequentemente utiliza uma **chave artificial** (surrogate key) para garantir integridade e simplificar a junção. As **tabelas dimensão** guardam os detalhes descritivos de cada aspecto analisado, com chaves primárias simples e dados exclusivos. O esquema opera com **desnormalização** – as dimensões não são divididas em várias tabelas, o que introduz certa redundância, mas essa característica é intencional: ela acelera as consultas, uma vez que reduz o número de junções e mantém a estrutura intuitiva para o usuário final.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-14h25m22s962.jpg" alt="" width="840">
+</p>
+
+O **Modelo Snowflake** é uma variação do modelo estrela. Nesse esquema, as tabelas dimensão são normalizadas, ou seja, divididas em subdimensões relacionadas entre si, eliminando duplicidades e criando uma estrutura que lembra um floco de neve. Essa normalização reduz o espaço de armazenamento, mas introduz níveis adicionais de junções, aumentando a complexidade das consultas e potencialmente comprometendo o desempenho analítico. Por esse motivo, o modelo estrela costuma ser preferido em ambientes de *data warehouse*, onde a velocidade de resposta é mais relevante que a economia de espaço.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-14h25m26s423.jpg" alt="" width="840">
+</p>
+
+O esquema **Constelação** (também chamado de **Galáxia**) expande a abordagem estrela ao conter **múltiplas tabelas fato** que podem compartilhar tabelas dimensão entre si. Cada tabela fato representa um processo de negócio diferente (ex.: vendas, estoque, devoluções), mas as dimensões comuns – como tempo, cliente e produto – são reutilizadas, formando uma constelação de estrelas interconectadas. Esse modelo integra diversos assuntos em um mesmo contexto analítico, permitindo uma visão unificada e rica para a tomada de decisão.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-14h25m29s146.jpg" alt="" width="840">
+</p>
+
+As **tabelas fato e dimensão** constituem a base de qualquer modelo dimensional. A **tabela fato** é o ponto de partida das análises: ela armazena eventos ou transações (vendas, pedidos, etc.) e contém as medidas que se deseja analisar – valores numéricos que podem ser somados, calculados ou agregados. A **tabela dimensão** fornece o contexto: seus atributos descritivos (categoria do produto, nome do cliente, data, região) permitem filtrar, agrupar e segmentar os dados da tabela fato. Durante a construção do modelo, costuma-se adicionar **chaves artificiais** (surrogate keys) às dimensões, garantindo independência entre o sistema de origem e o ambiente analítico, além de preservar a chave natural do sistema transacional. Essa estrutura desnormalizada é essencial para que ferramentas de BI (Business Intelligence) entreguem respostas rápidas e intuitivas aos usuários.      
+
+
 ### 🟩 Vídeo 07 - O que é Granularidade de dados?
 
 <video width="60%" controls>
@@ -232,7 +267,30 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/9b5a732f-c653-4ea5-b8c8-09f599893560?autoplay=1
+
+Este vídeo explora o conceito de granularidade, um pilar fundamental na modelagem de dados e Business Intelligence (BI). O vídeo detalha como o nível de detalhamento dos dados afeta tanto a qualidade das análises quanto a performance dos sistemas.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-14h48m44s732.jpg" alt="" width="840">
+</p>
+
+Esta imagem introduz o conceito de granularidade, elemento central na modelagem dimensional. Ela apresenta a definição de granularidade como o **nível de detalhamento dos dados armazenados em uma tabela fato**. O esquema ilustra a relação inversa entre o “grão” (tamanho da unidade de análise) e o nível de detalhe: quanto maior o grão, menor a quantidade de detalhes; quanto menor o grão, mais refinados são os dados. Além disso, destaca a necessidade de um **trade-off** na definição da granularidade, equilibrando a riqueza analítica com a viabilidade técnica e de performance.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-14h48m50s391.jpg" alt="" width="840">
+</p>
+
+A imagem traz um exemplo prático para fixar o conceito de granularidade. Utilizando um mapa da América do Norte (Estados Unidos e Canadá), ela sugere um cenário de análise de vendas por território. A definição da granularidade aqui está associada à dimensão geográfica: é possível analisar as vendas no nível mais agregado (todo o continente, um país) ou em níveis mais detalhados (regiões, estados, cidades). Essa escolha impacta diretamente a forma como os dados serão sumarizados e apresentados, mostrando que a granularidade não se limita ao tempo, mas se aplica a qualquer dimensão analítica.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-03-31-14h49m05s779.jpg" alt="" width="840">
+</p>
+
+Este slide enfatiza um ponto de atenção crítico: a relação entre granularidade e capacidade de processamento. A imagem alerta que optar por uma granularidade muito baixa (alto nível de detalhe) exige maior poder computacional para processar e exibir os dados. A frase “Não adianta modelo perfeito sem poder de processamento” resume o trade-off: um modelo bem estruturado, com detalhamento excessivo, pode se tornar inviável se o ambiente computacional não der suporte à complexidade exigida. Assim, a definição da granularidade deve considerar tanto os requisitos analíticos quanto a infraestrutura disponível.      
+
 
 ### 🟩 Vídeo 08 - Chave Artificial com Start Schema
 
@@ -241,7 +299,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/570e32ab-f424-43e8-9e86-460e2e9054a2?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Modelando o Esquema Relacional Base
 
