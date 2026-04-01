@@ -435,7 +435,30 @@ A segunda imagem apresenta o **esqueleto dimensional** do modelo em formato estr
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/9aadd40b-2f98-4f83-a18d-e03450a98211?autoplay=1
 
+Este vídeo apresenta uma demonstração prática de como construir um modelo de dados dimensional (Star Schema) em uma ferramenta de design, comparando-o com a modelagem relacional tradicional. O foco está na organização de entidades como Clientes, Produtos e Vendas, e como essas estruturas servem a propósitos diferentes no ecossistema de dados.
 
+### Anotações
+
+### Modelagem dimensional — diagrama
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-09h30m49s910.jpg" alt="" width="840">
+</p>
+
+**Explicação didática (foco nesta imagem):**
+
+- **Visão geral:** o diagrama apresenta um *fato* central **t_vendas** ligado a várias *dimensões* — **d_cliente**, **d_produtos**, **d_categoria**, **d_vendedor** e **date**.  
+- **Chaves e relacionamentos:** em **t_vendas** o campo **sk_vendas** aparece como **PK**; os campos **id_date**, **id_categ**, **id_vendedor**, **id_produto** e **id_cliente** funcionam como **FK** apontando para as dimensões correspondentes.  
+- **Atributos relevantes:** a tabela de fatos inclui **Quantidade**, **Descrição** e **Prioridade** (enumeração **"H", "M", "L"**), enquanto as dimensões trazem identificadores e atributos descritivos (por exemplo, **Cliente_nome varchar(45)**; **Prod_name varchar(45)**; **Categ_name varchar(45)**).  
+- **Data como atributo de análise:** o autor destaca a necessidade de registrar a data do pedido e opta por **datetime** para permitir múltiplos pedidos no mesmo dia e granularidade temporal maior.  
+- **Propósito do esquema:** o desenho segue a lógica de um **esquema em estrela** (star schema) — dimensão desnormalizada para facilitar consultas analíticas — em contraste com modelos normalizados (ou snowflake), que seriam mais adequados a ambientes transacionais (OLTP).  
+  - **Implicação prática:** esse formato prioriza desempenho de leitura e simplicidade nas consultas analíticas (OLAP), sacrificando normalização e algumas constraints típicas de um SGBD transacional. 
+
+**Pontos de atenção ao implementar:**
+
+- **Definir tipos e tamanhos** (varchar, enum, int) conforme volume e cardinalidade esperados.  
+- **Garantir integridade referencial** ao carregar dados de fontes externas (ETL), especialmente para as FKs do fato.  
+- **Considerar tabelas de junção** (N:N) quando houver relacionamentos muitos‑para‑muitos entre entidades (por exemplo, pedido ↔ produto), conforme mencionado pelo autor. 
 
 ### 🟩 Vídeo 13 - Rastreando Modificações no Modelo - Slowly Changing Dimensions
 
@@ -444,7 +467,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/a6b7d91c-ce80-44c4-bdd7-a450610f2845?autoplay=1
 
 ### 🟩 Vídeo 14 - Modificando o Star Schema para mapear Modificações nos Dados
 
