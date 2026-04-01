@@ -138,7 +138,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 ### Módulo 8: Modelagem de Dados com Power BI  
 
 - [x] Curso: [Fundamentos de Modelagem Dimensional](Modulo_08/01-Curso.01-Fundamentos_de_Modelagem_Dimensional)
-- [ ] Curso: [Modelagem de Dados no Power BI]()
+- [x] Curso: [Modelagem de Dados no Power BI](Modulo_08/02-Curso.02-Modelagem_de_Dados_no_Power_BI)
 - [ ] Curso: Primeiros passos com DAX e Cálculos com Power BI
 - [ ] Curso: Otimização de Modelo de Dados com Foco em Desempenho no Power BI
 - [ ] Curso: Dashboard de Vendas com Power BI utilizando Star Schema
