@@ -169,7 +169,18 @@ A imagem exibe o diálogo **Editar Relação**, com a opção **Muitos para muit
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/3959f3d2-16fc-4454-8415-1ec3bbcde659?autoplay=1
 
+O vídeo apresenta o processo de transição de um banco de dados relacional para um modelo dimensional (Star Schema), destacando as melhores práticas de tratamento de dados, resolução de erros e estratégias de análise de processos internos.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-14h52m10s790.jpg" alt="" width="840">
+</p>
+
+Nesta imagem vemos a interface do Power BI aberta com um projeto derivado de um banco de dados relacional. O ponto central aqui é que não se trata de uma *sample* padrão do Power BI, mas sim de um projeto próprio, justamente porque as amostras não permitem modificações nos dados. A explicação destaca que, para criar um modelo em estrela, é necessário importar e transformar os dados de forma controlada. O professor alerta que erros podem surgir durante as transformações — como tabelas não importadas — e recomenda desfazer a última ação e salvar frequentemente para identificar o que funcionou ou não.  
+
+O objetivo didático é mostrar como partir de tabelas relacionais (Project, Department, Employee, Dep_Locations, etc.) e reorganizá-las em um esquema dimensional. Esse processo é fundamental para análises de carga de trabalho, projetos e departamentos, evitando problemas de relacionamentos muitos-para-muitos. Assim, a imagem serve como introdução prática ao desafio de transformar dados relacionais em um **Star Schema** dentro do Power BI.
+     
 
 ### 🟩 Vídeo 06 - Construindo Company Star Schema: Mesclando Colunas e Modificando Campos
 
@@ -178,7 +189,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/dc372358-e1b3-42af-b870-0d34f5378114?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Construindo Company Star Schema: Trabalhando nas Tabela Fato e Dimensão
 
