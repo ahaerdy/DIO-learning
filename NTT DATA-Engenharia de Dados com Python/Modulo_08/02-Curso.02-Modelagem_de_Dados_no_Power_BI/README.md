@@ -229,6 +229,47 @@ Trecho do material de apoio: "Eu venho para cá e agora o que que eu tenho, tá 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/4928cdbf-99ab-4516-8f1c-2c764f8f9b93?autoplay=1
 
+Este vídeo descreve a transformação de dados brutos em um modelo relacional eficiente (Star Schema). O objetivo principal é criar uma Tabela Fato (F_Equipe) que consolide informações de horas trabalhadas, projetos e colaboradores, além de organizar as Tabelas de Dimensão.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-15h55m58s144.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a interface do Power Query com várias consultas listadas e colunas de uma tabela de colaboradores visíveis.  
+**Explicação didática:** aqui o instrutor está preparando as tabelas de referência (employee, project, works_on) para iniciar mesclas; o foco visual é a lista de consultas e a identificação das colunas que serão usadas para relacionar colaboradores e projetos. Essa tela serve para ilustrar a etapa inicial de inspeção das fontes antes de criar a tabela fato.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-15h56m02s326.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a caixa de diálogo de mesclagem (merge) onde o usuário seleciona tabelas e colunas correspondentes para combinar dados. O slide evidencia o passo em que se escolhem as chaves de junção (por exemplo, SSN/Essn e Pno/Pnumber) e o tipo de junção (ex.: externa esquerda). É nessa etapa que se define se a mescla será criada como nova consulta — prática recomendada para testar sem alterar as originais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-15h56m09s108.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a pré-visualização do resultado da mesclagem, com linhas correspondentes entre colaboradores e projetos e valores numéricos visíveis. O instrutor verifica se a mescla trouxe a coluna desejada (por exemplo, Pname) e confere se os pares colaborador–projeto apresentam os valores esperados (como horas atribuídas). Essa verificação visual é essencial para garantir que as chaves escolhidas produziram correspondências corretas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-15h56m11s614.jpg" alt="" width="840">
+</p>
+
+A imagem exibe uma tabela resultante com colunas como colaborador, gerente, nome do projeto, departamento e uma coluna de horas. Este é o momento em que a nova consulta já contém a **quantidade de horas por colaborador por projeto** — a base para construir a tabela fato. O instrutor renomeia a coluna para "horas trabalhadas" e prepara a tabela (F_equipe) para uso posterior como fato no modelo.
+ 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-15h56m18s742.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o painel de etapas aplicadas (Applied Steps) e a organização das consultas, indicando renomeações e mesclas realizadas. O painel evidencia o histórico de transformações (mesclas, remoção/renomeação de colunas, criação de índice). Isso permite rastrear e reverter alterações se necessário; também demonstra a boa prática de criar consultas intermediárias (ex.: distribuição de horas) antes de consolidar a tabela fato.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-15h57m13s958.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o objetivo final: ter uma **tabela fato** (F_equipe / distribuição de horas) conectada a dimensões (colaborador, projeto, departamento, localizações, dependentes). O próximo passo natural é criar os relacionamentos entre essas tabelas no modelo para possibilitar análises por colaborador, projeto e local.      
 
 
 ### 🟩 Vídeo 08 - Construindo Company Star Schema: Realizando adequações e Estabelecendo Relacionamentos
@@ -238,7 +279,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/4ddf4681-85d8-470e-a586-4b4d3638eb19?autoplay=1
 
 ### 🟩 Vídeo 09 - Construindo Company Star Schema: Mesclando Tabelas e Adicionando Colunas de Exemplos
 
