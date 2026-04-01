@@ -469,6 +469,58 @@ Este vídeo apresenta uma demonstração prática de como construir um modelo de
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/a6b7d91c-ce80-44c4-bdd7-a450610f2845?autoplay=1
 
+As Slowly Changing Dimensions (SCD) são estratégias fundamentais no modelagem dimensional de dados. Elas determinam como o sistema deve reagir quando as informações de uma dimensão (como o cargo de um cliente ou seu status de assinatura) mudam ao longo do tempo.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-10h05m25s353.jpg" alt="" width="840">
+</p>
+
+**Slowly Changing Dimensions (SCD)** são técnicas usadas em modelagem dimensional para tratar mudanças nos dados de dimensão ao longo do tempo. Elas permitem definir como as alterações (como a mudança de estado civil, cargo ou status de um cliente) serão refletidas no Data Warehouse. Os principais tipos variam de SCD‑0 (nenhuma modificação) até SCD‑6 (combinação de abordagens), cada um adequado a diferentes requisitos de rastreamento histórico e desempenho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-10h05m31s622.jpg" alt="" width="840">
+</p>
+
+**SCD – Tipo 0**  
+Neste tipo, os dados não sofrem modificação após serem inseridos. Qualquer mudança na origem é simplesmente ignorada pelo Data Warehouse. É o modo passivo, sem rastreamento de histórico. Em termos de implementação, equivale a um `TRUNCATE TABLE` seguido de nova inserção dos dados, ou seja, a tabela é recarregada periodicamente sem guardar versões anteriores.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-10h05m35s550.jpg" alt="" width="840">
+</p>
+
+**SCD – Tipo 1**  
+O tipo 1 sobrescreve os valores antigos pelos novos, sem manter qualquer histórico da mudança. Quando um atributo é alterado na origem, o Data Warehouse realiza um `UPDATE` no registro existente. Caso o registro não exista, é feito um `INSERT`. Essa abordagem é simples e preserva o tamanho da tabela, mas não permite analisar como os dados evoluíram ao longo do tempo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-10h05m43s295.jpg" alt="" width="840">
+</p>
+
+**SCD – Tipo 2**  
+O tipo 2 mantém o histórico completo das mudanças, criando uma nova linha para cada versão do registro. São adicionadas colunas de controle, como `StartDate` (data de início da versão), `EndDate` (data de término) e `IsCurrent` (flag que indica a versão ativa). No exemplo, o cliente com `CustomerKey` 11012 teve sua `Designation` alterada de “Management” para “Snr. Management” em 2021‑06‑01. A versão anterior é marcada com `EndDate` e `IsCurrent = No`, enquanto a nova versão tem `StartDate` atual e `IsCurrent = Yes`. Essa técnica permite reconstruir o estado da dimensão em qualquer momento do tempo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-10h05m47s542.jpg" alt="" width="840">
+</p>
+
+**SCD – Tipo 3**  
+No tipo 3, em vez de adicionar novas linhas, são criadas colunas extras na mesma linha para armazenar valores anteriores. Normalmente, mantém‑se apenas o valor imediatamente anterior de um atributo específico. No exemplo, a coluna `PreviousDesignation` guarda o cargo anterior (“Management”) quando o cargo atual (“Snr. Management”) é alterado. Embora economize espaço, esse método limita o rastreamento a apenas uma mudança por atributo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-10h05m53s583.jpg" alt="" width="840">
+</p>
+
+**SCD – Tipo 4**  
+O tipo 4 utiliza duas tabelas: a tabela principal mantém apenas os registros atuais (sem histórico), e uma tabela de histórico, com a mesma estrutura, armazena todas as versões antigas. Quando um registro é alterado, o valor atual é movido para a tabela de histórico antes de ser sobrescrito. Essa separação melhora o desempenho das consultas que precisam apenas dos dados atuais, mantendo o histórico acessível para análises retrospectivas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-10h06m05s432.jpg" alt="" width="840">
+</p>
+
+**SCD – Tipo 6**  
+O tipo 6 combina as características dos tipos 1, 2 e 3 – daí o nome (1+2+3 = 6). Ele mantém o histórico completo com linhas versionadas (SCD‑2), uma coluna com o valor atual (SCD‑1) e uma coluna com o valor anterior (SCD‑3). Na tabela exemplo, `CurrentOccupation` representa o cargo atual (atualizado sempre), `Occupation` mantém o valor da linha naquele período (histórico) e as colunas de controle (`CurrentDate`, `EndDate`, `IsCurrent`) permitem navegar pelas versões. Essa abordagem oferece máxima flexibilidade para análises temporais, mas exige mais espaço e lógica de manutenção.      
+
 ### 🟩 Vídeo 14 - Modificando o Star Schema para mapear Modificações nos Dados
 
 <video width="60%" controls>
@@ -476,7 +528,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/b12037b1-fd99-4527-b7ed-d69a40df8d58?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
