@@ -406,7 +406,25 @@ Os elementos principais identificáveis são **Fornecedor**, **Cliente**, **Prod
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/077bd450-c43f-444d-b750-beec1cdaacc6?autoplay=1
+
+Este vídeo apresenta um guia prático sobre como estruturar um modelo de dados analítico voltado para vendas. A instrutora, Juliana, demonstra a criação de um Esquema Estrela (Star Schema), diferenciando tabelas de Fato e Dimensão, e detalhando os atributos necessários para uma análise de negócios eficiente.
+
+### Anotações
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-09h13m37s042.jpg" alt="" width="840">
+</p>
+
+A imagem mostra um recorte inicial do diagrama lógico/relacional e uma tabela de atributos para **produto**. Do lado esquerdo há uma tabela com os campos principais do produto — **ID_produto (PK)**, **Nome**, **ID_2 (FK)**, **ID_1 (FK)**, **Descrição**, **Avaliação** e **Preço** — com tipos de dados indicados (varchar, int, double precision). À direita aparece um esboço de diagrama com entidades relacionadas ao domínio de vendas: **Fornecedor**, **Cliente**, **Produto**, **Pedido**, **Categoria**, **Colaborador** e **Frete**, incluindo chaves primárias e alguns atributos (por exemplo, CPF do cliente, distância e preço no frete). Essa visão corresponde à etapa inicial de levantamento de entidades e atributos antes de definir chaves e relacionamentos finais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-09h13m49s512.jpg" alt="" width="840">
+</p>
+
+A segunda imagem apresenta o **esqueleto dimensional** do modelo em formato estrela. No centro está a tabela fato **t_vendas** (com **sk_vendas** como chave) e atributos de fato como **Quantidade**, **Descrição** e **Prioridade** (enum com valores H, M, L). Ao redor aparecem as dimensões previstas: **d_date** (com **id_date** e campo data), **d_cliente** (ID e nome), **d_vendedor** (ID e nome do colaborador), **d_categoria** (ID e nome da categoria) e **d_produtos** (ID, nome e tipo do produto). A imagem reflete a padronização de nomes de chaves (por exemplo, **ID_date**, **ID_cliente**, **ID_vendedor**, **ID_categ**, **ID_produto**) e a intenção de manter a tabela fato conectada a essas dimensões para análises temporais e por entidade.
 
 ### 🟩 Vídeo 12 - Criando os Relacionamentos do Star Schema
 
@@ -415,7 +433,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/9aadd40b-2f98-4f83-a18d-e03450a98211?autoplay=1
+
+
 
 ### 🟩 Vídeo 13 - Rastreando Modificações no Modelo - Slowly Changing Dimensions
 
