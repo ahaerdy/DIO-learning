@@ -530,11 +530,24 @@ O tipo 6 combina as características dos tipos 1, 2 e 3 – daí o nome (1+2+3 =
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-modelagem-dimensional/learning/b12037b1-fd99-4527-b7ed-d69a40df8d58?autoplay=1
 
+Este vídeo tutorial foca na transformação de tabelas de dimensão estáticas em dimensões históricas (comumente conhecidas como Slowly Changing Dimensions - SCD Tipo 2). O objetivo é permitir que analistas rastreiem mudanças no comportamento ou status de clientes e colaboradores ao longo do tempo, garantindo a integridade histórica dos dados.
 
+### Anotações
 
-##  Materiais de Apoio
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-10h22m22s255.jpg" alt="" width="840">
+</p>
+ 
+A imagem mostra um diagrama de modelagem dimensional com várias tabelas de dimensão e fatos dispostas em estilo de diagrama (ex.: **d_cliente**, **d_date**, **t_vendas**, **d_vendedor**, **d_produtos**, **d_categoria**). Na **dimensão cliente (d_cliente)** aparecem atributos textuais como **Cliente_nom (varchar)**, **birthdate (date)**, **Cliente_profile (varchar)** e colunas de rastreio temporal/estado: **Cliente_prof_atual (enum Y/N)**, **Cliente_start_date (date)** e **Cliente_end_date (date, NULL permitido)**. Outros elementos visíveis incluem chaves primárias (PK) e chaves estrangeiras (FK) ligando fatos e dimensões, e atributos de produto e vendedor com tipos e tamanhos indicados.
 
-# Certificado: 
+**Pontos didáticos e práticos extraídos da imagem e do texto associado**  
+- **Rastreabilidade temporal:** a presença de `start_date`, `end_date` e um flag `prof_atual` indica a intenção de transformar a dimensão cliente em uma **dimensão histórica** (SCD), permitindo acompanhar mudanças de perfil ao longo do tempo.  
+- **Flag simplifica consultas:** o campo **Cliente_prof_atual** com valores **Y/N** é uma otimização para facilitar buscas pelo estado corrente do cliente, em vez de depender apenas de `NULL` em `end_date`.  
+- **Chave natural vs. chave surrogate:** o diagrama e o comentário associado mostram que a **chave natural** do cliente permanece constante enquanto o **surrogate key** (ID da linha) muda a cada versão histórica, permitindo recuperar o histórico completo por cliente.  
+- **Consistência de tipos:** os atributos textuais usam `varchar(45)` e datas usam `date`, conforme anotado no diagrama; isso ajuda a padronizar o modelo e evitar ambiguidade na ingestão de dados.  
+- **Aplicabilidade:** a mesma abordagem (atributo, flag atual, start/end dates) pode ser aplicada a outras dimensões que mudam ao longo do tempo, como **vendedor/colaborador** (cargo, cargo_atual, etc.), conforme indicado no material.
+
+# Certificado: Fundamentos de Modelagem Dimensional
 
 - Link na plataforma: 
 - Certificado em pdf:
