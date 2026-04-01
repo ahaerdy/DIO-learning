@@ -549,5 +549,5 @@ A imagem mostra um diagrama de modelagem dimensional com várias tabelas de dime
 
 # Certificado: Fundamentos de Modelagem Dimensional
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/QPJVJ4HM.pdf
+- Certificado em pdf: [Fundamentos de Modelagem Dimensional](000-Midia_e_Anexos/Certificado-Fundamentos_de_Modelagem_Dimensional.pdf)
