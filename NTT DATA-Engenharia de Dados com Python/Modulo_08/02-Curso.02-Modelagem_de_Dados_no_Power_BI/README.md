@@ -191,8 +191,35 @@ O objetivo didático é mostrar como partir de tabelas relacionais (Project, Dep
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/dc372358-e1b3-42af-b870-0d34f5378114?autoplay=1
 
+O vídeo descreve o processo técnico de converter um banco de dados relacional (baseado no modelo "Company" do MySQL) em um Star Schema (Esquema Estrela) otimizado para análise no Power BI. O foco está na criação de uma tabela fato consolidada através de mesclagens e limpeza de dados.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-15h32m36s558.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a interface do **Power Query** durante o processo de *mesclagem* de consultas para construir uma tabela fato a partir das tabelas relacionais da base `company`. O foco visual é a seleção de tabelas/colunas para mesclar (por exemplo, **employee** com **project**) e as opções de junção (orientação à esquerda), indicando que o autor está consolidando informações de colaboradores e projetos para formar uma nova consulta/tabela.  
+**Passos visíveis e seu propósito**:  
+- **Selecionar tabelas e colunas correspondentes** para criar a mescla (join) que trará os projetos associados a cada colaborador.  
+- **Remover colunas irrelevantes** (birth date, middle name, address, salary) para deixar apenas atributos úteis à análise.  
+- **Expandir/selecionar** apenas o `pname` (nome do projeto) ao invés de agregar, preservando instâncias redundantes esperadas em uma tabela fato.  
+- **Adicionar coluna de índice** para criar uma surrogate key (ID SK) que servirá como chave artificial da nova tabela fato.  
+
+Trecho do material de apoio: "Work zone e department. Ok. Aí o que que eu quero fazer? Eu quero criar uma nova tabela, certo? Então essa nova tabela eu posso gerar a partir de uma mescla." 
 
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-01-15h33m02s720.jpg" alt="" width="840">
+
+
+A imagem apresenta o painel de **Etapas Aplicadas** e anotações das transformações realizadas no Power Query: remoção e renomeação de colunas, mesclas sucessivas (project, department, employee para obter gerente), adição de índice e criação de colunas compostas (por exemplo, mesclar `fname` + `lastname` para formar **gerente**). Também há evidência de limpeza e verificação de inconsistências (colaboradores sem gerente atribuído).  
+ 
+- Ao mesclar o campo de gerente (`super ssn`) com a tabela **employee**, o autor expande apenas `fname` e `lastname` e depois **mescla colunas** com um espaço para criar a coluna **gerente**.  
+- É esperado haver **redundância** na tabela fato (várias linhas por colaborador quando associado a múltiplos projetos); por isso a surrogate key e a remoção de IDs numéricos são usadas para tornar a tabela mais legível.  
+Trecho do material de apoio: "Eu venho para cá e agora o que que eu tenho, tá gente? Pera aí, primeiro eu tenho que conseguir puxar para cá, né? Agora sim. Eu tenho aqui o ID de cada um deles, o nome, a matrícula e no caso o projeto que ele trabalha." 
+
+      
 ### 🟩 Vídeo 07 - Construindo Company Star Schema: Trabalhando nas Tabela Fato e Dimensão
 
 <video width="60%" controls>
@@ -201,6 +228,8 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
 </video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/4928cdbf-99ab-4516-8f1c-2c764f8f9b93?autoplay=1
+
+
 
 ### 🟩 Vídeo 08 - Construindo Company Star Schema: Realizando adequações e Estabelecendo Relacionamentos
 
