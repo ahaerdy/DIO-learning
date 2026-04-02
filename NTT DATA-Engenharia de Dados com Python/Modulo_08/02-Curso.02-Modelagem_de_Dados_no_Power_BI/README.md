@@ -376,6 +376,11 @@ Neste vídeo a instrutora sugere que a utilização de consultas SQL é o métod
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/199f6339-0d67-47d0-801a-1673bedaf25d?autoplay=1
 
+O vídeo aborda a importância estratégica das dimensões temporais na modelagem de dados, os desafios de integrar múltiplas fontes e os métodos para criar uma tabela de datas robusta para análises de negócio.
+
+### Anotações
+
+      
 
 
 ### 🟩 Vídeo 13 - O que é Hierarquia de Dados?
@@ -385,7 +390,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/5997b796-9a14-493f-9f50-f84e49790340?autoplay=1
 
 ### 🟩 Vídeo 14 - Criando Hierarquia de Dados com Power BI Desktop
 
