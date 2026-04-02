@@ -577,10 +577,9 @@ Como criar e utilizar hierarquias no Power BI para organizar dados de forma estr
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-15h24m55s069.jpg" alt="" width="840">
 </p>
 
-- **Hierarquia e drill-down**: a presença de *Categoria* e *Subcategoria* no painel de campos e o título do gráfico indicam que o autor está demonstrando como montar uma hierarquia para permitir subir/descer níveis de análise (drill up / drill down) sem poluir o relatório.
-- **Preparação dos dados**: os menus e botões visíveis (Transformar, Obter Dados, Decimal fixo) sugerem que os dados foram ajustados no Power Query antes de serem usados no visual, garantindo tipos e agregações corretas.
+- **Hierarquia e drill-down**: os índices *Categoria* e *Subcategoria* no painel de campos e o título do gráfico indicam como montar uma hierarquia para permitir subir/descer níveis de análise (drill up / drill down) sem poluir o relatório.
+- **Preparação dos dados**: os menus e botões visíveis (Transformar, Obter Dados, Decimal fixo) mostgram que os dados foram ajustados no Power Query antes de serem usados no visual, garantindo tipos e agregações corretas.
 - **Escolha de visual**: o gráfico central (barras/pizza/clusterizado conforme elementos visuais) ilustra como diferentes visuais afetam a legibilidade quando há muitos elementos; a imagem evidencia a necessidade de escolher o visual adequado para mostrar categorias e subcategorias.
-
 
 ### 🟩 Vídeo 16 - Granularidade de Dados com Power BI
 
