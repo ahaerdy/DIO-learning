@@ -418,6 +418,97 @@ Quando essa tabela já existe no modelo, **nenhuma etapa adicional é necessári
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/5997b796-9a14-493f-9f50-f84e49790340?autoplay=1
 
+Tutorial sobre a criação de tabelas de datas (Calendário) utilizando a linguagem DAX (Data Analysis Expressions) no Power BI. O vídeo explora desde funções básicas até a personalização de colunas para análise temporal avançada.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h32m30s817.jpg" alt="" width="840">
+</p>
+
+Este slide mostra a criação de uma tabela de datas utilizando a função **CALENDAR** no DAX.  
+A função recebe duas datas como parâmetros: início e fim, e retorna um intervalo contínuo de datas.  
+O exemplo apresentado define o intervalo de **01/01/2008 até 31/12/2022**, permitindo que o modelo trabalhe com uma base temporal completa para análises.
+
+```DAX
+Table Date = CALENDAR(DATE(2008,1,1), DATE(2022,12,31))
+``` 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h33m21s153.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a criação de uma nova coluna chamada **Year**, que extrai o ano da coluna de datas da tabela.  
+A função utilizada é **YEAR**, que retorna apenas o componente do ano de uma data.
+
+```DAX
+Year = YEAR('Table Date'[Date])
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h33m29s013.jpg" alt="" width="840">
+</p>
+
+Neste ponto, é criada a coluna **Month Number**, responsável por identificar o número do mês (de 1 a 12) a partir da data.  
+A função utilizada é **MONTH**, que retorna o mês correspondente.
+
+```DAX
+Month Number = MONTH('Table Date'[Date])
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h33m33s863.jpg" alt="" width="840">
+</p>
+
+Aqui é adicionada a coluna **Week Number**, que indica o número da semana dentro do ano.  
+A função utilizada é **WEEKNUM**, que retorna um valor entre 1 e 52 (ou 53, dependendo do ano).
+
+```DAX
+Week Number = WEEKNUM('Table Date'[Date])
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h33m40s025.jpg" alt="" width="840">
+</p>
+
+Neste slide, é criada a coluna **Day of the week**, que retorna o número do dia da semana (de 1 a 7).  
+A função utilizada é **WEEKDAY**, que identifica o dia da semana de uma data.
+
+```DAX
+Day of the week = WEEKDAY('Table Date'[Date])
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h33m46s679.jpg" alt="" width="840">
+</p>
+
+Aqui temos a criação da coluna **Day of the week 2**, que retorna o nome do dia da semana por extenso.  
+A função utilizada é **FORMAT**, que converte a data em texto com o formato desejado.
+
+```DAX
+Day of the week 2 = FORMAT('Table Date'[Date], "dddd")
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h33m55s729.jpg" alt="" width="840">
+</p>
+
+Este slide mostra a tabela resultante com as colunas criadas:  
+- **Year**  
+- **Month Number**  
+- **Week Number**  
+- **Day of the week**  
+- **Day of the week 2**  
+
+Assim, cada data possui informações detalhadas que permitem análises temporais mais ricas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h33m59s839.jpg" alt="" width="840">
+</p>
+
+Este último slide apresenta a visualização dos dados já enriquecidos com as colunas criadas.  
+Ele mostra como a tabela de datas se integra ao modelo, permitindo segmentações por ano, mês, semana e dia da semana.  
+Esse processo é fundamental para estruturar um **modelo em estrela** no Power BI, garantindo flexibilidade nas análises temporais.
 
 
 ### 🟩 Vídeo 14 - Criando Hierarquia de Dados com Power BI Desktop
@@ -427,7 +518,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/4b0c572d-fb84-44f8-9555-a674dc306fb6?autoplay=1
+
+
 
 ### 🟩 Vídeo 15 - Criando Hierarquia de Dados com Estrutura de Pais/Filhos com Power BI Desktop
 
