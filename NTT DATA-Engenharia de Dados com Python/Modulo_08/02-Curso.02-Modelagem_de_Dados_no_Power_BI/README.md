@@ -555,8 +555,6 @@ Trecho do documento: "E dessa forma a gente consegue em um mesmo visual apresent
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h45m58s091.jpg" alt="" width="840">
 </p>
 
-**Hierarquia pai/filho**
-
 Diferente da hierarquia em “escadinha” (ex.: continente → país → estado), a hierarquia pai/filho permite que um mesmo elemento superior (pai) tenha múltiplos dependentes (filhos) em uma estrutura semelhante a uma árvore. Cada filho pode, por sua vez, se tornar pai de outros níveis.
 
 Conforme definição da Microsoft: “O processo de exibição de vários níveis filho com base em um pai de nível superior é conhecido como nivelar a hierarquia.” Esse tipo de estrutura é muito usado em cenários como organogramas, categorias de produtos com ramificações assimétricas ou qualquer conjunto de dados onde a relação não seja linear, mas sim uma árvore de dependências.
@@ -571,6 +569,19 @@ Conforme definição da Microsoft: “O processo de exibição de vários nívei
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/bcbfbdb6-ab71-42cc-b709-038c774ee997?autoplay=1
 
+Como criar e utilizar hierarquias no Power BI para organizar dados de forma estruturada, permitindo uma análise detalhada (drill-down) sem sobrecarregar visualmente os relatórios.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-15h24m55s069.jpg" alt="" width="840">
+</p>
+
+- **Hierarquia e drill-down**: a presença de *Categoria* e *Subcategoria* no painel de campos e o título do gráfico indicam que o autor está demonstrando como montar uma hierarquia para permitir subir/descer níveis de análise (drill up / drill down) sem poluir o relatório.
+- **Preparação dos dados**: os menus e botões visíveis (Transformar, Obter Dados, Decimal fixo) sugerem que os dados foram ajustados no Power Query antes de serem usados no visual, garantindo tipos e agregações corretas.
+- **Escolha de visual**: o gráfico central (barras/pizza/clusterizado conforme elementos visuais) ilustra como diferentes visuais afetam a legibilidade quando há muitos elementos; a imagem evidencia a necessidade de escolher o visual adequado para mostrar categorias e subcategorias.
+
+
 ### 🟩 Vídeo 16 - Granularidade de Dados com Power BI
 
 <video width="60%" controls>
@@ -578,7 +589,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/06c67c6e-a693-49e4-859a-49642132147d?autoplay=1
 
 ### 🟩 Vídeo 17 - Definindo a Granularidade de Dados para Datas com Power BI
 
