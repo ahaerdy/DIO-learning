@@ -362,14 +362,10 @@ Neste vídeo a instrutora sugere que a utilização de consultas SQL é o métod
 
 ### Anotações
 
-#### 💡 Insights e Conclusões
-
 *   **A Versatilidade do SQL:** O maior benefício do SQL em bancos relacionais não é apenas extrair dados, mas a capacidade de visualizar o mesmo conjunto de dados sob diferentes ângulos, permitindo que o analista "molde" a informação antes mesmo de chegar à ferramenta de visualização.
 *   **Transformação na Origem:** Ao realizar concatenações e definições de IDs via SQL, você reduz a carga de processamento em ferramentas de BI (como Power BI ou Tableau), tornando os relatórios mais rápidos.
 *   **Foco no Modelo Dimensional:** A modelagem de dados não é apenas técnica, é sobre criar uma "perspectiva de dados" que faça sentido para o negócio. O uso de SQL e Python são meios para atingir um fim: um modelo dimensional claro e funcional.
 *   **Decisão de Ferramenta:** A escolha entre SQL e Python deve ser baseada no ambiente. Se os dados já estão em um banco relacional, o SQL oferece um caminho mais direto e performático para a modelagem dimensional.
-      
-
 
 ### 🟩 Vídeo 12 - Criando a Tabela Calendário por Medida utilizando Calendar() com Power BI Desktop
 
@@ -379,6 +375,8 @@ Neste vídeo a instrutora sugere que a utilização de consultas SQL é o métod
 </video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/199f6339-0d67-47d0-801a-1673bedaf25d?autoplay=1
+
+
 
 ### 🟩 Vídeo 13 - O que é Hierarquia de Dados?
 
