@@ -520,6 +520,48 @@ Esse processo é fundamental para estruturar um **modelo em estrela** no Power B
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/4b0c572d-fb84-44f8-9555-a674dc306fb6?autoplay=1
 
+O vídeo trata de hierarquia de dados, explicando como organizar informações de forma subordinada para criar visualizações profundas e limpas, permitindo análises detalhadas (drill-down) sem sobrecarregar o usuário final.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h45m32s476.jpg" alt="" width="840">
+</p>
+
+**Hierarquia de dados – definição fundamental**
+
+A imagem apresenta o conceito base de hierarquia: uma organização que estabelece ordem de prioridade entre elementos de um conjunto, com relações de subordinação entre membros de um grupo. Na prática, isso significa que cada nível possui graus sucessivos de poder, situação e responsabilidade.
+
+Na área de dados, uma hierarquia permite estruturar informações em níveis – por exemplo, continente → país → estado → cidade → bairro. Cada nível está contido no anterior, criando uma dependência lógica. Essa organização é essencial para permitir análises que vão do geral ao detalhe sem perder a clareza visual.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h45m39s684.jpg" alt="" width="840">
+</p>
+
+A pergunta central “O que podemos fazer?” remete à utilidade prática das hierarquias de dados. Ao construir uma hierarquia bem definida, é possível:
+
+- Navegar entre níveis de detalhe (drill down) em um mesmo visual, sem adicionar filtros separados.
+- Mostrar categorias e subcategorias de forma integrada, mantendo o relatório enxuto.
+- Aproveitar hierarquias automáticas (como datas: ano → trimestre → mês → dia) ou criar hierarquias personalizadas para domínios específicos (ex.: produtos, localizações geográficas, organizações).
+
+Essa abordagem evita a poluição visual e permite análises mais aprofundadas com poucos cliques.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h45m47s199.jpg" alt="" width="840">
+</p>
+
+Exemplo prático aplicado a categorias e subcategorias de produto (por exemplo Components; Clothing; Accessories e subitens como Road Bikes; Mountain Bikes; Jerseys; Wheels; Helmets) junto com a métrica # TotalSales. O objetivo visual é ilustrar como uma hierarquia de categoria → subcategoria permite que um único gráfico apresente níveis distintos de detalhe: ao agrupar por Category e depois por SubCategory, o usuário pode navegar (drill down) entre agregados e detalhes mantendo a mesma métrica de vendas.
+Trecho do documento: "E dessa forma a gente consegue em um mesmo visual apresentar diversas informações, como por exemplo categoria e subcategoria."
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h45m58s091.jpg" alt="" width="840">
+</p>
+
+**Hierarquia pai/filho**
+
+Diferente da hierarquia em “escadinha” (ex.: continente → país → estado), a hierarquia pai/filho permite que um mesmo elemento superior (pai) tenha múltiplos dependentes (filhos) em uma estrutura semelhante a uma árvore. Cada filho pode, por sua vez, se tornar pai de outros níveis.
+
+Conforme definição da Microsoft: “O processo de exibição de vários níveis filho com base em um pai de nível superior é conhecido como nivelar a hierarquia.” Esse tipo de estrutura é muito usado em cenários como organogramas, categorias de produtos com ramificações assimétricas ou qualquer conjunto de dados onde a relação não seja linear, mas sim uma árvore de dependências.
 
 
 ### 🟩 Vídeo 15 - Criando Hierarquia de Dados com Estrutura de Pais/Filhos com Power BI Desktop
@@ -529,7 +571,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/bcbfbdb6-ab71-42cc-b709-038c774ee997?autoplay=1
 
 ### 🟩 Vídeo 16 - Granularidade de Dados com Power BI
 
