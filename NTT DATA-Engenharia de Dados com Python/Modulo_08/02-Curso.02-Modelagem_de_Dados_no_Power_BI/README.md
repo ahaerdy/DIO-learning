@@ -358,6 +358,19 @@ A tela exibe o ambiente principal do Power BI Desktop com o **Painel de Campos**
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/06bffb3c-7573-4fcc-8d54-51ed0673030b?autoplay=1
 
+Neste vídeo a instrutora sugere que a utilização de consultas SQL é o método mais eficiente para transformar informações complexas, como a concatenação de localizações ou a contagem de dependentes. Embora ferramentas de programação como Python também sejam mencionadas, o foco permanece na flexibilidade do SQL para gerar novas perspectivas de dados. Essa abordagem facilita a estruturação de um modelo dimensional mais ágil e organizado. Ao manipular os dados diretamente na fonte, o profissional consegue preparar o ambiente de forma robusta para análises futuras.
+
+### Anotações
+
+#### 💡 Insights e Conclusões
+
+*   **A Versatilidade do SQL:** O maior benefício do SQL em bancos relacionais não é apenas extrair dados, mas a capacidade de visualizar o mesmo conjunto de dados sob diferentes ângulos, permitindo que o analista "molde" a informação antes mesmo de chegar à ferramenta de visualização.
+*   **Transformação na Origem:** Ao realizar concatenações e definições de IDs via SQL, você reduz a carga de processamento em ferramentas de BI (como Power BI ou Tableau), tornando os relatórios mais rápidos.
+*   **Foco no Modelo Dimensional:** A modelagem de dados não é apenas técnica, é sobre criar uma "perspectiva de dados" que faça sentido para o negócio. O uso de SQL e Python são meios para atingir um fim: um modelo dimensional claro e funcional.
+*   **Decisão de Ferramenta:** A escolha entre SQL e Python deve ser baseada no ambiente. Se os dados já estão em um banco relacional, o SQL oferece um caminho mais direto e performático para a modelagem dimensional.
+      
+
+
 ### 🟩 Vídeo 12 - Criando a Tabela Calendário por Medida utilizando Calendar() com Power BI Desktop
 
 <video width="60%" controls>
@@ -365,7 +378,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/199f6339-0d67-47d0-801a-1673bedaf25d?autoplay=1
 
 ### 🟩 Vídeo 13 - O que é Hierarquia de Dados?
 
