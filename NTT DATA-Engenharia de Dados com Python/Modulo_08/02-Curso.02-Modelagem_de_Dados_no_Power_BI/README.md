@@ -299,7 +299,7 @@ A captura apresenta a interface de um projeto Power BI / Power Query com menus d
 
 Aqui são mostrados trechos da tela do Editor do Power Query e exemplos de transformações aplicadas (etapas como *Colunas mescladas*, *Colunas reordenadas*, e operações sobre tabelas dependentes). Ela também exibe uma expressão/linha que remete à remoção de colunas ou referência a constraints em uma tabela, indicando manipulação programática das etapas de transformação.
 
-**Observações práticas:** no vídeo o instrutor testa a aplicação das etapas e resolve falhas de carregamento voltando etapa a etapa (por exemplo, aplicar mesclagem, testar, dividir coluna por delimitador quando necessário). Essa abordagem — aplicar transformações incrementalmente e validar o carregamento — evita retrabalho e ajuda a identificar exatamente qual etapa causa erro. "[00:01:30] Venho aqui, aplico. OK, então ele não teve problema. O ideal aqui então, pessoal, seria realmente aqui em equipe que este caso, esse aqui, eu vou dividir a coluna, tá?" 
+No vídeo o instrutor testa a aplicação das etapas e resolve falhas de carregamento voltando etapa a etapa (por exemplo, aplicar mesclagem, testar, dividir coluna por delimitador quando necessário). Essa abordagem — aplicar transformações incrementalmente e validar o carregamento — evita retrabalho e ajuda a identificar exatamente qual etapa causa erro. 
 
 ### 🟩 Vídeo 09 - Construindo Company Star Schema: Mesclando Tabelas e Adicionando Colunas de Exemplos
 
@@ -310,6 +310,20 @@ Aqui são mostrados trechos da tela do Editor do Power Query e exemplos de trans
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/d3765e14-b696-46a1-9723-c2fced4a70fa?autoplay=1
 
+O vídeo como manipular tabelas no Power BI, focando em mesclagem de consultas, resolução de erros de modelagem e a importância de escolher o relacionamento correto entre as tabelas (1:N vs. N:N). O instrutor demonstra como decisões precoces na preparação dos dados podem facilitar ou complicar o desenvolvimento posterior.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-10h25m26s316.jpg" alt="" width="840">
+</p>
+
+A captura mostra a **interface do Power BI Desktop** com foco nas áreas de **ribbon** (Arquivo, Página Inicial, Ajuda), no painel lateral de **Campos / Propriedades** e em trechos da tela de consultas onde aparecem listas de colunas e elementos de transformação. Visualmente destacam‑se: a barra superior com comandos de transformação, o painel de **Campos** à direita com itens colapsados/expandidos, e caixas de texto que indicam operações sobre colunas (por exemplo, divisão ou mesclagem). Esses elementos indicam que a imagem registra um momento de edição/transformação de dados, com atenção para **colunas mescladas** e para a visibilidade de campos no modo de exibição de relatório.
+
+A imagem também evidencia sinais de **complexidade na modelagem**: nomes compostos exibidos em uma única coluna, opções de dividir por delimitador e mensagens de erro/estado no editor (por exemplo, avisos sobre colunas usadas em outras etapas). Isso sugere que a operação mostrada envolve criar uma coluna de **nome completo** para permitir junções, e que essa ação pode gerar dependências que impedem a remoção posterior da coluna sem causar erros.
+
+**Observação**: ao replicar esse tipo de operação, mantenha cópias intermediárias ou use nomes temporários para colunas derivadas, para evitar que etapas posteriores fiquem quebradas ao remover campos usados em junções.       
+
 ### 🟩 Vídeo 10 - Considerações sobre Transformação de Dados no Power BI Desktop
 
 <video width="60%" controls>
@@ -317,7 +331,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/ce5a1fb1-db67-4d57-a441-4c669e0e7d11?autoplay=1
+
+
 
 ### 🟩 Vídeo 11 - Por que Precisamos Criar uma Tabela Calendário?
 
