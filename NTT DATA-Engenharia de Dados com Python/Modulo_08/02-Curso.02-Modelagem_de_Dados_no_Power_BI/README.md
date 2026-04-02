@@ -281,6 +281,26 @@ A imagem mostra o objetivo final: ter uma **tabela fato** (F_equipe / distribui�
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/4ddf4681-85d8-470e-a586-4b4d3638eb19?autoplay=1
 
+Este vídeo foca no processo prático de gerenciamento de relacionamentos e transformação de dados em uma ferramenta de Business Intelligence (como o Power BI). O instrutor demonstra como lidar com inconsistências de nomes, realizar limpezas necessárias e estruturar tabelas para garantir que os dados se conectem de forma lógica e eficiente.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-10h02m12s861.jpg" alt="" width="840">
+</p>
+
+A captura apresenta a interface de um projeto Power BI / Power Query com menus de navegação e opções de transformação de dados (por exemplo, *Transformar dados*, *Gerenciar relações*, *Mesclar colunas*). A imagem evidencia o fluxo típico de preparação: identificação de tabelas (equipe, colaboradores), tentativa de criar relacionamentos e ações de transformação (mesclar, dividir colunas) para garantir chaves consistentes entre tabelas.
+
+**Por que é importante:** o slide ilustra um problema prático comum ao modelar dados relacionais: *matching parcial* entre campos de nomes que impede relacionamentos unívocos. A solução demonstrada no vídeo é aplicar transformações (mesclar quando necessário, depois dividir por delimitador) para obter colunas com formato adequado e permitir a criação de relacionamentos corretos entre fatos e dimensões. "[00:00:00] OK, pessoal, então vamos ver aqui, ó. Primeira coisa que eu tenho: equipe, colaboradores, né? E aqui o colaborador." 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-10h02m17s312.jpg" alt="" width="840">
+</p>
+
+Aqui são mostrados trechos da tela do Editor do Power Query e exemplos de transformações aplicadas (etapas como *Colunas mescladas*, *Colunas reordenadas*, e operações sobre tabelas dependentes). Ela também exibe uma expressão/linha que remete à remoção de colunas ou referência a constraints em uma tabela, indicando manipulação programática das etapas de transformação.
+
+**Observações práticas:** no vídeo o instrutor testa a aplicação das etapas e resolve falhas de carregamento voltando etapa a etapa (por exemplo, aplicar mesclagem, testar, dividir coluna por delimitador quando necessário). Essa abordagem — aplicar transformações incrementalmente e validar o carregamento — evita retrabalho e ajuda a identificar exatamente qual etapa causa erro. "[00:01:30] Venho aqui, aplico. OK, então ele não teve problema. O ideal aqui então, pessoal, seria realmente aqui em equipe que este caso, esse aqui, eu vou dividir a coluna, tá?" 
+
 ### 🟩 Vídeo 09 - Construindo Company Star Schema: Mesclando Tabelas e Adicionando Colunas de Exemplos
 
 <video width="60%" controls>
@@ -288,7 +308,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/d3765e14-b696-46a1-9723-c2fced4a70fa?autoplay=1
 
 ### 🟩 Vídeo 10 - Considerações sobre Transformação de Dados no Power BI Desktop
 
