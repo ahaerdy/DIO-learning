@@ -528,9 +528,7 @@ O vídeo trata de hierarquia de dados, explicando como organizar informações d
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-14h45m32s476.jpg" alt="" width="840">
 </p>
 
-**Hierarquia de dados – definição fundamental**
-
-A imagem apresenta o conceito base de hierarquia: uma organização que estabelece ordem de prioridade entre elementos de um conjunto, com relações de subordinação entre membros de um grupo. Na prática, isso significa que cada nível possui graus sucessivos de poder, situação e responsabilidade.
+O slide apresenta o conceito base de hierarquia: uma organização que estabelece ordem de prioridade entre elementos de um conjunto, com relações de subordinação entre membros de um grupo. Na prática, isso significa que cada nível possui graus sucessivos de poder, situação e responsabilidade.
 
 Na área de dados, uma hierarquia permite estruturar informações em níveis – por exemplo, continente → país → estado → cidade → bairro. Cada nível está contido no anterior, criando uma dependência lógica. Essa organização é essencial para permitir análises que vão do geral ao detalhe sem perder a clareza visual.
 
