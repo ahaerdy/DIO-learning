@@ -380,7 +380,33 @@ O vídeo aborda a importância estratégica das dimensões temporais na modelage
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-13h41m10s892.jpg" alt="" width="840">
+</p>
+
+Ao desenvolver relatórios no Power BI, é comum encontrar tabelas diferentes que possuem colunas de datas distintas – por exemplo, uma tabela de vendas (Sales) com a coluna *Ship Date* e uma tabela de pedidos (Orders) com a coluna *Order Date*. Cada tabela referencia seu próprio conjunto de datas, sem uma relação direta entre si. O desafio apresentado é: **como criar um visual (gráfico, tabela etc.) que utilize várias tabelas e suas respectivas datas de forma integrada?** Sem uma base comum, não é possível, por exemplo, comparar vendas e pedidos no mesmo período de tempo de maneira simples.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-13h41m13s422.jpg" alt="" width="840">
+</p>
+
+Para resolver o problema de tabelas com datas independentes, existem três abordagens principais:
+- **Dados de origem**: a fonte de dados já fornece uma tabela de datas pronta, geralmente vinda de um Data Warehouse bem estruturado.
+- **DAX (Data Analysis Expressions)**: criar a tabela de datas diretamente no modelo do Power BI usando linguagem DAX.
+- **Power Query**: construir a tabela de datas por meio de transformações na etapa de obtenção e limpeza dos dados.
+
+Cada uma dessas soluções permite criar uma **tabela de datas única**, que servirá como referência comum para todas as outras tabelas do modelo. Assim, é possível relacionar vendas e pedidos a um mesmo calendário e responder a perguntas como “total de vendas e pedidos por ano/mês”.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-13h41m14s924.jpg" alt="" width="840">
+</p>
+
+Se o trabalho de construção da tabela de datas já foi realizado pelo **engenheiro de dados** (chamado de *trabalho completo*), essa tabela virá pronta e enriquecida com informações importantes para o negócio, como:
+- **Feriados da empresa** – dias em que a organização não opera ou opera em regime especial.
+- **Separação entre ano civil e ano fiscal** – útil para relatórios gerenciais que seguem calendário fiscal diferente do calendário tradicional.
+- **Identificação de finais de semana** – permite calcular indicadores de dias úteis, metas por dia da semana etc.
+
+Quando essa tabela já existe no modelo, **nenhuma etapa adicional é necessária** – basta utilizá-la como dimensão de tempo e relacioná-la às demais tabelas por meio de chaves estrangeiras de data. Isso garante consistência e evita retrabalho.      
 
 
 ### 🟩 Vídeo 13 - O que é Hierarquia de Dados?
@@ -391,6 +417,8 @@ O vídeo aborda a importância estratégica das dimensões temporais na modelage
 </video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/5997b796-9a14-493f-9f50-f84e49790340?autoplay=1
+
+
 
 ### 🟩 Vídeo 14 - Criando Hierarquia de Dados com Power BI Desktop
 
