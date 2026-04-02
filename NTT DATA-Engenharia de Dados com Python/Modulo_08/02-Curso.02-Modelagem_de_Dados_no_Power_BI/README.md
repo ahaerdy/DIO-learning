@@ -320,7 +320,7 @@ O vídeo como manipular tabelas no Power BI, focando em mesclagem de consultas, 
 
 A captura mostra a **interface do Power BI Desktop** com foco nas áreas de **ribbon** (Arquivo, Página Inicial, Ajuda), no painel lateral de **Campos / Propriedades** e em trechos da tela de consultas onde aparecem listas de colunas e elementos de transformação. Visualmente destacam‑se: a barra superior com comandos de transformação, o painel de **Campos** à direita com itens colapsados/expandidos, e caixas de texto que indicam operações sobre colunas (por exemplo, divisão ou mesclagem). Esses elementos indicam que a imagem registra um momento de edição/transformação de dados, com atenção para **colunas mescladas** e para a visibilidade de campos no modo de exibição de relatório.
 
-A imagem também evidencia sinais de **complexidade na modelagem**: nomes compostos exibidos em uma única coluna, opções de dividir por delimitador e mensagens de erro/estado no editor (por exemplo, avisos sobre colunas usadas em outras etapas). Isso sugere que a operação mostrada envolve criar uma coluna de **nome completo** para permitir junções, e que essa ação pode gerar dependências que impedem a remoção posterior da coluna sem causar erros.
+**Complexidade na modelagem**: nomes compostos exibidos em uma única coluna, opções de dividir por delimitador e mensagens de erro/estado no editor (por exemplo, avisos sobre colunas usadas em outras etapas). Isso sugere que a operação mostrada envolve criar uma coluna de **nome completo** para permitir junções, e que essa ação pode gerar dependências que impedem a remoção posterior da coluna sem causar erros.
 
 **Observação**: ao replicar esse tipo de operação, mantenha cópias intermediárias ou use nomes temporários para colunas derivadas, para evitar que etapas posteriores fiquem quebradas ao remover campos usados em junções.       
 
@@ -333,7 +333,21 @@ A imagem também evidencia sinais de **complexidade na modelagem**: nomes compos
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/ce5a1fb1-db67-4d57-a441-4c669e0e7d11?autoplay=1
 
+Este vídeo foca no processo de ETL (Extração, Transformação e Carga) e modelagem dimensional utilizando o Power Query no Power BI. A instrutora demonstra como resolver problemas de redundância, mesclar tabelas para enriquecer dados e preparar a estrutura para uma análise de produtividade eficiente.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-10h48m42s193.jpg" alt="" width="840">
+</p>
+
+A tela mostra a caixa de diálogo **Criar relacionamento** do Power BI, onde se escolhem a tabela e as colunas que serão relacionadas. Observe os controles de **cardinalidade** e **direção do filtro cruzado** — aqui a relação está configurada como **Muitos para Muitos**, com opção para ativar o relacionamento e aplicar filtros de segurança em ambos os sentidos. Use essa janela para validar se as chaves escolhidas realmente representam a relação esperada entre as tabelas antes de confirmar; relações muitos‑para‑muitos exigem cuidado porque alteram o comportamento de agregações e filtros no modelo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-02-10h48m52s951.jpg" alt="" width="840">
+</p>
+
+A tela exibe o ambiente principal do Power BI Desktop com o **Painel de Campos** e a faixa de opções voltada para transformação e mesclagem de consultas. O fluxo mostrado corresponde ao processo de **mesclar tabelas de dimensão** (por exemplo, departamento com localização) para trazer atributos descritivos — como nome do departamento e localização — para a tabela de fatos ou para enriquecer a dimensão. A prática demonstrada inclui: escolher a coluna de junção correta (ID ou nome), expandir apenas os campos necessários (a localização, por exemplo) e fechar/aplicar para validar se não surgiram erros nas consultas. Quando houver redundância ou múltiplos atributos que não serão usados nas análises, o instrutor recomenda ocultar ou suprimir esses campos para simplificar o modelo; por fim, lembra‑se que falta ainda criar a **tabela de datas**, componente essencial em modelagem dimensional.   
 
 ### 🟩 Vídeo 11 - Por que Precisamos Criar uma Tabela Calendário?
 
@@ -342,7 +356,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/06bffb3c-7573-4fcc-8d54-51ed0673030b?autoplay=1
 
 ### 🟩 Vídeo 12 - Criando a Tabela Calendário por Medida utilizando Calendar() com Power BI Desktop
 
