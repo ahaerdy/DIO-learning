@@ -754,12 +754,6 @@ A imagem mostra o **Editor do Power Query** com uma tabela de dados já carregad
 Nesta captura, o instrutor **seleciona duas colunas** da tabela: `year` (ano) e `month number` (número do mês). A seleção múltipla é feita clicando nos cabeçalhos das colunas enquanto pressiona alguma tecla de modificação (Ctrl ou Shift). A partir dessas duas colunas, será criada uma nova coluna do tipo `short date` (data abreviada), combinando o ano e o mês em um único campo de data. A interface do Power Query permite essa transformação tanto pelo menu quanto pela linguagem M.
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-09h53m52s561.jpg" alt="" width="840">
-</p>
-
-*Conteúdo não identificado com segurança a partir do material disponível.*
-
-<p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-09h53m58s327.jpg" alt="" width="840">
 </p>
 
