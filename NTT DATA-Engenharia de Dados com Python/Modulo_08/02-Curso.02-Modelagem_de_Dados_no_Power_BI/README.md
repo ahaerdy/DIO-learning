@@ -683,6 +683,51 @@ A **granularidade** dos dados representa o nível de detalhe contido em uma base
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/d742fea0-4038-4dcc-9b63-ca2be6f0ebf1?autoplay=1
 
+O vídeo foca na preparação de dados financeiros, especificamente na configuração de tabelas de datas e na definição de granularidade, um conceito fundamental para a precisão de relatórios e dashboards.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-08h39m24s889.jpg" alt="" width="840">
+</p>
+
+O ponto central é a criação de uma coluna calculada chamada **Month Name**, utilizando a função `FORMAT`. O código mostrado é:
+
+```DAX
+Month Name = FORMAT('Table Date'[Month Number], "MMM")
+```
+
+Esse trecho gera abreviações dos meses (Jan, Feb, etc.) a partir do número do mês. A explicação didática aqui é que, ao criar colunas derivadas com DAX, podemos enriquecer a tabela de datas para facilitar análises temporais. No entanto, como o professor comenta, essa abordagem inicial pode gerar inconsistências (como dezembro aparecendo como mês 1), o que será ajustado em seguida.
+ 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-08h39m27s222.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a continuação da criação da coluna de nome do mês, mas com uma correção aplicada. O código ajustado utiliza a função `DATE` para evitar erros de mapeamento:
+
+```DAX
+Month Name = FORMAT(DATE(1, 'Table Date'[Month Number], 1), "MMM")
+```
+
+A diferença é que agora se constrói uma data fictícia (ano 1, dia 1) usando o número do mês como parâmetro. Isso garante que o resultado seja consistente com o calendário real. A lição didática é que, ao manipular datas em DAX, muitas vezes precisamos criar datas artificiais para que o formato aplicado funcione corretamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-08h39m36s076.jpg" alt="" width="840">
+</p>
+
+Nesta última imagem, o foco está no **Editor do Power Query**, onde são exibidas as etapas aplicadas à tabela *financials*. Vemos a transformação de tipos de dados:
+
+```M
+Table.TransformColumnTypes(financials_Table, {
+    {"Segment", type text},
+    {"Country", type text}
+})
+```
+
+Esse código em linguagem M mostra como converter colunas para o tipo texto. A explicação didática é que, além de criar colunas calculadas com DAX, também podemos manipular os dados diretamente no Power Query, garantindo consistência antes de carregar o modelo. Aqui o professor introduz a ideia de granularidade: escolher o nível de detalhe (ano, mês, semana, dia) que será usado nas análises, e como preparar as tabelas para suportar esses diferentes níveis.      
+
+
 ### 🟩 Vídeo 19 - Criando uma Coluna Personalizada no Power BI
 
 <video width="60%" controls>
@@ -690,7 +735,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/edf31d94-7a1c-48aa-a94b-48ed58043811?autoplay=1
+
+
 
 ### 🟩 Vídeo 20 - Criando um Campo Data com Maior Granularidade
 
