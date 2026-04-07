@@ -651,6 +651,27 @@ A última imagem reforça a configuração final: hierarquia com Level 1 e Level
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/ea22357b-8bdf-4496-8334-4d1292f4be87?autoplay=1
 
+O vídeo explora o conceito de granularidade de dados aplicado ao Power BI, discutindo como o nível de detalhamento afeta tanto a precisão das análises quanto a performance técnica dos relatórios.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h58m17s754.jpg" alt="" width="840">
+</p>
+
+A **granularidade** dos dados representa o nível de detalhe contido em uma base de informações. Quanto mais fina a granularidade (dados a cada segundo, por exemplo), maior a riqueza de detalhes. Quanto mais grossa (dados agregados por dia), menor a precisão pontual, mas também menor a complexidade. No Power BI, a escolha da granularidade afeta diretamente o que você pode fazer: com granularidade fina é possível aplicar *drill down* (aprofundar) e *roll up* (subir na hierarquia) em visuais, explorando os dados em diferentes níveis. Por isso, entender esse conceito é essencial para construir relatórios que equilibrem detalhamento e desempenho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h58m24s167.jpg" alt="" width="840">
+</p>
+
+**Atenção à granularidade do seu projeto!** Escolher um nível inadequado pode trazer problemas sérios. Se a granularidade for muito baixa (detalhamento excessivo), o relatório do Power BI pode ficar lento, consumir muita memória e demorar para processar – especialmente com grandes volumes de dados. Por outro lado, se a granularidade for muito alta (dados muito agregados), você perde precisão e acurácia nas análises, podendo mascarar variações importantes. O impacto direto está no **desempenho**: um relatório bonito, mas que não carrega ou que trava, perde sua utilidade. O segredo é encontrar o equilíbrio certo entre o detalhe necessário e a performance esperada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h58m26s753.jpg" alt="" width="840">
+</p>
+
+**Exemplo prático**: monitoramento da temperatura interna de um caminhão frigorífico (ou de sorvete). Os sensores coletam dados a cada minuto – uma variação muito fina. A pergunta central é: **qual nível de granularidade devemos definir para esse cenário?** Se usarmos os dados brutos (minuto a minuto), o volume pode ser enorme e comprometer o desempenho do Power BI. Se agregarmos demais (média por dia), podemos perder picos críticos de temperatura que estragam a carga. A solução exige análise: considerar a capacidade de processamento, a necessidade de negócio (detectar variações rápidas) e, muitas vezes, conversar com o engenheiro de dados para definir agregações intermediárias (por hora, a cada 15 minutos, etc.) que mantenham a qualidade da análise sem sobrecarregar a infraestrutura. Nem sempre é uma decisão trivial – exige equilíbrio entre detalhamento e performance.      
 
 
 ### 🟩 Vídeo 18 - Criando um Relacionamento entre Financials e Tabela Calendário
@@ -660,7 +681,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/d742fea0-4038-4dcc-9b63-ca2be6f0ebf1?autoplay=1
 
 ### 🟩 Vídeo 19 - Criando uma Coluna Personalizada no Power BI
 
