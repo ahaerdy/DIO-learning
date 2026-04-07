@@ -911,7 +911,7 @@ O vídeo aborda as distinções fundamentais entre a criação de dados via DAX 
 </p>
 
 A imagem mostra a **faixa de opções (ribbon)** do Power BI Desktop com comandos relacionados à preparação e ingestão de dados: **Colar**, **Área de Transferência**, **Dados**, **Consultas**, e atalhos para **Gerenciar relações**, **Nova medida**, **Nova coluna**, **Nova tabela** e configurações de segurança e idioma.  
-Esse tipo de captura é típico do momento em que o autor demonstra a interface de modelagem e onde se encontram ações para criar ou transformar tabelas e campos no projeto.  
+
 A presença de itens como **Pasta de trabalho do Excel**, **Obter dados**, **Dataverse** e **SQL Server** indica opções de conexão a fontes externas, reforçando que o slide ilustra o fluxo de importação e preparação de dados no Power BI.  
 
 <p align="center">
@@ -919,7 +919,9 @@ A presença de itens como **Pasta de trabalho do Excel**, **Obter dados**, **Dat
 </p>
 
 Esta captura exibe o **Editor do Power Query** com menus de transformação (Arquivo, Página Inicial, Transformar, Adicionar Coluna, Exibição, Ferramentas) e opções de limpeza como **Usar a Primeira Linha como Cabeçalho**, **Tipo de Dados**, **Dividir**, **Agrupar** e **Substituir Valores**.  
-O foco visual é a etapa de preparação dos dados antes da carga: aqui se aplicam transformações que persistem quando a tabela é importada para o modelo (Power Query).  
+
+O foco é a etapa de preparação dos dados antes da carga: aqui se aplicam transformações que persistem quando a tabela é importada para o modelo (Power Query).  
+
 Do ponto de vista didático, a imagem serve para diferenciar operações feitas em Power Query (persistidas no modelo) das medidas criadas em DAX (calculadas sob demanda).
 
 <p align="center">
@@ -927,15 +929,17 @@ Do ponto de vista didático, a imagem serve para diferenciar operações feitas 
 </p>
 
 A imagem apresenta uma **visualização tabular** com amostra de linhas (valores de mês, ano e montantes) e uma chamada à função de transformação `TransformColumnTypes(...)`, indicando que o autor está mostrando como garantir tipos corretos (por exemplo, converter Month e Year para inteiros).  
-A tabela de exemplo (valores mensais e colunas MonthYear) ilustra dados de vendas/amount por mês e ano, útil para demonstrar como estruturar uma dimensão de tempo ou validar a qualidade dos dados antes de modelar.  
-Didaticamente, esse slide reforça a prática de verificar tipos e amostras de dados para evitar problemas em cálculos e relacionamentos no modelo.
+
+A tabela de exemplo (valores mensais e colunas MonthYear) ilustra dados de vendas/amount por mês e ano, útil para demonstrar como estruturar uma dimensão de tempo ou validar a qualidade dos dados antes de modelar. 
+
+Esse slide reforça a prática de verificar tipos e amostras de dados para evitar problemas em cálculos e relacionamentos no modelo.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-15h00m10s322.jpg" alt="" width="840">
 </p>
 
 Este slide é conceitual e lista **links úteis** e referências oficiais da Microsoft sobre modelagem dimensional e modelagem tabular (SSAS / Power BI), indicando recursos para aprofundamento: documentação sobre *Modelagem Dimensional com Power BI* e *Modelagem Transacional / Tabular*.  
-No contexto da aula, o slide funciona como orientação bibliográfica para quem deseja estudar o **Star Schema**, diferenças entre modelos relacionais e dimensionais, e práticas recomendadas ao projetar modelos para Power BI.  
+  
 Recomenda-se consultar os links oficiais indicados pelo autor para entender melhor quando usar esquemas dimensionais versus modelos transacionais no Power BI.       
 
 # Certificado: 
