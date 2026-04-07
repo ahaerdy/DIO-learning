@@ -942,7 +942,7 @@ Este slide é conceitual e lista **links úteis** e referências oficiais da Mic
   
 Recomenda-se consultar os links oficiais indicados pelo autor para entender melhor quando usar esquemas dimensionais versus modelos transacionais no Power BI.       
 
-# Certificado: 
+# Certificado: Modelagem de Dados no Power BI
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/4CIQ1GMA.pdf
+- Certificado em pdf: [Certificado-Modelagem_de_Dados_no_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Modelagem_de_Dados_no_Power_BI.pdf)
