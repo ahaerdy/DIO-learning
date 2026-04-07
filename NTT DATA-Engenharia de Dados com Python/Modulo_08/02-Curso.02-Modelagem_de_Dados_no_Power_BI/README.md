@@ -813,7 +813,45 @@ A imagem mostra o **ambiente do Power BI Desktop** com o painel de **Campos** e 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/21c1d9a1-6192-43e3-8f6e-0f467d4f9f58?autoplay=1
 
+O vídeo revisita os conceitos de relacionamentos em modelagem de dados, com foco específico nas melhores práticas para o Power BI e modelagem dimensional (Star Schema). A discussão aborda os tipos de relacionamento (Muitos para Um, Um para Um, Muitos para Muitos) e por que o Power BI tem preferências claras para otimização de desempenho e clareza analítica.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-13h56m02s735.jpg" alt="" width="840">
+</p>
+
+Este slide introduz o conceito de relacionamento **muitos para um** (ou seu inverso, **um para muitos**). Nesse tipo de relação, uma coluna em uma tabela possui muitas instâncias de um mesmo valor que se conectam a um único valor correspondente em outra tabela. É a direcionalidade clássica entre tabelas **fato** (lado muitos) e **dimensão** (lado um). Por exemplo: uma tabela de vendas (fato) pode ter muitos registros para o mesmo produto, enquanto a tabela de produtos (dimensão) mantém cada produto uma única vez.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-13h56m06s875.jpg" alt="" width="840">
+</p>
+
+O relacionamento muitos-para-um (ou um-para-muitos) é o **tipo mais comum** em modelagem dimensional e também o **padrão adotado pelo Power BI** quando você utiliza a detecção automática de relações. Ao clicar em "Gerenciar relações" e depois em "Detectar relação", o Power BI tende a criar automaticamente esse tipo de vínculo, desde que as condições de cardinalidade sejam atendidas. Isso ocorre porque é a forma mais natural de conectar tabelas fato e dimensão sem ambiguidades.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-13h56m13s888.jpg" alt="" width="840">
+</p>
+
+A relação **um para um (1:1)** ocorre quando cada valor em uma coluna de uma tabela corresponde a exatamente um valor na coluna relacionada da outra tabela, e vice-versa. Para que isso funcione, ambas as colunas devem conter **valores exclusivos** (sem duplicatas). Um exemplo seria uma tabela de funcionários e uma tabela de detalhes de contato, onde cada funcionário tem exatamente um registro de contato. No entanto, como veremos no próximo slide, esse tipo de relação nem sempre é recomendado no Power BI.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-13h56m18s750.jpg" alt="" width="840">
+</p>
+
+Apesar de tecnicamente possível, o relacionamento **um para um (1:1)** é **não recomendado** no Power BI e em modelagem dimensional. Ele tende a gerar **informações redundantes**, pois duas tabelas separadas contêm dados que poderiam perfeitamente residir em uma única tabela. A prática mais adequada é **combinar as duas tabelas** em uma só, eliminando a necessidade do relacionamento e simplificando o modelo. Isso melhora a performance e reduz a complexidade para os usuários finais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-13h56m23s943.jpg" alt="" width="840">
+</p>
+
+O relacionamento **muitos para muitos (N:M)** acontece quando muitos valores em uma tabela se conectam a muitos valores em outra tabela, sem que haja exclusividade de nenhum dos lados. Por exemplo: um aluno pode se matricular em vários cursos, e um curso pode ter vários alunos. Nesse caso, nenhuma das tabelas (alunos e cursos) possui valores únicos na chave de relação. O Power BI permite esse tipo de relacionamento, mas, como veremos a seguir, ele traz desafios e não é a prática recomendada para a maioria dos cenários analíticos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-13h56m28s660.jpg" alt="" width="840">
+</p>
+
+Relacionamentos **muitos para muitos** são **desencorajados** em modelos Star Schema no Power BI. A ausência de valores exclusivos em ambas as tabelas introduz **ambiguidade** nos resultados, especialmente quando filtros cruzados são aplicados. Os usuários podem não ter certeza de qual instância de valor está sendo referenciada, comprometendo a confiabilidade da análise. Sempre que possível, recomenda-se resolver a relação muitos-para-muitos introduzindo uma **tabela ponte** (ou tabela de fatos intermediária), transformando-a em dois relacionamentos muitos-para-um.      
 
 ### 🟩 Vídeo 22 - Resolvendo Desafios de Modelagem no Power BI
 
@@ -822,7 +860,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/9e226113-cc3c-4e61-95d6-30c5755aac73?autoplay=1
+
+
 
 ### 🟩 Vídeo 23 - Considerações sobre o curso
 
