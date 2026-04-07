@@ -590,6 +590,58 @@ Como criar e utilizar hierarquias no Power BI para organizar dados de forma estr
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/06c67c6e-a693-49e4-859a-49642132147d?autoplay=1
 
+Este tutorial foca na estruturação de dados relacionais complexos, especificamente a relação entre colaboradores e gerentes, utilizando funções DAX avançadas para criar níveis hierárquicos que facilitam a visualização e o "drill-down" em relatórios.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h38m23s170.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a interface do Power BI com menus principais (Arquivo, Página Inicial, Inserir, Modelagem, Exibição) e um painel lateral de campos e visuais. Observe que o autor prepara o ambiente para trabalhar com uma tabela relacional chamada **company_constraints** e pretende criar medidas/colunas para tratar hierarquia pai‑filho.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h38m26s055.jpg" alt="" width="840">
+</p>
+
+Esta captura exibe o editor de modelagem do Power BI onde o autor digita a expressão DAX que cria o caminho hierárquico. É possível ver a fórmula apresentada no slide: `Path = PATH('company_constraints employee'[Ssn], 'company_constraints employee'[Super_ssn])`, indicando que o **PATH** é construído a partir do identificador do funcionário e do identificador do seu superior.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h38m45s660.jpg" alt="" width="840">
+</p>
+
+Aqui vemos o painel de propriedades da coluna criada e a listagem de campos da tabela `company_constraints employee`. A imagem evidencia colunas típicas de um cadastro de funcionários (Fname, Lname, Salary, Super_ssn) e sugere que o PATH foi gerado com sucesso, permitindo extrair níveis hierárquicos a partir desses campos.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h38m49s288.jpg" alt="" width="840">
+</p>
+
+A captura mostra dados de exemplo da tabela (SSN, nome, endereço, salário, sexo) usados para ilustrar como o PATH relaciona gerente e subordinados. Esses registros exemplificam entradas com e sem gerente (valores nulos ou em branco no campo de superior), o que é importante ao extrair níveis com `PATHITEM`.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h39m00s738.jpg" alt="" width="840">
+</p>
+
+Nesta imagem o autor cria colunas de nível a partir do PATH usando `PATHITEM`. O procedimento mostrado é: criar uma coluna **Level 1** com `PATHITEM(PATH, 1)` e outra **Level 2** com `PATHITEM(PATH, 2)`, transformando o vetor de caminho em colunas separadas que representam gerente (nível 1) e subordinado (nível 2). Isso permite montar uma hierarquia navegável nos visuais.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h39m08s619.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a criação da hierarquia no painel de campos: os campos **Level 1** e **Level 2** são agrupados em uma hierarquia que pode ser arrastada para visuais. Com isso, o usuário pode "subir" e "descer" nos níveis (drill up/drill down) em gráficos clusterizados, exibindo métricas agregadas por gerente e por seus subordinados.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h39m13s453.jpg" alt="" width="840">
+</p>
+
+Este slide ilustra um exemplo de visual (gráfico clusterizado horizontal) onde a hierarquia é aplicada: no eixo Y aparecem os níveis (Level 1 → Level 2) e a métrica exibida é a soma de **Hours**. A legenda pode receber o campo **Project** para decompor horas por projeto dentro da hierarquia, permitindo analisar carga por gerente e por colaborador.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-07h39m17s767.jpg" alt="" width="840">
+</p>
+
+A última imagem reforça a configuração final: hierarquia com Level 1 e Level 2 aplicada ao visual, mostrando como navegar entre níveis e como a granularidade hierárquica ajuda a entender a distribuição de horas entre gerentes e subordinados. Esse resultado é útil para explorar a base sem poluir o visual e para identificar inconsistências (por exemplo, gerentes sem subordinados).  
+
 ### 🟩 Vídeo 17 - Definindo a Granularidade de Dados para Datas com Power BI
 
 <video width="60%" controls>
@@ -597,7 +649,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/ea22357b-8bdf-4496-8334-4d1292f4be87?autoplay=1
+
+
 
 ### 🟩 Vídeo 18 - Criando um Relacionamento entre Financials e Tabela Calendário
 
