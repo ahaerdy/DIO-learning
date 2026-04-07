@@ -787,6 +787,23 @@ A imagem apresenta a janela do **Editor Avançado do Power Query** (Advanced Edi
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/ad7b6049-197e-4b03-9693-8c7cb2e7d8df?autoplay=1
 
+O vídeo foca na criação de colunas personalizadas que combinam mês e ano para facilitar a análise e o relacionamento entre tabelas (como tabelas de fatos e orçamentos). O instrutor demonstra duas abordagens principais: o uso de DAX (Data Analysis Expressions) e o Power Query, destacando os desafios técnicos de tipos de dados e como solucioná-los quando o Power BI interpreta as informações de forma equivocada
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-13h35m12s153.jpg" alt="" width="840">
+</p>
+
+
+A imagem mostra o **ambiente do Power BI Desktop** com o painel de **Campos** e menus relacionados à modelagem (por exemplo, **Transformar dados**, **Gerenciar relações**, e opções de criação de **nova coluna**). O instrutor demonstra a intenção de criar uma coluna **Month Year** combinando mês e ano, e os passos e problemas observados na prática: criação via **DAX**, verificação de tipos de dados no **Power Query**, e a necessidade de ajustar o tipo para garantir relacionamentos corretos entre tabelas.
+
+- **Objetivo:** criar uma coluna que represente mês e ano (ex.: `2013-01`) para usar como chave de relacionamento entre a tabela de datas e tabelas de fatos (por exemplo, **Financial** e **Budget**).  
+- **Abordagem inicial (DAX):** o instrutor tenta criar uma **coluna calculada** via DAX concatenando `Month` e `Year`. Isso gera uma coluna que é avaliada por demanda e **não** aparece como coluna física editável no Power Query.  
+- **Problema observado:** houve uma **inconsistência de tipos** (valores convertidos incorretamente para data, aparecendo como `1905`), indicando que o Power BI interpretou mal o tipo ao converter valores (texto ↔ data).  
+- **Solução adotada:** criar a coluna **diretamente no Power Query** (transformação persistente), ajustar explicitamente os **tipos de dados** (por exemplo, definir `Year` como inteiro) e então **criar o relacionamento** entre as tabelas usando a coluna `Month Year`.  
+- **Recomendação prática:** quando DAX produzir ganhos de performance, prefira DAX; porém, se houver problemas de interpretação de tipo ou necessidade de manipulação persistente dos dados, use o **Power Query** para criar a coluna física e garantir consistência no modelo (facilita a criação do **Star Schema** e evita erros de conversão).
+
 ### 🟩 Vídeo 21 - Relembrando Conceitos
 
 <video width="60%" controls>
@@ -794,7 +811,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/21c1d9a1-6192-43e3-8f6e-0f467d4f9f58?autoplay=1
+
+
 
 ### 🟩 Vídeo 22 - Resolvendo Desafios de Modelagem no Power BI
 
