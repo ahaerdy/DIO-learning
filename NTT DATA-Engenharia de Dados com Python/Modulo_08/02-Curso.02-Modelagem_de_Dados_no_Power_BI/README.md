@@ -737,6 +737,51 @@ Esse código em linguagem M mostra como converter colunas para o tipo texto. A e
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/edf31d94-7a1c-48aa-a94b-48ed58043811?autoplay=1
 
+Este vídeo aborda técnicas avançadas de manipulação de datas no Power Query, explorando o conceito de granularidade, a criação de colunas por exemplo e o funcionamento da Linguagem M "por trás das câmeras".
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-09h53m41s289.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o **Editor do Power Query** com uma tabela de dados já carregada. O instrutor removeu algumas colunas relacionadas a datas (por exemplo, colunas de ano, mês, dia em separado) porque uma tabela de dimensão de datas será usada posteriormente. O objetivo agora é criar um campo de data com granularidade mais alta (menos detalhes), para simplificar o processamento. A interface exibe as colunas restantes, prontas para a próxima etapa de transformação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-09h53m50s855.jpg" alt="" width="840">
+</p>
+
+Nesta captura, o instrutor **seleciona duas colunas** da tabela: `year` (ano) e `month number` (número do mês). A seleção múltipla é feita clicando nos cabeçalhos das colunas enquanto pressiona alguma tecla de modificação (Ctrl ou Shift). A partir dessas duas colunas, será criada uma nova coluna do tipo `short date` (data abreviada), combinando o ano e o mês em um único campo de data. A interface do Power Query permite essa transformação tanto pelo menu quanto pela linguagem M.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-09h53m52s561.jpg" alt="" width="840">
+</p>
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-09h53m58s327.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a **documentação de referência da linguagem M** do Power Query, especificamente a categoria **Date functions** (funções de data). O destaque está na função `Date.Year`, que extrai o ano de um valor do tipo `datetime`. O exemplo mostrado:
+
+```m
+Date.Year(#datetime(2011, 12, 31, 9, 15, 36))
+```
+
+Retorna o valor `2011`. A página também lista outras funções relacionadas (`DateTime functions`, `DateTimeZone functions`, `Duration functions`, etc.) e fornece links para conteúdo recomendado, como `Date.DaysInMonth`. Essa referência é útil para quem deseja escrever expressões M personalizadas no Power Query.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-09h54m01s810.jpg" alt="" width="840">
+</p>
+
+A imagem mostra uma **pesquisa ou aba do navegador** com os termos “date format in m language”, “Power Query M function reference” e “Accessing data functions”. Trata-se de um momento em que o instrutor busca documentação adicional sobre formatação de datas na linguagem M. O conteúdo visual sugere que ele está navegando pelos recursos oficiais da Microsoft ou por tutoriais para complementar a explicação sobre como trabalhar com datas no Power Query.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-09h54m06s373.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a janela do **Editor Avançado do Power Query** (Advanced Editor) para a consulta `financial_sample_modeling`. O código M gerado automaticamente é exibido, mostrando cada etapa da transformação: origem dos dados (Excel Workbook), alteração de tipos, criação da coluna `short date` (usando uma combinação de texto a partir das colunas `year` e `month number`) e remoção de colunas. O instrutor utiliza essa visualização para explicar como o Power BI traduz as ações da interface para a linguagem M, permitindo que o usuário edite diretamente o código, se desejar.      
 
 
 ### 🟩 Vídeo 20 - Criando um Campo Data com Maior Granularidade
@@ -746,7 +791,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/ad7b6049-197e-4b03-9693-8c7cb2e7d8df?autoplay=1
 
 ### 🟩 Vídeo 21 - Relembrando Conceitos
 
