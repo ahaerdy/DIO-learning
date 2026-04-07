@@ -866,7 +866,31 @@ O vídeo explora as complexidades da modelagem de dados, focando especificamente
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-14h36m24s047.jpg" alt="" width="840">
+</p>
+
+O slide apresenta o título “Modelagem” e destaca dois grandes problemas que podem surgir ao estruturar um modelo de dados: **Ciclos** e **Dependências de relação**.  
+Ciclos ocorrem quando tabelas se relacionam formando um caminho fechado (ex.: T1 → T2 → T3 → T1), o que torna o fluxo dos dados ambíguo. Já as dependências de relação referem-se a como uma alteração em uma tabela pode impactar outras por causa dos vínculos estabelecidos.  
+A imagem serve como abertura do tópico, alertando para os desafios comuns na modelagem dimensional.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-14h36m26s656.jpg" alt="" width="840">
+</p>
+
+A imagem traz apenas o título “Dependências”, indicando que o foco agora é entender esse conceito antes de aprofundar nos ciclos.  
+Em um modelo relacional, uma dependência significa que a existência ou a integridade de uma tabela está ligada a outra. Por exemplo, se uma tabela `Customer` é alterada (ex.: exclusão de um cliente), isso pode exigir ajustes na tabela `Sales` que referencia aquele cliente.  
+Essas dependências são naturais em relacionamentos bem definidos, mas quando mal gerenciadas podem levar a efeitos em cascata e dificultar a manutenção do modelo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-14h36m29s840.jpg" alt="" width="840">
+</p>
+
+A imagem retoma o título “Modelagem” e foca especificamente nos **Ciclos**.  
+Ela lista três consequências diretas de um ciclo (ex.: T1‑T2‑T3‑T1):  
+- **Difícil gerenciamento**: a manutenção se torna complexa porque qualquer alteração pode se propagar indefinidamente.  
+- **Dificultam o entendimento das relações**: não fica claro qual tabela é origem ou destino dos dados, gerando ambiguidade na criação de relatórios.  
+Em um modelo estrela ou floco de neve (snowflake), ciclos quebram a hierarquia esperada e prejudicam a performance das agregações. A recomendação é sempre eliminar esses círculos, deixando o modelo o mais enxuto possível.      
 
 
 ### 🟩 Vídeo 23 - Considerações sobre o curso
@@ -878,8 +902,41 @@ O vídeo explora as complexidades da modelagem de dados, focando especificamente
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/f76fc8b2-d929-45d5-88a2-4e7f1e72ca12?autoplay=1
 
+O vídeo aborda as distinções fundamentais entre a criação de dados via DAX (medidas e tabelas calculadas) e via Power Query, focando em desempenho, armazenamento e boas práticas de modelagem dimensional.
 
-##  Materiais de Apoio
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-14h59m54s579.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a **faixa de opções (ribbon)** do Power BI Desktop com comandos relacionados à preparação e ingestão de dados: **Colar**, **Área de Transferência**, **Dados**, **Consultas**, e atalhos para **Gerenciar relações**, **Nova medida**, **Nova coluna**, **Nova tabela** e configurações de segurança e idioma.  
+Esse tipo de captura é típico do momento em que o autor demonstra a interface de modelagem e onde se encontram ações para criar ou transformar tabelas e campos no projeto.  
+A presença de itens como **Pasta de trabalho do Excel**, **Obter dados**, **Dataverse** e **SQL Server** indica opções de conexão a fontes externas, reforçando que o slide ilustra o fluxo de importação e preparação de dados no Power BI.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-14h59m59s435.jpg" alt="" width="840">
+</p>
+
+Esta captura exibe o **Editor do Power Query** com menus de transformação (Arquivo, Página Inicial, Transformar, Adicionar Coluna, Exibição, Ferramentas) e opções de limpeza como **Usar a Primeira Linha como Cabeçalho**, **Tipo de Dados**, **Dividir**, **Agrupar** e **Substituir Valores**.  
+O foco visual é a etapa de preparação dos dados antes da carga: aqui se aplicam transformações que persistem quando a tabela é importada para o modelo (Power Query).  
+Do ponto de vista didático, a imagem serve para diferenciar operações feitas em Power Query (persistidas no modelo) das medidas criadas em DAX (calculadas sob demanda).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-15h00m03s755.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta uma **visualização tabular** com amostra de linhas (valores de mês, ano e montantes) e uma chamada à função de transformação `TransformColumnTypes(...)`, indicando que o autor está mostrando como garantir tipos corretos (por exemplo, converter Month e Year para inteiros).  
+A tabela de exemplo (valores mensais e colunas MonthYear) ilustra dados de vendas/amount por mês e ano, útil para demonstrar como estruturar uma dimensão de tempo ou validar a qualidade dos dados antes de modelar.  
+Didaticamente, esse slide reforça a prática de verificar tipos e amostras de dados para evitar problemas em cálculos e relacionamentos no modelo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-07-15h00m10s322.jpg" alt="" width="840">
+</p>
+
+Este slide é conceitual e lista **links úteis** e referências oficiais da Microsoft sobre modelagem dimensional e modelagem tabular (SSAS / Power BI), indicando recursos para aprofundamento: documentação sobre *Modelagem Dimensional com Power BI* e *Modelagem Transacional / Tabular*.  
+No contexto da aula, o slide funciona como orientação bibliográfica para quem deseja estudar o **Star Schema**, diferenças entre modelos relacionais e dimensionais, e práticas recomendadas ao projetar modelos para Power BI.  
+Recomenda-se consultar os links oficiais indicados pelo autor para entender melhor quando usar esquemas dimensionais versus modelos transacionais no Power BI.       
 
 # Certificado: 
 
