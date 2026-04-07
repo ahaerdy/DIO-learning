@@ -862,6 +862,11 @@ Relacionamentos **muitos para muitos** são **desencorajados** em modelos Star S
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/9e226113-cc3c-4e61-95d6-30c5755aac73?autoplay=1
 
+O vídeo explora as complexidades da modelagem de dados, focando especificamente nos perigos das relações circulares (ciclos) e na importância de manter um modelo "enxuto" para garantir a performance em ferramentas como o Power BI.
+
+### Anotações
+
+      
 
 
 ### 🟩 Vídeo 23 - Considerações sobre o curso
@@ -871,7 +876,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelage
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/modelagem-de-dados-no-power-bi/learning/f76fc8b2-d929-45d5-88a2-4e7f1e72ca12?autoplay=1
 
 
 ##  Materiais de Apoio
