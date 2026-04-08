@@ -5,6 +5,8 @@
 
 ### Parte 1 - Primeiros passos com DAX e Cálculos com Power BI
 
+### 🟩 Vídeo 01 - Contextualizando – O que é DAX?
+
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
@@ -75,15 +77,6 @@ O slide aponta uma **desvantagem do DAX**: suas expressões não são tão bem c
 Este slide introduz as **funções iterator (funções X)** no DAX, como `SUMX`, `COUNTX` e `MINX`. Diferente das funções de agregação tradicionais (`SUM`, `COUNT`, `MIN`), as versões com X iteram linha por linha sobre uma tabela, aplicando uma expressão a cada registro antes de agregar. Essas funções geralmente oferecem melhor desempenho e menor uso de espaço quando bem aplicadas, sendo uma alternativa poderosa para cálculos mais complexos.      
 
 
-### 🟩 Vídeo 01 - Contextualizando – O que é DAX?
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_01.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo: Curso: Primeiros passos com DAX e Cálculos com Power BI
-
 ### 🟩 Vídeo 02 - O que são Funções X?
 
 <video width="60%" controls>
@@ -91,7 +84,12 @@ link do vídeo: Curso: Primeiros passos com DAX e Cálculos com Power BI
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/72819f5f-3677-4e06-b53e-06ed8df93bb5?autoplay=1
+
+### Anotações
+
+      
+
 
 ### 🟩 Vídeo 03 - Criando Medidas Rápidas com Power BI Desktop
 
