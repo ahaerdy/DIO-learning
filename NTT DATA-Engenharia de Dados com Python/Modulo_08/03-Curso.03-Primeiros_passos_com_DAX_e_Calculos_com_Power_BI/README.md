@@ -324,7 +324,40 @@ Aqui, o foco está em um cartão que mostra valores de **Sales** comparados com 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/774bce68-72d4-4639-a9f9-01b1453e4056?autoplay=1
 
+O vídeo descreve as nuances entre colunas calculadas e medidas no Power BI, demonstrando como utilizar expressões DAX para criar visualizações dinâmicas, hierarquias de datas e relatórios eficientes.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h46m50s770.jpg" alt="" width="840">
+</p>
+
+Nesta tela vemos a criação de uma medida em Power BI utilizando DAX. O exemplo mostra a tentativa de calcular a média de vendas com `AVERAGEX`, mas sem definir corretamente a expressão, o que resulta em valores repetidos. Isso ilustra a diferença entre colunas calculadas (que armazenam valores linha a linha) e medidas (que são calculadas sob demanda e podem ser dimensionadas por tempo ou outra dimensão).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h46m59s975.jpg" alt="" width="840">
+</p>
+
+Aqui aparece a mensagem de erro ao tentar usar `AVERAGEX` sem fornecer todos os argumentos necessários. O Power BI indica que a função precisa da tabela e da expressão para funcionar corretamente. Esse exemplo reforça a importância de compreender a sintaxe das funções DAX e de diferenciar quando usar `AVERAGE` (apenas coluna) e `AVERAGEX` (tabela + expressão).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h47m08s103.jpg" alt="" width="840">
+</p>
+
+Nesta imagem vemos a medida corrigida: `AVG Sales = AVERAGE(financials[Sales])`. Agora o cálculo é válido e retorna a média de vendas. A medida pode ser usada em visuais, como tabelas ou gráficos, e dimensionada por hierarquias de tempo (ano, mês), permitindo análises comparativas entre períodos.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h47m29s786.jpg" alt="" width="840">
+</p>
+
+O visual mostra como medidas podem ser combinadas com dimensões temporais para identificar variações mensais e anuais. É um exemplo prático de como medidas são recalculadas dinamicamente conforme o contexto do visual.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h47m46s359.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a comparação entre metas e vendas acumuladas ao longo do tempo. O gráfico mostra linhas de meta e de vendas, destacadas por cores diferentes. Esse tipo de visualização é útil para avaliar desempenho em relação a objetivos, reforçando o papel das medidas como cálculos dinâmicos que podem ser aplicados em diferentes contextos visuais.
 
 ### 🟩 Vídeo 07 - Colunas Personalizadas
 
@@ -333,7 +366,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/1b92e821-50f4-4d9f-bd35-d79a16534e7c?autoplay=1
 
 ### 🟩 Vídeo 08 - Falando um pouco mais sobre medidas
 
