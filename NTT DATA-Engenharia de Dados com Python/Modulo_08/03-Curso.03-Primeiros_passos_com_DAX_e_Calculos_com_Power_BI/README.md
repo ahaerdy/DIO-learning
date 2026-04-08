@@ -117,7 +117,6 @@ A nota "Use o DAX quando não houver outra alternativa" reforça que, embora pod
 Utilize esses materiais para consolidar o entendimento sobre funções iteradoras (`X`) e boas práticas de modelagem. A documentação da Microsoft é a fonte primária para sintaxe, exemplos e comportamento detalhado de cada função.
       
 
-
 ### 🟩 Vídeo 03 - Criando Medidas Rápidas com Power BI Desktop
 
 <video width="60%" controls>
@@ -127,6 +126,120 @@ Utilize esses materiais para consolidar o entendimento sobre funções iteradora
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/bcca8288-ee47-4eab-a511-f2464a86942a?autoplay=1
 
+O vídeo foca na utilização do recurso de Medidas Rápidas (Quick Measures) no Power BI, uma funcionalidade que permite criar cálculos complexos em DAX (Data Analysis Expressions) sem a necessidade de escrever código manualmente. O instrutor demonstra como a ferramenta automatiza a lógica de negócios e serve como uma ponte para entender funções avançadas.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h42m57s176.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a interface inicial do Power BI Desktop, destacando o painel de campos e opções de inserção de dados. É o ponto de partida para a criação de medidas rápidas, onde o usuário pode selecionar tabelas e colunas para aplicar cálculos automáticos sem precisar escrever fórmulas manualmente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m10s556.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a janela de criação de uma medida rápida. O Power BI gera automaticamente o código DAX correspondente, neste caso utilizando a função `AVERAGEX` para calcular a média da contagem de vendas por segmento. O usuário escolhe os campos e o cálculo, e o sistema monta a expressão.
+
+```DAX
+Média de Contagem de Sales por Segment =
+AVERAGEX(
+    KEEPFILTERS(VALUES('financials'[Segment])),
+    CALCULATE(COUNTA('financials'[Sales]))
+)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m14s721.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a medida criada sendo aplicada em um visual. O gráfico exibe a média da contagem de vendas por segmento, permitindo comparar rapidamente os resultados entre diferentes categorias. É um exemplo prático de como medidas rápidas podem ser usadas para gerar insights sem escrever código manualmente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m20s268.jpg" alt="" width="840">
+</p>
+
+Neste ponto, a medida é representada em um gráfico de barras, mostrando a distribuição da média de vendas por segmento. O visual ajuda a identificar padrões e diferenças entre os segmentos de forma clara e intuitiva.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m22s054.jpg" alt="" width="840">
+</p>
+
+Aqui o gráfico é detalhado por país, exibindo a média da contagem de vendas por segmento em cada região. Isso permite analisar variações geográficas e comparar o desempenho entre diferentes mercados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m37s870.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a configuração de uma nova medida rápida, desta vez para calcular a diferença percentual entre dois valores: preço de venda e preço de manufatura. O Power BI gera automaticamente a fórmula em DAX utilizando variáveis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m41s311.jpg" alt="" width="840">
+</p>
+
+O código gerado para a diferença percentual aparece aqui. Ele utiliza variáveis para armazenar os valores de comparação e retorna o cálculo apenas quando o valor não está em branco.
+
+```DAX
+Manufacturing Price % de diferença de Sale Price =
+VAR _BASELINE_VALUE = SUM('financials'[Sale Price])
+VAR _VALUE_TO_COMPARE = SUM('financials'[Manufacturing Price])
+RETURN
+IF(
+    NOT ISBLANK(_VALUE_TO_COMPARE),
+    DIVIDE(_VALUE_TO_COMPARE - _BASELINE_VALUE, _BASELINE_VALUE)
+)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m44s890.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a tabela de dados utilizada para validar a medida criada. Nela aparecem colunas como preço de manufatura, preço de venda, vendas brutas e lucro, permitindo verificar se os cálculos estão corretos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m49s572.jpg" alt="" width="840">
+</p>
+
+Aqui vemos novamente a medida de diferença percentual sendo aplicada em um visual. O resultado mostra que o preço de manufatura é cerca de 18,54% diferente do preço de venda, evidenciando a utilidade da medida para análise de margens.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m56s681.jpg" alt="" width="840">
+</p>
+
+O gráfico exibe o valor percentual calculado, permitindo visualizar rapidamente a diferença entre os preços. Esse tipo de medida é útil para análises de custo e precificação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h44m10s753.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a configuração de outra medida rápida: o cálculo de total acumulado. O usuário seleciona o campo base (Sales) e o campo de agrupamento (como Country ou Date), e o Power BI gera automaticamente a expressão correspondente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h44m28s702.jpg" alt="" width="840">
+</p>
+
+Aqui aparece o código DAX gerado para o total acumulado de vendas por segmento. Ele utiliza funções como `CALCULATE`, `FILTER` e `ISONORAFTER` para construir o cálculo.
+
+```DAX
+Total acumulado de Sales em Segment =
+CALCULATE(
+    SUM('financials'[Sales]),
+    FILTER(
+        ALLSELECTED('financials'[Segment]),
+        ISONORAFTER('financials'[Segment], MAX('financials'[Segment]), DESC)
+    )
+)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h44m32s766.jpg" alt="" width="840">
+</p>
+
+O resultado da medida acumulada é exibido em um cartão, mostrando o total de vendas acumuladas tanto por data quanto por segmento. Esse tipo de medida é útil para acompanhar evolução de vendas ao longo do tempo ou por categorias específicas.      
+
+
 ### 🟩 Vídeo 04 - Comparando os tipos de Medidas
 
 <video width="60%" controls>
@@ -134,7 +247,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/452309db-17b4-46aa-85f3-a35d8feae63b?autoplay=1
 
 ### 🟩 Vídeo 05 - Criando as primeiras medidas com DAX
 
