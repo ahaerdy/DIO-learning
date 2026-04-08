@@ -86,8 +86,35 @@ Este slide introduz as **funções iterator (funções X)** no DAX, como `SUMX`,
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/72819f5f-3677-4e06-b53e-06ed8df93bb5?autoplay=1
 
+O vídeo aborda o conceito, o funcionamento e as vantagens das chamadas "Funções X" na linguagem DAX do Power BI, destacando como elas otimizam a performance e o armazenamento de dados.
+
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-09h54m09s761.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a diferença entre funções tradicionais (`SUM`, `COUNT`, `MIN`) e suas versões com sufixo `X` (`SUMX`, `COUNTX`, `MINX`). Essas funções são chamadas de **iteradores** (ou *iterator functions*). Em vez de operarem sobre uma coluna inteira de uma só vez, elas percorrem linha a linha da tabela, aplicando uma expressão a cada registro individual.
+
+**Vantagens principais:**
+- **Melhor desempenho** – a iteração controlada permite cálculos mais eficientes em grandes volumes de dados.
+- **Menor espaço de armazenamento** – ao evitar colunas calculadas desnecessárias, as funções `X` reduzem o modelo de dados.
+
+**Quando usar DAX?**  
+A nota "Use o DAX quando não houver outra alternativa" reforça que, embora poderoso, o DAX deve ser empregado com critério – preferindo soluções nativas do Power Query ou relacionamentos bem modelados sempre que possível. As funções `X` são recomendadas quando você precisa de agregações personalizadas ou cálculos linha a linha sem criar colunas físicas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-09h54m16s507.jpg" alt="" width="840">
+</p>
+
+**Referências e recursos oficiais**
+
+- **Download do Conector MySQL/.NET** – essencial para conectar o Power BI a bancos MySQL.
+- **Treinamento da Microsoft sobre obtenção de dados** – módulo oficial para aprender a importar dados de diversas fontes.
+- **Dataset Power BI** – conjunto de dados de exemplo para exercícios práticos.
+- **Documentação oficial DAX** – referências diretas para as funções `SUMX` e o guia geral de funções DAX.
+
+Utilize esses materiais para consolidar o entendimento sobre funções iteradoras (`X`) e boas práticas de modelagem. A documentação da Microsoft é a fonte primária para sintaxe, exemplos e comportamento detalhado de cada função.
       
 
 
@@ -98,7 +125,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/bcca8288-ee47-4eab-a511-f2464a86942a?autoplay=1
 
 ### 🟩 Vídeo 04 - Comparando os tipos de Medidas
 
