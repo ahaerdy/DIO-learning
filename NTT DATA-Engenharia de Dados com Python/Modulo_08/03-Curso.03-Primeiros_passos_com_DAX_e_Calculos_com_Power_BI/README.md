@@ -239,7 +239,6 @@ CALCULATE(
 
 O resultado da medida acumulada é exibido em um cartão, mostrando o total de vendas acumuladas tanto por data quanto por segmento. Esse tipo de medida é útil para acompanhar evolução de vendas ao longo do tempo ou por categorias específicas.      
 
-
 ### 🟩 Vídeo 04 - Comparando os tipos de Medidas
 
 <video width="60%" controls>
@@ -249,6 +248,47 @@ O resultado da medida acumulada é exibido em um cartão, mostrando o total de v
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/452309db-17b4-46aa-85f3-a35d8feae63b?autoplay=1
 
+O vídeo explora a transição de uma visão de vendas pontuais para uma visão acumulada, utilizando as "Medidas Rápidas" do Power BI. O objetivo é entender não apenas quanto foi vendido em um dia, mas como o volume de vendas cresce e se concentra ao longo do tempo.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h03m21s283.jpg" alt="" width="840">
+</p>
+
+O foco aqui é configurar um cálculo de **total acumulado** sobre o campo *Sales*, utilizando a dimensão *Date*. Esse recurso permite gerar um gráfico cumulativo que mostra a progressão das vendas ao longo do tempo, facilitando a análise de tendências e a identificação de períodos de maior concentração de vendas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h03m38s637.jpg" alt="" width="840">
+</p>
+
+O trecho mostra a função `CALCULATE` combinada com `FILTER` e `ISONORAFTER`, que garante que os valores sejam somados de forma cumulativa até a data selecionada.  
+
+```DAX
+CALCULATE (
+    SUM('financials'[Sales]),
+    FILTER(
+        ALLSELECTED('financials'[Date]),
+        ISONORAFTER('financials'[Date], MAX('financials'[Date]), DESC)
+    )
+)
+```
+
+Esse código cria uma medida personalizada que acumula as vendas ao longo do tempo, permitindo comparar períodos e visualizar a evolução histórica.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h03m42s936.jpg" alt="" width="840">
+</p>
+
+O eixo horizontal representa as datas e o eixo vertical o valor acumulado de *Sales*. A curva crescente evidencia como as vendas se somam ao longo do tempo, destacando períodos de maior crescimento. Esse tipo de visualização é útil para entender a distribuição acumulada (CDF – *Cumulative Distribution Function*) e identificar tendências de longo prazo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h03m47s709.jpg" alt="" width="840">
+</p>
+
+Neste último quadro, o gráfico de vendas acumuladas continua sendo detalhado, com destaque para valores específicos em datas selecionadas. O marcador mostra, por exemplo, o total acumulado em 1º de outubro de 2014, permitindo verificar o crescimento progressivo. Essa análise ajuda a perceber onde está concentrada a maior parte das vendas e como elas evoluem ao longo dos anos, sendo uma ferramenta essencial para decisões estratégicas.      
+
+
 ### 🟩 Vídeo 05 - Criando as primeiras medidas com DAX
 
 <video width="60%" controls>
@@ -256,7 +296,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/35e9f828-84b7-47ae-81c3-d3fb8e7bf42e?autoplay=1
+
+
 
 ### 🟩 Vídeo 06 - Usando AVARAGEX & AVARAGE
 
