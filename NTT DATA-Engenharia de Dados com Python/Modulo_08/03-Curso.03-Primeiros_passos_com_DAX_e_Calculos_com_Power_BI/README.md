@@ -134,7 +134,7 @@ O vídeo foca na utilização do recurso de Medidas Rápidas (Quick Measures) no
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h42m57s176.jpg" alt="" width="840">
 </p>
 
-Esta imagem mostra a interface inicial do Power BI Desktop, destacando o painel de campos e opções de inserção de dados. É o ponto de partida para a criação de medidas rápidas, onde o usuário pode selecionar tabelas e colunas para aplicar cálculos automáticos sem precisar escrever fórmulas manualmente.
+Este é o ponto de partida para a criação de medidas rápidas, onde o usuário pode selecionar tabelas e colunas para aplicar cálculos automáticos sem precisar escrever fórmulas manualmente.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m10s556.jpg" alt="" width="840">
@@ -154,7 +154,7 @@ AVERAGEX(
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m14s721.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a medida criada sendo aplicada em um visual. O gráfico exibe a média da contagem de vendas por segmento, permitindo comparar rapidamente os resultados entre diferentes categorias. É um exemplo prático de como medidas rápidas podem ser usadas para gerar insights sem escrever código manualmente.
+O gráfico exibe a média da contagem de vendas por segmento, permitindo comparar rapidamente os resultados entre diferentes categorias. É um exemplo prático de como medidas rápidas podem ser usadas para gerar insights sem escrever código manualmente.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m20s268.jpg" alt="" width="840">
@@ -196,7 +196,7 @@ IF(
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m44s890.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a tabela de dados utilizada para validar a medida criada. Nela aparecem colunas como preço de manufatura, preço de venda, vendas brutas e lucro, permitindo verificar se os cálculos estão corretos.
+Aqui vemos a tabela de dados utilizada para validar a medida criada. Nela aparecem colunas como preço de manufatura, preço de venda, vendas brutas e lucro, permitindo verificar se os cálculos estão corretos.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-10h43m49s572.jpg" alt="" width="840">
