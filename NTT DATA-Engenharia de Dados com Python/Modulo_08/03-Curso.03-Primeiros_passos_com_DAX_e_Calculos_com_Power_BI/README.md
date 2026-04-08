@@ -298,6 +298,21 @@ Neste último quadro, o gráfico de vendas acumuladas continua sendo detalhado, 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/35e9f828-84b7-47ae-81c3-d3fb8e7bf42e?autoplay=1
 
+O vídeo aborda a criação de Medidas Customizadas utilizando a linguagem DAX no Power BI, demonstrando como elas se comportam de forma diferente das agregações automáticas e como podem ser usadas para definir metas dinâmicas.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h22m46s842.jpg" alt="" width="840">
+</p>
+
+O eixo X está configurado com **Date** e o eixo Y com o **Total acumulado de Sales**, permitindo visualizar a evolução das vendas ao longo do tempo. Esse tipo de gráfico é útil para acompanhar tendências e comparar períodos, mostrando como o valor acumulado cresce mês a mês. A explicação conecta-se ao momento da aula em que o instrutor demonstra a criação de medidas e a utilização delas em visuais para análise.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-08-15h23m28s275.jpg" alt="" width="840">
+</p>
+
+Aqui, o foco está em um cartão que mostra valores de **Sales** comparados com metas. O instrutor explica como criar medidas personalizadas em DAX, como o **Total Sales**, e depois derivar novas métricas, como **Meta** e **Meta mínima**, multiplicando ou ajustando os valores de vendas. A imagem ilustra a comparação entre o valor alcançado (118,73 milhões), a meta mínima (94,98 milhões) e a meta máxima (154,34 milhões). Esse recurso evidencia como medidas permitem estabelecer objetivos e acompanhar o desempenho em relação a metas definidas.
 
 
 ### 🟩 Vídeo 06 - Usando AVARAGEX & AVARAGE
@@ -307,7 +322,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/774bce68-72d4-4639-a9f9-01b1453e4056?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Colunas Personalizadas
 
