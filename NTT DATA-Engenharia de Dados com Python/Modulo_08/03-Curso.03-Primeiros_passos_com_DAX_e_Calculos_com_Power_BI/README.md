@@ -406,7 +406,7 @@ A instrução cria uma view chamada `OrdersWithTotalPrice` que contém os campos
 No Power Query você define a expressão (linguagem M) que gera a nova coluna durante a etapa de transformação; isso mantém o cálculo na camada de ETL antes de carregar os dados ao modelo. Quando a criação é feita no Power BI com DAX, o processamento pode ocorrer no modelo e a escolha entre coluna persistida ou medida por demanda afeta armazenamento e performance.
 
 Custom Column Formula:
-```plaintext
+```M
 = ([Weather] + [Health care quality] + [Crime] + [Tax]) / 4
 ```
 
