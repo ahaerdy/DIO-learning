@@ -796,9 +796,9 @@ Este vídeo as principais categorias de funções DAX, detalhando como cada uma 
   <img src="000-Midia_e_Anexos/2026-04-09-14-48-23.png" alt="" width="480">
 </p>
 
-#### Resumo: Referência de Funções DAX
+#### Referência de Funções DAX
 
-A página **Referência da função DAX** da Microsoft disponibiliza documentação detalhada para mais de 250 funções utilizadas em fórmulas de Expressão de Análise de Dados (DAX). Ela atua como um guia completo que detalha sintaxe, parâmetros, valores de retorno e exemplos para cada função.
+A página disponibiliza documentação detalhada para mais de 250 funções utilizadas em fórmulas de Expressão de Análise de Dados (DAX). Ela atua como um guia completo que detalha sintaxe, parâmetros, valores de retorno e exemplos para cada função.
 
 > **Aviso de Compatibilidade:** Nem todas as funções DAX têm suporte ou estão disponíveis em versões mais antigas do Power BI Desktop, do SQL Server Analysis Services e do Power Pivot no Excel.
 
