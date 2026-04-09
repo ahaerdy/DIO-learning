@@ -452,13 +452,13 @@ Diferentemente das medidas, as **colunas** (ou colunas calculadas) são persisti
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h22m44s627.jpg" alt="" width="840">
 </p>
 
-ste trecho mostra exemplos de criação de coluna personalizada no Power Query e a interface de edição de consultas, destacando que colunas personalizadas usam a linguagem M e aparecem no modelo final. Aumento de espaço que possivelmente aumentará o tempo de atualização. Prefira transformar e limpar dados no Power Query quando a lógica puder ser aplicada uma vez; reserve medidas para cálculos que dependem do contexto do relatório.
+O trecho mostra exemplos de criação de coluna personalizada no Power Query e a interface de edição de consultas, destacando que colunas personalizadas usam a linguagem M e aparecem no modelo final. Aumento de espaço que possivelmente aumentará o tempo de atualização. Prefira transformar e limpar dados no Power Query quando a lógica puder ser aplicada uma vez; reserve medidas para cálculos que dependem do contexto do relatório.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h22m50s421.jpg" alt="" width="840">
 </p>
 
-por fim, são exibidos elementos do editor do Power Query (fases aplicadas, tipos de transformação e pré-visualização), reforçando que operações no Power Query afetam o modelo antes da carga. Colunas disponíveis Segment Country Product Discount Band Units Sold Manufacturing Price Sale Price.     
+Por fim, são exibidos elementos do editor do Power Query (fases aplicadas, tipos de transformação e pré-visualização), reforçando que operações no Power Query afetam o modelo antes da carga. Colunas disponíveis Segment Country Product Discount Band Units Sold Manufacturing Price Sale Price.     
 
 ### 🟩 Vídeo 09 - Entendendo o Contexto com DAX
 
