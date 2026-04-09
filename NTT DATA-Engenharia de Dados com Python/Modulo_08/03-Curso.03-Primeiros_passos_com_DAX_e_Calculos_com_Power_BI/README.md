@@ -892,7 +892,7 @@ Link: https://learn.microsoft.com/pt-br/dax/information-functions-dax
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/95ea99a8-08b7-454e-8927-cf84b36bfe2a?autoplay=1
 
-O vídeo foca na aplicação prática de expressões DAX (*Data Analysis Expressions*) no Power BI, com ênfase na organização de medidas e no uso da função `CALCULATE` para filtragem temporal.
+Aplicação prática de expressões DAX (*Data Analysis Expressions*) no Power BI, com ênfase na organização de medidas e no uso da função `CALCULATE` para filtragem temporal.
 
 ### Anotações
 
