@@ -469,6 +469,33 @@ Por fim, são exibidos elementos do editor do Power Query (fases aplicadas, tipo
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/9d32a368-7569-42e7-ac0f-52a4677fa6b2?autoplay=1
 
+O vídeo apresenta o conceito de "contexto" dentro do Power BI, demonstrando como uma única medida DAX pode produzir resultados variados dependendo de como os dados são filtrados, visualizados e interagidos.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h59m50s537.jpg" alt="" width="840">
+</p>
+
+A imagem mostra um slide conceitual que introduz a ideia central: **o contexto altera o resultado de medidas DAX mesmo quando a fórmula da medida é a mesma**. Visualmente há três cartões/visuais que representam a mesma medida *Total Sales* exibida em diferentes cortes (valor total, por ano e por Product ID), ilustrando que a mesma expressão agregada pode retornar números distintos conforme o contexto de exibição.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h59m58s560.jpg" alt="" width="840">
+</p>
+
+A captura mostra a interface do Power BI com um relatório aberto e vários visuais de *Sales* (cartões, gráficos de barras, mapas e treemap). O foco desta imagem é demonstrar a interação: ao clicar em um segmento (por exemplo, um país ou produto) o relatório aplica esse elemento como filtro e todos os visuais se atualizam, alterando o contexto em que a medida é avaliada.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h00m01s738.jpg" alt="" width="840">
+</p>
+
+Esta imagem enfatiza exemplos numéricos e visuais de como *Sales* aparece em diferentes cortes (por segmento, produto e país) dentro do mesmo relatório. Serve para reforçar que, embora a medida seja a mesma (por exemplo, `Total Sales = SUM(Sales[TotalPrice])`), os valores exibidos mudam conforme os filtros aplicados pelos visuais e pela interação do usuário.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h00m06s333.jpg" alt="" width="840">
+</p>
+
+O slide final sintetiza a classificação dos contextos relevantes para DAX: **contexto de linha, contexto de consulta e contexto de filtro**. Cada tipo atua em um nível diferente — o contexto de linha é inerente à iteração sobre linhas (por exemplo, em colunas calculadas), o contexto de consulta é o conjunto de linhas retornadas por uma expressão, e o contexto de filtro é formado por filtros explícitos (visuais, slicers, `CALCULATE`, etc.).  
 
 
 ### 🟩 Vídeo 10 - Tipos de contextos do Power BI
@@ -478,7 +505,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/22a1d392-0b19-44a1-b271-5a1fdbda11c2?autoplay=1
 
 ### 🟩 Vídeo 11 - Explorando as possibilidades com filtros
 
