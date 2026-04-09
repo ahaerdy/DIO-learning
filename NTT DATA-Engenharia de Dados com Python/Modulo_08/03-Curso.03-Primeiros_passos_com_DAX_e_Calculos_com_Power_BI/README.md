@@ -892,7 +892,27 @@ Link: https://learn.microsoft.com/pt-br/dax/information-functions-dax
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/95ea99a8-08b7-454e-8927-cf84b36bfe2a?autoplay=1
 
+O vídeo foca na aplicação prática de expressões DAX (*Data Analysis Expressions*) no Power BI, com ênfase na organização de medidas e no uso da função `CALCULATE` para filtragem temporal.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-15h36m09s515.jpg" alt="" width="840">
+</p>
+
+O trecho de código visível é uma medida que soma a coluna **Sales** aplicando um filtro para o ano de 2014, usando a função **CALCULATE** e a função de data **YEAR**.  
+
+Código: `Total Sales for 2014 = CALCULATE(SUM(financials[ Sales]), YEAR(financials[Date])=2014)`. 
+
+A medida apresentada aplica primeiro a agregação `SUM(financials[Sales])` e, em seguida, restringe o contexto de avaliação ao conjunto de linhas cuja data pertence a 2014. Na prática, isso permite reutilizar a mesma medida em visuais e painéis, garantindo que o valor exibido represente apenas as vendas daquele ano específico.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-15h36m14s575.jpg" alt="" width="840">
+</p>
+
+A segunda imagem apresenta os visuais do relatório (gráficos de barras e cartões) mostrando o resultado da medida **Total Sales for 2014** aplicada ao relatório: os elementos visuais exibem o total agregado de vendas restrito a 2014, com rótulos de magnitude (por exemplo, **120 M**) no eixo/indicador. Esse slide ilustra como a medida DAX criada anteriormente se materializa em um visual do relatório, confirmando que o filtro por ano funcionou conforme o esperado.  
+
+O ponto-chave é entender a separação entre **cálculo** (a medida DAX) e **apresentação** (o visual). A medida encapsula a lógica (soma + filtro por ano) e qualquer visual que a consuma exibirá automaticamente o valor filtrado, sem necessidade de recriar a lógica no próprio visual.      
 
 ### 🟩 Vídeo 17 - Realizando considerações e explorando as medidas DAX
 
@@ -901,7 +921,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/934d63d8-e0ba-4db7-be0d-6ee9d73664e0?autoplay=1
 
 ### 🟩 Vídeo 18 - Criando uma página do relatório com as novas medidas
 
