@@ -619,7 +619,7 @@ O slide explica as funções **EARLIER** e **EARLIEST**, usadas principalmente e
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h26m11s772.jpg" alt="" width="840">
 </p>
 
-este slide mostra a documentação oficial da função **EARLIER** no DAX. A sintaxe é `EARLIER(<coluna>[, <número>])`, onde `coluna` é a referência à coluna avaliada e `número` (opcional) indica quantas etapas de avaliação externa retroceder. A função retorna o valor atual da coluna em uma etapa externa à avaliação atual. É útil para cálculos aninhados em que se deseja usar um valor como entrada e produzir cálculos com base nesse valor. No DAX, diferentemente do Excel, essa função é usada principalmente no contexto de colunas calculadas.
+O slide destaca a documentação oficial da função **EARLIER** no DAX. A sintaxe é `EARLIER(<coluna>[, <número>])`, onde `coluna` é a referência à coluna avaliada e `número` (opcional) indica quantas etapas de avaliação externa retroceder. A função retorna o valor atual da coluna em uma etapa externa à avaliação atual. É útil para cálculos aninhados em que se deseja usar um valor como entrada e produzir cálculos com base nesse valor. No DAX, diferentemente do Excel, essa função é usada principalmente no contexto de colunas calculadas.
 
 ### 🟩 Vídeo 13 - Explorando seções de DAX e tipos de funções
 
