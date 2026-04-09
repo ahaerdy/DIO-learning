@@ -630,7 +630,154 @@ O slide destaca a documentação oficial da função **EARLIER** no DAX. A sinta
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/5c549361-0718-46c1-866d-c544e66dd1aa?autoplay=1
 
+Visão geral das funções DAX (Data Analysis Expressions), destacando a importância da documentação oficial da Microsoft e mergulhando em funções específicas como `NETWORKDAYS` e a fundamental `CALCULATE`.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h55m53s858.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a **página inicial da referência de funções DAX** na documentação da Microsoft. Ela apresenta o propósito do material: listar e documentar as funções DAX (sintaxe, parâmetros, valor de retorno e exemplos) e indica que a biblioteca contém **mais de 250 funções** usadas em fórmulas DAX. Use esta página como ponto de partida para localizar categorias (data/hora, agregação, filtro, etc.) e para confirmar compatibilidade entre Power BI Desktop, Analysis Services e Power Pivot no Excel.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m01s889.jpg" alt="" width="840">
+</p>
+
+A imagem destaca a seção **"Novas funções do DAX"** e a organização por categorias. Ela enfatiza que o DAX é atualizado com frequência (novas funções e melhorias) e que a documentação lista apenas as alterações com impacto visível para o usuário. Ao estudar DAX, verifique essa seção para identificar funções recentes e mudanças relevantes para a sua versão do Power BI.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m07s032.jpg" alt="" width="840">
+</p>
+
+Aqui aparece uma tabela resumida das **novas funções** (ex.: `NETWORKDAYS`, `BITAND`, `BITLSHIFT`, `BITOR`, `BITRSHIFT`, `BITXOR`) com o mês de introdução e uma breve descrição. Use essa tabela para identificar rapidamente funções que podem resolver problemas específicos (por exemplo, operações bitwise ou cálculo de dias úteis) antes de abrir a página de referência completa de cada função.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m16s579.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o índice da categoria **Funções de data e hora**, listando funções relacionadas (por exemplo, `NETWORKDAYS`, `NOW`, `TODAY`, `WEEKDAY`, `YEARFRAC`). Quando precisar manipular datas ou calcular intervalos, consulte essa seção para escolher a função adequada e revisar parâmetros como formato de data, inclusão/exclusão de extremos e tratamento de feriados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m18s520.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta a **descrição geral da função `NETWORKDAYS`**: objetivo (retornar número de dias úteis inteiros entre duas datas), comportamento (inclusão das datas de início e fim) e observação sobre como fins de semana e feriados são excluídos do cálculo. Ao usar `NETWORKDAYS`, preste atenção aos parâmetros opcionais que definem quais dias da semana são considerados fim de semana e à tabela de feriados que pode ser passada para exclusão.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m22s478.jpg" alt="" width="840">
+</p>
+
+A imagem detalha os **parâmetros** de `NETWORKDAYS`: `start_date`, `end_date`, `weekend` e `holidays`.  
+- **start_date / end_date:** datas que definem o intervalo.  
+- **weekend:** código numérico que especifica quais dias da semana são considerados fim de semana (por exemplo, `1` ou omitido = sábado e domingo; `11` = domingo apenas; `17` = sábado apenas).  
+- **holidays:** tabela/coluna com datas a excluir do calendário de dias úteis. Configure `weekend` conforme o calendário da sua organização antes de contar dias úteis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m24s760.jpg" alt="" width="840">
+</p>
+
+A imagem lista os **valores possíveis para o parâmetro `weekend`**, mostrando combinações e códigos que permitem adaptar a função a diferentes convenções de fim de semana (ex.: países ou empresas com fins de semana não convencionais). Consulte essa tabela sempre que trabalhar com calendários regionais ou regimes de trabalho que não usem sábado/domingo como fim de semana padrão.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m27s426.jpg" alt="" width="840">
+</p>
+ 
+Esta imagem reforça a definição de `weekend` e lembra que **feriados** devem ser passados como uma tabela de datas para serem excluídos do cálculo. Em cenários práticos, mantenha uma tabela de feriados atualizada no modelo e passe-a como argumento para `NETWORKDAYS` para obter contagens corretas de dias úteis.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m40s949.jpg" alt="" width="840">
+</p>
+
+A imagem mostra um **exemplo prático** de uso da função `NETWORKDAYS` com sintaxe DAX e o resultado retornado. O exemplo ilustra como combinar `start_date`, `end_date`, `weekend` e `holidays` para obter o número de dias úteis entre duas datas, incluindo o caso em que o resultado é zero por causa de fim de semana e feriado.
+
+```dax
+= NETWORKDAYS (
+  DATE ( 2022, 5, 28 ),
+  DATE ( 2022, 5, 30 ),
+  1,
+  {
+    DATE ( 2022, 5, 30 )
+  }
+)
+```
+
+**Observação sobre o exemplo:** o resultado retornado é `0` porque 28/05/2022 é sábado, 30/05/2022 foi marcado como feriado e `weekend = 1` considera sábado e domingo como fim de semana.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m45s377.jpg" alt="" width="840">
+</p>
+
+A imagem volta ao índice de **novas funções** e destaca que a documentação também lista funções bitwise (`BITAND`, `BITOR`, `BITXOR`, `BITLSHIFT`, `BITRSHIFT`) — úteis para manipulação de bits e operações de baixo nível em cenários específicos de modelagem ou integração.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m48s361.jpg" alt="" width="840">
+</p>
+
+ 
+Esta imagem inicia a seção da função **`CALCULATE`**, uma das mais usadas em DAX. Ela indica que `CALCULATE` avalia uma expressão em um **contexto de filtro modificado**, permitindo aplicar filtros adicionais ou substituir filtros existentes para calcular medidas condicionais.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h56m57s020.jpg" alt="" width="840">
+</p>
+
+
+A imagem apresenta o **índice de funções de filtro** (onde `CALCULATE` e `CALCULATETABLE` aparecem) e lembra que `CALCULATETABLE` tem comportamento análogo ao `CALCULATE`, mas retorna uma tabela em vez de um valor escalar. Use `CALCULATETABLE` quando precisar de uma tabela filtrada como resultado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h57m06s384.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a **sintaxe** de `CALCULATE` e os parâmetros principais: a expressão a ser avaliada e filtros opcionais (`filter1`, `filter2`, ...). Esses filtros podem ser expressões booleanas, expressões de tabela ou funções modificadoras de filtro; quando múltiplos filtros são fornecidos, eles são combinados logicamente (AND/OR conforme a expressão).
+
+```dax
+CALCULATE(<expression>[, <filter1> [, <filter2> [, ... ]]])
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h57m11s421.jpg" alt="" width="840">
+</p>
+
+A imagem detalha **regras e tipos de filtros** aceitos por `CALCULATE`:  
+- **Expressões de filtro booleanas** (devem avaliar TRUE/FALSE, não podem referenciar medidas nem usar `CALCULATE` aninhado).  
+- **Expressões de filtro de tabela** (objetos de tabela usados como filtros, frequentemente gerados por funções como `FILTER`).  
+- **Funções de modificação de filtro** (ex.: `ALL`, `KEEPFILTERS`).  
+Essas regras são importantes para evitar erros e garantir que os filtros se comportem conforme esperado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h57m15s234.jpg" alt="" width="840">
+</p>
+
+A imagem lista restrições adicionais introduzidas em atualizações recentes (por exemplo, regras a partir de setembro de 2021): filtros booleanos não podem usar funções que retornam tabelas, a menos que essas tabelas sejam passadas a funções de agregação; porém, agregações escalares são permitidas dentro de filtros booleanos. Verifique a versão do Power BI se encontrar comportamentos diferentes do esperado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h57m17s205.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra um **exemplo prático** de uso de `CALCULATE` com uma agregação dentro de uma expressão de filtro (uso de `MAX` dentro do filtro). Esse padrão é comum para calcular valores condicionais com base em um valor agregado do contexto atual.
+
+```dax
+Total sales on the last selected date =
+CALCULATE (
+  SUM ( Sales[Sales Amount] ),
+  'Sales'[OrderDateKey] = MAX ( 'Sales'[OrderDateKey] )
+)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h57m21s769.jpg" alt="" width="840">
+</p>
+
+A imagem final mostra um **exemplo de medida** (`Blue Revenue`) que usa `CALCULATE` para somar vendas apenas para produtos com cor azul. É um exemplo direto de como `CALCULATE` aplica filtros de coluna para produzir medidas condicionais no modelo.
+
+```dax
+Blue Revenue =
+CALCULATE(
+  SUM(Sales[Sales Amount]),
+  'Product'[Color] = "Blue"
+)
+```
 
 ### 🟩 Vídeo 14 - Explorando as funções existentes de: agregação, data e hora, lógicas e outros
 
@@ -639,7 +786,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/ecc60d49-acfa-4c69-8c15-0377562e0070?autoplay=1
 
 ### 🟩 Vídeo 15 - Explorando funções de informação e inteligência de dados temporais
 
