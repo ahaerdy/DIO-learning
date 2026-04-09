@@ -368,6 +368,48 @@ Aqui vemos a comparação entre metas e vendas acumuladas ao longo do tempo. O g
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/1b92e821-50f4-4d9f-bd35-d79a16534e7c?autoplay=1
 
+Este vídeo apresenta as diferentes metodologias para criar dados personalizados no Power BI, destacando quando processar informações na origem (SQL), na transformação (Power Query) ou na análise (DAX).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-08h25m38s508.jpg" alt="" width="840">
+</p>
+
+**Colunas personalizadas** são campos que você adiciona ao modelo, mas que não existem originalmente na fonte de dados. Elas podem ser criadas de três maneiras:
+
+1. **Na origem dos dados** – durante a extração, por exemplo com uma consulta SQL que já calcula o campo. Isso transfere o processamento para o banco de dados.
+2. **Com Power Query** – usando a interface ou a linguagem M para transformar os dados após a importação.
+3. **Com DAX** – criando colunas calculadas ou medidas diretamente no Power BI, o que mantém o processamento no próprio arquivo.
+
+A escolha entre essas formas afeta onde o cálculo é executado e como o desempenho do relatório se comporta.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-08h25m42s983.jpg" alt="" width="840">
+</p>
+
+Exemplo de criação de coluna personalizada **na origem dos dados**, utilizando SQL:
+
+```sql
+CREATE VIEW OrdersWithTotalPrice
+AS
+SELECT unitprice, qty, unitprice * qty as TotalPrice
+FROM sales.salesorders
+```
+
+A instrução cria uma view chamada `OrdersWithTotalPrice` que contém os campos originais `unitprice` e `qty`, mais uma coluna derivada `TotalPrice` (resultado da multiplicação). Essa coluna não precisa ser armazenada fisicamente – ela é calculada no momento da consulta, no próprio SGBD, aliviando a carga do Power BI.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-08h25m48s123.jpg" alt="" width="840">
+</p>
+
+No Power Query você define a expressão (linguagem M) que gera a nova coluna durante a etapa de transformação; isso mantém o cálculo na camada de ETL antes de carregar os dados ao modelo. Quando a criação é feita no Power BI com DAX, o processamento pode ocorrer no modelo e a escolha entre coluna persistida ou medida por demanda afeta armazenamento e performance.
+
+Custom Column Formula:
+```plaintext
+= ([Weather] + [Health care quality] + [Crime] + [Tax]) / 4
+```
+
 ### 🟩 Vídeo 08 - Falando um pouco mais sobre medidas
 
 <video width="60%" controls>
@@ -375,7 +417,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/d86acac7-3659-4da3-ae9e-787f6778395a?autoplay=1
 
 ### 🟩 Vídeo 09 - Entendendo o Contexto com DAX
 
