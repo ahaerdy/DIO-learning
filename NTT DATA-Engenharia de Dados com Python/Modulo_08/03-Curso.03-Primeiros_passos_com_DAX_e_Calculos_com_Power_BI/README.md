@@ -551,7 +551,7 @@ A imagem apresenta exemplos de funções de manipulação de filtros (por exempl
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h28m06s108.jpg" alt="" width="840">
 </p>
  
-Slide final de síntese que reforça os conceitos apresentados: o contexto (linha, várias linhas, consulta e filtro) e a lista de funções DAX relevantes para manipular esses contextos. A imagem funciona como um resumo visual para consulta rápida durante a prática no Power BI, indicando que o próximo passo é ver exemplos práticos no ambiente e aprofundar o uso de `CALCULATE`, `FILTER`, `ALLEXCEPT` e funções relacionadas.  
+Resumo para consulta rápida durante a prática no Power BI, indicando que o próximo passo é ver exemplos práticos no ambiente e aprofundar o uso de `CALCULATE`, `FILTER`, `ALLEXCEPT` e funções relacionadas.  
 
 ### 🟩 Vídeo 11 - Explorando as possibilidades com filtros
 
@@ -562,7 +562,21 @@ Slide final de síntese que reforça os conceitos apresentados: o contexto (linh
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/db2d0536-c746-4e31-a90f-71b6ec3f3f66?autoplay=1
 
+O vídeo descreve a aplicação prática de filtros em relatórios do Power BI, diferenciando conceitos de visualização e demonstrando como o "Contexto de Filtro" altera a perspectiva dos dados sem modificar sua estrutura subjacente.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h44m20s943.jpg" alt="" width="840">
+</p>
+
+A captura mostra a interface de um relatório Power BI intitulado **Sales Report** com múltiplos elementos de análise: um seletor de período (date slicer), cartões de KPI (Total de Vendas; Unidades Vendidas; Discounts; COGS), um gráfico de vendas por mês, um gráfico de pizza por segmento, visuais de vendas por produto e um mapa de vendas por país. À direita aparece o painel de **Filtros**, onde se vê o campo **Year** e opções de filtragem (básica e avançada), indicando que o autor demonstra como aplicar filtros a nível de página versus a nível de relatório.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h44m30s171.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a página de **Report de Lucro Detalhado** com visuais focados em *Profit*: soma de profit por produto, por segmento, por trimestre e por país, além de seletores de ano (2013 / 2014). Observam‑se valores numéricos por país (por exemplo, entradas para Canada, France, Germany, Mexico, United States) e um total agregado de profit, o que indica uma análise de rentabilidade segmentada por dimensões diferentes.  
 
 ### 🟩 Vídeo 12 - Contexto em fórmulas
 
@@ -571,7 +585,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/b1578951-feb2-4396-aa2b-bafd6f1ffb50?autoplay=1
 
 ### 🟩 Vídeo 13 - Explorando seções de DAX e tipos de funções
 
