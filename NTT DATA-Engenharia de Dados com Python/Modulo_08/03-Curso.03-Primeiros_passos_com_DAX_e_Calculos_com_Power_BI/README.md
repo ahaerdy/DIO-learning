@@ -406,7 +406,7 @@ A instrução cria uma view chamada `OrdersWithTotalPrice` que contém os campos
 No Power Query você define a expressão (linguagem M) que gera a nova coluna durante a etapa de transformação; isso mantém o cálculo na camada de ETL antes de carregar os dados ao modelo. Quando a criação é feita no Power BI com DAX, o processamento pode ocorrer no modelo e a escolha entre coluna persistida ou medida por demanda afeta armazenamento e performance.
 
 Custom Column Formula:
-```M
+```
 = ([Weather] + [Health care quality] + [Crime] + [Tax]) / 4
 ```
 
@@ -419,6 +419,47 @@ Custom Column Formula:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/d86acac7-3659-4da3-ae9e-787f6778395a?autoplay=1
 
+O vídeo apresenta as definições fundamentais de Medidas e Colunas no Power BI, destacando suas diferenças operacionais, impactos na performance e a importância do contexto de filtro para a análise de dados. O conteúdo é voltado tanto para a prática do dia a dia quanto para a preparação para a certificação oficial da Microsoft.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h22m30s971.jpg" alt="" width="840">
+</p>
+
+O slide apresenta o conceito de **medidas** na ferramenta. Medidas são cálculos criados sob demanda, úteis para operar linha por linha das tabelas. Podem ser criadas como *Medidas Rápidas* (sem usar DAX) ou com expressões DAX personalizadas. Diferente de colunas calculadas, as medidas não são armazenadas no arquivo `.pbix` – são avaliadas apenas no momento da interação do usuário, com base nos filtros aplicados ao relatório. A combinação desses filtros forma o *contexto de filtro*, que determina quais linhas serão consideradas no cálculo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h22m35s092.jpg" alt="" width="840">
+</p>
+
+Este slide contrasta medidas com colunas: as colunas são persistidas no arquivo (.pbix) e ocupam espaço, enquanto medidas são calculadas apenas quando solicitadas. Uma coluna calculada cria um valor para cada linha em uma tabela.   
+Regra prática: crie colunas calculadas quando precisar do valor armazenado por linha (por exemplo, para relacionamentos ou segmentações); evite colunas desnecessárias para não aumentar o tamanho do modelo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h22m37s986.jpg" alt="" width="840">
+</p>
+ 
+A imagem repete a definição anterior, enfatizando que medidas são calculadas com base nos filtros do relatório. O *contexto de filtro* é o conjunto de seleções (como slicers, filtros de página ou de visual) que restringem os dados antes da aplicação da medida. Entender esse contexto é fundamental para criar medidas que se comportem corretamente em diferentes cenários de análise.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h22m41s412.jpg" alt="" width="840">
+</p>
+
+Diferentemente das medidas, as **colunas** (ou colunas calculadas) são persistidas no arquivo `.pbix`. Cada nova coluna aumenta o espaço de armazenamento do modelo e pode impactar negativamente o desempenho, elevando o tempo de atualização dos dados. Colunas são avaliadas linha a linha durante o carregamento ou a atualização, e os resultados ficam gravados. Por isso, devem ser usadas com critério, preferindo medidas sempre que o cálculo puder ser feito sob demanda.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h22m44s627.jpg" alt="" width="840">
+</p>
+
+ste trecho mostra exemplos de criação de coluna personalizada no Power Query e a interface de edição de consultas, destacando que colunas personalizadas usam a linguagem M e aparecem no modelo final. Aumento de espaço que possivelmente aumentará o tempo de atualização. Prefira transformar e limpar dados no Power Query quando a lógica puder ser aplicada uma vez; reserve medidas para cálculos que dependem do contexto do relatório.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-09h22m50s421.jpg" alt="" width="840">
+</p>
+
+por fim, são exibidos elementos do editor do Power Query (fases aplicadas, tipos de transformação e pré-visualização), reforçando que operações no Power Query afetam o modelo antes da carga. Colunas disponíveis Segment Country Product Discount Band Units Sold Manufacturing Price Sale Price.     
+
 ### 🟩 Vídeo 09 - Entendendo o Contexto com DAX
 
 <video width="60%" controls>
@@ -426,7 +467,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/9d32a368-7569-42e7-ac0f-52a4677fa6b2?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Tipos de contextos do Power BI
 
