@@ -788,6 +788,35 @@ CALCULATE(
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/ecc60d49-acfa-4c69-8c15-0377562e0070?autoplay=1
 
+Este vídeo as principais categorias de funções DAX, detalhando como cada uma contribui para a criação de medidas e colunas calculadas eficientes no Power BI. O DAX é a linguagem fundamental para transformar dados brutos em insights de negócio.
+
+### Anotações
+
+**Referência da função DAX**
+
+A referência das funções DAX fornece informações detalhadas, incluindo sintaxe, parâmetros, valores retornados e exemplos para mais de 250 funções usadas em fórmulas de Expressões de Análise de Dados (DAX).
+
+- **Funções de agregação** — contagem, soma, média, mínimo, máximo
+- **Funções de Data e Hora**
+- **Funções financeiras**
+- **Funções INFO**
+- **Funções lógicas**
+- **Funções matemáticas**
+- **Funções estatísticas**
+- **Funções de Texto**
+- **Funções de relacionamento**
+- **Funções de tabela**
+- **Funções de inteligência de tempo**
+
+Cada categoria inclui uma breve explicação sobre o tipo de operação que realiza.
+
+**Conteúdo relacionado**
+- DAX Referência de sintaxe
+- DAX Referência do operador
+- DAX Convenções de Parameter-Naming
+      
+Link do conteúdo apresentado: https://learn.microsoft.com/pt-br/dax/dax-function-reference
+
 ### 🟩 Vídeo 15 - Explorando funções de informação e inteligência de dados temporais
 
 <video width="60%" controls>
@@ -795,7 +824,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/64f32a9d-c802-496d-8482-cb5bc7fb2112?autoplay=1
 
 ### 🟩 Vídeo 16 - Criando mais medidas com DAX – CALCULATE, SUM e Funções DATE
 
