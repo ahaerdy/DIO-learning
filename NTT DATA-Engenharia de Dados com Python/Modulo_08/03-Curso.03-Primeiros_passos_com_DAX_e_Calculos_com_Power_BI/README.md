@@ -900,9 +900,9 @@ O vídeo foca na aplicação prática de expressões DAX (*Data Analysis Express
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-15h36m09s515.jpg" alt="" width="840">
 </p>
 
-O trecho de código visível é uma medida que soma a coluna **Sales** aplicando um filtro para o ano de 2014, usando a função **CALCULATE** e a função de data **YEAR**.  
+Soma a coluna **Sales** aplicando um filtro para o ano de 2014, usando a função **CALCULATE** e a função de data **YEAR**.  
 
-Código: `Total Sales for 2014 = CALCULATE(SUM(financials[ Sales]), YEAR(financials[Date])=2014)`. 
+`Total Sales for 2014 = CALCULATE(SUM(financials[ Sales]), YEAR(financials[Date])=2014)`. 
 
 A medida apresentada aplica primeiro a agregação `SUM(financials[Sales])` e, em seguida, restringe o contexto de avaliação ao conjunto de linhas cuja data pertence a 2014. Na prática, isso permite reutilizar a mesma medida em visuais e painéis, garantindo que o valor exibido represente apenas as vendas daquele ano específico.
 
