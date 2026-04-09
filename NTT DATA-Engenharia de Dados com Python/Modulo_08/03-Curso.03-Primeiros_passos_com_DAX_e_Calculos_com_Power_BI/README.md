@@ -837,6 +837,50 @@ Link: https://learn.microsoft.com/pt-br/dax/dax-function-reference
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/64f32a9d-c802-496d-8482-cb5bc7fb2112?autoplay=1
 
+O vídeo apresenta uma visão panorâmica das diversas categorias de funções DAX, a lógica por trás de sua aplicação e como utilizá-las para transformar dados brutos em informações significativas dentro do Power BI. O instrutor enfatiza que, embora o DAX seja uma linguagem de alto nível (quase um "pseudocódigo"), sua aplicação exige bom senso, especialmente no que diz respeito à performance do relatório.
+
+### Anotações
+
+#### 📂 Tópicos Principais
+
+##### 1. Funções de Informação e Lógica
+As funções de informação permitem examinar atributos de uma tabela ou coluna para verificar se correspondem a um tipo esperado.
+*   **Lógica Booleana:** Uso de operadores como `AND`, `OR`, `XOR` e `NOT`.
+*   **BITAND:** Uma função específica que retorna o "Bitwise AND" de dois números (ex: `BITAND(13, 11)` resulta em 9).
+*   **Verificação de Dados:** Capacidade de verificar se uma coluna contém um determinado valor ou estatística específica.
+
+##### 2. Estruturas Condicionais (`IF` e `SWITCH`)
+O DAX permite criar fluxos lógicos para tratar dados ausentes ou categorizar informações.
+*   **Função IF:** Utilizada para testes lógicos simples (ex: se um campo estiver em branco, não mostre nada; caso contrário, mostre o valor).
+*   **Função SWITCH:** Uma alternativa mais limpa ao `IF` aninhado. É ideal para mapear valores, como transformar o número do mês (1, 2, 3) em nomes (Janeiro, Fevereiro, Março), incluindo uma cláusula `ELSE` para valores desconhecidos.
+
+##### 3. Funções Matemáticas, Trigonométricas e de Texto
+*   **Matemática:** Além das operações básicas, o DAX oferece funções avançadas como `ACOS`, `ASIN` e `LOG`. A função `CURRENCY` é usada para converter dados para o formato de moeda.
+*   **Texto (Strings):** Funções para manipular cadeias de caracteres, como `CONCATENATE`, `LEFT`, `REPLACE`, `SEARCH` e `FIND`.
+    *   *Diferença importante:* `SEARCH` localiza a posição de um caractere específico, enquanto `FIND` procura uma cadeia de texto dentro de outra.
+
+##### 4. Manipulação de Tabelas e Performance
+O DAX é fortemente baseado no modelo relacional (SQL).
+*   **Operações de Tabela:** Funções como `CROSSJOIN` (produto cartesiano), `DISTINCT` (valores únicos), `EXCEPT` (diferença entre tabelas) e `FILTER`.
+*   **SUMMARIZE vs. GROUPBY:** Ambas agrupam dados, mas possuem comportamentos diferentes em relação a cálculos implícitos.
+*   **Performance:** O instrutor alerta que recursos nativos da interface do Power BI são mais "compactados" e performáticos que expressões DAX complexas. A regra de ouro é: **use a interface sempre que possível; use DAX quando necessário.**
+
+##### 5. Inteligência de Dados Temporais (Time Intelligence)
+Esta é uma das categorias mais vitais para análise de negócios, permitindo comparar períodos e tendências.
+*   **Funções de Balanço:** `CLOSINGBALANCEMONTH`, `QUARTER` e `YEAR`.
+*   **Criação de Calendários:** Uso de `CALENDAR` e `CALENDARAUTO` para gerar tabelas de datas dinâmicas.
+*   **Acumulados:** Funções como `MTD` (Month-to-Date), `QTD` (Quarter-to-Date) e `YTD` (Year-to-Date) para analisar o desempenho acumulado até o momento.
+
+#### 💡 Insights Relevantes
+
+*   **DAX como Pseudocódigo:** Embora a Microsoft a classifique como uma linguagem, ela pode ser interpretada como um pseudocódigo de alto nível, facilitando a leitura para quem já tem lógica de programação.
+*   **A Utilidade da Escala Logarítmica:** O uso da função `LOG` é um insight poderoso para visualização de dados. Quando há uma variação muito grande entre os valores (dados muito pequenos misturados com dados muito grandes), a escala logarítmica ajuda a tornar o gráfico inteligível.
+*   **Visão Temporal vs. Snapshot:** Dados temporais são superiores a "snapshots" (fotos estáticas). Enquanto um snapshot mostra o total de vendas, a inteligência temporal permite ver a *saúde* da empresa, identificando se ela está crescendo ou declinando ao longo dos meses.
+*   **Modelagem Star Schema:** Para melhor performance, deve-se buscar modelar os dados em um esquema de estrela (*Star Schema*) antes de aplicar DAX pesado. Isso envolve processos de ETL (Extração, Transformação e Carga) eficientes.
+*   **Granularidade:** O DAX permite manipular a granularidade dos dados. É possível criar tabelas com menos detalhes (ex: apenas ano e mês) usando produtos cartesianos para simplificar análises de metas anuais.
+*   **Documentação é Fundamental:** Dada a vastidão de funções, o instrutor recomenda o uso constante da documentação oficial da Microsoft para consultar sintaxe e exemplos práticos.
+
+Link: https://learn.microsoft.com/pt-br/dax/information-functions-dax      
 
 
 ### 🟩 Vídeo 16 - Criando mais medidas com DAX – CALCULATE, SUM e Funções DATE
@@ -846,7 +890,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/95ea99a8-08b7-454e-8927-cf84b36bfe2a?autoplay=1
+
+
 
 ### 🟩 Vídeo 17 - Realizando considerações e explorando as medidas DAX
 
