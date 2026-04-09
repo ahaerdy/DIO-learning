@@ -796,30 +796,37 @@ Este vídeo as principais categorias de funções DAX, detalhando como cada uma 
   <img src="000-Midia_e_Anexos/2026-04-09-14-48-23.png" alt="" width="480">
 </p>
 
-**Referência da função DAX**
+#### Resumo: Referência de Funções DAX
 
-Referência das funções DAX fornece informações detalhadas, incluindo sintaxe, parâmetros, valores retornados e exemplos para mais de 250 funções usadas em fórmulas de Expressões de Análise de Dados (DAX).
+A página **Referência da função DAX** da Microsoft disponibiliza documentação detalhada para mais de 250 funções utilizadas em fórmulas de Expressão de Análise de Dados (DAX). Ela atua como um guia completo que detalha sintaxe, parâmetros, valores de retorno e exemplos para cada função.
 
-- **Funções de agregação** — contagem, soma, média, mínimo, máximo
-- **Funções de Data e Hora**
-- **Funções financeiras**
-- **Funções INFO**
-- **Funções lógicas**
-- **Funções matemáticas**
-- **Funções estatísticas**
-- **Funções de Texto**
-- **Funções de relacionamento**
-- **Funções de tabela**
-- **Funções de inteligência de tempo**
+> **Aviso de Compatibilidade:** Nem todas as funções DAX têm suporte ou estão disponíveis em versões mais antigas do Power BI Desktop, do SQL Server Analysis Services e do Power Pivot no Excel.
 
-Cada categoria inclui uma breve explicação sobre o tipo de operação que realiza.
+##### Quadro de Categorias de Funções
 
-**Conteúdo relacionado**
-- DAX Referência de sintaxe
-- DAX Referência do operador
-- DAX Convenções de Parameter-Naming
+A documentação divide as funções DAX nas seguintes categorias, dependendo de suas finalidades:
+
+| Categoria | Descrição |
+| :--- | :--- |
+| **Novas funções de DAX** | Agrupa funções recém-adicionadas à linguagem ou funções já existentes que receberam atualizações significativas. |
+| **Funções de agregação** | Calculam um valor escalar (como soma, contagem, média, mínimo ou máximo) para todas as linhas de uma coluna ou tabela. |
+| **Funções de data e hora** | Semelhantes às funções do Excel, mas baseiam-se nos tipos de dados *datetime* padronizados pelo Microsoft SQL Server. |
+| **Funções de filtro** | Permitem pesquisar valores em tabelas, filtrar dados por relações e manipular o contexto de avaliação de dados para a criação de cálculos dinâmicos. |
+| **Funções financeiras** | Utilizadas na execução de cálculos financeiros, como taxas de retorno e valor presente líquido. |
+| **Funções INFO** | Retornam metadados sobre o modelo semântico (tabelas, colunas, relações). São baseadas em Exibições de Gerenciamento Dinâmico (DMVs) do Analysis Services. |
+| **Funções de informações** | Analisam se um valor em uma tabela ou coluna corresponde a um tipo esperado (por exemplo, a função `ISERROR` para detectar erros). |
+| **Funções lógicas** | Retornam informações ou resultados booleanos com base na avaliação de expressões. |
+| **Funções matemáticas e trigonométricas** | Executam cálculos matemáticos (muito semelhantes ao Excel), mas com comportamentos adaptados aos tipos numéricos do DAX. |
+| **Funções pai e filho** | Ajudam a gerenciar e extrair métricas de dados estruturados em uma hierarquia de modelo pai/filho. |
+| **Funções de relação** | Servem para gerenciar, invocar ou utilizar ativamente as relações estabelecidas entre as tabelas durante os cálculos. |
+| **Funções estatísticas** | Calculam valores ligados a probabilidades e distribuições estatísticas, como desvio padrão e permutações. |
+| **Funções de manipulação de tabela** | Realizam operações que retornam tabelas inteiras como resultado ou manipulam a estrutura/conteúdo de tabelas já existentes. |
+| **Funções de Texto** | Executam operações com cadeias de caracteres, como concatenar, buscar textos, extrair partes da *string* e controlar formatos de datas/números. |
+| **Funções de inteligência de tempo** | Utilizam o motor de calendário e datas do DAX para facilitar a criação de comparações de períodos e métricas acumuladas (ex: vendas de um período com o mesmo período do ano anterior). |
+| **Outras funções** | Agrupa operações ou ações exclusivas do sistema que não se encaixam naturalmente nas categorias acima. |
+
       
-Link do conteúdo apresentado: https://learn.microsoft.com/pt-br/dax/dax-function-reference
+Link: https://learn.microsoft.com/pt-br/dax/dax-function-reference
 
 ### 🟩 Vídeo 15 - Explorando funções de informação e inteligência de dados temporais
 
