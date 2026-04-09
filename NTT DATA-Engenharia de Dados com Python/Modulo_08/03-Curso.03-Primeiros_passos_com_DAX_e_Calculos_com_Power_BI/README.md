@@ -587,6 +587,40 @@ A imagem apresenta a página de **Report de Lucro Detalhado** com visuais focado
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/b1578951-feb2-4396-aa2b-bafd6f1ffb50?autoplay=1
 
+O vídeo explica como o Power BI interpreta e executa fórmulas DAX, destacando a importância do "contexto" — um agrupamento de tabelas, filtros e relacionamentos que define como os dados são calculados. O conteúdo abrange desde a verificação básica de sintaxe até funções avançadas de recursividade como `EARLIER` e `EARLIEST`.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h25m52s973.jpg" alt="" width="840">
+</p>
+
+O slide introduz o conceito de **contexto em fórmulas DAX**. O contexto é formado pela combinação de tabelas, filtros e relacionamentos ativos no momento do cálculo. Antes de executar uma fórmula, o Power BI verifica a sintaxe DAX e a existência das tabelas e colunas referenciadas. Contextos muito complexos dificultam a identificação de erros; por isso, recomenda-se começar com fórmulas simples e restritivas para entender o comportamento do contexto antes de avançar para expressões mais elaboradas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h25m58s232.jpg" alt="" width="840">
+</p>
+
+Aqui são apresentas duas funções DAX usadas para manipular contexto. **RELATED** expande o contexto da linha atual, permitindo acessar valores de uma coluna em uma tabela relacionada (lado "um" do relacionamento). **FILTER** retorna uma tabela contendo apenas as linhas que atendem a uma condição específica, modificando o contexto atual para incluir somente essas linhas. Ambas são fundamentais para trabalhar com modelos relacionais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h26m03s036.jpg" alt="" width="840">
+</p>
+
+A instrutora destaca as funções **ALL** e **ALLEXCEPT**. **ALL** remove todos os filtros do contexto atual, ignorando qualquer segmentação ou filtro aplicado pela consulta. **ALLEXCEPT** remove todos os filtros exceto aqueles especificados explicitamente nos argumentos. Essas funções são essenciais para criar cálculos que desconsideram parte do contexto, como totais gerais ou percentuais sobre totais, ajudando a compreender e controlar contextos complexos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h26m08s027.jpg" alt="" width="840">
+</p>
+
+O slide explica as funções **EARLIER** e **EARLIEST**, usadas principalmente em colunas calculadas. Elas permitem "voltar" a níveis externos de avaliação durante cálculos aninhados, funcionando como uma espécie de loop sobre as linhas da tabela. **EARLIER** aceita um segundo argumento opcional para especificar quantos níveis externos retroceder (1 = nível imediatamente externo, 2 = dois níveis, etc.). **EARLIEST** sempre retorna o valor do nível mais externo. Esses conceitos envolvem recursividade e são úteis para comparações entre linhas ou subconsultas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-13h26m11s772.jpg" alt="" width="840">
+</p>
+
+este slide mostra a documentação oficial da função **EARLIER** no DAX. A sintaxe é `EARLIER(<coluna>[, <número>])`, onde `coluna` é a referência à coluna avaliada e `número` (opcional) indica quantas etapas de avaliação externa retroceder. A função retorna o valor atual da coluna em uma etapa externa à avaliação atual. É útil para cálculos aninhados em que se deseja usar um valor como entrada e produzir cálculos com base nesse valor. No DAX, diferentemente do Excel, essa função é usada principalmente no contexto de colunas calculadas.
+
 ### 🟩 Vídeo 13 - Explorando seções de DAX e tipos de funções
 
 <video width="60%" controls>
@@ -594,7 +628,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/5c549361-0718-46c1-866d-c544e66dd1aa?autoplay=1
+
+
 
 ### 🟩 Vídeo 14 - Explorando as funções existentes de: agregação, data e hora, lógicas e outros
 
