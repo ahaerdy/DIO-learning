@@ -792,9 +792,13 @@ Este vídeo as principais categorias de funções DAX, detalhando como cada uma 
 
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-04-09-14-48-23.png" alt="" width="480">
+</p>
+
 **Referência da função DAX**
 
-A referência das funções DAX fornece informações detalhadas, incluindo sintaxe, parâmetros, valores retornados e exemplos para mais de 250 funções usadas em fórmulas de Expressões de Análise de Dados (DAX).
+Referência das funções DAX fornece informações detalhadas, incluindo sintaxe, parâmetros, valores retornados e exemplos para mais de 250 funções usadas em fórmulas de Expressões de Análise de Dados (DAX).
 
 - **Funções de agregação** — contagem, soma, média, mínimo, máximo
 - **Funções de Data e Hora**
@@ -825,6 +829,8 @@ Link do conteúdo apresentado: https://learn.microsoft.com/pt-br/dax/dax-functio
 </video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/64f32a9d-c802-496d-8482-cb5bc7fb2112?autoplay=1
+
+
 
 ### 🟩 Vídeo 16 - Criando mais medidas com DAX – CALCULATE, SUM e Funções DATE
 
