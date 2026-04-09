@@ -497,7 +497,6 @@ Esta imagem enfatiza exemplos numéricos e visuais de como *Sales* aparece em di
 
 O slide final sintetiza a classificação dos contextos relevantes para DAX: **contexto de linha, contexto de consulta e contexto de filtro**. Cada tipo atua em um nível diferente — o contexto de linha é inerente à iteração sobre linhas (por exemplo, em colunas calculadas), o contexto de consulta é o conjunto de linhas retornadas por uma expressão, e o contexto de filtro é formado por filtros explícitos (visuais, slicers, `CALCULATE`, etc.).  
 
-
 ### 🟩 Vídeo 10 - Tipos de contextos do Power BI
 
 <video width="60%" controls>
@@ -507,6 +506,53 @@ O slide final sintetiza a classificação dos contextos relevantes para DAX: **c
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/22a1d392-0b19-44a1-b271-5a1fdbda11c2?autoplay=1
 
+O vídeo apresenta os conceitos fundamentais de Contexto no Power BI, essencial para entender como as fórmulas DAX (Data Analysis Expressions) se comportam e como os dados são filtrados e calculados dinamicamente.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h27m20s771.jpg" alt="" width="840">
+</p>
+
+Slide introdutório que lista os três tipos de contexto usados em DAX: **contexto de linha**, **contexto de consulta** e **contexto de filtro**. A imagem funciona como um índice conceitual: apresenta que o *contexto* é o mecanismo que permite executar análises dinâmicas em que o resultado de uma fórmula varia conforme a seleção atual (linha/elemento) e os dados relacionados. Esta definição orienta a leitura dos slides seguintes e estabelece o foco didático da aula.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h27m29s254.jpg" alt="" width="840">
+</p>
+
+Imagem que ilustra o **contexto de linha** e traz um exemplo prático de expressão DAX que combina um valor da linha atual com um valor relacionado em outra tabela. O ponto central é que, no contexto de linha, a avaliação considera a *linha atual* e segue automaticamente as relações entre tabelas para recuperar valores associados (por exemplo, uma taxa por região). O exemplo mostra como usar `RELATED` para buscar um campo em uma tabela relacionada e somá‑lo ao valor da linha atual.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h27m34s383.jpg" alt="" width="840">
+</p>
+ 
+A imagem contextualiza que essas funções são poderosas e diferentes das funções do Excel, pois operam sobre tabelas e relações, permitindo manipular o contexto de dados para cálculos dinâmicos. Serve como ponte entre a explicação conceitual e a lista concreta de funções que serão usadas para controlar filtros em expressões DAX.  
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h27m44s860.jpg" alt="" width="840">
+</p>
+
+A ideia é que funções iteradoras (como `MAXX` combinada com `FILTER`) percorrem várias linhas, mantendo contextos de linha internos e externos; `EARLIER` é usado para referenciar o contexto de avaliação anterior (loop externo) durante essa comparação. O foco didático é demonstrar como DAX realiza varreduras e comparações entre contextos de linha para produzir agregações complexas.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h27m55s280.jpg" alt="" width="840">
+</p>
+ 
+O exemplo mostra uma medida simples de soma (`SUM('Sales'[Profit])`) para explicar que, quando usada como medida, a expressão é avaliada no subconjunto de dados definido pelo contexto de consulta (por exemplo, por região, produto ou segmento), e que esse resultado pode variar conforme esse subconjunto. A imagem reforça a distinção entre medida e coluna calculada no comportamento do contexto.  
+ 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h27m58s449.jpg" alt="" width="840">
+</p>
+  
+A imagem apresenta exemplos de funções de manipulação de filtros (por exemplo, `ALLEXCEPT`, `ALL`, `REMOVEFILTERS`, `CALCULATE`, `FILTER`, `KEEPFILTERS`, `SELECTEDVALUE`) e uma tabela-resumo com descrições curtas. O objetivo é mostrar como essas funções alteram o contexto de avaliação para produzir cálculos dinâmicos controlando quais filtros são mantidos, removidos ou substituídos.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-10h28m06s108.jpg" alt="" width="840">
+</p>
+ 
+Slide final de síntese que reforça os conceitos apresentados: o contexto (linha, várias linhas, consulta e filtro) e a lista de funções DAX relevantes para manipular esses contextos. A imagem funciona como um resumo visual para consulta rápida durante a prática no Power BI, indicando que o próximo passo é ver exemplos práticos no ambiente e aprofundar o uso de `CALCULATE`, `FILTER`, `ALLEXCEPT` e funções relacionadas.  
+
 ### 🟩 Vídeo 11 - Explorando as possibilidades com filtros
 
 <video width="60%" controls>
@@ -514,7 +560,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/db2d0536-c746-4e31-a90f-71b6ec3f3f66?autoplay=1
+
+
 
 ### 🟩 Vídeo 12 - Contexto em fórmulas
 
