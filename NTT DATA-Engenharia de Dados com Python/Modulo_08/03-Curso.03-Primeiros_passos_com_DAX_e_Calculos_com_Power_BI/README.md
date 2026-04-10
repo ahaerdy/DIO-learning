@@ -1027,7 +1027,57 @@ A última imagem mostra a medida `AVG Price Units Sold` sendo aplicada em um gr�
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/3c7fb8e4-a2d9-424c-8223-6263636ddfb2?autoplay=1
 
+O vídeo trata da aplicação prática de medidas DAX, na importância do contexto de filtro e na personalização de visuais para criar dashboards interativos e informativos. O instrutor demonstra como as medidas se comportam dinamicamente conforme o usuário interage com o relatório.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-12h47m27s516.jpg" alt="" width="840">
+</p>
+
+Este slide mostra a interface do Power BI com um gráfico de barras configurado para exibir **Total Sales for 2014** por **Month Name**. Observe os painéis laterais de **Campos** e **Filtros**: a explicação visual destaca que a ordenação por nome de mês pode ficar fora da sequência cronológica (ordem alfabética) se não houver um campo numérico de ordenação (por exemplo, *Month Number*). A lição prática é: quando precisar de ordem temporal correta, associe o rótulo textual a um campo numérico de ordenação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-12h47m37s148.jpg" alt="" width="840">
+</p>
+
+Aqui vemos o mesmo gráfico com opções de formatação e classificação abertas. O destaque é para os controles de **Classificar eixo**, **Eixo X / Eixo Y** e propriedades de título. A imagem ilustra como alterar o eixo para contínuo/categórico, ajustar rótulos e usar o **Month Number** como eixo enquanto mantém **Month Name** nas dicas de ferramenta — técnica que preserva a leitura cronológica sem perder o rótulo amigável.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-12h47m49s574.jpg" alt="" width="840">
+</p>
+
+Este recorte mostra o painel de **Filtros** aplicado ao visual: filtros no nível do visual, da página e de todas as páginas. A imagem evidencia que uma medida pode ser afetada por filtros em diferentes níveis e que é possível inspecionar quais campos estão disponíveis para filtragem (por exemplo, *Month Number*, *Primeiro Month Name*, *Total Sales for 2014*). Use esse painel para entender o **contexto de filtro** que está influenciando a medida exibida.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-12h48m05s184.jpg" alt="" width="840">
+</p>
+
+Slide conceitual que compara duas abordagens: (1) criar medidas específicas (ex.: *Total Sales for 2014*) e usá‑las nos visuais; (2) usar o campo bruto *Sales* e aplicar filtros de data no visual. A imagem sugere que medidas pré‑definidas oferecem maior reuso e previsibilidade (podem ser referenciadas em outros cálculos), enquanto o uso direto do campo bruto depende do contexto do visual e da agregação aplicada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-12h48m15s578.jpg" alt="" width="840">
+</p>
+
+Este trecho mostra um visual de barras configurado para **Average Price Units Sold por Product** e o painel de formatação de cores/estilo. A explicação prática: ao transformar um escalar (métrica única) em uma dimensão (por produto), o Power BI recalcula a medida por contexto — aqui evidenciado pela variação entre produtos (ex.: VTT com maior média). Também ilustra como a escolha de cores e tipo de visual melhora a inteligibilidade.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-12h48m17s274.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a criação e o comportamento de **segmentadores** (slicers) para *Year* e *Month Name*, além da dificuldade de ordenar meses quando o slicer usa apenas o nome textual. A recomendação visual é usar um par (Month Number + Month Name) ou ordenar o campo de texto por um campo numérico para manter a sequência cronológica nos segmentadores e nos eixos dos gráficos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-12h48m27s730.jpg" alt="" width="840">
+</p>
+
+Este slide reúne vários visuais do relatório (distribuição de vendas, soma por mês, filtros ativos) e enfatiza a interatividade: selecionar ano/mês em um segmentador altera automaticamente os visuais relacionados, mostrando como o **contexto de filtro** impacta resultados agregados e rankings por produto. Use essa configuração para explorar variações temporais e comparar períodos lado a lado (barras clusterizadas vs. empilhadas).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-12h48m31s821.jpg" alt="" width="840">
+</p>
+
+Imagem final que sintetiza o painel: lista de campos, visuais e filtros aplicados, com foco em **Distribuição de Vendas** e **AVG Price Units Sold por Product**. Serve como referência prática para montar relatórios interativos: defina medidas reutilizáveis, controle ordenação temporal com campos numéricos, e use segmentadores bem projetados para manter clareza e permitir análises ad hoc sem distorcer as medidas por contexto.
 
 ### 🟩 Vídeo 19 - Outros recursos do DAX
 
@@ -1036,7 +1086,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/2dd0b1f4-6f8e-41f8-884f-121a330076ca?autoplay=1
+
+
 
 ### 🟩 Vídeo 20 - Simulando e Criando uma medida com base em um relacionamento inativo
 
