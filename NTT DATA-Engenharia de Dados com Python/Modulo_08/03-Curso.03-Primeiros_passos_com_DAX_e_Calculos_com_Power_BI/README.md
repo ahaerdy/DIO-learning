@@ -900,7 +900,7 @@ Aplicação prática de expressões DAX (*Data Analysis Expressions*) no Power B
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-09-15h36m09s515.jpg" alt="" width="840">
 </p>
 
-Soma a coluna **Sales** aplicando um filtro para o ano de 2014, usando a função **CALCULATE** e a função de data **YEAR**.  
+Soma-se a coluna **Sales** aplicando um filtro para o ano de 2014, usando a função **CALCULATE** e a função de data **YEAR**.  
 
 `Total Sales for 2014 = CALCULATE(SUM(financials[ Sales]), YEAR(financials[Date])=2014)`. 
 
@@ -923,6 +923,13 @@ O ponto-chave é entender a separação entre **cálculo** (a medida DAX) e **ap
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/934d63d8-e0ba-4db7-be0d-6ee9d73664e0?autoplay=1
 
+O vídeo orienta sobre a criação de medidas personalizadas utilizando a linguagem DAX (Data Analysis Expressions), destacando funções de agregação, filtros inteligentes e a importância da documentação técnica para o desenvolvimento de dashboards preciso.
+
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 18 - Criando uma página do relatório com as novas medidas
 
 <video width="60%" controls>
@@ -930,7 +937,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/3c7fb8e4-a2d9-424c-8223-6263636ddfb2?autoplay=1
 
 ### 🟩 Vídeo 19 - Outros recursos do DAX
 
