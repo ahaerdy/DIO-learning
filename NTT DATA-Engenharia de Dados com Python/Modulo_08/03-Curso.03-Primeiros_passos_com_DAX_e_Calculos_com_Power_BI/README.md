@@ -927,8 +927,96 @@ O vídeo orienta sobre a criação de medidas personalizadas utilizando a lingua
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-10h36m45s211.jpg" alt="" width="840">
+</p>
 
+Nesta imagem vemos a criação de uma medida em DAX para calcular o total de vendas em 2014. O código utiliza a função `CALCULATE` junto com `SUM` e um filtro de ano:
+
+```dax
+Total Sales for 2014 = CALCULATE(
+    SUM(financials[Sales]),
+    YEAR(financials[Date]) = 2014
+)
+```
+
+Essa medida retorna a soma das vendas apenas para o ano de 2014, permitindo análises específicas por período.
+ 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-10h36m49s111.jpg" alt="" width="840">
+</p>
+
+Aqui temos uma medida de vendas acumuladas ao longo do tempo. O Power BI gera automaticamente uma expressão em DAX que combina `CALCULATE`, `SUM`, `FILTER` e a função booleana `ISONORAFTER`:
+
+```dax
+Total acumulado de Sales em Date =
+CALCULATE(
+    SUM('financials'[Sales]),
+    FILTER(
+        ALLSELECTED('financials'[Date]),
+        ISONORAFTER('financials'[Date], MAX('financials'[Date]), DESC)
+    )
+)
+```
+
+Essa medida soma as vendas de forma acumulada, respeitando o contexto de seleção de datas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-10h37m38s780.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a criação de uma medida de média de vendas por mês. O DAX utilizado é:
+
+```dax
+Media Sales =
+AVERAGEX(
+    VALUES('Calendar'[Month Name]),
+    [Total Sales]
+)
+```
+
+Essa fórmula calcula a média das vendas totais considerando os meses distintos, retornados pela função `VALUES`.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-10h37m53s361.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a documentação da função `VALUES` em DAX. Ela retorna valores distintos de uma coluna ou todas as linhas de uma tabela. Um exemplo prático é contar o número de faturas únicas:
+
+```dax
+= COUNTROWS(VALUES('InternetSales_USD'[SalesOrderNumber]))
+```
+
+Esse código retorna a quantidade de ordens de venda distintas, útil para análises de volume de transações.
+ 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-10h38m09s592.jpg" alt="" width="840">
+</p>
+
+A imagem mostra os resultados da medida anterior aplicada em categorias de produtos. O cálculo de `COUNTROWS(VALUES(...))` gera a contagem de faturas por categoria, como acessórios, bicicletas e vestuário, permitindo visualizar o total de pedidos únicos por segmento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-10h38m33s247.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, é criada uma medida para calcular a média de preço por unidade vendida. O DAX utilizado é:
+
+```dax
+AVG Units Sold =
+SUM(financials[Sale Price]) /
+SUM(financials[Units Sold])
+```
+
+Essa medida divide o valor total das vendas pelo número de unidades vendidas, resultando em um preço médio por unidade.
+ 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-10h38m41s342.jpg" alt="" width="840">
+</p>
+
+A última imagem mostra a medida `AVG Price Units Sold` sendo aplicada em um gráfico. O cálculo reflete a média de preço por unidade vendida, permitindo visualizar a variação desse indicador ao longo do tempo ou em diferentes categorias de produtos.      
 
 ### 🟩 Vídeo 18 - Criando uma página do relatório com as novas medidas
 
@@ -938,6 +1026,8 @@ O vídeo orienta sobre a criação de medidas personalizadas utilizando a lingua
 </video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/3c7fb8e4-a2d9-424c-8223-6263636ddfb2?autoplay=1
+
+
 
 ### 🟩 Vídeo 19 - Outros recursos do DAX
 
