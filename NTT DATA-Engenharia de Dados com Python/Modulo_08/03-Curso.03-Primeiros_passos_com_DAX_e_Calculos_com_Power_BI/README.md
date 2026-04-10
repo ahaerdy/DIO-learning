@@ -1111,7 +1111,6 @@ USERRELATIONSHIP(<columnName1>, <columnName2>)
 
 Essa função não retorna valores diretamente, mas habilita o relacionamento indicado durante o cálculo. É usada dentro de funções como **CALCULATE**, permitindo que relacionamentos inativos sejam ativados temporariamente para uma medida específica.
  
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-14h33m53s276.jpg" alt="" width="840">
 </p>
@@ -1152,6 +1151,31 @@ Esse exemplo mostra como ativar o relacionamento inativo entre *ShipDate* e *Dat
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/1c78b3e6-a645-4315-8faf-599856d10f48?autoplay=1
 
+Este vídeo mostra como gerenciar múltiplos relacionamentos entre tabelas, especificamente quando se tem mais de uma data associada a um registro (como data de venda e data de envio). O vídeo demonstra como ativar relacionamentos "inativos" usando funções DAX para cálculos específicos sem alterar a estrutura global do modelo.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-15h02m13s085.jpg" alt="" width="840">
+</p>
+
+O elemento central é a **medida** chamada **Relationship change** e a expressão DAX que utiliza `CALCULATE` junto com `USERELATIONSHIP` para forçar o uso da coluna `secondDate` da tabela `financials` em relação à coluna `Date` da tabela `Calendar`. Essa construção permite que, apenas dentro do escopo dessa medida, o Power BI utilize o relacionamento alternativo (inativo por padrão) para calcular somas de vendas.
+
+```dax
+Relationship change =
+CALCULATE(
+  SUM(financials[Sales]),
+  USERELATIONSHIP(financials[secondDate], 'Calendar'[Date])
+)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-15h02m30s594.jpg" alt="" width="840">
+</p>
+
+
+A imagem mostra o resultado visual esperado ao aplicar a medida: um visual (por exemplo, por trimestre) que exibe os valores calculados usando o relacionamento alternativo. O destaque é que, ao arrastar a medida **Relationship change** para o eixo/legenda do visual, o Power BI passa a considerar **secondDate** como a coluna de ligação para aquele cálculo específico, sem alterar o relacionamento padrão do modelo. Em suma, a imagem ilustra o comportamento prático — a medida força temporariamente outro relacionamento para gerar o visual desejado.
+
 ### 🟩 Vídeo 21 - Analisando aspecto temporal dos dados com DAX
 
 <video width="60%" controls>
@@ -1159,7 +1183,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/eac31621-51ae-4c51-b9ab-9fd40d1ef190?autoplay=1
+
+
 
 ### 🟩 Vídeo 22 - Calculando valores com SAMEPERIODLASTYEAR
 
