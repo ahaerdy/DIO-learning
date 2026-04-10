@@ -1088,7 +1088,60 @@ Imagem final que sintetiza o painel: lista de campos, visuais e filtros aplicado
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/2dd0b1f4-6f8e-41f8-884f-121a330076ca?autoplay=1
 
+O vídeo mostra como gerenciar diferentes conexões entre tabelas no Power BI, permitindo análises flexíveis (como vendas por data de pedido vs. data de envio) sem comprometer a integridade do modelo de dados.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-14h33m31s872.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta a introdução ao recurso **USERRELATIONSHIP** no DAX. Ele destaca que o Power BI permite modificar relacionamentos entre tabelas, diferenciando entre relacionamentos ativos e inativos. O ponto central é que a função USERRELATIONSHIP pode ser usada para ativar um relacionamento específico durante o cálculo de uma medida, sem alterar o modelo original.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-14h33m37s480.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a documentação oficial da função **USERRELATIONSHIP**.  
+A sintaxe é simples:
+
+```dax
+USERRELATIONSHIP(<columnName1>, <columnName2>)
+```
+
+Essa função não retorna valores diretamente, mas habilita o relacionamento indicado durante o cálculo. É usada dentro de funções como **CALCULATE**, permitindo que relacionamentos inativos sejam ativados temporariamente para uma medida específica.
+ 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-14h33m53s276.jpg" alt="" width="840">
+</p>
+
+Este slide conceitual mostra o modelo de dados com tabelas **Sales** e **Calendar**.  
+As linhas sólidas representam relacionamentos ativos (por exemplo, entre *OrderDate* e *Date*), enquanto as linhas tracejadas indicam relacionamentos inativos (como *ShipDate* e *Date*). O Power BI mantém apenas um relacionamento ativo por vez, mas permite que relacionamentos inativos sejam ativados com USERRELATIONSHIP quando necessário.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-14h33m59s917.jpg" alt="" width="840">
+</p>
+
+Este bloco mostra visuais comparando **Sales by Order Date** e **Sales by Ship Date**.  
+A diferença nos valores evidencia que cada relacionamento (ativo ou inativo) gera resultados distintos. Para usar o relacionamento baseado em *ShipDate*, é necessário ativá-lo explicitamente em uma medida com USERRELATIONSHIP, já que o padrão ativo é o *OrderDate*.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-10-14h34m12s078.jpg" alt="" width="840">
+</p>
+
+Aqui temos o exemplo prático da documentação oficial.  
+A medida é criada para calcular vendas pela data de envio (*ShipDate*) em vez da data do pedido (*OrderDate*). O código é:
+
+```dax
+InternetSales by ShipDate :=
+CALCULATE (
+    SUM ( InternetSales[SalesAmount] ),
+    USERRELATIONSHIP ( InternetSales[ShipDate], DateTime[Date] )
+)
+```
+
+Esse exemplo mostra como ativar o relacionamento inativo entre *ShipDate* e *DateTime* apenas durante o cálculo da medida, sem substituir o relacionamento ativo existente.
 
 ### 🟩 Vídeo 20 - Simulando e Criando uma medida com base em um relacionamento inativo
 
@@ -1097,7 +1150,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/1c78b3e6-a645-4315-8faf-599856d10f48?autoplay=1
 
 ### 🟩 Vídeo 21 - Analisando aspecto temporal dos dados com DAX
 
