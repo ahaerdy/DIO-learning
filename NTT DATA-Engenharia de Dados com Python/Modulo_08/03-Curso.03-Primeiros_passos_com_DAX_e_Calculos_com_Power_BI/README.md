@@ -1340,7 +1340,7 @@ Aqui vemos um gráfico de colunas/área comparando soma de `Profit` e `profit pr
 
 A última imagem mostra uma tabela de valores mensais (ex.: janeiro a dezembro) com totais e subtotais por trimestre e um total anual. Ela ilustra como apresentar números tabulares ao lado de visuais gráficos para fornecer contexto numérico preciso; ao combinar tabela e gráfico, o leitor obtém tanto a visão agregada quanto os valores exatos por período.
 
-# Certificado: 
+# Certificado: Primeiros passos com DAX e Cálculos com Power BI
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/8EASFFBR.pdf
+- Certificado em pdf: [Certificado-Primeiros_passos_com_DAX_e_Calculos_com_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Primeiros_passos_com_DAX_e_Calculos_com_Power_BI.pdf)
