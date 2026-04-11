@@ -1185,7 +1185,55 @@ A imagem mostra o resultado visual esperado ao aplicar a medida: um visual (por 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/eac31621-51ae-4c51-b9ab-9fd40d1ef190?autoplay=1
 
+O vídeo explica como utilizar funções DAX (Data Analysis Expressions) para realizar análises temporais sofisticadas no Power BI, focando especificamente na função TOTALYTD para cálculos acumulados de ano até a data (Year-to-Date).
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h11m51s242.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a documentação oficial das funções de inteligência de dados temporais em DAX. Aqui são listadas funções como `CLOSINGBALANCEMONTH`, `DATEADD`, `DATESBETWEEN` e outras, que permitem manipular períodos de tempo em cálculos. O objetivo é destacar que o DAX possui recursos específicos para análises temporais, como somar valores até determinada data ou comparar períodos distintos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h11m56s614.jpg" alt="" width="840">
+</p>
+
+Nesta imagem vemos uma tabela de vendas mensais distribuídas por ano (2013 e 2014). O visual mostra como os valores variam mês a mês e permite comparar os totais entre anos. Esse exemplo ilustra como a interface do Power BI pode organizar dados temporais em matriz, mas também prepara o terreno para aplicar funções DAX que automatizam esse tipo de cálculo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h12m07s291.jpg" alt="" width="840">
+</p>
+
+Aqui aparece a interface do Power BI com campos e medidas disponíveis, como `Total Sales`, `Profit`, `Calendar[Date]` e outros. O foco é mostrar onde criar uma nova medida utilizando funções temporais, como `TOTALYTD`, para calcular acumulados ao longo do ano. É o ponto de partida para aplicar DAX diretamente na modelagem.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h12m11s538.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta a documentação da função `TOTALYTD`. Ela avalia o valor acumulado do ano até a data especificada. A sintaxe é:
+
+```dax
+TOTALYTD(<expression>, <dates>[, <filter>][, <year_end_date>])
+```
+
+Essa função é usada para calcular totais acumulados em análises temporais, permitindo comparar valores parciais dentro de um ano com o total anual.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h12m33s267.jpg" alt="" width="840">
+</p>
+
+Nesta imagem vemos a criação de uma medida no Power BI chamada `YTD Total Sales`. O código utilizado é:
+
+```dax
+YTD Total Sales =
+    TOTALYTD(
+        SUM(financials[Sales]),
+        'Calendar'[Date]
+    )
+```
+
+Essa medida soma as vendas acumuladas até a data atual dentro do ano, permitindo análises comparativas entre períodos. É um exemplo prático de como aplicar a função `TOTALYTD` para obter insights temporais diretamente nos relatórios.      
 
 ### 🟩 Vídeo 22 - Calculando valores com SAMEPERIODLASTYEAR
 
@@ -1194,7 +1242,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/4c4b2ccd-ea90-408c-8a5a-6d2b73660086?autoplay=1
 
 ### 🟩 Vídeo 23 - Calculando valores com PREVIOUSMONTH e Considerações finais
 
