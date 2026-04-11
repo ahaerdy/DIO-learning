@@ -1244,6 +1244,41 @@ Essa medida soma as vendas acumuladas até a data atual dentro do ano, permitind
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/4c4b2ccd-ea90-408c-8a5a-6d2b73660086?autoplay=1
 
+O vídeo ensina como visualizar e comparar dados de vendas ao longo do tempo no Power BI, utilizando desde matrizes simples até medidas avançadas em DAX para comparações anuais precisas.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h30m31s677.jpg" alt="" width="840">
+</p>
+
+O slide mostra a **construção de uma matriz/relatório no Power BI** usando a tabela **Calendar** e a hierarquia de datas (Ano, Trimestre, Mês, Dia). À direita há um **resumo tabular de vendas por mês** com os totais por ano: **2013 = 26.415.255,51**, **2014 = 92.311.094,75** e **Total = 118.726.350,26**. Esse slide ilustra o ponto inicial da aula: montar a matriz com *Total Sales* por ano e mês para comparar períodos. 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h30m55s258.jpg" alt="" width="840">
+</p>
+
+**Código DAX da imagem:** a medida que calcula o valor do **ano anterior** é construída com `CALCULATE` e `SAMEPERIODLASTYEAR`, referenciando a coluna de data da tabela calendário. A imagem destaca a criação da medida **Last Year** a partir da medida existente **Total Sales** e a importância de usar a coluna `Date` da tabela `Calendar` como contexto temporal.  
+
+```dax
+CALCULATE(
+  [Total Sales],
+  SAMEPERIODLASTYEAR('Calendar'[Date])
+)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h31m07s010.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a **configuração do visual** (eixo X e valores): o **Eixo X** está definido para `Date` com os níveis **Ano → Trimestre → Mês**, e os **Valores** incluem **Total Sales** e **Last Year**. Esse layout permite **drill-down** e roll-up na hierarquia temporal, possibilitando comparar o período atual com o mesmo período do ano anterior em diferentes granularidades. A captura também ilustra controles de formatação e campos usados no painel de visualizações. 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h31m09s468.jpg" alt="" width="840">
+</p>
+
+Este slide final apresenta o **gráfico comparativo por mês** com duas séries: **Total Sales** e **Last Year**. O objetivo é visualizar, mês a mês, quanto foi vendido no período atual versus o mesmo período do ano anterior, usando a medida `Last Year` criada anteriormente. O visual facilita identificar meses com crescimento ou queda ano a ano e funciona corretamente graças à hierarquia de datas e à tabela calendário. 
+
 ### 🟩 Vídeo 23 - Calculando valores com PREVIOUSMONTH e Considerações finais
 
 <video width="60%" controls>
@@ -1251,7 +1286,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiro
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ##  Materiais de Apoio
 
