@@ -1286,9 +1286,59 @@ Este slide final apresenta o **gráfico comparativo por mês** com duas séries:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/primeiros-passos-com-dax-e-calculos-com-power-bi/learning/3ee9af32-84cd-42d6-8f4c-b6d3384626ac?autoplay=1
 
-##  Materiais de Apoio
+O vídeo resume as técnicas apresentadas para melhorar a legibilidade de relatórios e a criação de medidas avançadas utilizando DAX (Data Analysis Expressions) para análise temporal e comparativa.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h50m46s110.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a interface do Power BI com foco nas opções de formatação de um visual de série temporal. Observe controles de rótulo, orientação e tamanho de fonte do eixo; a instrução prática é ajustar **tamanho** e **orientação** dos rótulos do eixo X (por exemplo, aumentar de 10 para 12 ou 13 e rotacionar para vertical) para melhorar a legibilidade quando há muitos pontos no eixo temporal. Ajustes simples de formatação tornam o gráfico mais claro sem alterar os dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h50m53s933.jpg" alt="" width="840">
+</p>
+
+O slide ilustra a criação de uma **nova medida** no painel de medidas do Power BI. O exemplo conceitual apresentado é a medida *Sales difference*, que pode ser construída usando `DIVIDE([Total Sales], [Last Year])` para evitar erros de divisão por zero. A recomendação é usar `DIVIDE` quando a operação envolve possíveis zeros no denominador.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h51m04s123.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a inclusão de duas medidas em um visual de área: o valor atual (por exemplo, **Profit**) e o valor do **mês anterior**. A imagem enfatiza que, após criar a medida que calcula o valor do mês anterior, é possível plotar ambas as séries no mesmo gráfico e usar segmentadores (slicers) por ano para comparar comportamento temporal entre períodos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h51m10s205.jpg" alt="" width="840">
+</p>
+
+A captura mostra a construção da medida que recupera o valor do mês anterior usando `CALCULATE` combinado com a função de deslocamento temporal (por exemplo, `PREVIOUSMONTH`). A ideia é: calcular a soma de `Profit` dentro de um contexto modificado pela função temporal para obter o valor correspondente ao mês anterior e, assim, permitir comparações mês a mês.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h51m25s498.jpg" alt="" width="840">
+</p>
+
+Nesta imagem aparece o layout do relatório com múltiplos visuais e segmentadores. O ponto prático é organizar os elementos (gráficos, segmentadores de ano, listas) para facilitar a interação: por exemplo, usar um segmentador de ano para filtrar rapidamente a série temporal e comparar `Profit` com `Profit Previous Month` em diferentes granularidades (mês, trimestre, ano).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h51m31s624.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o painel de campos e a hierarquia de datas (`Date Hierarchy`) com níveis como Ano, Trimestre, Mês e Dia. A recomendação prática é usar essa hierarquia para navegar entre níveis de agregação (descer para mês, subir para trimestre/ano) sem recriar colunas, e considerar `CALENDARAUTO()` para gerar uma tabela de calendário quando necessário.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h51m40s373.jpg" alt="" width="840">
+</p>
+
+Aqui vemos um gráfico de colunas/área comparando soma de `Profit` e `profit previous month` por mês e por ano. Use esse tipo de visual para identificar rapidamente meses em que o lucro aumentou ou diminuiu em relação ao mês anterior; combinar com segmentadores permite isolar anos ou trimestres específicos para análise detalhada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-11-10h51m43s802.jpg" alt="" width="840">
+</p>
+
+A última imagem mostra uma tabela de valores mensais (ex.: janeiro a dezembro) com totais e subtotais por trimestre e um total anual. Ela ilustra como apresentar números tabulares ao lado de visuais gráficos para fornecer contexto numérico preciso; ao combinar tabela e gráfico, o leitor obtém tanto a visão agregada quanto os valores exatos por período.
 
 # Certificado: 
 
