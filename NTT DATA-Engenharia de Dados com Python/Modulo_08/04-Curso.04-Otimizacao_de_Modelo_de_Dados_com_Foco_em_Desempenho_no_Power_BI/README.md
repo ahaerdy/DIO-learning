@@ -213,6 +213,112 @@ Esses três pontos definem a metodologia de diagnóstico que será aprofundada n
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/ce4f06e5-8686-4e3a-8b0c-515b092fb294?autoplay=1
 
+O vídeo mostra como identificar gargalos de desempenho em relatórios de BI, a importância de uma modelagem de dados eficiente e técnicas práticas para reduzir o tamanho do modelo e aumentar a velocidade de resposta para o usuário final.
+
+### Anotações
+
+#### Otimização de Visuais — Onde Melhorar o Desempenho?
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m22s588.jpg" alt="" width="840">
+</p>
+
+O slide apresenta a seção **Visuais** dentro do tema *Resolvendo Problemas*, com foco em **onde otimizar** no relatório. Três princípios são destacados:
+
+- **Melhorar o desempenho** — o objetivo central da otimização é garantir que o relatório carregue e responda de forma ágil.
+- **Mínimo impacto na experiência do usuário** — as intervenções de performance não devem degradar a usabilidade nem a clareza visual para quem consome o relatório.
+- **Menos visuais → mais desempenho** — cada elemento visual adicionado à tela representa uma consulta extra ao modelo de dados. Reduzir a quantidade de visuais é, portanto, uma das formas mais diretas de ganhar velocidade.
+
+Complementando esses pontos, o slide destaca dois vetores de análise: **Campos no visual** (quais campos estão sendo usados e se são realmente necessários) e **Pense em como representar os Detalhes…** (questionar se um visual dedicado é indispensável ou se a mesma informação pode ser entregue por outro meio, como dicas de ferramenta ou segmentadores já existentes).
+
+#### Otimização de DAX — Tempo de Execução e Performance Analyzer
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m26s430.jpg" alt="" width="840">
+</p>
+
+O slide trata do segundo eixo de otimização: as **consultas DAX**. Os três pontos apresentados são:
+
+- **Tempo de execução da consulta** — cada medida DAX que alimenta um visual tem um custo de processamento mensurável; identificar os tempos é o ponto de partida para qualquer tuning.
+- **Performance Analyzer** — ferramenta nativa do Power BI Desktop utilizada para capturar e inspecionar o tempo gasto por cada visual ao executar sua consulta DAX.
+- **Referência: 120 milsseg** — valor de referência considerado aceitável para uma consulta DAX. Tempos muito acima disso indicam que há algo a revisar na lógica da medida ou no modelo.
+
+À direita, o painel do **Performance Analyzer** exibido no slide mostra um exemplo real: o visual *Vendas por Ano* registrou **2754 ms** apenas na etapa de *Consulta DAX* — um tempo muito superior ao parâmetro de referência, sinalizando claramente a necessidade de revisão.
+
+#### Modelo de Dados — Pontos de Atenção
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m29s997.jpg" alt="" width="840">
+</p>
+
+O slide lista os **Pontos de atenção** relacionados à modelagem de dados, acompanhado de um diagrama esquemático que representa a estrutura de tabelas e seus relacionamentos. São quatro diretrizes práticas:
+
+- **Verifique as relações e cardinalidades** — relações incorretas ou com cardinalidade inadequada impactam diretamente o resultado das medidas DAX e o desempenho das consultas.
+- **Delete as colunas desnecessárias** — colunas que não são utilizadas por visuais, medidas ou filtros ocupam espaço no modelo sem agregar valor, aumentando o custo de memória e processamento.
+- **Preferência exclusão: na importação** — sempre que possível, a remoção de colunas deve ocorrer na origem, via SQL ou durante o processo de importação, antes que os dados entrem no modelo.
+- **Use o Power Query quando necessário** — nos casos em que a exclusão na fonte não é viável, o Power Query é o ambiente correto para eliminar colunas e linhas antes que os dados sejam carregados.
+
+#### Modelo de Dados — Impacto no Desempenho Geral
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m33s045.jpg" alt="" width="840">
+</p>
+
+O slide apresenta a seção **Modelo de dados** e contextualiza por que esse é o elemento central de toda a estratégia de desempenho. Três consequências diretas de um modelo bem estruturado são listadas:
+
+- **Visuais com bom desempenho** — um modelo eficiente permite que os visuais consultem e renderizem dados com rapidez, independentemente da complexidade do relatório.
+- **DAX com execução rápida** — medidas calculadas sobre um modelo otimizado executam em menos iterações, reduzindo o tempo de resposta.
+- **Provável: relações, colunas ou metadados** — quando há lentidão, a causa mais provável está em algum desses três elementos: relações mal configuradas, colunas desnecessárias presentes no modelo ou metadados incorretos.
+
+O diagrama à direita reforça visualmente a ideia de um modelo relacional com tabelas em diferentes níveis hierárquicos, conectadas por relacionamentos.
+
+#### Pontos de Atenção — Revisão e Consolidação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m34s472.jpg" alt="" width="840">
+</p>
+
+O slide retoma os **Pontos de atenção** do modelo de dados — os mesmos apresentados anteriormente — reforçando-os como checklist de revisão prática antes de qualquer publicação do relatório:
+
+- **Verifique as relações e cardinalidades**
+- **Delete as colunas desnecessárias**
+- **Preferência exclusão: na importação**
+- **Use o Power Query quando necessário**
+
+A repetição do slide no contexto da aula funciona como consolidação: após entender *por que* o modelo impacta o desempenho, o aluno é relembrado de *como* agir diretamente no modelo para corrigir os problemas identificados.
+
+#### Técnicas para Redução de Dados
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m37s148.jpg" alt="" width="840">
+</p>
+
+O slide enumera as principais **Técnicas para redução de dados** aplicáveis a modelos de importação no Power BI:
+
+- **Remover colunas desnecessárias** — eliminar atributos que não contribuem para análises ou filtros.
+- **Remover linhas desnecessárias** — filtrar registros irrelevantes antes da carga (ex.: dados históricos fora do escopo do relatório).
+- **Otimizar tipos de dados de coluna** — usar o tipo mais enxuto possível (ex.: inteiro em vez de texto para códigos numéricos), o que reduz o espaço ocupado no mecanismo VertiPaq.
+- **Colunas personalizadas** — preferir colunas calculadas criadas no Power Query (M) em vez de colunas DAX quando a lógica for simples, pois o VertiPaq compacta de forma mais eficiente dados originados do Power Query.
+- **Desabilitar data/hora automática** — o recurso automático cria tabelas de calendário ocultas para cada coluna de data, inflando o modelo; desativá-lo e criar uma tabela de datas única é a prática recomendada.
+- **…** — o slide indica que há outras técnicas documentadas, remetendo à **Documentação oficial** da Microsoft (link exibido no canto inferior direito).
+
+#### Documentação Oficial — Técnicas de Redução de Dados para Modelagem de Importação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m39s900.jpg" alt="" width="840">
+</p>
+
+A imagem exibe uma captura de tela do **Microsoft Learn**, na página oficial de diretrizes do Power BI intitulada **"Técnicas de redução de dados para Modelagem de importação"**, acessível em:
+
+```
+learn.microsoft.com/pt-br/power-bi/guidance/import-modeling-data-reduction
+```
+
+O índice lateral da página confirma os tópicos cobertos pela documentação, incluindo: *Remover colunas desnecessárias*, *Remover linhas desnecessárias*, *Agrupar por e resumir* e *Otimizar tipos de dados de coluna*, entre outros.
+
+A professora recorre a essa página para demonstrar que as técnicas apresentadas no slide anterior têm respaldo na documentação oficial da Microsoft, servindo como referência de consulta para aprofundamento. Não se trata de código Python — a classificação automática foi incorreta; a imagem contém exclusivamente uma página web de documentação.      
+
+
 ### 🟩 Vídeo 04 - Primeiro contato com Performance Analyzer
 
 <video width="60%" controls>
@@ -220,7 +326,10 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizac
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/43d8bce6-4d00-4161-9ff1-77d514663d33?autoplay=1
+
+
+
 
 ### 🟩 Vídeo 05 - Explorando e Analisando os dados de análise de performance exportada
 
