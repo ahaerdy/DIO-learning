@@ -393,7 +393,7 @@ Esse formato JSON permite análises programáticas externas, exportação para f
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/2ea1fe17-1b79-40cf-885b-73b58a8f8202?autoplay=1
 
-O vídeo descreve a utilização do Performance Analyzer do Power BI para identificar gargalos em relatórios. O palestrante demonstra como elementos visuais aparentemente inofensivos (como formas e caixas de texto) podem acumular milissegundos preciosos, prejudicando a experiência do usuário. A principal solução proposta é a substituição de múltiplos elementos de design por uma única imagem de fundo estática, criada em ferramentas externas como Figma ou Canva.
+A instrutora demonstra como elementos visuais aparentemente inofensivos (como formas e caixas de texto) podem acumular milissegundos preciosos, prejudicando a experiência do usuário. A principal solução proposta é a substituição de múltiplos elementos de design por uma única imagem de fundo estática, criada em ferramentas externas como Figma ou Canva.
 
 ### Anotações
 
