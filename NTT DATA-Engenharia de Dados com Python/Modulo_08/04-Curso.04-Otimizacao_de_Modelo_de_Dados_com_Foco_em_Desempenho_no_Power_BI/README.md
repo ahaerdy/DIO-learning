@@ -157,6 +157,53 @@ Os três fatores que determinam qual modalidade escolher são: **acesso aos dado
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/944308ac-a504-4111-aab2-5062b78bab08?autoplay=1
 
+O vĩdeo explica como transformar relatórios visualmente atraentes em ferramentas de alta performance, focando em usabilidade, eficiência de dados e experiência do usuário (UX).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h12m44s927.jpg" alt="" width="840">
+</p>
+
+O slide apresenta um **cenário hipotético** para contextualizar os problemas de desempenho em relatórios Power BI. À direita, é exibido um exemplo de relatório com visual elaborado, destacado pelas etiquetas *"Resultados significativos"* e *"Relatório com visual agradável"* — indicando que o produto entrega valor visual e analítico para os usuários. À esquerda, no entanto, uma caixa aponta para o ponto crítico do cenário: o modelo de dados recebeu **comentários negativos por conta do mau desempenho**. A seta ligando os dois elementos evidencia a contradição central: um relatório visualmente satisfatório, mas tecnicamente comprometido — situação agravada pelo fato de o colaborador que o criou já ter saído da organização.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h12m52s589.jpg" alt="" width="840">
+</p>
+
+O slide enumera os **problemas identificados** no cenário hipotético, respondendo à pergunta *"Quais os problemas?"*. São listados dois sintomas principais enfrentados pelos usuários: o **carregamento lento das páginas** do relatório e o fato de que as **tabelas não são atualizadas com rapidez em seleções** — o que compromete a visualização de métricas com dados atualizados. Ao fundo, uma terceira evidência vem da área de TI: o **arquivo está muito grande**, consumindo armazenamento de forma desnecessária no ambiente Power BI. Esses três pontos delimitam o escopo técnico do problema a ser resolvido.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h12m54s264.jpg" alt="" width="840">
+</p>
+
+O slide responde à pergunta *"O que fazer para resolver?"*, listando as cinco estratégias de otimização aplicáveis ao cenário:
+
+- **Examinar o desempenho de medidas, relações e visuais** — analisar cada componente individualmente para identificar onde estão as ineficiências.
+- **Usar variáveis para aprimorar o desempenho e solucionar problemas** — ao armazenar em variável um cálculo reutilizado em uma medida DAX, o Power BI evita reexecutá-lo a cada avaliação, ganhando eficiência.
+- **Aprimorar o desempenho reduzindo os níveis de cardinalidade** — substituir relacionamentos muitos-para-muitos (N:M) por relacionamentos um-para-muitos (1:N), preferidos pelo motor do Power BI.
+- **Otimizar modelos do DirectQuery com o armazenamento no nível de tabela** — configurar o modo de armazenamento adequado para cada tabela, reduzindo consultas desnecessárias à fonte de dados.
+- **Criar e gerenciar agregações** — utilizar tabelas de agregação para acelerar consultas sobre grandes volumes de dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h13m00s354.jpg" alt="" width="840">
+</p>
+
+O slide ilustra, de forma esquemática, **como os elementos internos do relatório afetam diretamente a experiência do usuário final**. O diagrama apresenta dois blocos de entrada — **Relações** (representadas por um modelo de tabelas interligadas) e **Visuais e medidas** (representados pelo painel de visualizações do Power BI) — que convergem para o **Desempenho do relatório do Power BI**. Este, por sua vez, determina a qualidade da **Experiência do usuário final**. A leitura do fluxo reforça que relações mal configuradas e medidas ineficientes impactam o desempenho do relatório e, consequentemente, a percepção de qualidade do produto pelo usuário.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h13m05s983.jpg" alt="" width="840">
+</p>
+
+O slide encerra a sequência do cenário hipotético apresentando os **três passos práticos para iniciar a resolução do problema**, sob o mesmo questionamento *"Como resolver?"*:
+
+- **Identificação de gargalos de desempenho no relatório** — primeiro passo, que consiste em localizar exatamente onde o relatório perde eficiência.
+- **Analisar o desempenho com o Performance Analyser** — ferramenta nativa do Power BI que será explorada na sequência da aula para medir o tempo de resposta de cada visual e consulta.
+- **Examinar os resultados** — avaliar as métricas coletadas e determinar quais ajustes são realmente necessários.
+
+Esses três pontos definem a metodologia de diagnóstico que será aprofundada nos próximos vídeos do curso.      
+
+
 ### 🟩 Vídeo 03 - Quando ocorrem os problemas de otimização?
 
 <video width="60%" controls>
@@ -164,7 +211,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizac
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/ce4f06e5-8686-4e3a-8b0c-515b092fb294?autoplay=1
 
 ### 🟩 Vídeo 04 - Primeiro contato com Performance Analyzer
 
