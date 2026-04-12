@@ -298,9 +298,6 @@ O vídeo mostra como utilizar o Performance Analyzer no Power BI Desktop para di
 
 ### Anotações
 
-Aqui está o documento revisado, agora sem as linhas que iniciavam com `####`:
-
-```markdown
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m21s288.jpg" alt="" width="840">
 </p>
