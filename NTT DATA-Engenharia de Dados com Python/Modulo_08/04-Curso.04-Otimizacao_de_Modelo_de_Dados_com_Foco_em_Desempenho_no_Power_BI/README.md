@@ -308,13 +308,13 @@ A imagem exibe a página de documentação oficial da Microsoft Learn intitulada
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m28s874.jpg" alt="" width="840">
 </p>
 
-A imagem mostra a seção **"Displaying the Performance Analyzer pane"** da mesma documentação da Microsoft. O texto instrui o usuário a acessar a aba **View** (Exibição) no Power BI Desktop e clicar em **Performance Analyzer** para abrir o painel. Abaixo da instrução, há uma captura de tela da barra de ferramentas do Power BI destacando o botão *Performance Analyzer* em vermelho, ao lado de *Filters*, *Bookmarks* e *Selection*. Uma vez ativado, o painel é exibido à direita do canvas do relatório.
+O slide mostra a seção **"Displaying the Performance Analyzer pane"** da mesma documentação da Microsoft. O texto instrui o usuário a acessar a aba **View** (Exibição) no Power BI Desktop e clicar em **Performance Analyzer** para abrir o painel. Abaixo da instrução, há uma captura de tela da barra de ferramentas do Power BI destacando o botão *Performance Analyzer* em vermelho, ao lado de *Filters*, *Bookmarks* e *Selection*. Uma vez ativado, o painel é exibido à direita do canvas do relatório.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m38s566.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta a parte da documentação que descreve as **categorias de tempo** registradas pelo Performance Analyzer para cada visual. São quatro categorias:
+São quatro categorias:
 
 - **DAX query** — tempo decorrido entre o envio da consulta pelo visual e o retorno dos resultados pelo Analysis Services.
 - **Visual display** — tempo necessário para o visual ser renderizado na tela, incluindo carregamento de imagens web ou geocodificação.
@@ -327,7 +327,7 @@ A coluna **Duration (ms)** registra a diferença entre os timestamps de *início
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m45s409.jpg" alt="" width="840">
 </p>
 
-A imagem exibe o **Power BI Desktop** com o relatório "Retail Analysis – Sample Modificada" aberto na **Página 1** e o painel do **Performance Analyzer** visível à direita. A gravação já foi iniciada (indicada pelo carimbo *"Gravação iniciada (22/11/2022 08:25:28)"*) e a primeira interação — um clique no filtro *Lindsey* — foi registrada. O painel lista os visuais da página com suas durações em milissegundos:
+A gravação já foi iniciada (indicada pelo carimbo *"Gravação iniciada (22/11/2022 08:25:28)"*) e a primeira interação — um clique no filtro *Lindsey* — foi registrada. O painel lista os visuais da página com suas durações em milissegundos:
 
 | Visual | Duração (ms) |
 |---|---|
@@ -346,27 +346,19 @@ Essa listagem permite identificar quais visuais consomem mais tempo de carregame
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m47s325.jpg" alt="" width="840">
 </p>
 
-A imagem mostra o resultado de um clique de expansão (*drill-through*) no visual do **medidor (gauge)** "This Year Sales, This Year Sales Meta e Regular_Sales_Units". O visual ocupa toda a área do canvas e exibe o valor **$6 Mi**, com a barra do medidor preenchida predominantemente em azul-petróleo. O botão **"Voltar ao relatório"** aparece no canto superior esquerdo. O painel do Performance Analyzer à direita permanece com os mesmos registros da gravação anterior, pois a expansão de visual não gera uma nova interação de consulta — apenas redimensiona a exibição.
+Aqui o resultado de um clique de expansão (*drill-through*) no visual do **medidor (gauge)** "This Year Sales, This Year Sales Meta e Regular_Sales_Units". O visual ocupa toda a área do canvas e exibe o valor **$6 Mi**, com a barra do medidor preenchida predominantemente em azul-petróleo. O botão **"Voltar ao relatório"** aparece no canto superior esquerdo. O painel do Performance Analyzer à direita permanece com os mesmos registros da gravação anterior, pois a expansão de visual não gera uma nova interação de consulta — apenas redimensiona a exibição.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h19m03s610.jpg" alt="" width="840">
 </p>
 
-A imagem registra o painel do Performance Analyzer com um dos itens expandido — a entrada **"Forma"** — revelando suas subcategorias de tempo:
-
-| Subcategoria | Duração (ms) |
-|---|---|
-| Exibição de visual | 15 |
-| Outro | 25 |
-| *Copiar consulta* | *(ação disponível)* |
-
-Isso ilustra na prática o que a documentação descreveu: o tempo total de um visual é composto por diferentes camadas. A categoria **"Outro"** (25 ms neste caso) representa o processamento realizado em *background* — preparação de queries, espera por outros visuais ou processamentos paralelos — enquanto a **"Exibição de visual"** (15 ms) é o tempo puro de renderização na tela. O relatório também mostra uma segunda rodada de eventos (com realce cruzado) acumulada logo abaixo na lista.
+O painel ilustra na prática o que a documentação descreveu: o tempo total de um visual é composto por diferentes camadas. A categoria **"Outro"** (25 ms neste caso) representa o processamento realizado em *background* — preparação de queries, espera por outros visuais ou processamentos paralelos — enquanto a **"Exibição de visual"** (15 ms) é o tempo puro de renderização na tela. O relatório também mostra uma segunda rodada de eventos (com realce cruzado) acumulada logo abaixo na lista.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h19m19s229.jpg" alt="" width="840">
 </p>
 
-A imagem exibe o **Bloco de Notas (Notepad)** com a **consulta DAX** copiada a partir do Performance Analyzer via a opção *"Copiar consulta"*. O código revela exatamente quais medidas o visual "This Year Sales, This Year Sales Meta e Regular Sales Units" executou internamente para exibir seus dados:
+**Bloco de Notas (Notepad)** com a **consulta DAX** copiada a partir do Performance Analyzer via a opção *"Copiar consulta"*. O código revela exatamente quais medidas o visual "This Year Sales, This Year Sales Meta e Regular Sales Units" executou internamente para exibir seus dados:
 
 ```dax
 // DAX Query
@@ -384,16 +376,13 @@ A função `EVALUATE` executa a expressão e a função `ROW` retorna uma tabela
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h19m28s691.jpg" alt="" width="840">
 </p>
 
-A imagem mostra o arquivo **PowerBIPerformanceData.json** — exportado pelo Performance Analyzer — aberto no **Firefox**, que oferece uma visualização estruturada do JSON. O arquivo registra todos os eventos capturados durante a sessão de gravação. Cada evento contém campos como `name`, `component`, `start`, `end`, `id` e `metrics`. Por exemplo:
+Arquivo **PowerBIPerformanceData.json** — exportado pelo Performance Analyzer — aberto no **Firefox**, que oferece uma visualização estruturada do JSON. O arquivo registra todos os eventos capturados durante a sessão de gravação. Cada evento contém campos como `name`, `component`, `start`, `end`, `id` e `metrics`. Por exemplo:
 
 - **Evento 0** (`User Action` / `Report Canvas`): `sourceLabel: "userAction_StartedMonitoring"` — marca o início da gravação.
 - **Evento 1** (`User Action` / `Report Canvas`): `sourceLabel: "userAction_CrossHighlight"` — registra uma interação de realce cruzado.
 - **Evento 2** (`Visual Container Lifecycle` / `Report Canvas`): métricas incluem `visualTitle: "Caixa de texto"`, `visualType: "textbox"`, `initialLoad: false` — indicando o carregamento do visual de caixa de texto.
 
 Esse formato JSON permite análises programáticas externas, exportação para ferramentas de BI ou comparações de desempenho ao longo do tempo. A visualização no navegador (em vez do VS Code) facilita a leitura hierárquica dos dados.
-```
-
-Todas as linhas que começavam com `####` foram removidas, mantendo apenas imagens e explicações.      
 
 ### 🟩 Vídeo 05 - Explorando e Analisando os dados de análise de performance exportada
 
