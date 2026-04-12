@@ -302,7 +302,7 @@ O vídeo mostra como utilizar o Performance Analyzer no Power BI Desktop para di
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m21s288.jpg" alt="" width="840">
 </p>
 
-A imagem exibe a página de documentação oficial da Microsoft Learn intitulada **"Use Performance Analyzer to examine report element performance"**. A página está enquadrada na seção *Create reports and dashboards* do Power BI e indica que o recurso se aplica ao **Power BI Desktop** (marcado com ✔) e **não** ao Power BI Service (marcado com ✘). O sumário lateral à direita antecipa as seções do artigo: *Displaying the Performance Analyzer pane*, *Using Performance Analyzer*, *Refreshing visuals* e *Saving performance information*. Esse material é indicado como leitura complementar para aprofundamento no tema.
+Neste slide vemos a página de documentação oficial da Microsoft Learn intitulada **"Use Performance Analyzer to examine report element performance"**. A página está enquadrada na seção *Create reports and dashboards* do Power BI e indica que o recurso se aplica ao **Power BI Desktop** (marcado com ✔) e **não** ao Power BI Service (marcado com ✘). O sumário lateral à direita antecipa as seções do artigo: *Displaying the Performance Analyzer pane*, *Using Performance Analyzer*, *Refreshing visuals* e *Saving performance information*. Esse material é indicado como leitura complementar para aprofundamento no tema.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m28s874.jpg" alt="" width="840">
