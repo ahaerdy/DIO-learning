@@ -308,7 +308,7 @@ Neste slide vemos a página de documentação oficial da Microsoft Learn intitul
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m28s874.jpg" alt="" width="840">
 </p>
 
-O slide mostra a seção **"Displaying the Performance Analyzer pane"** da mesma documentação da Microsoft. O texto instrui o usuário a acessar a aba **View** (Exibição) no Power BI Desktop e clicar em **Performance Analyzer** para abrir o painel. Abaixo da instrução, há uma captura de tela da barra de ferramentas do Power BI destacando o botão *Performance Analyzer* em vermelho, ao lado de *Filters*, *Bookmarks* e *Selection*. Uma vez ativado, o painel é exibido à direita do canvas do relatório.
+Seção **"Displaying the Performance Analyzer pane"** da mesma documentação da Microsoft. O texto instrui o usuário a acessar a aba **View** (Exibição) no Power BI Desktop e clicar em **Performance Analyzer** para abrir o painel. Abaixo da instrução, há uma captura de tela da barra de ferramentas do Power BI destacando o botão *Performance Analyzer* em vermelho, ao lado de *Filters*, *Bookmarks* e *Selection*. Uma vez ativado, o painel é exibido à direita do canvas do relatório.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m38s566.jpg" alt="" width="840">
