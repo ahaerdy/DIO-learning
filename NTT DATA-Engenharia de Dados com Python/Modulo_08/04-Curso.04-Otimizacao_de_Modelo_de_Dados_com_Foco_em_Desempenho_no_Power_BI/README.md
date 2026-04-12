@@ -393,6 +393,29 @@ Esse formato JSON permite análises programáticas externas, exportação para f
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/2ea1fe17-1b79-40cf-885b-73b58a8f8202?autoplay=1
 
+O vídeo descreve a utilização do Performance Analyzer do Power BI para identificar gargalos em relatórios. O palestrante demonstra como elementos visuais aparentemente inofensivos (como formas e caixas de texto) podem acumular milissegundos preciosos, prejudicando a experiência do usuário. A principal solução proposta é a substituição de múltiplos elementos de design por uma única imagem de fundo estática, criada em ferramentas externas como Figma ou Canva.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-15h16m26s919.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a exportação do **Performance Analyzer** do Power BI com a lista de eventos registrados (eventos numerados, session ID e hashes) e detalhes de cada ação capturada no relatório.  
+
+- Cada linha representa um evento monitorado (por exemplo, *User Action*, *Query*, *Report Canvas*), com timestamps e IDs que permitem rastrear a sequência de execução.  
+- Esse tipo de exportação é útil para isolar o comportamento de um visual específico: ao salvar apenas as interações daquele visual, você consegue analisar com precisão quais chamadas e queries impactaram o tempo de resposta.  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-15h16m44s245.jpg" alt="" width="840">
+</p>
+
+O slide exibe o painel do **Performance Analyzer** com tempos de execução (em milissegundos) atribuídos a vários elementos do relatório — formas, caixas de texto, segmentadores e outros visuais — e uma calculadora usada para somar esses tempos.  
+
+- É possível ver valores individuais de latência por elemento (por exemplo, *Forma 114 ms*, *segmentador 470 ms*), evidenciando que elementos visuais “decorativos” também contribuem para o tempo total de resposta.  
+- A soma acumulada desses tempos pode chegar a segundos perceptíveis para o usuário final, mesmo quando cada item isolado parece pequeno.  
+- Priorize clareza dos dados sobre ornamentos visuais; quando precisar de imagens de fundo complexas, prefira imagens estáticas otimizadas (tamanho e formato) ou usar imagens paginadas para reduzir renderização em tempo real.     
+
 ### 🟩 Vídeo 06 - Instalando e utilizando o DAX Studio na avaliação das medidas DAX
 
 <video width="60%" controls>
@@ -400,7 +423,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizac
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/51d5f11a-6fdb-4878-b295-f9f45041d023?autoplay=1
 
 ### 🟩 Vídeo 07 - Falando sobre cache na avaliação de desempenho dos relatórios
 
