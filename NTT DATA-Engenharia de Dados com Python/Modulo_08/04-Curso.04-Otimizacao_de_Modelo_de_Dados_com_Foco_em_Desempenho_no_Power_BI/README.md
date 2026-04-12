@@ -18,23 +18,17 @@ O vídeo aborda a transição entre a criação de relatórios visualmente atrae
 
 ### Anotações
 
-#### Otimizando Modelos com Foco em Performance — Formação Power BI Analyst
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h39m34s708.jpg" alt="" width="840">
 </p>
 
 Slide de abertura da aula ministrada por **Juliana Mascarenhas**, Tech Education Specialist da DIO, Mestre em Modelagem Computacional e Cientista de Dados. O tema central é **"Otimizando Modelos com Foco em Performance"**, inserido na trilha da **Formação Power BI Analyst**. Este módulo dá continuidade aos conteúdos anteriores — criação de visuais, ETL, modelagem de dados e modelagem dimensional — e introduz agora os fundamentos de otimização de desempenho em relatórios do Power BI.
 
-#### Etapa 1 — Fundamentos de Otimização com Power BI
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h39m39s481.jpg" alt="" width="840">
 </p>
 
 Slide de transição que marca o início da **Etapa 1: Fundamentos de Otimização com Power BI**. Não há código nesta imagem. O slide sinaliza que a aula entrará em conceitos fundamentais sobre o que é otimização, por que ela importa e quais são suas consequências práticas no contexto de relatórios Power BI.
-
-#### O que é otimização?
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h39m40s899.jpg" alt="" width="840">
@@ -46,8 +40,6 @@ O slide apresenta a definição formal de **otimização** no contexto de modelo
 
 Essa definição delimita o escopo do conceito: otimizar não é refazer o relatório do zero, mas intervir cirurgicamente no modelo existente para que ele processe e entregue informações com mais eficiência. O objetivo final é sempre o aumento de desempenho — tanto na atualização dos dados quanto na renderização dos visuais para o usuário final.
 
-#### Desempenho? Pra que?
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h39m45s262.jpg" alt="" width="840">
 </p>
@@ -55,8 +47,6 @@ Essa definição delimita o escopo do conceito: otimizar não é refazer o relat
 O slide destaca uma distinção crítica que muitos analistas negligenciam: o **desempenho do relatório em fase de testes** e o **desempenho do relatório em fase de produção** são realidades diferentes.
 
 Durante o desenvolvimento, o relatório roda em ambiente controlado, geralmente com poucos usuários e volume de dados reduzido. Ao ser publicado e consumido por múltiplos usuários simultaneamente, surgem gargalos que não existiam na fase de testes. Compreender essa diferença é o ponto de partida para justificar o investimento em otimização desde o início do projeto.
-
-#### O que impacta na visão do usuário?
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h39m47s148.jpg" alt="" width="840">
@@ -68,8 +58,6 @@ Do ponto de vista do usuário final, o mau desempenho se manifesta de duas forma
 - **Demora na atualização dos visuais** — gráficos e tabelas levam tempo excessivo para refletir filtros e interações.
 
 Ambas as situações geram uma **experiência negativa**, o que contraria o propósito de qualquer relatório analítico: entregar informação de forma rápida, clara e confiável. Um relatório visualmente impecável perde valor se o usuário precisar esperar para interagir com ele.
-
-#### Qual o motivo do mau desempenho?
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h39m51s430.jpg" alt="" width="840">
@@ -83,8 +71,6 @@ O slide aponta que, em **90% dos casos**, o mau desempenho de um relatório Powe
 
 O número 90% reforça que esses dois problemas dominam a maioria dos diagnósticos de performance, tornando-os o foco prioritário de qualquer processo de otimização.
 
-#### Quais as vantagens da otimização?
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h39m56s929.jpg" alt="" width="840">
 </p>
@@ -96,8 +82,6 @@ O slide elenca os benefícios diretos de um modelo de dados bem otimizado:
 - **Cliente satisfeito** — seja um cliente interno ou externo, a qualidade percebida do relatório está diretamente ligada à sua velocidade e confiabilidade.
 
 Tratar os problemas de desempenho durante o desenvolvimento evita retrabalho custoso na fase de produção e permite manter o relatório otimizado de forma contínua ao longo de sua vida útil.
-
-#### Processo de otimização
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h39m59s384.jpg" alt="" width="840">
@@ -112,8 +96,6 @@ O slide lista as principais diretrizes práticas do processo de otimização de 
 - **Reduzir cardinalidades** — colunas com muitos valores únicos exigem mais recursos para processar relacionamentos e filtros.
 - **Analisar metadados do modelo** — assim como bancos de dados relacionais, o Power BI expõe metadados que permitem identificar gargalos.
 - **Resumir dados sempre que possível** — trabalhar com dados agregados em vez de dados granulares reduz o volume processado e acelera as consultas.
-
-#### Processo de otimização — Fluxo de dados no Power BI
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h40m09s479.jpg" alt="" width="840">
@@ -131,8 +113,6 @@ O fluxo representado segue a seguinte sequência:
 4. **Navegador e aplicativos móveis** → os usuários finais consomem o relatório por diferentes canais.
 
 A recomendação prática é: sempre que possível, aplicar filtros, remover colunas e agregar dados **antes** de carregar no Power BI Desktop, reduzindo o volume que precisa ser processado em todas as etapas seguintes.
-
-#### Armazenamento de dados
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-12h40m15s298.jpg" alt="" width="840">
@@ -217,8 +197,6 @@ O vídeo mostra como identificar gargalos de desempenho em relatórios de BI, a 
 
 ### Anotações
 
-#### Otimização de Visuais — Onde Melhorar o Desempenho?
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m22s588.jpg" alt="" width="840">
 </p>
@@ -230,8 +208,6 @@ O slide apresenta a seção **Visuais** dentro do tema *Resolvendo Problemas*, c
 - **Menos visuais → mais desempenho** — cada elemento visual adicionado à tela representa uma consulta extra ao modelo de dados. Reduzir a quantidade de visuais é, portanto, uma das formas mais diretas de ganhar velocidade.
 
 Complementando esses pontos, o slide destaca dois vetores de análise: **Campos no visual** (quais campos estão sendo usados e se são realmente necessários) e **Pense em como representar os Detalhes…** (questionar se um visual dedicado é indispensável ou se a mesma informação pode ser entregue por outro meio, como dicas de ferramenta ou segmentadores já existentes).
-
-#### Otimização de DAX — Tempo de Execução e Performance Analyzer
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m26s430.jpg" alt="" width="840">
@@ -245,8 +221,6 @@ O slide trata do segundo eixo de otimização: as **consultas DAX**. Os três po
 
 À direita, o painel do **Performance Analyzer** exibido no slide mostra um exemplo real: o visual *Vendas por Ano* registrou **2754 ms** apenas na etapa de *Consulta DAX* — um tempo muito superior ao parâmetro de referência, sinalizando claramente a necessidade de revisão.
 
-#### Modelo de Dados — Pontos de Atenção
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m29s997.jpg" alt="" width="840">
 </p>
@@ -257,8 +231,6 @@ O slide lista os **Pontos de atenção** relacionados à modelagem de dados, aco
 - **Delete as colunas desnecessárias** — colunas que não são utilizadas por visuais, medidas ou filtros ocupam espaço no modelo sem agregar valor, aumentando o custo de memória e processamento.
 - **Preferência exclusão: na importação** — sempre que possível, a remoção de colunas deve ocorrer na origem, via SQL ou durante o processo de importação, antes que os dados entrem no modelo.
 - **Use o Power Query quando necessário** — nos casos em que a exclusão na fonte não é viável, o Power Query é o ambiente correto para eliminar colunas e linhas antes que os dados sejam carregados.
-
-#### Modelo de Dados — Impacto no Desempenho Geral
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m33s045.jpg" alt="" width="840">
@@ -271,8 +243,6 @@ O slide apresenta a seção **Modelo de dados** e contextualiza por que esse é 
 - **Provável: relações, colunas ou metadados** — quando há lentidão, a causa mais provável está em algum desses três elementos: relações mal configuradas, colunas desnecessárias presentes no modelo ou metadados incorretos.
 
 O diagrama à direita reforça visualmente a ideia de um modelo relacional com tabelas em diferentes níveis hierárquicos, conectadas por relacionamentos.
-
-#### Pontos de Atenção — Revisão e Consolidação
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m34s472.jpg" alt="" width="840">
@@ -287,8 +257,6 @@ O slide retoma os **Pontos de atenção** do modelo de dados — os mesmos apres
 
 A repetição do slide no contexto da aula funciona como consolidação: após entender *por que* o modelo impacta o desempenho, o aluno é relembrado de *como* agir diretamente no modelo para corrigir os problemas identificados.
 
-#### Técnicas para Redução de Dados
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m37s148.jpg" alt="" width="840">
 </p>
@@ -302,8 +270,6 @@ O slide enumera as principais **Técnicas para redução de dados** aplicáveis 
 - **Desabilitar data/hora automática** — o recurso automático cria tabelas de calendário ocultas para cada coluna de data, inflando o modelo; desativá-lo e criar uma tabela de datas única é a prática recomendada.
 - **…** — o slide indica que há outras técnicas documentadas, remetendo à **Documentação oficial** da Microsoft (link exibido no canto inferior direito).
 
-#### Documentação Oficial — Técnicas de Redução de Dados para Modelagem de Importação
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-13h53m39s900.jpg" alt="" width="840">
 </p>
@@ -314,7 +280,7 @@ A imagem exibe uma captura de tela do **Microsoft Learn**, na página oficial de
 learn.microsoft.com/pt-br/power-bi/guidance/import-modeling-data-reduction
 ```
 
-O índice lateral da página confirma os tópicos cobertos pela documentação, incluindo: *Remover colunas desnecessárias*, *Remover linhas desnecessárias*, *Agrupar por e resumir* e *Otimizar tipos de dados de coluna*, entre outros.
+Tópicos cobertos pela documentação, incluindo: *Remover colunas desnecessárias*, *Remover linhas desnecessárias*, *Agrupar por e resumir* e *Otimizar tipos de dados de coluna*, entre outros.
 
 A professora recorre a essa página para demonstrar que as técnicas apresentadas no slide anterior têm respaldo na documentação oficial da Microsoft, servindo como referência de consulta para aprofundamento. Não se trata de código Python — a classificação automática foi incorreta; a imagem contém exclusivamente uma página web de documentação.      
 
@@ -328,8 +294,109 @@ A professora recorre a essa página para demonstrar que as técnicas apresentada
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/43d8bce6-4d00-4161-9ff1-77d514663d33?autoplay=1
 
+O vídeo mostra como utilizar o Performance Analyzer no Power BI Desktop para diagnosticar e melhorar o desempenho de relatórios, garantindo carregamentos rápidos e uma experiência de usuário fluida.
 
+### Anotações
 
+Aqui está o documento revisado, agora sem as linhas que iniciavam com `####`:
+
+```markdown
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m21s288.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a página de documentação oficial da Microsoft Learn intitulada **"Use Performance Analyzer to examine report element performance"**. A página está enquadrada na seção *Create reports and dashboards* do Power BI e indica que o recurso se aplica ao **Power BI Desktop** (marcado com ✔) e **não** ao Power BI Service (marcado com ✘). O sumário lateral à direita antecipa as seções do artigo: *Displaying the Performance Analyzer pane*, *Using Performance Analyzer*, *Refreshing visuals* e *Saving performance information*. Esse material é indicado como leitura complementar para aprofundamento no tema.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m28s874.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a seção **"Displaying the Performance Analyzer pane"** da mesma documentação da Microsoft. O texto instrui o usuário a acessar a aba **View** (Exibição) no Power BI Desktop e clicar em **Performance Analyzer** para abrir o painel. Abaixo da instrução, há uma captura de tela da barra de ferramentas do Power BI destacando o botão *Performance Analyzer* em vermelho, ao lado de *Filters*, *Bookmarks* e *Selection*. Uma vez ativado, o painel é exibido à direita do canvas do relatório.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m38s566.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a parte da documentação que descreve as **categorias de tempo** registradas pelo Performance Analyzer para cada visual. São quatro categorias:
+
+- **DAX query** — tempo decorrido entre o envio da consulta pelo visual e o retorno dos resultados pelo Analysis Services.
+- **Visual display** — tempo necessário para o visual ser renderizado na tela, incluindo carregamento de imagens web ou geocodificação.
+- **Other** (Outro) — tempo que o visual precisa para preparar queries, aguardar outros visuais concluírem ou executar processos em segundo plano (*background*).
+- **Evaluated parameters** (preview) — tempo gasto para avaliar parâmetros de campo dentro de um visual.
+
+A coluna **Duration (ms)** registra a diferença entre os timestamps de *início* e *fim* de cada operação, e a maioria das operações é executada sequencialmente em uma única *thread* de interface do usuário.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m45s409.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o **Power BI Desktop** com o relatório "Retail Analysis – Sample Modificada" aberto na **Página 1** e o painel do **Performance Analyzer** visível à direita. A gravação já foi iniciada (indicada pelo carimbo *"Gravação iniciada (22/11/2022 08:25:28)"*) e a primeira interação — um clique no filtro *Lindsey* — foi registrada. O painel lista os visuais da página com suas durações em milissegundos:
+
+| Visual | Duração (ms) |
+|---|---|
+| Caixa de texto | 40 |
+| Forma | 39 |
+| This Year Sales, This Year Sales Meta e Regular... | 273 |
+| Cartão de linha múltipla | 271 |
+| Vendas por Categoria | 271 |
+| ChicletSlicer 1.6.3 | 269 |
+| Total Sales Variance %, Sales Per Sq Ft e This Y... | 201 |
+| This Year Sales por Territory | 56 |
+
+Essa listagem permite identificar quais visuais consomem mais tempo de carregamento em resposta à interação do usuário.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h18m47s325.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o resultado de um clique de expansão (*drill-through*) no visual do **medidor (gauge)** "This Year Sales, This Year Sales Meta e Regular_Sales_Units". O visual ocupa toda a área do canvas e exibe o valor **$6 Mi**, com a barra do medidor preenchida predominantemente em azul-petróleo. O botão **"Voltar ao relatório"** aparece no canto superior esquerdo. O painel do Performance Analyzer à direita permanece com os mesmos registros da gravação anterior, pois a expansão de visual não gera uma nova interação de consulta — apenas redimensiona a exibição.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h19m03s610.jpg" alt="" width="840">
+</p>
+
+A imagem registra o painel do Performance Analyzer com um dos itens expandido — a entrada **"Forma"** — revelando suas subcategorias de tempo:
+
+| Subcategoria | Duração (ms) |
+|---|---|
+| Exibição de visual | 15 |
+| Outro | 25 |
+| *Copiar consulta* | *(ação disponível)* |
+
+Isso ilustra na prática o que a documentação descreveu: o tempo total de um visual é composto por diferentes camadas. A categoria **"Outro"** (25 ms neste caso) representa o processamento realizado em *background* — preparação de queries, espera por outros visuais ou processamentos paralelos — enquanto a **"Exibição de visual"** (15 ms) é o tempo puro de renderização na tela. O relatório também mostra uma segunda rodada de eventos (com realce cruzado) acumulada logo abaixo na lista.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h19m19s229.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o **Bloco de Notas (Notepad)** com a **consulta DAX** copiada a partir do Performance Analyzer via a opção *"Copiar consulta"*. O código revela exatamente quais medidas o visual "This Year Sales, This Year Sales Meta e Regular Sales Units" executou internamente para exibir seus dados:
+
+```dax
+// DAX Query
+EVALUATE
+  ROW(
+    "V_This_Year_Sales_Goal", 'Sales'[_This Year Sales Goal],
+    "This_Year_Sales", 'Sales'[This Year Sales],
+    "Regular_Sales_Units", 'Sales'[Regular_Sales_Units]
+  )
+```
+
+A função `EVALUATE` executa a expressão e a função `ROW` retorna uma tabela de linha única com as três medidas mapeadas: a meta de vendas do ano atual, as vendas do ano atual e as unidades de vendas regulares. Essa funcionalidade é útil para depurar e entender o que cada visual está consultando no modelo de dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-12-14h19m28s691.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o arquivo **PowerBIPerformanceData.json** — exportado pelo Performance Analyzer — aberto no **Firefox**, que oferece uma visualização estruturada do JSON. O arquivo registra todos os eventos capturados durante a sessão de gravação. Cada evento contém campos como `name`, `component`, `start`, `end`, `id` e `metrics`. Por exemplo:
+
+- **Evento 0** (`User Action` / `Report Canvas`): `sourceLabel: "userAction_StartedMonitoring"` — marca o início da gravação.
+- **Evento 1** (`User Action` / `Report Canvas`): `sourceLabel: "userAction_CrossHighlight"` — registra uma interação de realce cruzado.
+- **Evento 2** (`Visual Container Lifecycle` / `Report Canvas`): métricas incluem `visualTitle: "Caixa de texto"`, `visualType: "textbox"`, `initialLoad: false` — indicando o carregamento do visual de caixa de texto.
+
+Esse formato JSON permite análises programáticas externas, exportação para ferramentas de BI ou comparações de desempenho ao longo do tempo. A visualização no navegador (em vez do VS Code) facilita a leitura hierárquica dos dados.
+```
+
+Todas as linhas que começavam com `####` foram removidas, mantendo apenas imagens e explicações.      
 
 ### 🟩 Vídeo 05 - Explorando e Analisando os dados de análise de performance exportada
 
@@ -338,7 +405,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizac
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/2ea1fe17-1b79-40cf-885b-73b58a8f8202?autoplay=1
 
 ### 🟩 Vídeo 06 - Instalando e utilizando o DAX Studio na avaliação das medidas DAX
 
