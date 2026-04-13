@@ -544,7 +544,6 @@ No painel **Log** vemos o resultado:
 
 O instrutor compara o tempo de execução com a medida simples anterior (5 ms) para mostrar o impacto da complexidade da DAX na performance.      
 
-
 ### 🟩 Vídeo 07 - Falando sobre cache na avaliação de desempenho dos relatórios
 
 <video width="60%" controls>
@@ -554,6 +553,13 @@ O instrutor compara o tempo de execução com a medida simples anterior (5 ms) p
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/9abb020c-14a5-4a07-bd51-d693a19843ea?autoplay=1
 
+Este vídeo apresenta as estratégias essenciais para realizar uma análise de desempenho precisa no Power BI, focando especificamente em como o Cache Visual e o Cache do Mecanismo de Dados podem mascarar os resultados reais de performance.
+
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 08 - Como avaliar o desempenho do relatório sem a influência do cache?
 
 <video width="60%" controls>
@@ -561,7 +567,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizac
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/089a3aa7-b3c0-4ad7-9a01-c3cbc077dc30?autoplay=1
 
 ### 🟩 Vídeo 09 - Verificando desempenho com relação a atualização dos dados
 
