@@ -697,7 +697,7 @@ Na visualização em tabela da tabela **District**, destacam-se as colunas **DM_
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-09h38m07s090.jpg" alt="" width="840">
 </p>
 
-A captura exibe o artigo oficial do Microsoft Learn intitulado **“Técnicas de redução de dados para Modelagem de importação”**. O conteúdo apresenta diretrizes práticas para otimizar modelos de importação no Power BI, incluindo a remoção de colunas e linhas desnecessárias, agrupamento e resumo de dados, e otimização de tipos de dados. Esse material serve como referência complementar para aplicar as melhores práticas de redução de volume de dados e melhorar significativamente o desempenho do relatório.      
+A página exibe o artigo oficial do Microsoft Learn intitulado **“Técnicas de redução de dados para Modelagem de importação”**. O conteúdo apresenta diretrizes práticas para otimizar modelos de importação no Power BI, incluindo a remoção de colunas e linhas desnecessárias, agrupamento e resumo de dados, e otimização de tipos de dados. Esse material serve como referência complementar para aplicar as melhores práticas de redução de volume de dados e melhorar significativamente o desempenho do relatório.      
 
 # Certificado: Otimização de Modelo de Dados com Foco em Desempenho no Power BI
 
