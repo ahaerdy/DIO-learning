@@ -620,6 +620,47 @@ Essa comparação prática reforça por que otimizar o desempenho do relatório 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/9bc7f3e9-72cb-4e56-91e9-bd5882ed7abc?autoplay=1
 
+Este vídeo apresenta as principais estratégias e ferramentas para analisar e melhorar o tempo de carregamento de relatórios no Power BI, focando no gerenciamento de cache, comparação de fontes de dados e uso de ferramentas externas como o DAX Studio.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-09h09m34s869.jpg" alt="" width="840">
+</p>
+
+O **DAX Studio** é a ferramenta oficial e mais completa para trabalhar com consultas DAX. Nesta tela da página inicial (daxstudio.org) vemos claramente as duas opções de download da versão 3.0.5:
+
+- **DaxStudio_3_0_5_setup.exe** (instalador – 9,4 MB)  
+- **DaxStudio_3_0_5_portable.zip** (versão portátil – 16 MB)  
+
+Ambas foram lançadas em 26 de setembro de 2022. O DAX Studio permite conectar-se a qualquer modelo de dados tabular (Power BI, Analysis Services, Azure, etc.) e é especialmente útil para análise de performance, execução de consultas DAX e troubleshooting de medidas e cálculos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-09h09m42s967.jpg" alt="" width="840">
+</p>
+
+Dentro da documentação oficial do DAX Studio, a seção **Writing DAX Queries** apresenta uma abordagem 100 % prática e baseada em exemplos. O tutorial explica a estrutura simples das consultas DAX e mostra exatamente o que é necessário para acompanhar os exercícios:
+
+- DAX Studio  
+- Power BI Desktop  
+- Arquivo de exemplo **Adventure Works 2020**  
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-09h10m08s902.jpg" alt="" width="840">
+</p>
+
+No menu lateral direito estão listados todos os tópicos importantes: Basic Queries, Sorting Results, Adding Calculations, Returning a single value, Selecting columns from multiple tables, Multiple Resultsets e Using Parameters in Queries. É o local ideal para quem quer aprender a escrever DAX de forma eficiente e profissional.
+
+No **Power BI Desktop**, com o **Performance Analyzer** aberto, conseguimos medir o tempo real de cada visual do relatório “Retail Analysis”.  
+
+O painel à direita mostra, em milissegundos, a divisão exata do processamento:
+
+- **Consulta DAX**  
+- **Exibição do visual**  
+- **Outros processos** (background)  
+
+Clicando no ícone “Analisar este visual” (presente em cada gráfico), o Performance Analyzer foca apenas naquele elemento, permitindo identificar rapidamente qual visual está consumindo mais tempo e quais medidas ou cálculos precisam ser otimizados. Essa é a forma mais precisa de fazer performance tuning diretamente no relatório.      
+
 
 ### 🟩 Vídeo 10 - Considerações finais sobre otimização de relatórios
 
@@ -628,7 +669,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizac
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/d9798f3f-379c-4fc5-a71c-9d6ffa3943b5?autoplay=1
 
 
 ##  Materiais de Apoio
