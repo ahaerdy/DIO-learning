@@ -589,6 +589,28 @@ Dessa forma o cache visual e de dados é descartado e o Performance Analyzer mos
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/089a3aa7-b3c0-4ad7-9a01-c3cbc077dc30?autoplay=1
 
+Este vídeo demonstra de forma prática como o cache de visualização influencia o tempo de carregamento de relatórios no Power BI. Através da ferramenta Performance Analyzer, a apresentadora compara métricas de carregamento com e sem o cache ativado, revelando a importância de considerar a experiência do usuário final no primeiro acesso.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-08h21m57s370.jpg" alt="" width="840">
+</p>
+
+Nesta captura de tela do Power BI Desktop, vemos simultaneamente duas ferramentas essenciais para análise de desempenho: a **Ferramenta de Captura** (janela central) e o **Performance Analyzer** (painel à direita).  
+
+A Ferramenta de Captura lista os elementos visuais da página (Formas, logo_dio, clean, caixas de texto, Segmentação de Dados, botões, cartões etc.) e registra o tempo exato de cada um em milissegundos. Já o Performance Analyzer mostra o resultado de uma gravação completa, incluindo o tempo total de carregamento de cada visual quando a página é acessada.
+
+Observe os valores comparativos destacados:
+
+- **logo_dio**: 260 ms (captura) × 435 ms (analyzer)  
+- **clean**: 260 ms × 471 ms  
+- **Segmentação de Dados**: 798 ms × 2.894 ms  
+
+A diferença clara entre os dois conjuntos de números demonstra o impacto real do **cache de visuais** do Power BI. Quando o cache está preenchido (primeira execução), os tempos são menores. Quando o cache é limpo (simulando o primeiro acesso de um usuário), os mesmos elementos demoram consideravelmente mais para renderizar.
+
+Essa comparação prática reforça por que otimizar o desempenho do relatório é fundamental: o usuário final não terá o cache pré-carregado como temos durante o desenvolvimento, e cada milissegundo extra afeta a experiência de navegação. O foco principal aqui é entender como o cache influencia o carregamento de segmentações, cartões e visuais complexos, preparando o terreno para as técnicas de otimização que serão exploradas a seguir.      
+
 ### 🟩 Vídeo 09 - Verificando desempenho com relação a atualização dos dados
 
 <video width="60%" controls>
@@ -596,7 +618,8 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizac
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/9bc7f3e9-72cb-4e56-91e9-bd5882ed7abc?autoplay=1
+
 
 ### 🟩 Vídeo 10 - Considerações finais sobre otimização de relatórios
 
