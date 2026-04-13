@@ -671,10 +671,35 @@ Clicando no ícone “Analisar este visual” (presente em cada gráfico), o Per
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/d9798f3f-379c-4fc5-a71c-9d6ffa3943b5?autoplay=1
 
+O vídeo aborda estratégias fundamentais para a otimização de performance em relatórios do Power BI, enfatizando que lentidões nem sempre derivam de fórmulas DAX complexas. A instrutora destaca a importância de remover colunas e tabelas desnecessárias ainda na fase de coleta de dados para reduzir o peso do modelo e evitar redundâncias. É essencial realizar uma modelagem de dados eficiente, priorizando cardinalidades adequadas e o tratamento de metadados para garantir a consistência das informações. O uso do Performance Analyzer é sugerido como uma ferramenta técnica para identificar se o gargalo está nos visuais ou no processamento de segundo plano. O conteúdo serve como um guia para enxugar a base de dados e focar apenas no que é essencial para o desempenho do projeto.
 
-##  Materiais de Apoio
+### Anotações
 
-# Certificado: 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-09h37m50s452.jpg" alt="" width="840">
+</p>
 
-- Link na plataforma: 
-- Certificado em pdf:
+Nesta captura de tela do Power BI Desktop, o painel **Performance Analyzer** está aberto à direita, exibindo o tempo de execução (em milissegundos) de cada consulta DAX e visual da página “Overview das metas de Vendas”. O relatório contém vários elementos visuais (gráfico de dispersão, medidor, rosca, mapa e funil) e a ferramenta está registrando o desempenho completo da página, incluindo consultas em segundo plano. Esse recurso é utilizado para identificar se o problema de lentidão está nas medidas DAX, nos visuais ou em outros fatores do modelo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-09h37m58s515.jpg" alt="" width="840">
+</p>
+
+Na visualização **Modelo de Dados** do Power BI Desktop, vemos o esquema estrela completo com as tabelas **District**, **Store**, **Item**, **Sales** e **Time** e as relações entre elas. O painel Campos à direita lista todas as tabelas e colunas disponíveis. Essa visão é fundamental para compreender a estrutura do modelo e identificar possíveis impactos na performance causados por colunas ou tabelas desnecessárias.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-09h38m00s311.jpg" alt="" width="840">
+</p>
+
+Na visualização em tabela da tabela **District**, destacam-se as colunas **DM_Pic** e **DM_Pic_fl**, que armazenam URLs completas de imagens (fotos de pessoas). As propriedades da coluna mostram que **DM_Pic** está configurada como “URL da Imagem”. Essas colunas contêm dados que não são utilizados nos visuais do relatório e representam um exemplo clássico de informação desnecessária que pode ser removida para reduzir o tamanho do modelo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-09h38m07s090.jpg" alt="" width="840">
+</p>
+
+A captura exibe o artigo oficial do Microsoft Learn intitulado **“Técnicas de redução de dados para Modelagem de importação”**. O conteúdo apresenta diretrizes práticas para otimizar modelos de importação no Power BI, incluindo a remoção de colunas e linhas desnecessárias, agrupamento e resumo de dados, e otimização de tipos de dados. Esse material serve como referência complementar para aplicar as melhores práticas de redução de volume de dados e melhorar significativamente o desempenho do relatório.      
+
+# Certificado: Otimização de Modelo de Dados com Foco em Desempenho no Power BI
+
+- Link na plataforma: https://hermes.dio.me/certificates/6JMKE9BD.pdf
+- Certificado em pdf: [Certificado-Otimizacao_de_Modelo_de_Dados_com_Foco_em_Desempenho_no_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Otimizacao_de_Modelo_de_Dados_com_Foco_em_Desempenho_no_Power_BI.pdf)
