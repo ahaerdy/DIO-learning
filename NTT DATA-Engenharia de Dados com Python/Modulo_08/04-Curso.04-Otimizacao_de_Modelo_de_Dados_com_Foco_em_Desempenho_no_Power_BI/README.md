@@ -557,8 +557,28 @@ Este vídeo apresenta as estratégias essenciais para realizar uma análise de d
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-08h06m50s961.jpg" alt="" width="840">
+</p>
 
+Nesta tela a instrutora está demonstrando o **Performance Analyzer** aberto ao lado do relatório “Sales Report”.  
+
+Quando abrimos o relatório pela primeira vez, o Power BI já carrega **cache visual** (imagens e layouts dos visuais) e **cache do mecanismo de dados** (resultados das consultas DAX). Isso faz com que os tempos mostrados no Performance Analyzer sejam **artificialmente baixos**. Para analisar o desempenho real do relatório, precisamos eliminar a influência do cache.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-08h06m56s717.jpg" alt="" width="840">
+</p>
+
+Agora a instrutora abriu a segunda página (“Report de Lucro Detalhado”). O Performance Analyzer continua aberto e mostra novos itens (Página alterada, Formas, Fundo do Título, Imagem, gráficos de profit, etc.).
+
+**Solução prática:**
+
+1. Crie uma **página nova vazia** no relatório.
+2. Salve o arquivo (.pbix).
+3. Feche completamente o Power BI Desktop.
+4. Reabra o arquivo.
+
+Dessa forma o cache visual e de dados é descartado e o Performance Analyzer mostrará os tempos **reais** de carregamento dos visuais. Essa é a técnica padrão para fazer uma análise confiável de performance antes de otimizar o relatório.
 
 ### 🟩 Vídeo 08 - Como avaliar o desempenho do relatório sem a influência do cache?
 
