@@ -417,6 +417,134 @@ A imagem mostra a exportação do **Performance Analyzer** do Power BI com a lis
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/51d5f11a-6fdb-4878-b295-f9f45041d023?autoplay=1
 
+O vídeo explica como o DAX Studio atua como uma ferramenta essencial para analistas que desejam ir além das métricas superficiais do Power BI, permitindo uma investigação profunda da performance de medidas e consultas.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h45m46s213.jpg" alt="" width="840">
+</p>
+
+A tela mostra a página oficial de download do **DAX Studio** (versão 3.0.5).  
+No centro aparece o botão verde para baixar o instalador completo (`DaxStudio_3_0_5_setup.exe`) e, ao lado, a versão portátil (`DaxStudio_3_0_5_portable.zip`).  
+Essa é a primeira etapa prática da aula: instalar a ferramenta que permite analisar e otimizar medidas DAX diretamente no modelo do Power BI.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h47m29s038.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a janela **Connect** do DAX Studio.  
+O instrutor selecionou o modelo `report_sample_mysql` (Power BI / SSDT Model) e clicou em **Connect**.  
+Logo abaixo, no painel **Log**, aparece um erro de sistema operacional:  
+> “An error occurred reading the system locales: Já existe uma entrada com a mesma chave.”  
+
+Esse é um problema comum quando o DAX Studio é instalado apenas para o usuário atual. O vídeo mostra a solução: reinstalar escolhendo a opção **“for all users”**.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h47m33s993.jpg" alt="" width="840">
+</p>
+
+Após a conexão bem-sucedida com o modelo `financial_sample_dax`, o DAX Studio exibe a janela de boas-vindas:  
+**“Start typing your query in this area”**.  
+Ele explica que a forma mais simples de consulta DAX é:
+
+```dax
+EVALUATE <table expression>
+```
+
+O painel esquerdo já mostra todas as tabelas e medidas do modelo carregado. O log confirma: **“Connected”** e **“Establishing Connection”**.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h48m49s433.jpg" alt="" width="840">
+</p>
+
+O navegador abre o tutorial oficial **“Writing DAX Queries”** do site daxstudio.org.  
+Essa página explica a sintaxe básica das consultas DAX e serve como guia para quem está começando a usar o DAX Studio.  
+O instrutor recomenda acessá-la sempre que precisar de exemplos práticos de `EVALUATE`, `DEFINE MEASURE`, ordenação, múltiplas tabelas, etc.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h49m02s829.jpg" alt="" width="840">
+</p>
+
+Tela do repositório GitHub **microsoft/powerbi-desktop-samples** → pasta **DAX**.  
+Contém os arquivos de exemplo oficiais do Adventure Works DW 2020 (`.pbix` e `.bak`).  
+O instrutor indica que esses arquivos são ideais para praticar as consultas mostradas no DAX Studio sem precisar criar um modelo do zero.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h50m28s728.jpg" alt="" width="840">
+</p>
+
+Primeiro exemplo prático de código no DAX Studio:
+
+```dax
+DEFINE
+    MEASURE financials[AVG Price Units Sold] =
+        SUM(financials[Sale Price]) / SUM(financials[Units Sold])
+
+EVALUATE
+    {[AVG Price Units Sold]}
+```
+
+O painel **History** mostra que a consulta foi executada em **73 ms** e retornou 1 linha.  
+Essa é a forma correta de testar uma medida já existente no modelo: primeiro `DEFINE` e depois `EVALUATE`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h50m45s856.jpg" alt="" width="840">
+</p>
+
+Início da definição de uma medida mais complexa (acumulado de vendas):
+
+```dax
+DEFINE
+    MEASURE financials[Total acumulado de Sales em Date] =
+        CALCULATE(
+            SUM(financials[Sales]),
+```
+
+O cursor está posicionado para continuar a cláusula `FILTER`.  
+O instrutor está demonstrando como construir uma medida de running total usando `CALCULATE` + `FILTER` + `ALLSELECTED` + `ISONDATER` / `MAX`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h50m49s587.jpg" alt="" width="840">
+</p>
+
+Continuação da medida de acumulado:
+
+```dax
+DEFINE
+    MEASURE financials[Total acumulado de Sales em Date] =
+        CALCULATE(
+            SUM(financials[Sales]),
+            FILTER(
+                ALLSELECTED(financials[Date]),
+                ISONORAFTER(financials[Date], MAX(financials[Date]), DESC)
+            )
+        )
+```
+
+O código completo aparece no editor. Essa é a expressão típica de **total acumulado até a data selecionada**.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-13-07h51m06s232.jpg" alt="" width="840">
+</p>
+
+Consulta final pronta para execução:
+
+```dax
+DEFINE
+    MEASURE financials[Total acumulado de Sales em Date] = ...
+
+EVALUATE
+    {[Total acumulado de Sales em Date]}
+```
+
+No painel **Log** vemos o resultado:  
+- **Query 1 Completed** → 23 ms  
+- **Query Batch Completed** → 28 ms  
+
+O instrutor compara o tempo de execução com a medida simples anterior (5 ms) para mostrar o impacto da complexidade da DAX na performance.      
+
+
 ### 🟩 Vídeo 07 - Falando sobre cache na avaliação de desempenho dos relatórios
 
 <video width="60%" controls>
@@ -424,7 +552,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizac
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/otimizacao-de-modelo-de-dados-com-foco-em-desempenho-no-power-bi/learning/9abb020c-14a5-4a07-bd51-d693a19843ea?autoplay=1
 
 ### 🟩 Vídeo 08 - Como avaliar o desempenho do relatório sem a influência do cache?
 
