@@ -101,8 +101,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Conhecendo Polimorfismo em Python](Modulo_04/04-Curso%2004-Conhecendo_Polimorfismo_em_Python)
 - [x] Curso: [Interfaces e Classes Abstratas com Python](Modulo_04/05-Curso%2005-Interfaces_e_Classes_Abstratas_com_Python)
 - [x] Projeto: [Modelando o Sistema Bancário em POO com Python](Modulo_04/06-Desafio-Gest%C3%A3o%20e%20Controle%20de%20Transa%C3%A7%C3%B5es%20Banc%C3%A1rias)
-  - Repositório: [DIO-projeto-sistema-bancario-em-poo-com-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python/tree/main#)
-  - Descrição: Projeto em Python que implementa um sistema bancário utilizando Programação Orientada a Objetos (POO), com classes abstratas, herança e encapsulamento. Atividade prática dos vídeos 01 e 02 do curso “Modelando o Sistema Bancário em POO com Python” da plataforma DIO.
+  - **Repositório**: [DIO-projeto-sistema-bancario-em-poo-com-python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python/tree/main#)
+  - **Descrição**: Projeto em Python que implementa um sistema bancário utilizando Programação Orientada a Objetos (POO), com classes abstratas, herança e encapsulamento. Atividade prática dos vídeos 01 e 02 do curso “Modelando o Sistema Bancário em POO com Python” da plataforma DIO.
 - [x] Projeto: [Criando um Pacote de Processamento de Imagens com Python](Modulo_04/07-Criando_um_Pacote_de_Processamento_de_Imagens_com_Python)
   - **Repositório**: [processamento-imagens-ahaerdy](https://github.com/ahaerdy/processamento-imagens-ahaerdy)
   - **Descrição**: Projeto de um pacote Python para processamento de imagens, implementando funções para aplicar filtros (preto e branco) e transformações (redimensionamento), utilizando a biblioteca Pillow. O pacote foi desenvolvido com setuptools para publicação no Test PyPI e no PyPI, incluindo scripts de teste para validação das funcionalidades implementadas.
@@ -128,7 +128,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
   - Repositório: [DIO-powerbi-financial-analysis](https://github.com/ahaerdy/DIO-powerbi-financial-analysis)
   - Descrição: Este projeto consiste na criação de um ecossistema de dados no Power BI utilizando o dataset Financial Sample. O foco foi unir Design de Interface (UI) com Inteligência de Negócios (BI), criando um relatório onde a navegabilidade orienta a descoberta de insights estratégicos.
 - [x] Curso: [Materiais complementares - Visualização de Dados e Relatórios com Power BI](Modulo_06/05-Curso.05-Materiais_complementares-Visualizacao_de_Dados_e_Relatorios_com_Power_BI)
-- [x] Desafio: [Dominando Filtragem e Extração de Dados com Python](Modulo_06/06-Desafio-Dominando_Filtragem_e_Extracao_de_Dados_com_Python)
+- [x] Projeto: [Dominando Filtragem e Extração de Dados com Python](Modulo_06/06-Desafio-Dominando_Filtragem_e_Extracao_de_Dados_com_Python)
   - **Repositório**: [azure-company-dashboard](https://github.com/ahaerdy/azure-company-dashboard)
   - **Descrição**: Pipeline completo de engenharia de dados para a empresa fictícia Azure Company. Foi realizada a modelagem relacional completa em MySQL 8.0 (com todas as tabelas, constraints, chaves estrangeiras e relacionamentos N:N), construção de camada analítica com 4 views OLAP, exportação via CSV e importação no Power BI. No Power Query foram executadas todas as transformações exigidas pelo desafio (mesclagem de nome completo, separação de endereço, tratamento manual de dados inconsistentes, junções com department e auto-join para hierarquia, criação das tabelas dimensionais `department_locations` e `employee_por_gerente`, correção de decimais na coluna Hours, entre outras). Por fim, foi configurado o modelo dimensional Star Schema com 5 relacionamentos ativos, otimizado para análises. Projeto documentado no repositório GitHub com detalhamentos por etapa na pasta `docs/`.
 
