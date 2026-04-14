@@ -3,7 +3,7 @@
 - Juliana Mascarenhas (Tech Education Specialist / Sócia (Content Creator) @SimplificandoRedes / Me Modelagem Computacional / Cientista de dados)
 - Contato Linkedin: / [juliana-mascarenhas-ds](https://www.linkedin.com/in/juliana-mascarenhas-ds/)
 
-## Vídeo 01 - Criando um Star Schema para Cenários de Vendas com Power BI
+## 🟩 Vídeo 01 - Criando um Star Schema para Cenários de Vendas com Power BI
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.05-video_01.webm" type="video/webm">
@@ -64,7 +64,7 @@ As linhas de relacionamento mostram claramente as chaves estrangeiras que ligam 
 
 Este é o esquema relacional de origem que servirá de base para o desafio: transformar o modelo transacional em um **star schema** (esquema em estrela). Com o foco definido em Professor, será possível identificar as dimensões relevantes (Professor, Departamento, Curso, Disciplina) e construir uma tabela de fatos central contendo as medidas de negócio (quantidade de disciplinas ministradas, horas-aula, etc.), eliminando tabelas auxiliares como Aluno e as tabelas associativas puramente operacionais para simplificar as análises dimensionais.      
 
-#### **STAR SCHEMA (preliminar)** 
+#### 🟩 **STAR SCHEMA (preliminar)** 
 
 ```mermaid
 erDiagram
