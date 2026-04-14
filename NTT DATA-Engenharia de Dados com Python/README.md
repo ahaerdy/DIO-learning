@@ -128,13 +128,13 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
   - **Repositório**: [DIO-powerbi-financial-analysis](https://github.com/ahaerdy/DIO-powerbi-financial-analysis)
   - **Descrição**: Este projeto consiste na criação de um ecossistema de dados no Power BI utilizando o dataset Financial Sample. O foco foi unir Design de Interface (UI) com Inteligência de Negócios (BI), criando um relatório onde a navegabilidade orienta a descoberta de insights estratégicos.
 - [x] Curso: [Materiais complementares - Visualização de Dados e Relatórios com Power BI](Modulo_06/05-Curso.05-Materiais_complementares-Visualizacao_de_Dados_e_Relatorios_com_Power_BI)
-- [x] Projeto: [Dominando Filtragem e Extração de Dados com Python](Modulo_06/06-Desafio-Dominando_Filtragem_e_Extracao_de_Dados_com_Python)
+- [x] Desafio: [Dominando Filtragem e Extração de Dados com Python](Modulo_06/06-Desafio-Dominando_Filtragem_e_Extracao_de_Dados_com_Python)
   
 ### Módulo 7: Processamento de Dados com Power BI  
 
 - [x] Curso: [Coleta e Extração de Dados com Power BI](Modulo_07/01-Curso.01-Coleta_e_Extracao_de_Dados_com_Power_BI)
 - [x] Curso: [Limpeza e Transformação de Dados com Power BI](Modulo_07/02-Curso.02-Limpeza_e_Transformacao_de_Dados_com_Power_BI)
-- [x] Desafio: [Criando um Dashboard corporativo com integração com MySQL e Azure](Modulo_07/03-Curso.03-Criando_um_Dashboard_corporativo_com_integracao_com_MySQL_e_Azure)
+- [x] Projeto: [Criando um Dashboard corporativo com integração com MySQL e Azure](Modulo_07/03-Curso.03-Criando_um_Dashboard_corporativo_com_integracao_com_MySQL_e_Azure)
   - **Repositório**: [azure-company-dashboard](https://github.com/ahaerdy/azure-company-dashboard)
   - **Descrição**: Pipeline completo de engenharia de dados para a empresa fictícia Azure Company. Foi realizada a modelagem relacional completa em MySQL 8.0 (com todas as tabelas, constraints, chaves estrangeiras e relacionamentos N:N), construção de camada analítica com 4 views OLAP, exportação via CSV e importação no Power BI. No Power Query foram executadas todas as transformações exigidas pelo desafio (mesclagem de nome completo, separação de endereço, tratamento manual de dados inconsistentes, junções com department e auto-join para hierarquia, criação das tabelas dimensionais `department_locations` e `employee_por_gerente`, correção de decimais na coluna Hours, entre outras). Por fim, foi configurado o modelo dimensional Star Schema com 5 relacionamentos ativos, otimizado para análises. Projeto documentado no repositório GitHub com detalhamentos por etapa na pasta `docs/`.
 
