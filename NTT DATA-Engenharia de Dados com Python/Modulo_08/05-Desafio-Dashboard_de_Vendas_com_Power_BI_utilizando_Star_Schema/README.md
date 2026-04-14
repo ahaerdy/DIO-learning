@@ -64,6 +64,47 @@ As linhas de relacionamento mostram claramente as chaves estrangeiras que ligam 
 
 Este é o esquema relacional de origem que servirá de base para o desafio: transformar o modelo transacional em um **star schema** (esquema em estrela). Com o foco definido em Professor, será possível identificar as dimensões relevantes (Professor, Departamento, Curso, Disciplina) e construir uma tabela de fatos central contendo as medidas de negócio (quantidade de disciplinas ministradas, horas-aula, etc.), eliminando tabelas auxiliares como Aluno e as tabelas associativas puramente operacionais para simplificar as análises dimensionais.      
 
+```mermaid
+erDiagram
+    DIM_PROFESSOR ||--o{ FATO_ENSINO : "FK_idProfessor"
+    DIM_DEPARTAMENTO ||--o{ FATO_ENSINO : "FK_idDepartamento"
+    DIM_CURSO ||--o{ FATO_ENSINO : "FK_idCurso"
+    DIM_DISCIPLINA ||--o{ FATO_ENSINO : "FK_idDisciplina"
+
+    DIM_PROFESSOR {
+        int idProfessor PK
+    }
+
+    DIM_DEPARTAMENTO {
+        int idDepartamento PK
+        varchar Nome
+        varchar Campus
+    }
+
+    DIM_CURSO {
+        int idCurso PK
+    }
+
+    DIM_DISCIPLINA {
+        int idDisciplina PK
+    }
+
+    FATO_ENSINO {
+        int idFato PK
+        int idProfessor FK
+        int idDepartamento FK
+        int idCurso FK
+        int idDisciplina FK
+        int carga_horaria "medida - quantidade de horas"
+    }
+```
+**Star Schema preliminar** (foco em Professor, conforme o desafio)
+
+- **Tabela Fato central**: `FATO_ENSINO` – contém as medidas de negócio (ex.: carga horária) e as chaves estrangeiras para as dimensões.
+- **Dimensões**: `DIM_PROFESSOR`, `DIM_DEPARTAMENTO`, `DIM_CURSO` e `DIM_DISCIPLINA`.
+- Tabelas `ALUNO`, `MATRICULADO`, `PRÉ-REQUISITOS` e `DISCIPLINA_&amp;_CURSO` foram eliminadas para simplificar a análise dimensional, mantendo apenas o necessário para responder às perguntas sobre professores, departamentos, cursos ministrados e quantidade de horas.
+
+
 ## 🟩 Descrição do desafio de modelagem dimensional
 
 ### Objetivo: Criar o diagrama dimensional – star schema – com base no diagrama relacional disponibilizado.
