@@ -103,8 +103,8 @@ erDiagram
 
 Descrição:
 
-- **Tabela Fato central**: `FATO_ENSINO` – contém as medidas de negócio (ex.: carga horária) e as chaves estrangeiras para as dimensões.
-- **Dimensões**: `DIM_PROFESSOR`, `DIM_DEPARTAMENTO`, `DIM_CURSO` e `DIM_DISCIPLINA`.
+- **Tabela Fato central (prefixo FATO_)**: `FATO_ENSINO` – contém as medidas de negócio (ex.: carga horária) e as chaves estrangeiras para as dimensões.
+- **Dimensões (prefixo DIM_)**: `DIM_PROFESSOR`, `DIM_DEPARTAMENTO`, `DIM_CURSO` e `DIM_DISCIPLINA`. São as tabelas que guardam os atributos descritivos (quem, o quê, quando, onde, como).
 - Tabelas `ALUNO`, `MATRICULADO`, `PRÉ-REQUISITOS` e `DISCIPLINA_&amp;_CURSO` foram eliminadas para simplificar a análise dimensional, mantendo apenas o necessário para responder às perguntas sobre professores, departamentos, cursos ministrados e quantidade de horas.
 
 
