@@ -8,7 +8,7 @@
 ### 🟩 Vídeo 01 - O que é otimização no Power BI?
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_01.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -131,7 +131,7 @@ Os três fatores que determinam qual modalidade escolher são: **acesso aos dado
 ### 🟩 Vídeo 02 - Exemplificando um cenário com problemas e otimização
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_02.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_02.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -187,7 +187,7 @@ Esses três pontos definem a metodologia de diagnóstico que será aprofundada n
 ### 🟩 Vídeo 03 - Quando ocorrem os problemas de otimização?
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_03.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_03.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -288,7 +288,7 @@ A professora recorre a essa página para demonstrar que as técnicas apresentada
 ### 🟩 Vídeo 04 - Primeiro contato com Performance Analyzer
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_04.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -387,7 +387,7 @@ Esse formato JSON permite análises programáticas externas, exportação para f
 ### 🟩 Vídeo 05 - Explorando e Analisando os dados de análise de performance exportada
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_05.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_05.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -411,7 +411,7 @@ A imagem mostra a exportação do **Performance Analyzer** do Power BI com a lis
 ### 🟩 Vídeo 06 - Instalando e utilizando o DAX Studio na avaliação das medidas DAX
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_06.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -547,7 +547,7 @@ O instrutor compara o tempo de execução com a medida simples anterior (5 ms) p
 ### 🟩 Vídeo 07 - Falando sobre cache na avaliação de desempenho dos relatórios
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_07.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_07.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -583,7 +583,7 @@ Dessa forma o cache visual e de dados é descartado e o Performance Analyzer mos
 ### 🟩 Vídeo 08 - Como avaliar o desempenho do relatório sem a influência do cache?
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_08.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_08.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -614,7 +614,7 @@ Essa comparação prática reforça por que otimizar o desempenho do relatório 
 ### 🟩 Vídeo 09 - Verificando desempenho com relação a atualização dos dados
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_09.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -665,7 +665,7 @@ Clicando no ícone “Analisar este visual” (presente em cada gráfico), o Per
 ### 🟩 Vídeo 10 - Considerações finais sobre otimização de relatórios
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.03-video_10.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.08-curso.04-video_10.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
