@@ -12,6 +12,57 @@
 
 link do vídeo: https://web.dio.me/lab/criando-um-star-schema-para-cenarios-de-vendas-com-power-bi/learning/c97e6b8e-f5d4-46bc-adea-0b9c67fb8b3c?back=/track/engenharia-dados-python
 
+O desafio foca na prática de modelagem dimensional, transformando um esquema de banco de dados relacional (transacional) em um esquema em estrela (Star Schema), otimizado para análise de dados.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-14-12h06m18s277.jpg" alt="" width="840">
+</p>
+
+O diagrama EER exibido no MySQL Workbench apresenta o modelo relacional completo da universidade. Nele estão representadas todas as entidades e os relacionamentos necessários para o banco de dados transacional, incluindo as tabelas associativas geradas a partir de relacionamentos muitos-para-muitos.
+
+As entidades e seus principais atributos são:
+
+- **Professor**  
+  `idProfessor` (INT)  
+  `Departamento_idDepartamento` (INT)
+
+- **Departamento**  
+  `idDepartamento` (INT)  
+  `Nome` (VARCHAR(45))  
+  `Campus` (VARCHAR(45))  
+  `idProfessor_coordenador` (INT)
+
+- **Curso**  
+  `idCurso` (INT)  
+  `Departamento_idDepartamento` (INT)
+
+- **Disciplina**  
+  `idDisciplina` (INT)  
+  `Professor_idProfessor` (INT)
+
+- **Aluno**  
+  `idAluno` (INT)
+
+- **Matriculado** (tabela associativa)  
+  `Aluno_idAluno` (INT)  
+  `Disciplina_idDisciplina` (INT)
+
+- **Disciplina & Curso** (tabela associativa)  
+  `Disciplina_idDisciplina` (INT)  
+  `Curso_idCurso` (INT)
+
+- **Pré-requisitos das disciplinas** (tabela associativa)  
+  `Disciplina_idDisciplina` (INT)  
+  `Pré-requisitos_idPré-requisitos` (INT)
+
+- **Pré-requisitos**  
+  `idPré-requisitos` (INT)
+
+As linhas de relacionamento mostram claramente as chaves estrangeiras que ligam as tabelas (por exemplo, Professor → Departamento, Disciplina → Professor, Curso → Departamento, etc.).
+
+Este é o esquema relacional de origem que servirá de base para o desafio: transformar o modelo transacional em um **star schema** (esquema em estrela). Com o foco definido em Professor, será possível identificar as dimensões relevantes (Professor, Departamento, Curso, Disciplina) e construir uma tabela de fatos central contendo as medidas de negócio (quantidade de disciplinas ministradas, horas-aula, etc.), eliminando tabelas auxiliares como Aluno e as tabelas associativas puramente operacionais para simplificar as análises dimensionais.      
 
 ## 🟩 Descrição do desafio de modelagem dimensional
 
