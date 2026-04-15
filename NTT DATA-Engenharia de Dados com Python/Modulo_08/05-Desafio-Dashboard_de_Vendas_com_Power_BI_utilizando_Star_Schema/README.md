@@ -138,3 +138,57 @@ Ex: data de oferta das disciplinas, data de oferta dos cursos, entre outros. O f
 
 - Link na plataforma: 
 - Certificado em pdf: 
+
+---
+
+```mermaid
+erDiagram
+    Professor { 
+        int idProfessor PK
+        int Departamento_idDepartamento FK
+    }
+    Departamento { 
+        int idDepartamento PK
+        varchar(45) Nome
+        varchar(45) Campus
+        int idProfessor_coordenador FK
+    }
+    Disciplina { 
+        int idDisciplina PK
+        int Professor_idProfessor FK
+    }
+    Aluno { 
+        int idAluno PK
+    }
+    Matriculado { 
+        int Aluno_idAluno PK,FK
+        int Disciplina_idDisciplina PK,FK
+    }
+    Curso { 
+        int idCurso PK
+        int Departamento_idDepartamento FK
+    }
+    Disciplina_Curso { 
+        int Disciplina_idDisciplina PK,FK
+        int Curso_idCurso PK,FK
+    }
+    Pre_requisitos_disciplinas { 
+        int Disciplina_idDisciplina PK,FK
+        int Pre_requisitos_idPre_requisitos PK,FK
+    }
+    Pre_requisitos { 
+        int idPre_requisitos PK
+    }
+
+    Professor ||--o{ Departamento : "coordena (idProfessor_coordenador)"
+    Departamento ||--o{ Professor : "possui (Departamento_idDepartamento)"
+    Professor ||--o{ Disciplina : "ministra (Professor_idProfessor)"
+    Departamento ||--o{ Curso : "oferece (Departamento_idDepartamento)"
+    Aluno ||--o{ Matriculado : "matricula"
+    Disciplina ||--o{ Matriculado : "tem"
+    Disciplina ||--o{ Disciplina_Curso : "associada a"
+    Curso ||--o{ Disciplina_Curso : "associado a"
+    Disciplina ||--o{ Pre_requisitos_disciplinas : "tem pre-requisito"
+    Pre_requisitos ||--o{ Pre_requisitos_disciplinas : "eh pre-requisito de"
+```
+
