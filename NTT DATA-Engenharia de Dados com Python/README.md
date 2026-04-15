@@ -145,7 +145,9 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Modelagem de Dados no Power BI](Modulo_08/02-Curso.02-Modelagem_de_Dados_no_Power_BI)
 - [x] Curso: [Primeiros passos com DAX e Cálculos com Power BI](Modulo_08/03-Curso.03-Primeiros_passos_com_DAX_e_Calculos_com_Power_BI)
 - [x] Curso: [Otimização de Modelo de Dados com Foco em Desempenho no Power BI](Modulo_08/04-Curso.04-Otimizacao_de_Modelo_de_Dados_com_Foco_em_Desempenho_no_Power_BI)
-- [x] Desafio: [Dashboard de Vendas com Power BI utilizando Star Schema](Modulo_08/05-Desafio-Dashboard_de_Vendas_com_Power_BI_utilizando_Star_Schema)
+- [x] Projeto: [Dashboard de Vendas com Power BI utilizando Star Schema](Modulo_08/05-Desafio-Dashboard_de_Vendas_com_Power_BI_utilizando_Star_Schema)
+  - **Repositório**: [dio-powerbi-star-schema-universidade](https://github.com/ahaerdy/dio-powerbi-star-schema-universidade)
+  - **Descrição**: O projeto demonstra a construção de um **Star Schema** a partir de um modelo relacional transacional, focado na análise de dados universitários. Através de um processo de ETL (Extract, Transform, Load) detalhado, as tabelas originais foram convertidas em **Tabelas de Dimensão** (prefixo `Dim_`) e uma **Tabela Fato** (`Fato_Professor`), otimizando a estrutura para consultas analíticas. A metodologia empregada enfatiza o uso estratégico de chaves primárias e estrangeiras numéricas para garantir alta performance em operações de *join* e eficiência de armazenamento, resultando em um modelo robusto capaz de fornecer *insights* granulares sobre a carga acadêmica de professores e o desempenho de disciplinas, essencial para tomadas de decisão baseadas em dados.
 - [ ] Desafio: Modelando um Dashboard de E-commerce com Power BI Utilizando Fórmulas DAX
 
 ### Módulo 9: Data Analytics & Storytelling com Power BI  

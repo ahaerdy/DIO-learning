@@ -145,8 +145,8 @@ Ex: data de oferta das disciplinas, data de oferta dos cursos, entre outros. O f
 
 # Certificado: Dashboard de Vendas com Power BI utilizando Star Schema
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/WDI18SJJ.pdf
+- Certificado em pdf: [Certificado-Dashboard_de_Vendas_com_Power_BI_utilizando_Star_Schema.pdf](000-Midia_e_Anexos/Certificado-Dashboard_de_Vendas_com_Power_BI_utilizando_Star_Schema.pdf)
 
 
 
