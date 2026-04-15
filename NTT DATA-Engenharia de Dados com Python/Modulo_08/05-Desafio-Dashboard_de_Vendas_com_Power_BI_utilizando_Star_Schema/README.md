@@ -68,81 +68,6 @@ Este é o esquema relacional de origem que servirá de base para o desafio: tran
 
 ```mermaid
 erDiagram
-    DIM_PROFESSOR ||--o{ FATO_ENSINO : "FK_idProfessor"
-    DIM_DEPARTAMENTO ||--o{ FATO_ENSINO : "FK_idDepartamento"
-    DIM_CURSO ||--o{ FATO_ENSINO : "FK_idCurso"
-    DIM_DISCIPLINA ||--o{ FATO_ENSINO : "FK_idDisciplina"
-
-    DIM_PROFESSOR {
-        int idProfessor PK
-    }
-
-    DIM_DEPARTAMENTO {
-        int idDepartamento PK
-        varchar Nome
-        varchar Campus
-    }
-
-    DIM_CURSO {
-        int idCurso PK
-    }
-
-    DIM_DISCIPLINA {
-        int idDisciplina PK
-    }
-
-    FATO_ENSINO {
-        int idFato PK
-        int idProfessor FK
-        int idDepartamento FK
-        int idCurso FK
-        int idDisciplina FK
-        int carga_horaria "medida - quantidade de horas"
-    }
-```
-
-Descrição:
-
-- **Tabela Fato central (prefixo FATO_)**: `FATO_ENSINO` – contém as medidas de negócio (ex.: carga horária) e as chaves estrangeiras para as dimensões.
-- **Dimensões (prefixo DIM_)**: `DIM_PROFESSOR`, `DIM_DEPARTAMENTO`, `DIM_CURSO` e `DIM_DISCIPLINA`. São as tabelas que guardam os atributos descritivos (quem, o quê, quando, onde, como).
-- Tabelas `ALUNO`, `MATRICULADO`, `PRÉ-REQUISITOS` e `DISCIPLINA_&amp;_CURSO` foram eliminadas para simplificar a análise dimensional, mantendo apenas o necessário para responder às perguntas sobre professores, departamentos, cursos ministrados e quantidade de horas.
-
-
-## 🟩 Descrição do desafio de modelagem dimensional
-
-### Objetivo
-
-Criar o diagrama dimensional – star schema – com base no diagrama relacional disponibilizado.
-
-### Foco: Professor (objeto de análise)
-
-Vocês irão montar o esquema em estrela com o foco na análise dos dados dos professores. Sendo assim, a tabela fato deve refletir diversos dados sobre professor, cursos ministrados, departamento ao qual faz parte.... Por aí vocês já têm uma ideia do que deve compor a tabela fato do modelo em questão. 
-
-Obs.: Não é necessário refletir dados sobre os alunos!
-
-### O que deve ser feito?
-
-Deverá ser criada a tabela Fato que contêm o contexto analisado. Da mesma forma, é necessária a criação das tabelas dimensão que serão compostas pelos detalhes relacionados ao contexto.
-
-Por fim, mas não menos importante, adicione uma tabela dimensão de datas. Para compensar a falta de dados de datas do modelo relacional, suponha que você tem acesso aos dados e crie os campos necessários para modelagem. 
-
-Ex: data de oferta das disciplinas, data de oferta dos cursos, entre outros. O formato, ou melhor, a granularidade, não está fixada. Podem ser utilizados diferentes formatos que correspondem a diferentes níveis de granularidade.
-
-### Imagem de referência
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/2026-04-14-11-59-39.png" alt="" width="1024">
-</p>
-
-# Certificado: Dashboard de Vendas com Power BI utilizando Star Schema
-
-- Link na plataforma: 
-- Certificado em pdf: 
-
----
-
-```mermaid
-erDiagram
     Professor { 
         int idProfessor PK
         int Departamento_idDepartamento FK
@@ -191,4 +116,38 @@ erDiagram
     Disciplina ||--o{ Pre_requisitos_disciplinas : "tem pre-requisito"
     Pre_requisitos ||--o{ Pre_requisitos_disciplinas : "eh pre-requisito de"
 ```
+
+## 🟩 Descrição do desafio de modelagem dimensional
+
+### Objetivo
+
+Criar o diagrama dimensional – star schema – com base no diagrama relacional disponibilizado.
+
+### Foco: Professor (objeto de análise)
+
+Vocês irão montar o esquema em estrela com o foco na análise dos dados dos professores. Sendo assim, a tabela fato deve refletir diversos dados sobre professor, cursos ministrados, departamento ao qual faz parte.... Por aí vocês já têm uma ideia do que deve compor a tabela fato do modelo em questão. 
+
+Obs.: Não é necessário refletir dados sobre os alunos!
+
+### O que deve ser feito?
+
+Deverá ser criada a tabela Fato que contêm o contexto analisado. Da mesma forma, é necessária a criação das tabelas dimensão que serão compostas pelos detalhes relacionados ao contexto.
+
+Por fim, mas não menos importante, adicione uma tabela dimensão de datas. Para compensar a falta de dados de datas do modelo relacional, suponha que você tem acesso aos dados e crie os campos necessários para modelagem. 
+
+Ex: data de oferta das disciplinas, data de oferta dos cursos, entre outros. O formato, ou melhor, a granularidade, não está fixada. Podem ser utilizados diferentes formatos que correspondem a diferentes níveis de granularidade.
+
+### Imagem de referência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-04-14-11-59-39.png" alt="" width="1024">
+</p>
+
+# Certificado: Dashboard de Vendas com Power BI utilizando Star Schema
+
+- Link na plataforma: 
+- Certificado em pdf: 
+
+
+
 
