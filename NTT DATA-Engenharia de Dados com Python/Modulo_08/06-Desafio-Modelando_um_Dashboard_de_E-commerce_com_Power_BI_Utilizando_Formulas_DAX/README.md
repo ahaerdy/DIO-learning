@@ -27,26 +27,26 @@ O processo consiste na criação das tabelas com base na tabela original. A part
 - F_Vendas (SK_ID , ID_Produto, Produto, Units Sold, Sales Price, Discount  Band, Segment, Country, Salers, Profit, Date (campos))
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-04-16-11-11-50.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-04-16-11-11-50.png" alt="" width="360">
 </p>
 
 *Verifique as informações que não foram contempladas nas demais tabelas dimensão que fornecem maiores detalhes sobre vendas.
 Exemplo de tabela criada por agrupamento das informações:
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-04-16-11-12-25.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-04-16-11-12-25.png" alt="" width="1024">
 </p>
 
 Exemplo de coluna sendo construída a partir de condicional – Índice de Produtos:
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-04-16-11-13-55.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-04-16-11-13-55.png" alt="" width="1024">
 </p>
 
 Reorganize as colunas:
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-04-16-11-14-21.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-04-16-11-14-21.png" alt="" width="1024">
 </p>
 
 Não se esqueça de salvar seu projeto para submeter ao Github. O link do seu repositório é utilizado na submissão do seu desafio de projeto. 
