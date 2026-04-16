@@ -53,10 +53,10 @@ Não se esqueça de salvar seu projeto para submeter ao Github. O link do seu re
 
 Você pode utilizar os seguintes pontos como base:
 
-• Salve o projeto .pbix
-• Salve uma imagem do seu esquema em estrela
-• Escreva no readme o processo de construção do seu diagrama
-• Fale sobre as etapas as funcionalidades e funções DAX utilizadas neste projeto
+- Salve o projeto .pbix
+- Salve uma imagem do seu esquema em estrela
+- Escreva no readme o processo de construção do seu diagrama
+- Fale sobre as etapas as funcionalidades e funções DAX utilizadas neste projeto
 
 Utilize o repositório do Github como uma descrição do seu projeto para auxiliar outras pessoas e ser visto pelos recrutadores.
 
