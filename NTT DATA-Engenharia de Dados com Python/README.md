@@ -148,7 +148,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Projeto: [Dashboard de Vendas com Power BI utilizando Star Schema](Modulo_08/05-Desafio-Dashboard_de_Vendas_com_Power_BI_utilizando_Star_Schema)
   - **Repositório**: [dio-powerbi-star-schema-universidade](https://github.com/ahaerdy/dio-powerbi-star-schema-universidade)
   - **Descrição**: o projeto demonstra a construção de um **Star Schema** a partir de um modelo relacional transacional, focado na análise de dados universitários. Através de um processo de ETL (Extract, Transform, Load) detalhado, as tabelas originais foram convertidas em **Tabelas de Dimensão** (prefixo `Dim_`) e uma **Tabela Fato** (`Fato_Professor`), otimizando a estrutura para consultas analíticas.
-  > 📌 **Nota sobre o escopo:**  embora o título oficial do projeto seja *"Dashboard de Vendas com Power BI utilizando Star Schema"*, os requisitos e o banco de dados fornecidos tratam da análise de indicadores de professores e disciplinas em um ambiente universitário (desafio de um outro Bootcamp utilizado aqui para o mesmo contexto de implementação).
+  > 📌 **Nota sobre o escopo:**  embora o título oficial do projeto seja *"Dashboard de Vendas com Power BI utilizando Star Schema"*, os requisitos e o banco de dados fornecidos tratam da análise de indicadores de professores e disciplinas em um ambiente universitário (desafio de um outro Bootcamp utilizado neste no mesmo contexto de implementação).
 - [x] Desafio: [Modelando um Dashboard de E-commerce com Power BI Utilizando Fórmulas DAX](Modulo_08/06-Desafio-Modelando_um_Dashboard_de_E-commerce_com_Power_BI_Utilizando_Formulas_DAX)
 
 ### Módulo 9: Data Analytics & Storytelling com Power BI  
