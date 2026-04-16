@@ -12,6 +12,7 @@
 
 link do vídeo: https://web.dio.me/project/modelagem-e-transformacao-de-dados-com-dax-com-power-bi/learning/b1c8ea6c-0b78-4d47-a873-9d911d79660b?back=/track/engenharia-dados-python&tab=undefined&moduleId=undefined
 
+O objetivo central desta aula é transformar uma tabela plana (flat table) única — a famosa **"Sample Financials"** — em um modelo de dados relacional otimizado do tipo **Star Schema** (Esquema Estrela). A instrutora guia o processo de decomposição da tabela original em tabelas de dimensão e uma tabela fato, utilizando o Power Query para transformações avançadas.
 
 ## Descrição do Desafio de Projeto
 
