@@ -262,6 +262,27 @@ Textos explicativos, gráficos e recursos visuais claros ajudam o grande públic
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/244f5921-d7db-4a14-86d9-982a0bd94b73?autoplay=1
 
+O vídeo explora como definir requisitos de interface para criar relatórios que não sejam apenas visualmente atraentes, mas funcionais, acessíveis e focados na clareza da informação.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-13h07m36s045.jpg" alt="" width="840">
+</p>
+
+No slide “Acessibilidade”, são apresentadas as diretrizes práticas para garantir que relatórios possam ser utilizados por pessoas com pouca ou nenhuma visão. As recomendações visam o uso de fontes claras e grandes, visuais bem espaçados e dimensionados corretamente, cores com contraste suficiente e uma navegação intuitiva, compatível com leitores de tela e teclados. Essas medidas transformam o relatório em uma ferramenta inclusiva, permitindo que o conteúdo seja compreendido independentemente das limitações visuais do usuário.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-13h08m21s957.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra um exemplo real de dashboard de vendas da Contoso Skateboard Store, exibido simultaneamente em um notebook (formato paisagem) e em um smartphone (formato retrato). No notebook, é possível visualizar múltiplos indicadores de desempenho, gráfico de evolução de vendas, barras de vendas por produto e um mapa geográfico. No dispositivo móvel, a interface é simplificada, priorizando os principais KPIs e um gráfico de série temporal mais compacto. O layout demonstra como o design deve se adaptar ao hardware e ao tamanho da tela, mantendo clareza e legibilidade em qualquer contexto de consumo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-13h08m24s780.jpg" alt="" width="840">
+</p>
+
+O slide “Requisitos Necessários” lista os elementos mínimos que todo tema de relatório deve conter. São eles: a marca ou logotipo da organização, uma paleta de cores que se alinhe ou complemente a identidade visual corporativa e as configurações padronizadas de texto (seleção de fonte, tamanhos e cores). Esses itens garantem consistência visual, reforçam a identidade da empresa e facilitam a interpretação rápida dos dados pelo usuário.      
 
 
 ### 🟩 Vídeo 07 - Fluxo de exploração em relatórios Analíticos
@@ -271,7 +292,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatori
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/f5d3d63c-d2a5-4be2-97a8-ca06836ff11d?autoplay=1
 
 ### 🟩 Vídeo 08 - Estrutura e boas práticas em relatórios
 
