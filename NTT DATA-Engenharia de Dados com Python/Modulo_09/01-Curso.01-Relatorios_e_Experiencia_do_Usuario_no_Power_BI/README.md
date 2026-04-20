@@ -372,6 +372,19 @@ O dashboard final demonstra a integração de todos os princípios de posicionam
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/736f549d-e2a1-4711-adcd-84abeaf4c8cf?autoplay=1
 
+Este conteúdo apresenta uma aula prática sobre a otimização de visualizações de dados, destacando que gráficos de pizza devem ser evitados quando há muitos elementos. O instrutor demonstra como utilizar gráficos de barras e colunas para criar relatórios mais legíveis, ajustando o espaçamento interno e as cores para facilitar a interpretação. 
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-14h26m05s568.jpg" alt="" width="840">
+</p>
+
+Nesta tela do Power BI Desktop (aba **Página 3**), observamos um exemplo prático de análise da métrica **Soma de Units Sold por Product** (quantidade total de unidades vendidas por produto).  
+
+À esquerda superior, um **gráfico de rosca (donut chart)** exibe a distribuição proporcional entre os produtos, com legendas coloridas à direita. Logo abaixo, um **gráfico de barras** compara diretamente os valores de vendas por produto (VTT, Neon, Passeio, etc.), tornando muito mais fácil identificar visualmente quais itens têm maior ou menor volume. À direita, um **gráfico de colunas agrupadas** reforça essa comparação, com rótulos de dados exibindo os valores exatos (ex.: 0,17 mi, 0,32 mi).  
+
+A instrutorA explica que, além dos gráficos padrão, é possível utilizar visuais personalizados obtidos na loja de visuais. Ele alerta que esses visuais externos não possuem o selo oficial da Microsoft, sendo necessário verificar se a organização permite o uso. A imagem ilustra justamente esse momento de escolha de campos como Units Sold por produto, preparando o terreno para comparar diferentes formas de visualização.     
 
 
 ### 🟩 Vídeo 10 - Explorando bons e maus exemplos de gráficos – parte 2
@@ -381,7 +394,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatori
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/1f2eec42-abbd-4456-a946-27739ba9deef?autoplay=1
+
+
 
 ### 🟩 Vídeo 11 - Explorando bons e maus exemplos de gráficos – parte 3
 
