@@ -105,8 +105,24 @@ A seção de UX mapeia perfis (Executive; Analyst; Analytical; Information worke
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/3296d0bc-805f-4a09-af25-d6ade544b6c5?autoplay=1
 
+O vídeo destaca a importância de alinhar o design e o tipo de relatório ao público-alvo específico. A escolha correta do formato garante que as necessidades dos usuários sejam atendidas com assertividade, seja para uma visão executiva rápida ou para uma análise operacional detalhada.
 
+### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-08h51m03s654.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, o foco está na relação entre **público-alvo** e os **tipos de relatório** que podem ser utilizados.  
+O ponto central é que cada perfil de usuário demanda uma abordagem distinta:
+
+- **Executivos** → utilizam **dashboards**, pois precisam de uma visão consolidada e rápida para tomada de decisão.  
+- **Analistas** → trabalham com relatórios **analíticos**, que permitem explorar dados em maior profundidade.  
+- **Profissionais operacionais** → dependem de relatórios **operacionais**, voltados para o acompanhamento de processos e execução de tarefas.  
+- **Usuários gerais ou educacionais** → recebem relatórios de **formação educacional**, que apresentam informações de forma mais acessível, sem exigir conhecimento prévio do contexto dos dados.
+
+A ideia é que o design do relatório seja sempre mapeado às necessidades do público, garantindo uma experiência de usuário (UX) adequada e assertiva.
+      
 ### 🟩 Vídeo 04 - Destrinchando os tipos de relatórios
 
 <video width="60%" controls>
@@ -114,7 +130,10 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatori
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/791d9a43-1a29-4399-9908-e7d7b9a9e18c?autoplay=1https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/791d9a43-1a29-4399-9908-e7d7b9a9e18c?autoplay=1
+
+
+
 
 ### 🟩 Vídeo 05 - O que são relatórios Operacionais e educacionais?
 
