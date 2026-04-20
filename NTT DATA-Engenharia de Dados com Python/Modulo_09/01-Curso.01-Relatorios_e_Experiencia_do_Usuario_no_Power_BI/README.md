@@ -362,7 +362,6 @@ Aqui vemos a aplicação prática da **proporção áurea** (ou regra de ouro) s
 
 O dashboard final demonstra a integração de todos os princípios de posicionamento vistos anteriormente: proximidade (agrupamento lógico de métricas relacionadas), contraste (destaques visuais com setas vermelhas nas barras), repetição (paleta consistente de cores e formatos) e proporção áurea. O resultado é um relatório limpo, profissional e intuitivo, onde o usuário identifica rapidamente as informações críticas ($177K de vendas totais, 11,33K unidades, etc.) sem esforço cognitivo.      
 
-
 ### 🟩 Vídeo 09 - Explorando bons e maus exemplos de gráficos – parte 1
 
 <video width="60%" controls>
@@ -385,7 +384,6 @@ Nesta tela do Power BI Desktop (aba **Página 3**), observamos um exemplo práti
 À esquerda superior, um **gráfico de rosca (donut chart)** exibe a distribuição proporcional entre os produtos, com legendas coloridas à direita. Logo abaixo, um **gráfico de barras** compara diretamente os valores de vendas por produto (VTT, Neon, Passeio, etc.), tornando muito mais fácil identificar visualmente quais itens têm maior ou menor volume. À direita, um **gráfico de colunas agrupadas** reforça essa comparação, com rótulos de dados exibindo os valores exatos (ex.: 0,17 mi, 0,32 mi).  
 
 A instrutora explica que, além dos gráficos padrão, é possível utilizar visuais personalizados obtidos na loja de visuais. Ele alerta que esses visuais externos não possuem o selo oficial da Microsoft, sendo necessário verificar se a organização permite o uso. A imagem ilustra justamente esse momento de escolha de campos como Units Sold por produto, preparando o terreno para comparar diferentes formas de visualização.     
-
 
 ### 🟩 Vídeo 10 - Explorando bons e maus exemplos de gráficos – parte 2
 
@@ -416,7 +414,6 @@ Aplicando a **formatação condicional** com gradiente de cores no gráfico de b
 
 Com o cursor sobre “Velo”, a dica de ferramenta exibe a opção de formatação condicional, explicando que é possível definir regras para alterar automaticamente a cor das barras com base no valor de sales. Esse recurso cria um degradê natural que destaca a proporção entre os produtos de forma elegante e autoexplicativa, tornando o relatório muito mais atrativo para o público.      
 
-
 ### 🟩 Vídeo 11 - Explorando bons e maus exemplos de gráficos – parte 3
 
 <video width="60%" controls>
@@ -426,11 +423,29 @@ Com o cursor sobre “Velo”, a dica de ferramenta exibe a opção de formataç
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/cefdd43e-e84a-45f9-a000-8b91211f9785?autoplay=1
 
+O conteúdo foca em estratégias eficazes para a criação de gráficos e a análise de dados temporais, priorizando a clareza visual em ferramentas de BI. O autor detalha como utilizar corretamente a hierarquia de datas e as configurações dos eixos para evitar interpretações confusas em indicadores de vendas. 
 
+### Anotações
 
-##  Materiais de Apoio
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-15h11m14s452.jpg" alt="" width="840">
+</p>
 
-# Certificado: 
+No Power BI Desktop, esta visualização demonstra a construção de um gráfico de linhas para analisar a **soma de vendas** ao longo do tempo, utilizando a hierarquia completa da data (ano, trimestre, mês e dia). O eixo X apresenta os períodos mensais de setembro de 2013 a novembro de 2014, enquanto o eixo Y exibe os valores em milhões, com variações claras de picos e quedas na série temporal.  
+
+No painel de **Visualizações**, observa-se a formatação aplicada: cor da linha, exibição de unidades definida como “Milhão” e opções de posicionamento do eixo. O painel **Filtros** mostra os campos de data sendo utilizados em todos os níveis da hierarquia. Essa configuração inicial é uma forma comum de criar gráficos temporais, porém serve como ponto de partida para discutir como a escolha da hierarquia e as opções de formatação influenciam diretamente a clareza e a legibilidade do visual.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-15h11m19s766.jpg" alt="" width="840">
+</p>
+
+Nesta página do relatório, dois visuais complementares são apresentados lado a lado para reforçar boas práticas de visualização de dados temporais.  
+
+À **esquerda**, o gráfico de linhas mantém a visão detalhada da soma de vendas por ano, trimestre, mês e dia, preservando a continuidade da série histórica. À **direita**, um gráfico de barras horizontais exibe a **soma de vendas por mês**, com cada barra representando claramente um mês do período analisado. Essa disposição permite uma comparação imediata entre os períodos mensais.  
+
+O painel **Visualizações** exibe as opções disponíveis para criação de novos gráficos, enquanto o painel **Campos** lista as medidas e dimensões do modelo (Sales, Date, entre outras). Essa tela exemplifica como combinar diferentes tipos de gráfico (linha + barra) em um mesmo relatório para tornar a análise mais intuitiva, comparativa e profissional.      
+
+# Certificado: Relatórios & Experiência do Usuário no Power BI
 
 - Link na plataforma: 
 - Certificado em pdf:
