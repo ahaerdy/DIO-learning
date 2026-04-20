@@ -82,37 +82,19 @@ Esses elementos garantem que o relatório seja acessível, intuitivo, capaz de g
 
 Este slide introduz o **Público-alvo** e sua influência direta no relatório final.  
 
-É destacado o **Tomador de decisão** e o perfil de consumidor, composto por três papéis principais:  
-- **Executivo**  
-- **Analista**  
-- **Operador de informações**  
-
-O diagrama associa claramente:  
-- O **Analista** às **Metas e Processos**  
-- O **Operador de informações** ao auxílio em **tomadas de decisão**  
-
-As ilustrações mostram profissionais representativos e elementos visuais que reforçam a conexão entre o público e o design do relatório.
+- **Executivo**: precisa de um painel objetivo com KPIs claros e de alto nível para decisões de médio e longo prazo.
+- **Analista**: necessita de dados mais descritivos e detalhados para verificar metas, KPIs e propor otimizações de processos.
+- **Operador de informações**:  busca informações atualizadas e operacionais (por exemplo, níveis de estoque) para ações do dia a dia.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-08h16m32s401.jpg" alt="" width="840">
 </p>
 
-O slide aprofunda o **Público-alvo** ao apresentar os **Tipos de relatório** e sua correspondência com cada perfil de usuário.  
+Este slide organiza tipos de relatório e requisitos de UX: tipos listados incluem Painel, Analítico, Operacional e Formação educacional. 
 
-São listados os quatro tipos:  
-- **Painel**  
-- **Analítico**  
-- **Operacional**  
-- **Formação educacional**  
+A seção de UX mapeia perfis (Executive; Analyst; Analytical; Information worker; Operational; General; Educational) para necessidades de interface — por exemplo, dashboards executivos para visão rápida, painéis analíticos para exploração e relatórios operacionais para acompanhamento em tempo real.
 
-O diagrama à direita estabelece o mapeamento direto:  
-- **Executivo** → **Dashboard**  
-- **Analista** → **Analytical**  
-- **Information worker** → **Operational**  
-- **General** → **Educational**  
-
-Na parte inferior, é reforçado o box **Requisitos de UX**, lembrando que cada tipo de relatório deve atender às necessidades específicas de experiência do usuário. As peças de quebra-cabeça simbolizam a integração perfeita entre perfil e formato de relatório.      
-
+ O objetivo é alinhar formato e interatividade do relatório ao tipo de usuário e ao propósito (monitoramento, análise ou operação). 
 
 ### 🟩 Vídeo 03 - Tipos de Relatórios de acordo com perfil do usuário
 
