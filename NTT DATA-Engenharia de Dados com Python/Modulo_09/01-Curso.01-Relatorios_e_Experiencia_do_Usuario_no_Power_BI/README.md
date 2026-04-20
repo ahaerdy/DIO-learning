@@ -447,5 +447,5 @@ O painel **Visualizações** exibe as opções disponíveis para criação de no
 
 # Certificado: Relatórios & Experiência do Usuário no Power BI
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/CKFY4GRA.pdf
+- Certificado em pdf: [Certificado-Relatorios_and_Experiencia_do_Usuario_no_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Relatorios_and_Experiencia_do_Usuario_no_Power_BI.pdf)
