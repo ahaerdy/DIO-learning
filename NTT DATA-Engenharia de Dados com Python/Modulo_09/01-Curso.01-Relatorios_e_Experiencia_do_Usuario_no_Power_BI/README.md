@@ -294,6 +294,13 @@ O slide “Requisitos Necessários” lista os elementos mínimos que todo tema 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/f5d3d63c-d2a5-4be2-97a8-ca06836ff11d?autoplay=1
 
+O vídeo resume as diretrizes para a criação de relatórios analíticos eficazes, focando na experiência do analista de dados e na estruturação lógica das consultas (filtrar, agrupar e resumir).
+
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 08 - Estrutura e boas práticas em relatórios
 
 <video width="60%" controls>
