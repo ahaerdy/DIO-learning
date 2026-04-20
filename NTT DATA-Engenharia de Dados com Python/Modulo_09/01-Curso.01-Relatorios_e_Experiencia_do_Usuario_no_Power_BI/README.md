@@ -56,7 +56,63 @@ Continuando a lista de requisitos necessários, este slide enfatiza quatro aspec
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: portal de carreiras oficial do Grupo Jacto
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/15f11935-e71f-4ef6-86a3-75499cad535a?autoplay=1
+
+O vídeo aborda as melhores práticas para a criação de relatórios de dados, destacando a importância da profundidade das informações, a consistência da marca corporativa e a personalização do conteúdo para diferentes perfis de usuários: Executivos, Analistas e Operadores.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-08h16m11s717.jpg" alt="" width="840">
+</p>
+
+O slide apresenta os **Requisitos Necessários** para a construção de relatórios de dados eficazes.  
+
+São listados quatro pilares fundamentais:  
+- **Disponibilidade de dados**  
+- **Relatórios naturais e amigáveis**  
+- **Fornecendo novos insights**  
+- **Padrão de marca corporativa**  
+
+Esses elementos garantem que o relatório seja acessível, intuitivo, capaz de gerar valor real para o usuário e alinhado à identidade visual da organização. As ilustrações reforçam visualmente a ideia de análise e visualização de informações, com ícones de gráficos, profissionais e elementos de dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-08h16m25s979.jpg" alt="" width="840">
+</p>
+
+Este slide introduz o **Público-alvo** e sua influência direta no relatório final.  
+
+É destacado o **Tomador de decisão** e o perfil de consumidor, composto por três papéis principais:  
+- **Executivo**  
+- **Analista**  
+- **Operador de informações**  
+
+O diagrama associa claramente:  
+- O **Analista** às **Metas e Processos**  
+- O **Operador de informações** ao auxílio em **tomadas de decisão**  
+
+As ilustrações mostram profissionais representativos e elementos visuais que reforçam a conexão entre o público e o design do relatório.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-08h16m32s401.jpg" alt="" width="840">
+</p>
+
+O slide aprofunda o **Público-alvo** ao apresentar os **Tipos de relatório** e sua correspondência com cada perfil de usuário.  
+
+São listados os quatro tipos:  
+- **Painel**  
+- **Analítico**  
+- **Operacional**  
+- **Formação educacional**  
+
+O diagrama à direita estabelece o mapeamento direto:  
+- **Executivo** → **Dashboard**  
+- **Analista** → **Analytical**  
+- **Information worker** → **Operational**  
+- **General** → **Educational**  
+
+Na parte inferior, é reforçado o box **Requisitos de UX**, lembrando que cada tipo de relatório deve atender às necessidades específicas de experiência do usuário. As peças de quebra-cabeça simbolizam a integração perfeita entre perfil e formato de relatório.      
+
 
 ### 🟩 Vídeo 03 - Tipos de Relatórios de acordo com perfil do usuário
 
@@ -65,7 +121,9 @@ link do vídeo: portal de carreiras oficial do Grupo Jacto
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/3296d0bc-805f-4a09-af25-d6ade544b6c5?autoplay=1
+
+
 
 ### 🟩 Vídeo 04 - Destrinchando os tipos de relatórios
 
