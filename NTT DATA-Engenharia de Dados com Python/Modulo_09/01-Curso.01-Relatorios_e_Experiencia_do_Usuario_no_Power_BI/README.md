@@ -188,6 +188,71 @@ Diferentemente dos painéis executivos, esses relatórios oferecem maior flexibi
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/080a17e9-4b55-449f-bed5-aa5b27790a2d?autoplay=1
 
+O vídeo apresenta as nuances entre diferentes tipos de dashboards, focando em como o design e a funcionalidade devem se adaptar ao público-alvo e ao objetivo final, seja ele a tomada de decisão imediata ou a disseminação de informações complexas para o grande público.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h52m51s473.jpg" alt="" width="840">
+</p>
+
+Os relatórios operacionais são projetados para que o usuário final consiga **monitorar dados em tempo real** e tomar decisões operacionais imediatas.  
+
+Como destacado no slide, a **meta** é o monitoramento contínuo, as **características** principais são monitoramento, tomada de decisão e navegabilidade, e o **objetivo** é minimizar recursos analíticos para manter o foco exclusivamente na operação do dia a dia.  
+
+Essa estrutura transforma o relatório em um verdadeiro “hub” de ação, com botões, marcadores e fluxos lógicos que permitem ao usuário navegar, executar ações externas e verificar o status operacional sem precisar realizar análises profundas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h52m58s369.jpg" alt="" width="840">
+</p>
+
+Exemplo prático de relatório operacional: painel da **Contoso Skateboard Store**.  
+
+O dashboard apresenta, em uma única tela, os principais indicadores de vendas em tempo real (vendas totais, vendas da Contoso, vendas por cliente e itens vendidos), um mapa com distribuição geográfica (bolhas na Califórnia), um gráfico de evolução de vendas ao longo do tempo e uma tabela detalhada com dados por localização e produto.  
+
+A tabela inclui colunas como preço, vendas, unidades vendidas, forecast de WI-FI, custo de warehouse, estoque disponível, turnover de inventário, dias de venda de estoque e status de invoice. Ícones visuais (estrelas, círculos, alertas) facilitam a leitura rápida do estado da operação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h53m03s489.jpg" alt="" width="840">
+</p>
+
+Visão ampliada da parte superior da tabela do relatório operacional.  
+
+Aqui é possível observar com clareza os dados do item “Los Angeles, CA, USA” e os valores específicos para cada produto (Power BI, Excel, PowerPoint, Teams, PowerApps e Xbox), incluindo preço, vendas realizadas, unidades vendidas, forecast, custo de armazém e quantidade em estoque.  
+
+Essa granularidade permite ao operador verificar rapidamente o desempenho de cada linha de produto ou fonte de dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h53m06s249.jpg" alt="" width="840">
+</p>
+
+Detalhe da seção inferior da tabela do relatório operacional, com foco nas métricas de eficiência de estoque.  
+
+São exibidas as colunas de “On hand”, “Inventory turnover ratio” (com percentual e estrelas), “Days sales of inventory” e o status do “Invoice” (ícones de check ou alerta).  
+
+Esses indicadores visuais ajudam o usuário a identificar imediatamente gargalos operacionais, níveis de estoque críticos ou problemas de faturamento sem necessidade de cálculos adicionais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h53m09s705.jpg" alt="" width="840">
+</p>
+
+Os relatórios educacionais têm como foco principal a **narrativa e a explicação clara** dos dados.  
+
+Diferentemente dos relatórios operacionais, eles partem da premissa de que o público **não tem familiaridade** prévia com os dados. Por isso, são amplamente utilizados por jornais e órgãos governamentais.  
+
+O objetivo é difundir informação de forma acessível, nivelando a compreensão entre pessoas com graus variados de conhecimento sobre o tema.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h53m25s581.jpg" alt="" width="840">
+</p>
+
+Exemplo clássico de relatório educacional: dashboard público de **Vacinações COVID-19**.  
+
+O painel apresenta dados agregados (total de pessoas vacinadas, percentuais por faixa etária, atualização de dados), um mapa dos Estados Unidos colorido por progresso em relação à meta federal, um termômetro de avanço (59,7 % da meta), lista de estados com percentuais detalhados e opções de visualização por localização ou por data.  
+
+Textos explicativos, gráficos e recursos visuais claros ajudam o grande público a entender o contexto e a evolução da campanha de vacinação sem necessidade de conhecimento técnico prévio.     
+
+
 ### 🟩 Vídeo 06 - Acessibilidade & Requisitos dos Usuários
 
 <video width="60%" controls>
@@ -195,7 +260,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatori
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/244f5921-d7db-4a14-86d9-982a0bd94b73?autoplay=1
+
+
 
 ### 🟩 Vídeo 07 - Fluxo de exploração em relatórios Analíticos
 
