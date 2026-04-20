@@ -334,6 +334,33 @@ Aqui vemos a interface prática do Power BI, com campos e filtros disponíveis p
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/d64b8387-62f9-41e4-9d7a-721a5c54906a?autoplay=1
 
+O vídeo aborda diretrizes essenciais de design para a criação de relatórios analíticos que otimizem a compreensão visual e a experiência do usuário. O autor destaca que a disposição dos elementos deve seguir a ordem de leitura natural do público, recomendando ferramentas como a regra dos terços e a proporção áurea para organizar informações por relevância. 
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-14h07m11s224.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o conceito fundamental de **posicionamento** em relatórios analíticos. Observe as setas azuis que indicam o fluxo natural de leitura: as informações mais relevantes devem ser colocadas no canto superior esquerdo, com os elementos distribuídos da esquerda para a direita. Essa organização segue o padrão intuitivo de leitura ocidental, tornando o layout mais ordenado, agradável e fácil de compreender pelo usuário final.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-14h07m16s685.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra a **regra dos terços**, uma técnica clássica de composição visual aplicada a relatórios. A página é dividida em uma grade invisível de nove partes iguais (três linhas horizontais e três verticais). Essa divisão permite posicionar os visuais de forma equilibrada, criando um layout harmonioso onde cada elemento ocupa uma ou mais células da grade, respeitando proporções que facilitam a leitura e evitam a desorganização.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-14h07m21s307.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a aplicação prática da **proporção áurea** (ou regra de ouro) sobre um dashboard real. A espiral dourada (baseada na sequência de Fibonacci) é sobreposta ao layout, guiando o olhar do observador naturalmente para os elementos mais importantes. Essa técnica cria um design assimétrico, porém visualmente belo e equilibrado, priorizando o impacto dos principais indicadores sem sobrecarregar a tela.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-14h07m26s369.jpg" alt="" width="840">
+</p>
+
+O dashboard final demonstra a integração de todos os princípios de posicionamento vistos anteriormente: proximidade (agrupamento lógico de métricas relacionadas), contraste (destaques visuais com setas vermelhas nas barras), repetição (paleta consistente de cores e formatos) e proporção áurea. O resultado é um relatório limpo, profissional e intuitivo, onde o usuário identifica rapidamente as informações críticas ($177K de vendas totais, 11,33K unidades, etc.) sem esforço cognitivo.      
 
 
 ### 🟩 Vídeo 09 - Explorando bons e maus exemplos de gráficos – parte 1
@@ -343,7 +370,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatori
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/736f549d-e2a1-4711-adcd-84abeaf4c8cf?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Explorando bons e maus exemplos de gráficos – parte 2
 
