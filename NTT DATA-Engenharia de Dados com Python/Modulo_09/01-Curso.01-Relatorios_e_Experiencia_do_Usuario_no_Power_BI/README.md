@@ -298,7 +298,31 @@ O vídeo resume as diretrizes para a criação de relatórios analíticos eficaz
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-13h41m42s221.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a **Estrutura** dos relatórios analíticos no Power BI, destacando o fluxo contínuo e fluido que deve ser seguido para uma experiência de análise mais eficiente.
+
+O diagrama central mostra a sequência obrigatória das três fases:
+
+- **Filter** (Filtragem)  
+- **Group** (Agrupamento)  
+- **Summarize** (Resumo)
+
+Abaixo, as fases são detalhadas explicitamente:
+
+- **Filtragem – Alvo de relevância**: aplica filtros para focar apenas nos dados importantes.  
+- **Agrupamento – divide os resultados em grupos**: organiza os dados em categorias ou segmentos para facilitar a comparação.  
+- **Resumo – Produz resultado de valor único**: agrega os valores (soma, média, contagem etc.) gerando um único resultado consolidado.
+
+Essa estrutura garante que o analista de dados tenha um caminho claro e lógico para explorar as informações.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-13h42m00s008.jpg" alt="" width="840">
+</p>
+
+Aqui vemos a interface prática do Power BI, com campos e filtros disponíveis para manipulação dos dados. O painel mostra opções como **Sales**, **COGS**, **Country**, **Date**, entre outros, que podem ser arrastados para aplicar filtros ou criar medidas. Essa visualização reforça como o analista pode aplicar a fase de filtragem diretamente no relatório, escolhendo escopos de aplicação (visual, página ou todas as páginas). Além disso, evidencia como os resumos são gerados automaticamente em colunas numéricas, permitindo cálculos como soma, média ou contagem, e como o agrupamento pode ser configurado para destacar diferenças entre intervalos ou categorias.
 
 
 ### 🟩 Vídeo 08 - Estrutura e boas práticas em relatórios
@@ -308,7 +332,9 @@ O vídeo resume as diretrizes para a criação de relatórios analíticos eficaz
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/d64b8387-62f9-41e4-9d7a-721a5c54906a?autoplay=1
+
+
 
 ### 🟩 Vídeo 09 - Explorando bons e maus exemplos de gráficos – parte 1
 
