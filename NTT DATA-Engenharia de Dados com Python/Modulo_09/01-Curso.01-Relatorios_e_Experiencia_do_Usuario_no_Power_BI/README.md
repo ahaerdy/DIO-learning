@@ -384,7 +384,7 @@ Nesta tela do Power BI Desktop (aba **Página 3**), observamos um exemplo práti
 
 À esquerda superior, um **gráfico de rosca (donut chart)** exibe a distribuição proporcional entre os produtos, com legendas coloridas à direita. Logo abaixo, um **gráfico de barras** compara diretamente os valores de vendas por produto (VTT, Neon, Passeio, etc.), tornando muito mais fácil identificar visualmente quais itens têm maior ou menor volume. À direita, um **gráfico de colunas agrupadas** reforça essa comparação, com rótulos de dados exibindo os valores exatos (ex.: 0,17 mi, 0,32 mi).  
 
-A instrutorA explica que, além dos gráficos padrão, é possível utilizar visuais personalizados obtidos na loja de visuais. Ele alerta que esses visuais externos não possuem o selo oficial da Microsoft, sendo necessário verificar se a organização permite o uso. A imagem ilustra justamente esse momento de escolha de campos como Units Sold por produto, preparando o terreno para comparar diferentes formas de visualização.     
+A instrutora explica que, além dos gráficos padrão, é possível utilizar visuais personalizados obtidos na loja de visuais. Ele alerta que esses visuais externos não possuem o selo oficial da Microsoft, sendo necessário verificar se a organização permite o uso. A imagem ilustra justamente esse momento de escolha de campos como Units Sold por produto, preparando o terreno para comparar diferentes formas de visualização.     
 
 
 ### 🟩 Vídeo 10 - Explorando bons e maus exemplos de gráficos – parte 2
@@ -396,6 +396,25 @@ A instrutorA explica que, além dos gráficos padrão, é possível utilizar vis
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/1f2eec42-abbd-4456-a946-27739ba9deef?autoplay=1
 
+O vídeo explora as melhores práticas de visualização de dados para representar o desempenho de vendas por categoria de produto. O autor demonstra que o uso de gráficos de linhas é inadequado para dados não temporais, sugerindo a substituição por gráficos de barras agrupadas para facilitar a comparação. A explicação enfatiza a importância de utilizar o contraste de cores e o cinza para destacar o item de maior sucesso. 
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-14h54m36s124.jpg" alt="" width="840">
+</p>
+
+No Power BI Desktop, esta tela apresenta uma comparação prática entre diferentes formas de visualizar a **Soma de Sales por Product**. O gráfico de linhas no canto superior esquerdo mostra os valores decrescendo, mas o instrutor destaca que essa não é a melhor escolha: não existe uma lógica temporal que explique a queda, tornando a leitura pouco clara.  
+
+Em contraste, os três gráficos de barras ao lado e abaixo demonstram a solução recomendada. O gráfico clusterizado (barras lado a lado) permite comparar diretamente os produtos, com o “Passeio” aparecendo como o maior vendedor. São mostradas ainda variações de formatação: um gráfico em tons de cinza e outro já com cores diferenciadas. Essa sequência ilustra por que o gráfico de barras é muito mais eficiente para destacar o maior e o menor valor de vendas de forma rápida e intuitiva.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-14h55m23s400.jpg" alt="" width="840">
+</p>
+
+Aplicando a **formatação condicional** com gradiente de cores no gráfico de barras, o visual ganha ainda mais clareza. Os produtos agora estão ordenados por soma de vendas: “Passeio” recebe a barra mais escura (azul intenso), enquanto “VTT”, “Velo”, “Amarelo”, “Montana” e “Carretera” vão clareando progressivamente conforme o valor diminui.  
+
+Com o cursor sobre “Velo”, a dica de ferramenta exibe a opção de formatação condicional, explicando que é possível definir regras para alterar automaticamente a cor das barras com base no valor de sales. Esse recurso cria um degradê natural que destaca a proporção entre os produtos de forma elegante e autoexplicativa, tornando o relatório muito mais atrativo para o público.      
 
 
 ### 🟩 Vídeo 11 - Explorando bons e maus exemplos de gráficos – parte 3
@@ -405,7 +424,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatori
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/cefdd43e-e84a-45f9-a000-8b91211f9785?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
