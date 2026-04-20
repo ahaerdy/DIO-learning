@@ -132,7 +132,51 @@ A ideia é que o design do relatório seja sempre mapeado às necessidades do p�
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/791d9a43-1a29-4399-9908-e7d7b9a9e18c?autoplay=1https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/791d9a43-1a29-4399-9908-e7d7b9a9e18c?autoplay=1
 
+O vídeo explora as diferentes abordagens para a criação de relatórios de dados, focando em dois tipos principais: Dashboards Executivos e Relatórios Analíticos. O objetivo é alinhar a complexidade e o formato da visualização com as necessidades específicas do público-alvo, garantindo que a "história" dos dados seja contada de forma eficaz, seja para uma tomada de decisão rápida ou para uma investigação profunda.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h10m12s571.jpg" alt="" width="840">
+</p>
+
+Este slide conceitual introduz o conceito de **Painel** (dashboard), um formato de relatório otimizado para executivos que precisam interpretar rapidamente a história por trás dos dados.
+
+- **Meta**: Interpretar a história com velocidade, priorizando a agilidade na compreensão das informações.
+- **Características**: Os visuais devem ser autoexplicativos, focados e rotulados de forma clara, limitando interações desnecessárias.
+- **Objetivo**: Minimizar a margem para interpretação, garantindo que o significado dos dados seja comunicado de maneira direta e inequívoca.
+
+Essa abordagem é ideal para decisões estratégicas baseadas em métricas de alto nível apresentadas em uma única página.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h10m17s509.jpg" alt="" width="840">
+</p>
+
+Este é um exemplo prático de painel executivo para a loja de skateboards Contoso. O layout concentra métricas chave em uma única tela: vendas totais, vendas por cliente, retornos, itens vendidos e devolvidos, além de indicadores de inventário (quantidade em estoque, valor, rotatividade e dias de estoque).
+
+Os gráficos de linha destacam a evolução das vendas e retornos ao longo do tempo (últimos 7 dias), enquanto o histograma mostra o nível de inventário. Destaques visuais, como setas de variação e alertas, reforçam a clareza e a rapidez na leitura, alinhando-se perfeitamente aos princípios de painéis autoexplicativos e focados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h10m30s028.jpg" alt="" width="840">
+</p>
+
+Este exemplo ilustra o conceito de **dados temporais implícitos**. Trata-se do célebre mapa da campanha de Napoleão na Rússia (1812-1813), criado por Charles Minard.
+
+A espessura da linha representa o tamanho do exército em cada etapa da marcha, com a cor diferenciando o avanço (claro) da retirada (escuro). A parte inferior inclui um gráfico de temperatura, correlacionando as condições climáticas às perdas sofridas.
+
+Sem eixos temporais explícitos, o design espacial conta uma narrativa impactante sobre as perdas progressivas, demonstrando como visualizações criativas podem incorporar o tempo de forma implícita e poderosa para storytelling.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-20-09h10m36s277.jpg" alt="" width="840">
+</p>
+
+Este slide apresenta os **Relatórios Analíticos**, direcionados ao público de analistas de dados.
+
+- **Meta**: Auxiliar na resposta a perguntas, facilitando a descoberta de insights.
+- **Características**: É o tipo mais comum de relatório, atende a diversos casos de uso e suporta segmentação de dados.
+- **Objetivo**: Proporcionar caminhos possíveis e a exploração de tópicos de interesse, permitindo análises mais investigativas e interativas.
+
+Diferentemente dos painéis executivos, esses relatórios oferecem maior flexibilidade para perguntas exploratórias e múltiplas perspectivas sobre os mesmos dados.      
 
 
 ### 🟩 Vídeo 05 - O que são relatórios Operacionais e educacionais?
@@ -142,7 +186,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatori
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/relatorios-experiencia-do-usuario-no-power-bi/learning/080a17e9-4b55-449f-bed5-aa5b27790a2d?autoplay=1
 
 ### 🟩 Vídeo 06 - Acessibilidade & Requisitos dos Usuários
 
