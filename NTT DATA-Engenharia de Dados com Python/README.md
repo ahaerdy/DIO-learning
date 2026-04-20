@@ -156,7 +156,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 9: Data Analytics & Storytelling com Power BI  
 
-- [ ] Curso: Relatórios & Experiência do Usuário no Power BI
+- [x] Curso: [Relatórios & Experiência do Usuário no Power BI]()
 - [ ] Curso: Explorando Recursos para criar Storytelling dos dados com Power BI
 - [ ] Curso: Fundamentos de Data Analytics com Power BI
 - [ ] Curso: Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI
