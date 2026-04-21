@@ -75,7 +75,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Curso: [Estruturas Condicionais e de Repetição em Python](Modulo_02/02-Curso.02-Estruturas.Condicionais.e.de.Repeticao.em.Python/README.md)
 - [x] Curso: [Manipulando Strings com Python](Modulo_02/03-Curso_3-Manipulando_Strings_com_Python/README.md)
 - [x] Curso: [Dominando Funções Python](hModulo_02/04-Curso%204-Dominando_Fun%C3%A7oes_Python/README.md)
-- [x] Projeto: [Criando um Sistema Bancário com Python](Modulo_02/05-Projeto-Cri)
+- [x] Projeto: [Criando um Sistema Bancário com Python](Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python)
   - **Repositório**:
   - **Descrição**: desenvolvimento de um sistema de operações bancárias simples em Python, sem uso de bibliotecas externas, explorando estruturas de controle, manipulação de strings, entrada de dados, validação de regras e aplicação de lógica para simular funcionalidades como saque, depósito e extrato.
 
