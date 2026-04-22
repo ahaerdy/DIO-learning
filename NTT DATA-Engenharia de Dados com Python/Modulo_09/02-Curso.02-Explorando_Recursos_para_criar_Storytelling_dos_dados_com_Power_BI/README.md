@@ -200,13 +200,31 @@ Esses pilares guiam a criação de relatórios que atendem a necessidades especi
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/85d47507-fd51-4ed4-8ee5-522dfdba09ca?autoplay=1
 
+O vídeo destaca a importância e a implementação do texto alternativo (Alt Text) em relatórios do Power BI, destacando como esse recurso simples pode transformar a experiência de usuários com deficiência visual ou em situações de erro de carregamento.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-14h01m48s728.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a interface de configuração de um visual no Power BI, com foco na seção de **formatação**. Nela, é possível observar o caminho para configurar propriedades gerais do visual, incluindo a opção de **texto alternativo**.
+
+Dentro dessa área, o usuário pode inserir uma descrição detalhada do gráfico exibido. Essa descrição deve explicar o propósito do visual, o tipo de gráfico utilizado e os principais insights apresentados. Por exemplo, ao descrever um gráfico de vendas por produto, é possível indicar qual item teve maior desempenho e qual teve menor.
+
+Além disso, a interface sugere que o texto alternativo pode ser estático ou construído dinamicamente com base em campos de dados, permitindo maior flexibilidade. O objetivo final é garantir que qualquer pessoa, mesmo sem acesso visual ao gráfico, consiga compreender as informações apresentadas.
+      
+
 ### 🟩 Vídeo 07 - Navegabilidade com acessibilidade – Ordenando as camadas e tabulação
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_07.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/552b1966-8cb1-4696-82fd-13b5ed111d49?autoplay=1
+
+
 
 ### 🟩 Vídeo 08 - Nomeações claras, concisas, diretas e sem abreviações
 
