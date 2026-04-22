@@ -14,7 +14,7 @@
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/9aa3b598-97f9-4b07-8f29-48c640097bab?autoplay=1
 
-O vídeo descreve como a construção de relatórios no Power BI vai além da simples disposição de dados, focando na criação de uma narrativa visual (storytelling) que atenda às necessidades específicas de diferentes públicos-alvo e requisitos de negócio.
+O vídeo explora como a construção de relatórios no Power BI vai além da simples disposição de dados, focando na criação de uma narrativa visual (storytelling) que atenda às necessidades específicas de diferentes públicos-alvo e requisitos de negócio.
 
 ### Anotações
 
@@ -23,7 +23,6 @@ O vídeo descreve como a construção de relatórios no Power BI vai além da si
 </p>
 
 A instrutora Juliana Mascarenhas inicia a abordagem sobre a construção de storytelling utilizando relatórios no Power BI. O objetivo desta etapa é identificar pontos específicos que agregam valor e fazem diferença no consumo das informações pelo público-alvo. 
-
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-08h52m12s731.jpg" alt="" width="840">
