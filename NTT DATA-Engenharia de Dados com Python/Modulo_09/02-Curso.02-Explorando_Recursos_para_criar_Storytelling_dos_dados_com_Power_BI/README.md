@@ -22,7 +22,7 @@ O vídeo explora como a construção de relatórios no Power BI vai além da sim
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-08h52m11s022.jpg" alt="" width="840">
 </p>
 
-A instrutora Juliana Mascarenhas inicia a abordagem sobre a construção de storytelling utilizando relatórios no Power BI. O objetivo desta etapa é identificar pontos específicos que agregam valor e fazem diferença no consumo das informações pelo público-alvo. 
+A instrutora inicia a abordagem sobre a construção de storytelling utilizando relatórios no Power BI. O objetivo é identificar pontos específicos que agregam valor e fazem diferença no consumo das informações pelo público-alvo. 
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-08h52m12s731.jpg" alt="" width="840">
