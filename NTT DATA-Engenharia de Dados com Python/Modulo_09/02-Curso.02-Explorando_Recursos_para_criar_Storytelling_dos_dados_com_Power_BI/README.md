@@ -147,7 +147,23 @@ Se a explicação precisar ser mais curta ou focada em um único aspecto (por ex
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
+
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/415c782d-6552-4a86-aba9-2c0ec423b32e?autoplay=1
+
+O vídeo aborda as melhores práticas para criar visualizações legíveis, estratégias para gerenciar grandes volumes de dados sem poluir o relatório e técnicas de alinhamento de precisão para um acabamento profissional.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-13h25m43s276.jpg" alt="" width="840">
+</p>
+
+A imagem mostra um conjunto de cinco cartões (cards) com indicadores numéricos: **8 Bi**, **1,8%**, **151 Mi**, **34 Mi** e **603 Mi**. Esse tipo de visual é comum em dashboards para apresentar métricas resumidas de forma rápida e legível.
+
+No contexto da aula, o instrutor utiliza esses cartões como exemplo para demonstrar técnicas de **alinhamento e distribuição** de visuais. Os valores representam, respectivamente, total de casos (8 bilhões), percentual (1,8%), total de mortes (151 milhões) e outros dois totais (34 milhões e 603 milhões) — provavelmente casos confirmados adicionais ou métricas relacionadas.
+
+A ênfase aqui não está nos números em si, mas no **layout profissional**: ao selecionar todos os cartões simultaneamente e usar as opções de **formato → alinhar → distribuir horizontalmente**, o instrutor organiza os elementos com espaçamento uniforme e alinhamento preciso, evitando aparência desleixada e melhorando a usabilidade do relatório.
+ 
 
 ### 🟩 Vídeo 05 - Conversando sobre acessibilidade no Power BI
 
@@ -155,7 +171,10 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/exploran
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_05.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/fdd6c888-0d6a-44ff-aead-c8092efdcfe1?autoplay=1
+
+
 
 ### 🟩 Vídeo 06 - Maneiras de adicionar um texto alternativo em um visual
 
