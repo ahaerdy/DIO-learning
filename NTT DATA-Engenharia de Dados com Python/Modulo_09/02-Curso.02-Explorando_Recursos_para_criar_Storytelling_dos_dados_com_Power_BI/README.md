@@ -127,13 +127,27 @@ O resultado é um relatório objetivo, profissional e fácil de compreender — 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/f7921b7d-3a4e-47f5-a949-7ab1ef8a3e84?autoplay=1
 
+O vídeo aborda as melhores práticas para a configuração de relatórios no Power BI, focando em acessibilidade entre dispositivos, modos de exibição, personalização de painéis e a importância da identidade visual corporativa.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-10h27m44s690.jpg" alt="" width="840">
+</p>
+
+A interface apresenta o relatório "COVID-19 US Tracking", uma amostra desenvolvida pela equipe do Power BI da Microsoft para monitorar dados da pandemia nos Estados Unidos. Este projeto é utilizado para ilustrar como diferentes configurações de exibição e elementos de storytelling impactam a percepção do usuário final. 
+
+No painel lateral de "Visualizações", sob a aba de formatação, encontram-se ajustes essenciais para a identidade visual do relatório, incluindo "Configurações de tela" (definida em 16:9), "Tela de fundo" e "Papel de parede". 
+
+Se a explicação precisar ser mais curta ou focada em um único aspecto (por exemplo, apenas **layout mobile** ou apenas **painel de filtros**), eu adapto o texto para esse foco.      
+
 ### 🟩 Vídeo 04 - Como alinhar elementos na página do relatório
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/415c782d-6552-4a86-aba9-2c0ec423b32e?autoplay=1
 
 ### 🟩 Vídeo 05 - Conversando sobre acessibilidade no Power BI
 
