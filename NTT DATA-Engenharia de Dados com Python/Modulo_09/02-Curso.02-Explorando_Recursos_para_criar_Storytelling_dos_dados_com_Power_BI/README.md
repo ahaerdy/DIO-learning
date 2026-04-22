@@ -174,6 +174,21 @@ A ênfase aqui não está nos números em si, mas no **layout profissional**: ao
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/fdd6c888-0d6a-44ff-aead-c8092efdcfe1?autoplay=1
 
+O vídeo destaca a importância de projetar relatórios no Power BI que sejam acessíveis a todos os usuários, incluindo aqueles com necessidades especiais (auditivas, motoras, visuais, etc.). O foco está na utilização de recursos nativos da ferramenta e na adesão aos padrões internacionais de acessibilidade.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-13h44m16s642.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta os três princípios essenciais da WCAG (Diretrizes de Acessibilidade de Conteúdo da Web), que o Power BI segue para tornar relatórios e dashboards acessíveis ao maior número possível de pessoas.  
+
+- **Perceptível**: as informações e os componentes da interface devem ser apresentados de modo que todos os usuários, inclusive aqueles com deficiências sensoriais, possam percebê-los.  
+- **Operável**: os componentes de navegação e interface precisam ser operáveis por diferentes dispositivos e métodos de interação (teclado, leitor de telas, etc.).  
+- **Compreensível**: as informações e o funcionamento da interface devem ser claros e fáceis de entender, evitando ambiguidades.  
+
+Esses pilares guiam a criação de relatórios que atendem a necessidades especiais, como dificuldades motoras, auditivas ou visuais.      
 
 
 ### 🟩 Vídeo 06 - Maneiras de adicionar um texto alternativo em um visual
@@ -182,7 +197,8 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/exploran
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/85d47507-fd51-4ed4-8ee5-522dfdba09ca?autoplay=1
 
 ### 🟩 Vídeo 07 - Navegabilidade com acessibilidade – Ordenando as camadas e tabulação
 
