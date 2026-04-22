@@ -11,7 +11,38 @@
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo: 
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/9aa3b598-97f9-4b07-8f29-48c640097bab?autoplay=1
+
+O vídeo descreve como a construção de relatórios no Power BI vai além da simples disposição de dados, focando na criação de uma narrativa visual (storytelling) que atenda às necessidades específicas de diferentes públicos-alvo e requisitos de negócio.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-08h52m11s022.jpg" alt="" width="840">
+</p>
+
+A instrutora Juliana Mascarenhas inicia a abordagem sobre a construção de storytelling utilizando relatórios no Power BI. O objetivo desta etapa é identificar pontos específicos que agregam valor e fazem diferença no consumo das informações pelo público-alvo. 
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-08h52m12s731.jpg" alt="" width="840">
+</p>
+
+O desenvolvimento do layout de um relatório depende diretamente de requisitos empresariais, do contexto dos dados e dos requisitos de saída. É essencial compreender as características de quem solicitou a informação para criar uma experiência adequada:
+
+**Público Técnico**: Geralmente prefere detalhes específicos e complexidade, permitindo o uso de visuais elaborados, drill downs, segmentações interativas e navegabilidade avançada.
+
+**Executivos**: Demandam informações objetivas e claras, com foco em resultados que não deixem espaço para múltiplas interpretações.A disposição dos visuais deve considerar elementos como a proporção áurea, repetição e contraste para otimizar o relatório.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-08h52m18s249.jpg" alt="" width="840">
+</p>
+
+Uma das principais diretrizes para a criação de relatórios é o desenho de um esboço inicial. Esta prática auxilia na definição da aparência do projeto antes de se dedicar tempo à construção efetiva na ferramenta. Assim como no planejamento de uma casa, o "rabisco" permite:
+
+- Experimentar ideias diferentes e visualizar a estrutura geral.
+- Discutir conceitos com a equipe para encontrar a melhor solução para o problema apresentado.Concentrar-se no que é realmente importante, incluindo a escolha do fundo ideal para os visuais.
 
 ### 🟩 Vídeo 02 - Diretrizes – O que é importante na construção do relatório?
 
@@ -19,7 +50,8 @@ link do vídeo:
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_02.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/ce4dcb34-3f1b-47a1-a728-e6cb523d3922?autoplay=1
 
 ### 🟩 Vídeo 03 - Verificando pontos de configuração do relatório
 
