@@ -212,7 +212,7 @@ A imagem mostra a interface de configuração de um visual no Power BI, com foco
 
 Dentro dessa área, o usuário pode inserir uma descrição detalhada do gráfico exibido. Essa descrição deve explicar o propósito do visual, o tipo de gráfico utilizado e os principais insights apresentados. Por exemplo, ao descrever um gráfico de vendas por produto, é possível indicar qual item teve maior desempenho e qual teve menor.
 
-Além disso, a interface sugere que o texto alternativo pode ser estático ou construído dinamicamente com base em campos de dados, permitindo maior flexibilidade. O objetivo final é garantir que qualquer pessoa, mesmo sem acesso visual ao gráfico, consiga compreender as informações apresentadas.
+A interface sugere que o texto alternativo pode ser estático ou construído dinamicamente com base em campos de dados, permitindo maior flexibilidade. O objetivo final é garantir que qualquer pessoa, mesmo sem acesso visual ao gráfico, consiga compreender as informações apresentadas.
       
 
 ### 🟩 Vídeo 07 - Navegabilidade com acessibilidade – Ordenando as camadas e tabulação
@@ -224,7 +224,27 @@ Além disso, a interface sugere que o texto alternativo pode ser estático ou co
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/552b1966-8cb1-4696-82fd-13b5ed111d49?autoplay=1
 
+O vídeo ensina como otimizar a experiência de usuários com deficiência em relatórios do Power BI, focando na organização da ordem de tabulação e no uso estratégico do painel de seleção.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-22-14h22m34s320.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o painel de **Seleção** no Power BI, onde são listados todos os elementos visuais presentes no relatório, como gráficos, cartões, botões, formas e caixas de texto. Esse painel permite visualizar a hierarquia e organização dos objetos na página.
+
+Cada item exibido corresponde a um componente do relatório, e a ordem em que aparecem está diretamente relacionada à navegação por teclado (ordem de tabulação). Isso significa que usuários que não utilizam o mouse irão percorrer esses elementos exatamente na sequência definida aqui.
+
+Também é possível observar que alguns elementos estão agrupados, indicando que pertencem a uma mesma estrutura visual (por exemplo, formas associadas a gráficos). Essa organização é importante para manter consistência tanto visual quanto funcional.
+
+Além disso, o painel permite:
+
+* Reordenar os elementos (alterando a navegação)
+* Agrupar componentes relacionados
+* Ocultar itens que não devem ser acessíveis na navegação
+
+Elementos puramente decorativos (como formas de fundo ou sombras) aparecem na lista, mas idealmente devem ser ocultados da ordem de tabulação para não interferirem na experiência de navegação do usuário.
 
 ### 🟩 Vídeo 08 - Nomeações claras, concisas, diretas e sem abreviações
 
@@ -232,7 +252,8 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/exploran
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_08.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/e3099fba-8315-4298-afcb-0fff6a52bba1?autoplay=1
 
 ### 🟩 Vídeo 09 - Utilizando marcadores para facilitar a leitura dos visuais
 
