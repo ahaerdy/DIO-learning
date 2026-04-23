@@ -300,7 +300,26 @@ Essa abordagem transforma um gráfico de tendência genérico em uma ferramenta 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/402577c4-9de7-4555-a0b8-7e6764ff5ae2?autoplay=1
+
+Este vídeo ensina como utilizar a galeria de temas do Power BI para transformar a estética de relatórios, garantindo não apenas beleza visual, mas também legibilidade e alinhamento com identidades corporativas.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-13h52m56s071.jpg" alt="" width="840">
+</p>
+
+A interface do Power BI Desktop apresenta, na guia **Exibição**, uma galeria de temas que permite configurar a identidade visual do relatório para garantir maior legibilidade e impacto visual. O software disponibiliza diversos conjuntos de cores predefinidos, incluindo opções com planos de fundo escuros ou "cinza chumbo", que servem para dar destaque aos dados e fazer com que os gráficos "saltem aos olhos" do usuário.
+
+Além da seleção de temas prontos, a ferramenta oferece recursos de gestão e customização avançada:
+
+* **Procurar e Galeria de temas:** Permite explorar temas específicos ou acessar a galeria online para buscar novas composições visuais.
+* **Personalizar o tema atual:** Abre um menu detalhado onde é possível definir cores, fontes de texto, estilos de visuais, configurações de página e painéis de filtro.
+* **Salvar tema atual:** Após realizar ajustes para alinhar o relatório à identidade visual de uma empresa, o usuário pode salvar as configurações para aplicá-las em outros projetos.
+
+Essa flexibilidade é essencial para que o desenvolvedor possa criar dashboards que respeitem requisitos empresariais ou preferências estéticas específicas, mantendo a consistência técnica e visual da apresentação.      
+
 
 ### 🟩 Vídeo 11 - Aprofundando nos recursos: indicadores, botões, seleções e segmentadores
 
@@ -308,7 +327,10 @@ link do vídeo:
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_11.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/d81e1463-3dac-4535-b57f-43ced01e0c99?autoplay=1
+
+
 
 ### 🟩 Vídeo 12 - Explorando as possibilidades com botões
 
