@@ -259,11 +259,6 @@ O vídeo apresenta um guia prático sobre como otimizar a visualização de dado
 
 ### Anotações
 
-Aqui está o documento enriquecido conforme as regras:
-
-```markdown
-#### 
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-09h41m48s313.jpg" alt="" width="840">
 </p>
