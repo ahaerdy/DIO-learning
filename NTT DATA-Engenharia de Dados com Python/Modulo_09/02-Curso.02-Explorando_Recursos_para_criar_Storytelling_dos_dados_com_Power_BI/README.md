@@ -384,7 +384,33 @@ Essas opções dão flexibilidade ao designer do relatório para adaptar o compo
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_12.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
+
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/ed5fc1cc-e0ec-4f75-96d3-57140034fc0a?autoplay=1
+
+O vídeo explora como utilizar botões para transformar relatórios estáticos em experiências interativas e intuitivas, focando em navegação, ações personalizadas e design de interface (UI).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-15h28m22s997.jpg" alt="" width="840">
+</p>
+
+#### Funcionalidades e Configurações de Botões
+
+Para gerenciar como o usuário interage com o relatório, o Power BI oferece diversas opções técnicas:
+
+* **Tipos de Botões**: Estão disponíveis ícones pré-definidos como setas (esquerda/direita), botões de redefinir, voltar e informações[cite: 65, 78]. Todos esses possuem funcionalidades associadas[cite: 65].
+* **Navigator**: Uma ferramenta que mapeia automaticamente as páginas do relatório, permitindo transições rápidas[cite: 67]. É possível ocultar páginas específicas ou defini-las apenas como dicas de ferramenta (tooltips) para que não apareçam na navegação principal[cite: 70, 71].
+* **Personalização Visual**: Através do painel de **Formato**, pode-se ajustar a estética dos botões, como a aplicação de **cantos arredondados** para tornar a transição visual menos brusca[cite: 73, 74]. Além disso, é possível configurar estados dinâmicos, alterando cores e ícones "ao focalizar" ou "ao pressionar" o botão[cite: 128, 130].
+
+#### Ações e Indicadores
+
+A inteligência por trás de um botão reside em sua **Ação**[cite: 121]. Além da simples navegação entre abas, os botões podem ser vinculados a:
+
+1.  **Indicadores (Bookmarks)**: Permitem salvar estados específicos de filtros e visuais, funcionando como atalhos para "favoritos" dentro do relatório[cite: 81, 118, 134].
+2.  **Drillthrough**: Utilizado para aumentar o nível de detalhamento de uma informação baseando-se em variáveis categóricas, como **Produto** ou **País**[cite: 83, 84, 94, 98].
+3.  **Perguntas e Respostas (P&R)**: Um recurso baseado em IA que permite ao usuário realizar consultas em linguagem natural diretamente no relatório[cite: 124, 131, 132].      
+
 
 ### 🟩 Vídeo 13 - Modificando interações no Power BI
 
@@ -392,7 +418,10 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/exploran
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_13.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/0fc87e6b-46c7-49a6-b32c-a82c81473a8c?autoplay=1
+
+
 
 ### 🟩 Vídeo 14 - Gráfico de Sankey e Considerações finais
 
