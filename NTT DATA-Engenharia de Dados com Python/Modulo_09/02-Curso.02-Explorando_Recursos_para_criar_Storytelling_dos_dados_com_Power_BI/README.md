@@ -274,12 +274,32 @@ A imagem mostra um gráfico no Power BI com as medidas **Sales** e **Gross Sales
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/00fe601a-834d-4a58-b997-6b36003c2619?autoplay=1
 
+Este vídeo ilustra técnicas avançadas de visualização de dados, focando em como tornar gráficos de linha e área mais legíveis e informativos através do uso de marcadores e eixos secundários.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-13h29m43s969.jpg" alt="" width="840">
+</p>
+
+No Power BI, a utilização de **marcadores** é um recurso fundamental para melhorar a legibilidade e a precisão na interpretação de dados em gráficos de linhas ou áreas. Ao selecionar um visual e acessar as opções de **Formato**, é possível ativar a exibição desses pontos para identificar exatamente onde cada instância de dado (como os meses do ano) está posicionada no gráfico.
+
+Nesta interface, observamos a aplicação de marcadores para diferenciar as métricas de **Soma de Sales** (representada pela área preenchida em azul) e **Soma de Profit** (representada pela linha com marcadores em formato de losango). A customização desses elementos permite:
+
+* **Diferenciação de Séries:** Definir tipos de marcadores distintos (como bolinhas ou losangos) para cada categoria, facilitando a distinção visual quando há sobreposição de informações.
+* **Ajuste Estético e Contraste:** Modificar as cores e o tamanho dos marcadores para dar ênfase a pontos específicos ou garantir que o visual permaneça harmonioso e profissional.
+* **Noção de Magnitude:** Auxiliar na visualização de pontos de dados em eixos secundários ou em situações onde as ordens de grandeza das métricas são muito distintas.
+
+Essa abordagem transforma um gráfico de tendência genérico em uma ferramenta de análise pontual, onde o usuário consegue identificar rapidamente o comportamento dos dados em cada período selecionado.      
+
+
 ### 🟩 Vídeo 10 - Explorando temas próprios do Power BI
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_10.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
+
 link do vídeo:
 
 ### 🟩 Vídeo 11 - Aprofundando nos recursos: indicadores, botões, seleções e segmentadores
