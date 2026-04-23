@@ -420,6 +420,21 @@ A inteligência por trás de um botão reside em sua **Ação**. Além da simple
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/0fc87e6b-46c7-49a6-b32c-a82c81473a8c?autoplay=1
 
+O vídeo explica como personalizar a forma como os diferentes elementos de um relatório Power BI conversam entre si. Aprender a manipular essas interações é fundamental para criar dashboards dinâmicos, intuitivos e que contem a história correta dos dados.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-15h55m04s814.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o **Power BI Desktop** na Página 3 do relatório "Report de Vendas Detalhado". Três visuais são visíveis: o gráfico de área **Vendas por Período**, uma **tabela de matriz** com os trimestres de 2013 e 2014, e o gráfico de barras/colunas **Vendas e Gross x Período**. O ponto central desta tela é a ativação do modo **Editar Interações**: perceba os ícones flutuantes que aparecem acima de cada visual — um ícone de gráfico de barras (**Realçar**), um ícone de funil (**Filtrar**) e um ícone de proibição (**Sem impacto**). No canto superior direito do gráfico "Vendas e Gross x Período" o tooltip **"Realçar"** está visível, indicando que o cursor está posicionado sobre o ícone correspondente. Este é o estado padrão de interação para esse visual: quando outro visual é clicado, ele **realça** proporcionalmente os dados, mantendo a visão do todo em segundo plano.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-15h55m11s782.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o resultado prático de alterar o tipo de interação de **Realçar** para **Filtrar** no mesmo relatório. Na tabela de matriz à esquerda, a linha **Trim 3** está selecionada (destacada em azul). O efeito imediato no gráfico **Vendas e Gross x Período** é visível: em vez de exibir todos os meses com realce proporcional, o gráfico agora apresenta **apenas os três meses do Trimestre 3** — agosto, setembro e julho — eliminando completamente os demais períodos da visualização. Isso ilustra a diferença fundamental entre as duas modalidades: o modo **Realçar** preserva o contexto geral e destaca a fatia selecionada, enquanto o modo **Filtrar** restringe o visual exclusivamente aos dados do item selecionado, exibindo os valores absolutos daquele recorte sem referência ao total.      
 
 
 ### 🟩 Vídeo 14 - Gráfico de Sankey e Considerações finais
@@ -428,7 +443,10 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/exploran
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_14.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/3a353361-1384-4d88-9d82-a6964ea5b080?autoplay=1
+
+
 
 
 ##  Materiais de Apoio
