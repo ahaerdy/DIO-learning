@@ -330,6 +330,52 @@ Essa flexibilidade é essencial para que o desenvolvedor possa criar dashboards 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/d81e1463-3dac-4535-b57f-43ced01e0c99?autoplay=1
 
+O vídeo mostra como transformar relatórios estáticos em experiências interativas e dinâmicas utilizando recursos avançados de navegação e filtragem no Power BI.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-15h00m53s731.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta os três principais recursos de navegação e interatividade no Power BI: **Indicadores**, **Botões** e **Seleções**.  
+- **Indicadores** (bookmarks) capturam um estado específico de uma página do relatório (filtros, slicers, visuais visíveis). Permitem retomar rapidamente aquela visualização mais tarde, funcionando como um *snapshot* configurável.  
+- **Botões** criam uma experiência interativa: ao clicar, o usuário pode navegar entre páginas, alterar tipos de gráfico, executar ações como redefinir filtros ou acionar um indicador.  
+- **Seleções** controlam a visibilidade dos itens no relatório, definindo quais objetos aparecem e quais ficam ocultos em determinado momento.
+
+Esses recursos são fundamentais para construir dashboards dinâmicos e de fácil navegação, sem depender apenas de filtros padrão.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-15h01m00s361.jpg" alt="" width="840">
+</p>
+
+A imagem introduz o **Segmentador** (slicer), um visual específico do Power BI que age como um filtro direto e sempre visível. Suas principais vantagens são:  
+- **Acesso rápido aos filtros mais usados** – evita que o usuário tenha que abrir listas suspensas ou painéis laterais.  
+- **Visualização imediata do estado filtrado** – o próprio segmentador mostra quais valores estão selecionados, simplificando a leitura do contexto atual.  
+- **Filtragem sobre colunas ocultas** – é possível segmentar por colunas que não aparecem nos dados principais, mantendo a tabela de origem organizada e sem expor campos desnecessários.
+
+Na prática, o segmentador torna a filtragem mais intuitiva e reduz a carga cognitiva do analista.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-15h01m07s864.jpg" alt="" width="840">
+</p>
+
+O conteúdo desta imagem é textual e não contém código. Ela descreve dois usos estratégicos do **Segmentador** para relatórios eficientes:  
+1. **Relatórios mais direcionados** – posicione o segmentador ao lado de visuais importantes (como gráficos principais), facilitando a interação sem desviar a atenção.  
+2. **Adiar consultas ao modelo de dados** – em cenários com *DirectQuery*, o uso de segmentadores suspensos (dropdown) evita atualizações automáticas a cada clique, melhorando o desempenho.  
+
+Além disso, há uma observação importante: segmentadores **não suportam** campos de entrada (digitação livre) nem funções de *drill down* (detalhamento hierárquico). Essas limitações devem ser consideradas no momento do projeto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-15h01m15s381.jpg" alt="" width="840">
+</p>
+
+A imagem detalha três configurações de seleção disponíveis para o Segmentador no Power BI:  
+- **Seleção única** (desativada por padrão) – permite que apenas um item seja escolhido por vez. Útil quando se deseja uma filtragem exclusiva.  
+- **Seleção múltipla com CTRL** (ativada por padrão) – possibilita selecionar vários itens pressionando a tecla Ctrl. É o comportamento padrão para análises comparativas.  
+- **Mostrar "Selecionar tudo"** (desativada por padrão) – se habilitada, adiciona uma caixa de seleção ao segmentador que permite marcar ou desmarcar todos os itens de uma vez.  
+
+Essas opções dão flexibilidade ao designer do relatório para adaptar o comportamento do segmentador à necessidade de negócio, seja para análises pontuais ou abrangentes.   
 
 
 ### 🟩 Vídeo 12 - Explorando as possibilidades com botões
@@ -338,7 +384,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/exploran
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_12.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/ed5fc1cc-e0ec-4f75-96d3-57140034fc0a?autoplay=1
 
 ### 🟩 Vídeo 13 - Modificando interações no Power BI
 
