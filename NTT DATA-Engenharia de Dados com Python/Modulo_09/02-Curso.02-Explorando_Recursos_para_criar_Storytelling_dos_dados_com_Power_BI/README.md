@@ -255,13 +255,29 @@ Elementos puramente decorativos (como formas de fundo ou sombras) aparecem na li
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/e3099fba-8315-4298-afcb-0fff6a52bba1?autoplay=1
 
+O vídeo apresenta um guia prático sobre como otimizar a visualização de dados no Power BI, focando na experiência do usuário final. A premissa central é que a clareza e a concisão são fundamentais para que os dados sejam transformados em insights acionáveis sem gerar confusão.
+
+### Anotações
+
+Aqui está o documento enriquecido conforme as regras:
+
+```markdown
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-23-09h41m48s313.jpg" alt="" width="840">
+</p>
+
+A imagem mostra um gráfico no Power BI com as medidas **Sales** e **Gross Sales** distribuídas por mês. O ponto central da explicação é a importância de títulos claros e concisos nos visuais. Em vez de usar termos técnicos ou abreviações como *Sum of Sales por mês*, a recomendação é adotar títulos descritivos e acessíveis, como **Vendas por Período**. Isso facilita a compreensão para qualquer usuário, independentemente de familiaridade com jargões. Além disso, o gráfico pode ser configurado para explorar diferentes níveis da hierarquia temporal (ano, trimestre, mês), permitindo análises mais detalhadas ou agregadas conforme necessário. O cuidado com a nomenclatura e a clareza visual é uma boa prática essencial na criação de relatórios.
+
 ### 🟩 Vídeo 09 - Utilizando marcadores para facilitar a leitura dos visuais
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.02-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
-link do vídeo:
+
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/explorando-recursos-para-criar-storytelling-dos-dados-com-power-bi/learning/00fe601a-834d-4a58-b997-6b36003c2619?autoplay=1
 
 ### 🟩 Vídeo 10 - Explorando temas próprios do Power BI
 
