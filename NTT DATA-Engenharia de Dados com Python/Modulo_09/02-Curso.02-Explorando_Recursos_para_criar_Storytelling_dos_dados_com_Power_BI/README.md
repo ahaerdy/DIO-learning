@@ -399,18 +399,17 @@ O vídeo explora como utilizar botões para transformar relatórios estáticos e
 
 Para gerenciar como o usuário interage com o relatório, o Power BI oferece diversas opções técnicas:
 
-* **Tipos de Botões**: Estão disponíveis ícones pré-definidos como setas (esquerda/direita), botões de redefinir, voltar e informações[cite: 65, 78]. Todos esses possuem funcionalidades associadas[cite: 65].
-* **Navigator**: Uma ferramenta que mapeia automaticamente as páginas do relatório, permitindo transições rápidas[cite: 67]. É possível ocultar páginas específicas ou defini-las apenas como dicas de ferramenta (tooltips) para que não apareçam na navegação principal[cite: 70, 71].
-* **Personalização Visual**: Através do painel de **Formato**, pode-se ajustar a estética dos botões, como a aplicação de **cantos arredondados** para tornar a transição visual menos brusca[cite: 73, 74]. Além disso, é possível configurar estados dinâmicos, alterando cores e ícones "ao focalizar" ou "ao pressionar" o botão[cite: 128, 130].
+* **Tipos de Botões**: Estão disponíveis ícones pré-definidos como setas (esquerda/direita), botões de redefinir, voltar e informações. Todos esses possuem funcionalidades associadas.
+* **Navigator**: Uma ferramenta que mapeia automaticamente as páginas do relatório, permitindo transições rápidas. É possível ocultar páginas específicas ou defini-las apenas como dicas de ferramenta (tooltips) para que não apareçam na navegação principal.
+* **Personalização Visual**: Através do painel de **Formato**, pode-se ajustar a estética dos botões, como a aplicação de **cantos arredondados** para tornar a transição visual menos brusca. Além disso, é possível configurar estados dinâmicos, alterando cores e ícones "ao focalizar" ou "ao pressionar" o botão.
 
 #### Ações e Indicadores
 
-A inteligência por trás de um botão reside em sua **Ação**[cite: 121]. Além da simples navegação entre abas, os botões podem ser vinculados a:
+A inteligência por trás de um botão reside em sua **Ação**. Além da simples navegação entre abas, os botões podem ser vinculados a:
 
-1.  **Indicadores (Bookmarks)**: Permitem salvar estados específicos de filtros e visuais, funcionando como atalhos para "favoritos" dentro do relatório[cite: 81, 118, 134].
-2.  **Drillthrough**: Utilizado para aumentar o nível de detalhamento de uma informação baseando-se em variáveis categóricas, como **Produto** ou **País**[cite: 83, 84, 94, 98].
-3.  **Perguntas e Respostas (P&R)**: Um recurso baseado em IA que permite ao usuário realizar consultas em linguagem natural diretamente no relatório[cite: 124, 131, 132].      
-
+1.  **Indicadores (Bookmarks)**: Permitem salvar estados específicos de filtros e visuais, funcionando como atalhos para "favoritos" dentro do relatório.
+2.  **Drillthrough**: Utilizado para aumentar o nível de detalhamento de uma informação baseando-se em variáveis categóricas, como **Produto** ou **País**.
+3.  **Perguntas e Respostas (P&R)**: Um recurso baseado em IA que permite ao usuário realizar consultas em linguagem natural diretamente no relatório.      
 
 ### 🟩 Vídeo 13 - Modificando interações no Power BI
 
