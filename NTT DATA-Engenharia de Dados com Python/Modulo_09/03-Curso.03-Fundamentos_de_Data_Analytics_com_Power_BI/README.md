@@ -112,6 +112,35 @@ A criação deste visual envolve a configuração de "compartimentos" (bins), on
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/290bd938-6e6f-4dc3-94af-24aa95450e0d?autoplay=1
 
+O vídeo aborda a aplicação da análise de N Superiores, uma técnica essencial para identificar os elementos de maior impacto em um conjunto de dados, como os produtos mais vendidos ou os clientes mais lucrativos.
+
+### Anotações
+
+#### N Superiores: DAX e P&R
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-09h58m40s341.jpg" alt="" width="840">
+</p>
+
+A análise de **N superiores**, comumente chamada de **Top N**, permite identificar os elementos de maior impacto dentro de um contexto específico. Essa métrica é essencial para destacar fatos relevantes, como os principais produtos vendidos, os segmentos mais lucrativos ou os países com maior demanda. No Power BI, essa funcionalidade pode ser explorada tanto através do recurso de **P&R (Perguntas e Respostas)**, que utiliza IA para interpretar consultas, quanto pela aplicação direta da função **DAX TOPN**.
+
+Abaixo, observa-se um exemplo de expressão DAX estruturada para retornar os três principais produtos baseados no montante de vendas:
+
+```dax
+EVALUATE
+TOPN (
+    3,
+    ADDCOLUMNS (
+        VALUES ('Product'[Product Name]),
+        "@Sales Amount", [Sales Amount]
+    ),
+    [@Sales Amount],
+    DESC
+)
+ORDER BY [@Sales Amount] DESC
+```
+
+Nesta construção, a função `TOPN` é utilizada para filtrar as três primeiras linhas de uma tabela gerada pela função `ADDCOLUMNS`, que associa cada produto ao seu respectivo valor de venda. O comando `EVALUATE` é empregado para executar a avaliação desta expressão específica, enquanto o parâmetro `DESC` garante que o ranking seja ordenado de forma descendente (do maior para o menor). Embora essa estrutura possua uma lógica semelhante a consultas SQL e seja considerada mais complexa, ela oferece um controle preciso sobre os dados analisados no relatório.      
 
 
 ### 🟩 Vídeo 05 - Criando visual com visão N Superiores com P&R
@@ -121,7 +150,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/106f9735-db26-4495-a1ba-716b02733b64?autoplay=1
+
+
 
 ### 🟩 Vídeo 06 - Criando visão N Superiores com Filtros
 
