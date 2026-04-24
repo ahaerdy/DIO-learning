@@ -324,6 +324,23 @@ Para operacionalizar essa identificação no Power BI, o processo envolve:
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/ac42c3e0-ef41-4df3-a7da-7cb46dc4d3a5?autoplay=1
 
+O vídeo explora o uso de gráficos de dispersão para identificar e analisar anomalias em conjuntos de dados, com um foco especial na visualização da evolução temporal através do "eixo de reprodução".
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-15h01m29s877.jpg" alt="" width="840">
+</p>
+
+A utilização do visual de dispersão permite identificar anomalias que, muitas vezes, não representam erros, mas sim comportamentos reais que se consolidam ao longo do tempo. Ao analisar a distribuição dos dados, é possível verificar se um ponto fora da curva é resultado de uma transformação equivocada ou de uma etapa esquecida no processo de tratamento de dados. Este tipo de visualização traz segurança na análise, garantindo que as oscilações identificadas estejam realmente relacionadas à natureza dos dados e não a falhas técnicas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-15h01m34s662.jpg" alt="" width="840">
+</p>
+
+Neste exemplo prático, observa-se o comportamento do número de pedidos em uma grande massa de dados, onde a maioria dos pontos converge para um padrão esperado. No entanto, o gráfico destaca pontos isolados que divergem drasticamente dessa convergência. Essas ocorrências únicas provocam questionamentos essenciais sobre a origem desses pedidos e por que esse fenômeno ocorreu em depósitos específicos, exemplificando como o gráfico de dispersão é fundamental para a identificação visual imediata de anomalias.      
+
+
 ### 🟩 Vídeo 11 - Criando DAX para identificar outliers
 
 <video width="60%" controls>
@@ -331,7 +348,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/81bb522b-bcc8-4c6a-8ecc-bfceaa0eeca7?autoplay=1
 
 ### 🟩 Vídeo 12 - Criando agrupamento dos dados
 
