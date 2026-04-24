@@ -266,6 +266,27 @@ Enquanto a coluna de vendas totais exibe os valores para todos os produtos, a no
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/4b0f9e22-64a2-44ae-8665-c0b5fc7a9660?autoplay=1
 
+O vídeo demonstra a criação e personalização de uma visualização de dados no Power BI (ou ferramenta similar) utilizando um gráfico de barras empilhadas. O foco é analisar dados de vendas, especificamente destacando a proporção dos três produtos mais vendidos ("top 3 produtos") em relação ao total de vendas por país, e como essa informação pode ser contextualizada e apresentada de forma clara.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-14h30m51s886.jpg" alt="" width="840">
+</p>
+
+A visualização apresenta a construção de um gráfico de colunas empilhadas para comparar a "Soma de Sales" (vendas totais) e o "TOP3 PRODUCT" (os três produtos mais vendidos) por país. O objetivo é analisar a proporção que esses produtos principais representam dentro do contexto total de vendas de cada nação, como Estados Unidos, Canadá e França. 
+
+Nesta fase inicial, o gráfico utiliza uma paleta de cores com azul e um tom de amarelo mais aberto. Abaixo, um gráfico de barras detalha especificamente o "TOP3 PRODUCT per Product", identificando os itens individuais que compõem essa métrica. Essa estrutura permite observar como a modificação de informações altera o contexto dos dados exibidos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-14h30m55s189.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o relatório no Power BI Desktop exibe ajustes finais de formatação e identidade visual. As cores foram modificadas para tons mais "fechados", utilizando um azul e um amarelo mais escuros para destacar melhor as proporções entre as séries de dados. Os rótulos de dados foram aumentados para o tamanho 15, facilitando a leitura dos valores, como os "25 Mi" em vendas e "17 Mi" correspondentes ao top 3 nos Estados Unidos.
+
+O painel de campos à direita revela a estrutura de dados utilizada, incluindo campos como `Country`, `Product`, `TOP3 PRODUCT` e `total sales`. O resultado final oferece duas visões complementares: uma focada nos produtos mais vendidos individualmente e outra que demonstra o impacto e a influência desses produtos no montante total de vendas por país.      
+
+
 ### 🟩 Vídeo 09 - Conversando sobre anomalias em dados
 
 <video width="60%" controls>
@@ -273,7 +294,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/4abd7195-1b04-48cb-a980-f966205bbdbf?autoplay=1
 
 ### 🟩 Vídeo 10 - Identificando Exceções com visuais
 
