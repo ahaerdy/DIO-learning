@@ -203,6 +203,58 @@ A lógica por trás deste visual envolve a aplicação de um filtro de **N super
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/81968e76-3f32-481e-aa3f-58075d3a4b74?autoplay=1
 
+O tutorial foca na construção de uma medida complexa que utiliza a combinação das funções CALCULATE, TOPN, ALL e VALUES. O objetivo é criar um filtro dinâmico que identifique o ranking de vendas, permitindo que apenas os itens do topo sejam destacados em relatórios e tabelas, independentemente dos filtros laterais aplicados.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-14h18m57s443.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, exploramos a documentação da função **TOPN** no DAX. Esta função é fundamental para retornar as primeiras N linhas de uma tabela específica com base em um critério de ordenação. Diferente da SUMX, a TOPN foca em ranqueamento e filtragem de dados.
+
+A sintaxe da função exige a definição de quatro argumentos principais:
+* **N_Value**: O número de linhas que devem ser retornadas.
+* **Table**: A tabela ou expressão de tabela de onde as linhas serão extraídas.
+* **OrderBy_Expression**: O critério ou medida que definirá a ordem do ranqueamento.
+* **Order**: A direção da ordenação (ascendente ou descendente).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-14h19m19s532.jpg" alt="" width="840">
+</p>
+
+Para identificar os produtos com maior volume de vendas, criamos a medida **TOP3 PRODUCT** utilizando uma combinação avançada de funções. O raciocínio lógico baseia-se no uso da função **CALCULATE** como motor principal para modificar o contexto de filtro.
+
+Dentro desta medida, aplicamos os seguintes componentes:
+* **Total Sales**: A medida de referência que soma as vendas da tabela *financials*.
+* **ALL (financials[Product])**: Utilizada dentro da TOPN para remover filtros pré-existentes na coluna de produtos, garantindo que o ranking considere todos os itens disponíveis.
+* **VALUES (financials[Product])**: Atua como um fator de filtragem final na CALCULATE para garantir que o resultado respeite o contexto visual do relatório.
+
+```dax
+TOP3 PRODUCT = 
+CALCULATE(
+    [total sales],
+    TOPN(
+        3, 
+        ALL(financials[Product]), 
+        [total sales]
+    ),
+    VALUES(financials[Product])
+)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-14h19m37s382.jpg" alt="" width="840">
+</p>
+
+Ao aplicar a medida em elementos visuais, confirmamos a eficácia do filtro de ranking. No gráfico de barras "TOP3 PRODUCT por Product", o Power BI exibe isoladamente os três produtos com melhor desempenho em vendas.
+
+A validação dos dados através de uma tabela comparativa permite observar que a medida `TOP3 PRODUCT` retorna valores apenas para os itens ranqueados no topo:
+1.  **Paseo**
+2.  **VTT**
+3.  **Velo**
+
+Enquanto a coluna de vendas totais exibe os valores para todos os produtos, a nova medida ignora os itens que não pertencem ao Top 3, facilitando a análise de destaque e a criação de visuais focados em performance.      
 
 
 ### 🟩 Vídeo 08 - Criando visuais com base na visão N superiores
@@ -212,7 +264,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/4b0f9e22-64a2-44ae-8665-c0b5fc7a9660?autoplay=1
 
 ### 🟩 Vídeo 09 - Conversando sobre anomalias em dados
 
