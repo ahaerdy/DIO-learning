@@ -50,7 +50,31 @@ O Power BI oferece uma série de funcionalidades para uma análise de dados robu
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/44318103-5dcb-4814-8290-5e0280b9edd9?autoplay=1
+
+O vídeo aborda a interseção fundamental entre a análise de dados e a estatística. A estatística é apresentada não apenas como um conjunto de fórmulas, mas como uma ferramenta essencial para explorar dados de forma quantitativa e qualitativa, permitindo a identificação de tendências, exceções e padrões comportamentais que fundamentam a tomada de decisão estratégica.
+
+### Anotações
+
+#### Resumo Estatístico em Análise de Dados
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-09h26m35s531.jpg" alt="" width="840">
+</p>
+
+A estatística é a base para explorar dados de maneira quantitativa e qualitativa, permitindo a mensuração de KPIs e a extração de qualidade das informações disponíveis. O **resumo estatístico**, especificamente, é uma ferramenta que fornece uma descrição rápida, simples e de alto valor sobre o conjunto de dados.
+
+Através dessa análise, é possível identificar pontos cruciais para o negócio, como:
+* **Distribuição e Tendências:** Compreender como os dados se comportam ao longo do tempo ou categorias.
+* **Identificação de Exceções:** Detectar anomalias ou "novidades" que fogem do padrão esperado.
+* **Padrões Comportamentais:** Visualizar dados como clusters ou médias para orientar decisões estratégicas.
+
+Para operacionalizar essas análises no Power BI, utilizam-se diversos recursos técnicos:
+* **DAX (Data Analytics Expressions):** Linguagem utilizada para aplicar o viés matemático e criar cálculos personalizados sobre os dados.
+* **Visuais Especializados:** Uso de histogramas e curvas de sino para demonstrar frequências e variabilidades.
+* **Análise Avançada:** Inclusão de elementos como margem de erro, desvio padrão e a possibilidade de integração com linguagens como R e Python para análises mais profundas.
+* **Rankings e Frequência:** Aplicação de lógicas como o "Top N" para identificar, por exemplo, os produtos mais vendidos ou a frequência de pedidos em uma cadeia de suprimentos.      
+
 
 ### 🟩 Vídeo 03 - Funções Estatísticas e Histograma
 
@@ -59,7 +83,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/022f4574-9f97-43a9-84cb-fbdbfb1e3fe8?autoplay=1
 
 ### 🟩 Vídeo 04 - Outros Recursos de Data Analytics no Power BI
 
