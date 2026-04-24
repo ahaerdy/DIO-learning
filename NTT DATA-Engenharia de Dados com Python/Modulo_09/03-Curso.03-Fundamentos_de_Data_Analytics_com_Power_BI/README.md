@@ -296,6 +296,25 @@ O painel de campos à direita revela a estrutura de dados utilizada, incluindo c
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/4abd7195-1b04-48cb-a980-f966205bbdbf?autoplay=1
 
+Este segmento aborda a importância e os métodos para identificar exceções (anomalias) em conjuntos de dados, com foco na utilização de visuais do Power BI. A palestrante enfatiza que a detecção dessas anomalias é crucial para a tomada de decisões estratégicas, a compreensão de padrões de comportamento e a revelação de eventos inesperados que podem impactar o negócio.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-14h46m18s812.jpg" alt="" width="840">
+</p>
+
+Nesta etapa da análise, utilizamos o Power BI para identificar exceções, que são caracterizadas como um tipo de anomalia. Trata-se de dados que fogem ao padrão esperado, surpreendendo o analista por não caracterizarem o comportamento normal da base.
+
+A identificação dessas exceções é fundamental para isolar pontos que diferem significativamente do restante dos dados, permitindo uma investigação profunda sobre as causas raiz dessas ocorrências. No painel visual apresentado, observamos a análise de vendas e produtos específicos (como o "TOP3 PRODUCT") distribuídos por países como United States of America, Canada, France, Germany e Mexico.
+
+A análise de anomalias pode impactar decisões empresariais ao revelar questões ligadas à cultura da empresa ou a falhas operacionais. Por exemplo, ao observar um volume de pedidos acima da média para uma categoria específica em um determinado depósito, o analista deve questionar se o evento foi pontual, se houve influência externa (como uma promoção não prevista) ou se existe uma periodicidade (trimestral ou anual) que transforme essa anomalia em um novo padrão de comportamento.
+
+Para operacionalizar essa identificação no Power BI, o processo envolve:
+* Segmentação de dados: Divisão entre o grupo que representa a exceção e o grupo que mantém o comportamento normal.
+* Métodos de implementação: Embora seja possível utilizar colunas calculadas, os resultados seriam estáticos. A abordagem recomendada prioriza o uso de visuais (elementos gráficos) ou fórmulas DAX para uma identificação dinâmica e eficiente.      
+
+
 ### 🟩 Vídeo 10 - Identificando Exceções com visuais
 
 <video width="60%" controls>
@@ -303,7 +322,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/ac42c3e0-ef41-4df3-a7da-7cb46dc4d3a5?autoplay=1
 
 ### 🟩 Vídeo 11 - Criando DAX para identificar outliers
 
