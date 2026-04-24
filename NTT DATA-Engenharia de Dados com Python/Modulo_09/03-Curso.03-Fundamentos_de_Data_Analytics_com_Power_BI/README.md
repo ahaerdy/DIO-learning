@@ -182,8 +182,17 @@ Para tornar a análise mais intuitiva, foi aplicada uma **formatação condicion
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/71785669-0b33-4c19-b03a-f04cc0f39b4a?autoplay=1
 
+O vídeo ensina como utilizar filtros de "Top N" para identificar os períodos mais lucrativos e como visualizar correlações entre diferentes métricas (Vendas vs. Lucro) utilizando escalas logarítmicas e ajustes de design para melhorar a legibilidade dos dados.
 
+### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-14h02m04s169.jpg" alt="" width="840">
+</p>
+
+A interface do Power BI Desktop apresenta a configuração final de um painel voltado para a análise de desempenho temporal e por categoria. O foco central da demonstração é o visual "Top 5 Meses - Temporal", que utiliza um gráfico de área para correlacionar a **Soma de Sales** (Vendas) e a **Soma de Profit** (Lucro). Para resolver a disparidade entre as ordens de grandeza dessas duas métricas, foi aplicada uma **escala logarítmica** no eixo, permitindo que a variação de ambas seja observada de forma proporcional e visualmente clara.
+
+A lógica por trás deste visual envolve a aplicação de um filtro de **N superior** (Top N) no painel de filtros lateral. Este filtro foi configurado para exibir apenas os 5 meses com maior volume de lucro, utilizando o campo "Month" como base de agrupamento. Adicionalmente, o visual foi refinado esteticamente através da remoção dos títulos dos eixos X e Y para maximizar o espaço útil, além da inclusão de marcadores específicos nas linhas para facilitar a distinção entre as séries de dados de vendas e lucro.      
 
 ### 🟩 Vídeo 07 - Criando visão N Superiores com DAX
 
@@ -192,7 +201,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/81968e76-3f32-481e-aa3f-58075d3a4b74?autoplay=1
+
+
 
 ### 🟩 Vídeo 08 - Criando visuais com base na visão N superiores
 
