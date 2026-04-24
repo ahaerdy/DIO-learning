@@ -152,6 +152,25 @@ Nesta construção, a função `TOPN` é utilizada para filtrar as três primeir
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/106f9735-db26-4495-a1ba-716b02733b64?autoplay=1
 
+Este guia resume as técnicas apresentadas para transformar dados brutos em dashboards profissionais, utilizando recursos de Inteligência Artificial (P&R), árvores hierárquicas e design avançado.
+
+### Anotações
+
+#### Q&A e Formatação Condicional no Power BI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-10h45m00s347.jpg" alt="" width="840">
+</p>
+
+A interface do Power BI Desktop apresenta a utilização do recurso de **P&R (Perguntas e Respostas)**, localizado na aba de visualizações. Esta ferramenta permite a criação de visuais a partir de consultas em linguagem natural, oferecendo sugestões automáticas baseadas nos dados disponíveis, como o "Top Country by Maximum Sold".
+
+**Métricas e Visualização de Dados**
+* **Métrica Maximum Sold**: Foi estabelecida uma medida para identificar o valor máximo da coluna de unidades (`Units Sold`) na tabela `financials`.
+* **Cartão de Resumo**: Um visual de cartão é utilizado para destacar que a maior instância de venda registrada é de aproximadamente **4,49 mil unidades**. Este valor representa o pico de vendas em um contexto específico de país e segmento.
+* **Ranking Top 3**: O visual de P&R foi convertido em um gráfico de barras padrão para exibir os três principais países em vendas: **United States**, **Canada** e **France**.
+
+**Refinamento Estético e Funcional**
+Para tornar a análise mais intuitiva, foi aplicada uma **formatação condicional** nas barras do gráfico. Utilizando um gradiente que varia entre tons de amarelo (menor valor) e azul forte (maior valor), o relatório enfatiza visualmente a liderança dos Estados Unidos, mesmo que a diferença nominal para o Canadá e a França não seja tão acentuada. Essa técnica de cores ajuda a refletir a proximidade dos valores entre os países do topo enquanto destaca o vencedor absoluto.      
 
 
 ### 🟩 Vídeo 06 - Criando visão N Superiores com Filtros
@@ -161,7 +180,10 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/71785669-0b33-4c19-b03a-f04cc0f39b4a?autoplay=1
+
+
+
 
 ### 🟩 Vídeo 07 - Criando visão N Superiores com DAX
 
