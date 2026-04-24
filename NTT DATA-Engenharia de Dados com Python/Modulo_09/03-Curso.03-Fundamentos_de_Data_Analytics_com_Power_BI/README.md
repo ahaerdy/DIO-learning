@@ -75,7 +75,6 @@ Para operacionalizar essas análises no Power BI, utilizam-se diversos recursos 
 * **Análise Avançada:** Inclusão de elementos como margem de erro, desvio padrão e a possibilidade de integração com linguagens como R e Python para análises mais profundas.
 * **Rankings e Frequência:** Aplicação de lógicas como o "Top N" para identificar, por exemplo, os produtos mais vendidos ou a frequência de pedidos em uma cadeia de suprimentos.      
 
-
 ### 🟩 Vídeo 03 - Funções Estatísticas e Histograma
 
 <video width="60%" controls>
@@ -85,6 +84,25 @@ Para operacionalizar essas análises no Power BI, utilizam-se diversos recursos 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/022f4574-9f97-43a9-84cb-fbdbfb1e3fe8?autoplay=1
 
+O vídeo explora as nuances entre gráficos de barras tradicionais e histogramas, demonstrando como configurar agrupamentos (buckets) para visualizar a distribuição de dados de forma eficaz.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-24-09h48m22s306.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a interface do **Power BI Desktop**, onde está sendo construído um **histograma** para análise de dados. O objetivo central desta visualização é ilustrar como uma amostra de dados está distribuída dentro de um determinado contexto, permitindo observar a frequência com que determinados valores ocorrem por meio de uma visão agrupada.
+
+No painel de visualização central, observa-se o gráfico intitulado "**Soma de Units Sold per Buckets**". Este gráfico difere de uma coluna clusterizada tradicional pois utiliza **grupos (buckets)** criados a partir do campo de unidades vendidas para mostrar a distribuição das instâncias de venda.
+
+No painel lateral de **Campos (Fields)**, é possível identificar a estrutura dos dados utilizada:
+* **Buckets**: O grupo criado para segmentar as unidades vendidas em compartimentos.
+* **Units Sold**: O campo original de unidades vendidas que serviu de base para a criação do histograma.
+* **Product**: Campo que permite analisar a distribuição de forma segmentada por produto.
+
+A criação deste visual envolve a configuração de "compartimentos" (bins), onde se define o tamanho ou a quantidade de grupos para refinar a precisão da curva de distribuição observada. Isso permite abstrair nuances específicas de produtos ou países para focar no comportamento nominal dos grupos de unidades vendidas.      
+
 ### 🟩 Vídeo 04 - Outros Recursos de Data Analytics no Power BI
 
 <video width="60%" controls>
@@ -92,7 +110,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/290bd938-6e6f-4dc3-94af-24aa95450e0d?autoplay=1
+
+
 
 ### 🟩 Vídeo 05 - Criando visual com visão N Superiores com P&R
 
