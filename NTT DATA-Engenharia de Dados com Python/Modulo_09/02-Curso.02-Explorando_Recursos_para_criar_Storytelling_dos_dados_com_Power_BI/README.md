@@ -483,7 +483,7 @@ Por fim, disponibilizamos alguns links úteis para que você possa se desenvolve
 * **Rooms:** caso você esteja inscrito(a) em uma experiência educacional na DIO (como um Bootcamp, por exemplo) você terá acesso ao Rooms. O Rooms é uma ferramenta de bate-papo em tempo real onde todos os inscritos podem interagir, compartilhando dúvidas e dicas (que podem conter imagens e snippets de código-fonte);
 * **Pesquise na Web:** pode parecer óbvio, mas é importante frisar a importância das engines de busca no dia-a-dia de um profissional de TI. Caso não encontre o que procura dentro da DIO, pesquise sobre o assunto (conceito, dúvida, erro etc) na Internet (dê um Google), pois na maioria das vezes você será levado à páginas incríveis como o StackOverflow que salvarão o seu dia 😎
 
-# Certificado: 
+# Certificado: Explorando Recursos para criar Storytelling dos dados com Power BI
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/JTCKSRFX.pdf
+- Certificado em pdf: [Certificado-Explorando_Recursos_para_criar_Storytelling_dos_dados_com_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Explorando_Recursos_para_criar_Storytelling_dos_dados_com_Power_BI.pdf)
