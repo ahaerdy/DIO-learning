@@ -634,6 +634,21 @@ Ao aplicar essa medida no campo de target, o visual é atualizado automaticament
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/ec4ff80c-af83-4ac0-a2cc-d1e1108b4468?autoplay=1
 
+Este vídeo tutorial foca no aprimoramento de visualizações de dados no Power BI, utilizando o recurso de Bandas de Lucro (Profit Bands) e ferramentas externas como o xViz para comparar resultados reais com metas estabelecidas.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-14h46m59s692.jpg" alt="" width="840">
+</p>
+
+A interface do Power BI Desktop exibe um relatório detalhado intitulado "SOMA DE SALES, META E SOMA DE PROFIT POR COUNTRY". O visual central compara o desempenho real de vendas e lucro em relação às metas estabelecidas para diferentes países, como Estados Unidos, Canadá, França, Alemanha e México. 
+
+No contexto da análise, os principais indicadores monitorados são a Soma de Vendas (Sales), a Soma de Lucro (Profit) e a Meta (Goal). No exemplo visualizado para os Estados Unidos, as vendas atingiram 25 milhões contra uma meta de 32,5 milhões. Essa comparação resulta em uma variância de 77%, que atua como uma medida de dispersão para demonstrar o comportamento dos dados a partir de uma média central. Através da variância, é possível verificar o quão próximo o resultado obtido está do valor esperado para a operação.
+
+A estrutura lateral de campos à direita revela que os dados estão organizados por diversas dimensões, incluindo Segmento, Produto, Data e Faixas de Desconto, permitindo agrupamentos e filtragens específicas para refinar a visão sobre a dispersão dos lucros.      
+
+
 ### 🟩 Vídeo 19 - Como examinar insights rápidos?
 
 <video width="60%" controls>
@@ -641,7 +656,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/3cb010dc-8fe5-4173-b04e-0a30035710ae?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
