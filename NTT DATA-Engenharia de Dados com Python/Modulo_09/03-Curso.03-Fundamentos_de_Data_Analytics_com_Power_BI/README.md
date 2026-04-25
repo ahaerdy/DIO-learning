@@ -413,8 +413,6 @@ Este vídeo explora as técnicas de agrupamento (grouping) e compartimentação 
 
 ### Anotações
 
-#### Agrupamento Manual de Dados
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h51m36s806.jpg" alt="" width="840">
 </p>
