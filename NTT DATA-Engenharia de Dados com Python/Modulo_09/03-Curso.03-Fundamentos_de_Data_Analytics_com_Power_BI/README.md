@@ -440,6 +440,33 @@ A janela **Grupos** permite o gerenciamento detalhado e a edição das categoria
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/057cc513-a356-4f6f-a6d1-80d07ef247ee?autoplay=1
 
+O vídeo detalha como organizar e segmentar dados de forma personalizada no Power BI, utilizando as funções de Grupos e Compartimentos (Bins). O foco principal é a criação de uma visão semestral a partir de dados mensais e a análise do impacto visual dessas segmentações nos relatórios.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-09h33m11s390.jpg" alt="" width="840">
+</p>
+
+O ponto de partida da aula foca na necessidade de organizar dados de vendas de uma forma distinta da visualização padrão. O relatório inicial apresenta a Soma de Sales distribuída mensalmente (de janeiro a dezembro), além de divisões por país e segmentos. O objetivo é demonstrar que a criação de grupos é um processo específico, dependendo do tipo de dado que se deseja manipular.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-09h33m31s040.jpg" alt="" width="840">
+</p>
+
+Para criar uma divisão automática em grandes blocos, utiliza-se o recurso de compartimentação (ou binning). Ao acessar as configurações de um novo grupo para campos numéricos ou de data, define-se o Tipo de grupo como Compartimento. Nesta interface, é possível determinar o agrupamento pelo tamanho ou pelo número de compartimentos; no exemplo, o valor é definido como 2 para segmentar os dados em duas grandes divisões.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-09h34m13s938.jpg" alt="" width="840">
+</p>
+
+Quando o objetivo é agrupar categorias textuais, como o nome dos meses (Month Name), o processo é manual e baseado na seleção de itens específicos. Na janela de criação de grupos para campos de texto, selecionam-se os meses desejados (por exemplo, de janeiro a junho) para compor o Primeiro Semestre. Os meses restantes (julho a dezembro) são então agrupados para formar o Segundo Semestre, permitindo uma análise temporal personalizada que não depende exclusivamente de uma hierarquia de data automática.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-09h34m25s636.jpg" alt="" width="840">
+</p>
+
+O resultado final da aplicação de grupos é uma visualização consolidada que permite o refinamento da análise dos dados. No novo gráfico de Soma de Sales por Semestres, é possível comparar diretamente o desempenho entre o primeiro e o segundo período do ano. Devido à natureza interativa do Power BI, ao selecionar um grupo específico (como o primeiro semestre), todos os outros elementos do relatório — incluindo vendas por país e segmentos — são filtrados automaticamente para exibir apenas as proporções relativas àquele intervalo.      
 
 
 ### 🟩 Vídeo 14 - O que é Clusterização de dados?
@@ -450,6 +477,8 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
 </video>
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/e7b3e9d2-25f0-43bc-95d4-dfb125b30b7b?autoplay=1
+
+
 
 ### 🟩 Vídeo 15 - Como criar uma análise temporal com Power BI?
 
