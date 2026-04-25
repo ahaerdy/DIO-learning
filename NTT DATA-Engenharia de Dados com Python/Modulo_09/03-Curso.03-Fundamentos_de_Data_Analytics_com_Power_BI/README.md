@@ -682,5 +682,5 @@ Após a geração dos insights, o Power BI permite explorar descobertas específ
 
 # Certificado: Fundamentos de Data Analytics com Power BI
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/FHWOEPUX.pdf
+- Certificado em pdf: [Certificado-Fundamentos_de_Data_Analytics_com_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Fundamentos_de_Data_Analytics_com_Power_BI.pdf)
