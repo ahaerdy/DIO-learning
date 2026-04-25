@@ -449,7 +449,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/e7b3e9d2-25f0-43bc-95d4-dfb125b30b7b?autoplay=1
 
 ### 🟩 Vídeo 15 - Como criar uma análise temporal com Power BI?
 
