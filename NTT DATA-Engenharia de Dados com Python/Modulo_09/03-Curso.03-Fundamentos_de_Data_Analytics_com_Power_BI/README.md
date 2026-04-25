@@ -478,7 +478,21 @@ O resultado final da aplicação de grupos é uma visualização consolidada que
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/e7b3e9d2-25f0-43bc-95d4-dfb125b30b7b?autoplay=1
 
+O vídeo descreve a técnica de clusterização (clustering), demonstrando como segmentar dados por similaridade para identificar padrões ocultos, comportamentos de clientes e tendências de vendas utilizando inteligência artificial no Power BI.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-09h53m48s678.jpg" alt="" width="840">
+</p>
+
+A técnica de **clusterização** (ou *clustering*) é utilizada para segmentar dados que possuem um alto grau de similaridade entre si, permitindo a criação de compartimentos específicos dentro do conjunto de dados. Diferente do processo de agrupamento comum, o recurso de cluster no Power BI localiza grupos de pontos que compartilham características comuns, identificando subconjuntos que se diferenciam do restante. No exemplo visual, a ferramenta é aplicada ao conjunto de dados *Financials* para analisar padrões entre a soma de unidades vendidas e o total de vendas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-09h53m56s976.jpg" alt="" width="840">
+</p>
+
+Ao criar um cluster, o Power BI gera automaticamente uma nova coluna no modelo de dados, como demonstrado pelo campo "Profit (clusters)". Ao acessar as **Ferramentas de coluna**, observa-se que esses dados são tratados como o tipo "Texto" e configurados para não serem resumidos. Essa organização facilita a detecção de padrões, permitindo que o analista utilize esses clusters para segmentar visuais e identificar subconjuntos específicos de lucratividade e volume de vendas dentro do cenário financeiro analisado.      
 
 ### 🟩 Vídeo 15 - Como criar uma análise temporal com Power BI?
 
@@ -487,7 +501,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/39972834-8293-4159-9075-fb700c23ed18?autoplay=1
+
+
 
 ### 🟩 Vídeo 16 - Um aliado no processo - Recurso analisar
 
