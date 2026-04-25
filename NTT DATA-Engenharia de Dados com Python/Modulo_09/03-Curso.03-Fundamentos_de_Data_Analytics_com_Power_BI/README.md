@@ -658,11 +658,29 @@ A estrutura lateral de campos à direita revela que os dados estão organizados 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/3cb010dc-8fe5-4173-b04e-0a30035710ae?autoplay=1
 
+O vídeo resume as funcionalidades de análise automatizada do Power BI Service, destacando como algoritmos de aprendizado de máquina podem identificar tendências, correlações e padrões em conjuntos de dados sem a necessidade de criação manual de gráficos.
 
+### Anotações
 
-##  Materiais de Apoio
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-15h01m02s532.jpg" alt="" width="840">
+</p>
 
-# Certificado: 
+No Power BI Desktop, é possível replicar manualmente tendências identificadas por algoritmos. O gráfico de dispersão apresentado correlaciona a Soma de Sales (eixo Y) com a Soma de Units Sold (eixo X), utilizando o Mês como detalhamento para os pontos de dados. Ao aplicar uma linha de tendência, visualiza-se a correlação direta entre o volume de unidades vendidas e o total de vendas alcançado em cada período. Esse tipo de visual é fundamental para validar se o crescimento das vendas está acompanhando proporcionalmente o esforço de escoamento de produtos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-15h01m08s884.jpg" alt="" width="840">
+</p>
+
+O recurso de Insights Rápidos é uma funcionalidade exclusiva do Power BI Serviço (nuvem) que utiliza algoritmos de machine learning para identificar automaticamente padrões e tendências em um conjunto de dados. Ao selecionar um relatório no workspace, o usuário pode acionar essa opção para que o sistema gere uma série de cartões interativos com descobertas relevantes, como correlações ou valores atípicos, que podem não ser óbvios durante a análise manual. Essa ferramenta serve como um ponto de partida para novas perspectivas analíticas quando o processo criativo inicial está exaurido.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-15h01m13s803.jpg" alt="" width="840">
+</p>
+
+Após a geração dos insights, o Power BI permite explorar descobertas específicas, como a correlação entre Discounts (Descontos) e Sale Price (Preço de Venda) para produtos específicos, como o "VTT". Outros visuais gerados automaticamente incluem a contagem de produtos por segmento e a distribuição percentual de unidades vendidas por mês, segmentadas por país. Caso um insight seja considerado valioso para o negócio, ele pode ser fixado diretamente em um dashboard existente, integrando a análise automatizada ao monitoramento estratégico da empresa.      
+
+# Certificado: Fundamentos de Data Analytics com Power BI
 
 - Link na plataforma: 
 - Certificado em pdf: 
