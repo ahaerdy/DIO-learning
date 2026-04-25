@@ -582,7 +582,14 @@ Para melhorar a legibilidade e destacar a diferença entre os dados, pode-se per
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/5eb7b904-92e5-487a-bcbb-4f550ed449d3?autoplay=1
+
+O vídeo explica como elevar o nível das análises de dados no Power BI utilizando visuais personalizados do AppSource, com foco específico em análise de variância para equipes de vendas e atendimento.
+
+### Anotações
+
+      
+
 
 ### 🟩 Vídeo 18 - Visuais personalizados de análise avançada - Parte 2
 
@@ -591,7 +598,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/ec4ff80c-af83-4ac0-a2cc-d1e1108b4468?autoplay=1
 
 ### 🟩 Vídeo 19 - Como examinar insights rápidos?
 
