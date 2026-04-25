@@ -546,6 +546,35 @@ Além do comportamento funcional, a estética do Play Axis pode ser ajustada par
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/6a159b85-eb64-4575-bfd9-4b97e46c6c0d?autoplay=1
 
+O vídeo explica como utilizar as capacidades de Inteligência Artificial do Power BI para identificar padrões ocultos, comparar distribuições de dados e "pensar fora da caixa" durante o processo de análise.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-14h15m25s217.jpg" alt="" width="840">
+</p>
+
+O Power BI oferece recursos para análises que permitem pensar "fora da caixa" ao lidar com contextos de dados repetitivos. Através da ferramenta de IA, é possível entender o porquê da distribuição de dados ter uma determinada aparência clicando com o botão direito sobre um visual e selecionando **Analisar** e, em seguida, **Procurar o local em que a distribuição é diferente**. 
+
+Nesta visualização inicial, o sistema identifica filtros que causam o máximo de alteração na distribuição da soma de vendas por mês. É possível observar insights baseados em clusterização, onde a maior parte dos registros (64%) está no Cluster 1. Além disso, a análise por ano revela que os dados de 2013 representam 25% dos registros, enquanto 2014 detém 75%, sendo os fatores que mais afetam a distribuição atual. Vale ressaltar que este recurso não funciona caso existam filtros não numéricos ou filtros de medidas aplicados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-14h15m54s200.jpg" alt="" width="840">
+</p>
+
+A ferramenta de análise permite comparar proporções entre diferentes segmentos para identificar quais grupos exercem maior influência nos resultados. No exemplo visualizado, a análise foca nos grupos "Outro" e "Destaque", que foram criados previamente para categorizar produtos.
+
+De acordo com o gráfico de proporções, o segmento "Outro" detém 42,9% dos registros, enquanto o grupo "Destaque" corresponde a 57,1%, sendo estes os elementos que mais impactam a distribuição da soma de vendas. O gráfico de barras exibe a **Soma de Sales para Outro** em relação à **Soma de Sales** total ao longo dos meses, facilitando a identificação visual de como esse subconjunto específico se comporta frente ao todo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-14h16m15s325.jpg" alt="" width="840">
+</p>
+
+Após identificar uma análise relevante fornecida pela IA, é possível integrá-la diretamente ao relatório utilizando a opção **Adicionar à página**. O novo visual gerado combina duas métricas: a **Soma de Sales para United States of America** (representada pelas colunas no eixo Y) e a **Soma de Sales** total (representada pela linha no eixo Y secundário) ao longo dos meses no eixo X.
+
+Para melhorar a legibilidade e destacar a diferença entre os dados, pode-se personalizar o estilo da linha no painel de formatação. É possível alterar o traço para o estilo **tracejado**, aumentar a largura do traço para dar mais espessura e aplicar um sombreamento abaixo da linha para evidenciar a progressão das vendas totais em comparação ao segmento específico dos Estados Unidos.      
+
+
 ### 🟩 Vídeo 17 - Visuais personalizados de análise avançada - Parte 1
 
 <video width="60%" controls>
