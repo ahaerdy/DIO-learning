@@ -350,6 +350,56 @@ Neste exemplo prático, observa-se o comportamento do número de pedidos em uma 
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/81bb522b-bcc8-4c6a-8ecc-bfceaa0eeca7?autoplay=1
 
+O vĩdeo explica como identificar e visualizar outliers de forma dinâmica no Power BI. Em vez de depender apenas das ferramentas nativas de filtragem, o método utiliza a linguagem DAX para criar medidas personalizadas que isolam produtos ou transações que superam determinados limites de vendas. O objetivo final é criar um gráfico de dispersão que destaque visualmente os pontos "fora da curva" e permita análises temporais dessas exceções.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h29m49s930.jpg" alt="" width="840">
+</p>
+
+O cálculo de um **outlier** utilizando a linguagem DAX no Power BI é iniciado através da criação de uma nova medida. O processo baseia-se na análise das unidades vendidas, filtrando os produtos conforme critérios específicos de volume de informação. 
+
+A estrutura da fórmula utiliza a função `CALCULATE` para definir a expressão principal, que neste caso é a medida `total de vendidos`. Esta medida pré-existente representa a soma das unidades vendidas (utilizando `SUMX` ou uma soma simples), facilitando a interação entre diferentes cálculos dentro do modelo. 
+
+Para isolar os dados desejados, aplica-se a função `FILTER`, especificando a tabela e a expressão de filtragem baseada no campo de produtos.
+
+```dax
+outlier = 
+CALCULATE(
+    [total de vendidos],
+    FILTER(
+        VALUES(Financials[Product]),
+        COUNTROWS(
+            FILTER(Financials, [total de vendidos] > 150)
+        ) > 0
+    )
+)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h29m59s765.jpg" alt="" width="840">
+</p>
+
+Após a criação da métrica, a configuração visual no painel de **Visualizações** permite a representação gráfica dos dados. O gráfico selecionado organiza a "Soma de Sales" (Soma de Vendas) e a medida de "outlier" por produto. 
+
+No painel de campos, os dados da tabela `financials` são distribuídos nos eixos do gráfico:
+* O campo **Product** é utilizado para definir a legenda e a segmentação dos dados.
+* A **Soma de Sales** é atribuída aos eixos de valores e tamanho, permitindo a comparação visual da magnitude das vendas.
+* A medida **outlier** é incluída no campo de dicas de ferramentas (tooltips) para fornecer informações contextuais adicionais durante a interação com o relatório.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h30m10s120.jpg" alt="" width="840">
+</p>
+
+O painel final consolidado apresenta uma análise de **Data Analytics** composta por diferentes perspectivas de desempenho:
+
+* **Gráfico de Dispersão (Outliers):** Localizado no topo superior esquerdo, correlaciona a Soma de Sales por Produto para identificar desvios estatísticos.
+* **Análise de Vendas e Lucro:** Um gráfico de bolhas dinâmico apresenta a relação entre a Soma de Sales, a Soma de Units Sold (unidades vendidas) e a Soma de Profit (lucro) por produto e mês.
+* **Distribuição Geográfica:** Um gráfico de colunas empilhadas compara a Soma de Sales e os "TOP3 PRODUCT" por país, destacando mercados como Estados Unidos, Canadá e França.
+* **Ranking de Produtos:** Um gráfico de barras horizontais detalha o "TOP3 PRODUCT" por categoria, permitindo uma visualização rápida da contagem de produtos líderes em vendas.      
+
+
 ### 🟩 Vídeo 12 - Criando agrupamento dos dados
 
 <video width="60%" controls>
@@ -357,7 +407,9 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/abd5979f-36b0-445e-9b0f-87de0c53758d?autoplay=1
+
+
 
 ### 🟩 Vídeo 13 - Criando compartimentos com dados
 
