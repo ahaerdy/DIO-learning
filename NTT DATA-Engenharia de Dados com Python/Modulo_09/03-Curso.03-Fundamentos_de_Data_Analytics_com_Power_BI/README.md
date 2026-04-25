@@ -503,7 +503,39 @@ Ao criar um cluster, o Power BI gera automaticamente uma nova coluna no modelo d
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/39972834-8293-4159-9075-fb700c23ed18?autoplay=1
 
+O vídeo ensina como transformar relatórios estáticos em apresentações dinâmicas utilizando o visual personalizado Play Axis. Aprenda a configurar, personalizar e extrair o máximo de impacto visual das suas análises temporais.
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-10h09m48s829.jpg" alt="" width="840">
+</p>
+
+O visual Play Axis (Dynamic Slicer) é uma ferramenta personalizada disponível no AppSource que funciona como um segmentador dinâmico. Diferente dos filtros convencionais que exigem cliques manuais, ele anima automaticamente os demais visuais do relatório, permitindo observar a evolução dos dados ao longo do tempo sem interação direta do usuário. É uma solução ideal para apresentações em monitores fixos ou para identificar padrões e tendências temporais de forma fluida.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-10h10m26s403.jpg" alt="" width="840">
+</p>
+
+Para configurar a animação, deve-se arrastar um campo temporal para o bucket de dados do visual. No exemplo, utiliza-se a hierarquia de datas, aplicando inicialmente o campo Ano ou Trimestre. Uma vez configurado, o visual exibe controles de reprodução (play, pause, stop) que, ao serem acionados, percorrem cronologicamente os valores do campo selecionado, filtrando todo o dashboard de acordo com o período exibido no momento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-10h10m33s302.jpg" alt="" width="840">
+</p>
+
+Ao executar o Play Axis configurado por Trimestre, o relatório entra em um modo de exibição dinâmico. É possível observar como o gráfico de "Vendas por Período", o gráfico de rosca por segmento e o treemap por país se atualizam instantaneamente conforme a animação avança. Esse recurso é particularmente útil para comentar a evolução dos indicadores durante reuniões, permitindo que o apresentador foque na narrativa enquanto os dados se transformam visualmente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-10h10m34s875.jpg" alt="" width="840">
+</p>
+
+O visual oferece diversas opções de personalização nas configurações de animação, como o Auto Start (iniciar assim que o relatório é aberto) e o Loop (reiniciar a sequência infinitamente). Além disso, é possível ajustar o tempo de transição entre cada etapa em milissegundos; por exemplo, definir 2000ms estabelece um intervalo de 2 segundos entre as mudanças de estado, garantindo que o público tenha tempo suficiente para absorver as variações nos cards e gráficos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-10h10m36s526.jpg" alt="" width="840">
+</p>
+
+Além do comportamento funcional, a estética do Play Axis pode ser ajustada para manter a identidade visual do projeto. É possível modificar as cores dos botões para tons mais sóbrios ou cores de destaque, remover o plano de fundo para uma integração limpa com o layout do dashboard e habilitar legendas (Captions) para indicar claramente qual período está sendo filtrado. Essas interações visuais ajudam a fixar o olhar do espectador e conferem um aspecto profissional e interativo à análise de dados.      
 
 ### 🟩 Vídeo 16 - Um aliado no processo - Recurso analisar
 
@@ -512,7 +544,7 @@ link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/6a159b85-eb64-4575-bfd9-4b97e46c6c0d?autoplay=1
 
 ### 🟩 Vídeo 17 - Visuais personalizados de análise avançada - Parte 1
 
