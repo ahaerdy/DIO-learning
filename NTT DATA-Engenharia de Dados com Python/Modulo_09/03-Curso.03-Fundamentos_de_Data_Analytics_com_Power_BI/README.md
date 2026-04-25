@@ -588,7 +588,41 @@ O vídeo explica como elevar o nível das análises de dados no Power BI utiliza
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-14h32m26s079.jpg" alt="" width="840">
+</p>
+
+Para realizar estudos de variância em indicadores como vendas (sales), é necessário buscar visuais especializados no AppSource. O **Bullet Chart da xViz** é uma opção robusta e certificada para essa finalidade.
+
+Este visual é um subtipo de gráfico de barras que facilita a leitura ao comparar uma medida em destaque (o "projétil" ou bullet) com uma medida de destino (target). Ele permite acompanhar o progresso em relação a metas ou comparar o desempenho com linhas de referência, integrando vários gráficos de KPI em um único visual para resumos abrangentes. Utiliza recursos de **Advanced Analytics**, como a adição de faixas e linhas de referência para obter insights extras sobre os dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-14h33m05s794.jpg" alt="" width="840">
+</p>
+
+Ao inserir o Bullet Chart no relatório, a interface de "Visualizações" disponibiliza campos específicos para a construção da análise. Para que o gráfico funcione corretamente, é necessário preencher três áreas fundamentais:
+
+* **Category**: Onde são inseridos os dados de segmentação, como os países (Country).
+* **Actual**: O valor atual que será analisado, como a soma das vendas (Sales).
+* **Target**: O valor do alvo ou meta que servirá de comparação para o valor atual.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-14h33m12s254.jpg" alt="" width="840">
+</p>
+
+O Bullet Chart da xViz oferece uma interface interativa que permite ao usuário escolher entre criar o visual do zero ("Build your own") ou utilizar configurações pré-definidas baseadas nos campos disponíveis. Entre as opções de templates, destacam-se o **With Target**, focado na comparação simples entre o valor atual e a meta, e os modelos baseados em normas internacionais como **KPI with Qualitative Range (IBCS)** e **KPI Comparison (IBCS)**, que são ideais para representar faixas qualitativas ou comparar séries de dados seguindo padrões profissionais de comunicação de negócios.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-14h33m19s890.jpg" alt="" width="840">
+</p>
+
+Para alimentar o campo de **Target** quando não há uma meta fixa na base de dados, é possível criar uma nova medida utilizando a linguagem DAX. Neste cenário, define-se uma meta baseada no desempenho histórico, como estabelecer um alvo 30% superior às vendas realizadas.
+
+```dax
+Meta = [Sales] * 1.3
+```
+
+Ao aplicar essa medida no campo de target, o visual é atualizado automaticamente para mostrar a distância entre o valor de vendas atual e o objetivo estabelecido.      
 
 
 ### 🟩 Vídeo 18 - Visuais personalizados de análise avançada - Parte 2
