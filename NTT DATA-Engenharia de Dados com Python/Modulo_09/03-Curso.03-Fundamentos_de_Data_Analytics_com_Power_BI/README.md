@@ -417,49 +417,21 @@ Este vídeo explora as técnicas de agrupamento (grouping) e compartimentação 
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h51m36s806.jpg" alt="" width="840">
 </p>
 
-Para criar perspectivas de análise personalizadas que não estão disponíveis por padrão, o Power BI permite o agrupamento manual de categorias diretamente nos visuais. Ao selecionar dois ou mais pontos de dados — como barras de segmentos em um gráfico — utilizando a tecla Shift e clicando com o botão direito, é possível acessar a opção **Agrupar os dados**. Este recurso consolida os itens selecionados para facilitar a comparação entre blocos específicos de informação.
+O agrupamento é uma técnica essencial para refinar análises e obter uma visão mais clara do contexto dos dados, permitindo ir além das segmentações padrão do Power BI. Para criar um grupo manualmente a partir de um gráfico de barras, selecionam-se os pontos de dados desejados e, com o botão direito, utiliza-se a opção **Agrupar os dados**. Esse processo permite consolidar categorias específicas que não estavam originalmente unidas na base de dados.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h51m41s218.jpg" alt="" width="840">
 </p>
 
-Após o agrupamento, o sistema gera automaticamente um novo campo na lista de dados identificado pelo sufixo **(grupos)**, como no exemplo **Segment (grupos)**. O visual é atualizado para exibir as novas categorias consolidadas, permitindo a aplicação de cores distintas para diferenciar os grupos criados dos demais dados, o que aumenta o poder de abstração visual durante a análise.
+Após a criação do grupo, o Power BI gera automaticamente um novo campo no painel de campos, geralmente identificado pelo sufixo **(grupos)**. Visualmente, as barras no gráfico passam a refletir essa nova organização, e é possível aplicar formatações distintas, como cores contrastantes, para diferenciar os grupos criados (como um grupo de "Destaque") dos demais elementos ou do grupo "Outros". Essa distinção visual facilita a abstração e a identificação imediata dos segmentos mais relevantes para a análise.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h51m52s529.jpg" alt="" width="840">
 </p>
 
-A janela de edição de grupos permite renomear as categorias para termos mais descritivos, como "Destaque", e gerenciar quais membros pertencem a cada grupo. Uma funcionalidade importante é a inclusão do grupo **Outros**, que consolida automaticamente todos os valores que não foram selecionados para grupos específicos, mantendo o gráfico organizado e focado nos itens de maior interesse.
+A janela **Grupos** permite o gerenciamento detalhado e a edição das categorias criadas. Através dessa interface, é possível renomear o campo de grupo, alterar o nome de grupos específicos e organizar os membros em listas. Uma funcionalidade importante é a opção **Incluir o grupo Outros**, que aglutina automaticamente todos os valores não selecionados individualmente em uma categoria única, garantindo que nenhum dado seja omitido da visualização final.
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h52m18s241.jpg" alt="" width="840">
-</p>
-
-A técnica de agrupamento também é aplicada com eficiência a dados geográficos. Ao visualizar vendas por país, o usuário pode selecionar manualmente múltiplas barras para consolidar nações em regiões maiores, permitindo uma visão macro das operações antes de detalhar países individualmente.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h52m32s377.jpg" alt="" width="840">
-</p>
-
-Na interface de grupos para o campo de países, é demonstrada a criação do grupo "América do Norte". Esta etapa envolve a seleção de países como Estados Unidos e Canadá, movendo-os para uma categoria unificada que simplifica a visualização e permite comparar o desempenho desse bloco econômico contra outras regiões ou países isolados.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h52m50s451.jpg" alt="" width="840">
-</p>
-
-Seguindo a lógica regional, países como França e Alemanha são agrupados sob a denominação "Europa". Através da lista de valores não agrupados, o usuário identifica os membros restantes e os associa a novos grupos, garantindo que a estrutura de dados reflita a hierarquia geográfica desejada para o relatório.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h53m09s532.jpg" alt="" width="840">
-</p>
-
-O resultado final apresenta um gráfico de colunas segmentado por regiões personalizadas: América do Norte, Europa e Outros (representando países com volume menor ou instâncias únicas). Esta disposição permite identificar rapidamente que os principais volumes de vendas estão concentrados na América do Norte, seguidos pela Europa, proporcionando uma perspectiva refinada que não existia nos dados originais.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h53m26s125.jpg" alt="" width="840">
-</p>
-
-A compartimentização (binning) é apresentada como uma forma de agrupamento aplicada a dados contíguos, como números ou datas. No contexto de meses, o objetivo é agrupar valores sequenciais para criar novas dimensões temporais, como semestres (agrupando de janeiro a junho), permitindo uma análise de tendências em períodos mais amplos do que o detalhamento mensal padrão.      
+### 🟩 Vídeo 13 - Criando compartimentos com dados
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.03-video_13.webm" type="video/webm">
