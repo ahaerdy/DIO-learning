@@ -409,16 +409,68 @@ O painel final consolidado apresenta uma análise de **Data Analytics** composta
 
 link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/abd5979f-36b0-445e-9b0f-87de0c53758d?autoplay=1
 
+Este vídeo explora as técnicas de agrupamento (grouping) e compartimentação (binning) no Power BI. O objetivo central é demonstrar como a organização de dados granulares em categorias maiores pode refinar a análise, facilitar a visualização e fornecer uma perspectiva estratégica (como visões regionais ou por destaque de mercado) que dados isolados não permitem.
 
+### Anotações
 
-### 🟩 Vídeo 13 - Criando compartimentos com dados
+#### Agrupamento Manual de Dados
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h51m36s806.jpg" alt="" width="840">
+</p>
+
+Para criar perspectivas de análise personalizadas que não estão disponíveis por padrão, o Power BI permite o agrupamento manual de categorias diretamente nos visuais. Ao selecionar dois ou mais pontos de dados — como barras de segmentos em um gráfico — utilizando a tecla Shift e clicando com o botão direito, é possível acessar a opção **Agrupar os dados**. Este recurso consolida os itens selecionados para facilitar a comparação entre blocos específicos de informação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h51m41s218.jpg" alt="" width="840">
+</p>
+
+Após o agrupamento, o sistema gera automaticamente um novo campo na lista de dados identificado pelo sufixo **(grupos)**, como no exemplo **Segment (grupos)**. O visual é atualizado para exibir as novas categorias consolidadas, permitindo a aplicação de cores distintas para diferenciar os grupos criados dos demais dados, o que aumenta o poder de abstração visual durante a análise.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h51m52s529.jpg" alt="" width="840">
+</p>
+
+A janela de edição de grupos permite renomear as categorias para termos mais descritivos, como "Destaque", e gerenciar quais membros pertencem a cada grupo. Uma funcionalidade importante é a inclusão do grupo **Outros**, que consolida automaticamente todos os valores que não foram selecionados para grupos específicos, mantendo o gráfico organizado e focado nos itens de maior interesse.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h52m18s241.jpg" alt="" width="840">
+</p>
+
+A técnica de agrupamento também é aplicada com eficiência a dados geográficos. Ao visualizar vendas por país, o usuário pode selecionar manualmente múltiplas barras para consolidar nações em regiões maiores, permitindo uma visão macro das operações antes de detalhar países individualmente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h52m32s377.jpg" alt="" width="840">
+</p>
+
+Na interface de grupos para o campo de países, é demonstrada a criação do grupo "América do Norte". Esta etapa envolve a seleção de países como Estados Unidos e Canadá, movendo-os para uma categoria unificada que simplifica a visualização e permite comparar o desempenho desse bloco econômico contra outras regiões ou países isolados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h52m50s451.jpg" alt="" width="840">
+</p>
+
+Seguindo a lógica regional, países como França e Alemanha são agrupados sob a denominação "Europa". Através da lista de valores não agrupados, o usuário identifica os membros restantes e os associa a novos grupos, garantindo que a estrutura de dados reflita a hierarquia geográfica desejada para o relatório.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h53m09s532.jpg" alt="" width="840">
+</p>
+
+O resultado final apresenta um gráfico de colunas segmentado por regiões personalizadas: América do Norte, Europa e Outros (representando países com volume menor ou instâncias únicas). Esta disposição permite identificar rapidamente que os principais volumes de vendas estão concentrados na América do Norte, seguidos pela Europa, proporcionando uma perspectiva refinada que não existia nos dados originais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-25-08h53m26s125.jpg" alt="" width="840">
+</p>
+
+A compartimentização (binning) é apresentada como uma forma de agrupamento aplicada a dados contíguos, como números ou datas. No contexto de meses, o objetivo é agrupar valores sequenciais para criar novas dimensões temporais, como semestres (agrupando de janeiro a junho), permitindo uma análise de tendências em períodos mais amplos do que o detalhamento mensal padrão.      
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.03-video_13.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/engenharia-dados-python/course/fundamentos-de-data-analytics-com-power-bi/learning/057cc513-a356-4f6f-a6d1-80d07ef247ee?autoplay=1
+
+
 
 ### 🟩 Vídeo 14 - O que é Clusterização de dados?
 
@@ -427,7 +479,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 15 - Como criar uma análise temporal com Power BI?
 
