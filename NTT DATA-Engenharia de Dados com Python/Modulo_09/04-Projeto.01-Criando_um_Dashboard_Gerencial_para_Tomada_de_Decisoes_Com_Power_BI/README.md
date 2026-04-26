@@ -80,6 +80,25 @@ O slide final aborda a escolha correta do tipo visual, alertando contra o uso de
 
 link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/840387b5-4e21-4495-80d9-e8e293b48d54
 
+O vídeo resume as técnicas apresentadas para transformar um relatório de dados bruto em um dashboard visualmente atraente e funcionalmente otimizado. O foco está na economia de espaço, identidade visual e experiência do usuário (UX).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-26-14h18m06s916.jpg" alt="" width="840">
+</p>
+
+Nesta etapa do desenvolvimento do relatório no Power BI Desktop, o foco reside na otimização estética e funcional da interface. A modificação inicial consiste na remoção de elementos visuais redundantes, como faixas de fundo desnecessárias, para liberar espaço útil na tela de exibição. O título "Sales Report" é reposicionado para o topo, e novos elementos gráficos, como logos e imagens personalizadas (ex.: criadas no Canva), são importados através do menu "Inserir" para conferir uma identidade visual mais profissional ao dashboard.
+
+A personalização dos cartões de indicadores (KPIs) é um ponto central desta aula. Para melhorar a legibilidade e o design, são aplicadas as seguintes configurações nos objetos visuais:
+
+* **Estilo e Forma:** Definição de cantos arredondados para suavizar o layout.
+* **Cores e Transparência:** Aplicação de preenchimento em tons de azul (seguindo a paleta do projeto) com ajuste de transparência para não sobrecarregar o visual.
+* **Formatação de Texto:** Alteração da cor do valor do balão e dos rótulos de categoria para branco, garantindo contraste sobre o fundo escuro.
+* **Eficiência com Pincel de Formatação:** Utilização do "Pincel de Formatação" para replicar rapidamente o estilo visual de um cartão (ex.: Total de Vendas) para outros (ex.: Unidades Vendidas), mantendo a consistência sem a necessidade de reconfiguração manual.
+
+Além da estética, a estrutura de dados é simplificada. Elementos de detalhamento secundário, como somas de descontos, são removidos ou movidos para tabelas, mantendo em destaque apenas os indicadores principais de vendas e unidades vendidas. Para organizar a área de análise, o relatório utiliza mecanismos de segmentação por produto, segmento e período temporal, preparando o terreno para a criação de indicadores que permitam alternar dinamicamente entre diferentes visões de distribuição de vendas.
+
 ### 🟩 Vídeo 03 - Adequando Relatório – Parte 2
 
 <video width="60%" controls>
@@ -87,7 +106,30 @@ link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/42904050-a242-4f6b-ade0-ef71d9c7aa8e
+
+Este vídeo foca na criação de um dashboard interativo no Power BI, demonstrando como alternar entre diferentes visões de dados (Produto vs. Segmento) utilizando botões, indicadores (bookmarks) e técnicas avançadas de formatação visual.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-26-15h25m08s098.jpg" alt="" width="840">
+</p>
+
+O layout inicial do relatório "Sales Report" apresenta métricas consolidadas, como o Total de Vendas de 118,73 Mi e 1,13 Mi de Unidades Vendidas. O painel inclui um gráfico de "Vendas por Período" e segmentadores de data configurados entre setembro de 2013 e dezembro de 2014. Nesta fase, o foco está na organização dos elementos visuais e na preparação de botões que permitirão ao usuário alternar interativamente entre as visões de produto e segmento. Para isso, inicia-se o agrupamento de objetos para garantir que fiquem corretamente sobrepostos e funcionais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-26-15h25m22s378.jpg" alt="" width="840">
+</p>
+
+A interface destaca a "Visão Segmento", onde o gráfico de barras "Sales x Segment" detalha o desempenho por categoria de mercado. O segmento "Government" apresenta o maior volume de vendas, seguido por "Small Business" e "Enterprise". Para operacionalizar essa troca de visualização, utiliza-se o painel de Indicadores (Bookmarks) para criar a entrada "vendas por segmento". Esta configuração é ajustada para afetar apenas os visuais selecionados, garantindo que a alternância entre os botões oculte ou exiba os gráficos corretos sem interferir em outros elementos do relatório.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-26-15h25m24s479.jpg" alt="" width="840">
+</p>
+
+Ao selecionar a "Visão Produto", o relatório exibe o gráfico "Sales x Produto", que revela a performance individual de cada item. O produto "Paseo" demonstra uma liderança clara em vendas em comparação com "VTT" e "Velo". Esta visualização é controlada pelo indicador "vendas por produto", que torna o gráfico de segmentos invisível enquanto destaca os dados de produto. Adicionalmente, aplica-se uma formatação de gradiente nas barras para facilitar a percepção visual da disparidade de valores entre os itens mais vendidos e os demais.      
+
 
 ### 🟩 Vídeo 04 - Realizando considerações sobre os visuais e modificando gráfico de área
 
@@ -96,7 +138,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/aabf4be7-c3c8-4d25-98b8-3c8edf9608aa
+
+
 
 ### 🟩 Vídeo 05 - Criando matriz de descrição de vendas
 
