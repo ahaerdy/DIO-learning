@@ -140,6 +140,21 @@ Ao selecionar a "Visão Produto", o relatório exibe o gráfico "Sales x Produto
 
 link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/aabf4be7-c3c8-4d25-98b8-3c8edf9608aa
 
+Este vídeo é um tutorial prático focado no refinamento visual e estrutural de um dashboard no Power BI. A apresentadora demonstra como alternar entre diferentes visões de vendas (por segmento e produto), ajustar a hierarquia temporal para melhor legibilidade e corrigir problemas comuns de ordenação de eixos, garantindo que os dados sejam apresentados de forma lógica e detalhada.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-27-06h31m08s514.jpg" alt="" width="840">
+</p>
+
+A interface do relatório de vendas foca na visualização de métricas de desempenho distribuídas por categorias estratégicas. No topo, um gráfico de área detalha a evolução das **Vendas por Período**, permitindo a identificação de tendências temporais. Logo abaixo, o gráfico de barras horizontais, intitulado **Vendas x Segmento**, apresenta a distribuição do faturamento entre diferentes perfis de clientes, como *Government*, *Small Business* e *Enterprise*. Essa organização visual é projetada para facilitar a alternância entre a visão de produto e a visão de segmento, garantindo que as diferenças de performance entre elas sejam percebidas imediatamente através da interação com o dashboard.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-27-06h31m21s996.jpg" alt="" width="840">
+</p>
+
+A configuração da hierarquia de datas é fundamental para o ajuste da profundidade da análise no Power BI. Através do painel de **Campos**, é possível gerenciar a estrutura temporal composta por **Ano, Trimestre, Mês e Dia**. Para corrigir comportamentos inesperados no eixo X — como a exibição desordenada de meses — realiza-se a alteração do tipo de eixo de "Contínuo" para "Categoria". Esse ajuste assegura a linearidade e o comportamento correto dos dados durante a navegação hierárquica (*drill down*). Ao concatenar os rótulos de ano e trimestre, o visual passa a representar com clareza a sucessão temporal, permitindo que a análise desça do nível anual para o trimestral de forma organizada e precisa.      
 
 
 ### 🟩 Vídeo 05 - Criando matriz de descrição de vendas
@@ -149,7 +164,9 @@ link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/c1680d14-e04d-4cc8-8985-c8c35f5b1886
+
+
 
 ### 🟩 Vídeo 06 - Ajustando estilização dos visuais e página
 
