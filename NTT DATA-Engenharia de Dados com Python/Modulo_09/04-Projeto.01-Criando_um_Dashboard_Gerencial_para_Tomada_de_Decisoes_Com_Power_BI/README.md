@@ -166,6 +166,17 @@ A configuração da hierarquia de datas é fundamental para o ajuste da profundi
 
 link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/c1680d14-e04d-4cc8-8985-c8c35f5b1886
 
+O vídeo descreve o processo de construção de uma visualização de matriz no Power BI, focando não apenas na disposição dos dados, mas também no refinamento estético para criar dashboards profissionais e intuitivos.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-27-07h12m17s134.jpg" alt="" width="840">
+</p>
+
+Na interface do Power BI Desktop, o processo de refinamento visual foca na configuração de uma Matriz para melhorar a legibilidade dos dados. No painel de formatação, a atenção está voltada para a seção de **Cabeçalhos da coluna**, onde são realizados ajustes finos na apresentação dos títulos superiores. 
+
+As opções de personalização permitem modificar a fonte (utilizando famílias como Segoe UI), o tamanho do texto e a aplicação de estilos como negrito ou itálico para dar o devido destaque visual. Além da tipografia, é possível definir o alinhamento do texto como centralizado, garantindo que os cabeçalhos fiquem simétricos em relação às colunas de valores apresentadas na matriz. Essas modificações são essenciais para que a estrutura da tabela suporte a análise de múltiplos níveis, como a visualização de vendas por período e produto.      
 
 
 ### 🟩 Vídeo 06 - Ajustando estilização dos visuais e página
@@ -175,7 +186,7 @@ link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/ea96b50e-6359-4c2b-9e2b-10ca050c012b
 
 ### 🟩 Vídeo 07 - Botões de navegação e próximos passos
 
