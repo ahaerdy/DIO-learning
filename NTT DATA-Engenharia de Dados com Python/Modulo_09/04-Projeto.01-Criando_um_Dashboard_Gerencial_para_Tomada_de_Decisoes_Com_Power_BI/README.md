@@ -203,19 +203,7 @@ A simplificação do layout é fundamental para evitar a sobrecarga de informaç
 * **Ajuste da Matriz**: Modificar os campos de colunas, removendo dimensões como trimestre e mantendo apenas o ano ou o mês, o que permite uma visão mais clara da dispersão de lucros e vendas detalhadas.
 * **Hierarquia Visual**: Ajustar o tamanho da fonte dos valores internos para **12** e dos cabeçalhos para **13**, garantindo que os dados numéricos sejam facilmente verificados pelo usuário.
 
-Essas modificações, embora demandem tempo no processo de criação, são essenciais para transformar dados brutos em um relatório amigável e funcional.<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-28-09h23m49s116.jpg" alt="" width="840">
-</p>
-
-A etapa de refinamento de um relatório no Power BI foca na **estética e na experiência do usuário**, garantindo que as informações mais importantes recebam o devido destaque visual. Para aumentar o contraste e a legibilidade das tabelas e matrizes, é possível personalizar as predefinições de estilo, utilizando cores como **azul e branco** para destacar colunas e cabeçalhos. Além dos ajustes de cores, a utilização de formas geométricas pode servir como uma moldura para os elementos de segmentação, ajudando a organizar visualmente o painel.
-
-A simplificação do layout é fundamental para evitar a sobrecarga de informações. Isso pode ser feito através da:
-* **Filtragem de Segmentos**: Reduzir a quantidade de visuais focando em exemplos específicos, como unidades vendidas ou distribuição por produto.
-* **Ajuste da Matriz**: Modificar os campos de colunas, removendo dimensões como trimestre e mantendo apenas o ano ou o mês, o que permite uma visão mais clara da dispersão de lucros e vendas detalhadas.
-* **Hierarquia Visual**: Ajustar o tamanho da fonte dos valores internos para **12** e dos cabeçalhos para **13**, garantindo que os dados numéricos sejam facilmente verificados pelo usuário.
-
-Essas modificações, embora demandem tempo no processo de criação, são essenciais para transformar dados brutos em um relatório amigável e funcional.
-      
+Essas modificações, embora demandem tempo no processo de criação, são essenciais para transformar dados brutos em um relatório amigável e funcional.      
 
 ### 🟩 Vídeo 07 - Botões de navegação e próximos passos
 
@@ -224,18 +212,60 @@ Essas modificações, embora demandem tempo no processo de criação, são essen
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/957ef85b-3e62-44f6-8e4d-9a525afd373d?back=/track/engenharia-dados-python
 
-### 🟩 Vídeo 08 - Entendendo o desafio
+O vídeo desreve a transformação de um relatório padrão do Power BI em uma ferramenta interativa e intuitiva. O foco principal é a experiência do usuário (UX), utilizando recursos de navegabilidade, personalização de botões e otimização de layout. O instrutor demonstra como criar menus verticais, gerenciar a visibilidade de páginas e aplicar feedbacks visuais (como cores e negrito) para tornar a navegação fluida e profissional.
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data-modulo.09-curso.04-video_08.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+### Anotações
 
-link do vídeo:
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-28-09h39m58s060.jpg" alt="" width="840">
+</p>
 
-##  Materiais de Apoio
+A interface inicial apresenta o Sales Report, onde o foco principal é a visualização de Vendas por Período. Neste estágio do desenvolvimento, o objetivo é estabelecer a navegabilidade do relatório utilizando navegadores de botões. Esses elementos permitem que o usuário transite entre diferentes contextos, como a Homepage e os detalhamentos de Vendas e Produto. O painel exibe indicadores críticos, como o Total de Vendas acumulado em 118,73 Mi, servindo como ponto de partida para análises mais profundas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-28-09h40m05s320.jpg" alt="" width="840">
+</p>
+
+No Report de Vendas Detalhado, a análise é aprofundada através do gráfico de Vendas e Gross x Período. Este visual utiliza um gráfico de colunas com uma linha de tendência sobreposta, facilitando a identificação de picos de crescimento que chegam a 22 Mi em determinados períodos. A estratégia aplicada aqui é a redução da carga cognitiva, mantendo apenas os visuais essenciais em tela. Caso o usuário necessite de mais detalhes, a estrutura de botões permite alternar entre dois visuais diferentes ocupando o mesmo espaço físico no layout.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-28-09h40m11s815.jpg" alt="" width="840">
+</p>
+
+O Report de Lucro Detalhado foca na métrica de rentabilidade através da Soma de Profit Product. A organização do relatório é dividida em três abas principais de concentração: Sales, Profit e Report. No ambiente de desenvolvimento do Power BI Desktop, o gerenciamento de campos como Country, Date e Product é fundamental para garantir que os filtros aplicados em uma página reflitam corretamente o lucro detalhado sem poluir visualmente a interface principal.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-28-09h40m22s023.jpg" alt="" width="840">
+</p>
+
+A etapa final de refinamento foca na experiência do usuário (UX) e na estética do dashboard. Isso inclui a customização dos estados dos botões para que mudem de cor — por exemplo, para azul escuro com fonte branca — ao serem selecionados ou pressionados. Além disso, páginas de apoio que não devem ser acessadas diretamente pelo menu, como a "Página 4", são ocultadas para simplificar o fluxo de navegação. Para tornar o sistema mais intuitivo, substitui-se o texto por ícones representativos, como um símbolo de casa para a Homepage, tornando o relatório final mais amigável e profissional.      
+
+### Entendendo o desafio
+
+Agora é a sua hora de brilhar e construir um perfil de destaque na DIO!  
+Explore todos os conceitos explorados até aqui e replique (ou melhor, porque não?) este projeto prático.  
+Para isso, crie seu próprio repositório e aumente ainda mais seu portfólio de projetos no GitHub,  
+o qual pode fazer toda diferença em suas entrevistas técnicas 😎
+
+Neste repositório, insira todos os links e arquivos necessários para seu projeto,  
+seja um arquivo de banco de dados ou um link para o template no Figma.
+
+**Dica:** Se o expert forneceu um repositório Github, você pode dar um *fork* no repositório dele  
+para organizar suas alterações e evoluções mantendo uma referência direta ao código-fonte original.
+
+---
+
+# Instruções para o desenvolvimento 
+
+[Descrição do Desafio](https://hermes.dio.me/files/assets/8c8b9d8e-2d05-4d68-ad5b-631bed568839.docx) (DOCX)
+[Exemplo](https://hermes.dio.me/files/assets/38ae8dcf-114a-4db3-836c-24d9beadb821.pbix) (PBIX)
+[Sales Report](https://hermes.dio.me/files/assets/caf9857e-117f-47a0-962c-3678882a0501.pbix) (PBIX)
+
+Bons estudos 😉
+
+### Conteúdo do
 
 # Certificado: Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI
 
