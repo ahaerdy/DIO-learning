@@ -259,15 +259,15 @@ para organizar suas alterações e evoluções mantendo uma referência direta a
 
 ### Instruções para o desenvolvimento 
 
-[Descrição do Desafio](https://hermes.dio.me/files/assets/8c8b9d8e-2d05-4d68-ad5b-631bed568839.docx) (DOCX)
-[Exemplo](https://hermes.dio.me/files/assets/38ae8dcf-114a-4db3-836c-24d9beadb821.pbix) (PBIX)
-[Sales Report](https://hermes.dio.me/files/assets/caf9857e-117f-47a0-962c-3678882a0501.pbix) (PBIX)
+- [Descrição do Desafio](https://hermes.dio.me/files/assets/8c8b9d8e-2d05-4d68-ad5b-631bed568839.docx) (DOCX)
+- [Exemplo](https://hermes.dio.me/files/assets/38ae8dcf-114a-4db3-836c-24d9beadb821.pbix) (PBIX)
+- [Sales Report](https://hermes.dio.me/files/assets/caf9857e-117f-47a0-962c-3678882a0501.pbix) (PBIX)
 
 Bons estudos 😉
 
 ---
 
-### Desafio de Projeto – Atualizando Relatório Financeiro com Foco na Experiência do Usuário
+### Desafio de Projeto (DOCX) – Atualizando Relatório Financeiro com Foco na Experiência do Usuário
 
 #### Objetivo do desafio
 Modificar o relatório criativo, o primeiro que criamos juntos, focando na experiência do usuário.  
