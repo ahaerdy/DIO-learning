@@ -160,6 +160,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [X] Curso: [Explorando Recursos para criar Storytelling dos dados com Power BI](Modulo_09/02-Curso.02-Explorando_Recursos_para_criar_Storytelling_dos_dados_com_Power_BI)
 - [X] Curso: [Fundamentos de Data Analytics com Power BI](Modulo_09/03-Curso.03-Fundamentos_de_Data_Analytics_com_Power_BI)
 - [x] Projeto: [Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI](Modulo_09/04-Projeto.01-Criando_um_Dashboard_Gerencial_para_Tomada_de_Decisoes_Com_Power_BI)
+  - **Repositório**: [dio-powerbi-financial-dashboard](https://github.com/ahaerdy/dio-powerbi-financial-dashboard)
+  - **Descrição**: dashboard gerencial desenvolvido em Power BI com foco em **apoio à tomada de decisão financeira**: apresenta **KPIs financeiros** essenciais e painéis de análise de **receita, despesas e rentabilidade**, com filtros interativos e visões por **período** e **centro de custo** para facilitar o monitoramento de desempenho, identificação de tendências e detecção de desvios; o objetivo é transformar dados operacionais em **insights acionáveis** que suportem decisões estratégicas e táticas da área financeira.
 - [ ] Projeto: Criando um Relatório Vendas e Lucros com Data Analytics com Power BI
 
 ## 🏆 Certificados Obtidos
