@@ -188,6 +188,35 @@ As opções de personalização permitem modificar a fonte (utilizando famílias
 
 link do vídeo: https://web.dio.me/lab/criando-relatorios-dinamicos-com-o-uso-de-parametros/learning/ea96b50e-6359-4c2b-9e2b-10ca050c012b
 
+O vídeo descreve o refinamento visual e na organização de dados em um dashboard. A instrutora demonstra como transformar um relatório funcional em uma ferramenta visualmente atraente e de fácil leitura, priorizando o contraste, a hierarquia de informações e a experiência do usuário.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-28-09h23m49s116.jpg" alt="" width="840">
+</p>
+
+A etapa de refinamento de um relatório no Power BI foca na **estética e na experiência do usuário**, garantindo que as informações mais importantes recebam o devido destaque visual. Para aumentar o contraste e a legibilidade das tabelas e matrizes, é possível personalizar as predefinições de estilo, utilizando cores como **azul e branco** para destacar colunas e cabeçalhos. Além dos ajustes de cores, a utilização de formas geométricas pode servir como uma moldura para os elementos de segmentação, ajudando a organizar visualmente o painel.
+
+A simplificação do layout é fundamental para evitar a sobrecarga de informações. Isso pode ser feito através da:
+* **Filtragem de Segmentos**: Reduzir a quantidade de visuais focando em exemplos específicos, como unidades vendidas ou distribuição por produto.
+* **Ajuste da Matriz**: Modificar os campos de colunas, removendo dimensões como trimestre e mantendo apenas o ano ou o mês, o que permite uma visão mais clara da dispersão de lucros e vendas detalhadas.
+* **Hierarquia Visual**: Ajustar o tamanho da fonte dos valores internos para **12** e dos cabeçalhos para **13**, garantindo que os dados numéricos sejam facilmente verificados pelo usuário.
+
+Essas modificações, embora demandem tempo no processo de criação, são essenciais para transformar dados brutos em um relatório amigável e funcional.<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-28-09h23m49s116.jpg" alt="" width="840">
+</p>
+
+A etapa de refinamento de um relatório no Power BI foca na **estética e na experiência do usuário**, garantindo que as informações mais importantes recebam o devido destaque visual. Para aumentar o contraste e a legibilidade das tabelas e matrizes, é possível personalizar as predefinições de estilo, utilizando cores como **azul e branco** para destacar colunas e cabeçalhos. Além dos ajustes de cores, a utilização de formas geométricas pode servir como uma moldura para os elementos de segmentação, ajudando a organizar visualmente o painel.
+
+A simplificação do layout é fundamental para evitar a sobrecarga de informações. Isso pode ser feito através da:
+* **Filtragem de Segmentos**: Reduzir a quantidade de visuais focando em exemplos específicos, como unidades vendidas ou distribuição por produto.
+* **Ajuste da Matriz**: Modificar os campos de colunas, removendo dimensões como trimestre e mantendo apenas o ano ou o mês, o que permite uma visão mais clara da dispersão de lucros e vendas detalhadas.
+* **Hierarquia Visual**: Ajustar o tamanho da fonte dos valores internos para **12** e dos cabeçalhos para **13**, garantindo que os dados numéricos sejam facilmente verificados pelo usuário.
+
+Essas modificações, embora demandem tempo no processo de criação, são essenciais para transformar dados brutos em um relatório amigável e funcional.
+      
+
 ### 🟩 Vídeo 07 - Botões de navegação e próximos passos
 
 <video width="60%" controls>
