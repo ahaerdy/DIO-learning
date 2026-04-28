@@ -294,5 +294,5 @@ Esses pontos fora da curva deixam seu relatório mais interessante.
 
 # Certificado: Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/3XA0LOPQ.pdf
+- Certificado em pdf: [Certificado-Criando_um_Dashboard_Gerencial_para_Tomada_de_Decisoes_Com_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Criando_um_Dashboard_Gerencial_para_Tomada_de_Decisoes_Com_Power_BI.pdf)
