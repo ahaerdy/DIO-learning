@@ -89,12 +89,31 @@ A navegabilidade é um ponto crucial no design de dashboards, exigindo a inclus�
 
 É o momento de criar um perfil de destaque na DIO, explorando conceitos aprendidos e replicando o projeto prático. Oriente-se a criar um repositório próprio no GitHub para aumentar o portfólio e destaque a importância disso em entrevistas técnicas. Também há instruções para inserir links e arquivos necessários, como banco de dados ou templates do Figma. Uma dica menciona a possibilidade de fazer “fork” de um repositório GitHub para manter referência ao código original.
 
-## Instruções para o desenvolvimento
+### Instruções para o desenvolvimento
 
 - [Projeto de Data Analytics com Power BI](https://hermes.dio.me/files/assets/7ebecd9e-23de-4755-ab91-6659b7f641d2.docx)  
 - [Relatório Criativo](https://hermes.dio.me/files/assets/7107b111-0651-436c-a49d-1d340d218db9.pbix)
 
 Bons estudos 😉
+
+## Desafio de Projeto - Atualizando Relatório Financeiro com Foco na Experiência do Usuário
+
+### Objetivo do desafio
+
+Modificar o relatório criativo, o primeiro que criamos juntos, focando na experiência do usuário.  
+Acompanhe o vídeo para que você entenda o que foi feito neste processo.  
+Além disso, leve em consideração os seguintes pontos:
+
+- Posicionamento  
+- Contraste  
+- Proporção áurea  
+- Segmentação dos dados  
+
+Como comentamos no curso, não é uma regra rígida.  
+Entenda os pontos e cria seu relatório levando-os em consideração.  
+Contudo, saiba quando você deve quebrar as regras.  
+Isso vai trazer mais criatividade ao seu relatório.  
+Esses pontos fora da curva deixam seu relatório mais interessante.
 
 # Certificado: Criando um Relatório Vendas e Lucros com Data Analytics com Power BI
 
