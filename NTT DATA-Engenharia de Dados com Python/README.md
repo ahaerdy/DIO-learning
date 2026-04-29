@@ -162,7 +162,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [x] Projeto: [Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI](Modulo_09/04-Projeto.01-Criando_um_Dashboard_Gerencial_para_Tomada_de_Decisoes_Com_Power_BI)
   - **Repositório**: [dio-powerbi-financial-dashboard](https://github.com/ahaerdy/dio-powerbi-financial-dashboard)
   - **Descrição**: dashboard gerencial desenvolvido em Power BI com foco em **apoio à tomada de decisão financeira**: apresenta **KPIs financeiros** essenciais e painéis de análise de **receita, despesas e rentabilidade**, com filtros interativos e visões por **período** e **centro de custo** para facilitar o monitoramento de desempenho, identificação de tendências e detecção de desvios; o objetivo é transformar dados operacionais em **insights acionáveis** que suportem decisões estratégicas e táticas da área financeira.
-- [ ] Projeto: Criando um Relatório Vendas e Lucros com Data Analytics com Power BI
+- [x] Projeto: [Criando um Relatório Vendas e Lucros com Data Analytics com Power BI](Modulo_09/05-Projeto.02-Criando_um_Relatorio_Vendas_e_Lucros_com_Data_Analytics_com_Power_BI)
 
 ## 🏆 Certificados Obtidos
 
