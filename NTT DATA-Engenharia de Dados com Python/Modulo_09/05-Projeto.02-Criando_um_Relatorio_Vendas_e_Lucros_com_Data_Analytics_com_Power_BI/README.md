@@ -44,6 +44,46 @@ A página de "Detalhes de Vendas" foca em análises estatísticas e segmentaçã
 
 link do vídeo: https://web.dio.me/lab/projeto-de-data-analytics-com-power-bi/learning/cdec6e7a-7019-4521-9501-eb392c3f2030
 
+O vídeo resume as instruções para a criação de uma página de relatório avançada, focando na integração de métricas, design estratégico e experiência do usuário (UX) em ferramentas de BI (como Power BI).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-29-11h10m33s174.jpg" alt="" width="840">
+</p>
+
+Na análise de dados, é fundamental explorar conceitos como Top N, anomalias, categorização e clusterização. Um exemplo prático e valioso para relatórios é a observação da proporção do total de vendas por país e como os três principais produtos influenciam esse montante. Essa análise permite identificar se a participação desses produtos é significativa em relação ao volume total de vendas em cada região.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-29-11h10m41s296.jpg" alt="" width="840">
+</p>
+
+A construção de uma página de relatório deve ser feita de maneira coerente, selecionando visuais que agreguem valor à análise em vez de apenas "jogar" informações na tela. Entre as opções interessantes para compor essa visão estão a distribuição dos principais meses e os rankings de Top N, que ajudam a organizar os dados de forma lógica.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-29-11h10m46s550.jpg" alt="" width="840">
+</p>
+
+Ao criar relatórios, o objetivo principal deve ser mostrar os dados de maneira coesa e agregada. Para isso, é necessário pensar estrategicamente no posicionamento dos elementos, na proporção das tabelas, no contraste das cores e no uso correto da segmentação de dados. Esse cuidado garante que as informações estejam visualmente integradas e fáceis de interpretar.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-29-11h10m52s514.jpg" alt="" width="840">
+</p>
+
+Para análises detalhadas, o uso de histogramas permite visualizar a distribuição de unidades vendidas. Através da definição de "buckets" (compartimentos) de unidades dentro da quantidade total de vendas, é possível relacionar o volume comercializado com os produtos específicos, oferecendo uma visão clara da frequência de vendas por categoria de quantidade.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-29-11h10m55s379.jpg" alt="" width="840">
+</p>
+
+A utilização de matrizes no relatório é eficaz para apresentar duas ou mais visões diferentes de forma simultânea e organizada. Esse tipo de estrutura facilita a visualização de dados complexos, permitindo que o usuário compreenda como diferentes métricas interagem dentro de um mesmo contexto informativo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-04-29-11h10m58s938.jpg" alt="" width="840">
+</p>
+
+A navegabilidade é um ponto crucial no design de dashboards, exigindo a inclusão de ícones funcionais para guiar o usuário. É necessário configurar botões para "avançar", "voltar" e, principalmente, um ícone de "página inicial" (home), que permita o retorno rápido à tela principal do projeto. Além disso, a documentação através de um arquivo Readme no GitHub é recomendada para explicar o projeto e as medidas criadas para as operações.      
+
 
 ## Entendendo o desafio
 
