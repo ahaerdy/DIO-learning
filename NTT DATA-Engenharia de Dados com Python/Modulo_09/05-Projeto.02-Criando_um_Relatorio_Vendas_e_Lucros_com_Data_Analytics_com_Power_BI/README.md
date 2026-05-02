@@ -117,5 +117,5 @@ Esses pontos fora da curva deixam seu relatório mais interessante.
 
 # Certificado: Criando um Relatório Vendas e Lucros com Data Analytics com Power BI
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/GQYUR4N8.pdf
+- Certificado em pdf: [Certificado-Criando_um_Relatorio_Vendas_e_Lucros_com_Data_Analytics_com_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Criando_um_Relatorio_Vendas_e_Lucros_com_Data_Analytics_com_Power_BI.pdf)
