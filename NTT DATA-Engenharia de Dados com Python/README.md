@@ -163,6 +163,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
   - **Repositório**: [dio-powerbi-financial-dashboard](https://github.com/ahaerdy/dio-powerbi-financial-dashboard)
   - **Descrição**: dashboard gerencial desenvolvido em Power BI com foco em **apoio à tomada de decisão financeira**: apresenta **KPIs financeiros** essenciais e painéis de análise de **receita, despesas e rentabilidade**, com filtros interativos e visões por **período** e **centro de custo** para facilitar o monitoramento de desempenho, identificação de tendências e detecção de desvios; o objetivo é transformar dados operacionais em **insights acionáveis** que suportem decisões estratégicas e táticas da área financeira.
 - [x] Projeto: [Criando um Relatório Vendas e Lucros com Data Analytics com Power BI](Modulo_09/05-Projeto.02-Criando_um_Relatorio_Vendas_e_Lucros_com_Data_Analytics_com_Power_BI)
+  - **Repositório**: [dio-relatorio-vendas-lucros-power-bi](https://github.com/ahaerdy/dio-relatorio-vendas-lucros-power-bi)
+  - **Descrição**: Relatório analítico de Vendas e Lucros desenvolvido no Power BI como desafio da trilha **Formação Power BI Analyst** da DIO, utilizando a base de dados **Financial Sample** da Microsoft. O dashboard conta com três páginas navegáveis — **Sales**, **Profit** e **Report** — abordando KPIs globais, distribuição por segmento, análise de lucro por país e trimestre, e comparativo entre vendas líquidas e brutas, com uso de visuais nativos, visual personalizado RadarChart, medidas DAX e navegação interativa entre páginas.
 
 ## 🏆 Certificados Obtidos
 
