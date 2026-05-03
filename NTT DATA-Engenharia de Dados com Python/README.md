@@ -237,7 +237,11 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 9
 
-
+- [Relatórios & Experiência do Usuário no Power BI](https://hermes.dio.me/certificates/CKFY4GRA.pdf)
+- [Explorando Recursos para criar Storytelling dos dados com Power BI](https://hermes.dio.me/certificates/JTCKSRFX.pdf)
+- [Fundamentos de Data Analytics com Power BI](https://hermes.dio.me/certificates/FHWOEPUX.pdf)
+- [Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI](https://hermes.dio.me/certificates/3XA0LOPQ.pdf)
+- [Criando um Relatório Vendas e Lucros com Data Analytics com Power BI](https://hermes.dio.me/certificates/GQYUR4N8.pdf)
 
 ## 🔗 Contribuições Open Source
 
