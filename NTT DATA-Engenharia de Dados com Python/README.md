@@ -270,7 +270,8 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton FalvoJr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - / [karinakato](https://www.linkedin.com/in/karinakato/) (Karina Kato / Machine Learning Engineer)
 - / [renatoromao](https://www.linkedin.com/in/renatoromao) (Renato Romão de Souza / Microsoft MVP, MCT, Especialista em Copilot & IA)
-- / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/) (Valéria Baptista / Head of Cloud and Cybersecurity | Professora e Mentora em Tecnologia)
+- / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/) (Valéria Baptista / Head of Cloud and Cybersecurity, Professora e Mentora em Tecnologia)
+- / [juliana-mascarenhas-ds](https://www.linkedin.com/in/juliana-mascarenhas-ds/) (Juliana Mascarenhas / Tech Education Specialist, Sócia @SimplificandoRedes, Me Modelagem Computacional, Cientista de dados)
 
 ---
 
