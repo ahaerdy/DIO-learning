@@ -944,5 +944,5 @@ Recomenda-se consultar os links oficiais indicados pelo autor para entender melh
 
 # Certificado: Modelagem de Dados no Power BI
 
-- Link na plataforma: https://hermes.dio.me/certificates/4CIQ1GMA.pdf
-- Certificado em pdf: [Certificado-Modelagem_de_Dados_no_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Modelagem_de_Dados_no_Power_BI.pdf)
+- Link na plataforma: https://hermes.dio.me/certificates/PZWKIMG3.pdf
+- Certificado em pdf: [Certificado-Modelagem de Dados no Power BI.pdf](<000-Midia_e_Anexos/Certificado-Modelagem de Dados no Power BI.pdf>)
