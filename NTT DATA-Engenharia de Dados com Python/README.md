@@ -1,12 +1,12 @@
 # Repositório de Estudos – Bootcamp NTT DATA - **Engenharia de Dados com Python**
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-em%20andamento-orange" />
+  <img src="https://img.shields.io/badge/status-concluido-brightgreen" />
   <img src="https://img.shields.io/badge/Bootcamp-NTT%20DATA%20Engenharia%20de%20Dados-blue" />
   <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
   <img src="https://img.shields.io/badge/SQL-Data%20Querying-blue?logo=postgresql" />
   <img src="https://img.shields.io/badge/Power%20BI-Business%20Intelligence-yellow?logo=powerbi" />
-  <img src="https://img.shields.io/badge/Power%20BI-Data%20Visualization-yellow?logo=powerbi" /> <!-- Novo badge adicionado -->
+  <img src="https://img.shields.io/badge/Power%20BI-Data%20Visualization-yellow?logo=powerbi" />
   <img src="https://img.shields.io/github/license/ahaerdy/DIO-learning" />
   <img src="https://img.shields.io/github/repo-size/ahaerdy/DIO-learning" />
   <img src="https://img.shields.io/github/last-commit/ahaerdy/DIO-learning" />
@@ -283,6 +283,6 @@ Este repositório continuará sendo atualizado à medida que novos projetos, ins
 
 ## 📎 Referências
 
-- Bootcamp NTT DATA – Engenharia de Dados com Python – Plataforma DIO  
+- [Bootcamp NTT DATA – Engenharia de Dados com Python – Plataforma DIO](https://web.dio.me/track/engenharia-dados-python)
 - Materiais complementares e projetos pessoais
 
