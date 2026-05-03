@@ -175,6 +175,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Conhecendo a Linguagem de Programação Python](https://hermes.dio.me/certificates/BRMRBL10.pdf)
 - [Desafios de Projetos: Crie Um Portfólio Vencedor](https://hermes.dio.me/certificates/BRMRBL10.pdf)
 - [Contribuindo em um Projeto Open Source no GitHub](https://hermes.dio.me/certificates/OC0JDME3.pdf)
+- Certificado do Módulo: [Introdução ao Ambiente Python e Projetos Colaborativos](https://hermes.dio.me/certificates/GEIVSQML.pdf) ✅
 
 ### Módulo 2
 
@@ -183,6 +184,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Manipulando Strings com Python](https://hermes.dio.me/certificates/5JWHA9TE.pdf)
 - [Dominando Funções Python](https://hermes.dio.me/certificates/M4SVGNUZ.pdf)
 - [Criando um Sistema Bancário com Python](https://hermes.dio.me/certificates/7UHQZHML.pdf)
+- Certificado do Módulo: [Sintaxe Básica com Python](https://hermes.dio.me/certificates/IAZTL9CE.pdf) ✅
 
 ### Módulo 3
 
@@ -193,6 +195,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Lidando com Data, Hora e Fuso Horário no Python](https://hermes.dio.me/certificates/AQA3RRPA.pdf)
 - [Otimizando o Sistema Bancário com Funções Python](https://hermes.dio.me/certificates/EXCY5DYB.pdf)
 - [Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional](https://hermes.dio.me/certificates/PGDMAIJT.pdf)
+- Certificado do Módulo: [Trabalhando com Coleções em Python](https://hermes.dio.me/certificates/9DYYTTLP.pdf) ✅
 
 ### Módulo 4
 
@@ -203,6 +206,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Interfaces e Classes Abstratas com Python](https://hermes.dio.me/certificates/BHZ9MWI7.pdf)
 - [Modelando o Sistema Bancário em POO com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
 - [Criando um Pacote de Processamento de Imagens com Python](https://hermes.dio.me/certificates/5FHX8ELU.pdf)
+- Certificado do Módulo: [Programação Orientada a Objetos com Python](https://hermes.dio.me/certificates/6ZZ8KIW5.pdf) ✅
 
 ### Módulo 5
 
@@ -211,6 +215,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Fundamentos Teóricos Sobre ETL](https://hermes.dio.me/certificates/AWMKK1HD.pdf)
 - [Primeiros Passos com Power BI](https://hermes.dio.me/certificates/YRS6OXNN.pdf)
 - [Analisando dados de um Dashboard de Vendas no Power BI](https://hermes.dio.me/certificates/OY4MDZED.pdf)
+- Certificado do Módulo: [Fundamentos de Power BI](https://hermes.dio.me/certificates/6UHDGI8V.pdf) ✅
 
 ### Módulo 6
 
@@ -219,12 +224,14 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Criando Dashboard Interativos com Power BI](https://hermes.dio.me/certificates/RL4WWELN.pdf)
 - [Criando Um Relatório Gerencial de Vendas com Power BI](https://hermes.dio.me/certificates/Y56KZQRD.pdf)
 - [Materiais complementares - Visualização de Dados e Relatórios com Power BI](https://hermes.dio.me/certificates/7CMJMKP3.pdf)
+- Certificado do Módulo: [Visualização de Dados e Relatórios com Power BI](https://hermes.dio.me/certificates/OGCUICZR.pdf) ✅
 
 ### Módulo 7
 
 - [Coleta e Extração de Dados com Power BI](https://hermes.dio.me/certificates/2FW0YSCV.pdf)
 - [Limpeza e Transformação de Dados com Power BI](https://hermes.dio.me/certificates/4CIQ1GMA.pdf)
 - [Criando um Dashboard corporativo com integração com MySQL e Azure](https://hermes.dio.me/certificates/OZYON3AQ.pdf)
+- Certificado do Módulo: [Processamento de Dados com Power BI](https://hermes.dio.me/certificates/YWIDO2YS.pdf) ✅
 
 ### Módulo 8
 
@@ -234,6 +241,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Otimização de Modelo de Dados com Foco em Desempenho no Power BI](https://hermes.dio.me/certificates/6JMKE9BD.pdf)
 - [Dashboard de Vendas com Power BI utilizando Star Schema](https://hermes.dio.me/certificates/WDI18SJJ.pdf)
 - [Modelando um Dashboard de E-commerce com Power BI Utilizando Fórmulas DAX](https://hermes.dio.me/certificates/1KGZWEW4.pdf)
+- Certificado do Módulo: [Modelagem de Dados com Power BI](https://hermes.dio.me/certificates/5UPDRENA.pdf) ✅
 
 ### Módulo 9
 
@@ -242,6 +250,11 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Fundamentos de Data Analytics com Power BI](https://hermes.dio.me/certificates/FHWOEPUX.pdf)
 - [Criando um Dashboard Gerencial para Tomada de Decisões Com Power BI](https://hermes.dio.me/certificates/3XA0LOPQ.pdf)
 - [Criando um Relatório Vendas e Lucros com Data Analytics com Power BI](https://hermes.dio.me/certificates/GQYUR4N8.pdf)
+- Certificado do Módulo: [Data Analytics & Storytelling com Power BI](https://hermes.dio.me/certificates/NPXMYK1T.pdf) ✅
+
+### Conclusão: 
+
+- 🎓Certificado de conclusão do Bootcamp: [NTT DATA - Engenharia de Dados com Python](https://hermes.dio.me/certificates/YJ6GLP6K.pdf) ✅
 
 ## 🔗 Contribuições Open Source
 
