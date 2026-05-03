@@ -296,4 +296,5 @@ print(ornitorrinco)
 - O material de apoio desta aula não foi disponibilizado.
 
 ## Certificado: Aprendendo o Conceito de Herança com Python
+
 Link do certificado: https://hermes.dio.me/certificates/IYESG1OU.pdf
