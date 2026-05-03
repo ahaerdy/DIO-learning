@@ -202,19 +202,10 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Conhecendo Polimorfismo em Python](https://hermes.dio.me/certificates/OBIHTKZH.pdf)
 - [Interfaces e Classes Abstratas com Python](https://hermes.dio.me/certificates/BHZ9MWI7.pdf)
 - [Modelando o Sistema Bancário em POO com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
-- [Criando um Pacote de Processamento de Imagens com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
+- [Criando um Pacote de Processamento de Imagens com Python](https://hermes.dio.me/certificates/5FHX8ELU.pdf)
 
 ### Módulo 5
 
-- [Introdução à Programação Orientada a Objetos (POO) com Python](https://hermes.dio.me/certificates/PMP6QAQI.pdf)
-- [Aprendendo o Conceito de Herança com Python](https://hermes.dio.me/certificates/IYESG1OU.pdf)
-- [Aplicando Encapsulamento em Python](https://hermes.dio.me/certificates/ZSXJMW71.pdf)
-- [Conhecendo Polimorfismo em Python](https://hermes.dio.me/certificates/OBIHTKZH.pdf)
-- [Interfaces e Classes Abstratas com Python](https://hermes.dio.me/certificates/BHZ9MWI7.pdf)
-- [Modelando o Sistema Bancário em POO com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
-- [Criando um Pacote de Processamento de Imagens com Python](https://hermes.dio.me/certificates/5FHX8ELU.pdf)
-
-### Módulo 6
 
 
 ## 🔗 Contribuições Open Source
