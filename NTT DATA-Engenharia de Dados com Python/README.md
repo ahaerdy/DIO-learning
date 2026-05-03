@@ -229,7 +229,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 ### Módulo 8
 
 - [Fundamentos de Modelagem Dimensional](https://hermes.dio.me/certificates/QPJVJ4HM.pdf)
-- [Modelagem de Dados no Power BI](https://hermes.dio.me/certificates/4CIQ1GMA.pdf)
+- [Modelagem de Dados no Power BI](https://hermes.dio.me/certificates/PZWKIMG3.pdf)
 - [Primeiros passos com DAX e Cálculos com Power BI](https://hermes.dio.me/certificates/8EASFFBR.pdf)
 - [Otimização de Modelo de Dados com Foco em Desempenho no Power BI](https://hermes.dio.me/certificates/6JMKE9BD.pdf)
 - [Dashboard de Vendas com Power BI utilizando Star Schema](https://hermes.dio.me/certificates/WDI18SJJ.pdf)
