@@ -206,12 +206,19 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 5
 
-- [Fundamentos de Business Intelligence (BI)]()
-- [Introdução a Análise de Dados com SQL]()
-- [Fundamentos Teóricos Sobre ETL]()
-- [Primeiros Passos com Power BI]()
-- [Analisando dados de um Dashboard de Vendas no Power BI]()
-- [Desvendando o Power BI com Python]()
+- [Fundamentos de Business Intelligence (BI)](https://hermes.dio.me/certificates/3SJHSOUZ.pdf)
+- [Introdução a Análise de Dados com SQL](https://hermes.dio.me/certificates/PEAAPAN5.pdf)
+- [Fundamentos Teóricos Sobre ETL](https://hermes.dio.me/certificates/AWMKK1HD.pdf)
+- [Primeiros Passos com Power BI](https://hermes.dio.me/certificates/YRS6OXNN.pdf)
+- [Analisando dados de um Dashboard de Vendas no Power BI](https://hermes.dio.me/certificates/OY4MDZED.pdf)
+
+### Módulo 6
+
+- [Trabalhando com Visuais no Power BI](https://hermes.dio.me/certificates/EMSMVOV4.pdf)
+- [Fundamentos de BI: KPIs e Métricas](https://hermes.dio.me/certificates/QKIF6XI1.pdf)
+- [Criando Dashboard Interativos com Power BI](https://hermes.dio.me/certificates/RL4WWELN.pdf)
+- [Criando Um Relatório Gerencial de Vendas com Power BI](https://hermes.dio.me/certificates/Y56KZQRD.pdf)
+- [Materiais complementares - Visualização de Dados e Relatórios com Power BI](https://hermes.dio.me/certificates/7CMJMKP3.pdf)
 
 ## 🔗 Contribuições Open Source
 

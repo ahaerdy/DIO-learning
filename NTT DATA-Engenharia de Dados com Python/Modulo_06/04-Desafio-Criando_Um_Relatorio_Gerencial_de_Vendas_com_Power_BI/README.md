@@ -518,6 +518,11 @@ Fiquem atentos a:
 - Botões para navegabilidade 
 - Segmentadores de dados 
 
-# Entrega do Desafio 
+## Entrega do Desafio 
 
-- Link do repositório: https://github.com/ahaerdy/DIO-powerbi-financial-analysis#
+- Link do repositório: https://github.com/ahaerdy/DIO-powerbi-financial-analysis
+
+# Certificado: Criando Um Relatório Gerencial de Vendas com Power BI
+
+Link do certificado: https://hermes.dio.me/certificates/Y56KZQRD.pdf
+Certificado em PDF: [Certificado-Criando_Um_Relatorio_Gerencial_de_Vendas_com_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Criando_Um_Relatorio_Gerencial_de_Vendas_com_Power_BI.pdf)
