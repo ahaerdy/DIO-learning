@@ -220,6 +220,12 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Criando Um Relatório Gerencial de Vendas com Power BI](https://hermes.dio.me/certificates/Y56KZQRD.pdf)
 - [Materiais complementares - Visualização de Dados e Relatórios com Power BI](https://hermes.dio.me/certificates/7CMJMKP3.pdf)
 
+### Módulo 7
+
+- [Coleta e Extração de Dados com Power BI](https://hermes.dio.me/certificates/2FW0YSCV.pdf)
+- [Limpeza e Transformação de Dados com Power BI](https://hermes.dio.me/certificates/4CIQ1GMA.pdf)
+- [Criando um Dashboard corporativo com integração com MySQL e Azure](https://hermes.dio.me/certificates/OZYON3AQ.pdf)
+
 ## 🔗 Contribuições Open Source
 
 - Repositório: https://github.com/digitalinnovationone/dio-lab-open-source

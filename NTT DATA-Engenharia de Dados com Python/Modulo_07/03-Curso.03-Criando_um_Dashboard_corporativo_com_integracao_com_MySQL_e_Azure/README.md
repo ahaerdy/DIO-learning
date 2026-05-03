@@ -615,5 +615,5 @@ Bons estudos 😉
 
 # Certificado: Criando um Dashboard corporativo com integração com MySQL e Azure    
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/OZYON3AQ.pdf
+- Certificado em pdf: [Certificado-Criando_um_Dashboard_corporativo_com_integracao_com_MySQL_e_Azure.pdf](000-Midia_e_Anexos/Certificado-Criando_um_Dashboard_corporativo_com_integracao_com_MySQL_e_Azure.pdf)
