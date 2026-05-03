@@ -54,6 +54,3 @@ O vídeo termina com uma mensagem inspiradora para os participantes, reforçando
 
 Este vídeo é uma fonte rica de informações tanto para iniciantes quanto para profissionais que desejam se aprofundar e crescer na área de dados. Ele destaca o impacto social da educação tecnológica, a importância de desenvolver habilidades técnicas e comportamentais, a necessidade de uma cultura organizacional forte e inclusiva, e as oportunidades reais de emprego que estão surgindo no mercado. O bootcamp de Engenharia de Dados com Python, promovido pela parceria entre Dio e NTT Data, aparece como uma excelente oportunidade para quem deseja ingressar ou avançar na carreira tecnológica, com um processo seletivo transparente e focado no desenvolvimento integral do profissional.
 
-
-
-

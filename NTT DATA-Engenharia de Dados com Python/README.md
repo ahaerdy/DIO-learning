@@ -174,6 +174,19 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Ambiente de Desenvolvimento e Primeiros Passos com Python](https://hermes.dio.me/certificates/CCAOJIT3.pdf)
 - [Conhecendo a Linguagem de Programação Python](https://hermes.dio.me/certificates/BRMRBL10.pdf)
 - [Desafios de Projetos: Crie Um Portfólio Vencedor](https://hermes.dio.me/certificates/BRMRBL10.pdf)
+- [Contribuindo em um Projeto Open Source no GitHub](https://hermes.dio.me/certificates/OC0JDME3.pdf)
+
+### Módulo 2
+
+- [Tipos de Operadores com Python](https://hermes.dio.me/certificates/EUCVFLQ4.pdf)
+- [Estruturas Condicionais e de Repetição em Python](https://hermes.dio.me/certificates/XVD62HUQ.pdf)
+- [Manipulando Strings com Python](https://hermes.dio.me/certificates/5JWHA9TE.pdf)
+- [Dominando Funções Python](https://hermes.dio.me/certificates/M4SVGNUZ.pdf)
+- [Criando um Sistema Bancário com Python](https://hermes.dio.me/certificates/7UHQZHML.pdf)
+
+### Módulo 3
+
+
 
 ## 🔗 Contribuições Open Source
 
