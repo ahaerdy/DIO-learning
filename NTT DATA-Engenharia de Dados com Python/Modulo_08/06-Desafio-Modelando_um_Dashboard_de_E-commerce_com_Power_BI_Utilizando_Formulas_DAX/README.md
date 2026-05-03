@@ -61,7 +61,7 @@ Você pode utilizar os seguintes pontos como base:
 
 Utilize o repositório do Github como uma descrição do seu projeto para auxiliar outras pessoas e ser visto pelos recrutadores.
 
-# Certificado: 
+# Certificado: Modelando um Dashboard de E-commerce com Power BI Utilizando Fórmulas DAX
 
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/1KGZWEW4.pdf
+- Certificado em pdf: [Certificado-Modelando_um_Dashboard_de_E-commerce_com_Power_BI_Utilizando_Formulas_DAX.pdf](000-Midia_e_Anexos/Certificado-Modelando_um_Dashboard_de_E-commerce_com_Power_BI_Utilizando_Formulas_DAX.pdf)

@@ -226,6 +226,19 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Limpeza e Transformação de Dados com Power BI](https://hermes.dio.me/certificates/4CIQ1GMA.pdf)
 - [Criando um Dashboard corporativo com integração com MySQL e Azure](https://hermes.dio.me/certificates/OZYON3AQ.pdf)
 
+### Módulo 8
+
+- [Fundamentos de Modelagem Dimensional](https://hermes.dio.me/certificates/QPJVJ4HM.pdf)
+- [Modelagem de Dados no Power BI](https://hermes.dio.me/certificates/4CIQ1GMA.pdf)
+- [Primeiros passos com DAX e Cálculos com Power BI](https://hermes.dio.me/certificates/8EASFFBR.pdf)
+- [Otimização de Modelo de Dados com Foco em Desempenho no Power BI](https://hermes.dio.me/certificates/6JMKE9BD.pdf)
+- [Dashboard de Vendas com Power BI utilizando Star Schema](https://hermes.dio.me/certificates/WDI18SJJ.pdf)
+- [Modelando um Dashboard de E-commerce com Power BI Utilizando Fórmulas DAX](https://hermes.dio.me/certificates/1KGZWEW4.pdf)
+
+### Módulo 9
+
+
+
 ## 🔗 Contribuições Open Source
 
 - Repositório: https://github.com/digitalinnovationone/dio-lab-open-source
