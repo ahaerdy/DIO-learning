@@ -186,6 +186,14 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 3
 
+- [Trabalhando com Listas em Python](https://hermes.dio.me/certificates/J3ZME80Z.pdf)
+- [Conhecendo Tuplas em Python](https://hermes.dio.me/certificates/OHCCW65H.pdf)
+- [Explorando Conjuntos em Python](https://hermes.dio.me/certificates/X8KEVLLA.pdf)
+- [Aprendendo a Utilizar Dicionários em Python](https://hermes.dio.me/certificates/UZPKD2UH.pdf)
+- [Lidando com Data, Hora e Fuso Horário no Python](https://hermes.dio.me/certificates/AQA3RRPA.pdf)
+- [Otimizando o Sistema Bancário com Funções Python](https://hermes.dio.me/certificates/EXCY5DYB.pdf)
+- [Desafios de Código: Aperfeiçoe Sua Lógica e Pensamento Computacional](https://hermes.dio.me/certificates/PGDMAIJT.pdf)
+
 
 
 ## 🔗 Contribuições Open Source
