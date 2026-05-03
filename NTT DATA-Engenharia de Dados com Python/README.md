@@ -206,7 +206,12 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 
 ### Módulo 5
 
-
+- [Fundamentos de Business Intelligence (BI)]()
+- [Introdução a Análise de Dados com SQL]()
+- [Fundamentos Teóricos Sobre ETL]()
+- [Primeiros Passos com Power BI]()
+- [Analisando dados de um Dashboard de Vendas no Power BI]()
+- [Desvendando o Power BI com Python]()
 
 ## 🔗 Contribuições Open Source
 

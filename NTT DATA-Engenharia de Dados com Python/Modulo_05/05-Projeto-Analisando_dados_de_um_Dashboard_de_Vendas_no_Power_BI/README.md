@@ -79,3 +79,8 @@ Muito bem, a terceira página é composta por:
 ## Projeto entregue
 
 Link : https://github.com/ahaerdy/DIO-projeto-powerbi-financials  
+
+# Certificado: Analisando dados de um Dashboard de Vendas no Power BI
+
+Link do certificado: https://hermes.dio.me/certificates/OY4MDZED.pdf
+Certificado em PDF: [Certificado-Analisando_dados_de_um_Dashboard_de_Vendas_no_Power_BI.pdf](000-Midia_e_Anexos/Certificado-Analisando_dados_de_um_Dashboard_de_Vendas_no_Power_BI.pdf)
