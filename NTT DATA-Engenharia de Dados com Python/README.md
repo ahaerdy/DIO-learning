@@ -204,7 +204,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Modelando o Sistema Bancário em POO com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
 - [Criando um Pacote de Processamento de Imagens com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
 
-### Módulo 4
+### Módulo 5
 
 - [Introdução à Programação Orientada a Objetos (POO) com Python](https://hermes.dio.me/certificates/PMP6QAQI.pdf)
 - [Aprendendo o Conceito de Herança com Python](https://hermes.dio.me/certificates/IYESG1OU.pdf)
@@ -214,7 +214,7 @@ O Bootcamp está organizado em módulos sequenciais com atividades práticas:
 - [Modelando o Sistema Bancário em POO com Python](https://hermes.dio.me/certificates/CZOEUYNC.pdf)
 - [Criando um Pacote de Processamento de Imagens com Python](https://hermes.dio.me/certificates/5FHX8ELU.pdf)
 
-### Módulo 5
+### Módulo 6
 
 
 ## 🔗 Contribuições Open Source
