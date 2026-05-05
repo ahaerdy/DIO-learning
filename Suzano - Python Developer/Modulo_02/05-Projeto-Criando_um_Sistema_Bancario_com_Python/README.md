@@ -57,7 +57,7 @@ Bons estudos 😉
 
 ### Link do projeto:
 
-- [desafio.py](https://github.com/ahaerdy/DIO-learning/blob/main/Suzano%20-%20Python%20Developer/Modulo_02/05-Projeto-Criando_um_Sistema_Bancario_com_Python/Projeto/desafio.py)
+- [dio-sistema-bancario-python](https://github.com/ahaerdy/dio-sistema-bancario-python)
 
 # Certificado
 
