@@ -59,15 +59,15 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Introdução à Programação e Pensamento Computacional](Modulo_01/04-Curso.04-Introducao.a.Programacao.e.Pensamento.Computacional/README.md)
 - [x] Curso: [Introdução ao Git e ao GitHub](Modulo_01/05-Curso.05-Introducao.ao.Git.e.ao.GitHub/README.md)
 - [x] Projeto: [Criando seu Primeiro Repositório no GitHub Para Compartilhar Seu Progresso](Modulo_01/06-Desafio-Criando.seu.Primeiro.Repositorio.no.GitHub.Para.Compartilhar.Seu.Progresso/README.md)
-	- Repositório: [DIO Learning](https://github.com/ahaerdy/DIO-learning)
-    - Descrição: Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma DIO - Digital Innovation One. Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
+	- **Repositório**: [DIO Learning](https://github.com/ahaerdy/DIO-learning)
+    - **Descrição**: Este repositório tem como objetivo documentar minha jornada de aprendizado através dos diversos cursos, formações e bootcamps da plataforma DIO - Digital Innovation One. Aqui armazeno minha evolução, anotações, projetos e materiais complementares para cada curso que estou realizando na DIO, seguindo uma organização clara e prática para facilitar o estudo e a consulta futura.
 
 ### Módulo 2: HTML/CSS3
 
 - [x] Curso: [Introdução a Criação de Websites com HTML5 e CSS3](Modulo_02/01-Curso.01-Introducao.a.Criacao.de.Websites.com.HTML5.e.CSS3/README.md)
 - [x] Projeto: [Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions](Modulo_02/02-Curso.02-Desenvolvendo.um.Menu.Hamburguer.e.Morphing.Menu.com.CSS.Transitions/README.md)
-	- Repositório: [DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css](https://github.com/ahaerdy/DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css)
-    - Descrição: Este repositório contém o projeto desenvolvido durante o curso “Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions”, ministrado por Gabriela Pinheiro na plataforma DIO (Digital Innovation One). O projeto tem como objetivo consolidar conceitos de estruturação HTML, estilização com CSS, animações, transições e responsividade, sem utilização de JavaScript.
+	- **Repositório**: [DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css](https://github.com/ahaerdy/DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css)
+    - **Descrição**: Este repositório contém o projeto desenvolvido durante o curso “Desenvolvendo um Menu Hamburguer e Morphing Menu com CSS Transitions”, ministrado por Gabriela Pinheiro na plataforma DIO (Digital Innovation One). O projeto tem como objetivo consolidar conceitos de estruturação HTML, estilização com CSS, animações, transições e responsividade, sem utilização de JavaScript.
 
 ### Módulo 3: Javascript
 
