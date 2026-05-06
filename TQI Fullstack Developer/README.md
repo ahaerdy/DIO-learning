@@ -83,6 +83,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e mentorias. 
 - [x] Curso: [Manipulando a D.O.M. com JavaScript](Modulo_03/10-Curso.10-Manipulando.a.DOM.com.JavaScript/README.md)
 - [x] Curso: [Desafios TQI - JavaScript](Modulo_03/11-Curso.11-Desafios.TQI-JavaScript/README.md)
 - [x] Projeto: [Desenvolvendo um Jogo da Memória](Modulo_03/12-Projeto-Desenvolvendo.um.Jogo.da.Memoria/README.md)
+    - **Repositório**: [DIO-jogo-da-memoria-html-css-javascript](https://github.com/ahaerdy/DIO-jogo-da-memoria-html-css-javascript)
+    - **Descrição**: Este projeto implementa um **Jogo da Memória** clássico com temática do universo Mario, utilizando HTML, CSS e JavaScript puro — sem nenhuma biblioteca ou framework externo. O desafio central é duplo: criar **animações 3D convincentes** apenas com CSS, e implementar uma **lógica de jogo robusta** em JavaScript que lide com casos de borda como duplo clique e viradas simultâneas.
 
 ### Módulo 4: ⭐️ ReactJS
 
