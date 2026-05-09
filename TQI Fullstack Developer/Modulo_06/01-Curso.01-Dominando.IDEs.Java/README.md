@@ -93,24 +93,6 @@ A história do Java remonta à década de 90, quando foi criada pela Sun Microsy
 
 O Java se diferencia de linguagens puramente compiladas (como C e C++) por seu ciclo de execução híbrido. Enquanto em C/C++ o código é compilado diretamente para código de máquina específico do sistema operacional (OS), o código Java é compilado para um formato intermediário chamado **bytecode**. Este bytecode não é lido diretamente pelo hardware, mas sim interpretado por uma Máquina Virtual Java (JVM), o que garante a portabilidade do programa entre diferentes plataformas.
 
-```c
-#include <stdio.h>
- int main () {
- char( nome = "Manuel da Silva
- float salario = 800.0;
- char[] sql = "insert into usuario";
- }
-
-```
-
-```java
-public class CadastroFrame (
- public static void main (String() ) {
- User u new User();
- usave();
-
-```
-
 <p align="center">
 <img src="000-Midia_e_Anexos/vlcsnap-2026-01-18-14h10m38s329.jpg" alt="" width="840">
 </p>
