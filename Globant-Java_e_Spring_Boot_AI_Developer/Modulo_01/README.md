@@ -125,10 +125,7 @@ A trilha de aprendizado é estruturada de forma progressiva para garantir uma ev
 
 Este caminho é desenhado para que cada etapa sustente a anterior, evitando que o aluno fique preso apenas na teoria ou seja lançado em projetos sem a devida preparação. Ao final, o profissional adquire não apenas conteúdo, mas uma visão de mercado que valoriza a organização de código, a facilidade de manutenção e a clareza técnica contextualizada ao produto.      
 
+# Certificado: Boas-vindas a Globant - Introdução ao Mercado de Desenvolvimento Java
 
-##  Materiais de Apoio
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/QBZJL1I1.pdf
+- Certificado em pdf: [Cerificado-Boas-vindas_a_Globant-Introducao_ao_Mercado_de_Desenvolvimento_Java.pdf](000-Midia_e_Anexos/Cerificado-Boas-vindas_a_Globant-Introducao_ao_Mercado_de_Desenvolvimento_Java.pdf)
