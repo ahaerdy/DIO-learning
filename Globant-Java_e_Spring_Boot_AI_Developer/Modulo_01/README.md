@@ -41,7 +41,14 @@ A progressão visa transformar o conhecimento de lógica básica em uma mentalid
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-mercado-de-desenvolvimento-java/learning/ad5b620e-9df7-4d9b-89a9-7a73d0412214?autoplay=1
+
+O vídeo detalha a transição do aprendizado da linguagem Java para a construção de aplicações robustas e modernas utilizando o ecossistema Spring. O foco central é o desenvolvimento de uma API inteligente que integra reconhecimento de fala e processamento de intenções, elevando o nível do portfólio do desenvolvedor para os padrões atuais do mercado.
+
+### Anotações
+
+      
+
 
 ### 🟩 Vídeo 03 - Como Boas Práticas, Testes e IA Fortalecem Sua Evolução
 
@@ -50,7 +57,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-mercado-de-desenvolvimento-java/learning/1afd1008-4423-48cd-8928-18e4dc2b802f?autoplay=1
 
 ### 🟩 Vídeo 04 - Por Que Esta Jornada Pode Virar Um Ponto de Virada na Sua Carreira
 
