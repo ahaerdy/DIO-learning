@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
+- Contato Linkedin: / [falvojr](https://www.linkedin.com/in/falvojr/)
 
 ## Boas-vindas a Globant - Introdução ao Mercado de Desenvolvimento Java
 
