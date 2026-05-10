@@ -34,37 +34,31 @@ A pergunta central do Teste de Turing: "Quando os computadores serão capazes de
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h41m28s562.jpg" alt="" width="840">
 </p>
 
-Conteúdo não identificado com segurança a partir do material disponível.
+John McCarthy, cientista da computação, foi responsável por cunhar o termo "Inteligência Artificial" em 1956, durante a Conferência de Dartmouth. Ele propôs que, para simular o comportamento humano de forma computacional, seria necessário criar uma inteligência não biológica, mas artificial — capaz de processar perguntas e respostas a partir de um banco de conhecimento, de maneira mais flexível do que simples regras pré-programadas.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h42m29s650.jpg" alt="" width="840">
 </p>
 
-Conteúdo não identificado com segurança a partir do material disponível.
+Joseph Weizenbaum, cientista do MIT, criou em 1966 o primeiro chatbot da história, chamado ELIZA. Inspirado no Teste de Turing, ELIZA simulava uma conversa usando padrões de substituição de palavras, imitando um psicoterapeuta. Essa inovação deu origem ao campo do Processamento de Linguagem Natural (PLN), permitindo que computadores se comunicassem em linguagem humana.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h42m42s020.jpg" alt="" width="840">
 </p>
 
-Conteúdo não identificado com segurança a partir do material disponível.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h43m05s618.jpg" alt="" width="840">
-</p>
-
-Conteúdo não identificado com segurança a partir do material disponível.
+A imagem mostra o terminal com o programa ELIZA carregado e em execução. Conforme explicado na aula, o ELIZA funcionava como um psicoterapeuta virtual: ele identificava palavras‑chave nas frases do usuário e aplicava regras de substituição para gerar respostas genéricas, como “Por que você está triste hoje?” ou “Me fale um pouco mais sobre a sua mãe”. Esse mecanismo simulava uma conversa natural sem que o computador realmente entendesse o significado. A cada interação, o ELIZA também enriquecia seu vocabulário — um princípio inicial do aprendizado de máquina. O próprio Weizenbaum ficou surpreso ao perceber que as pessoas atribuíam emoções e humanidade ao programa, antecipando discussões éticas que continuam atuais com assistentes como o ChatGPT.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h43m16s134.jpg" alt="" width="840">
 </p>
 
-Conteúdo não identificado com segurança a partir do material disponível.
+A IBM impulsionou a popularização desses modelos em 2010 com o lançamento do IBM Watson. Focado em responder perguntas complexas através de processamento de linguagem natural massivo, o Watson ganhou fama mundial em 2011 ao derrotar competidores humanos no programa Jeopardy!, provando a eficácia da IA em processar e recuperar informações de grandes bases de dados.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h43m20s627.jpg" alt="" width="840">
 </p>
 
-O Processamento de Linguagem Natural (PLN) é a área da inteligência artificial que permite computadores entenderem e responderem em linguagem humana. Inspirado pelo Teste de Turing, o primeiro chatbot ELIZA (1966) usava regras de substituição e aprendizado de padrões para simular conversas, abrindo caminho para assistentes modernos como o ChatGPT.   
+O Processamento de Linguagem Natural (PLN) define a maneira como humanos e computadores trocam informações. Longe de ser um processo "mágico", ele se baseia em modelos matemáticos que calculam a probabilidade de sequências de palavras. Ao armazenar volumes gigantescos de dados, as máquinas realizam uma substituição de padrões em alta escala para criar diálogos coerentes e naturais. 
 
 
 ### 🟩 Vídeo 02 - Como uma Inteligência Artificial é treinada e o que são LLMs
