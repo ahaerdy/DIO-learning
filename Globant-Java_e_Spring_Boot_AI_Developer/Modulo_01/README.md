@@ -47,7 +47,26 @@ O vídeo detalha a transição do aprendizado da linguagem Java para a construç
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-10h56m28s872.jpg" alt="" width="840">
+</p>
+
+A transição do aprendizado da linguagem Java para o ecossistema Spring marca o início da construção de produtos com foco em soluções de mercado. Esta fase da jornada foca na robustez do back-end, introduzindo ferramentas essenciais para a criação de aplicações profissionais:
+
+* **Spring Boot:** Agiliza o desenvolvimento de aplicações configuráveis e prontas para produção.
+* **APIs REST:** Implementação do estilo arquitetural predominante para comunicação entre sistemas.
+* **Spring Data:** Simplificação da persistência e conexão com bancos de dados.
+* **OpenFeign:** Facilitação do consumo de APIs externas.
+
+O objetivo central é a evolução para o projeto final do Bootcamp: uma API inteligente que integra Java e Spring Boot com recursos avançados de Inteligência Artificial. Diferente de uma interface tradicional que apenas processa dados brutos (JSON), esta solução é projetada para **ouvir, entender e agir**. O fluxo compreende a captura de fala do usuário, conversão de áudio em texto, interpretação de intenções e extração de dados relevantes para fornecer uma resposta precisa.
+
+Além da funcionalidade técnica, o projeto enfatiza a qualidade de entrega por meio de:
+
+* Regras de negócio bem estruturadas.
+* Integração de ponta a ponta.
+* Práticas de testes unitários e padrões de mercado.
+
+Essa abordagem visa consolidar um portfólio que demonstre não apenas o domínio da linguagem, mas a capacidade de criar soluções modernas, inteligentes e alinhadas às necessidades reais da indústria.      
 
 
 ### 🟩 Vídeo 03 - Como Boas Práticas, Testes e IA Fortalecem Sua Evolução
