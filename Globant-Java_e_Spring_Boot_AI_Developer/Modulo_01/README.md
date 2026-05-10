@@ -78,6 +78,26 @@ Essa abordagem visa consolidar um portfólio que demonstre não apenas o domíni
 
 link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-mercado-de-desenvolvimento-java/learning/1afd1008-4423-48cd-8928-18e4dc2b802f?autoplay=1
 
+Este vídeo apresenta a filosofia e a estrutura de um bootcamp focado em transformar desenvolvedores iniciantes em profissionais de backend maduros. O diferencial da trilha não é apenas ensinar a "fazer o código funcionar", mas sim focar na qualidade, na arquitetura e no uso estratégico da Inteligência Artificial como aliada no processo de desenvolvimento.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-11h09m32s463.jpg" alt="" width="840">
+</p>
+
+Esta etapa inicial estabelece os pilares para a formação de um desenvolvedor backend de alto nível, focando na transição do conhecimento técnico básico para uma postura de liderança e excelência técnica (**Elite TOH**). O objetivo é consolidar uma base que ultrapassa a simples funcionalidade do código, priorizando a clareza, a confiabilidade e a capacidade de evolução de sistemas complexos.
+
+A trajetória proposta organiza o aprendizado em torno de três eixos fundamentais:
+
+* **Qualidade e Sustentabilidade:** A adoção de práticas como **Clean Code**, **SOLID** e **Design Patterns** deixa de ser um diferencial para se tornar parte intrínseca da construção do software.
+* **Confiança e Maturidade:** A implementação de testes unitários com **JUnit** e a exploração do ecossistema **Spring Boot** permitem que o profissional desenvolva uma visão madura sobre responsabilidade de código e manutenção.
+* **Inovação Assistida:** A integração estratégica da **Inteligência Artificial** (LLMs e agentes) atua como uma alavanca para acelerar o aprendizado e a revisão de caminhos, desde que sustentada por uma base sólida de orientação a objetos e arquitetura.
+
+Essa combinação prepara o profissional para os desafios de **2026**, transformando o estudo técnico em um direcionamento de carreira focado em resultados consistentes e visão sistêmica.      
+
+
+
 ### 🟩 Vídeo 04 - Por Que Esta Jornada Pode Virar Um Ponto de Virada na Sua Carreira
 
 <video width="60%" controls>
@@ -85,7 +105,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-mercado-de-desenvolvimento-java/learning/4f4fa11a-450b-47b2-be88-76d118fbaaa5?autoplay=1
 
 ##  Materiais de Apoio
 
