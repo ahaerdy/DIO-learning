@@ -96,8 +96,6 @@ A trajetória proposta organiza o aprendizado em torno de três eixos fundamenta
 
 Essa combinação prepara o profissional para os desafios de **2026**, transformando o estudo técnico em um direcionamento de carreira focado em resultados consistentes e visão sistêmica.      
 
-
-
 ### 🟩 Vídeo 04 - Por Que Esta Jornada Pode Virar Um Ponto de Virada na Sua Carreira
 
 <video width="60%" controls>
@@ -106,6 +104,27 @@ Essa combinação prepara o profissional para os desafios de **2026**, transform
 </video>
 
 link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-mercado-de-desenvolvimento-java/learning/4f4fa11a-450b-47b2-be88-76d118fbaaa5?autoplay=1
+
+Este bootcamp foi desenhado não apenas como um curso técnico, mas como uma jornada de transformação profissional. O foco central é a construção de confiança através de uma trilha estruturada, que leva o desenvolvedor do zero até a criação de soluções modernas integradas com Inteligência Artificial.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-11h16m32s079.jpg" alt="" width="840">
+</p>
+
+A jornada deste bootcamp propõe uma transformação que vai além do aprendizado técnico isolado, focando na construção de **confiança com direção**. O objetivo é capacitar o desenvolvedor a transitar com segurança por todo o ecossistema de desenvolvimento moderno, desde a compreensão profunda da linguagem Java e criação de APIs com Spring Boot até a entrega de códigos com alta qualidade e testabilidade.
+
+A trilha de aprendizado é estruturada de forma progressiva para garantir uma evolução natural:
+
+* **Fundamentos e Lógica:** Fortalecimento da base em lógica de programação e na linguagem Java.
+* **Orientação a Objetos e Dados:** Domínio dos pilares da POO e integração com bancos de dados.
+* **Ecossistema Spring:** Imersão no framework para construção de soluções robustas.
+* **Qualidade e Maturidade:** Refino técnico através de boas práticas e implementação de testes unitários.
+* **Projeto Final:** Consolidação do repertório em uma aplicação real que conecta o backend a tecnologias avançadas, como inteligência artificial e reconhecimento de fala.
+
+Este caminho é desenhado para que cada etapa sustente a anterior, evitando que o aluno fique preso apenas na teoria ou seja lançado em projetos sem a devida preparação. Ao final, o profissional adquire não apenas conteúdo, mas uma visão de mercado que valoriza a organização de código, a facilidade de manutenção e a clareza técnica contextualizada ao produto.      
+
 
 ##  Materiais de Apoio
 
