@@ -937,7 +937,6 @@ Ao concluir o curso, é natural que surjam dúvidas sobre o conteúdo estudado. 
 Para o aprofundamento nos temas abordados, a documentação oficial da Oracle oferece recursos detalhados sobre a estrutura fundamental da linguagem Java. Os materiais de referência incluem guias sobre palavras-chave, conceitos de variáveis e tipos de dados, servindo como base técnica para o conteúdo apresentado:
 
 * **Palavras-chave**: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/keywords.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/keywords.html) 
-* **Resumo de Variáveis**: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variablesummary.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variablesummary.html) 
 * **Tipos de Dados**: [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html) 
 
 <p align="center">
