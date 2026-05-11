@@ -223,7 +223,7 @@ A chamada consiste em referenciar a entidade (classe ou objeto), utilizar o oper
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/bc9c60c8-8a5f-4a70-84e1-9b9d2f824f02?autoplay=1
 
-Este resumo apresenta os conceitos fundamentais sobre a estrutura, o funcionamento e as boas práticas no desenvolvimento de métodos em programação. A aula explora a definição de assinatura de um método — composta por seu nome e parâmetros — e introduz tipos especiais como construtores e destruidores, além do conceito de mensagem como o ato de solicitar a execução de um código. É dada ênfase à passagem de parâmetros por valor, onde uma cópia dos dados é utilizada, garantindo que alterações internas não afetem a variável original externa. Para assegurar a legibilidade e a manutenção do software, o conteúdo recomenda o uso da notação Camelo (camelCase), nomes descritivos com verbos e substantivos, e a limitação da extensão dos métodos a um intervalo de 80 a 120 linhas, incentivando a criação de métodos auxiliares e a aplicação de visibilidades adequadas para reduzir o acoplamento.
+O vídeo apresenta os conceitos fundamentais sobre a estrutura, o funcionamento e as boas práticas no desenvolvimento de métodos em programação. A aula explora a definição de assinatura de um método — composta por seu nome e parâmetros — e introduz tipos especiais como construtores e destruidores, além do conceito de mensagem como o ato de solicitar a execução de um código. É dada ênfase à passagem de parâmetros por valor, onde uma cópia dos dados é utilizada, garantindo que alterações internas não afetem a variável original externa. Para assegurar a legibilidade e a manutenção do software, o conteúdo recomenda o uso da notação Camelo (camelCase), nomes descritivos com verbos e substantivos, e a limitação da extensão dos métodos a um intervalo de 80 a 120 linhas, incentivando a criação de métodos auxiliares e a aplicação de visibilidades adequadas para reduzir o acoplamento.
 
 ### Anotações
 
@@ -342,7 +342,7 @@ Para a resolução dos exercícios, é fundamental aplicar boas práticas de mod
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/c93b0388-6923-4bb1-986d-274f2cf990aa?autoplay=1
 
-Este conteúdo apresenta a resolução comentada de três exercícios práticos sobre a criação e aplicação de métodos na linguagem Java. Através de exemplos de uma calculadora, um sistema de saudações horárias e um simulador de empréstimos, o instrutor demonstra conceitos fundamentais como modificadores estáticos, passagem de parâmetros, tipos de retorno e a composição de métodos (um método chamando outro ou sendo passado como argumento).
+Este vídeo apresenta a resolução comentada de três exercícios práticos sobre a criação e aplicação de métodos na linguagem Java. Através de exemplos de uma calculadora, um sistema de saudações horárias e um simulador de empréstimos, o instrutor demonstra conceitos fundamentais como modificadores estáticos, passagem de parâmetros, tipos de retorno e a composição de métodos (um método chamando outro ou sendo passado como argumento).
 
 ### Anotações
 
@@ -777,7 +777,7 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/3fe282bb-81e7-4275-a963-389e1b09ad53?autoplay=1
 
-Esta aula aborda o funcionamento da instrução return em métodos, caracterizando-a como uma estrutura de interrupção capaz de finalizar a execução de um bloco de código de forma abrupta ou ao término das instruções. O conteúdo destaca que o retorno deve ser estritamente compatível com o tipo de dado definido na assinatura do método — seja ele um tipo primitivo ou um objeto — e explica que, em métodos do tipo void, o uso do return é opcional e serve apenas para encerrar o fluxo precocemente, sem retornar valores. Por fim, a aula propõe um exercício prático de refatoração, evoluindo uma aplicação de cálculo de áreas de quadriláteros para que os métodos deixem de apenas exibir resultados no console e passem a retornar valores processados.
+A aula aborda o funcionamento da instrução return em métodos, caracterizando-a como uma estrutura de interrupção capaz de finalizar a execução de um bloco de código de forma abrupta ou ao término das instruções. O conteúdo destaca que o retorno deve ser estritamente compatível com o tipo de dado definido na assinatura do método — seja ele um tipo primitivo ou um objeto — e explica que, em métodos do tipo void, o uso do return é opcional e serve apenas para encerrar o fluxo precocemente, sem retornar valores. Por fim, a aula propõe um exercício prático de refatoração, evoluindo uma aplicação de cálculo de áreas de quadriláteros para que os métodos deixem de apenas exibir resultados no console e passem a retornar valores processados.
 
 ### Anotações
 
