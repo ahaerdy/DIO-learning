@@ -72,79 +72,79 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 1: Configuração do Ambiente de Desenvolvimento
 
-- [ ] Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_01/01-Curso.01-Introducao.ao.Java.e.seu.Ambiente.de.Desenvolvimento/README.md)
-- [ ] Curso: [Git e GitHub: Primeiros Passos e Configuração do Ambiente](Modulo_01/02-Curso.02-Git.e.GitHub-Primeiros.Passos.e.Configuracao.do.Ambiente/README.md)
-- [ ] Curso: [Dominando IDEs Java](Modulo_01/03-Curso.03-Dominando.IDEs.Java/README.md)
+- [x] Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_01/01-Curso.01-Boas-vindas_a_Globant-Introducao_ao_Mercado_de_Desenvolvimento_Java)
+- [x] Curso: [Git e GitHub: Primeiros Passos e Configuração do Ambiente](Modulo_01/02-Curso.02-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
+- [ ] Curso: [Dominando IDEs Java](Modulo_01/)
 
 ---
 
 ### Módulo 2: Fundamentos do Desenvolvimento Java
 
-- [ ] Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_02/01-Curso.01-Fundamentos.da.Sintaxe.da.Linguagem.Java/README.md)
-- [ ] Curso: [Estruturas de Controle em Java](Modulo_02/02-Curso.02-Estruturas.de.Controle.em.Java/README.md)
-- [ ] Curso: [Logging e Tratamento de Exceções em Java](Modulo_02/03-Curso.03-Logging.e.Tratamento.de.Excecoes.em.Java/README.md)
-- [ ] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_02/04-Curso.04-Gerenciando.Dependencias.com.Maven.e.Gradle/README.md)
-- [ ] Desafio de código: [Simulando e Corrigindo em Java](Modulo_02/05-Desafio.de.Codigo.05-Simulando.e.Corrigindo.em.Java/README.md)
+- [ ] Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_02/)
+- [ ] Curso: [Estruturas de Controle em Java](Modulo_02/)
+- [ ] Curso: [Logging e Tratamento de Exceções em Java](Modulo_02/)
+- [ ] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_02/)
+- [ ] Desafio de código: [Simulando e Corrigindo em Java](Modulo_02/)
 
 ---
 
 ### Módulo 3: Programação Orientada a Objetos Com Java
 
-- [ ] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_03/01-Curso.01-Java.e.a.Arte.da.Abstracao.com.Classes.e.Encapsulamento/README.md)
-- [ ] Curso: [Herança e Polimorfismo em Java](Modulo_03/02-Curso.02-Heranca.e.Polimorfismo.em.Java/README.md)
-- [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_03/03-Curso.03-Dominando.Interfaces.e.Lambdas.em.Java/README.md)
-- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/04-Curso.04-Jornada.Pratica.com.Collections.e.Outras.Classes.Uteis.de.Java/README.md)
-- [ ] Desafio de projeto: [Criando um Jogo do Tabuleiro em Java](Modulo_03/05-Desafio.de.Projeto.05-Criando.um.Jogo.do.Tabuleiro.em.Java/README.md)
+- [ ] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_03/)
+- [ ] Curso: [Herança e Polimorfismo em Java](Modulo_03/)
+- [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_03/)
+- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/)
+- [ ] Desafio de projeto: [Criando um Jogo do Tabuleiro em Java](Modulo_03/)
 
 ---
 
 ### Módulo 4: Inteligência Artificial Aplicada ao Desenvolvimento de Software
 
-- [ ] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_04/01-Curso.01-A.Era.da.IA-Machine.Learning.LLMs.IA.Generativa.e.Agentes/README.md)
-- [ ] Curso: [Utilizando Copilots no Desenvolvimento de Software](Modulo_04/02-Curso.02-Utilizando.Copilots.no.Desenvolvimento.de.Software/README.md)
-- [ ] Curso: [Introdução à Engenharia de Prompts](Modulo_04/03-Curso.03-Introducao.a.Engenharia.de.Prompts/README.md)
-- [ ] Curso: [Explorando a Engenharia de Prompts na Prática](Modulo_04/04-Curso.04-Explorando.a.Engenharia.de.Prompts.na.Pratica/README.md)
-- [ ] Desafio de projeto: [Guia de Como Usar Copilots para Criar Novas Features no Seu Projeto](Modulo_04/05-Desafio.de.Projeto.05-Guia.de.Como.Usar.Copilots.para.Criar.Novas.Features.no.Seu.Projeto/README.md)
+- [ ] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_04/)
+- [ ] Curso: [Utilizando Copilots no Desenvolvimento de Software](Modulo_04/)
+- [ ] Curso: [Introdução à Engenharia de Prompts](Modulo_04/)
+- [ ] Curso: [Explorando a Engenharia de Prompts na Prática](Modulo_04/)
+- [ ] Desafio de projeto: [Guia de Como Usar Copilots para Criar Novas Features no Seu Projeto](Modulo_04/)
 
 ---
 
 ### Módulo 5: Persistência de Dados com Core
 
-- [ ] Curso: [Introdução e Noções de Banco de Dados Relacionais](Modulo_05/01-Curso.01-Introducao.e.Nocoes.de.Banco.de.Dados.Relacionais/README.md)
-- [ ] Curso: [Criando suas Primeiras Consultas SQL](Modulo_05/02-Curso.02-Criando.suas.Primeiras.Consultas.SQL/README.md)
+- [ ] Curso: [Introdução e Noções de Banco de Dados Relacionais](Modulo_05/)
+- [ ] Curso: [Criando suas Primeiras Consultas SQL](Modulo_05/)
 
 ---
 
 ### Módulo 6: Ecossistema Spring para Desenvolvimento de APIs
 
-- [ ] Curso: [Principais Protocolos de Comunicação da Internet](Modulo_06/01-Curso.01-Principais.Protocolos.de.Comunicacao.da.Internet/README.md)
-- [ ] Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/02-Curso.02-Introducao.ao.Spring.Framework.com.Spring.Boot/README.md)
-- [ ] Curso: [Construindo uma API REST Documentada com Spring Web e Swagger](Modulo_06/03-Curso.03-Construindo.uma.API.REST.Documentada.com.Spring.Web.e.Swagger/README.md)
-- [ ] Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/04-Curso.04-Adicionando.Seguranca.em.APIs.REST.com.Spring.Security/README.md)
-- [ ] Desafio de código: [A Melhor Maneira de Desenvolver APIs com Spring Boot](Modulo_06/05-Desafio.de.Codigo.05-A.Melhor.Maneira.de.Desenvolver.APIs.com.Spring.Boot/README.md)
+- [ ] Curso: [Principais Protocolos de Comunicação da Internet](Modulo_06/)
+- [ ] Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/)
+- [ ] Curso: [Construindo uma API REST Documentada com Spring Web e Swagger](Modulo_06/)
+- [ ] Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/)
+- [ ] Desafio de código: [A Melhor Maneira de Desenvolver APIs com Spring Boot](Modulo_06/)
 
 ---
 
 ### Módulo 7: Boas Práticas de Desenvolvimento de Aplicações Java
 
-- [ ] Curso: [Boas Práticas Para APIs RESTful](Modulo_07/01-Curso.01-Boas.Praticas.Para.APIs.RESTful/README.md)
-- [ ] Curso: [Introdução a Clean Code](Modulo_07/02-Curso.02-Introducao.a.Clean.Code/README.md)
-- [ ] Curso: [Clean Code em Java: Governando Código de Alta Qualidade](Modulo_07/03-Curso.03-Clean.Code.em.Java-Governando.Codigo.de.Alta.Qualidade/README.md)
-- [ ] Curso: [Trabalhando com Design Patterns de Aplicações Java](Modulo_07/04-Curso.04-Trabalhando.com.Design.Patterns.de.Aplicacoes.Java/README.md)
+- [ ] Curso: [Boas Práticas Para APIs RESTful](Modulo_07/)
+- [ ] Curso: [Introdução a Clean Code](Modulo_07/)
+- [ ] Curso: [Clean Code em Java: Governando Código de Alta Qualidade](Modulo_07/)
+- [ ] Curso: [Trabalhando com Design Patterns de Aplicações Java](Modulo_07/)
 
 ---
 
 ### Módulo 8: Testes Unitários no Seu Código Java
 
-- [ ] Curso: [Introdução a Testes de Software](Modulo_08/01-Curso.01-Introducao.a.Testes.de.Software/README.md)
-- [ ] Curso: [Introdução ao JUnit 5](Modulo_08/02-Curso.02-Introducao.ao.JUnit.5/README.md)
-- [ ] Desafio de código: [Guias Práticos Com JUnit](Modulo_08/03-Desafio.de.Codigo.03-Guias.Praticos.Com.JUnit/README.md)
+- [ ] Curso: [Introdução a Testes de Software](Modulo_08/)
+- [ ] Curso: [Introdução ao JUnit 5](Modulo_08/)
+- [ ] Desafio de código: [Guias Práticos Com JUnit](Modulo_08/)
 
 ---
 
 ### Módulo 9: Projeto Final: Assistente Inteligente por IA
 
-- [ ] Desafio de projeto: [Implementando sua API Inteligente com Recrutamento de IA no Seu Projeto](Modulo_09/01-Desafio.de.Projeto.01-Implementando.sua.API.Inteligente.com.Recrutamento.de.IA.no.Seu.Projeto/README.md)
+- [ ] Desafio de projeto: [Implementando sua API Inteligente com Recrutamento de IA no Seu Projeto](Modulo_09/)
 
 ---
 
