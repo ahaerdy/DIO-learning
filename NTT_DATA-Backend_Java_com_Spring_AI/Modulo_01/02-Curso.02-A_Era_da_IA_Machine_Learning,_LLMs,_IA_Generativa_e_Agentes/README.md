@@ -70,6 +70,53 @@ O Processamento de Linguagem Natural (PLN) define a maneira como humanos e compu
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/ad7cc7c5-c657-4f2c-92e9-651b71c60375?autoplay=1
 
+O vídeo desxreve o processo prático de treinamento de uma Inteligência Artificial, utilizando a analogia de reconhecimento de maçãs para explicar como máquinas "aprendem" a identificar padrões, lidar com variações e expandir seu vocabulário através de parâmetros e tokens.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-11-13-28-02.png" alt="" width="840">
+</p>
+
+#### 1. O Ponto de Partida: O Modelo Zero
+Toda IA começa como um "modelo zero", sem conhecimento prévio. Para que ela funcione, é necessário fornecer um **contexto**. No exemplo do vídeo, o contexto é "reconhecer maçãs". Sem dados e instruções, a IA é incapaz de distinguir qualquer objeto.
+
+#### 2. Tokens e Parâmetros: A "Linguagem" da IA
+A IA não armazena imagens como nós; ela armazena **padrões**. Esses padrões são traduzidos em **tokens** e **parâmetros**.
+*   **Exemplos de parâmetros para uma maçã:** Formato esférico, presença de caule, tons de vermelho/amarelo, fenda superior.
+*   **Insight:** A computação de IA é, essencialmente, sobre reconhecimento de padrões e estatística.
+
+#### 3. Reforço Positivo e Refinamento
+Quando a IA encontra algo que foge do padrão inicial (ex: uma maçã com o caule de lado), ela fica em dúvida (probabilidade de 50%). É aqui que entra o **Reforço Positivo**:
+*   O humano confirma: "Sim, isso é uma maçã".
+*   A IA atualiza sua base: "O caule e a fenda podem estar em qualquer direção".
+*   Esse processo de "tentativa, erro e correção" é o que torna a IA mais inteligente.
+
+#### 4. Generalização e Probabilidade
+A IA aprende a lidar com o novo baseando-se no que já conhece. 
+*   **Maçã cortada:** Mesmo nunca tendo visto uma maçã aberta, a IA analisa os tokens existentes (formato, cor, caule) e conclui que, por **probabilidade**, aquilo ainda é uma maçã.
+*   **Diferenciação:** Ao ver uma pera, a IA compara os tokens. Como o formato e a cor não batem com a maioria dos parâmetros de "maçã", ela conclui que não é o objeto em questão.
+
+#### 5. LLMs vs. SLMs: A Escala do Conhecimento
+O vídeo diferencia os dois principais tipos de modelos baseados em sua "bagagem":
+*   **LLM (Large Language Model):** Modelos gigantescos (como o ChatGPT) com bilhões de parâmetros. Eles parecem mais inteligentes porque têm um "vocabulário" de padrões vasto sobre quase tudo.
+*   **SLM (Small Language Model):** Modelos menores e especializados. São eficientes para tarefas específicas (ex: reconhecer apenas objetos de madeira) e não exigem tanto processamento.
+
+#### ✨ Insights e Conclusões
+
+💡 **A IA é "Burra" por Natureza**
+No início, uma IA é comparável a um bebê. Ela não tem "intuição". Toda a sua inteligência vem da bagagem de dados e do treinamento fornecido por humanos. A "mágica" é, na verdade, um acúmulo massivo de parâmetros.
+
+💡 **Alucinação é uma Questão Estatística**
+Quando uma IA "alucina" (dá uma resposta sem sentido), geralmente é porque a probabilidade estatística entre dois caminhos foi ambígua ou os parâmetros de entrada foram insuficientes para uma decisão clara.
+
+💡 **Qualidade > Quantidade (em certos casos)**
+Nem toda solução precisa de um LLM bilionário. Para problemas específicos e nichados, um SLM bem treinado com tokens precisos pode ser mais rápido e barato do que uma IA generalista.
+
+💡 **O Significado de "Artificial"**
+O termo "Artificial" no nome é literal: é algo simulado, produzido pelo homem para parecer inteligência natural. A IA não "sente" o que é uma maçã; ela apenas valida uma lista de requisitos estatísticos que definimos para ela. 
+
+
 ### 🟩 Vídeo 03 - Entendendo Deep Learning
 
 <video width="60%" controls>
@@ -77,7 +124,9 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/66b70f5b-904c-4759-bcc6-78dd43d8c23e?autoplay=1
+
+
 
 ### 🟩 Vídeo 04 - A Era das IAs Generativas
 
@@ -86,7 +135,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/ac73b928-c152-43a8-9d2e-d9be15d348fa?autoplay=1
 
 
 # Certificado: 
