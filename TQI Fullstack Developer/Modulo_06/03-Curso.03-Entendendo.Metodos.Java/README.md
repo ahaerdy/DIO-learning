@@ -15,7 +15,7 @@
 
 link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/entendendo-metodos-java/learning/1d32857c-8137-4b87-8a1c-474300f71648?autoplay=1
 
-Esta fonte consiste na transcrição de uma aula introdutória de um curso focado em métodos na linguagem Java, ministrada por Thiago Leite Carvalho, um desenvolvedor Back-end com 17 anos de experiência e mestre em Engenharia de Software que atua no SERPRO. O instrutor estabelece que o objetivo principal do curso é capacitar o aluno a compreender, criar e utilizar métodos, estruturando o conteúdo em três aulas principais sobre criação, sobrecarga e retornos, ao mesmo tempo em que define a lógica de programação, o Java 11 e a IDE IntelliJ como pré-requisitos essenciais. Além de apresentar sua trajetória acadêmica e profissional, Thiago compartilha seus canais de contato, como LinkedIn e GitHub para acesso a projetos e materiais, e orienta sobre o uso do fórum do curso e da comunidade no Discord para a resolução de dúvidas durante o aprendizado.
+O instrutor estabelece que o objetivo principal do curso é capacitar o aluno a compreender, criar e utilizar métodos, estruturando o conteúdo em três aulas principais sobre criação, sobrecarga e retornos, ao mesmo tempo em que define a lógica de programação, o Java 11 e a IDE IntelliJ como pré-requisitos essenciais. 
 
 ### Anotações
 
