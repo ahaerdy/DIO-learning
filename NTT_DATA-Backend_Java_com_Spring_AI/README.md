@@ -70,7 +70,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 1: Capítulos Inteligentes no Apoio à Construção de Soluções
 
-- [ ] Curso: [O Que é Este Bootcamp?](Modulo_01/01-Curso.01-O_Que_E_Este_Bootcamp)
+- [x] Curso: [O Que é Este Bootcamp?](Modulo_01/01-Curso.01-O_Que_E_Este_Bootcamp)
 - [ ] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/)
 - [ ] Curso: [Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial](Modulo_01/)
 - [ ] Curso: [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação](Modulo_01/)
@@ -80,43 +80,43 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 2: Revisando os Fundamentos Técnicos de Java
 
-- [ ] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/01-Curso.01-Java.e.a.Arte.da.Abstracao.com.Classes.e.Encapsulamento/README.md)
-- [ ] Curso: [Herança e Polimorfismo em Java](Modulo_02/02-Curso.02-Heranca.e.Polimorfismo.em.Java/README.md)
-- [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_02/03-Curso.03-Dominando.Interfaces.e.Lambdas.em.Java/README.md)
-- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_02/04-Curso.04-Jornada.Pratica.com.Collections.e.Outras.Classes.Uteis.de.Java/README.md)
-- [ ] Desafio de código: [Programando com OO em Java Na Prática](Modulo_02/05-Desafio.de.Codigo.05-Programando.com.OO.em.Java.Na.Pratica/README.md)
+- [ ] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/)
+- [ ] Curso: [Herança e Polimorfismo em Java](Modulo_02/)
+- [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_02/0)
+- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_02/)
+- [ ] Desafio de código: [Programando com OO em Java Na Prática](Modulo_02/)
 
 ---
 
 ### Módulo 3: Elevando a Qualidade do Seu Código Java com Boas Práticas e Padrões
 
-- [ ] Curso: [Logging e Tratamento de Exceções em Java](Modulo_03/01-Curso.01-Logging.e.Tratamento.de.Excecoes.em.Java/README.md)
-- [ ] Curso: [Simplificando I/O de Arquivos e Diretórios com Java](Modulo_03/02-Curso.02-Simplificando.IO.de.Arquivos.e.Diretorios.com.Java/README.md)
-- [ ] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_03/03-Curso.03-Gerenciando.Dependencias.com.Maven.e.Gradle/README.md)
-- [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_03/04-Curso.04-Anotacoes.em.Java-Marcando.o.Seu.Codigo.de.Maneira.Inteligente/README.md)
-- [ ] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade](Modulo_03/05-Curso.05-SOLID.e.Clean.Code.em.Java-Governando.Codigo.de.Alta.Qualidade/README.md)
-- [ ] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](Modulo_03/06-Desafio.de.Projeto.06-Design.Patterns.com.Java-Dos.Classicos.GoF.ao.Spring.Framework/README.md)
+- [ ] Curso: [Logging e Tratamento de Exceções em Java](Modulo_03/)
+- [ ] Curso: [Simplificando I/O de Arquivos e Diretórios com Java](Modulo_03/)
+- [ ] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_03/)
+- [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_03/)
+- [ ] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade](Modulo_03/)
+- [ ] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](Modulo_03/)
 
 ---
 
 ### Módulo 4: Criando Soluções Inteligentes com Spring Boot e Java Moderno
 
-- [ ] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_04/01-Curso.01-Criando.sua.Primeira.API.REST.com.Spring.Boot/README.md)
-- [ ] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_04/02-Curso.02-Conectando.sua.API.com.Banco.de.Dados.Atraves.do.Spring.Data/README.md)
-- [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_04/03-Curso.03-Simplificando.a.Seguranca.em.APIs.REST.com.Spring.Security/README.md)
-- [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_04/04-Curso.04-Consumindo.APIs.Externas.com.a.Spring.Cloud.OpenFeign/README.md)
-- [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot](Modulo_04/05-Desafio.de.Projeto.05-Desenvolvendo.sua.API.Inteligente.com.Recrutamento.de.IA.com.Spring.Boot/README.md)
+- [ ] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_04/)
+- [ ] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_04/)
+- [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_04/)
+- [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_04/)
+- [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot](Modulo_04/)
 
 ---
 
 ### Módulo 5: Publicando, Operando e Monitorando Soluções de Back-end no Azure
 
-- [ ] Curso: [Configurando Planos de Serviço de Aplicativos do Azure](Modulo_05/01-Curso.01-Configurando.Planos.de.Servico.de.Aplicativos.do.Azure/README.md)
-- [ ] Curso: [Configurando os Serviços de Aplicativos do Azure](Modulo_05/02-Curso.02-Configurando.os.Servicos.de.Aplicativos.do.Azure/README.md)
-- [ ] Curso: [Configurando Contas de Armazenamento](Modulo_05/03-Curso.03-Configurando.Contas.de.Armazenamento/README.md)
-- [ ] Curso: [Configurando o Azure Monitor](Modulo_05/04-Curso.04-Configurando.o.Azure.Monitor/README.md)
-- [ ] Curso: [Configurando Métricas do Azure](Modulo_05/05-Curso.05-Configurando.Metricas.do.Azure/README.md)
-- [ ] Curso: [Configurando a Análise de Logs](Modulo_05/06-Curso.06-Configurando.a.Analise.de.Logs/README.md)
+- [ ] Curso: [Configurando Planos de Serviço de Aplicativos do Azure](Modulo_05/0)
+- [ ] Curso: [Configurando os Serviços de Aplicativos do Azure](Modulo_05/)
+- [ ] Curso: [Configurando Contas de Armazenamento](Modulo_05/)
+- [ ] Curso: [Configurando o Azure Monitor](Modulo_05/)
+- [ ] Curso: [Configurando Métricas do Azure](Modulo_05/)
+- [ ] Curso: [Configurando a Análise de Logs](Modulo_05/)
 
 ---
 
