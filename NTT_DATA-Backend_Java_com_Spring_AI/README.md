@@ -124,8 +124,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 1
 
-- [O Que é Este Bootcamp?]()
-- [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes]()
+- [O Que é Este Bootcamp?](https://hermes.dio.me/certificates/RVA5LWRX.pdf)
+- [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](https://hermes.dio.me/certificates/GRMBVTUI.pdf)
 - [Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial]()
 - [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação]()
 - Certificado do Módulo: [Capítulos Inteligentes no Apoio à Construção de Soluções]()
