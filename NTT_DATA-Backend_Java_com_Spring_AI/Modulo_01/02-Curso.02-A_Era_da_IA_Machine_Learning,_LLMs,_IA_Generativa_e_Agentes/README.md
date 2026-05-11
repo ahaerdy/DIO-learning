@@ -102,21 +102,6 @@ O vídeo diferencia os dois principais tipos de modelos baseados em sua "bagagem
 *   **LLM (Large Language Model):** Modelos gigantescos (como o ChatGPT) com bilhões de parâmetros. Eles parecem mais inteligentes porque têm um "vocabulário" de padrões vasto sobre quase tudo.
 *   **SLM (Small Language Model):** Modelos menores e especializados. São eficientes para tarefas específicas (ex: reconhecer apenas objetos de madeira) e não exigem tanto processamento.
 
-#### ✨ Insights e Conclusões
-
-💡 **A IA é "Burra" por Natureza**
-No início, uma IA é comparável a um bebê. Ela não tem "intuição". Toda a sua inteligência vem da bagagem de dados e do treinamento fornecido por humanos. A "mágica" é, na verdade, um acúmulo massivo de parâmetros.
-
-💡 **Alucinação é uma Questão Estatística**
-Quando uma IA "alucina" (dá uma resposta sem sentido), geralmente é porque a probabilidade estatística entre dois caminhos foi ambígua ou os parâmetros de entrada foram insuficientes para uma decisão clara.
-
-💡 **Qualidade > Quantidade (em certos casos)**
-Nem toda solução precisa de um LLM bilionário. Para problemas específicos e nichados, um SLM bem treinado com tokens precisos pode ser mais rápido e barato do que uma IA generalista.
-
-💡 **O Significado de "Artificial"**
-O termo "Artificial" no nome é literal: é algo simulado, produzido pelo homem para parecer inteligência natural. A IA não "sente" o que é uma maçã; ela apenas valida uma lista de requisitos estatísticos que definimos para ela. 
-
-
 ### 🟩 Vídeo 03 - Entendendo Deep Learning
 
 <video width="60%" controls>
@@ -126,6 +111,11 @@ O termo "Artificial" no nome é literal: é algo simulado, produzido pelo homem 
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/66b70f5b-904c-4759-bcc6-78dd43d8c23e?autoplay=1
 
+O vídeo aborda o conceito de Deep Learning (Aprendizado Profundo), detalhando como essa tecnologia tenta mimetizar as conexões neurais humanas para criar uma inteligência artificial mais intuitiva, capaz de realizar inferências e compreender contextos complexos.
+
+### Anotações
+
+      
 
 
 ### 🟩 Vídeo 04 - A Era das IAs Generativas
