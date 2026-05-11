@@ -167,7 +167,7 @@ O vídeo apresenta o conceito de IA Generativa (GenAI), diferenciando-a das tecn
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-05-11-14-14-54.png" alt="" width="840">
+  <img src="000-Midia_e_Anexos/2026-05-11-14-16-48.png" alt="" width="840">
 </p>
 
 #### 1. O que é IA Generativa?
