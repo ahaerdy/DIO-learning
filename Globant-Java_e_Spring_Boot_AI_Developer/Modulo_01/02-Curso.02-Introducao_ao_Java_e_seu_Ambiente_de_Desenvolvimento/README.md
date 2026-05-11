@@ -61,55 +61,87 @@ O vídeo apresenta uma visão panorâmica da trajetória do Java, desde sua conc
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m16s183.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta o slide introdutório sobre a **origem do Java**: mostra que, em 1991, a Sun Microsystems formou o *Green Team* com a missão de criar tecnologias para um futuro de dispositivos conectados. Explique aos alunos que esse slide contextualiza a motivação inicial — a visão de casas e aparelhos interligados — e por que essa visão exigia uma linguagem independente de sistema operacional. Use este momento para relacionar a ideia de interoperabilidade com problemas práticos de hardware e software da época.
+Em 1991, a **Sun Microsystems** formou um grupo especial chamado **Green Team** — um trocadilho entre *Dream Team* (time dos sonhos) e *Green People* (alienígenas, em inglês). A missão desse time era visionária para a época: desenvolver uma tecnologia que permitisse que residências e dispositivos domésticos se comunicassem com computadores. O conceito é muito próximo do que hoje chamamos de **automação residencial** ou **casas inteligentes**, com dispositivos como assistentes virtuais e lâmpadas conectadas. James Gosling foi o principal nome desse time e é reconhecido como o criador do Java.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m20s054.jpg" alt="" width="840">
 </p>
 
-Este slide destaca o **primeiro desafio do Green Team**: criar uma linguagem independente de sistema operacional, que mais tarde recebeu o nome inicial de *GreenTalk*. A explicação deve focar em por que a independência de S.O. era crucial para dispositivos embarcados e para a visão de interoperabilidade entre equipamentos domésticos. Enfatize que essa necessidade técnica foi o motor para as decisões de design que viriam a caracterizar o Java.
+Para viabilizar a comunicação entre dispositivos de diferentes fabricantes e sistemas operacionais, o Green Team identificou um problema central: as linguagens da época eram dependentes do sistema operacional em que rodavam. A solução foi criar uma linguagem completamente nova, independente de S.O., que pudesse ser executada em qualquer plataforma. Essa linguagem recebeu o nome de **GreenTalk**.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m23s021.jpg" alt="" width="840">
 </p>
 
-A imagem refere-se ao projeto **StarSeven**, um controle remoto desenvolvido com a GreenTalk para controlar equipamentos de sala de estar. Explique que o StarSeven é um exemplo prático da aplicação inicial da linguagem: interfaces para dispositivos domésticos. Use-o para ilustrar como protótipos ajudaram a validar requisitos (portabilidade, comunicação entre dispositivos, interface de usuário) antes da adoção em larga escala.
+Com a GreenTalk em mãos, o time construiu um protótipo concreto de produto: o **StarSeven (\*7)**, um controle remoto interativo capaz de acionar equipamentos de uma sala de estar. A imagem presente no slide é o **Duke**, o mascote oficial do Java — um personagem estilizado que acompanha a linguagem desde seus primórdios e que foi originalmente criado justamente para o StarSeven.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m25s031.jpg" alt="" width="840">
 </p>
 
-Este slide mostra a transição do projeto para a **era da Internet** (1994), quando o Green Team percebeu a oportunidade trazida pelo protocolo HTTP e criou o navegador *WebRunner*. Explique que a popularização da web mudou o foco: a linguagem passou a ser vista também como plataforma para aplicações distribuídas e interativas na rede. Aproveite para conectar essa mudança de contexto com a necessidade de execução segura e portátil de código vindo da web.
+Em **1994**, a internet começava a se popularizar impulsionada pelo protocolo **HTTP**. O Green Team enxergou nesse movimento uma oportunidade estratégica: reposicionar a tecnologia que havia desenvolvido para o ambiente web. Foi então que o time criou o **WebRunner**, um navegador experimental capaz de executar conteúdo dinâmico — o que era algo completamente inédito para a época e abriu as portas para o Java se projetar além do nicho de automação residencial.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m29s402.jpg" alt="" width="840">
 </p>
 
-A imagem é um **screenshot do HotJava / página de anúncio** que demonstra o navegador HotJava como vitrine das capacidades da linguagem Java. Explique que o HotJava foi usado para mostrar como applets e código portátil poderiam ser distribuídos pela web, servindo como demonstração técnica e de marketing. Use este slide para discutir o papel de demonstrações públicas na adoção de novas tecnologias.
+O slide exibe capturas de tela do **HotJava**, o navegador que sucedeu o WebRunner e que se tornou a primeira demonstração pública das capacidades do Java na web. À esquerda, vê-se a página inicial do HotJava hospedada nos servidores da Sun (`http://tachyon.eng/java.sun.com/index.html`), com o logo da linguagem e o mascote Duke. À direita, um exemplo de aplicação interativa rodando dentro do navegador — um canvas de desenho de linhas, demonstrando que o Java permitia executar programas dinâmicos diretamente no browser, algo revolucionário para meados dos anos 1990.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m39s380.jpg" alt="" width="840">
 </p>
 
-A imagem apresenta uma **linha do tempo inicial de versões do JDK** (JDK 1 até JDK 7) com suas datas de lançamento. Explique que essa tabela ajuda a visualizar a evolução rápida e contínua da plataforma nos primeiros anos, mostrando como recursos e correções foram sendo introduzidos. Recomende que os alunos observem como ciclos de lançamento e versões influenciam compatibilidade e adoção em projetos reais.
+O slide apresenta a **linha do tempo das primeiras versões do Java**, desde o seu lançamento oficial até o início dos anos 2010:
+
+| Versão     | Data de Lançamento |
+|------------|--------------------|
+| JDK 1      | 01/1996            |
+| JDK 1.1    | 02/1997            |
+| J2SDK 1.2  | 12/1998            |
+| J2SDK 1.3  | 05/2000            |
+| J2SDK 1.4  | 02/2002            |
+| JDK 5.0    | 09/2004            |
+| JDK 6      | 12/2006            |
+| JDK 7      | 07/2011            |
+
+O Java foi lançado oficialmente em janeiro de 1996 com o **JDK 1** e, ao longo dessa primeira fase, passou por evoluções contínuas — incluindo uma mudança de nomenclatura para J2SDK nas versões 1.2, 1.3 e 1.4. A partir do JDK 5.0, a numeração voltou ao padrão JDK, marcando também uma das atualizações mais significativas da linguagem até aquele momento.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m43s023.jpg" alt="" width="840">
 </p>
 
-Este slide mostra **versões mais recentes do JDK** (JDK 8, 9, 10, 11, 17, 21, 25) com datas de lançamento e fim de suporte. Explique a diferença entre versões LTS (Long Term Support) e versões intermediárias, e por que isso importa para empresas que escolhem uma versão para produção. Use a tabela para discutir políticas de suporte e o impacto no ciclo de atualização de aplicações corporativas.
+Este slide complementa a linha do tempo com as **versões mais recentes do Java**, agora incluindo a coluna de **Fim do Suporte** — informação essencial para quem precisa escolher uma versão para projetos profissionais:
+
+| Versão        | Data de Lançamento | Fim do Suporte |
+|---------------|--------------------|----------------|
+| JDK 8 (LTS)   | 03/2014            | 03/2022        |
+| JDK 9         | 09/2017            | 03/2018        |
+| JDK 10        | 03/2018            | 09/2018        |
+| JDK 11        | 09/2018            | 09/2023        |
+| JDK 17        | 02/2021            | 09/2026        |
+| JDK 21        | 09/2023            | 09/2028        |
+| JDK 25        | 12/2025            | 09/2030        |
+
+As versões marcadas como **LTS (Long-Term Support)** recebem suporte estendido e são as mais indicadas para uso em produção. O JDK 8 foi um marco histórico e amplamente adotado. Atualmente, o **JDK 21** é a LTS mais recente consolidada, enquanto o **JDK 25** representa o lançamento mais atual previsto no roadmap.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m49s562.jpg" alt="" width="840">
 </p>
 
-A imagem lista **empresas conhecidas que usam Java** (por exemplo, Netflix, Slack, PayPal, PicPay, LinkedIn, Microsoft, Airbnb). Explique que esse slide serve para demonstrar a ampla adoção do Java em diferentes setores e tipos de aplicações — desde serviços de streaming até fintechs e plataformas corporativas. Incentive uma breve discussão sobre por que Java continua popular em sistemas de grande escala (ecossistema, desempenho, ferramentas, comunidade).
+O slide reforça a **relevância do Java no mercado atual** ao apresentar grandes empresas que utilizam a linguagem em seus sistemas. Entre elas estão **Netflix**, **Slack**, **PayPal**, **PicPay**, **LinkedIn**, **Microsoft** e **Airbnb** — organizações de escala global e de diferentes segmentos, como streaming, comunicação corporativa, pagamentos digitais e hospedagem. Essa diversidade demonstra que o Java não é restrito a um nicho específico, sendo aplicado em back-end de alta performance, sistemas financeiros, aplicações mobile (via Android) e muito mais.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-16h08m58s878.jpg" alt="" width="840">
 </p>
 
-O slide final apresenta as **referências** utilizadas na montagem do conteúdo. Explique que as fontes listadas servem para aprofundamento e verificação histórica, e recomende que os alunos consultem essas referências para detalhes sobre datas, releases e roadmap de suporte. Use este momento para reforçar boas práticas de pesquisa e checagem de versões ao trabalhar com plataformas de produção.      
+O slide encerra a aula com as **referências bibliográficas** utilizadas como base para o conteúdo apresentado:
+
+- [Uma breve história do Java — Giuliana Bezerra (Medium)](https://giulianabezerra.medium.com/uma-breve-historia-do-java-f58d1761154)
+- [A história da linguagem Java — DIO](https://www.dio.me/articles/a-historia-da-linguagem-java)
+- [Java SE Support Roadmap — Oracle](https://www.oracle.com/java/technologies/java-se-support-roadmap.html)
+- [Java Releases Full Matrix](https://www.java.com/releases/fullmatrix)
+
+Essas fontes permitem aprofundar o estudo sobre a evolução histórica do Java e acompanhar o ciclo de vida oficial das versões da linguagem diretamente nas páginas da Oracle e da comunidade.
 
 ## Parte 2 - Configuração do Ambiente Java
 
