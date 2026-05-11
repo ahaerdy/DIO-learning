@@ -162,8 +162,44 @@ Esse exemplo é utilizado para mostrar como o deep learning permite que sistemas
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/ac73b928-c152-43a8-9d2e-d9be15d348fa?autoplay=1
 
+O vídeo apresenta o conceito de IA Generativa (GenAI), diferenciando-a das tecnologias anteriores e discutindo seu impacto nas profissões, na ética e no cotidiano.
 
+### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-11-14-14-54.png" alt="" width="840">
+</p>
+
+#### 1. O que é IA Generativa?
+Diferente das IAs tradicionais que focam em **reconhecer padrões** (como identificar se uma foto é de uma maçã), a IA Generativa tem a capacidade de **criar algo novo**. 
+*   **Analogia Biológica:** Assim como as células do corpo são regenerativas (repõem o que morreu), a IA Generativa "gera" conteúdo inédito a partir de uma base de conhecimento.
+*   **Mudança de Paradigma:** Saímos da era da interpretação estatística para a era da produção criativa.
+
+#### 2. Multimodalidade: A IA em Diversas Formas
+A IA Generativa não se limita a texto. Ela é **multimodal**, atuando em diferentes frentes:
+*   **Imagens:** Criação de artes realistas ou estilizadas (ex: Canva, que passou de editor para criador de imagens).
+*   **Áudio e Música:** Geração de trilhas e vozes sintéticas.
+*   **Vídeo:** Produção de cenas completas a partir de comandos.
+*   **Código:** Desenvolvimento de softwares e aplicações através de "Vibe Coding".
+
+#### 3. Novas Profissões e o Mercado de Trabalho
+O surgimento da GenAI está criando nichos que não existiam há dois anos:
+*   **Engenheiro de Prompt (Prompt Engineer):** Especialista em formular comandos precisos para extrair o melhor resultado da IA.
+*   **Recuperador de "Lost Media":** Uso de IA para reconstruir frames e áudios perdidos de mídias antigas ou danificadas.
+*   **Cibersegurança com IA:** Profissionais focados em detectar padrões de conteúdos gerados por IA para evitar fraudes.
+*   **Escrita Colaborativa:** Termos como "Vibe Writing" definem a criação de livros e roteiros em parceria com a máquina.
+
+#### 4. O Desafio do Realismo e a Ética
+A tecnologia evoluiu a ponto de ser difícil distinguir o real do artificial.
+*   **Fake News:** O risco de desinformação aumenta com imagens e vídeos hiper-realistas.
+*   **História e Verdade:** Questiona-se como garantiremos a autenticidade de registros históricos e comunicações pessoais (como áudios de WhatsApp).
+
+#### 5. A IA no Cotidiano: Invisível e Onipresente
+Muitas vezes já usamos IA sem perceber:
+*   **Teclados Preditivos:** Sugestões de palavras em smartphones.
+*   **Buscas Inteligentes:** Resumos gerados por IA em motores de busca como o Google.
+*   **Ferramentas de Design:** Automatização de processos repetitivos.
+   
 # Certificado: 
 
 - Link na plataforma: https://hermes.dio.me/certificates/GRMBVTUI.pdf
