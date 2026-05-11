@@ -115,6 +115,43 @@ O vídeo aborda o conceito de Deep Learning (Aprendizado Profundo), detalhando c
 
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-13h34m55s576.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a definição de inferência aplicada ao contexto de inteligência artificial. O conceito é introduzido como a capacidade de chegar a conclusões a partir de premissas, observações ou padrões previamente conhecidos.
+
+No contexto da aula, essa ideia é utilizada para explicar por que seres humanos conseguem associar uma informação simples a lembranças, emoções ou outros conhecimentos conectados. A inferência é apresentada como um dos elementos centrais do deep learning, já que modelos modernos de IA não apenas identificam dados de forma literal, mas também estabelecem relações entre informações.
+
+O professor relaciona esse conceito ao funcionamento das conexões neurais humanas: ao receber um estímulo simples, como uma revista, uma música ou uma imagem, o cérebro automaticamente ativa associações indiretas. O deep learning tenta reproduzir esse comportamento através de redes neurais artificiais capazes de reconhecer padrões e realizar associações contextuais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-13h35m01s709.jpg" alt="" width="840">
+</p>
+
+A imagem organiza visualmente a relação hierárquica entre três conceitos fundamentais apresentados na aula:
+
+* Inteligência Artificial
+* Machine Learning
+* Deep Learning
+
+A estrutura mostra que deep learning é uma técnica contida dentro do machine learning, enquanto machine learning faz parte do campo mais amplo da inteligência artificial.
+
+A explicação enfatiza que a inteligência artificial representa o conceito geral de simular comportamentos inteligentes. Dentro dela, o machine learning surge como o mecanismo de aprendizado baseado em dados, probabilidades e reconhecimento de padrões. Já o deep learning adiciona camadas mais profundas de processamento através de redes neurais artificiais.
+
+O professor utiliza essa hierarquia para demonstrar a evolução das IAs modernas: inicialmente sistemas simples de resposta, depois modelos capazes de aprender padrões e, por fim, arquiteturas profundas capazes de inferir relações complexas, contexto, nuances emocionais e conexões indiretas entre informações.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-13h35m13s893.jpg" alt="" width="840">
+</p>
+
+A imagem mostra uma demonstração prática utilizando o ChatGPT para exemplificar como modelos modernos de IA realizam inferências através de deep learning.
+
+O prompt apresentado solicita sugestões de filmes semelhantes ao filme “Robô Selvagem”. A resposta da IA não se limita a identificar elementos superficiais como “robôs” ou “animação”. Em vez disso, o sistema interpreta características mais profundas do filme, como emoções, vínculos afetivos, conexões humanas e mensagens filosóficas.
+
+Os filmes sugeridos, como WALL-E e O Gigante de Ferro, compartilham temas relacionados a laços emocionais, empatia, aprendizado e relacionamento entre humanos e máquinas. A explicação da aula destaca justamente esse comportamento inferencial: a IA consegue associar conceitos que não foram explicitamente descritos no prompt.
+
+Esse exemplo é utilizado para mostrar como o deep learning permite que sistemas modernos trabalhem com contexto e associações indiretas. Em vez de responder apenas com base em palavras-chave literais, o modelo reconhece padrões semânticos e conexões entre temas, comportamentos e estilos narrativos.
       
 
 
