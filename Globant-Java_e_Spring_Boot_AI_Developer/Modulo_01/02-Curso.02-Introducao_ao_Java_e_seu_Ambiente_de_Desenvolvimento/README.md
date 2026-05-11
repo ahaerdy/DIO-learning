@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- José Luiz Abreu Cardoso Junior (Engenheiro de software sênior)
+- Contato Linkedin: / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/)
 
 ## Parte 1 - Introdução
 
