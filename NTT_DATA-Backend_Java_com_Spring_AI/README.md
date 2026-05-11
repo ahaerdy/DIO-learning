@@ -71,7 +71,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 1: Capítulos Inteligentes no Apoio à Construção de Soluções
 
 - [x] Curso: [O Que é Este Bootcamp?](Modulo_01/01-Curso.01-O_Que_E_Este_Bootcamp)
-- [ ] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-A_Era_da_IA_Machine_Learning,_LLMs,_IA_Generativa_e_Agentes)
+- [x] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-A_Era_da_IA_Machine_Learning,_LLMs,_IA_Generativa_e_Agentes)
 - [ ] Curso: [Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial](Modulo_01/)
 - [ ] Curso: [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação](Modulo_01/)
 - [ ] Mentoria (Live): [Live de Lançamento do Bootcamp NTT DATA 2026](Modulo_01/)
