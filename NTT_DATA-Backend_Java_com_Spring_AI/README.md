@@ -70,11 +70,11 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 1: Capítulos Inteligentes no Apoio à Construção de Soluções
 
-- [ ] Curso: [O Que é Este Bootcamp?](Modulo_01/01-Curso.01-O.Que.e.Este.Bootcamp/README.md)
-- [ ] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-A.Era.da.IA-Machine.Learning.LLMs.IA.Generativa.e.Agentes/README.md)
-- [ ] Curso: [Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial](Modulo_01/03-Curso.03-Tudo.que.voce.Precisa.Saber.para.Comecar.a.Usar.Inteligencia.Artificial/README.md)
-- [ ] Curso: [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação](Modulo_01/04-Curso.04-Explorando.o.GitHub.Copilot-Aumentando.sua.Produtividade.com.IA.na.Programacao/README.md)
-- [ ] Mentoria (Live): [Live de Lançamento do Bootcamp NTT DATA 2026](Modulo_01/05-Mentoria.05-Live.de.Lancamento.do.Bootcamp.NTT.DATA.2026/README.md)
+- [ ] Curso: [O Que é Este Bootcamp?](Modulo_01/01-Curso.01-O_Que_E_Este_Bootcamp)
+- [ ] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/)
+- [ ] Curso: [Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial](Modulo_01/)
+- [ ] Curso: [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação](Modulo_01/)
+- [ ] Mentoria (Live): [Live de Lançamento do Bootcamp NTT DATA 2026](Modulo_01/)
 
 ---
 
