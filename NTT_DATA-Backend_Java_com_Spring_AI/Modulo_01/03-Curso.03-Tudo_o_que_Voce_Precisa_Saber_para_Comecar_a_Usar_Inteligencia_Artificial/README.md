@@ -59,7 +59,7 @@ O vídeo é uma aula prática sobre como utilizar o Microsoft Copilot para criar
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-05-12-14-00-10.png" alt="" width="840">
+  <img src="000-Midia_e_Anexos/2026-05-12-14-01-51.png" alt="" width="840">
 </p>
 
 ### 1. Interface e Funcionalidades do Copilot
