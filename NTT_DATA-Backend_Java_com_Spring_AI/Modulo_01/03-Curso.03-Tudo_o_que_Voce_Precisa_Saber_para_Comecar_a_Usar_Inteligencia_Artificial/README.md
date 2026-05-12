@@ -445,10 +445,96 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/t
 
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-16-53-32.png" alt="" width="840">
+</p>
+
+#### 1. Introdução à Gestão do Conhecimento (GC)
+*   **Definição (0:47):** A GC é um processo contínuo de capturar, organizar, compartilhar e reutilizar conhecimento.
+    *   **Conhecimento Tácito (0:55):** Experiências, habilidades e insights não documentados.
+    *   **Conhecimento Explícito (0:58):** Documentos, manuais, relatórios e outras informações formalizadas.
+*   **Desafios Atuais na GC (1:02):**
+    *   **Silos de Informação (1:08):** Conhecimento fragmentado por equipes ou ferramentas, dificultando o acesso e a colaboração.
+    *   **Perda de Memória Organizacional (1:15):** Rotatividade de pessoal e falta de registro de saberes tácitos levam à perda de conhecimento valioso.
+    *   **Tempo de Busca (1:27):** Conteúdo disperso, taxonomia inconsistente e classificação ineficaz resultam em longos tempos para encontrar informações.
+    *   **Atualização e Conflito (1:41):** Múltiplas versões de um mesmo conhecimento e diferentes fontes que podem conflitar entre si.
+
+    *   **Insight:** Os desafios da GC destacam a necessidade de soluções que possam lidar com a complexidade, volume e dispersão do conhecimento, onde a intervenção humana manual se torna ineficiente.
+
+#### 2. Como a IA Torna a GC Mais Efetiva (2:08)
+A IA atua em três pilares fundamentais para aprimorar a gestão do conhecimento:
+
+*   **2.1. Automação da Organização (2:22):**
+    *   **Funcionalidades:** Criação automática de sumários, tópicos e tags.
+    *   **Benefício:** Ajuda na taxonomia e categorização de qualquer tipo de informação ou conhecimento, tornando-o mais estruturado e acessível.
+
+*   **2.2. Recuperação Ampliada (2:40):**
+    *   **Funcionalidades:** Buscas semânticas e capacidade de responder a perguntas em linguagem natural.
+    *   **Benefício:** Permite pesquisar informações de forma mais intuitiva e eficiente, reduzindo o tempo de busca e superando a necessidade de classificações rígidas.
+
+*   **2.3. Geração de Informações (2:57):**
+    *   **Funcionalidades:** Criação de fatos, sínteses comparativas e insights a partir do conhecimento acumulado.
+    *   **Benefício:** Transforma o conhecimento passivo em novas informações úteis, promovendo um uso prático e criativo dos dados existentes.
+
+    *   **Insight:** A IA não apenas otimiza processos existentes, mas também adiciona uma camada de inteligência e criatividade, permitindo que as organizações extraiam mais valor do seu capital intelectual.
+
+#### 3. Ferramentas de IA Aplicadas à GC (3:23)
+A IA utiliza diversas técnicas para implementar as funcionalidades acima:
+
+*   **3.1. Processamento de Texto (LLMs) (3:29):**
+    *   **Uso:** Modelos de Linguagem Grande (LLMs) para criação de resumos, categorização de conhecimento e deduplicação de informações.
+    *   **Benefício:** Organiza e refina o conhecimento de forma automatizada, eliminando redundâncias e estruturando o conteúdo.
+
+*   **3.2. Extração de Metadados (3:48):**
+    *   **Uso:** Identificação automática de autor, tema, palavras-chave e outras informações contextuais.
+    *   **Benefício:** Enriquece os dados com informações descritivas, facilitando a busca e a compreensão do conteúdo.
+
+*   **3.3. Cruzamento de Documentos (4:02):**
+    *   **Uso:** Integração de informações de diferentes fontes para responder a uma única pergunta.
+    *   **Exemplo:** Combinar dados de um manual de instruções com notas de uma reunião para fornecer uma resposta completa.
+    *   **Benefício:** Supera a fragmentação do conhecimento, fornecendo respostas abrangentes que exigem a consulta de múltiplas fontes.
+
+    *   **Insight:** A combinação dessas ferramentas permite que a IA atue como um "cérebro" organizacional, conectando pontos e transformando dados brutos em conhecimento acionável.
+
+#### 4. Memória Organizacional com IA (4:40)
+A IA apoia a preservação e o reuso do conhecimento, construindo uma memória institucional robusta:
+
+*   **Funcionalidades:**
+    *   Criação de glossários e playbooks.
+    *   Documentação de lições aprendidas (lessons learned).
+    *   Geração de FAQs (Perguntas Frequentes).
+    *   Padronização de termos e conceitos.
+*   **Benefício:** Garante que o conhecimento seja capturado, organizado e facilmente acessível para futuras referências, evitando a perda de expertise e promovendo a consistência.
+
+    *   **Insight:** A IA transforma a memória organizacional de um conceito abstrato em um ativo tangível e dinâmico, acessível a todos os membros da organização.
+
+#### 5. Casos de Uso da IA na GC (5:15)
+A aplicação da IA na GC é vasta e transversal a diversos setores:
+
+*   **5.1. Educação (5:23):**
+    *   **Exemplos:** Criação de bancos de planos de aula, rubricas padronizadas para avaliação, FAQs para pais e alunos.
+    *   **Benefício:** Otimiza a criação de conteúdo pedagógico, padroniza avaliações e melhora a comunicação.
+
+*   **5.2. Saúde, Negócios, Pesquisa e Gestão Pública (6:10):**
+    *   **Exemplos:** Documentação de protocolos, bases de documentos para atendimento, repertórios de resumos e referências, manuais e FAQs.
+    *   **Benefício:** Aprimora a conformidade, agiliza o atendimento, facilita a pesquisa e padroniza a comunicação interna e externa.
+
+    *   **Insight:** A versatilidade da IA na GC demonstra seu potencial para resolver problemas complexos de informação em praticamente qualquer domínio.
+
+#### 6. Boas Práticas na Utilização da IA para GC (6:33)
+Para garantir o uso eficaz e ético da IA na GC, é crucial seguir algumas diretrizes:
+
+*   **6.1. Fontes Verificáveis e Transparência (6:43):**
+    *   **Recomendação:** Sempre exigir fontes verificáveis (autores, nomes, datas de acesso) para as informações geradas pela IA.
+    *   **Transparência da IA (6:54):** A IA deve sinalizar sempre que houver incerteza em suas respostas ou buscas.
+    *   **Benefício:** Garante a confiabilidade e a rastreabilidade do conhecimento, construindo confiança na ferramenta.
+
+*   **6.2. Governança e Dados Sensíveis (7:03):**
+    *   **Cuidado Essencial:** Nunca imputar dados sensíveis (endereços, números de documentos, informações pessoais) na IA.
+    *   **Benefício:** Protege a privacidade e a segurança dos dados, evitando riscos de vazamento ou uso indevido.
+
+    *   **Insight:** A tecnologia é uma ferramenta poderosa, mas sua eficácia e aceitação dependem diretamente de um uso responsável e ético, com foco na segurança e na verificação.
       
-
-
-
 ### 🟩 Vídeo 10 - Projeto Hands-on: Construindo um Sistema de Gestão de Conhecimento com IA
 
 <video width="60%" controls>
@@ -456,7 +542,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/t
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/adb0a6bb-e926-401c-9b96-d61e17457546?autoplay=1
 
 ##  Materiais de Apoio
 
