@@ -201,11 +201,103 @@ O vídeo demonstra como a IA se comporta diante de perguntas extremamente espec�
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/eb55a39c-9db7-4225-a664-840bf25721d3?autoplay=1
 
-## Anotações
+### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-16-17-01.png" alt="" width="840">
+</p>
 
+#### Geração de Plano de Aula com LLM: Um Guia Prático
+
+Este vídeo demonstra como utilizar uma LLM para gerar um plano de aula completo e detalhado, aplicando técnicas de prompt engineering para garantir a precisão e a qualidade do resultado.
+
+##### 1. Introdução e Objetivo (0:00 - 0:18)
+*   **Tópico:** Apresentação do objetivo do vídeo.
+*   **Conteúdo:** Gerar um plano de aula completo utilizando uma LLM.
+
+##### 2. Metodologia de Prompt Engineering: O "Guia de Bolso" (0:19 - 0:42)
+*   **Tópico:** Definição da abordagem para criar prompts eficazes.
+*   **Conteúdo:** Utilização de um "Guia de Bolso" para contextualização precisa, definindo:
+    *   **Papel (Role):** Quem a IA deve ser (ex: professor).
+    *   **Público (Audience):** Para quem o conteúdo é destinado (ex: alunos do 1º ano do Ensino Médio).
+    *   **Formato (Format):** Como a resposta deve ser estruturada (ex: tabela).
+    *   **Tamanho (Size):** Escala ou duração (ex: plano de aula de 1 hora).
+    *   **Objetivo (Objective):** Qual o propósito final da saída.
+*   **Insight:** Essa estrutura de prompt garante que a LLM compreenda o contexto e as expectativas, resultando em respostas mais alinhadas e úteis.
+
+##### 3. Configuração e Prompt Detalhado (0:43 - 1:58)
+*   **Tópico:** Demonstração prática da criação do prompt.
+*   **Ferramenta:** Microsoft Copilot (0:45).
+*   **Detalhes do Prompt:**
+    *   **Papel:** Professor(a) de História (1:07).
+    *   **Público:** Alunos do 1º ano do Ensino Médio (1:11).
+    *   **Formato e Tempo:** Plano de aula de 1 hora (1:15).
+    *   **Tema:** Revolução Francesa (1:19).
+    *   **Inclusões Específicas:** Objetivos de aprendizagem, etapas detalhadas, materiais, avaliação formativa, diferenciação (para diferentes níveis de alunos), e acessibilidade (1:22).
+    *   **Formato de Saída:** Uma tabela com colunas específicas (1:37).
+    *   **Cláusula Anti-Alucinação (1:43 - 1:58):** Instrução crucial para a LLM: "Se não tiver certeza de um fato, escreva verificar."
+*   **Insight:** A cláusula anti-alucinação é uma técnica avançada de prompt engineering que aumenta a confiabilidade do conteúdo gerado, especialmente em contextos educacionais onde a precisão é fundamental.
+
+##### 4. Análise da Resposta da LLM (2:07 - 6:06)
+
+###### 4.1. Formato e Tempo (2:07 - 2:47)
+*   **Tópico:** Verificação do cumprimento das especificações de formato e duração.
+*   **Conteúdo:** A LLM respeita o formato de tabela (2:08). A duração total das atividades é de 55 minutos, deixando 5 minutos "vagos" (2:33).
+*   **Insight:** Os 5 minutos restantes podem ser intencionalmente úteis para acompanhamento contínuo, perguntas adicionais ou flexibilidade, demonstrando uma resposta prática e não apenas literal da LLM.
+
+###### 4.2. Conteúdo do Plano de Aula
+
+*   **Introdução (2:48 - 3:09):**
+    *   **Conteúdo:** Histórico, temas (crise do Antigo Regime, desigualdade social, ideias iluministas) e uma pergunta avaliativa para engajar os alunos ("Por que uma sociedade pode se revoltar?").
+    *   **Insight:** A inclusão de uma pergunta avaliativa na introdução estimula o pensamento crítico e a curiosidade desde o início da aula.
+*   **Materiais (3:10 - 3:18):**
+    *   **Conteúdo:** Quadro, marcadores, slides com mapa da França.
+*   **Avaliação (3:19 - 3:26):**
+    *   **Conteúdo:** Pergunta oral para sondar conhecimentos prévios.
+*   **Desenvolvimento (3:27 - 4:25):**
+    *   **Conteúdo:** Dividido em duas partes, explicando as fases da Revolução.
+    *   **Aplicação da Cláusula Anti-Alucinação (3:37 - 3:45):** A LLM sugere "verificar essas datas", demonstrando a eficácia da instrução no prompt.
+    *   **Recursos Visuais:** Proposta de mostrar imagens relacionadas à Revolução (3:48), com sugestões de quais imagens buscar (3:53).
+    *   **Atividade:** Alunos em duplas para criar listas de causas e consequências (3:57).
+    *   **Materiais:** Slides com linha do tempo, imagens, texto da Declaração dos Direitos do Homem e do Cidadão (4:01).
+    *   **Avaliação:** Observação da participação e coleta das listas (4:17).
+*   **Fechamento (4:26 - 4:56):**
+    *   **Conteúdo:** Debate rápido, com registro da contribuição de cada aluno.
+    *   **Avaliação Formativa:** Acompanhamento contínuo, perguntas durante a explicação, análise das listas geradas e participação no debate.
+
+###### 4.3. Diferenciação (4:57 - 5:27)
+*   **Tópico:** Estratégias para atender diferentes níveis de aprendizado.
+*   **Conteúdo:**
+    *   **Alunos com maior domínio:** Pesquisa rápida sobre o impacto da Revolução em outros países (5:08).
+    *   **Alunos com dificuldade:** Fornecimento de um resumo simplificado com palavras-chave e imagens (5:15).
+*   **Insight:** A LLM consegue propor estratégias pedagógicas variadas, adaptando o conteúdo e as atividades para diferentes perfis de alunos, promovendo a inclusão e o engajamento.
+
+###### 4.4. Acessibilidade (5:28 - 5:52)
+*   **Tópico:** Medidas para tornar o plano de aula acessível.
+*   **Conteúdo:**
+    *   **Slides:** Contraste adequado e fonte ampliada (5:31).
+    *   **Recurso Adicional:** Disponibilização de um áudio explicativo para alunos com deficiência visual (5:39).
+*   **Insight:** A menção da possibilidade de gerar áudio explicativo via IA (5:46-5:52) destaca o potencial das LLMs para criar materiais didáticos inclusivos de forma eficiente.
+
+###### 4.5. Garantia de Participação (5:53 - 6:06)
+*   **Tópico:** Assegurar que todos os alunos possam contribuir.
+*   **Conteúdo:** Garantia de espaço para participação oral e escrita de todos os alunos nas atividades.
+
+##### 5. Conclusão da Avaliação (6:07 - 6:22)
+*   **Tópico:** Resumo do sucesso da geração do plano de aula.
+*   **Conteúdo:** O objetivo foi cumprido, resultando em um plano de aula completo baseado em inteligência artificial.
+
+##### 6. Refinamento e Ajustes (6:23 - 7:09)
+*   **Tópico:** Demonstração da capacidade de iterar e refinar a saída da LLM.
+*   **Conteúdo:** É sempre possível pedir ajustes. Exemplo: solicitar que a avaliação formativa seja retirada da tabela e apresentada como uma seção separada (6:26 - 6:48). A LLM realiza a alteração conforme solicitado (6:54 - 7:06).
+*   **Insight:** A interação iterativa com a LLM é fundamental para personalizar e otimizar o resultado final, transformando um bom output em um excelente, adaptado às necessidades específicas do usuário.
+
+##### 7. Considerações Finais (7:10 - 7:29)
+*   **Tópico:** Reflexões sobre o potencial das LLMs.
+*   **Conteúdo:** O vídeo demonstra as capacidades de uma LLM e a diferença em relação a uma LLM comum, mostrando uma ótima aplicação para professores.
+*   **Insight:** As LLMs, quando bem direcionadas, podem ser ferramentas poderosas para educadores, auxiliando na criação de materiais didáticos completos, personalizados e inclusivos.
 
 ## Parte 4 - Entendendo Viés, Explicabilidade e Raciocínio em IA
 
