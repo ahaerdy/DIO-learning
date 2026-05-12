@@ -205,9 +205,6 @@ link do vídeo:
 
 ## Anotações
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/2026-05-12-15-54-24.png" alt="" width="840">
-</p>
 
 
 ## Parte 4 - Entendendo Viés, Explicabilidade e Raciocínio em IA
