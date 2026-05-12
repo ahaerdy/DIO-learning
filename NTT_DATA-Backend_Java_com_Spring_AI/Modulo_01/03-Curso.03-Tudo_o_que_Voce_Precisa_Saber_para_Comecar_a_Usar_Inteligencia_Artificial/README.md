@@ -544,9 +544,39 @@ Para garantir o uso eficaz e ético da IA na GC, é crucial seguir algumas diret
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/adb0a6bb-e926-401c-9b96-d61e17457546?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-18-06-24.png" alt="" width="840">
+</p>
+
+#### 1. Ingestão e Estruturação de Dados
+O processo começa com a alimentação da IA com diferentes fontes de informação:
+*   **Fontes Diversas:** Notas de aula, trechos de e-mail e artigos científicos.
+*   **Taxonomia Automática:** A IA categoriza o conteúdo em três pilares: Transparência, Segurança/Revisão Humana e Formação Docente.
+*   **Padronização:** Criação de resumos curtos (2 linhas), tags específicas e tabelas comparativas para facilitar a recuperação da informação.
+
+#### 2. Análise Transversal e Identificação de Lacunas
+A IA não apenas resume, mas conecta os pontos entre os textos:
+*   **Consenso:** Todos os textos concordam que a IA não substitui o papel humano, mas o potencializa.
+*   **Divergências de Foco:** Enquanto um texto foca no aluno (transparência), outro foca na instituição (governança) e o terceiro no professor (capacitação).
+*   **Lacunas (Gaps):** A análise revelou que faltam métricas de avaliação de impacto e detalhes sobre conformidade legal/regulatória nos textos fornecidos.
+
+#### 3. Extração de Valor e Insights Acionáveis
+A transformação de "informação" em "conhecimento aplicado":
+*   **FAQ e Glossário:** Criação de ferramentas de consulta rápida para alinhar o entendimento da equipe.
+*   **Melhores Práticas:** Identificação de protocolos de revisão humana e políticas de privacidade como fundamentais.
+*   **Diferenciação de Abordagens:** Comparação entre a prática individual do professor, a prática institucional e a ética social.
+
+#### 4. Mitigação de Riscos e Alucinações
+O professor enfatiza comandos de controle para garantir a confiabilidade:
+*   **Citação de Fontes:** Obrigar a IA a indicar de onde tirou cada informação.
+*   **Marcação de Incertezas:** Uso do termo "verificar" para datas ou dados que a IA não conseguiu validar com precisão.
+*   **Riscos de Entendimento:** Alerta para não confundir "informar o aluno" (transparência) com "validar o conteúdo" (revisão humana).      
+
 ##  Materiais de Apoio
 
-# Certificado:  
+# Certificado: Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial
 
-- Link na plataforma:  
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/0ADAB6RO.pdf  
+- Certificado em pdf: [Certificado-Tudo_que_voce_Precisa_Saber_para_Comecar_a_Usar_Inteligencia_Artificial.pdf](000-Midia_e_Anexos/Certificado-Tudo_que_voce_Precisa_Saber_para_Comecar_a_Usar_Inteligencia_Artificial.pdf)
