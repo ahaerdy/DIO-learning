@@ -574,8 +574,6 @@ O professor enfatiza comandos de controle para garantir a confiabilidade:
 *   **Marcação de Incertezas:** Uso do termo "verificar" para datas ou dados que a IA não conseguiu validar com precisão.
 *   **Riscos de Entendimento:** Alerta para não confundir "informar o aluno" (transparência) com "validar o conteúdo" (revisão humana).      
 
-##  Materiais de Apoio
-
 # Certificado: Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial
 
 - Link na plataforma: https://hermes.dio.me/certificates/0ADAB6RO.pdf  
