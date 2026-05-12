@@ -70,7 +70,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ---
 
-### Módulo 1: Configuração do Ambiente de Desenvolvimento
+### Módulo 1: Introdução ao Desenvolvimento Java e Setup do Ambiente
 
 - [x] Curso: [Boas-vindas a Globant - Introdução ao Mercado de Desenvolvimento Java](Modulo_01/01-Curso.01-Boas-vindas_a_Globant-Introducao_ao_Mercado_de_Desenvolvimento_Java)
 - [x] Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_01/02-Curso.02-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
