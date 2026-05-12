@@ -308,7 +308,40 @@ Este vídeo demonstra como utilizar uma LLM para gerar um plano de aula completo
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/aa0ce976-d0c7-49e4-8c75-cdcf06ee7744?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-16-28-07.png" alt="" width="840">
+</p>
+
+#### 1. A Origem do Viés na IA
+O viés não é "criado" pela máquina, mas sim **reproduzido** por ela.
+*   **Padrões nos Dados:** A IA aprende com grandes volumes de dados. Se esses dados contêm preconceitos sociais ou desequilíbrios regionais, o modelo irá replicar esses padrões.
+*   **Exemplo:** Se uma IA for treinada com mais exemplos de uma região específica, ela tenderá a favorecer essa cultura ou contexto em detrimento de outras.
+
+#### 2. Viés no Contexto Educacional
+A aula destaca três áreas críticas onde o viés pode prejudicar o ensino:
+*   **Gênero:** Estereotipar profissões (ex: associar certas carreiras apenas a homens ou mulheres).
+*   **Regionalismo:** Desvalorizar sotaques, dialetos ou variedades linguísticas, focando em uma "norma" centralizada.
+*   **Estilo de Linguagem:** Penalizar alunos que usam linguagens consideradas "informais", mas que são legítimas e ricas em seu contexto, em favor de uma formalidade rígida da IA.
+
+#### 3. Explicabilidade: Abrindo a "Caixa Preta"
+A explicabilidade é a capacidade de entender **como** a IA chegou a uma resposta.
+*   **Justificativa:** Pedir que a IA explique os critérios usados e o passo a passo do raciocínio.
+*   **Ferramenta de Estudo:** Ao exigir explicações, a IA deixa de ser apenas uma fornecedora de respostas e se torna um material de apoio pedagógico.
+
+#### 4. Raciocínio e Reflexão Provocada
+Podemos "forçar" a IA a ser mais precisa através de técnicas de interação:
+*   **Pensamento em Etapas:** Solicitar que o sistema considere alternativas antes de concluir.
+*   **Auto-checagem (Reflexão):** Pedir que a IA revise sua própria saída em busca de contradições ou erros lógicos.
+
+#### 5. Boas Práticas para Educadores
+Estratégias práticas para o dia a dia escolar:
+*   **Checklists:** Usar listas de verificação para garantir que a resposta da IA não contém vieses.
+*   **Marcações (Tags):** Pedir que a IA destaque dados numéricos ou fatos específicos para facilitar a conferência humana.
+*   **Educação Digital:** Ensinar os alunos a também questionarem a IA, promovendo o uso responsável desde cedo.
 
 ### 🟩 Vídeo 08 - Projeto Hands-on: Analisando Respostas da IA com Olhar Crítico
 
@@ -317,7 +350,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/5ef22cbf-7dd3-4c21-aa5c-7c667cf30625?autoplay=1
 
 ## Parte 5 - IA como Aliada na Gestão do Conhecimento
 
