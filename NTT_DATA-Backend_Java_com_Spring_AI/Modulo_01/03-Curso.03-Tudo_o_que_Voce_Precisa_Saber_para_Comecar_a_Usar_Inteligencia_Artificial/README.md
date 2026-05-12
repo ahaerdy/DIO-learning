@@ -209,26 +209,6 @@ link do vídeo:
   <img src="000-Midia_e_Anexos/2026-05-12-15-54-24.png" alt="" width="840">
 </p>
 
-#### 1. Anatomia de um Prompt Otimizado
-O professor utiliza um "guia de bolso" para estruturar o prompt perfeito, baseando-se em quatro pilares essenciais:
-*   **Papel e Público:** Define a identidade da IA (ex: Professor de História) e para quem a resposta se destina (ex: alunos do 9º ano).
-*   **Formato e Tamanho:** Especifica a estrutura da saída (ex: 4 cartões de estudo, lista numerada, perguntas e respostas).
-*   **Objetivo:** Clarifica o que se deseja alcançar (ex: fixação de conceitos com verificação rápida de compreensão).
-
-#### 2. Avaliação e Rubrica de Qualidade
-Após a primeira resposta da IA sobre a **Revolução Industrial**, o professor avalia se os critérios foram atendidos:
-*   A IA respeitou o número de cartões? Sim.
-*   O nível de linguagem é adequado? Sim, embora use termos rebuscados, são apropriados para o nível escolar definido.
-*   A progressão pedagógica faz sentido? Sim, cobrindo desde a definição até as consequências sociais.
-
-### 3. Refinamento de Prompts (Iteração)
-A técnica de refinamento consiste em pedir à IA para reescrever a resposta anterior, eliminando termos vagos e adicionando **"evidências observáveis"**. 
-*   **Resultado:** A IA incluiu uma seção de "evidência esperada", detalhando o que o aluno deve mencionar especificamente (ex: substituição do trabalho artesanal por máquinas) para demonstrar que realmente compreendeu o conteúdo.
-
-#### 4. O Teste de Alucinação
-Para testar a confiabilidade, foi feito um pedido extremamente específico: dados estatísticos de alunos com dificuldade em matemática no ensino médio em **Curitiba**.
-*   **Comportamento da IA:** O Copilot não inventou números falsos (não alucinou), mas "divagou". Ele trouxe dados nacionais, regionais e do PISA, aproximando-se do tema sem confirmar dados inexistentes para a cidade específica.
-*   **Importância das Fontes:** O vídeo destaca a necessidade de verificar os links e fontes fornecidos pela IA para validar os números apresentados.
 
 ## Parte 4 - Entendendo Viés, Explicabilidade e Raciocínio em IA
 
