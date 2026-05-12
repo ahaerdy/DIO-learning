@@ -95,6 +95,39 @@ A aula demonstra que a primeira resposta da IA raramente é a final. O instrutor
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/689af521-bbad-4e5f-aa74-85804837599e?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-14-32-43.png" alt="" width="849">
+</p>      
+
+## 1. O que é (e o que não é) Inteligência Artificial
+*   **Definição:** IA é um sistema que aprende através de **padrões** e toma decisões com base em dados. Essencialmente, é o aprendizado de padrões em escala.
+*   **O que NÃO é IA:** 
+    *   **Excel:** É uma ferramenta de cálculo e organização, não aprende sozinha.
+    *   **Google Search:** É um buscador de links. Ele te direciona para onde a resposta pode estar, enquanto a IA gera a resposta a partir do que aprendeu.
+
+### 2. IA Fraca vs. IA Forte
+*   **IA Fraca (Narrow AI):** Especialista em tarefas nichadas (traduzir, resumir, classificar). **Importante:** Todas as IAs atuais (ChatGPT, Gemini, Claude) são consideradas IAs fracas, pois operam dentro de limites específicos.
+*   **IA Forte (General AI):** Uma IA generalista, capaz de realizar qualquer tarefa intelectual humana. Ainda é um conceito teórico/futurista.
+
+### 3. Machine Learning (Aprendizado de Máquina)
+*   **O Processo:** Envolve treinar a IA com exemplos (dados) e algoritmos (passos matemáticos).
+*   **Metáfora Professor-Aluno:** Nós (humanos) somos os professores que fornecem a base de dados. A IA é o aluno que aprende essa base e consegue generalizar o conhecimento para responder novas perguntas.
+*   **Aplicações Escolares:** Classificação automática de respostas (certo/errado) e sugestão de conteúdos personalizados.
+
+### 4. PLN e Visão Computacional
+*   **PLN (Processamento de Linguagem Natural):** Focado em **texto**. Capacidade de resumir, adaptar e gerar conteúdo escrito em diferentes níveis de complexidade (ex: adaptar um texto científico para um aluno do 8º ano).
+*   **Visão Computacional:** Focado em **imagem**. Permite que a IA "veja", interprete cenas, reconheça objetos e descreva imagens (essencial para acessibilidade, como gerar áudio-descrição para alunos com deficiência visual).
+
+### 5. Engenharia de Prompt (Prompt Engineering)
+Para obter a melhor resposta da IA, deve-se seguir o "Guia de Bolso" das 5 perguntas:
+1.  **Papel:** Quem a IA deve ser? (Ex: Professor de Ciências).
+2.  **Público:** Para quem ela está falando? (Ex: Alunos do 8º ano).
+3.  **Formato:** Qual a estrutura da saída? (Ex: Título, 2 parágrafos, 3 perguntas).
+4.  **Tamanho:** Qual a extensão? (Ex: 4 a 6 linhas por parágrafo).
+5.  **Objetivo:** Para que serve a resposta? (Ex: Fixar o conceito de fotossíntese).
+
 ### 🟩 Vídeo 04 - Projeto Hands-on: Explorando Interfaces de IA Simplificadas
 
 <video width="60%" controls>
@@ -102,7 +135,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/t
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/a7cf963c-b4c7-4778-8851-17f8b52c5dd4?autoplay=1
 
 ## Parte 3 - Explorando os Modelos de Linguagem
 
