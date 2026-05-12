@@ -160,7 +160,6 @@ O vídeo demonstra um teste de estresse pedindo dados estatísticos muito espec�
 *   **Comportamento da IA:** Quando a IA não possui dados exatos para um nicho geográfico/temporal muito restrito, ela tende a ser **generalista**.
 *   **O Risco:** A IA pode "mentir com confiança", apresentando dados nacionais como se fossem locais ou criando números plausíveis, mas falsos.      
 
-
 ## Parte 3 - Explorando os Modelos de Linguagem
 
 ### 🟩 Vídeo 05 - Explorando os Modelos de Linguagem
@@ -170,7 +169,30 @@ O vídeo demonstra um teste de estresse pedindo dados estatísticos muito espec�
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/a7cf963c-b4c7-4778-8851-17f8b52c5dd4?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-15-23-33.png" alt="" width="840">
+</p>      
+
+### **1. Anatomia de um Prompt Otimizado**
+Para obter resultados precisos, o vídeo sugere um "guia de bolso" para a estruturação de prompts, dividindo-os em quatro pilares essenciais:
+*   **Papel (Role):** Definir quem a IA deve ser (ex: Professor de História).
+*   **Público-alvo:** Para quem o conteúdo se destina (ex: Alunos do 9º ano).
+*   **Formato e Tamanho:** Especificar a estrutura da saída (ex: 4 cartões de estudo em lista numerada).
+*   **Objetivo:** O que se pretende alcançar (ex: Fixar conceitos da Revolução Industrial com verificação rápida).
+
+### **2. Refinamento e Rubricas de Qualidade**
+A técnica de refinamento é usada para elevar o nível da resposta inicial. No exemplo prático:
+*   **Substituição de termos vagos:** Trocar explicações genéricas por termos técnicos e históricos mais precisos.
+*   **Inclusão de Evidências Observáveis:** Adicionar uma seção que descreve o que o professor deve esperar como resposta ideal do aluno, facilitando a avaliação pedagógica.
+
+### **3. O Teste de Alucinação**
+O vídeo demonstra como a IA se comporta diante de perguntas extremamente específicas (ex: estatísticas de dificuldades em matemática no ensino médio especificamente em Curitiba).
+*   **Comportamento da IA:** O Copilot tendeu a ser generalista, trazendo dados nacionais (Brasil) e estaduais (Paraná) quando não encontrou o dado ultraespecífico.
+*   **Risco:** A IA pode "mentir com confiança". Embora neste caso ela tenha divagado em vez de inventar números, o alerta permanece para a necessidade de validação humana.
 
 ### 🟩 Vídeo 06 - Projeto Hands-on: Criando Conteúdos Educacionais com LLMs
 
