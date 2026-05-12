@@ -7,7 +7,7 @@
 
 ### 🟩 Vídeo 01 - Introdução à Inteligência Artificial
 
-<video width="840" controls>
+<video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.02-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
@@ -19,7 +19,7 @@ A Inteligência Artificial (IA) não é apenas uma ferramenta de automação, ma
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-05-12-13-22-45.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-05-12-13-22-45.png" alt="" width="840">
 </p>
 
 ### 1. O que é (e o que não é) Inteligência Artificial
