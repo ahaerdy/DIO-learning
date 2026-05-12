@@ -54,6 +54,36 @@ A Inteligência Artificial (IA) não é apenas uma ferramenta de automação, ma
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/a92d0bd8-83ca-4058-a833-70fe219058c3?autoplay=1
 
+O vídeo é uma aula prática sobre como utilizar o Microsoft Copilot para criar conteúdos educacionais, focando na jornada desde a escrita do primeiro prompt até o refinamento necessário para atingir o público-alvo ideal (neste caso, alunos do 7º ano).
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-14-00-10.png" alt="" width="840">
+</p>
+
+### 1. Interface e Funcionalidades do Copilot
+O Microsoft Copilot é apresentado como uma ferramenta robusta integrada ao ecossistema Microsoft.
+*   **Campo de Prompt:** Onde a interação acontece.
+*   **Recursos Adicionais:** Acesso a agentes, notebooks, criação de imagens e integração direta com aplicativos como Excel e Word.
+*   **Dica de Organização:** O instrutor recomenda salvar todos os prompts utilizados em arquivos `.txt`. Isso garante a **auditabilidade** (saber o que foi feito) e facilita a reutilização em aulas futuras.
+
+### 2. A Estrutura do Prompt Inicial
+Para obter um resultado de qualidade, o prompt deve ser contextualizado. O exemplo utilizado foi:
+*   **Persona:** Professor(a) do 7º ano.
+*   **Tarefa:** Explicar o que é Inteligência Artificial.
+*   **Restrições:** Apenas 3 frases.
+*   **Elementos Obrigatórios:** Um exemplo do cotidiano escolar e um alerta de privacidade.
+
+### 3. Análise Crítica do Primeiro Resultado
+A IA entregou uma resposta tecnicamente correta, mas com ressalvas pedagógicas:
+*   **Pontos Positivos:** Seguiu a estrutura de 3 frases e incluiu o exemplo e o alerta.
+*   **Pontos Negativos:** O vocabulário foi considerado um pouco avançado para o 7º ano (uso de termos como "coerência", "armazenados" e "indevidamente").
+
+### 4. O Poder do Refinamento (Iteração)
+A aula demonstra que a primeira resposta da IA raramente é a final. O instrutor utiliza um comando simples: **"Seja mais simples"**.
+*   **Resultado Refinado:** A IA substituiu termos complexos por palavras mais acessíveis ("forma errada" em vez de "indevidamente", "programa que corrige provas" em vez de "critérios de gramática e coerência").
+
 ## Parte 2 - Compreendendo os Fundamentos da IA
 
 ### 🟩 Vídeo 03 - Compreendendo os Fundamentos da IA
@@ -63,7 +93,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/t
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/689af521-bbad-4e5f-aa74-85804837599e?autoplay=1
 
 ### 🟩 Vídeo 04 - Projeto Hands-on: Explorando Interfaces de IA Simplificadas
 
