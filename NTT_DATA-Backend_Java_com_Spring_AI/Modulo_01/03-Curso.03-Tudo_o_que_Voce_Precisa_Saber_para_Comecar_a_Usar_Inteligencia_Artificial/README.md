@@ -141,7 +141,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/t
   <img src="000-Midia_e_Anexos/2026-05-12-14-54-03.png" alt="" width="840">
 </p>
 
-### 1. Estrutura de um Prompt de Alta Performance
+#### 1. Estrutura de um Prompt de Alta Performance
 Para que a IA entregue exatamente o que você precisa, o prompt deve seguir critérios específicos (o "Guia de Bolso"):
 *   **Papel (Role):** Definir quem a IA deve ser (ex: Professor de História).
 *   **Público-alvo:** Para quem a resposta se destina (ex: Alunos do 9º ano).
@@ -149,13 +149,13 @@ Para que a IA entregue exatamente o que você precisa, o prompt deve seguir crit
 *   **Tamanho:** Limitação quantitativa (ex: Lista numerada de 4 itens).
 *   **Objetivo:** O que se pretende alcançar (ex: Fixar conceitos com verificação rápida).
 
-### 2. O Processo de Refinamento (Iteração)
+#### 2. O Processo de Refinamento (Iteração)
 A primeira resposta da IA nem sempre é a ideal. O refinamento consiste em:
 *   **Substituir termos vagos:** Trocar generalizações por conceitos técnicos ou específicos.
 *   **Adicionar evidências observáveis:** Pedir que a IA especifique o que se espera da resposta do aluno (ex: "O aluno deve mencionar a transição do trabalho artesanal para o mecanizado").
 *   **Aumento de complexidade:** Tornar a resposta mais robusta mantendo a estrutura original.
 
-### 3. Teste de Alucinação e Especificidade
+#### 3. Teste de Alucinação e Especificidade
 O vídeo demonstra um teste de estresse pedindo dados estatísticos muito específicos (alunos com dificuldade em matemática no ensino médio em Curitiba).
 *   **Comportamento da IA:** Quando a IA não possui dados exatos para um nicho geográfico/temporal muito restrito, ela tende a ser **generalista**.
 *   **O Risco:** A IA pode "mentir com confiança", apresentando dados nacionais como se fossem locais ou criando números plausíveis, mas falsos.      
@@ -177,19 +177,19 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/t
   <img src="000-Midia_e_Anexos/2026-05-12-15-23-33.png" alt="" width="840">
 </p>      
 
-### **1. Anatomia de um Prompt Otimizado**
+#### **1. Anatomia de um Prompt Otimizado**
 Para obter resultados precisos, o vídeo sugere um "guia de bolso" para a estruturação de prompts, dividindo-os em quatro pilares essenciais:
 *   **Papel (Role):** Definir quem a IA deve ser (ex: Professor de História).
 *   **Público-alvo:** Para quem o conteúdo se destina (ex: Alunos do 9º ano).
 *   **Formato e Tamanho:** Especificar a estrutura da saída (ex: 4 cartões de estudo em lista numerada).
 *   **Objetivo:** O que se pretende alcançar (ex: Fixar conceitos da Revolução Industrial com verificação rápida).
 
-### **2. Refinamento e Rubricas de Qualidade**
+#### **2. Refinamento e Rubricas de Qualidade**
 A técnica de refinamento é usada para elevar o nível da resposta inicial. No exemplo prático:
 *   **Substituição de termos vagos:** Trocar explicações genéricas por termos técnicos e históricos mais precisos.
 *   **Inclusão de Evidências Observáveis:** Adicionar uma seção que descreve o que o professor deve esperar como resposta ideal do aluno, facilitando a avaliação pedagógica.
 
-### **3. O Teste de Alucinação**
+#### **3. O Teste de Alucinação**
 O vídeo demonstra como a IA se comporta diante de perguntas extremamente específicas (ex: estatísticas de dificuldades em matemática no ensino médio especificamente em Curitiba).
 *   **Comportamento da IA:** O Copilot tendeu a ser generalista, trazendo dados nacionais (Brasil) e estaduais (Paraná) quando não encontrou o dado ultraespecífico.
 *   **Risco:** A IA pode "mentir com confiança". Embora neste caso ela tenha divagado em vez de inventar números, o alerta permanece para a necessidade de validação humana.
@@ -202,6 +202,33 @@ O vídeo demonstra como a IA se comporta diante de perguntas extremamente espec�
 </video>
 
 link do vídeo:
+
+## Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-15-54-24.png" alt="" width="840">
+</p>
+
+#### 1. Anatomia de um Prompt Otimizado
+O professor utiliza um "guia de bolso" para estruturar o prompt perfeito, baseando-se em quatro pilares essenciais:
+*   **Papel e Público:** Define a identidade da IA (ex: Professor de História) e para quem a resposta se destina (ex: alunos do 9º ano).
+*   **Formato e Tamanho:** Especifica a estrutura da saída (ex: 4 cartões de estudo, lista numerada, perguntas e respostas).
+*   **Objetivo:** Clarifica o que se deseja alcançar (ex: fixação de conceitos com verificação rápida de compreensão).
+
+#### 2. Avaliação e Rubrica de Qualidade
+Após a primeira resposta da IA sobre a **Revolução Industrial**, o professor avalia se os critérios foram atendidos:
+*   A IA respeitou o número de cartões? Sim.
+*   O nível de linguagem é adequado? Sim, embora use termos rebuscados, são apropriados para o nível escolar definido.
+*   A progressão pedagógica faz sentido? Sim, cobrindo desde a definição até as consequências sociais.
+
+### 3. Refinamento de Prompts (Iteração)
+A técnica de refinamento consiste em pedir à IA para reescrever a resposta anterior, eliminando termos vagos e adicionando **"evidências observáveis"**. 
+*   **Resultado:** A IA incluiu uma seção de "evidência esperada", detalhando o que o aluno deve mencionar especificamente (ex: substituição do trabalho artesanal por máquinas) para demonstrar que realmente compreendeu o conteúdo.
+
+#### 4. O Teste de Alucinação
+Para testar a confiabilidade, foi feito um pedido extremamente específico: dados estatísticos de alunos com dificuldade em matemática no ensino médio em **Curitiba**.
+*   **Comportamento da IA:** O Copilot não inventou números falsos (não alucinou), mas "divagou". Ele trouxe dados nacionais, regionais e do PISA, aproximando-se do tema sem confirmar dados inexistentes para a cidade específica.
+*   **Importância das Fontes:** O vídeo destaca a necessidade de verificar os links e fontes fornecidos pela IA para validar os números apresentados.
 
 ## Parte 4 - Entendendo Viés, Explicabilidade e Raciocínio em IA
 
