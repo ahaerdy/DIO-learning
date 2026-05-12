@@ -1,13 +1,13 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Gabriel Vieira (CTO, US @ Ubivis / Industrial AI & Digital Twins for Manufacturing / Industry 4.0)
+- Contato Linkedin: / [devgvieira](https://www.linkedin.com/in/devgvieira/)
 
 ## Parte 1 - Introdução à Inteligência Artificial
 
 ### 🟩 Vídeo 01 - Introdução à Inteligência Artificial
 
-<video width="60%" controls>
+<video width="840" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.02-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
