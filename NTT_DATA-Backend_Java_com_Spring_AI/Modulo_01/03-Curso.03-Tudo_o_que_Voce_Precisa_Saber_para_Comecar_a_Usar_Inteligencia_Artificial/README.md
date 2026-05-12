@@ -352,6 +352,86 @@ Estratégias práticas para o dia a dia escolar:
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/5ef22cbf-7dd3-4c21-aa5c-7c667cf30625?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-12-16-41-14.png" alt="" width="840">
+</p>
+
+#### 1. Introdução e Objetivo da Aula Prática
+*   **Contexto:** O Professor Gabriel apresenta uma aula "Hands-on" focada em analisar respostas de IA com um "olhar crítico".
+*   **Ferramenta:** Utilização do Microsoft Copilot para testar os pontos discutidos em uma aula teórica anterior.
+*   **Insight:** A aula visa demonstrar como a interação humana é crucial para validar e aprimorar a saída da IA, transformando-a de uma ferramenta de geração para uma ferramenta de apoio crítico.
+
+#### 2. Engenharia de Prompt Inicial: Construindo a Requisição
+*   **Assunção:** Familiaridade prévia com o sistema Copilot.
+*   **Prompt Detalhado (0:31):**
+    *   **Contextualização da IA (0:40):** "Você é um professor(a) de geografia para o quinto ano."
+    *   **Objetivo Claro (0:47):** Responder em até 6 parágrafos à pergunta: "Como as tecnologias de transporte e comunicação mudam a vida nas cidades?"
+    *   **Formato Esperado (1:01):**
+        *   Linguagem clara.
+        *   Exemplos do contexto brasileiro de diferentes regiões.
+        *   **Mitigação de Vieses (1:09):** Explicitamente pedir exemplos de diferentes regiões para evitar o viés de regionalismo.
+    *   **Instrução para Incerteza (1:13):** "Se não tiver certeza de um dado, explicite."
+        *   **Insight:** Esta instrução estimula o raciocínio da IA e é uma técnica fundamental para mitigar alucinações, forçando a IA a reconhecer suas limitações.
+*   **Key Takeaway:** Um prompt bem elaborado não apenas define a tarefa, mas também incorpora estratégias para controlar a qualidade da saída, incluindo a mitigação de vieses e a gestão da incerteza.
+
+#### 3. Análise da Resposta Inicial da IA
+*   **Conformidade (1:35):** A IA entregou 6 parágrafos, com detalhes e exemplos.
+*   **Cobertura Regional (1:45):** Mencionou São Paulo, Região Sul (Curitiba), contraste com o Norte, e Região Nordeste.
+*   **Avaliação Preliminar (2:08):** A IA cumpriu o objetivo inicial de cobrir diferentes regiões e fornecer exemplos.
+*   **Insight:** A primeira resposta da IA pode parecer satisfatória à primeira vista, mas o processo de refinamento é essencial para aprofundar a qualidade e a confiabilidade.
+
+#### 4. Refinamento 1: Auto-reflexão e Verificação de Fontes
+*   **Próximo Passo (2:12):** Refinar a resposta.
+*   **Requisição de Critérios (2:16):** Pedir à IA para listar, em até 5 linhas, os critérios usados para chegar à resposta.
+*   **Requisição de Fontes (2:28):** Pedir 3 fontes, incluindo autor/título, ano e link. Se não houver fonte, a IA deve dizer "Não encontrei".
+    *   **Insight:** Esta etapa é crucial para a checagem de fatos e para identificar potenciais alucinações. Forçar a IA a explicitar a ausência de fontes é tão importante quanto a citação de fontes existentes.
+*   **Análise das Fontes da IA (2:49):**
+    *   Citou IBGE (com link e ano).
+    *   Citou Ministério dos Transportes (Plano Nacional de Logística de 2022).
+    *   **Ponto Crítico (3:01):** A IA declarou "Não encontrei fontes adicionais" para exemplos regionais.
+        *   **Insight:** Isso indica uma lacuna que o usuário deve preencher, buscando informações mais atualizadas (ex: 2023) e verificando a validade das informações existentes.
+    *   **Key Takeaway:** A auto-reflexão da IA sobre seus critérios e a citação de fontes (ou a ausência delas) adicionam uma camada de transparência e permitem ao usuário identificar onde a verificação humana é mais necessária.
+
+#### 5. Refinamento 2: Identificação e Mitigação de Vieses (Auto-correção da IA)
+*   **Próximo Passo (3:39):** Pedir à IA para fazer uma checagem de si mesma.
+*   **Requisição (3:42):** Pedir à IA para apontar 3 pontos em sua própria resposta que podem conter viés, focando em:
+    *   Regionalismo
+    *   Linguagem
+    *   E como mitigá-los.
+*   **Análise da Auto-identificação de Vieses da IA (3:59):**
+    *   **Viés de Regionalismo (4:15):** A IA reconheceu o foco excessivo em São Paulo e Curitiba.
+        *   **Mitigação Proposta (4:23):** Incluir exemplos equilibrados de cidades pequenas/médias de diferentes regiões (ex: Petrolina, Santarém).
+    *   **Viés de Linguagem (4:34):** A IA identificou o uso de termos técnicos/complexos (telemedicina, infraestrutura) inadequados para o 5º ano.
+        *   **Mitigação Proposta (4:48):** Substituir por explicações simples.
+    *   **Viés de Foco Urbano (4:52):** A IA percebeu que seu foco em cidades poderia invisibilizar realidades rurais.
+        *   **Mitigação Proposta (5:12):** Acrescentar exemplos de tecnologias que chegam ao campo (internet, transporte escolar em áreas rurais).
+*   **Insight:** Esta é uma das etapas mais poderosas, pois a IA não apenas gera conteúdo, mas também desenvolve uma capacidade de auto-crítica e sugere melhorias, mitigando estereótipos e garantindo uma cobertura mais inclusiva.
+*   **Key Takeaway:** Ensinar a IA a identificar e corrigir seus próprios vieses é fundamental para criar sistemas mais justos, precisos e adaptados ao público-alvo.
+
+#### 6. Refinamento 3: Avaliação com Rubrica e Revisão Final
+*   **Último Ponto (5:39):** Avaliação com uma rubrica.
+*   **Requisição (5:47):** Pedir à IA para analisar sua própria resposta original usando uma rubrica com os seguintes critérios, atribuindo notas de 0 a 2 para cada:
+    *   Viés
+    *   Fontes
+    *   Cobertura Regional
+    *   Clareza
+    *   Linguagem Inclusiva
+*   **Requisição de Revisão (6:00):** Após a autoavaliação, pedir à IA para revisar o texto para reduzir vieses, equilibrar exemplos regionais e tornar a linguagem inclusiva, mantendo o limite de 6 parágrafos.
+*   **Análise da Autoavaliação e Revisão da IA (6:18):**
+    *   **Notas Atribuídas:**
+        *   Viés: 1 ponto
+        *   Fontes: 1 ponto
+        *   Cobertura Regional: 1 ponto
+        *   Clareza: 2 pontos (bom!)
+        *   Linguagem Inclusiva: 1 ponto
+    *   **Justificativa (6:36):** A IA explicou o porquê de cada nota.
+    *   **Texto Revisado (6:47):** A IA forneceu uma nova versão da resposta, incorporando as mitigações discutidas.
+*   **Insight:** A aplicação de uma rubrica e a subsequente revisão baseada nessa avaliação permitem que a IA desenvolva um "raciocínio próprio" para julgar e aprimorar a qualidade de sua saída, tornando o processo mais sistemático e eficaz.
+*   **Key Takeaway:** A autoavaliação guiada por rubricas é uma ferramenta poderosa para garantir que a IA não apenas produza respostas, mas também as refine de acordo com critérios de qualidade predefinidos, resultando em um conteúdo mais robusto e confiável.      
+
+
 ## Parte 5 - IA como Aliada na Gestão do Conhecimento
 
 ### 🟩 Vídeo 09 - IA como Aliada na Gestão do Conhecimento
@@ -361,7 +441,13 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/t
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/tudo-o-que-voce-precisa-saber-para-comecar-a-usar-inteligencia-artificial/learning/a3dcdcb7-e476-43dd-9226-1e14800bcc88?autoplay=1
+
+### Anotações
+
+      
+
+
 
 ### 🟩 Vídeo 10 - Projeto Hands-on: Construindo um Sistema de Gestão de Conhecimento com IA
 
