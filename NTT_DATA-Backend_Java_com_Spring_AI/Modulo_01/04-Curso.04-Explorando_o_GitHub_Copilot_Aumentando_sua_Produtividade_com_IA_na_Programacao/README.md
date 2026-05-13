@@ -171,8 +171,8 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-05-13-14-58-02.png" alt="" width="840">
-</p>      
+  <img src="000-Midia_e_Anexos/2026-05-13-14-59-32.png" alt="" width="840">
+</p>     
 
 #### 1. Extensões do GitHub Copilot
 As extensões representam um salto na personalização da ferramenta. Elas permitem:
@@ -194,7 +194,6 @@ A tecnologia de IA evolui rapidamente, e o vídeo destaca canais essenciais para
 *   **Site Oficial do GitHub Copilot:** Seção "O que há de novo" (What's new).
 *   **Documentação do VS Code:** Detalhes técnicos sobre a integração da IDE com a IA.
 *   **Materiais de Apoio:** Links úteis e cursos complementares na plataforma de ensino.
-
 
 # Certificado: Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação
 
