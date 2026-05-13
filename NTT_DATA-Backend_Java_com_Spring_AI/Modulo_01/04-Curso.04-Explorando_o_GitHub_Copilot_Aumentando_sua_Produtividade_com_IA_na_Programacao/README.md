@@ -27,7 +27,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 #### 2. Funcionalidades Chave
 *   **Sugestões em Tempo Real:** Oferece trechos de código completos enquanto você digita.
 *   **Correção de Erros:** Auxilia na identificação e resolução de bugs durante o desenvolvimento.
-*   **Explicação de Conceitos:** Ajuda o desenvolvedor a entender trechos de código ou conceitos complexos.
+*   **Explicdocs(copilot): finaliza curso 04 e atualiza status no READMEação de Conceitos:** Ajuda o desenvolvedor a entender trechos de código ou conceitos complexos.
 *   **Sugestão de Comentários:** Pode gerar documentação ou comentários baseados na lógica do código.
 
 #### 3. Benefícios para o Desenvolvedor
@@ -170,7 +170,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 
 
-# Certificado: [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação
+# Certificado: Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação
 
 - Link na plataforma: 
 - Certificado em pdf:
