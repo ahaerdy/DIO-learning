@@ -156,7 +156,7 @@ O Copilot oferece diversas funcionalidades para otimizar a escrita e compreensã
         3.  No painel de controle do Git no VS Code, clicar em **"Generate Commit Message with Copilot"**.
         4.  O Copilot analisará as alterações e sugerirá uma mensagem de commit relevante.
 
-*   **Insight:** A capacidade do Copilot de gerar, explicar e refinar código, além de auxiliar em tarefas como a criação de commits, o posiciona como um verdadeiro "copiloto" no processo de desenvolvimento, acelerando tarefas repetitivas e auxiliando na compreensão. A qualidade da saída, no entanto, depende fortemente da clareza e especificidade das instruções fornecidas.      
+*   **Observações:** A capacidade do Copilot de gerar, explicar e refinar código, além de auxiliar em tarefas como a criação de commits, o posiciona como um verdadeiro "copiloto" no processo de desenvolvimento, acelerando tarefas repetitivas e auxiliando na compreensão. A qualidade da saída, no entanto, depende fortemente da clareza e especificidade das instruções fornecidas.      
 
 
 ### 🟩 Vídeo 04 - Como Conferir as Novidades do GitHub Copilot
@@ -168,9 +168,9 @@ O Copilot oferece diversas funcionalidades para otimizar a escrita e compreensã
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conhecendo-o-github-copilot-aumentando-sua-produtividade-na-programacao/learning/8b03a344-f493-4ca7-8a75-4e038a1a3e3e?autoplay=1
 
-##  Materiais de Apoio
 
-# Certificado: 
+
+# Certificado: [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação
 
 - Link na plataforma: 
 - Certificado em pdf:

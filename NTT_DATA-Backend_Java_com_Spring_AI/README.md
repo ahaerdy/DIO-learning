@@ -73,7 +73,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] Curso: [O Que é Este Bootcamp?](Modulo_01/01-Curso.01-O_Que_E_Este_Bootcamp)
 - [x] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-A_Era_da_IA_Machine_Learning,_LLMs,_IA_Generativa_e_Agentes)
 - [x] Curso: [Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial](Modulo_01/03-Curso.03-Tudo_o_que_Voce_Precisa_Saber_para_Comecar_a_Usar_Inteligencia_Artificial)
-- [ ] Curso: [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação](Modulo_01/04-Curso.04-Explorando_o_GitHub_Copilot_Aumentando_sua_Produtividade_com_IA_na_Programacao)
+- [x] Curso: [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação](Modulo_01/04-Curso.04-Explorando_o_GitHub_Copilot_Aumentando_sua_Produtividade_com_IA_na_Programacao)
 - [ ] Mentoria (Live): [Live de Lançamento do Bootcamp NTT DATA 2026](Modulo_01/)
 
 ---
@@ -177,5 +177,6 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
 - / [devgvieira](https://www.linkedin.com/in/devgvieira/) (Gabriel Vieira / CTO, US @ Ubivis, Industrial AI & Digital Twins for Manufacturing, Industry 4.0)
+- / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst)
 
 <!-- Preencher conforme for progredindo no bootcamp -->
