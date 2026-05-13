@@ -168,6 +168,32 @@ O Copilot oferece diversas funcionalidades para otimizar a escrita e compreensã
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conhecendo-o-github-copilot-aumentando-sua-produtividade-na-programacao/learning/8b03a344-f493-4ca7-8a75-4e038a1a3e3e?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-13-14-58-02.png" alt="" width="840">
+</p>      
+
+#### 1. Extensões do GitHub Copilot
+As extensões representam um salto na personalização da ferramenta. Elas permitem:
+*   **Integração de Serviços Externos:** Conectar ferramentas e serviços de terceiros diretamente ao GitHub Copilot Chat.
+*   **Fluxo de Trabalho Unificado:** Realizar consultas e ações em outras plataformas sem sair do ambiente de desenvolvimento (IDE).
+
+#### 2. Novos Modos de Operação: Edição e Agente
+O Copilot está introduzindo formas mais poderosas de interagir com o código:
+*   **Modo de Edição (Edit Mode):** Focado na execução de mudanças em múltiplos arquivos simultaneamente. Ele utiliza o contexto de todo o projeto para garantir que as alterações sejam coerentes em diferentes partes do sistema.
+*   **Modo Agente (Agent Mode):** Atualmente em fase de *preview*, este modo opera de forma mais autônoma e dinâmica. Ele não apenas sugere código, mas pode "raciocinar" sobre tarefas complexas e utilizar um conjunto de ferramentas para resolvê-las.
+
+#### 3. VS Code Insiders: O Laboratório de Inovações
+Para desenvolvedores que desejam testar as funcionalidades antes do lançamento oficial:
+*   **Acesso Antecipado:** Recursos como o "Modo Agente" estão disponíveis primeiro no **VS Code Insiders**.
+*   **Experimentação:** É o ambiente ideal para explorar a interface de chat atualizada e as novas capacidades de contexto multi-arquivos.
+
+#### 4. Fontes de Atualização e Documentação
+A tecnologia de IA evolui rapidamente, e o vídeo destaca canais essenciais para se manter atualizado:
+*   **Site Oficial do GitHub Copilot:** Seção "O que há de novo" (What's new).
+*   **Documentação do VS Code:** Detalhes técnicos sobre a integração da IDE com a IA.
+*   **Materiais de Apoio:** Links úteis e cursos complementares na plataforma de ensino.
 
 
 # Certificado: Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação
