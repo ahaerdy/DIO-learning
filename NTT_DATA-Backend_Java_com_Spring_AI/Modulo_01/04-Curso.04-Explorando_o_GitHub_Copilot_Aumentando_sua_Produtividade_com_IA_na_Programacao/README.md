@@ -82,7 +82,82 @@ O GitHub oferece diferentes níveis de licenciamento:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conhecendo-o-github-copilot-aumentando-sua-produtividade-na-programacao/learning/60aec6d3-e308-43db-adb6-bfa00b1d8d63?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-13-11-21-33.png" alt="" width="840">
+</p>
+
+O vídeo explora as diversas formas de utilizar o GitHub Copilot, desde ambientes de desenvolvimento integrados (IDEs) até a linha de comando (CLI), interface web e dispositivos móveis. Ele detalha o processo de instalação, demonstra exemplos práticos e aborda as melhores práticas para otimizar a interação com a ferramenta.
+
+#### 1. Introdução e Plataformas Suportadas
+
+O GitHub Copilot é uma ferramenta de inteligência artificial que auxilia desenvolvedores na escrita de código, oferecendo sugestões e completando trechos de código. Sua versatilidade permite integração em múltiplos ambientes.
+
+*   **Plataformas de Uso:**
+    *   **IDEs:** Ambientes de Desenvolvimento Integrados (Visual Studio Code, Visual Studio, Xcode, JetBrains - PyCharm, IntelliJ, Neovim, Eclipse).
+    *   **CLI:** Linha de Comando (via GitHub CLI).
+    *   **Web:** Site do GitHub.
+    *   **Mobile:** Aplicativo GitHub Mobile.
+    *   **Outros:** Azure Data Studio.
+
+*   **Insight:** A ampla compatibilidade do Copilot com as ferramentas mais populares do mercado o torna uma adição valiosa para a maioria dos fluxos de trabalho de desenvolvimento, democratizando o acesso à assistência de IA.
+
+#### 2. Instalação e Configuração em IDEs (Exemplo: VS Code)
+
+A instalação do GitHub Copilot em IDEs é um processo direto, geralmente envolvendo a adição de uma extensão e a autenticação com a conta GitHub.
+
+*   **Processo de Instalação no VS Code:**
+    1.  Acessar a barra lateral de **Extensões** (ícone de blocos).
+    2.  Pesquisar por "GitHub Copilot".
+    3.  Selecionar a extensão oficial do `github.com` e clicar em **Instalar**.
+    4.  Após a instalação, o Copilot solicitará a conexão com sua conta GitHub para autorizar o acesso.
+    5.  Ao retornar ao VS Code, a licença vinculada à sua conta será automaticamente ativada.
+
+*   **Acesso e Configurações no VS Code:**
+    *   **Acesso Rápido:** O Copilot pode ser acessado diretamente no editor (sugestões inline) ou através do ícone de chat no canto superior direito da interface.
+    *   **Configurações da Extensão:** As configurações específicas do Copilot podem ser acessadas via `File > Preferences > Settings` e, na aba de extensões, buscando por "GitHub Copilot". Embora não detalhadas no vídeo, é útil saber onde encontrá-las para personalização.
+
+*   **Insight:** A integração nativa e o processo de instalação simplificado nas IDEs mais populares minimizam a barreira de entrada para os desenvolvedores que desejam experimentar e incorporar o Copilot em seu dia a dia.
+
+#### 3. Exemplos Práticos de Uso em IDEs
+
+O Copilot oferece diversas funcionalidades para otimizar a escrita e compreensão de código.
+
+*   **3.1. Geração de Dados Mock (Exemplo: E-commerce)**
+    *   **Cenário:** Criar uma constante `products` com uma lista de objetos para um projeto de e-commerce.
+    *   **Interação:**
+        1.  Em um arquivo `.js` vazio, iniciar um comentário descrevendo a intenção: `// create a constant called products containing a list of objects`.
+        2.  O Copilot começará a sugerir o código.
+        3.  Para refinar, adicionar mais detalhes no comentário: `// ID, name, price, description, category`.
+        4.  O Copilot gerará a estrutura de dados mock com base nas especificações.
+    *   **Melhoria do Prompt:**
+        1.  A resposta inicial pode ser genérica. Para melhorar, pode-se usar o chat inline (Ctrl+I) ou o chat do Copilot.
+        2.  **Exemplo de Prompt Refinado:** `substitua o nome para nome de produtos eletrônicos e altere a descrição para uma mais detalhada acerca do produto correspondente`.
+        3.  O Copilot ajustará o código, fornecendo nomes e descrições mais específicos e detalhados.
+
+*   **3.2. Explicação de Trechos de Código:**
+    *   **Cenário:** Entender um trecho de código existente.
+    *   **Interação:**
+        1.  Selecionar o trecho de código desejado.
+        2.  Clicar com o botão direito e selecionar `Copilot > Explain`.
+        3.  O Copilot abrirá o chat e, após permissão para acessar o repositório (se versionado) e autenticação GitHub, fornecerá uma explicação detalhada do código.
+    *   **Funcionalidades Adicionais:**
+        *   Pedir para **melhorar** ou **corrigir** o código.
+        *   Solicitar a explicação em **outras linguagens** (ex: `retornar em português de forma resumida`).
+
+*   **3.3. Geração de Mensagens de Commit:**
+    *   **Cenário:** Criar uma mensagem de commit descritiva para alterações no código.
+    *   **Interação:**
+        1.  Realizar alterações no código.
+        2.  Adicionar as alterações à *staging area* do Git.
+        3.  No painel de controle do Git no VS Code, clicar em **"Generate Commit Message with Copilot"**.
+        4.  O Copilot analisará as alterações e sugerirá uma mensagem de commit relevante.
+
+*   **Insight:** A capacidade do Copilot de gerar, explicar e refinar código, além de auxiliar em tarefas como a criação de commits, o posiciona como um verdadeiro "copiloto" no processo de desenvolvimento, acelerando tarefas repetitivas e auxiliando na compreensão. A qualidade da saída, no entanto, depende fortemente da clareza e especificidade das instruções fornecidas.      
+
 
 ### 🟩 Vídeo 04 - Como Conferir as Novidades do GitHub Copilot
 
@@ -91,7 +166,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conhecendo-o-github-copilot-aumentando-sua-produtividade-na-programacao/learning/8b03a344-f493-4ca7-8a75-4e038a1a3e3e?autoplay=1
 
 ##  Materiais de Apoio
 
