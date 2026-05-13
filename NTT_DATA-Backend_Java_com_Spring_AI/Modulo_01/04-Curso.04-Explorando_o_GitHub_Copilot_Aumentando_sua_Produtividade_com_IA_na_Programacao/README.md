@@ -197,5 +197,5 @@ A tecnologia de IA evolui rapidamente, e o vídeo destaca canais essenciais para
 
 # Certificado: Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/XI4QOS5T.pdf
+- Certificado em pdf: [Certificado-Explorando_o_GitHub_Copilot_Aumentando_sua_Produtividade_com_IA_na_Programacao.pdf](000-Midia_e_Anexos/Certificado-Explorando_o_GitHub_Copilot_Aumentando_sua_Produtividade_com_IA_na_Programacao.pdf)
