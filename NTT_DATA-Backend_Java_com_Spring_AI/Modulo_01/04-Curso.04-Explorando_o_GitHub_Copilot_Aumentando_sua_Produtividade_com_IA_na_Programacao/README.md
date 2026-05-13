@@ -49,7 +49,31 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conhecendo-o-github-copilot-aumentando-sua-produtividade-na-programacao/learning/6c5e7726-27b7-42ee-acf3-5c337d7ff5ef?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-13-10-56-34.png" alt="" width="840">
+</p>
+
+O vídeo resume as principais funcionalidades, benefícios e formas de acesso ao GitHub Copilot, uma ferramenta que está transformando a maneira como desenvolvedores escrevem e otimizam código.
+
+#### 1. Como ele aumenta a produtividade?
+A ferramenta foca em remover os "atritos" do dia a dia do desenvolvedor:
+*   **Automação de tarefas repetitivas:** Sugere códigos "boilerplate" e funções comuns automaticamente.
+*   **Redução de pesquisas externas:** Evita que o desenvolvedor precise sair da IDE para buscar soluções em fóruns ou documentações, economizando tempo precioso.
+*   **Sugestões Contextuais:** O Copilot analisa o código que você já escreveu para oferecer sugestões que façam sentido dentro do seu projeto específico.
+
+#### 2. Qualidade e Criatividade
+Além de velocidade, o Copilot auxilia na qualidade técnica:
+*   **Boas Práticas:** Sugere padrões de projeto conhecidos e melhorias na estrutura do código.
+*   **Suporte à Criatividade:** Pode oferecer abordagens e soluções que o desenvolvedor talvez não tivesse considerado inicialmente.
+
+#### 3. Planos e Acesso
+O GitHub oferece diferentes níveis de licenciamento:
+*   **Planos Disponíveis:** Free, Pro, Business e Enterprise.
+*   **GitHub Education:** Um grande diferencial. Estudantes, professores e mantenedores de projetos de código aberto podem ter acesso ao **GitHub Pro gratuitamente**, incluindo o Copilot, através do programa educacional.
 
 ### 🟩 Vídeo 03 - Explorando o GitHub Copilot na Prática
 
