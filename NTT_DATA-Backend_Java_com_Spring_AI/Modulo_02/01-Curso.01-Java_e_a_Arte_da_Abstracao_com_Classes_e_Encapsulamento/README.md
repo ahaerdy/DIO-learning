@@ -265,7 +265,7 @@ public record Person {
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-14-14h00m37s090.jpg" alt="" width="840">
 </p>
 
-O arquivo `Main.java` mostra a criação de uma instância de `Person` sem qualquer argumento: `var person = new Person();`. Um ícone de aviso (⚠) aparece na linha, indicando que o `record` ainda não possui atributos definidos no cabeçalho — portanto o construtor gerado automaticamente também não exige argumentos neste momento. O build anterior foi concluído com sucesso (`Build completed successfully in 687 ms`).
+O arquivo `Main.java` mostra a criação de uma instância de `Person` sem qualquer argumento: `var person = new Person();`. Um ícone de aviso (⚠) aparece na linha, indicando que o `record` ainda não possui atributos definidos no cabeçalho — portanto o construtor gerado automaticamente também não exige argumentos neste momento. 
 
 ```java
 public class Main {
@@ -430,6 +430,16 @@ public record Person(String name, int age) {
 ```
 
 > **Regra importante:** qualquer construtor secundário em um `record` **deve obrigatoriamente chamar o construtor canônico** via `this(...)`. Isso garante que todos os campos — que são `final` — recebam um valor antes de qualquer uso.      
+
+### Conclusão
+
+O record não é um substituto da classe convencional — ele tem um propósito bem definido: representar dados imutáveis de forma concisa. Enquanto uma classe comum exige que o desenvolvedor escreva manualmente o construtor, os getters, o equals, o hashCode e o toString, o record gera tudo isso automaticamente a partir dos atributos declarados no cabeçalho, reduzindo drasticamente o código repetitivo.
+
+A principal diferença em relação à classe está justamente na imutabilidade: uma vez instanciado, os valores de um record não podem ser alterados. Não há setters, e qualquer tentativa de criar um resulta em erro de compilação, pois os campos são implicitamente private final. Essa característica não é uma limitação acidental — é uma decisão de design intencional para garantir que o objeto carregue sempre um estado consistente e previsível.
+
+Na prática, o record é especialmente adequado para cenários como respostas de APIs, objetos de transferência de dados (DTOs), parâmetros agrupados de métodos e qualquer situação em que o objetivo seja transportar ou representar um conjunto de valores sem a necessidade de modificá-los depois. Em arquiteturas mais modernas, onde imutabilidade e previsibilidade são valorizadas, o record se torna uma ferramenta natural e expressiva.
+
+Introduzido de forma experimental no Java 14 e consolidado como recurso estável no Java 17 (LTS), o record reflete uma tendência da linguagem em absorver padrões que já eram comuns em Kotlin (com as data classes) e C# (com os record types). Conhecê-lo bem é entender não apenas uma nova sintaxe, mas uma forma diferente de pensar a modelagem de dados dentro da orientação a objetos.
 
 
 ## Parte 2 - Exercícios: Classes e Encapsulamento
