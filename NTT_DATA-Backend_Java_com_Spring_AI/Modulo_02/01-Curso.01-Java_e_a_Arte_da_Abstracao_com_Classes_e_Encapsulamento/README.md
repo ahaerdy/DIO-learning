@@ -11,15 +11,20 @@ Aqui está a versão revisada e reestruturada das suas anotações:
 
 ## 🎬 Vídeo 01 — Criando a Primeira Classe
 
-> 🔗 [Assistir aula na plataforma DIO](https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/java-e-a-arte-da-abstracao-com-classes-e-encapsulamento/learning/8367cdbe-ddde-4555-987a-5821f7e05e7f?autoplay=1)
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.05-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/java-e-a-arte-da-abstracao-com-classes-e-encapsulamento/learning/8367cdbe-ddde-4555-987a-5821f7e05e7f?autoplay=1)
 
 O vídeo revisa os fundamentos da Programação Orientada a Objetos (POO) em Java, com foco na **abstração de conceitos do mundo real para o software**, garantindo segurança, organização e reuso de código.
 
 ---
 
-## 📝 Anotações
+### 📝 Anotações
 
-### Exemplo 1 — O que acontece a cada `new`?
+#### Exemplo 1 — O que acontece a cada `new`?
 
 O professor apresenta o código abaixo para ilustrar que cada `new` aloca um novo objeto na memória Heap:
 
@@ -33,7 +38,7 @@ public class Main {
 }
 ```
 
-#### ⚠️ Problemas desse código
+##### ⚠️ Problemas desse código
 
 Embora a alocação de três objetos distintos na Heap esteja tecnicamente correta, o compartilhamento do mesmo recurso (`System.in`) gera três problemas sérios:
 
@@ -43,7 +48,7 @@ Embora a alocação de três objetos distintos na Heap esteja tecnicamente corre
 | **Vazamento de memória** | `Scanner` é um recurso "pesado"; instâncias desnecessárias desperdiçam memória. |
 | **Risco de exceção** | Fechar qualquer um dos scanners encerra `System.in` para todos os outros, causando erros em tempo de execução. |
 
-#### ✅ A forma correta
+##### ✅ A forma correta
 
 A solução é separar o **mecanismo de leitura** (um único `Scanner`) dos **dados lidos** (variáveis independentes). O scanner deve ser único; os dados capturados é que podem ocupar espaços distintos na memória.
 
@@ -83,11 +88,11 @@ public class Main {
 
 ---
 
-### Exemplo 2 — Criando e Usando uma Classe Própria
+#### Exemplo 2 — Criando e Usando uma Classe Própria
 
 O professor cria a classe `Person` para demonstrar como modelar entidades do mundo real em Java.
 
-#### Classe `Person` (versão do professor)
+##### Classe `Person` (versão do professor)
 
 ```java
 public class Person {
@@ -96,7 +101,7 @@ public class Person {
 }
 ```
 
-#### Classe `Main` (versão do professor)
+##### Classe `Main` (versão do professor)
 
 ```java
 public class Main {
@@ -116,7 +121,7 @@ public class Main {
 }
 ```
 
-#### Saída do programa
+##### Saída do programa
 
 ```
 Male name: João age: 10
@@ -127,7 +132,7 @@ Female name: Maria age: 10
 
 ---
 
-### 🔍 Análise Técnica — Por Que Atributos `public` São um Problema?
+##### 🔍 Análise Técnica — Por Que Atributos `public` São um Problema?
 
 O código acima viola um dos pilares fundamentais da POO: o **Encapsulamento**. Expor atributos com `public` apresenta quatro riscos principais:
 
@@ -149,11 +154,11 @@ Como demonstrado no exemplo, misturar referências (`male.name` com `female.age`
 
 ---
 
-### ✅ A Solução Correta — Encapsulamento com Getters e Setters
+##### ✅ A Solução Correta — Encapsulamento com Getters e Setters
 
 A correção é declarar os atributos como `private` e fornecer métodos públicos controlados de acesso (getters) e modificação (setters), com validações embutidas.
 
-#### Classe `Person` refatorada
+###### Classe `Person` refatorada
 
 ```java
 public class Person {
@@ -187,7 +192,7 @@ public class Person {
 }
 ```
 
-#### Classe `Main` refatorada
+###### Classe `Main` refatorada
 
 ```java
 public class Main {
@@ -214,7 +219,7 @@ public class Main {
 }
 ```
 
-#### Saída correta
+##### Saída correta
 
 ```
 Dados do masculino:
@@ -224,18 +229,16 @@ Dados do feminino:
 Nome: Maria | Idade: 10
 ```
 
----
+#### O que foi visto nesta aula
 
-### 📌 Resumo dos Conceitos do Vídeo
+Ao final da aula, o aluno saiu com um entendimento prático de como:
 
-| Conceito | Descrição |
-|---|---|
-| **`new`** | Aloca um novo objeto na memória Heap a cada chamada. |
-| **Atributo `public`** | Permite acesso direto de qualquer classe — viola o encapsulamento. |
-| **Atributo `private`** | Restringe o acesso à própria classe — boa prática de POO. |
-| **Getter** | Método público que retorna o valor de um atributo privado. |
-| **Setter** | Método público que valida e define o valor de um atributo privado. |
-| **`this`** | Referencia o atributo da instância atual, diferenciando-o de parâmetros homônimos. |
+- Modelar entidades do mundo real como classes Java;
+- Compreender que cada new cria um objeto independente na memória;
+- Aplicar encapsulamento com private e métodos de acesso;
+- Usar this para resolver conflitos de escopo;
+- Distinguir membros estáticos (da classe) de membros de instância;
+- Usar construtores para controlar como um objeto nasce, tornando obrigatório o fornecimento de dados essenciais desde a criação.
 
 ### 🟩 Vídeo 02 - Trabalhando com Records
 
