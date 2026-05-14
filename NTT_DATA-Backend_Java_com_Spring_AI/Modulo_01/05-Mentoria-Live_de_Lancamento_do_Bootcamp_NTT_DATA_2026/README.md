@@ -34,6 +34,8 @@ A NTT DATA reforça que o bootcamp não é apenas uma trilha de estudos, mas uma
 * **Integração Nativa de IA:** O desenvolvedor deve usar IA (como o Spring AI) para abstrair complexidades e focar na geração de valor.
 * **Fundamentos são Inegociáveis:** A IA não substitui a base. É essencial dominar Orientação a Objetos, herança, polimorfismo e lógica para validar se a IA está "alucinando" ou entregando soluções coerentes.
 
+---
+
 #### Requisitos e Habilidades Valorizadas
 
 ##### Hard Skills (Conhecimentos Técnicos)
@@ -53,6 +55,8 @@ A NTT DATA reforça que o bootcamp não é apenas uma trilha de estudos, mas uma
 * **Ownership:** Assumir a responsabilidade pelo próprio aprendizado e carreira.
 * **Colaboração:** "Levantar a mão" quando travar (regra dos 30 minutos) e ajudar colegas.
 
+---
+
 #### Cultura e Onboarding na NTT DATA
 
 * **"Júnior é Júnior":** A empresa não espera experiência prévia de quem está começando, mas espera fundamentação teórica e vontade de aprender.
@@ -61,6 +65,8 @@ A NTT DATA reforça que o bootcamp não é apenas uma trilha de estudos, mas uma
 * **Buddy System:** Um "padrinho" auxilia no aculturamento.
 * **Universidade Corporativa:** Trilhas de conhecimento síncronas e assíncronas.
 * **Diversidade:** Grupos focais para PCDs, mulheres, pretos, 40+ e neurodivergentes, garantindo suporte além da contratação.
+
+---
 
 #### Dicas de Ouro dos Mentores
 
