@@ -1,11 +1,11 @@
-## Instrutor
+# Mentoria: Live de Lançamento do Bootcamp NTT DATA 2026
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+▶️ [Assista no Youtube](https://youtu.be/tT4dUzg0ny8)
+
+# Resumo
 
 
 
-##  Materiais de Apoio
 
 # Certificado: 
 
