@@ -3,11 +3,109 @@
 - xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
 - Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
 
+## Parte 1 - Java e a Arte da Abstração com Classes e Encapsulamento
 
+### 🟩 Vídeo 01 - Criando a primeira Classe
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.05-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/java-e-a-arte-da-abstracao-com-classes-e-encapsulamento/learning/8367cdbe-ddde-4555-987a-5821f7e05e7f?autoplay=1
+
+O vídeo esume os fundamentos da POO, utilizando a linguagem Java como base. O foco principal é a abstração de conceitos do mundo real para o software, garantindo segurança, organização e reuso de código.
+
+### Anotações
+
+#### O Exemplo Conceitual do Professor 
+
+O código abaixo é apresentado pelo professor como forma de ilustrar que cada comando `new` cria um novo objeto na memória:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        var scanner1 = new Scanner(System.in);
+        var scanner2 = new Scanner(System.in);
+    }
+}
+
+```
+
+Observação:
+
+Embora ele de fato aloque três espaços diferentes na memória **Heap** para três objetos `Scanner`, ele cria um conflito de recursos:
+
+* **Conflito de I/O:** Todos os três objetos tentam controlar o mesmo recurso do sistema operacional: o `System.in` (teclado).
+* **Vazamento de Memória:** O `Scanner` é um recurso "pesado". Criar múltiplos objetos para a mesma função desperdiça memória.
+* **Risco de Exceções:** Se você fechar `scanner1`, o fluxo de entrada (`System.in`) será encerrado para todos os outros, causando erros no programa.
+
+O Código Correto e Eficiente
+
+A forma correta de gerenciar isso é separar o **mecanismo de leitura** (o objeto Scanner) dos **dados lidos** (as variáveis). O Scanner deve ser único, enquanto os dados capturados podem ocupar quantos espaços de memória forem necessários.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // 1. Criamos um ÚNICO mecanismo de leitura na memória Heap
+        var leitor = new Scanner(System.in);
+
+        // 2. Alocamos espaços de memória distintos para os DADOS (Strings)
+        // Cada 'nextLine()' captura uma entrada e a coloca em um novo endereço
+        System.out.println("Digite o valor para a variável 'scanner' (ex: um nome):");
+        String scanner = leitor.nextLine(); 
+
+        System.out.println("Digite o valor para a variável 'scanner2' (ex: um ID):");
+        String scanner2 = leitor.nextLine();
+
+        System.out.println("Digite o valor para a variável 'scanner3' (ex: uma cidade):");
+        String scanner3 = leitor.nextLine();
+
+        // 3. Demonstração de que os dados estão preservados em locais diferentes
+        System.out.println("\n--- Conteúdo Armazenado na Memória ---");
+        System.out.println("Variável dado1: " + scanner);
+        System.out.println("Variável dado2: " + scanner1);
+        System.out.println("Variável dado3: " + scanner2);
+
+        // 4. Fechamento do recurso (Boa prática de Engenharia de Software)
+        leitor.close();
+    }
+}
+
+```
+
+
+
+### 🟩 Vídeo 02 - Trabalhando com Records
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.05-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/java-e-a-arte-da-abstracao-com-classes-e-encapsulamento/learning/64263a12-13af-4f4c-b2ec-cb4c27b04d99?autoplay=1
+
+     
+
+
+## Parte 2 - Exercícios: Classes e Encapsulamento
+
+### 🟩 Vídeo 03 - Exercícios
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.05-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: 
 
 ##  Materiais de Apoio
 
 # Certificado: 
 
 - Link na plataforma: 
-- Certificado em pdf: 
+- Certificado em pdf:
