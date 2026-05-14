@@ -18,7 +18,7 @@ O vídeo esume os fundamentos da POO, utilizando a linguagem Java como base. O f
 
 ### Anotações
 
-#### O Exemplo Conceitual do Professor 
+#### Primeiro Exemplo
 
 O código abaixo é apresentado pelo professor como forma de ilustrar que cada comando `new` cria um novo objeto na memória:
 
@@ -80,7 +80,7 @@ public class Main {
 
 #### Segundo exemplo:
 
-Classe Main:
+##### Classe Main:
 ```java
 public class Main {
 
@@ -99,8 +99,7 @@ public class Main {
 }
 ```
 
-
-Classe Person:
+##### Classe Person:
 ```java
 public class Person {
 
@@ -110,14 +109,71 @@ public class Person {
 }
 ```
 
-Saída:
-
+##### Saída:
 ```plaintext
 Male name: João age: 10
 Female name: Maria age: 10
 
 Process finished with exit code 0
 ```
+
+#### Análise Técnica: O Problema do Acesso Direto a Atributos
+
+O exemplo fornecido ilustra uma prática que viola um dos pilares fundamentais da Programação Orientada a Objetos (POO): o **Encapsulamento**. Embora o código funcione tecnicamente para alocar memória e exibir dados, ele apresenta falhas graves de design e segurança que devem ser evitadas.
+
+##### Por que evitar o acesso direto às variáveis?
+
+Existem quatro motivos principais para evitar o uso de modificadores `public` em atributos de classe, como visto na classe `Person`:
+
+* **Falta de Controle e Validação**: Quando um atributo é `public`, qualquer parte do código pode inserir valores inválidos. Por exemplo, seria possível definir `male.age = -50;` ou `male.name = null;`, e a classe `Person` não teria como impedir ou validar essa entrada.
+* **Quebra do Encapsulamento**: O mundo externo não deveria saber *como* os dados são armazenados, apenas *o que* a classe pode fazer. O acesso direto expõe a estrutura interna, criando um acoplamento forte entre as classes.
+* **Dificuldade de Manutenção**: Se você decidir mudar o nome do atributo `age` para `dataNascimento` no futuro, terá que alterar manualmente todas as linhas de código em outras classes que acessavam `age` diretamente.
+* **Exposição de Erros de Lógica**: O próprio exemplo mostra como é fácil cometer erros de digitação ao acessar variáveis diretamente, como na linha `System.out.println("Male name: " + male.name + " age: " + female.age);`, onde a idade do objeto masculino foi substituída indevidamente pela do feminino.
+
+##### A Solução Correta: Getters e Setters
+
+Para corrigir o exemplo do professor e seguir os padrões de **Engenharia de Software** e **Engenharia de Dados** que você aplica em seus estudos, deve-se utilizar o modificador `private` e métodos de acesso.
+
+##### Classe Person Refatorada:
+
+```java
+public class Person {
+    // Atributos privados: ninguém acessa diretamente
+    private String name;
+    private int age;
+
+    // Métodos públicos para controlar o acesso
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if (name != null && !name.isEmpty()) {
+            this.name = name;
+        }
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age >= 0) { // Validação simples
+            this.age = age;
+        }
+    }
+}
+
+```
+
+##### Resumo das Diferenças
+
+| Aspecto | Acesso Direto (Evitar) | Encapsulamento (Recomendado) |
+| --- | --- | --- |
+| **Segurança** | Nula (qualquer valor é aceito) | Alta (validação via Setters) |
+| **Visibilidade** | `public` | `private` |
+| **Manutenção** | Difícil e propensa a erros | Centralizada e segura |
+| **Flexibilidade** | Rígida | Permite lógica interna oculta |
 
 
 ### 🟩 Vídeo 02 - Trabalhando com Records
