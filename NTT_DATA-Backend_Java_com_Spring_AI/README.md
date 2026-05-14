@@ -80,7 +80,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 2: Revisando os Fundamentos Técnicos de Java
 
-- [x] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/05-Mentoria-Live_de_Lancamento_do_Bootcamp_NTT_DATA_2026/000-Midia_e_Anexos)
+- [x] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/01-Curso.01-Java_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento)
 - [ ] Curso: [Herança e Polimorfismo em Java](Modulo_02/)
 - [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_02/0)
 - [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_02/)
