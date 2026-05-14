@@ -1,12 +1,3 @@
-## Instrutor
-
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
-
-Aqui está a versão revisada e reestruturada das suas anotações:
-
----
-
 # Parte 1 — Java e a Arte da Abstração com Classes e Encapsulamento
 
 ## 🎬 Vídeo 01 — Criando a Primeira Classe
@@ -22,7 +13,7 @@ O vídeo revisa os fundamentos da Programação Orientada a Objetos (POO) em Jav
 
 ---
 
-### 📝 Anotações
+### Anotações
 
 #### Exemplo 1 — O que acontece a cada `new`?
 
@@ -249,7 +240,11 @@ Ao final da aula, o aluno saiu com um entendimento prático de como:
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/java-e-a-arte-da-abstracao-com-classes-e-encapsulamento/learning/64263a12-13af-4f4c-b2ec-cb4c27b04d99?autoplay=1
 
-     
+Este vídeo aprofunda o conceito de **Records** no Java, uma funcionalidade introduzida para simplificar a criação de classes que servem puramente como transportadoras de dados imutáveis.  
+
+### Anotações
+
+      
 
 
 ## Parte 2 - Exercícios: Classes e Encapsulamento
