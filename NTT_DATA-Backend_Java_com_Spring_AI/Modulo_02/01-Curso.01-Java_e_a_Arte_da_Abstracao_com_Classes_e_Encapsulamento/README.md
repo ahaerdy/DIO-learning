@@ -67,9 +67,9 @@ public class Main {
 
         // 3. Demonstração de que os dados estão preservados em locais diferentes
         System.out.println("\n--- Conteúdo Armazenado na Memória ---");
-        System.out.println("Variável dado1: " + scanner);
-        System.out.println("Variável dado2: " + scanner1);
-        System.out.println("Variável dado3: " + scanner2);
+        System.out.println("Variável scanner: " + scanner);
+        System.out.println("Variável scanner2: " + scanner1);
+        System.out.println("Variável scanner3: " + scanner2);
 
         // 4. Fechamento do recurso (Boa prática de Engenharia de Software)
         leitor.close();
