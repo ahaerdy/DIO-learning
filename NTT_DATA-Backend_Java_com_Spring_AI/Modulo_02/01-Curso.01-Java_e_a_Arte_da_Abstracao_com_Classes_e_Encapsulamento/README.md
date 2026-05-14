@@ -33,15 +33,15 @@ public class Main {
 
 ```
 
-Observação:
+##### Observação:
 
-Embora ele de fato aloque três espaços diferentes na memória **Heap** para três objetos `Scanner`, ele cria um conflito de recursos:
+Embora ele de fato aloque três espaços diferentes na memória **Heap** para três objetos `Scanner`, isto cria um conflito de recursos:
 
-* **Conflito de I/O:** Todos os três objetos tentam controlar o mesmo recurso do sistema operacional: o `System.in` (teclado).
-* **Vazamento de Memória:** O `Scanner` é um recurso "pesado". Criar múltiplos objetos para a mesma função desperdiça memória.
-* **Risco de Exceções:** Se você fechar `scanner1`, o fluxo de entrada (`System.in`) será encerrado para todos os outros, causando erros no programa.
+* **Conflito de I/O:** todos os três objetos tentam controlar o mesmo recurso do sistema operacional: o `System.in` (teclado).
+* **Vazamento de Memória:** o `Scanner` é um recurso "pesado". Criar múltiplos objetos para a mesma função desperdiça memória.
+* **Risco de Exceções:** se você fechar `scanner1`, o fluxo de entrada (`System.in`) será encerrado para todos os outros, causando erros no programa.
 
-O Código Correto e Eficiente
+##### O Código Correto e Eficiente
 
 A forma correta de gerenciar isso é separar o **mecanismo de leitura** (o objeto Scanner) dos **dados lidos** (as variáveis). O Scanner deve ser único, enquanto os dados capturados podem ocupar quantos espaços de memória forem necessários.
 
@@ -78,6 +78,46 @@ public class Main {
 
 ```
 
+#### Segundo exemplo:
+
+Classe Main:
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var male = new Person();
+        male.name = "João";
+        male.age = 12;
+
+        var female = new Person();
+        female.name = "Maria";
+        female.age = 10;
+
+        System.out.println("Male name: " + male.name + " age: " + female.age);
+        System.out.println("Female name: " + female.name + " age: " + female.age);
+    }
+}
+```
+
+
+Classe Person:
+```java
+public class Person {
+
+    public String name;
+
+    public int age;
+}
+```
+
+Saída:
+
+```plaintext
+Male name: João age: 10
+Female name: Maria age: 10
+
+Process finished with exit code 0
+```
 
 
 ### 🟩 Vídeo 02 - Trabalhando com Records
