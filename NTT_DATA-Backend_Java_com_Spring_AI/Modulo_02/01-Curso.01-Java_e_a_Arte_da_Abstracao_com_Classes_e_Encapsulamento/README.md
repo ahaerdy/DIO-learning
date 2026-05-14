@@ -3,47 +3,49 @@
 - xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
 - Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
 
-## Parte 1 - Java e a Arte da Abstração com Classes e Encapsulamento
+Aqui está a versão revisada e reestruturada das suas anotações:
 
-### 🟩 Vídeo 01 - Criando a primeira Classe
+---
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.05-video_01.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+# Parte 1 — Java e a Arte da Abstração com Classes e Encapsulamento
 
-link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/java-e-a-arte-da-abstracao-com-classes-e-encapsulamento/learning/8367cdbe-ddde-4555-987a-5821f7e05e7f?autoplay=1
+## 🎬 Vídeo 01 — Criando a Primeira Classe
 
-O vídeo esume os fundamentos da POO, utilizando a linguagem Java como base. O foco principal é a abstração de conceitos do mundo real para o software, garantindo segurança, organização e reuso de código.
+> 🔗 [Assistir aula na plataforma DIO](https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/java-e-a-arte-da-abstracao-com-classes-e-encapsulamento/learning/8367cdbe-ddde-4555-987a-5821f7e05e7f?autoplay=1)
 
-### Anotações
+O vídeo revisa os fundamentos da Programação Orientada a Objetos (POO) em Java, com foco na **abstração de conceitos do mundo real para o software**, garantindo segurança, organização e reuso de código.
 
-#### Primeiro Exemplo
+---
 
-O código abaixo é apresentado pelo professor como forma de ilustrar que cada comando `new` cria um novo objeto na memória:
+## 📝 Anotações
+
+### Exemplo 1 — O que acontece a cada `new`?
+
+O professor apresenta o código abaixo para ilustrar que cada `new` aloca um novo objeto na memória Heap:
 
 ```java
 public class Main {
     public static void main(String[] args) {
-        var scanner = new Scanner(System.in);
+        var scanner  = new Scanner(System.in);
         var scanner1 = new Scanner(System.in);
         var scanner2 = new Scanner(System.in);
     }
 }
-
 ```
 
-##### Observação:
+#### ⚠️ Problemas desse código
 
-Embora ele de fato aloque três espaços diferentes na memória **Heap** para três objetos `Scanner`, isto cria um conflito de recursos:
+Embora a alocação de três objetos distintos na Heap esteja tecnicamente correta, o compartilhamento do mesmo recurso (`System.in`) gera três problemas sérios:
 
-* **Conflito de I/O:** todos os três objetos tentam controlar o mesmo recurso do sistema operacional: o `System.in` (teclado).
-* **Vazamento de Memória:** o `Scanner` é um recurso "pesado". Criar múltiplos objetos para a mesma função desperdiça memória.
-* **Risco de Exceções:** se você fechar `scanner1`, o fluxo de entrada (`System.in`) será encerrado para todos os outros, causando erros no programa.
+| Problema | Descrição |
+|---|---|
+| **Conflito de I/O** | Os três objetos disputam o controle do mesmo fluxo de entrada (`System.in`). |
+| **Vazamento de memória** | `Scanner` é um recurso "pesado"; instâncias desnecessárias desperdiçam memória. |
+| **Risco de exceção** | Fechar qualquer um dos scanners encerra `System.in` para todos os outros, causando erros em tempo de execução. |
 
-##### O Código Correto e Eficiente
+#### ✅ A forma correta
 
-A forma correta de gerenciar isso é separar o **mecanismo de leitura** (o objeto Scanner) dos **dados lidos** (as variáveis). O Scanner deve ser único, enquanto os dados capturados podem ocupar quantos espaços de memória forem necessários.
+A solução é separar o **mecanismo de leitura** (um único `Scanner`) dos **dados lidos** (variáveis independentes). O scanner deve ser único; os dados capturados é que podem ocupar espaços distintos na memória.
 
 ```java
 import java.util.Scanner;
@@ -51,154 +53,189 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        // 1. Criamos um ÚNICO mecanismo de leitura na memória Heap
+
+        // 1. Um único mecanismo de leitura na memória Heap
         var leitor = new Scanner(System.in);
 
-        // 2. Alocamos espaços de memória distintos para os DADOS (Strings)
-        // Cada 'nextLine()' captura uma entrada e a coloca em um novo endereço
-        System.out.println("Digite o valor para a variável 'scanner' (ex: um nome):");
-        String scanner = leitor.nextLine(); 
+        // 2. Variáveis distintas armazenam cada dado capturado
+        System.out.println("Digite um nome:");
+        String nome = leitor.nextLine();
 
-        System.out.println("Digite o valor para a variável 'scanner2' (ex: um ID):");
-        String scanner2 = leitor.nextLine();
+        System.out.println("Digite um ID:");
+        String id = leitor.nextLine();
 
-        System.out.println("Digite o valor para a variável 'scanner3' (ex: uma cidade):");
-        String scanner3 = leitor.nextLine();
+        System.out.println("Digite uma cidade:");
+        String cidade = leitor.nextLine();
 
-        // 3. Demonstração de que os dados estão preservados em locais diferentes
-        System.out.println("\n--- Conteúdo Armazenado na Memória ---");
-        System.out.println("Variável scanner: " + scanner);
-        System.out.println("Variável scanner2: " + scanner1);
-        System.out.println("Variável scanner3: " + scanner2);
+        // 3. Exibição dos dados armazenados
+        System.out.println("\n--- Conteúdo Armazenado ---");
+        System.out.println("Nome:   " + nome);
+        System.out.println("ID:     " + id);
+        System.out.println("Cidade: " + cidade);
 
-        // 4. Fechamento do recurso (Boa prática de Engenharia de Software)
+        // 4. Boa prática: fechar o recurso ao final
         leitor.close();
     }
 }
-
 ```
 
-#### Segundo exemplo:
+> 💡 **Conclusão:** o objeto `Scanner` é o *instrumento* de leitura; as variáveis `String` são os *recipientes* dos dados. Confundir os dois papéis é um erro de design comum em iniciantes.
 
-##### Classe Main:
+---
+
+### Exemplo 2 — Criando e Usando uma Classe Própria
+
+O professor cria a classe `Person` para demonstrar como modelar entidades do mundo real em Java.
+
+#### Classe `Person` (versão do professor)
+
+```java
+public class Person {
+    public String name;
+    public int age;
+}
+```
+
+#### Classe `Main` (versão do professor)
+
 ```java
 public class Main {
 
     public static void main(String[] args) {
         var male = new Person();
         male.name = "João";
-        male.age = 12;
+        male.age  = 12;
 
         var female = new Person();
         female.name = "Maria";
-        female.age = 10;
+        female.age  = 10;
 
-        System.out.println("Male name: " + male.name + " age: " + female.age);
+        System.out.println("Male name: "   + male.name   + " age: " + female.age); // ← bug!
         System.out.println("Female name: " + female.name + " age: " + female.age);
     }
 }
 ```
 
-##### Classe Person:
-```java
-public class Person {
+#### Saída do programa
 
-    public String name;
-
-    public int age;
-}
 ```
-
-##### Saída:
-```plaintext
 Male name: João age: 10
 Female name: Maria age: 10
-
-Process finished with exit code 0
 ```
 
-#### Análise Técnica: O Problema do Acesso Direto a Atributos
+> 🐛 **Bug na saída:** a primeira linha imprime a idade de `female` no lugar de `male`. Esse erro passou despercebido justamente porque os atributos são acessados diretamente, sem nenhuma camada de controle — evidenciando um problema estrutural de design.
 
-O exemplo fornecido ilustra uma prática que viola um dos pilares fundamentais da Programação Orientada a Objetos (POO): o **Encapsulamento**. Embora o código funcione tecnicamente para alocar memória e exibir dados, ele apresenta falhas graves de design e segurança que devem ser evitadas.
+---
 
-##### Por que evitar o acesso direto às variáveis?
+### 🔍 Análise Técnica — Por Que Atributos `public` São um Problema?
 
-Existem quatro motivos principais para evitar o uso de modificadores `public` em atributos de classe, como visto na classe `Person`:
+O código acima viola um dos pilares fundamentais da POO: o **Encapsulamento**. Expor atributos com `public` apresenta quatro riscos principais:
 
-* **Falta de Controle e Validação**: Quando um atributo é `public`, qualquer parte do código pode inserir valores inválidos. Por exemplo, seria possível definir `male.age = -50;` ou `male.name = null;`, e a classe `Person` não teria como impedir ou validar essa entrada.
-* **Quebra do Encapsulamento**: O mundo externo não deveria saber *como* os dados são armazenados, apenas *o que* a classe pode fazer. O acesso direto expõe a estrutura interna, criando um acoplamento forte entre as classes.
-* **Dificuldade de Manutenção**: Se você decidir mudar o nome do atributo `age` para `dataNascimento` no futuro, terá que alterar manualmente todas as linhas de código em outras classes que acessavam `age` diretamente.
-* **Exposição de Erros de Lógica**: O próprio exemplo mostra como é fácil cometer erros de digitação ao acessar variáveis diretamente, como na linha `System.out.println("Male name: " + male.name + " age: " + female.age);`, onde a idade do objeto masculino foi substituída indevidamente pela do feminino.
+**1. Falta de validação**
+Qualquer parte do código pode inserir valores inválidos sem que a classe possa reagir:
+```java
+male.age  = -50;   // age negativo: inválido, mas aceito
+male.name = null;  // null: pode causar NullPointerException
+```
 
-##### A Solução Correta: Getters e Setters
+**2. Quebra do encapsulamento**
+O mundo externo passa a conhecer *como* os dados são armazenados internamente, criando um acoplamento forte entre as classes. O ideal é que o exterior saiba apenas *o que* a classe faz, não *como* ela faz.
 
-Para corrigir o exemplo do professor e seguir os padrões de **Engenharia de Software** e **Engenharia de Dados** deve-se utilizar o modificador `private` e métodos de acesso.
+**3. Dificuldade de manutenção**
+Se o atributo `age` precisar ser renomeado para `birthDate` no futuro, será necessário alterar manualmente todas as referências diretas espalhadas pelo projeto.
 
-##### Classe Person Refatorada:
+**4. Erros de lógica silenciosos**
+Como demonstrado no exemplo, misturar referências (`male.name` com `female.age`) não gera erro de compilação — o bug só aparece na saída, tornando-o difícil de rastrear.
+
+---
+
+### ✅ A Solução Correta — Encapsulamento com Getters e Setters
+
+A correção é declarar os atributos como `private` e fornecer métodos públicos controlados de acesso (getters) e modificação (setters), com validações embutidas.
+
+#### Classe `Person` refatorada
 
 ```java
 public class Person {
-    // Atributos privados: ninguém acessa diretamente
+
+    // Atributos privados: inacessíveis diretamente de fora da classe
     private String name;
     private int age;
 
-    // Métodos públicos para controlar o acesso
+    // --- Getter e Setter para 'name' ---
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         if (name != null && !name.isEmpty()) {
-            // this.name -> refere-se ao atributo privado da classe
-            // name      -> refere-se ao parâmetro recebido no método
-            this.name = name;
+            this.name = name; // 'this.name' → atributo da classe
+                              // 'name'      → parâmetro do método
         }
     }
 
+    // --- Getter e Setter para 'age' ---
     public int getAge() {
         return age;
     }
 
     public void setAge(int age) {
-        if (age >= 0) { // Validação simples
-            // this.age -> refere-se ao atributo privado da classe
-            // age      -> refere-se ao parâmetro recebido no método
+        if (age >= 0) {       // Validação: idade não pode ser negativa
             this.age = age;
         }
     }
 }
-
 ```
 
-##### Classe Main refatorada
+#### Classe `Main` refatorada
 
 ```java
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        // 1. Instância do objeto Masculino
+
+        // Objeto masculino
         var male = new Person();
-        // Em vez de male.name = "João", usamos o Setter:
         male.setName("João");
         male.setAge(12);
 
-        // 2. Instância do objeto Feminino
+        // Objeto feminino
         var female = new Person();
         female.setName("Maria");
         female.setAge(10);
 
-        // 3. Impressão utilizando Getters
-        // Agora o risco de erro de lógica (como trocar as idades) diminui pela clareza dos métodos
-        System.out.println("Dados do Masculino:");
+        // Impressão via getters — clara, sem risco de trocar referências
+        System.out.println("Dados do masculino:");
         System.out.println("Nome: " + male.getName() + " | Idade: " + male.getAge());
 
-        System.out.println("\nDados do Feminino:");
+        System.out.println("\nDados do feminino:");
         System.out.println("Nome: " + female.getName() + " | Idade: " + female.getAge());
     }
 }
 ```
+
+#### Saída correta
+
+```
+Dados do masculino:
+Nome: João | Idade: 12
+
+Dados do feminino:
+Nome: Maria | Idade: 10
+```
+
+---
+
+### 📌 Resumo dos Conceitos do Vídeo
+
+| Conceito | Descrição |
+|---|---|
+| **`new`** | Aloca um novo objeto na memória Heap a cada chamada. |
+| **Atributo `public`** | Permite acesso direto de qualquer classe — viola o encapsulamento. |
+| **Atributo `private`** | Restringe o acesso à própria classe — boa prática de POO. |
+| **Getter** | Método público que retorna o valor de um atributo privado. |
+| **Setter** | Método público que valida e define o valor de um atributo privado. |
+| **`this`** | Referencia o atributo da instância atual, diferenciando-o de parâmetros homônimos. |
 
 ### 🟩 Vídeo 02 - Trabalhando com Records
 
