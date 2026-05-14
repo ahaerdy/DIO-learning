@@ -132,7 +132,7 @@ Existem quatro motivos principais para evitar o uso de modificadores `public` em
 
 ##### A Solução Correta: Getters e Setters
 
-Para corrigir o exemplo do professor e seguir os padrões de **Engenharia de Software** e **Engenharia de Dados** que você aplica em seus estudos, deve-se utilizar o modificador `private` e métodos de acesso.
+Para corrigir o exemplo do professor e seguir os padrões de **Engenharia de Software** e **Engenharia de Dados** deve-se utilizar o modificador `private` e métodos de acesso.
 
 ##### Classe Person Refatorada:
 
@@ -149,6 +149,8 @@ public class Person {
 
     public void setName(String name) {
         if (name != null && !name.isEmpty()) {
+            // this.name -> refere-se ao atributo privado da classe
+            // name      -> refere-se ao parâmetro recebido no método
             this.name = name;
         }
     }
@@ -159,6 +161,8 @@ public class Person {
 
     public void setAge(int age) {
         if (age >= 0) { // Validação simples
+            // this.age -> refere-se ao atributo privado da classe
+            // age      -> refere-se ao parâmetro recebido no método
             this.age = age;
         }
     }
@@ -166,15 +170,35 @@ public class Person {
 
 ```
 
-##### Resumo das Diferenças
+##### Classe Main refatorada
 
-| Aspecto | Acesso Direto (Evitar) | Encapsulamento (Recomendado) |
-| --- | --- | --- |
-| **Segurança** | Nula (qualquer valor é aceito) | Alta (validação via Setters) |
-| **Visibilidade** | `public` | `private` |
-| **Manutenção** | Difícil e propensa a erros | Centralizada e segura |
-| **Flexibilidade** | Rígida | Permite lógica interna oculta |
+```java
+import java.util.Scanner;
 
+public class Main {
+
+    public static void main(String[] args) {
+        // 1. Instância do objeto Masculino
+        var male = new Person();
+        // Em vez de male.name = "João", usamos o Setter:
+        male.setName("João");
+        male.setAge(12);
+
+        // 2. Instância do objeto Feminino
+        var female = new Person();
+        female.setName("Maria");
+        female.setAge(10);
+
+        // 3. Impressão utilizando Getters
+        // Agora o risco de erro de lógica (como trocar as idades) diminui pela clareza dos métodos
+        System.out.println("Dados do Masculino:");
+        System.out.println("Nome: " + male.getName() + " | Idade: " + male.getAge());
+
+        System.out.println("\nDados do Feminino:");
+        System.out.println("Nome: " + female.getName() + " | Idade: " + female.getAge());
+    }
+}
+```
 
 ### 🟩 Vídeo 02 - Trabalhando com Records
 
