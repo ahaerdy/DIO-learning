@@ -242,7 +242,194 @@ Este vídeo aprofunda o conceito de **Records** no Java, uma funcionalidade intr
 
 ### Anotações
 
-      
+#### Tentativa de declarar campo de instância em um `record`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-14-14h00m14s384.jpg" alt="" width="840">
+</p>
+
+O editor exibe o arquivo `Person.java` com a declaração de um `record`. Logo abaixo do cabeçalho `public record P...`, foi tentada a declaração de um campo de instância `private Str...`, o que gerou imediatamente o aviso **"Instance field is not allowed in record"**. O IntelliJ oferece a sugestão de transformar o campo em `static` como alternativa viável. No painel lateral, a documentação da classe `String` é exibida como contexto da IDE, sem relação direta com o erro.
+
+> **Ponto-chave:** Em um `record`, **não é permitido declarar campos de instância no corpo da declaração**. A única forma aceita de definir atributos é na lista de parâmetros do cabeçalho do `record` — que também funciona como o seu construtor canônico.
+
+```java
+// Incorreto — gera erro de compilação em um record
+public record Person {
+    private String name; // ❌ Instance field is not allowed in record
+}
+```
+
+#### Instanciando um `record` sem argumentos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-14-14h00m37s090.jpg" alt="" width="840">
+</p>
+
+O arquivo `Main.java` mostra a criação de uma instância de `Person` sem qualquer argumento: `var person = new Person();`. Um ícone de aviso (⚠) aparece na linha, indicando que o `record` ainda não possui atributos definidos no cabeçalho — portanto o construtor gerado automaticamente também não exige argumentos neste momento. O build anterior foi concluído com sucesso (`Build completed successfully in 687 ms`).
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var person = new Person(); // ⚠ record sem atributos declarados
+    }
+
+}
+```
+
+> Neste estágio, `Person` é um `record` vazio. A instanciação funciona, mas o objeto ainda não carrega nenhum dado.
+
+#### Acesso a atributos privados e o getter gerado automaticamente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-14-14h00m52s435.jpg" alt="" width="840">
+</p>
+
+O `record Person` já possui os atributos `String name` e `int age` declarados no cabeçalho. Em `Main.java`, a instância é criada com `new Person(name: "João", age: 12)` e impressa com `System.out.println(person)`. Na linha 6, a tentativa de acessar `person.name` (sem parênteses, como se fosse campo público) gerou o aviso **"'name' has private access in 'Person'"**, visível tanto no popup de sugestão quanto na barra de status inferior.
+
+O console, referente a uma execução anterior, já exibiu a saída correta via `toString`:
+
+```
+Person[name=João]
+```
+
+> **Regra do `record`:** todos os atributos declarados no cabeçalho são automaticamente `private final`. O acesso de leitura se dá por meio de um **método getter gerado automaticamente**, cujo nome é idêntico ao do atributo — `name()` em vez do convencional `getName()`.
+
+```java
+// Incorreto
+System.out.println(person.name);   // ❌ private access
+
+// Correto
+System.out.println(person.name()); // ✅ getter gerado pelo record
+```
+
+#### Usando o getter e criando uma segunda instância
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-14-14h01m29s594.jpg" alt="" width="840">
+</p>
+
+`Main.java` demonstra o uso correto do getter `person.name()` e a criação de um segundo objeto `newPerson` reaproveitando o nome do primeiro mas com idade diferente. O console confirma o comportamento esperado:
+
+```
+Person[name=João, age=12]
+João
+```
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var person = new Person(name: "João", age: 12);
+        System.out.println(person);
+        System.out.println(person.name()); // getter gerado automaticamente
+
+        var newPerson = new Person(person.name(), age: 13); // nova instância independente
+    }
+
+}
+```
+
+> Como `record`s são **imutáveis**, não existe setter. Para "alterar" um valor, é necessário criar uma nova instância — exatamente como ilustrado com `newPerson`. Os dois objetos são independentes entre si.
+
+#### Construtor compacto (*compact constructor*)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-14-14h01m35s189.jpg" alt="" width="840">
+</p>
+
+`Person.java` exibe o `record` com um **construtor compacto** declarado explicitamente (`public Person{...}`). Dentro dele, quatro chamadas a `System.out.println` imprimem separadores e os valores de `name` e `age`. O console ao fundo mostra a saída produzida quando esse construtor foi executado durante a instanciação:
+
+```
+========
+João
+12
+========end
+Person[name=João, age=12]
+João
+```
+
+```java
+public record Person(String name, int age) {
+
+    // Construtor compacto — executado após a atribuição automática dos campos
+    public Person {
+        System.out.println("========");
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println("========");
+    }
+
+}
+```
+
+> O construtor compacto **não recebe parâmetros explícitos** e **não atribui os campos** — essa atribuição já é feita automaticamente pelo `record` antes de entrar no bloco. Seu uso mais comum é a **validação de dados**: rejeitar valores nulos, verificar regras de negócio, etc.
+
+#### Visualizando o fluxo completo de execução
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-14-14h01m43s185.jpg" alt="" width="840">
+</p>
+
+`Main.java` revisado, sem a linha `newPerson`, mostra o fluxo limpo de criação e leitura. O console exibe a ordem completa de execução, confirmando que o construtor compacto é chamado **durante a instanciação**, antes que qualquer `println` do `main` seja executado:
+
+```
+========
+João
+12
+========end
+Person[name=João, age=12]
+João
+```
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var person = new Person(name: "João", age: 12); // construtor compacto dispara aqui
+        System.out.println(person);         // Person[name=João, age=12]
+        System.out.println(person.name()); // João
+    }
+
+}
+```
+
+> A sequência do console deixa claro o ciclo de vida: primeiro o `record` atribui os campos, depois executa o construtor compacto, e só então o controle retorna ao `main`.
+
+#### Construtor secundário e método personalizado no `record`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-14-14h01m57s783.jpg" alt="" width="840">
+</p>
+
+`Person.java` apresenta três elementos adicionais do `record`:
+
+1. **Construtor compacto vazio** (linhas 3–5) — declarado sem conteúdo, apenas para evidenciar sua existência.
+2. **Construtor secundário** (linhas 7–9) — aceita apenas `String name` e delega ao construtor canônico via `this(name, age: 1)`, definindo `age` com valor padrão `1`.
+3. **Método personalizado `getInfo()`** (linhas 11–13) — retorna uma `String` formatada com `name` e `age`.
+
+```java
+public record Person(String name, int age) {
+
+    // Construtor compacto (vazio — sem lógica adicional)
+    public Person {
+
+    }
+
+    // Construtor secundário — obrigatório delegar ao construtor canônico
+    public Person(String name) {
+        this(name, 1); // age recebe valor padrão
+    }
+
+    // Método personalizado
+    public String getInfo() {
+        return "Name: " + name + " age: " + age;
+    }
+
+}
+```
+
+> **Regra importante:** qualquer construtor secundário em um `record` **deve obrigatoriamente chamar o construtor canônico** via `this(...)`. Isso garante que todos os campos — que são `final` — recebam um valor antes de qualquer uso.      
 
 
 ## Parte 2 - Exercícios: Classes e Encapsulamento
