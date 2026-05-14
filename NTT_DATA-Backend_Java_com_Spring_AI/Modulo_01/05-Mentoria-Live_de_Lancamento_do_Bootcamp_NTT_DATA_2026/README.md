@@ -74,8 +74,3 @@ A NTT DATA reforça que o bootcamp não é apenas uma trilha de estudos, mas uma
 2. **Prática constante:** Aplique a teoria em projetos pequenos e alimente seu GitHub.
 3. **Raciocínio sobre Ferramenta:** Em entrevistas, foque em explicar **como** você resolveu um problema e por que tomou certas decisões arquiteturais.
 4. **LinkedIn:** Mantenha seu perfil atualizado e interaja com a comunidade e recrutadores.
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
