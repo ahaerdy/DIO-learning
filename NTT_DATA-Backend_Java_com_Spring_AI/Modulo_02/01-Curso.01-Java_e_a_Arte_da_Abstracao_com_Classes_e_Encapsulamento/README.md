@@ -11,8 +11,6 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/j
 
 O vídeo revisa os fundamentos da Programação Orientada a Objetos (POO) em Java, com foco na **abstração de conceitos do mundo real para o software**, garantindo segurança, organização e reuso de código.
 
----
-
 ### Anotações
 
 #### Exemplo 1 — O que acontece a cada `new`?
