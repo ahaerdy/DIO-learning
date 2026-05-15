@@ -1,3 +1,8 @@
+## Instrutor
+
+- José Luiz Abreu Cardoso Junior (Engenheiro de software sênior)
+- Contato Linkedin: / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/)
+
 # Parte 1 — Java e a Arte da Abstração com Classes e Encapsulamento
 
 ## 🎬 Vídeo 01 — Criando a Primeira Classe
