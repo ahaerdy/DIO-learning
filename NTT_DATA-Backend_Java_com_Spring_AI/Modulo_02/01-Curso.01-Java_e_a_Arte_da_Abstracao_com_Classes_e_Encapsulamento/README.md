@@ -1115,6 +1115,12 @@ java Main
 
 Ou, se estiver usando uma IDE como IntelliJ IDEA ou Eclipse, basta abrir o projeto e executar a classe `Main`.
 
+#### Fluxograma do Algoritmo PetMachine
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-15-13-20-29.png" alt="" width="1024">
+</p>
+
 ##  Materiais de Apoio
 
 Os materiais complementares e de apoio que oferecemos têm como objetivo fornecer informações para facilitar e enriquecer a sua jornada de aprendizado no curso "Java e a Arte da Abstração com Classes e Encapsulamento". Aqui você encontrará links úteis, como slides, repositórios e páginas oficiais, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
