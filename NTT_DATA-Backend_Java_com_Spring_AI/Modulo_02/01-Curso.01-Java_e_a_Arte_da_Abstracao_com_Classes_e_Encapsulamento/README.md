@@ -491,7 +491,7 @@ Siga as seguintes regras para implementação
    - O abastecimento de água e shampoo deve permitir 2 litros por vez que for acionado;
 ```
 
-#### Resumo das Especificações
+#### Tabela RESUMO
 
 | Regra | Detalhe |
 |---|---|
