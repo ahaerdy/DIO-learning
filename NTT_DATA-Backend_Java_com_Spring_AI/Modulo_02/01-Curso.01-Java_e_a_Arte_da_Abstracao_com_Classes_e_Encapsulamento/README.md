@@ -1141,5 +1141,5 @@ Para se desenvolver ainda mais e se destacar na DIO e no mercado de trabalho, su
 
 # Certificado: Java e a Arte da Abstração com Classes e Encapsulamento
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/YTACYY7E.pdf
+- Certificado em pdf: [Certificado-ava_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento.pdf](000-Midia_e_Anexos/Certificado-ava_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento.pdf)
