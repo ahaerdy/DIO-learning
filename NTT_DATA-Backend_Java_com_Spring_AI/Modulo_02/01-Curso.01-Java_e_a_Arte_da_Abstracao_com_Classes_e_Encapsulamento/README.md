@@ -463,12 +463,38 @@ O vídeo apresenta uma série de exercícios de programação orientada a objeto
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-15-12-06-07.png" alt="" width="480">
+</p>
+
+Os exercícios encontram-se discriminados no link: https://github.com/digitalinnovationone/exercicios-java-basico/blob/main/exercicios/3%20-%20Java%20e%20a%20Arte%20da%20Abstra%C3%A7%C3%A3o%20com%20Classes%20e%20Encapsulamento.md
+
+O exercício escolhido foi o terceiro, cujas especificações encontram-se abaixo disciminadas.
+
+```javascript
+3. Escreva um código onde temos o controle de banho de um petshop, a maquina de banhos dos pets deve ter as seguintes operações:
+   - Dar banho no pet;
+   - Abastecer com água;
+   - Abastecer com shampoo;
+   - verificar nivel de água;
+   - verificar nivel de shampoo;
+   - verificar se tem pet no banho;
+   - colocar pet na maquina;
+   - retirar pet da máquina;
+   - limpar maquina.
+
+Siga as seguintes regras para implementação
+
+   - A maquina de banho deve permitir somente 1 pet por vez;
+   - Cada banho realizado irá consumir 10 litros de água e 2 litros de shampoo;
+   - A máquina tem capacidade máxima de 30 litros de água e 10 litros de shampoo;
+   - Se o pet for retirado da maquina sem estar limpo será necessário limpar a máquina para permitir a entrada de outro pet;
+   - A limpeza da máquina ira consumir 3 litros de água e 1 litro de shampoo;
+   - O abastecimento de água e shampoo deve permitir 2 litros por vez que for acionado;
+```
 
 
 ##  Materiais de Apoio
-
-
 
 Os materiais complementares e de apoio que oferecemos têm como objetivo fornecer informações para facilitar e enriquecer a sua jornada de aprendizado no curso "Java e a Arte da Abstração com Classes e Encapsulamento". Aqui você encontrará links úteis, como slides, repositórios e páginas oficiais, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
 
