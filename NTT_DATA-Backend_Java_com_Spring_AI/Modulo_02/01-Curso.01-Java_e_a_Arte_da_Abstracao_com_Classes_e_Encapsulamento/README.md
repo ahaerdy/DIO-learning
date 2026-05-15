@@ -464,14 +464,14 @@ O vídeo apresenta uma série de exercícios de programação orientada a objeto
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-05-15-12-06-07.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-05-15-12-06-07.png" alt="" width="840">
 </p>
 
 Os exercícios encontram-se discriminados no link: https://github.com/digitalinnovationone/exercicios-java-basico/blob/main/exercicios/3%20-%20Java%20e%20a%20Arte%20da%20Abstra%C3%A7%C3%A3o%20com%20Classes%20e%20Encapsulamento.md
 
-O exercício escolhido foi o terceiro, cujas especificações encontram-se abaixo disciminadas.
+O exercício escolhido foi o terceiro, cujas especificações encontram-se abaixo disciminadas:
 
-```javascript
+```plaintext
 3. Escreva um código onde temos o controle de banho de um petshop, a maquina de banhos dos pets deve ter as seguintes operações:
    - Dar banho no pet;
    - Abastecer com água;
