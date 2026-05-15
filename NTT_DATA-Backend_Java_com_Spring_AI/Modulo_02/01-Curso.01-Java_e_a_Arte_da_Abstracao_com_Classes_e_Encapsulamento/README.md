@@ -1103,7 +1103,7 @@ this.pet = null;                         // só então anula a referência
 
 > 🔴 *"Muita atenção: se você der o set nulo antes de fazer isso, quando você tentar acessar o isClean você vai ter um erro."* 
 
-## ▶️ Como Executar
+#### ▶️ Como Executar
 
 ```bash
 # 1. Compile todos os arquivos
@@ -1115,7 +1115,7 @@ java Main
 
 Ou, se estiver usando uma IDE como IntelliJ IDEA ou Eclipse, basta abrir o projeto e executar a classe `Main`.
 
-#### Fluxograma do Algoritmo PetMachine
+#### Fluxograma do Sistema PetMachine
 
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-05-15-13-20-29.png" alt="" width="1024">
