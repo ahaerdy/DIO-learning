@@ -457,11 +457,36 @@ Introduzido experimentalmente no Java 14 e consolidado no **Java 17 (LTS)**, o `
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/java-e-a-arte-da-abstracao-com-classes-e-encapsulamento/learning/cb67cd06-4a75-4378-b6b6-c9526185a882?autoplay=1
+
+O vídeo apresenta uma série de exercícios de programação orientada a objetos (POO) para prática, com foco na aplicação de conceitos aprendidos. O palestrante detalha três exercícios e, em seguida, demonstra a resolução do terceiro, incluindo a criação de classes, métodos e um menu interativo.
+
+### Anotações
+
+      
+
 
 ##  Materiais de Apoio
 
-# Certificado: 
+
+
+Os materiais complementares e de apoio que oferecemos têm como objetivo fornecer informações para facilitar e enriquecer a sua jornada de aprendizado no curso "Java e a Arte da Abstração com Classes e Encapsulamento". Aqui você encontrará links úteis, como slides, repositórios e páginas oficiais, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
+
+### Recursos Adicionais
+
+Para ajudá-lo a aprofundar o conhecimento, disponibilizamos a seguir o material complementar contendo os conteúdos e links apresentados no curso:
+
+* **Repositório:** https://github.com/digitalinnovationone/exercicios-java-basico
+
+### Dicas e Links Úteis
+
+Para se desenvolver ainda mais e se destacar na DIO e no mercado de trabalho, sugerimos os seguintes recursos:
+
+* **Artigos e Fórum da DIO:** Compartilhe seus conhecimentos e dúvidas através dos artigos (visíveis globalmente na plataforma da DIO) e nos fóruns específicos para cada experiência educacional, como nossos Bootcamps.
+* **Rooms:** Participe do *Rooms*, uma ferramenta de bate-papo em tempo real onde você pode interagir com outros participantes dos nossos Bootcamps, compartilhando dúvidas, dicas e snippets de código.
+* **Exploração na Web:** Utilize motores de busca para aprofundar seu conhecimento sobre temas específicos. Páginas como o StackOverflow são recursos valiosos para encontrar soluções e expandir seu entendimento.
+
+# Certificado: Java e a Arte da Abstração com Classes e Encapsulamento
 
 - Link na plataforma: 
 - Certificado em pdf:
