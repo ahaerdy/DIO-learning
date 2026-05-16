@@ -236,7 +236,7 @@ A diferença está apenas na **variável de referência**:
 
 - Se fizéssemos `Manager manager = new Manager()` — variável do tipo `Manager`, apontaria para um objeto `Manager`. O compilador permitiria acessar tudo: membros de `Employee` e de `Manager`.
 
-- `Employee manager = new Manager()` — variável do tipo `Employee`, mas ainda aponta para o **mesmo tipo de objeto**, um `Manager`. O compilador só permite acessar os membros de `Employee` através dessa variável.
+- `Employee manager = new Manager()` — variável do tipo `Employee`, ainda aponta para o **mesmo tipo de objeto**, um `Manager`. Mas o compilador só permite acessar os membros de `Employee` através dessa variável.
 
 O objeto em si não está "errado" na segunda forma — ele continua sendo um `Manager` de verdade na memória. O que muda é a **lente** pela qual o compilador enxerga esse objeto: ao declarar a variável como `Employee`, você está dizendo ao compilador "trate isso aqui como um colaborador genérico", **PERDENDO ACESSO DIRETO** às especificidades do gerente como `getLogin()`.
 
