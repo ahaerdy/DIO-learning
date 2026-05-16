@@ -1087,9 +1087,9 @@ Retirar pet (opção 8) → máquina.clean = pet.isClean()
 | **Expressão booleana direta** | `return this.pet != null` em vez de `if/else` com `true`/`false` |
 | **Constantes (`static final`)** | Centraliza valores como `MAX_WATER`, `WATER_PER_BATH` evitando _magic numbers_ |
 
-#### ⚠️ Alerta Importante — Ordem de Operações em `removePet()`
+#### ⚠️ Ordem de Operações em `removePet()`
 
-Na aula, o professor alerta especificamente sobre este ponto:
+Na aula, o instrutor alerta especificamente sobre este ponto:
 
 ```java
 // ❌ ERRADO — NullPointerException garantido!
