@@ -733,6 +733,10 @@ public Manager(String code,
 }
 ```
 
+### 5. Sobrescrita (`Override`) vs. Sobrecarga (`Overload`)
+*   **Sobrescrita (@Override):** Altera o comportamento de um método herdado da classe pai. É possível usar `super.metodo()` para estender a lógica original em vez de apenas substituí-la.
+*   **Sobrecarga:** Define múltiplos métodos com o mesmo nome, mas com assinaturas (parâmetros) diferentes, dentro da mesma classe ou na hierarquia.
+
 #### Override de getCode() no Manager — prefixo "MN" com super.getCode()
 
 <p align="center">
@@ -833,6 +837,11 @@ public static void printEmployee(Employee employee) {
     }
 }
 ```
+
+### 6. Métodos e Classes Abstratas
+
+*   **Classes Abstratas:** Funcionam como moldes e não podem ser instanciadas diretamente.
+*   **Métodos Abstratos:** Definem um "contrato". A classe pai declara o método sem implementação, obrigando todas as subclasses não abstratas a fornecerem sua própria lógica (ex: cálculo de salário total).
 
 #### Método getFullSalary abstrato e sobrecarga com parâmetro extra
 
