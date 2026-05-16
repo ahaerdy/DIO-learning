@@ -422,40 +422,6 @@ O vídeo explora os conceitos fundamentais e as funcionalidades modernas do Java
 
 ### Anotações
 
-#### Tópicos Principais deta Aula
-
-##### 1. Polimorfismo e o Desafio do Casting
-Ao instanciar uma subclasse (ex: `Manager`) usando uma referência da superclasse (ex: `Employee`), o Java limita o acesso apenas aos métodos e propriedades definidos na superclasse.
-*   **Casting Manual:** Para acessar membros específicos da subclasse, é necessário realizar o *casting*.
-*   **Risco:** Realizar casting sem verificação pode causar a exceção `ClassCastException`.
-
-##### 2. Evolução da Verificação de Tipos: `instanceof`
-O Java evoluiu a forma como verificamos e convertemos tipos:
-*   **Abordagem Clássica:** `if (obj instanceof Manager) { Manager m = (Manager) obj; ... }`
-*   **Pattern Matching (Java 16+):** Permite verificar o tipo e criar uma variável local já convertida em uma única linha: `if (obj instanceof Manager manager) { ... }`.
-
-##### 3. `Switch` com Pattern Matching e Classes Seladas
-Uma das maiores inovações das versões recentes do Java é o uso do `switch` para verificar tipos:
-*   **Sintaxe Moderna:** O `switch` pode agora receber um objeto e executar blocos baseados na sua instância específica.
-*   **Vantagem das Sealed Classes:** Se a classe pai for `sealed` (selada), o compilador sabe exatamente quais são as subclasses possíveis. Isso elimina a necessidade de uma cláusula `default` no `switch`, tornando o código mais seguro e exaustivo.
-
-##### 4. Construtores e a Palavra-Chave `super`
-Na herança, a inicialização segue uma ordem hierárquica:
-*   **Chamada Obrigatória:** Se a classe pai define um construtor com argumentos, as subclasses devem obrigatoriamente chamar esse construtor usando `super(...)`.
-*   **Reuso:** O `super` permite reaproveitar a lógica de inicialização da classe base antes de adicionar comportamentos específicos da subclasse.
-
-##### 5. Sobrescrita (`Override`) vs. Sobrecarga (`Overload`)
-*   **Sobrescrita (@Override):** Altera o comportamento de um método herdado da classe pai. É possível usar `super.metodo()` para estender a lógica original em vez de apenas substituí-la.
-*   **Sobrecarga:** Define múltiplos métodos com o mesmo nome, mas com assinaturas (parâmetros) diferentes, dentro da mesma classe ou na hierarquia.
-
-##### 6. Métodos e Classes Abstratas
-*   **Classes Abstratas:** Funcionam como moldes e não podem ser instanciadas diretamente.
-*   **Métodos Abstratos:** Definem um "contrato". A classe pai declara o método sem implementação, obrigando todas as subclasses não abstratas a fornecerem sua própria lógica (ex: cálculo de salário total).
-
-##### 7. Modificadores de Acesso: O Papel do `protected`
-*   **Private:** Acesso apenas na própria classe.
-*   **Public:** Acesso de qualquer lugar.
-*   **Protected:** Permite acesso às subclasses e também a outras classes dentro do mesmo pacote (*package*). É ideal para expor propriedades a herdeiros sem torná-las totalmente públicas.
       
 
 
