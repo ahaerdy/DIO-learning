@@ -18,7 +18,7 @@ O vídeo aprofunda os conceitos fundamentais da Programação Orientada a Objeto
 
 ### Anotações
 
-#### 1. O Conceito de Herança
+### 1. O Conceito de Herança
 
 A herança é apresentada através de uma analogia com o mundo real: assim como filhos herdam características genéticas dos pais (cor dos olhos, cabelo, predisposições), na programação, uma **subclasse** herda atributos e métodos de uma **superclasse**.
 *   **Palavra-chave `extends`:** Utilizada para estabelecer a relação de herança.
@@ -265,7 +265,7 @@ public class Client extends Salesman {
 }
 ```
 
-#### 3. Restrições de Herança: `final` e `sealed`
+### 3. Restrições de Herança: `final` e `sealed`
 O Java oferece ferramentas para controlar quem pode herdar de quem, garantindo a integridade da regra de negócio:
 *   **`final`:** Quando aplicada a uma classe, impede que qualquer outra classe herde dela. É o "fim da linha" na hierarquia.
 *   **`sealed` (Classes Seladas):** Uma funcionalidade mais refinada que permite especificar exatamente quais classes têm permissão para herdar da superclasse (usando a cláusula `permits`). Isso evita que classes não relacionadas (como uma classe `Cliente`) tentem herdar comportamentos de `Colaborador`.
@@ -422,7 +422,7 @@ O vídeo explora os conceitos fundamentais e as funcionalidades modernas do Java
 
 ### Anotações
 
-#### 1. Polimorfismo e o Desafio do Casting
+### 1. Polimorfismo e o Desafio do Casting
 Ao instanciar uma subclasse (ex: `Manager`) usando uma referência da superclasse (ex: `Employee`), o Java limita o acesso apenas aos métodos e propriedades definidos na superclasse.
 *   **Casting Manual:** Para acessar membros específicos da subclasse, é necessário realizar o *casting*.
 *   **Risco:** Realizar casting sem verificação pode causar a exceção `ClassCastException`.
@@ -508,7 +508,7 @@ public static void printEmployee(Employee employee) {
 > `class Manager`  
 > `JoãojoaoException in thread "main" java.lang.ClassCastException: class Salesman cannot be cast to class Manager`
 
-#### 2. Evolução da Verificação de Tipos: `instanceof`
+### 2. Evolução da Verificação de Tipos: `instanceof`
 O Java evoluiu a forma como verificamos e convertemos tipos:
 *   **Abordagem Clássica:** `if (obj instanceof Manager) { Manager m = (Manager) obj; ... }`
 *   **Pattern Matching (Java 16+):** Permite verificar o tipo e criar uma variável local já convertida em uma única linha: `if (obj instanceof Manager manager) { ... }`.
@@ -551,7 +551,7 @@ public static void printEmployee(Employee employee) {
 > ==============
 > ```
 
-#### 3. `Switch` com Pattern Matching e Classes Seladas
+### 3. `Switch` com Pattern Matching e Classes Seladas
 Uma das maiores inovações das versões recentes do Java é o uso do `switch` para verificar tipos:
 *   **Sintaxe Moderna:** O `switch` pode agora receber um objeto e executar blocos baseados na sua instância específica.
 *   **Vantagem das Sealed Classes:** Se a classe pai for `sealed` (selada), o compilador sabe exatamente quais são as subclasses possíveis. Isso elimina a necessidade de uma cláusula `default` no `switch`, tornando o código mais seguro e exaustivo.
@@ -703,7 +703,8 @@ public /*non-sealed*/ class Manager extends Employee {
 }
 ```
 
-#### 4. Construtores e a Palavra-Chave `super`
+### 4. Construtores e a Palavra-Chave `super`
+
 Na herança, a inicialização segue uma ordem hierárquica:
 *   **Chamada Obrigatória:** Se a classe pai define um construtor com argumentos, as subclasses devem obrigatoriamente chamar esse construtor usando `super(...)`.
 *   **Reuso:** O `super` permite reaproveitar a lógica de inicialização da classe base antes de adicionar comportamentos específicos da subclasse.
