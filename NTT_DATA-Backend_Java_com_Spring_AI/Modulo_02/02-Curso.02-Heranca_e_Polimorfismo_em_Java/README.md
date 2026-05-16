@@ -198,6 +198,11 @@ public class Main {
 }
 ```
 
+### 2. Polimorfismo: A Flexibilidade das Formas
+O polimorfismo é a capacidade de um objeto ser referenciado de múltiplas formas dentro de uma hierarquia.
+*   **Analogia da Maquininha de Cartão:** Uma máquina de cartão está preparada para receber um "Cartão". Não importa se o cartão específico é de "Crédito" ou "Débito"; a máquina trata ambos como o tipo genérico "Cartão" para iniciar a operação.
+*   **Aplicação Prática:** É possível declarar uma variável do tipo `Employee` e instanciá-la como um `Manager`. Isso permite que o código trate diferentes subtipos de forma genérica, facilitando a manutenção.
+
 #### Polimorfismo — variável do tipo `Employee` referenciando um `Manager`
 
 <p align="center">
