@@ -81,7 +81,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 2: Revisando os Fundamentos Técnicos de Java
 
 - [x] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/01-Curso.01-Java_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento)
-- [x] Curso: [Herança e Polimorfismo em Java](Modulo_02/)
+- [x] Curso: [Herança e Polimorfismo em Java](Modulo_02/02-Curso.02-Heranca_e_Polimorfismo_em_Java)
 - [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_02/0)
 - [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_02/)
 - [ ] Desafio de código: [Programando com OO em Java Na Prática](Modulo_02/)
