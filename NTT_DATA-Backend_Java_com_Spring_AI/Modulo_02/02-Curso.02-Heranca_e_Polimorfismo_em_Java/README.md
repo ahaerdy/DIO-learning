@@ -265,6 +265,11 @@ public class Client extends Salesman {
 }
 ```
 
+#### 3. Restrições de Herança: `final` e `sealed`
+O Java oferece ferramentas para controlar quem pode herdar de quem, garantindo a integridade da regra de negócio:
+*   **`final`:** Quando aplicada a uma classe, impede que qualquer outra classe herde dela. É o "fim da linha" na hierarquia.
+*   **`sealed` (Classes Seladas):** Uma funcionalidade mais refinada que permite especificar exatamente quais classes têm permissão para herdar da superclasse (usando a cláusula `permits`). Isso evita que classes não relacionadas (como uma classe `Cliente`) tentem herdar comportamentos de `Colaborador`.
+
 #### Classe `Manager` marcada como `final` — impedindo extensão
 
 <p align="center">
@@ -295,11 +300,6 @@ public final class Manager extends Employee {
     }
 }
 ```
-
-#### 3. Restrições de Herança: `final` e `sealed`
-O Java oferece ferramentas para controlar quem pode herdar de quem, garantindo a integridade da regra de negócio:
-*   **`final`:** Quando aplicada a uma classe, impede que qualquer outra classe herde dela. É o "fim da linha" na hierarquia.
-*   **`sealed` (Classes Seladas):** Uma funcionalidade mais refinada que permite especificar exatamente quais classes têm permissão para herdar da superclasse (usando a cláusula `permits`). Isso evita que classes não relacionadas (como uma classe `Cliente`) tentem herdar comportamentos de `Colaborador`.
 
 #### Erro ao herdar de classe `final` — `Client extends Salesman` bloqueado
 
