@@ -1118,7 +1118,7 @@ Ou, se estiver usando uma IDE como IntelliJ IDEA ou Eclipse, basta abrir o proje
 #### Fluxograma do Sistema PetMachine
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-05-15-13-20-29.png" alt="" width="1024">
+  <img src="000-Midia_e_Anexos/2026-05-16-08-27-52.png" alt="" width="1024">
 </p>
 
 ##  Materiais de Apoio
