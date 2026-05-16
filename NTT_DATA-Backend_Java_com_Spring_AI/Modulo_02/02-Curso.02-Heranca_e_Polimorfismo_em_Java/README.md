@@ -228,6 +228,20 @@ public class Main {
 }
 ```
 
+#### Detalhamento
+
+Em ambos os casos o **objeto criado é sempre um `Manager`**. O `new Manager()` é quem define o tipo real do objeto, independentemente do tipo da variável.
+
+A diferença está apenas na **variável de referência**:
+
+- Se fizéssemos `Manager manager = new Manager()` — variável do tipo `Manager`, apontaria para um objeto `Manager`. O compilador permitiria acessar tudo: membros de `Employee` e de `Manager`.
+
+- `Employee manager = new Manager()` — variável do tipo `Employee`, mas ainda aponta para o **mesmo tipo de objeto**, um `Manager`. O compilador só permite acessar os membros de `Employee` através dessa variável.
+
+O objeto em si não está "errado" na segunda forma — ele continua sendo um `Manager` de verdade na memória. O que muda é a **lente** pela qual o compilador enxerga esse objeto: ao declarar a variável como `Employee`, você está dizendo ao compilador "trate isso aqui como um colaborador genérico", **PERDENDO ACESSO DIRETO** às especificidades do gerente como `getLogin()`.
+
+**Isso é justamente o ponto do polimorfismo**: você pode ter uma variável genérica que em tempo de execução aponta para objetos de tipos diferentes (`Manager`, `Salesman`, etc.), e o código que usa essa variável não precisa saber qual é o tipo real.
+
 #### Classe `Client` estendendo `Salesman` — herança fora do modelo de negócio
 
 <p align="center">
