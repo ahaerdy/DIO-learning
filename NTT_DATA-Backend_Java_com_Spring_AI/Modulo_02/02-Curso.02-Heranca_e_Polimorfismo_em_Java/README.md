@@ -422,6 +422,11 @@ O vídeo explora os conceitos fundamentais e as funcionalidades modernas do Java
 
 ### Anotações
 
+#### 1. Polimorfismo e o Desafio do Casting
+Ao instanciar uma subclasse (ex: `Manager`) usando uma referência da superclasse (ex: `Employee`), o Java limita o acesso apenas aos métodos e propriedades definidos na superclasse.
+*   **Casting Manual:** Para acessar membros específicos da subclasse, é necessário realizar o *casting*.
+*   **Risco:** Realizar casting sem verificação pode causar a exceção `ClassCastException`.
+
 #### Polimorfismo por referência — instanciando Manager via Employee
 
 <p align="center">
