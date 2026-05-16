@@ -409,8 +409,6 @@ public non-sealed class Manager extends Employee {
 }
 ```
 
-
-
 ### 🟩 Vídeo 02 - Explorando Herança e Polimorfismo
 
 <video width="60%" controls>
@@ -420,6 +418,9 @@ public non-sealed class Manager extends Employee {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/heranca-e-polimorfismo-em-java/learning/1df116a3-f35a-4923-8dc5-669fd3d30de9?autoplay=1
 
+
+
+
 ### 🟩 Vídeo 03 - Reforçando instance of e sobrecarga de método
 
 <video width="60%" controls>
@@ -427,7 +428,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/h
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/heranca-e-polimorfismo-em-java/learning/8bb2b63f-8913-4118-b149-f022b118cebf?autoplay=1
 
 ## Parte 2 - Exercícios: Herança e Polimorfismo em Java
 

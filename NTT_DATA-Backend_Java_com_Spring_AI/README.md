@@ -82,41 +82,41 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - [x] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/01-Curso.01-Java_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento)
 - [x] Curso: [Herança e Polimorfismo em Java](Modulo_02/02-Curso.02-Heranca_e_Polimorfismo_em_Java)
-- [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_02/0)
-- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_02/)
-- [ ] Desafio de código: [Programando com OO em Java Na Prática](Modulo_02/)
+- [ ] Curso: [Dominando Interfaces e Lambdas em Java]
+- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java]
+- [ ] Desafio de código: [Programando com OO em Java Na Prática]
 
 ---
 
 ### Módulo 3: Elevando a Qualidade do Seu Código Java com Boas Práticas e Padrões
 
-- [ ] Curso: [Logging e Tratamento de Exceções em Java](Modulo_03/)
-- [ ] Curso: [Simplificando I/O de Arquivos e Diretórios com Java](Modulo_03/)
-- [ ] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_03/)
-- [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_03/)
-- [ ] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade](Modulo_03/)
-- [ ] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](Modulo_03/)
+- [ ] Curso: [Logging e Tratamento de Exceções em Java]
+- [ ] Curso: [Simplificando I/O de Arquivos e Diretórios com Java]
+- [ ] Curso: [Gerenciando Dependências com Maven e Gradle]
+- [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
+- [ ] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade]
+- [ ] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]
 
 ---
 
 ### Módulo 4: Criando Soluções Inteligentes com Spring Boot e Java Moderno
 
-- [ ] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_04/)
-- [ ] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_04/)
-- [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_04/)
-- [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_04/)
-- [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot](Modulo_04/)
+- [ ] Curso: [Criando sua Primeira API REST com Spring Boot]
+- [ ] Curso: [Conectando sua API com Banco de Dados Através do Spring Data]
+- [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security]
+- [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign]
+- [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
 
 ---
 
 ### Módulo 5: Publicando, Operando e Monitorando Soluções de Back-end no Azure
 
-- [ ] Curso: [Configurando Planos de Serviço de Aplicativos do Azure](Modulo_05/0)
-- [ ] Curso: [Configurando os Serviços de Aplicativos do Azure](Modulo_05/)
-- [ ] Curso: [Configurando Contas de Armazenamento](Modulo_05/)
-- [ ] Curso: [Configurando o Azure Monitor](Modulo_05/)
-- [ ] Curso: [Configurando Métricas do Azure](Modulo_05/)
-- [ ] Curso: [Configurando a Análise de Logs](Modulo_05/)
+- [ ] Curso: [Configurando Planos de Serviço de Aplicativos do Azure]
+- [ ] Curso: [Configurando os Serviços de Aplicativos do Azure]
+- [ ] Curso: [Configurando Contas de Armazenamento]
+- [ ] Curso: [Configurando o Azure Monitor]
+- [ ] Curso: [Configurando Métricas do Azure]
+- [ ] Curso: [Configurando a Análise de Logs]
 
 ---
 
@@ -128,48 +128,48 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](https://hermes.dio.me/certificates/GRMBVTUI.pdf)
 - [Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial](https://hermes.dio.me/certificates/0ADAB6RO.pdf)
 - [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação](https://hermes.dio.me/certificates/XI4QOS5T.pdf)
-- Certificado do Módulo: [Capítulos Inteligentes no Apoio à Construção de Soluções]()
+- Certificado do Módulo: [Capítulos Inteligentes no Apoio à Construção de Soluções]
 
 ### Módulo 2
 
 - [Java e a Arte da Abstração com Classes e Encapsulamento](https://hermes.dio.me/certificates/YTACYY7E.pdf)
-- [Herança e Polimorfismo em Java]()
-- [Dominando Interfaces e Lambdas em Java]()
-- [Jornada Prática com Collections e Outras Classes Úteis de Java]()
-- Certificado do Módulo: [Revisando os Fundamentos Técnicos de Java]()
+- [Herança e Polimorfismo em Java]
+- [Dominando Interfaces e Lambdas em Java]
+- [Jornada Prática com Collections e Outras Classes Úteis de Java]
+- Certificado do Módulo: [Revisando os Fundamentos Técnicos de Java]
 
 ### Módulo 3
 
-- [Logging e Tratamento de Exceções em Java]()
-- [Simplificando I/O de Arquivos e Diretórios com Java]()
-- [Gerenciando Dependências com Maven e Gradle]()
-- [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]()
-- [SOLID e Clean Code em Java: Governando Código de Alta Qualidade]()
-- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]()
-- Certificado do Módulo: [Elevando a Qualidade do Seu Código Java com Boas Práticas e Padrões]()
+- [Logging e Tratamento de Exceções em Java]
+- [Simplificando I/O de Arquivos e Diretórios com Java]
+- [Gerenciando Dependências com Maven e Gradle]
+- [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
+- [SOLID e Clean Code em Java: Governando Código de Alta Qualidade]
+- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]
+- Certificado do Módulo: [Elevando a Qualidade do Seu Código Java com Boas Práticas e Padrões]
 
 ### Módulo 4
 
-- [Criando sua Primeira API REST com Spring Boot]()
-- [Conectando sua API com Banco de Dados Através do Spring Data]()
-- [Simplificando a Segurança em APIs REST com Spring Security]()
-- [Consumindo APIs Externas com a Spring Cloud OpenFeign]()
-- [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]()
-- Certificado do Módulo: [Criando Soluções Inteligentes com Spring Boot e Java Moderno]()
+- [Criando sua Primeira API REST com Spring Boot]
+- [Conectando sua API com Banco de Dados Através do Spring Data]
+- [Simplificando a Segurança em APIs REST com Spring Security]
+- [Consumindo APIs Externas com a Spring Cloud OpenFeign]
+- [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
+- Certificado do Módulo: [Criando Soluções Inteligentes com Spring Boot e Java Moderno]
 
 ### Módulo 5
 
-- [Configurando Planos de Serviço de Aplicativos do Azure]()
-- [Configurando os Serviços de Aplicativos do Azure]()
-- [Configurando Contas de Armazenamento]()
-- [Configurando o Azure Monitor]()
-- [Configurando Métricas do Azure]()
-- [Configurando a Análise de Logs]()
-- Certificado do Módulo: [Publicando, Operando e Monitorando Soluções de Back-end no Azure]()
+- [Configurando Planos de Serviço de Aplicativos do Azure]
+- [Configurando os Serviços de Aplicativos do Azure]
+- [Configurando Contas de Armazenamento]
+- [Configurando o Azure Monitor]
+- [Configurando Métricas do Azure]
+- [Configurando a Análise de Logs]
+- Certificado do Módulo: [Publicando, Operando e Monitorando Soluções de Back-end no Azure]
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [NTT DATA: Backend Java com Spring AI]()
+- 🎓 Certificado de conclusão do Bootcamp: [NTT DATA: Backend Java com Spring AI]
 
 ---
 
