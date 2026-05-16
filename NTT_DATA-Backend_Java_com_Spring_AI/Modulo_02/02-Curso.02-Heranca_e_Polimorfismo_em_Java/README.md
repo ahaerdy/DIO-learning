@@ -433,7 +433,7 @@ Ao instanciar uma subclasse (ex: `Manager`) usando uma referência da superclass
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h46m55s356.jpg" alt="" width="840">
 </p>
 
-O arquivo `Main.java` mostra o ponto de partida da aula. Uma variável do tipo `Employee` é declarada e recebe uma instância de `Manager` — uma forma válida de polimorfismo em Java, pois `Manager` herda de `Employee`. Em seguida, o código usa `setName`, `setLogin` e `setPassword` via cast implícito, e imprime os valores com `getName`, `getLogin` e `getPassword`. O problema explorado aqui é que, ao reservar espaço de memória como `Employee`, o compilador só enxerga os membros declarados em `Employee` — os atributos exclusivos de `Manager` (como `login` e `password`) exigem cast explícito para serem acessados.
+O arquivo `Main.java` mostra o ponto de partida da aula. Uma variável do tipo `Employee` é declarada e recebe uma instância de `Manager` — uma forma válida de polimorfismo em Java, pois `Manager` herda de `Employee`. Em seguida, o código usa `setName`, `setLogin` e `setPassword` via cast implícito, e imprime os valores com `getName`, `getLogin` e `getPassword`. O problema explorado aqui é que, ao reservar espaço de memória como `Employee`, o compilador só enxerga os membros declarados em `Employee` — os atributos exclusivos de `Manager` (como `login` e `password`) exigem CAST EXPLÍCITO para serem acessados.
 
 ```java
 public class Main {
