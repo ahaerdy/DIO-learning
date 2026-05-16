@@ -22,7 +22,7 @@ O vídeo aprofunda os conceitos fundamentais da Programação Orientada a Objeto
 
 A herança é apresentada através de uma analogia com o mundo real: assim como filhos herdam características genéticas dos pais (cor dos olhos, cabelo, predisposições), na programação, uma **subclasse** herda atributos e métodos de uma **superclasse**.
 *   **Palavra-chave `extends`:** Utilizada para estabelecer a relação de herança.
-*   **Reuso de Código:** Evita a duplicidade ao permitir que classes específicas (como `Manager` ou `Salesman`) aproveitem campos comuns definidos em uma classe base (`employee`), como nome, idade e endereço 
+*   **Reuso de Código:** Evita a duplicidade ao permitir que classes específicas (como `Manager` ou `Salesman`) aproveitem campos comuns definidos em uma classe base (`Employee`), como nome, idade e endereço 
 
 #### Classe `Employee` — Definindo a Superclasse
 
