@@ -18,7 +18,7 @@ O vídeo aprofunda os conceitos fundamentais da Programação Orientada a Objeto
 
 ### Anotações
 
-#### O Conceito de Herança
+#### 1. O Conceito de Herança
 
 A herança é apresentada através de uma analogia com o mundo real: assim como filhos herdam características genéticas dos pais (cor dos olhos, cabelo, predisposições), na programação, uma **subclasse** herda atributos e métodos de uma **superclasse**.
 *   **Palavra-chave `extends`:** Utilizada para estabelecer a relação de herança.
@@ -115,7 +115,7 @@ public class Employee {
 }
 ```
 
-#### Polimorfismo: A Flexibilidade das Formas
+#### 2. Polimorfismo: A Flexibilidade das Formas
 
 O polimorfismo é a capacidade de um objeto ser referenciado de múltiplas formas dentro de uma hierarquia.
 *   **Analogia da Maquininha de Cartão:** Uma máquina de cartão está preparada para receber um "Cartão". Não importa se o cartão específico é de "Crédito" ou "Débito"; a máquina trata ambos como o tipo genérico "Cartão" para iniciar a operação.
