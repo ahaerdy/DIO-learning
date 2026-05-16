@@ -1094,14 +1094,12 @@ Na aula, o instrutor alerta especificamente sobre este ponto:
 ```java
 // ❌ ERRADO — NullPointerException garantido!
 this.pet = null;                         // pet já é null aqui...
-this.clean = this.pet.isClean();         // ...esta linha explode!
+this.clean = this.pet.isClean();         // ... aqui dará erro!
 
 // ✅ CORRETO — lê o estado ANTES de anular a referência
 this.clean = this.pet.isClean();         // lê o estado do pet
 this.pet = null;                         // só então anula a referência
 ```
-
-> *"Muita atenção: se você der o set nulo antes de fazer isso, quando você tentar acessar o isClean você vai ter um erro."* 
 
 #### Como Executar
 
