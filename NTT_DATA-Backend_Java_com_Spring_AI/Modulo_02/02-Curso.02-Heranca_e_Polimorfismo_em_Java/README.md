@@ -551,6 +551,11 @@ public static void printEmployee(Employee employee) {
 > ==============
 > ```
 
+#### 3. `Switch` com Pattern Matching e Classes Seladas
+Uma das maiores inovações das versões recentes do Java é o uso do `switch` para verificar tipos:
+*   **Sintaxe Moderna:** O `switch` pode agora receber um objeto e executar blocos baseados na sua instância específica.
+*   **Vantagem das Sealed Classes:** Se a classe pai for `sealed` (selada), o compilador sabe exatamente quais são as subclasses possíveis. Isso elimina a necessidade de uma cláusula `default` no `switch`, tornando o código mais seguro e exaustivo.
+
 #### Pattern Matching para instanceof — sintaxe moderna do Java 17
 
 <p align="center">
