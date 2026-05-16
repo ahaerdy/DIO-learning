@@ -1115,7 +1115,7 @@ java Main
 
 Ou, se estiver usando uma IDE como IntelliJ IDEA ou Eclipse, basta abrir o projeto e executar a classe `Main`.
 
-#### Fluxograma do Sistema PetMachine
+#### Fluxograma do Sistema
 
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-05-16-08-27-52.png" alt="" width="1024">
