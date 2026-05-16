@@ -1087,7 +1087,7 @@ Retirar pet (opção 8) → máquina.clean = pet.isClean()
 | **Expressão booleana direta** | `return this.pet != null` em vez de `if/else` com `true`/`false` |
 | **Constantes (`static final`)** | Centraliza valores como `MAX_WATER`, `WATER_PER_BATH` evitando _magic numbers_ |
 
-#### ⚠️ Armadilha Importante — Ordem de Operações em `removePet()`
+#### ⚠️ Alerta Importante — Ordem de Operações em `removePet()`
 
 Na aula, o professor alerta especificamente sobre este ponto:
 
@@ -1101,9 +1101,9 @@ this.clean = this.pet.isClean();         // lê o estado do pet
 this.pet = null;                         // só então anula a referência
 ```
 
-> 🔴 *"Muita atenção: se você der o set nulo antes de fazer isso, quando você tentar acessar o isClean você vai ter um erro."* 
+> *"Muita atenção: se você der o set nulo antes de fazer isso, quando você tentar acessar o isClean você vai ter um erro."* 
 
-#### ▶️ Como Executar
+#### Como Executar
 
 ```bash
 # 1. Compile todos os arquivos
