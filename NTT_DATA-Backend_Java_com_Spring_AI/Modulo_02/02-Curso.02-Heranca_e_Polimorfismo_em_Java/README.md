@@ -508,6 +508,11 @@ public static void printEmployee(Employee employee) {
 > `class Manager`  
 > `JoãojoaoException in thread "main" java.lang.ClassCastException: class Salesman cannot be cast to class Manager`
 
+#### 2. Evolução da Verificação de Tipos: `instanceof`
+O Java evoluiu a forma como verificamos e convertemos tipos:
+*   **Abordagem Clássica:** `if (obj instanceof Manager) { Manager m = (Manager) obj; ... }`
+*   **Pattern Matching (Java 16+):** Permite verificar o tipo e criar uma variável local já convertida em uma única linha: `if (obj instanceof Manager manager) { ... }`.
+
 #### Resolvendo o cast com instanceof — verificação de tipo antes da conversão
 
 <p align="center">
