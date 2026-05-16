@@ -703,6 +703,11 @@ public /*non-sealed*/ class Manager extends Employee {
 }
 ```
 
+#### 4. Construtores e a Palavra-Chave `super`
+Na herança, a inicialização segue uma ordem hierárquica:
+*   **Chamada Obrigatória:** Se a classe pai define um construtor com argumentos, as subclasses devem obrigatoriamente chamar esse construtor usando `super(...)`.
+*   **Reuso:** O `super` permite reaproveitar a lógica de inicialização da classe base antes de adicionar comportamentos específicos da subclasse.
+
 #### Construtor de Manager — uso da keyword super
 
 <p align="center">
