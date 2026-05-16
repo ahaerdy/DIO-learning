@@ -115,19 +115,13 @@ public class Employee {
 }
 ```
 
-#### 2. Polimorfismo: A Flexibilidade das Formas
-
-O polimorfismo é a capacidade de um objeto ser referenciado de múltiplas formas dentro de uma hierarquia.
-*   **Analogia da Maquininha de Cartão:** Uma máquina de cartão está preparada para receber um "Cartão". Não importa se o cartão específico é de "Crédito" ou "Débito"; a máquina trata ambos como o tipo genérico "Cartão" para iniciar a operação.
-*   **Aplicação Prática:** É possível declarar uma variável do tipo `Employee` e instanciá-la como um `Manager`. Isso permite que o código trate diferentes subtipos de forma genérica, facilitando a manutenção.
-
-#### Polimorfismo em ação — `Main.java` usando o objeto `manager`
+#### Herança em uso — `Main.java` utilizando atributos herdados e próprios de `Manager`
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-09h13m21s657.jpg" alt="" width="840">
 </p>
 
-A imagem mostra o `Main.java` instanciando `Employee` e `Manager` separadamente, e em seguida utilizando os métodos herdados e próprios do gerente. Repare que `manager.setName("João")` é chamado com sucesso, provando que `Manager` herda o atributo `name` de `Employee`, embora esse campo não esteja declarado no próprio `Manager`. As impressões no console validam o funcionamento da herança: `getName()`, `getLogin()` e `getPassword()` retornam os valores atribuídos.
+A imagem mostra o `Main.java` instanciando `Employee` e `Manager` diretamente, e em seguida utilizando métodos dos dois tipos. `manager.setName("João")` é chamado com sucesso mesmo `name` não estando declarado em `Manager` — ele vem de `Employee` via herança. Da mesma forma, `getLogin()` e `getPassword()` pertencem ao próprio `Manager`. As três chamadas a `System.out.println` confirmam que ambos os grupos de atributos estão acessíveis no mesmo objeto, que é o resultado prático da relação de herança estabelecida com `extends`.
 
 ```java
 public class Main {
