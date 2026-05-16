@@ -422,8 +422,683 @@ O vídeo explora os conceitos fundamentais e as funcionalidades modernas do Java
 
 ### Anotações
 
-      
+#### Polimorfismo por referência — instanciando Manager via Employee
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h46m55s356.jpg" alt="" width="840">
+</p>
+
+O arquivo `Main.java` mostra o ponto de partida da aula. Uma variável do tipo `Employee` é declarada e recebe uma instância de `Manager` — uma forma válida de polimorfismo em Java, pois `Manager` herda de `Employee`. Em seguida, o código usa `setName`, `setLogin` e `setPassword` via cast implícito, e imprime os valores com `getName`, `getLogin` e `getPassword`. O problema explorado aqui é que, ao reservar espaço de memória como `Employee`, o compilador só enxerga os membros declarados em `Employee` — os atributos exclusivos de `Manager` (como `login` e `password`) exigem cast explícito para serem acessados.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Employee manager = new Manager();
+
+        manager.setName("João");
+        manager.setLogin("joao");
+        manager.setPassword("123456");
+
+        System.out.printf(manager.getName());
+        System.out.printf(manager.getLogin());
+        System.out.printf(manager.getPassword());
+    }
+}
+```
+
+#### Estrutura da classe Manager — atributos e métodos específicos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h48m02s646.jpg" alt="" width="840">
+</p>
+
+A classe `Manager.java` está marcada como `non-sealed`, sinalizando que ela pode ser herdada por outras classes (exigência da cadeia `sealed` iniciada em `Employee`). Além dos campos herdados de `Employee`, o `Manager` declara três atributos próprios: `login`, `password` e `commission`. Os métodos `getLogin`, `setLogin`, `getPassword` e `setPassword` são exibidos em sua forma compacta (inline), característicos de getters/setters gerados pelo IntelliJ.
+
+```java
+public non-sealed class Manager extends Employee {
+
+    private String login;
+
+    private String password;
+
+    private double commission;
+
+    public String getLogin() { return login; }
+
+    public void setLogin(final String login) { this.login = login; }
+
+    public String getPassword() { return password; }
+
+    public void setPassword(final String password) { this.password = password; }
+}
+```
+
+#### ClassCastException — problema ao converter Salesman para Manager
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h50m00s667.jpg" alt="" width="840">
+</p>
+
+O método `printEmployee(Employee employee)` é chamado duas vezes: uma com `new Manager()` e outra com `new Salesman()`. Dentro do método, há um cast direto para `Manager` sem qualquer verificação de tipo, o que funciona para a primeira chamada, mas lança uma `ClassCastException` em tempo de execução na segunda. O console exibe claramente o erro: `class Salesman cannot be cast to class Manager`. `Manager` e `Salesman` estão na mesma cadeia de herança (ambos estendem `Employee`), mas são tipos irmãos — não há conversão direta entre eles.
+
+```java
+public static void main(String[] args) {
+    printEmployee(new Manager());
+    printEmployee(new Salesman());
+}
+
+public static void printEmployee(Employee employee) {
+    employee.setName("João");
+    ((Manager) employee).setLogin("joao");
+    ((Manager) employee).setPassword("123456");
+
+    System.out.println(employee.getClass());
+    System.out.printf(employee.getName());
+    // Lança ClassCastException quando employee é Salesman
+}
+```
+
+> **Saída no console:**
+> `class Manager`  
+> `JoãojoaoException in thread "main" java.lang.ClassCastException: class Salesman cannot be cast to class Manager`
+
+#### Resolvendo o cast com instanceof — verificação de tipo antes da conversão
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h52m02s064.jpg" alt="" width="840">
+</p>
+
+A solução imediata para o `ClassCastException` é envolver o cast em um bloco `if (employee instanceof Manager)`. Dessa forma, o cast `((Manager) employee)` só é executado quando a verificação confirma que o objeto é realmente uma instância de `Manager`. O console demonstra que agora o bloco do Manager é processado corretamente (imprimindo João, joao e 123456), enquanto o Salesman percorre o método sem erros — apenas sem exibir seus dados específicos, pois ainda não há bloco para ele.
+
+```java
+public static void printEmployee(Employee employee) {
+
+    System.out.printf("=======%s=======\n", employee.getClass().getCanonicalName());
+
+    if (employee instanceof Manager) {
+        employee.setName("João");
+        ((Manager) employee).setLogin("joao");
+        ((Manager) employee).setPassword("123456");
+
+        System.out.println(employee.getName());
+        System.out.println(((Manager) employee).getLogin());
+        System.out.println(((Manager) employee).getPassword());
+    }
+
+    System.out.println("==============");
+}
+```
+
+> **Saída no console:**
+> ```
+> =======Manager=======
+> João
+> joao
+> 123456
+> ==============
+> =======Salesman=======
+> ==============
+> ```
+
+#### Pattern Matching para instanceof — sintaxe moderna do Java 17
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h54m53s816.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a versão modernizada com **Pattern Matching para `instanceof`**, disponível a partir do Java 16/17 (LTS). Em vez de verificar e depois fazer cast manualmente em linhas separadas, é possível declarar a variável tipada diretamente na expressão `instanceof`. O código também introduz o `switch(employee)` com `case Manager manager ->`, que combina a verificação de tipo com a criação da variável em uma única construção.
+
+```java
+// Forma clássica (Java < 16)
+if (employee instanceof Manager) {
+    ((Manager) employee).setLogin("joao");
+}
+
+// Pattern Matching — Java 16+ (disponível em LTS a partir do Java 17)
+if (employee instanceof Manager manager) {
+    manager.setLogin("joao");
+}
+
+// switch com Pattern Matching
+switch (employee) {
+    case Manager manager -> {
+        // variável 'manager' já disponível e tipada
+    }
+    case Salesman salesman -> {
+        // variável 'salesman' já disponível e tipada
+    }
+}
+```
+
+#### switch com Pattern Matching — bloco do Manager com atributos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h55m27s762.jpg" alt="" width="840">
+</p>
+
+O bloco `case Manager manager` dentro do `switch` é preenchido com as atribuições de valores ao gerente. Dentro desse bloco, `employee` (referência do tipo pai) e `manager` (referência tipada do filho) coexistem — métodos comuns como `setCode`, `setName` e `setSalary` são chamados via `manager`, enquanto os específicos `setLogin` e `setPassword` também usam `manager`. O bloco `case Salesman salesman` ainda está vazio neste momento.
+
+```java
+public static void printEmployee(Employee employee) {
+
+    System.out.printf("=======%s=======\n", employee.getClass().getCanonicalName());
+
+    switch (employee) {
+        case Manager manager -> {
+            manager.setCode("123");
+            manager.setName("João");
+            manager.setSalary(5000);
+            manager.setLogin("joao");
+            manager.setPassword("123456");
+
+            System.out.println(manager.getCode());
+            System.out.println(manager.getSalary());
+            System.out.println(manager.getName());
+            System.out.println(manager.getLogin());
+            System.out.println(manager.getPassword());
+        }
+        case Salesman salesman -> {
+
+        }
+    }
+
+    System.out.println("==============");
+}
+```
+
+#### switch completo — bloco do Salesman e saída no console
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h55m49s757.jpg" alt="" width="840">
+</p>
+
+O bloco `case Salesman salesman` é preenchido com os dados de Lucas: código 456, salário 2800, nome e percentual de vendas de 10%. O console confirma a execução correta do switch para ambos os tipos: o Salesman exibe código, salário, nome e percentual corretamente. Neste momento a classe `Employee` ainda é `sealed`, o que permite ao compilador verificar exaustividade do `switch` sem necessidade de `default`.
+
+```java
+case Salesman salesman -> {
+    salesman.setCode("456");
+    salesman.setName("Lucas");
+    salesman.setSalary(2800);
+    salesman.setPercentPerSold(10);
+
+    System.out.println(salesman.getCode());
+    System.out.println(salesman.getSalary());
+    System.out.println(salesman.getName());
+    System.out.println(salesman.getPercentPerSold());
+}
+```
+
+> **Saída no console:**
+> ```
+> SL456
+> 2800.0
+> Lucas
+> 10.0
+> ==============
+> ```
+
+#### Classe Salesman — atributos e métodos próprios
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h55m54s438.jpg" alt="" width="840">
+</p>
+
+A classe `Salesman.java` (marcada como `non-sealed`) estende `Employee` e adiciona o atributo `percentPerSold`, que representa o percentual de comissão sobre vendas. Os métodos `getPercentPerSold` e `setPercentPerSold` são exibidos de forma compacta (inline). Neste momento a classe ainda não possui construtor explícito nem o atributo `soldAmount`, que serão acrescentados nos passos seguintes.
+
+```java
+public /*non-sealed*/ class Salesman extends Employee {
+
+    private double percentPerSold;
+
+    public double getPercentPerSold() { return percentPerSold; }
+
+    public void setPercentPerSold(final double percentPerSold) { this.percentPerSold = percentPerSold; }
+}
+```
+
+#### Classe Manager revisitada — corpo expandido dos métodos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h55m58s369.jpg" alt="" width="840">
+</p>
+
+A classe `Manager.java` é revisitada agora com os corpos dos métodos exibidos em formato expandido (sem a forma inline compacta). Os atributos `login`, `password` e `commission` permanecem `private`. Os métodos `getLogin`, `setLogin` e `getPassword` são mostrados com seus corpos completos, facilitando a leitura e compreensão da estrutura.
+
+```java
+public /*non-sealed*/ class Manager extends Employee {
+
+    private String login;
+
+    private String password;
+
+    private double commission;
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(final String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+}
+```
+
+#### Construtor de Manager — uso da keyword super
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h56m22s378.jpg" alt="" width="840">
+</p>
+
+Um construtor completo é adicionado a `Manager`. Ele recebe todos os parâmetros necessários — tanto os herdados de `Employee` quanto os próprios. A palavra-chave `super(...)` é usada para invocar o construtor da classe pai, repassando `code`, `name`, `address`, `age` e `salary`. Os atributos específicos (`login`, `password`, `commission`) são inicializados diretamente com `this`. Quando uma classe pai define um construtor com argumentos, todas as subclasses são obrigadas a chamar `super(...)` explicitamente.
+
+```java
+public Manager(String code,
+               String name,
+               String address,
+               int age,
+               double salary,
+               String login,
+               String password,
+               double commission) {
+    super(code, name, address, age, salary);
+    this.login = login;
+    this.password = password;
+    this.commission = commission;
+}
+```
+
+#### Override de getCode() no Manager — prefixo "MN" com super.getCode()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h58m35s970.jpg" alt="" width="840">
+</p>
+
+A **sobrescrita** (`@Override`) do método `getCode()` é implementada em `Manager`. Em vez de retornar apenas o código bruto, o método concatena o prefixo `"MN"` com o resultado de `super.getCode()`, reaproveitando o comportamento da classe pai. O console confirma: o código do Manager é exibido como `MN123` e o do Salesman como `SL456`. Isso demonstra que `super.método()` permite combinar a lógica da classe pai com comportamento adicional na subclasse.
+
+```java
+@Override
+public String getCode() {
+    return "MN" + super.getCode();
+}
+```
+
+> **Saída no console (parcial):**
+> ```
+> SL456
+> 2800.0
+> Lucas
+> 10.0
+> ```
+
+#### Modificador protected — atributos acessíveis na hierarquia
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-14h59m25s535.jpg" alt="" width="840">
+</p>
+
+Os atributos de `Employee.java` são alterados de `private` para `protected`. Com `protected`, um atributo permanece inacessível a código externo genérico, mas pode ser acessado diretamente por classes que herdam de `Employee` — sem necessidade de getters/setters. A imagem também exibe o início do construtor de `Employee`, mostrando os parâmetros `code`, `name`, `address`. Essa alteração é necessária para que, por exemplo, `Manager.getCode()` possa referenciar `this.code` diretamente.
+
+```java
+public /*sealed*/ abstract class Employee permits Manager, Salesman {
+
+    protected String code;  // antes: private
+
+    protected String name;
+
+    protected String address;
+
+    protected int age;
+
+    protected double salary;
+
+    public Employee(String code,
+                    String name,
+                    String address,
+                    ...
+```
+
+#### Erro ao acessar this.code em Manager fora do mesmo pacote
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h00m10s154.jpg" alt="" width="840">
+</p>
+
+Em `Manager.java`, o `@Override` de `getCode()` tenta usar `this.code` (em vez de `super.getCode()`). O marcador de erro vermelho na linha 11 indica que o acesso não é permitido — apesar de `code` ser `protected` em `Employee`, há uma restrição: `protected` garante acesso dentro do mesmo **pacote** ou via herança, mas não quando as classes estão em pacotes diferentes sem relação de herança direta visível. A solução exibida nas imagens seguintes será mover as classes para um pacote comum (`domain`).
+
+```java
+@Override
+public String getCode() {
+    return "MN" + this.code;  // ❌ Erro: 'code' tem acesso protected em 'Employee'
+}
+```
+
+#### Erro de acesso protected após mover para o pacote domain
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h00m25s777.jpg" alt="" width="840">
+</p>
+
+Após mover `Employee`, `Manager` e `Salesman` para o pacote `domain`, o `Main.java` (que permanece no pacote raiz) tenta acessar `employee.code` diretamente. O IntelliJ exibe um popup de erro: `'code' has protected access in 'domain.Employee'`. Isso ilustra a segunda regra do modificador `protected`: ele **não** permite acesso de fora do pacote onde o atributo foi declarado, a menos que a classe acesse via herança interna ao pacote. A sugestão do IDE é usar o setter (`Replace with setter`).
+
+> **Regras do modificador `protected`:**
+> - ✅ Acessível dentro do mesmo pacote
+> - ✅ Acessível via herança (subclasse no mesmo pacote)
+> - ❌ Não acessível de fora do pacote por classes não relacionadas
+
+#### switch com Pattern Matching e aviso de acesso protegido
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h01m25s903.jpg" alt="" width="840">
+</p>
+
+O `Main.java` revisado mostra que a tentativa de acessar `employee.code` diretamente (linha 10) ainda gera erro — confirmando o comportamento `protected` fora do pacote. O `switch (employee)` com `case Manager manager ->` está estruturado corretamente. O restante do bloco usa setters normais (`manager.setCode`, `manager.setName`, `manager.setSalary`) para contornar a restrição de acesso direto.
+
+```java
+public static void printEmployee(Employee employee) {
+    // employee.code = "";  // ❌ Acesso protegido fora do pacote domain
+    System.out.printf("=======%s=======\n", employee.getClass().getCanonicalName());
+    switch (employee) {
+        case Manager manager -> {
+            manager.setCode("123");
+            manager.setName("João");
+            manager.setSalary(5000);
+            // ...
+        }
+    }
+}
+```
+
+#### Método getFullSalary abstrato e sobrecarga com parâmetro extra
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h02m27s912.jpg" alt="" width="840">
+</p>
+
+`Employee.java` recebe dois novos métodos. O primeiro é `getFullSalary()` declarado como `abstract` — isso força todas as subclasses concretas a fornecerem uma implementação, sob pena de erro de compilação. O segundo é uma sobrecarga: `getFullSalary(double extra)`, que chama internamente `this.getFullSalary()` (o abstrato, portanto polimórfico) e soma o valor extra. A sobrecarga não é abstrata — ela tem implementação e pode ser chamada diretamente na referência `Employee`.
+
+```java
+// Método abstrato — obriga subclasses a implementar
+public abstract double getFullSalary();
+
+// Sobrecarga concreta — reutiliza o método abstrato + adiciona bônus
+public double getFullSalary(double extra) {
+    return this.getFullSalary() + extra;
+}
+```
+
+#### Construtor de Salesman — parâmetros incluindo soldAmount
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h03m11s782.jpg" alt="" width="840">
+</p>
+
+`Salesman.java` ganha um construtor completo. Além dos parâmetros herdados (`code`, `name`, `address`, `age`, `salary`), ele recebe `percentPerSold` e o novo atributo `soldAmount` (valor total vendido). O `super(...)` repassa os campos do pai, e os atributos próprios são inicializados via `this`. O atributo `soldAmount` (linha 7) é necessário para calcular a comissão do vendedor com base no volume de vendas.
+
+```java
+public class Salesman extends Employee {
+
+    private double percentPerSold;
+
+    private double soldAmount;
+
+    public Salesman(String code,
+                    String name,
+                    String address,
+                    int age,
+                    double salary,
+                    double percentPerSold,
+                    double soldAmount) {
+        super(code, name, address, age, salary);
+        this.percentPerSold = percentPerSold;
+        this.soldAmount = soldAmount;
+    }
+}
+```
+
+#### Getter e setter de soldAmount em Salesman
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h04m17s740.jpg" alt="" width="840">
+</p>
+
+Os métodos de acesso `getSoldAmount()` e `setSoldAmount()` são gerados para o atributo `soldAmount` em `Salesman`. Esses métodos são necessários para que o `Main.java` possa atribuir e consultar o valor de vendas do vendedor sem acessar o atributo diretamente (encapsulamento). A saída no console exibida no painel inferior pertence a uma execução anterior e mostra os valores do Salesman Lucas.
+
+```java
+public double getSoldAmount() {
+    return soldAmount;
+}
+
+public void setSoldAmount(final double soldAmount) {
+    this.soldAmount = soldAmount;
+}
+```
+
+#### Declaração do método abstrato getFullSalary em Employee
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h05m12s742.jpg" alt="" width="840">
+</p>
+
+`Employee.java` exibe a declaração final do método `getFullSalary()` como abstrato (linha 70). Um método abstrato não possui corpo — ele apenas define a assinatura. Qualquer classe concreta que herdar de `Employee` é obrigada a implementá-lo. Caso a subclasse não implemente, ela também precisará ser declarada como `abstract`. O aviso no rodapé do IDE (`Method 'getFullSalary()' is never used`) é temporário, pois o método ainda não está sendo chamado no `Main.java`.
+
+```java
+// Em Employee.java
+public abstract double getFullSalary();
+```
+
+#### Stub gerado pelo IntelliJ — implementação vazia de getFullSalary em Salesman
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h06m54s529.jpg" alt="" width="840">
+</p>
+
+O IntelliJ gera automaticamente o stub de implementação do método abstrato em `Salesman`. O código `return 0` é apenas um placeholder — o compilador considera o contrato cumprido, mas a lógica de negócio ainda não está correta. A imagem destaca (em azul) o bloco gerado com `@Override`. O mesmo stub também é gerado automaticamente em `Manager`, visível nas próximas imagens.
+
+```java
+// Salesman.java — stub gerado automaticamente (ainda incorreto)
+@Override
+public double getFullSalary() {
+    return 0;
+}
+```
+
+#### Stub de getFullSalary em Manager — implementação pendente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h07m00s871.jpg" alt="" width="840">
+</p>
+
+Em `Manager.java`, o mesmo stub `@Override public double getFullSalary() { return 0; }` é gerado pelo IntelliJ. Os métodos `getCommission()` e `setCommission()` já estão presentes e funcionais. O `return 0` será substituído pela lógica correta: salário base somado à comissão do gerente.
+
+```java
+// Manager.java — stub gerado automaticamente (ainda incorreto)
+public double getCommission() {
+    return commission;
+}
+
+public void setCommission(final double commission) {
+    this.commission = commission;
+}
+
+@Override
+public double getFullSalary() {
+    return 0;  // será substituído por: this.salary + this.commission
+}
+```
+
+#### Implementação real de getFullSalary em Salesman — cálculo com soldAmount
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h07m41s690.jpg" alt="" width="840">
+</p>
+
+A implementação real de `getFullSalary()` em `Salesman` substitui o stub. A fórmula calcula o salário total como: salário base + (valor vendido × percentual de vendas / 100). O marcador de erro na linha 28 indica um pequeno problema de sintaxe (o operador `+` entre `this.salary` e a expressão parentética), que será corrigido a seguir.
+
+```java
+@Override
+public double getFullSalary() {
+    // Fórmula: salário base + comissão sobre vendas
+    return this.salary + (soldAmount * percentPerSold) / 100;
+}
+```
+
+#### Main atualizado — setSoldAmount e chamada de getFullSalary no Salesman
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h08m06s432.jpg" alt="" width="840">
+</p>
+
+O bloco `case Salesman` no `Main.java` recebe `salesman.setSoldAmount(1000)` — definindo R$ 1.000 em vendas. As chamadas de impressão incluem `getCode()`, `getSalary()`, `getName()`, `getPercentPerSold()` e `getSoldAmount()`. Fora do switch, `employee.getFullSalary(extra: 500)` demonstra o uso da sobrecarga definida na classe pai, passando um bônus adicional.
+
+```java
+case Salesman salesman -> {
+    salesman.setCode("456");
+    salesman.setName("Lucas");
+    salesman.setSalary(2800);
+    salesman.setPercentPerSold(10);
+    salesman.setSoldAmount(1000);
+
+    System.out.println(salesman.getCode());
+    System.out.println(salesman.getSalary());
+    System.out.println(salesman.getName());
+    System.out.println(salesman.getPercentPerSold());
+    System.out.println(salesman.getSoldAmount());
+}
+// ...
+System.out.println(employee.getFullSalary(/* extra */ 500));
+System.out.println(employee.getFullSalary());
+```
+
+#### Implementação real de getFullSalary em Manager — salário + comissão
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h08m19s296.jpg" alt="" width="840">
+</p>
+
+`Manager.java` recebe sua implementação correta de `getFullSalary()`: a soma de `this.salary` (herdado, agora `protected`) e `this.commission` (atributo próprio do gerente). A lógica é diferente da do Salesman — cada subclasse implementa o contrato abstrato à sua própria maneira, que é exatamente o objetivo do método abstrato: garantir a existência do comportamento sem ditar sua implementação.
+
+```java
+@Override
+public double getFullSalary() {
+    return this.salary + this.commission;
+}
+```
+
+#### Employee.java — método abstrato e aviso de uso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h08m39s395.jpg" alt="" width="840">
+</p>
+
+`Employee.java` é exibido na sua forma final, mostrando `public abstract double getFullSalary();` na linha 70. O rodapé do IDE exibe o aviso `Method 'getFullSalary()' is never used` — isso é esperado porque ainda não há chamada a esse método no `Main.java` neste momento (a chamada será inserida a seguir). O aviso desaparecerá assim que o método for chamado.
+
+```java
+// Employee.java — linha 70
+public abstract double getFullSalary();
+```
+
+#### Saída completa do programa — Manager com getFullSalary e extra
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h11m31s849.jpg" alt="" width="840">
+</p>
+
+O `Main.java` exibe o bloco completo do Salesman com `setSoldAmount(1000)` e as impressões de todas as propriedades. O console confirma a execução correta: `SL456`, `2800.0`, `Lucas`, `10.0`, `1000.0`, `2900.0` (salário full = 2800 + 10% de 1000 = 2900). O bloco do Manager chama `manager.getFullSalary(extra: 500)`, usando a sobrecarga — o resultado é `5000 + 1200 + 500 = 6700`.
+
+> **Saída no console (Manager):**
+> ```
+> joao
+> 123456
+> 1200.0
+> 6700.0    ← getFullSalary(500): salary + commission + extra
+> 6200.0    ← getFullSalary():    salary + commission
+> ```
+> **Saída no console (Salesman):**
+> ```
+> SL456
+> 2800.0
+> Lucas
+> 10.0
+> 1000.0
+> 2900.0    ← getFullSalary(): 2800 + (1000 * 10 / 100)
+> ```
+
+#### Employee.java — visão final com método abstrato e sobrecarga
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h13m14s751.jpg" alt="" width="840">
+</p>
+
+`Employee.java` é exibido na forma final. A linha 70 mantém `public abstract double getFullSalary();` e o aviso de uso não utilizado persiste (indicado no rodapé). Isso ocorre porque o método abstrato sem parâmetros é chamado indiretamente pela sobrecarga `getFullSalary(double extra)` — mas o IDE ainda sinaliza como "nunca usado" por não localizar uma chamada direta explícita. Em produção, o aviso pode ser suprimido ou ignorado.
+
+```java
+// Employee.java — estado final
+public abstract double getFullSalary();                          // linha 70 — contrato obrigatório
+
+public double getFullSalary(double extra) {                      // linha 72 — sobrecarga concreta
+    return this.getFullSalary() + extra;
+}
+```
+
+#### Main.java — bloco do Manager completo com comissão e getFullSalary
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h13m30s422.jpg" alt="" width="840">
+</p>
+
+O bloco completo do Manager em `Main.java` é exibido. Após `setSalary(5000)`, `setLogin("joao")`, `setPassword("123456")` e `setCommission(1200)`, o código imprime todas as propriedades e então chama `manager.getFullSalary(extra: 500)`. O console exibe `6700.0` para a chamada com extra e `6200.0` para a chamada sem. A linha `======domain.Salesman======` ao fim indica que o bloco seguinte (Salesman) iniciará na próxima iteração.
+
+```java
+case Manager manager -> {
+    manager.setCode("123");
+    manager.setName("João");
+    manager.setSalary(5000);
+    manager.setLogin("joao");
+    manager.setPassword("123456");
+    manager.setCommission(1200);
+
+    System.out.println(manager.getCode());
+    System.out.println(manager.getSalary());
+    System.out.println(manager.getName());
+    System.out.println(manager.getLogin());
+    System.out.println(manager.getPassword());
+    System.out.println(manager.getCommission());
+    System.out.println(manager.getFullSalary(/* extra */ 500));
+}
+```
+
+#### Main.java — bloco do Salesman completo com getSoldAmount e getFullSalary
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-15h13m50s677.jpg" alt="" width="840">
+</p>
+
+A última imagem exibe o bloco final do Salesman em `Main.java`. Após configurar todos os atributos (`setSoldAmount(1000)`), o código imprime `getCode()`, `getSalary()`, `getName()`, `getPercentPerSold()` e `getSoldAmount()`. Em seguida, fora do switch, `employee.getFullSalary(extra: 500)` e `employee.getFullSalary()` são chamados na referência genérica `Employee` — demonstrando polimorfismo: o Java resolve em tempo de execução qual implementação de `getFullSalary()` invocar com base no tipo real do objeto.
+
+```java
+case Salesman salesman -> {
+    salesman.setCode("456");
+    salesman.setName("Lucas");
+    salesman.setSalary(2800);
+    salesman.setPercentPerSold(10);
+    salesman.setSoldAmount(1000);
+
+    System.out.println(salesman.getCode());
+    System.out.println(salesman.getSalary());
+    System.out.println(salesman.getName());
+    System.out.println(salesman.getPercentPerSold());
+    System.out.println(salesman.getSoldAmount());
+}
+
+System.out.println(employee.getFullSalary(/* extra */ 500));
+System.out.println(employee.getFullSalary());
+System.out.println("==============");
+```      
 
 
 ### 🟩 Vídeo 03 - Reforçando instance of e sobrecarga de método
