@@ -1217,7 +1217,9 @@ public class Main {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/heranca-e-polimorfismo-em-java/learning/360e9eb3-2963-42af-a5b8-6feab7b489f2?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
