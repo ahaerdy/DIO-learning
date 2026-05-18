@@ -1229,7 +1229,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/h
 
 Organizando melhor a descrição:
 
-```
+```markdown
 Exercício 3 – Hierarquia de Relógios
 
 Objetivo  
@@ -1238,9 +1238,9 @@ Criar uma hierarquia de classes que represente relógios de diferentes lugares d
 ---
 
 Estrutura da Superclasse (Relógio)  
-- [Hora](ca://s?q=Definir_propriedade_Hora)  
-- [Minuto](ca://s?q=Definir_propriedade_Minuto)  
-- [Segundo](ca://s?q=Definir_propriedade_Segundo)  
+- Hora
+- Minuto
+- Segundo
 
 Métodos obrigatórios  
 - Getters e setters para cada propriedade, garantindo que os valores sejam válidos (hora entre 0–23, minuto e segundo entre 0–59).  
@@ -1254,11 +1254,11 @@ Método abstrato (a ser implementado pelas subclasses)
 ---
 
 Implementações Específicas  
-1. [Relógio Brasileiro](ca://s?q=Implementar_Relogio_Brasileiro)  
+1. Relógio Brasileiro
    - Utiliza o formato de 24 horas (00–23).  
    - Exemplo: 14:30:45 → "14:30:45".  
 
-2. [Relógio Americano](ca://s?q=Implementar_Relogio_Americano)  
+2. Relógio Americano 
    - Utiliza o formato de 12 horas (01–12).  
    - Não existem horas de 13 até 24.  
    - Deve considerar AM/PM para diferenciar períodos do dia.  
