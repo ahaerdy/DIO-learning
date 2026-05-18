@@ -1224,62 +1224,642 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/h
 - Os exercícios propostos para este curso estão no link [4 - Herança e Polimorfismo em Java](https://github.com/digitalinnovationone/exercicios-java-basico/blob/main/exercicios/4%20-%20Heran%C3%A7a%20e%20Polimorfismo%20em%20Java%20.md)       
 - O ecercício escolhido é o terceiro, cuja descrição é a que se encontra abaixo:
 
-
 3. Escreva uma hierarquia de classes para criação de relógios para diferentes lugares do mundo, defina uma classe pai que tenha as propriedades Hora, minuto e segundo com seus respectivos getters e setters (atendendo as regras do funcionamento de um relógio) e um método que deverá retornar a hora no formato HH:MM:SS, a partir dessa classe crie 2 implementações, uma chamada relógio Americando e outra chamada relógio Brasileiro, lembrando que para o relógio americano não existem as horas de 13 até 24. Defina também na super classe um método que ficará por responsabilidade da classe que extende-la definir seu funcionamemnto, esse método deve receber um relógio ( independente da implementação) e deve-se extrair as informações dele e usa-la no objeto que recebeu para setar as novas informações do relógio.
 
-#### Refinando as especificações:
+
+# Projeto Java: Hierarquia de Relógios
+### Herança e Polimorfismo na Prática — DIO Java Course
 
 ---
 
-Exercício 3 – Hierarquia de Relógios
+## 📋 Índice
 
-Objetivo:
-- Criar uma hierarquia de classes que represente relógios de diferentes lugares do mundo, respeitando as regras de funcionamento de cada tipo de relógio.
-
-
-Estrutura da Superclasse (Relógio):   
-- Hora
-- Minuto
-- Segundo
-
-Métodos obrigatórios:
-
-- Getters e setters para cada propriedade, garantindo que os valores sejam válidos (hora entre 0–23, minuto e segundo entre 0–59).  
-- Método para retornar o horário no formato `HH:MM:SS`.  
-
-Método abstrato (a ser implementado pelas subclasses):
-
-- Receber um objeto do tipo Relógio (independente da implementação).  
-- Extrair suas informações (hora, minuto, segundo).  
-- Atualizar o relógio atual com esses valores.  
-
-Implementações Específicas:
-
-1. Relógio Brasileiro
-   - Utiliza o formato de 24 horas (00–23).  
-   - Exemplo: 14:30:45 → "14:30:45".  
-
-2. Relógio Americano 
-   - Utiliza o formato de 12 horas (01–12).  
-   - Não existem horas de 13 até 24.  
-   - Deve considerar AM/PM para diferenciar períodos do dia.  
-   - Exemplo: 14:30:45 → "02:30:45 PM".  
-
-Regras de Funcionamento:  
-- Validação dos valores ao definir hora, minuto e segundo.  
-- Conversão correta entre formatos (24h → 12h).  
-- Implementação do método abstrato para sincronizar relógios diferentes.  
-
-Resumo das Etapas:
-1. Criar a classe pai Relógio com propriedades, getters/setters e método `getHoraFormatada()`.  
-2. Definir o método abstrato para sincronização de relógios.  
-3. Implementar a classe Relógio Brasileiro (formato 24h).  
-4. Implementar a classe Relógio Americano (formato 12h com AM/PM).  
-5. Testar a sincronização entre diferentes relógios.  
+1. [Visão Geral do Projeto](#visão-geral-do-projeto)
+2. [Conceitos-Chave Abordados](#conceitos-chave-abordados)
+3. [Estrutura de Arquivos](#estrutura-de-arquivos)
+4. [Implementação Passo a Passo](#implementação-passo-a-passo)
+   - [Passo 1 — Superclasse `Relogio`](#passo-1--superclasse-relogio)
+   - [Passo 2 — Subclasse `RelogioBrasileiro`](#passo-2--subclasse-relogiobrasileiro)
+   - [Passo 3 — Subclasse `RelogioAmericano`](#passo-3--subclasse-relogioamericano)
+   - [Passo 4 — Classe `Main`](#passo-4--classe-main)
+5. [Diagrama de Herança](#diagrama-de-herança)
+6. [Conceitos Demonstrados](#conceitos-demonstrados)
+7. [Possíveis Evoluções](#possíveis-evoluções)
 
 ---
 
+## Visão Geral do Projeto
 
+Este projeto implementa uma **hierarquia de classes** para representar relógios de diferentes regiões do mundo. O objetivo é demonstrar, de forma prática, dois pilares fundamentais da Programação Orientada a Objetos (POO):
+
+- **Herança**: uma classe filha herda atributos e comportamentos de uma classe pai.
+- **Polimorfismo**: o mesmo método se comporta de formas diferentes dependendo da classe que o implementa.
+
+O projeto é composto por:
+
+| Classe | Tipo | Responsabilidade |
+|---|---|---|
+| `Relogio` | Superclasse (abstrata) | Define a estrutura base de qualquer relógio |
+| `RelogioBrasileiro` | Subclasse | Implementa o formato de 24 horas (00–23h) |
+| `RelogioAmericano` | Subclasse | Implementa o formato de 12 horas (01–12h, AM/PM) |
+| `Main` | Classe de execução | Demonstra o uso do sistema de relógios |
+
+---
+
+## Conceitos-Chave Abordados
+
+### 🔷 Herança (`extends`)
+A palavra-chave `extends` permite que uma classe **herde** atributos e métodos de outra. A subclasse recebe tudo que a superclasse tem e ainda pode adicionar ou modificar comportamentos.
+
+### 🔷 Classe Abstrata (`abstract`)
+Uma classe abstrata **não pode ser instanciada diretamente** — ela serve como um molde. Pode ter métodos concretos (já implementados) e métodos abstratos (que as filhas **obrigatoriamente** devem implementar).
+
+### 🔷 Método Abstrato (`abstract void metodo()`)
+Declara uma assinatura de método sem corpo. Cada subclasse é responsável por fornecer sua própria implementação. Isso é a essência do **polimorfismo**.
+
+### 🔷 Encapsulamento (getters e setters com validação)
+Os atributos são privados (`private`) e acessados/modificados apenas por métodos públicos, que aplicam as **regras de negócio** do relógio (ex: horas entre 0 e 23, minutos entre 0 e 59).
+
+### 🔷 Polimorfismo de método (`@Override`)
+As subclasses sobrescrevem o método abstrato da superclasse, cada uma com comportamento próprio, mas seguindo o mesmo contrato definido pela superclasse.
+
+---
+
+## Estrutura de Arquivos
+
+```
+src/
+└── relogios/
+    ├── Relogio.java              ← Superclasse abstrata
+    ├── RelogioBrasileiro.java    ← Subclasse: formato 24h
+    ├── RelogioAmericano.java     ← Subclasse: formato 12h (AM/PM)
+    └── Main.java                 ← Ponto de entrada da aplicação
+```
+
+> **Dica IntelliJ:** Crie um novo projeto Java, depois um pacote chamado `relogios` dentro de `src/`. Crie cada arquivo `.java` dentro desse pacote clicando com o botão direito → *New → Java Class*.
+
+---
+
+## Implementação Passo a Passo
+
+---
+
+### Passo 1 — Superclasse `Relogio`
+
+**Arquivo:** `src/relogios/Relogio.java`
+
+Esta é a base de todo o sistema. Ela define:
+- Os **atributos** `hora`, `minuto` e `segundo` (privados).
+- **Getters e setters com validação** para garantir que os valores inseridos fazem sentido para um relógio.
+- Um método concreto `getTempoFormatado()` que retorna a hora no formato `HH:MM:SS`.
+- Um método **abstrato** `sincronizar(Relogio relogio)` — o coração do polimorfismo — que cada subclasse implementará à sua maneira.
+
+```java
+package relogios;
+
+/**
+ * Superclasse abstrata que representa um relógio genérico.
+ *
+ * Por ser ABSTRATA, não pode ser instanciada diretamente:
+ *   Relogio r = new Relogio(); // ← ERRO de compilação
+ *
+ * Ela serve como CONTRATO para todas as implementações de relógio.
+ */
+public abstract class Relogio {
+
+    // ─────────────────────────────────────────────
+    // ATRIBUTOS PRIVADOS (Encapsulamento)
+    // O "private" impede acesso direto de fora da classe.
+    // Somente os getters e setters abaixo podem manipulá-los.
+    // ─────────────────────────────────────────────
+
+    private int hora;
+    private int minuto;
+    private int segundo;
+
+
+    // ─────────────────────────────────────────────
+    // GETTER e SETTER: hora
+    // Regra: hora válida está entre 0 e 23 (formato 24h base).
+    // Subclasses podem impor regras adicionais nos seus próprios setters.
+    // ─────────────────────────────────────────────
+
+    public int getHora() {
+        return hora;
+    }
+
+    public void setHora(int hora) {
+        // Valida se o valor está dentro do intervalo permitido (0–23)
+        if (hora >= 0 && hora <= 23) {
+            this.hora = hora;
+        } else {
+            // Em vez de aceitar um valor inválido, lançamos uma exceção
+            // que informa claramente o problema ao desenvolvedor.
+            throw new IllegalArgumentException(
+                "Hora inválida: " + hora + ". Deve estar entre 0 e 23."
+            );
+        }
+    }
+
+
+    // ─────────────────────────────────────────────
+    // GETTER e SETTER: minuto
+    // Regra: minuto válido está entre 0 e 59.
+    // ─────────────────────────────────────────────
+
+    public int getMinuto() {
+        return minuto;
+    }
+
+    public void setMinuto(int minuto) {
+        if (minuto >= 0 && minuto <= 59) {
+            this.minuto = minuto;
+        } else {
+            throw new IllegalArgumentException(
+                "Minuto inválido: " + minuto + ". Deve estar entre 0 e 59."
+            );
+        }
+    }
+
+
+    // ─────────────────────────────────────────────
+    // GETTER e SETTER: segundo
+    // Regra: segundo válido está entre 0 e 59.
+    // ─────────────────────────────────────────────
+
+    public int getSegundo() {
+        return segundo;
+    }
+
+    public void setSegundo(int segundo) {
+        if (segundo >= 0 && segundo <= 59) {
+            this.segundo = segundo;
+        } else {
+            throw new IllegalArgumentException(
+                "Segundo inválido: " + segundo + ". Deve estar entre 0 e 59."
+            );
+        }
+    }
+
+
+    // ─────────────────────────────────────────────
+    // MÉTODO CONCRETO: getTempoFormatado()
+    //
+    // Retorna a hora no formato HH:MM:SS, com dois dígitos
+    // em cada parte (ex: 9h 5min 3s → "09:05:03").
+    //
+    // String.format() com "%02d" garante que números com
+    // apenas 1 dígito recebam um zero à esquerda.
+    // ─────────────────────────────────────────────
+
+    public String getTempoFormatado() {
+        return String.format("%02d:%02d:%02d", hora, minuto, segundo);
+    }
+
+
+    // ─────────────────────────────────────────────
+    // MÉTODO ABSTRATO: sincronizar(Relogio relogio)
+    //
+    // Este método declara uma RESPONSABILIDADE sem implementá-la.
+    // Cada subclasse DEVE obrigatoriamente fornecer sua versão.
+    //
+    // O parâmetro é do tipo Relogio (a superclasse), o que significa
+    // que tanto um RelogioBrasileiro quanto um RelogioAmericano
+    // podem ser passados — isso é POLIMORFISMO de parâmetro.
+    // ─────────────────────────────────────────────
+
+    public abstract void sincronizar(Relogio relogio);
+}
+```
+
+> **📌 Por que `abstract`?**
+> Usamos `abstract` na classe porque não faz sentido criar um "relógio genérico" — sempre será um relógio brasileiro ou americano. A superclasse existe apenas para definir a estrutura comum.
+
+---
+
+### Passo 2 — Subclasse `RelogioBrasileiro`
+
+**Arquivo:** `src/relogios/RelogioBrasileiro.java`
+
+Representa um relógio no **formato 24 horas** (de 0h até 23h), como usado no Brasil. Herda toda a estrutura da superclasse e implementa o método `sincronizar`.
+
+```java
+package relogios;
+
+/**
+ * Relógio no formato BRASILEIRO: 24 horas (00h a 23h).
+ *
+ * A palavra "extends" estabelece a HERANÇA:
+ *   RelogioBrasileiro herda de Relogio todos os atributos
+ *   (hora, minuto, segundo) e métodos (getters, setters,
+ *   getTempoFormatado), sem precisar redeclará-los.
+ */
+public class RelogioBrasileiro extends Relogio {
+
+    /**
+     * Implementação obrigatória do método abstrato da superclasse.
+     *
+     * Aqui, o @Override indica ao compilador que estamos
+     * SOBRESCREVENDO um método herdado — isso é POLIMORFISMO.
+     *
+     * Comportamento: extrai hora, minuto e segundo do relógio
+     * recebido (que pode ser qualquer implementação de Relogio)
+     * e os aplica neste objeto, convertendo para o formato 24h.
+     *
+     * Como o formato brasileiro já aceita 0–23, usamos os
+     * valores diretamente.
+     *
+     * @param relogio Qualquer objeto que estenda Relogio
+     */
+    @Override
+    public void sincronizar(Relogio relogio) {
+        // Usamos os getters da superclasse para extrair
+        // as informações do relógio recebido como parâmetro.
+        int horaOrigem   = relogio.getHora();
+        int minutoOrigem = relogio.getMinuto();
+        int segundoOrigem = relogio.getSegundo();
+
+        // Aplicamos os valores neste objeto usando os setters
+        // herdados da superclasse (que já fazem a validação).
+        this.setHora(horaOrigem);
+        this.setMinuto(minutoOrigem);
+        this.setSegundo(segundoOrigem);
+
+        System.out.println(
+            "[BR] Relógio sincronizado para: " + this.getTempoFormatado()
+        );
+    }
+}
+```
+
+> **📌 O que `extends` nos dá gratuitamente?**
+> `RelogioBrasileiro` já possui `getHora()`, `setHora()`, `getMinuto()`, `setMinuto()`, `getSegundo()`, `setSegundo()` e `getTempoFormatado()` **sem escrever uma única linha a mais**. Esse reaproveitamento de código é uma das grandes vantagens da herança.
+
+---
+
+### Passo 3 — Subclasse `RelogioAmericano`
+
+**Arquivo:** `src/relogios/RelogioAmericano.java`
+
+Representa um relógio no **formato americano de 12 horas**, onde não existem as horas de 13 a 24 — o dia se divide em AM (manhã) e PM (tarde/noite). Esta classe tem complexidade adicional pois precisa:
+1. Sobrescrever o setter de hora para aceitar apenas 1–12.
+2. Implementar `sincronizar` **convertendo** horas do formato 24h para o formato 12h.
+
+```java
+package relogios;
+
+/**
+ * Relógio no formato AMERICANO: 12 horas (01h a 12h) com AM/PM.
+ *
+ * Diferenças em relação ao RelogioBrasileiro:
+ *  - Horas válidas: 1 a 12 (não existem 0h, 13h–23h)
+ *  - Possui um indicador de período: AM ou PM
+ *  - O método sincronizar converte o horário recebido para o formato 12h
+ */
+public class RelogioAmericano extends Relogio {
+
+    // ─────────────────────────────────────────────
+    // ATRIBUTO EXTRA: período (AM ou PM)
+    // Exclusivo desta subclasse — não existe na superclasse.
+    // ─────────────────────────────────────────────
+
+    private String periodo; // "AM" ou "PM"
+
+
+    // ─────────────────────────────────────────────
+    // SOBRESCRITA DO SETTER DE HORA
+    //
+    // A superclasse aceita 0–23, mas o relógio americano
+    // só aceita 1–12. Precisamos SOBRESCREVER o setter
+    // para aplicar essa regra mais restrita.
+    // ─────────────────────────────────────────────
+
+    @Override
+    public void setHora(int hora) {
+        // Regra americana: hora deve estar entre 1 e 12
+        if (hora >= 1 && hora <= 12) {
+            super.setHora(hora); // Delega a atribuição à superclasse
+        } else {
+            throw new IllegalArgumentException(
+                "Hora inválida para relógio americano: " + hora +
+                ". Deve estar entre 1 e 12."
+            );
+        }
+    }
+
+
+    // ─────────────────────────────────────────────
+    // GETTER e SETTER do período (AM/PM)
+    // ─────────────────────────────────────────────
+
+    public String getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(String periodo) {
+        // Aceita apenas "AM" ou "PM" (case-insensitive)
+        if ("AM".equalsIgnoreCase(periodo) || "PM".equalsIgnoreCase(periodo)) {
+            this.periodo = periodo.toUpperCase();
+        } else {
+            throw new IllegalArgumentException(
+                "Período inválido: " + periodo + ". Use 'AM' ou 'PM'."
+            );
+        }
+    }
+
+
+    // ─────────────────────────────────────────────
+    // SOBRESCRITA DE getTempoFormatado()
+    //
+    // O formato americano inclui o período: "HH:MM:SS AM/PM"
+    // Ex: "09:30:00 PM"
+    // ─────────────────────────────────────────────
+
+    @Override
+    public String getTempoFormatado() {
+        // Chama o formato base da superclasse e adiciona o período
+        return super.getTempoFormatado() + " " + periodo;
+    }
+
+
+    // ─────────────────────────────────────────────
+    // IMPLEMENTAÇÃO DO MÉTODO ABSTRATO: sincronizar()
+    //
+    // Recebe um Relogio qualquer (pode ser RelogioBrasileiro
+    // ou qualquer outra implementação futura) e converte
+    // o horário recebido para o formato de 12 horas.
+    //
+    // Tabela de conversão 24h → 12h:
+    //   00h → 12:xx AM (meia-noite)
+    //   01h–11h → 01h–11h AM
+    //   12h → 12h PM (meio-dia)
+    //   13h–23h → 01h–11h PM
+    // ─────────────────────────────────────────────
+
+    @Override
+    public void sincronizar(Relogio relogio) {
+        // Extrai os dados brutos do relógio de origem (em 24h)
+        int hora24   = relogio.getHora();
+        int minuto   = relogio.getMinuto();
+        int segundo  = relogio.getSegundo();
+
+        // ── Lógica de conversão 24h → 12h ──
+        int hora12;
+        String novoPeriodo;
+
+        if (hora24 == 0) {
+            // Meia-noite: 00:xx:xx → 12:xx:xx AM
+            hora12 = 12;
+            novoPeriodo = "AM";
+
+        } else if (hora24 < 12) {
+            // Manhã: 01h–11h → 01–11 AM
+            hora12 = hora24;
+            novoPeriodo = "AM";
+
+        } else if (hora24 == 12) {
+            // Meio-dia: 12h → 12 PM
+            hora12 = 12;
+            novoPeriodo = "PM";
+
+        } else {
+            // Tarde/noite: 13h–23h → 01–11 PM
+            hora12 = hora24 - 12;
+            novoPeriodo = "PM";
+        }
+
+        // Aplica os valores convertidos neste objeto
+        this.setHora(hora12);
+        this.setMinuto(minuto);
+        this.setSegundo(segundo);
+        this.setPeriodo(novoPeriodo);
+
+        System.out.println(
+            "[US] Relógio sincronizado para: " + this.getTempoFormatado()
+        );
+    }
+}
+```
+
+> **📌 `super.setHora(hora)` — Por que usar `super`?**
+> Dentro do `setHora` sobrescrito, depois de validar a regra americana (1–12), chamamos `super.setHora(hora)` para que a superclasse execute a atribuição real ao atributo privado `hora`. Como `hora` é `private` na superclasse, a subclasse não pode acessá-lo diretamente — ela precisa passar pelo setter herdado.
+
+---
+
+### Passo 4 — Classe `Main`
+
+**Arquivo:** `src/relogios/Main.java`
+
+A classe principal demonstra todo o sistema em funcionamento, instanciando os relógios e chamando os métodos, evidenciando o polimorfismo em ação.
+
+```java
+package relogios;
+
+/**
+ * Ponto de entrada da aplicação.
+ *
+ * Demonstra:
+ *  1. Instanciação das subclasses
+ *  2. Uso dos setters com validação
+ *  3. Exibição formatada com getTempoFormatado()
+ *  4. Polimorfismo com o método sincronizar()
+ */
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("====================================");
+        System.out.println("  SISTEMA DE RELÓGIOS — DIO Java  ");
+        System.out.println("====================================\n");
+
+
+        // ─────────────────────────────────────────────
+        // 1. CRIANDO UM RELÓGIO BRASILEIRO
+        //
+        // Usamos "new RelogioBrasileiro()" — nunca "new Relogio()"
+        // pois Relogio é abstrata e não pode ser instanciada.
+        // ─────────────────────────────────────────────
+
+        RelogioBrasileiro relogioBR = new RelogioBrasileiro();
+        relogioBR.setHora(15);    // 15h (válido no formato 24h)
+        relogioBR.setMinuto(30);
+        relogioBR.setSegundo(45);
+
+        System.out.println("Relógio Brasileiro:");
+        System.out.println("  Horário: " + relogioBR.getTempoFormatado());
+        // Saída esperada: "15:30:45"
+        System.out.println();
+
+
+        // ─────────────────────────────────────────────
+        // 2. CRIANDO UM RELÓGIO AMERICANO
+        // ─────────────────────────────────────────────
+
+        RelogioAmericano relogioUS = new RelogioAmericano();
+        relogioUS.setHora(9);      // 9 AM (válido no formato 12h)
+        relogioUS.setMinuto(5);
+        relogioUS.setSegundo(3);
+        relogioUS.setPeriodo("AM");
+
+        System.out.println("Relógio Americano:");
+        System.out.println("  Horário: " + relogioUS.getTempoFormatado());
+        // Saída esperada: "09:05:03 AM"
+        System.out.println();
+
+
+        // ─────────────────────────────────────────────
+        // 3. POLIMORFISMO EM AÇÃO: sincronizar()
+        //
+        // O método sincronizar() aceita qualquer objeto do tipo
+        // Relogio — isso é polimorfismo de parâmetro.
+        //
+        // Cada subclasse se comporta de forma diferente
+        // com os mesmos dados de entrada.
+        // ─────────────────────────────────────────────
+
+        System.out.println("====================================");
+        System.out.println("  SINCRONIZAÇÃO  ");
+        System.out.println("====================================\n");
+
+        // ── Cenário A: Sincronizando relógio americano
+        //               a partir do relógio brasileiro (15:30:45)
+        //               Esperado: 03:30:45 PM
+        System.out.println("Sincronizando relógio americano com o horário brasileiro (15:30:45):");
+        relogioUS.sincronizar(relogioBR);
+        System.out.println();
+
+        // ── Cenário B: Sincronizando relógio brasileiro
+        //               a partir de um horário de meia-noite
+        RelogioBrasileiro meiaNoite = new RelogioBrasileiro();
+        meiaNoite.setHora(0);
+        meiaNoite.setMinuto(0);
+        meiaNoite.setSegundo(0);
+
+        System.out.println("Sincronizando relógio americano com meia-noite (00:00:00):");
+        relogioUS.sincronizar(meiaNoite);
+        // Esperado: 12:00:00 AM
+        System.out.println();
+
+        // ── Cenário C: Sincronizando relógio brasileiro
+        //               a partir do relógio americano
+        //               O americano agora marca 12:00:00 AM → 0h
+        System.out.println("Sincronizando relógio brasileiro a partir do americano:");
+        relogioBR.sincronizar(relogioUS);
+        // O americano tem hora = 12 (que no contexto vem de 00h),
+        // mas o BR receberá o valor bruto do getHora() = 12
+        System.out.println();
+
+
+        // ─────────────────────────────────────────────
+        // 4. DEMONSTRAÇÃO DE VALIDAÇÃO (tratamento de erro)
+        // ─────────────────────────────────────────────
+
+        System.out.println("====================================");
+        System.out.println("  TESTE DE VALIDAÇÃO  ");
+        System.out.println("====================================\n");
+
+        try {
+            // Tenta setar hora 25 no relógio brasileiro — deve lançar exceção
+            relogioBR.setHora(25);
+        } catch (IllegalArgumentException e) {
+            System.out.println("[ERRO ESPERADO - BR] " + e.getMessage());
+        }
+
+        try {
+            // Tenta setar hora 13 no relógio americano — deve lançar exceção
+            relogioUS.setHora(13);
+        } catch (IllegalArgumentException e) {
+            System.out.println("[ERRO ESPERADO - US] " + e.getMessage());
+        }
+
+        System.out.println("\nFim da demonstração.");
+    }
+}
+```
+
+---
+
+## Diagrama de Herança
+
+```
+                    ┌──────────────────────────────────────┐
+                    │          <<abstract>>                │
+                    │            Relogio                   │
+                    │──────────────────────────────────────│
+                    │ - hora: int                          │
+                    │ - minuto: int                        │
+                    │ - segundo: int                       │
+                    │──────────────────────────────────────│
+                    │ + getHora(): int                     │
+                    │ + setHora(int): void  ← validação    │
+                    │ + getMinuto(): int                   │
+                    │ + setMinuto(int): void ← validação   │
+                    │ + getSegundo(): int                  │
+                    │ + setSegundo(int): void ← validação  │
+                    │ + getTempoFormatado(): String        │
+                    │ + sincronizar(Relogio): void ←abstract│
+                    └──────────────────┬───────────────────┘
+                                       │  herança (extends)
+               ┌───────────────────────┴───────────────────────┐
+               │                                               │
+               ▼                                               ▼
+┌──────────────────────────────┐         ┌──────────────────────────────────┐
+│      RelogioBrasileiro       │         │        RelogioAmericano          │
+│──────────────────────────────│         │──────────────────────────────────│
+│  (sem atributos novos)       │         │ - periodo: String  (AM/PM)       │
+│──────────────────────────────│         │──────────────────────────────────│
+│ + sincronizar(Relogio): void │         │ + setHora(int): void ← override  │
+│   ← copia os valores direto  │         │ + getPeriodo(): String           │
+│                              │         │ + setPeriodo(String): void       │
+│                              │         │ + getTempoFormatado(): String    │
+│                              │         │   ← override, inclui AM/PM       │
+│                              │         │ + sincronizar(Relogio): void     │
+│                              │         │   ← converte 24h → 12h           │
+└──────────────────────────────┘         └──────────────────────────────────┘
+     Formato: HH:MM:SS (24h)                  Formato: HH:MM:SS AM/PM (12h)
+     Ex: 15:30:45                             Ex: 03:30:45 PM
+```
+
+---
+
+## Conceitos Demonstrados
+
+### 1. Herança
+`RelogioBrasileiro` e `RelogioAmericano` reutilizam **todo o código** da superclasse sem reescrevê-lo. Qualquer melhoria feita em `Relogio` é automaticamente herdada pelas subclasses.
+
+### 2. Encapsulamento com Regras de Negócio
+Os setters não apenas atribuem valores — eles **validam** se o valor faz sentido para um relógio real. Isso protege o estado interno do objeto de dados inválidos.
+
+### 3. Abstração
+A classe `Relogio` define **o que** um relógio deve fazer (`sincronizar`), sem definir **como** cada tipo de relógio faz. Isso é abstração: esconder detalhes de implementação atrás de uma interface comum.
+
+### 4. Polimorfismo
+O método `sincronizar(Relogio relogio)` aceita **qualquer** implementação de `Relogio`. No momento da execução, o Java decide dinamicamente qual versão do método chamar — isso é o **polimorfismo em tempo de execução** (dynamic dispatch).
+
+```java
+Relogio qualquerRelogio = new RelogioBrasileiro(); // válido!
+qualquerRelogio = new RelogioAmericano();           // também válido!
+// A variável é do tipo Relogio, mas o objeto real pode ser qualquer subclasse.
+```
+
+### 5. `@Override`
+A anotação `@Override` é uma salvaguarda: ela instrui o compilador a verificar se o método realmente sobrescreve algo da superclasse. Se houver um erro de digitação no nome, o compilador avisará — sem a anotação, um método com nome errado seria criado silenciosamente sem sobrescrever nada.
+
+---
+
+## Possíveis Evoluções
+
+Com a estrutura de herança criada, o projeto pode ser facilmente estendido:
+
+| Evolução | Como implementar |
+|---|---|
+| Adicionar fuso horário | Novo atributo `fusoHorario` na superclasse ou em subclasses específicas |
+| Relógio Japonês (JST) | Nova subclasse `RelogioJapones extends Relogio` |
+| Interface gráfica | Criar um método `exibir()` na superclasse que chama `getTempoFormatado()` |
+| Relógio em tempo real | Usar `java.time.LocalTime` dentro de um método `atualizar()` |
+| Lista de relógios | `List<Relogio> fusosMundo` — polimorfismo colecionado |
+
+---
 
 ##  Materiais de Apoio
 
