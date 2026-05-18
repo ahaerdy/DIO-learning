@@ -1130,7 +1130,6 @@ System.out.println(employee.getFullSalary());
 System.out.println("==============");
 ```
 
-
 ### 🟩 Vídeo 03 - Reforçando `instanceof` e sobrecarga de método
 
 <video width="60%" controls>
@@ -1139,6 +1138,75 @@ System.out.println("==============");
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/heranca-e-polimorfismo-em-java/learning/8bb2b63f-8913-4118-b149-f022b118cebf?autoplay=1
+
+O instrutor aprofunda o funcionamento do operador `instanceof` e a flexibilidade da sobrecarga de métodos. O objetivo é consolidar o entendimento sobre como o Java gerencia tipos e hierarquias de classes.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-18-07h57m00s843.jpg" alt="" width="840">
+</p>
+
+O código no método `main` instancia três objetos das classes presentes na hierarquia de herança: `Employee`, `Salesman` e `Manager`. Em seguida, é utilizado o operador `instanceof` para verificar se a variável `employee` é uma instância da classe `Employee`. O resultado impresso no console é `true`, o que confirma o comportamento esperado: um objeto é sempre reconhecido como instância da própria classe com a qual foi criado.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Employee employee = new Employee();
+        Salesman salesman = new Salesman();
+        Manager manager = new Manager();
+
+        System.out.println(employee instanceof Employee);
+    }
+}
+```
+
+> **Saída:** `true`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-18-08h01m32s804.jpg" alt="" width="840">
+</p>
+
+Neste trecho, a verificação com `instanceof` é feita sobre a variável `salesman` comparando-a com a classe `Salesman`. O resultado também é `true`. O ponto relevante aqui é que o `instanceof` não se limita a verificar o tipo exato da variável — ele percorre a **hierarquia de herança**. Por isso, uma instância de `Salesman` também seria reconhecida como instância de `Employee`, caso essa comparação fosse feita, uma vez que `Salesman` herda de `Employee`.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Employee employee = new Employee();
+        Salesman salesman = new Salesman();
+        Manager manager = new Manager();
+
+        System.out.println(salesman instanceof Salesman);
+    }
+}
+```
+
+> **Saída:** `true`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-18-08h01m40s223.jpg" alt="" width="840">
+</p>
+
+Aqui é demonstrado um caso que **não funciona**: comparar um objeto de uma classe com uma classe irmã dentro da hierarquia. A variável `salesman` foi declarada com o tipo `Employee` (superclasse), mas instanciada como `new Salesman()`. Ao tentar verificar `manager instanceof Salesman`, o compilador já aponta um erro — `Inconvertible types; cannot cast 'Manager' to 'Salesman'` — porque `Manager` e `Salesman` ramificam para lados diferentes da hierarquia. Eles compartilham apenas a superclasse `Employee`, mas não possuem relação de herança entre si. O resultado da execução é `false`.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Employee employee = new Employee();
+        Employee salesman = new Salesman();
+        Manager manager = new Manager();
+
+        System.out.println(manager instanceof Salesman);
+    }
+}
+```
+
+> **Saída:** `false`  
+> **Aviso do compilador:** `Inconvertible types; cannot cast 'Manager' to 'Salesman'`
+
 
 ## Parte 2 - Exercícios: Herança e Polimorfismo em Java
 
