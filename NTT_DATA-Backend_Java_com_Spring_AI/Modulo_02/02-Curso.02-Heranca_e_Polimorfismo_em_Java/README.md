@@ -1877,5 +1877,5 @@ Para se desenvolver ainda mais e se destacar na DIO e no mercado de trabalho, su
 
 # Certificado: Herança e Polimorfismo em Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/8TYKBD1O.pdf
+- Certificado em pdf: [Certificado-Heranca_e_Polimorfismo_em_Java.pdf](000-Midia_e_Anexos/Certificado-Heranca_e_Polimorfismo_em_Java.pdf)

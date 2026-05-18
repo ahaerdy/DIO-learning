@@ -133,7 +133,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 2
 
 - [Java e a Arte da Abstração com Classes e Encapsulamento](https://hermes.dio.me/certificates/YTACYY7E.pdf)
-- [Herança e Polimorfismo em Java]
+- [Herança e Polimorfismo em Java](https://hermes.dio.me/certificates/8TYKBD1O.pdf)
 - [Dominando Interfaces e Lambdas em Java]
 - [Jornada Prática com Collections e Outras Classes Úteis de Java]
 - Certificado do Módulo: [Revisando os Fundamentos Técnicos de Java]
