@@ -1219,6 +1219,14 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/heranca-e-polimorfismo-em-java/learning/360e9eb3-2963-42af-a5b8-6feab7b489f2?autoplay=1
 
+### Anotações
+
+- Os exercícios propostos para este curso estão no link [4 - Herança e Polimorfismo em Java](https://github.com/digitalinnovationone/exercicios-java-basico/blob/main/exercicios/4%20-%20Heran%C3%A7a%20e%20Polimorfismo%20em%20Java%20.md)       
+- O ecercício escolhido é o terceiro, cuja descrição é a que se encontra abaixo:
+
+```
+3. Escreva uma hierarquia de classes para criação de relógios para diferentes lugares do mundo, defina uma classe pai que tenha as propriedades Hora, minuto e segundo com seus respectivos getters e setters (atendendo as regras do funcionamento de um relógio) e um método que deverá retornar a hora no formato HH:MM:SS, a partir dessa classe crie 2 implementações, uma chamada relógio Americando e outra chamada relógio Brasileiro, lembrando que para o relógio americano não existem as horas de 13 até 24. Defina também na super classe um método que ficará por responsabilidade da classe que extende-la definir seu funcionamemnto, esse método deve receber um relógio ( independente da implementação) e deve-se extrair as informações dele e usa-la no objeto que recebeu para setar as novas informações do relógio.
+```
 
 
 ##  Materiais de Apoio
