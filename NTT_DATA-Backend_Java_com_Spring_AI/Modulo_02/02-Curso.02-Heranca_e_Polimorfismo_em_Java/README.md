@@ -1782,23 +1782,23 @@ public class Main {
 ## Diagrama de Herança
 
 ```
-                    ┌──────────────────────────────────────┐
-                    │          <<abstract>>                │
-                    │            Relogio                   │
-                    │──────────────────────────────────────│
-                    │ - hora: int                          │
-                    │ - minuto: int                        │
-                    │ - segundo: int                       │
-                    │──────────────────────────────────────│
-                    │ + getHora(): int                     │
-                    │ + setHora(int): void  ← validação    │
-                    │ + getMinuto(): int                   │
-                    │ + setMinuto(int): void ← validação   │
-                    │ + getSegundo(): int                  │
-                    │ + setSegundo(int): void ← validação  │
-                    │ + getTempoFormatado(): String        │
-                    │ + sincronizar(Relogio): void ←abstract│
-                    └──────────────────┬───────────────────┘
+                    ┌─────────────────────────────────────────┐
+                    │          <<abstract>>                   │
+                    │            Relogio                      │
+                    │─────────────────────────────────────────│
+                    │ - hora: int                             │
+                    │ - minuto: int                           │
+                    │ - segundo: int                          │
+                    │─────────────────────────────────────────│
+                    │ + getHora(): int                        │
+                    │ + setHora(int): void  ← validação       │
+                    │ + getMinuto(): int                      │
+                    │ + setMinuto(int): void ← validação      │
+                    │ + getSegundo(): int                     │
+                    │ + setSegundo(int): void ← validação     │
+                    │ + getTempoFormatado(): String           │
+                    │ + sincronizar(Relogio): void ← abstract │
+                    └──────────────────┬──────────────────────┘
                                        │  herança (extends)
                ┌───────────────────────┴───────────────────────┐
                │                                               │
