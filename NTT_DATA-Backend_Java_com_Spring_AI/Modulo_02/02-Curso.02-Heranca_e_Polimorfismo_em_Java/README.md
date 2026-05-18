@@ -1783,8 +1783,8 @@ public class Main {
 
 ```
                     ┌─────────────────────────────────────────┐
-                    │          <<abstract>>                   │
-                    │            Relogio                      │
+                    │              <<abstract>>               │
+                    │                Relogio                  │
                     │─────────────────────────────────────────│
                     │ - hora: int                             │
                     │ - minuto: int                           │
