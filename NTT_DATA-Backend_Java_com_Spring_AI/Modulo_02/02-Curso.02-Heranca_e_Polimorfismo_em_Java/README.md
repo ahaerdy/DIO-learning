@@ -1229,7 +1229,6 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/h
 
 Organizando melhor a descrição:
 
-```markdown
 Exercício 3 – Hierarquia de Relógios
 
 Objetivo  
@@ -1280,7 +1279,6 @@ Resumo das Etapas
 4. Implementar a classe Relógio Americano (formato 12h com AM/PM).  
 5. Testar a sincronização entre diferentes relógios.  
 
-```
 
 
 
