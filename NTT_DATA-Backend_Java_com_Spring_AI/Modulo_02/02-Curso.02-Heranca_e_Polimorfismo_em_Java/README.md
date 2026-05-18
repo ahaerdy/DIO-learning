@@ -1227,32 +1227,34 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/h
 
 3. Escreva uma hierarquia de classes para criação de relógios para diferentes lugares do mundo, defina uma classe pai que tenha as propriedades Hora, minuto e segundo com seus respectivos getters e setters (atendendo as regras do funcionamento de um relógio) e um método que deverá retornar a hora no formato HH:MM:SS, a partir dessa classe crie 2 implementações, uma chamada relógio Americando e outra chamada relógio Brasileiro, lembrando que para o relógio americano não existem as horas de 13 até 24. Defina também na super classe um método que ficará por responsabilidade da classe que extende-la definir seu funcionamemnto, esse método deve receber um relógio ( independente da implementação) e deve-se extrair as informações dele e usa-la no objeto que recebeu para setar as novas informações do relógio.
 
-Organizando melhor a descrição:
-
-Exercício 3 – Hierarquia de Relógios
-
-Objetivo  
-Criar uma hierarquia de classes que represente relógios de diferentes lugares do mundo, respeitando as regras de funcionamento de cada tipo de relógio.
+#### Refinando as especificações:
 
 ---
 
-Estrutura da Superclasse (Relógio)  
+Exercício 3 – Hierarquia de Relógios
+
+Objetivo:
+- Criar uma hierarquia de classes que represente relógios de diferentes lugares do mundo, respeitando as regras de funcionamento de cada tipo de relógio.
+
+
+Estrutura da Superclasse (Relógio):   
 - Hora
 - Minuto
 - Segundo
 
-Métodos obrigatórios  
+Métodos obrigatórios:
+
 - Getters e setters para cada propriedade, garantindo que os valores sejam válidos (hora entre 0–23, minuto e segundo entre 0–59).  
 - Método para retornar o horário no formato `HH:MM:SS`.  
 
-Método abstrato (a ser implementado pelas subclasses)  
+Método abstrato (a ser implementado pelas subclasses):
+
 - Receber um objeto do tipo Relógio (independente da implementação).  
 - Extrair suas informações (hora, minuto, segundo).  
 - Atualizar o relógio atual com esses valores.  
 
----
+Implementações Específicas:
 
-Implementações Específicas  
 1. Relógio Brasileiro
    - Utiliza o formato de 24 horas (00–23).  
    - Exemplo: 14:30:45 → "14:30:45".  
@@ -1263,22 +1265,19 @@ Implementações Específicas
    - Deve considerar AM/PM para diferenciar períodos do dia.  
    - Exemplo: 14:30:45 → "02:30:45 PM".  
 
----
-
-Regras de Funcionamento  
+Regras de Funcionamento:  
 - Validação dos valores ao definir hora, minuto e segundo.  
 - Conversão correta entre formatos (24h → 12h).  
 - Implementação do método abstrato para sincronizar relógios diferentes.  
 
----
-
-Resumo das Etapas  
+Resumo das Etapas:
 1. Criar a classe pai Relógio com propriedades, getters/setters e método `getHoraFormatada()`.  
 2. Definir o método abstrato para sincronização de relógios.  
 3. Implementar a classe Relógio Brasileiro (formato 24h).  
 4. Implementar a classe Relógio Americano (formato 12h com AM/PM).  
 5. Testar a sincronização entre diferentes relógios.  
 
+---
 
 
 
