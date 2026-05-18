@@ -1228,7 +1228,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/h
 
 
 # Projeto Java: Hierarquia de Relógios
-### Herança e Polimorfismo na Prática — DIO Java Course
+### Herança e Polimorfismo na Prática
 
 ---
 
