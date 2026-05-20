@@ -513,6 +513,9 @@ O Java evoluiu a forma como verificamos e convertemos tipos:
 *   **Abordagem Clássica:** `if (obj instanceof Manager) { Manager m = (Manager) obj; ... }`
 *   **Pattern Matching (Java 16+):** Permite verificar o tipo e criar uma variável local já convertida em uma única linha: `if (obj instanceof Manager manager) { ... }`.
 
+📌 Vide explicação em: [Operador de Comparação de Tipo `instanceof` ](https://github.com/ahaerdy/roadmap_java/tree/main/fundamentos/operadores/op_igualdade_condicionaiis_relacionais#operador-de-comparação-de-tipo-instanceof
+)
+
 #### Resolvendo o cast com instanceof — verificação de tipo antes da conversão
 
 <p align="center">
