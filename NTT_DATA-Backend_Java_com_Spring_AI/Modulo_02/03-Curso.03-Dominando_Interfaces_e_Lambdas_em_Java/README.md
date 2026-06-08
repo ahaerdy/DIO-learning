@@ -415,8 +415,6 @@ Os modificadores de acesso definem o escopo de visibilidade de uma classe, atrib
     *   Uma classe aninhada (não estática) *pode* acessar membros `private` da sua classe externa.
     *   **Cuidado:** O uso excessivo de classes aninhadas pode aumentar a complexidade do código.
 
----
-
 ### 2. Palavras-Chave Adicionais
 
 #### 2.1. `static`
@@ -450,8 +448,6 @@ Os modificadores de acesso definem o escopo de visibilidade de uma classe, atrib
 *   **Benefício:** Reduz a verbosidade do código, tornando-o mais limpo ao chamar métodos ou acessar atributos estáticos.
 *   **Opinião do Instrutor (28:03):** Gosta de usar `static import` para melhorar a legibilidade.
 
----
-
 ### 3. Resumo e Conclusão
 
 *   **`public`:** Acessível de qualquer lugar.
@@ -462,10 +458,7 @@ Os modificadores de acesso definem o escopo de visibilidade de uma classe, atrib
 *   **`final`:** Impede modificação (variáveis), herança (classes) ou sobrescrita (métodos).
 *   **`static import`:** Simplifica o acesso a membros estáticos.
 
-
-##  Materiais de Apoio
-
-# Certificado: 
+# Certificado: Dominando Interfaces e Lambdas em Java
 
 - Link na plataforma: 
 - Certificado em pdf:
