@@ -360,7 +360,7 @@ Conceitos avançados para otimização do desenvolvimento:
 
 ## Parte 2 - Exercícios: Interfaces e Lambda em Java
 
-### 🟩 Vídeo 04 - Exercícios
+### 🟩 Vídeo 04 - Exercícios 
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.02-curso.03-video_04.webm" type="video/webm">
@@ -369,6 +369,98 @@ Conceitos avançados para otimização do desenvolvimento:
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/dominando-interfaces-e-lambda-em-java/learning/452bf14a-ec57-4808-9db3-98226a49d182?autoplay=1
 
+Esta aula aprofunda o entendimento sobre os modificadores de acesso (`public`, `default`, `protected`, `private`) e outras palavras-chave importantes (`static`, `final`) em Java. O objetivo é compreender como controlar a visibilidade e o comportamento de classes, atributos e métodos, o que é crucial para o desenvolvimento de software robusto e bem estruturado.
+
+### Anotações
+
+### 1. Modificadores de Acesso
+
+Os modificadores de acesso definem o escopo de visibilidade de uma classe, atributo ou método.
+
+#### 1.1. `public`
+*   **Definição:** O modificador de acesso mais permissivo.
+*   **Acesso:** Qualquer parte do código, em qualquer pacote, pode acessar membros `public`.
+*   **Uso:** É o padrão que o instrutor já vinha utilizando desde o início do curso.
+*   **Exemplo (0:31):** Uma classe ou método declarado como `public` é acessível de qualquer lugar.
+
+#### 1.2. `default` (Modificador Implícito)
+*   **Definição:** Quando nenhum modificador de acesso é especificado para uma classe, atributo ou método.
+*   **Acesso:** Restrito *apenas* a classes dentro do *mesmo pacote*.
+*   **Demonstração (2:11):**
+    *   Uma classe `Client` (originalmente `User`) é criada sem modificador de acesso.
+    *   Ao tentar instanciar `Client` a partir da classe `Main` (que está em um pacote diferente, `keywords`), ocorre um erro: "cannot be accessed from outside package".
+    *   **Insight:** Mesmo importando o pacote (`import keywords.*`), o acesso não é concedido, pois a regra é estrita ao *mesmo pacote*.
+    *   **Exemplo Prático (4:21):** Se a classe `Address` (também `default`) estiver no mesmo pacote que `Client`, `Client` pode acessá-la. Se `Address` for movida para um subpacote (`nested`), o acesso é perdido, reforçando que subpacotes não contam como "mesmo pacote" para `default`.
+*   **Regra Fundamental:** Para acesso `default`, a classe que tenta acessar e a classe que está sendo acessada devem estar no *exato mesmo pacote*.
+
+#### 1.3. `protected`
+*   **Definição:** Um modificador de acesso que oferece mais permissividade que `default`, mas menos que `public`.
+*   **Acesso:**
+    1.  Dentro do *mesmo pacote*.
+    2.  Por *subclasses*, mesmo que essas subclasses estejam em pacotes diferentes.
+*   **Demonstração (8:49):**
+    *   Atributos da classe `Client` são definidos como `protected` (ex: `protected String name`).
+    *   Uma nova classe `Manager` é criada e `extends Client` (herança).
+    *   `Manager` consegue acessar o atributo `name` de `Client` (via `this.name` ou `super.name`) mesmo que `Manager` esteja em um pacote diferente.
+    *   **Insight:** A relação de herança é a chave para o acesso `protected` fora do pacote.
+*   **Restrição:** O modificador `protected` *não pode* ser aplicado a classes de nível superior (top-level classes), apenas a membros (atributos e métodos).
+
+#### 1.4. `private`
+*   **Definição:** O modificador de acesso mais restritivo.
+*   **Acesso:** Apenas dentro da *própria classe* onde o membro é declarado.
+*   **Demonstração (13:10):**
+    *   Um atributo `name` na classe `Client` é definido como `private`.
+    *   Qualquer tentativa de acessar `name` de fora da classe `Client` (mesmo de `main` ou de outras classes no mesmo pacote) resultará em erro.
+*   **Classes Aninhadas (Nested Classes) (13:52):**
+    *   Uma classe aninhada (não estática) *pode* acessar membros `private` da sua classe externa.
+    *   **Cuidado:** O uso excessivo de classes aninhadas pode aumentar a complexidade do código.
+
+---
+
+### 2. Palavras-Chave Adicionais
+
+#### 2.1. `static`
+*   **Definição:** O modificador `static` indica que um membro (atributo ou método) pertence à *classe* em si, e não a uma instância específica da classe.
+*   **Comportamento (17:10):**
+    *   **Atributos `static`:** São compartilhados por *todas* as instâncias da classe. Se uma instância modifica um atributo `static`, essa mudança é visível para todas as outras instâncias.
+        *   **Demonstração (20:12):** Ao criar `Client client1` e `Client client2`, e modificar `client1.staticName`, `client2.staticName` também reflete a mudança.
+    *   **Atributos não `static`:** Pertencem a cada instância individualmente. A modificação em uma instância não afeta as outras.
+        *   **Demonstração (21:24):** `client1.name` e `client2.name` são independentes.
+    *   **Métodos `static`:** Só podem acessar outros membros `static` da classe. Eles não podem acessar membros não `static` porque não operam sobre uma instância específica.
+*   **Uso Comum:** Classes utilitárias (ex: `Math.random()`, `System.out.println()`), constantes globais da classe.
+*   **Acesso:** Membros `static` (se forem `public`) podem ser acessados diretamente pelo nome da classe (ex: `Client.staticName`), sem a necessidade de uma instância.
+
+#### 2.2. `final`
+*   **Definição:** O modificador `final` indica que algo não pode ser alterado ou estendido.
+*   **Aplicações (24:35):**
+    *   **Variáveis `final`:** Uma vez que um valor é atribuído, ele não pode ser alterado. Devem ser inicializadas no momento da declaração ou no construtor.
+        *   **Demonstração (25:13):** Tentar reatribuir um valor a uma variável `final` causa um erro de compilação.
+    *   **Classes `final`:** Não podem ser estendidas (herdadas) por outras classes. Isso garante que o comportamento da classe não seja modificado por subclasses.
+        *   **Exemplo:** A classe `String` em Java é `final`.
+    *   **Métodos `final`:** Não podem ser sobrescritos (overridden) por subclasses.
+*   **Padrão de Classe Utilitária (26:21):**
+    *   Uma classe `final` com um construtor `private` (para evitar instanciação) e métodos/atributos `static` e `final` é um padrão comum para classes utilitárias (ex: `Math` class).
+    *   **Exemplo (26:47):** `public final class Client { private Client() {} public static final String STATIC_NAME = "UtilName"; public static String getStaticName() { return STATIC_NAME; } }`
+
+#### 2.3. `static import`
+*   **Definição:** Permite importar membros `static` de uma classe diretamente, sem precisar prefixar o nome da classe ao usá-los.
+*   **Uso (27:17):**
+    *   `import static com.example.Client.getStaticName;`
+    *   `import static com.example.Client.*;` (para importar todos os membros estáticos)
+*   **Benefício:** Reduz a verbosidade do código, tornando-o mais limpo ao chamar métodos ou acessar atributos estáticos.
+*   **Opinião do Instrutor (28:03):** Gosta de usar `static import` para melhorar a legibilidade.
+
+---
+
+### 3. Resumo e Conclusão
+
+*   **`public`:** Acessível de qualquer lugar.
+*   **`default`:** Acessível apenas dentro do mesmo pacote.
+*   **`protected`:** Acessível dentro do mesmo pacote OU por subclasses (mesmo em pacotes diferentes).
+*   **`private`:** Acessível apenas dentro da própria classe.
+*   **`static`:** Membros pertencem à classe, são compartilhados por todas as instâncias e acessados via nome da classe.
+*   **`final`:** Impede modificação (variáveis), herança (classes) ou sobrescrita (métodos).
+*   **`static import`:** Simplifica o acesso a membros estáticos.
 
 
 ##  Materiais de Apoio
