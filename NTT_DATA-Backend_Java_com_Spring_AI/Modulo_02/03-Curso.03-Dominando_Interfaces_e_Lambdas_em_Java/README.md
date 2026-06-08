@@ -7,7 +7,9 @@
 
 Para este curso, ver também:
 
-- ☕️ Roadmap Java --> [Interfaces](https://github.com/ahaerdy/roadmap_java/tree/main/orientacao_a_objetos/aprofundando/interfaces)
+- ☕️ Roadmap Java 
+  - [Interfaces](https://github.com/ahaerdy/roadmap_java/tree/main/orientacao_a_objetos/aprofundando/interfaces)
+  - [Expressões Lambda](https://github.com/ahaerdy/roadmap_java/tree/main/orientacao_a_objetos/recursos_modernos/expressoes_lambda)
 
 ### 🟩 Vídeo 01 - Interfaces
 
