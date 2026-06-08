@@ -307,7 +307,59 @@ A imagem demonstra a simplificação máxima da chamada do método customizado a
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/dominando-interfaces-e-lambda-em-java/learning/452bf14a-ec57-4808-9db3-98226a49d182?autoplay=1
+
+### Anotações
+
+### 1. Modificadores de Acesso
+Os modificadores definem quem pode visualizar ou interagir com os membros de uma classe.
+
+*   **`public`**: O nível mais aberto. Classes, métodos ou atributos marcados como públicos podem ser acessados por qualquer outra classe em qualquer pacote do projeto.
+*   **`default` (Padrão/Package-private)**: Ocorre quando nenhum modificador é especificado. O acesso é restrito apenas a classes que pertencem ao **mesmo pacote**. Se uma classe for movida para um subpacote ou pacote diferente, ela perde o acesso aos membros *default*.
+*   **`protected`**: Funciona de forma semelhante ao *default* (acesso dentro do mesmo pacote), mas com uma exceção importante: permite o acesso por **herança**. Ou seja, uma subclasse pode acessar membros protegidos da superclasse, mesmo que esteja em um pacote diferente.
+*   **`private`**: O nível mais restritivo. O acesso é permitido apenas dentro da **própria classe**. É a base do encapsulamento, protegendo o estado interno do objeto.
+
+### 2. A Palavra-chave `static`
+Define membros que pertencem à **classe** em si, e não a instâncias (objetos) específicas.
+
+*   **Atributos Estáticos**: São compartilhados entre todas as instâncias. Se um objeto altera um valor estático, todos os outros objetos daquela classe verão a mudança.
+*   **Métodos Estáticos**: Podem ser chamados diretamente pelo nome da classe (ex: `Cliente.getStaticName()`) sem a necessidade de criar um objeto com `new`.
+*   **Classes Aninhadas Estáticas**: Podem ser úteis em padrões de projeto (como o *Builder*), mas possuem regras específicas de acesso aos membros da classe externa.
+
+### 3. A Palavra-chave `final`
+Utilizada para impor imutabilidade e restrições de herança.
+
+*   **Variáveis `final`**: Uma vez inicializadas, seu valor não pode ser alterado (constantes).
+*   **Classes `final`**: Não podem ser estendidas (não permitem herança).
+*   **Métodos `final`**: Não podem ser sobrescritos por subclasses.
+
+### 4. Classes Utilitárias e Imports Estáticos
+Conceitos avançados para otimização do desenvolvimento:
+
+*   **Classes Utilitárias**: Geralmente definidas como `final`, com um construtor `private` (para evitar instanciação) e apenas métodos `static`. Exemplo: classes de formatação de strings ou cálculos matemáticos.
+*   **`import static`**: Permite importar métodos ou atributos estáticos de uma classe para que possam ser usados diretamente no código, sem precisar prefixar com o nome da classe.
+
+---
+
+### Melhores Práticas
+
+*   **Encapsulamento Progressivo**: A boa prática sugere começar sempre com o nível de acesso mais restritivo (`private`) e abrir a visibilidade (`protected` ou `public`) apenas quando houver uma necessidade clara. Isso reduz o acoplamento do código.
+*   **O Perigo do `static`**: Embora útil para compartilhar dados, o uso excessivo de atributos estáticos pode causar efeitos colaterais difíceis de rastrear, já que o estado é global para todas as instâncias da classe.
+*   **Segurança com `final`**: Usar `final` em parâmetros de métodos ou classes utilitárias previne comportamentos inesperados e garante que a lógica de negócio não seja alterada acidentalmente por herança ou reatribuição.
+*   **Classes Aninhadas (*Nested Classes*)**: Embora o Java permita criar classes dentro de classes, isso aumenta a complexidade. O uso é recomendado principalmente em contextos específicos como testes unitários ou padrões de projeto bem definidos.
+*   **Organização por Pacotes**: O modificador *default* reforça a importância de uma boa estrutura de pacotes. Agrupar classes relacionadas no mesmo pacote facilita a comunicação entre elas sem expor membros desnecessariamente ao restante do sistema.
+
+---
+
+### 🛠 Resumo de Visibilidade
+
+| Modificador | Classe | Pacote | Subclasse | Projeto |
+| :--- | :---: | :---: | :---: | :---: |
+| **public** | Sim | Sim | Sim | Sim |
+| **protected** | Sim | Sim | Sim | Não |
+| **default** | Sim | Sim | Não | Não |
+| **private** | Sim | Não | Não | Não |      
+
 
 ## Parte 2 - Exercícios: Interfaces e Lambda em Java
 
