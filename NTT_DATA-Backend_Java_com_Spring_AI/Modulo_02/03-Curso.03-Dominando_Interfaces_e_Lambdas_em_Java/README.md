@@ -309,7 +309,7 @@ A imagem demonstra a simplificação máxima da chamada do método customizado a
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/dominando-interfaces-e-lambda-em-java/learning/452bf14a-ec57-4808-9db3-98226a49d182?autoplay=1
 
-#### Anotações
+### Anotações
 
 #### 1. Modificadores de Acesso
 Os modificadores definem quem pode visualizar ou interagir com os membros de uma classe.
@@ -338,6 +338,7 @@ Conceitos avançados para otimização do desenvolvimento:
 
 *   **Classes Utilitárias**: Geralmente definidas como `final`, com um construtor `private` (para evitar instanciação) e apenas métodos `static`. Exemplo: classes de formatação de strings ou cálculos matemáticos.
 *   **`import static`**: Permite importar métodos ou atributos estáticos de uma classe para que possam ser usados diretamente no código, sem precisar prefixar com o nome da classe.
+
 
 #### Melhores Práticas
 
