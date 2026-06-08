@@ -5,6 +5,10 @@
 
 ## Parte 1 - Dominando Interfaces e Lambda em Java
 
+Para este curso, ver também:
+
+- Roadmap Java --> [Interfaces](https://github.com/ahaerdy/roadmap_java/tree/main/orientacao_a_objetos/aprofundando/interfaces)
+
 ### 🟩 Vídeo 01 - Interfaces
 
 <video width="60%" controls>
