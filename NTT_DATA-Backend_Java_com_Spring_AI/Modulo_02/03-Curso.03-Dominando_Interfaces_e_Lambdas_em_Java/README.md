@@ -371,7 +371,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/d
 
 Esta aula aprofunda o entendimento sobre os modificadores de acesso (`public`, `default`, `protected`, `private`) e outras palavras-chave importantes (`static`, `final`) em Java. O objetivo é compreender como controlar a visibilidade e o comportamento de classes, atributos e métodos, o que é crucial para o desenvolvimento de software robusto e bem estruturado.
 
-### Anotações
+## Anotações
 
 ### 1. Modificadores de Acesso
 
