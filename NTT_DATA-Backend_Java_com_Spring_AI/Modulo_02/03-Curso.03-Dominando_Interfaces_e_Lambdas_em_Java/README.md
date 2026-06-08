@@ -460,5 +460,5 @@ Os modificadores de acesso definem o escopo de visibilidade de uma classe, atrib
 
 # Certificado: Dominando Interfaces e Lambdas em Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/E4G0QGRT.pdf
+- Certificado em pdf: [Certificado-Dominando_Interfaces_e_Lambdas_em_Java.pdf](000-Midia_e_Anexos/Certificado-Dominando_Interfaces_e_Lambdas_em_Java.pdf)
