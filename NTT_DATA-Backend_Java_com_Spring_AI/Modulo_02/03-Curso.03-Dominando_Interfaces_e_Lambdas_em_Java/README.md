@@ -219,7 +219,6 @@ public class Main {
 }
 ```
 
-
 ### 🟩 Vídeo 02 - Interfaces Funcionais
 
 <video width="60%" controls>
@@ -227,7 +226,9 @@ public class Main {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/dominando-interfaces-e-lambda-em-java/learning/1fa31db9-fe0a-41b7-b8e1-f1afc63c63bb?autoplay=1
+
+
 
 ### 🟩 Vídeo 03 - Entendendo algumas keywords usadas
 
