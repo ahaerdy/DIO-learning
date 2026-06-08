@@ -7,6 +7,11 @@
 
 Para este curso, ver também:
 
+<p align="center">
+  <img src="https://github.com/ahaerdy/roadmap_java/blob/main/000-Midia_e_Anexos/2026-06-06-13-09-59.png" alt="" width="480">
+</p>
+
+
 - ☕️ Roadmap Java 
   - [Interfaces](https://github.com/ahaerdy/roadmap_java/tree/main/orientacao_a_objetos/aprofundando/interfaces)
   - [Expressões Lambda](https://github.com/ahaerdy/roadmap_java/tree/main/orientacao_a_objetos/recursos_modernos/expressoes_lambda)
