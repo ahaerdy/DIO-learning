@@ -367,7 +367,9 @@ Conceitos avançados para otimização do desenvolvimento:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/dominando-interfaces-e-lambda-em-java/learning/452bf14a-ec57-4808-9db3-98226a49d182?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
