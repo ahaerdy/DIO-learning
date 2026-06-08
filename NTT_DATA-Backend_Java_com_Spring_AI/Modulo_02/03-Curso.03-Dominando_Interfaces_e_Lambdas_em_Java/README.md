@@ -228,6 +228,76 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/dominando-interfaces-e-lambda-em-java/learning/1fa31db9-fe0a-41b7-b8e1-f1afc63c63bb?autoplay=1
 
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-06-08-12h58m32s112.jpg" alt="" width="840">
+</p>
+
+```java
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<User> users = List.of(
+            new User("Maria", 21),
+            new User("Joao", 32),
+            new User("Eduardo", 40),
+            new User("Ana", 19)
+        );
+    }
+}
+```
+
+A imagem ilustra a criação de uma coleção de objetos do tipo `User` utilizando o método `List.of()`. Este método é empregado para instanciar uma lista imutável, garantindo que os elementos adicionados (neste caso, os usuários com seus respectivos nomes e idades) não possam ser alterados, adicionados ou removidos após a inicialização da coleção.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-06-08-13h01m37s801.jpg" alt="" width="840">
+</p>
+
+```java
+var consumer = new Consumer<User>() {
+    @Override
+    public void accept(final User user) {
+        System.out.println(user);
+    }
+};
+users.forEach(consumer);
+```
+
+Neste trecho, demonstra-se a implementação da interface funcional `Consumer` por meio de uma classe anônima. O método `accept` é sobrescrito para definir a ação que será executada para cada elemento (imprimir o usuário no console). Em seguida, o método `forEach`, herdado da interface `Iterable`, é invocado na lista, recebendo essa implementação do `Consumer` para iterar sobre os itens.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-06-08-13h09m24s791.jpg" alt="" width="840">
+</p>
+
+```java
+users.forEach(user -> System.out.println(user));
+```
+
+A imagem apresenta a refatoração do código anterior, substituindo a verbosidade da classe anônima por uma expressão lambda. A sintaxe `user -> System.out.println(user)` cumpre exatamente o mesmo papel do método `accept` da interface `Consumer`, tornando o código mais conciso e legível. A saída exibida no console confirma a execução bem-sucedida da iteração sobre todos os usuários da lista.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-06-08-13h09m51s295.jpg" alt="" width="840">
+</p>
+
+```java
+private static void printStringValue(Function<User, String> callback, List<User> users) {
+    users.forEach(u -> System.out.println(callback.apply(u)));
+}
+```
+
+Aqui é introduzida outra interface funcional nativa, a `Function<T, R>`. Diferente do `Consumer`, a `Function` recebe um argumento de um tipo (neste caso, `User`) e retorna um resultado de outro tipo (neste caso, `String`). O método customizado `printStringValue` exemplifica como aplicar essa função de callback a cada elemento da lista, utilizando o método `apply` dentro de uma expressão lambda no `forEach`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2026-06-08-13h11m04s313.jpg" alt="" width="840">
+</p>
+
+```java
+printStringValue(Record::toString, users);
+```
+
+A imagem demonstra a simplificação máxima da chamada do método customizado através do uso de referências a métodos (*method references*). Em vez de escrever a expressão lambda completa, utiliza-se a sintaxe `Record::toString` (ou `User::toString`), que instrui o compilador a utilizar diretamente o método `toString` do objeto como implementação da interface funcional `Function`, resultando em um código ainda mais limpo e expressivo.      
 
 
 ### 🟩 Vídeo 03 - Entendendo algumas keywords usadas
