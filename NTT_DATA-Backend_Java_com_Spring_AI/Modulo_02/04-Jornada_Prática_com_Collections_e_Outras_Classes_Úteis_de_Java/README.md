@@ -15,7 +15,7 @@
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/583ba61a-3460-403a-83d2-b263ca9d4ccd?autoplay=1
 
 
-O vídeo resume os conceitos fundamentais de coleções em Java, focando na interface List e suas implementações mais comuns: ArrayList, LinkedList e Vector.
+O vídeo resume os conceitos fundamentais de coleções em Java, focando na interface List e suas implementações mais comuns: `ArrayList`, `LinkedList` e `Vector`.
 
 ### Anotações
 
@@ -186,20 +186,43 @@ System.out.println(users);
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-09-19h39m26s522.jpg" alt="" width="840">
 </p>
 
-*Conteúdo não identificado com segurança a partir do material disponível.*
+A imagem exibe a sobrescrita do método `toString()`. Sem ele, ao imprimir uma lista ou objeto, o Java mostra o endereço de memória (ex: `User@15db9742`). Com `toString()` implementado, a saída se torna legível. O professor usa `String.format()` para gerar uma representação no formato JSON ou similar.
+
+```java
+@Override
+public String toString() {
+    return String.format("{\"code\":%d, \"name\":\"%s\"}", code, name);
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-09-19h39m44s549.jpg" alt="" width="840">
 </p>
 
-*Conteúdo não identificado com segurança a partir do material disponível.*
+A imagem demonstra os métodos de remoção da lista: `remove(Object o)` retorna `boolean` (indica se removeu com sucesso), enquanto `remove(int index)` retorna o elemento removido. Também mostra `removeFirst()` (Java 21+), `clear()` para esvaziar a lista, e como a lista se comporta após cada operação.
+
+```java
+boolean removido = users.remove(usuarioInexistente); // false
+User removidoPorIndice = users.remove(0);            // retorna o User removido
+users.removeFirst();                                 // remove e retorna o primeiro
+users.clear();                                       // lista fica vazia
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-09-19h40m12s474.jpg" alt="" width="840">
 </p>
 
-*Conteúdo não identificado com segurança a partir do material disponível.*      
+A imagem mostra um teste de performance comparando `ArrayList`, `Vector` e `LinkedList` ao adicionar muitos elementos. O professor utiliza `Duration.between()` para medir o tempo em milissegundos. O resultado mostra que `ArrayList` é o mais rápido para inserções sucessivas no final, `Vector` é mais lento por causa da sincronização, e `LinkedList` pode ser mais lento ainda nesse cenário específico. A recomendação é escolher a implementação com base no padrão de uso real da aplicação.
 
+```java
+Instant inicio = Instant.now();
+for (int i = 0; i < 100_000; i++) {
+    lista.add(i);
+}
+Instant fim = Instant.now();
+long ms = Duration.between(inicio, fim).toMillis();
+System.out.println("Tempo: " + ms + " ms");
+```
 
 
 ### 🟩 Vídeo 02 - Trabalhando com Set
