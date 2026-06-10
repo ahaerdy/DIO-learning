@@ -180,51 +180,6 @@ users.clear();
 System.out.println(users);
 ```
 
-#### Comparativo de performance — ArrayList vs Vector vs LinkedList
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-09-19h39m26s522.jpg" alt="" width="840">
-</p>
-
-A imagem exibe a sobrescrita do método `toString()`. Sem ele, ao imprimir uma lista ou objeto, o Java mostra o endereço de memória (ex: `User@15db9742`). Com `toString()` implementado, a saída se torna legível. O professor usa `String.format()` para gerar uma representação no formato JSON ou similar.
-
-```java
-@Override
-public String toString() {
-    return String.format("{\"code\":%d, \"name\":\"%s\"}", code, name);
-}
-```
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-09-19h39m44s549.jpg" alt="" width="840">
-</p>
-
-A imagem demonstra os métodos de remoção da lista: `remove(Object o)` retorna `boolean` (indica se removeu com sucesso), enquanto `remove(int index)` retorna o elemento removido. Também mostra `removeFirst()` (Java 21+), `clear()` para esvaziar a lista, e como a lista se comporta após cada operação.
-
-```java
-boolean removido = users.remove(usuarioInexistente); // false
-User removidoPorIndice = users.remove(0);            // retorna o User removido
-users.removeFirst();                                 // remove e retorna o primeiro
-users.clear();                                       // lista fica vazia
-```
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-09-19h40m12s474.jpg" alt="" width="840">
-</p>
-
-A imagem mostra um teste de performance comparando `ArrayList`, `Vector` e `LinkedList` ao adicionar muitos elementos. O professor utiliza `Duration.between()` para medir o tempo em milissegundos. O resultado mostra que `ArrayList` é o mais rápido para inserções sucessivas no final, `Vector` é mais lento por causa da sincronização, e `LinkedList` pode ser mais lento ainda nesse cenário específico. A recomendação é escolher a implementação com base no padrão de uso real da aplicação.
-
-```java
-Instant inicio = Instant.now();
-for (int i = 0; i < 100_000; i++) {
-    lista.add(i);
-}
-Instant fim = Instant.now();
-long ms = Duration.between(inicio, fim).toMillis();
-System.out.println("Tempo: " + ms + " ms");
-```
-
-
 ### 🟩 Vídeo 02 - Trabalhando com Set
 
 <video width="60%" controls>
@@ -233,6 +188,244 @@ System.out.println("Tempo: " + ms + " ms");
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/c10088f0-cd6d-449b-9833-e7f1bdc75531?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h25m01s400.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a implementação completa da classe `User` em Java. A classe possui dois atributos privados (`int id` e `String name`), dois construtores (um sem argumentos e outro parametrizado), getters e setters para ambos os campos, e três métodos sobrescritos da classe `Object`: `toString()`, `equals()` e `hashCode()`.
+
+O método `toString()` formata a representação textual do objeto. O `equals()` verifica identidade de referência primeiro (`obj == this`), depois confirma o tipo com `instanceof`, e por fim compara `id` e `name` usando `Objects.equals`. O `hashCode()` delega para `Objects.hash(this.id, this.name)`, garantindo que objetos iguais segundo `equals` produzam o mesmo hash.
+
+```java
+import java.util.Objects;
+
+public class User {
+
+    private int id;
+    private String name;
+
+    public User() {
+    }
+
+    public User(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("User[id=%d, name='%s']", id, name);
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (obj == this) return true;
+        // O instanceof já garante que 'obj' não é null
+        if (!(obj instanceof User user)) return false;
+        return this.id == user.getId() && Objects.equals(user.getName(), this.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.id, this.name);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h25m01s414.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `Main` no IntelliJ IDEA, onde um `Set<User>` é criado com a implementação `HashSet`. Quatro objetos `User` são adicionados ao conjunto com IDs 1 a 4. Em seguida, `users.contains(new User(id: 1, name: "Jão"))` é chamado e o resultado impresso no console é **`false`**.
+
+Esse resultado demonstra um ponto fundamental: sem a sobrescrita de `equals` e `hashCode`, o `HashSet` usa a implementação padrão herdada de `Object`, que compara **referências de memória**. Mesmo que dois objetos `User` tenham os mesmos dados, eles são instâncias diferentes e, portanto, considerados objetos distintos pelo conjunto.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Set<User> users = new HashSet<>();
+        users.add(new User( id: 1,  name: "Jão"));
+        users.add(new User( id: 2,  name: "Maria"));
+        users.add(new User( id: 3,  name: "Juca"));
+        users.add(new User( id: 4,  name: "Leo"));
+
+        System.out.println(users.contains(new User( id: 1,  name: "Jão")));
+    }
+}
+```
+
+> **Saída:** `false`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h25m37s308.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, uma linha adicional (linha 13) chama explicitamente `equals` entre dois objetos `User` com os mesmos dados (`id: 1, name: "Jão"`). O console exibe **`true`** para esse `equals` e **`false`** para o `contains`.
+
+Isso evidencia o comportamento após a implementação correta de `equals`: dois objetos com os mesmos atributos são reconhecidos como iguais pela comparação direta. Porém, o `HashSet` ainda retorna `false` no `contains`, pois ele utiliza **primeiro o `hashCode`** para localizar o bucket antes de usar `equals`. Enquanto `hashCode` não estiver sobrescrito, o `HashSet` não conseguirá encontrar o objeto.
+
+```java
+System.out.println(new User( id: 1,  name: "Jão").equals(new User( id: 1,  name: "Jão")));
+// true
+
+System.out.println(users.contains(new User( id: 1,  name: "Jão")));
+// false
+```
+
+> **Saída:**
+> ```
+> true
+> false
+> ```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h35m09s524.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra o comportamento após a implementação completa de `equals` **e** `hashCode`. O console agora exibe o hash gerado para um objeto `User(id: 1, name: "Jão")` (valor `79254`) e em seguida **`true`** para `users.contains`.
+
+Com `hashCode` corretamente implementado, o `HashSet` consegue calcular o bucket correto e então utilizar `equals` para confirmar a igualdade. O ciclo está completo: mesmos dados → mesmo hash → mesmo bucket → `equals` retorna `true` → `contains` retorna `true`.
+
+```java
+System.out.println(new User( id: 1,  name: "Jão").hashCode());
+// 79254
+
+System.out.println(users.contains(new User( id: 1,  name: "Jão")));
+// true
+```
+
+> **Saída:**
+> ```
+> 79254
+> true
+> ```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h39m16s465.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta dois modos de iteração sobre o `HashSet`. O primeiro utiliza `users.forEach(System.out::println)` com referência de método. O segundo usa um `Iterator` explícito com laço `while (iterator.hasNext())`. Ambos produzem a mesma saída: os quatro usuários impressos em ordem não determinística (Leo, Juca, Jão, Maria).
+
+Isso ilustra que o `HashSet` **não garante ordem de inserção**. A ordem de iteração depende dos valores de `hashCode` e da organização interna dos buckets.
+
+```java
+// Forma 1 — forEach com referência de método
+users.forEach(System.out::println);
+
+// Forma 2 — Iterator explícito
+var iterator = users.iterator();
+while (iterator.hasNext()) {
+    System.out.println(iterator.next());
+}
+```
+
+> **Saída (exemplo):**
+> ```
+> {'id': 4, 'name': Leo}
+> {'id': 3, 'name': Juca}
+> {'id': 1, 'name': Jão}
+> {'id': 2, 'name': Maria}
+> ```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h43m09s174.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o uso de `removeAll` para remover múltiplos elementos do conjunto de uma vez, passando uma coleção (`List.of(...)`) como argumento. Na primeira execução, tenta-se remover `User(id: 1, name: "Jão")` e `User(id: 2, name: "Lucas")` — como "Lucas" não existe no conjunto, apenas Jão é removido, restando Leo, Juca e Maria. Na segunda execução, verifica-se que `removeAll` retorna `false` quando nenhum elemento da coleção passada existe no conjunto.
+
+```java
+// Remove todos os elementos da coleção que existirem no Set
+users.removeAll(List.of(new User( id: 1,  name: "Jão"), new User( id: 2,  name: "Lucas")));
+System.out.println(users);
+// [{'id': 4, 'name': Leo}, {'id': 3, 'name': Juca}, {'id': 2, 'name': Maria}]
+
+System.out.println(users.removeAll(List.of(new User( id: 2,  name: "Jão"), new User( id: 2,  name: "Lucas"))));
+// false
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h45m01s980.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra o método `removeIf`, que aceita um `Predicate` (expressão lambda) para remover elementos que satisfaçam uma condição. No exemplo, `user -> user.getId() > 2` remove os usuários com ID 3 e 4, deixando apenas Jão (id=1) e Maria (id=2) no conjunto.
+
+`removeIf` é mais expressivo e seguro do que iterar manualmente e chamar `remove` dentro do laço, pois evita `ConcurrentModificationException`.
+
+```java
+users.removeIf(user -> user.getId() > 2);
+System.out.println(users);
+```
+
+> **Saída:**
+> ```
+> [{'id': 1, 'name': Jão}, {'id': 2, 'name': Maria}]
+> ```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h45m47s027.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o uso de `Predicate.not(...)` para **negar** a condição passada ao `removeIf`. Com `Predicate.not(user -> user.getId() > 2)`, o conjunto remove os elementos cujo ID **não** é maior que 2, ou seja, mantém apenas Leo (id=4) e Juca (id=3).
+
+Isso evidencia a flexibilidade dos predicados: `Predicate.not` é um método estático que inverte qualquer `Predicate`, permitindo lógica de filtragem sem a necessidade de reescrever a condição com negação manual.
+
+```java
+users.removeIf(Predicate.not(user -> user.getId() > 2));
+System.out.println(users);
+```
+
+> **Saída:**
+> ```
+> [{'id': 4, 'name': Leo}, {'id': 3, 'name': Juca}]
+> ```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h46m20s060.jpg" alt="" width="840">
+</p>
+
+*Conteúdo não identificado com segurança a partir do material disponível.*
+
+> A imagem exibida no PDF corresponde à mesma tela da página anterior (`Predicate.not`), sem conteúdo novo identificável com segurança para esta posição específica do esqueleto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h47m20s251.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o uso de `removeAll` retornando `false` quando a coleção passada não contém nenhum elemento presente no `Set` atual. O console exibe `true` para `contains`, `false` para `removeAll` (nenhum elemento removido), e o conjunto completo com os quatro usuários.
+
+Esse comportamento reforça que `removeAll` é uma operação segura: ele utiliza `equals` e `hashCode` para comparar os elementos, e retorna `false` se o conjunto não foi modificado — útil para verificar se uma remoção em lote teve efeito.
+
+```java
+System.out.println(users.contains(new User( id: 1,  name: "Jão")));
+// true
+
+System.out.println(users.removeAll(List.of(new User( id: 2,  name: "Jão"), new User( id: 2,  name: "Lucas"))));
+// false
+
+System.out.println(users);
+// [{'id': 4, 'name': Leo}, {'id': 3, 'name': Juca}, {'id': 1, 'name': Jão}, {'id': 2, 'name': Maria}]
+```
+
 
 ## Parte 2 - Trabalhando com Map e Wrappers
 
