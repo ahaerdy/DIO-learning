@@ -400,14 +400,6 @@ System.out.println(users);
 > ```
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h46m20s060.jpg" alt="" width="840">
-</p>
-
-*Conteúdo não identificado com segurança a partir do material disponível.*
-
-> A imagem exibida no PDF corresponde à mesma tela da página anterior (`Predicate.not`), sem conteúdo novo identificável com segurança para esta posição específica do esqueleto.
-
-<p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h47m20s251.jpg" alt="" width="840">
 </p>
 
@@ -425,7 +417,6 @@ System.out.println(users.removeAll(List.of(new User( id: 2,  name: "Jão"), new 
 System.out.println(users);
 // [{'id': 4, 'name': Leo}, {'id': 3, 'name': Juca}, {'id': 1, 'name': Jão}, {'id': 2, 'name': Maria}]
 ```
-
 
 ## Parte 2 - Trabalhando com Map e Wrappers
 
