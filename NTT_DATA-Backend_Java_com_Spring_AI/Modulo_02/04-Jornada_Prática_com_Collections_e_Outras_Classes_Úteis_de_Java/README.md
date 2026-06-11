@@ -427,7 +427,214 @@ System.out.println(users);
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/e13a8fd0-8b11-41d3-8537-f6ff20c46637?autoplay=1
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h02m49s643.jpg" alt="" width="840">
+</p>
+
+O código demonstra a criação de um `Map<String, User>` com a implementação `HashMap`. Quatro entradas são inseridas via `put`, associando um e-mail (a **chave**) a um objeto `User` (o **valor**). Em seguida, três formas de iteração são exibidas: impressão direta do mapa, iteração sobre `keySet()` e iteração sobre `values()`. O console mostra o conjunto de chaves (e-mails) separado pelo divisor, confirmando que a ordem de exibição não é garantida no `HashMap`.
+
+```java
+public static void main(String[] args) {
+    Map<String, User> users = new HashMap<>();
+    users.put("joao@joao.com",   new User( name: "João",  age: 22));
+    users.put("maria@maria.com", new User( name: "Maria", age: 32));
+    users.put("juca@juca.com",   new User( name: "Juca",  age: 18));
+    users.put("leo@leo.com",     new User( name: "Leo",   age: 40));
+
+    System.out.println(users);
+    System.out.println("=========================");
+    users.keySet().forEach(System.out::println);
+    System.out.println("=========================");
+    users.values().forEach(System.out::println);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h02m54s548.jpg" alt="" width="840">
+</p>
+
+O console exibe a segunda parte da saída do mesmo código: após o separador de iguais, são listados os **valores** do mapa, ou seja, os objetos `User`. A ordem (`Leo`, `Juca`, `João`, `Maria`) confirma o comportamento do `HashMap`, que não preserva a ordem de inserção. Cada linha representa um `User` formatado pelo `toString` gerado automaticamente pelo `record`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h03m17s079.jpg" alt="" width="840">
+</p>
+
+Demonstração dos métodos `containsKey` e `containsValue`. O código testa se a chave `"marcos@marcos.com"` existe no mapa e se o valor `new User("Marcos", 40)` está presente. Ambos retornam `false`, pois nem a chave nem o valor foram inseridos. O resultado `false / false` no console confirma isso.
+
+```java
+System.out.println(users.containsKey("marcos@marcos.com"));
+System.out.println(users.containsValue(new User( name: "Marcos", age: 40)));
+```
+
+> **Importante:** `containsValue` depende da implementação correta de `equals` e `hashCode` na classe `User`. Por usar `record`, esses métodos são gerados automaticamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h03m30s696.jpg" alt="" width="840">
+</p>
+
+O mesmo par de chamadas agora com argumentos válidos: a chave `"joao@joao.com"` existe no mapa, e o valor `new User("Leo", 40)` também está presente (pois o `record` compara por valor de campo). Ambos retornam `true`, demonstrando que o `HashMap` localiza corretamente entradas via hash.
+
+```java
+System.out.println(users.containsKey("joao@joao.com"));
+System.out.println(users.containsValue(new User( name: "Leo", age: 40)));
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h03m47s871.jpg" alt="" width="840">
+</p>
+
+Demonstração do método `remove(key)`. Ao passar a chave `"joao@joao.com"`, o mapa remove a entrada e **retorna o valor removido** — neste caso, `User[name=João, age=22]`. Esse comportamento é útil quando é preciso remover e ao mesmo tempo capturar o objeto que foi excluído.
+
+```java
+System.out.println(users.remove( key: "joao@joao.com"));
+// Saída: User[name=João, age=22]
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h03m55s250.jpg" alt="" width="840">
+</p>
+
+Quando a chave passada ao `remove` contém um caractere extra (um espaço no final: `"joao@joao.com "`), ela não corresponde a nenhuma entrada do mapa. O método retorna `null` em vez do usuário, evidenciando que a comparação de chaves é exata — qualquer diferença de caractere resulta em não-encontrado.
+
+```java
+System.out.println(users.remove( key: "joao@joao.com "));
+// Saída: null
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h04m20s049.jpg" alt="" width="840">
+</p>
+
+Demonstração da sobrecarga `remove(key, value)`, que só remove a entrada se **tanto a chave quanto o valor** corresponderem. Aqui, a chave é `"joao@joao.com"` mas o valor fornecido é `new User("Leo", 40)` — que não está associado a essa chave. O retorno é `false`, indicando que a remoção não ocorreu.
+
+```java
+System.out.println(users.remove("joao@joao.com", new User( name: "Leo", age: 40)));
+// Saída: false
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h04m31s479.jpg" alt="" width="840">
+</p>
+
+Agora a sobrecarga `remove(key, value)` é chamada com chave e valor **corretos e correspondentes**: chave `"leo@leo.com"` associada a `new User("Leo", 40)`. A remoção é realizada com sucesso e o método retorna `true`.
+
+```java
+System.out.println(users.remove("leo@leo.com", new User( name: "Leo", age: 40)));
+// Saída: true
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h05m30s729.jpg" alt="" width="840">
+</p>
+
+Demonstração do método `replace`. O mapa é iterado com `forEach` antes e depois da substituição para comparar os estados. O método `replace("joao@joao.com", new User("João", 60))` atualiza apenas o valor associado à chave, sem alterar as demais entradas. O console confirma que a idade de João passou de 22 para 60 após o `replace`.
+
+```java
+users.forEach((k, v) -> System.out.printf("key: %s | value %s \n", k, v));
+System.out.println("==================");
+users.replace("joao@joao.com", new User( name: "João", age: 60));
+users.forEach((k, v) -> System.out.printf("key: %s | value %s \n", k, v));
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h05m43s047.jpg" alt="" width="840">
+</p>
+
+O console exibe o resultado completo da execução com `replace`. Na primeira iteração, João aparece com `age=22`; após o separador, a segunda iteração mostra João com `age=60`, enquanto os demais usuários (Leo, Juca, Maria) permanecem inalterados. Isso confirma que `replace` age de forma cirúrgica, alterando apenas o valor da chave especificada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h06m43s110.jpg" alt="" width="840">
+</p>
+
+Retorno ao método `remove(key)` simples, agora em contexto de revisão. A chamada `users.remove("joao@joao.com")` retorna o `User` removido (`User[name=João, age=22]`), confirmando o mesmo comportamento observado anteriormente. O console exibe o objeto e encerra com código 0.
+
+```java
+System.out.println(users.remove( key: "joao@joao.com"));
+// Saída: User[name=João, age=22]
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h06m55s466.jpg" alt="" width="840">
+</p>
+
+Demonstração de `containsValue` com valor **incorreto** (nome `"Leo,"` com vírgula, ou instância diferente sem correspondência). O resultado é `false`. A imagem reforça que a comparação de valores no `HashMap` é feita via `equals`, e qualquer diferença — mesmo mínima — resulta em não-encontrado.
+
+```java
+System.out.println(users.containsValue(new User( name: "Leo,", age: 40)));
+// Saída: false
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h07m00s271.jpg" alt="" width="840">
+</p>
+
+Agora `containsValue` é chamado com o objeto correto: `new User("Leo", 40)`. O retorno é `true`, confirmando que o `record` `User` compara por igualdade de campos (graças ao `equals` gerado automaticamente), e que o valor existe no mapa.
+
+```java
+System.out.println(users.containsValue(new User( name: "Leo", age: 40)));
+// Saída: true
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h07m19s477.jpg" alt="" width="840">
+</p>
+
+Demonstração do método `getOrDefault`. Quando a chave passada não existe no mapa (chave vazia `""`), o método retorna o valor padrão fornecido como segundo argumento: `User[name= , age=-1]`. Isso evita `NullPointerException` em situações onde a chave pode estar ausente.
+
+```java
+System.out.println(users.getOrDefault( key: " ", new User( name: " ", age: -1)));
+// Saída: User[name= , age=-1]
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h07m31s007.jpg" alt="" width="840">
+</p>
+
+O mesmo `getOrDefault` agora com uma chave válida: `"juca@juca.com"`. Como essa chave existe no mapa, o método retorna o valor real associado (`User[name=Juca, age=18]`), ignorando o valor padrão. Isso demonstra a lógica condicional interna do método.
+
+```java
+System.out.println(users.getOrDefault( key: "juca@juca.com", new User( name: " ", age: -1)));
+// Saída: User[name=Juca, age=18]
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h07m44s233.jpg" alt="" width="840">
+</p>
+
+Demonstração do método `get` simples. Ao passar a chave `"juca@juca.com"`, o mapa retorna `User[name=Juca, age=18]` diretamente. Diferente de `getOrDefault`, o `get` retornará `null` se a chave não existir — sem a possibilidade de fornecer um valor padrão.
+
+```java
+System.out.println(users.get("juca@juca.com"));
+// Saída: User[name=Juca, age=18]
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h07m49s993.jpg" alt="" width="840">
+</p>
+
+Quando `get` recebe uma chave que não existe no mapa — aqui `"juca@juca.com "` com espaço extra —, o retorno é `null`. Isso evidencia o risco de usar `get` sem verificação prévia: o `null` pode causar `NullPointerException` se o resultado for utilizado sem tratamento.
+
+```java
+System.out.println(users.get("juca@juca.com "));
+// Saída: null
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-11-16h08m34s483.jpg" alt="" width="840">
+</p>
+
+Demonstração do método `merge`. Ele recebe uma chave, um valor novo e uma `BiFunction`. Se a chave **não existir** no mapa, o valor novo é simplesmente inserido. Se a chave **já existir**, a função é invocada com o valor atual e o novo valor, permitindo decidir qual dos dois será mantido. No exemplo, a chave `"leo@leo.com"` existe, então a função é chamada: ela imprime ambos os usuários e retorna `user2` (o novo), substituindo o anterior. O estado final do mapa mostra Leo com `name=` e `age=-1`.
+
+```java
+users.merge( key: "leo@leo.com", new User( name: "", age: -1), (user, user2) -> {
+    System.out.println(user);
+    System.out.println(user2);
+    return user2;
+});
+System.out.println(users);
+```
 
 ### 🟩 Vídeo 04 - Tipos primitivos e Wrappers
 
