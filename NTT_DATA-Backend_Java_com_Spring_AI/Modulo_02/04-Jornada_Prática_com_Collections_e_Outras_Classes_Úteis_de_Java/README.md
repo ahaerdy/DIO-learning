@@ -645,6 +645,53 @@ System.out.println(users);
 
 link do vídeo:
 
+### Anotações
+
+#### Footprint de memória — tipos primitivos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h01m41s343.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o artigo do Baeldung aberto no navegador, na seção **3.1 – Single Item Memory Footprint**. O artigo lista o espaço ocupado em memória por cada tipo primitivo do Java:
+
+| Tipo | Tamanho |
+|---|---|
+| `boolean` | 1 bit |
+| `byte` | 8 bits |
+| `short`, `char` | 16 bits |
+| `int`, `float` | 32 bits |
+| `long`, `double` | 64 bits |
+
+Esses valores podem variar conforme a implementação da JVM. Na VM da Oracle, por exemplo, o tipo `boolean` é mapeado internamente como `int` (0 ou 1), ocupando 32 bits na prática. Variáveis primitivas vivem na **stack** e por isso são acessadas de forma muito eficiente.
+
+#### Footprint de memória — tipos wrapper (objetos)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h01m56s958.jpg" alt="" width="840">
+</p>
+
+A imagem continua o artigo do Baeldung, agora mostrando o tamanho ocupado pelos **tipos wrapper** (classes que encapsulam os tipos primitivos) na JVM. Um único objeto de tipo de referência ocupa 128 bits, exceto `Long` e `Double`, que ocupam 192 bits:
+
+| Wrapper | Tamanho |
+|---|---|
+| `Boolean` | 128 bits |
+| `Byte` | 128 bits |
+| `Short`, `Character` | 128 bits |
+| `Integer`, `Float` | 128 bits |
+| `Long`, `Double` | 192 bits |
+
+Isso significa que um `Boolean` ocupa 128 vezes mais espaço que um `boolean` primitivo, e um `Integer` ocupa o equivalente a quatro variáveis `int`. Essa diferença substancial justifica a atenção à escolha entre primitivo e wrapper.
+
+#### Autoboxing em loop — alerta do IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h03m21s244.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o IntelliJ IDEA com um `for` loop declarando a variável de controle como `Integer` (wrapper) em vez de `int` (primitivo). O IDE emite um aviso — **"Type may be primitive"** — sugerindo converter o tipo wrapper para primitivo.
+
+
 ## Parte 3 - Classes String, StringBuilder e StringBuffer
 
 ### 🟩 Vídeo 05 - Classe String
