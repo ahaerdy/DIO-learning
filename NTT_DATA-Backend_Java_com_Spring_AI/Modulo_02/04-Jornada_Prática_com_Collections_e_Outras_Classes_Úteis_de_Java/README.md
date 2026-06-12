@@ -902,7 +902,315 @@ Essa estrutura interna explica por que os tipos wrapper ocupam tanto mais memór
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/47b5dfa0-75b8-4c30-b042-0384cac77f5e?autoplay=1
+
+### Anotações
+
+#### `replace` — Substituindo caracteres em uma String
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h17m14s226.jpg" alt="" width="840">
+</p>
+
+O método `replace` da classe `String` substitui **todas** as ocorrências de um caractere ou sequência por outro valor. No exemplo abaixo, todas as letras `"j"` minúsculas são trocadas por `"J"` maiúsculo na string `"java;java;java;java"`, e o resultado é impresso:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "java;java;java;java";
+        value = value.replace("j", "J");
+        System.out.println(value);
+    }
+}
+```
+
+**Saída:** `Java;Java;Java;Java`
+
+> O método `replace` retorna uma **nova string** com as substituições aplicadas — por isso é necessário reatribuir o resultado à variável `value`.
+
+#### `split` sem delimitador — Quebrando caractere a caractere
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h19m31s227.jpg" alt="" width="840">
+</p>
+
+O método `split` divide uma string em um array de substrings com base em um padrão (regex). Quando chamado com uma string vazia (`""`), ele quebra **cada caractere individualmente**. O laço `for-each` percorre o array e imprime cada elemento:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "java;java;java;java";
+
+        var values = value.split("");
+        for (var v : values) {
+            System.out.println(v);
+        }
+    }
+}
+```
+
+**Saída:** cada caractere da string em uma linha separada (`j`, `a`, `v`, `a`, `;`, `j`, ...).
+
+#### `split` com delimitador — Dividindo por ponto e vírgula
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h19m55s148.jpg" alt="" width="840">
+</p>
+
+Ao passar `";"` como delimitador para o `split`, a string é dividida nos pontos onde o ponto e vírgula aparece. Cada parte resultante é um elemento do array:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "java;java;java;java";
+
+        var values = value.split(";");
+        for (var v : values) {
+            System.out.println(v);
+        }
+    }
+}
+```
+
+**Saída:**
+```
+java
+java
+java
+java
+```
+
+#### `split` com limite — Controlando o número de divisões
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h20m14s723.jpg" alt="" width="840">
+</p>
+
+O método `split` aceita um segundo parâmetro `limit`, que define o número máximo de elementos no array resultante. Com `limit: 2`, apenas a **primeira ocorrência** do delimitador é usada para dividir:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "java;java;java;java";
+
+        var values = value.split(";", 2);
+        for (var v : values) {
+            System.out.println(v);
+        }
+    }
+}
+```
+
+**Saída:**
+```
+java
+java;java;java
+```
+
+O primeiro elemento é `"java"` e o segundo contém o restante da string, sem novas divisões.
+
+#### `toUpperCase` e `toLowerCase` — Alterando a capitalização
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h21m18s181.jpg" alt="" width="840">
+</p>
+
+Os métodos `toUpperCase()` e `toLowerCase()` convertem todos os caracteres da string para maiúsculo ou minúsculo, respectivamente. Ambos retornam uma nova string sem modificar a original:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "jaVa;jaVa;jaVa;jaVa";
+
+        System.out.println(value.toUpperCase());
+        System.out.println(value.toLowerCase());
+    }
+}
+```
+
+**Saída:**
+```
+JAVA;JAVA;JAVA;JAVA
+java;java;java;java
+```
+
+#### `contains` — Verificando a presença de uma substring
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h22m02s716.jpg" alt="" width="840">
+</p>
+
+O método `contains` verifica se a string contém uma determinada sequência de caracteres, retornando `true` ou `false`. A comparação é **case-sensitive** — letras maiúsculas e minúsculas são tratadas como diferentes:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "java;java;java;java";
+        System.out.println(value.contains("V"));
+    }
+}
+```
+
+**Saída:** `false`
+
+> O IntelliJ IDEA exibe um aviso de análise estática: `"Result of 'value.contains("V")' is always 'false'"`, pois a string literal não contém `"V"` maiúsculo.
+
+#### `indexOf` — Encontrando o índice de uma substring
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h22m33s087.jpg" alt="" width="840">
+</p>
+
+O método `indexOf` retorna a posição (índice base zero) da primeira ocorrência de uma string dentro da string alvo. A sobrescrita com `fromIndex` permite definir a partir de qual posição a busca deve começar:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "java;java;java;java";
+        System.out.println(value.indexOf("j", 1));
+    }
+}
+```
+
+**Saída:** `5`
+
+Iniciando a busca a partir do índice `1`, o método ignora o `"j"` na posição `0` e encontra a próxima ocorrência na posição `5`.
+
+#### `isEmpty` — Verificando se a string está vazia
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h22m58s140.jpg" alt="" width="840">
+</p>
+
+O método `isEmpty()` retorna `true` apenas se a string tiver comprimento zero (sem nenhum caractere). Strings que contêm apenas espaços em branco **não** são consideradas vazias por este método:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "java;java;java;java";
+        System.out.println(value.isEmpty());
+    }
+}
+```
+
+**Saída:** `false`
+
+> O IntelliJ exibe o aviso `"Result of 'value.isEmpty()' is always 'false'"`, pois a string é declarada com conteúdo fixo.
+
+#### `isBlank` — Verificando se a string está em branco
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h23m18s097.jpg" alt="" width="840">
+</p>
+
+Diferente de `isEmpty`, o método `isBlank()` retorna `true` tanto para strings vazias quanto para strings compostas **apenas por espaços em branco**. Isso o torna mais adequado para validações de entrada do usuário:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "   ";
+        System.out.println(value.isBlank());
+    }
+}
+```
+
+**Saída:** `true`
+
+> Use `isBlank()` quando quiser garantir que a string não é apenas espaços; use `isEmpty()` quando precisar verificar se ela tem comprimento zero.
+
+#### `substring` — Extraindo uma parte da string
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h24m40s330.jpg" alt="" width="840">
+</p>
+
+O método `substring(beginIndex, endIndex)` extrai uma porção da string. O `beginIndex` é **inclusivo** (o caractere nessa posição é incluído) e o `endIndex` é **exclusivo** (o caractere nessa posição não é incluído):
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = "/********java********/";
+        System.out.println(value.substring(8, 12));
+    }
+}
+```
+
+**Saída:** `java`
+
+Os índices `8` (inclusivo) a `12` (exclusivo) delimitam exatamente os quatro caracteres da palavra `"java"` dentro da string.
+
+#### Manipulação de JSON com `replace` e `split`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h27m25s036.jpg" alt="" width="840">
+</p>
+
+Este exemplo demonstra uma abordagem prática para parsear manualmente um JSON simples usando métodos da classe `String`. A estratégia é: remover os delimitadores estruturais (`{`, `}`, `"`) com `replace`, dividir a string resultante pela vírgula, e depois dividir cada par `chave:valor` pelos dois pontos para popular um `HashMap`:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value = """
+                {"name":"João","age":18}""";
+
+        Map<String, String> map = new HashMap<>();
+        value = value.replace("{", "").replace("}", "").replace("\"", "");
+        var valueArr = value.split(",");
+        for (var v : valueArr) {
+            var keyValue = v.split(":");
+            map.put(keyValue[0], keyValue[1]);
+        }
+        System.out.println(map);
+    }
+}
+```
+
+**Saída:** `{name=João, age=18}`
+
+> O uso de **text blocks** (aspas triplas `"""`) é uma funcionalidade introduzida no Java 15/17 que permite declarar strings com aspas duplas internas sem precisar de caracteres de escape.
+
+#### Tabela de especificadores do `String.format`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h28m52s354.jpg" alt="" width="840">
+</p>
+
+A imagem exibe uma tabela de referência do site JavaPoint com os especificadores de formato aceitos pelo método `String.format` (e pelo `System.out.printf`). Cada especificador define como um argumento será formatado na string de saída:
+
+| Especificador | Tipo de dado | Saída |
+|---|---|---|
+| `%a` | ponto flutuante (exceto BigDecimal) | representação hexadecimal |
+| `%b` | qualquer tipo | `"true"` se não-nulo, `"false"` se nulo |
+| `%c` | caractere | Unicode do caractere |
+| `%d` | inteiro (byte, short, int, long, bigint) | número inteiro decimal |
+| `%e` | ponto flutuante | número decimal em notação científica |
+| `%f` | ponto flutuante | número decimal |
+| `%n` | nenhum | separador de linha da plataforma |
+| `%o` | inteiro | número octal |
+| `%s` | qualquer tipo | valor como String |
+| `%x` | inteiro | string hexadecimal |
+
+#### `String.format` — Formatando strings dinamicamente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-12h29m11s731.jpg" alt="" width="840">
+</p>
+
+O método estático `String.format` permite construir strings formatadas usando especificadores como `%s` (para strings). É útil quando se precisa montar uma string com valores dinâmicos sem realizar impressão imediata — o resultado pode ser atribuído a uma variável:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var test = "%s";
+        System.out.println(String.format(test, "Java"));
+    }
+}
+```
+
+**Saída:** `Java`
+
+> Além de `String.format`, o mesmo resultado pode ser obtido com `System.out.printf`. A diferença é que `printf` imprime diretamente, enquanto `String.format` retorna a string formatada, permitindo atribuição a uma variável para uso posterior.    
+
 
 ### 🟩 Vídeo 06 - Classes StringBuilder e StringBuffer
 
@@ -911,7 +1219,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/2e9561e8-5b04-4ca7-8719-66c9204a6a21?autoplay=1
+
+
 
 ## Parte 4 - Aplicando o BigDecimal, Enums e Classe Optional
 
