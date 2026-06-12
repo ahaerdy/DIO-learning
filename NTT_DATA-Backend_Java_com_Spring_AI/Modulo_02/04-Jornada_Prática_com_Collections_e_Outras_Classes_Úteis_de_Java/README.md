@@ -643,7 +643,7 @@ System.out.println(users);
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/7419b877-5e89-451b-9e53-b1b070bdc307?autoplay=1
 
 ### Anotações
 
@@ -690,6 +690,207 @@ Isso significa que um `Boolean` ocupa 128 vezes mais espaço que um `boolean` pr
 </p>
 
 A imagem mostra o IntelliJ IDEA com um `for` loop declarando a variável de controle como `Integer` (wrapper) em vez de `int` (primitivo). O IDE emite um aviso — **"Type may be primitive"** — sugerindo converter o tipo wrapper para primitivo.
+
+```java
+for (Integer i = 0; i < 100; i++) {
+    // ...
+}
+```
+
+O alerta existe porque, a cada iteração, o Java realiza operações de **autoboxing** (empacotamento do `int` primitivo em `Integer`) e **unboxing** (desempacotamento de volta para `int`), gerando objetos temporários desnecessários e impondo custo extra ao garbage collector.
+
+#### Autoboxing explícito e o custo de desempacotamento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h14m37s799.jpg" alt="" width="840">
+</p>
+
+A imagem exibe um trecho de código que ilustra de forma explícita o que acontece por baixo dos panos quando se usa `Integer` com operações de incremento:
+
+```java
+Integer i = new Integer(value: 1);
+i++;
+
+Integer in = new Integer(value: 1);
+var pi = in.intValue();
+pi++;
+pi = new Integer(pi);
+```
+
+O exemplo mostra que `i++` em um `Integer` equivale a: (1) desempacotar o valor primitivo com `intValue()`, (2) incrementá-lo, e (3) criar um **novo objeto `Integer`** para armazenar o resultado. Esse ciclo de criação e descarte de objetos é o custo real do autoboxing em operações repetitivas.
+
+#### Tipos primitivos não aceitam null — erro de compilação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h16m26s695.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o IntelliJ IDEA com um erro de compilação ao tentar atribuir `null` a uma variável do tipo primitivo `int`:
+
+```java
+int i = null; // ERRO: Incompatible types. Found: 'null', required: 'int'
+```
+
+O IDE indica que o tipo requerido é `int` mas foi fornecido `null`. Tipos primitivos **não aceitam valores nulos** — eles sempre têm um valor padrão (ex.: `0` para `int`). Quando a necessidade de representar ausência de valor (`null`) for requisito, o correto é usar o wrapper `Integer`, que por ser um objeto pode receber `null`.
+
+#### Tipos primitivos — declaração dos 8 tipos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h17m42s211.jpg" alt="" width="840">
+</p>
+
+A imagem exibe todos os 8 tipos primitivos do Java declarados no método `main`:
+
+```java
+boolean b;
+byte by;
+short s;
+char c;
+int i;
+float f;
+long l;
+double d;
+```
+
+O IDE exibe o aviso **"Variable 'b' is never used"**, pois as variáveis foram declaradas mas não utilizadas. Essa visão panorâmica serve para relembrar o conjunto completo de primitivos disponíveis em Java.
+
+#### Tipos wrapper — declaração das classes correspondentes
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h18m08s289.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a declaração das classes wrapper correspondentes a cada tipo primitivo:
+
+```java
+Boolean b;
+Byte by;
+Short s;
+Character c;
+Integer i;
+Float f;
+Long l;
+Double d;
+```
+
+A regra geral para lembrar o nome do wrapper é **iniciar a primeira letra em maiúsculo**. As exceções são `char` → `Character` e `int` → `Integer`. Conhecer esse mapeamento é essencial para usar coleções genéricas (`List<Integer>`, `Map<String, Double>`, etc.), pois generics em Java **não aceitam tipos primitivos**.
+
+#### Passagem por valor — comportamento com tipo primitivo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h18m17s115.jpg" alt="" width="840">
+</p>
+
+A imagem mostra um experimento clássico com **passagem por valor** em Java usando tipo primitivo:
+
+```java
+public static void main(String[] args) {
+    int i = 0;
+    printValue(i);
+    System.out.println(i); // imprime 0
+}
+
+private static void printValue(int i) {
+    System.out.println(++i); // imprime 1
+}
+```
+
+A saída no console é `1` (dentro do método) e `0` (após o retorno). Isso demonstra que, ao passar um primitivo para um método, é feita uma **cópia do valor** — o incremento dentro de `printValue` não afeta a variável original em `main`.
+
+#### Uso de `final` no parâmetro do método
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h19m11s546.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a aplicação do modificador `final` no parâmetro do método para evitar reatribuições acidentais, e como contornar a restrição criando uma variável local:
+
+```java
+private static void printValue(final int i) {
+    var ii = i;
+    System.out.println(++ii); // imprime 1
+}
+```
+
+Declarar o parâmetro como `final` impede que ele seja reatribuído diretamente dentro do método, tornando a intenção mais clara. Para realizar a operação de incremento, cria-se uma variável local `ii` que recebe o valor de `i` e pode ser manipulada livremente.
+
+#### Passagem por referência — comportamento com objeto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h20m40s949.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o experimento análogo ao anterior, agora com um objeto do tipo `User` sendo passado ao método:
+
+```java
+public static void main(String[] args) {
+    var user = new User(name: "João", age: 20);
+    printValue(user);
+    System.out.println(user); // User{name='Maria', age=33}
+}
+
+private static void printValue(User user) {
+    user = new User(name: "Maria", age: 33);
+    System.out.println(user); // User{name='Maria', age=33}
+}
+```
+
+O console exibe `User{name='Maria', age=33}` seguido de `User{name='João', age=20}`. Quando um novo objeto é criado dentro do método (`user = new User(...)`), a referência local é substituída, mas a variável original em `main` permanece apontando para o objeto inicial — **reatribuir a referência localmente não afeta o chamador**.
+
+#### Modificação de propriedades via referência com `final`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h22m06s347.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o cenário em que o parâmetro do método é declarado como `final` para impedir a reatribuição da referência, mas as **propriedades internas do objeto ainda podem ser alteradas**:
+
+```java
+private static void printValue(final User user) {
+    user.setName("Maria");
+    user.setAge(33);
+    System.out.println(user);
+}
+```
+
+A saída mostra `User{name='Maria', age=33}` em ambas as linhas do console, pois o `final` protege a referência (impede `user = new User(...)`) mas **não torna as propriedades do objeto imutáveis**. Alterações feitas via setters refletem no objeto original, já que ambas as variáveis apontam para a mesma instância na heap.
+
+#### Conclusão — primitivo vs. wrapper e boas práticas
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h22m51s010.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o código final consolidado com `final` no parâmetro e o retorno do objeto modificado, acompanhado de um aviso do IntelliJ sinalizando que o valor de retorno não está sendo utilizado (`return value of methods never used`):
+
+```java
+private static void printValue(final User user) {
+    user.setName("Maria");
+    user.setAge(33);
+    System.out.println(user);
+}
+```
+
+A recomendação prática da aula é: prefira manipular objetos no **ponto onde foram criados** para evitar efeitos colaterais difíceis de rastrear. Se modificações dentro de um método forem inevitáveis, considere **retornar o objeto alterado** ao invés de depender da mutação por referência, tornando o fluxo de dados explícito.
+
+#### Recapitulação — autoboxing e unboxing
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-12-08h23m09s841.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a visão interna da classe `Integer` no IntelliJ, mostrando que ela estende `Number` e contém um campo `int value` (o primitivo encapsulado), além de constantes como `MIN_VALUE` e `MAX_VALUE` e a implementação de diversas interfaces:
+
+```java
+public final class Integer extends Number
+    implements Comparable<Integer>, Constable, ConstantDesc {
+
+    private final int value; // o primitivo armazenado internamente
+    // ...
+}
+```
+
+Essa estrutura interna explica por que os tipos wrapper ocupam tanto mais memória do que seus equivalentes primitivos — eles carregam metadados, herança de classe, cabeçalho de objeto da JVM e campos adicionais. O **autoboxing** (primitivo → objeto) e o **unboxing** (objeto → primitivo) são conversões automáticas introduzidas no Java 5 que, quando usadas de forma descuidada em loops ou operações repetitivas, podem impactar a performance e sobrecarregar o garbage collector.
 
 
 ## Parte 3 - Classes String, StringBuilder e StringBuffer
