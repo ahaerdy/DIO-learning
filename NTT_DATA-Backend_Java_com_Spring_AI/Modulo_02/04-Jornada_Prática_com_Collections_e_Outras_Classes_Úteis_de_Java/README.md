@@ -1364,8 +1364,240 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 ### Anotações
 
-      
+#### Imprecisão com `double` primitivo
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h34m17s327.jpg" alt="" width="840">
+</p>
+
+O exemplo de abertura da aula demonstra o problema de imprecisão com tipos de ponto flutuante primitivos em Java. São declaradas duas variáveis `var` recebendo os valores `0.1` e `0.2`, e em seguida é impresso o resultado da soma. Logo abaixo, uma série de subtrações de `2.00` por valores de `1.1` até `2` é executada — o objetivo é evidenciar como a representação binária do padrão IEEE 754 gera resultados inesperados mesmo em operações simples.
+
+```java
+import java.time.Duration;
+import java.time.OffsetDateTime;
+
+public class Main {
+    public static void main(String[] args) {
+        var value1 = 0.1;
+        var value2 = 0.2;
+        System.out.println(value1 + value2);
+
+        System.out.println(2.00 - 1.1);
+        System.out.println(2.00 - 1.2);
+        System.out.println(2.00 - 1.3);
+        System.out.println(2.00 - 1.4);
+        System.out.println(2.00 - 1.5);
+        System.out.println(2.00 - 1.6);
+        System.out.println(2.00 - 1.7);
+        System.out.println(2.00 - 1.8);
+        System.out.println(2.00 - 1.9);
+        System.out.println(2.00 - 2);
+    }
+}
+```
+
+#### Saída: imprecisão do `double` primitivo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h35m13s351.jpg" alt="" width="840">
+</p>
+
+A saída do programa revela claramente o problema: `0.1 + 0.2` retorna `0.30000000000000004` em vez de `0.3`. As subtrações seguintes também apresentam erros: `2.00 - 1.1` produz `0.8999999999999999`, `2.00 - 1.5` retorna `0.6000000000000001`, e assim por diante. Apenas alguns valores "sortudos" — como `2.00 - 1.2`, `2.00 - 1.4` e `2.00 - 2` — retornam exatamente `0.8`, `0.6` e `0.0`. Isso evidencia que `double` não é adequado para cálculos que exigem precisão decimal garantida.
+
+#### Tentativa com `Float` (wrapper)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h39m48s983.jpg" alt="" width="840">
+</p>
+
+Como alternativa, o instrutor experimenta o tipo `Float` (classe wrapper), usando o construtor `new Float(valor)` com literais `f`. A adição de `value1 + value2` ainda é testada, e as mesmas subtrações são refeitas com `new Float(2.00f) - new Float(1.xf)`. O construtor `new Float(...)` é marcado como depreciado pelo Java moderno, mas é utilizado aqui apenas para fins didáticos.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Float value1 = 0.1f;
+        Float value2 = 0.2f;
+        System.out.println(value1 + value2);
+        System.out.println("=============");
+        System.out.println(new Float(2.00f) - new Float(1.1f));
+        System.out.println(new Float(2.00f) - new Float(1.2f));
+        System.out.println(new Float(2.00f) - new Float(1.3f));
+        System.out.println(new Float(2.00f) - new Float(1.4f));
+        System.out.println(new Float(2.00f) - new Float(1.5f));
+        System.out.println(new Float(2.00f) - new Float(1.6f));
+        System.out.println(new Float(2.00f) - new Float(1.7f));
+        System.out.println(new Float(2.00f) - new Float(1.8f));
+        System.out.println(new Float(2.00f) - new Float(1.9f));
+        System.out.println(new Float(2.00f) - new Float(2f));
+    }
+}
+```
+
+#### Saída: imprecisão com `Float`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h39m50s475.jpg" alt="" width="840">
+</p>
+
+A saída com `Float` mostra um comportamento ligeiramente diferente do `double`, mas ainda impreciso: `0.1f + 0.2f` resulta em `0.3` (aparentemente correto pela menor precisão do tipo), porém as subtrações revelam erros como `0.79999995`, `0.70000005` e `0.39999998`. O `Float` tem menos bits de mantissa que o `double`, o que às vezes "esconde" o erro, mas não o elimina — e pode introduzir erros diferentes.
+
+#### Tentativa com `Double` (wrapper)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h45m54s804.jpg" alt="" width="840">
+</p>
+
+O instrutor repete o experimento agora com a classe wrapper `Double`. Os literais `f` são removidos e os tipos passam a ser `Double value1 = 0.1` e `Double value2 = 0.2`. As subtrações são feitas com literais `double` diretamente (sem wrapper explícito nas operações). O objetivo é confirmar se usar o wrapper em vez do primitivo muda algo quanto à precisão.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Double value1 = 0.1;
+        Double value2 = 0.2;
+        System.out.println(value1 + value2);
+        System.out.println("=============");
+        System.out.println(2.00 - 1.1);
+        System.out.println(2.00 - 1.2);
+        System.out.println(2.00 - 1.3);
+        System.out.println(2.00 - 1.4);
+        System.out.println(2.00 - 1.5);
+        System.out.println(2.00 - 1.6);
+        System.out.println(2.00 - 1.7);
+        System.out.println(2.00 - 1.8);
+        System.out.println(2.00 - 1.9);
+        System.out.println(2.00 - 2);
+    }
+}
+```
+
+#### Saída: `Double` wrapper não resolve o problema
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h45m55s327.jpg" alt="" width="840">
+</p>
+
+A saída com `Double` wrapper é idêntica à do `double` primitivo: `0.30000000000000004` para a soma, e os mesmos erros nas subtrações (`0.8999999999999999`, `0.6000000000000001`, etc.). Isso confirma que o problema não está no uso de primitivo versus wrapper — ambos compartilham a mesma representação IEEE 754 de 64 bits. A solução precisa ser outra.
+
+#### Solução: `BigDecimal` com `subtract`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h51m14s236.jpg" alt="" width="840">
+</p>
+
+A solução apresentada é a classe `java.math.BigDecimal`. Os valores são passados como `String` para o construtor — prática recomendada para evitar que o `double` literal já entre com imprecisão antes mesmo de ser atribuído ao `BigDecimal`. A soma usa o método `.add()` e as subtrações usam `.subtract()`, já que o operador `-` não é aplicável a objetos.
+
+```java
+import java.math.BigDecimal;
+
+public class Main {
+    public static void main(String[] args) {
+        var value1 = new BigDecimal("0.1");
+        var value2 = new BigDecimal("0.2");
+        System.out.println(value1.add(value2));
+        System.out.println("========");
+
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.1")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.2")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.3")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.4")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.5")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.6")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.7")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.8")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("1.9")));
+        System.out.println(new BigDecimal("2.00").subtract(new BigDecimal("2")));
+    }
+}
+```
+
+#### Saída: `BigDecimal` com precisão exata
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h51m14s945.jpg" alt="" width="840">
+</p>
+
+A saída com `BigDecimal` demonstra precisão decimal exata: `0.1 + 0.2 = 0.3`, e todas as subtrações retornam os valores esperados — `0.90`, `0.80`, `0.70`, `0.60`, `0.50`, `0.40`, `0.30`, `0.20`, `0.10`, `0.00`. O `BigDecimal` trabalha internamente com aritmética decimal arbitrária, sem a limitação da representação binária de ponto flutuante.
+
+#### `BigDecimal`: multiplicação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-13h03m45s854.jpg" alt="" width="840">
+</p>
+
+O instrutor explora o método `.multiply()` do `BigDecimal`. Com os valores `"0.1"` e `"0.2"`, o resultado de `value2.multiply(value1)` é `0.02` — correto e preciso. A operação de multiplicação não exige nenhum parâmetro adicional e retorna um novo `BigDecimal` com a precisão combinada dos dois operandos.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value1 = new BigDecimal("0.1");
+        var value2 = new BigDecimal("0.2");
+        System.out.println(value2.multiply(value1));
+    }
+}
+// Saída: 0.02
+```
+
+#### `BigDecimal`: multiplicação com valores maiores
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-13h03m58s435.jpg" alt="" width="840">
+</p>
+
+Para tornar o resultado mais visível, os valores são trocados por `"56.3645"` e `"99.345"`. O `.multiply()` retorna `5599.5312525` — um número com muitas casas decimais, mas inteiramente preciso. Isso demonstra que o `BigDecimal` mantém todas as casas decimais significativas sem arredondamento implícito.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        var value1 = new BigDecimal("56.3645");
+        var value2 = new BigDecimal("99.345");
+        System.out.println(value2.multiply(value1));
+    }
+}
+// Saída: 5599.5312525
+```
+
+#### `BigDecimal`: divisão com `RoundingMode`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-13h05m00s306.jpg" alt="" width="840">
+</p>
+
+A divisão em `BigDecimal` requer atenção especial: se o resultado for uma dízima periódica (divisão infinita), o Java lança uma `ArithmeticException`. Para evitar isso, o método `.divide()` aceita um `RoundingMode` como segundo argumento. O exemplo utiliza `RoundingMode.HALF_UP` — que arredonda para cima quando o dígito seguinte é ≥ 5 — com os valores `"56.36"` e `"99.3478"`, retornando `1.7627`.
+
+```java
+import java.math.RoundingMode;
+
+public class Main {
+    public static void main(String[] args) {
+        var value1 = new BigDecimal("56.36");
+        var value2 = new BigDecimal("99.3478");
+        System.out.println(value2.divide(value1, RoundingMode.HALF_UP));
+    }
+}
+// Saída: 1.7627
+```
+
+#### `BigDecimal`: raiz quadrada com `MathContext`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-13h05m17s376.jpg" alt="" width="840">
+</p>
+
+O método `.sqrt()` do `BigDecimal` exige um `MathContext` como argumento, que define a precisão (número de dígitos significativos) e o modo de arredondamento. No exemplo, `value2 = new BigDecimal("144")` tem sua raiz quadrada calculada com `new MathContext(3333)`, retornando `12` — resultado exato, pois 144 é um quadrado perfeito. O `MathContext` é especialmente útil em raízes e divisões onde o número de casas decimais precisa ser controlado.
+
+```java
+import java.math.MathContext;
+import java.math.RoundingMode;
+
+public class Main {
+    public static void main(String[] args) {
+        var value1 = new BigDecimal("56.36");
+        var value2 = new BigDecimal("144");
+        System.out.println(value2.sqrt(new MathContext(3333)));
+    }
+}
+// Saída: 12
+```      
 
 
 ### 🟩 Vídeo 08 - Enums
