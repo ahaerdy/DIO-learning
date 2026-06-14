@@ -1221,6 +1221,10 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/2e9561e8-5b04-4ca7-8719-66c9204a6a21?autoplay=1
 
+### Anotações
+
+
+
 
 
 ## Parte 4 - Aplicando o BigDecimal, Enums e Classe Optional
@@ -1232,7 +1236,10 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/51a2ca43-4d18-4f8c-8ed5-d8af42ed85d0?autoplay=1
+
+
+
 
 ### 🟩 Vídeo 08 - Enums
 
@@ -1241,7 +1248,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/de7b907c-ce4f-4416-b954-3bd7711effe1?autoplay=1
 
 ### 🟩 Vídeo 09 - Classe Optional
 
