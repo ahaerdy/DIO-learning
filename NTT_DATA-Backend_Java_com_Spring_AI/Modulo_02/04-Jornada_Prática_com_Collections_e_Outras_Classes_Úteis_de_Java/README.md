@@ -1225,10 +1225,6 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 #### String, StringBuilder e StringBuffer — Benchmark de Concatenação em Java
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-11h51m38s653.jpg" alt="" width="840">
-</p>
-
 O código exibido implementa um **benchmark comparativo** entre três formas de concatenação de strings em Java, medindo o tempo de execução de cada uma com **200.000 iterações**. Cada bloco é cronometrado individualmente usando `OffsetDateTime.now()` como marcador de início e fim, com a diferença calculada em milissegundos pelo método auxiliar `getInterval`.
 
 **Bloco 1 — `String` com `+=`** (linhas 10–25): A cada iteração, como `String` é **imutável**, o Java descarta o objeto anterior e aloca um novo na memória com o conteúdo concatenado. Repetido 200 mil vezes, esse comportamento gera um custo crescente de alocação e coleta de lixo (*garbage collection*).
