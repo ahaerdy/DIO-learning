@@ -16,6 +16,8 @@ Para este curso, ver também:
     - [x] [Arrays](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arrays)
     - [x] [ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arraylist)
 
+---
+
 ## Parte 1 - Praticando com Collections e Outras Classes Úteis do Java
 
   
