@@ -1223,7 +1223,120 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 ### Anotações
 
+#### String, StringBuilder e StringBuffer — Benchmark de Concatenação em Java
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-11h51m38s653.jpg" alt="" width="840">
+</p>
+
+O código exibido implementa um **benchmark comparativo** entre três formas de concatenação de strings em Java, medindo o tempo de execução de cada uma com **200.000 iterações**. Cada bloco é cronometrado individualmente usando `OffsetDateTime.now()` como marcador de início e fim, com a diferença calculada em milissegundos pelo método auxiliar `getInterval`.
+
+**Bloco 1 — `String` com `+=`** (linhas 10–25): A cada iteração, como `String` é **imutável**, o Java descarta o objeto anterior e aloca um novo na memória com o conteúdo concatenado. Repetido 200 mil vezes, esse comportamento gera um custo crescente de alocação e coleta de lixo (*garbage collection*).
+
+**Bloco 2 — `StringBuilder` (single-thread)** (linhas 27–44): `StringBuilder` é **mutável** — mantém um buffer interno que cresce conforme necessário. O método `.append()` opera sobre o mesmo objeto em memória, sem criar objetos intermediários. É a escolha de maior desempenho para ambientes de thread única.
+
+**Bloco 3 — `StringBuffer` (multi-thread)** (linhas 46–66): Possui o mesmo comportamento mutável do `StringBuilder`, porém seus métodos são **sincronizados** (`synchronized`), tornando-o seguro para acesso concorrente por múltiplas threads. Essa sincronização introduz um pequeno custo adicional em relação ao `StringBuilder`.
+
+**Método auxiliar `getInterval`** (linhas 68–77): Recebe dois instantes `OffsetDateTime` e retorna a diferença em milissegundos via `Duration.between(...).toMillis()`, servindo como cronômetro reutilizável para os três blocos.
+
+```java
+import java.time.Duration;
+import java.time.OffsetDateTime;
+
+public class Main {
+    public static void main(String[] args) {
+
+        // =========================================================================
+        // 1. ABORDAGEM TRADICIONAL: String com o operador +=
+        // =========================================================================
+        // Captura o momento exato antes de iniciar o loop da String.
+        var stringStart = OffsetDateTime.now();
+
+        String stringConcat = "";
+        for (int i = 0; i < 200_000; i++) {
+            // PROBLEMA CRÍTICO: Strings em Java são IMUTÁVEIS.
+            // A cada iteração, o Java não "aumenta" a string existente.
+            // Ele cria uma NOVA String na memória, copia o conteúdo antigo e adiciona o novo "i".
+            // Fazer isso 200 mil vezes gera um overhead gigantesco de alocação de memória e lixo.
+            stringConcat += i;
+        }
+
+        // Captura o momento em que o loop da String terminou.
+        var stringEnd = OffsetDateTime.now();
+        // Imprime o tempo gasto em milissegundos. Spoiler: vai demorar bastante!
+        System.out.printf("String: %s \n", getInterval(stringStart, stringEnd));
+
+        // =========================================================================
+        // 2. ABORDAGEM PERFORMANCE (Single-thread): StringBuilder
+        // =========================================================================
+        // Captura o momento inicial para o teste do StringBuilder.
+        var builderStart = OffsetDateTime.now();
+
+        // StringBuilder é MUTÁVEL. Ele cria um buffer interno (array) que cresce conforme necessário.
+        StringBuilder builderConcat = new StringBuilder();
+        for (int i = 0; i < 200_000; i++) {
+            // O método append() modifica o MESMO objeto na memória.
+            // Não há criação de milhares de objetos temporários. É extremamente rápido.
+            builderConcat.append(i);
+        }
+
+        // Captura o término do loop do StringBuilder.
+        var builderEnd = OffsetDateTime.now();
+        // Imprime o tempo. Será praticamente instantâneo comparado ao primeiro método.
+        System.out.printf("StringBuilder(singlethread): %s \n", getInterval(builderStart, builderEnd));
+
+        // =========================================================================
+        // 3. ABORDAGEM SEGURA (Multi-thread): StringBuffer
+        // =========================================================================
+        // Captura o momento inicial para o teste do StringBuffer.
+        var bufferStart = OffsetDateTime.now();
+
+        // StringBuffer possui o mesmo comportamento mutável do StringBuilder, MAS seus métodos
+        // são sincronizados (contêm a palavra-chave 'synchronized').
+        // Isso o torna seguro para ser usado por várias Threads ao mesmo tempo (Thread-Safe).
+        StringBuffer bufferConcat = new StringBuffer();
+        for (int i = 0; i < 200_000; i++) {
+            // Como este código roda em apenas uma Thread principal (main), o mecanismo de
+            // sincronização gera um pequeno "pedágio" de performance desnecessário aqui.
+            bufferConcat.append(i);
+        }
+
+        // Captura o término do loop do StringBuffer.
+        var bufferEnd = OffsetDateTime.now();
+        // Será muito mais rápido que a String pura, mas ligeiramente mais lento que o StringBuilder.
+        System.out.printf("StringBuffer(multithread): %s \n", getInterval(bufferStart, bufferEnd));
+    }
+
+    /**
+     * Método auxiliar para calcular a diferença de tempo entre dois pontos.
+     * @param start  Ponto de partida no tempo
+     * @param end    Ponto de chegada no tempo
+     * @return       Duração total convertida em milissegundos
+     */
+    private static long getInterval(final OffsetDateTime start, final OffsetDateTime end) {
+        // Calcula a duração entre as duas datas e retorna o valor em milissegundos (toMillis).
+        return Duration.between(start, end).toMillis();
+    }
+}
+```
+
+#### Resultado da Execução no IntelliJ IDEA
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h00m19s859.jpg" alt="" width="840">
+</p>
+
+A saída do painel **Run** do IntelliJ IDEA exibe os tempos medidos em milissegundos para as três abordagens com 200.000 iterações:
+
+| Abordagem | Tempo medido |
+|---|---|
+| `String` (operador `+=`) | **10.439 ms** (~10 segundos) |
+| `StringBuilder` (single-thread) | **6 ms** |
+| `StringBuffer` (multi-thread) | **8 ms** |
+
+O resultado confirma na prática o impacto da imutabilidade da classe `String`: realizar 200 mil concatenações com `+=` consumiu mais de 10 segundos, enquanto `StringBuilder` e `StringBuffer` concluíram a mesma operação em menos de 10 milissegundos — uma diferença superior a **1.000×**.
+
+A pequena diferença entre `StringBuilder` (6 ms) e `StringBuffer` (8 ms) é atribuída ao mecanismo de sincronização do `StringBuffer`. Como o código roda em uma única thread (a thread `main`), o overhead de sincronização é desnecessário nesse contexto — o que reforça que `StringBuilder` é a escolha adequada para ambientes single-thread, reservando `StringBuffer` para cenários com acesso concorrente real.
 
 
 
