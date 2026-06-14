@@ -1366,10 +1366,6 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 #### Imprecisão com `double` primitivo
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h34m17s327.jpg" alt="" width="840">
-</p>
-
 O exemplo de abertura da aula demonstra o problema de imprecisão com tipos de ponto flutuante primitivos em Java. São declaradas duas variáveis `var` recebendo os valores `0.1` e `0.2`, e em seguida é impresso o resultado da soma. Logo abaixo, uma série de subtrações de `2.00` por valores de `1.1` até `2` é executada — o objetivo é evidenciar como a representação binária do padrão IEEE 754 gera resultados inesperados mesmo em operações simples.
 
 ```java
@@ -1406,10 +1402,6 @@ A saída do programa revela claramente o problema: `0.1 + 0.2` retorna `0.300000
 
 #### Tentativa com `Float` (wrapper)
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h39m48s983.jpg" alt="" width="840">
-</p>
-
 Como alternativa, o instrutor experimenta o tipo `Float` (classe wrapper), usando o construtor `new Float(valor)` com literais `f`. A adição de `value1 + value2` ainda é testada, e as mesmas subtrações são refeitas com `new Float(2.00f) - new Float(1.xf)`. O construtor `new Float(...)` é marcado como depreciado pelo Java moderno, mas é utilizado aqui apenas para fins didáticos.
 
 ```java
@@ -1443,10 +1435,6 @@ A saída com `Float` mostra um comportamento ligeiramente diferente do `double`,
 
 #### Tentativa com `Double` (wrapper)
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h45m54s804.jpg" alt="" width="840">
-</p>
-
 O instrutor repete o experimento agora com a classe wrapper `Double`. Os literais `f` são removidos e os tipos passam a ser `Double value1 = 0.1` e `Double value2 = 0.2`. As subtrações são feitas com literais `double` diretamente (sem wrapper explícito nas operações). O objetivo é confirmar se usar o wrapper em vez do primitivo muda algo quanto à precisão.
 
 ```java
@@ -1479,10 +1467,6 @@ public class Main {
 A saída com `Double` wrapper é idêntica à do `double` primitivo: `0.30000000000000004` para a soma, e os mesmos erros nas subtrações (`0.8999999999999999`, `0.6000000000000001`, etc.). Isso confirma que o problema não está no uso de primitivo versus wrapper — ambos compartilham a mesma representação IEEE 754 de 64 bits. A solução precisa ser outra.
 
 #### Solução: `BigDecimal` com `subtract`
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-14-12h51m14s236.jpg" alt="" width="840">
-</p>
 
 A solução apresentada é a classe `java.math.BigDecimal`. Os valores são passados como `String` para o construtor — prática recomendada para evitar que o `double` literal já entre com imprecisão antes mesmo de ser atribuído ao `BigDecimal`. A soma usa o método `.add()` e as subtrações usam `.subtract()`, já que o operador `-` não é aplicável a objetos.
 
