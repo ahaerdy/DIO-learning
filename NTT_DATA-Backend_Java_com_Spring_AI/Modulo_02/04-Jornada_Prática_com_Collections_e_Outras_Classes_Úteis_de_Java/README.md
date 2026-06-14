@@ -5,6 +5,18 @@
 
 ## Parte 1 - Praticando com Collections e Outras Classes Úteis do Java
 
+
+Para este curso, ver também:
+
+<p align="left">
+  <img src="https://github.com/ahaerdy/roadmap_java/blob/main/000-Midia_e_Anexos/2026-06-06-13-09-59.png" alt="" width="320">
+</p>
+
+- ☕️ Roadmap Java
+  - [x] [Arrays vs ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist)
+    - [x] [Arrays](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arrays)
+    - [x] [ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arraylist)
+  
 ### 🟩 Vídeo 01 - Trabalhando com Listas e Arrays
 
 <video width="60%" controls>
@@ -1335,7 +1347,6 @@ O resultado confirma na prática o impacto da imutabilidade da classe `String`: 
 A pequena diferença entre `StringBuilder` (6 ms) e `StringBuffer` (8 ms) é atribuída ao mecanismo de sincronização do `StringBuffer`. Como o código roda em uma única thread (a thread `main`), o overhead de sincronização é desnecessário nesse contexto — o que reforça que `StringBuilder` é a escolha adequada para ambientes single-thread, reservando `StringBuffer` para cenários com acesso concorrente real.
 
 
-
 ## Parte 4 - Aplicando o BigDecimal, Enums e Classe Optional
 
 ### 🟩 Vídeo 07 - Classe BigDecimal
@@ -1347,6 +1358,9 @@ A pequena diferença entre `StringBuilder` (6 ms) e `StringBuffer` (8 ms) é atr
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/51a2ca43-4d18-4f8c-8ed5-d8af42ed85d0?autoplay=1
 
+### Anotações
+
+      
 
 
 
