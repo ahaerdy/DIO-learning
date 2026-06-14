@@ -3,8 +3,7 @@
 - José Luiz Abreu Cardoso Junior (Engenheiro de software sênior)
 - Contato Linkedin: / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/)
 
-## Parte 1 - Praticando com Collections e Outras Classes Úteis do Java
-
+---
 
 Para este curso, ver também:
 
@@ -16,6 +15,9 @@ Para este curso, ver também:
   - [x] [Arrays vs ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist)
     - [x] [Arrays](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arrays)
     - [x] [ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arraylist)
+
+## Parte 1 - Praticando com Collections e Outras Classes Úteis do Java
+
   
 ### 🟩 Vídeo 01 - Trabalhando com Listas e Arrays
 
