@@ -1736,6 +1736,29 @@ A imagem mostra o teste com a opção `3` (Multiplicação), valores `80` e `99`
 
 A imagem apresenta o teste da opção `4` (Divisão) com valores `50` e `5`, resultando em `50 / 5 = 10`. Com todos os quatro testes concluídos, a calculadora demonstra que enums com propriedades funcionais permitem implementar múltiplos comportamentos distintos de forma limpa, centralizada e sem repetição de lógica condicional.
       
+#### Tópicos Principais Estudados na Aula
+
+1. O que são Enums?
+*   **Definição:** Uma estrutura que permite definir um conjunto fixo de valores predefinidos (constantes).
+*   **Uso Comum:** Representar dados que raramente mudam, como dias da semana, meses, estados civis ou, como mostrado no exemplo, estados brasileiros e operações matemáticas.
+
+2. Padronização e Segurança de Tipos
+*   **Problema das Strings:** Usar `String` para campos como "Estado" permite erros (ex: "RJ" vs "Rio de Janeiro").
+*   **Solução com Enum:** Ao criar um `StateEnum`, o desenvolvedor força o sistema a aceitar apenas os valores definidos, facilitando verificações em blocos `if` e garantindo a integridade dos dados.
+
+3. Manipulação de Enums: `values()` e `valueOf()`
+*   **`values()`:** Retorna um array com todas as constantes do Enum na ordem em que foram declaradas. Útil para selecionar uma opção via índice (ex: menu de calculadora).
+*   **`valueOf(String)`:** Recupera a instância do Enum a partir de uma representação exata em String do seu nome.
+
+4. Enums com Propriedades e Comportamentos (Avançado)
+*   **Campos Personalizados:** Enums em Java podem ter construtores e campos (ex: `symbol` para armazenar "+", "-", "*").
+*   **Lógica Encapsulada com Lambdas:** O uso de `BiFunction<Integer, Integer, Integer>` permite que cada constante do Enum carregue sua própria lógica de cálculo.
+    *   *Exemplo:* A constante `SUM` armazena a função `(v1, v2) -> v1 + v2`.
+*   **Método `apply()`:** Permite executar a lógica armazenada na propriedade do Enum de forma dinâmica.
+
+5. Construção de uma Calculadora "Limpa"
+*   A aula culmina na criação de uma calculadora que evita múltiplos blocos `if/else` ou `switch`.
+*   A lógica de qual operação executar é resolvida diretamente pelo Enum selecionado pelo usuário.
 
 
 ### 🟩 Vídeo 09 - Classe Optional
