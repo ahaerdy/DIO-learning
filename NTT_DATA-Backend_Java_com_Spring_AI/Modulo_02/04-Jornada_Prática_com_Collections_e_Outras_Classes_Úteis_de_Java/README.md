@@ -1904,7 +1904,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 **Geração de streams e coleta em arrays (código Java)**
 
-A imagem mostra um trecho de código Java que cria duas streams: uma `Stream<Integer>` gerada por `Stream.generate(...)` e coletada em um `Integer[]`, e outra `IntStream` gerada por `IntStream.generate(...)` e coletada em um `int[]`. O objetivo didático é demonstrar a diferença entre trabalhar com streams de objetos (causando boxing/unboxing) e streams de primitivos (otimizadas para `int`), além de mostrar o uso de `limit(...)` para evitar loops infinitos e `toArray(...)` para coletar os resultados.
+Segue abaixo um trecho de código Java que cria duas streams: uma `Stream<Integer>` gerada por `Stream.generate(...)` e coletada em um `Integer[]`, e outra `IntStream` gerada por `IntStream.generate(...)` e coletada em um `int[]`. O objetivo didático é demonstrar a diferença entre trabalhar com streams de objetos (causando boxing/unboxing) e streams de primitivos (otimizadas para `int`), além de mostrar o uso de `limit(...)` para evitar loops infinitos e `toArray(...)` para coletar os resultados.
 
 ```java
 import java.util.Random;
@@ -2064,7 +2064,7 @@ A imagem aborda a possibilidade de usar `.parallel()` para processamento paralel
 **Transição para trabalhar com objetos na API de Streams**
 
 A imagem final indica que, nas próximas aulas, serão trazidos exemplos usando objetos e classes Java com a API de Streams, mostrando que os conceitos vistos (geração, filtros, mapeamentos, reduções, debug e paralelismo) se aplicam também ao processamento de coleções de objetos mais complexos.
-     
+    
 
 
 ### 🟩 Vídeo 11 - Explorando API de Streams
