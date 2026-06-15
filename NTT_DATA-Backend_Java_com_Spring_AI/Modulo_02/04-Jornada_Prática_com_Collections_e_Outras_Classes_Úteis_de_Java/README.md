@@ -1902,168 +1902,146 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 ### Anotações
 
-**Geração de streams e coleta em arrays (código Java)**
+Neste bloco, vemos o código inicial demonstrando o uso de `Stream.generate()` para criar um stream infinito de números inteiros.
 
-Segue abaixo um trecho de código Java que cria duas streams: uma `Stream<Integer>` gerada por `Stream.generate(...)` e coletada em um `Integer[]`, e outra `IntStream` gerada por `IntStream.generate(...)` e coletada em um `int[]`. O objetivo didático é demonstrar a diferença entre trabalhar com streams de objetos (causando boxing/unboxing) e streams de primitivos (otimizadas para `int`), além de mostrar o uso de `limit(...)` para evitar loops infinitos e `toArray(...)` para coletar os resultados.
+O exemplo utiliza `Stream.generate(() -> new Random().nextInt())` combinado com `.limit(5)` para restringir a quantidade de elementos e `.toArray(Integer[]::new)` para coletar o resultado em um array tipado de `Integer`. 
 
-```java
-import java.util.Random;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+Em seguida, é mostrada a versão otimizada com `IntStream` (stream especializada para primitivos `int`), que evita o overhead de boxing/unboxing. O código imprime os valores gerados aleatoriamente. 
 
-public class Main {
-    public static void main(String[] args) {
-        // Stream de Integer (objetos)
-        Integer[] value1 = Stream.generate(() -> new Random().nextInt())
-                                 .limit(5)
-                                 .toArray(Integer[]::new);
-
-        for (var v1 : value1) {
-            System.out.println("value1: " + v1);
-        }
-
-        System.out.println(" =========== ");
-
-        // IntStream (primitivo)
-        var value2 = IntStream.generate(() -> new Random().nextInt(100))
-                              .limit(5)
-                              .toArray();
-
-        for (var v : value2) {
-            System.out.println("value2: " + v);
-        }
-    }
-}
-```
-
-“No nosso `generate`, vamos passar um lambda que, no caso, não recebe argumentos, mas dá um retorno. Estamos utilizando o `new Random().nextInt()`.”
-
+Essa é uma introdução prática à criação de streams e ao tratamento de tipos primitivos na API de Streams do Java.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h26m12s221.jpg" alt="" width="840">
 </p>
 
-**Saída do programa e execução no console**
+Aqui temos a execução do código anterior, mostrando a saída no console.
 
-A imagem exibe a saída do programa no console após a execução dos dois blocos de código: primeiro os cinco valores (com sinal negativo/positivo) coletados em `value1`, depois os cinco valores entre 0 e 99 coletados em `value2`. Serve para ilustrar que `Stream.generate` produz valores conforme a função fornecida e que `IntStream.generate(...).toArray()` retorna um array de primitivos `int`.
+São impressos 5 números aleatórios para o `Stream<Integer>` (value1) e outros 5 para o `IntStream` (value2), seguidos de uma linha separadora. 
 
-*“Geramos aqui o `.limit(5)` e perceba que o nosso `.toArray` não um array para inicialização; ele já retorna diretamente o tipo `int` porque essa stream é otimizada para tipos primitivos.”* 
+A saída demonstra que os streams geram valores conforme esperado, reforçando o conceito de streams infinitas controladas pelo `.limit()`. 
 
+Essa visualização ajuda a entender o comportamento em tempo de execução.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h29m35s226.jpg" alt="" width="840">
 </p>
 
-**Uso de `Stream.of` com valores literais (varargs) e `filter`**
+Neste slide, o código demonstra `Stream.of()` para criar um stream a partir de valores literais (nomes) e a operação `.filter()`.
 
-A imagem mostra um trecho do IDE com um `Stream.of(...)` contendo nomes (por exemplo, Maria, João, Márcio, Luana, Leandro, Márcia) seguido por operações encadeadas como `peek(...)`, `filter(...)` e `toList()`. O ponto central é demonstrar como criar uma stream a partir de valores literais usando varargs e aplicar filtros com `Predicate` para selecionar elementos (por exemplo, nomes que terminam com "a" ou "o").
+O filtro usa uma lambda `name -> name.endsWith("a")` para selecionar apenas nomes que terminam com "a". O resultado é coletado com `.toList()` e impresso.
+
+Perceba o destaque no `.filter()` e a saída `[Maria, Luana, Marcia]`. Isso ilustra uma operação intermediária (`filter`) seguida de uma terminal (`toList`).
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h29m47s918.jpg" alt="" width="840">
 </p>
 
-**Uso de `filter` e `toList()` para coletar resultados filtrados**
+Aqui o filtro foi alterado para `endsWith("o")`, demonstrando a flexibilidade da operação.
 
-A imagem evidencia o uso de `.filter(name -> name.endsWith("a"))` seguido de `.toList()` para coletar apenas os nomes que terminam com a letra `"a"`. É um exemplo claro de operação intermediária (`filter`) seguida de operação terminal (`toList()`), mostrando como encadear transformações e, ao final, materializar o resultado em uma coleção.
+A saída agora mostra `[João, Marcio, Leandro]`. 
 
-*“Como estamos trabalhando com strings, podemos usar `name -> name.endsWith(\"a\")`. Dessa forma, filtramos apenas os nomes que terminam com a letra \"a\".”* 
-
+Essa mudança rápida no código exemplifica como é simples modificar predicados para diferentes critérios de filtragem.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h31m09s933.jpg" alt="" width="840">
 </p>
 
-**Uso de `peek` para debug e captura de valores**
+Exemplo do método `.peek()` usado para depuração.
 
-A imagem mostra o uso de `.peek(...)` em uma pipeline de stream, possivelmente com `peek(System.out::println)` ou `peek(debugValues::add)`. O `peek` é uma operação intermediária útil para inspeção (debug) dos elementos que passam pela pipeline; sem uma operação terminal subsequente, `peek` não terá efeito.
+O `peek(System.out::println)` é inserido antes do filtro. Como é uma operação intermediária, ela só executa quando há uma operação terminal posterior. 
+
+Na saída, vemos os nomes sendo impressos individualmente durante o processamento do pipeline (efeito colateral de debug).
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h32m05s160.jpg" alt="" width="840">
 </p>
 
-**Captura de valores em lista auxiliar durante `peek`**
+Demonstração de como o `peek` afeta o fluxo quando a operação terminal é comentada.
 
-A imagem ilustra a prática de criar uma lista auxiliar (`debugValues`) e usar `peek(debugValues::add)` para coletar os elementos conforme a stream é processada. Isso demonstra como inspecionar o fluxo de dados sem alterar a semântica da pipeline (embora modificar estado externo seja geralmente desencorajado).
+Ao comentar o `System.out.println(value)`, o peek não produz saída (exceto possivelmente uma referência interna do pipeline). Isso reforça o conceito de **lazy evaluation** das streams: operações intermediárias só são avaliadas quando uma terminal é invocada.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h32m26s372.jpg" alt="" width="840">
 </p>
 
-**Encadeamento de operações e uso de `limit` após filtro**
+Uso avançado do `peek` com uma lista auxiliar para capturar valores durante o processamento.
 
-A imagem mostra um encadeamento onde, após aplicar um `filter(...)`, é usado um `.limit(2)` para restringir o número de elementos resultantes. Isso ilustra que operações intermediárias podem ser combinadas para controlar tanto quais elementos passam quanto quantos são processados.
+Foi criada uma `List<String> debugValues` e o `peek` adiciona elementos a ela via method reference. 
+
+A saída mostra tanto a lista de debug quanto o resultado final filtrado. Excelente técnica para inspecionar o estado intermediário do pipeline.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h33m39s589.jpg" alt="" width="840">
 </p>
 
-**Conversão de listas para streams e busca por ocorrências**
+Aplicação do `.limit(2)` após o filtro.
 
-A imagem apresenta o uso de `.stream()` em coleções existentes e demonstra operações de busca como `filter(...)` combinadas com `anyMatch(...)`, `noneMatch(...)` ou `allMatch(...)` para verificar ocorrências ou propriedades dos elementos. Essas operações são terminais e retornam booleanos.
+O stream é limitado a apenas 2 elementos após o filtro por nomes terminados em "o", resultando em `[João, Marcio]`. 
+
+Isso demonstra como combinar operações intermediárias (`filter` + `limit`) para controlar o tamanho do resultado.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h35m39s295.jpg" alt="" width="840">
 </p>
 
-**Diferenças entre `findAny()` e `findFirst()`**
+Exemplo de `.anyMatch()` para verificar existência de elementos que contenham "a".
 
-A imagem destaca as operações `findAny()` e `findFirst()`. `findFirst()` garante o primeiro elemento da sequência (útil quando a ordem importa), enquanto `findAny()` pode retornar qualquer elemento e é mais apropriado para streams paralelos onde a ordem não é garantida.
+O código combina filtro e `anyMatch`. A saída é `true`, pois pelo menos um nome atende ao critério. 
+
+Operação terminal que retorna booleano e curto-circuita (não processa todos os elementos desnecessariamente).
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h36m19s084.jpg" alt="" width="840">
 </p>
 
-**Uso de `reduce` para agregação de strings**
+Combinação de `.filter()` com `.anyMatch()`.
 
-A imagem mostra um exemplo de `reduce` aplicado a uma stream de strings para concatená-las com um separador (por exemplo, `";"`), seguido de um tratamento com `.replaceFirst(...)` para remover um separador inicial indesejado. É um padrão comum para transformar uma sequência em um único valor agregado.
+Aqui o filtro por nomes terminados em "o" é mantido, e o `anyMatch` verifica presença de "a". O resultado continua `true`. 
+
+Boa demonstração de encadeamento de operações.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h36m40s170.jpg" alt="" width="840">
 </p>
 
-**Uso do `reduce` com números e coletores para `IntStream`**
+Exemplo com `.noneMatch()` verificando ausência de "Z".
 
-A imagem ilustra o uso de `reduce` com números (por exemplo, soma com `Integer::sum`) e também menciona coletores (`Collectors.toList()`, `.toSet()`) para coletar resultados de `IntStream` em coleções. Mostra como alternar entre operações de agregação e coletores conforme a necessidade.
+Como nenhum nome termina em "o" e contém "Z", o resultado é `true` (nenhum elemento atende à condição). 
+
+Útil para validações de "não existe nenhum...".
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h37m56s294.jpg" alt="" width="840">
 </p>
 
-**uso do `map` para transformação de tipos**
+Demonstração de `.allMatch()` verificando se todos os nomes filtrados contêm "o".
 
-A imagem mostra exemplos de `map`, como `Integer::toString` para converter inteiros em strings, ou mapeamentos para booleanos (por exemplo, verificar se um número é par). O `map` transforma cada elemento da stream, permitindo encadear várias transformações.
+Como todos os nomes terminados em "o" obviamente contêm "o", o resultado é `true`. 
+
+Mostra o uso de operações de correspondência para verificações universais.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h38m23s132.jpg" alt="" width="840">
 </p>
 
-**Exemplo complexo combinando duas listas e operações aritméticas**
+Operação de redução (`reduce`) para concatenar strings com separador.
 
-A imagem apresenta um exemplo mais complexo onde duas listas de inteiros (`values1` e `values2`) são combinadas: filtra-se `values2` com base em `values1::contains`, aplica-se `map` para realizar operações aritméticas e usa-se `peek`/`printf` para debugar cada etapa. É um caso prático de composição de filtros, mapeamentos e agregações.
+O `reduce` inicia com string vazia e acumula os nomes separados por ";". Depois, `.replaceFirst` remove o separador inicial indesejado. 
+
+Resultado: `Maria;João;Marcio;Luana;Leandro;Marcia`. 
+
+Excelente exemplo de agregação para transformar a stream em um único valor.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h38m32s757.jpg" alt="" width="840">
 </p>
 
-**Uso de `peek` com `System.out.printf` para entender o processamento**
+Exemplo de `.map()` transformando `Stream<Integer>` em `Stream<String>`.
 
-A imagem demonstra o uso de `System.out.printf` dentro de `peek` para imprimir o estado intermediário de cada elemento durante o processamento (filtro e mapeamento). Essa técnica facilita entender passo a passo como os elementos são transformados.
+Os números são convertidos para strings via `Object::toString` (ou `Integer::toString`). 
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h38m51s725.jpg" alt="" width="840">
-</p>
+A operação `map` é fundamental para transformar elementos de um tipo para outro dentro do pipeline.
 
-**Consideração sobre processamento paralelo (`parallel()`)**
-
-A imagem aborda a possibilidade de usar `.parallel()` para processamento paralelo, ressaltando que é necessário avaliar se haverá ganho de performance no caso específico. Não existe garantia automática de melhoria; depende do cenário e do custo das operações.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h39m08s260.jpg" alt="" width="840">
-</p>
-
-**Transição para trabalhar com objetos na API de Streams**
-
-A imagem final indica que, nas próximas aulas, serão trazidos exemplos usando objetos e classes Java com a API de Streams, mostrando que os conceitos vistos (geração, filtros, mapeamentos, reduções, debug e paralelismo) se aplicam também ao processamento de coleções de objetos mais complexos.
     
 
 
