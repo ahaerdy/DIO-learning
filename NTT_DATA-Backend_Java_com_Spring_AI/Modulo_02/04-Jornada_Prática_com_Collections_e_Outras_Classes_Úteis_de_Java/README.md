@@ -1902,6 +1902,11 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 ### Anotações
 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h26m07s495.jpg" alt="" width="840">
+</p>
+
 Neste bloco, vemos o código inicial demonstrando o uso de `Stream.generate()` para criar um stream infinito de números inteiros.
 
 O exemplo utiliza `Stream.generate(() -> new Random().nextInt())` combinado com `.limit(5)` para restringir a quantidade de elementos e `.toArray(Integer[]::new)` para coletar o resultado em um array tipado de `Integer`. 
