@@ -1902,206 +1902,351 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 ### Anotações
 
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h26m07s495.jpg" alt="" width="840">
 </p>
 
-Neste bloco, vemos o código inicial demonstrando o uso de `Stream.generate()` para criar um stream infinito de números inteiros.
+Neste primeiro exemplo, estamos conhecendo a API de Streams do Java, que nos permite trabalhar com conceitos de programação funcional. O código demonstra como gerar streams infinitas e limitá-las.
 
-O exemplo utiliza `Stream.generate(() -> new Random().nextInt())` combinado com `.limit(5)` para restringir a quantidade de elementos e `.toArray(Integer[]::new)` para coletar o resultado em um array tipado de `Integer`. 
+Primeiro, declaramos uma variável `value1` e usamos o método `Stream.generate()`, passando um lambda que utiliza `new Random().nextInt()` para gerar números aleatórios. Como a stream rodaria indefinidamente, usamos `.limit(5)` para restringir a cinco elementos e `.toArray(Integer[]::new)` para coletar os resultados em um array tipado de `Integer`, utilizando um *method reference*.
 
-Em seguida, é mostrada a versão otimizada com `IntStream` (stream especializada para primitivos `int`), que evita o overhead de boxing/unboxing. O código imprime os valores gerados aleatoriamente. 
+Em seguida, para evitar problemas de *boxing* e *unboxing* (já que estamos trabalhando com tipos primitivos), o código mostra o uso de `IntStream`. Com `IntStream.generate()`, geramos números primitivos `int` (limitados a 100) e coletamos diretamente com `.toArray()`, que já retorna um array de `int` otimizado.
 
-Essa é uma introdução prática à criação de streams e ao tratamento de tipos primitivos na API de Streams do Java.
+```java
+import java.util.Random;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class Main {
+    public static void main(String[] args) {
+        // Cria um Stream infinito de Integers usando Random().nextInt()
+        // .limit(5) restringe para apenas 5 números
+        // .toArray(Integer[]::new) coleta em um array de Integer
+        Integer[] value1 = Stream.generate(() -> new Random().nextInt())
+                .limit(5)
+                .toArray(Integer[]::new);
+
+        // Percorre o array value1 e imprime cada número
+        for (var v1 : value1) {
+            System.out.println("value1: " + v1);
+        }
+
+        // Imprime uma linha de separação para organizar a saída
+        System.out.println("==========");
+
+        // Cria um IntStream infinito de ints usando Random().nextInt(100)
+        // .nextInt(100) gera números entre 0 e 99
+        // .limit(5) restringe para apenas 5 números
+        // .toArray() coleta em um array de int
+        var value2 = IntStream.generate(() -> new Random().nextInt(100))
+                .limit(5)
+                .toArray();
+
+        // Percorre o array value2 e imprime cada número
+        for (var v : value2) {
+            System.out.println("value2: " + v);
+        }
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h26m12s221.jpg" alt="" width="840">
 </p>
 
-Aqui temos a execução do código anterior, mostrando a saída no console.
-
-São impressos 5 números aleatórios para o `Stream<Integer>` (value1) e outros 5 para o `IntStream` (value2), seguidos de uma linha separadora. 
-
-A saída demonstra que os streams geram valores conforme esperado, reforçando o conceito de streams infinitas controladas pelo `.limit()`. 
-
-Essa visualização ajuda a entender o comportamento em tempo de execução.
+Ao executar o código anterior, podemos observar no console a saída gerada. Primeiro, são impressos os cinco números aleatórios gerados pelo `Stream.generate()` (que podem ser negativos ou positivos, pois não definimos um limite no `nextInt()`). Após a linha de separação, vemos os cinco números gerados pelo `IntStream.generate()`, que estão restritos entre 0 e 99.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h29m35s226.jpg" alt="" width="840">
 </p>
 
-Neste slide, o código demonstra `Stream.of()` para criar um stream a partir de valores literais (nomes) e a operação `.filter()`.
+Outra forma muito comum de inicializar uma stream é através do método `Stream.of()`, que utiliza *varargs* para receber múltiplos valores. Neste exemplo, passamos uma lista de nomes.
 
-O filtro usa uma lambda `name -> name.endsWith("a")` para selecionar apenas nomes que terminam com "a". O resultado é coletado com `.toList()` e impresso.
+Em seguida, aplicamos o método `.filter()`, que recebe um `Predicate` (uma função que retorna um booleano). Aqui, estamos filtrando apenas os nomes que terminam com a letra "a" (`name -> name.endsWith("a")`). Por fim, usamos a operação terminal `.toList()` para converter a stream resultante de volta para uma lista. O console mostra que apenas "Maria", "Luana" e "Marcia" foram selecionados.
 
-Perceba o destaque no `.filter()` e a saída `[Maria, Luana, Marcia]`. Isso ilustra uma operação intermediária (`filter`) seguida de uma terminal (`toList`).
+```java
+import java.util.stream.Stream;
+
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .filter(name -> name.endsWith("a"))
+                .toList();
+
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h29m47s918.jpg" alt="" width="840">
 </p>
 
-Aqui o filtro foi alterado para `endsWith("o")`, demonstrando a flexibilidade da operação.
+Alterando a condição do filtro para buscar nomes que terminam com a letra "o" (`name -> name.endsWith("o")`), o resultado muda de acordo. O console agora exibe `[João, Marcio, Leandro]`.
 
-A saída agora mostra `[João, Marcio, Leandro]`. 
+```java
+import java.util.stream.Stream;
 
-Essa mudança rápida no código exemplifica como é simples modificar predicados para diferentes critérios de filtragem.
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .filter(name -> name.endsWith("o"))
+                .toList();
+
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h31m09s933.jpg" alt="" width="840">
 </p>
 
-Exemplo do método `.peek()` usado para depuração.
+Agora introduzimos o método `.peek()`. Ele é uma **operação intermediária** que recebe um `Consumer` (consome o valor mas não retorna nada) e é muito utilizado para *debug*.
 
-O `peek(System.out::println)` é inserido antes do filtro. Como é uma operação intermediária, ela só executa quando há uma operação terminal posterior. 
+No entanto, observe que ao rodar o código sem uma **operação terminal** (como o `.toList()`), a stream não é processada. O `System.out.println(value)` imprime apenas a referência do objeto do pipeline da stream (`java.util.stream.ReferencePipeline...`), provando que as operações intermediárias são *lazy* (preguiçosas) e só executam quando uma operação terminal é invocada.
 
-Na saída, vemos os nomes sendo impressos individualmente durante o processamento do pipeline (efeito colateral de debug).
+```java
+import java.util.stream.Stream;
+
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .peek(System.out::println)
+                .filter(name -> name.endsWith("o"));
+
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h32m05s160.jpg" alt="" width="840">
 </p>
 
-Demonstração de como o `peek` afeta o fluxo quando a operação terminal é comentada.
+Neste momento, a linha que imprimia a variável `value` foi comentada. Como ainda não há uma operação terminal no pipeline da stream, o programa simplesmente finaliza com `exit code 0` sem imprimir nenhum dos nomes que deveriam passar pelo `peek`. Isso reforça que o `peek` não faz nada sozinho.
 
-Ao comentar o `System.out.println(value)`, o peek não produz saída (exceto possivelmente uma referência interna do pipeline). Isso reforça o conceito de **lazy evaluation** das streams: operações intermediárias só são avaliadas quando uma terminal é invocada.
+```java
+import java.util.stream.Stream;
+
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .peek(System.out::println)
+                .filter(name -> name.endsWith("o"));
+
+        // System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h32m26s372.jpg" alt="" width="840">
 </p>
 
-Uso avançado do `peek` com uma lista auxiliar para capturar valores durante o processamento.
+Ao adicionar a operação terminal `.toList()` ao final do pipeline, a stream é finalmente executada. O `peek` agora consegue interceptar e imprimir cada elemento à medida que passa pela stream (mostrando todos os nomes originais no console). Logo após, o `System.out.println(value)` imprime a lista final filtrada apenas com os nomes terminados em "o".
 
-Foi criada uma `List<String> debugValues` e o `peek` adiciona elementos a ela via method reference. 
+```java
+import java.util.stream.Stream;
 
-A saída mostra tanto a lista de debug quanto o resultado final filtrado. Excelente técnica para inspecionar o estado intermediário do pipeline.
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .peek(System.out::println)
+                .filter(name -> name.endsWith("o"))
+                .toList();
+
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h33m39s589.jpg" alt="" width="840">
 </p>
 
-Aplicação do `.limit(2)` após o filtro.
+Para demonstrar outra forma de capturar valores durante o *debug*, criamos uma lista externa chamada `debugValues`. O `peek` foi alterado para adicionar cada elemento que passa por ele nessa lista (`debugValues::add`). Ao final, imprimimos primeiro a lista de debug (que contém todos os nomes) e depois a lista resultante do filtro.
 
-O stream é limitado a apenas 2 elementos após o filtro por nomes terminados em "o", resultando em `[João, Marcio]`. 
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
-Isso demonstra como combinar operações intermediárias (`filter` + `limit`) para controlar o tamanho do resultado.
+public class Main {
+    public static void main(String[] args) {
+        List<String> debugValues = new ArrayList<>();
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                // .peek(System.out::println)
+                .peek(debugValues::add)
+                .filter(name -> name.endsWith("o"))
+                .toList();
+
+        System.out.println(debugValues);
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h35m39s295.jpg" alt="" width="840">
 </p>
 
-Exemplo de `.anyMatch()` para verificar existência de elementos que contenham "a".
+Podemos encadear múltiplas operações intermediárias. Aqui, após o filtro, adicionamos um `.limit(2)`. Isso faz com que a stream processe e retorne apenas os dois primeiros elementos que satisfaçam a condição do filtro. O resultado no console é `[João, Marcio]`, deixando "Leandro" de fora.
 
-O código combina filtro e `anyMatch`. A saída é `true`, pois pelo menos um nome atende ao critério. 
+```java
+import java.util.stream.Stream;
 
-Operação terminal que retorna booleano e curto-circuita (não processa todos os elementos desnecessariamente).
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .filter(name -> name.endsWith("o"))
+                .limit(2)
+                .toList();
+
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h36m19s084.jpg" alt="" width="840">
 </p>
 
-Combinação de `.filter()` com `.anyMatch()`.
+Além de retornar listas, as streams possuem operações terminais que retornam valores booleanos. O método `.anyMatch()` verifica se **pelo menos um** elemento da stream satisfaz a condição informada. Neste caso, estamos verificando se algum nome contém a letra "a". Como "Maria", "Luana" e "Marcia" contêm, o resultado impresso é `true`.
 
-Aqui o filtro por nomes terminados em "o" é mantido, e o `anyMatch` verifica presença de "a". O resultado continua `true`. 
+```java
+import java.util.stream.Stream;
 
-Boa demonstração de encadeamento de operações.
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .anyMatch(n -> n.contains("a"));
+
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h36m40s170.jpg" alt="" width="840">
 </p>
 
-Exemplo com `.noneMatch()` verificando ausência de "Z".
+Podemos combinar filtros com essas operações booleanas. Aqui, primeiro filtramos os nomes que terminam com "o" (João, Marcio, Leandro) e depois verificamos com `.anyMatch()` se algum deles contém a letra "a". Como "João" e "Marcio" possuem a letra "a", o resultado continua sendo `true`.
 
-Como nenhum nome termina em "o" e contém "Z", o resultado é `true` (nenhum elemento atende à condição). 
+```java
+import java.util.stream.Stream;
 
-Útil para validações de "não existe nenhum...".
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .filter(n -> n.endsWith("o"))
+                .anyMatch(n -> n.contains("a"));
+
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h37m56s294.jpg" alt="" width="840">
 </p>
 
-Demonstração de `.allMatch()` verificando se todos os nomes filtrados contêm "o".
+Alterando a condição do `.anyMatch()` para buscar a letra "z", o resultado passa a ser `false`. Nenhum dos nomes filtrados (terminados em "o") contém a letra "z".
 
-Como todos os nomes terminados em "o" obviamente contêm "o", o resultado é `true`. 
+```java
+import java.util.stream.Stream;
 
-Mostra o uso de operações de correspondência para verificações universais.
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .filter(n -> n.endsWith("o"))
+                .anyMatch(n -> n.contains("z"));
+
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h38m23s132.jpg" alt="" width="840">
 </p>
 
-Operação de redução (`reduce`) para concatenar strings com separador.
+Outra operação booleana é o `.noneMatch()`, que retorna `true` apenas se **nenhum** elemento satisfizer a condição. Como verificamos se nenhum nome contém a letra "z", e de fato nenhum contém, o resultado impresso é `true`.
 
-O `reduce` inicia com string vazia e acumula os nomes separados por ";". Depois, `.replaceFirst` remove o separador inicial indesejado. 
+```java
+import java.util.stream.Stream;
 
-Resultado: `Maria;João;Marcio;Luana;Leandro;Marcia`. 
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .filter(n -> n.endsWith("o"))
+                .noneMatch(n -> n.contains("z"));
 
-Excelente exemplo de agregação para transformar a stream em um único valor.
+        System.out.println(value);
+    }
+}
+```
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h38m32s757.jpg" alt="" width="840">
 </p>
 
-Passo a passo da execução:
-
-#### 1. Criando a matéria-prima (`Stream.of`)
+Temos também o `.allMatch()`, que só retorna `true` se **todos** os elementos da stream coincidirem com a condição. Como filtramos previamente apenas os nomes que terminam com "o", a verificação se todos contêm a letra "o" naturalmente retorna `true`.
 
 ```java
-Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+import java.util.stream.Stream;
 
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .filter(n -> n.endsWith("o"))
+                .allMatch(n -> n.contains("o"));
+
+        System.out.println(value);
+    }
+}
 ```
 
-Seis  nomes dentro da esteira de produção.
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h38m51s725.jpg" alt="" width="840">
+</p>
 
-#### 2. A primeira barreira/filtro (`.filter`)
+Avançando para operações de agregação, temos o `.reduce()`. Ele é uma operação terminal que transforma a stream em um único valor, utilizando um valor de identidade inicial e um `BinaryOperator` para acumular os resultados.
+
+Neste exemplo, começamos com uma string vazia `""` e concatenamos cada elemento separando-os por ponto e vírgula `(a, b) -> a + ";" + b`. Como a identidade inicial era vazia, o resultado começa com um ponto e vírgula extra, que é removido em seguida utilizando o método `.replaceFirst(";", "")` da própria `String`. O resultado é uma única string com todos os nomes concatenados.
 
 ```java
-.filter(n -> n.endsWith("o"))
+import java.util.stream.Stream;
 
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+                .reduce("", (a, b) -> a + ";" + b).replaceFirst(";", "");
+
+        System.out.println(value);
+    }
+}
 ```
 
-O método `filter` funciona como uma peneira. Ele olha para cada nome na esteira e faz uma pergunta: *"Você termina com a letra 'o'?"* (`endsWith("o")`).
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h39m08s260.jpg" alt="" width="840">
+</p>
 
-* **Maria** termina com "o"? Não. (Eliminada)
-* **João** termina com "o"? Sim. (Passa adiante)
-* **Marcio** termina com "o"? Sim. (Passa adiante)
-* **Luana** termina com "o"? Não. (Eliminada)
-* **Leandro** termina com "o"? Sim. (Passa adiante)
-* **Marcia** termina com "o"? Não. (Eliminada)
-
-Depois dessa linha, apenas **João**, **Marcio** e **Leandro** continuam correndo pela esteira.
-
-#### 3. O teste final (`.allMatch`)
+Por fim, vemos o método `.map()`, que é ideal para transformar os elementos da stream de um tipo para outro. Aqui, temos uma stream de números inteiros e utilizamos `.map(Object::toString)` para converter cada número em uma `String`. O resultado final coletado pelo `.toList()` é uma lista de strings contendo os números originais.
 
 ```java
-.allMatch(n -> n.contains("o"))
+import java.util.stream.Stream;
 
+public class Main {
+    public static void main(String[] args) {
+        var value = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 7, 8, 7)
+                .map(Object::toString)
+                .toList();
+
+        System.out.println(value);
+    }
+}
 ```
-
-O `allMatch` é um inspetor de qualidade que faz uma pergunta final para **todos** os sobreviventes da esteira. Ele quer saber se **TODOS** eles contêm a letra "o" (`contains("o")`) em alguma parte do nome.
-
-* **João** contém "o"? Sim.
-* **Marcio** contém "o"? Sim.
-* **Leandro** contém "o"? Sim.
-
-Como **todos** os três passaram no teste, o `allMatch` fecha a esteira e responde: **`true`** (Verdadeiro).
-*(Nota: Se apenas um deles não contivesse a letra "o", o resultado seria `false`).*
-
-#### 4. Guardando e exibindo o resultado
-
-```java
-var value = ...
-System.out.println(value);
-
-```
-
-O resultado final (`true`) foi guardado dentro da variável chamada `value`.
-
-Na linha de baixo, o `System.out.println(value)` pega esse resultado e o exibe na tela. É por isso que ali embaixo, no console do IntelliJ (na parte preta), está escrito apenas:
-
-> **true**
-
-    
-
 
 ### 🟩 Vídeo 11 - Explorando API de Streams
 
