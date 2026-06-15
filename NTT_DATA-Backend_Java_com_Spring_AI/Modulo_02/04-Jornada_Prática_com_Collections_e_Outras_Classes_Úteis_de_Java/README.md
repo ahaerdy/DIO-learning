@@ -1936,7 +1936,7 @@ public class Main {
 }
 ```
 
-*“No nosso `generate`, vamos passar um lambda que, no caso, não recebe argumentos, mas dá um retorno. Estamos utilizando o `new Random().nextInt()`.”* 
+“No nosso `generate`, vamos passar um lambda que, no caso, não recebe argumentos, mas dá um retorno. Estamos utilizando o `new Random().nextInt()`.”
 
 
 <p align="center">
