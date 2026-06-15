@@ -1597,11 +1597,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 #### Criando um Enum de estados com StateEnum
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-08h38m40s161.jpg" alt="" width="840">
-</p>
-
-A imagem mostra a criação de um `enum` chamado `StateEnum` dentro do package `enumeration` no IntelliJ IDEA. O enum contém as siglas de estados brasileiros como valores constantes: `SP`, `RJ`, `RS`, `MG` e `MT`. O aviso `"Field 'MT' is never used"` na barra inferior indica que o campo existe mas ainda não foi referenciado em nenhuma outra parte do código — o que é esperado nesse momento, já que o enum está sendo apresentado apenas como exemplo de uso.
+O código abaixo mostra a criação de um `enum` chamado `StateEnum` dentro do package `enumeration` no IntelliJ IDEA. O enum contém as siglas de estados brasileiros como valores constantes: `SP`, `RJ`, `RS`, `MG` e `MT`. 
 
 ```java
 package enumeration;
@@ -1615,15 +1611,9 @@ Esse exemplo ilustra como enums são ideais para representar conjuntos de valore
 
 #### Usando StateEnum como tipo de campo na classe User
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-08h38m49s630.jpg" alt="" width="840">
-</p>
-
-A imagem exibe a classe `User`, também dentro do package `enumeration`. Ela possui dois campos: `name` (do tipo `String`) e `state` (do tipo `StateEnum`), inicializado com o valor `StateEnum.RJ`. O IntelliJ exibe avisos de "no usages" nos campos, pois a classe ainda não está sendo usada em nenhum outro ponto do projeto neste momento da aula.
+Abaixo temos a classe `User`, também dentro do package `enumeration`. Ela possui dois campos: `name` (do tipo `String`) e `state` (do tipo `StateEnum`), inicializado com o valor `StateEnum.RJ`. 
 
 ```java
-package enumeration;
-
 public class User {
 
     private String name;
@@ -1637,11 +1627,7 @@ Ao declarar `state` como do tipo `StateEnum` em vez de `String`, o compilador ga
 
 #### Estrutura do menu principal com while e Scanner
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-09h09m56s646.jpg" alt="" width="840">
-</p>
-
-A imagem mostra a classe `Main` com o método `main`, que implementa um menu interativo de calculadora utilizando `Scanner` e um laço `while`. O loop continua enquanto a opção escolhida for diferente de `5` (sair). Há validação para opções fora do intervalo válido (menores que 1 ou maiores que 5), exibindo uma mensagem de erro e continuando o loop com `continue`. Quando o usuário escolhe a opção `5`, o `break` encerra o laço. A seleção da operação é feita via `OperationEnum.values()[option - 1]`, aproveitando a ordem de declaração do enum.
+Abaixo temos a classe `Main` com o método `main`, que implementa um menu interativo de calculadora utilizando `Scanner` e um laço `while`. O loop continua enquanto a opção escolhida for diferente de `5` (sair). Há validação para opções fora do intervalo válido (menores que 1 ou maiores que 5), exibindo uma mensagem de erro e continuando o loop com `continue`. Quando o usuário escolhe a opção `5`, o `break` encerra o laço. A seleção da operação é feita via `OperationEnum.values()[option - 1]`, aproveitando a ordem de declaração do enum.
 
 ```java
 import java.util.Scanner;
@@ -1684,11 +1670,7 @@ O uso de `OperationEnum.values()[option - 1]` elimina a necessidade de uma cadei
 
 #### OperationEnum com propriedades e BiFunction
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-09h10m00s983.jpg" alt="" width="840">
-</p>
-
-A imagem apresenta o enum `OperationEnum` completo, que vai além de simples constantes: cada valor carrega duas propriedades — uma `BiFunction<Integer, Integer, Integer>` chamada `calculate` (que define a operação matemática via lambda ou method reference) e uma `String` chamada `symbol` (o símbolo da operação). O construtor do enum recebe essas duas propriedades, e getters públicos permitem acessá-las externamente.
+O próximo trecho de código apresenta o enum `OperationEnum` completo, que vai além de simples constantes: cada valor carrega duas propriedades — uma `BiFunction<Integer, Integer, Integer>` chamada `calculate` (que define a operação matemática via lambda ou method reference) e uma `String` chamada `symbol` (o símbolo da operação). O construtor do enum recebe essas duas propriedades, e getters públicos permitem acessá-las externamente.
 
 ```java
 import java.util.function.BiFunction;
