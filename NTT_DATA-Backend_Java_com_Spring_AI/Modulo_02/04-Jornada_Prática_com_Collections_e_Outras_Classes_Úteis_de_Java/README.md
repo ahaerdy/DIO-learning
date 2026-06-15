@@ -1593,6 +1593,169 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/de7b907c-ce4f-4416-b954-3bd7711effe1?autoplay=1
 
+### Anotações
+
+#### Criando um Enum de estados com StateEnum
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-08h38m40s161.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a criação de um `enum` chamado `StateEnum` dentro do package `enumeration` no IntelliJ IDEA. O enum contém as siglas de estados brasileiros como valores constantes: `SP`, `RJ`, `RS`, `MG` e `MT`. O aviso `"Field 'MT' is never used"` na barra inferior indica que o campo existe mas ainda não foi referenciado em nenhuma outra parte do código — o que é esperado nesse momento, já que o enum está sendo apresentado apenas como exemplo de uso.
+
+```java
+package enumeration;
+
+public enum StateEnum {
+    SP, RJ, RS, MG, MT
+}
+```
+
+Esse exemplo ilustra como enums são ideais para representar conjuntos de valores fixos e bem definidos, como os estados de um país, evitando o uso de Strings livres que poderiam conter erros de digitação ou valores inesperados.
+
+#### Usando StateEnum como tipo de campo na classe User
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-08h38m49s630.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a classe `User`, também dentro do package `enumeration`. Ela possui dois campos: `name` (do tipo `String`) e `state` (do tipo `StateEnum`), inicializado com o valor `StateEnum.RJ`. O IntelliJ exibe avisos de "no usages" nos campos, pois a classe ainda não está sendo usada em nenhum outro ponto do projeto neste momento da aula.
+
+```java
+package enumeration;
+
+public class User {
+
+    private String name;
+
+    private StateEnum state = StateEnum.RJ;
+
+}
+```
+
+Ao declarar `state` como do tipo `StateEnum` em vez de `String`, o compilador garante que apenas valores válidos do enum possam ser atribuídos ao campo — eliminando a possibilidade de um valor arbitrário ou inválido ser inserido.
+
+#### Estrutura do menu principal com while e Scanner
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-09h09m56s646.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `Main` com o método `main`, que implementa um menu interativo de calculadora utilizando `Scanner` e um laço `while`. O loop continua enquanto a opção escolhida for diferente de `5` (sair). Há validação para opções fora do intervalo válido (menores que 1 ou maiores que 5), exibindo uma mensagem de erro e continuando o loop com `continue`. Quando o usuário escolhe a opção `5`, o `break` encerra o laço. A seleção da operação é feita via `OperationEnum.values()[option - 1]`, aproveitando a ordem de declaração do enum.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        var option = -1;
+        while (option != 5) {
+            System.out.println("Escolha uma opção pelo número:");
+            System.out.println("1 - Soma");
+            System.out.println("2 - Subtração");
+            System.out.println("3 - Multiplicação");
+            System.out.println("4 - Divisão");
+            System.out.println("5 - Sair");
+            option = scanner.nextInt();
+
+            if (option > 5 || option < 1) {
+                System.out.println("Selecione uma opção válida");
+                continue;
+            }
+
+            if (option == 5) break;
+            var selectedOption = OperationEnum.values()[option - 1];
+
+            System.out.println("Informe o primeiro valor");
+            var value1 = scanner.nextInt();
+            System.out.println("Informe o segundo valor");
+            var value2 = scanner.nextInt();
+
+            var result = selectedOption.getCalculate().apply(value1, value2);
+
+            System.out.printf("%s %s %s = %s \n\n", value1, selectedOption.getSymbol(), value2, result);
+        }
+    }
+}
+```
+
+O uso de `OperationEnum.values()[option - 1]` elimina a necessidade de uma cadeia de `if`s para descobrir qual operação foi escolhida — a ordem de declaração dos valores no enum é suficiente para fazer o mapeamento direto.
+
+#### OperationEnum com propriedades e BiFunction
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-09h10m00s983.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o enum `OperationEnum` completo, que vai além de simples constantes: cada valor carrega duas propriedades — uma `BiFunction<Integer, Integer, Integer>` chamada `calculate` (que define a operação matemática via lambda ou method reference) e uma `String` chamada `symbol` (o símbolo da operação). O construtor do enum recebe essas duas propriedades, e getters públicos permitem acessá-las externamente.
+
+```java
+import java.util.function.BiFunction;
+
+public enum OperationEnum {
+
+    SUM(Integer::sum, "+"),
+    SUBTRACTION((Integer v1, Integer v2) -> v1 - v2, "-"),
+    MULTIPLY((Integer v1, Integer v2) -> v1 * v2, "*"),
+    DIVISION((Integer v1, Integer v2) -> v1 / v2, "/");
+
+    private final BiFunction<Integer, Integer, Integer> calculate;
+
+    private final String symbol;
+
+    OperationEnum(BiFunction<Integer, Integer, Integer> calculate, String symbol) {
+        this.calculate = calculate;
+        this.symbol = symbol;
+    }
+
+    public BiFunction<Integer, Integer, Integer> getCalculate() {
+        return calculate;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+}
+```
+
+Cada constante do enum encapsula seu próprio comportamento: `SUM` usa um method reference (`Integer::sum`), enquanto as demais usam lambdas explícitas. Isso permite invocar a operação correta chamando apenas `selectedOption.getCalculate().apply(value1, value2)`, sem nenhum `if` ou `switch`.
+
+#### Execução: resultado da soma (50 + 60 = 110)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-09h10m11s647.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a saída do programa no painel Run do IntelliJ após o usuário selecionar a opção `1` (Soma) e informar os valores `50` e `60`. O resultado `50 + 60 = 110` ainda não aparece formatado nesta execução — o professor menciona que esqueceu de incluir o `\n` no `printf`, o que será corrigido em seguida. O console confirma que a seleção via índice do enum está funcionando corretamente.
+
+#### Execução: resultado da subtração (50 - 20 = 30)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-09h10m13s329.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a execução com a opção `2` (Subtração), valores `50` e `20`, produzindo o resultado formatado `50 - 20 = 30`. Aqui o `printf` já está com o `\n` correto, separando visualmente cada operação no console. O símbolo `-` exibido vem diretamente da propriedade `symbol` do enum `SUBTRACTION`.
+
+#### Execução: resultado da multiplicação (80 * 99 = 7920)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-09h10m14s244.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o teste com a opção `3` (Multiplicação), valores `80` e `99`, com saída `80 * 99 = 7920`. O cálculo é executado pela lambda `(v1, v2) -> v1 * v2` armazenada na constante `MULTIPLY` do enum, sem qualquer `if` na classe `Main`.
+
+#### Execução: resultado da divisão (50 / 5 = 10)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-09h10m15s077.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta o teste da opção `4` (Divisão) com valores `50` e `5`, resultando em `50 / 5 = 10`. Com todos os quatro testes concluídos, a calculadora demonstra que enums com propriedades funcionais permitem implementar múltiplos comportamentos distintos de forma limpa, centralizada e sem repetição de lógica condicional.
+      
+
+
 ### 🟩 Vídeo 09 - Classe Optional
 
 <video width="60%" controls>
