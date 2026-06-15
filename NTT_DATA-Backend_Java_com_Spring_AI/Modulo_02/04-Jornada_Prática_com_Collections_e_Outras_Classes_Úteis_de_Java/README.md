@@ -1902,10 +1902,6 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 ### Anotações
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h26m07s495.jpg" alt="" width="840">
-</p>
-
 Neste primeiro exemplo, estamos conhecendo a API de Streams do Java, que nos permite trabalhar com conceitos de programação funcional. O código demonstra como gerar streams infinitas e limitá-las.
 
 Primeiro, declaramos uma variável `value1` e usamos o método `Stream.generate()`, passando um lambda que utiliza `new Random().nextInt()` para gerar números aleatórios. Como a stream rodaria indefinidamente, usamos `.limit(5)` para restringir a cinco elementos e `.toArray(Integer[]::new)` para coletar os resultados em um array tipado de `Integer`, utilizando um *method reference*.
