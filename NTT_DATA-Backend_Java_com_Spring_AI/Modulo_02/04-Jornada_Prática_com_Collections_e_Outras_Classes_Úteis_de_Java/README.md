@@ -12,9 +12,14 @@ Para este curso, ver também:
 </p>
 
 - ☕️ Roadmap Java
-  - [x] [Arrays vs ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist)
-    - [x] [Arrays](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arrays)
-    - [x] [ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arraylist)
+  - **Orientação a Objetos**
+    - **Aprofundando em OOP**
+      - [x] [Arrays vs ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist)
+        - [x] [Arrays](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arrays)
+        - [x] [ArrayList](https://github.com/ahaerdy/roadmap_java/tree/main/topicos_avancados_concorrencia/colecoes/arrays_vs_arraylist/arraylist)    
+  - **Tópicos Avançados & Concorrência**
+    - **Coleções**
+      - [x] [Enums](https://github.com/ahaerdy/roadmap_java/tree/main/orientacao_a_objetos/aprofundando/enums)  
 
 ---
 
@@ -1744,7 +1749,7 @@ A imagem apresenta o teste da opção `4` (Divisão) com valores `50` e `5`, res
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/da083763-0b0f-4a46-876b-e3317b668292?autoplay=1
 
 ## Parte 5 - API de Streams e Generics
 
@@ -1755,7 +1760,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/da083763-0b0f-4a46-876b-e3317b668292?autoplay=1
+
+
 
 ### 🟩 Vídeo 11 - Explorando API de Streams
 
