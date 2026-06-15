@@ -2041,11 +2041,64 @@ Excelente exemplo de agregação para transformar a stream em um único valor.
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-15h38m32s757.jpg" alt="" width="840">
 </p>
 
-Exemplo de `.map()` transformando `Stream<Integer>` em `Stream<String>`.
+Passo a passo da execução:
 
-Os números são convertidos para strings via `Object::toString` (ou `Integer::toString`). 
+#### 1. Criando a matéria-prima (`Stream.of`)
 
-A operação `map` é fundamental para transformar elementos de um tipo para outro dentro do pipeline.
+```java
+Stream.of("Maria", "João", "Marcio", "Luana", "Leandro", "Marcia")
+
+```
+
+Seis  nomes dentro da esteira de produção.
+
+#### 2. A primeira barreira/filtro (`.filter`)
+
+```java
+.filter(n -> n.endsWith("o"))
+
+```
+
+O método `filter` funciona como uma peneira. Ele olha para cada nome na esteira e faz uma pergunta: *"Você termina com a letra 'o'?"* (`endsWith("o")`).
+
+* **Maria** termina com "o"? Não. (Eliminada)
+* **João** termina com "o"? Sim. (Passa adiante)
+* **Marcio** termina com "o"? Sim. (Passa adiante)
+* **Luana** termina com "o"? Não. (Eliminada)
+* **Leandro** termina com "o"? Sim. (Passa adiante)
+* **Marcia** termina com "o"? Não. (Eliminada)
+
+Depois dessa linha, apenas **João**, **Marcio** e **Leandro** continuam correndo pela esteira.
+
+#### 3. O teste final (`.allMatch`)
+
+```java
+.allMatch(n -> n.contains("o"))
+
+```
+
+O `allMatch` é um inspetor de qualidade que faz uma pergunta final para **todos** os sobreviventes da esteira. Ele quer saber se **TODOS** eles contêm a letra "o" (`contains("o")`) em alguma parte do nome.
+
+* **João** contém "o"? Sim.
+* **Marcio** contém "o"? Sim.
+* **Leandro** contém "o"? Sim.
+
+Como **todos** os três passaram no teste, o `allMatch` fecha a esteira e responde: **`true`** (Verdadeiro).
+*(Nota: Se apenas um deles não contivesse a letra "o", o resultado seria `false`).*
+
+#### 4. Guardando e exibindo o resultado
+
+```java
+var value = ...
+System.out.println(value);
+
+```
+
+O resultado final (`true`) foi guardado dentro da variável chamada `value`.
+
+Na linha de baixo, o `System.out.println(value)` pega esse resultado e o exibe na tela. É por isso que ali embaixo, no console do IntelliJ (na parte preta), está escrito apenas:
+
+> **true**
 
     
 
