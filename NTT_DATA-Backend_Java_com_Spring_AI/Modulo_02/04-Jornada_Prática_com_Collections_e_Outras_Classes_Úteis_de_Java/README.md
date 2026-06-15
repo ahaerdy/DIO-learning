@@ -212,11 +212,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 ### Anotações
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-10-15h25m01s400.jpg" alt="" width="840">
-</p>
-
-A imagem exibe a implementação completa da classe `User` em Java. A classe possui dois atributos privados (`int id` e `String name`), dois construtores (um sem argumentos e outro parametrizado), getters e setters para ambos os campos, e três métodos sobrescritos da classe `Object`: `toString()`, `equals()` e `hashCode()`.
+Abaixo observamos a implementação completa da classe `User` em Java. A classe possui dois atributos privados (`int id` e `String name`), dois construtores (um sem argumentos e outro parametrizado), getters e setters para ambos os campos, e três métodos sobrescritos da classe `Object`: `toString()`, `equals()` e `hashCode()`.
 
 O método `toString()` formata a representação textual do objeto. O `equals()` verifica identidade de referência primeiro (`obj == this`), depois confirma o tipo com `instanceof`, e por fim compara `id` e `name` usando `Objects.equals`. O `hashCode()` delega para `Objects.hash(this.id, this.name)`, garantindo que objetos iguais segundo `equals` produzam o mesmo hash.
 
@@ -1751,6 +1747,148 @@ A imagem apresenta o teste da opção `4` (Divisão) com valores `50` e `5`, res
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/da083763-0b0f-4a46-876b-e3317b668292?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h20m47s021.jpg" alt="" width="840">
+</p>
+
+Este trecho mostra a definição de um **enum** em Java, chamado `SexEnum`, que contém os valores `MALE` e `FEMALE`. O uso de `enum` é útil para representar categorias fixas e bem definidas, evitando erros de digitação e garantindo consistência no código.
+
+```java
+package domain;
+
+public enum SexEnum {
+    MALE, FEMALE;
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h20m48s286.jpg" alt="" width="840">
+</p>
+
+Aqui temos a criação de um **record** em Java chamado `User`. Esse record define três atributos: `name` (String), `age` (int) e `sex` (SexEnum). O uso de records simplifica a criação de classes imutáveis e é ideal para representar dados.
+
+```java
+package domain;
+
+public record User(String name, int age, SexEnum sex) { }
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h22m35s077.jpg" alt="" width="840">
+</p>
+
+Neste ponto, vemos o uso da classe `Optional` para encapsular um objeto `User`. O método `Optional.of()` é utilizado para criar um `Optional` com um valor não nulo. Caso o valor seja nulo, ocorre uma exceção.
+
+```java
+Optional<User> optional = Optional.of(new User("João", 18, SexEnum.MALE));
+System.out.println(optional.get());
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h22m47s298.jpg" alt="" width="840">
+</p>
+
+Aqui é mostrado o problema de usar `Optional.of()` com valores nulos. O código tenta criar um `Optional` com `null`, o que gera uma `NullPointerException`.
+
+```java
+Optional<User> optional = Optional.of(null);
+// System.out.println(optional.get());
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h24m00s978.jpg" alt="" width="840">
+</p>
+
+Neste exemplo, o método `Optional.ofNullable()` é utilizado. Ele permite criar um `Optional` que pode estar vazio caso o valor seja nulo, evitando a exceção.
+
+```java
+Optional<User> optional = Optional.ofNullable(null);
+System.out.println(optional);
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h29m10s179.jpg" alt="" width="840">
+</p>
+
+Aqui vemos o uso do método `ifPresent`, que executa uma ação apenas se o valor estiver presente. Isso evita acessos indevidos a valores nulos.
+
+```java
+optional.ifPresent(System.out::println);
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h33m07s319.jpg" alt="" width="840">
+</p>
+
+Neste trecho, é utilizado o método `ifPresentOrElse`, que permite definir uma ação para o caso de o valor estar presente e outra para o caso de estar ausente.
+
+```java
+optional.ifPresentOrElse(
+    user -> System.out.printf("Usuário: %s%n", user),
+    () -> System.out.println("Não foi informado um usuário")
+);
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h33m44s843.jpg" alt="" width="840">
+</p>
+
+Aqui o `Optional` é inicializado com um valor válido, garantindo que o bloco `ifPresentOrElse` execute a ação de imprimir o usuário.
+
+```java
+Optional<User> optional = Optional.of(new User("João", 18, SexEnum.MALE));
+optional.ifPresentOrElse(
+    user -> System.out.printf("Usuário: %s%n", user),
+    () -> System.out.println("Não foi informado um usuário")
+);
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h34m57s083.jpg" alt="" width="840">
+</p>
+
+Neste exemplo, dentro do `ifPresentOrElse`, o objeto `User` é modificado para demonstrar como trabalhar com valores dentro de uma expressão lambda.
+
+```java
+int newAge = 22;
+optional.ifPresentOrElse(
+    user -> {
+        System.out.printf("Usuário: %s%n", user);
+        user = new User("João", newAge, SexEnum.MALE);
+        System.out.printf("Usuário: %s%n", user);
+    },
+    () -> System.out.println("Não foi informado um usuário")
+);
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h38m01s226.jpg" alt="" width="840">
+</p>
+
+Aqui é demonstrado o uso de `orElseThrow`, que lança uma exceção caso o `Optional` esteja vazio. É útil quando se deseja garantir que o valor esteja presente.
+
+```java
+System.out.println(optional.orElseThrow(() -> new RuntimeException("")));
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-15-14h39m06s660.jpg" alt="" width="840">
+</p>
+
+Neste trecho, vemos a diferença entre `orElse` e `orElseGet`. Ambos fornecem valores padrão, mas `orElseGet` só executa o código fornecido se o `Optional` estiver vazio, evitando processamento desnecessário.
+
+```java
+System.out.println(optional.orElse(defaultUser()));
+System.out.println(optional.orElseGet(Main::defaultUser));
+
+public static User defaultUser() {
+    return new User("Maria", 22, SexEnum.FEMALE);
+}
+```      
+
+
 ## Parte 5 - API de Streams e Generics
 
 ### 🟩 Vídeo 10 - Introdução à API de Streams
@@ -1771,7 +1909,9 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/9627f65c-e3c5-4982-8999-02e51108f436?autoplay=1
+
+
 
 ### 🟩 Vídeo 12 - Generics
 
@@ -1780,7 +1920,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/618f4e62-63ea-46d3-898f-9f12c789768c?autoplay=1
 
 ## Parte 6 - Classes Date e Calendar
 
