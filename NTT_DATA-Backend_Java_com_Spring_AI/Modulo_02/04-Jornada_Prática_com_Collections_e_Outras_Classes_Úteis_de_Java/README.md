@@ -1597,7 +1597,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 #### Criando um Enum de estados com StateEnum
 
-O código abaixo mostra a criação de um `enum` chamado `StateEnum` dentro do package `enumeration` no IntelliJ IDEA. O enum contém as siglas de estados brasileiros como valores constantes: `SP`, `RJ`, `RS`, `MG` e `MT`. 
+O código abaixo é um exemplo de criação de um `enum` chamado `StateEnum` dentro do package `enumeration` no IntelliJ IDEA. O enum contém as siglas de estados brasileiros como valores constantes: `SP`, `RJ`, `RS`, `MG` e `MT`. 
 
 ```java
 package enumeration;
@@ -1611,7 +1611,7 @@ Esse exemplo ilustra como enums são ideais para representar conjuntos de valore
 
 #### Usando StateEnum como tipo de campo na classe User
 
-Abaixo temos a classe `User`, também dentro do package `enumeration`. Ela possui dois campos: `name` (do tipo `String`) e `state` (do tipo `StateEnum`), inicializado com o valor `StateEnum.RJ`. 
+Abaixo vemos a classe `User`, também dentro do package `enumeration`. Ela possui dois campos: `name` (do tipo `String`) e `state` (do tipo `StateEnum`), inicializado com o valor `StateEnum.RJ`. 
 
 ```java
 public class User {
