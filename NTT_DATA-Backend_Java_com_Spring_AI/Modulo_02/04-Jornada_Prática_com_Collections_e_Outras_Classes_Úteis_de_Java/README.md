@@ -2273,7 +2273,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/f0b51ae9-8785-4f7e-a757-ef7d0902de29?autoplay=1
 
 ### 🟩 Vídeo 14 - Classe Calendar
 
@@ -2282,18 +2282,20 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/156c539f-7989-4eb3-b471-de027590d32f?autoplay=1
 
 ## Parte 7 - Conhecendo as Classes OffsetDateTime OffsetTime LocalDate LocalDateTime e LocalTime
 
-### 🟩 Vídeo 15 - Classes OffsetDateTime OffsetTime LocalDate LocalDateTime e LocalTime
+### 🟩 Vídeo 15 - Classes OffsetDateTime, OffsetTime, LocalDate, LocalDateTime e LocalTime
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.02-curso.04-video_15.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/f140cc1b-e275-429c-986d-380df6d21885?autoplay=1
+
+
 
 ## Parte 8 - Classe Thread e Interface Runnable
 
@@ -2304,7 +2306,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/1d012f60-03b1-433c-84a2-c1232d3ce007?autoplay=1
 
 ## Parte 9 - Exercícios: Collections e Outras Classes Úteis do Java
 
