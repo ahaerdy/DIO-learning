@@ -2641,6 +2641,184 @@ O uso de `OptionalLong` (em vez de um `long` primitivo) é a abordagem segura da
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/618f4e62-63ea-46d3-898f-9f12c789768c?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-13h06m43s525.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `GenericDAO<T>`, dentro do pacote `dao`, já com toda a estrutura básica implementada. Essa classe é abstrata e representa um DAO (Data Access Object) genérico, capaz de funcionar para qualquer tipo de domínio que venha a ser definido por `T`.
+
+Ela mantém internamente uma lista (`db`) que simula um banco de dados em memória, e expõe os métodos fundamentais de acesso a dados: salvar, deletar, buscar com filtro, listar todos e contar registros.
+
+```java
+package dao;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Predicate;
+
+public abstract class GenericDAO<T> {
+
+    private final List<T> db = new ArrayList<>();
+
+    public T save(T domain){
+        db.add(domain);
+        return domain;
+    }
+
+    public boolean delete(T domain){
+        return db.remove(domain);
+    }
+
+    public Optional<T> find(Predicate<T> filterCallback){
+        return db.stream().filter(filterCallback).findFirst();
+    }
+
+    public List<T> findAll(){
+        return db;
+    }
+
+    public int count(){
+        return db.size();
+    }
+}
+```
+
+O uso do generics em `T` permite que essa mesma classe seja reaproveitada por qualquer entidade da aplicação, sem precisar reescrever a lógica de acesso a dados para cada uma delas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-13h06m45s329.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `UserDAO`, no pacote `dao`, que estende `GenericDAO<UserDomain>`. Essa é a implementação concreta do DAO genérico para a entidade de usuário: ao herdar de `GenericDAO`, `UserDAO` ganha automaticamente todos os métodos de `save`, `delete`, `find`, `findAll` e `count` já tipados para trabalhar com `UserDomain`, sem precisar reescrever nenhuma dessas operações.
+
+```java
+package dao;
+
+import domain.UserDomain;
+
+public class UserDAO extends GenericDAO<UserDomain>{
+}
+```
+
+Esse é justamente o ganho de produtividade do uso de generics combinado com herança: a mesma estrutura de acesso a dados serve para qualquer domínio que se queira criar, bastando estender a classe genérica.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-13h06m47s346.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `UserDomain`, no pacote `domain`, implementada como um `record` do Java. Essa é a entidade concreta que representa um usuário, com os atributos `name` (String) e `age` (int).
+
+```java
+package domain;
+
+public record UserDomain(String name, int age) {
+}
+```
+
+Usar `record` aqui é uma forma simples e enxuta de criar uma entidade imutável, já que o Java gera automaticamente o construtor, os métodos de acesso, `equals`, `hashCode` e `toString` para os atributos declarados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-13h06m49s314.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `Main`, que instancia o DAO genérico através da implementação concreta `UserDAO`, e executa uma sequência de operações para testar o comportamento do CRUD em memória.
+
+```java
+import dao.GenericDAO;
+import dao.UserDAO;
+import domain.UserDomain;
+
+public class Main {
+
+    static GenericDAO<UserDomain> dao = new UserDAO();
+    public static void main(String[] args) {
+        var user = new UserDomain("João", 36);
+        System.out.println(dao.count());
+        System.out.println(dao.save(user));
+        System.out.println(dao.findAll());
+        System.out.println(dao.count());
+        dao.delete(new UserDomain("", -1));
+        dao.delete(user);
+        System.out.println(dao.findAll());
+        System.out.println(dao.count());
+
+    }
+
+}
+```
+
+A sequência de chamadas testa, em ordem: a contagem inicial (vazia), o salvamento de um novo usuário, a listagem de todos os registros, a contagem após o `save`, uma tentativa de remoção de um usuário inexistente, a remoção do usuário que de fato existe, e por fim a listagem e a contagem finais para confirmar que o registro foi removido.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-13h06m51s263.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a saída no console após a execução do `Main`, com o resultado de cada chamada feita anteriormente:
+
+```
+0
+UserDomain[name=João, age=36]
+[UserDomain[name=João, age=36]]
+1
+[]
+0
+```
+
+Esse resultado confirma o comportamento esperado: a contagem inicial é `0`, o `save` retorna o próprio objeto salvo, o `findAll` mostra a lista com o usuário recém-adicionado, a contagem sobe para `1`, e após as duas chamadas de `delete` (uma para um usuário inexistente e outra para o usuário real) a lista volta a ficar vazia e a contagem retorna a `0`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-13h15m15s464.jpg" alt="" width="840">
+</p>
+
+A imagem mostra uma nova versão da classe `Main`, com uma alteração em relação à anterior: agora as duas chamadas a `dao.delete(...)` estão envolvidas em `System.out.println`, para que o valor booleano retornado pelo método de remoção apareça diretamente no console.
+
+```java
+import dao.GenericDAO;
+import dao.UserDAO;
+import domain.UserDomain;
+
+public class Main {
+
+    static GenericDAO<UserDomain> dao = new UserDAO();
+    public static void main(String[] args) {
+        var user = new UserDomain("João", 36);
+        System.out.println(dao.count());
+        System.out.println(dao.save(user));
+        System.out.println(dao.findAll());
+        System.out.println(dao.count());
+        System.out.println(dao.delete(new UserDomain("", -1)));
+        System.out.println(dao.delete(user));
+        System.out.println(dao.findAll());
+        System.out.println(dao.count());
+    }
+
+}
+```
+
+Essa mudança evidencia que o método `delete` do `GenericDAO`, internamente, usa `db.remove(domain)`, que retorna `true` quando o elemento é encontrado e removido, e `false` quando o elemento não existe na lista.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-13h15m17s127.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a nova saída no console, agora exibindo também o resultado booleano das duas chamadas de `delete`:
+
+```
+0
+UserDomain[name=João, age=36]
+[UserDomain[name=João, age=36]]
+1
+false
+true
+[]
+0
+```
+
+O `false` corresponde à tentativa de remover um usuário que não existe na lista (`new UserDomain("", -1)`), enquanto o `true` confirma que o usuário `João`, que de fato estava cadastrado, foi removido com sucesso. Em seguida, o `findAll` retorna uma lista vazia e o `count` volta a `0`, confirmando que a remoção funcionou corretamente.      
+
+
 ## Parte 6 - Classes Date e Calendar
 
 ### 🟩 Vídeo 13 - Classe Date
