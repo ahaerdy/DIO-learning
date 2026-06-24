@@ -2253,6 +2253,387 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/9627f65c-e3c5-4982-8999-02e51108f436?autoplay=1
 
+### Anotações
+
+#### Record `Contact`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h13m46s449.jpg" alt="" width="840">
+</p>
+
+O `Contact` é definido como um **Java Record** no pacote `domain`. Um record é uma forma concisa de declarar classes portadoras de dados imutáveis — o compilador gera automaticamente construtor, getters, `equals`, `hashCode` e `toString`.
+
+```java
+package domain;
+
+public record Contact(String description, ContactType type) { }
+```
+
+O record possui dois componentes: `description` (a string com o endereço de e-mail ou número de telefone) e `type` (um enum `ContactType` que classifica o contato).
+
+#### Enum `ContactType`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h13m48s335.jpg" alt="" width="840">
+</p>
+
+O enum `ContactType` define os dois tipos possíveis de contato aceitos pelo sistema.
+
+```java
+package domain;
+
+public enum ContactType {
+    EMAIL, PHONE
+}
+```
+
+Ao usar um enum, o código ganha segurança de tipo em tempo de compilação: não é possível passar um tipo de contato inválido onde `ContactType` é esperado.
+
+#### Enum `Sex`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h13m50s605.jpg" alt="" width="840">
+</p>
+
+O enum `Sex` representa o sexo do usuário, com dois valores possíveis.
+
+```java
+package domain;
+
+public enum Sex {
+    MALE, FEMALE
+}
+```
+
+Da mesma forma que `ContactType`, usar um enum aqui evita o uso de strings "mágicas" (`"M"`, `"F"`) e torna o código mais legível e seguro.
+
+#### Record `User`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h13m52s269.jpg" alt="" width="840">
+</p>
+
+O `User` é também um **record**, desta vez com quatro componentes: nome, idade, sexo e uma lista de contatos.
+
+```java
+package domain;
+
+import java.util.List;
+
+public record User(String name, int age, Sex sex, List<Contact> contacts) { }
+```
+
+A presença de `List<Contact>` como componente torna o `User` a entidade central da estrutura de dados usada na aula — é ela que será consultada e transformada pela API de Streams.
+
+#### Classe `Main` — Configuração inicial e ordenação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h13m54s015.jpg" alt="" width="840">
+</p>
+
+A classe `Main` reúne toda a lógica de exemplo. O método `generateUsers()` constrói uma lista de seis usuários com diferentes contatos. No `main`, a lista é ordenada pelo nome usando `Comparator.comparing` com method reference, e então impressa com `forEach`.
+
+```java
+import domain.Contact;
+import domain.User;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+import static domain.ContactType.EMAIL;
+import static domain.ContactType.PHONE;
+import static domain.Sex.FEMALE;
+import static domain.Sex.MALE;
+
+public class Main {
+    public static void main(String[] args) {
+
+        List<User> users = new ArrayList<>(generateUsers());
+
+        users.sort(Comparator.comparing(User::name));
+
+        users.forEach(System.out::println);
+    }
+
+    private static List<User> generateUsers() {
+        var contacts1 = List.of(
+                new Contact("(19)90665-8104", PHONE),
+                new Contact("joao@gmail.com", EMAIL)
+        );
+        var contacts2 = List.of(
+                new Contact("(21)92121-0032", PHONE)
+        );
+        var contacts3 = List.of(
+                new Contact("lucas@outlook.com", EMAIL)
+        );
+        var contacts4 = List.of(
+                new Contact("andreia@outlook.com", EMAIL),
+                new Contact("andreia@gmail.com", EMAIL)
+        );
+        var contacts5 = List.of(
+                new Contact("(31)97785-4456", PHONE),
+                new Contact("(31)92115-0011", PHONE)
+        );
+
+        var user1 = new User("João",   26, MALE,   new ArrayList<>(contacts1));
+        var user2 = new User("Maria",  28, FEMALE, new ArrayList<>(contacts2));
+        var user3 = new User("Lucas",  19, MALE,   new ArrayList<>(contacts3));
+        var user4 = new User("Andreia",40, FEMALE, new ArrayList<>(contacts4));
+        var user5 = new User("Vitor",  30, MALE,   new ArrayList<>(contacts5));
+        var user6 = new User("Bruna",  36, FEMALE, new ArrayList<>());
+
+        return List.of(user1, user2, user3, user4, user5, user6);
+    }
+}
+```
+
+Note que os contatos são criados com `List.of()` (imutável) e em seguida encapsulados em `new ArrayList<>()`. Isso é intencional: `List.of()` gera uma lista imutável, e para que operações futuras possam modificar a lista de contatos de um usuário é necessário convertê-la para uma `ArrayList` mutável.
+
+#### Saída — Lista de usuários ordenada alfabeticamente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h17m17s472.jpg" alt="" width="840">
+</p>
+
+A saída do programa após a ordenação por nome mostra os seis usuários em ordem alfabética. O `toString` gerado automaticamente pelo record exibe todos os campos, incluindo a lista de contatos de cada usuário.
+
+```
+User[name=Andreia, age=40, sex=FEMALE, contacts=[Contact[description=andreia@outlook.com, type=EMAIL], Contact[description=andreia@gmail.com, type=EMAIL]]]
+User[name=Bruna, age=36, sex=FEMALE, contacts=[]]
+User[name=João, age=26, sex=MALE, contacts=[Contact[description=(19)90665-8104, type=PHONE], Contact[description=joao@gmail.com, type=EMAIL]]]
+User[name=Lucas, age=19, sex=MALE, contacts=[Contact[description=lucas@outlook.com, type=EMAIL]]]
+User[name=Maria, age=28, sex=FEMALE, contacts=[Contact[description=(21)92121-0032, type=PHONE]]]
+User[name=Vitor, age=30, sex=MALE, contacts=[Contact[description=(31)97785-4456, type=PHONE], Contact[description=(31)92115-0011, type=PHONE]]]
+```
+
+Bruna aparece com uma lista de contatos vazia (`contacts=[]`), o que será útil nos exemplos de filtro a seguir.
+
+#### Stream com `filter` — Usuários com pelo menos dois contatos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h20m51s217.jpg" alt="" width="840">
+</p>
+
+O método `filter` da Stream API permite selecionar apenas os elementos que satisfazem um predicado. Neste exemplo, o objetivo é obter somente os usuários que possuem **ao menos dois contatos**.
+
+```java
+var values = users.stream()
+        .filter(u -> u.contacts().size() >= 2)
+        .toList();
+
+values.forEach(System.out::println);
+```
+
+O lambda `u -> u.contacts().size() >= 2` avalia o tamanho da lista de contatos de cada usuário. Apenas `João`, `Andreia` e `Vitor` satisfazem essa condição, pois são os únicos com dois ou mais contatos cadastrados.
+
+#### Stream com `filter` — Usuários sem contatos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h22m20s441.jpg" alt="" width="840">
+</p>
+
+Aqui o predicado é invertido: busca-se usuários cuja lista de contatos seja nula **ou** vazia. Isso demonstra como combinar condições com o operador `||` dentro de um lambda.
+
+```java
+var values = users.stream()
+        .filter(u -> u.contacts() != null && u.contacts().isEmpty())
+        .toList();
+
+values.forEach(System.out::println);
+```
+
+O resultado retorna apenas `Bruna`, que foi criada com `new ArrayList<>()` — uma lista vazia. A verificação `!= null` protege contra referências nulas caso algum usuário fosse criado sem lista de contatos.
+
+#### Stream com `filter` e `anyMatch` — Usuários com contato do tipo EMAIL
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h28m13s299.jpg" alt="" width="840">
+</p>
+
+O método `anyMatch` é um **terminal de curto-circuito** da Stream API: ele retorna `true` assim que encontrar o primeiro elemento que satisfaça o predicado, sem percorrer o restante da stream. Neste exemplo, ele é usado dentro de um `filter` externo para selecionar usuários que possuam **ao menos um contato do tipo EMAIL**.
+
+```java
+var values = users.stream()
+        .filter(u -> u.contacts().stream().anyMatch(c -> c.type() == EMAIL))
+        .toList();
+
+values.forEach(System.out::println);
+```
+
+A stream interna (`u.contacts().stream()`) percorre os contatos de cada usuário. Se qualquer contato for do tipo `EMAIL`, o usuário é incluído no resultado — mesmo que ele também possua contatos do tipo `PHONE`.
+
+#### Saída — Usuários com pelo menos um contato EMAIL
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h28m16s160.jpg" alt="" width="840">
+</p>
+
+A saída confirma que `João`, `Lucas` e `Andreia` foram retornados — todos possuem ao menos um contato do tipo `EMAIL`. `João` também tem um contato `PHONE`, mas isso não impede sua inclusão pois o critério usa `anyMatch` (pelo menos um).
+
+```
+User[name=João, age=26, sex=MALE, contacts=[Contact[description=(19)90665-8104, type=PHONE], Contact[description=joao@gmail.com, type=EMAIL]]]
+User[name=Lucas, age=19, sex=MALE, contacts=[Contact[description=lucas@outlook.com, type=EMAIL]]]
+User[name=Andreia, age=40, sex=FEMALE, contacts=[Contact[description=andreia@outlook.com, type=EMAIL], Contact[description=andreia@gmail.com, type=EMAIL]]]
+```
+
+#### Stream com `flatMap` — Extraindo e filtrando contatos diretamente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h30m48s654.jpg" alt="" width="840">
+</p>
+
+O `flatMap` é utilizado quando se quer **achatar** uma stream de coleções em uma única stream de elementos. Em vez de trabalhar com `Stream<List<Contact>>`, ele produz diretamente uma `Stream<Contact>`, permitindo filtrar e operar sobre os contatos de todos os usuários de forma unificada.
+
+```java
+var values = users.stream()
+        .flatMap(u -> u.contacts().stream())
+        .filter(c -> c.type() == EMAIL)
+        .sorted(Comparator.comparing(Contact::description))
+        .toList();
+
+values.forEach(System.out::println);
+```
+
+O `flatMap` recebe uma função que, para cada `User`, retorna uma `Stream<Contact>`. Essas streams individuais são mescladas em uma única stream contínua. Em seguida, o `filter` seleciona apenas contatos do tipo `EMAIL` e o `sorted` os ordena alfabeticamente pela descrição.
+
+#### Saída — Contatos do tipo EMAIL ordenados alfabeticamente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h30m50s560.jpg" alt="" width="840">
+</p>
+
+A saída exibe apenas os contatos do tipo `EMAIL`, ordenados alfabeticamente pela descrição. Todos os usuários foram "desmontados" pelo `flatMap`, e seus contatos foram reunidos em uma única sequência para filtragem e ordenação.
+
+```
+Contact[description=andreia@gmail.com, type=EMAIL]
+Contact[description=andreia@outlook.com, type=EMAIL]
+Contact[description=joao@gmail.com, type=EMAIL]
+Contact[description=lucas@outlook.com, type=EMAIL]
+```
+
+#### Stream com `flatMap`, `filter`, `map` e `mapToLong` — Menor número de telefone
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h34m28s495.jpg" alt="" width="840">
+</p>
+
+Este exemplo encadeia várias operações para transformar os números de telefone (armazenados como strings com formatação) em valores numéricos do tipo `long` e encontrar o menor deles.
+
+```java
+var values = users.stream()
+        .flatMap(u -> u.contacts().stream())
+        .filter(c -> c.type() == PHONE)
+        .map(c -> c.description()
+                .replace("(", "")
+                .replace(")", "")
+                .replace("-", ""))
+        .mapToLong(Long::parseLong)
+        .min();
+
+System.out.println(values);
+```
+
+O `flatMap` desmonta os contatos de todos os usuários; o `filter` seleciona apenas os do tipo `PHONE`; o `map` remove os caracteres de máscara `(`, `)` e `-`, transformando, por exemplo, `"(19)90665-8104"` em `"1990665-8104"` e depois em `"19906658104"`; o `mapToLong` converte a string limpa para `long`; e por fim `min()` retorna um `OptionalLong` com o menor valor encontrado.
+
+#### Saída — Menor número de telefone como `OptionalLong`
+
+<p align="parameter">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h34m30s928.jpg" alt="" width="840">
+</p>
+
+A saída mostra o resultado encapsulado em um `OptionalLong`, que é o tipo de retorno de `min()` em uma `LongStream`. O `Optional` existe porque a stream poderia estar vazia, caso não houvesse nenhum telefone cadastrado.
+
+```
+OptionalLong[19906658104]
+```
+
+O menor número encontrado foi `19906658104` (correspondente ao telefone de João com DDD 19), pois numericamente os números com DDD 19 iniciam com um valor menor que os DDDs 21 e 31.
+
+#### Stream com `flatMap`, `filter`, `map` e `mapToLong` — Versão completa com `min()`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h39m16s713.jpg" alt="" width="840">
+</p>
+
+Esta imagem exibe o código completo da classe `Main` com o encadeamento final da stream, consolidando todos os conceitos apresentados na aula em um único exemplo coeso.
+
+```java
+import domain.Contact;
+import domain.User;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+import static domain.ContactType.EMAIL;
+import static domain.ContactType.PHONE;
+import static domain.Sex.FEMALE;
+import static domain.Sex.MALE;
+
+public class Main {
+    public static void main(String[] args) {
+
+        List<User> users = new ArrayList<>(generateUsers());
+
+        var values = users.stream()
+                .flatMap(u -> u.contacts().stream())
+                .filter(c -> c.type() == PHONE)
+                .map(c -> c.description()
+                        .replace("(", "")
+                        .replace(")", "")
+                        .replace("-", ""))
+                .mapToLong(Long::parseLong)
+                .min();
+
+        System.out.println(values);
+    }
+
+    private static List<User> generateUsers() {
+        var contacts1 = List.of(
+                new Contact("(19)90665-8104", PHONE),
+                new Contact("joao@gmail.com", EMAIL)
+        );
+        var contacts2 = List.of(
+                new Contact("(21)92121-0032", PHONE)
+        );
+        var contacts3 = List.of(
+                new Contact("lucas@outlook.com", EMAIL)
+        );
+        var contacts4 = List.of(
+                new Contact("andreia@outlook.com", EMAIL),
+                new Contact("andreia@gmail.com", EMAIL)
+        );
+        var contacts5 = List.of(
+                new Contact("(31)97785-4456", PHONE),
+                new Contact("(31)92115-0011", PHONE)
+        );
+
+        var user1 = new User("João",    26, MALE,   new ArrayList<>(contacts1));
+        var user2 = new User("Maria",   28, FEMALE, new ArrayList<>(contacts2));
+        var user3 = new User("Lucas",   19, MALE,   new ArrayList<>(contacts3));
+        var user4 = new User("Andreia", 40, FEMALE, new ArrayList<>(contacts4));
+        var user5 = new User("Vitor",   30, MALE,   new ArrayList<>(contacts5));
+        var user6 = new User("Bruna",   36, FEMALE, new ArrayList<>());
+
+        return List.of(user1, user2, user3, user4, user5, user6);
+    }
+}
+```
+
+O encadeamento demonstra como a Stream API permite construir pipelines de transformação expressivos e legíveis: cada operação intermediária (`flatMap`, `filter`, `map`, `mapToLong`) é aplicada de forma lazy, e `min()` dispara a execução de toda a pipeline retornando o resultado.
+
+#### Saída final — `OptionalLong` com o menor número de telefone
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h39m18s918.jpg" alt="" width="840">
+</p>
+
+A saída final confirma o resultado já visto anteriormente: o menor número de telefone dentre todos os usuários, após a remoção da formatação e conversão para `long`, é `19906658104`.
+
+```
+OptionalLong[19906658104]
+```
+
+O uso de `OptionalLong` (em vez de um `long` primitivo) é a abordagem segura da linguagem para representar um resultado que pode ou não existir — neste caso, a stream poderia estar vazia se nenhum usuário tivesse contato do tipo `PHONE`. Para obter o valor primitivo, bastaria chamar `.getAsLong()` ou `.orElse(0L)` sobre o `Optional`.      
 
 
 ### 🟩 Vídeo 12 - Generics
@@ -2317,7 +2698,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/45a8b03c-14f2-4e71-a816-0b72babfc126?autoplay=1
 
 ##  Materiais de Apoio
 
