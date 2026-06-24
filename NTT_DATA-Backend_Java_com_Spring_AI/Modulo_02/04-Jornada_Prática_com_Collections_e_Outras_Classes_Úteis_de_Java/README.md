@@ -2327,10 +2327,6 @@ A presença de `List<Contact>` como componente torna o `User` a entidade central
 
 #### Classe `Main` — Configuração inicial e ordenação
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-24-10h13m54s015.jpg" alt="" width="840">
-</p>
-
 A classe `Main` reúne toda a lógica de exemplo. O método `generateUsers()` constrói uma lista de seis usuários com diferentes contatos. No `main`, a lista é ordenada pelo nome usando `Comparator.comparing` com method reference, e então impressa com `forEach`.
 
 ```java
