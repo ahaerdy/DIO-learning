@@ -3129,7 +3129,7 @@ O fluxo é o seguinte: primeiro o `Calendar` atual é convertido em `String` com
 Ao final, os dois `println` comparam a hora original do `calendar` com a hora alterada no `newCalendar`, confirmando visualmente que a troca de "19:" para "21:" realmente modificou a hora exibida na segunda linha de saída.      
 
 
-## Parte 7 - Conhecendo as Classes OffsetDateTime OffsetTime LocalDate LocalDateTime e LocalTime
+## Parte 7 - Conhecendo as Classes OffsetDateTime, OffsetTime, LocalDate, LocalDateTime e LocalTime
 
 ### 🟩 Vídeo 15 - Classes OffsetDateTime, OffsetTime, LocalDate, LocalDateTime e LocalTime
 
@@ -3140,6 +3140,401 @@ Ao final, os dois `println` comparam a hora original do `calendar` com a hora al
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/f140cc1b-e275-429c-986d-380df6d21885?autoplay=1
 
+### Anotações
+
+#### Formatando uma data com `LocalDate` e `DateTimeFormatter`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-12h57m02s145.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println(formatter.format(localDate));
+    }
+}
+```
+
+A aula começa com `LocalDate.now()`, que retorna a data atual. Para exibi-la em um formato customizado, é criado um `DateTimeFormatter` com o padrão `"dd/MM/yyyy"`, e o método `formatter.format(localDate)` aplica essa máscara na hora de imprimir. O resultado no console é a data do dia no formato dia/mês/ano (`18/02/2024` na execução mostrada).
+
+#### Convertendo uma `String` em data com `LocalDate.parse`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-12h58m40s231.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        var strDate = "22/12/2015";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println(LocalDate.parse(strDate, formatter));
+    }
+}
+```
+
+Aqui é criada uma `String` (`strDate`) representando uma data no formato `dd/MM/yyyy`. Para transformar esse texto em um objeto `LocalDate`, é usado `LocalDate.parse(strDate, formatter)`, passando o mesmo `formatter` configurado anteriormente — isso é necessário porque, sem informar o padrão, o método de parse espera o formato ISO padrão (`yyyy-MM-dd`). O resultado impresso é a data convertida já no formato interno do `LocalDate` (`2015-12-22`).
+
+#### Exibindo a data convertida no formato original de entrada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h03m53s573.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        var strDate = "22/12/2015";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println(formatter.format(LocalDate.parse(strDate, formatter)));
+    }
+}
+```
+
+Dando sequência ao exemplo anterior, agora o `LocalDate.parse(strDate, formatter)` é envolvido por `formatter.format(...)`. Assim, a data é primeiro interpretada a partir da `String` no padrão `dd/MM/yyyy` e, na hora de imprimir, é formatada novamente no mesmo padrão de entrada, em vez do formato ISO padrão. O console mostra a data exatamente como foi digitada (`22/12/2015`).
+
+#### Somando anos a uma data com `plusYears`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h17m10s090.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.temporal.TemporalUnit;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        System.out.println(localDate.plusYears(yearsToAdd: 20));
+    }
+}
+```
+
+Depois de explorar o `plus` genérico (que recebe uma quantidade e uma unidade do tipo `TemporalUnit`), a aula mostra um método mais direto e legível: `plusYears`. Chamando `localDate.plusYears(20)`, a data atual é somada em 20 anos, sem a necessidade de informar a unidade manualmente. O resultado impresso é a data 20 anos no futuro (`2044-02-18`).
+
+#### Trabalhando com horas usando `LocalTime`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h21m16s304.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.LocalTime;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        LocalTime localTime = LocalTime.now();
+        System.out.println(localTime);
+    }
+}
+```
+
+Depois de explorar bastante a classe `LocalDate`, a aula introduz a classe `LocalTime`, usada para representar apenas a hora, sem informação de data. Com `LocalTime.now()`, é capturado o instante atual de hora, minuto, segundo e fração de segundo, e o `println` exibe esse valor diretamente (`22:30:46.910443`), no mesmo padrão de horas, minutos, segundos e milissegundos que a classe `LocalDate` segue para datas.
+
+#### Formatando `LocalTime` em horas de 12h
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h22m12s791.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        LocalTime localTime = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");
+        System.out.println(formatter.format(localTime));
+    }
+}
+```
+
+Assim como aconteceu com `LocalDate`, a `LocalTime` também aceita um `DateTimeFormatter` para customizar a exibição. Aqui é criado um padrão `"hh:mm:ss"` (hora no formato de 12 horas, minutos e segundos), aplicado com `formatter.format(localTime)`. O console exibe a hora atual nesse formato (`10:31:36`).
+
+#### Obtendo os segundos do dia com `toSecondOfDay`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h23m00s674.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        LocalTime localTime = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");
+        System.out.println(localTime.toSecondOfDay());
+    }
+}
+```
+
+Continuando a explorar os métodos de `LocalTime`, é utilizado `toSecondOfDay()`, que retorna a quantidade total de segundos já transcorridos desde a meia-noite até o horário atual. O valor impresso (`81132`) representa esse total em segundos, sendo uma forma prática de obter uma representação numérica simples do horário do dia.
+
+#### Definindo um valor específico com `withHour`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h23m29s453.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        LocalTime localTime = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");
+        System.out.println(localTime.withHour(1));
+    }
+}
+```
+
+Diferente de somar ou subtrair, o método `withHour` define diretamente o valor da hora desejada, mantendo os demais campos (minutos, segundos, nanossegundos) inalterados. Ao chamar `localTime.withHour(1)`, a hora é fixada em 1, e o restante do horário permanece o mesmo do `localTime` original. O resultado impresso confirma a hora ajustada (`01:32:40.002634`). Esses métodos `withX`, ao contrário do `Calendar` (que altera o próprio objeto), retornam sempre uma nova instância, sem efeitos colaterais.
+
+#### Combinando data e hora com `LocalDateTime`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h24m58s891.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        LocalTime localTime = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+        LocalDateTime localDateTime = localDate.atTime(localTime);
+        System.out.println(formatter.format(localDateTime));
+    }
+}
+```
+
+A aula apresenta agora a classe `LocalDateTime`, que une data e hora em um único objeto. Ela é construída a partir de `localDate.atTime(localTime)`, combinando o `LocalDate` e o `LocalTime` já existentes. Para exibição, é usado o formatter padrão `DateTimeFormatter.ISO_DATE_TIME`, que segue o padrão ISO 8601 — bastante usado em APIs. O resultado impresso (`2024-02-18T22:34:07.498051`) mostra data e hora combinadas nesse formato.
+
+#### `LocalDateTime` já segue o padrão ISO por padrão
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h25m17s278.jpg" alt="" width="840">
+</p>
+
+```java
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        LocalTime localTime = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+        LocalDateTime localDateTime = localDate.atTime(localTime);
+        System.out.println(localDateTime);
+    }
+}
+```
+
+Removendo o uso explícito do `formatter` e imprimindo o `localDateTime` diretamente, o resultado no console é praticamente idêntico ao exemplo anterior (`2024-02-18T22:34:23.926075`). Isso confirma que o formato ISO 8601 já é o padrão de exibição do próprio `LocalDateTime`, sem necessidade de formatação adicional para esse caso.
+
+#### Convertendo `LocalDateTime` para `Date` (compatibilidade com API legada)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h30m01s362.jpg" alt="" width="840">
+</p>
+
+```java
+import java.util.Date;
+
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDate localDate = LocalDate.now();
+        LocalTime localTime = LocalTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
+        LocalDateTime localDateTime = localDate.atTime(localTime);
+        System.out.println(localDateTime);
+
+        Date date = Date.from(localDateTime.toInstant(ZoneOffset.ofHours(-3)));
+        System.out.println(date);
+    }
+}
+```
+
+Como `LocalDateTime` não carrega informação de zona, o método `toInstant` exige que um `ZoneOffset` seja informado manualmente — nesse caso, `ZoneOffset.ofHours(-3)`, representando o horário de Brasília. O `Instant` resultante é então usado em `Date.from(...)` para gerar um objeto da antiga API `java.util.Date`, permitindo manter compatibilidade com código legado durante uma migração gradual. O console mostra a data convertida no formato tradicional do `Date` (`Sun Feb 18 22:38:27 BRT 2024`).
+
+#### Fazendo o caminho inverso: de `Date`/`Calendar` para `LocalDateTime`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h33m27s276.jpg" alt="" width="840">
+</p>
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDateTime localDateTime = localDate.atTime(localTime);
+        System.out.println(localDateTime);
+
+        Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        ZoneId zoneId = calendar.getTimeZone().toZoneId();
+        LocalDateTime localDateTime1 = LocalDateTime.ofInstant(calendar.toInstant(), zoneId);
+        System.out.println(localDateTime1);
+    }
+}
+```
+
+Para fazer o caminho inverso — partir de uma API antiga e chegar a uma `LocalDateTime` — primeiro é criado um `Date`, depois um `Calendar` que recebe esse `Date` via `setTime`. Em seguida, é extraído o `ZoneId` do próprio `Calendar` (`calendar.getTimeZone().toZoneId()`), e esse `ZoneId`, junto com o `Instant` do calendário, alimenta `LocalDateTime.ofInstant(...)`. O resultado é uma `LocalDateTime` equivalente ao `Date`/`Calendar` original, ainda que com uma pequena perda de precisão entre as duas saídas impressas (`2024-02-18T22:45:44.461416` e `2024-02-18T22:45:44.463`).
+
+#### Medindo a diferença entre datas com `Duration.between`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h35m16s786.jpg" alt="" width="840">
+</p>
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDateTime localDateTime = localDate.atTime(localTime);
+
+        System.out.println(Duration.between(localDateTime, LocalDateTime.now()).toMillis());
+    }
+}
+```
+
+Para calcular a diferença entre dois momentos no tempo, é usado `Duration.between(...)`, passando o `localDateTime` capturado anteriormente e um novo `LocalDateTime.now()`. O método `toMillis()` converte essa diferença para milissegundos. Como as duas datas foram obtidas em instantes muito próximos durante a execução do código, o resultado impresso é um valor pequeno (`2` milissegundos), representando o tempo decorrido entre uma chamada e outra.
+
+#### Apresentando a classe `OffsetDateTime`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h35m32s051.jpg" alt="" width="840">
+</p>
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        LocalDateTime localDateTime = localDate.atTime(localTime);
+        OffsetDateTime offsetDateTime = OffsetDateTime.now();
+
+        System.out.println(offsetDateTime);
+    }
+}
+```
+
+A principal diferença entre `LocalDateTime` e `OffsetDateTime` é que esta última já trabalha com o deslocamento (offset) da zona em relação ao UTC. Com `OffsetDateTime.now()`, é capturada a data e hora atuais já incluindo essa informação. O resultado impresso mostra o offset `-03:00`, que antes não aparecia ao trabalhar apenas com `LocalDateTime`.
+
+#### Trocando a zona com `withOffsetSameInstant`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h36m31s512.jpg" alt="" width="840">
+</p>
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        OffsetDateTime offsetDateTime = OffsetDateTime.now();
+
+        offsetDateTime = offsetDateTime.withOffsetSameInstant(ZoneOffset.UTC);
+
+        System.out.println(offsetDateTime);
+    }
+}
+```
+
+O método `withOffsetSameInstant` permite alterar a zona de um `OffsetDateTime` mantendo o mesmo instante real, ou seja, ele recalcula a hora para refletir corretamente a nova zona. Ao trocar para `ZoneOffset.UTC`, o offset de `-3` horas é somado de volta, ajustando o horário exibido. O resultado impresso (`2024-02-19T01:51:56.444859Z`) mostra a mesma instância de tempo, agora representada em UTC (indicado pelo `Z` no final).
+
+#### Consultando o offset atual com `getOffset`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h37m09s505.jpg" alt="" width="840">
+</p>
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        OffsetDateTime offsetDateTime = OffsetDateTime.now();
+
+        offsetDateTime = offsetDateTime.withOffsetSameInstant(ZoneOffset.UTC);
+
+        System.out.println(offsetDateTime.getOffset());
+    }
+}
+```
+
+Mantendo a conversão para UTC ativa, agora é usado o método `getOffset()`, que retorna apenas o deslocamento daquele `OffsetDateTime` em relação ao UTC — diferente do `getOffset` outras classes, aqui ele é específico do `OffsetDateTime`. Como a zona já foi alterada para UTC na linha anterior, o resultado impresso é `Z`, a notação que representa o offset zero do UTC.
+
+#### Obtendo o instante em segundos com `toEpochSecond`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h37m19s709.jpg" alt="" width="840">
+</p>
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        OffsetDateTime offsetDateTime = OffsetDateTime.now();
+
+        //offsetDateTime = offsetDateTime.withOffsetSameInstant(ZoneOffset.UTC);
+
+        System.out.println(offsetDateTime.toEpochSecond());
+    }
+}
+```
+
+Com a linha de conversão para UTC agora comentada, o `offsetDateTime` permanece na sua zona local original (`-3`). O método `toEpochSecond()` retorna a quantidade de segundos transcorridos desde 1º de janeiro de 1970 (epoch) até o instante representado, já levando em conta a zona configurada. O console exibe esse valor (`1708307580`), uma representação numérica única e independente de fuso para aquele momento específico.
+
+#### Convertendo `Calendar`/`Date` para `OffsetDateTime`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-13h38m16s648.jpg" alt="" width="840">
+</p>
+
+```java
+import java.util.Calendar;
+
+public class Main {
+
+    public static void main(String[] args) {
+        OffsetDateTime offsetDateTime = OffsetDateTime.now();
+        OffsetDateTime offsetDateTimeUTC = offsetDateTime.withOffsetSameInstant(ZoneOffset.UTC);
+
+        OffsetDateTime offsetDateTime1 = Calendar.getInstance().getTime().toInstant().atOffset(ZoneOffset.ofHours(3));
+        System.out.println(offsetDateTime1);
+    }
+}
+```
+
+Fechando o ciclo de conversões, agora é feito o caminho de `Calendar` para `OffsetDateTime`. A partir de `Calendar.getInstance()`, é obtido o `Date` correspondente, convertido para `Instant` com `toInstant()`, e em seguida transformado em `OffsetDateTime` com `atOffset(...)`, informando o `ZoneOffset` desejado. Inicialmente o offset foi informado como `+3` (positivo), o que produzia um horário incorreto para o fuso de Brasília — o ajuste correto exige `ZoneOffset.ofHours(-3)`, com o sinal negativo, resultando na hora local correta sendo impressa no console.      
 
 
 ## Parte 8 - Classe Thread e Interface Runnable
