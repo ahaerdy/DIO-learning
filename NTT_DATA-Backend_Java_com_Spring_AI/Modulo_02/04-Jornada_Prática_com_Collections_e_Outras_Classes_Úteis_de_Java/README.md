@@ -3051,6 +3051,84 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/156c539f-7989-4eb3-b471-de027590d32f?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-12h37m26s282.jpg" alt="" width="840">
+</p>
+
+Aqui temos a instanciação inicial do `Calendar`. O código importa `java.text.DateFormat`, `java.text.SimpleDateFormat` e `java.util.Calendar`, e dentro do `main` cria um calendário com `Calendar.getInstance()` — a forma padrão de obter uma instância já preenchida com a data e hora atuais.
+
+Na sequência, é criado um `DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss Z")`, o mesmo recurso de formatação já usado anteriormente com `Date`, agora aplicado ao `Calendar`.
+
+O restante do código explora o método `calendar.get(...)`, passando como parâmetro constantes da própria classe `Calendar`:
+
+```java
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class Main {
+    public static void main(String[] args) {
+        var calendar = Calendar.getInstance();
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss Z");
+        System.out.println(calendar.get(Calendar.YEAR));
+        System.out.println(calendar.get(Calendar.MONTH));
+        System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
+        System.out.println(calendar.get(Calendar.HOUR));
+        System.out.println(calendar.get(Calendar.DAY_OF_YEAR));
+        System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
+        System.out.println(formatter.format(calendar.getTime()));
+    }
+}
+```
+
+Cada chamada a `calendar.get(Calendar.X)` retorna uma informação específica da data: ano (`YEAR`), mês (`MONTH`), dia do mês (`DAY_OF_MONTH`), hora (`HOUR`), dia do ano (`DAY_OF_YEAR`) e dia da semana (`DAY_OF_WEEK`). Por fim, `formatter.format(calendar.getTime())` converte o `Calendar` para `Date` por meio de `getTime()` e formata o resultado como texto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-12h37m26s283.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a saída da execução do código anterior no console. Os valores impressos, na mesma ordem das chamadas a `calendar.get(...)`, foram:
+
+```
+2026
+5
+25
+0
+176
+5
+25/06/2026 12:29:27 -0300
+```
+
+Esses números evidenciam dois pontos importantes sobre a API `Calendar`: o `MONTH` retornou `5`, pois os meses são indexados a partir de zero (janeiro = 0), portanto `5` representa junho; e o `HOUR` retornou no formato de 12 horas (diferente de `HOUR_OF_DAY`, que traria o formato 24h). O `DAY_OF_YEAR` igual a `176` indica que a data corresponde ao 176º dia do ano, e `DAY_OF_WEEK` igual a `5` corresponde a quinta-feira, já que, na constante do `Calendar`, domingo equivale a `1`. A última linha mostra a data já formatada pelo `formatter`, no padrão `dd/MM/yyyy HH:mm:ss Z`.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-12h40m33s541.jpg" alt="" width="840">
+</p>
+
+Nesta imagem o código evolui para demonstrar a conversão de `Calendar` para `String` e o caminho inverso, de `String` para `Calendar` passando por `Date`. O método `main` agora declara `throws ParseException`, já que `formatter.parse(...)` pode lançar essa exceção.
+
+```java
+public static void main(String[] args) throws ParseException {
+    var calendar = Calendar.getInstance();
+    DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss Z");
+    var stringDate = formatter.format(calendar.getTime());
+    stringDate = stringDate.replace("19:", "21:");
+    var newDate = formatter.parse(stringDate);
+    var newCalendar = Calendar.getInstance();
+    newCalendar.setTime(newDate);
+    System.out.println(formatter.format(calendar.getTime()));
+    System.out.println(formatter.format(newCalendar.getTime()));
+}
+```
+
+O fluxo é o seguinte: primeiro o `Calendar` atual é convertido em `String` com `formatter.format(calendar.getTime())`. Em seguida, é feita uma alteração manual nessa string usando `stringDate.replace("19:", "21:")`, trocando a hora "19" por "21". Essa nova string é então convertida de volta em `Date` com `formatter.parse(stringDate)` — e é por isso que o método pode lançar `ParseException`. Como esse `parse` devolve um `Date` e não um `Calendar`, é criado um novo `Calendar` com `Calendar.getInstance()` e usado `newCalendar.setTime(newDate)` para "carregar" essa data dentro dele, já que o `set` do `Calendar` altera o objeto internamente mas não retorna um novo valor.
+
+Ao final, os dois `println` comparam a hora original do `calendar` com a hora alterada no `newCalendar`, confirmando visualmente que a troca de "19:" para "21:" realmente modificou a hora exibida na segunda linha de saída.      
+
+
 ## Parte 7 - Conhecendo as Classes OffsetDateTime OffsetTime LocalDate LocalDateTime e LocalTime
 
 ### 🟩 Vídeo 15 - Classes OffsetDateTime, OffsetTime, LocalDate, LocalDateTime e LocalTime
