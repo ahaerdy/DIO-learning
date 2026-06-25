@@ -2830,6 +2830,218 @@ O `false` corresponde à tentativa de remover um usuário que não existe na lis
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/f0b51ae9-8785-4f7e-a757-ef7d0902de29?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-10h36m56s953.jpg" alt="" width="840">
+</p>
+
+O primeiro exemplo da aula demonstra a forma mais simples de instanciar e exibir uma data em Java utilizando a classe `Date` do pacote `java.util`. O código cria um objeto `date` com `new Date()`, que automaticamente captura a data e hora atuais do sistema, e em seguida imprime seu valor com `System.out.println`. A saída exibida no console (`Sat Feb 17 20:21:40 BRT 2024`) revela o formato padrão da classe: dia da semana, mês abreviado, dia, hora completa com timezone e ano.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var date = new Date();
+        System.out.println(date);
+    }
+}
+```
+
+> **Saída:** `Sat Feb 17 20:21:40 BRT 2024`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-10h40m48s015.jpg" alt="" width="840">
+</p>
+
+Aqui é introduzida a formatação de datas com `SimpleDateFormat`, uma implementação concreta da classe abstrata `DateFormat` do pacote `java.text`. O padrão `"dd/MM/yyyy - hh:mm:ss"` é passado ao construtor — note que `MM` em maiúsculo representa o mês (para não confundir com `mm` minúsculo, que representa minutos). O `h` minúsculo no campo de hora trabalha no formato 12 horas: por isso o console exibiu `08:22:44` mesmo sendo 20h. A segunda linha imprime a data formatada via `formatter.format(date)`.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var date = new Date();
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy - hh:mm:ss");
+        System.out.println(date);
+        System.out.println(formatter.format(date));
+    }
+}
+```
+
+> **Saída:**
+> ```
+> Sat Feb 17 20:22:44 BRT 2024
+> 17/02/2024 - 08:22:44
+> ```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-10h41m07s856.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a correção do formato de hora: substituindo o `hh` minúsculo por `HH` maiúsculo no padrão do `SimpleDateFormat`, a saída passa a usar o formato 24 horas. Agora o console exibe `20:22:59` corretamente, refletindo a hora real do sistema. Essa é uma distinção sutil mas importante nos padrões de formatação de datas em Java.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var date = new Date();
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy - HH:mm:ss");
+        System.out.println(date);
+        System.out.println(formatter.format(date));
+    }
+}
+```
+
+> **Saída:**
+> ```
+> Sat Feb 17 20:22:59 BRT 2024
+> 17/02/2024 - 20:22:59
+> ```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-10h42m19s973.jpg" alt="" width="840">
+</p>
+
+Esta imagem exibe o site **currentmillis.com**, acessado durante a aula para ilustrar o conceito de **Unix Epoch** — o ponto de origem da contagem de tempo em milissegundos adotado amplamente em sistemas computacionais. O valor mostrado (`1708212059119`) representa os milissegundos transcorridos desde **1º de janeiro de 1970 às 00:00:00 UTC**, data convencionada como marco zero do tempo Unix. O site também exibe a conversão para data local (17 Feb 2024, 20:23:48, fuso Brasilia Standard UTC-3h), reforçando a relação entre o valor numérico bruto e a data legível. Esse conceito é fundamental para entender o construtor `new Date(long)` da classe `Date` do Java.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-10h43m12s421.jpg" alt="" width="840">
+</p>
+
+Aqui é demonstrado o construtor de `Date` que recebe um valor `long` representando milissegundos desde o Epoch. O código subtrai `999999999L` do tempo atual (`System.currentTimeMillis()`), gerando uma data no passado. O sufixo `L` é obrigatório para que o compilador trate o literal numérico como `long` e não como `int`. A saída `Tue Feb 06 06:37:58 BRT 2024` confirma que a data foi calculada corretamente a partir da diferença de milissegundos.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var date = new Date(System.currentTimeMillis() - 999999999L);
+        System.out.println(date);
+    }
+}
+```
+
+> **Saída:** `Tue Feb 06 06:37:58 BRT 2024`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-11h15m01s376.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta o uso do método `setYear()` — um dos mutadores da classe `Date` marcados como **`@Deprecated`** desde o JDK 1.1. O código chama `date.setYear(99)` e o resultado exibido no console é `Wed Feb 17 20:28:44 BRST 1999`. Isso revela o comportamento não intuitivo do método: ele **não recebe o ano diretamente**, mas sim um deslocamento a partir de 1900 — portanto, passar `99` resulta no ano `1900 + 99 = 1999`. A barra de status inferior do IntelliJ exibe o aviso `'setYear(int)' is deprecated`, confirmando que este método não deve ser usado em código novo.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var date = new Date();
+        date.setYear(99);
+        System.out.println(date);
+    }
+}
+```
+
+> **Saída:** `Wed Feb 17 20:28:44 BRST 1999`
+>
+> ⚠️ `setYear(int)` recebe o valor do ano **menos 1900**. Para definir o ano 1999, passe `99`. Para 2024, passe `124`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-11h15m39s543.jpg" alt="" width="840">
+</p>
+
+Aqui é demonstrado o método `setHours()`, outro mutador depreciado da classe `Date`. Ao contrário do `setYear()`, o comportamento de `setHours()` é mais direto: passando `22`, a hora do objeto é definida literalmente como 22h. A saída `Sat Feb 17 22:29:30 BRT 2024` confirma isso. O IntelliJ ainda exibe o aviso de método depreciado, mas o resultado é intuitivo — o valor passado corresponde diretamente à hora no formato 24h.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var date = new Date();
+        date.setHours(22);
+        System.out.println(date);
+    }
+}
+```
+
+> **Saída:** `Sat Feb 17 22:29:30 BRT 2024`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-11h15m50s567.jpg" alt="" width="840">
+</p>
+
+Esta imagem exibe a documentação interna do método `setHours()` aberta diretamente no IntelliJ IDEA (arquivo `Date.java` do JDK, linha 806). A documentação confirma que o método está marcado com `@Deprecated` e especifica seu comportamento: define a hora do objeto `Date` para o valor fornecido, modificando o ponto no tempo dentro do mesmo dia — mantendo ano, mês, data, minuto e segundo inalterados. A nota de depreciação indica que, desde o JDK 1.1, o método foi substituído por `Calendar.set(Calendar.HOUR_OF_DAY, int hours)`. O parâmetro aceita valores de 0 a 23.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-11h16m50s713.jpg" alt="" width="840">
+</p>
+
+Esta imagem demonstra a comparação de datas com o método `equals()`. Duas instâncias de `Date` são criadas a partir do **mesmo valor de milissegundos** capturado em `System.currentTimeMillis()`, garantindo que representem o mesmo instante. A chamada `date.equals(newDate)` retorna `true`, pois ambos os objetos encapsulam o mesmo timestamp. Esse é o modo correto de verificar igualdade entre datas na API legada — nunca usando o operador `==`, que compara referências de objetos.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var milliseconds = System.currentTimeMillis();
+        var date = new Date(milliseconds);
+        var newDate = new Date(milliseconds);
+        System.out.println(date.equals(newDate));
+    }
+}
+```
+
+> **Saída:** `true`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-11h17m00s121.jpg" alt="" width="840">
+</p>
+
+
+Aqui é mostrado o método `after()` aplicado à comparação entre os mesmos dois objetos `Date` com timestamps idênticos. O retorno é `false`, pois `date` **não é posterior** a `newDate` — eles representam o mesmo instante. O método `after(Date when)` retorna `true` apenas se o objeto receptor for estritamente mais recente do que o argumento passado. Com datas iguais, a condição não é satisfeita.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var milliseconds = System.currentTimeMillis();
+        var date = new Date(milliseconds);
+        var newDate = new Date(milliseconds);
+        System.out.println(date.after(newDate));
+    }
+}
+```
+
+> **Saída:** `false`
+>
+> 💡 `after()` retorna `true` somente se `date` for **estritamente posterior** a `newDate`. Datas iguais resultam em `false`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-25-11h17m13s386.jpg" alt="" width="840">
+</p>
+
+Esta última imagem da sequência exibe o método `getTimezoneOffset()`, que retorna o deslocamento de fuso horário em **minutos**. O valor é dividido por `60` para obter o resultado em horas. A saída `3` indica um offset de 3 horas em relação ao UTC — correspondente ao fuso horário de Brasília (BRT, UTC-3). Note que o método retorna o offset como positivo mesmo para fusos à esquerda do UTC, o que pode ser contra-intuitivo. Este é mais um método marcado como depreciado na API legada de datas do Java.
+
+```java
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        var milliseconds = System.currentTimeMillis();
+        var date = new Date(milliseconds);
+        System.out.println(date.getTimezoneOffset() / 60);
+    }
+}
+```
+
+> **Saída:** `3`
+>
+> ℹ️ O retorno representa o deslocamento em horas em relação ao UTC. Para o fuso de Brasília (UTC-3), o valor retornado é `3`.
+
+
 ### 🟩 Vídeo 14 - Classe Calendar
 
 <video width="60%" controls>
