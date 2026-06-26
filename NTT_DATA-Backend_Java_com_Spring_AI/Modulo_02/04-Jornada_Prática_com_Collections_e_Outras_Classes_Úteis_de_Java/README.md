@@ -3836,9 +3836,7 @@ O resultado da operação é -8
 
 Os três arquivos analisados formam uma solução funcional, organizada e idiomática para o exercício proposto. A separação de responsabilidades está clara: `Calculate` define o contrato, `Operation` encapsula as estratégias de cálculo usando lambdas, e `Main` cuida exclusivamente da interação com o usuário e orquestração do fluxo. A lógica de soma e subtração foi verificada manualmente e está correta para os casos testados.
 
-##  Materiais de Apoio
-
-# Certificado: 
+# Certificado: Jornada Prática com Collections e Outras Classes Úteis de Java
 
 - Link na plataforma: 
 - Certificado em pdf:
