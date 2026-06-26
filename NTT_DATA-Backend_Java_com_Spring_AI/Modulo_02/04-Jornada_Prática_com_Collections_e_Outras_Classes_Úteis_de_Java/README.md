@@ -3548,6 +3548,139 @@ Fechando o ciclo de conversões, agora é feito o caminho de `Calendar` para `Of
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/imersao-pratica-com-collections-e-outras-classes-uteis-do-java/learning/1d012f60-03b1-433c-84a2-c1232d3ce007?autoplay=1
 
+### Anotações
+
+#### Sincronização com Bloco `synchronized` — ArrayList
+
+Segue abaixo um programa Java completo que demonstra o problema de **concorrência em ambiente multi thread** e a solução com blocos `synchronized`.
+
+A estrutura central é uma `List<Integer>` compartilhada entre threads. Dois `Runnable`s (`inc` e `dec`) adicionam 100.000 números cada — um em ordem crescente, outro em ordem decrescente — enquanto um terceiro (`show`) imprime a lista 250.000 vezes. As três threads são disparadas simultaneamente com `new Thread(...).start()`.
+
+Os métodos `inc(int number)` e `show()` protegem o acesso à lista com o bloco `synchronized(numbers) { ... }`, garantindo que apenas uma thread por vez leia ou modifique a coleção. Sem essa proteção, o código lançaria uma `ConcurrentModificationException`.
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+    private static final List<Integer> numbers = new ArrayList<>();
+
+    private static void inc(int number){
+        synchronized (numbers){
+            numbers.add(number);
+        }
+    }
+
+    private static void show(){
+        synchronized (numbers){
+            System.out.println(numbers);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Runnable inc = () -> {
+            for (int i = 0; i < 100_000; i++) {
+                inc(i);
+            }
+        };
+
+        Runnable dec = () -> {
+            for (int i = 100_000; i > 0; i--) {
+                inc(i);
+            }
+        };
+
+        Runnable show = () -> {
+            for (int i = 0; i < 250_000; i++) {
+                show();
+            }
+        };
+
+        new Thread(inc).start();
+        new Thread(dec).start();
+        new Thread(show).start();
+    }
+}
+```
+
+#### Saída da Execução com `ArrayList` Sincronizado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-26-08h22m53s760.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o painel **Run** do IntelliJ IDEA com a saída do programa anterior em execução. O terminal exibe uma longa lista de inteiros sequenciais — números próximos ao fim do intervalo crescente (a partir de 99.650 até 99.999) — impressa pela thread `show`.
+
+O resultado confirma que, com os blocos `synchronized`, as operações de leitura e escrita na lista ocorrem de forma ordenada, sem lançar `ConcurrentModificationException`. A thread de exibição captura estados consistentes da coleção a cada chamada de `show()`.
+
+#### Alternativa com `LinkedBlockingQueue`
+
+A implementação abaixo apresenta uma versão refatorada do programa que substitui o `ArrayList` com blocos `synchronized` por uma **`LinkedBlockingQueue`** — uma implementação de fila do pacote `java.util.concurrent` que já é *thread-safe* por design.
+
+A declaração da coleção passa a ser:
+
+```java
+private final static Queue<Integer> numbers = new LinkedBlockingQueue<>(250_000);
+```
+
+A capacidade inicial de 250.000 é definida no construtor para comportar todos os elementos que as threads `inc` e `dec` irão inserir. Com isso, os métodos `inc(int number)` e `show()` não precisam mais de nenhum bloco ou modificador `synchronized` — a sincronização é tratada internamente pela própria classe.
+
+```java
+import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class Main {
+
+    private final static Queue<Integer> numbers = new LinkedBlockingQueue<>(250_000);
+
+    private static void inc(int number){
+        numbers.add(number);
+    }
+
+    private static void show(){
+        System.out.println(numbers);
+    }
+
+    public static void main(String[] args) {
+
+        Runnable inc = () -> {
+            for (int i = 0; i < 100_000; i++) {
+                inc(i);
+            }
+        };
+
+        Runnable dec = () -> {
+            for (int i = 100_000; i > 0; i--) {
+                inc(i);
+            }
+        };
+
+        Runnable show = () -> {
+            for (int i = 0; i < 250_000; i++) {
+                show();
+            }
+        };
+
+        new Thread(inc).start();
+        new Thread(dec).start();
+        new Thread(show).start();
+    }
+}
+```
+
+#### Saída da Execução com `LinkedBlockingQueue`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-26-08h46m45s981.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o painel **Run** com a saída do programa que usa `LinkedBlockingQueue`. Ao contrário da execução com o `ArrayList` sincronizado — que produzia números estritamente ordenados — aqui a saída intercala valores das duas threads (`inc` crescente e `dec` decrescente), como valores próximos a 97.500 misturados com valores na faixa de 3.000 a 3.400.
+
+Esse comportamento é esperado: a `LinkedBlockingQueue` garante a **segurança do acesso concorrente** (nenhuma exceção é lançada), mas não impõe ordem entre os elementos inseridos por threads diferentes. A ordem de inserção depende do escalonamento do sistema operacional. O importante é que a estrutura permanece consistente e íntegra durante toda a execução.      
+
+
 ## Parte 9 - Exercícios: Collections e Outras Classes Úteis do Java
 
 ### 🟩 Vídeo 17 - Lista de Exercícios
