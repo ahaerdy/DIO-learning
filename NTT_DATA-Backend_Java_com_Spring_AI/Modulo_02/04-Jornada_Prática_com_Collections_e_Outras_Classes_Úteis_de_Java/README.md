@@ -3838,5 +3838,5 @@ Os três arquivos analisados formam uma solução funcional, organizada e idiom�
 
 # Certificado: Jornada Prática com Collections e Outras Classes Úteis de Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/7MBZSWH9.pdf
+- Certificado em pdf: [Certificado-Jornada.Prática.com.Collections.e.Outras.Classes.Úteis.de.Java.pdf](000-Midia_e_Anexos/Certificado-Jornada.Prática.com.Collections.e.Outras.Classes.Úteis.de.Java.pdf)
