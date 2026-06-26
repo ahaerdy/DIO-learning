@@ -240,3 +240,107 @@ public class Main {
 
 ## Solução
 
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        try {
+            String saldoInput = scanner.nextLine();
+            String saqueInput = scanner.nextLine();
+
+            int saldo = Integer.parseInt(saldoInput.trim());
+            int valorSaque = Integer.parseInt(saqueInput.trim());
+
+            if (valorSaque <= 0) {
+                System.out.println("Valor invalido");
+                return;
+            }
+
+            if (valorSaque > saldo) {
+                System.out.println("Saldo insuficiente");
+                return;
+            }
+
+            System.out.println(saldo - valorSaque);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Entrada invalida");
+        }
+    }
+}
+```
+
+### Explicação detalhada
+
+#### Fluxo geral do programa
+
+O programa segue uma sequência linear de validações em cascata — cada verificação só é alcançada se a anterior passou. Visualizando:
+
+```
+Ler entradas
+     ↓
+parseInt() conseguiu? ──NÃO──→ "Entrada invalida"
+     ↓ SIM
+valorSaque <= 0? ───────SIM──→ "Valor invalido"
+     ↓ NÃO
+valorSaque > saldo? ────SIM──→ "Saldo insuficiente"
+     ↓ NÃO
+Exibe saldo - valorSaque
+```
+
+#### Bloco `try/catch` — tratando entradas não numéricas
+
+```java
+try {
+    int saldo      = Integer.parseInt(saldoInput.trim());
+    int valorSaque = Integer.parseInt(saqueInput.trim());
+    // ...
+} catch (NumberFormatException e) {
+    System.out.println("Entrada invalida");
+}
+```
+
+`Integer.parseInt()` lança uma `NumberFormatException` quando a string não representa um número inteiro válido (ex.: `"abc"`, `"12.5"`, `""`). O `catch` captura esse erro e imprime a mensagem adequada, **sem deixar o programa travar**.
+
+O `.trim()` remove espaços em branco das bordas antes de tentar converter, evitando falsos erros por espaços acidentais na entrada.
+
+#### Validação 1 — valor inválido
+
+```java
+if (valorSaque <= 0) {
+    System.out.println("Valor invalido");
+    return;  // encerra o main imediatamente
+}
+```
+
+Cobre dois sub-casos: saque **zero** (sem sentido prático) e saque **negativo** (que aumentaria o saldo, o que seria uma falha de segurança). O `return` sai do método `main` na hora, sem executar as verificações seguintes.
+
+#### Validação 2 — saldo insuficiente
+
+```java
+if (valorSaque > saldo) {
+    System.out.println("Saldo insuficiente");
+    return;
+}
+```
+
+Só chega aqui se o valor já passou pela validação anterior (ou seja, é positivo). Se mesmo assim for maior que o saldo disponível, o saque é recusado.
+
+#### Operação bem-sucedida
+
+```java
+System.out.println(saldo - valorSaque);
+```
+
+Se nenhuma das condições de erro foi atingida, o novo saldo é calculado e exibido diretamente na impressão, sem precisar de uma variável auxiliar.
+
+#### Verificação com os exemplos da tabela
+
+| Saldo | Saque | Caminho percorrido | Saída esperada | ✓ |
+|---|---|---|---|---|
+| 1000 | 200 | Válido → 200 ≤ 1000 → 1000−200 | **800** | ✅ |
+| 500 | 700 | Válido → 700 > 500 | **Saldo insuficiente** | ✅ |
+| 300 | -50 | -50 ≤ 0 | **Valor invalido** | ✅ |
+| abc | 100 | parseInt("abc") explode | **Entrada invalida** | ✅ |
