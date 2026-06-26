@@ -3694,29 +3694,147 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/i
 
 ### Anotações
 
-O exercício proposto para esta aula foi o seguinte:
+O exercício selecionado para esta aula foi o seguinte:
 
 
-1 - Escreva um código que cria uma calculadora para as operações de soma e subtração, o usuário deve informar todos os números que serão usados na conta de uma só vez utilizando virgulas para separa-los.
+> 1 - Escreva um código que cria uma calculadora para as operações de soma e subtração, o usuário deve informar todos os números que serão usados na conta de uma só vez utilizando virgulas para separa-los.
 
-2 - Escreva um código que receba entradas sem formatação e as retorne formatadas, os tipos de entradas que o código deve retornar são as seguintes:
-  * Telefone fixo (8 dígitos sem DDD xxxx-xxxx, 10 Dígitos com DDD (xx)xxxx-xxxx);
-  * Celular (9 dígitos sem DDD xxxxx-xxxx, 11 dígitos (xx)xxxxx-xxxx);
+#### Solução
 
-O código deve ser capaz de detectar as seguintes situações:
+Este relatório examina a solução proposta para o exercício de criação de uma calculadora em Java que realiza operações de soma e subtração, recebendo do usuário uma lista de números separados por vírgula. A solução é composta por três arquivos: `Calculate.java`, `Operation.java` e `Main.java`.
 
-  * Se receber somente números detectar se corresponde com algum dos formatos aceitos e retornar formatado;
-  * Se receber uma entrada com quantidade de números diferentes dos padrões descritos acima, informar que não se trata de um número válido;
-  * Se receber um número formatado, retorna-lo do mesmo jeito e informar de qual tipo de dispositivo se trata;
-  * Se receber com mascara incorreta, corrigir e retornar
-  * Se receber qualquer entrada que tenha números e outros caracteres verificar se tem números para compor um dos tipos aceitos e retornar do que se trata ou retornar que foi uma entrada inválida. 
+#### Arquivo: Calculate.java
 
->3 - Escreva um código que receba 3 valores separados por um caracter de sua escolha n vezes ( n é o número de vezes que o usuário desejar informar) ex.: nome;Lucas;Texto. Quando o usuário parar de informar valores o código deve retornar todos esses campos compondo um json, um xml e um yaml (Json: https://pt.wikipedia.org/wiki/JSON, XML: https://pt.wikipedia.org/wiki/XML, yaml: https://www.treinaweb.com.br/blog/o-que-e-yaml) as entradas devem seguir o seguinte padrão:
->  * NOME_CAMPO;VALOR;TIPO;
->  * Os tipos que devem ser aceitos são: texto, datas, data e hora, números inteiros, números com pontos flutuantes, boleanos, array dos tipos anteriores ( opcional, possibilitar definir arrays de objetos e objetos internos).
+```java
+package br.com.dio.calc;
+
+public interface Calculate {
+
+    long exec (long ... numbers);
+
+}
+```
+
+- Trata-se de uma **interface funcional** (possui apenas um método abstrato: `exec`), o que permite que ela seja implementada por meio de **expressões lambda**.
+- O método `exec` recebe um parâmetro do tipo **varargs** (`long ... numbers`), permitindo que a chamada seja feita com qualquer quantidade de argumentos `long`, ou diretamente com um array `long[]`.
+- Essa interface define o **contrato** que qualquer operação matemática da calculadora deve seguir: receber números e devolver um resultado do tipo `long`.
+- O uso de varargs é o que possibilita, mais adiante, que o array de números digitado pelo usuário seja repassado de forma flexível para a operação escolhida.
 
 
+#### Arquivo: Operation.java
 
+```java
+package br.com.dio.calc;
+import java.util.stream.LongStream;
+
+public enum Operation {
+
+    SUM(n -> LongStream.of(n).sum()),
+
+    SUBTRACTION(n -> LongStream.of(n).reduce((n1, n2) -> n1 - n2).orElse(0));
+
+    private final Calculate operationCallback;
+
+    Operation(Calculate operationCallback) {
+        this.operationCallback = operationCallback;
+    }
+
+    public Calculate getOperationCallback() {
+        return operationCallback;
+    }
+}
+```
+
+- É um **enum** que representa as operações disponíveis na calculadora: `SUM` e `SUBTRACTION`.
+- Cada constante do enum recebe, em seu construtor, uma **implementação lambda da interface `Calculate`**, atribuída ao atributo `operationCallback`. Essa é uma aplicação do padrão *Strategy*, em que cada constante do enum carrega seu próprio comportamento (algoritmo).
+- **`SUM`**: implementado como `n -> LongStream.of(n).sum()`. O array recebido é transformado em um `LongStream` e somado com o método `sum()`, retornando o total de todos os elementos.
+- **`SUBTRACTION`**: implementado como `n -> LongStream.of(n).reduce((n1, n2) -> n1 - n2).orElse(0)`. O método `reduce` percorre o stream aplicando a subtração acumulada da esquerda para a direita, ou seja, para `[a, b, c, d]` o resultado é `((a - b) - c) - d`. O `orElse(0)` trata o caso de um stream vazio (array sem elementos), retornando `0` nesse cenário.
+- O construtor do enum (`Operation(Calculate operationCallback)`) é privado por padrão (construtores de enum sempre são) e apenas armazena a lambda recebida.
+- O método `getOperationCallback()` expõe esse comportamento, permitindo que código externo (no caso, a classe `Main`) obtenha a lambda correspondente e a execute chamando `.exec(numeros)`.
+- A ordem das constantes (`SUM` = índice 0, `SUBTRACTION` = índice 1) é relevante, pois `Main` faz uso direto dessa ordenação para mapear a opção numérica escolhida pelo usuário.
+
+#### Arquivo: Main.java
+
+```java
+import br.com.dio.calc.Operation;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+
+        System.out.println("Informe o número da operação que deseja realizar (1 = sum, 2 = subtraction)");
+        var operationOption = scanner.nextInt();
+
+        while (operationOption > 2 || operationOption < 1) {
+            System.out.println("Escolhe uma opção válida (1 = sum, 2 = subtraction)");
+            operationOption = scanner.nextInt();
+        }
+
+       var selectedOperation = Operation.values()[operationOption - 1];
+
+        System.out.println("Informe os números que serão usados separados por vírgula (ex.: 1,2,3,4)");
+        var numbers = scanner.next();
+
+        var numberArray = Arrays.stream(numbers.split(","))
+                .mapToLong(Long::parseLong)
+                .toArray();
+
+        var result = selectedOperation.getOperationCallback().exec(numberArray);
+        System.out.printf("O resultado da operação é %s \n", result);
+
+        scanner.close();
+    }
+}
+```
+
+- É a classe principal, responsável por interagir com o usuário via console usando `Scanner`.
+- **Seleção da operação**: o programa solicita um número inteiro (`1` para soma, `2` para subtração) com `scanner.nextInt()`.
+- **Validação de entrada**: o laço `while (operationOption > 2 || operationOption < 1)` garante que apenas `1` ou `2` sejam aceitos, repetindo a solicitação até que um valor válido seja informado.
+- **Mapeamento para o enum**: `Operation.values()[operationOption - 1]` converte a opção digitada (1 ou 2) no índice correspondente do array de constantes do enum (0 ou 1), obtendo assim `SUM` ou `SUBTRACTION`.
+- **Leitura dos números**: `scanner.next()` lê uma única *token* (string sem espaços) contendo os números separados por vírgula, como `"1,2,3,4"`.
+- **Conversão para array de `long`**: a string é dividida pela vírgula com `numbers.split(",")`, gerando um array de `String`; em seguida, `Arrays.stream(...).mapToLong(Long::parseLong).toArray()` converte cada elemento em `long`, retornando um array primitivo `long[]`.
+- **Execução da operação**: `selectedOperation.getOperationCallback().exec(numberArray)` recupera a lambda armazenada na constante do enum e a executa, repassando o array de números graças ao suporte a varargs da interface `Calculate`.
+- **Exibição do resultado**: o resultado é exibido com `System.out.printf`, e por fim o `Scanner` é fechado com `scanner.close()` para liberar o recurso.
+
+##### Observações sobre o design
+
+- A solução é um bom exemplo do uso combinado de **enum + interface funcional (lambda)** para implementar o padrão *Strategy* de forma concisa, evitando estruturas `if/else` ou `switch` para selecionar o comportamento de cada operação.
+- Um ponto de atenção (não um erro, mas uma fragilidade) é a dependência da **ordem das constantes do enum** coincidir com a numeração apresentada ao usuário (`1 = SUM`, `2 = SUBTRACTION`). Caso uma nova operação seja inserida no meio do enum no futuro, a numeração no menu precisaria ser revisada manualmente.
+- A leitura via `scanner.next()` funciona bem para entradas sem espaços (como `"1,2,3,4"`), mas não trata espaços após as vírgulas (ex.: `"1, 2, 3"` geraria erro de `NumberFormatException` ao tentar converter `" 2"` — na verdade `Long::parseLong` aceita espaços à esquerda em alguns casos, mas o comportamento não é garantido para todos os formatos, sendo mais seguro orientar o usuário a não usar espaços, como já é feito no exemplo do prompt).
+
+#### Exemplos de Saída (Execução)
+
+##### Exemplo 1 — Operação de Soma
+
+```
+Informe o número da operação que deseja realizar (1 = sum, 2 = subtraction)
+1
+Informe os números que serão usados separados por vírgula (ex.: 1,2,3,4)
+1,2,3,4
+O resultado da operação é 10 
+```
+
+*Cálculo: 1 + 2 + 3 + 4 = 10*
+
+##### Exemplo 2 — Operação de Subtração
+
+```
+Informe o número da operação que deseja realizar (1 = sum, 2 = subtraction)
+2
+Informe os números que serão usados separados por vírgula (ex.: 1,2,3,4)
+1,2,3,4
+O resultado da operação é -8 
+```
+
+*Cálculo: ((1 - 2) - 3) - 4 = (-1 - 3) - 4 = -4 - 4 = -8*
+
+#### Conclusão
+
+Os três arquivos analisados formam uma solução funcional, organizada e idiomática para o exercício proposto. A separação de responsabilidades está clara: `Calculate` define o contrato, `Operation` encapsula as estratégias de cálculo usando lambdas, e `Main` cuida exclusivamente da interação com o usuário e orquestração do fluxo. A lógica de soma e subtração foi verificada manualmente e está correta para os casos testados.
 
 ##  Materiais de Apoio
 
