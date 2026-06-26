@@ -68,7 +68,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ---
 
-### Módulo 1: Capítulos Inteligentes no Apoio à Construção de Soluções
+### Módulo 1: Copilotos Inteligentes no Apoio à Construção de Soluções
 
 - [x] Curso: [O Que é Este Bootcamp?](Modulo_01/01-Curso.01-O_Que_E_Este_Bootcamp)
 - [x] Curso: [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-A_Era_da_IA_Machine_Learning,_LLMs,_IA_Generativa_e_Agentes)
@@ -128,7 +128,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes](https://hermes.dio.me/certificates/GRMBVTUI.pdf)
 - [Tudo que você Precisa Saber para Começar a Usar Inteligência Artificial](https://hermes.dio.me/certificates/0ADAB6RO.pdf)
 - [Explorando o GitHub Copilot: Aumentando sua Produtividade com IA na Programação](https://hermes.dio.me/certificates/XI4QOS5T.pdf)
-- Certificado do Módulo: [Capítulos Inteligentes no Apoio à Construção de Soluções]
+- Certificado do Módulo: [Copilotos Inteligentes no Apoio à Construção de Soluções](https://hermes.dio.me/certificates/FRUKWUDF.pdf)
 
 ### Módulo 2
 
