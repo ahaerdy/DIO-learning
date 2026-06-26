@@ -136,7 +136,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [Herança e Polimorfismo em Java](https://hermes.dio.me/certificates/8TYKBD1O.pdf)
 - [Dominando Interfaces e Lambdas em Java](https://hermes.dio.me/certificates/E4G0QGRT.pdf)
 - [Jornada Prática com Collections e Outras Classes Úteis de Java](https://hermes.dio.me/certificates/7MBZSWH9.pdf)
-- Certificado do Módulo: [Revisando os Fundamentos Técnicos de Java]
+- Certificado do Módulo: [Revisando os Fundamentos Técnicos de Java](https://hermes.dio.me/certificates/2KRLDQQT.pdf)
 
 ### Módulo 3
 
