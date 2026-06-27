@@ -25,7 +25,9 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/d
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/debugging-e-o-tratamento-de-excecoes-em-java/learning/7b54028a-0f26-41b5-876f-0425d3ecefe7?autoplay=1
+
+
 
 ### 🟩 Vídeo 03 - Gerenciando Exceções em Java
 
@@ -34,11 +36,11 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/debugging-e-o-tratamento-de-excecoes-em-java/learning/e99f4cc8-9aa6-4abe-bdec-3152797f31d7?autoplay=1
 
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Logging e Tratamento de Exceções em Java
 
 - Link na plataforma: 
 - Certificado em pdf:
