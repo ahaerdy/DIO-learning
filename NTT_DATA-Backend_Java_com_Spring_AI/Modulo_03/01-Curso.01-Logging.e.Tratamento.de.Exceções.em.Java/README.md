@@ -109,11 +109,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/d
 
 ### Anotações
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-28-16h18m36s914.jpg" alt="" width="840">
-</p>
-
-Esta imagem mostra a classe `UserDAO`, criada no pacote `br.com.dio.dao` para representar a camada de acesso aos dados do cadastro de usuários. A classe mantém uma lista em memória de `UserModel` e um contador `nextId` usado para simular a geração de identificadores como em um banco de dados real.
+O código abaixo mostra a classe `UserDAO`, criada no pacote `br.com.dio.dao` para representar a camada de acesso aos dados do cadastro de usuários. A classe mantém uma lista em memória de `UserModel` e um contador `nextId` usado para simular a geração de identificadores como em um banco de dados real.
 
 O método `save` atribui um novo ID ao modelo recebido, incrementa o contador e adiciona o objeto à lista, retornando o usuário salvo. O método `update` localiza o registro existente pelo ID (reaproveitando `findById`), remove a versão antiga da lista e adiciona a nova em seu lugar. O método `delete` segue lógica semelhante: localiza o registro pelo ID e o remove da lista.
 
@@ -165,11 +161,7 @@ public class UserDAO {
 }
 ```
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-28-16h18m37s737.jpg" alt="" width="840">
-</p>
-
-Esta imagem mostra a classe `UserNotFoundException`, criada no pacote `br.com.dio.exception`. Ela estende `RuntimeException`, o que significa que é uma exceção não verificada (*unchecked*): o compilador não obriga o código que a chama a tratá-la explicitamente com `try-catch` ou a declará-la na assinatura do método.
+O código seguinte mostra a classe `UserNotFoundException`, criada no pacote `br.com.dio.exception`. Ela estende `RuntimeException`, o que significa que é uma exceção não verificada (*unchecked*): o compilador não obriga o código que a chama a tratá-la explicitamente com `try-catch` ou a declará-la na assinatura do método.
 
 A classe define apenas um construtor que recebe uma `String message` e a repassa para o construtor da superclasse via `super(message)`. Essa mensagem é a que será exibida quando a exceção for lançada — exatamente a mensagem formatada no `findById`, indicando que não existe usuário cadastrado com o ID informado.
 
@@ -184,11 +176,7 @@ public class UserNotFoundException extends RuntimeException {
 }
 ```
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-28-16h18m38s262.jpg" alt="" width="840">
-</p>
-
-Esta imagem mostra o enum `MenuOption`, criado no pacote `br.com.dio.model` para tornar o menu de interação mais robusto e organizado do que um simples número inteiro. Em vez de trabalhar diretamente com `int`, cada opção do menu é representada por uma constante nomeada em inglês: `SAVE`, `UPDATE`, `DELETE`, `FIND_BY_ID`, `FIND_ALL` e `EXIT`.
+O próximo código mostra o enum `MenuOption`, criado no pacote `br.com.dio.model` para tornar o menu de interação mais robusto e organizado do que um simples número inteiro. Em vez de trabalhar diretamente com `int`, cada opção do menu é representada por uma constante nomeada em inglês: `SAVE`, `UPDATE`, `DELETE`, `FIND_BY_ID`, `FIND_ALL` e `EXIT`.
 
 O uso do enum permite, mais adiante, usar o método `values()` para converter a entrada numérica do usuário na opção correspondente, além de possibilitar o uso de `switch` sobre essas constantes de forma mais legível e segura do que comparar números mágicos.
 
@@ -210,11 +198,7 @@ public enum MenuOption {
 }
 ```
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-28-16h18m38s646.jpg" alt="" width="840">
-</p>
-
-Esta imagem mostra a classe `UserModel`, no pacote `br.com.dio.model`, que representa a entidade de usuário do cadastro. Diferente do plano inicial de usar um `record`, a aula optou por uma classe tradicional, pois o `record` é imutável e isso traria dificuldades para operações como `update`.
+Abaixo, a classe `UserModel`, no pacote `br.com.dio.model`, que representa a entidade de usuário do cadastro. Diferente do plano inicial de usar um `record`, a aula optou por uma classe tradicional, pois o `record` é imutável e isso traria dificuldades para operações como `update`.
 
 A classe possui quatro atributos privados — `id` (long), `name` (String), `email` (String) e `birthday` (OffsetDateTime) — além de dois construtores: um vazio (padrão) e outro com todos os argumentos. Para cada atributo há um par de métodos `getter`/`setter`.
 
@@ -300,11 +284,7 @@ public class UserModel {
 }
 ```
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-28-16h21m28s282.jpg" alt="" width="840">
-</p>
-
-Esta imagem mostra a classe `Main`, com o menu interativo completo do cadastro de usuários. A classe mantém como atributos estáticos uma instância de `UserDAO` e um `Scanner` para ler a entrada do usuário.
+Por fim, a classe `Main`, com o menu interativo completo do cadastro de usuários. A classe mantém como atributos estáticos uma instância de `UserDAO` e um `Scanner` para ler a entrada do usuário.
 
 No método `main`, um laço `while (true)` exibe repetidamente as seis opções do menu (Cadastrar, Atualizar, Excluir, Buscar por identificador, Listar, Sair) e lê a escolha do usuário com `scanner.nextInt()`. Essa entrada numérica (1 a 6) é convertida na constante correspondente do enum `MenuOption` por meio de `MenuOption.values()[userInput - 1]`, já que o array de valores do enum é indexado a partir de zero.
 
