@@ -388,7 +388,7 @@ public class Main {
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-28-16h21m30s365.jpg" alt="" width="840">
 </p>
 
-Esta imagem mostra o resultado da execução do programa no terminal da IDE. O menu é exibido normalmente com as seis opções, o usuário digita `3` (Excluir) e, em seguida, informa o identificador `1` quando solicitado.
+A imagem acima mostra o resultado da execução do programa no terminal da IDE. O menu é exibido normalmente com as seis opções, o usuário digita `3` (Excluir) e, em seguida, informa o identificador `1` quando solicitado.
 
 Como nenhum usuário com esse ID havia sido cadastrado, o programa lança a exceção `UserNotFoundException`, exibindo a mensagem "Não existe usuário com o id 1 cadastrado". O terminal mostra também a *call stack* completa da exceção, indicando exatamente a sequência de chamadas que levou ao erro: a exceção é originada dentro da lambda do `findById` (`UserDAO.java:35`), passa pelo `Optional.orElseThrow` da própria API do Java, retorna ao `findById` (`UserDAO.java:35`), sobe até o `delete` que o chamou (`UserDAO.java:27`) e, por fim, até o ponto em `Main.main` (`Main.java:38`) onde a operação de exclusão foi disparada. Essa exceção foi provocada propositalmente para servir de ponto de partida ao estudo do tratamento de exceções nas próximas aulas.      
 
@@ -401,6 +401,8 @@ Como nenhum usuário com esse ID havia sido cadastrado, o programa lança a exce
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/debugging-e-o-tratamento-de-excecoes-em-java/learning/e99f4cc8-9aa6-4abe-bdec-3152797f31d7?autoplay=1
+
+
 
 ##  Materiais de Apoio
 
