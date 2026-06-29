@@ -758,5 +758,5 @@ Esse painel confirma exatamente o comportamento esperado: a tentativa de excluir
 
 # Certificado: Logging e Tratamento de Exceções em Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/2FJ8QP3K.pdf
+- Certificado em pdf: [Certificado-Logging.e.Tratamento.de.Exceções.em.Java.pdf](000-Midia_e_Anexos/Certificado-Logging.e.Tratamento.de.Exceções.em.Java.pdf)
