@@ -402,9 +402,383 @@ Como nenhum usuário com esse ID havia sido cadastrado, o programa lança a exce
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/debugging-e-o-tratamento-de-excecoes-em-java/learning/e99f4cc8-9aa6-4abe-bdec-3152797f31d7?autoplay=1
 
+### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-07h35m46s039.jpg" alt="" width="840">
+</p>
 
-##  Materiais de Apoio
+A execução do programa de cadastro de usuários é interrompida por uma `UserNotFoundException`. Ao escolher a opção "4 - Buscar por identificador" e informar um id que não existe (`1`), o fluxo é encerrado abruptamente com a mensagem **"Não existe usuário com o id 1 cadastrado"**.
+
+O stack trace mostra o caminho percorrido pela exceção até a sua origem:
+
+```
+at br.com.dio.dao.UserDAO.lambda$findById$1(UserDAO.java:35)
+at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+at br.com.dio.dao.UserDAO.findById(UserDAO.java:35)
+at Main.main(Main.java:44)
+```
+
+Essa é uma exceção *unchecked* (não verificada): ela estende `RuntimeException`, por isso o compilador não obriga o código a tratá-la. Como nenhum bloco `try/catch` foi implementado ainda, o programa simplesmente termina com `Process finished with exit code 1`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m48s421.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta a classe `UserDAO`, responsável por simular o armazenamento de usuários em memória através de uma `List<UserModel>`.
+
+```java
+package br.com.dio.dao;
+
+import br.com.dio.exception.EmptyStorageException;
+import br.com.dio.exception.UserNotFoundException;
+import br.com.dio.model.UserModel;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class UserDAO {
+
+    private long nextId = 1L;
+    private final List<UserModel> models = new ArrayList<>();
+
+    public UserModel save(final UserModel model) {
+        model.setId(nextId++);
+        models.add(model);
+        return model;
+    }
+
+    public UserModel update(final UserModel model) {
+        var toUpdate = findById(model.getId());
+        models.remove(toUpdate);
+        models.add(model);
+        return model;
+    }
+
+    public void delete(final long id) {
+        var toDelete = findById(id);
+        models.remove(toDelete);
+    }
+
+    public UserModel findById(final long id) {
+        verifyStorage();
+        var message = String.format("Não existe usuário com o id %s cadastrado", id);
+        return models.stream()
+                .filter(u -> u.getId() == id)
+                .findFirst()
+                .orElseThrow(() -> new UserNotFoundException(message));
+    }
+
+    public List<UserModel> FindAll() {
+        List<UserModel> result;
+        try {
+            verifyStorage();
+            result = models;
+        } catch (EmptyStorageException ex) {
+            ex.printStackTrace();
+            result = new ArrayList<>();
+        }
+        return result;
+    }
+
+    private void verifyStorage(){
+        if (models.isEmpty()) throw new EmptyStorageException("O armazenamento está vazio");
+    }
+}
+```
+
+A classe centraliza as operações de CRUD (`save`, `update`, `delete`, `findById`, `FindAll`). O método `findById` usa Stream API: filtra a lista pelo id desejado e, caso não encontre nenhum elemento, o `orElseThrow` dispara uma `UserNotFoundException` com uma mensagem personalizada construída via `String.format`.
+
+Já o método `verifyStorage` centraliza a verificação se a lista está vazia, lançando uma `EmptyStorageException` quando necessário. Esse método é chamado tanto no `findById` quanto no `FindAll`, evitando repetição de código — sendo que em `findById` a exceção é propagada livremente, enquanto em `FindAll` ela é capturada localmente com um `try/catch`, registrando o erro via `printStackTrace()` e retornando uma lista vazia no lugar de interromper a execução.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m49s496.jpg" alt="" width="840">
+</p>
+
+Aqui é exibida a classe `EmptyStorageException`, uma exceção customizada criada para indicar que o armazenamento de usuários está vazio.
+
+```java
+package br.com.dio.exception;
+
+public class EmptyStorageException extends RuntimeException {
+
+    public EmptyStorageException(final String message) {
+        super(message);
+    }
+}
+```
+
+Por estender `RuntimeException`, trata-se de uma exceção *unchecked*: o código que a invoca não é obrigado pelo compilador a tratá-la com `try/catch`, podendo optar por deixá-la se propagar livremente pela pilha de chamadas ou capturá-la quando fizer sentido para a regra de negócio.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m50s424.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a classe `UserNotFoundException`, utilizada para indicar que um usuário com determinado identificador não foi encontrado na base.
+
+```java
+package br.com.dio.exception;
+
+public class UserNotFoundException extends RuntimeException {
+
+    public UserNotFoundException(String message) {
+        super(message);
+    }
+}
+```
+
+Assim como a `EmptyStorageException`, ela também estende `RuntimeException`, sendo, portanto, uma exceção não verificada. Seu construtor recebe uma mensagem personalizada que é repassada ao construtor da superclasse via `super(message)`, permitindo que o consumidor da exceção tenha contexto exato sobre qual usuário não foi localizado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m51s399.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta o enum `MenuOption`, que representa as operações disponíveis no menu do programa de cadastro de usuários.
+
+```java
+package br.com.dio.model;
+
+import br.com.dio.dao.UserDAO;
+
+import java.util.function.Consumer;
+
+public enum MenuOption {
+    SAVE,
+    UPDATE,
+    DELETE,
+    FIND_BY_ID,
+    FIND_ALL,
+    EXIT;
+}
+```
+
+Cada constante do enum corresponde a uma opção do menu interativo exibido ao usuário: cadastrar, atualizar, excluir, buscar por identificador, listar todos os registros e sair do programa. Esse enum é usado na classe principal para mapear a entrada numérica digitada pelo usuário para a operação correspondente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m52s440.jpg" alt="" width="840">
+</p>
+
+Aqui é exibida a classe `UserModel`, que representa a entidade de usuário utilizada em todo o sistema.
+
+```java
+package br.com.dio.model;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.util.Objects;
+
+public class UserModel {
+    private long id;
+    private String name;
+    private String email;
+    private LocalDate birthday;
+
+    public UserModel() {
+    }
+
+    public UserModel(long id, String name, String email, LocalDate birthday) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.birthday = birthday;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        UserModel userModel = (UserModel) o;
+        return id == userModel.id &&
+                Objects.equals(name, userModel.name) &&
+                Objects.equals(email, userModel.email) &&
+                Objects.equals(birthday, userModel.birthday);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, email, birthday);
+    }
+
+    @Override
+    public String toString() {
+        return "UserModel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", birthday=" + birthday +
+                '}';
+    }
+}
+```
+
+A classe possui os atributos `id`, `name`, `email` e `birthday`, este último utilizando `LocalDate` no lugar de `LocalDateTime`/`OffsetDateTime`, já que para os fins didáticos da aula basta armazenar a data de nascimento sem informação de horário. Além dos getters e setters convencionais, a classe sobrescreve `equals`, `hashCode` e `toString`, possibilitando comparação correta entre instâncias e uma representação textual legível do objeto — útil, por exemplo, para exibir o usuário recém-cadastrado no console.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m53s374.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a classe `Main`, ponto de entrada da aplicação, que implementa o menu interativo via console e orquestra as chamadas ao `UserDAO`.
+
+```java
+import br.com.dio.exception.EmptyStorageException;
+import br.com.dio.exception.UserNotFoundException;
+import br.com.dio.model.MenuOption;
+import br.com.dio.dao.UserDAO;
+import br.com.dio.model.UserModel;
+
+import javax.print.attribute.standard.RequestingUserName;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+public class Main {
+
+    private final static UserDAO dao = new UserDAO();
+    private final static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("Bem vindo ao cadastro de usuários, selecione a operação desejada");
+            System.out.println("1 - Cadastrar");
+            System.out.println("2 - Atualizar");
+            System.out.println("3 - Excluir");
+            System.out.println("4 - Buscar por identificador");
+            System.out.println("5 - Listar");
+            System.out.println("6 - Sair");
+            var userInput = scanner.nextInt();
+            var selectedOption = MenuOption.values()[userInput -1];
+            System.out.print(selectedOption.toString());
+            switch (selectedOption) {
+                case SAVE -> {
+                    var user = dao.save(requestToSave());
+                    System.out.printf("Usuário cadastrado %s", user);
+                }
+                case UPDATE -> {
+                    try{
+                        var user = dao.update(requestToUpdate());
+                        System.out.printf("Usuário atualizado %s", user);
+                    } catch (UserNotFoundException | EmptyStorageException ex){
+                        System.out.println(ex.getMessage());
+                    }
+                }
+                case DELETE -> {
+                    try {
+                        dao.delete(requestId());
+                        System.out.println("Usuário excluído");
+                    } catch (UserNotFoundException | EmptyStorageException ex){
+                        System.out.println(ex.getMessage());
+                    }
+                }
+                case FIND_BY_ID -> {
+                    try {
+                        var id = requestId();
+                        var user = dao.findById(id);
+                        System.out.printf("Usuario com id %s", id);
+                        System.out.println(user);
+                    } catch (UserNotFoundException | EmptyStorageException ex) {
+                        System.out.println(ex.getMessage());
+                    }
+                }
+                case FIND_ALL -> {
+                    var users = dao.FindAll();
+                    System.out.println("Usuários cadastrados");
+                    System.out.println("====================");
+                    users.forEach(System.out::println);
+                    System.out.println("====================fim====================");
+                }
+                case EXIT ->  System.exit(0);
+            }
+        }
+    }
+
+    private static long requestId(){
+        System.out.println("Informe o identificador do usuário");
+        return scanner.nextLong();
+    }
+
+    private static UserModel requestToSave() {
+        System.out.println("Informe o nome do usuário");
+        var name = scanner.next();
+        System.out.println("Informe o e-mail do usuário");
+        var email = scanner.next();
+        System.out.println("Informe a data de nascimento do usuário (dd/MM/yyyy)");
+        var birthdayString = scanner.next();
+        var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        var birthday = LocalDate.parse(birthdayString, formatter);
+        return new UserModel(0, name, email, birthday);
+    }
+
+    private static UserModel requestToUpdate() {
+        System.out.println("Informe o identificador do usuário");
+        var id = scanner.nextLong();
+        System.out.println("Informe o nome do usuário");
+        var name = scanner.next();
+        System.out.println("Informe o e-mail do usuário");
+        var email = scanner.next();
+        System.out.println("Informe a data de nascimento do usuário (dd/MM/yyyy)");
+        var birthdayString = scanner.next();
+        var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        var birthday = LocalDate.parse(birthdayString, formatter);
+        return new UserModel(id, name, email, birthday);
+    }
+}
+```
+
+A classe `Main` exibe um menu em loop infinito (`while (true)`), lê a opção digitada pelo usuário e converte o número informado para o respectivo valor do enum `MenuOption`. O `switch` em cima do enum direciona a execução para o método apropriado do `UserDAO`.
+
+Cada operação que pode lançar exceção (`UPDATE`, `DELETE`, `FIND_BY_ID`) está protegida por um bloco `try/catch` com captura combinada de `UserNotFoundException | EmptyStorageException`, imprimindo a mensagem da exceção no console em vez de interromper o programa. Já a operação `SAVE` não possui tratativa, pois apenas insere um novo registro, e `FIND_ALL` delega a tratativa interna de armazenamento vazio para o próprio `UserDAO.FindAll()`. Os métodos auxiliares `requestId`, `requestToSave` e `requestToUpdate` são responsáveis por capturar os dados digitados pelo usuário via `Scanner`, incluindo o parse da data de nascimento usando `DateTimeFormatter`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h53m23s965.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra uma sessão de depuração (debug) no console da IDE, exibindo a execução do menu com múltiplas operações em sequência.
+
+Primeiro é realizado um cadastro (opção `1 - Cadastrar`), informando o nome "Jão", o e-mail "jao@jao.com" e a data de nascimento "19/02/1999". O programa confirma o cadastro exibindo `Usuário cadastrado UserModel{id=1, name='Jão', email='jao@jao.com', birthday=1999-02-19}` — resultado direto do `toString()` sobrescrito na classe `UserModel`.
+
+Em seguida, é selecionada a opção `3 - Excluir`, informando o identificador `2`. Como esse id não corresponde a nenhum usuário cadastrado (apenas o id `1` existe), espera-se que essa tentativa de exclusão dispare uma exceção de usuário não encontrado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h53m25s729.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra o painel de variáveis (Threads & Variables) do depurador da IDE durante a execução em modo debug.
+
+É possível observar o estado das variáveis no momento da pausa: `userInput = 3`, `selectedOption = "DELETE"` e a variável `ex`, do tipo `UserNotFoundException`, contendo a mensagem **"Não existe usuário com o id 2 cadastrado"**.
+
+Esse painel confirma exatamente o comportamento esperado: a tentativa de excluir o usuário com id `2` (inexistente na base, que contém apenas o id `1`) resultou no disparo da `UserNotFoundException`, que foi capturada pelo bloco `catch` correspondente no menu, permitindo inspecionar a exceção em tempo de execução através do depurador.      
 
 # Certificado: Logging e Tratamento de Exceções em Java
 
