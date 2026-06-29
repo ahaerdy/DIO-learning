@@ -8,5 +8,4 @@ public class Main {
         FilePersistence persistence = new IOFilePersistence("user.csv");
         System.out.println(persistence.write("Lucas;Lucas@lucas.com;15/01/1990"));
     }
-
 }

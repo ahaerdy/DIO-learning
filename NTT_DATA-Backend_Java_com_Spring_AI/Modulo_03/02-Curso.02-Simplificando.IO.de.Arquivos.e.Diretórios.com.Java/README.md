@@ -188,6 +188,20 @@ public class IOFilePersistence implements FilePersistence {
 
 Aqui é exibida a classe `Main` já chamando o método `write` recém-implementado. A instância de `FilePersistence` é criada apontando para o arquivo `"user.csv"` e, em seguida, é feita a chamada `persistence.write(data: "Lucas;lucas@lucas.com;15/01/1990")`, simulando a escrita de um registro em formato CSV (nome, e-mail e data de nascimento separados por ponto e vírgula). O resultado é impresso com `System.out.println`. No painel de execução, abaixo, aparece novamente a mensagem de inicialização dos recursos do arquivo `user.csv`, e o processo finaliza com exit code 0, confirmando que a escrita ocorreu sem erros.
 
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.IOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new IOFilePersistence("user.csv");
+        System.out.println(persistence.write("Lucas;Lucas@lucas.com;15/01/1990"));
+    }
+}
+```
+
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-15h25m58s090.jpg" alt="" width="840">
 </p>
