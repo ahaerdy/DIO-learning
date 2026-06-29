@@ -331,7 +331,7 @@ public class Main {
 
 A imagem exibe o ambiente IntelliJ IDEA com o arquivo `user.csv` aberto, mostrando o resultado da execução do `Main`. O arquivo gerado na pasta `managedFiles/IO/` contém exatamente as três linhas gravadas pelo método `write`. No painel de execução, é possível ver que os dados foram impressos duas vezes: primeiro como retorno de cada chamada a `write`, e depois como resultado do `findAll`, confirmando que ambos os métodos funcionam corretamente.
 
-O código abaixo apresenta uma versão evoluída de `IOFilePersistence`, agora com o método `findBy` implementado. O método percorre o arquivo linha a linha com `BufferedReader` e `FileReader`, verificando via `line.contains(sentence)` se a linha contém o trecho buscado. Quando encontrado, armazena a linha em `found` e interrompe o laço com `break`. Caso nenhuma linha corresponda, retorna uma `String` vazia.
+No código a seguir vemos uma versão evoluída de `IOFilePersistence`, agora com o método `findBy` implementado. O método percorre o arquivo linha a linha com `BufferedReader` e `FileReader`, verificando via `line.contains(sentence)` se a linha contém o trecho buscado. Quando encontrado, armazena a linha em `found` e interrompe o laço com `break`. Caso nenhuma linha corresponda, retorna uma `String` vazia.
 
 ```java
 package br.com.dio.persistence;
