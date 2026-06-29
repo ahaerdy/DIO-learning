@@ -218,6 +218,463 @@ Esta imagem mostra o conteúdo final do arquivo `user.csv`, aberto diretamente n
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-io-de-arquivos-e-diretorios-com-java/learning/6395a541-e246-47df-b9d9-61af2dd6b22f?autoplay=1
 
+### Anotações
+
+Segue abaixo a implementação inicial da classe `IOFilePersistence`, que implementa a interface `FilePersistence`. Neste estágio da aula, apenas o método `write` e o método `findAll` estão funcionais; os métodos `remove`, `replace` e `findBy` retornam valores vazios ou `false`, sinalizando que ainda serão implementados. O método `write` utiliza `FileWriter`, `BufferedWriter` e `PrintWriter` para gravar dados em modo _append_ no arquivo. O método `findAll` lê o arquivo linha a linha com `BufferedReader` e `FileReader`, acumulando o conteúdo em um `StringBuilder`. O método privado `clearFile` zera o arquivo usando `FileOutputStream`.
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+
+public class IOFilePersistence implements FilePersistence {
+
+    private final String currentDir = System.getProperty("user.dir");
+    private final String storedDir = "/managedFiles/IO/";
+    private final String fileName;
+
+    public IOFilePersistence(String fileName) throws IOException {
+        this.fileName = fileName;
+        var file = new File(currentDir + storedDir);
+        if (!file.exists() && !file.mkdirs()) try {
+            throw new IOException("Erro ao criar arquivo");
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+        clearFile();
+    }
+
+    @Override
+    public String write(String data) {
+        try(
+            var fileWriter = new FileWriter(currentDir + storedDir + fileName, true);
+            var bufferedWrite = new BufferedWriter(fileWriter);
+            var printWriter = new PrintWriter(bufferedWrite)
+        ) {
+            printWriter.println(data);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    @Override
+    public boolean remove(String sentence) {
+        return false;
+    }
+
+    @Override
+    public String replace(String oldContent, String newContent) {
+        return "";
+    }
+
+    @Override
+    public String findAll() {
+        var content = new StringBuilder();
+        try (var reader = new BufferedReader(new FileReader(currentDir + storedDir + fileName))) {
+            String line;
+            do
+            {
+                line = reader.readLine();
+                if ((line != null)) content.append(line)
+                        .append(System.lineSeparator());
+            } while (line != null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return content.toString();
+    }
+
+    @Override
+    public String findBy(String sentence) {
+        return "";
+    }
+
+    private void clearFile(){
+        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
+            System.out.printf("inicializando recursos (%s) \n", currentDir + storedDir + fileName);
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    private void createFile(){
+
+    }
+}
+```
+
+A seguir a classe `Main` em um primeiro teste de uso, onde são gravadas três entradas no arquivo `user.csv` via `persistence.write(...)` e, em seguida, é chamado `persistence.findAll()` para exibir todo o conteúdo gravado. Este é o ponto em que o professor valida que o método `write` e o método `findAll` funcionam corretamente juntos.
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.IOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new IOFilePersistence("user.csv");
+        System.out.println(persistence.write("Lucas;lucas@lucas.com;15/01/1990"));
+        System.out.println(persistence.write("Maria;maria@maria.com;23/10/2000"));
+        System.out.println(persistence.write("Lucas;lucas@lucas.com;01/12/1995"));
+        System.out.println(persistence.findAll());
+    }
+}
+```
+
+---
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-18h48m54s384.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o ambiente IntelliJ IDEA com o arquivo `user.csv` aberto, mostrando o resultado da execução do `Main`. O arquivo gerado na pasta `managedFiles/IO/` contém exatamente as três linhas gravadas pelo método `write`. No painel de execução, é possível ver que os dados foram impressos duas vezes: primeiro como retorno de cada chamada a `write`, e depois como resultado do `findAll`, confirmando que ambos os métodos funcionam corretamente.
+
+O código abaixo apresenta uma versão evoluída de `IOFilePersistence`, agora com o método `findBy` implementado. O método percorre o arquivo linha a linha com `BufferedReader` e `FileReader`, verificando via `line.contains(sentence)` se a linha contém o trecho buscado. Quando encontrado, armazena a linha em `found` e interrompe o laço com `break`. Caso nenhuma linha corresponda, retorna uma `String` vazia.
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+
+public class IOFilePersistence implements FilePersistence {
+
+    private final String currentDir = System.getProperty("user.dir");
+    private final String storedDir = "/managedFiles/IO/";
+    private final String fileName;
+
+    public IOFilePersistence(String fileName) throws IOException {
+        this.fileName = fileName;
+        var file = new File(currentDir + storedDir);
+        if (!file.exists() && !file.mkdirs()) try {
+            throw new IOException("Erro ao criar arquivo");
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+        clearFile();
+    }
+
+    @Override
+    public String write(String data) {
+        try(
+            var fileWriter = new FileWriter(currentDir + storedDir + fileName, true);
+            var bufferedWrite = new BufferedWriter(fileWriter);
+            var printWriter = new PrintWriter(bufferedWrite)
+        ) {
+            printWriter.println(data);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    @Override
+    public boolean remove(String sentence) {
+        return false;
+    }
+
+    @Override
+    public String replace(String oldContent, String newContent) {
+        return "";
+    }
+
+    @Override
+    public String findAll() {
+        var content = new StringBuilder();
+        try (var reader = new BufferedReader(new FileReader(currentDir + storedDir + fileName))) {
+            String line;
+            do
+            {
+                line = reader.readLine();
+                if ((line != null)) content.append(line)
+                        .append(System.lineSeparator());
+            } while (line != null);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return content.toString();
+    }
+
+    @Override
+    public String findBy(String sentence) {
+        String found = "";
+        try (var reader = new BufferedReader(new FileReader(currentDir + storedDir + fileName))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.contains(sentence)) {
+                    found = line;
+                    break;
+                }
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return found;
+    }
+
+    private void clearFile(){
+        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
+            System.out.printf("inicializando recursos (%s) \n", currentDir + storedDir + fileName);
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    private void createFile(){
+
+    }
+}
+```
+
+Abaixo temos a classe `Main` atualizada para testar o método `findBy` com diferentes sentenças de busca: pelo nome (`"Lucas;"`), pelo e-mail (`"Maria;"`), por parte de uma data (`"95"`) e por um valor inexistente (`"22;"`). Os separadores com `"================"` facilitam a leitura do resultado no console.
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.IOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new IOFilePersistence("user.csv");
+        System.out.println(persistence.write("Lucas;lucas@lucas.com;15/01/1990"));
+        System.out.println(persistence.write("Maria;maria@maria.com;23/10/2000"));
+        System.out.println(persistence.write("Lucas;lucas@lucas.com;01/12/1995"));
+        System.out.println("================");
+        System.out.println(persistence.findAll());
+        System.out.println("================");
+        System.out.println(persistence.findBy("Lucas;"));
+        System.out.println("================");
+        System.out.println(persistence.findBy("Maria;"));
+        System.out.println("================");
+        System.out.println(persistence.findBy("95"));
+        System.out.println("================");
+        System.out.println(persistence.findBy("22;"));
+        System.out.println("================");
+    }
+}
+```
+
+---
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-19h16m06s990.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o resultado da execução no console do IntelliJ, após os testes com `findBy`. É possível verificar que: a busca por `"Lucas;"` retornou a primeira ocorrência do nome Lucas; a busca por `"Maria;"` retornou a linha de Maria; a busca por `"95"` retornou a linha de Lucas com data `01/12/1995`; e a busca por `"22;"` retornou vazio, pois nenhuma linha continha essa sequência. O comportamento confirma que o método `findBy` opera por correspondência parcial de conteúdo.
+
+O código a seguir apresenta a implementação do método `remove` na classe `IOFilePersistence`. A lógica consiste em: carregar todo o conteúdo do arquivo com `findAll()`; converter em uma `ArrayList` mutável usando `Stream.of(...).toList()` com quebra por `System.lineSeparator()`; verificar se alguma linha contém a sentença buscada — se não houver correspondência, retorna `false` imediatamente; caso contrário, chama `clearFile()` para limpar o arquivo e, em seguida, reescreve apenas as linhas que **não** contêm a sentença, usando `filter` + `forEach(this::write)`.
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.stream.Stream;
+
+public class IOFilePersistence implements FilePersistence {
+
+    private final String currentDir = System.getProperty("user.dir");
+    private final String storedDir = "/managedFiles/IO/";
+    private final String fileName;
+
+    // ... (construtor e outros métodos omitidos para brevidade)
+
+    @Override
+    public boolean remove(final String sentence) {
+        var content = findAll();
+        var contentList = new ArrayList<>(Stream.of(content.split(System.lineSeparator())).toList());
+        if (contentList.stream().noneMatch(c -> c.contains(sentence))) return false;
+        clearFile();
+        contentList.stream()
+                .filter(c -> !c.contains(sentence))
+                .forEach(this::write);
+        return true;
+    }
+
+    @Override
+    public String replace(String oldContent, String newContent) {
+        return "";
+    }
+
+    // ... (demais métodos)
+}
+```
+
+A seguir, a classe `Main` atualizada para testar o método `remove`. Após gravar e listar os três registros, são realizadas duas tentativas de remoção: a primeira com `"/12/19"` (que corresponde à linha de João com data `01/12/1995`) deve retornar `true`; a segunda com `"/06/2021"` (inexistente no arquivo) deve retornar `false`. Em seguida, novas buscas por `findBy` verificam que João não é mais encontrado.
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.IOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new IOFilePersistence("user.csv");
+        System.out.println(persistence.write("Lucas;lucas@lucas.com;15/01/1990"));
+        System.out.println(persistence.write("Maria;maria@maria.com;23/10/2000"));
+        System.out.println(persistence.write("Lucas;lucas@lucas.com;01/12/1995"));
+        System.out.println("================");
+        System.out.println(persistence.findAll());
+        System.out.println("================");
+        System.out.println(persistence.remove("/12/19"));
+        System.out.println("================");
+        System.out.println(persistence.remove("/06/2021"));
+        System.out.println("================");
+        System.out.println(persistence.findBy("Lucas;"));
+        System.out.println("================");
+        System.out.println(persistence.findBy("Maria;"));
+        System.out.println("================");
+        System.out.println(persistence.findBy("95"));
+        System.out.println("================");
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-19h27m25s262.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a saída do console após a execução com os testes de `remove`. O resultado confirma o comportamento esperado: o primeiro `remove("/12/19")` retornou `true` e removeu a linha de João; o segundo `remove("/06/2021")` retornou `false` pois nenhuma linha continha esse padrão. As buscas posteriores mostram que Lucas e Maria ainda estão presentes, mas a busca por `"95"` (referente à data de João) não retornou nenhum resultado, evidenciando que a remoção foi bem-sucedida.
+
+Abaixo a versão completa da classe `IOFilePersistence`, agora com o método `replace` implementado e o método auxiliar privado `toListString()` extraído via refatoração. O método `replace` segue lógica semelhante ao `remove`: carrega o conteúdo como lista, verifica se o `oldContent` existe, limpa o arquivo e reescreve as linhas — substituindo, via `map`, as linhas que contêm `oldContent` pelo `newContent`. O método `toListString()` encapsula a conversão do conteúdo do arquivo em uma `List<String>` mutável, evitando duplicação de código.
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public class IOFilePersistence implements FilePersistence {
+
+    private final String currentDir = System.getProperty("user.dir");
+    private final String storedDir = "/managedFiles/IO/";
+    private final String fileName;
+
+    // ... (construtor omitido para brevidade)
+
+    @Override
+    public boolean remove(final String sentence) {
+        var contentList = toListString();
+        if (contentList.stream().noneMatch(c -> c.contains(sentence))) return false;
+        clearFile();
+        contentList.stream()
+                .filter(c -> !c.contains(sentence))
+                .forEach(this::write);
+        return true;
+    }
+
+    @Override
+    public String replace(final String oldContent, final String newContent) {
+        var contentList = toListString();
+
+        if (contentList.stream().noneMatch(c -> c.contains(oldContent))) return "";
+
+        clearFile();
+        contentList.stream()
+                .map(c -> c.contains(oldContent) ? newContent : c)
+                .forEach(this::write);
+        return newContent;
+    }
+
+    @Override
+    public String findAll() {
+        var content = new StringBuilder();
+        try (var reader = new BufferedReader(new FileReader(currentDir + storedDir + fileName))) {
+            String line;
+            do
+            {
+                line = reader.readLine();
+                if ((line != null)) content.append(line)
+                        .append(System.lineSeparator());
+            } while (line != null);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return content.toString();
+    }
+
+    @Override
+    public String findBy(String sentence) {
+        String found = "";
+        try (var reader = new BufferedReader(new FileReader(currentDir + storedDir + fileName))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.contains(sentence)) {
+                    found = line;
+                    break;
+                }
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return found;
+    }
+
+    private List<String> toListString() {
+        var content = findAll();
+        return new ArrayList<>(Stream.of(content.split(System.lineSeparator())).toList());
+    }
+
+    private void clearFile(){
+        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    private void createFile(){
+
+    }
+}
+```
+
+Por fim, a classe `Main` com o teste completo de `replace`. Após remover João e listar os dados, é chamado `persistence.replace(".com;15/01/", "Carlos;carlos@carlos.com;22/03/1991")`, substituindo a linha de Lucas pela de Carlos. Em seguida, `findAll()` é chamado para exibir o estado final do arquivo e confirmar a substituição.
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.IOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new IOFilePersistence("user.csv");
+        System.out.println(persistence.write("Lucas;lucas@lucas.com;15/01/1990"));
+        System.out.println(persistence.write("Maria;maria@maria.com;23/10/2000"));
+        System.out.println(persistence.write("Lucas;lucas@lucas.com;01/12/1995"));
+        System.out.println("================");
+        System.out.println(persistence.findAll());
+        System.out.println("================");
+        System.out.println(persistence.remove("/12/19"));
+        System.out.println("================");
+        System.out.println(persistence.remove("/06/2021"));
+        System.out.println("================");
+        System.out.println(persistence.findBy("Lucas;"));
+        System.out.println("================");
+        System.out.println(persistence.findBy("Maria;"));
+        System.out.println("================");
+        System.out.println(persistence.findBy( "95;" ));
+        System.out.println("================");
+        System.out.println(persistence.replace(".com;15/01/", "Carlos;carlos@carlos.com;22/03/1991" ));
+        System.out.println("================");
+        System.out.println(persistence.findAll());
+    }
+}
+```
+
+---
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-19h43m02s649.jpg" alt="" width="840">
+</p>
+
+A imagem exibe a saída final do console, confirmando o funcionamento completo de todos os métodos da `IOFilePersistence`. O fluxo de execução mostra: gravação dos três registros, listagem completa, remoção bem-sucedida de João (`true`), tentativa de remoção inexistente (`false`), buscas por Lucas e Maria, o retorno do `replace` com o novo conteúdo (`Carlos;carlos@carlos.com;22/03/1991`), e o `findAll` final exibindo apenas Carlos e Maria no arquivo. Com isso, a implementação completa da API de IO do Java para gerenciamento de arquivos CSV está validada e funcional.
+
 
 ## Parte 2 - Trabalhando com java.nio
 
