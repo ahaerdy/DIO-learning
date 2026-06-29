@@ -91,7 +91,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 3: Elevando a Qualidade do Seu Código Java com Boas Práticas e Padrões
 
 - [x] Curso: [Logging e Tratamento de Exceções em Java](Modulo_03/01-Curso.01-Logging.e.Tratamento.de.Exceções.em.Java)
-- [ ] Curso: [Simplificando I/O de Arquivos e Diretórios com Java]
+- [ ] Curso: [Simplificando I/O de Arquivos e Diretórios com Java](Modulo_03/02-Curso.02-Simplificando.IO.de.Arquivos.e.Diretórios.com.Java)
 - [ ] Curso: [Gerenciando Dependências com Maven e Gradle]
 - [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
 - [ ] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade]
