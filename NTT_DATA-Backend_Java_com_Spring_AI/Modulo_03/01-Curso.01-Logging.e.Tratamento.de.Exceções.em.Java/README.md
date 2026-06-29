@@ -421,11 +421,7 @@ at Main.main(Main.java:44)
 
 Essa é uma exceção *unchecked* (não verificada): ela estende `RuntimeException`, por isso o compilador não obriga o código a tratá-la. Como nenhum bloco `try/catch` foi implementado ainda, o programa simplesmente termina com `Process finished with exit code 1`.
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m48s421.jpg" alt="" width="840">
-</p>
-
-Esta imagem apresenta a classe `UserDAO`, responsável por simular o armazenamento de usuários em memória através de uma `List<UserModel>`.
+O código abaixo apresenta a classe `UserDAO`, responsável por simular o armazenamento de usuários em memória através de uma `List<UserModel>`.
 
 ```java
 package br.com.dio.dao;
@@ -491,11 +487,7 @@ A classe centraliza as operações de CRUD (`save`, `update`, `delete`, `findByI
 
 Já o método `verifyStorage` centraliza a verificação se a lista está vazia, lançando uma `EmptyStorageException` quando necessário. Esse método é chamado tanto no `findById` quanto no `FindAll`, evitando repetição de código — sendo que em `findById` a exceção é propagada livremente, enquanto em `FindAll` ela é capturada localmente com um `try/catch`, registrando o erro via `printStackTrace()` e retornando uma lista vazia no lugar de interromper a execução.
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m49s496.jpg" alt="" width="840">
-</p>
-
-Aqui é exibida a classe `EmptyStorageException`, uma exceção customizada criada para indicar que o armazenamento de usuários está vazio.
+Abaixo é exibida a classe `EmptyStorageException`, uma exceção customizada criada para indicar que o armazenamento de usuários está vazio.
 
 ```java
 package br.com.dio.exception;
@@ -510,11 +502,7 @@ public class EmptyStorageException extends RuntimeException {
 
 Por estender `RuntimeException`, trata-se de uma exceção *unchecked*: o código que a invoca não é obrigado pelo compilador a tratá-la com `try/catch`, podendo optar por deixá-la se propagar livremente pela pilha de chamadas ou capturá-la quando fizer sentido para a regra de negócio.
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m50s424.jpg" alt="" width="840">
-</p>
-
-Esta imagem mostra a classe `UserNotFoundException`, utilizada para indicar que um usuário com determinado identificador não foi encontrado na base.
+A seguir temos a classe `UserNotFoundException`, utilizada para indicar que um usuário com determinado identificador não foi encontrado na base.
 
 ```java
 package br.com.dio.exception;
@@ -529,11 +517,7 @@ public class UserNotFoundException extends RuntimeException {
 
 Assim como a `EmptyStorageException`, ela também estende `RuntimeException`, sendo, portanto, uma exceção não verificada. Seu construtor recebe uma mensagem personalizada que é repassada ao construtor da superclasse via `super(message)`, permitindo que o consumidor da exceção tenha contexto exato sobre qual usuário não foi localizado.
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m51s399.jpg" alt="" width="840">
-</p>
-
-Esta imagem apresenta o enum `MenuOption`, que representa as operações disponíveis no menu do programa de cadastro de usuários.
+o código seguinte apresenta o enum `MenuOption`, que representa as operações disponíveis no menu do programa de cadastro de usuários.
 
 ```java
 package br.com.dio.model;
@@ -553,10 +537,6 @@ public enum MenuOption {
 ```
 
 Cada constante do enum corresponde a uma opção do menu interativo exibido ao usuário: cadastrar, atualizar, excluir, buscar por identificador, listar todos os registros e sair do programa. Esse enum é usado na classe principal para mapear a entrada numérica digitada pelo usuário para a operação correspondente.
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m52s440.jpg" alt="" width="840">
-</p>
 
 Aqui é exibida a classe `UserModel`, que representa a entidade de usuário utilizada em todo o sistema.
 
@@ -645,11 +625,7 @@ public class UserModel {
 
 A classe possui os atributos `id`, `name`, `email` e `birthday`, este último utilizando `LocalDate` no lugar de `LocalDateTime`/`OffsetDateTime`, já que para os fins didáticos da aula basta armazenar a data de nascimento sem informação de horário. Além dos getters e setters convencionais, a classe sobrescreve `equals`, `hashCode` e `toString`, possibilitando comparação correta entre instâncias e uma representação textual legível do objeto — útil, por exemplo, para exibir o usuário recém-cadastrado no console.
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-08h49m53s374.jpg" alt="" width="840">
-</p>
-
-Esta imagem mostra a classe `Main`, ponto de entrada da aplicação, que implementa o menu interativo via console e orquestra as chamadas ao `UserDAO`.
+Por fim, temos a classe `Main`, ponto de entrada da aplicação, que implementa o menu interativo via console e orquestra as chamadas ao `UserDAO`.
 
 ```java
 import br.com.dio.exception.EmptyStorageException;
