@@ -140,7 +140,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 3
 
-- [Logging e Tratamento de Exceções em Java]
+- [Logging e Tratamento de Exceções em Java](https://hermes.dio.me/certificates/2FJ8QP3K.pdf)
 - [Simplificando I/O de Arquivos e Diretórios com Java]
 - [Gerenciando Dependências com Maven e Gradle]
 - [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
