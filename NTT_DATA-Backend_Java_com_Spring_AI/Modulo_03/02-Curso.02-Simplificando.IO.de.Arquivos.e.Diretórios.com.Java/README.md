@@ -1147,12 +1147,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/s
 
 #### Criando a classe `NIO2FilePersistence`
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-14h38m40s702.jpg" alt="" width="840">
-</p>
-
-
-A imagem mostra a primeira versão da classe `NIO2FilePersistence`, baseada na API `java.nio.file` (Paths/Files), introduzida a partir do Java 7.
+Primeira versão da classe `NIO2FilePersistence`, baseada na API `java.nio.file` (Paths/Files), introduzida a partir do Java 7.
 
 ```java
 package br.com.dio.persistence;
@@ -1201,11 +1196,6 @@ O construtor usa `Paths.get` para montar o diretório de armazenamento e, caso e
 
 #### Testando a escrita com `NIO2FilePersistence`
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-14h38m42s972.jpg" alt="" width="840">
-</p>
-
-
 ```java
 import br.com.dio.persistence.FilePersistence;
 import br.com.dio.persistence.NIO2FilePersistence;
@@ -1238,11 +1228,6 @@ A classe `Main` instancia `NIO2FilePersistence` para o arquivo `user.csv` e cham
 A captura mostra a árvore do projeto na IntelliJ, com a pasta `managedFiles` contendo as subpastas `IO` e `NIO2`, cada uma com seu próprio `user.csv`. O arquivo aberto no editor confirma que as três linhas gravadas pelo `write` (Luana, Marcos e Henrique) foram persistidas corretamente, uma por linha. No console de execução logo abaixo, a mesma sequência aparece intercalada pelos separadores `====`, e o processo finaliza com `exit code 0`, confirmando que a escrita via `Files.write` com `StandardOpenOption.APPEND` funcionou como esperado.
 
 #### Implementação completa: `remove`, `replace`, `findBy` e `findAll`
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-15h04m29s763.jpg" alt="" width="840">
-</p>
-
 
 ```java
 package br.com.dio.persistence;
@@ -1339,11 +1324,6 @@ Esta versão evoluiu a classe original com quatro novas responsabilidades. `find
 
 #### Testando todas as operações de persistência
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-15h04m31s362.jpg" alt="" width="840">
-</p>
-
-
 ```java
 import br.com.dio.persistence.FilePersistence;
 import br.com.dio.persistence.NIO2FilePersistence;
@@ -1392,11 +1372,6 @@ O teste agora cobre o ciclo completo: três gravações, um `findAll` para confe
 O console confirma o comportamento esperado de cada método: depois das três gravações e do `findAll` exibindo os três registros, `remove("marcos@")` retorna `true` (a linha do Marcos foi removida) e `remove("luiz@")` retorna `false` (não há correspondência). Em seguida, `findBy(";28/09/")` localiza e devolve a linha da Luana, enquanto `findBy("luiz")` devolve uma string vazia. Por fim, `replace("03/05/2", ...)` substitui a linha do Henrique pelo novo registro do Eric, e a tentativa de substituir "Julia" retorna vazio, pois nenhum registro contém esse termo. O `findAll` final mostra que o arquivo ficou apenas com Luana e Eric, refletindo exatamente as operações de remoção e substituição executadas.
 
 #### Refatorando para uma classe abstrata: `FilePersistence`
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m02s694.jpg" alt="" width="840">
-</p>
-
 
 ```java
 package br.com.dio.persistence;
@@ -1463,11 +1438,6 @@ public abstract class FilePersistence {
 Aqui a antiga interface de persistência se torna uma classe abstrata. Os campos `currentDir`, `storedDir` e `fileName` passam a ser `protected` e o construtor único centraliza a definição do `fileName` via `super`. Como `remove` e `replace` seguem a mesma lógica em todas as implementações, eles deixam de ser duplicados em cada classe concreta e passam a viver aqui, assim como os utilitários `cleanFile` e `toListString`. Já `write`, `findAll` e `findBy` continuam `abstract`, pois cada implementação (IO, NIO, NIO2) lida com a leitura e escrita de um jeito diferente.
 
 #### `IOFilePersistence` agora estende `FilePersistence`
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m03s314.jpg" alt="" width="840">
-</p>
-
 
 ```java
 package br.com.dio.persistence;
@@ -1539,11 +1509,6 @@ public class IOFilePersistence extends FilePersistence {
 Esta classe usa a API clássica `java.io`. O construtor garante a criação do diretório com `File.mkdirs()` e lança exceção caso falhe. O `write` usa um bloco try-with-resources encadeando `FileWriter` → `BufferedWriter` → `PrintWriter`, gravando a linha com `println`, que já cuida do separador de linha. `findAll` lê o arquivo linha a linha com `BufferedReader` até encontrar `null`, acumulando tudo num `StringBuilder`. `findBy` segue lógica parecida, mas interrompe a leitura assim que encontra a primeira linha que contém a sentença buscada.
 
 #### `NIO2FilePersistence` simplificada após a refatoração
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m04s005.jpg" alt="" width="840">
-</p>
-
 
 ```java
 package br.com.dio.persistence;
