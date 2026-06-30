@@ -1689,7 +1689,7 @@ A `Main` agora importa as quatro classes de persistência e usa o tipo abstrato 
 #### Saída da execução com `IOFilePersistence`
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m08s010.jpg" alt="" width="840">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m08s010.jpg" alt="" width="560">
 </p>
 
 
