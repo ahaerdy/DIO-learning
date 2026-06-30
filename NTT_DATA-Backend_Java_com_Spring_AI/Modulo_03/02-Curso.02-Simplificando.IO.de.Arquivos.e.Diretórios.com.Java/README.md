@@ -1567,7 +1567,7 @@ public class NIO2FilePersistence extends FilePersistence {
 
 Com a refatoração, a classe fica bem mais enxuta: ela agora estende `FilePersistence` e mantém apenas o que é realmente específico da API NIO2 — o construtor (com `Paths`/`Files.createDirectory`), o `write` (com `Files.write` em modo `APPEND`) e a leitura via `Files.lines` usada tanto em `findAll` quanto em `findBy`. Os métodos `remove`, `replace`, `cleanFile` e `toListString` não aparecem mais aqui porque já foram herdados da superclasse.
 
-#### --- `NIOFilePersistence` usando `RandomAccessFile` e `ByteBuffer`
+#### `NIOFilePersistence` usando `RandomAccessFile` e `ByteBuffer`
 
 ```java
 package br.com.dio.persistence;
