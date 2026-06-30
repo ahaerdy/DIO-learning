@@ -1569,11 +1569,6 @@ Com a refatoração, a classe fica bem mais enxuta: ela agora estende `FilePersi
 
 #### `NIOFilePersistence` usando `RandomAccessFile` e `ByteBuffer`
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m04s689.jpg" alt="" width="840">
-</p>
-
-
 ```java
 package br.com.dio.persistence;
 import java.io.*;
