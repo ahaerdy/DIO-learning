@@ -1143,7 +1143,702 @@ O console mostra a execução completa e bem-sucedida do programa: os três regi
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-io-de-arquivos-e-diretorios-com-java/learning/19f6a205-2026-4620-8fa0-980b9db73dcb?autoplay=1
 
-##  Materiais de Apoio
+### Anotações
+
+#### Criando a classe `NIO2FilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-14h38m40s702.jpg" alt="" width="840">
+</p>
+
+
+A imagem mostra a primeira versão da classe `NIO2FilePersistence`, baseada na API `java.nio.file` (Paths/Files), introduzida a partir do Java 7.
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+
+public class NIO2FilePersistence {
+
+    private final String currentDir = System.getProperty("user.dir");
+    private final String storedDir = "/managedFiles/NIO2/";
+    private final String fileName;
+
+    public NIO2FilePersistence(final String fileName) throws IOException {
+        this.fileName = fileName;
+        var path = Paths.get(currentDir + storedDir);
+        if (!Files.exists(path)) {
+            Files.createDirectory(path);
+        }
+        cleanFile();
+    }
+
+    public String write(final String data) {
+        var path = Paths.get(currentDir + storedDir + fileName);
+        try {
+            Files.write(path, data.getBytes(), StandardOpenOption.APPEND);
+            Files.write(path, System.lineSeparator().getBytes(), StandardOpenOption.APPEND);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    private void cleanFile(){
+        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+}
+```
+
+O construtor usa `Paths.get` para montar o diretório de armazenamento e, caso ele ainda não exista, chama `Files.createDirectory`. Em seguida, `cleanFile()` é executado para garantir que o arquivo comece vazio. O método `write` monta o caminho completo do arquivo e usa `Files.write` duas vezes em modo `APPEND`: uma para gravar os bytes do dado recebido e outra para gravar o separador de linha do sistema, simulando um `println` em nível de bytes.
+
+#### Testando a escrita com `NIO2FilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-14h38m42s972.jpg" alt="" width="840">
+</p>
+
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.NIO2FilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        NIO2FilePersistence persistence = new NIO2FilePersistence("user.csv");
+        System.out.println("=========================");
+        System.out.println(persistence.write("Luana;luana@luana.com;28/09/1989"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Marcos;marcos@marcos.com;01/01/1999"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Henrique;henrique@henrique.com;03/05/2001;"));
+        System.out.println("=========================");
+    }
+}
+```
+
+A classe `Main` instancia `NIO2FilePersistence` para o arquivo `user.csv` e chama `write` três vezes, intercalando os resultados com separadores visuais (`====`) para facilitar a leitura da saída no console.
+
+#### Conferindo o arquivo gerado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-14h38m43s972.jpg" alt="" width="840">
+</p>
+
+
+A captura mostra a árvore do projeto na IntelliJ, com a pasta `managedFiles` contendo as subpastas `IO` e `NIO2`, cada uma com seu próprio `user.csv`. O arquivo aberto no editor confirma que as três linhas gravadas pelo `write` (Luana, Marcos e Henrique) foram persistidas corretamente, uma por linha. No console de execução logo abaixo, a mesma sequência aparece intercalada pelos separadores `====`, e o processo finaliza com `exit code 0`, confirmando que a escrita via `Files.write` com `StandardOpenOption.APPEND` funcionou como esperado.
+
+#### Implementação completa: `remove`, `replace`, `findBy` e `findAll`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-15h04m29s763.jpg" alt="" width="840">
+</p>
+
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class NIO2FilePersistence {
+
+    private final String currentDir = System.getProperty("user.dir");
+    private final String storedDir = "/managedFiles/NIO2/";
+    private final String fileName;
+
+    public NIO2FilePersistence(final String fileName) throws IOException {
+        this.fileName = fileName;
+        var path = Paths.get(currentDir + storedDir);
+        if (!Files.exists(path)) {
+            Files.createDirectory(path);
+        }
+        cleanFile();
+    }
+
+    public String write(final String data) {
+        var path = Paths.get(currentDir + storedDir + fileName);
+        try {
+            Files.write(path, data.getBytes(), StandardOpenOption.APPEND);
+            Files.write(path, System.lineSeparator().getBytes(), StandardOpenOption.APPEND);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    public boolean remove(final String sentence) {
+        var contentList = toListString();
+        if (contentList.stream().noneMatch(c -> c.contains(sentence))) return false;
+        cleanFile();
+        contentList.stream()
+                .filter(c -> !c.contains(sentence))
+                .forEach(this::write);
+        return true;
+    }
+
+    private List<String> toListString() {
+        var content = findAll();
+        return new ArrayList<>(Stream.of(content.split(System.lineSeparator())).toList());
+    }
+
+    public String findBy(final String sentence) {
+        var content = findAll();
+        return Stream.of(content.split(System.lineSeparator()))
+                .filter(c -> c.contains(sentence))
+                .findFirst()
+                .orElse("");
+    }
+
+    private void cleanFile(){
+        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    public String replace(final String oldContent, final String newContent) {
+        var contentList = toListString();
+        if (contentList.stream().noneMatch(c -> c.contains(oldContent))) return "";
+        cleanFile();
+        contentList.stream()
+                .map(c -> c.contains(oldContent) ? newContent : c)
+                .forEach(this::write);
+        return newContent;
+    }
+
+    public String findAll() {
+        var path = Paths.get(currentDir + storedDir + fileName);
+        var content = "";
+        try (var lines = Files.lines(path)) {
+            content = lines.collect(Collectors.joining(System.lineSeparator()));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return content.toString();
+    }
+}
+```
+
+Esta versão evoluiu a classe original com quatro novas responsabilidades. `findAll` lê o arquivo inteiro com `Files.lines` (try-with-resources) e junta as linhas com `Collectors.joining`. `toListString` reaproveita `findAll` e transforma o conteúdo numa `List<String>` usando `split` pelo separador de linha. `remove` verifica se alguma linha contém a sentença buscada; se não houver correspondência, retorna `false` direto; caso contrário, limpa o arquivo e reescreve apenas as linhas que **não** contêm a sentença. `replace` segue lógica parecida, mas usa `map` para trocar a linha correspondente pelo novo conteúdo, mantendo as demais linhas intactas. `findBy` filtra as linhas pela sentença e retorna a primeira ocorrência ou uma string vazia via `orElse`.
+
+#### Testando todas as operações de persistência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-15h04m31s362.jpg" alt="" width="840">
+</p>
+
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.NIO2FilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        NIO2FilePersistence persistence = new NIO2FilePersistence("user.csv");
+        System.out.println("=========================");
+        System.out.println(persistence.write("Luana;luana@luana.com;28/09/1989"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Marcos;marcos@marcos.com;01/01/1999"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Henrique;henrique@henrique.com;03/05/2001;"));
+        System.out.println("=========================");
+        System.out.println(persistence.findAll());
+        System.out.println("====================");
+        System.out.println(persistence.remove("marcos@"));
+        System.out.println("====================");
+        System.out.println(persistence.remove("luiz@"));
+        System.out.println("====================");
+        System.out.println(persistence.findBy(";28/09/"));
+        System.out.println("====================");
+        System.out.println(persistence.findBy("luiz"));
+        System.out.println("====================");
+        System.out.println(persistence.replace("03/05/2", "Eric;eric@eric.com;20/06/1985"));
+        System.out.println("====================");
+        System.out.println(persistence.replace("Julia", "Maria;maria@maria.com;09/09/1999"));
+        System.out.println("===================================");
+        System.out.println(persistence.findAll());
+        System.out.println("===================================");
+    }
+}
+```
+
+O teste agora cobre o ciclo completo: três gravações, um `findAll` para conferir o conteúdo bruto, duas chamadas de `remove` (uma que encontra "marcos@" e outra com "luiz@", que não existe), duas buscas com `findBy` e duas tentativas de `replace` — uma trocando a data do Henrique por um novo registro do Eric, e outra tentando substituir "Julia", que não está no arquivo.
+
+#### Resultado da execução completa
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-15h04m33s556.jpg" alt="" width="840">
+</p>
+
+
+O console confirma o comportamento esperado de cada método: depois das três gravações e do `findAll` exibindo os três registros, `remove("marcos@")` retorna `true` (a linha do Marcos foi removida) e `remove("luiz@")` retorna `false` (não há correspondência). Em seguida, `findBy(";28/09/")` localiza e devolve a linha da Luana, enquanto `findBy("luiz")` devolve uma string vazia. Por fim, `replace("03/05/2", ...)` substitui a linha do Henrique pelo novo registro do Eric, e a tentativa de substituir "Julia" retorna vazio, pois nenhum registro contém esse termo. O `findAll` final mostra que o arquivo ficou apenas com Luana e Eric, refletindo exatamente as operações de remoção e substituição executadas.
+
+#### Refatorando para uma classe abstrata: `FilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m02s694.jpg" alt="" width="840">
+</p>
+
+
+```java
+package br.com.dio.persistence;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
+public abstract class FilePersistence {
+
+    protected final String currentDir = System.getProperty("user.dir");
+    protected final String storedDir = "/managedFiles/IO/";
+    protected final String fileName;
+
+    public FilePersistence(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public abstract String write(final String data);
+
+    public boolean remove(final String sentence) {
+        var content = findAll();
+        var contentList = new ArrayList<>(Stream.of(content.split(System.lineSeparator())).toList());
+        if (contentList.stream().noneMatch(c -> c.contains(sentence))) return false;
+        cleanFile();
+        contentList.stream()
+                .filter(c -> !c.contains(sentence))
+                .forEach(this::write);
+        return true;
+    }
+
+    public String replace(final String oldContent, final String newContent) {
+        var contentList = toListString();
+
+        if (contentList.stream().noneMatch(c -> c.contains(oldContent))) return "";
+
+        cleanFile();
+        contentList.stream()
+                .map(c -> c.contains(oldContent) ? newContent : c)
+                .forEach(this::write);
+        return newContent;
+    }
+
+    public abstract String findAll();
+
+    public abstract String findBy(final String sentence);
+
+    protected void cleanFile(){
+        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+
+    protected List<String> toListString() {
+        var content = findAll();
+        return new ArrayList<>(Stream.of(content.split(System.lineSeparator())).toList());
+    }
+}
+```
+
+Aqui a antiga interface de persistência se torna uma classe abstrata. Os campos `currentDir`, `storedDir` e `fileName` passam a ser `protected` e o construtor único centraliza a definição do `fileName` via `super`. Como `remove` e `replace` seguem a mesma lógica em todas as implementações, eles deixam de ser duplicados em cada classe concreta e passam a viver aqui, assim como os utilitários `cleanFile` e `toListString`. Já `write`, `findAll` e `findBy` continuam `abstract`, pois cada implementação (IO, NIO, NIO2) lida com a leitura e escrita de um jeito diferente.
+
+#### `IOFilePersistence` agora estende `FilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m03s314.jpg" alt="" width="840">
+</p>
+
+
+```java
+package br.com.dio.persistence;
+import java.io.*;
+
+public class IOFilePersistence extends FilePersistence {
+
+    public IOFilePersistence(final String fileName) throws IOException {
+        super(fileName);
+        var file = new File(currentDir + storedDir);
+        if (!file.exists() && !file.mkdirs()) try {
+            throw new IOException("Erro ao criar arquivo");
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+        cleanFile();
+    }
+
+    @Override
+    public String write(String data) {
+        try(
+            var fileWriter = new FileWriter(currentDir + storedDir + fileName, true);
+            var bufferedWrite = new BufferedWriter(fileWriter);
+            var printWriter = new PrintWriter(bufferedWrite)
+        ) {
+            printWriter.println(data);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    @Override
+    public String findAll() {
+        var content = new StringBuilder();
+        try (var reader = new BufferedReader(new FileReader(currentDir + storedDir + fileName))) {
+            String line;
+            do
+            {
+                line = reader.readLine();
+                if ((line != null)) content.append(line)
+                        .append(System.lineSeparator());
+            } while (line != null);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return content.toString();
+    }
+
+    @Override
+    public String findBy(String sentence) {
+        String found = "";
+        try (var reader = new BufferedReader(new FileReader(currentDir + storedDir + fileName))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.contains(sentence)) {
+                    found = line;
+                    break;
+                }
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return found;
+    }
+}
+```
+
+Esta classe usa a API clássica `java.io`. O construtor garante a criação do diretório com `File.mkdirs()` e lança exceção caso falhe. O `write` usa um bloco try-with-resources encadeando `FileWriter` → `BufferedWriter` → `PrintWriter`, gravando a linha com `println`, que já cuida do separador de linha. `findAll` lê o arquivo linha a linha com `BufferedReader` até encontrar `null`, acumulando tudo num `StringBuilder`. `findBy` segue lógica parecida, mas interrompe a leitura assim que encontra a primeira linha que contém a sentença buscada.
+
+#### `NIO2FilePersistence` simplificada após a refatoração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m04s005.jpg" alt="" width="840">
+</p>
+
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class NIO2FilePersistence extends FilePersistence {
+
+    public NIO2FilePersistence(final String fileName) throws IOException {
+        super(fileName);
+        var path = Paths.get(currentDir + storedDir);
+        if (!Files.exists(path)) {
+            Files.createDirectory(path);
+        }
+        cleanFile();
+    }
+
+    public String write(final String data) {
+        var path = Paths.get(currentDir + storedDir + fileName);
+        try {
+            Files.write(path, data.getBytes(), StandardOpenOption.APPEND);
+            Files.write(path, System.lineSeparator().getBytes(), StandardOpenOption.APPEND);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    public String findBy(final String sentence) {
+        var content = findAll();
+        return Stream.of(content.split(System.lineSeparator()))
+                .filter(c -> c.contains(sentence))
+                .findFirst()
+                .orElse("");
+    }
+
+    public String findAll() {
+        var path = Paths.get(currentDir + storedDir + fileName);
+        var content = "";
+        try (var lines = Files.lines(path)) {
+            content = lines.collect(Collectors.joining(System.lineSeparator()));
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return content.toString();
+    }
+}
+```
+
+Com a refatoração, a classe fica bem mais enxuta: ela agora estende `FilePersistence` e mantém apenas o que é realmente específico da API NIO2 — o construtor (com `Paths`/`Files.createDirectory`), o `write` (com `Files.write` em modo `APPEND`) e a leitura via `Files.lines` usada tanto em `findAll` quanto em `findBy`. Os métodos `remove`, `replace`, `cleanFile` e `toListString` não aparecem mais aqui porque já foram herdados da superclasse.
+
+#### `NIOFilePersistence` usando `RandomAccessFile` e `ByteBuffer`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m04s689.jpg" alt="" width="840">
+</p>
+
+
+```java
+package br.com.dio.persistence;
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.util.stream.Stream;
+
+public class NIOFilePersistence extends FilePersistence{
+
+    public NIOFilePersistence(String fileName) throws IOException {
+        super(fileName);
+        var file = new File(currentDir + storedDir);
+        if (!file.exists() && !file.mkdirs()) throw new IOException("Erro ao criar arquivo");
+        cleanFile();
+    }
+
+    @Override
+    public String write(final String data) {
+        try(var file = new RandomAccessFile(new File(currentDir + storedDir + fileName), "rw")){
+            file.seek(file.length());
+            file.writeBytes(data);
+            file.writeBytes(System.lineSeparator());
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    @Override
+    public String findAll() {
+        var content = new StringBuilder();
+        File file = new File(currentDir + storedDir + fileName);
+        if (!file.exists()) return "";
+        try(var raf = new RandomAccessFile(file, "r");
+            var channel = raf.getChannel()){
+            var buffer = ByteBuffer.allocate(256);
+            while (channel.read(buffer) != -1){
+                buffer.flip();
+                while (buffer.hasRemaining()){
+                    content.append((char) buffer.get());
+                }
+                buffer.clear();
+            }
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+        return content.toString();
+    }
+
+    @Override
+    public String findBy(final String sentence) {
+        try {
+            var lines = java.nio.file.Files.readAllLines(java.nio.file.Path.of(currentDir + storedDir + fileName));
+            return lines.stream()
+                    .filter(line -> line.contains(sentence))
+                    .findFirst()
+                    .orElse("Registro não encontrado");
+        } catch (IOException ex) {
+            return "Erro ao buscar: " + ex.getMessage();
+        }
+    }
+}
+```
+
+Esta terceira implementação trabalha em um nível mais baixo. O `write` abre um `RandomAccessFile` em modo `"rw"`, posiciona o cursor no final do arquivo com `seek(file.length())` e escreve os bytes diretamente. O `findAll` usa um `FileChannel` obtido a partir do `RandomAccessFile` e lê o conteúdo em blocos de 256 bytes para um `ByteBuffer`, transformando cada byte lido em `char` e acumulando no `StringBuilder` até o canal não ter mais dados (`read` retornando `-1`). Já o `findBy`, diferente das outras duas implementações, usa `Files.readAllLines` (uma API NIO2) e, ao não encontrar a sentença, retorna a mensagem `"Registro não encontrado"` em vez de uma string vazia — uma pequena diferença de comportamento entre as implementações.
+
+#### Ajustando a `Main` para testar as implementações refatoradas
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m06s101.jpg" alt="" width="840">
+</p>
+
+
+A captura mostra a IDE com a classe `Main` já adaptada para o novo desenho orientado a herança: a variável é declarada como `FilePersistence persistence`, mas instanciada com `new IOFilePersistence("user.csv")`. A bateria de testes permanece a mesma usada anteriormente (gravações, `findAll`, `remove`, `findBy` e `replace`), só que agora chamada por meio do tipo abstrato, evidenciando o uso de polimorfismo. O rodapé do editor indica "Build completed successfully", confirmando que a refatoração não quebrou a compilação do projeto.
+
+#### Main completa testando `IOFilePersistence`
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.IOFilePersistence;
+import br.com.dio.persistence.NIO2FilePersistence;
+import br.com.dio.persistence.NIOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new IOFilePersistence("user.csv");
+        System.out.println("Saída - IOFilePersistence");
+        System.out.println("=========================");
+        System.out.println(persistence.write("Luana;luana@luana.com;28/09/1989"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Marcos;marcos@marcos.com;01/01/1999"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Henrique;henrique@henrique.com;03/05/2001;"));
+        System.out.println("=========================");
+        System.out.println(persistence.findAll());
+        System.out.println("====================");
+        System.out.println(persistence.remove("marcos@"));
+        System.out.println("====================");
+        System.out.println(persistence.remove("luiz@"));
+        System.out.println("====================");
+        System.out.println(persistence.findBy(";28/09/"));
+        System.out.println("====================");
+        System.out.println(persistence.findBy("luiz"));
+        System.out.println("====================");
+        System.out.println(persistence.replace("03/05/2", "Eric;eric@eric.com;20/06/1985"));
+        System.out.println("====================");
+        System.out.println(persistence.replace("Julia", "Maria;maria@maria.com;09/09/1999"));
+        System.out.println("===================================");
+        System.out.println(persistence.findAll());
+        System.out.println("===================================");
+    }
+}
+```
+
+A `Main` agora importa as quatro classes de persistência e usa o tipo abstrato `FilePersistence` como referência, atribuindo-lhe a implementação `IOFilePersistence`. A bateria de testes é exatamente a mesma usada nas etapas anteriores, identificada com a mensagem `"Saída - IOFilePersistence"`, o que permitirá comparar o comportamento dessa implementação com o das demais.
+
+#### Saída da execução com `IOFilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h09m08s010.jpg" alt="" width="840">
+</p>
+
+
+O console reproduz o mesmo padrão de resultado já visto anteriormente: as três gravações, o `findAll` com os três registros, `remove("marcos@")` retornando `true`, `remove("luiz@")` retornando `false`, `findBy(";28/09/")` localizando a Luana, `findBy("luiz")` retornando vazio, o `replace` trocando o Henrique pelo Eric e a tentativa de substituir "Julia" retornando vazio. O `findAll` final mostra apenas Luana e Eric. Isso confirma que `IOFilePersistence`, mesmo usando uma API de I/O diferente por baixo dos panos, mantém o mesmo contrato de comportamento definido em `FilePersistence`.
+
+#### Main reaproveitada para testar `NIOFilePersistence`
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.IOFilePersistence;
+import br.com.dio.persistence.NIO2FilePersistence;
+import br.com.dio.persistence.NIOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new NIOFilePersistence("user.csv");
+        System.out.println("Saída - NIOFilePersistence");
+        System.out.println("=========================");
+        System.out.println(persistence.write("Luana;luana@luana.com;28/09/1989"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Marcos;marcos@marcos.com;01/01/1999"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Henrique;henrique@henrique.com;03/05/2001;"));
+        System.out.println("=========================");
+        System.out.println(persistence.findAll());
+        System.out.println("====================");
+        System.out.println(persistence.remove("marcos@"));
+        System.out.println("====================");
+        System.out.println(persistence.remove("luiz@"));
+        System.out.println("====================");
+        System.out.println(persistence.findBy(";28/09/"));
+        System.out.println("====================");
+        System.out.println(persistence.findBy("luiz"));
+        System.out.println("====================");
+        System.out.println(persistence.replace("03/05/2", "Eric;eric@eric.com;20/06/1985"));
+        System.out.println("====================");
+        System.out.println(persistence.replace("Julia", "Maria;maria@maria.com;09/09/1999"));
+        System.out.println("===================================");
+        System.out.println(persistence.findAll());
+        System.out.println("===================================");
+    }
+}
+```
+
+A única mudança em relação ao teste anterior é a linha de instanciação, agora usando `new NIOFilePersistence("user.csv")`. O restante da bateria de testes permanece idêntico, o que permite uma comparação direta entre as três implementações.
+
+#### Saída da execução com `NIOFilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h18m34s161.jpg" alt="" width="840">
+</p>
+
+
+A saída segue o mesmo padrão das execuções anteriores até a busca por `"luiz"`: enquanto nas outras implementações esse `findBy` retornava uma string vazia, aqui ele retorna `"Registro não encontrado"`, exatamente como definido no `orElse` do `findBy` de `NIOFilePersistence`. O restante do fluxo — `replace` trocando o Henrique pelo Eric, a tentativa frustrada de substituir "Julia" e o `findAll` final com Luana e Eric — se comporta da mesma forma que nas implementações anteriores, mostrando que a diferença fica restrita ao tratamento interno de "não encontrado" em cada classe.
+
+#### Main reaproveitada para testar `NIO2FilePersistence`
+
+``java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.IOFilePersistence;
+import br.com.dio.persistence.NIO2FilePersistence;
+import br.com.dio.persistence.NIOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new NIO2FilePersistence("user.csv");
+        System.out.println("Saída - NIO2FilePersistence");
+        System.out.println("=========================");
+        System.out.println(persistence.write("Luana;luana@luana.com;28/09/1989"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Marcos;marcos@marcos.com;01/01/1999"));
+        System.out.println("=========================");
+        System.out.println(persistence.write("Henrique;henrique@henrique.com;03/05/2001;"));
+        System.out.println("=========================");
+        System.out.println(persistence.findAll());
+        System.out.println("====================");
+        System.out.println(persistence.remove("marcos@"));
+        System.out.println("====================");
+        System.out.println(persistence.remove("luiz@"));
+        System.out.println("====================");
+        System.out.println(persistence.findBy(";28/09/"));
+        System.out.println("====================");
+        System.out.println(persistence.findBy("luiz"));
+        System.out.println("====================");
+        System.out.println(persistence.replace("03/05/2", "Eric;eric@eric.com;20/06/1985"));
+        System.out.println("====================");
+        System.out.println(persistence.replace("Julia", "Maria;maria@maria.com;09/09/1999"));
+        System.out.println("===================================");
+        System.out.println(persistence.findAll());
+        System.out.println("===================================");
+    }
+}
+```
+
+Mais uma vez, apenas a linha de instanciação muda, agora usando `new NIO2FilePersistence("user.csv")`, fechando o ciclo de comparação entre as três implementações concretas de `FilePersistence`.
+
+#### Saída da execução com `NIO2FilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h18m36s462.jpg" alt="" width="840">
+</p>
+
+
+A execução final mostra o mesmo resultado obtido com `IOFilePersistence`: as três gravações, o `findAll` inicial com os três registros, `remove("marcos@")` retornando `true`, `remove("luiz@")` retornando `false`, `findBy(";28/09/")` localizando a Luana, `findBy("luiz")` retornando vazio, o `replace` trocando o Henrique pelo Eric, a tentativa de substituir "Julia" retornando vazio e o `findAll` final com Luana e Eric. Com as três implementações produzindo saídas equivalentes (à exceção da mensagem específica de "registro não encontrado" do `NIOFilePersistence`), fica demonstrado que a abstração feita em `FilePersistence` permite trocar a estratégia de I/O por baixo sem alterar o contrato exposto para quem consome a classe.
+
 
 # Certificado: Simplificando IO de Arquivos e Diretórios com Java
 

@@ -1,25 +1,18 @@
 package br.com.dio.persistence;
-
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
 
-public class IOFilePersistence implements FilePersistence {
 
-    private final String currentDir = System.getProperty("user.dir");
-    private final String storedDir = "/managedFiles/IO/";
-    private final String fileName;
+public class IOFilePersistence extends FilePersistence {
 
-    public IOFilePersistence(String fileName) throws IOException {
-        this.fileName = fileName;
+    public IOFilePersistence(final String fileName) throws IOException {
+        super(fileName);
         var file = new File(currentDir + storedDir);
         if (!file.exists() && !file.mkdirs()) try {
             throw new IOException("Erro ao criar arquivo");
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
-        clearFile();
+        cleanFile();
     }
 
     @Override
@@ -34,32 +27,6 @@ public class IOFilePersistence implements FilePersistence {
             ex.printStackTrace();
         }
         return data;
-    }
-
-    @Override
-    public boolean remove(final String sentence) {
-        var content = findAll();
-        var contentList = new ArrayList<>(Stream.of(content.split(System.lineSeparator())).toList());
-        if (contentList.stream().noneMatch(c -> c.contains(sentence))) return false;
-        clearFile();
-        contentList.stream()
-                .filter(c -> !c.contains(sentence))
-                .forEach(this::write);
-        return true;
-    }
-
-
-    @Override
-    public String replace(final String oldContent, final String newContent) {
-        var contentList = toListString();
-
-        if (contentList.stream().noneMatch(c -> c.contains(oldContent))) return "";
-
-        clearFile();
-        contentList.stream()
-                .map(c -> c.contains(oldContent) ? newContent : c)
-                .forEach(this::write);
-        return newContent;
     }
 
     @Override
@@ -95,21 +62,4 @@ public class IOFilePersistence implements FilePersistence {
         }
         return found;
     }
-
-    private List<String> toListString() {
-        var content = findAll();
-        return new ArrayList<>(Stream.of(content.split(System.lineSeparator())).toList());
-    }
-
-    private void clearFile(){
-        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
-        }catch (IOException ex){
-            ex.printStackTrace();
-        }
-    }
-
-    private void createFile(){
-
-    }
-
 }
