@@ -993,10 +993,6 @@ No console, depois do resultado já conhecido de `findBy(";bia@")` (a linha da B
 
 #### Versão final e simplificada do `NIOFilePersistence`
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h21m54s981.jpg" alt="" width="840">
-</p>
-
 ```java
 package br.com.dio.persistence;
 
@@ -1098,10 +1094,6 @@ public class NIOFilePersistence implements FilePersistence{
 Esta é a versão final da classe `NIOFilePersistence` apresentada na aula. O `findBy` original, baseado em leitura byte a byte com `ByteBuffer`, foi substituído por uma alternativa mais simples utilizando `Files.readAllLines` combinado com Stream API (`filter`, `findFirst`, `orElse`), o que reduz bastante a complexidade do código, embora implique carregar todo o conteúdo do arquivo em memória de uma vez. Os métodos `remove` e `replace` também foram implementados: `remove` usa `findAll()` para obter o conteúdo, separa em linhas com `split`, verifica se existe alguma correspondência com `noneMatch`, limpa o arquivo com `clearFile()` e regrava apenas as linhas que não contêm a sentença buscada, usando `forEach(this::write)`.
 
 #### Código final de teste no `Main`
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h21m57s040.jpg" alt="" width="840">
-</p>
 
 ```java
 import br.com.dio.persistence.FilePersistence;
