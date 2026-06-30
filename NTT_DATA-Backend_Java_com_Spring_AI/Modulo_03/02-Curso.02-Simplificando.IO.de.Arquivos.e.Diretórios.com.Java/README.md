@@ -1741,7 +1741,7 @@ A única mudança em relação ao teste anterior é a linha de instanciação, a
 #### Saída da execução com `NIOFilePersistence`
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h18m34s161.jpg" alt="" width="840">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h18m34s161.jpg" alt="" width="560">
 </p>
 
 
@@ -1793,7 +1793,7 @@ Mais uma vez, apenas a linha de instanciação muda, agora usando `new NIO2FileP
 #### Saída da execução com `NIO2FilePersistence`
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h18m36s462.jpg" alt="" width="840">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h18m36s462.jpg" alt="" width="560">
 </p>
 
 
