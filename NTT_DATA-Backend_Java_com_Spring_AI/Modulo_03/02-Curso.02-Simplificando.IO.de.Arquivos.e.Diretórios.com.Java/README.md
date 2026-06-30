@@ -885,6 +885,263 @@ Process finished with exit code 0
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-io-de-arquivos-e-diretorios-com-java/learning/7230497d-7e54-4de6-9a67-89ccb0280150?autoplay=1
 
+### Anotações
+
+#### Estrutura inicial do `NIOFilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h02m14s568.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `NIOFilePersistence`, que implementa a interface `FilePersistence` usando os recursos de `java.nio` (em especial `RandomAccessFile`, `FileChannel` e `ByteBuffer`). Já estão prontos os métodos `write`, `findAll` e `clearFile`, enquanto `remove` e `replace` ainda retornam valores fixos (`false` e `""`, respectivamente). O método `findBy`, foco da aula, aparece com uma lógica que percorre o buffer byte a byte, monta o conteúdo em um `StringBuilder` e tenta identificar quando uma linha contém a sentença buscada, mas ainda está em processo de construção e ajuste.
+
+#### Código de teste no `Main` com chamadas ao `findBy`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h02m15s698.jpg" alt="" width="840">
+</p>
+
+Aqui está a classe `Main`, que instancia `NIOFilePersistence` para o arquivo `user.csv` e grava três registros (bianca, bernardo e ricardo). Em seguida, chama `findAll()` para listar tudo e, na sequência, duas chamadas a `findBy`: uma buscando `";bia@"` (que deve encontrar o registro da Bianca) e outra buscando `";laura@"` (que não existe no arquivo). Um breakpoint vermelho na linha do primeiro `findBy` indica que a aula vai usar o depurador para acompanhar passo a passo o que acontece dentro do método.
+
+#### Iniciando a depuração (debug) da aplicação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h02m16s493.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, o menu de execução do IntelliJ IDEA é aberto sobre a classe `Main`, mostrando as opções "Run", "Debug" e "Run with Coverage". A opção "Debug 'Main.main()'" é selecionada para iniciar a execução em modo de depuração, permitindo parar no breakpoint definido dentro do `findBy` e observar variável por variável o comportamento do laço de leitura do arquivo.
+
+#### Primeira parada no depurador: buffer ainda vazio
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h09m51s423.jpg" alt="" width="840">
+</p>
+
+A execução já está parada dentro do `findBy`, na linha do `while (!content.toString().endsWith(System.lineSeparator()))`. No painel de variáveis é possível ver que `sentence` vale `";bia@"`, `content` ainda está vazio (`""`) e `bytesReader` é `114`, ou seja, o canal já leu 114 bytes do arquivo para dentro do buffer, mas o `StringBuilder` ainda não processou nenhum caractere. Essa é a etapa inicial do laço que irá montar a linha caractere a caractere.
+
+#### Acompanhando a montagem da linha caractere a caractere
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h10m00s868.jpg" alt="" width="840">
+</p>
+
+Avançando no depurador, o conteúdo de `content` já apresenta o trecho parcial `"bianca;bia@bi"`, mostrando que o laço interno `content.append((char) buffer.get())` está, de fato, lendo o `ByteBuffer` posição a posição e concatenando cada caractere ao `StringBuilder`. O buffer indica `pos=13`, confirmando que treze caracteres já foram consumidos do total de 114 bytes lidos.
+
+#### Linha completa formada e teste do `contains`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h10m09s345.jpg" alt="" width="840">
+</p>
+
+O laço interno termina quando `content` passa a terminar com o separador de linha do sistema, e agora `content` contém a linha inteira: `"bianca;bia@bia.com;22/09/1997;\n"`. A condição `if (content.toString().contains(sentence))` é avaliada com `sentence = ";bia@"`, e como essa sequência está presente na linha, o fluxo deve entrar no `break`, interrompendo a busca porque a linha procurada foi encontrada.
+
+#### Retorno do conteúdo encontrado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h10m22s335.jpg" alt="" width="840">
+</p>
+
+A execução chegou até o `return content.toString()`, no final do método `findBy`. O painel de variáveis confirma que `content` ainda guarda a linha completa da Bianca (`"bianca;bia@bia.com;22/09/1997;\n"`), que será o valor devolvido pela chamada. Isso mostra que, para esse primeiro caso de teste (busca por `";bia@"`), a lógica implementada até aqui funciona corretamente.
+
+#### Resultado no console para a primeira busca
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h10m33s494.jpg" alt="" width="840">
+</p>
+
+O console mostra a sequência completa de saídas até este ponto: a gravação dos três registros (bianca, bernardo e ricardo), o resultado do `findAll()` listando todos eles, e logo depois o resultado de `persistence.findBy(";bia@")`, que retornou corretamente apenas a linha da Bianca. Isso confirma visualmente que o primeiro cenário de busca, com correspondência encontrada, está funcionando como esperado.
+
+#### Erro ao buscar uma sentença inexistente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h11m57s801.jpg" alt="" width="840">
+</p>
+
+Ao testar agora a busca por `";laura@"` (que não existe no arquivo), a aplicação lança uma `StringIndexOutOfBoundsException`, com a mensagem "String index out of range: -1". O stack trace aponta para a linha 89 do `NIOFilePersistence`, exatamente no trecho `content.setLength(-1)`, dentro do bloco `else` da verificação `contains`. Esse erro evidencia uma falha na lógica: ao tentar "limpar" o `StringBuilder` para continuar a busca na próxima linha, o código está chamando `setLength` com um valor inválido (`-1`).
+
+#### Corrigindo o `setLength` para continuar a busca
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h12m17s123.jpg" alt="" width="840">
+</p>
+
+O trecho `content.setLength(-1)` é então corrigido para `content.setLength(0)`, que é a forma correta de esvaziar um `StringBuilder` para reaproveitá-lo na leitura da próxima linha. No painel de depuração, com a busca agora por `";laura@"`, o `content` ainda mostra a linha da Bianca antes de ser limpo, confirmando que o fluxo está prestes a reiniciar a montagem de uma nova linha já sem o erro anterior.
+
+#### Avançando para a linha do Bernardo, ainda sem correspondência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h12m29s772.jpg" alt="" width="840">
+</p>
+
+Com a correção aplicada, o laço de leitura segue normalmente e agora `content` contém a linha `"bernardo;bernardo@bernardo.com;28/11/1999;\n"`. Como `sentence` continua sendo `";laura@"` e essa linha não contém esse trecho, a condição do `if (content.toString().contains(sentence))` é falsa, e o código deve seguir para o `else`, limpando o `content` novamente para tentar a próxima linha.
+
+#### Nova parada no breakpoint, agora na linha do Ricardo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h12m34s751.jpg" alt="" width="840">
+</p>
+
+O depurador para outra vez no breakpoint da linha 86, e desta vez `content` mostra a linha `"Ricardo;ricardo@ricardo.com;12/01/2000;\n"`. A mensagem no rodapé confirma "Breakpoint reached", indicando que o laço continua avançando linha por linha pelo arquivo em busca de `";laura@"`, que ainda não foi localizada, já que nem Bernardo nem Ricardo correspondem à sentença buscada.
+
+#### Console final: busca sem correspondência termina sem erros
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h12m41s639.jpg" alt="" width="840">
+</p>
+
+No console, depois do resultado já conhecido de `findBy(";bia@")` (a linha da Bianca), o processo é desconectado da JVM de depuração e finalizado com "Process finished with exit code 0", ou seja, sem lançar exceções. Isso mostra que, após a correção do `setLength(0)`, a busca por uma sentença inexistente (`";laura@"`) agora consegue percorrer todas as linhas do arquivo sem quebrar a aplicação, mesmo que o tratamento do "não encontrado" ainda precise ser refinado.
+
+#### Versão final e simplificada do `NIOFilePersistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h21m54s981.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.util.stream.Stream;
+
+public class NIOFilePersistence implements FilePersistence{
+
+    private final String currentDir = System.getProperty("user.dir");
+    private final String storedDir = "/managedFiles/IO/";
+    private final String fileName;
+
+    public NIOFilePersistence(String fileName) throws IOException {
+        this.fileName = fileName;
+        var file = new File(currentDir + storedDir);
+        if (!file.exists() && !file.mkdirs()) throw new IOException("Erro ao criar arquivo");
+        clearFile();
+    }
+
+    @Override
+    public String write(final String data) {
+        try(var file = new RandomAccessFile(new File(currentDir + storedDir + fileName), "rw")){
+            file.seek(file.length());
+            file.writeBytes(data);
+            file.writeBytes(System.lineSeparator());
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    @Override
+    public boolean remove(final String sentence) {
+        var content = findAll();
+        var contentList = Stream.of(content.split(System.lineSeparator())).toList();
+
+        if (contentList.stream().noneMatch(c -> c.contains(sentence))) return false;
+
+        clearFile();
+        contentList.stream()
+                .filter(c -> !c.contains(sentence))
+                .forEach(this::write);
+        return true;
+    }
+
+    @Override
+    public String replace(String oldContent, String newContent) {
+        return "";
+    }
+
+    @Override
+    public String findAll() {
+        var content = new StringBuilder();
+        File file = new File(currentDir + storedDir + fileName);
+
+        if (!file.exists()) return "";
+
+        try(var raf = new RandomAccessFile(file, "r");
+            var channel = raf.getChannel()){
+
+            var buffer = ByteBuffer.allocate(256);
+            while (channel.read(buffer) != -1){
+                buffer.flip();
+                while (buffer.hasRemaining()){
+                    content.append((char) buffer.get());
+                }
+                buffer.clear();
+            }
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+        return content.toString();
+    }
+
+    // Exemplo de correção simples para o findBy
+    @Override
+    public String findBy(final String sentence) {
+        try {
+            var lines = java.nio.file.Files.readAllLines(java.nio.file.Path.of(currentDir + storedDir + fileName));
+            return lines.stream()
+                    .filter(line -> line.contains(sentence))
+                    .findFirst()
+                    .orElse("Registro não encontrado");
+        } catch (IOException ex) {
+            return "Erro ao buscar: " + ex.getMessage();
+        }
+    }
+
+    private void clearFile(){
+        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+}
+```
+
+Esta é a versão final da classe `NIOFilePersistence` apresentada na aula. O `findBy` original, baseado em leitura byte a byte com `ByteBuffer`, foi substituído por uma alternativa mais simples utilizando `Files.readAllLines` combinado com Stream API (`filter`, `findFirst`, `orElse`), o que reduz bastante a complexidade do código, embora implique carregar todo o conteúdo do arquivo em memória de uma vez. Os métodos `remove` e `replace` também foram implementados: `remove` usa `findAll()` para obter o conteúdo, separa em linhas com `split`, verifica se existe alguma correspondência com `noneMatch`, limpa o arquivo com `clearFile()` e regrava apenas as linhas que não contêm a sentença buscada, usando `forEach(this::write)`.
+
+#### Código final de teste no `Main`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h21m57s040.jpg" alt="" width="840">
+</p>
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.NIOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new NIOFilePersistence("user.csv");
+        System.out.println(persistence.write("bianca;bia@bia.com;22/09/1997;"));
+        System.out.println("====================================");
+        System.out.println(persistence.write("bernardo;bernardo@bernardo.com;28/11/1999;"));
+        System.out.println("====================================");
+        System.out.println(persistence.write("ricardo;ricardo@ricardo.com;12/01/2000;"));
+        System.out.println("====================================");
+        System.out.println(persistence.findAll());
+        System.out.println("====================================");
+        System.out.println(persistence.remove("ricardo@"));
+        System.out.println("====================================");
+        System.out.println(persistence.findBy("bia@"));
+        System.out.println("====================================");
+        System.out.println(persistence.findBy("ricardo@"));
+        System.out.println("====================================");
+
+    }
+}
+```
+
+Esta é a versão final da classe `Main`, que exercita toda a API construída ao longo da aula: grava os três registros (bianca, bernardo e ricardo), lista tudo com `findAll`, remove o registro do Ricardo com `remove("ricardo@")`, busca pela Bianca com `findBy("bia@")` (que deve retornar a linha encontrada) e, por fim, busca novamente por `"ricardo@"` com `findBy`, que agora deve indicar que o registro não foi mais encontrado, já que ele foi removido na etapa anterior.
+
+#### Execução final completa no console
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-13h21m58s103.jpg" alt="" width="840">
+</p>
+
+O console mostra a execução completa e bem-sucedida do programa: os três registros são gravados e exibidos um a um, o `findAll()` lista todos eles juntos, o `remove("ricardo@")` retorna `true` (indicando que encontrou e removeu o registro), o `findAll()` seguinte mostra que apenas a linha da Bianca permanece, e o `findBy("ricardo@")` retorna "Registro não encontrado", confirmando que a remoção funcionou corretamente. O processo finaliza com "exit code 0", sem erros, encerrando a implementação da persistência baseada em `java.nio`.      
+
+
 ### 🟩 Vídeo 05 - Usando java.nio2
 
 <video width="60%" controls>

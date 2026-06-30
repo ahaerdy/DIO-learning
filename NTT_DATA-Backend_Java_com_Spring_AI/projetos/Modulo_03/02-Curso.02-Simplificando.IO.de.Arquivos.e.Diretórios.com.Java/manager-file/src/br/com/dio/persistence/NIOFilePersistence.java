@@ -2,6 +2,7 @@ package br.com.dio.persistence;
 
 import java.io.*;
 import java.nio.ByteBuffer;
+import java.util.stream.Stream;
 
 public class NIOFilePersistence implements FilePersistence{
 
@@ -29,9 +30,19 @@ public class NIOFilePersistence implements FilePersistence{
     }
 
     @Override
-    public boolean remove(String sentence) {
-        return false;
+    public boolean remove(final String sentence) {
+        var content = findAll();
+        var contentList = Stream.of(content.split(System.lineSeparator())).toList();
+
+        if (contentList.stream().noneMatch(c -> c.contains(sentence))) return false;
+
+        clearFile();
+        contentList.stream()
+                .filter(c -> !c.contains(sentence))
+                .forEach(this::write);
+        return true;
     }
+
 
     @Override
     public String replace(String oldContent, String newContent) {
@@ -62,9 +73,18 @@ public class NIOFilePersistence implements FilePersistence{
         return content.toString();
     }
 
+    // Exemplo de correção simples para o findBy
     @Override
-    public String findBy(String sentence) {
-        return "";
+    public String findBy(final String sentence) {
+        try {
+            var lines = java.nio.file.Files.readAllLines(java.nio.file.Path.of(currentDir + storedDir + fileName));
+            return lines.stream()
+                    .filter(line -> line.contains(sentence))
+                    .findFirst()
+                    .orElse("Registro não encontrado");
+        } catch (IOException ex) {
+            return "Erro ao buscar: " + ex.getMessage();
+        }
     }
 
     private void clearFile(){
