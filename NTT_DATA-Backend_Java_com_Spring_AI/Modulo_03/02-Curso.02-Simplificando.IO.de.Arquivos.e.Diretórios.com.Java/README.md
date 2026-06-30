@@ -323,8 +323,6 @@ public class Main {
 }
 ```
 
----
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-18h48m54s384.jpg" alt="" width="840">
 </p>
@@ -667,8 +665,6 @@ public class Main {
 }
 ```
 
----
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-29-19h43m02s649.jpg" alt="" width="840">
 </p>
@@ -686,6 +682,199 @@ A imagem exibe a saída final do console, confirmando o funcionamento completo d
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-io-de-arquivos-e-diretorios-com-java/learning/af09c850-e686-4488-b820-d36b71b50adb?autoplay=1
+
+### Anotações
+
+#### Criando a classe NIOFilePersistence
+
+A classe `NIOFilePersistence` é criada implementando a interface `FilePersistence`, dando início à segunda forma de trabalhar com arquivos em Java, agora usando a API `java.io` em conjunto com recursos de baixo nível (como o `RandomAccessFile`). O construtor recebe o `fileName`, monta o caminho do arquivo a partir do diretório atual (`currentDir`) somado ao diretório de armazenamento (`storedDir`), cria o diretório caso não exista e chama `clearFile()` — método reaproveitado da implementação anterior em Java IO, responsável por garantir que o arquivo exista (criando-o, se necessário) através de um `FileOutputStream`.
+
+O método `write` já está implementado: dentro de um `try-with-resources`, é aberto um `RandomAccessFile` no modo `"rw"` (leitura e escrita), o cursor é posicionado no fim do arquivo com `file.seek(file.length())` para não sobrescrever o conteúdo existente, e em seguida o conteúdo (`data`) é escrito com `writeBytes`, seguido de uma quebra de linha via `System.lineSeparator()`. Os demais métodos da interface (`remove`, `replace`, `findAll`, `findBy`) ainda estão como stubs, retornando valores vazios ou `false`, pois serão implementados nas etapas seguintes da aula.
+
+```java
+package br.com.dio.persistence;
+
+import java.io.*;
+
+public class NIOFilePersistence implements FilePersistence{
+
+    private final String currentDir = System.getProperty("user.dir");
+    private final String storedDir = "/managedFiles/IO/";
+    private final String fileName;
+
+    public NIOFilePersistence(String fileName) throws IOException {
+        this.fileName = fileName;
+        var file = new File(currentDir + storedDir);
+        if (!file.exists() && !file.mkdirs()) throw new IOException("Erro ao criar arquivo");
+        clearFile();
+    }
+
+    @Override
+    public String write(final String data) {
+        try(var file = new RandomAccessFile(new File(currentDir + storedDir + fileName), "rw")){
+            file.seek(file.length());
+            file.writeBytes(data);
+            file.writeBytes(System.lineSeparator());
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+        return data;
+    }
+
+    @Override
+    public boolean remove(String sentence) {
+        return false;
+    }
+
+    @Override
+    public String replace(String oldContent, String newContent) {
+        return "";
+    }
+
+    @Override
+    public String findAll() {
+        return "";
+    }
+
+    @Override
+    public String findBy(String sentence) {
+        return "";
+    }
+
+    private void clearFile(){
+        try(OutputStream outputStream = new FileOutputStream(currentDir + storedDir + fileName)) {
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
+}
+```
+
+#### Testando o método write
+
+Na classe `Main`, é instanciado um `FilePersistence` usando a nova implementação `NIOFilePersistence`, apontando para o arquivo `user.csv`. Em seguida, o método `write` é chamado três vezes, cada uma escrevendo uma linha no formato `nome;email;data_de_nascimento;` para os usuários Bianca, Bernardo e Ricardo, com separadores impressos no console entre cada chamada para facilitar a visualização do resultado.
+
+```java
+import br.com.dio.persistence.FilePersistence;
+import br.com.dio.persistence.NIOFilePersistence;
+
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new NIOFilePersistence("user.csv");
+        System.out.println(persistence.write( "bianca;bia@bia.com;22/09/1997;" ));
+        System.out.println("====================");
+        System.out.println(persistence.write(  "bernardo;bernardo@bernardo.com;28/11/1999;" ));
+        System.out.println("====================");
+        System.out.println(persistence.write(  "ricardo;ricardo@ricardo.com;12/01/2000;" ));
+        System.out.println("====================");
+    }
+}
+```
+
+#### Resultado da execução do write
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-08h59m52s335.jpg" alt="" width="840">
+</p>
+
+Ao executar a classe `Main`, o console mostra cada linha escrita sendo retornada e impressa logo após o seu respectivo separador, confirmando que o método `write` está funcionando corretamente e acrescentando, e não sobrescrevendo, o conteúdo no arquivo `user.csv`. O processo finaliza com o código de saída `0`, indicando que não houve erros durante a escrita.
+
+```
+bianca;bia@bia.com;22/09/1997;
+====================
+bernardo;bernardo@bernardo.com;28/11/1999;
+====================
+ricardo;ricardo@ricardo.com;12/01/2000;
+====================
+
+Process finished with exit code 0
+```
+
+#### Implementando o método findAll
+
+Agora a classe `NIOFilePersistence` recebe a implementação do método `findAll`, responsável por ler todo o conteúdo do arquivo. Primeiro é verificado se o arquivo existe; se não existir, retorna uma string vazia. Em seguida, dentro de um `try-with-resources`, é aberto um `RandomAccessFile` no modo `"r"` (somente leitura) e obtido o seu `FileChannel` através de `raf.getChannel()`. Um `ByteBuffer` de 256 bytes é alocado para realizar a leitura em blocos: enquanto o canal ainda tiver bytes para ler (`channel.read(buffer) != -1`), o buffer é virado com `flip()` para permitir a leitura dos dados nele armazenados, e cada byte lido é convertido para `char` e adicionado ao `StringBuilder` (`content`). Depois de esgotar o conteúdo do buffer, ele é limpo com `clear()` para receber a próxima leitura. Ao final, o método retorna `content.toString()`, ou seja, todo o conteúdo do arquivo lido byte a byte — uma abordagem mais próxima do sistema operacional e, por isso, um pouco mais complexa do que a leitura feita com a API Java IO.
+
+```java
+@Override
+public String findAll() {
+    var content = new StringBuilder();
+    File file = new File(currentDir + storedDir + fileName);
+
+    if (!file.exists()) return "";
+
+    try(var raf = new RandomAccessFile(file, "r");
+        var channel = raf.getChannel()){
+
+        var buffer = ByteBuffer.allocate(256);
+        while (channel.read(buffer) != -1){
+            buffer.flip();
+            while (buffer.hasRemaining()){
+                content.append((char) buffer.get());
+            }
+            buffer.clear();
+        }
+    }catch (IOException ex){
+        ex.printStackTrace();
+    }
+    return content.toString();
+}
+```
+
+#### Depurando a leitura com breakpoint no findAll
+
+Na classe `Main`, é adicionada uma nova chamada `persistence.findAll()` logo após as três escritas, e um breakpoint é posicionado nessa linha para permitir o acompanhamento, em modo de depuração, de como a leitura byte a byte realmente acontece dentro do método implementado anteriormente.
+
+```java
+public class Main {
+    public static void main(String[] args) throws IOException {
+        FilePersistence persistence = new NIOFilePersistence("user.csv");
+        System.out.println(persistence.write( "bianca;bia@bia.com;22/09/1997;" ));
+        System.out.println("====================");
+        System.out.println(persistence.write(  "bernardo;bernardo@bernardo.com;28/11/1999;" ));
+        System.out.println("====================");
+        System.out.println(persistence.write(  "ricardo;ricardo@ricardo.com;12/01/2000;" ));
+        System.out.println("====================");
+        System.out.println(persistence.findAll());
+        System.out.println("========================");
+    }
+}
+```
+
+#### Acompanhando a conversão de bytes para caracteres no debugger
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-09h05m05s844.jpg" alt="" width="840">
+</p>
+
+Com a execução pausada dentro do `findAll`, o painel de variáveis do depurador permite observar, passo a passo, o comportamento do laço de leitura: o `buffer` aparece como um `HeapByteBuffer` já posicionado após a leitura de alguns bytes, e a variável `content` mostra progressivamente o `StringBuilder` sendo montado (já contendo `"bianca"` neste ponto da execução). É possível ver, ao avaliar `buffer.get()`, que cada byte lido é convertido para o caractere correspondente (por exemplo, o primeiro byte convertido resulta na letra "i"), confirmando visualmente como o conteúdo do arquivo é reconstruído caractere a caractere até formar a string final.
+
+#### Resultado final: write e findAll funcionando juntos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-09h25m54s976.jpg" alt="" width="840">
+</p>
+
+Ao liberar o breakpoint e concluir a execução em modo debug, o console exibe primeiro as três linhas escritas pelo método `write` (Bianca, Bernardo e Ricardo, cada uma seguida do separador), e logo em seguida o resultado do `findAll()`, que reproduz exatamente o mesmo conteúdo lido diretamente do arquivo `user.csv`, confirmando que a leitura byte a byte reconstituiu corretamente todas as linhas gravadas. A execução é encerrada com a desconexão da VM de depuração e o código de saída `0`. Com a escrita (`write`) e a leitura completa (`findAll`) implementadas e validadas, a aula é encerrada, ficando para o próximo encontro a implementação dos métodos `remove`, `replace` e `findBy`.
+
+```
+bianca;bia@bia.com;22/09/1997;
+====================
+bernardo;bernardo@bernardo.com;28/11/1999;
+====================
+ricardo;ricardo@ricardo.com;12/01/2000;
+====================
+bianca;bia@bia.com;22/09/1997;
+bernardo;bernardo@bernardo.com;28/11/1999;
+ricardo;ricardo@ricardo.com;12/01/2000;
+
+========================
+Disconnected from the target VM, address: '127.0.0.1:60275', transport: 'socket'
+
+Process finished with exit code 0
+```      
+
 
 ### 🟩 Vídeo 04 - Concluindo implementação do java.nio
 
