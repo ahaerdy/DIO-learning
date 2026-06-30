@@ -35,7 +35,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/g
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/e7fcb087-73a3-40e5-8e4d-5a9516441bd6?autoplay=1
 
 ## Parte 2 - Instalação e Configuração do Gradle
 
@@ -46,7 +46,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/b7d688f1-cd7a-4678-a786-6978c61eb002?autoplay=1
 
 ### 🟩 Vídeo 05 - Criando um projeto Gradle
 
