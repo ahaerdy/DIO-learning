@@ -1796,11 +1796,10 @@ Mais uma vez, apenas a linha de instanciação muda, agora usando `new NIO2FileP
   <img src="000-Midia_e_Anexos/vlcsnap-2026-06-30-16h18m36s462.jpg" alt="" width="560">
 </p>
 
-
 A execução final mostra o mesmo resultado obtido com `IOFilePersistence`: as três gravações, o `findAll` inicial com os três registros, `remove("marcos@")` retornando `true`, `remove("luiz@")` retornando `false`, `findBy(";28/09/")` localizando a Luana, `findBy("luiz")` retornando vazio, o `replace` trocando o Henrique pelo Eric, a tentativa de substituir "Julia" retornando vazio e o `findAll` final com Luana e Eric. Com as três implementações produzindo saídas equivalentes (à exceção da mensagem específica de "registro não encontrado" do `NIOFilePersistence`), fica demonstrado que a abstração feita em `FilePersistence` permite trocar a estratégia de I/O por baixo sem alterar o contrato exposto para quem consome a classe.
 
 
 # Certificado: Simplificando IO de Arquivos e Diretórios com Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/548SYNOS.pdf
+- Certificado em pdf: [Certificado-Simplificando.IO.de.Arquivos.e.Diretórios.com.Java.pdf](000-Midia_e_Anexos/Certificado-Simplificando.IO.de.Arquivos.e.Diretórios.com.Java.pdf)
