@@ -15,8 +15,82 @@
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/d9d9f3b4-84fa-4114-8436-28067fffae34?autoplay=1
 
 ### Anotações
-      
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-01-08-51-23.png" alt="" width="840">
+</p>
+
+A aula trata da instalação e uso do Maven no Ubuntu/Linux. O instrutor explica que o Maven é uma ferramenta para gerenciar dependências e automatizar builds em projetos Java, mostrando como instalar via apt (forma convencional e simples) e também mencionando a alternativa manual de baixar diretamente do site oficial do Apache Maven, configurar variáveis de ambiente e usar versões mais atualizadas. O foco é demonstrar como preparar o ambiente para que o Maven esteja disponível no sistema e pronto para ser utilizado em projetos Java.
+
+#### Preparando Ambiente Java + Maven no Kubuntu
+
+#### 1. Verificar instalação do Java
+Execute os comandos:
+```bash
+java -version
+javac -version
+```
+Saída esperada (exemplo):
+```
+openjdk version "21.0.11"
+javac 21.0.11
+```
+
+#### 2. Instalar o Maven
+Atualize os pacotes e instale:
+```bash
+sudo apt update
+sudo apt install maven
+```
+
+#### 3. Confirmar instalação do Maven
+Verifique a versão:
+```bash
+mvn -version
+```
+Saída esperada (exemplo):
+```
+Apache Maven 3.9.12
+Java version: 21.0.11
+```
+
+#### 4. Estrutura do Projeto
+O projeto deve conter um arquivo `pom.xml` na raiz, que define:
+- Dependências
+- Plugins
+- Configurações de build
+
+#### 5. Compilar o Projeto
+Dentro da pasta do projeto:
+```bash
+mvn compile
+```
+
+#### 6. Executar Testes
+```bash
+mvn test
+```
+
+#### 7. Gerar Arquivo JAR
+```bash
+mvn package
+```
+O `.jar` será criado em `target/`.
+
+#### 8. Executar o Programa
+```bash
+java -jar target/meu-projeto-1.0-SNAPSHOT.jar
+```
+
+#### 9. Executar Diretamente sem JAR
+```bash
+mvn exec:java -Dexec.mainClass="com.seuprojeto.Main"
+```
+
+#### 10. Observações
+- O IntelliJ IDEA reconhece automaticamente o `pom.xml` e baixa dependências.  
+- O terminal usa o mesmo `pom.xml`, garantindo consistência entre IDE e linha de comando.  
+- Maven facilita o gerenciamento de **dependências** e a **automatização de builds**.
 
 ### 🟩 Vídeo 02 - Instalando Maven com sdkman e criando projetos
 
