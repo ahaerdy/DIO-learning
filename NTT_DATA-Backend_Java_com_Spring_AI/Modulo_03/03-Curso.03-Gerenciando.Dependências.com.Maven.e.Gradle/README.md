@@ -485,7 +485,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/g
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/bd8894d6-5902-4e6b-8470-65453c8cede3?autoplay=1
 
 ### 🟩 Vídeo 07 - Migrando Projeto Maven para Gradle
 
@@ -494,7 +494,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/7414e848-1b25-41cc-a080-2091b6b509b8?autoplay=1
 
 ### 🟩 Vídeo 08 - Migrando projeto Gradle para Maven
 
