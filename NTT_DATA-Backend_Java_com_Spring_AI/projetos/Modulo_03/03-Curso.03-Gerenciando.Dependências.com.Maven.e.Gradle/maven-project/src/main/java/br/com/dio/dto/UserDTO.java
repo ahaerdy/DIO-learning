@@ -7,9 +7,4 @@ public class UserDTO {
     private int id;
     private String name;
     private LocalDate birthday;
-
-
-    public void setBirthday(LocalDate localDate) {
-    }
 }
-

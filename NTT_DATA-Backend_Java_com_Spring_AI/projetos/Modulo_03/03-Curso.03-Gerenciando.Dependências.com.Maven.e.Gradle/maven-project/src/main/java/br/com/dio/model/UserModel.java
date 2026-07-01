@@ -4,15 +4,10 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@EqualsAndHashCode
 @NoArgsConstructor
-@ToString
-
+@AllArgsConstructor
 public class UserModel {
     private int code;
     private String userName;
     private LocalDate birthday;
-
-    private String name;
-    private LocalDate birthdate;
 }

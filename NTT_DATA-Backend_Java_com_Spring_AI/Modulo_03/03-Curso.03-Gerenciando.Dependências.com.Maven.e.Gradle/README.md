@@ -3,7 +3,8 @@
 - José Luiz Abreu Cardoso Junior (Engenheiro de software sênior)
 - Contato Linkedin: / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/)
 
-## Parte 1 - Instalação e Configuração do Maven
+## Parte 1 - Instalação e Configuração do Maven 
+#maven
 
 ### 🟩 Vídeo 01 - Instalando Maven
 
@@ -447,7 +448,13 @@ public class UserModel {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/e7fcb087-73a3-40e5-8e4d-5a9516441bd6?autoplay=1
 
-## Parte 2 - Instalação e Configuração do Gradle
+### Anotações
+
+  
+
+
+## Parte 2 - Instalação e Configuração do Gradle 
+#gradle
 
 ### 🟩 Vídeo 04 - Instalando Gradle
 
@@ -465,7 +472,9 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/g
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/5b675065-3f83-471a-9128-0a9b8c3a34cc?autoplay=1
+
+
 
 ## Parte 3 - Comparação e Migração entre Ferramentas
 
