@@ -450,7 +450,253 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/g
 
 ### Anotações
 
-  
+Este é o `pom.xml` do projeto Maven, já configurado com todas as dependências necessárias para o funcionamento conjunto do Lombok e do MapStruct. Nas propriedades estão definidas as versões (`org.mapstruct.version`, `org.projectlombok.version` e `lombok-mapstruct-binding.version`), e nas dependências constam o `mapstruct`, o `mapstruct-processor`, o `lombok` e o `lombok-mapstruct-binding` — este último essencial para que os dois annotation processors (Lombok e MapStruct) consigam trabalhar juntos sem conflitos durante a compilação. No `build`, o plugin `maven-compiler-plugin` referencia explicitamente esses processadores em `annotationProcessorPaths`.
+
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.com.dio</groupId>
+    <artifactId>maven-project</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+        <org.projectlombok.version>1.18.30</org.projectlombok.version>
+        <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${org.mapstruct.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${org.mapstruct.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok-mapstruct-binding</artifactId>
+            <version>${lombok-mapstruct-binding.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.12.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${org.projectlombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok-mapstruct-binding</artifactId>
+                            <version>${lombok-mapstruct-binding.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+```
+
+Esta é a classe `UserDTO`, localizada no pacote `br.com.dio.dto`. Ela representa o objeto de transferência de dados (DTO) e utiliza a anotação `@Data` do Lombok para gerar automaticamente getters, setters e demais métodos utilitários. Seus campos são `id` (int), `name` (String) e `birthday` (LocalDate) — esses nomes são importantes porque serão usados como origem/destino nos mapeamentos feitos pelo MapStruct em seguida.
+
+```java
+package br.com.dio.dto;
+import lombok.Data;
+import java.time.LocalDate;
+
+@Data
+public class UserDTO {
+    private int id;
+    private String name;
+    private LocalDate birthday;
+}
+```
+
+Aqui está a interface `UserMapper`, criada no pacote `mapper` e anotada com `@Mapper`, a anotação que indica ao MapStruct que essa interface deve gerar automaticamente uma implementação de mapeamento entre objetos. São definidos dois métodos: `toModel`, que converte um `UserDTO` em `UserModel`, e `toDTO`, que faz o caminho inverso. Em cada método, as anotações `@Mapping(target = ..., source = ...)` indicam explicitamente qual campo de destino (`target`) deve receber o valor de qual campo de origem (`source`) — por exemplo, o campo `id` do DTO é mapeado para o campo `code` do model, e `name` é mapeado para `userName`, já que esses campos têm nomes diferentes entre as duas classes.
+
+```java
+package br.com.dio.mapper;
+
+import br.com.dio.dto.UserDTO;
+import br.com.dio.model.UserModel;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
+@Mapper
+public interface UserMapper {
+    @Mapping(target = "code", source = "id")
+    @Mapping(target = "userName", source = "name")
+    UserModel toModel(final UserDTO dto);
+
+    @Mapping(target = "id", source = "code")
+    @Mapping(target = "name", source = "userName")
+    UserDTO toDTO(final UserModel model);
+}
+```
+
+Esta é a classe `UserModel`, no pacote `br.com.dio.model`. Diferente do DTO, ela usa um conjunto de anotações do Lombok mais explícito: `@Getter`, `@Setter`, `@NoArgsConstructor` e `@AllArgsConstructor`, gerando os métodos de acesso e os construtores com e sem argumentos. Seus campos são `code` (int), `userName` (String) e `birthday` (LocalDate) — note que os nomes `code` e `userName` são propositalmente diferentes dos nomes `id` e `name` do `UserDTO`, exatamente para demonstrar o mapeamento explícito feito pelo MapStruct na interface `UserMapper`.
+
+```java
+package br.com.dio.model;
+import lombok.*;
+import java.time.LocalDate;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserModel {
+    private int code;
+    private String userName;
+    private LocalDate birthday;
+}
+```
+
+Abaixo a classe `Main`, onde o mapper é instanciado e utilizado pela primeira vez. A linha `Mappers.getMapper(UserMapper.class)` é o ponto central: é a fábrica do MapStruct que devolve a implementação concreta da interface `UserMapper` (gerada em tempo de compilação, sem uso de reflection). Em seguida, um `UserModel` é criado e populado (`setCode(1)`, `setUserName("James")`, `setBirthday(...)`), e o resultado de `mapper.toDTO(model)` é impresso no console. Logo depois, um `UserDTO` é criado (`setId(2)`, `setName("Maria")`, `setBirthday(...)`) e o resultado de `mapper.toModel(dto)` também é impresso, demonstrando o mapeamento nos dois sentidos.
+
+```java
+import br.com.dio.dto.UserDTO;
+import br.com.dio.mapper.UserMapper;
+import br.com.dio.model.UserModel;
+import org.mapstruct.factory.Mappers;
+import java.time.LocalDate;
+
+public class Main {
+    private final static UserMapper mapper = Mappers.getMapper(UserMapper.class);
+
+    public static void main(String[] args) {
+        var model = new UserModel();
+        model.setCode(1);
+        model.setUserName("James");
+        model.setBirthday(LocalDate.now().minusYears(20));
+        System.out.println(mapper.toDTO(model));
+
+        var dto = new UserDTO();
+        dto.setId(2);
+        dto.setName("Maria");
+        dto.setBirthday(LocalDate.now().minusYears(30));
+        System.out.println(mapper.toModel(dto));
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-01-13h42m57s677.jpg" alt="" width="840">
+</p>
+
+Esta captura mostra o momento da execução do código: no editor aparece o trecho final da classe `Main` (`dto.setId(2)`, `dto.setName("Maria")`, `dto.setBirthday(...)`, `System.out.println(mapper.toModel(dto))`), e no painel de execução, logo abaixo, o resultado impresso no console. Repare que a primeira linha impressa é `UserDTO(id=1, name=James, birthday=2006-07-01)`, resultado do `mapper.toDTO(model)` — mesmo sem nenhuma implementação escrita manualmente, o MapStruct já converteu o `UserModel` para `UserDTO` corretamente. A segunda linha, `br.com.dio.model.UserModel@4d405ef7`, é o resultado de `mapper.toModel(dto)` impresso sem um `toString()` sobrescrito na classe `UserModel`, por isso aparece apenas a referência do objeto em memória.
+
+```
+UserDTO(id=1, name=James, birthday=2006-07-01)
+br.com.dio.model.UserModel@4d405ef7
+
+Process finished with exit code 0
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-01-13h47m04s402.jpg" alt="" width="840">
+</p>
+
+Após compilar o projeto (com `BUILD SUCCESS` visível no painel inferior), o professor abre o arquivo `.class` gerado para `UserMapper` a partir da pasta `target/classes`. O IntelliJ o exibe descompilado, revelando o bytecode traduzido de volta para código Java legível. Aqui aparece exatamente a mesma interface `UserMapper` criada anteriormente, apenas formatada de outro jeito pelo decompilador (`@Mappings({@Mapping(target = "code", source = "id") ...`) — ou seja, essa classe é só a interface original recompilada, e não a implementação real do mapeamento.
+
+```java
+package br.com.dio.mapper;
+
+@Mapper
+public interface UserMapper {
+    @Mappings({@Mapping(
+        target = "code",
+        source = "id"
+    )
+    // ... demais @Mapping conforme definidos na interface original
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-01-13h47m31s250.jpg" alt="" width="840">
+</p>
+
+Aqui está o verdadeiro "pulo do gato" do MapStruct: a classe `UserMapperImpl`, gerada automaticamente pelo annotation processor durante a compilação, implementando a interface `UserMapper`. É nela que fica o código de mapeamento de fato — puro Java, sem qualquer uso de reflection. No método `toModel`, o gerador criou um `UserModel`, tratou o caso de `dto` nulo e chamou diretamente os getters/setters (`userModel.setCode(dto.getId())`, `userModel.setUserName(dto.getName())`), inclusive mapeando `birthday` para `birthday` automaticamente, mesmo sem uma anotação `@Mapping` explícita para esse campo — o MapStruct faz esse mapeamento implícito porque os nomes das propriedades são idênticos nas duas classes.
+
+```java
+package br.com.dio.mapper;
+
+public class UserMapperImpl implements UserMapper {
+
+    public UserMapperImpl() {
+    }
+
+    public UserModel toModel(UserDTO dto) {
+        if (dto == null) {
+            return null;
+        } else {
+            UserModel userModel = new UserModel();
+            userModel.setCode(dto.getId());
+            userModel.setUserName(dto.getName());
+            userModel.setBirthday(dto.getBirthday());
+            return userModel;
+        }
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-01-13h48m29s429.jpg" alt="" width="840">
+</p>
+
+O professor volta ao código-fonte original da interface `UserMapper`, agora usando-o para explicar por que o campo `birthday` foi mapeado corretamente na implementação gerada, mesmo sem uma anotação `@Mapping` dedicada a ele. A explicação é que o MapStruct mapeia automaticamente propriedades que têm o mesmo nome no destino (`target`) e na origem (`source`) — como `birthday` existe com o mesmo nome tanto em `UserDTO` quanto em `UserModel`, o mapeamento é feito de forma implícita, sem necessidade de configuração manual.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-01-13h49m24s321.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a janela **Project Structure > Libraries** do IntelliJ, onde é possível visualizar as bibliotecas Maven já vinculadas ao projeto (`mapstruct-processor`, `mapstruct`, `lombok-mapstruct-binding` e `lombok`, todas resolvidas a partir do repositório local `.m2`). O professor usa essa tela para ilustrar o que seria necessário fazer caso o projeto não utilizasse o Maven: seria preciso adicionar cada uma dessas bibliotecas manualmente ao projeto, gerenciando à mão os arquivos `.jar` de cada dependência.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-01-13h50m15s633.jpg" alt="" width="840">
+</p>
+
+Por fim, esta imagem mostra a página do **MvnRepository** (mvnrepository.com) para o artefato `org.mapstruct:mapstruct:1.5.5.Final`. A página exibe informações como licença (Apache 2.0), categoria (Code Generators), tags, e o trecho de configuração pronto para uso em Maven, Gradle, SBT, entre outros gerenciadores. Essa é a alternativa apontada para quando não se conhece o nome exato de uma biblioteca: pesquisar no Maven Repository e copiar o bloco de dependência correspondente diretamente para o `pom.xml`, evitando o trabalho manual de baixar e versionar arquivos `.jar` por conta própria.
+
+```xml
+
+<dependency>
+    <groupId>org.mapstruct</groupId>
+    <artifactId>mapstruct</artifactId>
+    <version>1.5.5.Final</version>
+</dependency>
+```
 
 
 ## Parte 2 - Instalação e Configuração do Gradle 
