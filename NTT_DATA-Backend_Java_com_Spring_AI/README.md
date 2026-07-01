@@ -91,8 +91,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 3: Elevando a Qualidade do Seu Código Java com Boas Práticas e Padrões
 
 - [x] Curso: [Logging e Tratamento de Exceções em Java](Modulo_03/01-Curso.01-Logging.e.Tratamento.de.Exceções.em.Java)
-- [ ] Curso: [Simplificando I/O de Arquivos e Diretórios com Java](Modulo_03/02-Curso.02-Simplificando.IO.de.Arquivos.e.Diretórios.com.Java)
-- [ ] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_03/03-Curso.03-Gerenciando.Dependências.com.Maven.e.Gradle)
+- [x] Curso: [Simplificando I/O de Arquivos e Diretórios com Java](Modulo_03/02-Curso.02-Simplificando.IO.de.Arquivos.e.Diretórios.com.Java)
+- [x] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_03/03-Curso.03-Gerenciando.Dependências.com.Maven.e.Gradle)
 - [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
 - [ ] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade]
 - [ ] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]
@@ -141,7 +141,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 3
 
 - [Logging e Tratamento de Exceções em Java](https://hermes.dio.me/certificates/2FJ8QP3K.pdf)
-- [Simplificando I/O de Arquivos e Diretórios com Java]
+- [Simplificando I/O de Arquivos e Diretórios com Java](https://hermes.dio.me/certificates/548SYNOS.pdf)
 - [Gerenciando Dependências com Maven e Gradle]
 - [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
 - [SOLID e Clean Code em Java: Governando Código de Alta Qualidade]
