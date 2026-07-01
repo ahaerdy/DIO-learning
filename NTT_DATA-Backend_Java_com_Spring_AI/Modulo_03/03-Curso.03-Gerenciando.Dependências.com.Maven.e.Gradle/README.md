@@ -643,10 +643,6 @@ public interface UserMapper {
 }
 ```
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-01-13h47m31s250.jpg" alt="" width="840">
-</p>
-
 Aqui está o verdadeiro "pulo do gato" do MapStruct: a classe `UserMapperImpl`, gerada automaticamente pelo annotation processor durante a compilação, implementando a interface `UserMapper`. É nela que fica o código de mapeamento de fato — puro Java, sem qualquer uso de reflection. No método `toModel`, o gerador criou um `UserModel`, tratou o caso de `dto` nulo e chamou diretamente os getters/setters (`userModel.setCode(dto.getId())`, `userModel.setUserName(dto.getName())`), inclusive mapeando `birthday` para `birthday` automaticamente, mesmo sem uma anotação `@Mapping` explícita para esse campo — o MapStruct faz esse mapeamento implícito porque os nomes das propriedades são idênticos nas duas classes.
 
 ```java
