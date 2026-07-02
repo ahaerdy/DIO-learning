@@ -707,6 +707,71 @@ Por fim, esta imagem mostra a página do **MvnRepository** (mvnrepository.com) p
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/b7d688f1-cd7a-4678-a786-6978c61eb002?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-02-11-53-57.png" alt="" width="840">
+</p>
+
+Esta aula apresenta o **Gradle** como uma alternativa moderna ao **Maven** para o gerenciamento de dependências em projetos **Java** e **Kotlin**. O instrutor compara as duas ferramentas, destacando que, embora o Maven seja mais tradicional e estável em ambientes web, o Gradle é amplamente preferido no ecossistema **Android** e oferece maior flexibilidade, apesar de exigir mais atenção a atualizações. O conteúdo demonstra dois métodos distintos de configuração: a **instalação manual**, que envolve o download de arquivos e a definição de variáveis de ambiente no sistema, e a utilização do **SDKMAN**, descrita como uma opção mais ágil. Durante o processo, são fornecidas orientações sobre comandos de terminal para extração de pacotes e verificação da versão instalada. O objetivo central é capacitar o aluno a preparar seu ambiente de desenvolvimento, permitindo que ele escolha a ferramenta que melhor se adapte às suas necessidades.    
+
+A forma mais eficiente de gerenciar o Gradle no Linux (incluindo o Kubuntu) é através do **SDKMAN!**. Este método evita problemas com permissões de root e facilita a troca de versões conforme a necessidade de cada projeto.
+
+#### 1. Instalação do SDKMAN!
+
+Caso você ainda não tenha o gerenciador instalado, abra o seu terminal e execute:
+
+```bash
+curl -s "https://get.sdkman.io" | bash
+
+```
+
+Após finalizar, carregue as configurações do SDKMAN! no seu terminal atual com o comando:
+
+```bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+```
+
+Verifique se a instalação ocorreu com sucesso digitando:
+
+```bash
+sdk version
+
+```
+
+#### 2. Listagem de versões do Gradle
+
+Para visualizar todas as versões disponíveis para instalação, utilize:
+
+```bash
+sdk list gradle
+
+```
+
+#### 3. Instalação do Gradle
+
+Com o SDKMAN! configurado, instale a versão desejada (exemplo com a versão 8.6, utilizada na aula):
+
+```bash
+sdk install gradle 8.6
+
+```
+
+#### 4. Verificação da instalação
+
+Para confirmar que o Gradle está corretamente instalado e configurado, rode o comando:
+
+```bash
+gradle -v
+
+```
+
+#### Dicas Extras para seu Fluxo de Trabalho
+
+* **Trocar de versão:** Caso precise mudar para outra versão em um projeto específico, basta rodar `sdk install gradle [versão]` e, posteriormente, alternar com `sdk use gradle [versão]`.
+* **Definir versão padrão:** Se desejar fixar uma versão para todo o sistema, utilize o comando `sdk default gradle [versão]`.
+* **Integração com IDE:** O IntelliJ IDEA detectará automaticamente os binários instalados via SDKMAN! ao configurar o JDK e o Gradle nas configurações do seu projeto.
 
 
 ### 🟩 Vídeo 05 - Criando um projeto Gradle
