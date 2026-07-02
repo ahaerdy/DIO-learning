@@ -41,7 +41,7 @@ Este repositório tem como objetivo documentar minha jornada de aprendizado atra
 
 ## Sobre Mim
 
-Olá! Meu nome é Arthur Haerdy Jr., sou engenheiro eletrônico e entusiasta de tecnologia e programação. Tenho investido meu tempo em aprimorar minhas habilidades por meio de cursos online, buscando sempre me atualizar e me preparar para os desafios do mercado atual.
+Meu nome é Arthur Haerdy Jr., sou engenheiro eletrônico e entusiasta de tecnologia e programação. Tenho investido meu tempo em aprimorar minhas habilidades por meio de cursos online, buscando sempre me atualizar e me preparar para os desafios do mercado atual.
 
 A plataforma DIO tem sido um parceiro fundamental nesse percurso, oferecendo conteúdos ricos, práticos e de alta qualidade, que me permitem evoluir tanto tecnicamente quanto em projetos reais.
 
@@ -54,6 +54,7 @@ Este repositório está estruturado para acompanhar meu progresso nas formaçõe
 - [Bootcamp Suzano Python Developer](https://github.com/ahaerdy/dio-learning/tree/main/Suzano%20-%20Python%20Developer)
 - [Bootcamp NTT DATA - Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python#-reposit%C3%B3rio-de-estudos--bootcamp-ntt-data-engenharia-de-dados-com-python)
 - [Bootcamp TQI Fullstack Developer](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer)
+- [Bootcamp NTT DATA: Backend Java com Spring AI](https://github.com/ahaerdy/DIO-learning/tree/main/NTT_DATA-Backend_Java_com_Spring_AI)
  
 Cada curso ou formação possui sua própria pasta, onde organizo anotações, códigos-fonte, desafios, projetos e demais arquivos que auxiliam no aprendizado.
 
