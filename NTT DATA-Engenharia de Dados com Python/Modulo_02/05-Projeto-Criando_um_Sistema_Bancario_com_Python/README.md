@@ -55,7 +55,7 @@ Bons estudos 😉
 
 ### Link do projeto:
 
-- [desafio.py](https://github.com/ahaerdy/dio-sistema-bancario-python)
+- [desafio.pydio-sistema-bancario-python](https://github.com/ahaerdy/dio-sistema-bancario-python)
 
 # Certificado
 
