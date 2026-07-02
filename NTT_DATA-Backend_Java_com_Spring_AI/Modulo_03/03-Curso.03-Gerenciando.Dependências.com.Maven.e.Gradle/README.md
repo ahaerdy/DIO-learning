@@ -783,6 +783,270 @@ gradle -v
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/5b675065-3f83-471a-9128-0a9b8c3a34cc?autoplay=1
 
+### Anotações
+
+#### Criando um projeto Gradle via linha de comando
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h15m53s692.jpg" alt="" width="840">
+</p>
+
+A imagem mostra um terminal sobreposto à documentação oficial do Gradle (página "Part 1: Initializing the Project"). Nele é executado o comando que gera rapidamente um projeto Java a partir da linha de comando, usando as configurações padrão do Gradle:
+
+```bash
+mkdir tutorial
+cd tutorial
+gradle init --use-defaults --type java-application
+```
+
+O retorno do terminal confirma a execução com sucesso da tarefa `:init` (`BUILD SUCCESSFUL`), indicando que o projeto foi criado sem a necessidade de responder a nenhuma pergunta interativa, já que a flag `--use-defaults` assume os valores padrão do Gradle.
+
+#### Estrutura padrão do build.gradle gerado pelo IntelliJ (Groovy)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h30m09s749.jpg" alt="" width="840">
+</p>
+
+Este é o arquivo `build.gradle` gerado automaticamente pelo assistente de novo projeto do IntelliJ, escrito na DSL Groovy (a linguagem padrão de configuração do Gradle antes da popularização do Kotlin DSL):
+
+```groovy
+plugins {
+    id 'java'
+}
+
+group = 'br.com.dio'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+```
+
+Diferente da criação via linha de comando, aqui o próprio assistente do IntelliJ já disponibiliza automaticamente uma dependência de testes (JUnit), configurando o repositório `mavenCentral()` e o bloco `test` para usar a plataforma JUnit.
+
+#### Explorando o diretório de cache de dependências do Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h35m09s209.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o terminal integrado do IntelliJ navegando pela estrutura de cache local do Gradle, localizada em `~/.gradle/caches/modules-2/files-2.1/`. O objetivo é demonstrar onde as dependências baixadas (como o JUnit) ficam armazenadas no computador:
+
+```bash
+cd 9274d3757e224bc02eae367bd481062a263c150b
+ls
+```
+
+O comando `ls` retorna o arquivo `junit-jupiter-5.9.1.jar`, confirmando que essa é a pasta onde o Gradle guarda fisicamente o artefato baixado do repositório Maven Central, dentro de uma estrutura organizada por grupo, artefato, versão e hash.
+
+#### Criando um novo projeto Gradle com Kotlin DSL
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h38m02s430.jpg" alt="" width="840">
+</p>
+
+A imagem não contém código, mas sim o assistente gráfico ("New Project") do IntelliJ IDEA para a criação de um novo projeto Gradle. Nele são definidos: o nome do projeto (`example-gradle`), o local de armazenamento, a linguagem (Java), o sistema de build (Gradle), a JDK (Corretto 21) e, principalmente, a opção de **Gradle DSL**, onde a alternativa **Kotlin** é selecionada em vez de Groovy — diferindo da criação anterior, que usava a linguagem padrão. Também é definido o `GroupId` como `br.com.dio`, mantendo a distribuição do Gradle configurada como `Wrapper`.
+
+#### Configurando dependências do MapStruct e Lombok no build.gradle.kts
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h44m47s763.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o `build.gradle.kts` já configurado com a DSL Kotlin, incluindo a declaração de variáveis (`val`) para centralizar as versões das bibliotecas MapStruct e Lombok, evitando repetição de valores ao longo do arquivo:
+
+```kotlin
+plugins {
+    id("java")
+}
+
+group = "br.com.dio"
+version = "1.0-SNAPSHOT"
+
+val mapstructVersion = "1.5.5.Final"
+val lombokVersion = "1.18.30"
+val lombokMapstructBinding = "0.2.0"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Dependências principais
+    implementation("org.mapstruct:mapstruct:$mapstructVersion")
+    implementation("org.projectlombok:lombok-mapstruct-binding:$lombokMapstructBinding")
+
+    // Lombok apenas em tempo de compilação
+    compileOnly("org.projectlombok:lombok:$lombokVersion")
+
+    // Processadores de anotação necessários para gerar código
+    annotationProcessor("org.mapstruct:mapstruct-processor:$mapstructVersion")
+    annotationProcessor("org.projectlombok:lombok-mapstruct-binding:$lombokMapstructBinding")
+    annotationProcessor("org.projectlombok:lombok:$lombokVersion")
+}
+```
+
+Repare que, além das dependências de `implementation` e `compileOnly`, é necessário declarar os `annotationProcessor` correspondentes ao Lombok e ao MapStruct — sem isso, os processadores de anotação responsáveis por gerar o código (getters, setters, implementação do mapper) não são executados durante a compilação. A árvore de projeto à esquerda já mostra as classes `UserDTO`, `UserMapper` e `UserModel` criadas dentro do pacote `br.com.dio`.
+
+#### Criando a estrutura de pacotes manualmente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h47m08s017.jpg" alt="" width="840">
+</p>
+
+No terminal integrado, a estrutura de pacotes do projeto é criada manualmente via linha de comando, seguindo o mesmo padrão de organização (`dto`, `mapper`, `model`) já utilizado anteriormente com o Maven:
+
+```bash
+mkdir src/main/java/br/com/dio/dto
+mkdir src/main/java/br/com/dio/mapper
+mkdir src/main/java/br/com/dio/model
+```
+
+Essa abordagem evita perder tempo criando os pacotes manualmente pela interface gráfica, já que os diretórios ficam disponíveis no explorador de arquivos do IntelliJ assim que criados.
+
+#### Classe UserDTO
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h49m16s090.jpg" alt="" width="840">
+</p>
+
+A imagem exibe o conteúdo da classe `UserDTO`, criada dentro do pacote `br.com.dio.dto`. Apesar da marcação automática indicar Python, o conteúdo real da imagem é código **Java**:
+
+```java
+package br.com.dio.dto;
+
+import ...
+
+@Data
+public class UserDTO {
+
+    private int id;
+    private String name;
+    private LocalDate birthday;
+
+}
+```
+
+A anotação `@Data`, do Lombok, é responsável por gerar automaticamente em tempo de compilação os métodos `getters`, `setters`, `equals`, `hashCode` e `toString` para os atributos `id`, `name` e `birthday`, evitando a necessidade de escrevê-los manualmente.
+
+#### Interface UserMapper
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h50m22s695.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a interface `UserMapper`, criada no pacote `br.com.dio.mapper`. Assim como na imagem anterior, o conteúdo real é código **Java** (apesar da marcação automática indicar Python):
+
+```java
+package br.com.dio.mapper;
+
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import br.com.dio.dto.UserDTO;
+import br.com.dio.model.UserModel;
+
+@Mapper
+public interface UserMapper {
+    @Mapping(target = "code", source = "id")
+    @Mapping(target = "username", source = "name")
+    UserModel toModel(UserDTO dto);
+
+    @Mapping(target = "id", source = "code")
+    @Mapping(target = "name", source = "username")
+    UserDTO toDTO(UserModel model);
+}
+```
+
+A anotação `@Mapper` indica ao MapStruct que essa interface deve ter sua implementação gerada automaticamente em tempo de compilação. Como os atributos de `UserDTO` (`id`, `name`) têm nomes diferentes dos atributos de `UserModel` (`code`, `username`), as anotações `@Mapping` definem explicitamente a correspondência entre `target` (atributo de destino) e `source` (atributo de origem) em cada sentido da conversão.
+
+#### Classe UserModel
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h51m32s263.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `UserModel`, criada no pacote `br.com.dio.model`. O conteúdo, novamente, é código **Java**:
+
+```java
+package br.com.dio.model;
+
+import lombok.Data;
+import java.time.LocalDate;
+
+@Data
+public class UserModel {
+
+    private int code;
+    private String username;
+    private LocalDate birthday;
+
+}
+```
+
+Essa classe foi criada copiando a estrutura da `UserDTO`, porém com nomes de atributos propositalmente diferentes (`code` no lugar de `id`, `username` no lugar de `name`), justamente para demonstrar, na sequência, como o MapStruct resolve esse tipo de divergência de nomenclatura entre objetos.
+
+#### Classe Main: testando o mapeamento entre UserDTO e UserModel
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-12h59m22s531.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a classe `Main`, responsável por testar o funcionamento do `UserMapper`. O conteúdo é código **Java**:
+
+```java
+import br.com.dio.dto.UserDTO;
+import br.com.dio.mapper.UserMapper;
+import br.com.dio.model.UserModel;
+import org.mapstruct.factory.Mappers;
+import java.time.LocalDate;
+
+public class Main {
+    private static final UserMapper mapper = Mappers.getMapper(UserMapper.class);
+
+    public static void main(String[] args) {
+        var model = new UserModel();
+        model.setUsername("Mario");
+        model.setCode(1);
+        model.setBirthday(LocalDate.now().minusYears(30));
+        System.out.println(mapper.toDTO(model));
+
+        var dto = new UserDTO();
+        dto.setName("Ana");
+        dto.setId(2);
+        dto.setBirthday(LocalDate.now().minusYears(40));
+        System.out.println(mapper.toModel(dto));
+    }
+}
+```
+
+A instância do mapper é obtida por meio de `Mappers.getMapper(UserMapper.class)`, padrão típico do MapStruct para acessar a implementação gerada em tempo de compilação. Em seguida, o código cria um `UserModel` e converte para `UserDTO` (`mapper.toDTO`), e cria um `UserDTO` e converte para `UserModel` (`mapper.toModel`), imprimindo o resultado de cada conversão no console.
+
+#### Resultado da execução no console
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-02-13h20m17s769.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a saída da execução do projeto (aba **Run**), exibindo o resultado impresso no console após rodar a classe `Main`:
+
+```
+> Task :Main.main()
+UserDTO(id=1, name=Mario, birthday=1996-07-02)
+UserModel(code=2, username=Ana, birthday=1986-07-02)
+
+BUILD SUCCESSFUL in 415ms
+```
+
+O resultado confirma que o `UserMapper` converteu corretamente um `UserModel` (contendo `code` e `username`) em um `UserDTO` (com `id` e `name`), e vice-versa, validando que o mapeamento configurado nas anotações `@Mapping` funcionou como esperado, junto com a geração das datas via `LocalDate.now().minusYears(...)`.      
 
 
 ## Parte 3 - Comparação e Migração entre Ferramentas

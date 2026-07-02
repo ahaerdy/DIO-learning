@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file:///mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning/NTT_DATA-Backend_Java_com_Spring_AI/projetos/Modulo_03/03-Curso.03-Gerenciando.Dependências.com.Maven.e.Gradle/example-gradle" />
+  </component>
+  <component name="KubernetesApiProvider"><![CDATA[{}]]></component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="/mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning/NTT_DATA-Backend_Java_com_Spring_AI/projetos/Modulo_03/03-Curso.03-Gerenciando.Dependências.com.Maven.e.Gradle/example-gradle" />
+          </set>
+        </option>
+        <option name="myGradleHome" value="" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
