@@ -707,6 +707,8 @@ Por fim, esta imagem mostra a página do **MvnRepository** (mvnrepository.com) p
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/b7d688f1-cd7a-4678-a786-6978c61eb002?autoplay=1
 
+
+
 ### 🟩 Vídeo 05 - Criando um projeto Gradle
 
 <video width="60%" controls>
