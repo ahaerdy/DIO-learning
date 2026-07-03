@@ -1060,6 +1060,241 @@ O resultado confirma que o `UserMapper` converteu corretamente um `UserModel` (c
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/bd8894d6-5902-4e6b-8470-65453c8cede3?autoplay=1
 
+### Anotações
+
+#### Apache Commons Collections — página oficial
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h30m08s038.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página oficial do projeto Apache Commons Collections, com a listagem das principais funcionalidades da biblioteca (interfaces como Bag, BidiMap, MultiMap, coleções ordenadas, comparadores, iteradores, entre outras) e a seção de documentação, com links para o guia inicial, relatórios do projeto e Javadocs. Essa é a lib escolhida como exemplo para demonstrar, de forma simples, os problemas que gerenciadores de dependência como Maven e Gradle resolvem no dia a dia.
+
+#### Maven Repository — commons-collections4 4.4
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h32m15s739.jpg" alt="" width="840">
+</p>
+
+Aqui é exibida a página do artefato `commons-collections4` no MVN Repository, com informações como licença, categoria, ranking, número de projetos que utilizam a lib e vulnerabilidades conhecidas. Na parte inferior aparece o trecho pronto para configuração via Maven:
+
+```xml
+
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-collections4</artifactId>
+    <version>4.4</version>
+</dependency>
+```
+
+#### Maven Repository — configuração via Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h32m48s965.jpg" alt="" width="840">
+</p>
+
+Na mesma página do artefato, agora com a aba "Gradle (Short)" selecionada, o repositório disponibiliza a mesma dependência em um formato compatível com o Gradle:
+
+```gradle
+// https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
+implementation 'org.apache.commons:commons-collections4:4.4'
+```
+
+Isso ilustra como o mesmo repositório central oferece a instrução de instalação já formatada para diferentes gerenciadores de dependência (Maven, Gradle, Gradle Kotlin, SBT, Ivy, entre outros).
+
+#### Busca por dependência — MapStruct
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h34m05s297.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o resultado da busca pelo termo "mapstruct" no MVN Repository, retornando 106 resultados, entre eles o MapStruct Core, o MapStruct Processor e a integração Lombok Mapstruct Binding. Esse é o exemplo usado para mostrar como é possível localizar rapidamente uma dependência pelo nome, sem precisar saber previamente o grupo (`groupId`) do artefato.
+
+#### Busca por grupo — org.apache.commons
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h34m31s334.jpg" alt="" width="840">
+</p>
+
+Aqui a busca é feita não pelo nome específico de uma lib, mas pelo grupo `org.apache.commons`, retornando 253 resultados, entre eles Commons Lang, Commons Collections, Commons Text, Commons Compress e Commons Math. Essa é uma segunda forma de pesquisa no repositório, útil quando se quer explorar todas as bibliotecas de um mesmo fornecedor ou pacote.
+
+#### Busca por plugin — maven-compiler-plugin
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h37m00s070.jpg" alt="" width="840">
+</p>
+
+Além de dependências, o MVN Repository também permite localizar plugins do Maven. A imagem mostra a busca por "maven-compiler-plugin", retornando o Apache Maven Compiler Plugin como primeiro resultado, junto com outros artefatos relacionados a compilação e ao ecossistema de plugins do Maven.
+
+#### Detalhe do plugin — Apache Maven Compiler Plugin
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h37m18s767.jpg" alt="" width="840">
+</p>
+
+Nesta página de detalhe do Apache Maven Compiler Plugin (versão 3.12.1) é exibida a instrução de dependência a ser adicionada ao `pom.xml` para configurá-lo como plugin de compilação do projeto:
+
+```xml
+
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.12.1</version>
+</dependency>
+```
+
+Assim como as dependências, os plugins também podem ser localizados e configurados a partir do mesmo repositório central.
+
+#### Gradle Plugins — plugins.gradle.org
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h38m05s127.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o site oficial de busca de plugins do Gradle (plugins.gradle.org), com uma listagem de plugins disponíveis para a comunidade, cada um com sua última versão e tags de categoria. Esse é o site específico usado quando o objetivo é localizar plugins voltados exclusivamente para projetos Gradle.
+
+#### Download manual do JAR
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h39m58s289.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a janela do sistema operacional para salvar o arquivo `commons-collections4-4.4.jar`, aberta a partir do link de download do JAR disponível na página do artefato no MVN Repository. Esse é o caminho manual de obtenção da biblioteca, sem uso de um gerenciador de dependências, que será usado em seguida para adicionar a lib diretamente ao projeto Java.
+
+#### Criação da classe Main com List.of
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h40m43s850.jpg" alt="" width="840">
+</p>
+
+No IntelliJ IDEA, é criada a classe `Main` com um método `main` contendo uma lista de frutas construída com `List.of`:
+
+```java
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+        List<String> fruits = List.of("banana", "maçã", "uva", "laranja");
+    }
+
+}
+```
+
+Essa lista simples servirá de base para demonstrar, mais adiante, o uso de um método utilitário do Apache Commons Collections sobre coleções Java.
+
+#### Project Structure — adicionando biblioteca manualmente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h50m32s809.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a tela "Project Structure" do IntelliJ IDEA, na seção "Libraries", ainda vazia ("Nothing to show"). O menu de adição está aberto, exibindo as opções disponíveis para incluir uma nova biblioteca: Java, From Maven, Kotlin/JS e Kotlin/Wasm. É por aqui que o JAR baixado manualmente será associado ao projeto.
+
+#### Selecionando o arquivo JAR baixado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h51m21s320.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o seletor de arquivos do IntelliJ é usado para localizar e selecionar o arquivo `commons-collections4-4.4.jar` previamente baixado no computador, para então adicioná-lo como biblioteca Java do projeto.
+
+#### Biblioteca adicionada ao projeto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h53m31s502.jpg" alt="" width="840">
+</p>
+
+Após a seleção, a tela "Project Structure" passa a exibir a biblioteca `commons-collections4-4.4` já cadastrada, apontando para o caminho local do arquivo JAR (`/Users/.../Projetos/java/commons-collections4-4.4.jar`) dentro da seção "Classes". Esse é o resultado da associação manual da lib ao projeto.
+
+#### Arquivo de configuração sample.iml
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h54m14s304.jpg" alt="" width="840">
+</p>
+
+Ao inspecionar os arquivos ocultos do projeto, aparece o `sample.iml`, arquivo de configuração interno do IntelliJ onde a associação da biblioteca foi registrada automaticamente:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="commons-collections4-4.4" level="project" />
+  </component>
+</module>
+```
+
+Esse arquivo evidencia a dependência do caminho local do JAR, um problema que apareceria caso o projeto fosse compartilhado em outra máquina sem o mesmo diretório de bibliotecas.
+
+#### Uso do CollectionUtils.isEmpty — importação estática
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h55m17s660.jpg" alt="" width="840">
+</p>
+
+Ao chamar `isEmpty(fruits)` dentro de um `System.out.println`, o IntelliJ sugere as opções de importação estática disponíveis para o método, entre elas `LocaleUtils.isEmpty` (padrão do Java), `CollectionUtils.isEmpty` e `IterableUtils.isEmpty`, ambos vindos do pacote `org.apache.commons.collections4` adicionado ao projeto. A opção `CollectionUtils.isEmpty` é a selecionada, evidenciando que a lib do Apache Commons já está disponível para uso no código.
+
+#### Execução com lista preenchida — retorno false
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h56m49s009.jpg" alt="" width="840">
+</p>
+
+Com a importação estática já configurada, o código final e o resultado da execução são exibidos:
+
+```java
+import java.util.List;
+import static org.apache.commons.collections4.CollectionUtils.isEmpty;
+
+public class Main {
+
+    public static void main(String[] args) {
+        List<String> fruits = List.of("banana", "maçã", "uva", "laranja");
+        System.out.println(isEmpty(fruits));
+    }
+
+}
+```
+
+Como a lista contém elementos, a saída no console é `false`, confirmando que o método `isEmpty` da lib está funcionando corretamente sobre a coleção Java.
+
+#### Testando o comportamento null-safe
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h57m30s903.jpg" alt="" width="840">
+</p>
+
+A lista agora é atribuída como `null` (o `List.of(...)` original é comentado), e o mesmo `isEmpty(fruits)` do Apache Commons é chamado:
+
+```java
+List<String> fruits = null; //List.of("banana", "maçã", "uva", "laranja");
+System.out.println(isEmpty(fruits));
+```
+
+A execução retorna `true` sem lançar exceção, demonstrando que o método `CollectionUtils.isEmpty` da lib é *null-safe*: ele verifica internamente se a coleção é nula antes de checar se está vazia.
+
+#### Comparando com o método nativo da coleção
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-09h58m46s203.jpg" alt="" width="840">
+</p>
+
+Por fim, é chamado o método `isEmpty()` diretamente na instância da lista (`fruits.isEmpty()`), o método nativo da interface `java.util.List`, e o próprio IntelliJ aponta o problema:
+
+```java
+List<String> fruits = null; //List.of("banana", "maçã", "uva", "laranja");
+fruits.isEmpty();
+```
+
+O aviso exibido é claro: *"Method invocation 'isEmpty' will produce 'NullPointerException'"*. Diferente do `CollectionUtils.isEmpty` do Apache Commons, o método nativo `isEmpty()` da coleção **não é null-safe** — se a referência for nula, a chamada lança uma `NullPointerException`. Essa comparação evidencia uma das vantagens práticas de se utilizar bibliotecas utilitárias como o Apache Commons Collections.
+
+
 ### 🟩 Vídeo 07 - Migrando Projeto Maven para Gradle
 
 <video width="60%" controls>
