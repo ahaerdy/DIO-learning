@@ -1540,7 +1540,125 @@ Esse comando dá início ao build do projeto já convertido, etapa em que, na se
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/7414e848-1b25-41cc-a080-2091b6b509b8?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-14h13m11s059.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a documentação oficial do Gradle (`docs.gradle.org`), na seção **The Maven Publish Plugin**. Nela é exibido um exemplo em Kotlin DSL (`build.gradle.kts`) de como configurar a identidade de uma publicação Maven. O bloco de código apresentado é:
+
+```kotlin
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "org.gradle.sample"
+            artifactId = "library"
+            version = "1.1"
+
+            from(components["java"])
+        }
+    }
+}
+```
+
+Esse exemplo ilustra exatamente a estrutura que precisa ser adicionada ao arquivo `build.gradle` do projeto para configurar o plugin **Maven Publish**: um bloco `publishing`, contendo `publications`, onde é criada uma `MavenPublication` (aqui chamada `maven`) e associada ao componente `java` através do método `from(components["java"])`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-14h16m11s259.jpg" alt="" width="840">
+</p>
+
+Aqui a configuração já foi aplicada no projeto real, dentro do IntelliJ IDEA, no arquivo `build.gradle.kts`:
+
+```kotlin
+publishing {
+    publications {
+        create<MavenPublication>(name: "mavenJava") {
+            from(components["java"])
+        }
+    }
+}
+```
+
+No painel lateral do Gradle, é possível ver a tarefa **generatePomFileForMavenJavaPublication** sendo executada com sucesso (`BUILD SUCCESSFUL`). No painel de projeto, à esquerda, nota-se que a pasta `build` foi criada contendo `publications/mavenJava/pom-default.xml`, ou seja, o Gradle gerou automaticamente um arquivo POM a partir da publicação configurada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-14h16m17s060.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, o arquivo `pom-default.xml`, gerado dentro de `build/publications/mavenJava`, está aberto no editor. Seu conteúdo inicial é:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache..."
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- This module was also published with a richer model, Gradle metadata, -->
+  <!-- which should be used instead. Do not delete the following line which -->
+  <!-- is to indicate to Gradle or any Gradle module metadata consumer      -->
+  <!-- that they should prefer consuming it instead.                       -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.dio</groupId>
+  <artifactId>using-gradle</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+```
+
+O arquivo contém comentários automáticos informando que o módulo também foi publicado com metadados mais completos do Gradle e que essa referência não deve ser removida. Logo em seguida aparecem os dados de identidade do projeto (`groupId`, `artifactId`, `version`) e o início da lista de `dependencies`, que corresponde às dependências de implementação do projeto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-14h17m34s681.jpg" alt="" width="840">
+</p>
+
+A imagem mostra novamente a documentação do Gradle, com o seletor de versão aberto no canto superior esquerdo, exibindo as opções **8.7**, **8.5**, **8.4** e **8.1.1**, além do link para "All versions". Abaixo, a página continua explicando as tarefas de publicação (`publish`, `publishToMavenLocal`) e a seção **Publications**, que descreve os quatro elementos configuráveis de uma publicação Maven: componente, artefatos customizados, metadados padrão (`artifactId`, `groupId`, `version`) e conteúdos adicionais do POM.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-14h19m38s490.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, o arquivo `gradle-wrapper.properties` está aberto, já atualizado:
+
+```properties
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.7-bin.zip
+networkTimeout=10000
+validateDistributionUrl=true
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+```
+
+No terminal, abaixo, é executado o comando de atualização do wrapper:
+
+```bash
+./gradlew wrapper --gradle-version 8.7
+```
+
+O resultado exibido é `BUILD SUCCESSFUL in 2s`, confirmando que o wrapper do projeto foi atualizado da versão 8.6 para a versão 8.7 do Gradle, refletindo a nova `distributionUrl` apontando para `gradle-8.7-bin.zip`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-14h20m08s228.jpg" alt="" width="840">
+</p>
+
+No painel de projeto do IntelliJ IDEA, dentro da pasta oculta `.gradle`, agora aparecem duas subpastas: **8.6** (a versão anterior) e **8.7** (a versão recém-baixada pelo wrapper), esta última já expandida mostrando diretórios internos como `checksums`, `dependencies-accessors`, `executionHistory`, `expanded`, `fileChanges`, `fileHashes` e `vcsMetadata`. No painel do Gradle, à direita, é selecionada a tarefa **clean**, e no console de execução aparece a saída:
+
+```
+Starting Gradle Daemon...
+Gradle Daemon started in 784 ms
+> Task :clean
+
+BUILD SUCCESSFUL in 15s
+1 actionable task: 1 executed
+```
+
+Isso confirma que a nova versão 8.7 do Gradle já está instalada e operante no ambiente local, sendo utilizada para executar as tarefas do projeto, enquanto a pasta da versão 8.6 permanece disponível para ser removida manualmente, já que não é rastreada pelo controle de versão.
+      
+
 
 ##  Materiais de Apoio
 
