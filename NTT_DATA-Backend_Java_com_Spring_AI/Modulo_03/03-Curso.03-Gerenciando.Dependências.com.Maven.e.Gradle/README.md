@@ -1657,12 +1657,9 @@ BUILD SUCCESSFUL in 15s
 ```
 
 Isso confirma que a nova versão 8.7 do Gradle já está instalada e operante no ambiente local, sendo utilizada para executar as tarefas do projeto, enquanto a pasta da versão 8.6 permanece disponível para ser removida manualmente, já que não é rastreada pelo controle de versão.
-      
 
 
-##  Materiais de Apoio
+# Certificado: Gerenciando Dependências com Maven e Gradle
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/AS9GLEB8.pdf
+- Certificado em pdf: [Certificado-Gerenciando.Dependências.com.Maven.e.Gradle.pdf](Modulo_03/03-Curso.03-Gerenciando.Dependências.com.Maven.e.Gradle/000-Midia_e_Anexos/Certificado-Gerenciando.Dependências.com.Maven.e.Gradle.pdf)
