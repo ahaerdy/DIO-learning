@@ -142,7 +142,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - [Logging e Tratamento de Exceções em Java](https://hermes.dio.me/certificates/2FJ8QP3K.pdf)
 - [Simplificando I/O de Arquivos e Diretórios com Java](https://hermes.dio.me/certificates/548SYNOS.pdf)
-- [Gerenciando Dependências com Maven e Gradle]
+- [Gerenciando Dependências com Maven e Gradle](https://hermes.dio.me/certificates/AS9GLEB8.pdf)
 - [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
 - [SOLID e Clean Code em Java: Governando Código de Alta Qualidade]
 - [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]
