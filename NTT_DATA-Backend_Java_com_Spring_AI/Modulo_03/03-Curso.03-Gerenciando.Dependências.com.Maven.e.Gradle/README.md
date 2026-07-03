@@ -1304,6 +1304,235 @@ O aviso exibido é claro: *"Method invocation 'isEmpty' will produce 'NullPointe
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/gerenciando-dependencias-com-maven-e-gradle/learning/7414e848-1b25-41cc-a080-2091b6b509b8?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h37m57s183.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o `pom.xml` do projeto Maven original, aberto no IntelliJ IDEA, exibindo o bloco `<properties>` com a versão do Java e as configurações de compilação, seguido do início do bloco `<dependencies>`:
+
+```xml
+<properties>
+    <java.version>21</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+    <org.projectlombok.version>1.18.30</org.projectlombok.version>
+    <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+</properties>
+
+<dependencies>
+    <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>${org.mapstruct.version}</version>
+```
+
+Esse é o ponto de partida da migração: o projeto Maven já existente, com suas dependências e propriedades definidas no `pom.xml`, que servirá de base para o Gradle gerar automaticamente o novo build.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h38m52s683.jpg" alt="" width="840">
+</p>
+
+No terminal, é executado o comando responsável por iniciar a migração:
+
+```bash
+gradle init
+```
+
+Em seguida, o Gradle identifica automaticamente a existência de uma build Maven no diretório e pergunta se deve gerar uma build Gradle a partir dela:
+
+```
+Found a Maven build. Generate a Gradle build from this? (default: yes) [yes, no]
+```
+
+Esse é o primeiro passo prático da migração: como o Gradle já está instalado na máquina, basta rodar `gradle init` dentro do projeto para que a própria ferramenta detecte o `pom.xml` e ofereça a conversão automática.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h39m22s779.jpg" alt="" width="840">
+</p>
+
+Após confirmar a geração da build a partir do Maven com `yes`, o Gradle passa para a próxima pergunta do assistente interativo, solicitando a escolha da linguagem do script de build:
+
+```
+Found a Maven build. Generate a Gradle build from this? (default: yes) [yes, no] yes
+
+Select build script DSL:
+  1: Kotlin
+  2: Groovy
+Enter selection (default: Kotlin) [1..2] 1
+```
+
+A opção escolhida foi o Kotlin (opção 1), considerada a alternativa mais interessante para o `build.gradle`, que na prática será gerado como `build.gradle.kts`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h39m26s703.jpg" alt="" width="840">
+</p>
+
+Na sequência do assistente do `gradle init`, surge uma nova pergunta sobre o uso de APIs e comportamentos mais recentes na geração da build:
+
+```
+Enter selection (default: Kotlin) [1..2] 1
+
+Generate build using new APIs and behavior (some features may change in the next minor release)? (default: no) [yes, no]
+```
+
+A resposta escolhida é manter o valor padrão (`no`), já que a própria ferramenta alerta que algumas dessas funcionalidades mais novas podem sofrer alterações em versões futuras — optando-se, assim, por uma geração mais estável.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h39m48s727.jpg" alt="" width="840">
+</p>
+
+Com todas as respostas do assistente confirmadas, o Gradle inicia de fato o processo de conversão, exibindo no terminal a execução da task `:init` e a resolução das dependências necessárias para realizar a leitura do Maven:
+
+```
+> Task :init
+Maven to Gradle conversion is an incubating feature.
+<------------> 0% EXECUTING [53s]
+> :init > Resolve dependencies of :detachedConfiguration1 > wagon-http-3.5.3.pom
+> :init > Resolve dependencies of :detachedConfiguration1 > maven-compat-3.9.5.pom
+> :init > Resolve dependencies of :detachedConfiguration1 > wagon-provider-api-3.5.3.pom
+```
+
+O próprio Gradle avisa que essa conversão de Maven para Gradle ainda é um recurso "incubating" (em fase de amadurecimento), e para conseguir interpretar o `pom.xml` ele precisa baixar bibliotecas auxiliares do próprio ecossistema Maven, como `wagon-http` e `maven-compat`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h39m54s568.jpg" alt="" width="840">
+</p>
+
+O terminal mostra o resultado final da execução do `gradle init`:
+
+```
+BUILD SUCCESSFUL in 56s
+1 actionable task: 1 executed
+```
+
+A conversão foi concluída com sucesso. A partir daqui, o Gradle já gerou os arquivos de configuração do novo projeto — como o `build.gradle` e o `settings` — reaproveitando as informações que estavam presentes no `pom.xml` original.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h40m23s902.jpg" alt="" width="840">
+</p>
+
+Com a migração concluída, o arquivo `build.gradle.kts` gerado automaticamente é aberto no editor:
+
+```kotlin
+/*
+ * This file was generated by the Gradle 'init' task.
+ */
+
+plugins {
+    `java-library`
+    `maven-publish`
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri("https://repo.maven.apache.org/maven2/")
+    }
+}
+```
+
+O Gradle aplicou o plugin `java-library` para o projeto Java e também o plugin `maven-publish`, que é o responsável por permitir a publicação de artefatos em repositórios Maven — uma forma de manter compatibilidade com o ecossistema Maven mesmo após a migração.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h40m28s677.jpg" alt="" width="840">
+</p>
+
+Ao lado do `build.gradle.kts`, o Gradle também gerou o arquivo `settings.gradle.kts`:
+
+```kotlin
+/*
+ * This file was generated by the Gradle 'init' task.
+ */
+
+rootProject.name = "using-maven"
+```
+
+Esse arquivo define o nome raiz do projeto, mantendo a mesma identificação (`using-maven`) que era usada no projeto Maven original.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h40m43s817.jpg" alt="" width="840">
+</p>
+
+Voltando ao `build.gradle.kts`, o plugin `maven-publish` é destacado no editor, chamando atenção justamente para esse plugin do Gradle que foi incluído automaticamente durante a conversão a partir do `pom.xml`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h41m06s539.jpg" alt="" width="840">
+</p>
+
+O IntelliJ IDEA detecta os novos arquivos de build do Gradle e exibe uma notificação:
+
+```
+Gradle 'using-maven' build scripts found
+[Load Gradle Project]  [Skip]
+```
+
+A opção **Load Gradle Project** é selecionada para que a IDE vincule o projeto ao Gradle recém-gerado, permitindo que os arquivos `build.gradle.kts` e `settings.gradle.kts` passem a ser reconhecidos e indexados corretamente pelo editor.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h41m33s491.jpg" alt="" width="840">
+</p>
+
+Após o carregamento do projeto Gradle pela IDE, é possível ver mais detalhes do `build.gradle.kts` já configurados automaticamente:
+
+```kotlin
+description = "using-maven"
+java.sourceCompatibility = JavaVersion.VERSION_21
+
+publishing {
+    publications.create<MavenPublication>("maven") {
+        from(components["java"])
+    }
+}
+
+tasks.withType<JavaCompile>() {
+    options.encoding = "UTF-8"
+}
+
+tasks.withType<Javadoc>() {
+    options.encoding = "UTF-8"
+}
+```
+
+O Gradle já configurou a versão do Java (`VERSION_21`), a codificação UTF-8 para compilação e geração de Javadoc, além do bloco de publicação Maven — informações que antes estavam espalhadas no `pom.xml` e agora foram reorganizadas no formato do Gradle.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-03-10h43m55s324.jpg" alt="" width="840">
+</p>
+
+Com o projeto já vinculado ao Gradle, o `build.gradle.kts` completo é exibido pela IDE, agora com a inferência de tipos do editor (`this: PluginDependenciesSpecScope`, `this: RepositoryHandler`, `this: MavenArtifactRepository`):
+
+```kotlin
+plugins {
+    `java-library`
+    `maven-publish`
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri("https://repo.maven.apache.org/maven2/")
+    }
+}
+```
+
+No terminal, é iniciada a execução do wrapper do Gradle, gerado junto com o restante do projeto (`gradlew` / `gradlew.bat`), usado quando não há o Gradle instalado no ambiente:
+
+```bash
+./gradlew build
+```
+
+```
+<------------> 0% INITIALIZING [1s]
+> Evaluating settings > Compiling settings file 'settings.gradle.kts'
+```
+
+Esse comando dá início ao build do projeto já convertido, etapa em que, na sequência da aula, aparecem os ajustes necessários para tratar as configurações mais específicas do projeto original (como os processadores de anotação), que a ferramenta de migração não consegue transferir automaticamente com perfeição.
+
+
 ### 🟩 Vídeo 08 - Migrando projeto Gradle para Maven
 
 <video width="60%" controls>
