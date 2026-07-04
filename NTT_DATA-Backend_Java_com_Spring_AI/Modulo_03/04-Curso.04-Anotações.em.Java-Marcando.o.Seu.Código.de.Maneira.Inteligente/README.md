@@ -189,66 +189,111 @@ public class Main {
 }
 ```
 
-#### Fluxo de Execução
+# Para que servem as Annotations em Java?
+
+## 1. Explicação geral
+
+Annotations (anotações) em Java são **metadados** que você anexa a classes, métodos, campos, parâmetros etc. Elas **não mudam o comportamento do código por si só** — uma anotação sozinha, como `@SerializerType`, não faz nada acontecer magicamente. Ela apenas "marca" um elemento do código com uma informação extra, que **alguma outra coisa** (o compilador, uma ferramenta, ou o próprio programa em tempo de execução) vai ler e interpretar depois.
+
+Pense nelas como **etiquetas adesivas**: você cola a etiqueta "frágil" numa caixa, mas quem realmente toma cuidado ao manusear a caixa é a transportadora que lê a etiqueta — a etiqueta em si não protege nada sozinha.
+
+### Para que essas "etiquetas" servem na prática?
+
+- **Documentar/gerar código automaticamente**: ex. `@Override`, `@Entity` (JPA), `@GetMapping` (Spring).
+- **Validar em tempo de compilação**: o compilador usa a anotação para checar algo (ex. `@Override` avisa erro se o método não sobrescreve nada).
+- **Configurar comportamento de frameworks**: Spring, Hibernate, JUnit etc. leem anotações para saber como injetar dependências, mapear tabelas, rodar testes...
+- **Gerar/transformar código em tempo de compilação**: os *Annotation Processors* (tema da Parte 2 da aula) leem anotações durante a compilação e podem gerar novos arquivos `.java` automaticamente (é assim, por exemplo, que o Lombok gera getters/setters).
+- **Ler metadados em tempo de execução (Reflection)**: com `@Retention(RUNTIME)`, a anotação continua disponível depois de compilado, e o programa pode usar a API de *Reflection* para perguntar "essa classe tem essa anotação? quais valores ela tem?" e agir de acordo.
+
+### Peças-chave para entender uma anotação
+
+1. **`@Retention`** — até quando a anotação "sobrevive":
+   - `SOURCE`: só existe no código-fonte, some na compilação.
+   - `CLASS`: vai para o `.class`, mas não é visível em runtime (padrão).
+   - `RUNTIME`: continua disponível para ser lida via Reflection enquanto o programa roda. **É o tipo usado neste projeto.**
+2. **`@Target`** — em que tipo de elemento a anotação pode ser usada (`TYPE` = classe/interface/enum/record, `METHOD` = método, `FIELD` = campo etc.).
+3. **Elementos da anotação** (ex. `value()`, `fieldFormat()`) — são como "parâmetros" que quem usa a anotação pode preencher, geralmente com valores padrão (`default`) para tornar o uso opcional.
+
+---
+
+## 2. O que está sendo feito especificamente nesta aula
+
+O projeto do curso é um **serializador de objetos para JSON feito na mão**, guiado por anotações. A ideia final (que será completada no `Main`, usando Reflection — assunto da Parte 2) é: dado um objeto qualquer (`Person`, `User`...), o programa vai **ler as anotações da classe** e decidir *como* gerar o JSON correspondente, sem precisar de biblioteca pronta (tipo Jackson/Gson).
+
+Vamos por peça:
+
+### `FieldFormatEnum`
+Não é uma anotação, é um **enum auxiliar** que define os estilos de nomenclatura possíveis para os campos no JSON final: `CAMEL_CASE`, `PASCAL_CASE`, `SNAKE_CASE`, `KEBAB_CASE`. Cada constante carrega uma função (`Function<String,String>`) que sabe converter um nome de campo de `camelCase` (padrão Java) para o estilo escolhido, usando o utilitário `CaseFormat` da Guava. Esse enum será usado *como valor* dentro da anotação `SerializerType`.
+
+### `@SerializedMethod`
+- `@Retention(RUNTIME)` + `@Target(METHOD)`.
+- Serve para marcar **métodos que devem ser incluídos no JSON** mesmo não sendo um getter convencional (no exemplo, `firstName()`), permitindo dar um **nome customizado** (`value`) para a propriedade gerada — no caso, `firstPersonName`.
+- Sem essa anotação, o futuro processo de serialização (via Reflection) não teria como saber que aquele método deveria virar um campo no JSON, nem qual nome usar.
+
+### `@SerializerType`
+- `@Retention(RUNTIME)` + `@Target(TYPE)` → só pode ser colocada em cima de classes/records/enums/interfaces.
+- É a anotação "principal": configura **como aquela classe inteira deve ser serializada**:
+  - `fieldFormat`: qual `FieldFormatEnum` usar para os nomes dos campos (padrão `CAMEL_CASE`).
+  - `prettify`: se o JSON deve sair identado/formatado (padrão `true`).
+- Como os dois parâmetros têm valor padrão, quem usa a anotação pode omitir tudo (como em `User`) e o comportamento padrão será aplicado.
+
+### `Person`
+Usa `@SerializerType(fieldFormat = KEBAB_CASE, prettify = false)` — está dizendo explicitamente: "quando me serializar, use `kebab-case` nos nomes dos campos e não formate o JSON". Além disso, o método `firstName()` é anotado com `@SerializedMethod("firstPersonName")`, pedindo para aparecer no JSON com esse nome customizado, mesmo não sendo um getter tradicional.
+
+### `User`
+Usa `@SerializerType` "pura", sem parâmetros — vai herdar os valores padrão da anotação (`camelCase` + JSON formatado). Serve como exemplo do caminho mais simples, contrastando com a customização feita em `Person`.
+
+### `Main`
+Ainda vazio — é onde, futuramente (usando **Reflection**, com `Class.getAnnotation(...)`, `getDeclaredFields()`, `getDeclaredMethods()` etc.), o código vai:
+1. Pegar a classe do objeto (`Person` ou `User`).
+2. Ler a anotação `@SerializerType` dela para saber o formato dos campos e se deve "prettificar".
+3. Percorrer campos e métodos anotados com `@SerializedMethod` para montar o JSON.
+4. Aplicar a formatação de nomes (via `FieldFormatEnum`) e a formatação de saída.
+
+Ou seja: **as anotações aqui não fazem nada sozinhas** — elas são a "receita"/configuração que o código de `Main` (ainda a ser escrito) vai ler via Reflection para decidir como transformar um objeto Java em uma `String` JSON.
+
+---
+
+## 3. Diagrama do fluxo completo
 
 ```mermaid
-graph TD
-    %% Bloco de Entrada e Inspeção
-    subgraph Entrada [Início do Fluxo]
-        A["<strong>Objeto Java anotado</strong>
-        (Classe com <strong>@SerializerType</strong> 
-        ou método com <strong>@SerializedMethod</strong>)"]
-        B{"<strong>Motor de Reflexão</strong>
-        (Inspeção dinâmica da 
-        estrutura do objeto)"}
+flowchart TD
+
+    subgraph DEF["Definição das Annotations (pacote br.com.dio.annotation)"]
+        A1["FieldFormatEnum<br/>Enum auxiliar (NÃO é annotation)<br/>Define 4 estilos de nome de campo<br/>(CAMEL, PASCAL, SNAKE, KEBAB)<br/>usando CaseFormat da Guava"]
+        A2["@SerializedMethod<br/>@Retention(RUNTIME) @Target(METHOD)<br/>Marca um método para ser incluído<br/>no JSON com nome customizado (value)"]
+        A3["@SerializerType<br/>@Retention(RUNTIME) @Target(TYPE)<br/>Configura a classe inteira:<br/>fieldFormat (padrão CAMEL_CASE)<br/>prettify (padrão true)"]
     end
 
-    %% Bloco de Decisão (Leitura das Annotations)
-    subgraph Processamento_de_Metadados [Análise de Metadados]
-        C["<strong>Lê @SerializerType</strong>
-        (Extrai regras de formato
-        e identação da classe)"]
-        D["<strong>Lê @SerializedMethod</strong>
-        (Identifica métodos que 
-        devem ser serializados)"]
+    subgraph MODEL["Aplicação nas classes modelo (br.com.dio.model)"]
+        B1["Person<br/>@SerializerType(fieldFormat=KEBAB_CASE, prettify=false)<br/>Campos: id, name, age<br/>Método firstName() anotado com<br/>@SerializedMethod('firstPersonName')"]
+        B2["User (record)<br/>@SerializerType sem parâmetros<br/>→ usa valores padrão (CAMEL_CASE, prettify=true)<br/>Componentes: id, fullName, age, salary"]
     end
 
-    %% Bloco de Ação (Aplicação das Regras)
-    subgraph Aplicacao_de_Regras [Execução da Lógica]
-        E["<strong>Aplica Formatação</strong>
-        (Usa Guava para converter 
-        campos conforme a regra)"]
-        F["<strong>Customiza Serialização</strong>
-        (Aplica nomes definidos no 
-        value da anotação)"]
+    subgraph RUN["Processamento em runtime (br.com.dio.Main) - a ser implementado"]
+        C1["1. Receber instância (Person ou User)"]
+        C2["2. Via Reflection, ler @SerializerType da classe<br/>→ obter fieldFormat e prettify"]
+        C3["3. Percorrer campos (getDeclaredFields)<br/>e métodos anotados com @SerializedMethod<br/>(getDeclaredMethods)"]
+        C4["4. Para cada campo/método, converter o nome<br/>usando FieldFormatEnum.format(nome)<br/>e usar @SerializedMethod.value() se presente"]
+        C5["5. Montar o JSON final,<br/>identado ou não conforme 'prettify'"]
     end
 
-    %% Bloco de Saída
-    subgraph Saida [Resultado Final]
-        G["<strong>Gera JSON Final</strong>
-        (Montagem do arquivo estruturado 
-        conforme as anotações)"]
-    end
+    A3 -->|usa como tipo do parâmetro fieldFormat| A1
+    A1 --> B1
+    A1 --> B2
+    A3 -->|aplicada em| B1
+    A3 -->|aplicada em| B2
+    A2 -->|aplicada em método de| B1
 
-    %% Definição de Conexões
-    A --> B
-    B --> C
-    B --> D
-    C --> E
-    D --> F
-    E --> G
-    F --> G
-
-    %% Estilização para garantir fonte preta e legibilidade
-    style A fill:#f9f,stroke:#333,color:#000
-    style B fill:#fff4dd,stroke:#d4a017,color:#000
-    style C fill:#d1e7dd,stroke:#0f5132,color:#000
-    style D fill:#d1e7dd,stroke:#0f5132,color:#000
-    style E fill:#cfe2f3,stroke:#084298,color:#000
-    style F fill:#cfe2f3,stroke:#084298,color:#000
-    style G fill:#bbf,stroke:#333,color:#000
+    B1 --> C1
+    B2 --> C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> C4
+    C4 --> C5
 ```
 
+**Resumo do fluxo:** as três anotações/enum são apenas **definições de metadados**. Elas são "coladas" nas classes `Person` e `User` para descrever *como* cada uma quer ser serializada. Só quando o código em `Main` (próxima etapa do curso, usando Reflection) **ler** essas anotações em tempo de execução é que elas passam a ter efeito real, guiando a geração do JSON final.
 
 
 ### 🟩 Vídeo 02 - Explorando Annotations em runtime
