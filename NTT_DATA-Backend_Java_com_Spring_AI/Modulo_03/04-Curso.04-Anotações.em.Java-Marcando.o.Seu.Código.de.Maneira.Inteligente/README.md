@@ -189,7 +189,7 @@ public class Main {
 }
 ```
 
-# Para que servem as Annotations em Java?
+# Análise
 
 ## 1. Explicação geral
 
