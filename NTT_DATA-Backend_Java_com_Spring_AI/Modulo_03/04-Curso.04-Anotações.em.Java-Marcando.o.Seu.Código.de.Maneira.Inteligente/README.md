@@ -250,7 +250,7 @@ Ainda vazio — é onde, futuramente (usando **Reflection**, com `Class.getAnnot
 
 Ou seja: **as anotações aqui não fazem nada sozinhas** — elas são a "receita"/configuração que o código de `Main` (ainda a ser escrito) vai ler via Reflection para decidir como transformar um objeto Java em uma `String` JSON.
 
-### Resuno de Fluxo 
+### 3. Resuno de Fluxo 
 
 As três anotações/enum são apenas **definições de metadados**. Elas são "coladas" nas classes `Person` e `User` para descrever *como* cada uma quer ser serializada. Só quando o código em `Main` (próxima etapa do curso, usando Reflection) **ler** essas anotações em tempo de execução é que elas passam a ter efeito real, guiando a geração do JSON final.
 
