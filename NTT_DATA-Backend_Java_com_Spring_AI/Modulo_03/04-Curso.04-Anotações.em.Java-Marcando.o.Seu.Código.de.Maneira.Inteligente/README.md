@@ -188,7 +188,68 @@ public class Main {
     }
 }
 ```
-      
+
+#### Fluxo
+
+```mermaid
+graph TD
+    %% Bloco de Entrada e Inspeção
+    subgraph Entrada [Início do Fluxo]
+        A["<strong>Objeto Java anotado</strong>
+        (Classe com <strong>@SerializerType</strong> 
+        ou método com <strong>@SerializedMethod</strong>)"]
+        B{"<strong>Motor de Reflexão</strong>
+        (Inspeção dinâmica da 
+        estrutura do objeto)"}
+    end
+
+    %% Bloco de Decisão (Leitura das Annotations)
+    subgraph Processamento_de_Metadados [Análise de Metadados]
+        C["<strong>Lê @SerializerType</strong>
+        (Extrai regras de formato
+        e identação da classe)"]
+        D["Lê <strong>@SerializedMethod</strong>
+        (Identifica métodos que 
+        devem ser serializados)"]
+    end
+
+    %% Bloco de Ação (Aplicação das Regras)
+    subgraph Aplicacao_de_Regras [Execução da Lógica]
+        E["<strong>Aplica Formatação</strong>
+        (Usa Guava para converter 
+        campos conforme a regra)"]
+        F["<strong>Customiza Serialização</strong>
+        (Aplica nomes definidos no 
+        value da anotação)"]
+    end
+
+    %% Bloco de Saída
+    subgraph Saida [Resultado Final]
+        G["<strong>Gera JSON Final</strong>
+        (Montagem do arquivo estruturado 
+        conforme as anotações)"]
+    end
+
+    %% Definição de Conexões
+    A --> B
+    B --> C
+    B --> D
+    C --> E
+    D --> F
+    E --> G
+    F --> G
+
+    %% Estilização para garantir fonte preta e legibilidade
+    style A fill:#f9f,stroke:#333,color:#000
+    style B fill:#fff4dd,stroke:#d4a017,color:#000
+    style C fill:#d1e7dd,stroke:#0f5132,color:#000
+    style D fill:#d1e7dd,stroke:#0f5132,color:#000
+    style E fill:#cfe2f3,stroke:#084298,color:#000
+    style F fill:#cfe2f3,stroke:#084298,color:#000
+    style G fill:#bbf,stroke:#333,color:#000
+```
+
+
 
 ### 🟩 Vídeo 02 - Explorando Annotations em runtime
 
@@ -198,6 +259,9 @@ public class Main {
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/annotations-em-java-marcando-o-seu-codigo-de-maneira-inteligente/learning/6866303d-13cb-4ebb-ae8d-742b920c96b2?autoplay=1
+
+
+
 
 ### 🟩 Vídeo 03 - Questionário: Introdução às Annotations em Runtime
 
