@@ -177,10 +177,6 @@ public record User(
 ) { }
 ```
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-04-15h42m13s093.jpg" alt="" width="840">
-</p>
-
 Por fim, temos a classe `Main`, criada no pacote raiz `br.com.dio`, contendo apenas o método `main` vazio. Essa classe serve como ponto de entrada da aplicação, onde futuramente será feito o processamento das anotações criadas para gerar o JSON a partir dos modelos `Person` e `User`.
 
 ```java
