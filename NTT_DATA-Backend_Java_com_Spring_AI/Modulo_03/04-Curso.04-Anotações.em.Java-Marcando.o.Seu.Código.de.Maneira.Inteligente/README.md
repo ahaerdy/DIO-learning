@@ -189,7 +189,7 @@ public class Main {
 }
 ```
 
-#### Fluxo
+#### Fluxo de Execução
 
 ```mermaid
 graph TD
@@ -208,7 +208,7 @@ graph TD
         C["<strong>Lê @SerializerType</strong>
         (Extrai regras de formato
         e identação da classe)"]
-        D["Lê <strong>@SerializedMethod</strong>
+        D["<strong>Lê @SerializedMethod</strong>
         (Identifica métodos que 
         devem ser serializados)"]
     end
