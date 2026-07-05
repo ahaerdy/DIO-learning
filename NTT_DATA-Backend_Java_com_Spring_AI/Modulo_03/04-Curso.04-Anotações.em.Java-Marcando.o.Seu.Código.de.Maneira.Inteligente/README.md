@@ -537,30 +537,21 @@ Na classe `Main`, um `SerializerProcessor` é instanciado e usado para serializa
 A execução do `Main` confirma o comportamento configurado em cada anotação: o `Person`, anotado com `PASCAL_CASE` e `prettify = false`, gera um JSON compactado com os campos em PascalCase, incluindo `FirstPersonName` obtido do método anotado com `@SerializedMethod`. Já o `User`, anotado com `SNAKE_CASE` e `prettify` no valor padrão (verdadeiro), gera um JSON formatado com indentação e os campos em snake_case, como `full_name`. O painel de execução mostra ainda que o build foi concluído com sucesso (`BUILD SUCCESSFUL`), validando que o processador de anotações funciona corretamente para os dois formatos testados.
 
 
-### 🟩 Vídeo 03 - Questionário: Introdução às Annotations em Runtime
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.03-curso.04-video_03.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/annotations-em-java-marcando-o-seu-codigo-de-maneira-inteligente/learning/5414e2f1-1151-48d1-a95f-0ff04dd0dee6?autoplay=1
-
 ## Parte 2 - Explorando Annotation Processors
 
-### 🟩 Vídeo 04 - Introdução a Annotation Processor
+### 🟩 Vídeo 03 - Introdução a Annotation Processor
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.03-curso.04-video_04.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.03-curso.03-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/annotations-em-java-marcando-o-seu-codigo-de-maneira-inteligente/learning/66dde68f-f31a-4937-9a97-cc7d005cb892?autoplay=1
 
-### 🟩 Vídeo 05 - Explorando Annotation Processor
+### 🟩 Vídeo 04 - Explorando Annotation Processor
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.03-curso.04-video_05.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.03-curso.04-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
