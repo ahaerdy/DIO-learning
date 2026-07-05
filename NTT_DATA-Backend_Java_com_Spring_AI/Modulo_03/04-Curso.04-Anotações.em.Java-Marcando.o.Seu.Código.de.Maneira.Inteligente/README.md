@@ -536,9 +536,9 @@ Na classe `Main`, um `SerializerProcessor` é instanciado e usado para serializa
 
 A execução do `Main` confirma o comportamento configurado em cada anotação: o `Person`, anotado com `PASCAL_CASE` e `prettify = false`, gera um JSON compactado com os campos em PascalCase, incluindo `FirstPersonName` obtido do método anotado com `@SerializedMethod`. Já o `User`, anotado com `SNAKE_CASE` e `prettify` no valor padrão (verdadeiro), gera um JSON formatado com indentação e os campos em snake_case, como `full_name`. O painel de execução mostra ainda que o build foi concluído com sucesso (`BUILD SUCCESSFUL`), validando que o processador de anotações funciona corretamente para os dois formatos testados.
 
-Se você quiser aprofundar e entender em detalhes tudo o que foi construído nesta aula — desde o conceito de anotações customizadas e reflection até a explicação linha a linha de cada arquivo Java (`FieldFormatEnum`, `SerializedMethod`, `SerializerType`, `Person`, `User`, `SerializerProcessor` e `Main`) — preparei um tutorial completo, pensado para quem está vendo esses conceitos pela primeira vez. Nele você encontra a visão geral do projeto, a explicação de cada bloco de código e o passo a passo completo de como um objeto é transformado em JSON usando anotações. 
+Se você quiser aprofundar e entender em detalhes tudo o que foi construído nesta aula — desde o conceito de anotações customizadas e reflection até a explicação linha a linha de cada arquivo Java (`FieldFormatEnum`, `SerializedMethod`, `SerializerType`, `Person`, `User`, `SerializerProcessor` e `Main`) — preparei um tutorial completo, pensado para quem está vendo esses conceitos pela primeira vez. Nele você encontra a visão geral do projeto, a explicação de cada bloco de código e o passo a passo completo de como um objeto é transformado em JSON usando anotações. Confira o tutorial detalhado clicandoabaixo.
 
-### Confira o tutorial detalhado aqui --> [Tutorial: Criando um Serializador de JSON com Anotações Customizadas em Java](000-Midia_e_Anexos/tutorial_annotations_java.md)
+⭐️ [Tutorial: Criando um Serializador de JSON com Anotações Customizadas em Java](000-Midia_e_Anexos/tutorial_annotations_java.md)
 
 
 ## Parte 2 - Explorando Annotation Processors
