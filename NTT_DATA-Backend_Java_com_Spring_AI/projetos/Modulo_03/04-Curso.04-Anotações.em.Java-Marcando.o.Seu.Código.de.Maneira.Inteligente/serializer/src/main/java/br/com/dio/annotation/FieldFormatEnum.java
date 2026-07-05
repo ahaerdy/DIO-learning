@@ -1,9 +1,6 @@
 package br.com.dio.annotation;
-import com.google.common.base.CaseFormat;
 import java.util.function.Function;
-
 import static com.google.common.base.CaseFormat.*;
-
 
 public enum FieldFormatEnum {
 
@@ -18,7 +15,5 @@ public enum FieldFormatEnum {
         this.format = format;
     }
 
-    public String format(String field) {
-        return format.apply(field);
-    }
+    public Function<String, String> getFormat() { return format; }
 }

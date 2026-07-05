@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../../../../.." vcs="Git" />
+    <mapping directory="/mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning" vcs="Git" />
   </component>
 </project>

@@ -262,7 +262,279 @@ As três anotações/enum são apenas **definições de metadados**. Elas são "
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/annotations-em-java-marcando-o-seu-codigo-de-maneira-inteligente/learning/6866303d-13cb-4ebb-ae8d-742b920c96b2?autoplay=1
 
+### Anotações
 
+#### FieldFormatEnum — formatos de nomenclatura de campos
+
+```java
+package br.com.dio.annotation;
+import java.util.function.Function;
+import static com.google.common.base.CaseFormat.*;
+
+public enum FieldFormatEnum {
+
+    CAMEL_CASE(field -> field),
+    PASCAL_CASE(field -> LOWER_CAMEL.to(UPPER_CAMEL, field)),
+    SNAKE_CASE(field -> LOWER_CAMEL.to(LOWER_UNDERSCORE, field)),
+    KEBAB_CASE(field -> LOWER_CAMEL.to(LOWER_HYPHEN, field));
+
+    private final Function<String, String> format;
+
+    FieldFormatEnum(final Function<String, String> format) {
+        this.format = format;
+    }
+
+    public Function<String, String> getFormat() { return format; }
+}
+```
+
+O enum `FieldFormatEnum` define as opções de nomenclatura que os campos podem receber ao serem serializados em JSON: `CAMEL_CASE`, `PASCAL_CASE`, `SNAKE_CASE` e `KEBAB_CASE`. Cada constante recebe no construtor uma `Function<String, String>`, e a conversão entre os formatos é feita com a classe `CaseFormat` da biblioteca Guava, partindo sempre de `LOWER_CAMEL` (o padrão usado nos nomes de campo em Java) para o formato desejado.
+
+#### SerializedMethod — anotação para métodos
+
+```java
+package br.com.dio.annotation;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+@Retention(RUNTIME)
+@Target(METHOD)
+public @interface SerializedMethod {
+    String value() default "";
+}
+```
+
+`SerializedMethod` é uma anotação de método, com retenção em tempo de execução (`RUNTIME`), o que permite que ela seja lida via reflection. Seu atributo `value` é opcional e serve para definir um nome customizado que a propriedade terá no JSON gerado, no lugar do nome padrão do método.
+
+#### SerializerType — anotação para classes
+
+```java
+package br.com.dio.annotation;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import static br.com.dio.annotation.FieldFormatEnum.CAMEL_CASE;
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+@Retention(RUNTIME)
+@Target(TYPE)
+public @interface SerializerType {
+    FieldFormatEnum fieldFormat() default CAMEL_CASE;
+
+    boolean prettify() default true;
+}
+```
+
+`SerializerType` é a anotação aplicada na classe (ou record) que será serializada. Ela concentra duas configurações: `fieldFormat`, que indica qual das opções de `FieldFormatEnum` deve ser usada na formatação dos nomes de campo (com `CAMEL_CASE` como padrão), e `prettify`, que controla se o JSON de saída será formatado com indentação e quebras de linha ou compactado em uma única linha.
+
+#### Person — modelo anotado com PascalCase
+
+```java
+package br.com.dio.model;
+
+import br.com.dio.annotation.SerializedMethod;
+import br.com.dio.annotation.SerializerType;
+
+import static br.com.dio.annotation.FieldFormatEnum.PASCAL_CASE;
+
+@SerializerType(fieldFormat = PASCAL_CASE, prettify = false)
+public class Person {
+
+    private long id;
+
+    private String name;
+
+    private int age;
+
+    public Person() {
+    }
+
+    public Person(final long id, final String name, final int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @SerializedMethod("firstPersonName")
+    public String firstName() {
+        return name.split(" ")[0];
+    }
+}
+```
+
+A classe `Person` é anotada com `@SerializerType(fieldFormat = PASCAL_CASE, prettify = false)`, ou seja, ao ser serializada seus campos aparecerão em PascalCase e o JSON resultante não será formatado com indentação. Além dos campos `id`, `name` e `age` com seus respectivos getters e setters, a classe possui o método `firstName()`, anotado com `@SerializedMethod("firstPersonName")`, que extrai apenas o primeiro nome a partir do campo `name` e será incluído no JSON sob a chave customizada `firstPersonName`.
+
+#### User — record anotado com snake_case
+
+```java
+package br.com.dio.model;
+
+import br.com.dio.annotation.SerializerType;
+import static br.com.dio.annotation.FieldFormatEnum.SNAKE_CASE;
+
+@SerializerType(fieldFormat = SNAKE_CASE)
+
+public record User(
+        long id,
+        String fullName,
+        int age,
+        double salary
+) { }
+```
+
+`User` é um record anotado com `@SerializerType(fieldFormat = SNAKE_CASE)`, mantendo o valor padrão de `prettify` (verdadeiro). Seus componentes `id`, `fullName`, `age` e `salary` serão convertidos para snake_case no momento da serialização, servindo como um segundo caso de teste, distinto do `Person`, para validar o processador de anotações com um formato de nomenclatura diferente e com uma classe declarada como record.
+
+#### SerializerProcessor — construção do método de serialização
+
+```java
+package br.com.dio.processor;
+
+import br.com.dio.annotation.SerializedMethod;
+import br.com.dio.annotation.SerializerType;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.joining;
+
+public class SerializerProcessor {
+
+    public String serializer(final Object object) throws IllegalAccessException, InvocationTargetException {
+        Objects.requireNonNull(object, "Enter with non null object");
+
+        var clazz = object.getClass();
+        var typeAnnotation = Stream.of(clazz.getAnnotations())
+                .flatMap(a -> (a instanceof SerializerType s) ? Stream.of(s) : Stream.empty())
+                .findFirst()
+                .orElseThrow(() -> new NoSuchElementException(
+                        "For serialize object annotate it with @SerializerType"));
+
+        var fieldNameFormatter = typeAnnotation.fieldFormat().getFormat();
+        var prettify = typeAnnotation.prettify();
+
+        Map<String, Object> elements = new HashMap<>();
+        for (var field : clazz.getDeclaredFields()) {
+            field.setAccessible(true);
+            elements.put(field.getName(), field.get(object));
+        }
+
+        var annotatedMethods = Stream.of(object.getClass().getMethods())
+                .filter(m -> Stream.of(m.getAnnotations())
+                        .anyMatch(a -> a.annotationType().equals(SerializedMethod.class)))
+                .toList(); // ou .collect(Collectors.toList()) se versão < 16
+
+        for (var method : annotatedMethods) {
+            method.setAccessible(true);
+            String customName = method.getAnnotation(SerializedMethod.class).value();
+            elements.put(customName.isBlank() ? method.getName() : customName, method.invoke(object));
+        }
+
+        var jsonFields = elements.entrySet().stream()
+                .map(e -> String.format(
+                        "\"%s\":%s",
+                        fieldNameFormatter.apply(e.getKey()),
+                        formatValue(e.getValue())
+                ))
+                .collect(joining(String.format(",%s", System.lineSeparator())));
+
+        var json = String.format(
+                "{%s%s%s}",
+                System.lineSeparator(),
+                jsonFields,
+                System.lineSeparator()
+        );
+
+        return prettify ?
+                json :
+                json.replaceAll(System.lineSeparator(), "")
+                        .replaceAll("    ", "");
+    }
+
+    private String formatValue(final Object value) {
+        return value instanceof String s ?
+                String.format("\"%s\"", s) :
+                value.toString();
+    }
+}
+```
+
+Esse é o núcleo da aula: a classe `SerializerProcessor` implementa o método `serializer`, responsável por transformar um objeto qualquer em uma string JSON usando reflection. Primeiro, `Objects.requireNonNull` garante que o objeto recebido não é nulo. Em seguida, `object.getClass()` obtém a classe do objeto e o código busca, entre as anotações da classe, aquela do tipo `SerializerType` — usando `flatMap` combinado com `instanceof` para já obter a anotação no tipo correto, sem precisar de cast explícito, e lançando uma exceção caso a classe não esteja anotada. A partir da anotação, são extraídos o formatador de nomes de campo (`fieldNameFormatter`) e a flag `prettify`.
+
+Depois, o método percorre `clazz.getDeclaredFields()`, tornando cada campo acessível com `setAccessible(true)` e armazenando nome e valor em um `Map<String, Object>` chamado `elements`. Em seguida, o mesmo mapa é complementado com os métodos anotados com `@SerializedMethod`: eles são filtrados a partir de `getMethods()`, e para cada um é obtido o nome customizado definido na anotação (ou o nome padrão do método, caso o valor esteja em branco) e o resultado de sua invocação via `method.invoke(object)`.
+
+Com o mapa completo, os campos são transformados em uma stream, mapeados para o formato `"chave":valor` — aplicando o formatador de nomes e um método auxiliar `formatValue` que coloca aspas em valores do tipo `String` e apenas chama `toString()` para os demais tipos — e unidos com `joining`, separando cada entrada por vírgula e quebra de linha. Por fim, o JSON é montado entre chaves e, se `prettify` for falso, as quebras de linha e a indentação são removidas com `replaceAll`.
+
+#### Main — execução e teste do serializador
+
+```java
+package br.com.dio;
+
+import br.com.dio.model.Person;
+import br.com.dio.model.User;
+import br.com.dio.processor.SerializerProcessor;
+import java.lang.reflect.InvocationTargetException;
+
+public class Main {
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
+        var processor = new SerializerProcessor();
+        System.out.println(processor.serializer(new Person(1, "João da Silva", 26)));
+        System.out.println(processor.serializer(new User(2, "Maria Silva", 30, 3222.23)));
+    }
+}
+```
+
+Na classe `Main`, um `SerializerProcessor` é instanciado e usado para serializar um `Person` e um `User`, imprimindo o resultado de cada chamada com `System.out.println`. Como o método `serializer` propaga as exceções de reflection (`InvocationTargetException` e `IllegalAccessException`), o `main` apenas as declara em sua assinatura, sem tratá-las, já que o foco da aula é o funcionamento das anotações e não o tratamento de erros.
+
+#### Resultado da execução
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-05-13h13m05s550.jpg" alt="" width="840">
+</p>
+
+```
+{"Name":"João da Silva","Id":1,"FirstPersonName":"João","Age":26}
+{
+"full_name":"Maria Silva",
+"id":2,
+"salary":3222.23,
+"age":30
+}
+```
+
+A execução do `Main` confirma o comportamento configurado em cada anotação: o `Person`, anotado com `PASCAL_CASE` e `prettify = false`, gera um JSON compactado com os campos em PascalCase, incluindo `FirstPersonName` obtido do método anotado com `@SerializedMethod`. Já o `User`, anotado com `SNAKE_CASE` e `prettify` no valor padrão (verdadeiro), gera um JSON formatado com indentação e os campos em snake_case, como `full_name`. O painel de execução mostra ainda que o build foi concluído com sucesso (`BUILD SUCCESSFUL`), validando que o processador de anotações funciona corretamente para os dois formatos testados.
 
 
 ### 🟩 Vídeo 03 - Questionário: Introdução às Annotations em Runtime

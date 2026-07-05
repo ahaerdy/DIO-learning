@@ -3,9 +3,9 @@ package br.com.dio.model;
 import br.com.dio.annotation.SerializedMethod;
 import br.com.dio.annotation.SerializerType;
 
-import static br.com.dio.annotation.FieldFormatEnum.KEBAB_CASE;
+import static br.com.dio.annotation.FieldFormatEnum.PASCAL_CASE;
 
-@SerializerType(fieldFormat = KEBAB_CASE, prettify = false)
+@SerializerType(fieldFormat = PASCAL_CASE, prettify = false)
 public class Person {
 
     private long id;
