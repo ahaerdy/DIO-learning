@@ -499,6 +499,10 @@ Com o mapa completo, os campos são transformados em uma stream, mapeados para o
 
 #### Main — execução e teste do serializador
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-05-13h13m04s851.jpg" alt="" width="840">
+</p>
+
 ```java
 package br.com.dio;
 
