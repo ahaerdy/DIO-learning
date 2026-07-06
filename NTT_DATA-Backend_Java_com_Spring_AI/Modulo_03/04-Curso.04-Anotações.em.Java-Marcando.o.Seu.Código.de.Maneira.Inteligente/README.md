@@ -1291,12 +1291,8 @@ Com o breakpoint atingido (sessão de debug conectada em `localhost:5005`), o pa
 </p>
 
 A janela de **Evaluate Expression** mostra o resultado de `element.getEnclosedElements()`: uma lista com 8 itens, contendo o construtor padrão (`Person()`), os campos `id` e `name`, os métodos `getId()`, `setId(int)`, `getName()`, `setName(java.lang.String)` e `toString()` — evidenciando todos os membros da classe `Person` que o processor tem disponíveis para inspecionar e usar na geração do builder.
-      
 
+# Certificado: Anotações em Java: Marcando o Seu Código de Maneira Inteligente
 
-##  Materiais de Apoio
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/SAW1GP6Q.pdf
+- Certificado em pdf: [Certificado-Anotações.em.Java.Marcando.o.Seu.Código.de.Maneira.Inteligente.pdf](000-Midia_e_Anexos/Certificado-Anotações.em.Java.Marcando.o.Seu.Código.de.Maneira.Inteligente.pdf)
