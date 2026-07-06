@@ -540,9 +540,7 @@ Na classe `Main`, um `SerializerProcessor` é instanciado e usado para serializa
 
 A execução do `Main` confirma o comportamento configurado em cada anotação: o `Person`, anotado com `PASCAL_CASE` e `prettify = false`, gera um JSON compactado com os campos em PascalCase, incluindo `FirstPersonName` obtido do método anotado com `@SerializedMethod`. Já o `User`, anotado com `SNAKE_CASE` e `prettify` no valor padrão (verdadeiro), gera um JSON formatado com indentação e os campos em snake_case, como `full_name`. O painel de execução mostra ainda que o build foi concluído com sucesso (`BUILD SUCCESSFUL`), validando que o processador de anotações funciona corretamente para os dois formatos testados.
 
-Se você quiser aprofundar e entender em detalhes tudo o que foi construído nesta aula — desde o conceito de anotações customizadas e reflection até a explicação linha a linha de cada arquivo Java (`FieldFormatEnum`, `SerializedMethod`, `SerializerType`, `Person`, `User`, `SerializerProcessor` e `Main`) — preparei um tutorial completo, pensado para quem está vendo esses conceitos pela primeira vez. Nele você encontra a visão geral do projeto, a explicação de cada bloco de código e o passo a passo completo de como um objeto é transformado em JSON usando anotações. Confira o tutorial detalhado clicando abaixo.  
-
-#tutorial
+Se você quiser aprofundar e entender em detalhes tudo o que foi construído nesta aula — desde o conceito de anotações customizadas e reflection até a explicação linha a linha de cada arquivo Java (`FieldFormatEnum`, `SerializedMethod`, `SerializerType`, `Person`, `User`, `SerializerProcessor` e `Main`) — preparei um tutorial completo, pensado para quem está vendo esses conceitos pela primeira vez. Nele você encontra a visão geral do projeto, a explicação de cada bloco de código e o passo a passo completo de como um objeto é transformado em JSON usando anotações. Confira o tutorial detalhado clicando abaixo. #tutorial
 
 ### ⭐️ [Tutorial: Criando um Serializador de JSON com Anotações Customizadas em Java](000-Midia_e_Anexos/tutorial_annotations_java.md) 
 
@@ -556,6 +554,494 @@ Se você quiser aprofundar e entender em detalhes tudo o que foi construído nes
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/annotations-em-java-marcando-o-seu-codigo-de-maneira-inteligente/learning/66dde68f-f31a-4937-9a97-cc7d005cb892?autoplay=1
+
+### Anotações
+
+#### Estrutura final do projeto multi-módulo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-08h36m50s937.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a estrutura final do projeto **annotation-processor** já com os três subprojetos criados: `annotation`, `processor` e `sample`, cada um com sua própria pasta `src` e seu próprio `build.gradle.kts`. No `settings.gradle.kts`, destacado em azul, aparece o `rootProject.name` definido como `"annotation-processor"` e os três `include(...)` apontando para cada um dos módulos (`sample`, `annotation`, `processor`).
+
+---
+
+#### Limpeza do build.gradle.kts do módulo processor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-09h16m52s940.jpg" alt="" width="840">
+</p>
+
+```kotlin
+plugins {
+    id("java")
+}
+
+group = "br.com.dio"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+```
+
+Este é o `build.gradle.kts` do módulo `:processor` logo após sua criação. A anotação na imagem indica que as dependências e configurações de teste que vêm por padrão no template do Gradle foram removidas, já que esse projeto não vai precisar delas.
+
+---
+
+#### settings.gradle.kts com os módulos incluídos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-09h51m26s223.jpg" alt="" width="840">
+</p>
+
+```kotlin
+rootProject.name = "annotation-processor"
+include(":sample")
+include(":annotation")
+include(":processor")
+```
+
+Aqui é mostrada a estrutura inicial do `settings.gradle.kts` já com os três módulos adicionados por meio dos comandos `include`, um para cada subprojeto criado (`sample`, `annotation` e `processor`).
+
+---
+
+#### Criando a classe Builder como Annotation
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h20m44s141.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a caixa de diálogo "New Java Class" do IntelliJ, usada para criar a classe `Builder` dentro do pacote `br.com.dio`, no módulo `annotation`. Nela é selecionado o tipo **Annotation**, em vez de uma classe, interface, record ou enum comuns, já que o objetivo é criar uma anotação customizada.
+
+---
+
+#### Configuração da anotação Builder
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h25m46s340.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.SOURCE;
+
+@Target(TYPE)
+@Retention(SOURCE)
+public @interface Builder {
+}
+```
+
+A anotação `Builder` recém-criada é configurada com `@Target(TYPE)`, indicando que ela será usada para marcar tipos (classes) no código, e com `@Retention(SOURCE)`, ou seja, diferente de uma retenção `RUNTIME`, essa anotação existirá apenas em tempo de compilação e não estará disponível via reflexão em tempo de execução.
+
+---
+
+#### Criando a classe Person no módulo sample
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h34m06s653.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+    }
+}
+```
+
+Depois de criar o pacote `br.com.dio` e a classe `Main` no módulo `sample`, a próxima etapa mostrada é a criação de uma nova classe chamada `Person`, dentro de um subpacote `model`, que será a classe usada para testar a anotação `Builder`.
+
+---
+
+#### Classe Person com propriedades, getters e setters
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h39m49s573.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio.model;
+
+public class Person {
+
+    private int id;
+    private String name;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+```
+
+A classe `Person`, criada no pacote `br.com.dio.model`, recebe duas propriedades simples, `id` e `name`, junto com seus respectivos getters e setters gerados automaticamente pela IDE. Ainda não há nenhuma anotação aplicada a essa classe nesta etapa.
+
+---
+
+#### Dependências do módulo sample
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h41m51s524.jpg" alt="" width="840">
+</p>
+
+```kotlin
+plugins {
+    id("java")
+}
+
+group = "br.com.dio"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(":annotation"))
+    compileOnly(project(":annotation"))
+    implementation(project(":processor"))
+    annotationProcessor(project(":processor"))
+}
+```
+
+Como a anotação `Builder` está em outro módulo, é necessário adicionar as dependências no `build.gradle.kts` do módulo `sample`. É feita uma referência direta aos projetos `:annotation` e `:processor` (em vez de baixar uma dependência externa), incluindo `implementation`, `compileOnly` e, principalmente, `annotationProcessor(project(":processor"))`, para que o processador de anotações seja de fato acionado durante a compilação.
+
+---
+
+#### Anotação Builder aplicada à classe Person
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h43m18s254.jpg" alt="" width="840">
+</p>
+
+```java
+import br.com.dio.Builder;
+
+@Builder
+public class Person {
+
+    private int id;
+
+    private String name;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(final int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(final String name) {
+        this.name = name;
+    }
+}
+```
+
+Com as dependências já configuradas, a classe `Person` agora é marcada com `@Builder`, importada de `br.com.dio.Builder`. A partir desse ponto, essa classe está pronta para ser processada pelo Annotation Processor que será construído no módulo `processor`.
+
+---
+
+#### Revisão da anotação Builder
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h51m32s924.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.SOURCE;
+
+@Target(TYPE)
+@Retention(SOURCE)
+public @interface Builder {
+}
+```
+
+Esta imagem retoma a anotação `Builder`, já finalizada, no módulo `annotation`, confirmando que ela está corretamente configurada com `@Target(TYPE)` e `@Retention(SOURCE)` antes de seguir para a etapa de referenciá-la a partir do módulo `sample`.
+
+---
+
+#### Classe Person com toString
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h54m26s940.jpg" alt="" width="840">
+</p>
+
+```java
+import br.com.dio.Builder;
+
+@Builder
+public class Person {
+
+    private int id;
+    private String name;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
+```
+
+Aqui a classe `Person` aparece completa, já com o método `toString()` sobrescrito, exibindo os campos `id` e `name` formatados. A criação de `equals` e `hashCode` fica em aberto, podendo ser adicionada depois caso seja necessária.
+
+---
+
+#### Dependências do módulo processor: auto-service e javapoet
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h57m59s703.jpg" alt="" width="840">
+</p>
+
+```kotlin
+plugins {
+    id("java")
+}
+
+group = "br.com.dio"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+val autoServiceVersion = "1.1.1"
+
+dependencies {
+    compileOnly("com.google.auto.service:auto-service:$autoServiceVersion")
+    annotationProcessor("com.google.auto.service:auto-service:$autoServiceVersion")
+    implementation("com.squareup:javapoet:1.13.0")
+
+    compileOnly(project(":annotation"))
+    implementation(project(":annotation"))
+}
+```
+
+O `build.gradle.kts` do módulo `processor` recebe as dependências que vão auxiliar na construção do Annotation Processor: a biblioteca `com.google.auto.service:auto-service`, referenciada por meio da variável `autoServiceVersion` (definida como `"1.1.1"`), e a biblioteca `com.squareup:javapoet`, na versão `1.13.0`, que facilita a geração de código Java. Também são adicionadas as referências ao módulo `:annotation`.
+
+---
+
+#### Criando o pacote base no módulo processor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h58m48s709.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a criação do pacote `br.com.dio` dentro do módulo `processor`, onde ficarão as classes responsáveis por implementar a lógica de geração de código a partir da anotação `Builder`.
+
+---
+
+#### Criando a classe BuilderGenerator
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-11h01m04s829.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+public class BuilderGenerator {
+}
+```
+
+É criada a classe `BuilderGenerator`, dentro do pacote `br.com.dio` no módulo `processor`. Essa classe será responsável por conter o código que efetivamente gera a classe Builder correspondente para as classes anotadas.
+
+---
+
+#### Criando a classe BuilderProcessor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-11h03m08s063.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+public class BuilderProcessor {
+}
+```
+
+Em seguida, é criada a classe `BuilderProcessor`, também no pacote `br.com.dio` do módulo `processor`. É nessa classe que estará concentrada boa parte do trabalho de processamento da anotação `Builder`.
+
+---
+
+#### Estendendo AbstractProcessor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-11h06m01s087.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+public class BuilderProcessor extends Abstra
+```
+
+Para que a classe `BuilderProcessor` funcione como um processador de anotações, ela precisa estender uma classe fornecida pelo próprio Java. A imagem mostra o autocomplete do IntelliJ sugerindo a opção `AbstractProcessor`, do pacote `javax.annotation.processing`, no momento em que essa herança é escrita.
+
+---
+
+#### AbstractProcessor exige a implementação do método process
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-11h07m51s136.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+import javax.annotation.processing.AbstractProcessor;
+
+public class BuilderProcessor extends AbstractProcessor {
+}
+```
+
+Ao estender `AbstractProcessor`, o IntelliJ aponta um erro indicando que a classe precisa implementar o método abstrato `process(Set<? extends TypeElement>, RoundEnvironment)`, exigido por essa classe base. É oferecida a opção "Implement methods" para gerar automaticamente essa implementação.
+
+---
+
+#### Implementando o método process
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-11h12m02s076.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.RoundEnvironment;
+import javax.lang.model.element.TypeElement;
+import java.util.Set;
+
+public class BuilderProcessor extends AbstractProcessor {
+
+    @Override
+    public boolean process(final Set<? extends TypeElement> annotations, final RoundEnvironment roundEnv) {
+        return false;
+    }
+
+}
+```
+
+Com o método `process` implementado, ainda retornando `false` por padrão, fica estabelecida a estrutura básica do processador. A função desse método é justamente fazer uma varredura no código-fonte em busca das anotações que devem ser processadas.
+
+---
+
+#### Apontando a anotação a ser processada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-12h00m07s786.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio;
+
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.RoundEnvironment;
+import javax.annotation.processing.SupportedAnnotationTypes;
+import javax.lang.model.element.TypeElement;
+import java.util.Set;
+
+@SupportedAnnotationTypes("br.com.dio.Builder")
+public class BuilderProcessor extends AbstractProcessor {
+
+    @Override
+    public boolean process(final Set<? extends TypeElement> annotations, final RoundEnvironment roundEnv) {
+        return false;
+    }
+
+}
+```
+
+É adicionada a anotação `@SupportedAnnotationTypes`, informando ao processador qual anotação ele deve ficar responsável por verificar. Como o valor esperado é um array de `String`, mas nesse caso existe apenas uma anotação, basta informar diretamente o nome totalmente qualificado `"br.com.dio.Builder"`.
+
+---
+
+#### Definindo a versão Java suportada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-12h03m20s407.jpg" alt="" width="840">
+</p>
+
+```java
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.RoundEnvironment;
+import javax.annotation.processing.SupportedAnnotationTypes;
+import javax.annotation.processing.SupportedSourceVersion;
+import javax.lang.model.element.TypeElement;
+import java.util.Set;
+
+import static javax.lang.model.SourceVersion.RELEASE_21;
+
+@SupportedAnnotationTypes("br.com.dio.Builder")
+@SupportedSourceVersion(RELEASE_21)
+public class BuilderProcessor extends AbstractProcessor {
+
+    @Override
+    public boolean process(final Set<? extends TypeElement> annotations, final RoundEnvironment roundEnv) {
+        return false;
+    }
+
+}
+```
+
+Por fim, é adicionada a anotação `@SupportedSourceVersion(RELEASE_21)`, indicando a versão do Java que esse processador vai suportar, nesse caso o Java 21. O import estático de `RELEASE_21` é ajustado com a ajuda da IDE, deixando a classe `BuilderProcessor` pronta para, na próxima etapa, receber a lógica que efetivamente gera o código do Builder.
+
 
 ### 🟩 Vídeo 04 - Explorando Annotation Processor
 
