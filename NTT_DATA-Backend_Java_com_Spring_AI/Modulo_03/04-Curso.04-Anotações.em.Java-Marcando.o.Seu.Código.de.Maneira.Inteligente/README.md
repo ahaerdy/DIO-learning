@@ -798,10 +798,6 @@ Esta imagem retoma a anotação `Builder`, já finalizada, no módulo `annotatio
 
 #### Classe Person com toString
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-10h54m26s940.jpg" alt="" width="840">
-</p>
-
 ```java
 import br.com.dio.Builder;
 
