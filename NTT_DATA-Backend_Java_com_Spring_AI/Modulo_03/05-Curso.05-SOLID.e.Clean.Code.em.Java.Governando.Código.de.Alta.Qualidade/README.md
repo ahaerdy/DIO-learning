@@ -91,7 +91,14 @@ Slide final com as referências utilizadas na construção do material da aula, 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/solid-e-clean-code-em-java-escrevendo-codigo-de-alta-qualidade/learning/6023b67b-a6fb-40ea-8eb9-1e3849b7fad1?autoplay=1
+
+Referência (refotoramento): https://github.com/digitalinnovationone/warehouse
+
+### Anotações
+
+      
+
 
 ##  Materiais de Apoio
 
