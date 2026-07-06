@@ -1046,7 +1046,253 @@ Por fim, é adicionada a anotação `@SupportedSourceVersion(RELEASE_21)`, indic
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/annotations-em-java-marcando-o-seu-codigo-de-maneira-inteligente/learning/66dde68f-f31a-4937-9a97-cc7d005cb892?autoplay=1
+
+### Anotações
+
+#### BuildGenerator.java — a classe geradora do código
+
+Esta código mostra o conteúdo completo da classe `BuildGenerator`, responsável por montar dinamicamente, usando a biblioteca **JavaPoet**, o código-fonte da classe Builder que será gerada.
+
+```java
+package br.com.dio;
+
+import com.squareup.javapoet.*;
+
+import javax.lang.model.type.TypeMirror;
+import java.util.Map;
+
+import static javax.lang.model.element.Modifier.*;
+
+public class BuildGenerator {
+
+    public TypeSpec create(
+            final String packageName,
+            final String className,
+            final String builderName,
+            final Map<String, TypeMirror> fields
+    ) {
+        var generaterBuilderClass = TypeSpec.classBuilder(builderName).addModifiers(PUBLIC);
+
+        fields.forEach((k, v) ->
+            generaterBuilderClass.addMethod(genBuilderSetter(
+                packageName,
+                builderName,
+                k,
+                TypeName.get(v)
+            ))
+        );
+
+        var buildMethod = MethodSpec.methodBuilder("build")
+                .addModifiers(PUBLIC)
+                .returns(ClassName.get(packageName, className))
+                .addStatement("var target = new $N()", className);
+
+        fields.keySet().forEach(f -> buildMethod.addStatement(
+                "target.set$N($N)",
+                f.substring(0, 1).toUpperCase() + f.substring(1),
+                f
+        ));
+
+        return generaterBuilderClass.addMethod(buildMethod.build()).build();
+    }
+
+    private MethodSpec genBuilderSetter(
+            final String packageName,
+            final String name,
+            final String param,
+            final TypeName type
+    ) {
+        return MethodSpec.methodBuilder(param)
+                .addModifiers(PUBLIC)
+                .returns(ClassName.get(packageName, name))
+                .addParameter(type, param, FINAL)
+                .addStatement("this.$N = $N", param, param)
+                .addStatement("return this")
+                .build();
+    }
+}
+```
+
+O método `create` recebe o pacote, o nome da classe original, o nome do builder e o mapa de campos (nome → tipo) extraídos da classe anotada. A partir disso ele monta, um a um, os métodos setter (via `genBuilderSetter`) e o método `build()`, que instancia o objeto original e chama cada `setX(...)` correspondente a um campo.
+
+#### BuildProcessor.java — o processador de anotações
+
+Aqui está o `BuildProcessor`, a classe que estende `AbstractProcessor` e é acionada pelo compilador Java sempre que encontra a anotação `@Builder`.
+
+```java
+package br.com.dio;
+
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.RoundEnvironment;
+import javax.annotation.processing.SupportedAnnotationTypes;
+import javax.annotation.processing.SupportedSourceVersion;
+import javax.lang.model.SourceVersion;
+import javax.lang.model.element.Element;
+import javax.lang.model.element.TypeElement;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Map;
+import java.util.Set;
+
+import com.squareup.javapoet.JavaFile;
+
+import static java.util.stream.Collectors.toMap;
+import static javax.lang.model.element.ElementKind.FIELD;
+
+@SupportedAnnotationTypes("vr.com.dio.Builder")
+@SupportedSourceVersion(SourceVersion.RELEASE_21)
+public class BuildProcessor extends AbstractProcessor {
+    @Override
+    public boolean process(final Set<? extends TypeElement> annotations, final RoundEnvironment roundEnv) {
+        for (var annotation : annotations) {
+            for (var element : roundEnv.getElementsAnnotatedWith(annotation)) {
+                Map fields = element.getEnclosedElements().stream()
+                        .filter(e -> e.getKind() == FIELD)
+                        .collect(toMap(e -> e.getSimpleName().toString(), Element::asType));
+                var packageName = processingEnv.getElementUtils().getPackageOf(element).toString();
+                var className = element.getSimpleName().toString();
+                var builderName = className + "Builder";
+                var typeSpec = new BuildGenerator().create(packageName, className, builderName, fields);
+                var javaFile = JavaFile.builder(packageName, typeSpec).indent("    ").build();
+
+                try {
+                    var out = new PrintWriter(processingEnv.getFiler()
+                            .createSourceFile(builderName)
+                            .openWriter()
+                    );
+                    out.write(javaFile.toString());
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+
+            }
+        }
+        return true;
+    }
+}
+```
+
+Ele varre todos os elementos anotados, extrai os campos (`FIELD`) da classe, monta o `TypeSpec` do builder chamando `BuildGenerator.create(...)` e, por fim, escreve o arquivo `.java` gerado usando `Filer` e `JavaFile`.
+
+#### Person.java — a classe de exemplo anotada com @Builder
+
+Esta é a classe de modelo usada para testar o annotation processor: `Person`, anotada com `@Builder`, com os campos `id` e `name`, seus respectivos getters/setters e um `toString()`.
+
+```java
+import br.com.dio.Builder;
+
+@Builder
+public class Person {
+
+    private int id;
+    private String name;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
+}
+```
+
+É sobre essa classe que o `BuildProcessor` vai atuar: ao encontrar a anotação `@Builder`, ele vai gerar automaticamente uma classe `PersonBuilder` com os métodos `id(...)`, `name(...)` e `build()`.
+
+#### Executando o build do projeto no IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-13h54m18s106.jpg" alt="" width="840">
+</p>
+
+Nesta captura, o projeto `annotation-processor` está sendo compilado pelo Gradle diretamente pelo painel do IntelliJ IDEA, com a tarefa `build` selecionada na árvore de tasks. O editor mostra a classe `Person.java` aberta, já com a anotação `@Builder` aplicada.
+
+#### Build concluído com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-13h54m43s723.jpg" alt="" width="840">
+</p>
+
+O painel de execução mostra o resultado do build: todas as tarefas do módulo `sample` (compile, classes, jar, assemble, testClasses, check) aparecem como concluídas, e a mensagem final confirma `BUILD SUCCESSFUL`.
+
+#### Preparando o ambiente para debugar o annotation processor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-13h57m25s901.jpg" alt="" width="840">
+</p>
+
+Aqui o terminal do IntelliJ mostra o comando usado para rodar o Gradle habilitando o modo debug do processo de build, permitindo anexar um depurador ao processo do annotation processor:
+
+```bash
+./gradlew --no-daemon -Dorg.gradle.debug=true clean build
+```
+
+#### Anexando o debugger ao processo (Attach to Process)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-13h58m10s224.jpg" alt="" width="840">
+</p>
+
+No menu **Run** do IntelliJ, a opção **Attach to Process...** está destacada. É por meio dela que se conecta o depurador Java a um processo já em execução — nesse caso, o processo do Gradle iniciado com o parâmetro de debug.
+
+#### Selecionando o processo do Gradle para depuração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-13h58m15s610.jpg" alt="" width="840">
+</p>
+
+A caixa de diálogo **Attach with Java Debugger To** lista o processo disponível para conexão: o `GradleDaemon`, escutando na porta `5005`, que é a porta padrão usada pelo Gradle para depuração remota.
+
+#### Estrutura do módulo processor e o breakpoint
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-13h59m00s056.jpg" alt="" width="840">
+</p>
+
+A árvore do projeto mostra o módulo `processor` expandido (pastas `build` e `src`), com o editor exibindo o método `process` do `BuilderProcessor` e um breakpoint (ponto vermelho) marcado na linha do primeiro `for`, usado para validar se o processor está de fato sendo chamado durante o build.
+
+#### Criando o arquivo de configuração do annotation processor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-13h59m38s597.jpg" alt="" width="840">
+</p>
+
+Um menu de criação de novo arquivo é exibido dentro da pasta `resources/META-INF/services`, sugerindo o nome `javax.annotation.processing.Processor`. Esse é o arquivo de configuração exigido pelo mecanismo padrão de *Service Loader* do Java para registrar manualmente um annotation processor (sem depender de bibliotecas auxiliares), informando dentro dele o caminho completo da classe `BuilderProcessor`.
+
+#### Depurando o processor: contexto de execução
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-14h00m28s087.jpg" alt="" width="840">
+</p>
+
+Com o breakpoint atingido (sessão de debug conectada em `localhost:5005`), o painel de variáveis mostra o contexto disponível dentro do método `process`: a instância `this` do `BuilderProcessor`, o conjunto `annotations` (com tamanho 1) e o `roundEnv`, confirmando que o processor está de fato sendo acionado durante o build.
+
+#### Avaliando os elementos encontrados na classe anotada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-06-14h00m43s333.jpg" alt="" width="840">
+</p>
+
+A janela de **Evaluate Expression** mostra o resultado de `element.getEnclosedElements()`: uma lista com 8 itens, contendo o construtor padrão (`Person()`), os campos `id` e `name`, os métodos `getId()`, `setId(int)`, `getName()`, `setName(java.lang.String)` e `toString()` — evidenciando todos os membros da classe `Person` que o processor tem disponíveis para inspecionar e usar na geração do builder.
+      
+
 
 ##  Materiais de Apoio
 
