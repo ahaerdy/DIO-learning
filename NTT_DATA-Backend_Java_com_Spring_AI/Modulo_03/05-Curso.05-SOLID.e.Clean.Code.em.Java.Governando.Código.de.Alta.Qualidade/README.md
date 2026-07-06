@@ -76,6 +76,11 @@ Aplicar corretamente os princípios do SOLID traz uma série de vantagens para o
 
 Slide final com as referências utilizadas na construção do material da aula, incluindo o artigo original de Robert C. Martin (Uncle Bob) sobre os princípios de desenvolvimento orientado a objetos.
 
+#### Referências
+1. `https://blog.casadosenvolvedor.com.br/principios-solid-o-que-sao/?gad_source=1&gclid=Cj0KCQjw2uiwBhCXARIsACMvIU1MCUICpXDmjDY5LiVnSFCOYtAdgAYN3kVeJQk-IpU8p18JFFmK6BEaAmGqEALw_wcB`  
+2. `https://medium.com/desenvolvendo-com-paixao/o-que-é-solid-o-guia-completo-para-você-entender-os-5-princípios-da-poo-2b937b3fc530`  
+3. `http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod`  
+
 
 ## Parte 2 - Refatorando Código
 
