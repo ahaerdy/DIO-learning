@@ -93,7 +93,7 @@ Slide final com as referências utilizadas na construção do material da aula, 
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/solid-e-clean-code-em-java-escrevendo-codigo-de-alta-qualidade/learning/6023b67b-a6fb-40ea-8eb9-1e3849b7fad1?autoplay=1
 
-Este material apresenta uma **aula prática sobre refatoração de código** focada na transição de um sistema monolítico para uma arquitetura modular em camadas. O professor utiliza um projeto de **controle de estoque e vendas de cestas básicas** para demonstrar como reduzir a complexidade de uma classe principal sobrecarregada. Através da criação de pacotes de **serviços, modelos e acesso a dados (DAO)**, o conteúdo ensina a distribuir responsabilidades e a aplicar **boas práticas de programação** em Java. O processo destaca a importância da **manutenibilidade e organização**, exemplificando a lógica de negócios desde o cálculo de lucros até o tratamento de itens vencidos. Ao final, a aula reforça que a **modularização** facilita o reaproveitamento de código e a evolução segura de sistemas de software.
+**Aula prática sobre refatoração de código** focada na transição de um sistema monolítico para uma arquitetura modular em camadas. O professor utiliza um projeto de **controle de estoque e vendas de cestas básicas** para demonstrar como reduzir a complexidade de uma classe principal sobrecarregada. Através da criação de pacotes de **serviços, modelos e acesso a dados (DAO)**, o conteúdo ensina a distribuir responsabilidades e a aplicar **boas práticas de programação** em Java. O processo destaca a importância da **manutenibilidade e organização**, exemplificando a lógica de negócios desde o cálculo de lucros até o tratamento de itens vencidos. Ao final, a aula reforça que a **modularização** facilita o reaproveitamento de código e a evolução segura de sistemas de software.
 
 Referência (código base usado no refotoramento): https://github.com/digitalinnovationone/warehouse
 
@@ -102,9 +102,7 @@ Referência (código base usado no refotoramento): https://github.com/digitalinn
 
 
 
-##  Materiais de Apoio
-
-# Certificado: 
+# Certificado: SOLID e Clean Code em Java: Governando Código de Alta Qualidade
 
 - Link na plataforma: 
 - Certificado em pdf:
