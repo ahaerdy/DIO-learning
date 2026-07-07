@@ -97,12 +97,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/s
 
 Referência (código base usado no refotoramento): https://github.com/digitalinnovationone/warehouse
 
-### Anotações
-
-
-
-
 # Certificado: SOLID e Clean Code em Java: Governando Código de Alta Qualidade
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/ZEHASZQA.pdf
+- Certificado em pdf: [Certificado-SOLID.e.Clean.Code.em.Java-Governando.Código.de.Alta.Qualidade.pdf](Modulo_03/05-Curso.05-SOLID.e.Clean.Code.em.Java.Governando.Código.de.Alta.Qualidade/000-Midia_e_Anexos/Certificado-SOLID.e.Clean.Code.em.Java-Governando.Código.de.Alta.Qualidade.pdf)
