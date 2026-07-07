@@ -96,6 +96,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_03/04-Curso.04-Anotações.em.Java-Marcando.o.Seu.Código.de.Maneira.Inteligente)
 - [x] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade](Modulo_03/05-Curso.05-SOLID.e.Clean.Code.em.Java.Governando.Código.de.Alta.Qualidade)
 - [x] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](Modulo_03/06-Desafio-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework)
+   - **Repositório**: [dio-design-patterns-java](https://github.com/ahaerdy/dio-design-patterns-java)
+    - **Descrição**: Este projeto explora na prática os principais Padrões de Projeto do Gang of Four (GoF) utilizando Java, dividido em duas partes complementares: na primeira, os padrões Singleton, Strategy e Facade são implementados manualmente com Java puro, sem frameworks, permitindo compreender os mecanismos internos de cada solução; na segunda, os mesmos padrões são aplicados com Spring Boot, onde o @Service gerencia o Singleton automaticamente, o Spring Data JPA gera as implementações do Repository/Strategy em tempo de execução, e o OpenFeign cria o cliente HTTP da Facade para integração com a API pública ViaCEP — resultando em uma API REST completa de gerenciamento de clientes com consulta automática de endereço por CEP. A comparação direta entre as duas abordagens evidencia como o Spring Boot abstrai padrões consolidados, reduzindo drasticamente a quantidade de código sem abrir mão dos princípios de design orientado a objetos.
 
 ---
 
