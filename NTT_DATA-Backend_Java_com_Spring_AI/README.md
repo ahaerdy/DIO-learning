@@ -94,8 +94,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] Curso: [Simplificando I/O de Arquivos e Diretórios com Java](Modulo_03/02-Curso.02-Simplificando.IO.de.Arquivos.e.Diretórios.com.Java)
 - [x] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_03/03-Curso.03-Gerenciando.Dependências.com.Maven.e.Gradle)
 - [x] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_03/04-Curso.04-Anotações.em.Java-Marcando.o.Seu.Código.de.Maneira.Inteligente)
-- [ ] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade](Modulo_03/05-Curso.05-SOLID.e.Clean.Code.em.Java.Governando.Código.de.Alta.Qualidade)
-- [ ] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]
+- [x] Curso: [SOLID e Clean Code em Java: Governando Código de Alta Qualidade](Modulo_03/05-Curso.05-SOLID.e.Clean.Code.em.Java.Governando.Código.de.Alta.Qualidade)
+- [x] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](Modulo_03/06-Desafio-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework)
 
 ---
 
