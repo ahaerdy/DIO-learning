@@ -399,6 +399,14 @@ O diagrama UML apresenta a estrutura do padrão comportamental **Strategy**. Sua
 
 A interface `Comportamento` é criada para atuar como a nossa **Strategy**. Ela define o contrato que todas as variações de movimentação do robô devem seguir, estabelecendo o método base que será implementado pelas classes concretas.
 
+```java
+package one.digitalinnovation.gof.strategy;
+
+public interface Comportamento {
+    void mover();
+}
+```
+
 #### Implementação do Comportamento Agressivo
 
 <p align="center">
