@@ -840,6 +840,7 @@ O `build.gradle` é ajustado com a dependência de testes do Spring Boot (que in
 
 ```java
 package dio.taskmanager.infrastructure.repository;
+package dio.taskmanager.infrastructure.repository;
 
 import dio.taskmanager.domain.Task;
 import dio.taskmanager.domain.TaskId;
@@ -851,14 +852,144 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// Classe de testes unitários para a implementação InMemoryTaskRepository.
+// Cada método anotado com @Test valida um comportamento específico do repositório.
 class repositoryInMemoryTaskRepositoryTest {
 
+    // Instância do repositório que será testada.
+    // É recriada antes de cada teste para garantir isolamento entre os casos de teste.
     private InMemoryTaskRepository repository;
 
+    // Executado automaticamente pelo JUnit antes de CADA método de teste.
+    // Garante que cada teste comece com um repositório novo e vazio,
+    // evitando que dados de um teste "vazem" para outro.
     @BeforeEach
     void setUp() {
         repository = new InMemoryTaskRepository();
     }
+
+    // Testa se uma tarefa é corretamente salva no repositório.
+    @Test
+    void shouldSaveTask() {
+        // Cria uma nova tarefa com título e descrição.
+        Task task = new Task("Estudar Java", Optional.of("Revisar coleções"));
+        // Salva a tarefa e captura o retorno (a própria tarefa salva).
+        Task saved = repository.save(task);
+
+        // Verifica se um ID foi gerado automaticamente ao salvar.
+        assertNotNull(saved.getId());
+        // Verifica se o título foi mantido corretamente.
+        assertEquals("Estudar Java", saved.getTitle());
+        // Verifica se o status inicial padrão é PENDING.
+        assertEquals(TaskStatus.PENDING, saved.getStatus());
+    }
+
+    // Testa se é possível buscar uma tarefa pelo seu ID após salvá-la.
+    @Test
+    void shouldFindTaskById() {
+        // Cria uma tarefa sem descrição (Optional.empty()).
+        Task task = new Task("Estudar Spring", Optional.empty());
+        repository.save(task);
+
+        // Busca a tarefa pelo ID gerado no save.
+        Optional<Task> found = repository.findById(task.getId());
+
+        // Confirma que a tarefa foi encontrada (Optional não está vazio).
+        assertTrue(found.isPresent());
+        // Confirma que o título da tarefa encontrada é o esperado.
+        assertEquals("Estudar Spring", found.get().getTitle());
+    }
+
+    // Testa se o findAll retorna todas as tarefas salvas no repositório.
+    @Test
+    void shouldReturnAllTasks() {
+        // Salva duas tarefas distintas.
+        repository.save(new Task("Tarefa 1", Optional.empty()));
+        repository.save(new Task("Tarefa 2", Optional.of("Com descrição")));
+
+        // Verifica se o total de tarefas retornadas é igual a 2.
+        assertEquals(2, repository.findAll().size());
+    }
+
+    // Testa se uma tarefa é corretamente removida do repositório.
+    @Test
+    void shouldDeleteTask() {
+        // Cria e salva uma tarefa que será deletada em seguida.
+        Task task = new Task("Tarefa para deletar", Optional.empty());
+        repository.save(task);
+
+        // Remove a tarefa do repositório usando seu ID.
+        repository.delete(task.getId());
+
+        // Tenta buscar a tarefa removida.
+        Optional<Task> found = repository.findById(task.getId());
+        // Confirma que a tarefa não está mais presente no repositório.
+        assertFalse(found.isPresent());
+    }
+}
+```
+
+A classe de testes gerada instancia um novo `InMemoryTaskRepository` antes de cada teste (`@BeforeEach`) e valida individualmente os métodos `save`, `findById`, `findAll` e `delete`, verificando se os dados salvos, encontrados e removidos correspondem ao esperado.
+
+
+**`setUp()` (`@BeforeEach`)**
+Roda antes de cada teste individualmente. Cria uma nova instância de `InMemoryTaskRepository`, garantindo que cada teste comece com um repositório limpo — sem dados residuais de execuções anteriores. Isso é essencial em testes de armazenamento em memória, já que o `Map` interno persistiria dados entre testes se a instância fosse reaproveitada.
+
+**`shouldSaveTask()`**
+Valida o comportamento do método `save`. Cria uma `Task` com título e descrição, salva no repositório e verifica três coisas: (1) que um `id` foi atribuído automaticamente (`assertNotNull`), (2) que o título foi preservado sem alterações, e (3) que toda tarefa nova nasce com status `PENDING` por padrão. Esse teste garante que a regra de negócio "toda tarefa começa pendente" está sendo respeitada.
+
+**`shouldFindTaskById()`**
+Valida o método `findById`. Salva uma tarefa e, em seguida, busca-a pelo próprio `id` gerado. Confirma que o `Optional` retornado não está vazio (`isPresent()`) e que a tarefa devolvida é de fato a que foi salva, comparando o título. Isso testa a integridade da associação chave→valor no `Map` interno.
+
+**`shouldReturnAllTasks()`**
+Valida o método `findAll`. Salva duas tarefas diferentes e verifica se a lista retornada contém exatamente 2 elementos. O teste é propositalmente simples (checa apenas o tamanho, não o conteúdo), servindo para garantir que múltiplos registros coexistem corretamente no armazenamento.
+
+**`shouldDeleteTask()`**
+Valida o método `delete`. Salva uma tarefa, remove-a pelo `id` e depois tenta buscá-la novamente com `findById`. Espera que o `Optional` retornado esteja vazio (`assertFalse(found.isPresent())`), confirmando que a remoção efetivamente apaga o registro do `Map`, sem deixar resíduos.
+
+Em conjunto, esses quatro testes cobrem o CRUD completo da interface `TaskRepository` (Create/Save, Read/FindById, Read/FindAll, Delete), validando tanto o "caminho feliz" de cada operação quanto a consistência dos dados entre elas.
+
+#### Executando os testes com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-15h14m02s635.jpg" alt="" width="840">
+</p>
+
+Ao rodar a suíte de testes `repositoryInMemoryTaskRepositoryTest`, o Gradle executa as tarefas de compilação e testes e encerra com "BUILD SUCCESSFUL", confirmando os 4 testes aprovados e validando a implementação do repositório em memória.
+
+#### Extraindo um teste de contrato para a interface TaskRepository
+
+A partir de 00:10:00 na transcrição, o professor observa que os 4 testes criados (`shouldSaveTask`, `shouldFindTaskById`, `shouldReturnAllTasks`, `shouldDeleteTask`) não validam nada específico da implementação em memória — eles validam **regras de negócio da interface `TaskRepository`**. Por isso, ele extrai esses testes para uma classe abstrata que passa a viver ao lado da interface, no domínio, e faz a implementação concreta apenas informar qual repositório deve ser testado. Esse padrão é conhecido como **teste de contrato** (contract test): garante que qualquer implementação futura da interface (banco de dados, arquivo, etc.) seja validada pelas mesmas regras, sem duplicar código de teste.
+
+**Como funciona:**
+
+1. Uma classe abstrata `TaskRepositoryTest` concentra todos os testes de regra de negócio e possui um campo `protected TaskRepository repository`.
+2. Um método abstrato `createRepository()` obriga cada subclasse a dizer qual implementação concreta será testada.
+3. O `@BeforeEach` da classe abstrata chama `createRepository()` antes de cada teste, garantindo isolamento.
+4. A classe `InMemoryTaskRepositoryTest` passa a **estender** `TaskRepositoryTest` e só implementa `createRepository()`, herdando os 4 testes automaticamente.
+
+**Classe abstrata — contém os testes de regra de negócio:**
+
+```java
+package dio.taskmanager.domain;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public abstract class TaskRepositoryTest {
+
+    protected TaskRepository repository;
+
+    @BeforeEach
+    void setUp() {
+        repository = createRepository();
+    }
+
+    protected abstract TaskRepository createRepository();
 
     @Test
     void shouldSaveTask() {
@@ -902,18 +1033,51 @@ class repositoryInMemoryTaskRepositoryTest {
 }
 ```
 
-A classe de testes gerada instancia um novo `InMemoryTaskRepository` antes de cada teste (`@BeforeEach`) e valida individualmente os métodos `save`, `findById`, `findAll` e `delete`, verificando se os dados salvos, encontrados e removidos correspondem ao esperado.
+**Classe concreta — apenas informa qual repositório testar:**
 
+```java
+package dio.taskmanager.infrastructure.repository;
 
-#### Executando os testes com sucesso
+import dio.taskmanager.domain.TaskRepository;
+import dio.taskmanager.domain.TaskRepositoryTest;
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-15h14m02s635.jpg" alt="" width="840">
-</p>
+class InMemoryTaskRepositoryTest extends TaskRepositoryTest {
 
-Ao rodar a suíte de testes `repositoryInMemoryTaskRepositoryTest`, o Gradle executa as tarefas de compilação e testes e encerra com "BUILD SUCCESSFUL", confirmando os 4 testes aprovados e validando a implementação do repositório em memória.
+    @Override
+    protected TaskRepository createRepository() {
+        return new InMemoryTaskRepository();
+    }
+}
+```
 
+**Onde cada arquivo deve ficar:**
 
+```
+src/test/java/dio/taskmanager/domain/TaskRepositoryTest.java
+src/test/java/dio/taskmanager/infrastructure/repository/InMemoryTaskRepositoryTest.java
+```
+
+Note que ambos ficam em `src/test/java`, nunca em `src/main/java`. As dependências de teste (JUnit 5, pacote `org.junit.jupiter.api`) são resolvidas pelo Gradle apenas via `testImplementation`, usada pela task `compileTestJava` — que só compila o conteúdo de `src/test`. Se qualquer uma dessas classes for criada dentro de `src/main/java` por engano, o build falha com o erro `package org.junit.jupiter.api does not exist`, porque a task `compileJava` (que compila `src/main`) não tem acesso às dependências de teste.
+
+O arquivo antigo `repositoryInMemoryTaskRepositoryTest`, que continha os 4 testes escritos diretamente na implementação em memória, deve ser removido — seu conteúdo foi totalmente absorvido pela classe abstrata `TaskRepositoryTest`.
+
+**Como rodar:**
+
+Pela IDE: clique com o botão direito em `InMemoryTaskRepositoryTest` → **Run**. Os 4 testes aparecem na execução mesmo não estando escritos diretamente nessa classe, pois são herdados de `TaskRepositoryTest`.
+
+Pelo terminal, na raiz do projeto:
+
+```bash
+./gradlew test
+```
+
+ou, para rodar apenas essa classe:
+
+```bash
+./gradlew test --tests "dio.taskmanager.infrastructure.repository.InMemoryTaskRepositoryTest"
+```
+
+**Ganho da abordagem:** se no futuro surgir uma implementação `DatabaseTaskRepository`, basta criar `DatabaseTaskRepositoryTest extends TaskRepositoryTest` e implementar `createRepository()` retornando a nova instância — os mesmos 4 testes de regra de negócio já cobrem essa nova implementação automaticamente, sem duplicação de código.
 
 ## Parte 4 - Orquestrando o domínio
 
