@@ -1082,6 +1082,10 @@ ou, para rodar apenas essa classe:
 #### Executando o Teste de Contrato
 
 <p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-08-18-16-37.png" alt="" width="480">
+</p>
+
+<p align="center">
   <img src="000-Midia_e_Anexos/2026-07-08-18-07-51.png" alt="" width="840">
 </p>
 
