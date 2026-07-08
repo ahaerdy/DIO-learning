@@ -463,6 +463,465 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
+#### Abertura: modelando o domínio de tarefas
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h14m38s955.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Criando sua Primeira API REST com Spring Boot", da trilha Jornada Tech, com o tópico 03 — "Modelando o domínio de tarefas" — em destaque no roteiro, que também inclui introdução ao API REST, gerenciamento de tarefas, orquestração do domínio e listagem de tarefas.
+
+
+#### Retomando o gerenciamento de tarefas
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h15m03s119.jpg" alt="" width="840">
+</p>
+
+O mesmo slide de sumário reaparece com o item 02 — "Gerenciamento de tarefas" — em destaque, situando a aula como continuação do vídeo anterior, no qual foram criadas as camadas application, domain e infrastructure, além das classes Task, TaskId e do enum TaskStatus no domínio.
+
+
+#### Criando a interface TaskRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h19m26s292.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.domain;
+
+public interface TaskRepository {
+}
+```
+
+A interface TaskRepository é criada, ainda vazia, dentro do pacote de domínio. Ela representa o padrão de projeto Repository: uma abstração da camada de armazenamento (seja banco de dados, arquivo ou memória), que mantém o domínio independente de como os dados serão persistidos.
+
+
+#### Definindo os métodos do repositório
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h21m40s543.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.domain;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface TaskRepository {
+    Task save(Task task);
+    List<Task> findAll();
+    Optional<Task> findById(TaskId id);
+    void delete(TaskId id);
+}
+```
+
+A interface é completada com os métodos `save`, `findAll`, `findById` e `delete`. O `findAll` retorna uma lista de tarefas, enquanto `findById` retorna um `Optional<Task>`, evitando `NullPointerException` caso a tarefa não exista. A busca usa o tipo `TaskId` em vez de `String`, tornando o código mais semântico.
+
+
+#### Gerando a implementação da interface
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h22m31s973.jpg" alt="" width="840">
+</p>
+
+Pelo menu de ações do IDE, é selecionada a opção "Implement interface", que gera automaticamente uma classe concreta a partir da interface `TaskRepository`, servindo de ponto de partida para a implementação em memória.
+
+
+#### Configurando a nova classe InMemoryTaskRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h34m37s365.jpg" alt="" width="840">
+</p>
+
+Na caixa de diálogo de implementação, a classe recebe o nome `InMemoryTaskRepository` e é destinada ao pacote `dio.taskmanager.infrastructure.repository` — um novo subpacote dentro da camada de infraestrutura, pensado para comportar futuras implementações adicionais de repositório.
+
+
+#### Selecionando os métodos a implementar
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h34m38s061.jpg" alt="" width="840">
+</p>
+
+O IDE lista os métodos definidos na interface (`save`, `findAll`, `findById` e `delete`) para que sejam gerados automaticamente na nova classe, com a opção "Insert @Override" habilitada.
+
+
+#### Esqueleto inicial da implementação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h34m38s724.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.infrastructure.repository;
+
+import dio.taskmanager.domain.Task;
+import dio.taskmanager.domain.TaskId;
+import dio.taskmanager.domain.TaskRepository;
+import java.util.List;
+import java.util.Optional;
+
+public class InMemoryTaskRepository implements TaskRepository {
+    @Override
+    public Task save(Task task) {
+        return null;
+    }
+
+    @Override
+    public List<Task> findAll() { return List.of(); }
+
+    @Override
+    public Optional<Task> findById(TaskId id) { return Optional.empty(); }
+
+    @Override
+    public void delete(TaskId id) {
+
+    }
+}
+```
+
+A classe é gerada com os métodos vazios (stubs), prontos para receber a lógica de armazenamento em memória.
+
+
+#### Armazenando as tarefas em um Map
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h37m14s206.jpg" alt="" width="840">
+</p>
+
+```java
+private final Map<TaskId, Task> storage = new HashMap<>();
+
+@Override
+public Task save(Task task) {
+    storage.put();
+    return null;
+}
+```
+
+Para guardar as tarefas, é criado um `Map<TaskId, Task>` chamado `storage`, escolhido em vez de uma lista por facilitar a busca por identificador. Ao chamar `storage.put()`, fica evidente que é necessário informar o identificador da tarefa como chave — o que leva à discussão sobre como obter esse ID a partir de um objeto `Task` com propriedades privadas.
+
+
+#### Encapsulamento e acesso via getters/setters
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h39m28s081.jpg" alt="" width="840">
+</p>
+
+```java
+public class Task {
+    private String id;
+    private String title;
+    private Optional<String> description;
+    private TaskStatus status;
+
+    public Task(String title, Optional<String> description, TaskStatus status) {
+        Assert.notNull(title, "Title must not be null");
+
+        this.id = new TaskId();
+        this.title = title;
+        this.description = description;
+        this.status = TaskStatus.PENDING;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+}
+```
+
+A classe `Task` mantém suas propriedades privadas para garantir encapsulamento, permitindo aplicar regras específicas de armazenamento ou recuperação de dados dentro dos próprios getters e setters. Por isso, o acesso ao identificador da tarefa deve ocorrer por meio de um `getId()`, em vez de acessar o campo diretamente.
+
+
+#### Explorando o plugin do Lombok para Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h54m00s898.jpg" alt="" width="840">
+</p>
+
+Com o aumento de classes contendo muitos getters e setters, escrevê-los manualmente se torna trabalhoso. A solução apresentada é o Lombok, cujo plugin oficial para Gradle, `io.freefair.lombok`, é localizado no repositório de plugins do Gradle.
+
+
+#### Conhecendo o Project Lombok
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h54m15s579.jpg" alt="" width="840">
+</p>
+
+A página oficial do Project Lombok é aberta, mostrando que se trata de uma biblioteca Java que se integra ao editor e às ferramentas de build para gerar automaticamente getters, setters e outros métodos repetitivos por meio de anotações.
+
+
+#### Integrando o Lombok ao Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h54m31s651.jpg" alt="" width="840">
+</p>
+
+A documentação explica como configurar o Lombok em projetos Gradle, reforçando que, além de getters e setters, a biblioteca também pode gerar construtores — uma ferramenta considerada interessante e que vale a pena ser estudada com mais profundidade.
+
+
+#### Copiando o plugin para o projeto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h54m39s900.jpg" alt="" width="840">
+</p>
+
+De volta à página do plugin, o trecho de configuração (`id("io.freefair.lombok") version "9.2.0"`) é copiado para ser adicionado ao arquivo `build.gradle` do projeto.
+
+
+#### Adicionando o plugin do Lombok ao build.gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h55m51s770.jpg" alt="" width="840">
+</p>
+
+```groovy
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id("io.freefair.lombok") version "9.2.0"
+}
+
+group = 'dio.taskmanager'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+```
+
+O plugin do Lombok é inserido na seção `plugins` do `build.gradle`, junto aos plugins já existentes do Spring Boot, para que a biblioteca seja baixada e configurada automaticamente no projeto.
+
+
+#### Anotando a classe Task com @Getter
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h58m43s470.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.domain;
+
+import lombok.Getter;
+import org.springframework.util.Assert;
+import java.util.Optional;
+
+@Getter
+public class Task {
+    private String id;
+    private String title;
+    private Optional<String> description;
+    private TaskStatus status;
+
+    public Task(String title, Optional<String> description, TaskStatus status) {
+        Assert.notNull(title, "Title must not be null");
+
+        this.id = new TaskId();
+        this.title = title;
+        this.description = description;
+        this.status = TaskStatus.PENDING;
+    }
+}
+```
+
+Com a anotação `@Getter` do Lombok aplicada à classe, todos os métodos get são gerados automaticamente em tempo de compilação, eliminando a necessidade de escrevê-los manualmente.
+
+
+#### Adicionando @Setter e finalizando o método save
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-14h05m43s885.jpg" alt="" width="840">
+</p>
+
+```java
+import dio.taskmanager.domain.TaskId;
+import dio.taskmanager.domain.TaskRepository;
+import lombok.Setter;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+public class InMemoryTaskRepository implements TaskRepository {
+    private final Map<TaskId, Task> storage = new HashMap<>();
+
+    @Override
+    @Setter
+    public Task save(Task task) {
+        storage.put(task.getId(), task);
+        return task;
+    }
+
+    @Override
+    public List<Task> findAll() { return List.of(); }
+
+    @Override
+    public Optional<Task> findById(TaskId id) { return Optional.empty(); }
+
+    @Override
+    public void delete(TaskId id) {
+
+    }
+}
+```
+
+A anotação `@Setter` também é adicionada, pensando na futura necessidade de atualizar valores da tarefa. Com o `getId()` disponível, o método `save` é finalizado usando `storage.put(task.getId(), task)`, retornando a própria tarefa salva.
+
+
+#### Implementando o findAll
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-14h11m47s410.jpg" alt="" width="840">
+</p>
+
+```java
+@Override
+public List<Task> findAll() {
+    return new ArrayList<>(storage.values());
+}
+```
+
+Como o método `values()` do `Map` retorna uma `Collection`, e não uma `List`, é necessário envolver o resultado em um `new ArrayList<>()` para atender ao tipo de retorno esperado por `findAll()`.
+
+#### Implementando findById e delete
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-14h21m54s764.jpg" alt="" width="840">
+</p>
+
+```java
+@Override
+public Optional<Task> findById(TaskId id) {
+    return Optional.ofNullable(storage.get(id));
+}
+
+@Override
+public void delete(TaskId id) {
+    storage.remove(id);
+}
+```
+
+O método `get()` do `Map` pode retornar `null` caso a chave não exista, então o resultado é envolvido em `Optional.ofNullable()` para evitar a manipulação direta de valores nulos. O `delete` é implementado com `storage.remove(id)`, removendo a tarefa correspondente do mapa.
+
+#### Gerando a classe de testes
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-14h24m37s872.jpg" alt="" width="840">
+</p>
+
+Pelo menu Generate do IDE, a opção "Test..." é selecionada para criar automaticamente uma classe de testes para o `InMemoryTaskRepository`.
+
+
+#### Configurando dependências e execução de testes no Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-14h25m08s965.jpg" alt="" width="840">
+</p>
+
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    // Testes com Spring Boot + JUnit 5
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
+```
+
+O `build.gradle` é ajustado com a dependência de testes do Spring Boot (que inclui o JUnit 5) e com o bloco `test { useJUnitPlatform() }`, necessário para que os testes sejam executados corretamente pela plataforma JUnit.
+
+#### Estrutura da classe de testes do repositório
+
+```java
+package dio.taskmanager.infrastructure.repository;
+
+import dio.taskmanager.domain.Task;
+import dio.taskmanager.domain.TaskId;
+import dio.taskmanager.domain.TaskStatus;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class repositoryInMemoryTaskRepositoryTest {
+
+    private InMemoryTaskRepository repository;
+
+    @BeforeEach
+    void setUp() {
+        repository = new InMemoryTaskRepository();
+    }
+
+    @Test
+    void shouldSaveTask() {
+        Task task = new Task("Estudar Java", Optional.of("Revisar coleções"));
+        Task saved = repository.save(task);
+
+        assertNotNull(saved.getId());
+        assertEquals("Estudar Java", saved.getTitle());
+        assertEquals(TaskStatus.PENDING, saved.getStatus());
+    }
+
+    @Test
+    void shouldFindTaskById() {
+        Task task = new Task("Estudar Spring", Optional.empty());
+        repository.save(task);
+
+        Optional<Task> found = repository.findById(task.getId());
+
+        assertTrue(found.isPresent());
+        assertEquals("Estudar Spring", found.get().getTitle());
+    }
+
+    @Test
+    void shouldReturnAllTasks() {
+        repository.save(new Task("Tarefa 1", Optional.empty()));
+        repository.save(new Task("Tarefa 2", Optional.of("Com descrição")));
+
+        assertEquals(2, repository.findAll().size());
+    }
+
+    @Test
+    void shouldDeleteTask() {
+        Task task = new Task("Tarefa para deletar", Optional.empty());
+        repository.save(task);
+
+        repository.delete(task.getId());
+
+        Optional<Task> found = repository.findById(task.getId());
+        assertFalse(found.isPresent());
+    }
+}
+```
+
+A classe de testes gerada instancia um novo `InMemoryTaskRepository` antes de cada teste (`@BeforeEach`) e valida individualmente os métodos `save`, `findById`, `findAll` e `delete`, verificando se os dados salvos, encontrados e removidos correspondem ao esperado.
+
+
+#### Executando os testes com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-15h14m02s635.jpg" alt="" width="840">
+</p>
+
+Ao rodar a suíte de testes `repositoryInMemoryTaskRepositoryTest`, o Gradle executa as tarefas de compilação e testes e encerra com "BUILD SUCCESSFUL", confirmando os 4 testes aprovados e validando a implementação do repositório em memória.
+
 
 
 ## Parte 4 - Orquestrando o domínio
