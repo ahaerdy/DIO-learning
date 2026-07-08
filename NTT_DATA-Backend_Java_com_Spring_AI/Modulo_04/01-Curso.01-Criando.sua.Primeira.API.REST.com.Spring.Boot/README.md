@@ -156,7 +156,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-07-08-13-15-34.png" alt="" width="480">
+  <img src="000-Midia_e_Anexos/2026-07-08-13-15-34.png" alt="" width="840">
 </p>
 
 #### Estrutura de pacotes do projeto (Domain, Application e Infrastructure)
