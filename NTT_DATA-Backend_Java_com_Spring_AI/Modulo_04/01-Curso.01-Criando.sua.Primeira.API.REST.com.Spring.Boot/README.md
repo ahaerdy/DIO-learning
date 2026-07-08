@@ -953,7 +953,7 @@ Em conjunto, esses quatro testes cobrem o CRUD completo da interface `TaskReposi
 #### Executando os testes com sucesso
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-15h14m02s635.jpg" alt="" width="840">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-15h14m02s635.jpg" alt="" width="100%">
 </p>
 
 Ao rodar a suíte de testes `repositoryInMemoryTaskRepositoryTest`, o Gradle executa as tarefas de compilação e testes e encerra com "BUILD SUCCESSFUL", confirmando os 4 testes aprovados e validando a implementação do repositório em memória.
