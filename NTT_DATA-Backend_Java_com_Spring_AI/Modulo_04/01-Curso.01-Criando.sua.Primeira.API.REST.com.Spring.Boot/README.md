@@ -155,6 +155,10 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-08-13-15-34.png" alt="" width="480">
+</p>
+
 #### Estrutura de pacotes do projeto (Domain, Application e Infrastructure)
 
 <p align="center">
@@ -447,6 +451,7 @@ public class Task {
 
 
 ## Parte 3 - Modelando o domínio de tarefas
+
 ### 🟩 Vídeo 03 - Modelando o domínio de tarefas
 
 <video width="60%" controls>
@@ -456,7 +461,12 @@ public class Task {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/f45d8163-14cd-4153-af05-fac9e1cd1166?autoplay=1
 
+### Anotações
+
+
+
 ## Parte 4 - Orquestrando o domínio
+
 ### 🟩 Vídeo 04 - Orquestrando o domínio
 
 <video width="60%" controls>
@@ -464,7 +474,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/9697c24a-da4d-4165-ae72-2b27f7066252?autoplay=1
 
 ## Parte 5 - Listagem de tarefas
 ### 🟩 Vídeo 05 - Listagem de tarefas
@@ -474,7 +484,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/654ce2a1-7dc6-4406-b3aa-c13935b3d17b?autoplay=1
 
 ## Parte 6 - Infraestrutura e interface
 ### 🟩 Vídeo 06 - Infraestrutura e interface
