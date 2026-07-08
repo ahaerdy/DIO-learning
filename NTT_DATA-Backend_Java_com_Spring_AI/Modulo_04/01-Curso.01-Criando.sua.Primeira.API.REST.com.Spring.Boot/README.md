@@ -1091,6 +1091,8 @@ ou, para rodar apenas essa classe:
 
 **Resultado da execução:** o Gradle reporta `4 tests passed` e finaliza com `BUILD SUCCESSFUL`. É importante notar que esses 4 testes não estão escritos em `InMemoryTaskRepositoryTest` — eles são executados porque a classe herda de `TaskRepositoryTest`. Isso confirma, na prática, que a extração para o teste de contrato funcionou: o JUnit reconhece e executa os métodos herdados da classe abstrata como se pertencessem à subclasse concreta, validando o `InMemoryTaskRepository` contra as mesmas regras de negócio definidas para a interface `TaskRepository`.
 
+### projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_03](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_03)
+
 ## Parte 4 - Orquestrando o domínio
 
 ### 🟩 Vídeo 04 - Orquestrando o domínio
@@ -1101,6 +1103,8 @@ ou, para rodar apenas essa classe:
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/9697c24a-da4d-4165-ae72-2b27f7066252?autoplay=1
+
+
 
 ## Parte 5 - Listagem de tarefas
 ### 🟩 Vídeo 05 - Listagem de tarefas

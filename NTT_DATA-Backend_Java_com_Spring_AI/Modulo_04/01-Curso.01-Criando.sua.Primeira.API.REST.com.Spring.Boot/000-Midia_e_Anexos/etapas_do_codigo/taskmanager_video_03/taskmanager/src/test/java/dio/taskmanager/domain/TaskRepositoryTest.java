@@ -1,8 +1,5 @@
-package dio.taskmanager.infrastructure.repository;
+package dio.taskmanager.domain;
 
-import dio.taskmanager.domain.Task;
-import dio.taskmanager.domain.TaskId;
-import dio.taskmanager.domain.TaskStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,14 +7,26 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class repositoryInMemoryTaskRepositoryTest {
+// Classe de teste ABSTRATA para a interface TaskRepository.
+// Ela concentra todos os testes de REGRA DE NEGÓCIO que QUALQUER implementação
+// de TaskRepository precisa satisfazer (memória, banco de dados, arquivo, etc.).
+// Não é executada diretamente pelo JUnit (é abstrata) — apenas suas subclasses são.
+public abstract class TaskRepositoryTest {
 
-    private InMemoryTaskRepository repository;
+    // Campo do tipo da INTERFACE (não da implementação concreta).
+    // Isso garante que os testes aqui dentro só usem o que está definido no contrato.
+    protected TaskRepository repository;
 
+    // Roda antes de cada teste. Delega a criação do repositório para a subclasse,
+    // via o método abstrato createRepository().
     @BeforeEach
     void setUp() {
-        repository = new InMemoryTaskRepository();
+        repository = createRepository();
     }
+
+    // Método abstrato: cada subclasse (cada implementação de TaskRepository)
+    // deve dizer QUAL repositório concreto será testado.
+    protected abstract TaskRepository createRepository();
 
     @Test
     void shouldSaveTask() {
