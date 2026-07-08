@@ -449,6 +449,7 @@ public class Task {
 }
 ```
 
+Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_02](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_02)
 
 ## Parte 3 - Modelando o domínio de tarefas
 
@@ -1081,9 +1082,13 @@ ou, para rodar apenas essa classe:
 
 #### Executando o Teste de Contrato
 
+Rodando os testes a partir da IDE:
+
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-07-08-18-16-37.png" alt="" width="840">
 </p>
+
+Resultado:
 
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-07-08-18-07-51.png" alt="" width="840">
