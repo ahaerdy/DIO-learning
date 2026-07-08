@@ -1089,7 +1089,7 @@ Rodando os testes a partir da IDE:
 </p>
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-07-08-18-07-51.png" alt="" width="840">
+  <img src="000-Midia_e_Anexos/2026-07-08-20-19-52.png" alt="" width="100%S">
 </p>
 
 **Resultado da execução:** o Gradle reporta `4 tests passed` e finaliza com `BUILD SUCCESSFUL`. É importante notar que esses 4 testes não estão escritos em `InMemoryTaskRepositoryTest` — eles são executados porque a classe herda de `TaskRepositoryTest`. Isso confirma, na prática, que a extração para o teste de contrato funcionou: o JUnit reconhece e executa os métodos herdados da classe abstrata como se pertencessem à subclasse concreta, validando o `InMemoryTaskRepository` contra as mesmas regras de negócio definidas para a interface `TaskRepository`.
