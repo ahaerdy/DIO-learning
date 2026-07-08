@@ -472,15 +472,6 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 Slide de abertura da aula "Criando sua Primeira API REST com Spring Boot", da trilha Jornada Tech, com o tópico 03 — "Modelando o domínio de tarefas" — em destaque no roteiro, que também inclui introdução ao API REST, gerenciamento de tarefas, orquestração do domínio e listagem de tarefas.
 
 
-#### Retomando o gerenciamento de tarefas
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-13h15m03s119.jpg" alt="" width="840">
-</p>
-
-O mesmo slide de sumário reaparece com o item 02 — "Gerenciamento de tarefas" — em destaque, situando a aula como continuação do vídeo anterior, no qual foram criadas as camadas application, domain e infrastructure, além das classes Task, TaskId e do enum TaskStatus no domínio.
-
-
 #### Criando a interface TaskRepository
 
 <p align="center">
