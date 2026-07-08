@@ -1122,7 +1122,7 @@ O que mudou foi exclusivamente a **organização do código de teste**:
 
 ⭐️ **Por que a solução antiga não era considerada ideal, já que ela funcionava e gravava/lia dados de verdade?**
 
-O problema nunca foi o comportamento em tempo de execução — era **onde a lógica de teste ficava presa**. Os 4 testes não verificam nada específico de "estar em memória"; eles verificam regras do **contrato da interface `TaskRepository`** (ex.: "todo `save` deve gerar um ID", "todo `findById` de algo salvo deve retornar presente"). Escritos diretamente dentro de `InMemoryTaskRepositoryTest`, esses testes ficavam fisicamente amarrados a essa implementação.
+O problema nunca foi o comportamento em tempo de execução — era **onde a lógica de teste ficava presa**. Os 4 testes não verificam nada específico de "estar em memória"; eles verificam regras do **contrato da interface `TaskRepository`** (ex.: "todo `save` deve gerar um ID", "todo `findById` de algo salvo deve retornar presente"). <mark style='background:#00ffff'><font color='#000000'><strong>Escritos diretamente dentro de `InMemoryTaskRepositoryTest`, esses testes ficavam fisicamente amarrados a essa implementação</strong></font></mark>.
 
 Isso trazia três riscos concretos para o futuro do projeto:
 
