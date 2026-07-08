@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/github/last-commit/ahaerdy/DIO-learning" />
 </p>
 
-Este repositório reúne os exercícios, projetos e anotações desenvolvidos por mim durante o [Bootcamp NTT DATA: Backend Java com Spring AI](https://web.dio.me/track/bootcamp-ntt-data-backend-java-com-spring-ai), oferecido pela plataforma DIO em parceria com a NTT DATA.
+Este repositório reúne os exercícios, projetos e anotações desenvolvidos por mim durante o [Bootcamp NTT DATA: Backend Java com Spring AI](https://web.dio.me/track/ntt-data-2026-ai-java-back-end), oferecido pela plataforma DIO em parceria com a NTT DATA.
 
 O conteúdo abrange desde os fundamentos modernos de Inteligência Artificial e sua aplicação no dia a dia do desenvolvedor, passando por uma revisão aprofundada de Java orientado a objetos, boas práticas de código, construção de APIs REST com Spring Boot, integração com banco de dados e segurança, até a publicação e monitoramento de soluções de back-end na nuvem com Microsoft Azure.
 
