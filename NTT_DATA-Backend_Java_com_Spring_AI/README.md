@@ -103,7 +103,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 4: Criando Soluções Inteligentes com Spring Boot e Java Moderno
 
-- [ ] Curso: [Criando sua Primeira API REST com Spring Boot]
+- [x] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_04/01-Curso.01-Criando.sua.Primeira.API.REST.com.Spring.Boot)
 - [ ] Curso: [Conectando sua API com Banco de Dados Através do Spring Data]
 - [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security]
 - [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign]
