@@ -10,7 +10,7 @@
 
 ## Sobre este documento
 
-Este tutorial foi criado a partir das suas anotações de aula (README) e do código-fonte real do projeto na etapa correspondente a cada vídeo. O objetivo é explicar, com riqueza de detalhes e em nível iniciante, cada instrução escrita até agora — o que ela faz, por que foi escrita daquela forma, e qual conceito de Java ou de arquitetura de software ela representa.
+Este tutorial foi criado a partir das anotações de aula (README) e do código-fonte real do projeto na etapa correspondente a cada vídeo. O objetivo é explicar, com riqueza de detalhes e em nível iniciante, cada instrução escrita até agora — o que ela faz, por que foi escrita daquela forma, e qual conceito de Java ou de arquitetura de software ela representa.
 
 Use este documento como um mapa: sempre que tiver dúvida sobre "por que essa linha está aqui", volte a ele. A ideia é que, relendo este material, você consiga reconstruir o raciocínio da aula sem precisar assistir ao vídeo novamente.
 
