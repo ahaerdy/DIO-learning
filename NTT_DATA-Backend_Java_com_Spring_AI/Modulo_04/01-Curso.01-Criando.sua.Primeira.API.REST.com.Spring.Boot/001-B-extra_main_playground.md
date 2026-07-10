@@ -419,7 +419,16 @@ BUILD SUCCESSFUL in 1s
 15:25:09: Execution finished ':dio.taskmanager.playground.Main.main()'.
 ```
 
-# Debugging (Main)
+# Debugging
+
+O objetivo desta sessão guiada de depuração (*debugging*) é observar o comportamento do código em tempo real, mapeando como a Java Virtual Machine (JVM) aloca e manipula os nossos POJOs na memória. Ao longo das capturas a seguir, analisaremos:
+
+* **O Nascimento dos Objetos:** A alocação das instâncias na memória Heap e a geração de identificadores únicos (UUID).
+* **Transição de Estados:** O preenchimento dos atributos internos passo a passo durante a execução dos construtores.
+* **Mecânica da Infraestrutura:** O comportamento interno do `InMemoryTaskRepository` e como o `HashMap` armazena as instâncias persistidas.
+* **Escopo e Referências:** A diferença entre visualizar parâmetros recebidos, variáveis locais e o ponteiro `this` dentro do contexto de execução.
+
+Abaixo, documentamos o estado da aplicação em pontos estratégicos de parada (*breakpoints*).
 
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-07-10-16-53-24.png" alt="" width="100%">
