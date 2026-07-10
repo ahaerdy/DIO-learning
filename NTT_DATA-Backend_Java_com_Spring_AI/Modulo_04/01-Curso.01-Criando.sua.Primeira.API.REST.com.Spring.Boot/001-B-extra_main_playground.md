@@ -419,7 +419,7 @@ BUILD SUCCESSFUL in 1s
 15:25:09: Execution finished ':dio.taskmanager.playground.Main.main()'.
 ```
 
-# Debugging do código
+# Debugging (Main)
 
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-07-10-16-53-24.png" alt="" width="100%">
