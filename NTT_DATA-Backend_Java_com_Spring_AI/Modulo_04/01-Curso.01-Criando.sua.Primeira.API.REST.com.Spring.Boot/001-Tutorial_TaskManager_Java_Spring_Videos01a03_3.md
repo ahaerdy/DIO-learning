@@ -518,7 +518,7 @@ public class Task {
 - **`@Getter`** — colocada acima da classe inteira, essa anotação instrui o Lombok a gerar automaticamente, durante a compilação, um método `getX()` para cada campo privado da classe (`getId()`, `getTitle()`, `getDescription()`, `getStatus()`). O código-fonte que você escreve não muda visualmente, mas o arquivo `.class` compilado já contém esses métodos, como se você os tivesse escrito à mão.
 
 > **O que "gerar em tempo de compilação" significa, na prática?**
-> Você nunca vai ver os métodos `getId()`, `getTitle()` etc. escritos dentro do arquivo `Task.java` — mas pode chamá-los normalmente em qualquer outra classe, como `task.getTitle()`. O Lombok se conecta ao processo de compilação e injeta esse código automaticamente antes de gerar os arquivos `.class` finais. É um "atalho" apenas para quem escreve o código; o resultado final é idêntico a ter escrito os getters manualmente.
+> Você **NUNCA** vai ver os métodos `getId()`, `getTitle()` etc. escritos dentro do arquivo `Task.java` — mas pode chamá-los normalmente em qualquer outra classe, como `task.getTitle()`. O Lombok se conecta ao processo de compilação e injeta esse código automaticamente antes de gerar os arquivos `.class` finais. É um "atalho" apenas para quem escreve o código; o resultado final é idêntico a ter escrito os getters manualmente.
 
 **Aplicando @Setter em InMemoryTaskRepository e finalizando o save**
 
@@ -965,10 +965,10 @@ flowchart TD
     end
 
     subgraph DOMAIN["pacote domain - regras de negocio puras"]
-        STATUS["TaskStatus.java<br/>enum PENDING, IN_PROGRESS, COMPLETED"]
-        TASKID["TaskId.java<br/>record - identificador UUID"]
-        TASK["Task.java<br/>entidade principal"]
-        REPO_IFACE["TaskRepository.java<br/>interface - contrato"]
+        STATUS["<u>TaskStatus.java</u><br/>enum<br>PENDING, IN_PROGRESS, COMPLETED"]
+        TASKID["<u>TaskId.java</u><br/>record - identificador UUID"]
+        TASK["<u><strong>Task.java</strong></u><br/><strong>entidade principal</strong>"]
+        REPO_IFACE["<u>TaskRepository.java</u><br/>interface - contrato"]
     end
 
     subgraph INFRA["pacote infrastructure.repository"]
