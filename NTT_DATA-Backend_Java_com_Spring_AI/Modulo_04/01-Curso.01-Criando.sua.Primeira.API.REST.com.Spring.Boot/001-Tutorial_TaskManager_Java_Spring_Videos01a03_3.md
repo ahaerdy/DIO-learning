@@ -1091,3 +1091,7 @@ sequenceDiagram
 - Repare que `InMemoryTaskRepositoryTest` (a classe "concreta") só aparece explicitamente em **duas** interações: quando o JUnit a descobre por reflection, e quando ela recebe a chamada `createRepository()`. Todo o resto — o `setUp()` e os 4 métodos de teste — acontece dentro da classe abstrata `TaskRepositoryTest`, exatamente como explicado no README: a subclasse concreta "empresta" seu objeto para que os testes herdados rodem sobre ele.
 - O retângulo destacado agrupa os 4 testes porque, na prática, o JUnit os executa em sequência (a ordem exata entre eles não é garantida por padrão, mas cada um roda de forma isolada, com um `setUp()` novo — logo uma `InMemoryTaskRepository` e uma `HashMap` novas — antes de cada teste).
 - `InMemoryTaskRepositoryTest_old.java` **não aparece neste diagrama de propósito**: como o próprio tutorial explica, esse arquivo ficou fora do fluxo ativo depois da refatoração para teste de contrato — ele existe apenas como material histórico de comparação "antes/depois", e não é mais descoberto/executado como parte da suíte que valida `InMemoryTaskRepository` (essa validação passou a vir inteiramente da herança de `TaskRepositoryTest`).
+
+## Ver também:
+
+- [Extra (fora do curso): uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
