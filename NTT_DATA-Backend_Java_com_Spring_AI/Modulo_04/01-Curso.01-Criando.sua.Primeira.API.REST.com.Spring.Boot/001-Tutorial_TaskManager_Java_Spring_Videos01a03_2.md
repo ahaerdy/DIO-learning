@@ -939,3 +939,126 @@ Segundo o roteiro do curso, o que já foi construído até aqui é só a base (d
 
 > **Sugestão de uso deste documento**
 > Depois de assistir a cada novo vídeo, adicione uma nova seção a este tutorial seguindo o mesmo formato: bloco de código → explicação linha a linha → um quadro de destaque com o "porquê" da decisão de design. Isso mantém o material sempre alinhado ao seu ritmo de estudo e cria, ao final do curso, um guia de referência completo e escrito com suas próprias palavras.
+
+---
+
+## Diagrama: como as classes se relacionam e como o projeto executa
+
+Esta seção fecha o tutorial com uma visão *de cima*, em diagramas, de tudo o que foi construído nos vídeos 01 a 03. A ideia é simples: até aqui você já leu, linha por linha, o que cada arquivo faz — agora é hora de ver o **conjunto**.
+
+Foram feitos dois diagramas, porque eles respondem a duas perguntas diferentes:
+
+1. **"Quem depende de quem, e o que acontece quando a aplicação Spring Boot sobe?"** → diagrama de blocos (flowchart).
+2. **"Quando eu rodo os testes, qual é a ordem exata das chamadas entre as classes?"** → diagrama de sequência.
+
+### 1. Diagrama de blocos — dependências entre classes e boot da aplicação
+
+```mermaid
+flowchart TD
+    subgraph ENTRY["Ponto de entrada"]
+        MAIN["TaskmanagerApplication.java<br/>public static void main"]
+    end
+
+    subgraph SPRING["Spring Boot Framework"]
+        BOOT["SpringApplication.run(...)"]
+        CTX["ApplicationContext<br/>container de beans do Spring"]
+    end
+
+    subgraph DOMAIN["pacote domain - regras de negocio puras"]
+        STATUS["TaskStatus.java<br/><br/>enum PENDING IN_PROGRESS COMPLETED"]
+        TASKID["TaskId.java<br/>record - identificador UUID"]
+        TASK["Task.java<br/>entidade principal"]
+        REPO_IFACE["TaskRepository.java<br/>interface - contrato"]
+    end
+
+    subgraph INFRA["pacote infrastructure.repository"]
+        INMEM["InMemoryTaskRepository.java<br/>implements TaskRepository"]
+        HASHMAP[("HashMap TaskId Task<br/>armazenamento em memoria")]
+    end
+
+    MAIN -- "1 chama" --> BOOT
+    BOOT -- "2 cria e inicializa" --> CTX
+    CTX -. "3 escaneia @SpringBootApplication" .-> DOMAIN
+
+    TASK -- "tem um" --> TASKID
+    TASK -- "tem um" --> STATUS
+    REPO_IFACE -- "opera sobre" --> TASK
+    REPO_IFACE -- "usa como chave" --> TASKID
+
+    INMEM -- "implements" --> REPO_IFACE
+    INMEM -- "guarda recupera" --> TASK
+    INMEM -- "indexa por" --> TASKID
+    INMEM -- "delega a" --> HASHMAP
+
+    style ENTRY fill:#ffe0b2,stroke:#e65100
+    style SPRING fill:#e1f5fe,stroke:#01579b
+    style DOMAIN fill:#e8f5e9,stroke:#1b5e20
+    style INFRA fill:#fce4ec,stroke:#880e4f
+```
+
+**Como ler este diagrama:**
+
+- As setas numeradas 1, 2, 3 mostram o que acontece, na ordem, quando você roda `TaskmanagerApplication`. Nesta etapa do curso (vídeos 01 a 03), o Spring apenas sobe o `ApplicationContext` — ainda não existe nenhum `@RestController` nem `@Service` registrado, então a aplicação inicializa mas não expõe nenhum endpoint HTTP ainda. Essa parte só chega nos vídeos 04 em diante (orquestração do domínio e Controllers), conforme antecipado na seção "Próximos passos" acima.
+- As setas dentro de `domain` e `infrastructure.repository` **não são chamadas em tempo de execução do boot** — são relações estruturais de **dependência de código** (quem importa/usa quem). Elas explicam por que, quando um teste ou (futuramente) um serviço chamar `InMemoryTaskRepository.save(task)`, o fluxo real de objetos é: `Task` (já com `TaskId` e `TaskStatus` embutidos) → `InMemoryTaskRepository` grava tudo isso na `HashMap`.
+- `TaskRepository` é uma **interface**: `InMemoryTaskRepository` é hoje sua única implementação, mas o desenho já deixa a porta aberta para uma futura `DatabaseTaskRepository`, exatamente como discutido na seção sobre o teste de contrato.
+
+### 2. Diagrama de sequência — a execução dos testes automatizados
+
+Este segundo diagrama responde a uma pergunta que o próprio README já discute em detalhe (seção de perguntas frequentes sobre o teste de contrato): *quando rodo `InMemoryTaskRepositoryTest`, e ela não tem nenhum método `@Test` escrito diretamente nela, o que exatamente é executado, e em que ordem?*
+
+```mermaid
+sequenceDiagram
+    participant Gradle as Gradle (task test)
+    participant JUnit as JUnit 5 (reflection)
+    participant Concrete as InMemoryTaskRepositoryTest
+    participant Abstract as TaskRepositoryTest (abstrata)
+    participant Impl as InMemoryTaskRepository
+    participant Map as HashMap interno
+
+    Gradle->>JUnit: executa suite de testes
+    JUnit->>Concrete: descobre a classe e escaneia toda a cadeia de heranca
+    Note over Concrete,Abstract: InMemoryTaskRepositoryTest extends TaskRepositoryTest
+
+    JUnit->>Abstract: chama @BeforeEach setUp()
+    Abstract->>Concrete: repository = createRepository()
+    Concrete->>Impl: new InMemoryTaskRepository()
+    Impl-->>Abstract: instancia concreta pronta
+
+    rect rgb(232, 245, 233)
+    Note over JUnit,Map: 4 metodos @Test herdados de TaskRepositoryTest
+    JUnit->>Abstract: shouldSaveTask()
+    Abstract->>Impl: repository.save(task)
+    Impl->>Map: storage.put(task.getId(), task)
+    Impl-->>Abstract: task salva com TaskId gerado
+    Abstract-->>JUnit: assertNotNull id / assertEquals title / assertEquals PENDING
+
+    JUnit->>Abstract: shouldFindTaskById()
+    Abstract->>Impl: repository.findById(id)
+    Impl->>Map: storage.get(id)
+    Map-->>Abstract: Optional Task
+    Abstract-->>JUnit: assertTrue present / assertEquals title
+
+    JUnit->>Abstract: shouldReturnAllTasks()
+    Abstract->>Impl: repository.findAll()
+    Impl->>Map: new ArrayList storage.values()
+    Map-->>Abstract: List Task
+    Abstract-->>JUnit: assertEquals 2 size
+
+    JUnit->>Abstract: shouldDeleteTask()
+    Abstract->>Impl: repository.delete(id)
+    Impl->>Map: storage.remove(id)
+    Abstract->>Impl: repository.findById(id)
+    Impl->>Map: storage.get(id)
+    Map-->>Abstract: Optional empty
+    Abstract-->>JUnit: assertFalse present
+    end
+
+    JUnit-->>Gradle: 4 tests passed
+    Gradle-->>Gradle: BUILD SUCCESSFUL
+```
+
+**Como ler este diagrama:**
+
+- Repare que `InMemoryTaskRepositoryTest` (a classe "concreta") só aparece explicitamente em **duas** interações: quando o JUnit a descobre por reflection, e quando ela recebe a chamada `createRepository()`. Todo o resto — o `setUp()` e os 4 métodos de teste — acontece dentro da classe abstrata `TaskRepositoryTest`, exatamente como explicado no README: a subclasse concreta "empresta" seu objeto para que os testes herdados rodem sobre ele.
+- O retângulo verde agrupa os 4 testes porque, na prática, o JUnit os executa em sequência (a ordem exata entre eles não é garantida por padrão, mas cada um roda de forma isolada, com um `setUp()` novo — logo uma `InMemoryTaskRepository` e uma `HashMap` novas — antes de cada teste).
+- `InMemoryTaskRepositoryTest_old.java` **não aparece neste diagrama de propósito**: como o próprio tutorial explica, esse arquivo ficou fora do fluxo ativo depois da refatoração para teste de contrato — ele existe apenas como material histórico de comparação "antes/depois", e não é mais descoberto/executado como parte da suíte que valida `InMemoryTaskRepository` (essa validação passou a vir inteiramente da herança de `TaskRepositoryTest`).
