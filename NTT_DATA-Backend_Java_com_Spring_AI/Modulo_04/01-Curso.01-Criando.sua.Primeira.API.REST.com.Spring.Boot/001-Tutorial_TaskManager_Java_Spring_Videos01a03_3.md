@@ -965,7 +965,7 @@ flowchart TD
     end
 
     subgraph DOMAIN["pacote domain - regras de negocio puras"]
-        STATUS["TaskStatus.java<br/>enum PENDING IN_PROGRESS COMPLETED"]
+        STATUS["TaskStatus.java<br/>enum PENDING, IN_PROGRESS, COMPLETED"]
         TASKID["TaskId.java<br/>record - identificador UUID"]
         TASK["Task.java<br/>entidade principal"]
         REPO_IFACE["TaskRepository.java<br/>interface - contrato"]
