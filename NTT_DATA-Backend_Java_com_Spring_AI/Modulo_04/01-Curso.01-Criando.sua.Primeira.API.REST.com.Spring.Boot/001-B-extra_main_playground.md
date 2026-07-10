@@ -418,3 +418,54 @@ BUILD SUCCESSFUL in 1s
 3 actionable tasks: 1 executed, 2 up-to-date
 15:25:09: Execution finished ':dio.taskmanager.playground.Main.main()'.
 ```
+
+# Debugging do código
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-10-16-53-24.png" alt="" width="100%">
+</p>
+
+Estado Limpo: Se você olhar para o painel de Variables (Variáveis) na parte inferior ou lateral da sua IDE, verá que a única coisa que existe no escopo local agora é o parâmetro args (o array de Strings vazio do método main).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-10-17-12-28.png" alt="" width="100%">
+</p>
+
+### 🔍 Análise do Breakpoint: Construtor da Classe `Task`
+
+O depurador está pausado exatamente na assinatura do construtor da classe `Task` (linha 14). Esta é a fase de inicialização, ideal para observar a diferença entre os dados recebidos (parâmetros) e o estado real do objeto na memória Heap (`this`).
+
+#### 1. O Estado Atual na Memória (Painel de Variáveis)
+* **Os Parâmetros (Dados de Entrada):**
+  * `title`: `"Estudar Java"` (recebido com sucesso da classe `Main`).
+  * `description`: `Optional.empty()` (representando explicitamente a ausência de descrição).
+* **O Objeto em Construção (`this`):**
+  * O objeto já possui um endereço físico alocado na memória Heap (`{Task@927}`).
+  * Como as linhas internas do construtor **ainda não foram executadas**, os atributos internos do objeto (`this.title`, `this.id`, etc.) ainda estão com seus valores padrão de inicialização: **`null`**.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-10-17-16-03.png" alt="" width="100%">
+</p>
+
+### 🔍 Análise do Breakpoint: Evolução do Objeto `Task`
+
+Como esperado, após a execução dos comandos de passo, as atribuições começaram a se consolidar na memória Heap da JVM. O objeto `this` começou a ganhar corpo e identidade própria.
+
+#### 1. O Estado Atual na Memória (Painel de Variáveis)
+* **`this.id` Inicializado:** O atributo `id` deixou de ser `null`. A linha `this.id = new TaskId();` foi executada, gerando um identificador único encapsulado na classe de valor `TaskId` (com o seu respectivo UUID).
+* **`this.title` Atribuído:** O campo `this.title` agora aponta corretamente para a string `"Estudar Java"`, transferindo com sucesso o valor que veio do parâmetro do método.
+* **Campos Restantes:** O depurador agora avança para carregar o `description` (como um `Optional.empty()`) e o `status` inicial da tarefa, que será definido como `TaskStatus.PENDING`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-10-17-17-52.png" alt="" width="100%">
+</p>
+
+### 🔍 Análise do Breakpoint: Retorno ao Método Estático (`main`)
+
+Após a conclusão do construtor da classe `Task`, o depurador encerra aquele escopo e retorna o fluxo de execução para a classe chamadora, parando na linha seguinte do `Main.java` (linha 43: `imprimirTask(tarefaSemDescricao);`).
+
+#### 1. O Estado Atual na Memória (Painel de Variáveis)
+* **Ausência do `this`:** Como estamos dentro do método `public static void main`, o painel de variáveis não exibe o ponteiro `this`. Métodos estáticos pertencem à classe como um todo, e não a uma instância específica, portanto, não há um "objeto atual" no escopo.
+* **A Variável Local (`tarefaSemDescricao`):** Agora, a variável que criamos aparece disponível no painel. Ela guarda a referência para o objeto `{Task}` recém-criado na memória Heap. Expandindo essa variável, podemos confirmar que os atributos internos (`id`, `title`, `description` e `status`) foram inicializados com sucesso e contêm os valores exatos que vimos sendo atribuídos no passo anterior.
+
+---

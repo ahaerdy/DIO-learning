@@ -16,7 +16,7 @@ import java.util.UUID;
  * Este ponto de entrada NÃO faz parte da aplicação Spring Boot e NÃO substitui
  * os testes automatizados (TaskRepositoryTest / InMemoryTaskRepositoryTest).
  * Ele existe só para você rodar manualmente, ver mensagens no terminal e
- * "testar" com as classes Task e InMemoryTaskRepository sem precisar escrever
+ * "testar" as classes Task e InMemoryTaskRepository sem precisar escrever
  * asserts do JUnit — bom para fixar, na prática, o que cada método faz.
  *
  * Repare que esta classe é um Java comum: não tem @SpringBootApplication,
