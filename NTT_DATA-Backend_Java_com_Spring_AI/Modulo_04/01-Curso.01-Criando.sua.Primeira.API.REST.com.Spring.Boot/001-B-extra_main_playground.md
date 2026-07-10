@@ -434,7 +434,9 @@ Abaixo, documentamos o estado da aplicação em pontos estratégicos de parada (
   <img src="000-Midia_e_Anexos/2026-07-10-16-53-24.png" alt="" width="100%">
 </p>
 
-Estado Limpo: Se você olhar para o painel de Variables (Variáveis) na parte inferior ou lateral da sua IDE, verá que a única coisa que existe no escopo local agora é o parâmetro args (o array de Strings vazio do método main).
+Estado inicial, debugger disparado. Estado Limpo: Se você olhar para o painel de Variables (Variáveis) na parte inferior ou lateral da sua IDE, verá que a única coisa que existe no escopo local agora é o parâmetro args (o array de Strings vazio do método main).
+
+**🎯 Próxima Ação:** Para não perdermos a oportunidade de ver a alocação de memória acontecer por dentro, utilizaremos o comando **Step Into (F7 - Entrar)**. Isso forçará o depurador a sair do método `main` e mergulhar diretamente no construtor da classe `Task`.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/2026-07-10-17-12-28.png" alt="" width="100%">
