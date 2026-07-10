@@ -1234,7 +1234,7 @@ link do vídeo:
 
 ##  Materiais de Apoio
 
-- [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_2.md)
+- [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_3.md)
 
 # Certificado: 
 
