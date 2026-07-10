@@ -282,7 +282,7 @@ public class Main {
 
 Ao executar, o console mostra, bloco a bloco, os `println` descritos acima — incluindo confirmações como `(esperado: false)` e `(esperado: true)` ao lado de cada verificação, para que você compare mentalmente o que o Java devolveu com o que era esperado, mesmo sem um framework de testes fazendo essa comparação por você.
 
-### Console (saída)
+# ▶️ Saída
 
 ```log
 15:25:07: Executing ':dio.taskmanager.playground.Main.main()'…
