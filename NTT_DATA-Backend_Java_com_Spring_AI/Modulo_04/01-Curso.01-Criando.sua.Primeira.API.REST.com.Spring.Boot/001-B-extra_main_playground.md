@@ -566,9 +566,31 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
   <img src="000-Midia_e_Anexos/2026-07-11-11-04-11.png" alt="" width="840">
 </p>
 
-**🎯 Próxima Ação:** Pressione **Step Over (F8)** para avançar pela impressão e passar pelo separador, entrando oficialmente no **BLOCO 6**. 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-11-33-10.png" alt="" width="100%">
+</p>
 
-Continue dando *Step Over* até **executar a linha** que salva a primeira tarefa (a chamada ao método `repository.save(...)`). Assim que a linha do primeiro salvamento for executada, pare e **capture a tela**. Certifique-se de manter o `repository` expandido na aba de variáveis: nosso objetivo é flagrar o `size` do `storage` mudando de `0` para `1`!
+### 📍 Anatomia da Criação — O Nascimento no Construtor
 
+**A Imagem Acima:** O depurador está pausado no momento cirúrgico em que a JVM está alocando espaço para a nova instância de `InMemoryTaskRepository`. O frame no Debug indica `<init>:12`, o que significa que estamos exatamente dentro do método construtor da classe.
+
+* **O Estado "null" Transitório:** Note que, no painel de variáveis, o `storage` aparece como `null`. Embora a linha de declaração `private final Map... = new HashMap<>();` esteja presente, a instrução ainda não foi totalmente processada pela JVM. Estamos literalmente no milissegundo anterior à variável receber a referência para o novo objeto `HashMap` na Heap.
+* **A Segurança do `final field`:** O atributo é marcado como `final`, o que garante que, uma vez que o construtor termine, essa referência nunca mais será alterada. É uma excelente prática de imutabilidade que blinda o repositório contra reatribuições acidentais (você não quer que alguém substitua seu mapa de dados por outro acidentalmente).
+* **O Ciclo de Vida do Objeto:** Este é o momento onde a abstração da "interface" começa a se transformar na "implementação" concreta. Quando você der o próximo passo, a memória será alocada e o `storage` passará a apontar para um endereço válido na memória.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-11-43-39.png" alt="" width="100%">
+</p>
+
+### 📍 A Materialização do Estado (O Poder do Watch)
+
+**A Imagem Acima:** O depurador pausou na linha 90, mas agora temos uma visão clara do estado interno do `repository`. O uso do *Watch* (ou a inspeção direta na aba *Variables*) nos revelou que a variável `storage` deixou de ser `null` e agora aponta para uma instância válida de `HashMap`.
+
+* **O Objeto "Vivo":** Ao expandir a variável `repository` (`{InMemoryTaskRepository@1216}`), vemos que o `storage` está presente e operante como um `HashMap`. O estado `size = 0` é a confirmação visual de que o repositório foi instanciado corretamente, está limpo e pronto para receber sua primeira tarefa.
+* **A Utilidade do "Watch":** Diferente do *breakpoint* comum, adicionar um *Watch* permite que você monitore o ciclo de vida dessa variável específica (`storage`) em tempo real, sem que ela desapareça do seu campo de visão ou seja ignorada pelo debugger. Isso nos deu a prova definitiva de que o campo foi inicializado e que a memória foi alocada com sucesso.
+* **Prontidão:** Com o `storage` instanciado e ativo na memória, a infraestrutura está totalmente operacional. O contrato definido pela interface `TaskRepository` está pronto para ser exercido pelas chamadas de método que virão a seguir.
+
+**🎯 Próxima Ação:** Você está na porta de entrada da persistência. Pressione **Step Over (F8)** para passar pela linha 90 e, em seguida, prepare-se para entrar na linha 93 (`repository.save(tarefaSemDescricao);`). Este é o momento onde a mágica acontece: observe o `size` do `storage` no seu *Watch* mudar de `0` para `1` assim que a linha for executada. Capture a tela exatamente neste ponto de virada!
 
 ---
+
