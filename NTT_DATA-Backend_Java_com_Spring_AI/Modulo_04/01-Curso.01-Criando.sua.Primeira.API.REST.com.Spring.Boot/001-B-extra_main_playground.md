@@ -640,6 +640,47 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
     * **Optional:** O campo `description` mostra claramente o uso de `Optional`, seja como `Optional.empty` ou contendo o valor, provando que a lógica de "valor opcional" está sendo respeitada na memória.
 * **A Visão do "Banco de Dados" em Memória:** Ao expandir qualquer um dos itens do `ArrayList` (índices 0, 1 ou 2), você está visualizando exatamente como o Java construiu o grafo de objetos em sua Heap. Este é o estado final da sua estrutura de dados após o processamento.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-13-52-57.png" alt="" width="100%">
+</p>
+
+## Relatório Final: A Arquitetura do Repositório em Memória
+
+Após uma série de investigações profundas no depurador (debugger), validamos com sucesso o comportamento do nosso `InMemoryTaskRepository`. Este laboratório não apenas confirmou a funcionalidade do código, mas também revelou o funcionamento interno da JVM durante a persistência.
+
+### 📋 Síntese do Fluxo de Trabalho
+
+1.  **O Contrato (Interface):** Estabelecemos uma interface `TaskRepository` que desacopla a regra de negócio da implementação. Isso garante que, futuramente, possamos trocar o `InMemoryTaskRepository` por uma implementação real de banco de dados sem alterar o `Main`.
+2.  **A Inicialização (Estado Zero):** Observamos via *Field Watchpoint* que o atributo `storage` inicia como `null` e, após a execução do construtor, torna-se um `HashMap` pronto para uso.
+3.  **Persistência e Estado (Ciclo de Vida):**
+    * Acompanhamos a evolução do `storage` conforme as chamadas `repository.save()` eram processadas, vendo o `size` do mapa incrementar de `0` para `3`.
+    * Confirmamos que o `HashMap` lida corretamente com a identidade das tarefas através dos `TaskId` (UUIDs), tratando tarefas com títulos iguais como entidades distintas.
+
+### 💡 Conclusão Técnica
+O sucesso desta implementação reside na correta associação chave-valor dentro do `HashMap`. A capacidade de visualizar esse estado "vivo" durante a execução (especialmente ao confirmar que `repository.findAll()` recupera corretamente os dados convertidos em `ArrayList`) demonstra que a estrutura de dados escolhida é eficiente e atende aos requisitos do projeto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-01-24.png" alt="" width="100%">
+</p>
+
+## 🔍 A Busca de Precisão (findById)
+
+**A Imagem Acima:** O depurador pausou na linha 108, logo após a execução de `repository.findById(idProcurado)`. Este passo demonstra a eficácia do padrão de projeto adotado.
+
+* **O Mecanismo de Busca (`findById`):** Diferente do `findAll()` que recupera todos os objetos, o `findById()` utiliza a chave (`TaskId`) para acessar diretamente o valor (`Task`) no `HashMap`. Isso é uma operação de tempo constante O(1), o que a torna extremamente rápida, independentemente de haver 3 ou 3 milhões de tarefas armazenadas.
+* **A Segurança do `Optional`:** Note que a variável `encontrada` é um `Optional<Task>`. O código não retorna `null` caso o ID não exista; ele retorna um `Optional.empty` ou um `Optional` contendo a tarefa encontrada. Isso é uma prática robusta para evitar o temido `NullPointerException` (NPE) nas camadas superiores da aplicação.
+* **Integridade dos Dados:** O debug mostra que o objeto `Task@1203` recuperado é idêntico ao objeto original que foi inserido no `storage` anteriormente, provando que a referência na memória foi preservada corretamente.
+
+
+### 💡 Por que isso é importante?
+Ao utilizar um `Map<TaskId, Task>`, transformamos o repositório em uma estrutura de busca eficiente. O `HashMap` usa o *hash code* do `TaskId` para localizar o "balde" (bucket) na memória onde o objeto `Task` está guardado. Isso é muito mais eficiente do que ter que iterar sobre uma lista de milhares de itens para encontrar um específico.
+
+**Conclusão da Etapa:** Você validou com sucesso:
+1.  **Criação** (UUIDs únicos).
+2.  **Persistência** (HashMap).
+3.  **Listagem** (findAll).
+4.  **Busca Específica** (findById).
+
 
 ---
 
