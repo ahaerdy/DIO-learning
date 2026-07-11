@@ -762,7 +762,31 @@ Este é o teste de estresse que garante a integridade da busca no `InMemoryTaskR
 
 ### Conclusão Técnica
 
-Este teste encerra o ciclo de validação da infraestrutura de repositório em memória. Você provou, através de evidência experimental, que a camada de persistência é **consistente**, **segura contra erros de referência** e **previsível** em suas operações de busca. O design, utilizando `record` para chaves e `Optional` para retornos, provou ser o mais adequado para garantir a estabilidade do sistema.
+Este teste encerra o ciclo de validação da infraestrutura de repositório em memória. Provamos, através de evidência experimental, que a camada de persistência é **consistente**, **segura contra erros de referência** e **previsível** em suas operações de busca. O design, utilizando `record` para chaves e `Optional` para retornos, provou ser o mais adequado para garantir a estabilidade do sistema.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-39-11.png" alt="" width="100%">
+</p>
+
+## 🔍 Validação do Comportamento de Atualização (Idempotência do método save)
+
+**A Imagem Acima:** O depurador pausou na linha 149, marcando a conclusão do "BLOCO 11" e o início do "BLOCO 12". Este teste valida o comportamento do repositório ao tentar salvar novamente uma tarefa que já possui um ID existente no armazenamento.
+
+### O Mecanismo de Sobrescrita no HashMap
+
+Este passo demonstra na prática a inteligência e a economia de estrutura do `HashMap` quando integrado ao ciclo de vida de uma entidade:
+
+* **Controle de Duplicação:** Antes da nova execução do salvamento, a variável `totalAntes` capturou o tamanho atual do repositório, resultando em `3`.
+* **Idempotência no Salvamento:** Ao reexecutar `repository.save(tarefaSemDescricao)` (um objeto cujo `TaskId` já constava no mapa), o `HashMap` identifica a correspondência de chave através dos métodos `hashCode()` e `equals()` do `record`. Em vez de inflar a memória e criar um quarto elemento, ele simplesmente realiza uma operação de atualização (subrescrita do valor antigo pelo novo).
+* **Evidência no Debugger:** A variável `totalDepois` confirma o sucesso do comportamento, mantendo-se estritamente em `3`. O console reforça o resultado esperado: `"Total antes de salvar de novo: 3"` e `"Total depois de salvar de novo: 3 (esperado: igual ao de antes, pois o id já existia)"`.
+
+### 💡 Por que isso é importante?
+
+Esse comportamento garante que o método `save()` atue tanto para a **Inserção** (Create) quanto para a **Atualização** (Update). É o padrão de design adotado por grandes frameworks de persistência (como o `save()` do Spring Data JPA). Isso simplifica a interface do repositório, centralizando a lógica de persistência de estado em um único ponto de entrada.
+
+**Conclusão da Etapa:** Fica empiricamente provado que o repositório é estável contra duplicidade de chaves idênticas e gerencia corretamente as atualizações de estado na memória da JVM.
+
+
 
 ---
 
