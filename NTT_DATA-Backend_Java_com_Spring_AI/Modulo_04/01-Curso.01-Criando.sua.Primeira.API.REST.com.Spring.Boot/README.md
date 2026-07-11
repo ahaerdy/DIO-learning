@@ -1153,6 +1153,10 @@ class DatabaseTaskRepositoryTest extends TaskRepositoryTest {
 
 As duas classes concretas passam a coexistir, cada uma rodando os mesmos 4 testes de regra de negócio contra sua própria implementação, sem nenhuma interferência entre elas.
 
+#### Material de suporte até esta etapa do projeto
+
+- [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_3.md)
+  - [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_03](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_03)
 
 ## Parte 4 - Orquestrando o domínio
@@ -1235,6 +1239,7 @@ link do vídeo:
 ##  Materiais de Apoio
 
 - [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_3.md)
+  - [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
 
 # Certificado: 
 

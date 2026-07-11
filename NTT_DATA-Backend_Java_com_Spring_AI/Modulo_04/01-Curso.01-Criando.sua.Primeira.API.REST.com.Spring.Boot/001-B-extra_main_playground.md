@@ -768,6 +768,10 @@ Este teste encerra o ciclo de validação da infraestrutura de repositório em m
   <img src="000-Midia_e_Anexos/2026-07-11-14-39-11.png" alt="" width="100%">
 </p>
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-42-48.png" alt="" width="100%">
+</p>
+
 ## 🔍 Validação do Comportamento de Atualização (Idempotência do método save)
 
 **A Imagem Acima:** O depurador pausou na linha 149, marcando a conclusão do "BLOCO 11" e o início do "BLOCO 12". Este teste valida o comportamento do repositório ao tentar salvar novamente uma tarefa que já possui um ID existente no armazenamento.
@@ -786,7 +790,28 @@ Esse comportamento garante que o método `save()` atue tanto para a **Inserção
 
 **Conclusão da Etapa:** Fica empiricamente provado que o repositório é estável contra duplicidade de chaves idênticas e gerencia corretamente as atualizações de estado na memória da JVM.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-44-50.png" alt="" width="100%">
+</p>
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-45-16.png" alt="" width="100%">
+</p>
+
+## 🔍 Validação da Operação de Exclusão (`Delete`)
+
+**A Imagem Acima:** O depurador valida a execução do "BLOCO 12", focando especificamente na capacidade do repositório em remover uma tarefa e refletir esse estado na camada de consulta.
+
+### Análise da Lógica de Exclusão
+
+O objetivo deste teste é garantir que, uma vez solicitada a remoção de um recurso através do método `delete`, a entidade não seja mais acessível via busca por ID.
+
+* **Execução da Remoção:** O fluxo inicia com a chamada `repository.delete(tarefaComDescricao.getId())`, que invoca a lógica de remoção do `HashMap` interno.
+* **Verificação de Estado:** Imediatamente após a exclusão, realiza-se uma nova busca: `repository.findById(tarefaComDescricao.getId())`.
+* **Confirmação via `Optional`:** O depurador apresenta o resultado da busca pós-exclusão como `buscaAposDelete = {Optional@1208} "Optional.empty"`.
+
+### Conclusão Técnica
+
+O retorno `Optional.empty` é a prova definitiva de que a tarefa foi removida com sucesso da estrutura de persistência. Ao utilizar o padrão `Optional`, o seu repositório comunica de forma inequívoca à aplicação que o recurso solicitado não existe mais, encerrando o ciclo de vida daquela tarefa dentro do repositório de forma consistente e segura. Este passo valida que o contrato da interface `TaskRepository` está sendo cumprido integralmente para a operação de exclusão.
 
 ---
-

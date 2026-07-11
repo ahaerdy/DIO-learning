@@ -1094,4 +1094,4 @@ sequenceDiagram
 
 ## Ver também:
 
-- [Extra (fora do curso): uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
+- [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
