@@ -626,9 +626,21 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
 * **Transição de Entrada para Saída:** O código agora avança para a linha 100, onde será executado o método `repository.findAll()`. Este é o momento crucial onde a "persistência" deixa de ser apenas um armazenamento e passa a ser uma consulta de dados.
 * **O Fluxo Natural:** Observe que o `main` agora possui dados suficientes para realizar uma operação de listagem completa. O ciclo de vida do objeto, que começou com a criação, passou pela inserção e agora culmina na recuperação, está completo.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-12-02-06.png" alt="" width="100%">
+</p>
 
+### 📍 A Recuperação de Dados (O Poder do findAll())
 
+**A Imagem Acima:** O depurador pausou na linha 104, revelando o sucesso da operação `repository.findAll()`. A variável `todas`, que antes não existia, agora é uma instância de `ArrayList` com `size = 3`.
 
+* **A Transformação de Dados:** O `InMemoryTaskRepository` realizou a ponte entre o armazenamento interno (`HashMap`) e a interface esperada. Como o `HashMap` é otimizado para busca por chave, a conversão `storage.values()` para `ArrayList` foi necessária para que a camada de apresentação (o seu `Main`) pudesse iterar sobre as tarefas como uma lista sequencial.
+* **Integridade dos Objetos:** Observe a profundidade do debug: os objetos estão íntegros.
+    * **UUID:** O ID único gerado no início do processo foi preservado e está vinculado corretamente a cada tarefa.
+    * **Optional:** O campo `description` mostra claramente o uso de `Optional`, seja como `Optional.empty` ou contendo o valor, provando que a lógica de "valor opcional" está sendo respeitada na memória.
+* **A Visão do "Banco de Dados" em Memória:** Ao expandir qualquer um dos itens do `ArrayList` (índices 0, 1 ou 2), você está visualizando exatamente como o Java construiu o grafo de objetos em sua Heap. Este é o estado final da sua estrutura de dados após o processamento.
+
+**🎯 Conclusão do Ciclo:** Com esta etapa, validamos com sucesso um CRUD completo (Create e Read) em memória. Demonstramos como o Java gerencia referências, como a inversão de dependência (via interface `TaskRepository`) funciona na prática e como a memória da JVM reflete as estruturas definidas no código. O próximo passo lógico na an;alise seria testar o `delete` ou o `findById` (usando o UUID).
 
 ---
 
