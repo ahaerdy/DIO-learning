@@ -606,7 +606,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
   <img src="000-Midia_e_Anexos/2026-07-11-11-52-46.png" alt="" width="100%">
 </p>
 
-### 📍 A Persistência Confirmada (Estado Final)
+### 🔍 A Persistência Confirmada (Estado Final)
 
 **A Imagem Acima:** O depurador pausou na linha 99, preparando-se para executar `repository.findAll()`. A evidência visual no painel de *Threads & Variables* é clara: nosso `repository` não é mais um objeto vazio; ele agora mantém o estado de toda a aplicação em memória.
 
@@ -618,7 +618,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
   <img src="000-Midia_e_Anexos/2026-07-11-11-54-40.png" alt="" width="100%">
 </p>
 
-### 📍 A Consolidação da Persistência (O Relatório do Console)
+### 🔍 A Consolidação da Persistência (O Relatório do Console)
 
 **A Imagem Acima:** O fluxo de execução alcançou o "BLOCO 7" e a evidência visual no Console é irrefutável. Após as três chamadas do método `.save()`, o sistema confirma que a memória (`storage`) está populada com 3 entidades `Task`.
 
@@ -630,7 +630,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
   <img src="000-Midia_e_Anexos/2026-07-11-12-02-06.png" alt="" width="100%">
 </p>
 
-### 📍 A Recuperação de Dados (O Poder do findAll())
+### 🔍 A Recuperação de Dados (O Poder do findAll())
 
 **A Imagem Acima:** O depurador pausou na linha 104, revelando o sucesso da operação `repository.findAll()`. A variável `todas`, que antes não existia, agora é uma instância de `ArrayList` com `size = 3`.
 
@@ -640,7 +640,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
     * **Optional:** O campo `description` mostra claramente o uso de `Optional`, seja como `Optional.empty` ou contendo o valor, provando que a lógica de "valor opcional" está sendo respeitada na memória.
 * **A Visão do "Banco de Dados" em Memória:** Ao expandir qualquer um dos itens do `ArrayList` (índices 0, 1 ou 2), você está visualizando exatamente como o Java construiu o grafo de objetos em sua Heap. Este é o estado final da sua estrutura de dados após o processamento.
 
-**🎯 Conclusão do Ciclo:** Com esta etapa, validamos com sucesso um CRUD completo (Create e Read) em memória. Demonstramos como o Java gerencia referências, como a inversão de dependência (via interface `TaskRepository`) funciona na prática e como a memória da JVM reflete as estruturas definidas no código. O próximo passo lógico na an;alise seria testar o `delete` ou o `findById` (usando o UUID).
+**Conclusão do Ciclo:** Com esta etapa, validamos com sucesso um CRUD completo (Create e Read) em memória. Demonstramos como o Java gerencia referências, como a inversão de dependência (via interface `TaskRepository`) funciona na prática e como a memória da JVM reflete as estruturas definidas no código. 
 
 ---
 
