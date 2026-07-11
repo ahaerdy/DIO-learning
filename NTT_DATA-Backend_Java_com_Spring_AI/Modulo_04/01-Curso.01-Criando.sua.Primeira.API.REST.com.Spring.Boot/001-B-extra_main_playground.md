@@ -699,7 +699,7 @@ Testar o cenário de "não encontrado" garante que sua arquitetura não seja fr�
   <img src="000-Midia_e_Anexos/2026-07-11-14-10-08.png" alt="" width="100%">
 </p>
 
-### 🔍 Passo 14: Validando o Cenário de Ausência (O Poder do Optional)
+### 🔍 Validando o Cenário de Ausência (O Poder do Optional)
 
 **A Imagem Acima:** O depurador pausou na linha 116, confirmando o resultado da busca por um `idInexistente`. Esta é uma etapa crucial de "teste de fronteira", onde garantimos que a aplicação se comporta de maneira previsível quando o dado solicitado não existe no `storage`.
 
@@ -720,7 +720,7 @@ Com isso, encerramos a verificação das operações de leitura. Você provou:
   <img src="000-Midia_e_Anexos/2026-07-11-14-12-59.png" alt="" width="100%">
 </p>
 
-## 🔍 Passo 16: Identidade vs. Igualdade (O Teste dos Records)
+## 🔍 Identidade vs. Igualdade (O Teste dos Records)
 
 **A Imagem Acima:** O depurador pausou na linha 130, permitindo que analisássemos a diferença crucial entre a **identidade de referência** e a **igualdade de valor** em Java.
 
