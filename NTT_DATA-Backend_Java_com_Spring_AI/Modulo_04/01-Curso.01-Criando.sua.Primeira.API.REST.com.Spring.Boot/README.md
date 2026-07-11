@@ -451,7 +451,7 @@ public class Task {
 }
 ```
 
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_02](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_02)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_02.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_02.zip)
 
 ## Parte 3 - Modelando o domínio de tarefas
 
@@ -1726,7 +1726,7 @@ O teste `should_create_task_successfully` passa novamente, agora usando o reposi
 
 #### Material de Apoio Até Esta Etapa do Projeto
 
-- Arquivos do projeto: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_03](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03)
+- Arquivos do projeto (até o vídeo 03): [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
 
 ## Parte 5 - Listagem de tarefas
 ### 🟩 Vídeo 05 - Listagem de tarefas
@@ -1793,7 +1793,10 @@ link do vídeo:
 
 - [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_3.md)
   - [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
-  - Arquivos do projeto: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_03](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03)
+  - Arquivos do projeto (até o vídeo 03): [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip)
+
+  - Arquivos do projeto (até o vídeo 04): [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
+
 
 
 # Certificado: 
