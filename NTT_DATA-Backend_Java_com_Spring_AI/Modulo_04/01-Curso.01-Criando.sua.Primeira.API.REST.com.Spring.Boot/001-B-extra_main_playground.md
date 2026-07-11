@@ -744,8 +744,25 @@ Esta validação é o que torna o `InMemoryTaskRepository` seguro. Ao utilizar `
 
 > **Nota Técnica:** Se `TaskId` fosse uma `class` comum sem o `equals` implementado manualmente, o `HashMap` falharia ao buscar uma tarefa se você passasse uma cópia do ID em vez do objeto ID original. O `record` elimina esse risco, tornando o repositório "à prova de erros" em relação à manipulação das chaves.
 
-**Conclusão:** Você provou empiricamente que o sistema trata as chaves pelo que elas representam (o valor do UUID) e não por onde elas estão na memória. Isso valida completamente a arquitetura de persistência em memória que você construiu.
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-32-24.png" alt="" width="100%">
+</p>
 
+## 🔍 Validação da Recuperação por Identidade (Prova Final)
+
+**A Imagem Acima:** O depurador e o console de saída confirmam, na linha 139, o sucesso da operação de busca utilizando uma instância de chave alternativa.
+
+### O Que Este Teste Prova?
+
+Este é o teste de estresse que garante a integridade da busca no `InMemoryTaskRepository`. Ele valida dois pontos críticos:
+
+* **Independência de Referência:** O sistema demonstrou corretamente que `original == copiaComMesmoUuid` resulta em `false`. Isso prova que o sistema não depende do endereço de memória do objeto para funcionar, protegendo-o contra erros de duplicação de referências.
+* **Confiabilidade do `record`:** A confirmação de que `original.equals(copiaComMesmoUuid)` retorna `true` valida que a lógica de "igualdade por valor" do Java está funcionando perfeitamente para o `TaskId`.
+* **Recuperação de Dados:** O ponto crucial: `repository.findById(copiaComMesmoUuid)` retornou a tarefa correta (`isPresent() == true`). Isso garante que, mesmo que o sistema receba um ID recém-instanciado (uma cópia), ele conseguirá localizar o registro original no `HashMap` sem falhas.
+
+### Conclusão Técnica
+
+Este teste encerra o ciclo de validação da infraestrutura de repositório em memória. Você provou, através de evidência experimental, que a camada de persistência é **consistente**, **segura contra erros de referência** e **previsível** em suas operações de busca. O design, utilizando `record` para chaves e `Optional` para retornos, provou ser o mais adequado para garantir a estabilidade do sistema.
 
 ---
 
