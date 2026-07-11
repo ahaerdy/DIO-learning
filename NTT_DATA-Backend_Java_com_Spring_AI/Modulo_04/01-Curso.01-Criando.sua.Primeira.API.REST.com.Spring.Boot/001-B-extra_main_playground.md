@@ -644,7 +644,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
   <img src="000-Midia_e_Anexos/2026-07-11-13-52-57.png" alt="" width="100%">
 </p>
 
-## Relatório Final: A Arquitetura do Repositório em Memória
+## A Arquitetura do Repositório em Memória
 
 Após uma série de investigações profundas no depurador (debugger), validamos com sucesso o comportamento do nosso `InMemoryTaskRepository`. Este laboratório não apenas confirmou a funcionalidade do código, mas também revelou o funcionamento interno da JVM durante a persistência.
 
@@ -671,7 +671,6 @@ O sucesso desta implementação reside na correta associação chave-valor dentr
 * **A Segurança do `Optional`:** Note que a variável `encontrada` é um `Optional<Task>`. O código não retorna `null` caso o ID não exista; ele retorna um `Optional.empty` ou um `Optional` contendo a tarefa encontrada. Isso é uma prática robusta para evitar o temido `NullPointerException` (NPE) nas camadas superiores da aplicação.
 * **Integridade dos Dados:** O debug mostra que o objeto `Task@1203` recuperado é idêntico ao objeto original que foi inserido no `storage` anteriormente, provando que a referência na memória foi preservada corretamente.
 
-
 ### 💡 Por que isso é importante?
 Ao utilizar um `Map<TaskId, Task>`, transformamos o repositório em uma estrutura de busca eficiente. O `HashMap` usa o *hash code* do `TaskId` para localizar o "balde" (bucket) na memória onde o objeto `Task` está guardado. Isso é muito mais eficiente do que ter que iterar sobre uma lista de milhares de itens para encontrar um específico.
 
@@ -680,6 +679,62 @@ Ao utilizar um `Map<TaskId, Task>`, transformamos o repositório em uma estrutur
 2.  **Persistência** (HashMap).
 3.  **Listagem** (findAll).
 4.  **Busca Específica** (findById).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-07-55.png" alt="" width="100%">
+</p>
+
+## 🔍 Testando o Inexistente (Cenários de Fronteira)
+
+**A Imagem Acima:** O depurador pausou na linha 111, marcando o início do "BLOCO 9". Anteriormente, validamos com sucesso que o `findById` encontra registros existentes. Agora, o foco mudou para como a aplicação se comporta quando solicitamos um dado que não está no repositório.
+
+* **A Importância da Negativa:** Todo sistema robusto precisa lidar graciosamente com a ausência de dados. Em vez de lançar um erro ou retornar `null` (o que causaria um `NullPointerException` se não tratado), o método `findById` retorna um `Optional.empty`.
+* **Defesa contra Falhas:** O código que você está prestes a executar (`repository.findById(idInexistente)`) é um teste de estresse para a sua lógica de encapsulamento. O `HashMap` retornará `null` internamente ao tentar acessar uma chave que não existe, mas a sua implementação de repositório está preparada para transformar esse `null` em um `Optional.empty` usando `Optional.ofNullable()`.
+* **Previsibilidade:** O uso de `Optional` força o desenvolvedor a verificar explicitamente se o objeto existe (`isPresent()`) antes de tentar extrair o valor, tornando o código muito mais seguro e previsível.
+
+### 💡 Por que este teste é vital?
+Testar o cenário de "não encontrado" garante que sua arquitetura não seja frágil. Se sua aplicação não quebrasse ao buscar um ID inexistente, ela estaria escondendo um bug potencial. Ao tratar o "vazio" como um estado válido da aplicação, você evita comportamentos inesperados em produção.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-10-08.png" alt="" width="100%">
+</p>
+
+### 🔍 Passo 14: Validando o Cenário de Ausência (O Poder do Optional)
+
+**A Imagem Acima:** O depurador pausou na linha 116, confirmando o resultado da busca por um `idInexistente`. Esta é uma etapa crucial de "teste de fronteira", onde garantimos que a aplicação se comporta de maneira previsível quando o dado solicitado não existe no `storage`.
+
+* **A Inteligência do `Optional`:** Ao contrário de retornar `null` (o que frequentemente causa `NullPointerException`), o método `repository.findById()` retorna um `Optional.empty` quando a chave não é encontrada no `HashMap`. 
+* **Evidência Visual:** No painel de variáveis, vemos claramente `naoEncontrada = {Optional@1208} "Optional.empty"` e `value = null`. Isso prova que o código, internamente, lidou com a ausência do registro sem quebrar o fluxo de execução.
+* **Resiliência do Design:** Ao forçar essa busca com um `UUID.randomUUID()` (que nunca foi salvo no repositório), você demonstrou que o método `findById` é capaz de distinguir entre "dado não encontrado" e "falha no sistema".
+
+### 💡 Por que este teste é vital?
+Muitos sistemas falham em produção porque não tratam o "nada" (ausência de dados) como um estado válido. Ao utilizar `Optional`, você obriga o código que chama o repositório a tomar uma decisão: "O que eu faço se a tarefa não existir?". Isso aumenta drasticamente a qualidade e a segurança do software.
+
+**Conclusão do Ciclo de Leitura:**
+Com isso, encerramos a verificação das operações de leitura. Você provou:
+1.  **Listagem Total** (`findAll`) retorna uma lista populada ou vazia.
+2.  **Busca Específica** (`findById`) retorna um `Optional` com o dado ou um `Optional.empty`.
+3.  **Resiliência** (tratamento de IDs inexistentes) funciona como esperado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-12-59.png" alt="" width="100%">
+</p>
+
+## 🔍 Passo 16: Identidade vs. Igualdade (O Teste dos Records)
+
+**A Imagem Acima:** O depurador pausou na linha 130, permitindo que analisássemos a diferença crucial entre a **identidade de referência** e a **igualdade de valor** em Java.
+
+* **O Cenário de Teste:** Criamos dois objetos `TaskId` distintos: o `original` e uma `copiaComMesmoUuid`. Embora ambos contenham o mesmo valor de UUID, são instâncias diferentes na memória da JVM (objetos distintos).
+* **Referência (`==`) vs. Valor (`.equals()`):**
+    * **`original == copiaComMesmoUuid`:** O resultado é `false`. Isso ocorre porque `==` compara o endereço de memória. Como são dois objetos diferentes (instanciados separadamente), a JVM os vê como distintos.
+    * **`original.equals(copiaComMesmoUuid)`:** O resultado é `true`. Este é o comportamento esperado de um `record` Java. Como ele implementa automaticamente o `equals()` verificando o conteúdo (o UUID), ele ignora que são instâncias diferentes e confirma que, semanticamente, eles representam a mesma "identidade".
+
+### 💡 Por que isso é a chave para o Repositório?
+Esta validação é o que torna o `InMemoryTaskRepository` seguro. Ao utilizar `TaskId` como chave no seu `HashMap`, a segurança de que o sistema encontrará o registro correto não depende de estarmos usando a mesma variável, mas sim de estarmos usando o mesmo **dado (UUID)**.
+
+> **Nota Técnica:** Se `TaskId` fosse uma `class` comum sem o `equals` implementado manualmente, o `HashMap` falharia ao buscar uma tarefa se você passasse uma cópia do ID em vez do objeto ID original. O `record` elimina esse risco, tornando o repositório "à prova de erros" em relação à manipulação das chaves.
+
+**Conclusão:** Você provou empiricamente que o sistema trata as chaves pelo que elas representam (o valor do UUID) e não por onde elas estão na memória. Isso valida completamente a arquitetura de persistência em memória que você construiu.
 
 
 ---
