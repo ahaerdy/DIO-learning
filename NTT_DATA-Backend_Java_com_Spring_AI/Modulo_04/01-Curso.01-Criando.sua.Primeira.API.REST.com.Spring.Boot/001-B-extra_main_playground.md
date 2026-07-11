@@ -640,7 +640,6 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
     * **Optional:** O campo `description` mostra claramente o uso de `Optional`, seja como `Optional.empty` ou contendo o valor, provando que a lógica de "valor opcional" está sendo respeitada na memória.
 * **A Visão do "Banco de Dados" em Memória:** Ao expandir qualquer um dos itens do `ArrayList` (índices 0, 1 ou 2), você está visualizando exatamente como o Java construiu o grafo de objetos em sua Heap. Este é o estado final da sua estrutura de dados após o processamento.
 
-**Conclusão do Ciclo:** Com esta etapa, validamos com sucesso um CRUD completo (Create e Read) em memória. Demonstramos como o Java gerencia referências, como a inversão de dependência (via interface `TaskRepository`) funciona na prática e como a memória da JVM reflete as estruturas definidas no código. 
 
 ---
 
