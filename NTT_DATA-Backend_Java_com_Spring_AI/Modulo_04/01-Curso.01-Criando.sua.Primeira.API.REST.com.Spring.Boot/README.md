@@ -1172,8 +1172,561 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
-      
+#### Introdução: orquestrando o domínio com Use Cases
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h35m32s842.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Criando sua Primeira API REST com Spring Boot", destacando o tópico atual do módulo: **Orquestrando o domínio**. A partir daqui a aula sai da camada de domínio (já construída nos vídeos anteriores, com entidade e repositório em memória) e avança para a camada de **application**, responsável por orquestrar as regras de negócio através do padrão de Use Case.
+
+
+#### Criando a classe CreateTaskUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h37m48s310.jpg" alt="" width="840">
+</p>
+
+No IntelliJ, dentro do pacote `application`, é criada uma nova classe Java chamada `CreateTaskUseCase`. Ela representa o primeiro caso de uso da aplicação, seguindo o padrão *Use Case* do Clean Architecture: cada classe concentra uma única regra de negócio, aplicando o princípio de responsabilidade única (SRP), em vez de um único serviço genérico cheio de métodos `save`, `find`, `delete`, etc.
+
+
+#### O método execute(): ponto de entrada do Use Case
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h38m00s679.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.application;
+
+public class CreateTaskUseCase {
+    void execute() {
+
+    }
+}
+```
+
+Por convenção, todo Use Case expõe um único método público chamado `execute`, que vai concentrar toda a lógica daquela regra de negócio específica — nesse caso, criar uma tarefa.
+
+
+#### Criando o pacote input para o DTO de entrada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h38m34s508.jpg" alt="" width="840">
+</p>
+
+Para instanciar uma `Task` é necessário receber título e descrição. Por isso é criado o pacote `application.input`, que vai abrigar o Data Transfer Object (DTO) responsável por representar os dados de entrada do caso de uso, em vez de acoplar o `execute` diretamente à entidade de domínio.
+
+
+#### CreateTaskInput como record
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h39m18s944.jpg" alt="" width="840">
+</p>
+
+A classe de entrada é criada como um **record**, escolha recomendada por trazer imutabilidade por padrão — característica desejável para um DTO que apenas transporta dados entre camadas, sem comportamento próprio.
+
+
+#### CreateTaskInput completo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h41m09s946.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.application.input;
+
+import java.util.Optional;
+
+public record CreateTaskInput(String title, Optional<String> description) {
+}
+```
+
+O `CreateTaskInput` carrega o título (obrigatório) e a descrição (opcional, representada com `Optional<String>`). Usar um DTO em vez de passar a entidade `Task` diretamente reduz o acoplamento entre a camada HTTP/controller e o Use Case: se no futuro a entrada deixar de vir de uma requisição REST e passar a vir de um evento, por exemplo, o Use Case permanece isolado e não precisa mudar.
+
+
+#### Recebendo o CreateTaskInput no execute()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h42m31s924.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.application;
+
+import dio.taskmanager.application.input.CreateTaskInput;
+import dio.taskmanager.domain.Task;
+
+public class CreateTaskUseCase {
+    void execute(CreateTaskInput input) {
+        var task = new Task(input.title(), input.description());
+    }
+}
+```
+
+O método `execute` passa a receber o `CreateTaskInput` e usa seus dados (`title` e `description`) para instanciar uma nova `Task` do domínio.
+
+
+#### Preparando o DTO de saída
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h44m21s508.jpg" alt="" width="840">
+</p>
+
+Depois de esboçar a criação da `Task` (marcada com o comentário `// repository`, indicando que ainda falta persistir os dados), a aula segue criando o pacote `application.output`, que vai conter o DTO de resposta do caso de uso — o mesmo raciocínio do DTO de entrada, agora aplicado à saída.
+
+
+#### TaskOutput: o DTO de saída
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h45m24s197.jpg" alt="" width="840">
+</p>
+
+Assim como existe um DTO de entrada, é criado também um DTO de saída chamado `TaskOutput`, evitando expor a entidade `Task` de domínio para fora da camada de application. Isso mantém o domínio isolado e permite, por exemplo, reaproveitar esse mesmo `TaskOutput` em outros casos de uso, como listagem e busca.
+
+
+#### Esqueleto inicial do TaskOutput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h45m39s334.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.application.output;
+
+public record TaskOutput() {
+}
+```
+
+Neste momento, o record `TaskOutput` acabou de ser criado, ainda sem nenhum campo definido.
+
+
+#### TaskOutput completo, com mapeamento a partir de Task
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h47m08s781.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.application.output;
+
+import dio.taskmanager.domain.Task;
+import java.util.Optional;
+
+public record TaskOutput(String id, String title, Optional<String> description, String status) {
+    public static TaskOutput from(Task task) {
+        return new TaskOutput(task.getId().id().toString(),
+                task.getTitle(),
+                task.getDescription(),
+                task.getStatus().name());
+    }
+}
+```
+
+O `TaskOutput` representa os dados de saída com tipos simples (`String`), inclusive convertendo o `status` (um enum no domínio) para texto. O método estático `from(Task)` centraliza o mapeamento entre a entidade de domínio `Task` e o DTO de resposta, isolando essa conversão em um único lugar.
+
+
+#### Retomando o Use Case com o DTO de saída
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h48m07s709.jpg" alt="" width="840">
+</p>
+
+De volta à classe `CreateTaskUseCase`, o método `execute` ainda cria a `Task` e mantém o comentário `// repository` como lembrete do próximo passo: persistir a tarefa antes de devolver a resposta.
+
+
+#### execute retornando TaskOutput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h48m23s326.jpg" alt="" width="840">
+</p>
+
+```java
+public TaskOutput execute(CreateTaskInput input) {
+    var task = new Task(input.title(), input.description());
+    // repository
+    return TaskOutput.from(task);
+}
+```
+
+O método `execute` agora retorna um `TaskOutput`, utilizando o método estático `from` para converter a `Task` recém-criada na resposta do caso de uso.
+
+
+#### Injetando o TaskRepository via construtor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h53m27s966.jpg" alt="" width="840">
+</p>
+
+```java
+public class CreateTaskUseCase {
+    private final TaskRepository repository;
+
+    public CreateTaskUseCase(TaskRepository repository) {
+        this.repository = repository;
+    }
+
+    public TaskOutput execute(CreateTaskInput input) {
+        var task = new Task(input.title(), input.description());
+        // repository.save
+        return TaskOutput.from(task);
+    }
+}
+```
+
+Para persistir a `Task`, o `CreateTaskUseCase` passa a receber um `TaskRepository` pelo construtor — um exemplo de injeção de dependência manual, em que a classe declara o que precisa de fora (o repositório) sem se preocupar com qual implementação concreta será usada.
+
+
+#### Chamando repository.save()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-15h56m13s330.jpg" alt="" width="840">
+</p>
+
+```java
+public TaskOutput execute(CreateTaskInput input) {
+    var task = new Task(input.title(), input.description());
+    var saved = repository.save(task);
+    return TaskOutput.from(saved);
+}
+```
+
+O comentário `// repository.save` dá lugar à chamada real `repository.save(task)`, que persiste a `Task` e retorna a instância salva. É essa instância (`saved`) que é convertida para `TaskOutput`.
+
+
+#### Gerando um teste para o Use Case
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-16h02m37s415.jpg" alt="" width="840">
+</p>
+
+Com o Use Case implementado, o próximo passo é validar seu comportamento. Pelo menu de contexto do IntelliJ, a opção **Generate...** é usada para criar um teste automatizado para a classe `CreateTaskUseCase`.
+
+
+#### Configurando o teste com JUnit5
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-16h03m03s485.jpg" alt="" width="840">
+</p>
+
+Na janela de criação de teste, é definida a biblioteca **JUnit5**, o nome da classe `CreateTaskUseCaseTest`, e o método `execute` é marcado para gerar automaticamente o esqueleto do teste correspondente.
+
+
+#### Classe de teste recém-criada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-16h03m09s775.jpg" alt="" width="840">
+</p>
+
+O IntelliJ gera a classe `CreateTaskUseCaseTest`, ainda vazia, pronta para receber o cenário de teste do caso de uso de criação de tarefa.
+
+
+#### Teste com injeção de dependência manual
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-16h24m13s812.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.application;
+
+import dio.taskmanager.application.input.CreateTaskInput;
+import dio.taskmanager.application.output.TaskOutput;
+import dio.taskmanager.infrastructure.repository.InMemoryTaskRepository;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+class CreateTaskUseCaseTest {
+    CreateTaskUseCase useCase;
+
+    @BeforeEach
+    void setup() {
+        this.useCase = new CreateTaskUseCase(new InMemoryTaskRepository());
+    }
+
+    @Test
+    void should_create_task_successfully() {
+        // given
+        String descricaoEsperada = "Finalizar o módulo de Records";
+        var input = new CreateTaskInput("Estudar Java", Optional.of(descricaoEsperada));
+
+        // when
+        TaskOutput output = useCase.execute(input);
+
+        // then
+        assertNotNull(output);
+        assertNotNull(output.id());
+        assertEquals("Estudar Java", output.title());
+        assertEquals(Optional.of(descricaoEsperada), output.description());
+    }
+}
+```
+
+O teste faz uma injeção de dependência **manual**: a cada execução (`@BeforeEach`), instancia o `CreateTaskUseCase` passando diretamente um `InMemoryTaskRepository`. O cenário `should_create_task_successfully` cria um `CreateTaskInput`, executa o Use Case e valida se o `TaskOutput` retornado tem os dados esperados.
+
+
+#### Teste executado com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-16h24m15s908.jpg" alt="" width="840">
+</p>
+
+O painel de resultados confirma que o teste `should_create_task_successfully` passou, validando que o Use Case cria a `Task` corretamente e devolve o `TaskOutput` esperado usando a injeção de dependência manual.
+
+
+#### Anotando o Use Case com @Service
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-16h25m53s654.jpg" alt="" width="840">
+</p>
+
+```java
+@Service
+public class CreateTaskUseCase {
+    private final TaskRepository repository;
+    // ...
+}
+```
+
+Para que o Spring passe a gerenciar essa classe automaticamente, ela é anotada com `@Service` — uma das anotações do Spring para indicar componentes gerenciados pelo contêiner de injeção de dependência, ao lado de `@Component` e `@Repository`.
+
+
+#### Erro de autowire: interface sem implementação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h38m17s017.jpg" alt="" width="840">
+</p>
+
+Ao anotar a classe com `@Service`, o Spring tenta descobrir sozinho como instanciá-la, mas exibe o erro **"Could not autowire. No beans of 'TaskRepository' type found"** — porque `TaskRepository` é apenas uma interface, sem nenhuma implementação concreta registrada ainda no contexto do Spring.
+
+
+#### O contrato TaskRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h39m14s535.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.domain;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface TaskRepository {
+    Task save(Task task);
+    List<Task> findAll();
+    Optional<Task> findById(TaskId id);
+    void delete(TaskId id);
+}
+```
+
+Esse é o contrato `TaskRepository`, definido na camada de domínio, com as operações `save`, `findAll`, `findById` e `delete`. Por ser uma interface, o Spring precisa de uma implementação concreta para saber o que injetar.
+
+
+#### Navegando até a implementação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h40m39s294.jpg" alt="" width="840">
+</p>
+
+Pelo menu de contexto sobre `TaskRepository`, a opção **Go To > Implementation** é usada para navegar até a implementação concreta dessa interface, que precisa ser anotada para o Spring conseguir reconhecê-la.
+
+
+#### Anotando InMemoryTaskRepository com @Repository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h40m54s420.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.infrastructure.repository;
+
+@Repository
+public class InMemoryTaskRepository implements TaskRepository {
+    private final Map<TaskId, Task> storage = new HashMap<>();
+
+    @Override
+    public Task save(Task task) {
+        storage.put(task.getId(), task);
+        return task;
+    }
+
+    @Override
+    public List<Task> findAll() {
+        return new ArrayList<>(storage.values());
+    }
+
+    @Override
+    public Optional<Task> findById(TaskId id) { return Optional.ofNullable(storage.get(id)); }
+}
+```
+
+A implementação `InMemoryTaskRepository` é anotada com `@Repository`, informando ao Spring que, sempre que a interface `TaskRepository` for requisitada, essa classe deve ser injetada.
+
+
+#### Trocando o construtor manual por @Autowired
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h44m25s067.jpg" alt="" width="840">
+</p>
+
+```java
+@Service
+public class CreateTaskUseCase {
+    @Autowired
+    private final TaskRepository repository;
+
+    // public CreateTaskUseCase(TaskRepository repository) {
+    //     this.repository = repository;
+    // }
+
+    public TaskOutput execute(CreateTaskInput input) {
+        var task = new Task(input.title(), input.description());
+        var saved = repository.save(task);
+        return TaskOutput.from(saved);
+    }
+}
+```
+
+Com a implementação já reconhecida pelo Spring, o construtor manual é comentado e o campo `repository` passa a ser injetado via `@Autowired`, deixando o Spring responsável por resolver e instanciar a dependência automaticamente.
+
+
+#### Testando com @SpringBootTest e @Autowired
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h47m46s881.jpg" alt="" width="840">
+</p>
+
+No teste, a instanciação manual é substituída por `@Autowired` no campo `useCase`, exigindo que a classe de teste seja anotada com `@SpringBootTest` para subir o contexto do Spring. Ao rodar em modo **Debug**, o Spring injeta automaticamente a implementação real (`InMemoryTaskRepository`) disponível no contexto.
+
+
+#### Breakpoint na implementação real
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h49m08s246.jpg" alt="" width="840">
+</p>
+
+Um breakpoint é colocado dentro do método `save()` da `InMemoryTaskRepository` para confirmar, durante a depuração, que essa implementação real está sendo injetada pelo Spring e efetivamente chamada pelo Use Case.
+
+
+#### Breakpoint atingido: injeção confirmada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h57m25s485.jpg" alt="" width="840">
+</p>
+
+A execução em modo debug avança e o breakpoint é atingido, confirmando visualmente que a instância injetada pelo Spring é a implementação real de `TaskRepository` e que o método `save` foi de fato chamado.
+
+
+#### Inspecionando o estado no debugger
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-17h57m36s022.jpg" alt="" width="840">
+</p>
+
+No painel de variáveis do depurador é possível inspecionar o estado no momento em que o breakpoint foi atingido: o objeto `task` recém-criado e o `storage` (ainda vazio, `size = 0`) da `InMemoryTaskRepository`, comprovando que o fluxo passou pela implementação real injetada automaticamente pelo Spring.
+
+
+#### Preparando o teste com Mockito
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-18h01m50s412.jpg" alt="" width="840">
+</p>
+
+Nem sempre é viável testar contra uma implementação real — por exemplo, quando ela depende de um banco de dados ou de uma API externa. Para simular esse cenário, a classe de teste passa a usar também a extensão do **Mockito**, biblioteca de mocking que já vem integrada ao Spring Boot, através de `@ExtendWith(MockitoExtension.class)`.
+
+
+#### Criando o mock do TaskRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-18h05m11s750.jpg" alt="" width="840">
+</p>
+
+```java
+@SpringBootTest
+@ExtendWith(MockitoExtension.class)
+class CreateTaskUseCaseTest {
+    @Mock
+    TaskRepository repository;
+
+    @Autowired
+    CreateTaskUseCase useCase;
+    // ...
+}
+```
+
+O campo `repository` é anotado com `@Mock`, criando uma "casca" da interface `TaskRepository` sem nenhuma implementação real por trás. Suas chamadas poderão ser manipuladas livremente dentro do teste.
+
+
+#### Substituindo @Autowired por @InjectMocks
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-18h06m21s217.jpg" alt="" width="840">
+</p>
+
+```java
+@Mock
+TaskRepository repository;
+
+@InjectMocks
+CreateTaskUseCase useCase;
+```
+
+Em vez de `@Autowired`, o campo `useCase` passa a usar `@InjectMocks`, anotação do Mockito responsável por instanciar o `CreateTaskUseCase` injetando automaticamente os mocks declarados na classe de teste — nesse caso, o `repository` mockado.
+
+
+#### Configurando o comportamento do mock
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-18h11m16s055.jpg" alt="" width="840">
+</p>
+
+```java
+when(repository.save(any(Task.class)))
+        .thenAnswer(invocation -> invocation.getArgument(0));
+```
+
+Com o mock configurado, é definido o comportamento simulado do método `save`: sempre que for chamado com qualquer `Task`, ele responde devolvendo o próprio argumento recebido — simulando, por exemplo, o que uma API real faria ao "aceitar" e devolver os dados enviados, sem depender de uma integração de verdade.
+
+
+#### Verificando a chamada ao repositório
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-18h11m29s986.jpg" alt="" width="840">
+</p>
+
+```java
+verify(repository, times(1)).save(any(Task.class));
+```
+
+Ao final do teste, `verify` garante que o método `save` do repositório mockado foi chamado exatamente uma vez, reforçando que o comportamento do Use Case está correto mesmo sem uma implementação real por trás.
+
+
+#### Confirmando que a implementação real não foi acionada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-18h14m35s819.jpg" alt="" width="840">
+</p>
+
+Repetindo a depuração com o breakpoint dentro de `InMemoryTaskRepository.save()`, dessa vez ele **não** é acionado — prova de que o Use Case está usando o repositório mockado, e não mais a implementação real em memória.
+
+
+#### Teste passando com o repositório mockado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-11-18h14m53s929.jpg" alt="" width="840">
+</p>
+
+O teste `should_create_task_successfully` passa novamente, agora usando o repositório mockado em vez da implementação real, encerrando a demonstração de como usar o Mockito para isolar o Use Case de dependências externas em testes unitários. Com isso, fica consolidado o conceito de Use Case como uma classe de responsabilidade única, testável tanto com injeção real (via `@Autowired`) quanto com mocks (via `@Mock`/`@InjectMocks`).
+
+#### Material de Apoio Até Esta Etapa do Projeto
+
+- Arquivos do projeto: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_video_03](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03)
 
 ## Parte 5 - Listagem de tarefas
 ### 🟩 Vídeo 05 - Listagem de tarefas
