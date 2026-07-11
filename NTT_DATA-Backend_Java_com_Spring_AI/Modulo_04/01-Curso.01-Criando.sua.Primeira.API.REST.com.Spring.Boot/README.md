@@ -1726,7 +1726,7 @@ Repetindo a depuração com o breakpoint dentro de `InMemoryTaskRepository.save(
 
 O teste `should_create_task_successfully` passa novamente, agora usando o repositório mockado em vez da implementação real, encerrando a demonstração de como usar o Mockito para isolar o Use Case de dependências externas em testes unitários. Com isso, fica consolidado o conceito de Use Case como uma classe de responsabilidade única, testável tanto com injeção real (via `@Autowired`) quanto com mocks (via `@Mock`/`@InjectMocks`).
 
-#### Material de Apoio Até Esta Etapa do Projeto
+#### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto (até o vídeo 04): [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
 
