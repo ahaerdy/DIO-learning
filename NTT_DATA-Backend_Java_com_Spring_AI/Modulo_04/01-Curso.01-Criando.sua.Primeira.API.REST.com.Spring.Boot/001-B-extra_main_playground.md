@@ -726,6 +726,10 @@ Com isso, encerramos a verificação das operações de leitura. Você provou:
   <img src="000-Midia_e_Anexos/2026-07-11-14-20-43.png" alt="" width="100%">
 </p>
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-14-25-50.png" alt="" width="100%">
+</p>
+
 ## 🔍 Identidade vs. Igualdade (O Teste dos Records)
 
 **A Imagem Acima:** O depurador pausou na linha 130, permitindo que analisássemos a diferença crucial entre a **identidade de referência** e a **igualdade de valor** em Java.
