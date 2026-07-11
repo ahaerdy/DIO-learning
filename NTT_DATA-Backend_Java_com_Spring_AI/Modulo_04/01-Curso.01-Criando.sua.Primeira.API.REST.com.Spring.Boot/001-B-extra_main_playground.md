@@ -506,7 +506,7 @@ Após a conclusão do construtor da classe `Task`, o depurador encerra aquele es
   <img src="000-Midia_e_Anexos/2026-07-11-10-49-17.png" alt="" width="100%">
 </p>
 
-### 📍 A Prova Real no Console — O Poder do `Optional`
+### 🔍 A Prova Real no Console — O Poder do `Optional`
 
 **A Imagem Acima:** O fluxo de execução avançou e o depurador parou na linha 64, prestes a imprimir o cabeçalho do **BLOCO 4**. Nossa atenção total agora se volta para o **Console**, que exibe o resultado cristalino das operações do Bloco 3.
 
@@ -519,7 +519,7 @@ Após a conclusão do construtor da classe `Task`, o depurador encerra aquele es
   <img src="000-Midia_e_Anexos/2026-07-11-10-51-26.png" alt="" width="100%">
 </p>
 
-### 📍 A Prova da Identidade Única (O Poder do UUID)
+### 🔍 A Prova da Identidade Única (O Poder do UUID)
 
 **A Imagem Acima:** O depurador acabou de executar a linha 67 e agora está pausado na linha 68. Nós instanciamos a `outraTarefa` e estamos prestes a acionar os comandos que imprimirão os IDs no console para fins de comparação.
 
@@ -570,7 +570,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
   <img src="000-Midia_e_Anexos/2026-07-11-11-33-10.png" alt="" width="100%">
 </p>
 
-### 📍 Anatomia da Criação — O Nascimento no Construtor
+### 🔍 Anatomia da Criação — O Nascimento no Construtor
 
 **A Imagem Acima:** O depurador está pausado no momento cirúrgico em que a JVM está alocando espaço para a nova instância de `InMemoryTaskRepository`. O frame no Debug indica `<init>:12`, o que significa que estamos exatamente dentro do método construtor da classe.
 
@@ -582,7 +582,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
   <img src="000-Midia_e_Anexos/2026-07-11-11-43-39.png" alt="" width="100%">
 </p>
 
-### 📍 A Materialização do Estado (O Poder do Watch)
+### 🔍 A Materialização do Estado (O Poder do Watch)
 
 **A Imagem Acima:** O depurador pausou na linha 90, mas agora temos uma visão clara do estado interno do `repository`. O uso do *Watch* (ou a inspeção direta na aba *Variables*) nos revelou que a variável `storage` deixou de ser `null` e agora aponta para uma instância válida de `HashMap`.
 
@@ -590,7 +590,45 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
 * **A Utilidade do "Watch":** Diferente do *breakpoint* comum, adicionar um *Watch* permite que você monitore o ciclo de vida dessa variável específica (`storage`) em tempo real, sem que ela desapareça do seu campo de visão ou seja ignorada pelo debugger. Isso nos deu a prova definitiva de que o campo foi inicializado e que a memória foi alocada com sucesso.
 * **Prontidão:** Com o `storage` instanciado e ativo na memória, a infraestrutura está totalmente operacional. O contrato definido pela interface `TaskRepository` está pronto para ser exercido pelas chamadas de método que virão a seguir.
 
-**🎯 Próxima Ação:** Você está na porta de entrada da persistência. Pressione **Step Over (F8)** para passar pela linha 90 e, em seguida, prepare-se para entrar na linha 93 (`repository.save(tarefaSemDescricao);`). Este é o momento onde a mágica acontece: observe o `size` do `storage` no seu *Watch* mudar de `0` para `1` assim que a linha for executada. Capture a tela exatamente neste ponto de virada!
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-11-49-22.png" alt="" width="100%">
+</p>
+
+### 🔍 A Materialização do Estado (O Poder do Watch)
+
+**A Imagem Acima:** O depurador pausou na linha 90, logo após a instaciação do `repository`. Graças à adição do *Watch*, agora temos uma visão clara do estado interno do `repository` e a variável `storage` deixou de ser `null`, apontando para uma instância válida de `HashMap`.
+
+* **O Objeto "Vivo":** Ao expandir a variável `repository` (`{InMemoryTaskRepository@1216}`), vemos que o `storage` está presente e operante como um `HashMap`. O estado `size = 0` é a confirmação visual de que o repositório foi instanciado corretamente, está limpo e pronto para receber sua primeira tarefa.
+* **A Utilidade do "Watch":** Diferente da inspeção padrão que pode ocultar campos durante a inicialização, o *Watch* permite que você monitore o ciclo de vida dessa variável específica (`storage`) em tempo real. Isso nos deu a prova definitiva de que o campo foi inicializado e que a memória foi alocada com sucesso.
+* **Prontidão:** Com o `storage` instanciado e ativo na memória, a infraestrutura está totalmente operacional. O contrato definido pela interface `TaskRepository` está pronto para ser exercido pelas chamadas de método que virão a seguir.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-11-52-46.png" alt="" width="100&">
+</p>
+
+### 📍 A Persistência Confirmada (Estado Final)
+
+**A Imagem Acima:** O depurador pausou na linha 99, preparando-se para executar `repository.findAll()`. A evidência visual no painel de *Threads & Variables* é clara: nosso `repository` não é mais um objeto vazio; ele agora mantém o estado de toda a aplicação em memória.
+
+* **O "Ground Truth" da Memória (`size = 3`):** Ao expandir o `repository`, o atributo `storage` exibe `size = 3`. Isso confirma que todas as chamadas anteriores ao método `save()` foram bem-sucedidas. O `HashMap` está gerenciando corretamente a associação entre os três `TaskId` (chaves únicas) e suas respectivas instâncias de `Task` (valores).
+* **A Estrutura de Busca:** O `HashMap` organiza esses dados de forma que, quando chamarmos `findAll()` ou `findById()`, ele não precisará percorrer uma lista linear (o que seria custoso). Ele já tem os endereços mapeados internamente, permitindo acesso imediato aos dados.
+* **Preparação para a Consulta:** Estamos prestes a executar `repository.findAll()`. Internamente, este método vai converter os valores do `HashMap` (`storage.values()`) em uma `List`, permitindo que o `Main` itere sobre os resultados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-11-54-40.png" alt="" width="100&">
+</p>
+
+### 📍 A Consolidação da Persistência (O Relatório do Console)
+
+**A Imagem Acima:** O fluxo de execução alcançou o "BLOCO 7" e a evidência visual no Console é irrefutável. Após as três chamadas do método `.save()`, o sistema confirma que a memória (`storage`) está populada com 3 entidades `Task`.
+
+* **A Confirmação do Estado:** A saída `Total armazenado agora: 3` valida a lógica da classe `InMemoryTaskRepository`. Não houve perda de dados, e o `HashMap` gerenciou corretamente as chaves (`TaskId`) e os valores (`Task`), independentemente do fato de termos títulos repetidos (como "Estudar Java").
+* **Transição de Entrada para Saída:** O código agora avança para a linha 100, onde será executado o método `repository.findAll()`. Este é o momento crucial onde a "persistência" deixa de ser apenas um armazenamento e passa a ser uma consulta de dados.
+* **O Fluxo Natural:** Observe que o `main` agora possui dados suficientes para realizar uma operação de listagem completa. O ciclo de vida do objeto, que começou com a criação, passou pela inserção e agora culmina na recuperação, está completo.
+
+
+
+
 
 ---
 
