@@ -479,4 +479,96 @@ Após a conclusão do construtor da classe `Task`, o depurador encerra aquele es
 * **Ausência do `this`:** Como estamos dentro do método `public static void main`, o painel de variáveis não exibe o ponteiro `this`. Métodos estáticos pertencem à classe como um todo, e não a uma instância específica, portanto, não há um "objeto atual" no escopo.
 * **A Variável Local (`tarefaSemDescricao`):** Agora, a variável que criamos aparece disponível no painel. Ela guarda a referência para o objeto `{Task}` recém-criado na memória Heap. Expandindo essa variável, podemos confirmar que os atributos internos (`id`, `title`, `description` e `status`) foram inicializados com sucesso e contêm os valores exatos que vimos sendo atribuídos no passo anterior.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-10-44-56.png" alt="" width="100%">
+</p>
+
+### O Efeito Colateral no Console e a Preparação do Bloco 2
+
+**A Imagem Acima:** O fluxo de execução avançou. Executamos o método `imprimirTask(tarefaSemDescricao)` e o depurador agora está pausado na linha 46, aguardando para iniciar a construção do segundo objeto. Mudamos a nossa lente de observação das Variáveis de Memória para a aba **Console**.
+
+* **O Resultado do Bloco 1:** O console exibe a prova visual de que nosso domínio está funcionando perfeitamente. O objeto que vimos nascer na memória agora teve seu estado impresso: o `id` exibe o UUID gerado, o `status` está como `PENDING` e, de forma elegante, a nossa lógica converteu o `Optional.empty()` da descrição para a string amigável `(nenhuma)`.
+* **A Nova Linha Destacada (Azul):** Estamos na largada do "BLOCO 2". A instrução `new Task(...)` está prestes a ser executada para criar a `tarefaComDescricao`. O contraste didático aqui é o uso do `Optional`: em vez de declararmos ausência de valor, estamos empacotando um valor real usando `Optional.of("Revisar Inversão de Controle...")`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-10-44-23.png" alt="" width="100%">
+</p>
+
+### O Nascimento da Segunda Tarefa e o `Optional` Preenchido
+
+**A Imagem Acima:** A instrução de instanciação foi concluída e o depurador parou na linha 48, prestes a enviar nosso novo objeto para o método de impressão.
+
+* **A Coexistência na Memória:** Olhando para o painel de variáveis, fica claro como a JVM gerencia o ciclo de vida. Agora temos duas instâncias distintas e independentes de `Task` vivendo simultaneamente na Heap: a `tarefaSemDescricao` (`{Task@1106}`) e a recém-criada `tarefaComDescricao` (`{Task@1207}`).
+* **O "Envelope" do `Optional`:** O grande destaque desta captura está ao expandirmos a `tarefaComDescricao`. O atributo `description` agora não é um espaço vazio. A JVM alocou um objeto `Optional` (`{Optional@1209}`) que atua como um invólucro de proteção. Dentro dele, repousa o valor real: a string `"Revisar Inversão de Controle"`. Isso valida visualmente o design do domínio: a aplicação sabe lidar de forma segura tanto com a presença quanto com a ausência do dado, blindando o código contra os temidos `NullPointerException`.
+* **A Linha Destacada (Azul):** O objeto está íntegro. O fluxo aguarda apenas o seu comando para passar o objeto montado como argumento para o `imprimirTask`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-10-49-17.png" alt="" width="100%">
+</p>
+
+### 📍 A Prova Real no Console — O Poder do `Optional`
+
+**A Imagem Acima:** O fluxo de execução avançou e o depurador parou na linha 64, prestes a imprimir o cabeçalho do **BLOCO 4**. Nossa atenção total agora se volta para o **Console**, que exibe o resultado cristalino das operações do Bloco 3.
+
+* **A Prevenção de Nulos em Ação:** O console ilustra perfeitamente o comportamento do encapsulamento `Optional` que vimos na memória no passo anterior:
+  * Ao interrogar a `tarefaSemDescricao`, o método `.isPresent()` retornou `false`. A aplicação não quebrou com o clássico (e temido) erro de *nulo*; em vez disso, o método `.orElse()` assumiu a responsabilidade de forma elegante e injetou a string de segurança `"(sem descrição informada)"`.
+  * Ao interrogar a `tarefaComDescricao`, o `.isPresent()` retornou `true` e o valor real (`"Revisar Inversão de Controle"`) foi extraído sem sobressaltos.
+* **A Linha Destacada (Azul):** Estamos na porta de entrada do Bloco 4. A instrução `separador(...)` está engatilhada, aguardando para organizar visualmente o nosso próximo experimento sobre a identidade das tarefas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-10-51-26.png" alt="" width="100%">
+</p>
+
+### 📍 A Prova da Identidade Única (O Poder do UUID)
+
+**A Imagem Acima:** O depurador acabou de executar a linha 67 e agora está pausado na linha 68. Nós instanciamos a `outraTarefa` e estamos prestes a acionar os comandos que imprimirão os IDs no console para fins de comparação.
+
+* **O Clone que não é Clone:** Olhe atentamente para a árvore expandida no painel de variáveis. A nossa nova `outraTarefa` (`{Task@1222}`) foi criada enviando exatamente os mesmos parâmetros da nossa primeira tarefa (`tarefaSemDescricao`): o título é `"Estudar Java"` e a descrição é `Optional.empty()`.
+* **A Identidade Garantida pelo Domínio:** Embora os "dados" sejam idênticos, a JVM alocou objetos em endereços de memória distintos (`@1222` vs `@1106`). Mais importante ainda: a nossa regra de domínio funcionou com perfeição. Veja o atributo `id` recém-gerado para a `outraTarefa`: ele encapsula um UUID completamente novo (`0be137b5...`). Isso comprova que a identidade de uma `Task` é definida exclusivamente pelo seu `TaskId`, impossibilitando conflitos mesmo que o usuário cadastre várias tarefas com títulos repetidos.
+* **A Linha Destacada (Azul):** O fluxo aguarda a sua liberação para começar a imprimir essas evidências no console.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-10-54-18.png" alt="" width="100%">
+</p>
+
+### A Conclusão da Regra de Negócio e a Ponte para a Infraestrutura
+
+**A Imagem Acima:** O depurador encerrou as execuções do Bloco 4 e está pausado na linha 83, aguardando para imprimir o cabeçalho do **BLOCO 5**. A aba Console exibe as evidências finais do nosso laboratório sobre as entidades.
+
+* **A Confirmação Visual (Console):** O console mostra de forma cristalina a diferença entre os UUIDs gerados. A verificação lógica de `Mesmo título, IDs iguais?` retornou `false`, ratificando que a identidade do objeto é soberana e independe de seus atributos textuais. Além disso, confirmamos que a regra de negócio inicializou as tarefas rigorosamente com o status `PENDING`.
+* **O Segredo do Encapsulamento (Comentários no Código):** Imediatamente acima da linha destacada, há um bloco de comentários crucial. Ele destaca a ausência intencional de um `@Setter` para o `status`. Esta é uma excelente prática de modelagem rica (*Domain-Driven Design*). Uma entidade não deve ter seu status alterado de forma externa e anêmica por um `setStatus(COMPLETED)`; ela deve sofrer transições de estado através de comportamentos do próprio negócio, como métodos `iniciar()` ou `concluir()`.
+* **A Linha Destacada (Azul):** Estamos mudando de marcha. Saímos da criação pura de instâncias e vamos preparar o terreno onde essas tarefas vão morar temporariamente na memória.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-10-57-39.png" alt="" width="100%">
+</p>
+
+### O Nascimento da Infraestrutura e o Design por Contratos
+
+**A Imagem Acima:** Acabamos de executar a linha de instanciação (linha 89) e o depurador parou na linha 90. O nosso repositório ganhou vida na memória da aplicação e está pronto para uso.
+
+* **O "Banco de Dados" Vazio na Memória:** Olhando para a aba *Threads & Variables*, vemos o surgimento da nossa variável `repository` (`{InMemoryTaskRepository@1249}`). O detalhe crucial revela-se ao expandi-la: o atributo interno `storage` (um `HashMap`) foi alocado com sucesso e seu estado inicial é explicitamente `size = 0`. A gaveta está montada e completamente limpa, aguardando as entidades.
+* **O Poder da Interface (Polimorfismo):** O bloco de comentários (linhas 85-88) e a própria sintaxe da linha executada evidenciam um princípio fundamental de arquitetura de software: *Programar voltado à Interface*. O lado esquerdo da declaração garante o contrato (`TaskRepository`), enquanto apenas o lado direito sabe da implementação concreta. Para o restante da classe `Main`, não importa se é um mapa em memória, um banco de dados relacional ou um arquivo de texto — o contrato de uso permanece o mesmo.
+* **A Linha Destacada (Azul):** O fluxo aguarda para imprimir no console o nome da classe concreta que está operando por trás da interface.
+
+### Por que um `HashMap`?
+
+No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `Map<TaskId, Task>` e instanciado concretamente como um `HashMap`. Mas o que isso significa na prática?
+
+* **O Conceito:** Um `HashMap` é uma estrutura de dados baseada no conceito de dicionário (ou chave-valor). Ele não guarda os itens em uma "fila" sequencial, mas sim associando uma **Chave** exclusiva a um **Valor**.
+* **Neste Contexto:** * A **Chave** é o nosso `TaskId` (o objeto que guarda o UUID).
+  * O **Valor** é a nossa `Task` inteira (o objeto com título, descrição e status).
+* **A Grande Vantagem (Performance):** Se tivéssemos guardado as tarefas em uma simples lista (`ArrayList`), toda vez que precisássemos buscar uma tarefa específica pelo ID (no método `findById`), o Java teria que olhar tarefa por tarefa na lista, do início ao fim, até achar a correta. Com o `HashMap`, o Java aplica uma fórmula matemática (função *hash*) sobre o ID e vai **direto** ao endereço de memória onde aquela tarefa está guardada, de forma instantânea. 
+
+É como um guarda-volumes: você não precisa abrir todos os armários para achar sua mochila; basta olhar o número na sua chave e ir direto à porta certa.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-11-11-04-11.png" alt="" width="840">
+</p>
+
+**🎯 Próxima Ação:** Pressione **Step Over (F8)** para avançar pela impressão e passar pelo separador, entrando oficialmente no **BLOCO 6**. 
+
+Continue dando *Step Over* até **executar a linha** que salva a primeira tarefa (a chamada ao método `repository.save(...)`). Assim que a linha do primeiro salvamento for executada, pare e **capture a tela**. Certifique-se de manter o `repository` expandido na aba de variáveis: nosso objetivo é flagrar o `size` do `storage` mudando de `0` para `1`!
+
+
 ---
