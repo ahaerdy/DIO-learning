@@ -603,7 +603,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
 * **Prontidão:** Com o `storage` instanciado e ativo na memória, a infraestrutura está totalmente operacional. O contrato definido pela interface `TaskRepository` está pronto para ser exercido pelas chamadas de método que virão a seguir.
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-07-11-11-52-46.png" alt="" width="100&">
+  <img src="000-Midia_e_Anexos/2026-07-11-11-52-46.png" alt="" width="100%">
 </p>
 
 ### 📍 A Persistência Confirmada (Estado Final)
@@ -615,7 +615,7 @@ No nosso `InMemoryTaskRepository`, o atributo `storage` foi declarado como um `M
 * **Preparação para a Consulta:** Estamos prestes a executar `repository.findAll()`. Internamente, este método vai converter os valores do `HashMap` (`storage.values()`) em uma `List`, permitindo que o `Main` itere sobre os resultados.
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-07-11-11-54-40.png" alt="" width="100&">
+  <img src="000-Midia_e_Anexos/2026-07-11-11-54-40.png" alt="" width="100%">
 </p>
 
 ### 📍 A Consolidação da Persistência (O Relatório do Console)
