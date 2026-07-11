@@ -451,6 +451,8 @@ public class Task {
 }
 ```
 
+#### Material de Apoio Até Esta Etapa
+
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_02.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_02.zip)
 
 ## Parte 3 - Modelando o domínio de tarefas
@@ -1153,7 +1155,7 @@ class DatabaseTaskRepositoryTest extends TaskRepositoryTest {
 
 As duas classes concretas passam a coexistir, cada uma rodando os mesmos 4 testes de regra de negócio contra sua própria implementação, sem nenhuma interferência entre elas.
 
-#### Material de Apoio Até Esta Etapa do Projeto
+#### Material de Apoio Até Esta Etapa
 
 - [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_3.md)
   - [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
@@ -1726,7 +1728,7 @@ O teste `should_create_task_successfully` passa novamente, agora usando o reposi
 
 #### Material de Apoio Até Esta Etapa do Projeto
 
-- Arquivos do projeto (até o vídeo 03): [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
+- Arquivos do projeto (até o vídeo 04): [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
 
 ## Parte 5 - Listagem de tarefas
 ### 🟩 Vídeo 05 - Listagem de tarefas
