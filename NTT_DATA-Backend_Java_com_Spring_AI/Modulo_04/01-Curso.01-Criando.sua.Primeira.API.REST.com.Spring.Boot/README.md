@@ -2044,6 +2044,7 @@ link do vídeo:
 
 - [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_3.md)
   - [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
+- [002-Tutorial_TaskManager_Java_Spring_Videos04a05](./002-Tutorial_TaskManager_Java_Spring_Videos04a05.md)
 
 ### Arquivos do Projeto
 
