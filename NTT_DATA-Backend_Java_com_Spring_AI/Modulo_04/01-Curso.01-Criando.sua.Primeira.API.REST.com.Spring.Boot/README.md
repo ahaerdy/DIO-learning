@@ -1996,9 +1996,593 @@ public TaskOutput execute(TaskId id, UpdateTaskInput input) {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/f6ebfd53-da70-4503-941d-c5905d11ccec?autoplay=1
+
+### Anotações
+
+#### Abertura: Criando sua Primeira API REST com Spring Boot
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h01m09s698.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula, apresentando o roteiro dos cinco tópicos que serão cobertos na construção da API REST com Spring Boot: infraestrutura e interface, consulta de tarefas, validação de dados, documentação da API e evolução da API. O foco inicial desta aula é o primeiro item, **Infraestrutura e interface**, que trata da camada HTTP responsável por receber as requisições do cliente.
+
+#### Criando o pacote `http`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h03m17s520.jpg" alt="" width="840">
+</p>
+
+```text
+dio.taskmanager.infrastructure.http
+```
+
+Dentro do pacote `infrastructure`, é criado um novo pacote chamado `http`. Seguindo os princípios de Domain Driven Design, a comunicação via HTTP é uma responsabilidade de infraestrutura, e não do domínio da aplicação — por isso ela fica isolada nesse pacote específico.
+
+#### Criando a classe TaskController
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h04m53s107.jpg" alt="" width="840">
+</p>
+
+```text
+TaskController
+```
+
+Dentro do pacote `http`, é criada uma nova classe chamada `TaskController`. O Controller é o padrão responsável por funcionar como ponto de entrada das requisições HTTP relacionadas a um recurso específico — neste caso, o recurso `task`.
+
+#### Adicionando a dependência spring-boot-starter-web
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h07m19s008.jpg" alt="" width="840">
+</p>
+
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+```
+
+Para trabalhar com HTTP no Spring Boot, é necessário adicionar uma dependência de web. É incluída no `build.gradle` a biblioteca `spring-boot-starter-web`, específica do Spring Boot. Ao adicionar essa dependência, a aplicação passa a ter acesso às anotações e classes relacionadas a controllers.
+
+#### Classe principal da aplicação após importar a dependência web
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h09m06s174.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager;
+
+import ...
+
+@SpringBootApplication
+public class TaskmanagerApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(TaskmanagerApplication.class, args);
+    }
+
+}
+```
+
+Com a biblioteca já importada, a classe principal `TaskmanagerApplication`, anotada com `@SpringBootApplication`, está pronta para demonstrar a mudança de comportamento causada pela dependência web: a aplicação passará a subir um servidor embutido em vez de apenas iniciar e finalizar.
+
+#### Aplicação rodando com servidor Tomcat na porta 8080
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h09m24s024.jpg" alt="" width="840">
+</p>
+
+```bash
+:: Spring Boot ::                (v4.0.5)
+
+INFO --- dio.taskmanager.TaskmanagerApplication : Starting TaskmanagerApplication
+INFO --- dio.taskmanager.TaskmanagerApplication : No active profile set
+INFO --- dio.taskmanager.TaskmanagerApplication : Started TaskmanagerApplication in 1.398 seconds
+```
+
+Ao executar a aplicação novamente, o console mostra que o Spring Boot agora é capaz de subir um servidor Tomcat — evidenciado pela mensagem de inicialização do serviço Tomcat na porta 8080. A partir desse momento, a aplicação passa a se manter em execução, mantendo o servidor web ativo, em vez de encerrar imediatamente.
+
+#### Anotando o TaskController com @RestController
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h12m37s866.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.infrastructure.http;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TaskController {
+}
+```
+
+A classe `TaskController` recebe a anotação `@RestController`. Com essa anotação, o Spring Boot sabe como instanciar o controller e registrá-lo junto ao servidor Tomcat, tornando-o apto a receber requisições HTTP.
+
+#### Injetando o CreateTaskUseCase via construtor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h13m59s757.jpg" alt="" width="840">
+</p>
+
+```java
+@RestController
+public class TaskController {
+    private final CreateTaskUseCase createTaskUseCase;
+
+    public TaskController(CreateTaskUseCase createTaskUseCase) {
+        this.createTaskUseCase = createTaskUseCase;
+    }
+
+}
+```
+
+Em vez de acessar diretamente o repository, o controller recebe o `CreateTaskUseCase` criado anteriormente, feito por injeção de dependência através do construtor. Esse use case será chamado para executar a lógica de criação de uma tarefa a partir do endpoint que será montado a seguir.
+
+#### Primeiro endpoint: @PostMapping
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h15m21s382.jpg" alt="" width="840">
+</p>
+
+```java
+@PostMapping
+void create() {
+    System.out.println("Creating task");
+}
+```
+
+É criado o primeiro endpoint do controller, um método `create` anotado com `@PostMapping`. O nome do método em si não é o mais relevante — o que importa é o mapeamento: essa anotação indica que existe uma URL disponível para receber requisições HTTP do tipo POST. Como não há nenhum mapeamento adicional, uma requisição POST para a raiz do `localhost:8080` cairá nesse método. Um `System.out.println` foi adicionado apenas para exemplificar a execução.
+
+#### Usando o HTTP Client do IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h17m49s784.jpg" alt="" width="840">
+</p>
+
+Para testar o endpoint, é utilizada a ferramenta HTTP Client do IntelliJ, acessada pelo menu de contexto com a opção **Create Request in HTTP Client**. Essa ferramenta permite montar e enviar requisições HTTP diretamente pela IDE.
+
+#### Enviando a primeira requisição POST
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h22m42s026.jpg" alt="" width="840">
+</p>
+
+```http
+POST http://localhost:8080
+```
+
+É montada uma requisição HTTP com o verbo POST para `localhost:8080`. Ao executá-la, o servidor responde com status 200, confirmando que a requisição foi processada com sucesso.
+
+#### Aplicação em execução após a primeira requisição
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h27m49s166.jpg" alt="" width="840">
+</p>
+
+```bash
+:: Spring Boot ::                (v3.2.0)
+
+INFO --- dio.taskmanager.TaskmanagerApplication : Starting TaskmanagerApplication
+INFO --- o.s.b.w.embedded.tomcat.TomcatWebServer : Tomcat initialized with port 8080
+INFO --- dio.taskmanager.TaskmanagerApplication : Started TaskmanagerApplication in 1.198 seconds
+```
+
+A aplicação é reiniciada para validar o novo endpoint. O log confirma a subida do servidor Tomcat na porta 8080 e o início bem-sucedido da aplicação `TaskmanagerApplication`, deixando-a pronta para receber a requisição de teste.
+
+#### Testando o endpoint via terminal com curl
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h31m16s454.jpg" alt="" width="840">
+</p>
+
+```bash
+curl -i -X POST http://localhost:8080
+```
+
+Como alternativa ao HTTP Client, o endpoint também é testado diretamente pelo terminal com o comando `curl -i -X POST`. O servidor responde com `HTTP/1.1 200`, indicando que a requisição foi processada com sucesso.
+
+#### Log confirmando a execução do método create
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h31m17s980.jpg" alt="" width="840">
+</p>
+
+```bash
+INFO --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Initializing Servlet 'dispatcherServlet'
+INFO --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : Completed initialization in 1 ms
+Creating task
+```
+
+No console da aplicação, a mensagem `Creating task` confirma que a requisição enviada via curl efetivamente caiu dentro do método `create` do `TaskController`, validando que o mapeamento do endpoint está funcionando corretamente.
+
+#### Resposta HTTP 200 sem corpo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h32m01s716.jpg" alt="" width="840">
+</p>
+
+```http
+HTTP/1.1 200
+Content-Length: 0
+
+<Response body is empty>
+```
+
+A resposta da requisição no HTTP Client mostra status 200 e corpo vazio, o que é esperado, já que o método `create` ainda não retorna nenhum conteúdo — apenas executa a lógica interna e imprime a mensagem no console.
+
+#### Confirmando o fluxo completo da requisição
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h37m20s962.jpg" alt="" width="840">
+</p>
+
+Com a resposta 200 confirmada no HTTP Client e a mensagem `Creating task` registrada no console, fica validado o fluxo completo: uma requisição POST enviada ao servidor é corretamente roteada até o método `create` do `TaskController`.
+
+#### Instanciando manualmente um CreateTaskInput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h40m52s100.jpg" alt="" width="840">
+</p>
+
+```java
+@PostMapping
+void create() {
+    var input = new CreateTaskInput("Renovar Passaporte", Optional.empty());
+    createTaskUseCase.execute(input);
+}
+```
+
+Para validar que os dados da tarefa chegam até o use case, é feita uma instanciação manual de um `CreateTaskInput`, apenas para fins de teste, e o `createTaskUseCase` é chamado com esse input. Essa etapa é temporária e servirá de base para a extração dos dados reais da requisição HTTP nos próximos passos.
+
+#### Revisando o InMemoryTaskRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h41m33s413.jpg" alt="" width="840">
+</p>
+
+```java
+@Repository
+public class InMemoryTaskRepository implements TaskRepository {
+    private final Map<TaskId, Task> storage = new HashMap<>();
+
+    @Override
+    public Task save(Task task) {
+        storage.put(task.getId(), task);
+        return task;
+    }
+    ...
+}
+```
+
+Antes de testar com um breakpoint, é revisado o `InMemoryTaskRepository`, para confirmar que o método `save` armazena a task recebida no mapa em memória e a retorna em seguida.
+
+#### Depurando o fluxo com breakpoint no repository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h42m03s530.jpg" alt="" width="840">
+</p>
+
+Um breakpoint é adicionado no método `save` do `InMemoryTaskRepository`. Ao rodar a aplicação em modo debug e enviar a requisição, a execução para nesse ponto, mostrando as variáveis `task` e `storage` — confirmando que a tarefa instanciada manualmente no controller realmente chega até a camada de persistência.
+
+#### Aplicação conectada em modo debug
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h44m28s921.jpg" alt="" width="840">
+</p>
+
+Com a aplicação em execução e o debugger conectado, uma nova requisição é enviada para confirmar que o fluxo cai corretamente no breakpoint configurado, validando de ponta a ponta a integração entre controller, use case e repository.
+
+#### Mapeando o controller para o recurso /tasks
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h49m13s831.jpg" alt="" width="840">
+</p>
+
+```java
+@RestController
+@RequestMapping("/tasks")
+public class TaskController {
+    ...
+}
+```
+
+Em vez de responder na raiz da aplicação, o ideal é que o controller responda em um caminho específico do recurso, já que a aplicação pode ter outros recursos no futuro. Por isso, é adicionada a anotação `@RequestMapping("/tasks")` na classe, de forma que requisições para `/tasks` sejam direcionadas a esse controller. O `@PostMapping` continua mapeado para a raiz desse caminho, ou seja, o método `create` responde a um POST em `/tasks`.
+
+#### Criando o pacote request para os DTOs
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h51m48s862.jpg" alt="" width="840">
+</p>
+
+```text
+dio.taskmanager.infrastructure.http.request
+```
+
+Para representar os dados recebidos pela API, é criado dentro do pacote `http` um novo pacote chamado `request`, destinado a armazenar os DTOs de entrada das requisições.
+
+#### Criando a classe CreateTaskRequest
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h53m08s740.jpg" alt="" width="840">
+</p>
+
+```text
+CreateTaskRequest
+```
+
+Dentro do pacote `request`, é criada a classe `CreateTaskRequest`, que seguirá uma ideia próxima à do `CreateTaskInput`, representando os dados de criação de uma tarefa recebidos via HTTP.
+
+#### Definindo o record CreateTaskRequest
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h55m42s675.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.infrastructure.http.request;
+
+import java.util.Optional;
+
+public record CreateTaskRequest(String title, Optional<String> description) {
+}
+```
+
+O `CreateTaskRequest` é definido como um record contendo `title` (String) e `description` (Optional<String>), representando exatamente as informações que a API deve receber do cliente para criar uma nova tarefa.
+
+#### Recebendo o CreateTaskRequest como @RequestBody
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h56m19s291.jpg" alt="" width="840">
+</p>
+
+```java
+@PostMapping
+void create(@RequestBody CreateTaskRequest request) {
+    var input = new CreateTaskInput("Renovar Passaporte", Optional.empty());
+    createTaskUseCase.execute(input);
+}
+```
+
+O método `create` passa a receber um parâmetro `CreateTaskRequest request`, anotado com `@RequestBody`. Essa anotação indica ao Spring que o corpo da requisição virá em um formato como JSON, e que ele deve ser automaticamente convertido (parseado) para essa classe Java.
+
+#### Substituindo os dados fixos pelos dados da requisição
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h58m32s277.jpg" alt="" width="840">
+</p>
+
+```java
+@PostMapping
+void create(@RequestBody CreateTaskRequest request) {
+    var input = new CreateTaskInput(request.title(), request.description());
+    createTaskUseCase.execute(input);
+}
+```
+
+Os valores que antes estavam fixos (`"Renovar Passaporte"` e `Optional.empty()`) são substituídos pelos dados vindos efetivamente da requisição, `request.title()` e `request.description()`, eliminando a instância manual usada anteriormente para testes.
+
+#### Erro 415 por ausência do Content-Type
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-13h59m45s701.jpg" alt="" width="840">
+</p>
+
+```http
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{"title": "ABC"}
+```
+
+Ao enviar a nova requisição com o corpo `{"title": "ABC"}`, é necessário incluir o cabeçalho `Content-Type: application/json`, para que o Spring saiba como converter o corpo recebido. Sem essa informação corretamente configurada na tentativa anterior, o servidor retornava um erro `415 Unsupported Media Type`.
+
+#### Requisição bem-sucedida com Content-Type correto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h03m51s375.jpg" alt="" width="840">
+</p>
+
+```http
+HTTP/1.1 200
+Content-Length: 0
+
+<Response body is empty>
+```
+
+Com o `Content-Type: application/json` corretamente definido, a requisição é reenviada e o servidor retorna status 200, confirmando que o endpoint processou a requisição sem exceções, recebendo corretamente os dados enviados no corpo JSON.
+
+#### Adicionando o método toInput() ao CreateTaskRequest
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h07m53s817.jpg" alt="" width="840">
+</p>
+
+```java
+public record CreateTaskRequest(String title, Optional<String> description) {
+    public CreateTaskInput toInput() {
+        return new CreateTaskInput(title, description);
+    }
+}
+```
+
+Para não misturar a responsabilidade de conversão de dados dentro do controller, é criado um método `toInput()` diretamente no `CreateTaskRequest`, responsável por transformar o DTO de requisição em um `CreateTaskInput` pronto para ser usado pelo use case.
+
+#### Simplificando o controller com request.toInput()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h08m06s159.jpg" alt="" width="840">
+</p>
+
+```java
+@PostMapping
+void create(@RequestBody CreateTaskRequest request) {
+    var input = request.toInput();
+    createTaskUseCase.execute(input);
+}
+```
+
+No `TaskController`, a montagem manual do `CreateTaskInput` é substituída por uma simples chamada a `request.toInput()`, deixando o controller responsável apenas por gerenciar a requisição, sem conter regras de conversão de dados.
+
+#### Capturando o output do use case e criando o pacote response
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h10m40s950.jpg" alt="" width="840">
+</p>
+
+```java
+void create(@RequestBody CreateTaskRequest request) {
+    var input = request.toInput();
+    var output = createTaskUseCase.execute(input);
+}
+```
+
+O retorno do `createTaskUseCase.execute(input)`, que é um `TaskOutput`, passa a ser armazenado na variável `output`. Em seguida, é criado dentro do pacote `http` um novo pacote chamado `response`, destinado aos DTOs de saída da API.
+
+#### Criando a classe TaskResponse
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h11m49s649.jpg" alt="" width="840">
+</p>
+
+```text
+TaskResponse
+```
+
+Dentro do pacote `response`, é criada a classe `TaskResponse`, responsável por representar os dados da tarefa que serão devolvidos ao cliente da API.
+
+#### Definindo o record TaskResponse e o método from()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h13m10s736.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.taskmanager.infrastructure.http.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import dio.taskmanager.application.output.TaskOutput;
+
+@JsonInclude(JsonInclude.Include.NON_ABSENT)
+public record TaskResponse(String id, String title, String description, String status) {
+    public static TaskResponse from(TaskOutput output) {
+        return new TaskResponse(output.id(),
+                output.title(),
+                output.description().orElse(null),
+                output.status());
+    }
+}
+```
+
+O `TaskResponse` é definido como um record com `id`, `title`, `description` e `status`, todos como String — a descrição, que no domínio é `Optional`, é convertida para `null` quando ausente, já que retornar um `Optional` não faz sentido para uma resposta HTTP. A anotação `@JsonInclude(JsonInclude.Include.NON_ABSENT)` faz com que o Jackson remova do JSON as propriedades nulas. Um método estático `from(TaskOutput output)` é criado para converter o output do use case nesse DTO de resposta.
+
+#### Alterando o retorno do endpoint para TaskResponse
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h14m43s520.jpg" alt="" width="840">
+</p>
+
+```java
+TaskResponse create(@RequestBody CreateTaskRequest request) {
+    var input = request.toInput();
+    var output = createTaskUseCase.execute(input);
+}
+```
+
+A assinatura do método `create` é alterada de `void` para `TaskResponse`, preparando o endpoint para devolver ao cliente as informações da tarefa criada, em vez de retornar apenas uma resposta vazia.
+
+#### Retornando o TaskResponse convertido a partir do output
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h19m44s287.jpg" alt="" width="840">
+</p>
+
+```java
+TaskResponse create(@RequestBody CreateTaskRequest request) {
+    var input = request.toInput();
+    var output = createTaskUseCase.execute(input);
+    return TaskResponse.from(output);
+}
+```
+
+O método `create` passa a retornar `TaskResponse.from(output)`, convertendo o resultado do use case no DTO de resposta. A partir de agora, uma requisição de criação será persistida e a resposta trará de volta as informações que foram efetivamente salvas.
+
+#### Testando a criação com apenas o título
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h20m25s053.jpg" alt="" width="840">
+</p>
+
+```http
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{"title": "ABC"}
+```
+
+É enviada uma nova requisição de teste contendo apenas o campo `title` com o valor `"ABC"`, para validar o fluxo completo agora que o endpoint retorna o `TaskResponse` correspondente.
+
+#### Testando a criação com título e descrição
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h56m21s384.jpg" alt="" width="840">
+</p>
+
+```http
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{"title": "ABC", "description": "qwerty"}
+```
+
+Uma nova requisição é enviada, agora incluindo também o campo `description` com o valor `"qwerty"`, para confirmar que ambos os campos do `CreateTaskRequest` são corretamente processados pelo endpoint.
+
+#### Resposta com os dados da tarefa persistida
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h56m55s987.jpg" alt="" width="840">
+</p>
+
+```json
+{
+  "id": "0483ebff-8063-4fb1-8b99-660098ff194b",
+  "title": "ABC",
+  "description": "qwerty",
+  "status": "PENDING"
+}
+```
+
+A resposta da requisição traz de volta o `id` gerado, o `title`, a `description` e o `status` da tarefa, confirmando que o fluxo completo de criação — do request ao response, passando pelo use case e pelo repository — está funcionando corretamente.
+
+#### Explorando a ferramenta de Endpoints do IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h57m10s312.jpg" alt="" width="840">
+</p>
+
+O IntelliJ disponibiliza uma ferramenta chamada **Endpoints**, acessível pelo menu de contexto do mapeamento através da opção **Show all endpoints of module**. Essa ferramenta lista todos os endpoints da aplicação, permitindo testá-los rapidamente conforme novos métodos vão sendo criados no controller.
+
+#### Painel de Endpoints exibindo o mapeamento /tasks
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-14h58m09s163.jpg" alt="" width="840">
+</p>
+
+O painel de **Endpoints** exibe o mapeamento `/tasks [POST]` associado ao `TaskController`. A partir dele, é possível testar a requisição diretamente pelo HTTP Client, visualizar a especificação OpenAPI e a documentação gerada, ou exportar essa especificação para uso em ferramentas como Swagger ou Redoc.
+
 
 ## Parte 7 - Consulta de tarefas
+
 ### 🟩 Vídeo 07 - Consulta de tarefas
 
 <video width="60%" controls>
@@ -2053,6 +2637,8 @@ link do vídeo:
 - Até o vídeo 03: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip)
 - Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
 - Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip)
+- Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
+
 
 # Certificado: 
 
