@@ -1740,6 +1740,253 @@ O teste `should_create_task_successfully` passa novamente, agora usando o reposi
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/654ce2a1-7dc6-4406-b3aa-c13935b3d17b?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h28m12s579.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Criando sua Primeira API REST com Spring Boot", da trilha Jornada Tech. O sumário à direita mostra as cinco etapas do módulo — Introdução ao API REST, Gerenciamento de tarefas, Modelando o domínio de tarefas, Orquestrando o domínio e Listagem de tarefas —, com o item "Listagem de tarefas" destacado, indicando que esta é a etapa abordada a partir daqui: a construção dos casos de uso (use cases) que orquestram o domínio de tarefas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h29m46s711.jpg" alt="" width="840">
+</p>
+
+No IDE, com o `CreateTaskUseCase` já implementado como referência, é criada uma nova classe Java chamada `GetTasksUseCase`, responsável por buscar todas as tarefas cadastradas. A ideia desse use case é chamar o repositório, obter as tasks e convertê-las para o DTO de saída, seguindo a estratégia de DTOs já adotada no projeto.
+
+```java
+package dio.taskmanager.application;
+
+import dio.taskmanager.application.input.CreateTaskInput;
+import dio.taskmanager.application.output.TaskOutput;
+import dio.taskmanager.domain.Task;
+import dio.taskmanager.domain.TaskRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CreateTaskUseCase {
+    private final TaskRepository repository;
+    // ...
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h35m35s252.jpg" alt="" width="840">
+</p>
+
+A classe `GetTasksUseCase` finalizada e anotada com `@Service`. O método `execute()` chama `repository.findAll()`, que retorna uma lista de tarefas, transforma essa lista em um `stream()`, aplica um `map` usando o método estático `TaskOutput::from` para converter cada `Task` em `TaskOutput`, e por fim reconverte o stream em lista com `toList()`. Ou seja: entra uma lista de tarefas do domínio e sai uma lista de DTOs de saída.
+
+```java
+package dio.taskmanager.application;
+
+import dio.taskmanager.application.output.TaskOutput;
+import dio.taskmanager.domain.TaskRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class GetTasksUseCase {
+    private final TaskRepository repository;
+
+    public GetTasksUseCase(TaskRepository repository) {
+        this.repository = repository;
+    }
+
+    public List<TaskOutput> execute() {
+        return repository.findAll().stream().map(TaskOutput::from).toList();
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h36m21s294.jpg" alt="" width="840">
+</p>
+
+Criação da próxima classe: `GetTaskByIdUseCase`, responsável por buscar uma única tarefa a partir do seu identificador. Esse use case vai receber o `taskId` (representado por uma classe própria, e não apenas um `String` ou `Long`) e retornar um `TaskOutput`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h38m41s301.jpg" alt="" width="840">
+</p>
+
+Implementação do método `execute` de `GetTaskByIdUseCase`. Ele chama `repository.findById(id)`, que devolve um `Optional<Task>` — ou seja, a tarefa pode existir ou não. Se existir, o `map` converte a `Task` em `TaskOutput`; se o `Optional` estiver vazio, o `orElseThrow` lança uma exceção customizada, passando o ID que não foi encontrado.
+
+```java
+public TaskOutput execute(TaskId id) {
+    return repository.findById(id)
+            .map(TaskOutput::from)
+            .orElseThrow(() -> new TaskNotFoundException(id));
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h42m54s437.jpg" alt="" width="840">
+</p>
+
+Para representar o cenário de tarefa não encontrada, é criada uma exceção customizada, `TaskNotFoundException`, no pacote de domínio (`domain`). A decisão de colocá-la no domínio, e não na camada de aplicação, se justifica porque essa é uma regra de negócio: "não encontrei uma task, então lanço uma exceção". Em outros cenários a exceção poderia estar na camada de aplicação, mas aqui faz mais sentido mantê-la junto da regra de negócio.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h48m10s405.jpg" alt="" width="840">
+</p>
+
+A classe `TaskNotFoundException` finalizada, estendendo `RuntimeException` e recebendo o `TaskId` no construtor. A mensagem da exceção é ajustada para o formato "Task com o ID tal não encontrada", deixando claro para quem consumir essa exceção qual tarefa não foi localizada.
+
+```java
+package dio.taskmanager.domain;
+
+public class TaskNotFoundException extends RuntimeException {
+    public TaskNotFoundException(TaskId taskId) {
+        super("Task with id " + taskId + " not found");
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h50m07s561.jpg" alt="" width="840">
+</p>
+
+Com os use cases de criação, listagem e busca por ID prontos, agora é criada a classe `DeleteTaskUseCase`, que também recebe o repositório por injeção de dependência via construtor.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h51m28s617.jpg" alt="" width="840">
+</p>
+
+Implementação completa do `DeleteTaskUseCase`. No método `execute`, primeiro verifica-se se a task existe através de `repository.findById(taskId).isEmpty()`; se não existir, lança-se a `TaskNotFoundException`; se existir, o repositório executa o `delete`.
+
+```java
+package dio.taskmanager.application;
+
+import dio.taskmanager.domain.TaskId;
+import dio.taskmanager.domain.TaskNotFoundException;
+import dio.taskmanager.domain.TaskRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DeleteTaskUseCase {
+    private final TaskRepository repository;
+
+    public DeleteTaskUseCase(TaskRepository repository) {
+        this.repository = repository;
+    }
+
+    public void execute(TaskId taskId) {
+        if (repository.findById(taskId).isEmpty()) {
+            throw new TaskNotFoundException(taskId);
+        }
+
+        repository.delete(taskId);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h52m10s210.jpg" alt="" width="840">
+</p>
+
+Início do último use case: `UpdateTaskUseCase`, apontado como um pouco mais complexo que os anteriores, pois envolve a atualização parcial de uma tarefa.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h53m47s663.jpg" alt="" width="840">
+</p>
+
+Estrutura inicial de `UpdateTaskUseCase`, já anotada com `@Service` e com o repositório injetado via construtor. A assinatura do método `execute` recebe um `TaskId` para identificar qual tarefa está sendo manipulada; o corpo do método ainda está vazio, sendo o próximo passo definir como receber os dados de atualização.
+
+```java
+package dio.taskmanager.application;
+
+import dio.taskmanager.application.output.TaskOutput;
+import dio.taskmanager.domain.TaskId;
+import dio.taskmanager.domain.TaskRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UpdateTaskUseCase {
+    private final TaskRepository repository;
+
+    public UpdateTaskUseCase(TaskRepository repository) {
+        this.repository = repository;
+    }
+
+    public TaskOutput execute(TaskId id, UpdateTaskInput input) {
+
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h54m38s375.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `input`, onde já existe o `CreateTaskInput` (DTO usado na criação de tarefas), é aberto o assistente de nova classe para criar um segundo DTO, exclusivo para a operação de atualização. A ideia é que, assim como existe um DTO de entrada para criação, exista outro específico para update, já que os dados e regras dessa operação são diferentes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h56m18s073.jpg" alt="" width="840">
+</p>
+
+Criação da classe `UpdateTaskInput`. A ideia por trás desse DTO é viabilizar uma atualização no estilo PATCH via REST, em que é possível alterar qualquer propriedade da tarefa de forma independente — título, descrição ou status —, sem a necessidade de reenviar todos os campos. O ID não entra nesse DTO, pois não faz sentido alterá-lo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-08h57m32s477.jpg" alt="" width="840">
+</p>
+
+O `UpdateTaskInput` implementado como um `record` com três campos, todos envolvidos em `Optional`: `title`, `description` e `status`. Colocar todos como `Optional` permite que o cliente da API envie apenas o campo que deseja alterar — se um valor não for enviado, o campo correspondente permanece inalterado na tarefa, em vez de ser apagado.
+
+```java
+package dio.taskmanager.application.input;
+
+import dio.taskmanager.domain.TaskStatus;
+
+import java.util.Optional;
+
+public record UpdateTaskInput(Optional<String> title,
+                               Optional<String> description,
+                               Optional<TaskStatus> status) {
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-09h04m28s890.jpg" alt="" width="840">
+</p>
+
+De volta ao `UpdateTaskUseCase`, o primeiro passo do método `execute` é localizar a tarefa: `repository.findById(id).orElseThrow(() -> new TaskNotFoundException(id))`. Com isso, ou a task é encontrada, ou a exceção customizada é lançada — reaproveitando o mesmo padrão já usado no `GetTaskByIdUseCase` e no `DeleteTaskUseCase`.
+
+```java
+public TaskOutput execute(TaskId id, UpdateTaskInput input) {
+    var task = repository.findById(id).orElseThrow(()
+            -> new TaskNotFoundException(id));
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-12-09h11m40s500.jpg" alt="" width="840">
+</p>
+
+Etapa final do `UpdateTaskUseCase`. A regra de como atualizar os campos é colocada dentro da própria classe `Task`, no domínio — afinal, quem sabe como uma tarefa deve ser atualizada é a própria tarefa, e não o use case. O método `update` da `Task` usa `Optional.ifPresent` para cada campo: se `title` estiver presente, atualiza o título; o mesmo para `status`; já `description` usa `Optional.ofNullable`, permitindo diferenciar "não alterar" de "definir como vazio". No use case, depois de chamar `task.update(...)`, a tarefa atualizada é persistida com `repository.save(task)` e o resultado é convertido para `TaskOutput.from(updated)`. Com isso, os cinco use cases da camada de aplicação — criação, listagem, busca por ID, exclusão e atualização — estão completos, junto com a exceção customizada de tarefa não encontrada.
+
+```java
+public void update(Optional<String> title, Optional<String> description,
+                    Optional<TaskStatus> status) {
+    title.ifPresent(value -> this.title = value);
+    description.ifPresent(value -> this.description = Optional.of(value));
+    status.ifPresent(value -> this.status = value);
+}
+```
+
+```java
+public TaskOutput execute(TaskId id, UpdateTaskInput input) {
+    var task = repository.findById(id).orElseThrow(()
+            -> new TaskNotFoundException(id));
+    task.update(input.title(), input.description(), input.status());
+    var updated = repository.save(task);
+    return TaskOutput.from(updated);
+}
+```
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip)
+
+
 ## Parte 6 - Infraestrutura e interface
 ### 🟩 Vídeo 06 - Infraestrutura e interface
 

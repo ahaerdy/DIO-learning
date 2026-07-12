@@ -18,6 +18,13 @@ public class Task {
         this.status = TaskStatus.PENDING;
     }
 
+    public void update(Optional<String> title, Optional<String> description,
+                       Optional<TaskStatus> status) {
+        title.ifPresent(value -> this.title = value);
+        description.ifPresent(value -> this.description = Optional.of(value));
+        status.ifPresent(value -> this.status = value);
+    }
+
     public TaskId getId() {
         return id;
     }
