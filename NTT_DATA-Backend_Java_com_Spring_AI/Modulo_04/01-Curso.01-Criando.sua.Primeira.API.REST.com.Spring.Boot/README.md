@@ -2582,7 +2582,7 @@ O painel de **Endpoints** exibe o mapeamento `/tasks [POST]` associado ao `TaskC
 
 #### Material de Apoio Até Esta Etapa
 
-- [003-Tutorial_TaskManager_Java_Spring_Videos06](./002-Tutorial_TaskManager_Java_Spring_Videos06.md)
+- [003-Tutorial_TaskManager_Java_Spring_Video06](./003-Tutorial_TaskManager_Java_Spring_Video06.md)
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
 
 ## Parte 7 - Consulta de tarefas
@@ -2634,8 +2634,8 @@ link do vídeo:
 - [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_3.md)
   - [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
 - [002-Tutorial_TaskManager_Java_Spring_Videos04a05](./002-Tutorial_TaskManager_Java_Spring_Videos04a05.md)
-- [003-Tutorial_TaskManager_Java_Spring_Videos06](./002-Tutorial_TaskManager_Java_Spring_Videos06.md)
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./
+- [003-Tutorial_TaskManager_Java_Spring_Video06](./003-Tutorial_TaskManager_Java_Spring_Video06.md)
+
 
 ### Arquivos do Projeto
 
