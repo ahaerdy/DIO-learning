@@ -2580,6 +2580,10 @@ O IntelliJ disponibiliza uma ferramenta chamada **Endpoints**, acessível pelo m
 
 O painel de **Endpoints** exibe o mapeamento `/tasks [POST]` associado ao `TaskController`. A partir dele, é possível testar a requisição diretamente pelo HTTP Client, visualizar a especificação OpenAPI e a documentação gerada, ou exportar essa especificação para uso em ferramentas como Swagger ou Redoc.
 
+#### Material de Apoio Até Esta Etapa
+
+- [003-Tutorial_TaskManager_Java_Spring_Videos06](./002-Tutorial_TaskManager_Java_Spring_Videos06.md)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
 
 ## Parte 7 - Consulta de tarefas
 
@@ -2630,15 +2634,16 @@ link do vídeo:
 - [001-Tutorial de Estudos — Construindo um Task Manager com Java e Spring Boot - Videos 01 a 03](./001-Tutorial_TaskManager_Java_Spring_Videos01a03_3.md)
   - [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
 - [002-Tutorial_TaskManager_Java_Spring_Videos04a05](./002-Tutorial_TaskManager_Java_Spring_Videos04a05.md)
+- [003-Tutorial_TaskManager_Java_Spring_Videos06](./002-Tutorial_TaskManager_Java_Spring_Videos06.md)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./
 
 ### Arquivos do Projeto
 
 - Até o vídeo 02: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_02.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_02.zip)
 - Até o vídeo 03: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_03.zip)
 - Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
-- Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip)
-- Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
-
+- Até o vídeo 05: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip)
+- Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
 
 # Certificado: 
 
