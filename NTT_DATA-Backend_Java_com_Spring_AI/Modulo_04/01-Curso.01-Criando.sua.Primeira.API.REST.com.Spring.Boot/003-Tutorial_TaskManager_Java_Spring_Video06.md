@@ -20,8 +20,6 @@ Assim como os documentos anteriores, este foi escrito a partir das anotações d
 > **Como este documento está organizado**
 > Mesmo formato dos documentos anteriores: o código é apresentado em pequenos blocos, na ordem em que foi escrito na aula, seguido de uma explicação linha a linha; ao final do vídeo, um checkpoint mostra o estado real dos arquivos criados e alterados nesta etapa, conferido diretamente no `.zip` entregue. Ao final deste documento, um glossário complementar reúne apenas os termos novos introduzidos no Vídeo 06, e a seção de "Próximos passos" é atualizada mais uma vez.
 
-> **Nota de concatenação:** este arquivo é a continuação direta de `002-Tutorial_TaskManager_Java_Spring_Videos04a05.md`. Para juntar os três documentos em um único arquivo: cole o conteúdo abaixo **logo após** a seção "Próximos passos: o que vem a partir do Vídeo 06" do documento anterior (ou substitua aquela seção pela versão atualizada de "Próximos passos" que está no final deste arquivo). O glossário e o checkpoint deste arquivo são complementares aos dos documentos anteriores — não os substituem, apenas os estendem.
-
 ---
 
 ## Parte 6 — Infraestrutura e interface (Vídeo 06)
@@ -461,4 +459,4 @@ Com o primeiro endpoint HTTP funcionando de ponta a ponta — criação de taref
 - **Vídeo 09 — Documentando a API:** deve apresentar uma ferramenta de documentação automática de APIs (comumente o Swagger/OpenAPI no ecossistema Spring), gerando uma interface visual para explorar os endpoints criados — dando continuidade direta à especificação OpenAPI já mencionada de forma indireta na ferramenta de Endpoints do IntelliJ (Seção 6.17).
 - **Vídeo 10 — Evoluindo a API:** deve fechar o curso com melhorias adicionais, possivelmente conectando os endpoints de atualização (`PATCH`/`PUT`) e remoção (`DELETE`), que continuam existindo apenas como Use Cases (`UpdateTaskUseCase`, `DeleteTaskUseCase`) sem nenhum mapeamento HTTP até este ponto.
 
-> **Sugestão de uso deste documento (mantida das versões anteriores):** depois de assistir a cada novo vídeo, adicione uma nova seção a este tutorial seguindo o mesmo formato: bloco de código → explicação linha a linha → checkpoint conferido contra o código real → atualização do glossário e dos próximos passos. Isso mantém o material sempre alinhado ao seu ritmo de estudo.
+---
