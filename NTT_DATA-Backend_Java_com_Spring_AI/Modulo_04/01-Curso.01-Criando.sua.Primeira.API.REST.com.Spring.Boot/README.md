@@ -1984,6 +1984,7 @@ public TaskOutput execute(TaskId id, UpdateTaskInput input) {
 
 #### Material de Apoio Até Esta Etapa
 
+- [002-Tutorial_TaskManager_Java_Spring_Videos04a05](./002-Tutorial_TaskManager_Java_Spring_Videos04a05.md)
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip)
 
 
