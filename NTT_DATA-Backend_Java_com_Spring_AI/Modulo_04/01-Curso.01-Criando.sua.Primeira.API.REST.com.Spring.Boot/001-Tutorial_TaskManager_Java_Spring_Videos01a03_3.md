@@ -40,7 +40,9 @@ Esses verbos irão, mais adiante no curso (a partir do Vídeo 04), se transforma
 
 O JSON é o formato usado para representar os dados que trafegam entre cliente e servidor, por ser leve e fácil de ler. Uma tarefa, por exemplo, seria representada como um objeto com campos como `id`, `task` e `completed`. O Spring Boot converte automaticamente objetos Java em JSON (e vice-versa) usando uma biblioteca interna chamada Jackson — nesta etapa essa biblioteca ainda não será usada diretamente, mas é bom já saber que esse trabalho é automático.
 
-### 1.4. O papel do Spring Boot
+### 1.4. O que é e qual o papel do Spring Boot
+
+O Spring Boot é um **framework** Java **projetado** para **simplificar o processo de criação de aplicações** baseadas no ecossistema Spring. Enquanto o Spring "puro" exige configurações manuais complexas (muitos arquivos XML ou classes de configuração para definir beans, servidores e conexões), o Spring Boot adota uma filosofia de "convenção sobre configuração", oferecendo uma estrutura pronta para rodar com o mínimo de intervenção.
 
 Sem um framework, criar um servidor HTTP em Java do zero exigiria lidar manualmente com sockets de rede e fazer o parsing de JSON "na mão". O Spring Boot elimina essa complexidade: com anotações, ele configura um servidor pronto, converte JSON em objetos Java automaticamente e direciona cada requisição para o método certo da classe certa. É por isso que o projeto começa (Vídeo 02) já com uma estrutura de pacotes pensada em separar essa infraestrutura das regras de negócio.
 
