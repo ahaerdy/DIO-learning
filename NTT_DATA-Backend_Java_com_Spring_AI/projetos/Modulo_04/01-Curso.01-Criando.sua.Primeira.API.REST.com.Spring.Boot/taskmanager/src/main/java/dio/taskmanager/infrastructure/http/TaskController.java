@@ -5,6 +5,7 @@ import dio.taskmanager.domain.TaskId;
 import dio.taskmanager.infrastructure.http.request.CreateTaskRequest;
 import dio.taskmanager.infrastructure.http.request.UpdateTaskRequest;
 import dio.taskmanager.infrastructure.http.response.TaskResponse;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,17 +22,21 @@ public class TaskController {
     private final UpdateTaskUseCase updateTaskUseCase;
 
 
-    public TaskController(CreateTaskUseCase createTaskUseCase, GetTasksUseCase getTasksUseCase) {
+    public TaskController(CreateTaskUseCase createTaskUseCase,
+                          GetTasksUseCase getTasksUseCase,
+                          GetTaskByIdUseCase getTaskByIdUseCase,
+                          DeleteTaskUseCase deleteTaskUseCase,
+                          UpdateTaskUseCase updateTaskUseCase) {
         this.createTaskUseCase = createTaskUseCase;
         this.getTasksUseCase = getTasksUseCase;
         this.getTaskByIdUseCase = getTaskByIdUseCase;
         this.deleteTaskUseCase = deleteTaskUseCase;
         this.updateTaskUseCase = updateTaskUseCase;
-
     }
 
+
     @PostMapping
-    TaskResponse create(@RequestBody CreateTaskRequest request) {
+    TaskResponse create(@RequestBody @Valid CreateTaskRequest request) {
         var input = request.toInput();
         var output = createTaskUseCase.execute(input);
         return TaskResponse.from(output);

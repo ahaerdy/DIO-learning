@@ -2897,7 +2897,167 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-11h47m36s668.jpg" alt="" width="840">
+</p>
+
+Slide de abertura do módulo "Criando sua Primeira API REST com Spring Boot", da Jornada Tech. O sumário lista cinco etapas do curso — Infraestrutura e interface, Consulta de tarefas, Validando dados, Documentando a API e Evoluindo a API — com o item **03/Validando dados** destacado, indicando que esta é a etapa que será abordada a seguir: a inclusão de regras de validação nos dados recebidos pela API.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-11h53m44s267.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o arquivo `build.gradle` do projeto é aberto para adicionar a dependência responsável pelas validações. A linha inserida é a `spring-boot-starter-validation`, biblioteca própria do Spring Boot para validação de dados de entrada:
+
+```gradle
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+```
+
+Essa dependência é o ponto de partida para que as anotações de validação (como `@NotBlank` e `@Size`) possam ser utilizadas nos DTOs de request da aplicação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-12h02m44s940.jpg" alt="" width="840">
+</p>
+
+Com a dependência já disponível, o DTO `CreateTaskRequest` é alterado para receber as anotações de validação. O campo `title` recebe `@NotBlank` (não pode ser vazio) e `@Size(min = 3, max = 100)` (tamanho mínimo e máximo definidos), enquanto o campo `description` recebe `@Size(max = 500)` para limitar seu tamanho máximo:
+
+```java
+package dio.taskmanager.infrastructure.http.request;
+
+import dio.taskmanager.application.input.CreateTaskInput;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+import java.util.Optional;
+
+public record CreateTaskRequest(
+        @NotBlank
+        @Size(min = 3, max = 100)
+        String title,
+        Optional<@Size(max = 500) String> description) {
+    public CreateTaskInput toInput() {
+        return new CreateTaskInput(title, description);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-12h06m38s493.jpg" alt="" width="840">
+</p>
+
+Para que as validações declaradas no DTO realmente entrem em ação, é necessário anotar o parâmetro do método do controller com `@Valid`, logo antes de `CreateTaskRequest`:
+
+```java
+@PostMapping
+TaskResponse create(@RequestBody @Valid CreateTaskRequest request) {
+    var input = request.toInput();
+    var output = createTaskUseCase.execute(input);
+    return TaskResponse.from(output);
+}
+```
+
+No console, abaixo, é possível ver que a aplicação foi reiniciada com sucesso (`Process finished with exit code`), preparando o terreno para o teste da validação recém-configurada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-12h07m41s421.jpg" alt="" width="840">
+</p>
+
+Teste prático da validação: uma requisição `POST /tasks` é enviada com o campo `title` igual a `"AB"`, ou seja, com apenas dois caracteres — abaixo do mínimo de três definido pelo `@Size(min = 3, max = 100)`:
+
+```json
+{
+  "title": "AB"
+}
+```
+
+Como esperado, a validação é acionada e a API retorna um erro `400 Bad Request`, confirmando que a regra de tamanho mínimo do título está funcionando corretamente:
+
+```json
+{
+  "timestamp": "2026-03-27T16:...",
+  "status": 400,
+  "error": "Bad Request",
+  "path": "/tasks"
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-12h26m03s560.jpg" alt="" width="840">
+</p>
+
+Como o retorno padrão `400` do Spring Boot não traz detalhes sobre qual campo falhou na validação, é criado um tratamento específico dentro do `GlobalExceptionHandler` usando `@ExceptionHandler(MethodArgumentNotValidException.class)` — a exceção lançada internamente pela biblioteca de validação sempre que uma regra é violada:
+
+```java
+@ExceptionHandler(MethodArgumentNotValidException.class)
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public Map<String, String> handleValidationExceptions(
+        MethodArgumentNotValidException ex) {
+
+    Map<String, String> errors = new HashMap<>();
+
+    ex.getBindingResult().getAllErrors().forEach(error -> {
+        String fieldName = ((FieldError) error).getField();
+        String errorMessage = error.getDefaultMessage();
+        errors.put(fieldName, errorMessage);
+    });
+
+    return errors;
+}
+```
+
+O método continua retornando o status `400`, mas agora monta um mapa de chave-valor com o campo que falhou e a respectiva mensagem de erro, obtidos a partir de `ex.getBindingResult().getAllErrors()`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-12h27m47s094.jpg" alt="" width="840">
+</p>
+
+Classe completa `GlobalExceptionHandler`, anotada com `@RestControllerAdvice`, reunindo os dois tratamentos de exceção já implementados — o de tarefa não encontrada e o de validação:
+
+```java
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(TaskNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String handleTaskNotFoundException(TaskNotFoundException ex) {
+        return ex.getMessage();
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public Map<String, String> handleValidationExceptions(
+            MethodArgumentNotValidException ex) {
+
+        Map<String, String> errors = new HashMap<>();
+
+        ex.getBindingResult().getAllErrors().forEach(error -> {
+            String fieldName = ((FieldError) error).getField();
+            String errorMessage = error.getDefaultMessage();
+            errors.put(fieldName, errorMessage);
+        });
+
+        return errors;
+    }
+}
+```
+
+Repetindo o mesmo teste de antes (título `"AB"`), a resposta da API deixa de ser um `400` genérico e passa a trazer a mensagem específica de validação, indicando claramente qual campo falhou e por qual motivo — no caso, o tamanho do título fora do intervalo permitido:
+
+```json
+{
+  "title": "size must be between 3 and 100"
+}
+```
+
+Com esse handler, o cliente da API (seja uma aplicação mobile, web ou outro serviço) passa a receber uma informação objetiva sobre o erro, em vez de apenas um código de status sem contexto.
 
 
 ## Parte 9 - Documentando a API
