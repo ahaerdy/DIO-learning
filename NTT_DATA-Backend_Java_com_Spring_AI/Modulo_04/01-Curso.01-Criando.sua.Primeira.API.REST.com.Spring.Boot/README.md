@@ -2880,7 +2880,7 @@ Por fim, a tarefa é deletada, retornando **204** com corpo vazio. Ao executar o
 
 #### Material de Apoio Até Esta Etapa
 
-- [005-Tutorial_TaskManager_Java_Spring_Video07](./005-Tutorial_TaskManager_Java_Spring_Video07.md)
+- [004-Tutorial_TaskManager_Java_Spring_Video07](./004-Tutorial_TaskManager_Java_Spring_Video07.md)
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
 
 
@@ -3061,7 +3061,7 @@ Com esse handler, o cliente da API (seja uma aplicação mobile, web ou outro se
 
 #### Material de Apoio Até Esta Etapa
 
-- [004-Tutorial_TaskManager_Java_Spring_Video08](./004-Tutorial_TaskManager_Java_Spring_Video08.md)
+- [005-Tutorial_TaskManager_Java_Spring_Video08](./005-Tutorial_TaskManager_Java_Spring_Video08.md)
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip)
 
 ## Parte 9 - Documentando a API
@@ -3104,8 +3104,8 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 - Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
 - Até o vídeo 05: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip)
 - Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
-- Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip)
+- Até o vídeo 07: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
+- Até o vídeo 08:  [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip)
 
 # Certificado: 
 
