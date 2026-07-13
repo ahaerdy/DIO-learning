@@ -2880,7 +2880,7 @@ Por fim, a tarefa é deletada, retornando **204** com corpo vazio. Ao executar o
 
 #### Material de Apoio Até Esta Etapa
 
-- [004-Tutorial_TaskManager_Java_Spring_Video07](./004-Tutorial_TaskManager_Java_Spring_Video07.md)
+- [005-Tutorial_TaskManager_Java_Spring_Video07](./005-Tutorial_TaskManager_Java_Spring_Video07.md)
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
 
 
@@ -3059,6 +3059,10 @@ Repetindo o mesmo teste de antes (título `"AB"`), a resposta da API deixa de se
 
 Com esse handler, o cliente da API (seja uma aplicação mobile, web ou outro serviço) passa a receber uma informação objetiva sobre o erro, em vez de apenas um código de status sem contexto.
 
+#### Material de Apoio Até Esta Etapa
+
+- [004-Tutorial_TaskManager_Java_Spring_Video08](./004-Tutorial_TaskManager_Java_Spring_Video08.md)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip)
 
 ## Parte 9 - Documentando a API
 ### 🟩 Vídeo 09 - Documentando a API
@@ -3090,6 +3094,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 - [002-Tutorial_TaskManager_Java_Spring_Videos04a05](./002-Tutorial_TaskManager_Java_Spring_Videos04a05.md)
 - [003-Tutorial_TaskManager_Java_Spring_Video06](./003-Tutorial_TaskManager_Java_Spring_Video06.md)
 - [004-Tutorial_TaskManager_Java_Spring_Video07](./004-Tutorial_TaskManager_Java_Spring_Video07.md)
+- [005-Tutorial_TaskManager_Java_Spring_Video08](./005-Tutorial_TaskManager_Java_Spring_Video08.md)
 
 
 ### Arquivos do Projeto
@@ -3100,6 +3105,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 - Até o vídeo 05: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip)
 - Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
 - Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip)
 
 # Certificado: 
 
