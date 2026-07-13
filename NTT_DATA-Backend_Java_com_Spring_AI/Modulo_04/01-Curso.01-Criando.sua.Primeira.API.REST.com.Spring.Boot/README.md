@@ -2594,9 +2594,298 @@ O painel de **Endpoints** exibe o mapeamento `/tasks [POST]` associado ao `TaskC
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/120ca8be-ecfc-4437-be09-e8496d314c04?autoplay=1
+
+### Anotações
+
+#### Abertura do módulo: Consulta de tarefas
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-07h46m19s339.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Criando sua Primeira API REST com Spring Boot", da Jornada Tech. O sumário mostra as cinco etapas do curso, com o item **02 — Consulta de tarefas** em destaque, indicando que esta aula vai tratar da criação dos endpoints de leitura, atualização e remoção de tarefas na API.
+
+#### Criando o endpoint de listagem (GET /tasks)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h11m22s175.jpg" alt="" width="840">
+</p>
+
+No `TaskController`, já existe o endpoint de criação (`@PostMapping`) usando o `CreateTaskUseCase`. Agora é criado um novo método `list()`, anotado com `@GetMapping`, mapeado para a raiz `/tasks`, que deve retornar uma lista de `TaskResponse`. Para isso, é necessário injetar mais um caso de uso no controller: o `GetTasksUseCase`.
+
+```java
+@GetMapping
+List<TaskResponse> list() {
+
+}
+```
+
+#### Implementando o método list() com Stream
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h12m48s688.jpg" alt="" width="840">
+</p>
+
+O corpo do método `list()` é implementado: o `getTasksUseCase.execute()` retorna uma lista de `TaskOutput`, que é convertida em uma lista de `TaskResponse` usando `stream().map(TaskResponse::from).toList()`.
+
+```java
+@GetMapping
+List<TaskResponse> list() {
+    return getTasksUseCase.execute().stream().map(TaskResponse::from).toList();
+}
+```
+
+#### Testando o endpoint GET /tasks
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h14m42s657.jpg" alt="" width="840">
+</p>
+
+Com a aplicação reiniciada, o painel de *Endpoints* já lista `/tasks [GET]` e `/tasks [POST]`. Uma requisição de criação é enviada com título "123" e descrição "456...", gerando uma nova tarefa (identificada como 82F2) na base de persistência em memória.
+
+#### Criando o stub do endpoint de busca por ID
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h16m16s137.jpg" alt="" width="840">
+</p>
+
+Após validar a listagem, é criado um novo endpoint para retornar apenas um elemento, buscado por ID. O método `read()` recebe o identificador via `@PathVariable`, ou seja, extraído diretamente da URL (diferente de um *query parameter*), seguindo o padrão REST.
+
+```java
+@GetMapping("/{id}")
+TaskResponse read(@PathVariable UUID id) {
+
+}
+```
+
+#### Injetando o GetTaskByIdUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h17m55s297.jpg" alt="" width="840">
+</p>
+
+O parâmetro do identificador é recebido como `UUID`, que é de fato o tipo utilizado internamente para identificar as tarefas. O controller passa a receber um novo caso de uso em seu construtor, o `GetTaskByIdUseCase`, que será responsável por buscar a tarefa pelo ID informado.
+
+#### Implementando o método read()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h18m48s231.jpg" alt="" width="840">
+</p>
+
+Com o caso de uso injetado, o método `read()` é implementado: o ID recebido da URL é usado para executar o `getTaskByIdUseCase`, e o resultado é convertido para `TaskResponse`.
+
+```java
+@GetMapping("/{id}")
+TaskResponse read(@PathVariable UUID id) {
+    var output = getTaskByIdUseCase.execute(new TaskId(id));
+    return TaskResponse.from(output);
+}
+```
+
+#### Novo endpoint disponível: GET /tasks/{id}
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h19m27s486.jpg" alt="" width="840">
+</p>
+
+Com a aplicação novamente em execução, o painel de *Endpoints* passa a exibir também o novo mapeamento `/tasks/{id} [GET]`, confirmando que a rota foi registrada corretamente.
+
+#### Erro 500 ao buscar um ID inexistente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h19m57s972.jpg" alt="" width="840">
+</p>
+
+Ao testar o novo endpoint com um UUID aleatório (que não existe na base), a requisição retorna um erro **500**. Nos logs do console, é possível ver que a aplicação lançou uma `TaskNotFoundException`, que não estava sendo tratada — esse é o comportamento padrão do Spring quando uma exceção não tratada é lançada durante o processamento da requisição.
+
+#### Criando a classe GlobalExceptionHandler
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h20m43s934.jpg" alt="" width="840">
+</p>
+
+Para que um recurso não encontrado retorne o código HTTP correto (404, em vez de 500), é criada uma nova classe no pacote HTTP, chamada `GlobalExceptionHandler`. A proposta dessa classe é centralizar o tratamento de todas as exceções lançadas pela aplicação.
+
+#### Estrutura inicial do GlobalExceptionHandler
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h32m18s174.jpg" alt="" width="840">
+</p>
+
+A classe é criada com a anotação `@RestControllerAdvice`, que permite que ela intercepte exceções lançadas por qualquer controller da aplicação.
+
+```java
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+}
+```
+
+#### Tratando a TaskNotFoundException com @ExceptionHandler
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h34m22s153.jpg" alt="" width="840">
+</p>
+
+É implementado um método anotado com `@ExceptionHandler(TaskNotFoundException.class)`, que é acionado sempre que essa exceção específica ocorrer. O método retorna a mensagem da exceção e é anotado com `@ResponseStatus(HttpStatus.NOT_FOUND)`, garantindo que a resposta HTTP seja um 404 em vez do 500 padrão.
+
+```java
+@ExceptionHandler(TaskNotFoundException.class)
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public String handleTaskNotFoundException(TaskNotFoundException ex) {
+    return ex.getMessage();
+}
+```
+
+#### Testando o retorno 404
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h35m00s061.jpg" alt="" width="840">
+</p>
+
+Uma nova requisição é enviada para o mesmo ID inexistente. Desta vez, a resposta traz o código **404**, com a mensagem informando que a tarefa com aquele ID não foi encontrada — exatamente o comportamento esperado para um recurso inexistente em uma API REST.
+
+#### Exceção tratada corretamente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h35m16s558.jpg" alt="" width="840">
+</p>
+
+Com o `GlobalExceptionHandler` em funcionamento, a aplicação não interrompe mais o fluxo com uma exceção não tratada quando uma tarefa não é encontrada — a resposta agora é padronizada e devidamente sinalizada ao cliente da API.
+
+#### Injetando o DeleteTaskUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h36m23s209.jpg" alt="" width="840">
+</p>
+
+Avançando para o endpoint de remoção, o `DeleteTaskUseCase` é injetado como um novo campo do `TaskController`, seguindo o mesmo padrão de injeção de dependência via construtor usado para os demais casos de uso.
+
+#### Implementando o endpoint DELETE com resposta 204
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h40m22s752.jpg" alt="" width="840">
+</p>
+
+O endpoint de remoção é mapeado com `@DeleteMapping("/{id}")` e usa o mesmo padrão de rota dos demais endpoints. Por padrão, o `DELETE` responderia com 200, mas como uma remoção não retorna conteúdo, ele é anotado com `@ResponseStatus(HttpStatus.NO_CONTENT)`, fazendo a API responder com **204**, o código padrão REST para operações sem corpo de resposta.
+
+```java
+@DeleteMapping("/{id}")
+@ResponseStatus(HttpStatus.NO_CONTENT)
+void delete(@PathVariable UUID id) {
+    deleteTaskUseCase.execute(new TaskId(id));
+}
+```
+
+#### Iniciando o endpoint de atualização (PATCH)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h41m06s370.jpg" alt="" width="840">
+</p>
+
+Por fim, falta implementar a atualização. A escolha é usar o verbo `PATCH` (em vez de `PUT`), por ser mais coerente com uma atualização parcial dos dados. O método `update()` é criado recebendo o ID pela URL e um corpo de requisição do tipo `UpdateTaskRequest`, um DTO que ainda precisa ser criado.
+
+```java
+@PatchMapping("/{id}")
+TaskResponse update(@PathVariable UUID id, @RequestBody UpdateTaskRequest request) {
+
+}
+```
+
+#### Criando o DTO UpdateTaskRequest
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h41m24s712.jpg" alt="" width="840">
+</p>
+
+Uma nova classe é criada a partir do próprio nome usado no controller: `UpdateTaskRequest`, escolhida como um `record`, seguindo o mesmo padrão adotado para os demais DTOs da aplicação.
+
+#### Implementando o record UpdateTaskRequest
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h45m30s556.jpg" alt="" width="840">
+</p>
+
+Diferente do `CreateTaskRequest`, todos os campos do `UpdateTaskRequest` são `Optional`: `title`, `description` e `status`. Essa escolha permite que o cliente da API envie apenas os campos que deseja alterar — se um campo nunca for enviado, ele simplesmente não é alterado. O método `toInput()` converte o request em um `UpdateTaskInput`, convertendo também a `status` (recebida como `String`) de volta para o enum `TaskStatus` através de `TaskStatus.valueOf`.
+
+```java
+public record UpdateTaskRequest(
+        Optional<String> title,
+        Optional<String> description,
+        Optional<String> status
+) {
+    public UpdateTaskInput toInput() {
+        return new UpdateTaskInput(title, description, status.map(TaskStatus::valueOf));
+    }
+}
+```
+
+#### Injetando o UpdateTaskUseCase no controller
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h46m32s839.jpg" alt="" width="840">
+</p>
+
+De volta ao `TaskController`, o DTO recém-criado já é importado e o campo `updateTaskUseCase` é declarado, ainda sem uso dentro do método `update()`, que será implementado em seguida.
+
+#### Finalizando o método update()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h51m36s046.jpg" alt="" width="840">
+</p>
+
+O corpo do método `update()` é concluído: o `request` é convertido em `input` através do `toInput()`, o `updateTaskUseCase` é executado recebendo o `TaskId` e o `input`, e o resultado é retornado como `TaskResponse`. Com isso, todos os mapeamentos de rota da API (criar, listar, buscar por ID, remover e atualizar) ficam disponíveis.
+
+```java
+@PatchMapping("/{id}")
+TaskResponse update(@PathVariable UUID id, @RequestBody UpdateTaskRequest request) {
+    var input = request.toInput();
+    var output = updateTaskUseCase.execute(new TaskId(id), input);
+    return TaskResponse.from(output);
+}
+```
+
+#### Aplicação reiniciada com todos os endpoints
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h52m05s588.jpg" alt="" width="840">
+</p>
+
+A aplicação é reiniciada e sobe normalmente na porta 8080. O painel de *Endpoints* agora lista as cinco rotas implementadas: `/tasks [GET]`, `/tasks [POST]`, `/tasks/{id} [GET]`, `/tasks/{id} [PATCH]` e `/tasks/{id} [DELETE]`, prontas para o teste manual completo da camada de API.
+
+#### Teste manual: criação e consulta
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h52m15s545.jpg" alt="" width="840">
+</p>
+
+O teste começa executando o `GET`, que retorna uma lista vazia. Em seguida, é criada uma tarefa chamada "ABC", com descrição vazia — nota-se que a descrição não é retornada na resposta, pois o campo é removido quando a propriedade é nula.
+
+#### Teste manual: atualização da tarefa
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h52m24s827.jpg" alt="" width="840">
+</p>
+
+Com o ID da tarefa recém-criada em mãos, é feita uma busca por ID (que retorna a tarefa) e, na sequência, uma atualização: o título é mantido, uma descrição é adicionada e o status é alterado para "completed". A resposta confirma que apenas os campos enviados foram modificados.
+
+#### Teste manual: remoção e verificação final
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-13-09h55m10s081.jpg" alt="" width="840">
+</p>
+
+Por fim, a tarefa é deletada, retornando **204** com corpo vazio. Ao executar o `GET` novamente, a lista volta a ficar vazia, confirmando que a remoção funcionou. Assim, é concluído o teste manual completo da camada de API — cobrindo criação, listagem, busca por ID, atualização e remoção de tarefas.
+
+#### Material de Apoio Até Esta Etapa
+
+- [003-Tutorial_TaskManager_Java_Spring_Video06](./003-Tutorial_TaskManager_Java_Spring_Video06.md)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
+
 
 ## Parte 8 - Validando dados
+
 ### 🟩 Vídeo 08 - Validando dados
 
 <video width="60%" controls>
