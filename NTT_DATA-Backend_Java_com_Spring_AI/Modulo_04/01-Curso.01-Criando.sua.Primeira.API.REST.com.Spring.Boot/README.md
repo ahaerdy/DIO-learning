@@ -2880,7 +2880,7 @@ Por fim, a tarefa é deletada, retornando **204** com corpo vazio. Ao executar o
 
 #### Material de Apoio Até Esta Etapa
 
-- [003-Tutorial_TaskManager_Java_Spring_Video06](./003-Tutorial_TaskManager_Java_Spring_Video06.md)
+- [004-Tutorial_TaskManager_Java_Spring_Video07](./004-Tutorial_TaskManager_Java_Spring_Video07.md)
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
 
 
@@ -2893,7 +2893,12 @@ Por fim, a tarefa é deletada, retornando **204** com corpo vazio. Ao executar o
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/62807b08-307b-4a2e-9efb-a8a920b705ee?autoplay=1
+
+### Anotações
+
+      
+
 
 ## Parte 9 - Documentando a API
 ### 🟩 Vídeo 09 - Documentando a API
@@ -2903,7 +2908,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/508b5c2f-c3a6-48b6-98d2-3e9649f79c11?autoplay=1
 
 ## Parte 10 - Evoluindo a API
 ### 🟩 Vídeo 10 - Evoluindo a API
@@ -2913,7 +2918,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/d19d5b00-9357-4a9a-9586-139b86cabcc1?autoplay=1
 
 
 ##  Materiais de Apoio
@@ -2924,6 +2929,7 @@ link do vídeo:
   - [Implementação de uma classe `Main` para explorar manualmente](./001-B-extra_main_playground.md)
 - [002-Tutorial_TaskManager_Java_Spring_Videos04a05](./002-Tutorial_TaskManager_Java_Spring_Videos04a05.md)
 - [003-Tutorial_TaskManager_Java_Spring_Video06](./003-Tutorial_TaskManager_Java_Spring_Video06.md)
+- [004-Tutorial_TaskManager_Java_Spring_Video07](./004-Tutorial_TaskManager_Java_Spring_Video07.md)
 
 
 ### Arquivos do Projeto
@@ -2933,6 +2939,7 @@ link do vídeo:
 - Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_04.zip)
 - Até o vídeo 05: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_05.zip)
 - Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
+- Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
 
 # Certificado: 
 
