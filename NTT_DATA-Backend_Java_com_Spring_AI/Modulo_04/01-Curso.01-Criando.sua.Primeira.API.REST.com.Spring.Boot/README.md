@@ -3644,8 +3644,22 @@ Rolando o documento renderizado, aparecem as seções finais da documentação: 
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/d19d5b00-9357-4a9a-9586-139b86cabcc1?autoplay=1
 
+### Anotações
 
-##  Materiais de Apoio
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-10h40m56s725.jpg" alt="" width="840">
+</p>
+
+Este slide abre o encerramento do módulo **"Criando sua Primeira API REST com Spring Boot"**, apresentando a agenda completa do curso em cinco etapas: Infraestrutura e interface, Consulta de tarefas, Validando dados, Documentando a API e, em destaque, **Evoluindo a API**. É justamente esse último tópico — os próximos passos possíveis após a construção da API REST básica — que será o foco da parte final da aula.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-10h41m56s605.jpg" alt="" width="840">
+</p>
+
+Esta ilustração resume, em formato de mapa visual, o roteiro sugerido para elevar a API construída ao nível corporativo. Do lado esquerdo, os **"Pilares da Robustez Corporativa"** trazem três frentes de evolução: **Segurança com Spring Security**, utilizando padrões modernos como JWT e OAuth2 para proteger recursos e gerenciar identidades, controlando quem pode acessar cada endpoint (por exemplo, diferenciando acesso de administrador e de usuário convencional); **Eficiência e Performance de Dados**, por meio da implementação de paginação e filtros para otimizar o consumo de memória e o tráfego de rede nas listagens; e **Consultas Dinâmicas (Specifications)**, que permitem montar buscas complexas e flexíveis com Spring Data JPA, como filtrar tarefas por título, status ou ordená-las pela mais recente.
+
+Do lado direito, em **"Novas Fronteiras e Arquiteturas"**, aparecem três caminhos adicionais de estudo: **Navegabilidade com HATEOAS**, que torna a API autodescritível ao fornecer, dentro do próprio JSON de resposta, links para os recursos e ações relacionadas (como atualizar ou excluir aquele item), reduzindo o acoplamento do cliente com a API; **Além do REST: GraphQL e gRPC**, apontando o GraphQL como alternativa para consultas mais flexíveis entre cliente e servidor e o gRPC como opção de comunicação mais veloz entre servidores; e a **Integração com Spring AI**, que permite adicionar recursos de inteligência artificial à API, como transcrição de áudio para texto e geração de fala a partir de texto.      
+
 
 ### Tutoriais
 
@@ -3669,7 +3683,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 - Até o vídeo 08:  [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip)
 - Até o vídeo 09:  [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_09.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_09.zip)
 
-# Certificado: 
+# Certificado: Criando sua Primeira API REST com Spring Boot
 
 - Link na plataforma: 
 - Certificado em pdf:
