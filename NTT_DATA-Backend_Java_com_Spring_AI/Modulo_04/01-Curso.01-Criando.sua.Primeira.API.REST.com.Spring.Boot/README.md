@@ -3358,10 +3358,6 @@ class TaskControllerTest {
 
 #### O teste completo, linha a linha
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h05m45s341.jpg" alt="" width="840">
-</p>
-
 Versão final do método de teste `should_save_and_retrieve_task_by_id`. A lógica é a seguinte: primeiro é montado um mapa chave-valor representando o corpo da requisição (título e descrição da tarefa), convertido para JSON pelo `ObjectMapper`. Em seguida, o `MockMvc` executa um `POST` em `/tasks` com esse payload, esperando como resposta o status `201 Created`. Nesse mesmo passo, é gerada a documentação do endpoint `create-task`, descrevendo os campos da requisição (`title`, `description`) e os campos da resposta (`id`, `title`, `description`, `status`). A resposta é então capturada como string, de onde é extraído o `id` gerado usando `JsonPath`. Com esse `id`, é feita uma segunda requisição, agora um `GET` em `/tasks/{id}`, esperando status `200 OK` e validando que o `id` e o `title` retornados batem com os enviados — gerando, ao mesmo tempo, a documentação do endpoint `get-task-by-id`, com seus parâmetros de caminho e campos de resposta.
 
 ```java
@@ -3471,6 +3467,44 @@ class TaskControllerTest {
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h06m24s463.jpg" alt="" width="840">
 </p>
+
+```log
+Starting Gradle Daemon...
+Gradle Daemon started in 1 s 25 ms
+> Task :generateEffectiveLombokConfig UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :generateTestEffectiveLombokConfig UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+09:58:24.496 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [dio.taskmanager.infrastructure.http.TaskControllerTest]: TaskControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:58:24.699 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration dio.taskmanager.TaskmanagerApplication for test class dio.taskmanager.infrastructure.http.TaskControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2026-07-14T09:58:25.039-03:00  INFO 66936 --- [    Test worker] d.t.i.http.TaskControllerTest            : Starting TaskControllerTest using Java 21.0.11 with PID 66936 (started by arthur in /mnt/storage_02/Backup_USB2/Backup_Github/DIO-learning/NTT_DATA-Backend_Java_com_Spring_AI/projetos/Modulo_04/01-Curso.01-Criando.sua.Primeira.API.REST.com.Spring.Boot/taskmanager)
+2026-07-14T09:58:25.040-03:00  INFO 66936 --- [    Test worker] d.t.i.http.TaskControllerTest            : No active profile set, falling back to 1 default profile: "default"
+2026-07-14T09:58:26.197-03:00  INFO 66936 --- [    Test worker] d.t.i.http.TaskControllerTest            : Started TaskControllerTest in 1.347 seconds (process running for 2.694)
+2026-07-14T09:58:27.064-03:00  INFO 66936 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-07-14T09:58:27.064-03:00  INFO 66936 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-07-14T09:58:27.067-03:00  INFO 66936 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+> Task :test
+TaskControllerTest > should_save_and_retrieve_task_by_id() PASSED
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+For more on this, please refer to https://docs.gradle.org/8.6/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+BUILD SUCCESSFUL in 12s
+5 actionable tasks: 1 executed, 4 up-to-date
+09:58:27: Execution finished ':test --tests "dio.taskmanager.infrastructure.http.TaskControllerTest"'.
+```
 
 Na primeira execução, o teste falhou porque o endpoint de criação retornava `200 OK` em vez de `201 Created` — o que exigiu um ajuste no `TaskController` para seguir a boa prática REST de retornar `201` em criações. Após a correção, o log de execução mostra o teste `TaskControllerTest > should save and retrieve task by id()` passando (`PASSED`) e o build finalizado com `BUILD SUCCESSFUL`, o que já gera a documentação dentro da pasta `generated-snippets`.
 
