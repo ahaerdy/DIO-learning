@@ -104,7 +104,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 4: Criando Soluções Inteligentes com Spring Boot e Java Moderno
 
 - [x] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_04/01-Curso.01-Criando.sua.Primeira.API.REST.com.Spring.Boot)
-- [ ] Curso: [Conectando sua API com Banco de Dados Através do Spring Data]
+- [x] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_04/02-Curso.02-Conectando.sua.API.com.Banco.de.Dados.Através.do.Spring.Data)
 - [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security]
 - [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign]
 - [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
@@ -181,6 +181,6 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - / [devgvieira](https://www.linkedin.com/in/devgvieira/) (Gabriel Vieira / CTO, US @ Ubivis, Industrial AI & Digital Twins for Manufacturing, Industry 4.0)
 - / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst)
 - / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/) (José Luiz Abreu Cardoso Junior / Engenheiro de software sênior))
-- / [thpoiani](https://www.linkedin.com/in/thpoiani/)(Thiago Poiani / Principal Engineer at Skip)
+- / [thpoiani](https://www.linkedin.com/in/thpoiani/)(Thiago Poiani / Principal Engineer at Skip  )
 
 <!-- Preencher conforme for progredindo no bootcamp -->
