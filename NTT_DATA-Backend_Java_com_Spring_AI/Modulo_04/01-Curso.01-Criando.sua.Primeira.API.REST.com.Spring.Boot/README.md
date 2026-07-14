@@ -3669,7 +3669,7 @@ Do lado direito, em **"Novas Fronteiras e Arquiteturas"**, aparecem três caminh
 - [003-Tutorial_TaskManager_Java_Spring_Video06](./003-Tutorial_TaskManager_Java_Spring_Video06.md)
 - [004-Tutorial_TaskManager_Java_Spring_Video07](./004-Tutorial_TaskManager_Java_Spring_Video07.md)
 - [005-Tutorial_TaskManager_Java_Spring_Video08](./005-Tutorial_TaskManager_Java_Spring_Video08.md)
-- [006-Tutorial_TaskManager_Java_Spring_Video06](./006-Tutorial_TaskManager_Java_Spring_Video09.md)
+- [006-Tutorial_TaskManager_Java_Spring_Video09](./006-Tutorial_TaskManager_Java_Spring_Video09.md)
 
 
 ### Arquivos do Projeto
