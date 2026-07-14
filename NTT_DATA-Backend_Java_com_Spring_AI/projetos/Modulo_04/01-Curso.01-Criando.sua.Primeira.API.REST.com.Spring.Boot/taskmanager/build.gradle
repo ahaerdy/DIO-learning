@@ -3,6 +3,8 @@ plugins {
     id 'org.springframework.boot' version '3.2.0'
     id 'io.spring.dependency-management' version '1.1.4'
     id("io.freefair.lombok") version "9.2.0"
+
+    id 'org.asciidoctor.jvm.convert' version '4.0.5'
 }
 
 group = 'dio.taskmanager'
@@ -10,6 +12,18 @@ version = '0.0.1-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+ext {
+    snippetsDir = file('build/generated-snippets')
+}
+
+configurations {
+    asciidoctorExtensions
+}
+
+asciidoctorj {
+    version = "3.0.0"
 }
 
 dependencies {
@@ -20,6 +34,12 @@ dependencies {
 
     // Testes com Spring Boot + JUnit 5
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    asciidoctorExtensions 'org.springframework.restdocs:spring-restdocs-asciidoctor'
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+
 }
 
 test {
@@ -32,4 +52,17 @@ test {
     testLogging { events "passed", "failed"
     }
 }
+
+tasks.named('test') { Task it ->
+    useJUnitPlatform()
+    outputs.dir snippetsDir
+}
+
+tasks.named('asciidoctor') {
+    configurations "asciidoctorExtensions"
+    inputs.dir snippetsDir
+    dependsOn test
+}
+
+
 

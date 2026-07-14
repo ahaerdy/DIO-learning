@@ -21,7 +21,6 @@ public class TaskController {
     private final DeleteTaskUseCase deleteTaskUseCase;
     private final UpdateTaskUseCase updateTaskUseCase;
 
-
     public TaskController(CreateTaskUseCase createTaskUseCase,
                           GetTasksUseCase getTasksUseCase,
                           GetTaskByIdUseCase getTaskByIdUseCase,
@@ -34,8 +33,8 @@ public class TaskController {
         this.updateTaskUseCase = updateTaskUseCase;
     }
 
-
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED) // <-- Adicionado para retornar status 201 Created
     TaskResponse create(@RequestBody @Valid CreateTaskRequest request) {
         var input = request.toInput();
         var output = createTaskUseCase.execute(input);
@@ -65,5 +64,4 @@ public class TaskController {
         var output = updateTaskUseCase.execute(new TaskId(id), input);
         return TaskResponse.from(output);
     }
-
 }

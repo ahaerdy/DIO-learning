@@ -3074,6 +3074,532 @@ Com esse handler, o cliente da API (seja uma aplicação mobile, web ou outro se
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/criando-sua-primeira-api-rest-com-spring-boot/learning/508b5c2f-c3a6-48b6-98d2-3e9649f79c11?autoplay=1
 
+### Anotações
+
+#### Abertura: Documentando a API
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h15m45s611.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Criando sua Primeira API REST com Spring Boot", parte da trilha Jornada Tech. O tópico em destaque na lista é o quarto, "Documentando a API", que é o assunto tratado a partir deste ponto — depois de já terem sido vistos infraestrutura/interface, consulta de tarefas e validação de dados.
+
+#### Spring REST Docs: a documentação oficial
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h17m44s785.jpg" alt="" width="840">
+</p>
+
+Página oficial do Spring REST Docs (docs.spring.io), apresentada como uma alternativa ao Open API/Swagger/Redoc que o próprio Spring Boot já expõe automaticamente a partir das anotações dos controllers. A diferença do Spring REST Docs é que a documentação nasce a partir dos testes de integração da aplicação, combinando trechos escritos manualmente com conteúdo gerado automaticamente pelos testes.
+
+#### Inserindo o plugin do Asciidoctor no build.gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h19m16s054.jpg" alt="" width="840">
+</p>
+
+Primeiro passo prático: abrir o `build.gradle` do projeto `taskmanager` e adicionar o plugin do Asciidoctor, seguindo a documentação oficial mostrada anteriormente.
+
+```groovy
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '4.0.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id("io.freefair.lombok") version "9.2.0"
+
+    id 'org.asciidoctor.jvm.convert' version '4.0.5'
+}
+
+group = 'dio'
+version = '0.0.1-SNAPSHOT'
+description = 'taskmanager'
+
+java {
+    toolchain { JavaToolchainSpec it ->
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+```
+
+#### Definindo o diretório dos snippets gerados
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h23m11s031.jpg" alt="" width="840">
+</p>
+
+Em seguida é criada uma variável chamada `snippetsDir`, que define o diretório onde o Asciidoctor vai depositar os fragmentos de documentação gerados a partir dos testes — dentro da pasta de build do projeto.
+
+```groovy
+ext {
+    snippetsDir = file('build/generated-snippets')
+}
+```
+
+#### Configuração de extensão do Asciidoctor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h24m59s351.jpg" alt="" width="840">
+</p>
+
+É adicionado um bloco `configurations` com uma entrada `asciidoctorExtensions`, que vai receber, mais adiante, a dependência responsável por integrar o Spring REST Docs ao Asciidoctor.
+
+```groovy
+configurations {
+    asciidoctorExtensions
+}
+```
+
+#### Definindo a versão do Asciidoctor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h26m37s086.jpg" alt="" width="840">
+</p>
+
+Mais uma entrada de configuração é inserida no `build.gradle`: o bloco `asciidoctorj`, fixando a versão do Asciidoctor que será usada para gerar a documentação.
+
+```groovy
+asciidoctorj {
+    version = "3.0.0"
+}
+```
+
+#### Adicionando as dependências do Spring REST Docs
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h27m21s426.jpg" alt="" width="840">
+</p>
+
+Duas novas dependências são adicionadas: a extensão do Asciidoctor específica para o Spring REST Docs (`asciidoctorExtensions`) e a biblioteca de testes que integra o REST Docs ao MockMvc (`testImplementation`).
+
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    asciidoctorExtensions 'org.springframework.restdocs:spring-restdocs-asciidoctor'
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+}
+```
+
+#### Ajustando a task de testes para gerar os snippets
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h29m09s212.jpg" alt="" width="840">
+</p>
+
+Por fim, é feita uma alteração na task `test` do Gradle: ao rodar os testes, a saída (`outputs.dir`) passa a apontar para o diretório `snippetsDir` definido anteriormente, garantindo que os documentos gerados fiquem no lugar esperado.
+
+```groovy
+tasks.named('test') { Task it ->
+    useJUnitPlatform()
+    outputs.dir snippetsDir
+}
+```
+
+#### Criando a task do Gradle para o Asciidoctor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h32m05s757.jpg" alt="" width="840">
+</p>
+
+É criada uma nova task do Gradle chamada `asciidoctor`, que usa a configuração `asciidoctorExtensions`, lê os snippets a partir de `snippetsDir` e depende da execução da task `test` — ou seja, sempre que essa task rodar, os testes também serão executados antes.
+
+```groovy
+tasks.named('asciidoctor') { Task it ->
+    configurations "asciidoctorExtensions"
+    inputs.dir snippetsDir
+    dependsOn test
+}
+```
+
+#### Gerando a classe de teste a partir do TaskController
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h33m16s130.jpg" alt="" width="840">
+</p>
+
+Com a configuração de build pronta, o próximo passo é criar a classe de teste que vai gerar a documentação. Isso é feito a partir do próprio `TaskController`, usando o menu de contexto do IntelliJ (clique direito → Generate...).
+
+#### Selecionando a opção de gerar teste
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h33m30s124.jpg" alt="" width="840">
+</p>
+
+No submenu "Generate", é selecionada a opção "Test...", que abre o assistente de criação de classe de teste para o `TaskController`.
+
+#### Configurando a criação da classe de teste
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h33m34s653.jpg" alt="" width="840">
+</p>
+
+Janela "Create Test" do IntelliJ, usada para configurar a nova classe: biblioteca de testes JUnit5, nome da classe (`TaskControllerTest`), pacote de destino e os métodos do controller disponíveis para gerar stubs de teste (`create`, `list`, `read`, `delete`, `update`).
+
+#### Classe de teste recém-criada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h41m44s620.jpg" alt="" width="840">
+</p>
+
+Resultado inicial: a classe `TaskControllerTest` é criada vazia, ainda sem anotações, imports ou lógica de teste — ponto de partida para a implementação manual que vem a seguir.
+
+```java
+package dio.taskmanager.infrastructure.http;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class TaskControllerTest {
+
+}
+```
+
+#### Adicionando os imports necessários
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h44m59s974.jpg" alt="" width="840">
+</p>
+
+São inseridas as anotações e os imports referentes ao Spring Boot e à biblioteca de geração de documentação, além de outros imports auxiliares (Jackson, JUnit, MockMvc, RestDocs), preparando a classe `TaskControllerTest` para receber a lógica do teste.
+
+```java
+package dio.taskmanager.infrastructure.http;
+
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import com.jayway.jsonpath.JsonPath;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.restdocs.RestDocumentationContextProvider;
+import org.springframework.restdocs.RestDocumentationExtension;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
+import static org.springframework.restdocs.payload.PayloadDocumentation.*;
+import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
+import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+@ExtendWith({RestDocumentationExtension.class, SpringExtension.class})
+@SpringBootTest
+class TaskControllerTest {
+```
+
+#### Injetando o MockMvc e configurando o BeforeEach
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h45m48s503.jpg" alt="" width="840">
+</p>
+
+É injetado um `MockMvc` — biblioteca que permite simular requisições ao controller sem subir um servidor real — e sua instanciação é feita em um método anotado com `@BeforeEach`, que recebe o `WebApplicationContext` (com todos os controllers da aplicação) e o `RestDocumentationContextProvider` (necessário para gerar a documentação).
+
+```java
+class TaskControllerTest {
+    MockMvc mockMvc;
+
+    @BeforeEach
+    void setUp(WebApplicationContext webApplicationContext, RestDocumentationContextProvider restDocumentation) {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+                .apply(documentationConfiguration(restDocumentation))
+                .build();
+    }
+
+}
+```
+
+#### Injetando o ObjectMapper
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-08h49m14s381.jpg" alt="" width="840">
+</p>
+
+É adicionado também um `ObjectMapper`, injetado via `@Autowired`, responsável por converter objetos Java em JSON e vice-versa — recurso usado logo a seguir para montar o corpo da requisição de teste.
+
+```java
+class TaskControllerTest {
+    MockMvc mockMvc;
+
+    @Autowired
+    ObjectMapper objectMapper;
+
+    @BeforeEach
+    void setUp(WebApplicationContext webApplicationContext, RestDocumentationContextProvider restDocumentation) {
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+                .apply(documentationConfiguration(restDocumentation))
+                .build();
+    }
+
+}
+```
+
+#### O teste completo, linha a linha
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h05m45s341.jpg" alt="" width="840">
+</p>
+
+Versão final do método de teste `should_save_and_retrieve_task_by_id`. A lógica é a seguinte: primeiro é montado um mapa chave-valor representando o corpo da requisição (título e descrição da tarefa), convertido para JSON pelo `ObjectMapper`. Em seguida, o `MockMvc` executa um `POST` em `/tasks` com esse payload, esperando como resposta o status `201 Created`. Nesse mesmo passo, é gerada a documentação do endpoint `create-task`, descrevendo os campos da requisição (`title`, `description`) e os campos da resposta (`id`, `title`, `description`, `status`). A resposta é então capturada como string, de onde é extraído o `id` gerado usando `JsonPath`. Com esse `id`, é feita uma segunda requisição, agora um `GET` em `/tasks/{id}`, esperando status `200 OK` e validando que o `id` e o `title` retornados batem com os enviados — gerando, ao mesmo tempo, a documentação do endpoint `get-task-by-id`, com seus parâmetros de caminho e campos de resposta.
+
+```java
+package dio.taskmanager.infrastructure.http;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.jayway.jsonpath.JsonPath;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.restdocs.RestDocumentationContextProvider;
+import org.springframework.restdocs.RestDocumentationExtension;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
+import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
+import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.get;  // <-- Corrigido para RestDocs
+import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders.post; // <-- Corrigido para RestDocs
+import static org.springframework.restdocs.payload.PayloadDocumentation.*;
+import static org.springframework.restdocs.request.RequestDocumentation.parameterWithName;
+import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+@ExtendWith({RestDocumentationExtension.class, SpringExtension.class})
+@SpringBootTest
+class TaskControllerTest {
+
+    MockMvc mockMvc;
+
+    @Autowired
+    WebApplicationContext webApplicationContext; // <-- Injetado aqui para evitar erro no parâmetro do JUnit 5
+
+    @Autowired
+    ObjectMapper objectMapper;
+
+    @BeforeEach
+    void setUp(RestDocumentationContextProvider restDocumentation) { // <-- Removido o context daqui
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext)
+                .apply(documentationConfiguration(restDocumentation))
+                .build();
+    }
+
+    @Test
+    void should_save_and_retrieve_task_by_id() throws Exception {
+        Map<String, String> taskRequest = new HashMap<>();
+        taskRequest.put("title", "Aprender Spring RestDocs");
+        taskRequest.put("description", "Ler o guia oficial do Spring");
+
+        String responseJson = this.mockMvc.perform(
+                        post("/tasks")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content(objectMapper.writeValueAsString(taskRequest))
+                )
+                .andExpect(status().isCreated())
+                .andDo(document("create-task",
+                        requestFields(
+                                fieldWithPath("title").description("Título da tarefa"),
+                                fieldWithPath("description").description("Descrição detalhada")
+                        ),
+                        responseFields(
+                                fieldWithPath("id").description("Identificador único da tarefa"),
+                                fieldWithPath("title").description("Título da tarefa"),
+                                fieldWithPath("description").description("Descrição detalhada"),
+                                fieldWithPath("status").description("Status da tarefa")
+                        )
+                ))
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+
+        String generatedId = JsonPath.read(responseJson, "$.id");
+
+        this.mockMvc.perform(
+                        get("/tasks/{id}", generatedId)
+                                .accept(MediaType.APPLICATION_JSON)
+                )
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id").value(generatedId))
+                .andExpect(jsonPath("$.title").value("Aprender Spring RestDocs"))
+                .andDo(document("get-task-by-id",
+                        pathParameters(
+                                parameterWithName("id").description("Identificador único da tarefa")
+                        ),
+                        responseFields(
+                                fieldWithPath("id").description("Identificador único da tarefa"),
+                                fieldWithPath("title").description("Título da tarefa"),
+                                fieldWithPath("description").description("Descrição detalhada"),
+                                fieldWithPath("status").description("Status da tarefa")
+                        )
+                ));
+    }
+}
+```
+
+#### Corrigindo o status de retorno e rodando o teste com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h06m24s463.jpg" alt="" width="840">
+</p>
+
+Na primeira execução, o teste falhou porque o endpoint de criação retornava `200 OK` em vez de `201 Created` — o que exigiu um ajuste no `TaskController` para seguir a boa prática REST de retornar `201` em criações. Após a correção, o log de execução mostra o teste `TaskControllerTest > should save and retrieve task by id()` passando (`PASSED`) e o build finalizado com `BUILD SUCCESSFUL`, o que já gera a documentação dentro da pasta `generated-snippets`.
+
+#### O snippet de exemplo em cURL
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h22m52s755.jpg" alt="" width="840">
+</p>
+
+Dentro de `build/generated-snippets/create-task`, o Spring REST Docs gerou automaticamente o arquivo `curl-request.adoc`, que documenta a requisição de criação da tarefa como um comando cURL de exemplo, pronto para ser incluído em uma documentação Asciidoctor.
+
+#### O snippet de requisição HTTP crua
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h22m58s620.jpg" alt="" width="840">
+</p>
+
+O arquivo `http-request.adoc` mostra a requisição HTTP crua (`POST /tasks`) exatamente como foi enviada no teste, com cabeçalhos e corpo JSON, servindo como outro formato de exemplo para quem for consumir a API.
+
+#### O snippet de resposta HTTP crua
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h23m02s188.jpg" alt="" width="840">
+</p>
+
+De forma simétrica ao request, o arquivo `http-response.adoc` documenta a resposta HTTP crua recebida (`201 Created`), incluindo cabeçalhos e o corpo JSON retornado pela API.
+
+#### O corpo da requisição isolado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h23m08s259.jpg" alt="" width="840">
+</p>
+
+O arquivo `request-body.adoc` isola apenas o corpo JSON enviado na requisição de criação, sem os cabeçalhos HTTP, útil para exibir só o payload de exemplo na documentação final.
+
+#### A tabela de campos da requisição
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h23m12s569.jpg" alt="" width="840">
+</p>
+
+O arquivo `request-fields.adoc` traz uma tabela com os campos esperados na requisição — `title` e `description`, ambos do tipo `String` — junto com as descrições passadas no método `document(...)` do teste.
+
+#### O corpo da resposta isolado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h23m17s009.jpg" alt="" width="840">
+</p>
+
+De forma equivalente ao `request-body.adoc`, o arquivo `response-body.adoc` isola apenas o corpo JSON retornado pela API na criação da tarefa, com o `id` gerado.
+
+#### A tabela de campos da resposta
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h23m19s551.jpg" alt="" width="840">
+</p>
+
+O arquivo `response-fields.adoc` documenta em forma de tabela os campos retornados na resposta — `id`, `title`, `description` e `status` — cada um com sua descrição, completando o conjunto de snippets gerados para o endpoint de criação.
+
+#### Voltando à task do Asciidoctor no projeto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h24m09s002.jpg" alt="" width="840">
+</p>
+
+Com os snippets gerados tanto para o endpoint de criação quanto para o de busca por ID, a atenção volta para a task `asciidoctor` do Gradle. Essa task procura um documento `.adoc` dentro do diretório `src` do projeto — que ainda não existe — sendo necessário criá-lo a seguir.
+
+#### Criando o diretório de documentação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h24m57s443.jpg" alt="" width="840">
+</p>
+
+Pelo menu de contexto do IntelliJ (`New → Directory`), começa a criação da estrutura de pastas onde ficará a documentação em Asciidoctor, dentro de `src`.
+
+#### Nomeando o diretório "docs"
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h25m40s767.jpg" alt="" width="840">
+</p>
+
+O novo diretório recebe o nome `docs`, que ficará dentro de `src` e vai abrigar os arquivos de documentação do projeto.
+
+#### Criando o subdiretório "asciidoc"
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h25m51s719.jpg" alt="" width="840">
+</p>
+
+Dentro de `docs`, é criado mais um diretório, chamado `asciidoc`, que é onde os documentos `.adoc` propriamente ditos vão ficar.
+
+#### Criando o arquivo index.adoc
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h26m33s214.jpg" alt="" width="840">
+</p>
+
+Dentro da pasta `asciidoc`, é criado um novo arquivo chamado `index.adoc`, que servirá como ponto de entrada da documentação da API — podendo, a partir daqui, incluir qualquer outro documento `.adoc` desejado.
+
+#### Incluindo os snippets gerados no index.adoc
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h27m21s387.jpg" alt="" width="840">
+</p>
+
+O `index.adoc` funciona de forma parecida com um Markdown, mas com o recurso adicional de `include::`, que permite importar outros arquivos `.adoc` — nesse caso, o snippet `create-task/curl-request.adoc` gerado pelo teste. O painel de pré-visualização à direita já mostra o resultado renderizado, com o título "Criar Tarefa" e o exemplo de requisição cURL.
+
+#### A documentação completa renderizada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h29m32s566.jpg" alt="" width="840">
+</p>
+
+Visualização final do `index.adoc` já mais elaborado, com um sumário completo ("API de Tarefas"): introdução, modelo de dados (tabela do objeto `Task` com os campos `id`, `title`, `description`, `status`), seguido das seções de criação e consulta de tarefas — reunindo, em um único documento, os snippets gerados automaticamente pelos testes com o conteúdo escrito manualmente.
+
+#### Códigos de status e observações finais
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-09h30m14s993.jpg" alt="" width="840">
+</p>
+
+Rolando o documento renderizado, aparecem as seções finais da documentação: uma tabela de "Códigos de Status" (200, 201, 204, 400, 404) e um bloco de "Observações" com notas gerais sobre a API — como o formato de retorno em JSON, o padrão de datas em ISO-8601 e os valores aceitos pelo campo `status`. Essa é a forma final de documentação da API construída com o Spring REST Docs.
+
+      
+#### Material de Apoio Até Esta Etapa
+
+- [006-Tutorial_TaskManager_Java_Spring_Video06](./006-Tutorial_TaskManager_Java_Spring_Video09.md)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_09.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_09.zip)
+
 ## Parte 10 - Evoluindo a API
 ### 🟩 Vídeo 10 - Evoluindo a API
 
@@ -3095,6 +3621,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 - [003-Tutorial_TaskManager_Java_Spring_Video06](./003-Tutorial_TaskManager_Java_Spring_Video06.md)
 - [004-Tutorial_TaskManager_Java_Spring_Video07](./004-Tutorial_TaskManager_Java_Spring_Video07.md)
 - [005-Tutorial_TaskManager_Java_Spring_Video08](./005-Tutorial_TaskManager_Java_Spring_Video08.md)
+- [006-Tutorial_TaskManager_Java_Spring_Video06](./006-Tutorial_TaskManager_Java_Spring_Video09.md)
 
 
 ### Arquivos do Projeto
@@ -3106,6 +3633,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 - Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_06.zip)
 - Até o vídeo 07: [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_07.zip)
 - Até o vídeo 08:  [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_08.zip)
+- Até o vídeo 09:  [./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_09.zip](./000-Midia_e_Anexos/etapas_do_codigo/taskmanager_ate_o_video_09.zip)
 
 # Certificado: 
 
