@@ -24,7 +24,9 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/13762d00-abe3-4831-95f8-7eb6441eccef?autoplay=1
+
+
 
 ### 🟩 Vídeo 03 - Criando a API REST para Customers
 
@@ -33,7 +35,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/cccb92aa-2e9e-429d-8d8a-ba56939b4599?autoplay=1
+
+
 
 ### 🟩 Vídeo 04 - Flexibilidade com NoSQL
 
