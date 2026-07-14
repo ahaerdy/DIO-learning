@@ -3650,7 +3650,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
   <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-10h40m56s725.jpg" alt="" width="840">
 </p>
 
-Este slide abre o encerramento do módulo **"Criando sua Primeira API REST com Spring Boot"**, apresentando a agenda completa do curso em cinco etapas: Infraestrutura e interface, Consulta de tarefas, Validando dados, Documentando a API e, em destaque, **Evoluindo a API**. É justamente esse último tópico — os próximos passos possíveis após a construção da API REST básica — que será o foco da parte final da aula.
+Este slide abre o encerramento do módulo **"Criando sua Primeira API REST com Spring Boot"**, apresentando a agenda completa do curso em cinco etapas: Infraestrutura e interface, Consulta de tarefas, Validando dados, Documentando a API e, em destaque, **Evoluindo a API**. É justamente esse último tópico — os próximos passos possíveis após a construção da API REST básica — que será feito na continuidade do módulo.
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-07-14-10h41m56s605.jpg" alt="" width="840">
@@ -3685,5 +3685,5 @@ Do lado direito, em **"Novas Fronteiras e Arquiteturas"**, aparecem três caminh
 
 # Certificado: Criando sua Primeira API REST com Spring Boot
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/P2CB0LSX.pdf
+- Certificado em pdf: [Certificado-Criando.sua.Primeira.API.REST.com.Spring.Boot.pdf](000-Midia_e_Anexos/Certificado-Criando.sua.Primeira.API.REST.com.Spring.Boot.pdf)
