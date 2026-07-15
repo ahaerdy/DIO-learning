@@ -434,27 +434,38 @@ Com as dependências configuradas, o instrutor aguarda a importação do projeto
 
 #### Log de inicialização: contêiner e conexão com o banco
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-10h08m54s489.jpg" alt="" width="840">
-</p>
-
 ```
-Starting MarketplaceApplication using Java 25.0.1
-No active profile set, falling back to 1 default profile: "default"
-Docker Compose file '.../compose.yml'
-Container marketplace-registration-database-1 Creating
-Container marketplace-registration-database-1 Created
-Container marketplace-registration-database-1 Starting
-Container marketplace-registration-database-1 Waiting
-Container marketplace-registration-database-1 Healthy
-HikariPool-1 - Starting...
-HikariPool-1 - Added connection
-HikariPool-1 - Start completed.
-HHH000490: Using JtaPlatform implementation: ...
-Started MarketplaceApplication in 9.323 seconds
-Shutting down DeltaManagerRegistryFactoryBean
-HikariPool-1 - Shutdown initiated...
-HikariPool-1 - Shutdown completed.
+.   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| |  | | | || (_| |  ) ) ) )
+  '  |____| .__|_|  |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2026-03-24T18:14:16.891-03:00  INFO 144510 --- [           main] br.com.tqi.analisecredito.Application   : Starting Application v0.0.1-SNAPSHOT using Java 17.0.10 with PID 144510 (/home/arthur/workspace/tqi_bootcamp/analisecredito/target/classes started by arthur in /home/arthur/workspace/tqi_bootcamp/analisecredito)
+2026-03-24T18:14:16.893-03:00  INFO 144510 --- [           main] br.com.tqi.analisecredito.Application   : No active profile set, falling back to 1 default profile: "default"
+2026-03-24T18:14:17.388-03:00  INFO 144510 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-24T18:14:17.424-03:00  INFO 144510 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 3 JPA repositories.
+2026-03-24T18:14:17.844-03:00  INFO 144510 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-24T18:14:17.850-03:00  INFO 144510 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-24T18:14:17.851-03:00  INFO 144510 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-03-24T18:14:17.892-03:00  INFO 144510 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-24T18:14:17.893-03:00  INFO 144510 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 959 ms
+2026-03-24T18:14:18.016-03:00  INFO 144510 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-24T18:14:18.055-03:00  INFO 144510 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-03-24T18:14:18.081-03:00  INFO 144510 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000256: Hibernate L2 cache provider: org.hibernate.cache.internal.NoCachingRegionFactory
+2026-03-24T18:14:18.231-03:00  INFO 144510 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: PSR-174 class transformer voided
+2026-03-24T18:14:18.253-03:00  INFO 144510 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-24T18:14:18.374-03:00  INFO 144510 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-24T18:14:18.375-03:00  INFO 144510 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-24T18:14:18.810-03:00  INFO 144510 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2026-03-24T18:14:18.851-03:00  INFO 144510 --- [           main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-24T18:14:19.141-03:00  WARN 144510 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning.
+2026-03-24T18:14:19.349-03:00  INFO 144510 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2026-03-24T18:14:19.394-03:00  INFO 144510 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-24T18:14:19.402-03:00  INFO 144510 --- [           main] br.com.tqi.analisecredito.Application   : Started Application in 2.822 seconds (process running for 3.125)
+
 Process finished with exit code 0
 ```
 
@@ -653,10 +664,6 @@ A entidade é ajustada: a geração automática do `id` é removida (o `Customer
 
 #### Hibernate criando a estrutura do banco
 
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h21m21s232.jpg" alt="" width="840">
-</p>
-
 ```log
 .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -824,10 +831,6 @@ public Customer save(Customer customer) {
 O método `save` fica completo: converte o `Customer` de domínio para a entidade através do `mapper`, persiste a entidade usando o `customerEntityRepository` (herdado do `CrudRepository`) e retorna o próprio `customer` recebido, já que não houve nenhuma alteração nele durante o processo.
 
 #### Implementando o método `findAll`
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h55m11s649.jpg" alt="" width="840">
-</p>
 
 ```java
 @Override
