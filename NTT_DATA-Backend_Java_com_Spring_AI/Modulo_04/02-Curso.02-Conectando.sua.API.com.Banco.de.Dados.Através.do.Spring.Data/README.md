@@ -147,7 +147,688 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
-      
+#### Abertura: Conectando sua API com Banco de Dados através do Spring Data
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h12m30s047.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula, parte da trilha **Jornada Tech**. O título situa o tema do encontro — integrar uma API com um banco de dados usando o **Spring Data** — e o sumário à direita mostra que a aula está no tópico **02, "Modelando SQL e NoSQL"**, dentro de uma sequência maior que também abordará a criação da API REST para Customers, flexibilidade com NoSQL e aplicações práticas com CrewAI.
+
+#### Retomada do estudo de caso: persistência poliglota
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h12m56s353.jpg" alt="" width="840">
+</p>
+
+O instrutor **Thiago Poiani** retoma a aula explicando o estudo de caso que guiará o desenvolvimento: um sistema de ticketing que usa **persistência poliglota**, combinando **PostgreSQL** para dados que exigem consistência (transações financeiras, integridade referencial), **MongoDB** para catálogos flexíveis de eventos distintos e **Redis** para o bloqueio temporário de assentos, garantindo performance na gestão de concorrência. Essa é a motivação por trás do projeto que será construído ao longo do curso.
+
+#### Criando o pacote `domain`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h26m02s116.jpg" alt="" width="840">
+</p>
+
+No IntelliJ IDEA, dentro do projeto **marketplace** (criado com Spring Boot e Java 25), o instrutor cria o primeiro pacote da estrutura baseada em **Domain-Driven Design**: `dio.marketplace.domain`. Esse pacote concentrará as regras de negócio da aplicação.
+
+#### Criando o pacote `application`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h27m14s056.jpg" alt="" width="840">
+</p>
+
+Em seguida é criado o pacote `dio.marketplace.application`, que funcionará como camada orquestradora, responsável por interagir tanto com o domínio quanto com a infraestrutura.
+
+#### Criando o pacote `infrastructure`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h28m27s438.jpg" alt="" width="840">
+</p>
+
+Por fim, dentro da divisão de camadas, é criado o pacote `dio.marketplace.infrastructure`, responsável pela parte mais externa da aplicação — comunicação com banco de dados e requisições externas. Com `domain`, `application` e `infrastructure` criados, fica definida a estratégia de camadas do projeto.
+
+#### Criando o módulo `registration`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h29m18s944.jpg" alt="" width="840">
+</p>
+
+A primeira funcionalidade da aplicação será voltada ao **registro de usuários**. Para isso, é criado um novo pacote, `dio.marketplace.registration`, que funcionará como um módulo próprio — a ideia é que a aplicação evolua e ganhe outros módulos semelhantes no futuro.
+
+#### Estrutura interna do módulo `registration`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h29m55s366.jpg" alt="" width="840">
+</p>
+
+Dentro do módulo `registration` são criados os subpacotes `application`, `domain` e `infrastructure`, repetindo a mesma divisão em camadas já definida para o projeto como um todo, agora aplicada especificamente a esse módulo de cadastro.
+
+#### Criando a classe `Customer`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h30m44s284.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `domain` do módulo `registration`, é criada a primeira classe do módulo: `Customer`, que representará o cliente cadastrado no sistema.
+
+#### Primeiro atributo de `Customer`: o identificador
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h31m24s415.jpg" alt="" width="840">
+</p>
+
+A classe `Customer` recebe seu primeiro atributo, `private CustomerId id;`. Em vez de usar um simples `String` como identificador, o instrutor opta por criar um **identificador fortemente tipado** — uma classe própria (`CustomerId`) para representar o ID do cliente, deixando mais claro no código, em qualquer lugar em que esse identificador for usado, que se trata especificamente de um ID de `Customer`.
+
+#### Criando `CustomerId` como um `record`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-08h58m09s641.jpg" alt="" width="840">
+</p>
+
+É criada a classe `CustomerId`, e o instrutor explica a escolha de utilizá-la como um **record** em vez de uma classe tradicional: classes são usadas para objetos com um ciclo de vida bem definido, enquanto um record representa um *data value* — um conjunto de atributos sem necessariamente ter identidade própria. Records já vêm com construtores canônicos prontos e trabalham naturalmente com imutabilidade: para alterar um valor, é preciso reconstruir o objeto.
+
+#### Código completo da classe `Customer`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h21m39s622.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.marketplace.registration.domain;
+
+import org.springframework.util.Assert;
+import java.util.UUID; // Adicionado para gerar o UUID aleatório
+
+public class Customer {
+    private CustomerId id;
+    private String name;
+    private String email;
+
+    // Construtor Principal
+    public Customer(CustomerId id, String name, String email) {
+        Assert.notNull(id, "Id must not be null"); // Validação de segurança adicionada
+        Assert.notNull(name, "Name must not be null");
+        Assert.notNull(email, "Email must not be null");
+
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
+    // Construtor Secundário (Conveniência para novos cadastros)
+    public Customer(String name, String email) {
+        this(new CustomerId(UUID.randomUUID()), name, email); // Corrigido aqui!
+    }
+}
+```
+
+A classe `Customer` fica com os atributos `id`, `name` e `email`. O construtor principal recebe os três valores e faz validações com `Assert.notNull` para garantir que nenhum deles seja nulo. Já o construtor secundário recebe apenas `name` e `email` — pensado para o momento de criação de um novo cadastro — e delega ao construtor principal, gerando automaticamente um novo `CustomerId` a partir de um `UUID.randomUUID()`.
+
+#### Código completo do `record CustomerId`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h21m41s267.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.marketplace.registration.domain;
+
+import java.util.UUID;
+import org.springframework.util.Assert;
+
+public record CustomerId(UUID id) {
+    public CustomerId {
+        Assert.notNull(id, "id must not be null");
+    }
+
+    public CustomerId customerId() {
+        this(UUID.randomUUID());
+    }
+}
+```
+
+O `record CustomerId` encapsula um `UUID` e usa um **construtor compacto** para validar que o `id` não é nulo. O método `customerId()` demonstra a facilidade de gerar um novo identificador aleatório a partir do record.
+
+#### Criando a interface `CustomerRepository`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h23m11s728.jpg" alt="" width="840">
+</p>
+
+Como a ideia é armazenar e manipular os dados de um `Customer` através de um banco de dados, é criada a interface `CustomerRepository`, dentro do pacote `domain`. Ter essa interface no domínio está relacionado às regras de negócio: é ali que se define o que a aplicação precisa fazer, independentemente de qual tecnologia de banco será usada.
+
+#### Interface `CustomerRepository` definida
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h24m29s489.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.marketplace.registration.domain;
+
+import java.util.List;
+
+public interface CustomerRepository {
+    Customer save(Customer customer);
+    List<Customer> findAll();
+}
+```
+
+A interface expõe apenas os métodos necessários para as regras de negócio já identificadas: salvar um `Customer` (`save`) e listar todos os clientes (`findAll`). Essa interface precisará de uma implementação concreta, que será criada na camada de infraestrutura.
+
+#### Criando o pacote `persistence`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h25m19s840.jpg" alt="" width="840">
+</p>
+
+Dentro de `infrastructure`, é criado o pacote `infrastructure.persistence`, destinado a concentrar tudo o que envolve o banco de dados.
+
+#### Criando o pacote `entity`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h26m33s442.jpg" alt="" width="840">
+</p>
+
+Dentro de `persistence`, é criado o subpacote `entity`, onde ficará a definição — a abstração — da tabela `customer` no banco de dados, que não precisa necessariamente ser idêntica à classe de domínio `Customer`.
+
+#### Criando o pacote `repository`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h27m03s133.jpg" alt="" width="840">
+</p>
+
+Ainda dentro de `persistence`, é criado o subpacote `repository`, que armazenará a implementação concreta do `CustomerRepository`, específica para o banco de dados utilizado.
+
+#### Criando a classe `JpaCustomerRepository`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h29m44s269.jpg" alt="" width="840">
+</p>
+
+É criada a classe `JpaCustomerRepository`, dentro do pacote `repository`, que será a implementação do `CustomerRepository` voltada para o banco relacional via JPA.
+
+#### Esqueleto inicial de `JpaCustomerRepository`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h38m39s263.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.marketplace.registration.infrastructure.persistence.repository;
+
+import dio.marketplace.registration.domain.Customer;
+import dio.marketplace.registration.domain.CustomerRepository;
+
+import java.util.List;
+
+public class JpaCustomerRepository implements CustomerRepository {
+    @Override
+    public Customer save(Customer customer) {
+        return null;
+    }
+
+    @Override
+    public List<Customer> findAll() {
+        return List.of();
+    }
+}
+```
+
+A IDE gera automaticamente o esqueleto da classe `JpaCustomerRepository`, implementando `CustomerRepository` com os métodos `save` e `findAll` ainda vazios (retornando `null` e uma lista vazia, respectivamente). Esses métodos serão implementados de fato mais adiante.
+
+#### Criando o arquivo `compose.yml`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h39m26s614.jpg" alt="" width="840">
+</p>
+
+Para ter um banco de dados disponível, o instrutor decide utilizar o **Docker**: uma ferramenta que permite instanciar serviços dentro de contêineres — abstrações leves de Linux que rodam na máquina local. É criado um novo arquivo `compose.yml` na raiz do projeto.
+
+#### Definindo o serviço de banco de dados no `compose.yml`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h41m44s073.jpg" alt="" width="840">
+</p>
+
+```yaml
+services:
+  registration-database:
+    image: mysql:9.6
+    environment:
+      MYSQL_DATABASE: registration
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app
+    ports:
+      - "3307:3306"
+    volumes:
+      - registration_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uapp", "-papp" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  registration_data:
+```
+
+O serviço `registration-database` usa a imagem **MySQL 9.6**, define variáveis de ambiente para o nome do banco, usuário e senha, mapeia a porta padrão do MySQL (3306) para a porta local 3307 — evitando conflito com uma instalação local do MySQL — e usa um **volume** para persistir os dados em disco entre reinicializações do contêiner. O **healthcheck** verifica a cada 5 segundos se o contêiner está saudável, considerando-o instável após 5 tentativas falhas.
+
+#### Suporte do Spring Boot ao Docker Compose
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h47m00s650.jpg" alt="" width="840">
+</p>
+
+No `build.gradle`, é adicionada a dependência `developmentOnly 'org.springframework.boot:spring-boot-docker-compose'`. Essa biblioteca do Spring Boot permite que o próprio framework detecte o arquivo `compose.yml`, suba os contêineres automaticamente ao iniciar a aplicação, aguarde que fiquem saudáveis e configure sozinho a conexão com o banco de dados, sem necessidade de configuração manual adicional.
+
+#### Adicionando o Spring Data JPA e o driver do MySQL
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h48m23s099.jpg" alt="" width="840">
+</p>
+
+Ainda no `build.gradle`, é adicionada a dependência `implementation 'org.springframework.boot:spring-boot-starter-data-jpa'` — a primeira dependência específica do **Spring Data**, voltada para bancos relacionais via JPA. Como o banco utilizado é o MySQL, também é necessário um driver de conexão específico para ele.
+
+#### Subindo a aplicação pela primeira vez
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-09h51m03s672.jpg" alt="" width="840">
+</p>
+
+Com as dependências configuradas, o instrutor aguarda a importação do projeto terminar e inicia a classe principal `MarketplaceApplication`, para verificar se o contêiner do banco sobe automaticamente e se a aplicação consegue se conectar a ele.
+
+#### Log de inicialização: contêiner e conexão com o banco
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-10h08m54s489.jpg" alt="" width="840">
+</p>
+
+```
+Starting MarketplaceApplication using Java 25.0.1
+No active profile set, falling back to 1 default profile: "default"
+Docker Compose file '.../compose.yml'
+Container marketplace-registration-database-1 Creating
+Container marketplace-registration-database-1 Created
+Container marketplace-registration-database-1 Starting
+Container marketplace-registration-database-1 Waiting
+Container marketplace-registration-database-1 Healthy
+HikariPool-1 - Starting...
+HikariPool-1 - Added connection
+HikariPool-1 - Start completed.
+HHH000490: Using JtaPlatform implementation: ...
+Started MarketplaceApplication in 9.323 seconds
+Shutting down DeltaManagerRegistryFactoryBean
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
+Process finished with exit code 0
+```
+
+O log confirma que o Spring Boot detecta o `compose.yml`, cria e sobe automaticamente o contêiner do banco, aguarda até que ele fique saudável (*Healthy*) e só então conecta a aplicação a ele através do pool de conexões **HikariCP**. Como ainda não há nenhum servidor web mantendo a aplicação ativa, ela se conecta, confirma que está tudo certo e encerra logo em seguida.
+
+#### Detalhes da conexão JDBC estabelecida
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-10h16m04s537.jpg" alt="" width="840">
+</p>
+
+O console mostra as informações da conexão já estabelecida com o banco: driver **MySQL Connector/J**, dialeto **MySQLDialect**, versão do banco 9.6, isolamento `REPEATABLE_READ`, entre outros detalhes. Isso confirma que o Spring Data já identificou o banco pela imagem do contêiner e configurou a conexão automaticamente, sem esforço manual de configuração.
+
+#### Adicionando Spring Web e Actuator
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h35m55s655.jpg" alt="" width="840">
+</p>
+
+São adicionadas mais duas dependências ao `build.gradle`: `spring-boot-starter-web`, para permitir a criação de controllers e o acesso a um servidor web dentro da aplicação, e `spring-boot-starter-actuator`, ferramenta do Spring Boot que disponibiliza endpoints como o de *health check*, permitindo verificar se a aplicação está de pé e corretamente conectada ao banco.
+
+#### Aplicação em execução com o Tomcat ativo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h43m08s111.jpg" alt="" width="840">
+</p>
+
+Com o Spring Boot Web adicionado, a aplicação sobe, conecta-se novamente ao banco e, dessa vez, permanece ativa: o log mostra o servidor **Tomcat** iniciado, o que mantém a aplicação de pé em vez de encerrar como antes.
+
+#### Painel Health do Actuator na IDE
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h43m31s490.jpg" alt="" width="840">
+</p>
+
+Na aba **Health** do painel de execução do IntelliJ, já é possível visualizar algumas informações fornecidas pelo Actuator, como os grupos `liveness` e `readiness` e o status geral da aplicação.
+
+#### Endpoint `/actuator/health` no navegador
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h43m50s211.jpg" alt="" width="840">
+</p>
+
+Acessando `localhost:8080/actuator/health` diretamente no navegador, o retorno é `{"groups":["liveness","readiness"],"status":"UP"}`. São poucas informações neste momento, mas já confirmam que o Actuator está disponível e a aplicação está saudável.
+
+#### Configurando detalhes do health check e do Docker Compose
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h49m50s597.jpg" alt="" width="840">
+</p>
+
+No `application.properties`, são adicionadas duas configurações:
+
+```properties
+spring.application.name=marketplace
+management.endpoint.health.show-details=always
+spring.docker.compose.lifecycle-management=start-only
+```
+
+`management.endpoint.health.show-details=always` faz com que o endpoint de *health* exiba mais detalhes, incluindo a conexão com o banco. Já `spring.docker.compose.lifecycle-management=start-only` evita que o Spring Boot derrube o contêiner a cada vez que a aplicação é encerrada — o contêiner sobe uma única vez e permanece disponível nas execuções seguintes, o que agiliza o ciclo de desenvolvimento.
+
+#### Health check com mais detalhes (JSON não formatado)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h50m29s830.jpg" alt="" width="840">
+</p>
+
+Voltando ao endpoint `/actuator/health` no navegador, agora com mais detalhes habilitados, o retorno passa a incluir o componente `db`, confirmando que o banco de dados está saudável (`status: UP`), além de outras informações como espaço em disco e SSL.
+
+#### Health check com JSON formatado (pretty-print)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h50m40s154.jpg" alt="" width="840">
+</p>
+
+Com a opção *Pretty-print* marcada no navegador, o mesmo retorno do endpoint de *health* fica formatado de maneira legível, deixando claro cada componente monitorado (`db`, `diskSpace`, `livenessState`, `ping`, `readinessState`, `ssl`) e o status geral `UP` da aplicação.
+
+#### Configurando criação automática do banco pelo Hibernate
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h52m55s721.jpg" alt="" width="840">
+</p>
+
+Novas configurações são adicionadas ao `application.properties`:
+
+```properties
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+```
+
+A ideia, a partir daqui, é criar entidades que representem a abstração das tabelas do banco de dados. Com `ddl-auto=create`, o **Hibernate** (implementação do JPA) cria automaticamente a estrutura do banco a partir dessas entidades, sem a necessidade de escrever SQL manualmente — prática ágil para desenvolvimento, mas não recomendada para produção, onde o ideal é trabalhar com ferramentas de *data migration*, como Flyway ou Liquibase. Já `show-sql=true` exibe no console os comandos SQL executados pela aplicação.
+
+#### Site oficial do Project Lombok
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h53m43s758.jpg" alt="" width="840">
+</p>
+
+Para agilizar o desenvolvimento, o instrutor apresenta o **Project Lombok**, biblioteca Java que se integra ao editor e à ferramenta de build, permitindo gerar automaticamente métodos como *getters*, *setters* e construtores, sem a necessidade de escrevê-los manualmente.
+
+#### Plugin do Gradle para o Lombok
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h54m00s737.jpg" alt="" width="840">
+</p>
+
+Na página do plugin **`io.freefair.lombok`** (Gradle Plugin Portal), é copiada a linha de configuração do plugin para ser adicionada ao `build.gradle` do projeto, viabilizando o uso do Lombok.
+
+#### Plugin do Lombok adicionado ao `build.gradle`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h54m59s310.jpg" alt="" width="840">
+</p>
+
+O plugin do Lombok é colado no bloco `plugins` do `build.gradle`, junto aos demais plugins já existentes (`java`, `org.springframework.boot`, `io.spring.dependency-management`).
+
+#### Criando a entidade `Customer`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-12h55m18s947.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `entity`, é criada a primeira entidade JPA do projeto, também chamada `Customer` — reforçando que ela é diferente da classe de domínio de mesmo nome, criada anteriormente. Essa entidade será a responsável por representar a tabela no banco de dados.
+
+#### Estrutura inicial da entidade `Customer`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h11m14s824.jpg" alt="" width="840">
+</p>
+
+```java
+@Entity
+@Data
+@RequiredArgsConstructor
+public class Customer {
+    @Id
+    private UUID id;
+
+    private String firstName;
+    private String lastName;
+    private String email;
+    private Instant createdOn;
+}
+```
+
+A entidade recebe a anotação `@Entity` do próprio JPA e as anotações `@Data` e `@RequiredArgsConstructor` do Lombok, que geram automaticamente getters, setters, construtores e `toString`. São definidos os campos `id`, `firstName`, `lastName`, `email` e `createdOn`, representando as colunas da tabela `customer` no banco.
+
+#### Adicionando o Spring Boot Validation
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h13m07s244.jpg" alt="" width="840">
+</p>
+
+É adicionada ao `build.gradle` a dependência `implementation 'org.springframework.boot:spring-boot-starter-validation'`, que permitirá aplicar validações declarativas nos campos da entidade, como a obrigatoriedade de preenchimento de determinados atributos.
+
+#### Entidade `Customer` com validações e ajustes finais
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h16m55s763.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.marketplace.registration.infrastructure.persistence.entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.Instant;
+import java.util.UUID;
+
+@Entity
+@Data
+@RequiredArgsConstructor
+public class Customer {
+    @Id
+    private UUID id;
+
+    @NotBlank
+    @Column(nullable = false)
+    private String firstName;
+    private String lastName;
+
+    @NotBlank
+    @Email
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @CreationTimestamp
+    @Column(nullable = false, updatable = false)
+    private Instant createdOn;
+}
+```
+
+A entidade é ajustada: a geração automática do `id` é removida (o `CustomerId` já é gerado pela própria aplicação, via `UUID`), e são acrescentadas validações — `@NotBlank` e `@Column(nullable = false)` no `firstName`; `@NotBlank`, `@Email` e `@Column(nullable = false, unique = true)` no `email`. O campo `createdOn` recebe `@CreationTimestamp`, que preenche automaticamente a data de criação, e `@Column(nullable = false, updatable = false)`, impedindo que esse valor seja alterado após a persistência.
+
+#### Hibernate criando a estrutura do banco
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h21m21s232.jpg" alt="" width="840">
+</p>
+
+Com a marcação `ddl-auto=create` já configurada, ao subir a aplicação novamente o **Hibernate** identifica a entidade `Customer` e cria automaticamente a estrutura correspondente no banco de dados, sem a necessidade de scripts SQL manuais nesta fase de desenvolvimento.
+
+#### Criando a interface `CustomerEntityRepository`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h24m03s703.jpg" alt="" width="840">
+</p>
+
+Enquanto a aplicação sobe, é criada a interface `CustomerEntityRepository`, no pacote `repository`, que será a base da implementação concreta de acesso ao banco de dados.
+
+#### `CustomerEntityRepository` estendendo `CrudRepository`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h27m03s421.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.marketplace.registration.infrastructure.persistence.repository;
+
+import dio.marketplace.registration.infrastructure.persistence.entity.Customer;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.UUID;
+
+public interface CustomerEntityRepository extends CrudRepository<Customer, UUID> {
+}
+```
+
+Ao estender `CrudRepository<Customer, UUID>` — interface do Spring Data que já disponibiliza operações completas de CRUD (*create, read, update, delete*) — a interface `CustomerEntityRepository` ganha automaticamente métodos como `save`, `findAll`, `deleteById`, `existsById`, entre muitos outros, sem que seja necessário implementar nada manualmente.
+
+#### Injetando o `CustomerEntityRepository` via construtor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h28m51s518.jpg" alt="" width="840">
+</p>
+
+Na classe `JpaCustomerRepository`, é adicionado um atributo `private final CustomerEntityRepository customerEntityRepository`, recebido por parâmetro no construtor da classe. Essa é a base para a **injeção de dependência**: o Spring será responsável por fornecer automaticamente essa dependência quando a classe for instanciada.
+
+#### Anotando `JpaCustomerRepository` com `@Repository`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h30m42s431.jpg" alt="" width="840">
+</p>
+
+É adicionada a anotação `@Repository` acima da classe `JpaCustomerRepository`. Essa anotação — assim como `@Service` e `@Component` — faz parte do mecanismo de injeção de dependência e inversão de controle do Spring, permitindo que a aplicação identifique essa classe como a implementação concreta a ser utilizada onde a interface `CustomerRepository` for requisitada.
+
+#### Iniciando a implementação do método `save`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h31m55s871.jpg" alt="" width="840">
+</p>
+
+Dentro do método `save`, começa a ser escrita a conversão do `Customer` de domínio para a entidade JPA, através da chamada `var entity = mapper(customer);` — o próximo passo será implementar esse método `mapper` responsável por essa transformação.
+
+#### Implementação do método `mapper` (domínio → entidade)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h37m48s219.jpg" alt="" width="840">
+</p>
+
+```java
+private static dio.marketplace.registration.infrastructure.persistence.entity.Customer mapper(Customer customer) {
+    var entity = new dio.marketplace.registration.infrastructure.persistence.entity.Customer();
+
+    entity.setId(customer.getId().id());
+    entity.setFirstName(customer.getName());
+    entity.setEmail(customer.getEmail());
+
+    return entity;
+}
+```
+
+O método `mapper` recebe o `Customer` de domínio e monta uma nova instância da entidade JPA, copiando o `id` (extraído do `record CustomerId`), o nome e o e-mail. Assim, o domínio e a entidade de persistência permanecem desacoplados, mesmo compartilhando os mesmos dados.
+
+#### Adicionando `@Getter` na classe de domínio `Customer`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h39m00s618.jpg" alt="" width="840">
+</p>
+
+Como a classe de domínio `Customer` ainda não possuía métodos *getters*, o instrutor adiciona a anotação `@Getter`, do Lombok, que gera automaticamente `getId()`, `getName()` e `getEmail()`, necessários para o método `mapper` acessar os dados do `Customer`.
+
+#### Revisando a conversão de domínio para entidade
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h39m55s861.jpg" alt="" width="840">
+</p>
+
+Com o `@Getter` aplicado, o método `mapper` da classe `JpaCustomerRepository` já consegue acessar corretamente `customer.getId().id()`, `customer.getName()` e `customer.getEmail()` para preencher os campos da entidade `Customer` de persistência.
+
+#### Implementando o `mapper` inverso (entidade → domínio)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h44m11s355.jpg" alt="" width="840">
+</p>
+
+É iniciada a implementação do `mapper` no sentido contrário, convertendo a entidade JPA de volta para o `Customer` de domínio, necessário para o método `findAll`.
+
+#### `mapper` completo: unindo `firstName` e `lastName`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h46m01s278.jpg" alt="" width="840">
+</p>
+
+```java
+private static Customer mapper(dio.marketplace.registration.infrastructure.persistence.entity.Customer entity) {
+    String fullName = Optional.ofNullable(entity.getLastName())
+            .map(lastName -> entity.getFirstName() + " " + lastName)
+            .orElseGet(entity::getFirstName);
+
+    return new Customer(new CustomerId(entity.getId()), fullName, entity.getEmail());
+}
+```
+
+Esse `mapper` ilustra bem a diferença entre entidade e domínio: enquanto a entidade separa `firstName` e `lastName`, a classe de domínio `Customer` possui apenas o atributo `name`. Usando `Optional`, o código concatena sobrenome ao nome quando ele existir, ou usa apenas o primeiro nome caso contrário, retornando então um novo `Customer` de domínio a partir do `CustomerId`, do nome completo montado e do e-mail.
+
+#### Finalizando o método `save`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h51m37s498.jpg" alt="" width="840">
+</p>
+
+```java
+@Override
+public Customer save(Customer customer) {
+    var entity = mapper(customer);
+    customerEntityRepository.save(entity);
+    return customer;
+}
+```
+
+O método `save` fica completo: converte o `Customer` de domínio para a entidade através do `mapper`, persiste a entidade usando o `customerEntityRepository` (herdado do `CrudRepository`) e retorna o próprio `customer` recebido, já que não houve nenhuma alteração nele durante o processo.
+
+#### Implementando o método `findAll`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h55m11s649.jpg" alt="" width="840">
+</p>
+
+```java
+@Override
+public List<Customer> findAll() {
+    var iterable = customerEntityRepository.findAll();
+
+    return StreamSupport.stream(iterable.spliterator(), false)
+            .map(JpaCustomerRepository::mapper)
+            .toList();
+}
+```
+
+O `findAll()` do `CrudRepository` retorna um `Iterable` de entidades. Esse iterável é transformado em uma `Stream` com `StreamSupport.stream`, permitindo aplicar o `mapper` (no sentido entidade → domínio) a cada item e, por fim, convertê-los em uma `List<Customer>` de domínio com `toList()`.
+
+#### Consultando a tabela `customer` no banco de dados
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-15-13h57m11s880.jpg" alt="" width="840">
+</p>
+
+Com a aplicação em execução e já conectada ao banco, o painel **Database** do IntelliJ permite acessar diretamente a tabela `customer` criada pelo Hibernate, confirmando visualmente a estrutura persistida — com colunas como `id` (binário), `email`, `first_name`, `last_name` e `created_on`. Com o `save` e o `findAll` implementados, além de tudo o que o `CrudRepository` já disponibiliza por padrão, a conexão entre a API e o banco de dados através do Spring Data está funcionando de ponta a ponta.
+   
 
 
 ### 🟩 Vídeo 03 - Criando a API REST para Customers
@@ -168,7 +849,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/2d8650ae-24db-445f-8ace-9e2be8acd60a?autoplay=1
 
 ### 🟩 Vídeo 05 - Multi-Database com Docker
 
@@ -177,7 +858,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/8bc989da-d704-412a-904d-a3162da4eb4f?autoplay=1
+
+
 
 ### 🟩 Vídeo 06 - Criando Endpoints Customizados
 
