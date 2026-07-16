@@ -896,7 +896,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/724e6f38-489f-4559-9a22-c0d2793c4cd8?autoplay=1
 
 ### 🟩 Vídeo 07 - Implementando Redis com Spring Data
 
@@ -905,7 +905,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/55a501a0-f3f4-449c-bca4-ae2862063fda?autoplay=1
 
 ### 🟩 Vídeo 08 - Comunicação entre Microsserviços
 
