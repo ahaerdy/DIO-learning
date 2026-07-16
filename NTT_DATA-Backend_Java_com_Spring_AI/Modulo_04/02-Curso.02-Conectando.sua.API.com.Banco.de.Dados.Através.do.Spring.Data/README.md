@@ -856,7 +856,6 @@ Com a aplicação em execução e já conectada ao banco, o painel **Database** 
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/marketplace_ate_o_video_02.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_02.zip)
-
 - [001-Tutorial_Marketplace_Java_Spring_Data_Videos01a02](./001-Tutorial_Marketplace_Java_Spring_Data_Videos01a02.md)
 
 ### 🟩 Vídeo 03 - Criando a API REST para Customers
