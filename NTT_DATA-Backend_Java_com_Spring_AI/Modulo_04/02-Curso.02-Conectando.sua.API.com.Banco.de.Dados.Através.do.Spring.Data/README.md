@@ -914,7 +914,8 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/7dbcac03-57b6-4066-a388-1f77910bd509?autoplay=1
+
 
 ### 🟩 Vídeo 09 - Implementando Persistência com Postgres
 
@@ -923,7 +924,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/0345270c-911c-46c1-be50-550e11fc4576?autoplay=1
+
+
 
 ### 🟩 Vídeo 10 - Evitando Overbooking
 
