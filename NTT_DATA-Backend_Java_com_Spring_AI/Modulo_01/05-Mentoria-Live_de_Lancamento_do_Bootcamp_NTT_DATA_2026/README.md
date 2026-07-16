@@ -57,6 +57,16 @@ A NTT DATA reforça que o bootcamp não é apenas uma trilha de estudos, mas uma
 
 ---
 
+#### Sobre as Entrevistas
+
+Nas entrevistas de contratação, especialmente para perfis iniciantes (júnior) ou em transição de carreira, o instrutor e executivo Wallace Delfino explicou que prefere não focar em perguntas técnicas decoradas ou desafios de código complexos (como o "LeetCode"), mas sim em entender o raciocínio e a curiosidade do candidato. De acordo com as fontes, ele costuma perguntar e explorar os seguintes pontos:
+
+  - Resolução de problemas em projetos: Ele se interessa em discutir projetos que o candidato realizou por curiosidade ou necessidade. As perguntas centrais são: "qual era o problema que você tinha?", "como você resolveu esse problema?" e "qual foi a linha de raciocínio que você utilizou?".
+  - Uso de Inteligência Artificial: Wallace também explora como o candidato encara a tecnologia de IA, perguntando: "quais ferramentas você já usou?", "como você já usou?" e "qual é a sua visão sobre o tema?". Ele ressalta que não existe uma resposta certa para essas perguntas, pois o objetivo é entender como a pessoa trabalha com as ferramentas disponíveis,.
+  - Conhecimentos básicos e fundamentos: Ele costuma explorar conhecimentos básicos para entender se a fundamentação teórica na cabeça da pessoa é sólida, o que ele considera essencial para o desenvolvimento futuro do profissional. Em resumo, o foco de Wallace é identificar pessoas que saibam resolver problemas e que demonstrem curiosidade e capacidade de aprendizado, avaliando muito mais o conjunto de habilidades pessoais (soft skills) do que apenas o domínio de ferramentas específicas,.
+
+---
+
 #### Cultura e Onboarding na NTT DATA
 
 * **"Júnior é Júnior":** A empresa não espera experiência prévia de quem está começando, mas espera fundamentação teórica e vontade de aprender.
