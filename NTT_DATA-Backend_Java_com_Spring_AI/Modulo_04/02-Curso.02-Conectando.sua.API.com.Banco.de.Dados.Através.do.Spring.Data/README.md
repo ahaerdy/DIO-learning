@@ -982,14 +982,6 @@ public interface CustomerEntityRepository extends
 
 Com essa combinação, a API de customers passa a suportar filtros de **página**, **tamanho de página** e **ordenação** automaticamente.
 
-#### Aplicação reiniciada com paginação disponível
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-19-12h50m29s444.jpg" alt="" width="840">
-</p>
-
-Novo log de subida do Spring Boot, confirmando que a aplicação foi reiniciada com sucesso após a inclusão do `PagingAndSortingRepository`, deixando o endpoint de customers pronto para receber parâmetros de paginação e ordenação.
-
 #### Abrindo o HTTP Client da IDE
 
 <p align="center">
