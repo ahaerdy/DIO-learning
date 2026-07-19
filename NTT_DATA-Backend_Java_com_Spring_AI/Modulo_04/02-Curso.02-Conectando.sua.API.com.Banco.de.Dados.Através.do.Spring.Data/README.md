@@ -1867,7 +1867,7 @@ No console de debug da aplicação, aparece o log gerado pelo `CustomerEventHand
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/marketplace_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_03.zip)
-- [001-Tutorial_Marketplace_Java_Spring_Data_Video03](./001-Tutorial_Marketplace_Java_Spring_Data_Video03.md)
+- [002-Tutorial_Marketplace_Java_Spring_Data_Video03](./002-Tutorial_Marketplace_Java_Spring_Data_Video03.md)
 
 ### 🟩 Vídeo 04 - Flexibilidade com NoSQL
 
