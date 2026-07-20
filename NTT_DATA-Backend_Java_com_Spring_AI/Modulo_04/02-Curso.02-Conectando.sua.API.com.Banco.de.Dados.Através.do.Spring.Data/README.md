@@ -2497,7 +2497,7 @@ link do vídeo:
 
 ### Arquivos do Projeto
 
-- Até o vídeo 02: [./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_02.zip)(./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_02.zip)
+- Até o vídeo 02: [./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_02.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_02.zip)
 - Até o vídeo 03: [./000-Midia_e_Anexos/marketplace_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_03.zip)
 - Até o vídeo 04: [./000-Midia_e_Anexos/marketplace_ate_o_video_04.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_04.zip)
 - Até o vídeo 05: [./000-Midia_e_Anexos/marketplace_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_05.zip)
