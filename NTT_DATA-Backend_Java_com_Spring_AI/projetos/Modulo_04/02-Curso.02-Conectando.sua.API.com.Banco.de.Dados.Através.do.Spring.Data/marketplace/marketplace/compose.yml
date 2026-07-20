@@ -33,6 +33,15 @@ services:
       timeout: 5s
       retries: 3
 
+  catalog-metadata-database:
+    image: mongo:7.0
+    container_name: marketplace-catalog-metadata-database-1
+    ports:
+      - "27018:27017"
+    volumes:
+      - catalog-metadata-data:/data/db
+
 volumes:
   registration_data:
   catalog_data:
+  catalog-metadata-data:
