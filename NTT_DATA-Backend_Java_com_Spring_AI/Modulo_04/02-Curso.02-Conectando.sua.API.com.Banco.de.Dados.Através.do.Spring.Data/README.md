@@ -2420,6 +2420,476 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
+#### Abertura da aula — slide de título
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-12h19m52s088.jpg" alt="" width="840">
+</p>
+
+Slide de abertura do módulo "Jornada Tech", com o título **"Conectando sua API com Banco de Dados Através do Spring Data"**. O sumário lateral apresenta cinco tópicos: introdução ao conectar sua API, modelagem SQL e NoSQL, criação da API REST para Customers, flexibilidade com NoSQL e aplicações práticas — este último item em destaque, indicando que é o ponto de partida da apresentação.
+
+
+#### Adicionando o serviço do MongoDB no `compose.yml`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-13h29m34s382.jpg" alt="" width="840">
+</p>
+
+No `compose.yml`, é adicionado um novo serviço `catalog-metadata-database`, com um healthcheck baseado em `mongosh` para verificar se o banco responde ao comando `ping`, e um bloco `volumes` com três volumes nomeados: `registration_data`, `catalog_data` e `metadata_data` — este último reservado para o novo banco MongoDB.
+
+```yaml
+    catalog-metadata-database:
+      # ...
+      healthcheck:
+        test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+        interval: 5s
+        timeout: 5s
+        retries: 3
+
+volumes:
+  registration_data:
+  catalog_data:
+  metadata_data:
+```
+
+Ao lado, o painel de debug mostra a aplicação já em execução na porta 8080, com eventos de criação, atualização e remoção sendo logados normalmente pelos listeners já existentes.
+
+
+#### Subindo o container do MongoDB
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-13h32m54s081.jpg" alt="" width="840">
+</p>
+
+Detalhe completo do serviço `catalog-metadata-database`: imagem `mongo:8.2`, porta mapeada `27018:27017` e volume `metadata_data:/data/db`.
+
+```yaml
+catalog-metadata-database:
+  image: mongo:8.2
+  ports:
+    - "27018:27017"
+  volumes:
+    - metadata_data:/data/db
+  healthcheck:
+    test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+    interval: 5s
+    timeout: 5s
+    retries: 3
+```
+
+No painel de serviços do Docker, o container `marketplace-catalog-metadata-database-1` já aparece com o status **healthy**, confirmando que o MongoDB subiu corretamente através do suporte a Docker Compose do Spring Boot.
+
+
+#### Adicionando a dependência do Spring Data MongoDB
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-13h37m18s550.jpg" alt="" width="840">
+</p>
+
+No `build.gradle`, é incluída a dependência do Spring Data MongoDB, ao lado das dependências já existentes para JPA, Web, Actuator, Validation e Data REST.
+
+```gradle
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.data:spring-data-rest-hal-explorer'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+}
+```
+
+No console de debug, os logs já mostram o driver do MongoDB sendo inicializado e conectado ao cluster, confirmando que a configuração automática do Spring Data MongoDB foi reconhecida assim que a aplicação foi reiniciada.
+
+
+#### Habilitando repositórios Mongo e auditoria na configuração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-13h52m56s972.jpg" alt="" width="840">
+</p>
+
+Na classe `CatalogConfiguration`, além da configuração já existente de `@EnableJpaRepositories` (usada para o banco relacional do catálogo), são adicionadas as anotações `@EnableMongoRepositories` e `@EnableMongoAuditing`, que habilitam o suporte a repositórios Mongo e a anotações de auditoria (como datas de criação e atualização) para os documentos MongoDB.
+
+```java
+@Configuration(proxyBeanMethods = false)
+@EnableJpaRepositories(basePackages = "dio.marketplace.catalog",
+        entityManagerFactoryRef = "catalogEntityManagerFactory",
+        transactionManagerRef = "catalogTransactionManager")
+@EnableMongoRepositories
+@EnableMongoAuditing
+public class CatalogConfiguration {
+    // ...
+}
+```
+
+
+#### Criando a classe/documento EventMetadata
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-13h53m23s140.jpg" alt="" width="840">
+</p>
+
+Pela caixa de diálogo "New Java Class" do IntelliJ, é criada a nova classe `EventMetadata`, dentro do pacote `infrastructure.persistence.entity`, como um `Class` comum — ao lado da entidade `Event` já existente. Diferente das entidades JPA, este documento representará dados no MongoDB.
+
+
+#### Código completo da classe EventMetadata
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-14h02m51s878.jpg" alt="" width="840">
+</p>
+
+Código completo da classe `EventMetadata`, um documento MongoDB anotado com `@Document`, `@Data` (Lombok) e `@RequiredArgsConstructor`. Ela representa o evento de forma bem mais flexível do que a entidade relacional: o campo `technicalRequirements` é um `Map<String, Object>` genérico, o que permite guardar qualquer tipo de informação extra (idade mínima, quantidade de bebidas, etc.) sem alterar a estrutura da classe. Também há listas de setores (`Sector`) e assentos (`Seat`), modeladas como classes internas estáticas.
+
+```java
+package dio.marketplace.registration.infrastructure.persistence.entity;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+
+import java.math.BigDecimal;
+import java.time.Instant;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+@Data
+@Document
+@RequiredArgsConstructor
+public class EventMetadata {
+    @Id
+    private String id;
+
+    @NotNull
+    private UUID eventId;
+
+    private String eventDescription;
+
+    private Map<String, Object> technicalRequirements;
+
+    private List<Sector> sectors;
+
+    private List<Seat> seats;
+
+    @CreatedDate
+    private Instant createdOn;
+
+    @LastModifiedDate
+    private Instant updatedAt;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Sector {
+        private String name;
+        private BigDecimal price;
+    }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Seat {
+        private String code;
+        private String sectorName;
+    }
+}
+```
+
+
+#### Configurando o UUID representation do Mongo no application.properties
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-14h36m58s760.jpg" alt="" width="840">
+</p>
+
+No `application.properties`, ao lado das configurações já existentes para os data sources de `registration` e `catalog` (MySQL), é adicionada a propriedade `spring.mongodb.representation.uuid=standard`. Sem essa configuração, o Spring não sabe fazer corretamente o mapeamento de UUIDs entre a forma como eles são persistidos e a forma como são lidos do MongoDB.
+
+```properties
+# Catalog (MySQL 3308)
+catalog.datasource.url=jdbc:mysql://localhost:3308/catalog
+catalog.datasource.username=app
+catalog.datasource.password=app
+catalog.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+catalog.jpa.properties.hibernate.hbm2ddl.auto=create
+
+spring.mongodb.representation.uuid=standard
+```
+
+No painel inferior, os serviços Docker mostram o volume `marketplace_metadata_data` sendo criado e o container `marketplace-catalog-metadata-database-1` iniciado, enquanto os demais containers são parados para reiniciar a aplicação sem conflito de portas.
+
+
+#### Criando o repositório EventMetadataEntityRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-14h38m00s236.jpg" alt="" width="840">
+</p>
+
+Com o `application.properties` completo (configurações de `registration` e `catalog` lado a lado), é aberta a caixa de diálogo "New Java Class" para criar a interface `EventMetadataEntityRepository`, dentro do pacote `repository`, seguindo a mesma estrutura já usada para os demais repositórios da aplicação.
+
+```properties
+spring.application.name=marketplace
+management.endpoint.health.show-details=always
+spring.docker.compose.lifecycle-management=start-only
+
+# Registration (MySQL 3307)
+registration.datasource.url=jdbc:mysql://localhost:3307/registration
+registration.datasource.username=app
+registration.datasource.password=app
+registration.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+registration.jpa.properties.hibernate.hbm2ddl.auto=update
+```
+
+
+#### Consultando o Actuator Health (visão compacta)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-14h42m48s890.jpg" alt="" width="840">
+</p>
+
+No navegador, o endpoint `localhost:8080/actuator/health` é consultado sem formatação (pretty-print desativado). A resposta já mostra os três componentes de banco de dados ativos e saudáveis: `catalogDataSource` e `registrationDataSource` (ambos MySQL) dentro de `db`, além do componente `mongo`, todos com status `"UP"`.
+
+
+#### Consultando o Actuator Health (visão formatada)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-14h49m02s940.jpg" alt="" width="840">
+</p>
+
+Mesma consulta ao Actuator, agora com "Pretty-print" habilitado. É possível ver com mais clareza a estrutura da resposta: o componente `db` agrupa `catalogDataSource` e `registrationDataSource`; o componente `mongo` mostra os bancos disponíveis (`admin`, `config`, `local`) e a versão do protocolo (`maxWireVersion: 27`); além disso aparecem os componentes `diskSpace`, `livenessState`, `ping` e `readinessState`, todos reportando status `UP`.
+
+```json
+{
+  "components": {
+    "db": {
+      "components": {
+        "catalogDataSource": { "details": { "database": "MySQL", "validationQuery": "isValid()" }, "status": "UP" },
+        "registrationDataSource": { "details": { "database": "MySQL", "validationQuery": "isValid()" }, "status": "UP" }
+      },
+      "status": "UP"
+    },
+    "mongo": {
+      "details": { "databases": ["admin", "config", "local"], "maxWireVersion": 27 },
+      "status": "UP"
+    }
+  }
+}
+```
+
+
+#### Explorando os links disponíveis no HAL Explorer
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-14h49m28s370.jpg" alt="" width="840">
+</p>
+
+No HAL Explorer, a raiz da API agora expõe quatro relações: `eventMetadatas`, `customers`, `events` e `profile`. O link `eventMetadatas` é a referência recém-criada para o novo repositório MongoDB, apontando para `http://localhost:8080/eventMetadatas{?page,size,sort*}`.
+
+
+#### Detalhe do link eventMetadatas no HAL Explorer
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h02m00s285.jpg" alt="" width="840">
+</p>
+
+Ainda na tela inicial do HAL Explorer, o cursor está posicionado sobre o botão de ação ao lado do link `eventMetadatas`, prestes a ser usado para montar uma nova requisição a partir dessa referência que acabou de ser criada.
+
+
+#### Montando um cadastro de evento pelo HAL Explorer
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h02m35s687.jpg" alt="" width="840">
+</p>
+
+Formulário de criação de um `EventMetadata` via HAL Explorer, com requisição `POST` para `http://localhost:8080/eventMetadatas`. Os campos disponíveis no JSON Schema são: Created on, Event description, Event id, Seats, Sectors, Technical requirements e Updated at. Apenas `eventDescription` (preenchido como "Descricao") e `eventId` (um UUID qualquer) são informados manualmente — os campos que são listas ou objetos (`seats`, `sectors`, `technicalRequirements`) não são preenchidos por esse formulário, por não serem simples o suficiente para a interface do HAL Explorer.
+
+```json
+{
+  "eventId": "a842359f-aa1f-4327-80f2-fce89c31d53e",
+  "eventDescription": "Descricao"
+}
+```
+
+
+#### Registro de evento criado com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h02m54s008.jpg" alt="" width="840">
+</p>
+
+A resposta da requisição confirma o status `201 (Created)`. O corpo retornado mostra o documento persistido, com `eventDescription: "Descricao"`, `eventId` preenchido e os campos `seats`, `sectors` e `technicalRequirements` como `null`, já que não foram enviados. Os links `self` e `eventMetadata` apontam para o novo recurso criado em `http://localhost:8080/eventMetadatas/69c9a485307560c32d72c922`.
+
+```json
+{
+  "createdOn": "2026-03-29T22:15:33.567589376Z",
+  "eventDescription": "Descricao",
+  "eventId": "a842359f-aa1f-4327-80f2-fce89c31d53e",
+  "seats": null,
+  "sectors": null,
+  "technicalRequirements": null,
+  "updatedAt": "2026-03-29T22:15:33.567589376Z"
+}
+```
+
+
+#### Configurando a conexão com o MongoDB no IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h03m45s156.jpg" alt="" width="840">
+</p>
+
+Na janela "Data Sources and Drivers" do IntelliJ, é configurada uma conexão direta com o MongoDB para inspecionar os dados persistidos: driver MongoDB, host `localhost`, porta `27018` (a porta mapeada no `compose.yml`) e banco de dados `test`, que é o banco padrão usado quando nenhum outro é especificado explicitamente na configuração do Spring Data MongoDB.
+
+
+#### Visualizando a collection eventMetadata no banco
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h04m40s409.jpg" alt="" width="840">
+</p>
+
+Com a conexão estabelecida, é possível visualizar diretamente a collection `eventMetadata` dentro do banco `test`, contendo o registro recém-criado com seus campos `eventDescription`, `eventId` e `updatedAt`. No terminal, os logs confirmam a inicialização completa da aplicação e o funcionamento do driver MongoDB.
+
+
+#### Repositório com listeners de save e delete
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h05m49s675.jpg" alt="" width="840">
+</p>
+
+Código da interface `EventMetadataEntityRepository`, anotada com `@RepositoryRestResource(path = "event-metadata", collectionResourceRel = "eventMetadata")`. Ela sobrescreve os métodos `onAfterSave` e `onAfterDelete` — provenientes dos eventos do MongoDB (`AfterSaveEvent` e `AfterDeleteEvent`) — para registrar em log cada operação de salvamento ou remoção de um documento `EventMetadata`.
+
+```java
+package dio.marketplace.registration.infrastructure.persistence.repository;
+
+import dio.marketplace.registration.infrastructure.event.EventMetadataEventListener;
+import dio.marketplace.registration.infrastructure.persistence.entity.EventMetadata;
+import org.slf4j.LoggerFactory;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.core.mapping.event.AfterDeleteEvent;
+import org.springframework.data.mongodb.core.mapping.event.AfterSaveEvent;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+import java.util.logging.Logger;
+
+@RepositoryRestResource(path = "event-metadata", collectionResourceRel = "eventMetadata")
+public interface EventMetadataEntityRepository extends JpaRepository<EventMetadata, Long> {
+    private static final Logger logger = LoggerFactory.getLogger(EventMetadataEventListener.class);
+
+    @Override
+    public void onAfterSave(AfterSaveEvent<EventMetadata> event) {
+        logger.info("Event metadata save via onAfterSave {}", event.getDocument());
+    }
+
+    @Override
+    public void onAfterDelete(AfterDeleteEvent<EventMetadata> event) {
+        logger.info("Event metadata delete via onAfterDelete {}", event.getDocument());
+    }
+}
+```
+
+
+#### Preparando a requisição HTTP para cadastrar um evento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h17m32s835.jpg" alt="" width="840">
+</p>
+
+No cliente HTTP do IntelliJ (arquivo `rest-api_5.http`), é montada uma requisição `POST` para `http://localhost:8080/events`, usada de forma automatizada para cadastrar um evento de teste: o título é gerado com um número aleatório e a data usa o timestamp atual do momento da requisição.
+
+```http
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+  "title": "Evento Automático #{{$random.integer(1, 1000)}}",
+  "date": "{{$timestamp}}"
+}
+```
+
+
+#### Evento cadastrado e captura do seu identificador
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h17m44s158.jpg" alt="" width="840">
+</p>
+
+No painel de requisições HTTP, aparecem os históricos `rest-api_4` (GET, status 200) e `rest-api_5` (POST, status 201). A resposta da requisição de criação do evento traz os links `self` e `event`, ambos apontando para o novo recurso, além de `createdOn`, `date` e `title` ("Evento Automático #140"). O identificador único (UUID) desse evento será reaproveitado na próxima requisição, para vincular o `EventMetadata` a ele.
+
+```json
+{
+  "_links": {
+    "self": { "href": "http://localhost:8080/events/47f1be37-fd66-424a-bed7-c6c531e63ccf" },
+    "event": { "href": "http://localhost:8080/events/47f1be37-fd66-424a-bed7-c6c531e63ccf" }
+  },
+  "createdOn": "2026-03-29T22:18:57.216237Z",
+  "date": "2026-03-29T22:18:57Z",
+  "title": "Evento Automático #140"
+}
+```
+
+
+#### Montando o cadastro do EventMetadata vinculado ao evento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h18m13s859.jpg" alt="" width="840">
+</p>
+
+Nova requisição, agora `POST` para `http://localhost:8080/eventMetadatas`, usando o `eventId` copiado do evento criado anteriormente. O corpo já inclui uma `eventDescription` detalhada e um objeto `technicalRequirements` com pares chave-valor livres — exatamente a flexibilidade que o `Map<String, Object>` do documento MongoDB permite: informações como sistema de som, idade mínima e disponibilidade de passe de bastidores.
+
+```http
+POST http://localhost:8080/eventMetadatas
+Content-Type: application/json
+
+{
+  "eventId": "47f1be37-fd66-424a-bed7-c6c531e63ccf",
+  "eventDescription": "Turnê de despedida da banda X. Um show épico com 3 horas de duração.",
+  "technicalRequirements": {
+    "sound_system": "Line Array L-Acoustics",
+    "min_age": 16,
+    "backstage_pass_available": true
+  },
+```
+
+
+#### Definindo setores e assentos do evento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h18m29s077.jpg" alt="" width="840">
+</p>
+
+Continuação do corpo da mesma requisição, agora com as listas `sectors` (setores "Pista Premium", a R$ 450,00, e "Arquibancada", a R$ 200,00) e `seats` (assentos "PRE-01" vinculado à Pista Premium e "ARQ-10" vinculado à Arquibancada) — demonstrando como a estrutura de listas de objetos aninhados do `EventMetadata` é usada na prática.
+
+```json
+  "sectors": [
+    { "name": "Pista Premium", "price": 450.00 },
+    { "name": "Arquibancada", "price": 200.00 }
+  ],
+  "seats": [
+    { "code": "PRE-01", "sectorName": "Pista Premium" },
+    { "code": "ARQ-10", "sectorName": "Arquibancada" }
+  ]
+}
+```
+
+
+#### Estrutura final do documento no MongoDB
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-15h18m55s389.jpg" alt="" width="840">
+</p>
+
+Após o envio da requisição completa, o painel do banco mostra a collection `eventMetadata` agora com dois registros: o primeiro (criado anteriormente, mais simples) e o segundo já contendo `seats` e `sectors` preenchidos. No terminal, os logs confirmam a execução tanto do `EventListener` (criação do evento) quanto do `EventMetadataEventListener` (salvamento do metadata), exibindo o documento completo persistido — com `eventDescription`, `technicalRequirements`, `sectors` e `seats` já estruturados como listas e objetos dentro do MongoDB. Isso evidencia a principal vantagem do NoSQL neste cenário: cadastrar eventos de forma mais simples e flexível, sem exigir um esquema rígido predefinido.
 
 
 #### Material de Apoio Até Esta Etapa
@@ -2436,6 +2906,16 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/724e6f38-489f-4559-9a22-c0d2793c4cd8?autoplay=1
+
+### Anotações
+
+
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/marketplace_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_06.zip)
+- [005-Tutorial_Marketplace_Java_Spring_Data_Video06](./005-Tutorial_Marketplace_Java_Spring_Data_Video06.md)
+
 
 ### 🟩 Vídeo 07 - Implementando Redis com Spring Data
 
