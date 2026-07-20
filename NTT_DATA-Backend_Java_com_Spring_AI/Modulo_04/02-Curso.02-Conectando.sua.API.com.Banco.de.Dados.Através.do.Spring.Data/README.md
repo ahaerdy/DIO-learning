@@ -2485,24 +2485,22 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 12 - Questionário - Conectando sua API com Banco de Dados Através do Spring Data
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_12.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
 
 
 ### Tutoriais
 
 - [001-Tutorial_Marketplace_Java_Spring_Data_Videos01a02](./001-Tutorial_Marketplace_Java_Spring_Data_Videos01a02.md)
+- [002-Tutorial_Marketplace_Java_Spring_Data_Video03](./002-Tutorial_Marketplace_Java_Spring_Data_Video03.md)
+- [003-Tutorial_Marketplace_Java_Spring_Data_Video04](./003-Tutorial_Marketplace_Java_Spring_Data_Video04.md)
 
 
 ### Arquivos do Projeto
 
 - Até o vídeo 02: [./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_02.zip)(./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_02.zip).
+- Até o vídeo 03: [./000-Midia_e_Anexos/marketplace_ate_o_video_03.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_03.zip)
+- Até o vídeo 04: [./000-Midia_e_Anexos/marketplace_ate_o_video_04.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_04.zip)
+- Até o vídeo 05: [./000-Midia_e_Anexos/marketplace_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_05.zip)
+
 
 # Certificado: 
 
