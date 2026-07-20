@@ -2418,6 +2418,14 @@ Ao acessar novamente o endpoint `/events`, a resposta mostra a coleção `_embed
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/8bc989da-d704-412a-904d-a3162da4eb4f?autoplay=1
 
+### Anotações
+
+
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/marketplace_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_05.zip)
+- [004-Tutorial_Marketplace_Java_Spring_Data_Video05](./004-Tutorial_Marketplace_Java_Spring_Data_Video05.md)
 
 
 ### 🟩 Vídeo 06 - Criando Endpoints Customizados

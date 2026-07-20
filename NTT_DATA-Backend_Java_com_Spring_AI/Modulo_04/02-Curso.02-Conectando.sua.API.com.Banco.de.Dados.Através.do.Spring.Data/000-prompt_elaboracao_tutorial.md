@@ -1,14 +1,14 @@
 Anexo os arquivos:
 1. README.md do curso — atualizado, contendo agora as anotações até o
-   Vídeo 03 (as etapas anteriores, já cobertas no tutorial que você tem
+   Vídeo 04 (as etapas anteriores, já cobertas no tutorial que você tem
    no histórico desta conversa ou que vou reanexar, permanecem
-   inalteradas nele; o conteúdo novo está a partir da seção do Vídeo 03).
+   inalteradas nele; o conteúdo novo está a partir da seção do Vídeo 04).
 2. Um .zip com a estrutura completa do projeto Java (marketplace) no
-   estado atual, correspondente ao que foi desenvolvido até o Vídeo 03.
+   estado atual, correspondente ao que foi desenvolvido até o Vídeo 04.
 
 Quero que você dê continuidade aos tutorial em markdown que já construímos
-juntos (anexos o tutorial dos Vídeos 01 a 02), cobrindo agora do Vídeo 03
-em diante, até onde o README e o código enviados chegarem.
+juntos (anexos os tutoriais dos Vídeos 01 a 02 e do Vídeo 03), cobrindo agora
+do Vídeo 04 em diante, até onde o README e o código enviados chegarem.
 
 Regras a seguir, mantendo o mesmo padrão já usado:
 - Leia o README e o código-fonte anexados antes de escrever qualquer coisa
