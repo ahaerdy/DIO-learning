@@ -1878,6 +1878,537 @@ No console de debug da aplicação, aparece o log gerado pelo `CustomerEventHand
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/2d8650ae-24db-445f-8ace-9e2be8acd60a?autoplay=1
 
+### Anotações
+
+#### Abertura da aula: agenda do módulo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-08h49m57s824.jpg" alt="" width="840">
+</p>
+
+O slide de abertura apresenta o tema da aula, "Conectando sua API com Banco de Dados Através do Spring Data", dentro da Jornada Tech. A agenda lista cinco tópicos: (01) Introdução ao conectando sua API, (02) Modelando SQL e NoSQL, (03) Criando a API REST para Customers, (04) Flexibilidade com NoSQL — destacado como o ponto em que a aula se encontra — e (05) Aplicações práticas e benefícios do CrewAI.
+
+#### Criando o pacote do novo componente "catalog"
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-08h51m21s159.jpg" alt="" width="840">
+</p>
+
+Na IDE, é criado um novo pacote chamado `dio.marketplace.catalog` dentro do projeto `marketplace`. Esse pacote marca o início de um novo componente da aplicação, o catálogo, que ficará responsável por armazenar eventos de diferentes tipos (shows, palestras, apresentações etc.), separado do componente `registration` já existente.
+
+#### Adicionando o segundo banco de dados no Docker Compose
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-08h56m26s802.jpg" alt="" width="840">
+</p>
+
+O arquivo de composição Docker passa a ter dois serviços de banco de dados: `registration-database` (MySQL 9.0, porta 3307) e o novo `catalog-database` (MySQL 9.6, porta 3308). Cada serviço define usuário, senha, volume próprio e um healthcheck baseado em `mysqladmin ping`. Essa é a etapa em que o segundo banco — o do catálogo — é adicionado manualmente ao ambiente.
+
+```yaml
+services:
+  registration-database:
+    image: mysql:9.0
+    environment:
+      MYSQL_DATABASE: registration
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app
+    ports:
+      - "3307:3306"
+    volumes:
+      - registration_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uapp", "-papp" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  catalog-database:
+    image: mysql:9.6
+    environment:
+      MYSQL_DATABASE: catalog
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app
+    ports:
+      - "3308:3306"
+    volumes:
+      - catalog_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uapp", "-papp"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+
+volumes:
+  registration_data:
+  catalog_data:
+```
+
+#### Abrindo o application.properties
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-08h56m30s348.jpg" alt="" width="840">
+</p>
+
+Com o segundo banco adicionado ao Compose, a auto-configuração automática do Spring Boot para bancos de dados deixa de funcionar corretamente (ela só cobre um único container). Por isso, o próximo passo é abrir o arquivo `application.properties`, que ainda mostra apenas as configurações padrão do projeto (nome da aplicação, exposição de detalhes de health e o modo `start-only` do Docker Compose).
+
+#### Configurando manualmente as propriedades dos dois bancos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-08h59m03s124.jpg" alt="" width="840">
+</p>
+
+O `application.properties` recebe dois blocos de configuração manual: um para o banco `registration` (porta 3307) e outro para o banco `catalog` (porta 3308), cada um com URL JDBC, usuário, senha, driver e a propriedade de geração automática de schema do Hibernate. É essa separação que vai permitir que cada componente da aplicação se conecte ao seu próprio banco.
+
+```properties
+# Registration (MySQL 3307)
+registration.datasource.url=jdbc:mysql://localhost:3307/registration
+registration.datasource.username=app
+registration.datasource.password=app
+registration.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+registration.jpa.properties.hibernate.hbm2ddl.auto=update
+
+# Catalog (MySQL 3308)
+catalog.datasource.url=jdbc:mysql://localhost:3308/catalog
+catalog.datasource.username=app
+catalog.datasource.password=app
+catalog.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+catalog.jpa.properties.hibernate.hbm2ddl.auto=create
+```
+
+#### Criando a classe RegistrationConfiguration
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-09h01m26s645.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `registration`, é criada a classe `RegistrationConfiguration`. Ela será responsável por assumir manualmente tudo o que o Spring Boot fazia de forma automática: criar a conexão com o banco, o pool de conexões, o Entity Manager Factory e o Transaction Manager — necessário agora que a aplicação passa a ter mais de uma fonte de dados.
+
+#### Código completo da RegistrationConfiguration
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-09h23m44s857.jpg" alt="" width="840">
+</p>
+
+A classe `RegistrationConfiguration` é anotada com `@Configuration` e `@EnableJpaRepositories`, apontando os repositórios JPA do pacote `dio.marketplace.registration` para o `EntityManagerFactory` e o `TransactionManager` definidos ali dentro — criando uma fronteira clara entre o que pertence ao banco de registration e o que pertence ao banco de catalog. Os beans são marcados como `@Primary`, o que significa que, ao injetar um `DataSourceProperties`, um `HikariDataSource` ou um `JpaProperties` sem qualificador explícito, o Spring sempre escolherá esta instância por padrão. O bean `registrationDataSource` lê as propriedades `registration.datasource.configuration` e constrói um `HikariDataSource`; o `registrationEntityManagerFactory` monta o `LocalContainerEntityManagerFactoryBean` a partir do datasource e das propriedades JPA; e o `registrationTransactionManager` cria o `PlatformTransactionManager` correspondente.
+
+```java
+package dio.marketplace.registration.infrastructure;
+
+import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
+import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+
+import javax.sql.DataSource;
+import java.util.LinkedHashMap;
+@Configuration(proxyBeanMethods = false)
+ @EnableJpaRepositories(
+        basePackages = "dio.marketplace.registration",
+        entityManagerFactoryRef = "registrationEntityManagerFactory",
+        transactionManagerRef = "registrationTransactionManager")
+public class RegistrationConfiguration {
+
+    @Primary
+    @Bean
+    @ConfigurationProperties("registration.datasource")
+    public DataSourceProperties registrationDataSourceProperties() {
+        return new DataSourceProperties();
+    }
+
+    @Primary
+    @Bean
+    @ConfigurationProperties("registration.datasource.configuration")
+    public HikariDataSource registrationDataSource(DataSourceProperties properties) {
+        return properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
+    }
+
+    @Primary
+    @Bean
+    @ConfigurationProperties("registration.jpa")
+    public JpaProperties registrationJpaProperties() {
+        return new JpaProperties();
+    }
+
+    @Primary
+    @Bean
+    public LocalContainerEntityManagerFactoryBean registrationEntityManagerFactory(DataSource dataSource,
+                                                                                     JpaProperties jpaProperties) {
+
+        var builder = new EntityManagerFactoryBuilder(
+                new HibernateJpaVendorAdapter(),
+                x -> new LinkedHashMap<>(jpaProperties.getProperties()),
+                null
+        );
+
+        return builder
+                .dataSource(dataSource)
+                .packages("dio.registration")
+                .persistenceUnit("registration")
+                .properties(jpaProperties.getProperties())
+                .build();
+    }
+
+    @Primary
+    @Bean
+    public PlatformTransactionManager registrationTransactionManager(LocalContainerEntityManagerFactoryBean emf) {
+        return new JpaTransactionManager(emf.getObject());
+    }
+}
+```
+
+#### Criando a classe CatalogConfiguration
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-09h25m03s535.jpg" alt="" width="840">
+</p>
+
+Seguindo o mesmo padrão, agora é criada a classe `CatalogConfiguration`, também dentro do pacote `catalog`, para configurar manualmente a conexão com o segundo banco de dados.
+
+#### Código completo da CatalogConfiguration
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-09h37m16s647.jpg" alt="" width="840">
+</p>
+
+A `CatalogConfiguration` repete a mesma estrutura da configuração de registration, mas com uma diferença importante: os beans não são marcados como `@Primary` — em vez disso, usam `@Qualifier("catalog")`. Isso significa que, ao injetar um `DataSourceProperties`, um `HikariDataSource` ou um `JpaProperties` para o catálogo, é preciso indicar explicitamente esse qualificador, já que o Spring escolheria por padrão a instância marcada como primária (a de registration). O restante da estrutura — leitura das propriedades `catalog.datasource`, criação do `HikariDataSource`, do `LocalContainerEntityManagerFactoryBean` (com `persistenceUnit("catalog")`) e do `PlatformTransactionManager` — segue a mesma lógica aplicada ao componente de registration.
+
+```java
+package dio.marketplace.catalog;
+import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
+import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+
+import javax.sql.DataSource;
+import java.util.LinkedHashMap;
+@Configuration(proxyBeanMethods = false)
+@EnableJpaRepositories(basePackages = "dio.marketplace.catalog",
+        entityManagerFactoryRef = "catalogEntityManagerFactory",
+        transactionManagerRef = "catalogTransactionManager")
+public class CatalogConfiguration {
+
+    @Qualifier("catalog")
+    @Bean
+    @ConfigurationProperties("catalog.datasource")
+    public DataSourceProperties catalogDataSourceProperties() {
+        return new DataSourceProperties();
+    }
+
+    @Qualifier("catalog")
+    @Bean
+    @ConfigurationProperties("catalog.datasource.configuration")
+    public HikariDataSource catalogDataSource(@Qualifier("catalog") DataSourceProperties properties) {
+        return properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
+    }
+
+    @Qualifier("catalog")
+    @Bean
+    @ConfigurationProperties("catalog.jpa")
+    public JpaProperties catalogJpaProperties() {
+        return new JpaProperties();
+    }
+
+    @Qualifier("catalog")
+    @Bean
+    public LocalContainerEntityManagerFactoryBean catalogEntityManagerFactory(@Qualifier("catalog") DataSource dataSource,
+                                                                                @Qualifier("catalog") JpaProperties jpaProperties) {
+
+        var builder = new EntityManagerFactoryBuilder(
+                new HibernateJpaVendorAdapter(),
+                x -> new LinkedHashMap<>(jpaProperties.getProperties()),
+                null
+        );
+
+        return builder
+                .dataSource(dataSource)
+                .packages("dio.marketplace.catalog")
+                .persistenceUnit("catalog")
+                .build();
+    }
+
+    @Qualifier("catalog")
+    @Bean
+    public PlatformTransactionManager catalogTransactionManager(@Qualifier("catalog") LocalContainerEntityManagerFactoryBean emf) {
+        return new JpaTransactionManager(emf.getObject());
+    }
+}
+```
+
+#### Erro ao subir a aplicação: dialeto não determinado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-09h38m33s150.jpg" alt="" width="840">
+</p>
+
+Ao tentar rodar a aplicação pela primeira vez com as duas configurações manuais, ocorre um erro: `HibernateException: Unable to determine Dialect without JDBC metadata`, encadeado a partir de uma `ServiceException` na criação do serviço JDBC do Hibernate. O problema indica que um dos bancos de dados configurados no Docker Compose não estava efetivamente no ar no momento em que a aplicação tentou se conectar.
+
+#### Verificando o status dos bancos pelo Actuator
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h14m26s814.jpg" alt="" width="840">
+</p>
+
+Depois de subir o container do banco que faltava manualmente com `docker compose up`, a aplicação é reiniciada. Para conferir se agora as duas conexões estão funcionando, é acessado o endpoint `localhost:8080/actuator/health` no navegador.
+
+#### Health check confirmando os dois bancos ativos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h14m34s077.jpg" alt="" width="840">
+</p>
+
+A resposta do endpoint de health mostra o componente `db` com dois sub-componentes: `catalogDataSource` e `registrationDataSource`, ambos do tipo MySQL e com status `"UP"`. Isso confirma que a configuração manual funcionou e que a aplicação agora está conectada simultaneamente aos dois bancos de dados — o de registration e o de catalog.
+
+#### Criando o pacote domain do catálogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h15m33s231.jpg" alt="" width="840">
+</p>
+
+Com a conexão dos dois bancos validada, começa a construção da estrutura de pacotes do componente `catalog`, seguindo a mesma organização usada em `registration`. O primeiro pacote criado é `dio.marketplace.catalog.domain`.
+
+#### Criando o pacote application do catálogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h16m31s602.jpg" alt="" width="840">
+</p>
+
+Em seguida, é criado o pacote `dio.marketplace.catalog.application`, dando continuidade à mesma estrutura de camadas (domain, application, infrastructure) usada no restante do projeto.
+
+#### Criando o pacote infrastructure do catálogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h16m55s775.jpg" alt="" width="840">
+</p>
+
+O terceiro pacote da estrutura, `dio.marketplace.catalog.infrastructure`, também é criado, completando o conjunto inicial de camadas do componente de catálogo.
+
+#### Criando o pacote de persistência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h18m41s256.jpg" alt="" width="840">
+</p>
+
+Dentro de `infrastructure`, é criado o sub-pacote `persistence`, que vai concentrar tudo o que se refere ao acesso e à persistência de dados do catálogo, como entidades e repositórios.
+
+#### Criando o pacote de entidades
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h44m35s817.jpg" alt="" width="840">
+</p>
+
+Dentro de `persistence`, é criado o pacote `entity`, onde ficará a entidade JPA que representará os eventos do catálogo no banco de dados.
+
+#### Criando o pacote de repositórios
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h45m29s793.jpg" alt="" width="840">
+</p>
+
+Ainda dentro de `persistence`, é criado o pacote `repository`, que abrigará o repositório responsável por acessar os dados de eventos persistidos.
+
+#### Criando a classe Event
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h45m56s951.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `entity`, é criada a classe `Event`, que vai representar a entidade de evento no banco de dados do catálogo — o ponto de partida para a nova API de eventos.
+
+#### Código completo da entidade Event
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h50m25s914.jpg" alt="" width="840">
+</p>
+
+A entidade `Event` é anotada com `@Entity` e `@EntityListeners(EventListener.class)`, além de `@Data` e `@RequiredArgsConstructor` do Lombok para gerar getters, setters e construtor automaticamente. O identificador `id` é do tipo `UUID`, gerado automaticamente pela estratégia `GenerationType.UUID` — diferente da entidade anterior, aqui não é necessário gerar o ID manualmente. Os campos `title` (não nulo, validado com `@NotBlank`) e `date` (não nulo, do tipo `Instant`) completam os dados principais do evento, e o campo `createdOn`, marcado com `@CreationTimestamp` e `updatable = false`, registra automaticamente o momento de criação do registro.
+
+```java
+package dio.marketplace.catalog.infrastructure.persistence.entity;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.time.Instant;
+
+import java.util.UUID;
+
+@Entity
+@EntityListeners(EventListener.class)
+@Data
+@RequiredArgsConstructor
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+
+    @NotBlank
+    @Column(nullable = false)
+    private String title;
+
+    @Column(nullable = false)
+    private Instant date;
+
+    @CreationTimestamp
+    @Column(updatable = false, nullable = false)
+    private Instant createdOn;
+}
+```
+
+#### Criando o EventListener
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-10h53m10s875.jpg" alt="" width="840">
+</p>
+
+É criada a classe `EventListener`, referenciada pela anotação `@EntityListeners` da entidade `Event`. Diferente do listener usado no componente de registration, este é construído com anotações voltadas diretamente ao ciclo de vida do Hibernate, como `@PostPersist`, `@PostUpdate` e `@PostRemove`, mostrando uma forma alternativa de reagir aos eventos de persistência da entidade.
+
+#### Criando o EventEntityRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h04m51s623.jpg" alt="" width="840">
+</p>
+
+No pacote `repository`, é criada a interface `EventEntityRepository`, que será responsável por persistir e consultar os dados da entidade `Event` no banco.
+
+#### Código completo do EventEntityRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h09m21s657.jpg" alt="" width="840">
+</p>
+
+O `EventEntityRepository` estende `CrudRepository<Event, UUID>`, herdando as operações básicas de criação, leitura, atualização e remoção, com `UUID` como tipo da chave primária. A anotação `@RepositoryRestResource` expõe automaticamente esse repositório como uma API REST via Spring Data REST — basta a entidade e essa interface anotada para disponibilizar os endpoints de eventos, sem necessidade de escrever um controller manualmente.
+
+```java
+package dio.marketplace.catalog.infrastructure.persistence.repository;
+
+import dio.marketplace.catalog.infrastructure.persistence.entity.Event;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+import java.util.UUID;
+
+@RepositoryRestResource
+public interface EventEntityRepository extends CrudRepository<Event, UUID> {
+}
+```
+
+#### Explorando a API pelo HAL Explorer
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h10m28s296.jpg" alt="" width="840">
+</p>
+
+Com a aplicação reiniciada, o HAL Explorer é acessado na raiz da API. Os links disponíveis agora incluem `customers`, `events` e `profile` — confirmando que o endpoint de eventos já está exposto automaticamente. Diferente do endpoint de customers, o de eventos não apresenta suporte a paginação, já que o repositório estende diretamente `CrudRepository`.
+
+#### Preparando uma requisição para criar um evento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h10m58s723.jpg" alt="" width="840">
+</p>
+
+No HAL Explorer, é iniciada uma nova requisição para o recurso `events`, com o objetivo de testar a criação de um evento diretamente pela API recém-exposta.
+
+#### Preenchendo a data do evento com conversão de epoch
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h11m12s088.jpg" alt="" width="840">
+</p>
+
+No formulário de requisição HTTP (método POST para `/events`), o campo `date` é preenchido com um valor numérico (timestamp Unix), usando um conversor de epoch em uma aba auxiliar do navegador para gerar o número correspondente à data desejada. O corpo da requisição já reflete esse valor no campo `date`.
+
+#### Preenchendo o título do evento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h11m16s545.jpg" alt="" width="840">
+</p>
+
+O campo `title` da requisição é preenchido com o valor "Evento 1", completando o corpo JSON da requisição POST com `date` e `title` antes do envio.
+
+#### Evento criado com sucesso (201 Created)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h11m32s548.jpg" alt="" width="840">
+</p>
+
+A requisição é enviada e a API responde com status `201 (Created)`. O corpo da resposta traz os links `self` e `event` apontando para o recurso recém-criado, além dos campos `createdOn`, `date` e `title` — confirmando que o evento "Evento 1" foi persistido corretamente no banco de catálogo.
+
+#### Iniciando a edição do evento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h12m12s728.jpg" alt="" width="840">
+</p>
+
+A partir do link `self` do evento criado, é aberta uma nova requisição do tipo `PATCH` para a URL do recurso, com o objetivo de atualizar parcialmente os dados do evento.
+
+#### Enviando a requisição PATCH
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h12m53s959.jpg" alt="" width="840">
+</p>
+
+A requisição de atualização é disparada a partir do HAL Explorer, para o link `self` do evento salvo anteriormente.
+
+#### Corpo da requisição PATCH com o novo título
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h13m10s651.jpg" alt="" width="840">
+</p>
+
+No corpo da requisição `PATCH`, apenas o campo `title` é enviado, com o novo valor "Evento Novo" — demonstrando a atualização parcial de um recurso via `CrudRepository` exposto pelo Spring Data REST.
+
+#### Evento atualizado com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h13m17s836.jpg" alt="" width="840">
+</p>
+
+A resposta da requisição `PATCH` retorna status `200 (OK)`, e o corpo mostra o campo `title` já atualizado para "Evento Novo", enquanto `date` e `createdOn` permanecem inalterados.
+
+#### Removendo o evento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h13m24s823.jpg" alt="" width="840">
+</p>
+
+Em seguida, é enviada uma requisição de exclusão (`DELETE`) para o mesmo recurso. A resposta retorna status `200 (OK)`, confirmando que o evento foi removido do banco de dados com sucesso.
+
+#### Confirmando a lista de eventos vazia
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-20-11h13m32s974.jpg" alt="" width="840">
+</p>
+
+Ao acessar novamente o endpoint `/events`, a resposta mostra a coleção `_embedded.events` vazia, confirmando que o evento criado anteriormente foi de fato removido. Com isso, o ciclo completo de criação, leitura, atualização e remoção de um evento via API REST gerada automaticamente pelo Spring Data REST fica validado.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/marketplace_ate_o_video_04.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_04.zip)
+- [003-Tutorial_Marketplace_Java_Spring_Data_Video04](./003-Tutorial_Marketplace_Java_Spring_Data_Video04.md)
+
+
 ### 🟩 Vídeo 05 - Multi-Database com Docker
 
 <video width="60%" controls>
