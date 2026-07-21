@@ -2913,6 +2913,8 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
   <img src="000-Midia_e_Anexos/2026-07-21-11-15-19.png" alt="" width="100%">
 </p>
 
+> tags: #nota / #nota_explicativa
+
 O tutorial demonstra o desenvolvimento de uma **funcionalidade de vitrine** em Java utilizando os frameworks **Spring Boot**, **MySQL** e **MongoDB**. O autor detalha a criação de **classes de domínio**, repositórios e um **use case** para consolidar dados de eventos e seus metadados de forma organizada. Para otimizar o desempenho, o código é refatorado para suportar **Virtual Threads** e execução assíncrona com **Completable Future**. Essa abordagem permite que múltiplas consultas ao banco de dados ocorram em **paralelo**, reduzindo o tempo de resposta da aplicação. O vídeo encerra com a validação do **endpoint customizado** e a promessa de implementar cache em uma etapa futura.
 
 ### 🟩 Vídeo 07 - Implementando Redis com Spring Data
