@@ -2913,11 +2913,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
   <img src="000-Midia_e_Anexos/2026-07-21-11-15-19.png" alt="" width="100%">
 </p>
 
-#### Material de Apoio Até Esta Etapa
-
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/marketplace_ate_o_video_06.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_06.zip)
-- [005-Tutorial_Marketplace_Java_Spring_Data_Video06](./005-Tutorial_Marketplace_Java_Spring_Data_Video06.md)
-
+O tutorial demonstra o desenvolvimento de uma **funcionalidade de vitrine** em Java utilizando os frameworks **Spring Boot**, **MySQL** e **MongoDB**. O autor detalha a criação de **classes de domínio**, repositórios e um **use case** para consolidar dados de eventos e seus metadados de forma organizada. Para otimizar o desempenho, o código é refatorado para suportar **Virtual Threads** e execução assíncrona com **Completable Future**. Essa abordagem permite que múltiplas consultas ao banco de dados ocorram em **paralelo**, reduzindo o tempo de resposta da aplicação. O vídeo encerra com a validação do **endpoint customizado** e a promessa de implementar cache em uma etapa futura.
 
 ### 🟩 Vídeo 07 - Implementando Redis com Spring Data
 
@@ -2946,7 +2942,6 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/0345270c-911c-46c1-be50-550e11fc4576?autoplay=1
-
 
 
 ### 🟩 Vídeo 10 - Evitando Overbooking
