@@ -2910,6 +2910,10 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 ### Anotações
 
 <p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-21-14-01-27.png" alt="" width="840">
+</p>
+
+<p align="center">
   <img src="000-Midia_e_Anexos/2026-07-21-11-15-19.png" alt="" width="100%">
 </p>
 
@@ -2928,6 +2932,10 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-21-14-02-06.png" alt="" width="840">
+</p>
+
 Este material demonstra a implementação técnica de uma camada de **caching** utilizando o **Redis** em uma aplicação desenvolvida com **Spring Boot**. O processo inicia com a configuração de um **contêiner Docker** e a inclusão das dependências necessárias para integrar o driver **Jedis** ao projeto. O autor explica como utilizar a anotação **@Cacheable** para otimizar o desempenho de um controlador de vitrine, reduzindo drasticamente o tempo de resposta das consultas. Além da configuração prática, o conteúdo aborda requisitos essenciais como a **serialização de objetos** e ajustes manuais no gerenciador de cache. Por fim, discute-se a transição da estratégia de **Cache-Aside** para métodos mais avançados, sugerindo que atualizações automáticas via ouvintes de eventos tornariam o sistema mais reativo.      
 
 ### 🟩 Vídeo 08 - Comunicação entre Microsserviços
@@ -2941,6 +2949,10 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-21-13-59-33.png" alt="" width="840">
+</p>
+
 O vídeo apresentado por Thiago Poiani foca na implementação de **comunicação entre microsserviços** utilizando eventos internos do **Spring Data**. O especialista explica como o sistema pode reagir a alterações em entidades através de anotações do JPA e do MongoDB, permitindo que diferentes módulos ajam como **data services** independentes. Para ilustrar o conceito, ele demonstra a criação de um serviço de **ticketing** que consome informações de clientes e eventos sem acessar diretamente o banco de dados original. O processo envolve o uso do **ApplicationEventPublisher** para disparar notificações de ações já concluídas, seguindo uma nomenclatura de verbos no passado. Por fim, o autor valida a arquitetura ao mostrar um **Event Listener** capturando esses sinais em tempo real para possibilitar a persistência em uma nova base de dados. Essa abordagem visa reduzir o **acoplamento** entre os componentes da aplicação, garantindo maior escalabilidade e organização do domínio.      
 
 
@@ -2952,6 +2964,14 @@ O vídeo apresentado por Thiago Poiani foca na implementação de **comunicaçã
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/0345270c-911c-46c1-be50-550e11fc4576?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-21-14-02-46.png" alt="" width="840">
+</p>
+
+O conteúdo descreve o processo técnico de integração entre módulos de um sistema utilizando **Spring Boot** e eventos para replicação de dados. O autor detalha a configuração de um novo banco de dados **PostgreSQL** para o módulo de ticketing, estabelecendo múltiplos **data sources** e repositórios customizados. A estratégia foca na separação de domínios, utilizando **IDs internos** e de correlação para garantir a autonomia das informações de clientes e eventos. Através da implementação de **Use Cases** e listeners, o sistema captura alterações no catálogo e as persiste de forma relacional. O exemplo prático demonstra o mapeamento de entidades complexas, como setores e assentos, e a resolução de conflitos de rotas na API. Por fim, valida-se o sucesso da arquitetura ao confirmar que a criação de registros em um serviço dispara atualizações automáticas no banco secundário.      
 
 
 ### 🟩 Vídeo 10 - Evitando Overbooking
