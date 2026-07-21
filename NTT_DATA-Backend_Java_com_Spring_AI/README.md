@@ -105,7 +105,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - [x] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_04/01-Curso.01-Criando.sua.Primeira.API.REST.com.Spring.Boot)
 - [x] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_04/02-Curso.02-Conectando.sua.API.com.Banco.de.Dados.Através.do.Spring.Data)
-- [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security]
+- [x] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_04/03-Curso.03-Simplificando.a.Segurança.em.APIs.REST.com.Spring.Security/)
 - [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign]
 - [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
 
