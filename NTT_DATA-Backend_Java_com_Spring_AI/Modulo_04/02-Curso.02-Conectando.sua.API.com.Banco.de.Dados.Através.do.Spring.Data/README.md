@@ -2909,7 +2909,9 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
-
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-21-11-15-19.png" alt="" width="100%">
+</p>
 
 #### Material de Apoio Até Esta Etapa
 
