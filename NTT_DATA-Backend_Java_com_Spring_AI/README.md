@@ -153,7 +153,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 4
 
 - [Criando sua Primeira API REST com Spring Boot](https://hermes.dio.me/certificates/P2CB0LSX.pdf)
-- [Conectando sua API com Banco de Dados Através do Spring Data]
+- [Conectando sua API com Banco de Dados Através do Spring Data](https://hermes.dio.me/certificates/MF0GVYEW.pdf)
 - [Simplificando a Segurança em APIs REST com Spring Security]
 - [Consumindo APIs Externas com a Spring Cloud OpenFeign]
 - [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
