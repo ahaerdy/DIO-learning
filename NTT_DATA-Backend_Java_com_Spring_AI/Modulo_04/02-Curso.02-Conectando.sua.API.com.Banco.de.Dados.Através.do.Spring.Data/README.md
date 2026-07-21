@@ -2981,7 +2981,15 @@ O conteúdo descreve o processo técnico de integração entre módulos de um si
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/fa2c9dde-42b9-4c4b-a760-f4c7a7b515a9?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-21-15-03-08.png" alt="" width="840">
+</p>
+
+O vídeo detalha a implementação técnica de um mecanismo de **bloqueio temporário de assentos** utilizando o **Redis** em uma arquitetura Java com **Spring Data**. O desenvolvedor demonstra como configurar múltiplas instâncias de banco de dados para gerenciar tanto a persistência no **PostgreSQL** quanto o cache rápido necessário para evitar compras simultâneas do mesmo lugar. A solução utiliza uma entidade com **TTL (Time To Leave)** de 30 segundos, garantindo que a reserva expire automaticamente caso a transação não seja concluída. O processo abrange desde a criação de **Custom Exceptions** e repositórios específicos até a validação final via requisições HTTP em um **Controller**. No encerramento, o autor valida o fluxo completo simulando a persistência de um evento e o comportamento do sistema quando um assento já está **reservado**.
 
 ### 🟩 Vídeo 11 - Consistência e Governança
 
@@ -2990,8 +2998,11 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/a56be228-c2a4-416c-8090-065127135d79?autoplay=1
 
+### Anotações
+
+      
 
 
 ### Tutoriais
