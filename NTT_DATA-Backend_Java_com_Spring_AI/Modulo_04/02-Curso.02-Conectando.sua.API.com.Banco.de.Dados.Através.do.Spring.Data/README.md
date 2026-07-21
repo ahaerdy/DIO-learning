@@ -2924,6 +2924,10 @@ O tutorial demonstra o desenvolvimento de uma **funcionalidade de vitrine** em J
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/55a501a0-f3f4-449c-bca4-ae2862063fda?autoplay=1
 
+### Anotações
+
+Este material demonstra a implementação técnica de uma camada de **caching** utilizando o **Redis** em uma aplicação desenvolvida com **Spring Boot**. O processo inicia com a configuração de um **contêiner Docker** e a inclusão das dependências necessárias para integrar o driver **Jedis** ao projeto. O autor explica como utilizar a anotação **@Cacheable** para otimizar o desempenho de um controlador de vitrine, reduzindo drasticamente o tempo de resposta das consultas. Além da configuração prática, o conteúdo aborda requisitos essenciais como a **serialização de objetos** e ajustes manuais no gerenciador de cache. Por fim, discute-se a transição da estratégia de **Cache-Aside** para métodos mais avançados, sugerindo que atualizações automáticas via ouvintes de eventos tornariam o sistema mais reativo.      
+
 ### 🟩 Vídeo 08 - Comunicação entre Microsserviços
 
 <video width="60%" controls>
@@ -2932,6 +2936,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/7dbcac03-57b6-4066-a388-1f77910bd509?autoplay=1
+
 
 
 ### 🟩 Vídeo 09 - Implementando Persistência com Postgres
