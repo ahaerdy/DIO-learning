@@ -3002,7 +3002,11 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-07-21-15-13-24.png" alt="" width="840">
+</p>
+
+Neste guia, o desenvolvedor Thiago Poiani apresenta caminhos avançados para aprofundar conhecimentos após um curso de **Spring Data**. O conteúdo destaca a importância de implementar **auditoria e controle de versão** por meio de anotações e o uso de **ETags** para gerenciar requisições condicionais de forma segura. O instrutor também aborda a resiliência em sistemas complexos, sugerindo o estudo do **padrão Saga** em microsserviços e a utilização da ferramenta **Temporal** para execuções duráveis. No campo da arquitetura de dados, ele recomenda a **segregação entre bancos de dados** operacionais e de relatórios. Por fim, propõe o uso de técnicas como **Change Data Capture (CDC)** e pipelines com Airflow para garantir que a análise de dados ocorra de forma independente da aplicação principal.      
 
 
 ### Tutoriais
@@ -3012,6 +3016,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 - [003-Tutorial_Marketplace_Java_Spring_Data_Video04](./003-Tutorial_Marketplace_Java_Spring_Data_Video04.md)
 - [004-Tutorial_Marketplace_Java_Spring_Data_Video05](./004-Tutorial_Marketplace_Java_Spring_Data_Video05.md)
 
+> **Observação**: os tutoriais só foram produzidos até o vídeo 05 (vide nota explicativa no vídeo 06).
 
 ### Arquivos do Projeto
 
@@ -3021,7 +3026,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 - Até o vídeo 05: [./000-Midia_e_Anexos/marketplace_ate_o_video_05.zip](./000-Midia_e_Anexos/etapas_do_codigo/marketplace_ate_o_video_05.zip)
 
 
-# Certificado: 
+# Certificado: Conectando sua API com Banco de Dados Através do Spring Data
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/MF0GVYEW.pdf
+- Certificado em pdf: [Certificado-Conectando.sua.API.com.Banco.de.Dados.Através.do.Spring.Data.pdf](000-Midia_e_Anexos/Certificado-Conectando.sua.API.com.Banco.de.Dados.Através.do.Spring.Data.pdf)
