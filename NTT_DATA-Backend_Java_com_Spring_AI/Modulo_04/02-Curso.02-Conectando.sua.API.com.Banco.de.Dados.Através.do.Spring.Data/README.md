@@ -2937,6 +2937,9 @@ Este material demonstra a implementação técnica de uma camada de **caching** 
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/conectando-sua-api-com-banco-de-dados-atraves-do-spring-data/learning/7dbcac03-57b6-4066-a388-1f77910bd509?autoplay=1
 
+### Anotações
+
+O vídeo apresentado por Thiago Poiani foca na implementação de **comunicação entre microsserviços** utilizando eventos internos do **Spring Data**. O especialista explica como o sistema pode reagir a alterações em entidades através de anotações do JPA e do MongoDB, permitindo que diferentes módulos ajam como **data services** independentes. Para ilustrar o conceito, ele demonstra a criação de um serviço de **ticketing** que consome informações de clientes e eventos sem acessar diretamente o banco de dados original. O processo envolve o uso do **ApplicationEventPublisher** para disparar notificações de ações já concluídas, seguindo uma nomenclatura de verbos no passado. Por fim, o autor valida a arquitetura ao mostrar um **Event Listener** capturando esses sinais em tempo real para possibilitar a persistência em uma nova base de dados. Essa abordagem visa reduzir o **acoplamento** entre os componentes da aplicação, garantindo maior escalabilidade e organização do domínio.      
 
 
 ### 🟩 Vídeo 09 - Implementando Persistência com Postgres
