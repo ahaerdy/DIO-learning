@@ -3016,11 +3016,7 @@ Neste guia, o desenvolvedor Thiago Poiani apresenta caminhos avançados para apr
 - [003-Tutorial_Marketplace_Java_Spring_Data_Video04](./003-Tutorial_Marketplace_Java_Spring_Data_Video04.md)
 - [004-Tutorial_Marketplace_Java_Spring_Data_Video05](./004-Tutorial_Marketplace_Java_Spring_Data_Video05.md)
 
-<div style="border-left: 5px solid #f59e0b; background-color: yellow; padding: 12px 16px; color: black; font-family: monospace; margin: 15px 0;">
-  <center>
-    <strong>Observação</strong>: os <strong>tutoriais</strong> e <strong>arquivos do projeto</strong> só foram produzidos até o vídeo 05 (vide nota explicativa no vídeo 06).
-  </center>   
-</div>
+> <strong>Observação</strong>: os <strong>tutoriais</strong> e <strong>arquivos do projeto</strong> só foram produzidos até o vídeo 05 (vide nota explicativa no vídeo 06).
 
 
 ### Arquivos do Projeto
