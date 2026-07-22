@@ -3016,7 +3016,7 @@ Neste guia, o desenvolvedor Thiago Poiani apresenta caminhos avançados para apr
 - [003-Tutorial_Marketplace_Java_Spring_Data_Video04](./003-Tutorial_Marketplace_Java_Spring_Data_Video04.md)
 - [004-Tutorial_Marketplace_Java_Spring_Data_Video05](./004-Tutorial_Marketplace_Java_Spring_Data_Video05.md)
 
-> <strong>Observação</strong>: os <strong>tutoriais</strong> e <strong>arquivos do projeto</strong> só foram produzidos até o vídeo 05 (vide nota explicativa no vídeo 06).
+> <strong>Observação</strong>: os <strong>tutoriais</strong> e <strong>arquivos do projeto</strong> só foram produzidos até o vídeo 05 (vide [nota explicativa no vídeo 06](#-v%C3%ADdeo-06---criando-endpoints-customizados)).
 
 
 ### Arquivos do Projeto
