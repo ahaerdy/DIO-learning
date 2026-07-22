@@ -112,22 +112,6 @@ Este diagrama resume o fluxo completo de uma requisição segura: a identidade c
 
 Apresentação do estudo de caso que será desenvolvido no curso: uma plataforma de gerenciamento de propostas entre influenciadores digitais e marcas. O influenciador pode criar propostas de mídia, mas não tem acesso às propostas de outros influenciadores — só pode ver as suas próprias. A marca, por sua vez, pode visualizar as propostas públicas disponíveis para contratação, mas não pode criar propostas como um influenciador faria. Esse controle de acesso é implementado com RBAC (papéis de Influenciador e Marca), e a tabela de permissões deixa claro quem pode criar, ver propostas públicas ou ver a própria proposta. O uso de UUIDs e Java Records é indicado como forma de garantir integridade e rastreabilidade dos contratos gerados.
 
-#### Conectando sua API com Banco de Dados Através do Spring Data
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-21-15h02m32s498.jpg" alt="" width="840">
-</p>
-
-Slide de abertura de um novo módulo do curso, com a agenda destacando o item 05, "Evitando Overbooking", dentro de uma sequência de seis tópicos sobre a conexão da API com o banco de dados via Spring Data: criação de endpoints customizados, uso do Redis, comunicação entre microsserviços, persistência com Postgres, prevenção de overbooking e, por fim, consistência e governança.
-
-#### Conectando sua API com Banco de Dados Através do Spring Data
-
-<p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-21-15h13m00s601.jpg" alt="" width="840">
-</p>
-
-Mesmo slide de agenda do módulo sobre Spring Data, agora com o item 06, "Consistência e Governança", em destaque como o próximo tópico a ser abordado.
-
 
 ### 🟩 Vídeo 02 - Primeiros Passos com Spring Security
 
@@ -139,6 +123,7 @@ Mesmo slide de agenda do módulo sobre Spring Data, agora com o item 06, "Consis
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/acb58be5-1969-47f8-b340-2b1eca9e74f4?autoplay=1
 
 ### Anotações
+
 
 
 
