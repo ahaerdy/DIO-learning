@@ -1,5 +1,6 @@
 package dio.proposalmanagement.auth.infrastructure.http;
 
+import dio.proposalmanagement.auth.infrastructure.persistence.entity.User;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -14,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
     @GetMapping
-    public String hello(@AuthenticationPrincipal UserDetails user) {
-        return "Hello World " + user.getUsername();
+    public String hello(@AuthenticationPrincipal User user) {
+        return "Hello World " + user.getId();
     }
 
     @GetMapping("/influencer")

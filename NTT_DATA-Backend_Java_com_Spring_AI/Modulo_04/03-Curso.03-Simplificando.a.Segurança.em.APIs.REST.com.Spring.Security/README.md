@@ -911,13 +911,625 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/s
 
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-12h30m51s548.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula, parte da série **Jornada Tech** (DIO), sobre "Simplificando a Segurança em APIs REST com Spring Security". O sumário à direita mostra os nove módulos do curso, com o item **04 — Segurança com Banco de Dados** destacado, indicando que este vídeo trata da integração da aplicação (que já possuía autenticação via filtro customizado) com uma base de dados real, substituindo o armazenamento de usuários em memória.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-12h32m36s721.jpg" alt="" width="840">
+</p>
+
+Edição do arquivo `compose.yml` para provisionar o banco de dados via Docker Compose. É definido um serviço `database` usando a imagem `mysql:9.6`, com banco `proposals`, usuário e senha `app`, exposto na porta local `3307` (mapeada para a `3306` do container, evitando conflito com um MySQL local) e um `healthcheck` que verifica a disponibilidade do banco via `mysqladmin ping`.
+
+```yaml
+services:
+  database:
+    image: mysql:9.6
+    environment:
+      MYSQL_DATABASE: proposals
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app
+    ports:
+      - "3307:3306"
+    volumes:
+      - data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uapp", "-papp" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  data:
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-12h35m54s119.jpg" alt="" width="840">
+</p>
+
+No `build.gradle`, é adicionada a dependência `spring-boot-docker-compose` como `developmentOnly`. Essa biblioteca permite que o Spring Boot gerencie automaticamente o ciclo de vida dos containers definidos no `compose.yml`: ao iniciar a aplicação, os containers sobem junto; ao encerrá-la, eles também são finalizados.
+
+```gradle
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-12h37m26s485.jpg" alt="" width="840">
+</p>
+
+Continuando a configuração do `build.gradle`, são adicionadas as dependências do **Spring Data JPA** e do conector do MySQL. Com essas bibliotecas, assim que o container do banco sobe (via Docker Compose), o Spring Data já é autoconfigurado — portas, usuário e senha são detectados automaticamente, sem necessidade de configuração manual de conexão.
+
+```gradle
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-12h39m32s942.jpg" alt="" width="840">
+</p>
+
+É adicionado o plugin do **Lombok** ao `build.gradle`. O Lombok é uma biblioteca amplamente usada no dia a dia com Spring, responsável por gerar automaticamente código repetitivo, como *getters*, *setters* e construtores, reduzindo a verbosidade das classes de entidade que serão criadas a seguir.
+
+```gradle
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '4.0.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+
+    id("io.freefair.lombok") version "9.2.0"
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-13h40m02s055.jpg" alt="" width="840">
+</p>
+
+Console de execução da aplicação mostrando o Docker Compose subindo o container do banco de dados (criação de volume e container, aguardando o `healthcheck`). Somente depois que o container é considerado *healthy* é que a aplicação Spring Boot efetivamente inicia — evidenciado pelos logs de bootstrap do Spring Data JPA e do Tomcat na porta 8080.
+
+```
+[proposal-management] DockerCli : Volume proposal-management_data Created
+[proposal-management] DockerCli : Container proposal-management-database-1 Created
+[proposal-management] DockerCli : Container proposal-management-database-1 Starting
+[proposal-management] DockerCli : Container proposal-management-database-1 Waiting
+[proposal-management] DockerCli : Container proposal-management-database-1 Healthy
+main : Bootstrapping Spring Data JPA repositories
+main : Tomcat initialized with port 8080 (http)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-13h44m25s262.jpg" alt="" width="840">
+</p>
+
+Painel de banco de dados do IntelliJ exibindo a conexão já configurada automaticamente com o MySQL (`jdbc:mysql://127.0.0.1:3307/proposals`). Como o banco veio do container gerenciado pelo Docker Compose integrado ao Spring Boot, a IDE consegue, por introspecção, detectar essa conexão sem que seja necessário configurá-la manualmente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-13h49m28s851.jpg" alt="" width="840">
+</p>
+
+Arquivo `application.properties` recebendo duas configurações adicionais: `spring.jpa.show-sql=true`, para exibir no console os comandos SQL executados pelo Hibernate, e `spring.jpa.hibernate.ddl-auto=create`, para que o próprio JPA crie o esquema do banco a partir das entidades. É reforçado que essa abordagem não é indicada para produção, onde o recomendado é o uso de *migrations*.
+
+```properties
+spring.application.name=proposal-management
+
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-13h50m38s581.jpg" alt="" width="840">
+</p>
+
+Criação de um novo pacote `persistence` dentro da camada `infrastructure`, dando início à organização da camada de persistência da aplicação, onde ficarão as entidades e os repositórios.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-13h52m51s765.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `persistence`, é criado o subpacote `entity`, que vai concentrar as classes que representam tabelas do banco de dados (entidades JPA).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-13h53m18s737.jpg" alt="" width="840">
+</p>
+
+Criação da primeira entidade da aplicação: a classe `User`, dentro do pacote `entity`. Essa classe representará a tabela de usuários no banco de dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h18m51s726.jpg" alt="" width="840">
+</p>
+
+Definição da classe `UserRole`, criada no pacote de domínio (`auth.domain`), como um `enum` com os papéis possíveis de um usuário: `INFLUENCER` e `BRAND`. Optou-se por deixá-la no domínio, e não dentro da entidade, por ser um conceito mais amplo do sistema, não restrito apenas à persistência.
+
+```java
+package dio.proposalmanagement.auth.domain;
+
+public enum UserRole {
+    INFLUENCER,
+    BRAND,
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h28m26s950.jpg" alt="" width="840">
+</p>
+
+Implementação completa da entidade `User`. A classe é anotada com `@Entity` (mapeando-a para uma tabela do banco) e com as anotações do Lombok `@Data`, `@NoArgsConstructor` e `@AllArgsConstructor`, que geram automaticamente *getters*, *setters* e construtores — o construtor vazio é exigido pelo Hibernate.
+
+O ponto central é que `User` implementa a interface `UserDetails` do Spring Security, o que permite reaproveitar toda a infraestrutura de autenticação já existente. São definidos os campos `id` (chave primária gerada via UUID), `username` (único e obrigatório), `password` (obrigatório) e `role` (um `UserRole` persistido como texto). Os métodos exigidos pela interface `UserDetails` são implementados: `getAuthorities()` retorna a *role* do usuário como uma `SimpleGrantedAuthority`, e os métodos de status da conta (`isAccountNonExpired`, `isAccountNonLocked`, `isCredentialsNonExpired`, `isEnabled`) retornam `true`, já que não há regras de expiração ou bloqueio neste momento.
+
+```java
+package dio.proposalmanagement.auth.infrastructure.persistence.entity;
+
+import dio.proposalmanagement.auth.domain.UserRole;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.UUID;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class User implements UserDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+
+    @Column(unique = true, nullable = false)
+    private String username;
+
+    @Column(nullable = false)
+    private String password;
+
+    @Enumerated(EnumType.STRING)
+    private UserRole role;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority(role.name()));
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h33m20s529.jpg" alt="" width="840">
+</p>
+
+Painel de banco de dados mostrando a tabela `user` recém-criada, ainda vazia (0 linhas). Ela foi gerada automaticamente pelo Hibernate a partir da entidade `User`, confirmando que a configuração `ddl-auto=create` e o mapeamento JPA funcionaram corretamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h34m39s235.jpg" alt="" width="840">
+</p>
+
+Criação de um novo pacote `repository` dentro de `persistence`, que abrigará as interfaces responsáveis por consultar e persistir dados no banco.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h35m20s019.jpg" alt="" width="840">
+</p>
+
+Criação da classe/interface `UserRepository` dentro do pacote `repository`, que será responsável por buscar os usuários no banco de dados para uso posterior no serviço de autenticação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h36m13s772.jpg" alt="" width="840">
+</p>
+
+Primeira versão do `UserRepository`, estendendo `CrudRepository<User, UUID>`, o que já disponibiliza operações prontas como `save`, `find`, `findAll` e `findById`. Nesse momento a classe ainda está declarada como `class` (e não como `interface`), o que gera os erros indicados pela IDE — esse ponto será corrigido logo em seguida.
+
+```java
+package dio.proposalmanagement.auth.infrastructure.persistence.repository;
+
+import dio.proposalmanagement.auth.infrastructure.persistence.entity.User;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.UUID;
+
+@Repository
+public class UserRepository extends CrudRepository<User, UUID> {
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h38m29s629.jpg" alt="" width="840">
+</p>
+
+Criação da classe `JpaUserDetailsService`, dentro do pacote `security`, que substituirá a implementação em memória do `UserDetailsService` mostrada ao fundo (com os usuários `influencer` e `brand` criados via `User.withUsername(...)`). Essa nova classe passará a buscar os usuários diretamente do banco de dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h40m25s210.jpg" alt="" width="840">
+</p>
+
+Estrutura inicial da classe `JpaUserDetailsService`, implementando a interface `UserDetailsService` do Spring Security, que exige a implementação do método `loadUserByUsername`, ainda retornando `null` neste momento.
+
+```java
+package dio.proposalmanagement.auth.infrastructure.security;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+public class JpaUserDetailsService implements UserDetailsService {
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return null;
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h41m09s753.jpg" alt="" width="840">
+</p>
+
+Correção do `UserRepository`: agora declarado corretamente como `interface` (e não mais `class`), com a assinatura do método `findByUsername`, que retorna um `Optional<User>`. Basta declarar a assinatura seguindo a convenção de nomes do Spring Data JPA/Hibernate para que a implementação da consulta seja gerada automaticamente.
+
+```java
+package dio.proposalmanagement.auth.infrastructure.persistence.repository;
+
+import dio.proposalmanagement.auth.infrastructure.persistence.entity.User;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+@Repository
+public interface UserRepository extends CrudRepository<User, UUID> {
+    Optional<User> findByUsername(String username);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h42m43s144.jpg" alt="" width="840">
+</p>
+
+No `JpaUserDetailsService`, é injetado o `UserRepository` via construtor. O Spring já sabe como fornecer essa dependência porque o repositório está anotado com `@Repository`.
+
+```java
+import dio.proposalmanagement.auth.infrastructure.persistence.repository.UserRepository;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+public class JpaUserDetailsService implements UserDetailsService {
+    private final UserRepository userRepository;
+
+    public JpaUserDetailsService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return null;
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h44m00s463.jpg" alt="" width="840">
+</p>
+
+A classe `JpaUserDetailsService` é anotada com `@Service`, para que o próprio Spring Boot consiga realizar a injeção de dependência dessa implementação de `UserDetailsService` onde ela for necessária (por exemplo, no `DaoAuthenticationManager`).
+
+```java
+import org.springframework.stereotype.Service;
+
+@Service
+public class JpaUserDetailsService implements UserDetailsService {
+    private final UserRepository userRepository;
+
+    public JpaUserDetailsService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+    // ...
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h44m45s221.jpg" alt="" width="840">
+</p>
+
+Implementação final do método `loadUserByUsername`: ele chama `userRepository.findByUsername(username)`, que retorna um `Optional`; caso esteja vazio, é lançada uma `UsernameNotFoundException`. Essa é exatamente a assinatura esperada por um `UserDetailsService`.
+
+```java
+@Override
+public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    return userRepository.findByUsername(username)
+            .orElseThrow(() -> new UsernameNotFoundException(username));
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h47m42s742.jpg" alt="" width="840">
+</p>
+
+Revisão do bean antigo, ainda presente no `SecurityConfig`, que criava um `UserDetailsService` em memória com os usuários `influencer` e `brand`. Como agora existe uma implementação própria de `UserDetailsService` (o `JpaUserDetailsService`), esse bean se torna redundante e pode ser removido, pois o Spring passará a injetar automaticamente a implementação baseada em banco de dados nos componentes que dependem de um `UserDetailsService` — como o `DaoAuthenticationManager`.
+
+```java
+@Bean
+UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
+    UserDetails influencer = User.withUsername("influencer")
+            .password(passwordEncoder.encode("password"))
+            .roles("INFLUENCER")
+            .build();
+
+    UserDetails brand = User.withUsername("brand")
+            .password(passwordEncoder.encode("password"))
+            .roles("BRAND")
+            .build();
+
+    return new InMemoryUserDetailsManager(influencer, brand);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-14h48m02s704.jpg" alt="" width="840">
+</p>
+
+Após a remoção do bean de `UserDetailsService` em memória, o `SecurityConfig` permanece apenas com a definição do `PasswordEncoder`. A partir de agora, a autenticação passa a depender exclusivamente do `JpaUserDetailsService`, que consulta os usuários no banco de dados.
+
+```java
+@Bean
+PasswordEncoder passwordEncoder() { return new BCryptPasswordEncoder(); }
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h04m41s982.jpg" alt="" width="840">
+</p>
+
+Adição de um bean `CommandLineRunner` no `SecurityConfig`, executado automaticamente na inicialização da aplicação. Ele verifica se o repositório de usuários está vazio e, em caso afirmativo, cria três usuários de exemplo — `fitness_vibe` e `tech_guru` com a *role* `INFLUENCER`, e `logistics` com a *role* `BRAND` — persistindo-os via `repository.saveAll(...)`. A partir deste momento, o Spring Security deixa de buscar usuários em memória e passa a autenticá-los diretamente a partir do banco de dados.
+
+```java
+@Bean
+CommandLineRunner initDatabase(UserRepository repository, PasswordEncoder passwordEncoder) {
+    return args -> {
+        if (repository.count() == 0) {
+            User fitnessInfluencer = new User();
+            fitnessInfluencer.setUsername("fitness_vibe");
+            fitnessInfluencer.setPassword(passwordEncoder.encode("password"));
+            fitnessInfluencer.setRole(UserRole.INFLUENCER);
+
+            User techInfluencer = new User();
+            techInfluencer.setUsername("tech_guru");
+            techInfluencer.setPassword(passwordEncoder.encode("password"));
+            techInfluencer.setRole(UserRole.INFLUENCER);
+
+            User brand = new User();
+            brand.setUsername("logistics");
+            brand.setPassword(passwordEncoder.encode("password"));
+            brand.setRole(UserRole.BRAND);
+
+            repository.saveAll(List.of(fitnessInfluencer, techInfluencer, brand));
+        }
+    };
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h06m19s811.jpg" alt="" width="840">
+</p>
+
+Visão completa e consolidada da classe `SecurityConfig` neste ponto da aula, reunindo o `CommandLineRunner` de inicialização dos usuários, a cadeia de filtros de segurança (`SecurityFilterChain`) com o filtro customizado de autenticação (`RestUsernamePasswordAuthenticationFilter`) e o bean de `PasswordEncoder` baseado em BCrypt.
+
+```java
+package dio.proposalmanagement.auth.infrastructure.security;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import dio.proposalmanagement.auth.domain.UserRole;
+import dio.proposalmanagement.auth.infrastructure.persistence.entity.User; // Import explícito da entidade correta
+import dio.proposalmanagement.auth.infrastructure.persistence.repository.UserRepository;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import java.util.List;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Bean
+    CommandLineRunner initDatabase(UserRepository repository, PasswordEncoder passwordEncoder) {
+        return args -> {
+            if (repository.count() == 0) {
+                User fitnessInfluencer = new User();
+                fitnessInfluencer.setUsername("fitness_vibe");
+                fitnessInfluencer.setPassword(passwordEncoder.encode("password"));
+                fitnessInfluencer.setRole(UserRole.INFLUENCER);
+
+                User techInfluencer = new User();
+                techInfluencer.setUsername("tech_guru");
+                techInfluencer.setPassword(passwordEncoder.encode("password"));
+                techInfluencer.setRole(UserRole.INFLUENCER);
+
+                User brand = new User();
+                brand.setUsername("logistics");
+                brand.setPassword(passwordEncoder.encode("password"));
+                brand.setRole(UserRole.BRAND);
+
+                repository.saveAll(List.<User>of(fitnessInfluencer, techInfluencer, brand));
+            }
+        };
+    }
+
+    @Bean
+    SecurityFilterChain securityFilterChain(
+            HttpSecurity http,
+            AuthenticationConfiguration authenticationConfiguration,
+            ObjectMapper objectMapper) throws Exception {
+
+        RestUsernamePasswordAuthenticationFilter customAuthFilter =
+                new RestUsernamePasswordAuthenticationFilter(authenticationConfiguration, objectMapper);
+
+        http
+                .csrf(AbstractHttpConfigurer::disable)
+                .securityContext(context -> context.requireExplicitSave(false))
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/auth/login").permitAll()
+                        .anyRequest().authenticated())
+                .addFilterAt(customAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
+    }
+
+    @Bean
+    PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h11m07s301.jpg" alt="" width="840">
+</p>
+
+Consulta à tabela `user` no banco de dados confirmando que os três usuários foram persistidos com sucesso, exibindo as colunas `id` (UUID), `password` (já criptografada com BCrypt, evidenciado pelo prefixo `$2a$10$...`) e `username`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h11m59s605.jpg" alt="" width="840">
+</p>
+
+Primeiro teste de autenticação usando o cliente HTTP: uma requisição `POST` para `/api/auth/login` com o usuário `influencer` (que era válido na implementação anterior, em memória) e senha `password`. Como esse usuário não existe mais no banco de dados, a resposta é `403`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h12m02s355.jpg" alt="" width="840">
+</p>
+
+Confirmação do resultado da requisição anterior: código de status `403`, indicando que a autenticação com o usuário `influencer` falhou, já que esse usuário não foi migrado para o banco.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h12m08s190.jpg" alt="" width="840">
+</p>
+
+Nova tentativa de login, agora com o usuário `tech_guru` (criado pelo `CommandLineRunner` e persistido no banco), utilizando a mesma senha `password`. A resposta é `200`, confirmando que a autenticação via banco de dados funcionou.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h12m16s057.jpg" alt="" width="840">
+</p>
+
+Utilizando o cookie de sessão (`JSESSIONID`) obtido no login anterior, é feita uma requisição `GET` para `http://localhost:8080`. A resposta retorna `Hello World tech_guru`, confirmando que o usuário autenticado foi corretamente identificado pela aplicação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h12m24s612.jpg" alt="" width="840">
+</p>
+
+Novo login, dessa vez com o usuário `logistics` (a *brand* criada no banco), utilizando a senha `password`. A resposta `200` e o novo `Set-Cookie` confirmam a autenticação bem-sucedida.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h12m30s755.jpg" alt="" width="840">
+</p>
+
+Requisição `GET` para `http://localhost:8080` usando o cookie de sessão do usuário `logistics`. A resposta retorna `Hello World logistics`, validando que a autenticação da *brand*, agora vinda do banco de dados, também está funcionando corretamente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h14m30s104.jpg" alt="" width="840">
+</p>
+
+Código do `Controller`, mostrando o endpoint principal `hello`, que recebe o usuário autenticado via `@AuthenticationPrincipal User user` e retorna `"Hello World " + user.getId()` — algo que não era possível anteriormente com o `UserDetails` padrão, que só expunha `username` e `password`. Também são mostrados os endpoints `/influencer` e `/brand`, protegidos por `@PreAuthorize` com as respectivas *roles*. A requisição para `/brand` retornou `403 Forbidden`, um problema relacionado à forma como as *roles* estão definidas.
+
+```java
+@RestController
+@RequestMapping
+public class Controller {
+
+    @GetMapping
+    public String hello(@AuthenticationPrincipal User user) {
+        return "Hello World " + user.getId();
+    }
+
+    @GetMapping("/influencer")
+    @PreAuthorize("hasRole('INFLUENCER')")
+    public String influencerEndpoint() { return "Hello INFLUENCER"; }
+
+    @GetMapping("/brand")
+    @PreAuthorize("hasRole('BRAND')")
+    public String brandEndpoint() { return "Hello BRAND"; }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h14m47s552.jpg" alt="" width="840">
+</p>
+
+Novo login realizado com o usuário `logistics` (*brand*), obtendo um novo cookie de sessão para testar o endpoint protegido `/brand`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h15m02s074.jpg" alt="" width="840">
+</p>
+
+Requisição ao endpoint raiz utilizando o cookie do usuário autenticado, retornando `Hello World` seguido do UUID do usuário (por exemplo, `6b84a463-75dd-4a5a-a83e-9d59cf1c2723`). Isso demonstra, na prática, o ganho de usar a entidade `User` própria em vez do `UserDetails` genérico: agora é possível acessar diretamente o `id` do usuário autenticado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h16m09s615.jpg" alt="" width="840">
+</p>
+
+Ajuste no `UserRole`: os valores do enum são renomeados de `INFLUENCER`/`BRAND` para `ROLE_INFLUENCER`/`ROLE_BRAND`. Isso é necessário porque o Spring Security espera, internamente, que as autoridades (*authorities*) tenham o prefixo `ROLE_` quando utilizadas em conjunto com `hasRole(...)` nas anotações `@PreAuthorize`. Antes dessa correção, a requisição para `/brand` retornava `403`.
+
+```java
+package dio.proposalmanagement.auth.domain;
+
+public enum UserRole {
+    ROLE_INFLUENCER,
+    ROLE_BRAND,
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-15h18m11s204.jpg" alt="" width="840">
+</p>
+
+Consulta à tabela `user` no banco de dados após reiniciar a aplicação, confirmando que as *roles* foram atualizadas para `ROLE_INFLUENCER` e `ROLE_BRAND`. Com esse ajuste, o `@PreAuthorize("hasRole('BRAND')")` do endpoint `/brand` passa a reconhecer corretamente a autoridade do usuário `logistics`, permitindo o acesso que antes era negado.
       
-
-
-
 #### Material de Apoio Até Esta Etapa
 
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/proposal-managemnet_ate_o_video04.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video04.zip)
 - [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
 
 
