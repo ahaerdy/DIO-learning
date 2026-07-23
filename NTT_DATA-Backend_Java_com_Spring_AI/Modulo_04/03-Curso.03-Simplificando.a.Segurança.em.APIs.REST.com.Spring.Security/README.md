@@ -483,10 +483,424 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/s
 
 ### Anotações
 
+#### Abertura do módulo: Evoluindo a Autenticação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-07h46m13s622.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Simplificando a Segurança em APIs REST com Spring Security", destacando o módulo 03 — Evoluindo a Autenticação. A partir daqui, a proposta é sair de uma configuração básica (todas as URLs autenticadas, login via formulário e usuários em memória) e evoluir para uma autenticação feita via API REST.
+
+#### O campo oculto de CSRF no formulário de login
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h02m53s690.jpg" alt="" width="840">
+</p>
+
+Na tela padrão de login gerada pelo Spring Security ("Please sign in"), com o DevTools do navegador aberto, é possível observar no HTML um campo `input` do tipo `hidden` chamado `_csrf`. Esse campo existe porque o Spring Security mantém a proteção contra CSRF (Cross-Site Request Forgery) habilitada por padrão: a cada requisição de formulário, um token único é enviado junto e validado no servidor, garantindo que a requisição realmente partiu daquele formulário gerado pela aplicação.
+
+#### Desabilitando o CSRF para os testes da API
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h11m14s054.jpg" alt="" width="840">
+</p>
+
+No `SecurityConfig.java`, a linha `.csrf(AbstractHttpConfigurer::disable)` desativa a proteção CSRF na cadeia de filtros de segurança. Essa decisão é tomada aqui apenas para simplificar os testes: em cenários de navegador, o CSRF costuma ser relevante, mas em aplicações mobile ou SPAs (que consultam o token de outra forma) a necessidade pode ser menor. Vale sempre avaliar o tipo de cliente que vai consumir a API antes de desabilitar essa proteção em produção.
+
+#### Documentação oficial: como funciona o Form Login
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h21m55s138.jpg" alt="" width="840">
+</p>
+
+Consulta à documentação oficial do Spring Security sobre "Form Login", mostrando o diagrama geral da cadeia de filtros (`SecurityFilterChain`) envolvida na autenticação por formulário: o `FilterSecurityInterceptor`, o `ExceptionTranslationFilter` e o `LoginUrlAuthenticationEntryPoint`, que redireciona o cliente para a tela de login quando necessário. Esse é o mecanismo que, por baixo dos panos, utiliza o `UsernamePasswordAuthenticationFilter`.
+
+#### Detalhamento do UsernamePasswordAuthenticationFilter
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h22m05s927.jpg" alt="" width="840">
+</p>
+
+Diagrama mais detalhado da documentação mostrando o fluxo interno do `UsernamePasswordAuthenticationFilter`: a requisição gera um `UsernamePasswordAuthenticationToken`, que é enviado ao `AuthenticationManager` para validação ("Authenticated?"). Em caso de falha, o fluxo segue para o `AuthenticationFailureHandler`; em caso de sucesso, entram em ação o `SessionAuthenticationStrategy`, o `SecurityContextHolder`, o `RememberMeServices` e o `AuthenticationSuccessHandler`, entre outros componentes responsáveis por manter o usuário autenticado.
+
+#### Criando o pacote `security`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h35m14s953.jpg" alt="" width="840">
+</p>
+
+Criação de um novo pacote dentro de `dio.proposalmanagement.auth.infrastructure`, chamado `security`, para organizar as futuras classes de configuração de autenticação, mantendo o código mais coeso.
+
+#### Criando a classe RestUsernamePasswordAuthenticationFilter
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h36m09s384.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `security`, é criada uma nova classe Java chamada `RestUsernamePasswordAuthenticationFilter`. Essa classe será uma implementação própria, baseada no filtro padrão do Spring Security, mas adaptada para receber a autenticação via requisição REST (JSON) em vez de formulário HTML.
+
+#### Estrutura inicial do filtro customizado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h39m57s437.jpg" alt="" width="840">
+</p>
+
+```java
+@Component
+public class RestUsernamePasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
+
+    @Override
+    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
+        return super.attemptAuthentication(request, response);
+    }
+}
+```
+
+A classe estende `UsernamePasswordAuthenticationFilter` e é anotada com `@Component` para que o Spring consiga identificá-la e gerenciá-la como um bean assim que a aplicação sobe. O método sobrescrito `attemptAuthentication` é justamente onde fica definida a lógica de como a autenticação vai ocorrer — é ali que a implementação customizada será construída.
+
+#### Criando o DTO LoginRequest
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h41m33s540.jpg" alt="" width="840">
+</p>
+
+```java
+public record LoginRequest(String username, String password) {}
+```
+
+Antes de tratar a autenticação em si, é necessário modelar o formato do JSON que a API vai receber. Para isso, é criado um `record` chamado `LoginRequest`, com as propriedades `username` e `password`. O uso de `record` (em vez de uma classe tradicional) faz sentido aqui por ser um objeto imutável, adequado para representar um payload de entrada.
+
+#### Adicionando o ObjectMapper
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h42m41s182.jpg" alt="" width="840">
+</p>
+
+```java
+private final ObjectMapper objectMapper;
+```
+
+Para transformar o JSON recebido na requisição em um objeto `LoginRequest` (processo de desserialização), é adicionado um campo `ObjectMapper`, classe do Spring responsável por converter JSON em objetos Java e vice-versa.
+
+#### Construtor do filtro e definição da URL de processamento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h44m57s412.jpg" alt="" width="840">
+</p>
+
+```java
+public RestUsernamePasswordAuthenticationFilter(ObjectMapper objectMapper) {
+    this.objectMapper = objectMapper;
+    setFilterProcessesUrl("/api/auth/login");
+}
+```
+
+O `ObjectMapper` é injetado por dependência via construtor. Além disso, é definida uma URL própria para o filtro por meio de `setFilterProcessesUrl("/api/auth/login")` — assim como o form login usa `/login` por padrão, esse novo filtro passa a responder no endpoint `/api/auth/login`.
+
+#### Lendo o JSON e criando o token de autenticação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-08h50m43s895.jpg" alt="" width="840">
+</p>
+
+```java
+try {
+    var loginRequest = objectMapper.readValue(request.getInputStream(), LoginRequest.class);
+
+    var token = UsernamePasswordAuthenticationToken.unauthenticated(
+            loginRequest.username(),
+            loginRequest.password());
+
+} catch (IOException e) {
+    throw new RuntimeException(e);
+}
+```
+
+Dentro de `attemptAuthentication`, o `objectMapper.readValue` converte o corpo da requisição (`request.getInputStream()`) em um `LoginRequest`. Em seguida, é criado um `UsernamePasswordAuthenticationToken.unauthenticated`, um objeto que carrega usuário e senha e que o Spring Security consegue manipular durante o processo de autenticação.
+
+#### Chamando o AuthenticationManager para autenticar
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-09h49m57s627.jpg" alt="" width="840">
+</p>
+
+```java
+return getAuthenticationManager().authenticate(token);
+```
+
+Com o token criado, o próximo passo é tentar efetivamente autenticar o usuário chamando `getAuthenticationManager().authenticate(token)`, método herdado da classe pai. Esse método verifica o usuário no `UserDetailsService`, aplica o `PasswordEncoder` configurado e valida se a senha enviada corresponde à senha registrada, retornando o objeto `Authentication` em caso de sucesso.
+
+#### Erro ao subir a aplicação: AuthenticationManager não definido
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-09h50m42s659.jpg" alt="" width="840">
+</p>
+
+Ao subir a aplicação, ocorre uma exceção: `IllegalArgumentException: authenticationManager must be specified`. Isso acontece porque o filtro customizado ainda não sabe qual `AuthenticationManager` deve utilizar — diferente do form login padrão, que já vem com essa configuração pronta, o filtro criado manualmente precisa recebê-la explicitamente.
+
+#### Ajustando o construtor para receber o AuthenticationConfiguration
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-09h51m12s230.jpg" alt="" width="840">
+</p>
+
+Para resolver o problema, o construtor do filtro é alterado para também receber um `AuthenticationConfiguration`, objeto que o Spring Security disponibiliza e que expõe o `AuthenticationManager` padrão da aplicação — o mesmo utilizado pelo `DaoAuthenticationProvider`, baseado no `UserDetailsService` e no `PasswordEncoder` já configurados.
+
+#### Passando o AuthenticationManager para a classe pai
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-09h54m21s328.jpg" alt="" width="840">
+</p>
+
+```java
+public RestUsernamePasswordAuthenticationFilter(AuthenticationConfiguration authenticationConfiguration,
+                                                  ObjectMapper objectMapper) {
+    super(authenticationConfiguration.getAuthenticationManager());
+    this.objectMapper = objectMapper;
+    setFilterProcessesUrl("/api/auth/login");
+}
+```
+
+O construtor agora chama `super(authenticationConfiguration.getAuthenticationManager())`, repassando o `AuthenticationManager` padrão para a classe pai (`UsernamePasswordAuthenticationFilter`). A partir disso, toda chamada a `getAuthenticationManager()` dentro do filtro utiliza esse manager já configurado, e a aplicação volta a subir sem erros.
+
+#### Liberando o endpoint de login na configuração de segurança
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-09h59m53s473.jpg" alt="" width="840">
+</p>
+
+```java
+.requestMatchers("/api/auth/login").permitAll()
+```
+
+No `SecurityConfig`, é adicionada uma nova regra liberando o acesso público ao endpoint `/api/auth/login`, já que é justamente essa URL que os usuários não autenticados vão utilizar para efetuar login.
+
+#### Removendo o form login
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h01m23s946.jpg" alt="" width="840">
+</p>
+
+```java
+// .formLogin(Customizer.withDefaults());
+```
+
+A configuração `.formLogin(Customizer.withDefaults())` é comentada, já que a aplicação deixará de utilizar a tela de login por formulário e passará a depender exclusivamente da autenticação via REST.
+
+#### Registrando o novo filtro na cadeia de segurança
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h09m20s194.jpg" alt="" width="840">
+</p>
+
+```java
+.addFilterAt(restUsernamePasswordAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+```
+
+O `RestUsernamePasswordAuthenticationFilter` é injetado como parâmetro do próprio bean `securityFilterChain`, permitindo que o Spring realize a injeção de dependência automaticamente. Em seguida, `addFilterAt` posiciona esse filtro customizado no lugar do `UsernamePasswordAuthenticationFilter` padrão dentro da cadeia de filtros de segurança.
+
+#### Visão consolidada do SecurityConfig atualizado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h11m54s893.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.auth.infrastructure.security;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Bean
+    SecurityFilterChain securityFilterChain(
+            HttpSecurity http,
+            AuthenticationConfiguration authenticationConfiguration,
+            ObjectMapper objectMapper) throws Exception {
+
+        RestUsernamePasswordAuthenticationFilter customAuthFilter =
+                new RestUsernamePasswordAuthenticationFilter(authenticationConfiguration, objectMapper);
+
+        http
+                .csrf(AbstractHttpConfigurer::disable)
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/auth/login").permitAll()
+                        .anyRequest().authenticated())
+                .addFilterAt(customAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
+    }
+
+    @Bean
+    UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
+        UserDetails influencer = User.withUsername("influencer")
+                .password(passwordEncoder.encode("password"))
+                .roles("INFLUENCER")
+                .build();
+
+        UserDetails brand = User.withUsername("brand")
+                .password(passwordEncoder.encode("password"))
+                .roles("BRAND")
+                .build();
+
+        return new InMemoryUserDetailsManager(influencer, brand);
+    }
+
+    @Bean
+    PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
+```
+
+Visão geral da classe `SecurityConfig` já com todas as mudanças aplicadas: CSRF desabilitado, a URL `/api/auth/login` liberada, o filtro customizado registrado no lugar do padrão, e os beans de `UserDetailsService` (com os usuários `influencer` e `brand`) e `PasswordEncoder` mantidos como no vídeo anterior.
+
+#### Primeiro teste: requisição de login via HTTP Client
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h14m31s578.jpg" alt="" width="840">
+</p>
+
+```http
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "influencer",
+  "password": "123"
+}
+```
+
+Utilizando a ferramenta HTTP Client do IntelliJ, é montada uma requisição `POST` para `/api/auth/login`, enviando um JSON com usuário `influencer` e senha `123` (propositalmente incorreta neste primeiro teste).
+
+#### Primeiro resultado: 403 por credenciais inválidas
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h22m25s345.jpg" alt="" width="840">
+</p>
+
+A resposta retorna `HTTP/1.1 403`, indicativo de que o Spring Security lançou uma exceção do tipo `BadCredentialsException`, já que a senha enviada (`123`) não corresponde à senha cadastrada para o usuário.
+
+#### Corrigindo a senha e identificando o comportamento de redirect
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h25m05s723.jpg" alt="" width="840">
+</p>
+
+Com a anotação `@no-cookie-jar` (para sempre visualizar o cookie retornado, sem reaproveitá-lo automaticamente) e a senha corrigida para `password`, a requisição ainda retorna `403`, mas agora mostrando um `Redirection` para `http://localhost:8080/`. Esse comportamento vem do próprio `UsernamePasswordAuthenticationFilter`, que por padrão redireciona o cliente para `/` após uma autenticação bem-sucedida — um comportamento pensado para aplicações web tradicionais, mas que não faz sentido em uma API REST.
+
+#### Substituindo o redirect por uma resposta 200
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h29m18s933.jpg" alt="" width="840">
+</p>
+
+```java
+setAuthenticationSuccessHandler((HttpServletRequest request, HttpServletResponse response, Authentication authentication) ->
+        response.setStatus(HttpServletResponse.SC_OK)
+);
+```
+
+Para eliminar o redirecionamento indesejado, é definido um `AuthenticationSuccessHandler` customizado, que simplesmente retorna o status `200 (OK)` quando a autenticação é bem-sucedida — sem redirecionar o cliente para nenhuma outra URL.
+
+#### Autenticado, mas sem sessão: novo 403 ao acessar outra rota
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h32m12s985.jpg" alt="" width="840">
+</p>
+
+```java
+.securityContext(context -> context.requireExplicitSave(false))
+```
+
+Mesmo com a resposta `200`, ao tentar acessar a rota `/` logo em seguida, o resultado ainda é `403`. Isso ocorre porque a autenticação por si só não garante uma sessão — é preciso que a próxima requisição informe qual sessão está sendo usada, por meio de um cookie. Para resolver isso, é adicionada a configuração `.securityContext(context -> context.requireExplicitSave(false))`, instruindo o Spring Security a salvar a sessão automaticamente.
+
+#### Entendendo o requireExplicitSave(false)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-10h32m41s765.jpg" alt="" width="840">
+</p>
+
+Continuação da explicação sobre a configuração anterior: normalmente, o `UsernamePasswordAuthenticationFilter` salva a sessão internamente através do `AuthenticationSuccessHandler` padrão. Como esse handler foi substituído por uma implementação simples (que apenas retorna `200`), é necessário pedir explicitamente ao `SecurityContext` para persistir a sessão automaticamente, sem depender de um salvamento manual.
+
+#### Cookie de sessão retornado na resposta
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-11h11m00s693.jpg" alt="" width="840">
+</p>
+
+Ao reenviar a requisição de login, a resposta `200` agora traz um cabeçalho `Set-Cookie` contendo o `JSESSIONID`. Esse cookie identifica a sessão criada para o usuário autenticado e deve ser enviado nas próximas requisições para que o servidor reconheça o cliente como autenticado.
+
+#### Acessando uma rota protegida com o cookie de sessão
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-11h12m13s079.jpg" alt="" width="840">
+</p>
+
+```http
+GET http://localhost:8080
+Cookie: JSESSIONID=1366E9388756E7925A271B178253A74A
+```
+
+Uma requisição `GET` para `/` sem o cookie retornaria `403`. Enviando o cookie de sessão obtido no login, a resposta retorna `200` com o corpo `Hello World influencer`, confirmando que a sessão do usuário `influencer` está sendo reconhecida corretamente.
+
+#### Autenticando com o segundo usuário (brand)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-11h15m19s332.jpg" alt="" width="840">
+</p>
+
+```http
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "brand",
+  "password": "password"
+}
+```
+
+Repetindo o processo de login, agora com o usuário `brand`, para demonstrar que cada usuário autenticado recebe sua própria sessão, independente da sessão já criada para o `influencer`.
+
+#### Novo cookie de sessão gerado para o usuário brand
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-11h15m29s631.jpg" alt="" width="840">
+</p>
+
+A resposta `200` traz um novo `Set-Cookie`, com um `JSESSIONID` diferente do gerado anteriormente para o `influencer`, evidenciando que cada login gera sua própria sessão isolada.
+
+#### Confirmando o isolamento das sessões
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-23-11h15m49s012.jpg" alt="" width="840">
+</p>
+
+Ao repetir a requisição `GET /` usando o cookie de sessão do `influencer`, a resposta continua retornando `Hello World influencer`. Já ao usar o cookie mais recente, gerado para o `brand`, a resposta passa a ser `Hello World brand`. Isso confirma que a aplicação, mesmo utilizando autenticação REST, ainda mantém o comportamento stateful herdado do `UsernamePasswordAuthenticationFilter`: cada sessão é controlada em memória e vinculada a um usuário específico, o que traz limitações — como a impossibilidade de escalar horizontalmente ou de reaproveitar a sessão após um reinício da aplicação — pontos que serão abordados nas próximas etapas do curso.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/R](./000-Midia_e_Anexos/etapas_do_codigo/R)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
 
 
-
-### 🟩 Vídeo 04 - Evoluindo a Autenticação
+### 🟩 Vídeo 04 - Segurança com Banco de Dados
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_04.webm" type="video/webm">
@@ -495,6 +909,16 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/s
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/345dee1d-d60f-4224-ada1-14af162d5058?autoplay=1
 
+### Anotações
+
+      
+
+
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
 
 
 ### 🟩 Vídeo 05 - Segurança com Banco de Dados

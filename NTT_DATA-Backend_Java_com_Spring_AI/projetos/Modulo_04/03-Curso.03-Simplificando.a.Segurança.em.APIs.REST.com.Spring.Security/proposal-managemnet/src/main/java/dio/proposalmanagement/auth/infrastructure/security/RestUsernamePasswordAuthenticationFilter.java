@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -16,9 +17,12 @@ public class RestUsernamePasswordAuthenticationFilter extends UsernamePasswordAu
 
     private final ObjectMapper objectMapper;
 
-    public RestUsernamePasswordAuthenticationFilter(ObjectMapper objectMapper) {
+    public RestUsernamePasswordAuthenticationFilter(AuthenticationConfiguration authenticationConfiguration, ObjectMapper objectMapper) throws Exception {
+        super(authenticationConfiguration.getAuthenticationManager());
         this.objectMapper = objectMapper;
         setFilterProcessesUrl("/api/auth/login");
+        setAuthenticationSuccessHandler((request, response, authentication) ->
+                response.setStatus(HttpServletResponse.SC_OK));
     }
 
     @Override
@@ -29,6 +33,7 @@ public class RestUsernamePasswordAuthenticationFilter extends UsernamePasswordAu
             var token = UsernamePasswordAuthenticationToken.unauthenticated(
                     loginRequest.username(),
                     loginRequest.password());
+            return getAuthenticationManager().authenticate(token);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -2,6 +2,9 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.2.5' // Ajuste a versão conforme necessário para o seu projeto/curso
     id 'io.spring.dependency-management' version '1.1.4'
+
+    id("io.freefair.lombok") version "9.2.0"
+
 }
 
 group = 'dio'
@@ -24,6 +27,12 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:6.0.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+
 }
 
 test {
