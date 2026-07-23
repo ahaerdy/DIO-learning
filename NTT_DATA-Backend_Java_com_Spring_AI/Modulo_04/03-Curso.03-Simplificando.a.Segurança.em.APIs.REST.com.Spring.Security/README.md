@@ -1530,7 +1530,7 @@ Consulta à tabela `user` no banco de dados após reiniciar a aplicação, confi
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/proposal-managemnet_ate_o_video04.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video04.zip)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [003-Tutorial_ProposalManagement_Spring_Security_Video04.md](./003-Tutorial_ProposalManagement_Spring_Security_Video04.md)
 
 
 ### 🟩 Vídeo 05 - Segurança com Banco de Dados
