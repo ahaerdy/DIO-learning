@@ -897,7 +897,7 @@ Ao repetir a requisição `GET /` usando o cookie de sessão do `influencer`, a 
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/R](./000-Midia_e_Anexos/etapas_do_codigo/R)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [002-Tutorial_ProposalManagement_Spring_Security_Video03.md](./002-Tutorial_ProposalManagement_Spring_Security_Video03.md)
 
 
 ### 🟩 Vídeo 04 - Segurança com Banco de Dados
