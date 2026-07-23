@@ -472,14 +472,19 @@ Por fim, o usuário `brand` acessa `/brand`, endpoint para o qual ele possui a r
 - [001-Tutorial_ProposalManagement_Spring_Security_Videos01a02.md](./001-Tutorial_ProposalManagement_Spring_Security_Videos01a02.md)
 
 
-### 🟩 Vídeo 03 - Primeiros Passos com Spring Security
+### 🟩 Vídeo 03 - Evoluindo a Autenticação
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_03.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/a32d0aa7-df06-4de2-9e2a-6f884af941d8?autoplay=1
+
+### Anotações
+
+
+
 
 ### 🟩 Vídeo 04 - Evoluindo a Autenticação
 
@@ -488,7 +493,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/345dee1d-d60f-4224-ada1-14af162d5058?autoplay=1
+
+
 
 ### 🟩 Vídeo 05 - Segurança com Banco de Dados
 
@@ -497,7 +504,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/54d0c000-6178-4510-bf96-6124f45075b1?autoplay=1
 
 ### 🟩 Vídeo 06 - Segurança Baseada em Papéis
 
