@@ -1533,7 +1533,7 @@ Consulta à tabela `user` no banco de dados após reiniciar a aplicação, confi
 - [003-Tutorial_ProposalManagement_Spring_Security_Video04.md](./003-Tutorial_ProposalManagement_Spring_Security_Video04.md)
 
 
-### 🟩 Vídeo 05 - Segurança com Banco de Dados
+### 🟩 Vídeo 05 - Segurança Baseada em Papéis
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_05.webm" type="video/webm">
@@ -1542,7 +1542,399 @@ Consulta à tabela `user` no banco de dados após reiniciar a aplicação, confi
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/54d0c000-6178-4510-bf96-6124f45075b1?autoplay=1
 
-### 🟩 Vídeo 06 - Segurança Baseada em Papéis
+### Anotações
+
+#### Abertura da aula
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-09h26m55s280.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da Jornada Tech "Simplificando a Segurança em APIs REST com Spring Security", com o sumário do curso em destaque no módulo 05 — Segurança Baseada em Papéis. A partir daqui a aula retoma o que já foi construído nos vídeos anteriores (form login, filtro de autenticação para REST e integração de UserDetails/UserDetailsService com o banco de dados) para avançar na modelagem do estudo de caso de propostas entre influencers e marcas.
+
+#### Criando o pacote do módulo Proposal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-09h28m42s664.jpg" alt="" width="840">
+</p>
+
+Na IDE, é criado um novo pacote chamado `proposal` dentro de `dio.proposalmanagement`. Esse pacote vai concentrar toda a regra de negócio de propostas, separada do módulo de autenticação — uma decisão pensada para deixar o domínio mais desacoplado, já visando um cenário em que esse módulo poderia até virar um microsserviço isolado no futuro.
+
+#### Estrutura interna do módulo Proposal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-09h31m20s962.jpg" alt="" width="840">
+</p>
+
+O pacote `proposal` é organizado seguindo o mesmo padrão já usado em `auth`: três subpacotes, `application`, `domain` e `infrastructure`. Essa separação em camadas é a base para trabalhar com Domain-Driven Design e Clean Architecture ao longo da aula.
+
+#### Criando a classe de domínio Proposal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-09h32m30s991.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `domain`, é criada a primeira classe de domínio do módulo: `Proposal`. Ela representa a proposta que um influencer pode criar e que uma marca pode visualizar.
+
+#### Identificador fortemente tipado para Proposal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-09h33m26s986.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+public class Proposal {
+    private ProposalId id;
+}
+```
+
+A classe `Proposal` recebe um campo `id` do tipo `ProposalId`, em vez de um `UUID` ou `String` cru. A ideia é trabalhar com identificadores fortemente tipados: criar um tipo específico para o ID evita que, por engano, um argumento errado seja passado para um método que espera esse identificador.
+
+#### Criando o record ProposalId
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-09h54m16s155.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+import java.util.UUID;
+
+public record ProposalId(UUID id) {
+}
+```
+
+`ProposalId` é criado como um `record` que encapsula um `UUID`. Por ser um simples "data value" (um valor sem ciclo de vida próprio), um record é a estrutura mais adequada — diferente de `Proposal`, que é uma classe porque tem um ciclo de vida mais bem definido.
+
+#### Completando os campos de Proposal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-10h13m32s340.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+import java.util.Optional;
+
+public class Proposal {
+    private ProposalId id;
+    private String title;
+    private Optional<String> description;
+    private Owner owner;
+}
+```
+
+Além do `id`, a classe `Proposal` ganha um `title` (obrigatório), uma `description` opcional (representada com `Optional<String>`) e um `owner`, do tipo `Owner` — o dono da proposta.
+
+#### Criando o record Owner
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-10h57m25s295.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+public record Owner(OwnerId id, String name) {
+}
+```
+
+`Owner` também é modelado como record, contendo um `OwnerId` e um `name`. Ele não é diretamente o usuário autenticado do módulo de auth — é uma representação própria do domínio de propostas, mantendo os dois módulos desacoplados, mesmo que por baixo dos panos utilizem o mesmo identificador.
+
+#### Criando o record OwnerId
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-10h58m10s848.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+import java.util.UUID;
+
+public record OwnerId(UUID id) {
+}
+```
+
+Seguindo o mesmo padrão de `ProposalId`, o `OwnerId` também é um record fortemente tipado que encapsula um `UUID`.
+
+#### Construtor de criação de Proposal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-11h39m59s119.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+import java.util.Optional;
+
+public class Proposal {
+    private ProposalId id;
+    private String title;
+    private Optional<String> description;
+    private Owner owner;
+
+    public Proposal(String title, Optional<String> description, Owner owner) {
+        this.id = new ProposalId();
+        this.title = title;
+        this.description = description;
+        this.owner = owner;
+    }
+}
+```
+
+É adicionado o construtor usado no momento da criação de uma proposta: ele recebe apenas `title`, `description` e `owner`, e instancia o `id` internamente através de `new ProposalId()` — já que, nesse momento, a proposta ainda não existe e não tem um identificador definido de antemão.
+
+#### Construtor vazio de ProposalId
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-11h41m28s560.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+import java.util.UUID;
+
+public record ProposalId(UUID id) {
+    public ProposalId() {
+        this(UUID.randomUUID());
+    }
+}
+```
+
+Como `ProposalId` só tinha o construtor canônico (que exige um `UUID`), é adicionado um construtor vazio que gera automaticamente um `UUID` aleatório, permitindo o uso de `new ProposalId()` no construtor de `Proposal`.
+
+#### Anotações Lombok em Proposal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-11h42m43s839.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+import java.util.Optional;
+
+@Getter
+@AllArgsConstructor
+public class Proposal {
+    private ProposalId id;
+    private String title;
+    private Optional<String> description;
+    private Owner owner;
+
+    public Proposal(String title, Optional<String> description, Owner owner) {
+        this.id = new ProposalId();
+        this.title = title;
+        this.description = description;
+        this.owner = owner;
+    }
+}
+```
+
+A classe `Proposal` recebe as anotações do Lombok `@Getter`, que gera automaticamente os métodos getters de todos os campos, e `@AllArgsConstructor`, que cria um construtor com todos os argumentos — útil, por exemplo, para reconstruir um `Proposal` já existente vindo do banco de dados.
+
+#### Criando a interface ProposalRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-11h43m08s034.jpg" alt="" width="840">
+</p>
+
+Com as classes de domínio prontas, o próximo passo é criar a interface `ProposalRepository`, que vai definir como o módulo se comunica com o banco de dados, seguindo o padrão Repository.
+
+#### Definindo os métodos de ProposalRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-11h44m24s320.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.domain;
+
+import java.util.List;
+
+public interface ProposalRepository {
+    List<Proposal> findAll();
+    List<Proposal> findAllByOwnerId(OwnerId ownerId);
+    Proposal save(Proposal proposal);
+}
+```
+
+A interface `ProposalRepository` fica dentro do domínio e expõe apenas os métodos que a regra de negócio realmente precisa: `findAll`, `findAllByOwnerId` e `save`. A implementação concreta, que efetivamente conversa com o banco, ficará depois na camada de infraestrutura — mantendo a regra de negócio isolada de detalhes técnicos.
+
+#### Criando o CreateProposalUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-11h50m07s129.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.application;
+
+public class CreateProposalUseCase {
+}
+```
+
+É criada a classe `CreateProposalUseCase` dentro do pacote `application`. Em vez de um `ProposalService` genérico com vários métodos, a aula segue o padrão de use case da Clean Architecture: cada use case tem uma única responsabilidade (Single Responsibility Principle) e apenas um método público, chamado `execute`.
+
+#### Injetando o repositório no use case
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-11h53m23s495.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.application;
+
+import dio.proposalmanagement.proposal.domain.ProposalRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CreateProposalUseCase {
+    private final ProposalRepository proposalRepository;
+
+    public CreateProposalUseCase(ProposalRepository proposalRepository) {
+        this.proposalRepository = proposalRepository;
+    }
+
+    public void execute() {
+        proposalRepository.save();
+    }
+}
+```
+
+O `ProposalRepository` é injetado via construtor, e a classe é anotada com `@Service` para que o Spring gerencie essa injeção de dependência. Dentro de `execute`, a ideia inicial é chamar `proposalRepository.save(...)`, mas ainda falta montar o `Proposal` que será salvo.
+
+#### Criando o pacote input
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-12h07m21s835.jpg" alt="" width="840">
+</p>
+
+Para não montar manualmente todos os argumentos de `Proposal` dentro do use case, é criado um pacote `input`, que vai abrigar um DTO (Data Transfer Object) responsável por carregar os dados de entrada.
+
+#### Criando o record CreateProposalInput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-12h07m57s999.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.application.input;
+
+public record CreateProposalInput() {
+}
+```
+
+É criado o record `CreateProposalInput`, que receberá os dados vindos de fora (como `title` e `description`) para representar a entrada do use case de criação de proposta.
+
+#### Montando o Proposal a partir do input
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-12h18m17s447.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.application;
+
+import dio.proposalmanagement.proposal.application.input.CreateProposalInput;
+import dio.proposalmanagement.proposal.domain.Owner;
+import dio.proposalmanagement.proposal.domain.ProposalRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CreateProposalUseCase {
+    private final ProposalRepository proposalRepository;
+
+    public CreateProposalUseCase(ProposalRepository proposalRepository) {
+        this.proposalRepository = proposalRepository;
+    }
+
+    public void execute(CreateProposalInput input, Owner owner) {
+        var proposal = input.toDomain(owner);
+        proposalRepository.save(proposal);
+    }
+}
+```
+
+O método `execute` passa a receber um `CreateProposalInput` e também um `Owner` como parâmetros separados — o `Owner` é recebido à parte para não acoplar o use case diretamente ao módulo de autenticação. A partir do input é chamado um método `toDomain(owner)`, que converte o DTO em um `Proposal` de domínio, e o resultado é passado para `proposalRepository.save`.
+
+#### Criando o ProposalOutput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-12h23m05s488.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.application.output;
+
+import dio.proposalmanagement.proposal.domain.Proposal;
+
+import java.util.Optional;
+
+public record ProposalOutput(String id, String title, Optional<String> description, String ownerId, String ownerName) {
+    public static ProposalOutput from(Proposal proposal) {
+        return new ProposalOutput(proposal.getId().id().toString(),
+                proposal.getTitle(),
+                proposal.getDescription(),
+                proposal.getOwner().id().toString(),
+                proposal.getOwner().name());
+    }
+}
+```
+
+Assim como foi criado um DTO de entrada, agora é criado um DTO de saída, `ProposalOutput`, com um método estático `from` que converte um `Proposal` de domínio em uma representação simples (strings e um `Optional`), pronta para ser exposta fora do use case — por exemplo, para um controller.
+
+#### Finalizando o CreateProposalUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-12h24m03s275.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.application;
+
+import dio.proposalmanagement.proposal.application.input.CreateProposalInput;
+import dio.proposalmanagement.proposal.application.output.ProposalOutput;
+import dio.proposalmanagement.proposal.domain.Owner;
+import dio.proposalmanagement.proposal.domain.ProposalRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CreateProposalUseCase {
+    private final ProposalRepository proposalRepository;
+
+    public CreateProposalUseCase(ProposalRepository proposalRepository) {
+        this.proposalRepository = proposalRepository;
+    }
+
+    public void execute(CreateProposalInput input, Owner owner) {
+        var proposal = input.toDomain(owner);
+        var saved = proposalRepository.save(proposal);
+
+        return ProposalOutput.from(saved);
+    }
+}
+```
+
+Por fim, o retorno de `proposalRepository.save(proposal)` é guardado em uma variável `saved`, e o use case passa a retornar `ProposalOutput.from(saved)`. Com isso, fecha-se o primeiro use case completo do módulo de propostas: ele recebe um input, monta o domínio, persiste e devolve um output — mantendo essa "porta de entrada e saída" isolada de controllers e de outras camadas de infraestrutura.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+
+
+### 🟩 Vídeo 06 - Implementando o Use Case de Listagem
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_06.webm" type="video/webm">
@@ -1551,8 +1943,7 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/s
 
 link do vídeo:
 
-### 🟩 Vídeo 07 - Implementando o Use Case de Listagem
-
+### 🟩 Vídeo 07 - Criando Entidades de Persistência
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_07.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
@@ -1560,7 +1951,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 08 - Criando Entidades de Persistência
+### 🟩 Vídeo 08 - Implementando o ProposalController
 
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_08.webm" type="video/webm">
@@ -1569,8 +1960,7 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 09 - Implementando o ProposalController
-
+### 🟩 Vídeo 09 - Segurança Escalável
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
@@ -1578,14 +1968,6 @@ link do vídeo:
 
 link do vídeo:
 
-### 🟩 Vídeo 10 - Segurança Escalável
-
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_10.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
-
-link do vídeo:
 
 ### Tutoriais
 
