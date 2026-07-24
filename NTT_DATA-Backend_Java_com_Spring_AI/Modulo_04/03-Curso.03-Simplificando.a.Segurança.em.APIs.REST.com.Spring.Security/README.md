@@ -2182,7 +2182,7 @@ public class ListProposalsUseCase {
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/proposal-managemnet_ate_o_video06.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video06.zip)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [005-Tutorial_ProposalManagement_Spring_Security_Video06.md](./005-Tutorial_ProposalManagement_Spring_Security_Video06.md)
 
 
 ### 🟩 Vídeo 07 - Criando Entidades de Persistência
