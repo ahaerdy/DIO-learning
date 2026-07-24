@@ -1931,7 +1931,7 @@ Por fim, o retorno de `proposalRepository.save(proposal)` é guardado em uma var
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/proposal-managemnet_ate_o_video05.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video05.zip)
-- [004-Tutorial_ProposalManagement_Spring_Security_Video05.mdy](./004-Tutorial_ProposalManagement_Spring_Security_Video05.md)
+- [004-Tutorial_ProposalManagement_Spring_Security_Video05.md](./004-Tutorial_ProposalManagement_Spring_Security_Video05.md)
 
 
 ### 🟩 Vídeo 06 - Implementando o Use Case de Listagem
