@@ -1930,7 +1930,7 @@ Por fim, o retorno de `proposalRepository.save(proposal)` é guardado em uma var
 
 #### Material de Apoio Até Esta Etapa
 
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/proposal-managemnet_ate_o_video05.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video05.zip)
 - [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
 
 
@@ -1941,7 +1941,249 @@ Por fim, o retorno de `proposalRepository.save(proposal)` é guardado em uma var
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/5ac2b804-d0d9-437b-b45d-32891286e428?autoplay=1
+
+### Anotações
+
+#### Abertura: Simplificando a Segurança em APIs REST com Spring Security
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-13h11m29s749.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Simplificando a Segurança em APIs REST com Spring Security", da Jornada Tech. À direita é exibido o sumário completo do módulo, com o item 06 — "Implementando o Use Case de Listagem" — destacado, indicando que esta é a etapa do conteúdo que será desenvolvida a partir daqui.
+
+#### Criando o enum AccessScope
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-13h31m10s249.jpg" alt="" width="840">
+</p>
+
+Nesta etapa é criado o enum `AccessScope`, com os valores `OWN` e `ALL`. A ideia é substituir o acoplamento direto com a `Role` de autenticação/autorização por um conceito próprio do domínio de listagem de propostas: em vez de o caso de uso perguntar diretamente "é uma brand?" ou "é um influencer?", ele passa a trabalhar apenas com um escopo de acesso — `OWN` (apenas os próprios registros) ou `ALL` (todos os registros) — mantendo a regra de negócio desacoplada dos detalhes de autenticação.
+
+```java
+package dio.proposalmanagement.proposal.application.list;
+
+public enum AccessScope {
+    OWN,
+    ALL
+}
+```
+
+#### Criando a interface Strategy
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-14h31m35s244.jpg" alt="" width="840">
+</p>
+
+Aqui é iniciada a criação de uma nova interface Java dentro do pacote `list`, que dará origem ao padrão de projeto **Strategy**. A proposta é ter uma interface simples, com implementações específicas para cada regra de acesso, e um factory responsável por entregar a implementação correta em tempo de execução.
+
+#### Definindo os métodos da interface Strategy
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-14h39m24s907.jpg" alt="" width="840">
+</p>
+
+A interface `Strategy` é definida com dois métodos: `getProposals`, que recebe um `OwnerId` e retorna a lista de `Proposal` (o parâmetro é útil apenas quando é preciso filtrar por usuário autenticado, podendo ser ignorado nas implementações que retornam tudo), e `getScope`, que identifica qual `AccessScope` aquela implementação representa — informação que a factory usará para escolher a estratégia certa.
+
+```java
+package dio.proposalmanagement.proposal.application.list;
+
+import dio.proposalmanagement.proposal.domain.OwnerId;
+import dio.proposalmanagement.proposal.domain.Proposal;
+
+import java.util.List;
+
+public interface Strategy {
+    List<Proposal> getProposals(OwnerId ownerId);
+    AccessScope getScope();
+}
+```
+
+#### Criando a implementação OwnStrategy
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-14h40m20s482.jpg" alt="" width="840">
+</p>
+
+Início da criação da primeira implementação da interface `Strategy`, a classe `OwnStrategy`, responsável por representar o escopo `OWN` — ou seja, o caso em que o usuário deve enxergar apenas as próprias propostas.
+
+#### Implementação completa da OwnStrategy
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-14h44m26s526.jpg" alt="" width="840">
+</p>
+
+A classe `OwnStrategy` é finalizada implementando `Strategy`. Ela recebe o `ProposalRepository` via injeção de dependência pelo construtor e é anotada com `@Service` para que o Spring consiga instanciá-la. O método `getProposals` delega para `proposalRepository.findAllByOwnerId(ownerId)`, retornando apenas as propostas do dono informado, e `getScope` retorna `AccessScope.OWN`.
+
+```java
+package dio.proposalmanagement.proposal.application.list;
+
+import dio.proposalmanagement.proposal.domain.OwnerId;
+import dio.proposalmanagement.proposal.domain.Proposal;
+import dio.proposalmanagement.proposal.domain.ProposalRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class OwnStrategy implements Strategy {
+    private final ProposalRepository proposalRepository;
+
+    public OwnStrategy(ProposalRepository proposalRepository) {
+        this.proposalRepository = proposalRepository;
+    }
+
+    @Override
+    public List<Proposal> getProposals(OwnerId ownerId) {
+        return proposalRepository.findAllByOwnerId(ownerId);
+    }
+
+    @Override
+    public AccessScope getScope() {
+        return AccessScope.OWN;
+    }
+}
+```
+
+#### Criando a implementação AllStrategy
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-14h44m44s667.jpg" alt="" width="840">
+</p>
+
+Após concluir a `OwnStrategy`, é criada a segunda implementação da interface `Strategy`, a classe `AllStrategy`, responsável por representar o escopo `ALL` — o caso em que o usuário deve enxergar todas as propostas.
+
+#### Implementação completa da AllStrategy
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-14h52m43s456.jpg" alt="" width="840">
+</p>
+
+A `AllStrategy` também implementa `Strategy`, recebendo o `ProposalRepository` pelo construtor e sendo anotada com `@Service`. Diferente da `OwnStrategy`, seu método `getProposals` chama `proposalRepository.findAll()`, retornando todas as propostas sem filtro por dono, e `getScope` retorna `AccessScope.ALL`. Com isso, as duas regras de acesso — "só o meu" e "tudo" — ficam isoladas em classes próprias, sem nenhum if/else amarrado a papéis de usuário.
+
+```java
+package dio.proposalmanagement.proposal.application.list;
+
+import dio.proposalmanagement.proposal.domain.OwnerId;
+import dio.proposalmanagement.proposal.domain.Proposal;
+import dio.proposalmanagement.proposal.domain.ProposalRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class AllStrategy implements Strategy {
+    private final ProposalRepository proposalRepository;
+
+    public AllStrategy(ProposalRepository proposalRepository) {
+        this.proposalRepository = proposalRepository;
+    }
+
+    @Override
+    public List<Proposal> getProposals(OwnerId ownerId) {
+        return proposalRepository.findAll();
+    }
+
+    @Override
+    public AccessScope getScope() {
+        return AccessScope.ALL;
+    }
+}
+```
+
+#### Criando a classe Factory
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-14h55m49s496.jpg" alt="" width="840">
+</p>
+
+Com as duas implementações de `Strategy` prontas, é criada a classe `Factory`, ainda vazia. Ela representa o segundo padrão de projeto utilizado, o **Factory**, cuja responsabilidade é concentrar a regra de negócio que decide qual instância de `Strategy` deve ser usada em cada caso.
+
+```java
+package dio.proposalmanagement.proposal.application.list;
+
+public class Factory {
+}
+```
+
+#### Implementando a Factory com Map e Collectors.toMap
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-15h02m44s106.jpg" alt="" width="840">
+</p>
+
+A `Factory` é anotada com `@Component` e recebe no construtor uma `List<Strategy>` — como o Spring conhece todas as classes que implementam `Strategy` (`OwnStrategy` e `AllStrategy`), ele já injeta automaticamente ambas nessa lista. Dentro do construtor, a lista é convertida em um `Map<AccessScope, Strategy>` usando stream e `Collectors.toMap`, onde a chave é o retorno de `strategy.getScope()` e o valor é a própria instância da strategy (via `Function.identity()`). Por fim, o método `getStrategy(AccessScope scope)` apenas consulta esse mapa e devolve a implementação correspondente ao escopo solicitado.
+
+```java
+package dio.proposalmanagement.proposal.application.list;
+
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+@Component
+public class Factory {
+    private final Map<AccessScope, Strategy> strategies;
+
+    public Factory(List<Strategy> strategies) {
+        this.strategies = strategies
+                .stream()
+                .collect(
+                        Collectors.toMap(
+                                Strategy::getScope,
+                                Function.identity()));
+    }
+
+    public Strategy getStrategy(AccessScope scope) {
+        return strategies.get(scope);
+    }
+}
+```
+
+#### Implementando o ListProposalsUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-24-15h05m27s668.jpg" alt="" width="840">
+</p>
+
+Com a `Strategy` e a `Factory` prontas, o `ListProposalsUseCase` é finalizado. Ele é anotado com `@Service` e recebe a `Factory` via construtor. No método `execute`, que recebe o `AccessScope` e o `OwnerId`, ele pede à factory a strategy correspondente ao escopo (`factory.getStrategy(scope)`) e chama `getProposals(ownerId)` sobre ela — nesse ponto já tendo em mãos a lista completa ou a lista filtrada, conforme o escopo. Em seguida, a lista de `Proposal` é transformada em uma lista de `ProposalOutput` usando stream, `map` e `ProposalOutput::from`, finalizando com `toList()`. Essa abordagem evita que o use case cresça com vários if/else: se surgir uma nova regra de acesso, basta criar uma nova strategy, sem alterar o que já existe.
+
+```java
+package dio.proposalmanagement.proposal.application;
+
+import dio.proposalmanagement.proposal.application.list.AccessScope;
+import dio.proposalmanagement.proposal.application.list.Factory;
+import dio.proposalmanagement.proposal.application.output.ProposalOutput;
+import dio.proposalmanagement.proposal.domain.OwnerId;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class ListProposalsUseCase {
+    private final Factory factory;
+
+    public ListProposalsUseCase(Factory factory) {
+        this.factory = factory;
+    }
+
+    public List<ProposalOutput> execute(AccessScope scope, OwnerId ownerId) {
+        var proposals = factory.getStrategy(scope).getProposals(ownerId);
+
+        return proposals.stream().map(ProposalOutput::from).toList();
+    }
+}
+```
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/proposal-managemnet_ate_o_video06.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video06.zip)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+
 
 ### 🟩 Vídeo 07 - Criando Entidades de Persistência
 <video width="60%" controls>
