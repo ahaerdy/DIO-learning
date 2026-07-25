@@ -68,7 +68,7 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 - [x] Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_01/01-Curso.01-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
 - [x] Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_01/02-Curso.02-Fundamentos_da_Sintaxe_da_Linguagem_Java)
 - [x] Curso: [Estruturas de Controle em Java](Modulo_01/03-Curso.03-Estruturas_de_Controle_em_Java)
-- [ ] Desafio de código: [Fundamentos da Linguagem de Programação Java](Modulo_01/04-Desafio-Fundamentos_da_Linguagem_de_Programacao_Java)
+- [ ] Desafio de código: [Fundamentos da Linguagem de Programação Java](Modulo_01/04-Desafio-Fundamentos_da_Linguagem_de_Programacao_Java/)
 
 ---
 
@@ -79,7 +79,7 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 - [x] Curso: [Dominando Interfaces e Lambda em Java](Modulo_02/03-Curso.03-Dominando.Interfaces.e.Lambda.em.Java)
 - [x] Curso: [Imersão Prática com Collections e Outras Classes Úteis do Java](Modulo_02/04-Curso.04-Imersao.Pratica.com.Collections.e.Outras.Classes.Uteis.do.Java)
 - [ ] Desafio de projeto: [Criando um Jogo do Sudoku em Java](Modulo_02/05-Desafio-Criando.um.Jogo.do.Sudoku.em.Java)
-- [ ] Desafio de código: [Estruturas de Controle em Java](Modulo_02/06-Desafio-Estruturas.de.Controle.em.Java)
+- [ ] Desafio de código: [Estruturas de Controle em Java](Modulo_02/06-Desafio-Estruturas.de.Controle.em.Java/)
 
 ---
 
