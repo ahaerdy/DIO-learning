@@ -68,13 +68,13 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 - [x] Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_01/01-Curso.01-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
 - [x] Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_01/02-Curso.02-Fundamentos_da_Sintaxe_da_Linguagem_Java)
 - [x] Curso: [Estruturas de Controle em Java](Modulo_01/03-Curso.03-Estruturas_de_Controle_em_Java)
-- [ ] Desafio de código: [Fundamentos da Linguagem de Programação Java](Modulo_01/04-Desafio-Fundamentos_da_Linguagem_de_Programacao_Java/)
+- [x] ✅ Desafio de código: [Fundamentos da Linguagem de Programação Java](Modulo_01/04-Desafio-Fundamentos_da_Linguagem_de_Programacao_Java/)
 
 ---
 
 ### Módulo 2: Programação Orientada a Objetos e Estruturas de Dados com Java
 
-- [x] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/01-Curso.01-Java.e.a.Arte.da.Abstracao.com.Classes.e.Encapsulamento)
+- [x] ✅ Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/01-Curso.01-Java.e.a.Arte.da.Abstracao.com.Classes.e.Encapsulamento)
 - [x] Curso: [Herança e Polimorfismo em Java](Modulo_02/02-Curso.02-Heranca.e.Polimorfismo.em.Java)
 - [x] Curso: [Dominando Interfaces e Lambda em Java](Modulo_02/03-Curso.03-Dominando.Interfaces.e.Lambda.em.Java)
 - [x] Curso: [Imersão Prática com Collections e Outras Classes Úteis do Java](Modulo_02/04-Curso.04-Imersao.Pratica.com.Collections.e.Outras.Classes.Uteis.do.Java)
