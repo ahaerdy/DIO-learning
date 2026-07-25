@@ -75,9 +75,9 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 ### Módulo 2: Programação Orientada a Objetos e Estruturas de Dados com Java
 
 - [x] ✅ Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_02/01-Curso.01-Java.e.a.Arte.da.Abstracao.com.Classes.e.Encapsulamento)
-- [x] Curso: [Herança e Polimorfismo em Java](Modulo_02/02-Curso.02-Heranca.e.Polimorfismo.em.Java)
-- [x] Curso: [Dominando Interfaces e Lambda em Java](Modulo_02/03-Curso.03-Dominando.Interfaces.e.Lambda.em.Java)
-- [x] Curso: [Imersão Prática com Collections e Outras Classes Úteis do Java](Modulo_02/04-Curso.04-Imersao.Pratica.com.Collections.e.Outras.Classes.Uteis.do.Java)
+- [x] ✅ Curso: [Herança e Polimorfismo em Java](Modulo_02/02-Curso.02-Heranca.e.Polimorfismo.em.Java)
+- [x] ✅ Curso: [Dominando Interfaces e Lambda em Java](Modulo_02/03-Curso.03-Dominando.Interfaces.e.Lambda.em.Java)
+- [x] ✅ Curso: [Imersão Prática com Collections e Outras Classes Úteis do Java](Modulo_02/04-Curso.04-Imersao.Pratica.com.Collections.e.Outras.Classes.Uteis.do.Java)
 - [ ] Desafio de projeto: [Criando um Jogo do Sudoku em Java](Modulo_02/05-Desafio-Criando.um.Jogo.do.Sudoku.em.Java)
 - [ ] Desafio de código: [Estruturas de Controle em Java](Modulo_02/06-Desafio-Estruturas.de.Controle.em.Java/)
 
