@@ -2191,7 +2191,7 @@ public class ListProposalsUseCase {
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/5d7367a3-5d1d-4c88-b6e0-501d516f326e?autoplay=1
 
 ### 🟩 Vídeo 08 - Implementando o ProposalController
 
@@ -2200,7 +2200,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/27bd5c02-966e-4a3a-a228-736398ec27b5?autoplay=1
 
 ### 🟩 Vídeo 09 - Segurança Escalável
 <video width="60%" controls>
@@ -2208,7 +2208,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/a614f035-453d-47b2-8a79-dd6fc49a299b?autoplay=1
 
 
 ### Tutoriais
