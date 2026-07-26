@@ -1,6 +1,9 @@
 package dio.proposalmanagement.proposal.infrastructure.persistence.entity;
 
+import dio.proposalmanagement.proposal.domain.Owner;
+import dio.proposalmanagement.proposal.domain.OwnerId;
 import dio.proposalmanagement.proposal.domain.Proposal;
+import dio.proposalmanagement.proposal.domain.ProposalId;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -8,6 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Entity
@@ -37,4 +41,14 @@ public class ProposalEntity {
                 proposal.getOwner().name()
         );
     }
+
+    public Proposal toDomain() {
+        return new Proposal(
+                new ProposalId(this.id),
+                this.title,
+                Optional.ofNullable(this.description),
+                new Owner(new OwnerId(this.ownerId), this.ownerName)
+        );
+    }
+
 }

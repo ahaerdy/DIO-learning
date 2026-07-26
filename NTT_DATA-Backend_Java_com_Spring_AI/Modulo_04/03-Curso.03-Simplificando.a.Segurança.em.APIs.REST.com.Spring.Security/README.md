@@ -2193,6 +2193,242 @@ public class ListProposalsUseCase {
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/5d7367a3-5d1d-4c88-b6e0-501d516f326e?autoplay=1
 
+### Anotações
+
+#### Introdução: Criando Entidades de Persistência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-08h39m56s510.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Simplificando a Segurança em APIs REST com Spring Security", da trilha Jornada Tech. O índice do curso está destacado no tópico 07 — "Criando Entidades de Persistência" — indicando que esta etapa é dedicada à criação das classes responsáveis por representar os dados no banco, dando sequência ao trabalho já feito nos use cases de listagem e criação de propostas.
+
+#### Criando os pacotes de persistência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-08h40m59s030.jpg" alt="" width="840">
+</p>
+
+Dentro da camada de infraestrutura do módulo `proposal`, está sendo criado um novo pacote chamado `persistence` (aparece no campo de criação como "persistance"). Esse pacote vai concentrar tudo o que se refere à comunicação com o banco de dados, mantendo essa responsabilidade separada das camadas de aplicação e domínio já existentes.
+
+#### Organizando entity e repository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-08h42m15s660.jpg" alt="" width="840">
+</p>
+
+Com o pacote `infrastructure.persistence` criado, agora aparecem dentro dele dois subpacotes: `entity` e `repository`. O pacote `entity` vai abrigar as classes que representam diretamente as tabelas do banco de dados, enquanto `repository` vai conter as implementações responsáveis por acessar esses dados.
+
+#### Criando a classe ProposalEntity
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-08h42m54s594.jpg" alt="" width="840">
+</p>
+
+Está sendo criada uma nova classe chamada `ProposalEntity` dentro do pacote `entity`. O nome foi escolhido dessa forma — em vez de simplesmente `Proposal` — para diferenciá-la claramente da classe de domínio `Proposal` já existente, deixando explícito que esta é a representação da tabela no banco, e não a regra de negócio.
+
+#### Estruturando os campos da entidade
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-08h53m15s372.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.infrastructure.persistence.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ProposalEntity {
+    @Id
+    private UUID id;
+
+    @Column(nullable = false)
+    private String title;
+
+    private String description;
+
+    @Column(nullable = false)
+    private UUID ownerId;
+}
+```
+
+A classe foi anotada com `@Entity` para o JPA reconhecê-la como uma tabela, `@Data` do Lombok para gerar getters e setters automaticamente, além de `@NoArgsConstructor` (exigido pelo Hibernate/JPA) e `@AllArgsConstructor`. O campo `id` não usa geração automática de valor, já que o próprio domínio já é responsável por gerar o UUID ao criar um `Proposal`. Os campos `title` e `ownerId` foram marcados como `@Column(nullable = false)`, enquanto `description` pode ser nulo. Para vincular a proposta ao usuário, optou-se por guardar apenas o identificador (`ownerId`) em vez de um relacionamento direto (`@ManyToOne`/`@OneToMany`) com uma tabela de usuários — decisão pensada para cenários com serviços isolados, evitando acoplamento entre os módulos de proposta e autenticação, ao custo de abrir mão da consistência imediata garantida por uma foreign key.
+
+#### Adicionando o nome do proprietário
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-08h56m31s758.jpg" alt="" width="840">
+</p>
+
+```java
+    @Column(nullable = false)
+    private UUID ownerId;
+
+    @Column(nullable = false)
+    private String ownerName;
+```
+
+Além do `ownerId`, foi adicionado também o campo `ownerName`, igualmente marcado como não nulo. Guardar o nome do usuário diretamente na proposta evita a necessidade de uma consulta adicional para exibi-lo, mas introduz um ponto de atenção: caso o nome do usuário seja alterado em outro serviço, será preciso algum mecanismo de sincronização (como escutar um evento de atualização de usuário) para manter essa informação consistente.
+
+#### Criando o mapeamento de domínio para entidade
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-09h00m09s231.jpg" alt="" width="840">
+</p>
+
+```java
+public static ProposalEntity from(Proposal proposal) {
+    return new ProposalEntity(
+            proposal.getId().id(),
+            proposal.getTitle(),
+            proposal.getDescription().orElse(null),
+            proposal.getOwner().id().id(),
+            proposal.getOwner().name()
+    );
+}
+```
+
+Foi criado o primeiro método de conversão (um mapper): `from`, que recebe um objeto de domínio `Proposal` e devolve um `ProposalEntity` pronto para ser persistido. Cada valor é extraído do objeto de domínio na ordem dos parâmetros do construtor gerado pelo Lombok, e como `description` é um `Optional`, ele é convertido para `null` quando estiver vazio, já que a entidade espera uma `String` direta.
+
+#### Completando o mapeamento com toDomain
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-09h05m26s013.jpg" alt="" width="840">
+</p>
+
+```java
+public Proposal toDomain() {
+    return new Proposal(
+            new ProposalId(this.id),
+            this.title,
+            Optional.ofNullable(this.description),
+            new Owner(new OwnerId(this.ownerId), this.ownerName)
+    );
+}
+```
+
+Agora foi criado o caminho inverso: o método `toDomain`, que parte de um `ProposalEntity` (vindo do banco) e reconstrói um objeto de domínio `Proposal`. Com isso, a entidade passa a ter dois métodos de mapeamento — `from` (domínio → entidade) e `toDomain` (entidade → domínio) — mantendo a separação entre o que a aplicação entende como regra de negócio e o que o banco entende como estrutura de dados.
+
+#### Criando o repositório JPA da entidade
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-09h06m41s036.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `repository`, está sendo criada a interface `ProposalEntityRepository`. Ela vai ser responsável por estender o `CrudRepository` do Spring Data, herdando automaticamente operações básicas de persistência como salvar, buscar e remover registros.
+
+#### Definindo a consulta por owner
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-09h21m28s793.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.proposalmanagement.proposal.infrastructure.persistence.repository;
+
+import dio.proposalmanagement.proposal.infrastructure.persistence.entity.ProposalEntity;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
+import java.util.UUID;
+
+public interface ProposalEntityRepository extends CrudRepository<ProposalEntity, UUID> {
+    List<ProposalEntity> findAllByOwnerId(UUID ownerId);
+}
+```
+
+A interface `ProposalEntityRepository` estende `CrudRepository<ProposalEntity, UUID>`, ganhando de graça as operações de CRUD. Foi adicionado também o método `findAllByOwnerId`, que segue a convenção de nomenclatura do Spring Data JPA — o Hibernate interpreta o nome do método e gera a consulta correspondente automaticamente, sem necessidade de escrever SQL.
+
+#### Criando a implementação do repositório de domínio
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-09h22m35s399.jpg" alt="" width="840">
+</p>
+
+Agora está sendo criada a classe `JpaProposalRepository`, que será a implementação concreta da interface de repositório definida na camada de domínio. Diferente da `ProposalEntityRepository` (que lida com a entidade JPA), essa classe vai implementar o contrato `ProposalRepository`, expondo métodos que trabalham diretamente com objetos de domínio (`Proposal`).
+
+#### Implementando o findAll
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-09h29m41s117.jpg" alt="" width="840">
+</p>
+
+```java
+@Repository
+public class JpaProposalRepository implements ProposalRepository {
+    private final ProposalEntityRepository proposalEntityRepository;
+
+    public JpaProposalRepository(ProposalEntityRepository proposalEntityRepository) {
+        this.proposalEntityRepository = proposalEntityRepository;
+    }
+
+    @Override
+    public List<Proposal> findAll() {
+        var iterable = proposalEntityRepository.findAll();
+
+        return StreamSupport
+                .stream(iterable.spliterator(), false)
+                .map(ProposalEntity::toDomain)
+                .toList();
+    }
+
+    @Override
+    public List<Proposal> findAllByOwnerId(OwnerId ownerId) {
+        return List.of();
+    }
+
+    @Override
+    public Proposal save(Proposal proposal) {
+        // implementação a seguir
+    }
+}
+```
+
+A classe foi anotada com `@Repository`, o que permite ao Spring Boot identificá-la e injetá-la automaticamente onde a interface `ProposalRepository` for requisitada — corrigindo o erro de injeção de dependência que ocorria antes dessa anotação. A `ProposalEntityRepository` é recebida via injeção pelo construtor. No `findAll`, como o `CrudRepository.findAll()` retorna um `Iterable` (e não uma `List`), o código usa `StreamSupport.stream(iterable.spliterator(), false)` para transformar esse iterável em uma stream, aplica `map(ProposalEntity::toDomain)` para converter cada entidade em um objeto de domínio, e finaliza com `toList()` para obter a lista de propostas esperada pela interface.
+
+#### Finalizando findAllByOwnerId e save
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-26-09h33m03s127.jpg" alt="" width="840">
+</p>
+
+```java
+@Override
+public List<Proposal> findAllByOwnerId(OwnerId ownerId) {
+    return proposalEntityRepository.findAllByOwnerId(ownerId.id())
+            .stream()
+            .map(ProposalEntity::toDomain)
+            .toList();
+}
+
+@Override
+public Proposal save(Proposal proposal) {
+    var entity = ProposalEntity.from(proposal);
+    var saved = proposalEntityRepository.save(entity);
+
+    return saved.toDomain();
+}
+```
+
+O método `findAllByOwnerId` segue a mesma lógica do `findAll`, com a diferença de que `ProposalEntityRepository.findAllByOwnerId` já retorna diretamente uma `List`, então basta chamar `.stream()`, mapear cada `ProposalEntity` para `Proposal` com `toDomain()` e coletar com `toList()`. Já no `save`, o fluxo é o inverso: primeiro o objeto de domínio `Proposal` é convertido em `ProposalEntity` com `ProposalEntity.from(proposal)`, essa entidade é salva através do `proposalEntityRepository.save(entity)`, e o resultado salvo é convertido de volta para `Proposal` com `saved.toDomain()`. Com isso, a implementação do repositório fica completa e os use cases de criação e listagem passam a funcionar corretamente com o banco de dados. O próximo passo será expor esses use cases através de um controller.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video07.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video07.zip)
+- [Tutorial_ProposalManagement_Spring_Security_Video07](./006-Tutorial_ProposalManagement_Spring_Security_Video07.md)
+
+
 ### 🟩 Vídeo 08 - Implementando o ProposalController
 
 <video width="60%" controls>
