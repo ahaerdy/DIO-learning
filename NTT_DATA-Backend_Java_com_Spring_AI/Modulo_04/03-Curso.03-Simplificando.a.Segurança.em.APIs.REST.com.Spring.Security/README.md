@@ -2737,5 +2737,5 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/s
 
 # Certificado: Simplificando a Segurança em APIs REST com Spring Security
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/WC8E96BD.pdf
+- Certificado em pdf: [Certificado-Simplificando.a.Segurança.em.APIs.REST.com.Spring.Security.pdf](Modulo_04/03-Curso.03-Simplificando.a.Segurança.em.APIs.REST.com.Spring.Security/000-Midia_e_Anexos/Certificado-Simplificando.a.Segurança.em.APIs.REST.com.Spring.Security.pdf)
