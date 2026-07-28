@@ -106,7 +106,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_04/01-Curso.01-Criando.sua.Primeira.API.REST.com.Spring.Boot)
 - [x] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_04/02-Curso.02-Conectando.sua.API.com.Banco.de.Dados.Através.do.Spring.Data)
 - [x] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_04/03-Curso.03-Simplificando.a.Segurança.em.APIs.REST.com.Spring.Security/)
-- [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign]
+- [x] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_04/04-Curso.04-Consumindo.APIs.Externas.com.a.Spring.Cloud.OpenFeign/)
 - [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
 
 ---
@@ -154,7 +154,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - [Criando sua Primeira API REST com Spring Boot](https://hermes.dio.me/certificates/P2CB0LSX.pdf)
 - [Conectando sua API com Banco de Dados Através do Spring Data](https://hermes.dio.me/certificates/MF0GVYEW.pdf)
-- [Simplificando a Segurança em APIs REST com Spring Security]
+- [Simplificando a Segurança em APIs REST com Spring Security](https://hermes.dio.me/certificates/WC8E96BD.pdf)
 - [Consumindo APIs Externas com a Spring Cloud OpenFeign]
 - [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
 - Certificado do Módulo: [Criando Soluções Inteligentes com Spring Boot e Java Moderno]

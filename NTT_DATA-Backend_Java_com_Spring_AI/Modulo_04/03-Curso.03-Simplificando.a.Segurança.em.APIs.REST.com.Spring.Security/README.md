@@ -8,7 +8,7 @@
 ### 🟩 Vídeo 01 - Introdução ao simplificando a segurança
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_01.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_01.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -116,7 +116,7 @@ Apresentação do estudo de caso que será desenvolvido no curso: uma plataforma
 ### 🟩 Vídeo 02 - Primeiros Passos com Spring Security
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_02.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_02.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -475,7 +475,7 @@ Por fim, o usuário `brand` acessa `/brand`, endpoint para o qual ele possui a r
 ### 🟩 Vídeo 03 - Evoluindo a Autenticação
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_03.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_03.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -903,7 +903,7 @@ Ao repetir a requisição `GET /` usando o cookie de sessão do `influencer`, a 
 ### 🟩 Vídeo 04 - Segurança com Banco de Dados
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_04.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_04.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -1536,7 +1536,7 @@ Consulta à tabela `user` no banco de dados após reiniciar a aplicação, confi
 ### 🟩 Vídeo 05 - Segurança Baseada em Papéis
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_05.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_05.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -1937,7 +1937,7 @@ Por fim, o retorno de `proposalRepository.save(proposal)` é guardado em uma var
 ### 🟩 Vídeo 06 - Implementando o Use Case de Listagem
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_06.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_06.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -2187,7 +2187,7 @@ public class ListProposalsUseCase {
 
 ### 🟩 Vídeo 07 - Criando Entidades de Persistência
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_07.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_07.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -2432,7 +2432,7 @@ O método `findAllByOwnerId` segue a mesma lógica do `findAll`, com a diferenç
 ### 🟩 Vídeo 08 - Implementando o ProposalController
 
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_08.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_08.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
@@ -2721,7 +2721,7 @@ Na sequência de testes, uma requisição autenticada com um `JSESSIONID` de um 
 
 ### 🟩 Vídeo 09 - Segurança Escalável
 <video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_09.webm" type="video/webm">
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.03-video_09.webm" type="video/webm">
     Seu navegador não suporta vídeo HTML5.
 </video>
 
