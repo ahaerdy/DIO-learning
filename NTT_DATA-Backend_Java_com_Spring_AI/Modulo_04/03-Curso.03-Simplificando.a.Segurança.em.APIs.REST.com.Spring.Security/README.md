@@ -2438,6 +2438,287 @@ O método `findAllByOwnerId` segue a mesma lógica do `findAll`, com a diferenç
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/27bd5c02-966e-4a3a-a228-736398ec27b5?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-08h36m32s037.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Simplificando a Segurança em APIs REST com Spring Security", da Jornada Tech. O tópico em destaque na agenda é o item 08, "Implementando o ProposalController", indicando que esta é a etapa em que o controller responsável por expor as operações de propostas via HTTP será construído, dando sequência ao que já foi feito com o repositório JPA nos vídeos anteriores.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-08h40m07s434.jpg" alt="" width="840">
+</p>
+
+Início da criação do controller no IntelliJ. Foi criado o pacote `http` dentro de `infrastructure`, e nele a classe `ProposalController`, ainda vazia, marcando o ponto de partida da implementação:
+
+```java
+package dio.proposalmanagement.proposal.infrastructure.http;
+
+public class ProposalController {
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-09h00m31s311.jpg" alt="" width="840">
+</p>
+
+A classe `ProposalController` já está anotada como `@RestController` e mapeada para o caminho `/proposals` via `@RequestMapping`. Os use cases `CreateProposalUseCase` e `ListProposalsUseCase` são injetados por construtor. O primeiro endpoint criado é o de criação de propostas, mapeado com `@PostMapping` e restrito pela anotação `@PreAuthorize("hasRole('INFLUENCER')")`, já recebendo como parâmetro o DTO `CreateProposalRequest`, criado para representar o payload JSON da requisição:
+
+```java
+import dio.proposalmanagement.proposal.application.CreateProposalUseCase;
+import dio.proposalmanagement.proposal.application.ListProposalsUseCase;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/proposals")
+public class ProposalController {
+    private final CreateProposalUseCase createProposalUseCase;
+    private final ListProposalsUseCase listProposalsUseCase;
+
+    public ProposalController(CreateProposalUseCase createProposalUseCase,
+                               ListProposalsUseCase listProposalsUseCase) {
+        this.createProposalUseCase = createProposalUseCase;
+        this.listProposalsUseCase = listProposalsUseCase;
+    }
+
+    @PostMapping
+    @PreAuthorize("hasRole('INFLUENCER')")
+    public ResponseEntity<?> createProposal(@RequestBody CreateProposalRequest request) {
+
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-09h00m55s442.jpg" alt="" width="840">
+</p>
+
+O DTO `CreateProposalRequest` foi criado como um `record`, contendo os campos `title` (obrigatório) e `description` (opcional, representado com `Optional<String>`). Esse tipo de estrutura é o ponto ideal para futuramente incluir regras de validação do payload recebido:
+
+```java
+package dio.proposalmanagement.proposal.infrastructure.http.request;
+
+import java.util.Optional;
+
+public record CreateProposalRequest(String title, Optional<String> description) {
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-09h29m22s568.jpg" alt="" width="840">
+</p>
+
+Dentro do corpo do método `createProposal`, o cursor é posicionado logo após `this.createProposalUseCase`, prestes a invocar o método `.execute(...)` do use case — o passo em que o controller efetivamente delega a execução da regra de negócio de criação da proposta para a camada de aplicação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-09h30m53s501.jpg" alt="" width="840">
+</p>
+
+O `CreateProposalRequest` recebe um novo método, `toInput()`, responsável por converter o DTO recebido na requisição HTTP em um `CreateProposalInput`, objeto de entrada esperado pelo use case da camada de aplicação:
+
+```java
+package dio.proposalmanagement.proposal.infrastructure.http.request;
+
+import dio.proposalmanagement.proposal.application.input.CreateProposalInput;
+
+import java.util.Optional;
+
+public record CreateProposalRequest(String title, Optional<String> description) {
+    public CreateProposalInput toInput() {
+        return new CreateProposalInput(title, description);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-09h37m52s226.jpg" alt="" width="840">
+</p>
+
+O método `createProposal` passa a receber também o usuário autenticado via `@AuthenticationPrincipal User user`. A partir dele é montado o `Owner` da proposta, usando o id e o username do usuário logado, e então o use case é executado recebendo tanto o input convertido (`request.toInput()`) quanto o owner, retornando um `output`:
+
+```java
+import dio.proposalmanagement.proposal.domain.OwnerId;
+import dio.proposalmanagement.proposal.infrastructure.http.request.CreateProposalRequest;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/proposals")
+public class ProposalController {
+    private final CreateProposalUseCase createProposalUseCase;
+    private final ListProposalsUseCase listProposalsUseCase;
+
+    public ProposalController(CreateProposalUseCase createProposalUseCase,
+                               ListProposalsUseCase listProposalsUseCase) {
+        this.createProposalUseCase = createProposalUseCase;
+        this.listProposalsUseCase = listProposalsUseCase;
+    }
+
+    @PostMapping
+    @PreAuthorize("hasRole('INFLUENCER')")
+    public ResponseEntity<?> createProposal(@RequestBody CreateProposalRequest request,
+                                             @AuthenticationPrincipal User user) {
+        var owner = new Owner(new OwnerId(user.getId()), user.getUsername());
+        var output = this.createProposalUseCase.execute(request.toInput(), owner);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-09h38m21s587.jpg" alt="" width="840">
+</p>
+
+É criado o esqueleto de um novo DTO de saída, o `ProposalResponse`, no pacote `infrastructure.http.response`, que será usado para formatar a resposta HTTP retornada ao cliente após a criação da proposta:
+
+```java
+package dio.proposalmanagement.proposal.infrastructure.http.response;
+
+public record ProposalResponse() {
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-10h01m46s237.jpg" alt="" width="840">
+</p>
+
+O `ProposalResponse` é detalhado com os campos `id`, `title`, `description` e um sub-record `OwnerResponse` (contendo `id` e `name` do dono da proposta). A anotação `@JsonInclude(JsonInclude.Include.NON_NULL)` garante que campos nulos não apareçam no JSON de saída. O método estático `from(ProposalOutput output)` converte o output do use case para esse DTO de resposta, tratando a descrição opcional com `orElse(null)`:
+
+```java
+package dio.proposalmanagement.proposal.infrastructure.http.response;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import dio.proposalmanagement.proposal.application.output.ProposalOutput;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public record ProposalResponse(String id, String title, String description, OwnerResponse owner) {
+    public record OwnerResponse(String id, String name) {
+    }
+
+    public static ProposalResponse from(ProposalOutput output) {
+        return new ProposalResponse(
+                output.id(),
+                output.title(),
+                output.description().orElse(null),
+                new OwnerResponse(output.ownerId(), output.ownerName())
+        );
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-10h03m40s653.jpg" alt="" width="840">
+</p>
+
+O endpoint de criação é finalizado: o tipo de retorno do método passa a ser `ProposalResponse`, e a última linha do método converte o `output` retornado pelo use case usando `ProposalResponse.from(output)`, completando o fluxo entre requisição, execução da regra de negócio e resposta HTTP:
+
+```java
+@PostMapping
+@PreAuthorize("hasRole('INFLUENCER')")
+public ProposalResponse createProposal(@RequestBody CreateProposalRequest request,
+                                        @AuthenticationPrincipal User user) {
+    var owner = new Owner(new OwnerId(user.getId()), user.getUsername());
+    var output = this.createProposalUseCase.execute(request.toInput(), owner);
+
+    return ProposalResponse.from(output);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-10h26m47s542.jpg" alt="" width="840">
+</p>
+
+Agora é implementado o segundo endpoint, de listagem de propostas, com `@GetMapping` e `@PreAuthorize("hasAnyRole('INFLUENCER', 'BRAND')")`, permitindo acesso tanto a influenciadores quanto a marcas. Dentro do método `findAllProposals`, é calculado um `accessScope` a partir da role do usuário, usando o método auxiliar `getAccessScope`, que faz um `switch` retornando `AccessScope.OWN` para influenciadores (só veem as próprias propostas) e `AccessScope.ALL` para marcas (veem todas as propostas):
+
+```java
+@GetMapping
+@PreAuthorize("hasAnyRole('INFLUENCER', 'BRAND')")
+public List<ProposalResponse> findAllProposals(@AuthenticationPrincipal User user) {
+    var accessScope = getAccessScope(user.getRole());
+    listProposalsUseCase.execute();
+}
+
+private static AccessScope getAccessScope(UserRole role) {
+    return switch (role) {
+        case ROLE_INFLUENCER -> AccessScope.OWN;
+        case ROLE_BRAND -> AccessScope.ALL;
+    };
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-10h47m43s209.jpg" alt="" width="840">
+</p>
+
+O método `findAllProposals` é completado: é criado um `OwnerId` a partir do id do usuário autenticado, e o `listProposalsUseCase.execute(accessScope, ownerId)` é chamado passando o escopo de acesso e o dono. O resultado, uma lista de `ProposalOutput`, é transformado em uma lista de `ProposalResponse` através de `.stream().map(ProposalResponse::from).toList()`:
+
+```java
+@GetMapping
+@PreAuthorize("hasAnyRole('INFLUENCER', 'BRAND')")
+public List<ProposalResponse> findAllProposals(@AuthenticationPrincipal User user) {
+    var accessScope = getAccessScope(user.getRole());
+    var ownerId = new OwnerId(user.getId());
+
+    return listProposalsUseCase.execute(accessScope, ownerId)
+            .stream()
+            .map(ProposalResponse::from)
+            .toList();
+}
+
+private static AccessScope getAccessScope(UserRole role) {
+    return switch (role) {
+        case ROLE_INFLUENCER -> AccessScope.OWN;
+        case ROLE_BRAND -> AccessScope.ALL;
+    };
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-10h48m29s082.jpg" alt="" width="840">
+</p>
+
+Visão geral do `ProposalController` já finalizado, reunindo os dois endpoints implementados: `createProposal` (POST, restrito a `INFLUENCER`) e `findAllProposals` (GET, disponível para `INFLUENCER` e `BRAND` com escopos de acesso diferentes), marcando a conclusão da camada de controllers da funcionalidade de propostas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-11h02m39s729.jpg" alt="" width="840">
+</p>
+
+Antes de testar os endpoints, é feita uma verificação no banco de dados: a aplicação foi iniciada com sucesso (log confirma `Started ProposalManagementApplication`), e o explorador de banco mostra as tabelas `proposal_entity` e `user` dentro do schema `proposals`. A tabela `user` já está populada com três usuários de teste (`tech_guru`, `fitness_vibe`, `logistics`), inseridos automaticamente na subida da aplicação, servindo como massa de dados para os testes dos endpoints recém-criados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-11h02m52s284.jpg" alt="" width="840">
+</p>
+
+No arquivo `rest-api.http` do IntelliJ, é montada uma requisição `POST http://localhost:8080/proposals` com `Content-Type: application/json`, um cookie de sessão (`JSESSIONID`) para simular um usuário autenticado, e o corpo contendo `{"title": "Título da proposta fitness"}`, preparando o teste manual do endpoint de criação de propostas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-11h03m40s940.jpg" alt="" width="840">
+</p>
+
+O resultado de uma das requisições de teste retorna status `403 Forbidden`, evidenciando o funcionamento da regra de autorização `@PreAuthorize`: quando o usuário autenticado não possui a role exigida pelo endpoint, a requisição é bloqueada antes mesmo de chegar à lógica de negócio.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-11h03m48s146.jpg" alt="" width="840">
+</p>
+
+Na sequência de testes, uma requisição autenticada com um `JSESSIONID` de um usuário do tipo `BRAND` retorna status `200`, confirmando que esse perfil consegue acessar o endpoint de listagem de propostas — validando na prática o comportamento de `AccessScope.ALL` configurado anteriormente para a role de marca.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video08.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video08.zip)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+
+
 ### 🟩 Vídeo 09 - Segurança Escalável
 <video width="60%" controls>
   <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.02-video_09.webm" type="video/webm">

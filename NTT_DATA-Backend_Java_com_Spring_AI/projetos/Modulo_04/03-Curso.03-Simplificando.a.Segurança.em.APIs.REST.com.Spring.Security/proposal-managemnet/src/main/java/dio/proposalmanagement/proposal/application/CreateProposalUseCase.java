@@ -8,13 +8,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CreateProposalUseCase {
+
     private final ProposalRepository proposalRepository;
 
     public CreateProposalUseCase(ProposalRepository proposalRepository) {
         this.proposalRepository = proposalRepository;
     }
 
-    public void execute(CreateProposalInput input, Owner owner) {
+    public ProposalOutput execute(CreateProposalInput input, Owner owner) {
         var proposal = input.toDomain(owner);
         var saved = proposalRepository.save(proposal);
 
