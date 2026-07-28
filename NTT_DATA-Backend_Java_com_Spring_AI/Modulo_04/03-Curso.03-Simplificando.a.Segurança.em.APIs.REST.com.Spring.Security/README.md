@@ -2748,8 +2748,25 @@ Esta imagem não contém código; trata-se de um diagrama conceitual (mapa menta
 
 Esse diagrama serve como fio condutor para toda a explicação da aula, que detalha cada uma dessas etapas.
 
+### Tutoriais
+
+- [001-Tutorial_ProposalManagement_Spring_Security_Videos01a02.md](./001-Tutorial_ProposalManagement_Spring_Security_Videos01a02.md)
+- [002-Tutorial_ProposalManagement_Spring_Security_Video03.md](./002-Tutorial_ProposalManagement_Spring_Security_Video03.md)
+- [003-Tutorial_ProposalManagement_Spring_Security_Video04.md](./003-Tutorial_ProposalManagement_Spring_Security_Video04.md)
+- [004-Tutorial_ProposalManagement_Spring_Security_Video05.md](./004-Tutorial_ProposalManagement_Spring_Security_Video05.md)
+- [005-Tutorial_ProposalManagement_Spring_Security_Video06.md](./005-Tutorial_ProposalManagement_Spring_Security_Video06.md)
+- [006-Tutorial_ProposalManagement_Spring_Security_Video07.md](./006-Tutorial_ProposalManagement_Spring_Security_Video07.md)
+- [007-Tutorial_ProposalManagement_Spring_Security_Video08.md](./007-Tutorial_ProposalManagement_Spring_Security_Video08.md)
+
 ### Arquivos do Projeto
 
+- Até o vídeo 02: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video02.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video02.zip)
+- Até o vídeo 03: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video03.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video03.zip)
+- Até o vídeo 04: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video04.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video04.zip)
+- Até o vídeo 05: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video05.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video05.zip)
+- Até o vídeo 06: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video06.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video06.zip)
+- Até o vídeo 07: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video07.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video07.zip)
+- Até o vídeo 08: [./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video08.zip](./000-Midia_e_Anexos/etapas_do_codigo/proposal-managemnet_ate_o_video08.zip)
 
 
 # Certificado: Simplificando a Segurança em APIs REST com Spring Security
