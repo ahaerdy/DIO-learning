@@ -2727,9 +2727,26 @@ Na sequência de testes, uma requisição autenticada com um `JSESSIONID` de um 
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/simplificando-a-seguranca-em-apis-rest-com-spring-security/learning/a614f035-453d-47b2-8a79-dd6fc49a299b?autoplay=1
 
+### Anotações
 
-### Tutoriais
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-14h20m11s643.jpg" alt="" width="840">
+</p>
 
+Este é o slide de abertura da aula, parte da trilha **Jornada Tech**, sobre **"Simplificando a Segurança em APIs REST com Spring Security"**. A agenda lateral lista as nove etapas do curso, da introdução até a implementação de use cases, controllers e persistência, culminando no tópico em destaque: **09 — Segurança Escalável**, que é o assunto tratado nesta aula.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-28-14h20m20s937.jpg" alt="" width="840">
+</p>
+
+Esta imagem não contém código; trata-se de um diagrama conceitual (mapa mental) intitulado **"Roadmap da Segurança: Do Local ao Ecossistema Distribuído"**, que resume visualmente a evolução de uma arquitetura de segurança:
+
+- **De Stateful para Stateless**: a aplicação parte de um modelo com sessões em memória (cookies), que gera dependência de sessão, e evolui para o uso de **JWT (JSON Web Tokens)**, trazendo escalabilidade por eliminar a necessidade de manter estado no servidor — ideal para sistemas distribuídos e microsserviços.
+- **Delegando Identidade (OAuth2 e OIDC)**: em vez de a própria aplicação gerenciar usuários, a responsabilidade é delegada a provedores de identidade como **Keycloak** e **Auth0**, que também permitem login social via Google e Facebook.
+- **Defesa em Camadas (MFA & OTP)**: adiciona-se um fator extra de autenticação, "algo que você tem", por meio de senhas temporárias (OTP) e códigos TOTP.
+- **Autorização Externalizada**: a lógica de controle de acesso (allow/deny) é desacoplada da aplicação e delegada a ferramentas como o **OPA (Open Policy Agent)**.
+
+Esse diagrama serve como fio condutor para toda a explicação da aula, que detalha cada uma dessas etapas.
 
 ### Arquivos do Projeto
 

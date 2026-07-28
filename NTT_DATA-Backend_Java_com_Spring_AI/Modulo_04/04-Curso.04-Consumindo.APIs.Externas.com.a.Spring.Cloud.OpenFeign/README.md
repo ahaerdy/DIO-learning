@@ -12,7 +12,7 @@
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/ceddcc80-24c5-4e0d-b0a8-45fcbf3d5602?autoplay=1
 
 ### 🟩 Vídeo 02 - Setup do Projeto Compliance
 
@@ -21,7 +21,7 @@ link do vídeo:
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/2abe0939-7196-418c-9611-67ec341f8179?autoplay=1
 
 ### 🟩 Vídeo 03 - Modelando Empresas com Spring Data
 
@@ -30,7 +30,7 @@ link do vídeo:
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/e480f1e5-fcaa-4a50-9e9b-0cf3f301b652?autoplay=1
 
 ### 🟩 Vídeo 04 - Estruturando Use Cases
 
@@ -39,7 +39,7 @@ link do vídeo:
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/53dd9050-589d-44d6-8f99-1536a9835c86?autoplay=1
 
 ### 🟩 Vídeo 05 - Monitorando Requisições e Respostas
 
@@ -48,7 +48,7 @@ link do vídeo:
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 06 - Configurando Cenários de Exceção
 
