@@ -178,14 +178,14 @@ public abstract class Employee {
   <img src="000-Midia_e_Anexos/vlcsnap-2026-05-16-09h15m12s903.jpg" alt="" width="840">
 </p>
 
-O `Main.java` exibe dois erros imediatamente após `Employee` ser declarada como abstrata. A linha 5 (`new Employee()`) é marcada com erro porque não é mais possível criar uma instância direta da classe abstrata. Já a linha 6 apresenta um erro diferente: `Employee manager = new Manager()` — o Java aponta incompatibilidade porque, neste momento, a variável do tipo `Employee` está recebendo um objeto do tipo `Manager`. Essa segunda situação introduz o conceito de polimorfismo, que será explorado na sequência.
+O `Main.java` exibe dois erros imediatamente após `Employee` ser declarada como abstrata. A linha 5 (`new Employee()`) é marcada com erro porque não é mais possível criar uma instância direta da classe abstrata. Já a linha 6 apresenta `Employee manager = new Manager()`. Essa segunda situação introduz o conceito de polimorfismo, que será explorado na sequência.
 
 ```java
 public class Main {
 
     public static void main(String[] args) {
         Employee employee = new Employee(); // ❌ Erro: Employee é abstrata
-        Employee manager = new Manager();  // ❌ Erro indicado pelo IDE
+        Employee manager = new Manager();  
 
         manager.setName("João");
         //manager.setLogin("joao");
