@@ -58,7 +58,118 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/intro
 
 ### Anotações
 
-      
+#### Abertura: História do Java
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h46m44s867.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula, apresentando o tema "História do Java" com o subtítulo "Introdução ao Java e seu ambiente de Desenvolvimento". Este slide marca o início da apresentação, que se propõe a contar a trajetória do surgimento do Java e sua relevância ao longo do tempo.
+
+#### O surgimento do Green Team (1991)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h46m47s479.jpg" alt="" width="840">
+</p>
+
+Em 1991, a Sun Microsystems formou o Green Team para atuar em um projeto considerado revolucionário para a época. O nome do time era um trocadilho com "Dream Team" (time dos sonhos) e "Green People" (as pessoas do projeto Green). A empresa apostava que, em um futuro próximo, residências e dispositivos estariam conectados a computadores — uma visão que hoje se aproxima do conceito de automação residencial e casas inteligentes.
+
+#### O primeiro desafio: uma linguagem independente de sistema operacional
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h46m51s047.jpg" alt="" width="840">
+</p>
+
+O primeiro desafio do Green Team foi criar uma linguagem de programação independente de sistema operacional (S.O.). Isso era necessário porque o time precisaria fazer diferentes dispositivos, com sistemas distintos, se comunicarem entre si — algo que soluções da época, como o C++, não resolviam de forma satisfatória, já que exigiam ajustes específicos para cada plataforma. Dessa necessidade surgiu a linguagem **GreenTalk**.
+
+#### O StarSeven (*7): o primeiro produto do projeto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h46m54s260.jpg" alt="" width="840">
+</p>
+
+Com a linguagem GreenTalk pronta, o time desenvolveu o **StarSeven (*7)**, um controle remoto criado para interagir com os equipamentos de uma sala de estar, permitindo acionar dispositivos da casa. É nesse produto que aparece pela primeira vez o mascote **Duke**, que anos depois se tornaria o símbolo oficial do Java. A ideia era promissora para a época, mas o mercado não se entusiasmou com a proposta.
+
+#### 1994: a chegada da internet e o navegador WebRunner
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h46m57s969.jpg" alt="" width="840">
+</p>
+
+Em 1994, com a popularização da internet e do protocolo HTTP, o Green Team enxergou uma nova oportunidade de mercado. Foi nesse contexto que surgiu o navegador **WebRunner**, criado para explorar esse momento de crescimento da web.
+
+#### Demonstração prática: HotJava e um Applet interativo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h47m02s457.jpg" alt="" width="840">
+</p>
+
+A imagem mostra duas janelas de navegador lado a lado. À esquerda, a página inicial do navegador **HotJava**; à direita, um exemplo de **Applet** em execução — um pequeno programa interativo que permite desenhar linhas dentro de um quadrado vermelho, contando o número de linhas desenhadas em um painel ao lado. Essa era uma demonstração do que o navegador conseguia oferecer além das páginas HTML estáticas comuns na época: conteúdo interativo rodando diretamente no navegador.
+
+#### 1996: o lançamento do JDK
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h47m13s816.jpg" alt="" width="840">
+</p>
+
+Em 1996 foi lançada uma nova versão da linguagem com diversas atualizações, reunidas em um pacote chamado **JDK (Java Development Kit)**, o kit de desenvolvimento voltado para a comunidade utilizar a linguagem.
+
+#### Roadmap de versões: dos primeiros lançamentos ao JDK 7
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h47m15s681.jpg" alt="" width="840">
+</p>
+
+Tabela com as sete primeiras versões do Java e suas respectivas datas de lançamento:
+
+| Versão | Data de Lançamento |
+|---|---|
+| JDK 1 | 01/1996 |
+| JDK 1.1 | 02/1997 |
+| J2SDK 1.2 | 12/1998 |
+| J2SDK 1.3 | 05/2000 |
+| J2SDK 1.4 | 02/2002 |
+| JDK 5.0 | 09/2004 |
+| JDK 6 | 12/2006 |
+| JDK 7 | 07/2011 |
+
+Nessas primeiras versões, o intervalo entre um lançamento e outro era relativamente curto, mostrando um ritmo acelerado de evolução da linguagem nesse período inicial.
+
+#### Roadmap de versões: o modelo LTS a partir do JDK 8
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h47m18s791.jpg" alt="" width="840">
+</p>
+
+Tabela com versões mais recentes do Java, incluindo a data de lançamento e o fim do suporte de cada uma:
+
+| Versão | Data de Lançamento | Fim do Suporte |
+|---|---|---|
+| JDK 8 (LTS) | 03/2014 | 03/2022 |
+| JDK 9 | 09/2017 | 03/2018 |
+| JDK 10 | 03/2018 | 09/2018 |
+| JDK 11 | 09/2018 | 09/2023 |
+| JDK 17 | 02/2021 | 09/2026 |
+| JDK 21 | 09/2023 | 09/2028 |
+| JDK 25 | 12/2025 | 09/2030 |
+
+A partir do JDK 8, o Java passou a garantir maior robustez, estabilidade e segurança em relação à compatibilidade entre versões, refletindo a adoção do modelo de versões **LTS (Long-Term Support)**, com suporte estendido por mais tempo.
+
+#### Empresas que usam Java
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h47m25s161.jpg" alt="" width="840">
+</p>
+
+Slide com os logotipos de grandes empresas que utilizam Java em seus sistemas: **Netflix, Slack, PayPal, PicPay, LinkedIn, Microsoft e Airbnb**. Esse conjunto de exemplos reforça que, apesar da fama de "linguagem lenta" que o Java carregou por conta de problemas pontuais em versões antigas, ele segue sendo amplamente utilizado por empresas de grande porte e alta exigência técnica.
+
+#### Referências da apresentação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-18h47m35s025.jpg" alt="" width="840">
+</p>
+
+Slide final com as referências utilizadas na construção da apresentação, incluindo artigos sobre a história do Java, a página oficial da Oracle com o roadmap de suporte das versões, e a matriz de lançamentos do Java. Um dos links do Medium contém um vídeo mostrando o StarSeven em uso, demonstrando a interação do controle remoto com os aparelhos de uma casa.
 
 
 ## Parte 2 - Configuração do Ambiente Java
