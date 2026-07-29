@@ -1283,7 +1283,7 @@ Declara uma assinatura de método sem corpo. Cada subclasse é responsável por 
 ### 🔷 Encapsulamento (getters e setters com validação)
 Os atributos são privados (`private`) e acessados/modificados apenas por métodos públicos, que aplicam as **regras de negócio** do relógio (ex: horas entre 0 e 23, minutos entre 0 e 59).
 
-### 🔷 Polimorfismo de método (`@Override`)
+### 🔷 Polimorfismo de método (ou Polimorfismo de Sobreescrita) (`@Override`) 
 As subclasses sobrescrevem o método abstrato da superclasse, cada uma com comportamento próprio, mas seguindo o mesmo contrato definido pela superclasse.
 
 ---
