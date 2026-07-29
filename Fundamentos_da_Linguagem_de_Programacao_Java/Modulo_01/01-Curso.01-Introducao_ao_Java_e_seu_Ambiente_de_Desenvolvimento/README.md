@@ -17,7 +17,7 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/intro
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-17h49m45s692.jpg" alt="" width="840">
+  <img src="./000-Midia_e_Anexos/vlcsnap-2026-07-29-17h49m45s692.jpg" alt="" width="840">
 </p>
 
 Slide de abertura da aula, intitulado **"Formação Java"**. Apresenta o instrutor José Luiz Abreu Cardoso Junior, identificado como Desenvolvedor Backend sênior, junto com seu usuário do Instagram (@junior.jose.lz) para contato. É o slide de boas-vindas exibido no momento em que o instrutor se apresenta e conta um pouco sobre sua trajetória profissional.
@@ -54,7 +54,12 @@ Essa estrutura apresenta a trilha de aprendizado que será seguida ao longo do c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/42f5af14-9b5c-457e-bffa-af2509b520be?autoplay=1
+
+### Anotações
+
+      
+
 
 ## Parte 2 - Configuração do Ambiente Java
 

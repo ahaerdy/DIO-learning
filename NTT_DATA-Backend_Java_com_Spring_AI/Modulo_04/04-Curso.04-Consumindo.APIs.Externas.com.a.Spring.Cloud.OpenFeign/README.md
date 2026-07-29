@@ -560,7 +560,7 @@ public record RiskAssessment(int score, RiskLevel level, RiskAssessmentStatus st
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video02.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video02.zip)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [001-Tutorial_Compliance_OpenFeign_Videos01a02.md](./001-Tutorial_Compliance_OpenFeign_Videos01a02.md)
       
 
 
