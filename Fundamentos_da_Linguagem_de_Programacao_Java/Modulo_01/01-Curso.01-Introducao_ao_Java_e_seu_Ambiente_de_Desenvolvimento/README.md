@@ -16,9 +16,36 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/intro
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-17h49m45s692.jpg" alt="" width="840">
+</p>
 
+Slide de abertura da aula, intitulado **"Formação Java"**. Apresenta o instrutor José Luiz Abreu Cardoso Junior, identificado como Desenvolvedor Backend sênior, junto com seu usuário do Instagram (@junior.jose.lz) para contato. É o slide de boas-vindas exibido no momento em que o instrutor se apresenta e conta um pouco sobre sua trajetória profissional.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-17h49m51s242.jpg" alt="" width="840">
+</p>
+
+Slide **"Sobre mim"**, com dois pontos de destaque: o início da carreira por meio de um curso técnico, somando atualmente 11 anos de experiência na área, e um traço pessoal ("bem caseiro e nerd"). O slide também disponibiliza os links de contato profissional do instrutor no LinkedIn e no GitHub, reforçando o convite feito anteriormente para que os alunos o conheçam melhor e mantenham contato.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-17h50m10s135.jpg" alt="" width="840">
+</p>
+
+Slide **"Pré-requisitos"**, indicando que o único requisito para acompanhar a formação são conhecimentos básicos de informática. Esse slide marca a transição da apresentação pessoal do instrutor para a explicação da estrutura do curso, sinalizando aos alunos que não é necessário conhecimento prévio de programação para iniciar.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-29-17h50m12s795.jpg" alt="" width="840">
+</p>
+
+Slide **"Conteúdo Programático"**, que organiza a formação em quatro blocos progressivos:
+1. Conceitos básicos
+2. Programação orientada a objetos
+3. Gerenciamento de exceções, IO e gerenciador de dependências
+4. Técnicas avançadas, Padrões e Persistência
+
+Essa estrutura apresenta a trilha de aprendizado que será seguida ao longo do curso, partindo dos fundamentos da linguagem até chegar a tópicos mais avançados, como padrões de projeto e persistência de dados.
+   
 
 ### 🟩 Vídeo 02 - História e evolução do Java
 
