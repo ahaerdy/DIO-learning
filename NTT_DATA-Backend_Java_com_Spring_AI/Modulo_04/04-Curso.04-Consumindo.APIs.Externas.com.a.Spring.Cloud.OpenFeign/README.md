@@ -782,11 +782,6 @@ A requisição retorna novamente status `201`, confirmando que a empresa foi cad
 
 No console da aplicação aparece a linha de log gerada pelo `handleAfterCreateEvent`, confirmando que o evento `afterCreate` foi disparado corretamente logo após a persistência da `CompanyEntity`. É esse gatilho que, a partir daqui, vai dar início à execução da lógica de verificação de compliance — conteúdo que fica para o próximo vídeo.
 
-#### Material de Apoio Até Esta Etapa
-
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
-
 
 ### 🟩 Vídeo 04 - Estruturando Use Cases
 
@@ -1320,9 +1315,8 @@ Nos logs do Mockoon, aparece o registro da requisição `GET /sanctions/companie
 
 #### Material de Apoio Até Esta Etapa
 
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
-      
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video04.zip)
+- [002-Tutorial_Compliance_OpenFeign_Videos03a04.md](./002-Tutorial_Compliance_OpenFeign_Videos03a04.md)
 
 ### 🟩 Vídeo 05 - Monitorando Requisições e Respostas
 
