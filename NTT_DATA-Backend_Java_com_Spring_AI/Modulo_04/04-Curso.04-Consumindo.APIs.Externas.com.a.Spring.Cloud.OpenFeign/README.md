@@ -797,6 +797,533 @@ No console da aplicação aparece a linha de log gerada pelo `handleAfterCreateE
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/53dd9050-589d-44d6-8f99-1536a9835c86?autoplay=1
 
+### Anotações
+
+#### Abertura: Consumindo APIs Externas com Spring Cloud OpenFeign
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-12h37m46s458.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Consumindo APIs Externas com o Spring Cloud OpenFeign", parte da Jornada Tech. O índice mostra as etapas do módulo, com destaque para o tópico 04 — "Estruturando Use Cases" —, que é o ponto de partida da aula: organizar as regras de negócio do projeto Compliance antes de integrar as chamadas externas com o OpenFeign.
+
+#### Criando a classe AnalyzeCompanyRiskUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h10m49s897.jpg" alt="" width="840">
+</p>
+
+No IntelliJ, dentro do pacote `dio.compliance.application`, é criada uma nova classe chamada `AnalyzeCompanyRiskUseCase`. Essa classe segue o padrão *use case* da Clean Architecture: cada caso de uso concentra uma única responsabilidade de negócio, evitando classes de serviço genéricas e sobrecarregadas com múltiplos métodos (save, find, delete etc.).
+
+#### Estrutura inicial do use case
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h40m20s258.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.complianceApplication;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnalyzeCompanyRiskUseCase {
+
+    public void execute() {
+
+    }
+}
+```
+
+A classe é anotada com `@Service`, permitindo que o Spring a reconheça como um bean gerenciado e a injete automaticamente onde for necessário. Por convenção, todo use case expõe um único método público chamado `execute`, que concentra a regra de negócio daquele caso específico.
+
+#### Instanciando o use case no event handler
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h44m26s223.jpg" alt="" width="840">
+</p>
+
+```java
+@Component
+@RepositoryEventHandler
+public class CompanyEventHandler {
+    private static final Logger LOG = LoggerFactory.getLogger(CompanyEventHandler.class);
+
+    private final AnalyzeCompanyRiskUseCase analyzeCompanyRiskUseCase;
+
+    public CompanyEventHandler() {
+        this.analyzeCompanyRiskUseCase = new AnalyzeCompanyRiskUseCase();
+    }
+
+    @HandleAfterCreate
+    public void handleAfterCreateEvent(CompanyEntity entity) {
+        LOG.info("handleAfterCreateEvent {}", entity);
+    }
+}
+```
+
+Um primeiro construtor é criado instanciando o use case manualmente com `new`. Esse é apenas um passo intermediário — o objetivo é substituir essa instanciação manual pela injeção de dependência do Spring, que é o padrão recomendado.
+
+#### Ajustando o construtor para injeção de dependência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h45m19s221.jpg" alt="" width="840">
+</p>
+
+```java
+private final AnalyzeCompanyRiskUseCase analyzeCompanyRiskUseCase;
+
+public CompanyEventHandler(AnalyzeCompanyRiskUseCase analyzeCompanyRiskUseCase) {
+    this.analyzeCompanyRiskUseCase = analyzeCompanyRiskUseCase;
+}
+```
+
+O construtor passa a receber o use case como parâmetro. Como a classe já está anotada com `@Service`, o Spring sabe como instanciá-la e injetá-la automaticamente nesse construtor — esse mecanismo é a injeção de dependência: ao anotar uma classe com `@Component` ou `@Service`, dizemos ao Spring "você sabe criar essa classe e pode passá-la como argumento sempre que precisar".
+
+#### Chamando o use case a partir do evento de criação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h48m43s967.jpg" alt="" width="840">
+</p>
+
+```java
+private final AnalyzeCompanyRiskUseCase analyzeCompanyRiskUseCase;
+
+public CompanyEventHandler(AnalyzeCompanyRiskUseCase analyzeCompanyRiskUseCase) {
+    this.analyzeCompanyRiskUseCase = analyzeCompanyRiskUseCase;
+}
+
+@HandleAfterCreate
+public void handleAfterCreateEvent(CompanyEntity entity) {
+    LOG.info("handleAfterCreateEvent {}", entity);
+    this.analyzeCompanyRiskUseCase.execute(entity.toDomain());
+}
+```
+
+Dentro do `handleAfterCreateEvent`, o use case é finalmente chamado, convertendo a entidade (`CompanyEntity`) em objeto de domínio antes de repassá-la (`entity.toDomain()`). A ideia é que, dentro das camadas de aplicação e domínio, sempre se trabalhe com classes de domínio — evitando misturar regras de negócio com detalhes de persistência, que pertencem à infraestrutura.
+
+#### Preparando os pontos de verificação KYC e AML
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h52m46s106.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.compliance.application;
+
+import dio.compliance.domain.Company;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnalyzeCompanyRiskUseCase {
+
+    public void execute(Company domain) {
+
+        // KYC -> San
+        // AML
+
+    }
+}
+```
+
+Com o método `execute` já recebendo o domínio `Company`, são deixados comentários indicando os dois pontos de verificação que a regra de negócio vai realizar: uma checagem de **KYC** (Know Your Customer, incluindo consulta de sanções) e uma checagem de **AML** (Anti-Money Laundering, prevenção à lavagem de dinheiro). Essas verificações serão implementadas consumindo APIs externas mocadas.
+
+#### Conhecendo a ferramenta Mockoon
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h52m56s266.jpg" alt="" width="840">
+</p>
+
+Para simular as APIs externas de KYC e AML, é apresentada a ferramenta Mockoon, que permite criar e rodar mock APIs REST rapidamente, sem necessidade de implantação remota ou conta de usuário. Outras alternativas citadas para esse tipo de mock são o WireMock e o próprio Postman.
+
+#### Página inicial do Mockoon
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h53m32s612.jpg" alt="" width="840">
+</p>
+
+A página do Mockoon é aberta novamente para localizar o link de download da ferramenta, que já havia sido instalada previamente para uso nesta aula.
+
+#### API de demonstração do Mockoon
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h54m07s842.jpg" alt="" width="840">
+</p>
+
+Com o Mockoon aberto, é exibida a API de demonstração ("Demo API") que já vem configurada por padrão na ferramenta, disponível em `localhost:3000` e contendo rotas de exemplo como `/users`, `/template`, `/content/:param1`, entre outras. Essa API serve para validar que a ferramenta está funcionando antes de criar os mocks específicos do projeto.
+
+#### Testando a API de demonstração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h57m37s908.jpg" alt="" width="840">
+</p>
+
+```http
+GET 192.168.64.1:3000/users
+```
+
+Utilizando o HTTP client do IntelliJ, é feita uma requisição GET para a API de demonstração do Mockoon, confirmando que o mock está de pé e respondendo corretamente. A partir daqui, os mocks específicos do projeto de compliance começam a ser criados.
+
+#### Salvando o ambiente mock "KYC"
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-13h58m37s834.jpg" alt="" width="840">
+</p>
+
+É criado um novo ambiente no Mockoon, salvo com o nome "KYC". Esse ambiente vai concentrar as rotas mocadas relacionadas à verificação de Know Your Customer, começando por um cenário simples: uma consulta de sanções que retorna uma lista vazia.
+
+#### Configurando a rota de sanções sem risco
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h09m48s376.jpg" alt="" width="840">
+</p>
+
+```json
+{
+  "matches": []
+}
+```
+
+No ambiente KYC, é criada a rota `GET /sanctions/companies/:registrationNumber`, com uma resposta chamada "Empresa sem Riscos", retornando status 200 e o corpo acima, indicando que nenhuma sanção foi encontrada para a empresa consultada. Esse é o primeiro cenário de teste — casos de erro e outras situações serão adicionados posteriormente.
+
+#### Configurando a porta do ambiente KYC
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h10m49s230.jpg" alt="" width="840">
+</p>
+
+Nas configurações do ambiente KYC, a porta da API é definida como `3001`, diferenciando esse mock da API de demonstração (que roda em `3000`). Em seguida, o servidor local é iniciado.
+
+#### Validando a rota de sanções mocada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h13m30s483.jpg" alt="" width="840">
+</p>
+
+```http
+GET 192.168.64.1:3001/sanctions/companies/registrationNumber
+```
+
+```json
+{
+  "matches": []
+}
+```
+
+Uma requisição de teste confirma que o mock de sanções, rodando na porta 3001, está funcionando corretamente e retornando o corpo esperado com status 200. Com essa API mocada validada, o próximo passo é começar a configurar o Spring Cloud OpenFeign no projeto.
+
+#### Definindo a versão do Spring Cloud
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h20m21s292.jpg" alt="" width="840">
+</p>
+
+```groovy
+ext {
+    set('springCloudVersion', "2025.1.1")
+}
+```
+
+No `build.gradle` do projeto, é adicionada a variável `springCloudVersion`. Diferente das dependências padrão do Spring Boot, o OpenFeign faz parte do Spring Cloud, que é distribuído em um repositório próprio e precisa dessa variável de versão para ser resolvido corretamente.
+
+#### Consultando a versão no Spring Initializr
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h21m30s730.jpg" alt="" width="840">
+</p>
+
+Para descobrir a versão correta do Spring Cloud, é aberto o Spring Initializr, que oferece as mesmas opções de configuração de projeto disponíveis no IntelliJ (build tool, linguagem, versão do Spring Boot etc.), além da possibilidade de explorar as dependências antes de gerar o projeto.
+
+#### Pesquisando a dependência do OpenFeign
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h22m08s664.jpg" alt="" width="840">
+</p>
+
+Ao pesquisar "openf" no campo de dependências do Spring Initializr, a sugestão "OpenFeign" aparece categorizada como "Spring Cloud Routing", confirmando que essa dependência pertence ao ecossistema Spring Cloud e não ao conjunto padrão de starters do Spring Boot.
+
+#### Explorando o build.gradle gerado pelo Initializr
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h22m37s589.jpg" alt="" width="840">
+</p>
+
+```groovy
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:..."
+    }
+}
+```
+
+Ao gerar o projeto de exemplo, o Spring Initializr mostra o `build.gradle` resultante, revelando exatamente quais trechos precisam ser copiados para o projeto Compliance: a dependência `spring-cloud-starter-openfeign` e o bloco `dependencyManagement` com o BOM do Spring Cloud.
+
+#### Conferindo o restante do build.gradle gerado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h22m55s920.jpg" alt="" width="840">
+</p>
+
+```groovy
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "2025.1.1")
+}
+```
+
+Antes de fechar a visualização do projeto gerado, o restante do arquivo é conferido, incluindo o bloco `ext` com a variável `springCloudVersion`, que é exatamente o trecho já adicionado anteriormente no projeto Compliance.
+
+#### Dependências finais adicionadas ao projeto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h23m09s182.jpg" alt="" width="840">
+</p>
+
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'org.springframework.data:spring-data-keyvalue'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+}
+```
+
+De volta ao projeto Compliance, a dependência `spring-cloud-starter-openfeign` é adicionada ao bloco `dependencies`, junto das demais dependências já existentes no projeto (persistência em memória, REST, actuator).
+
+#### Adicionando o gerenciamento de dependências do Spring Cloud
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h23m58s930.jpg" alt="" width="840">
+</p>
+
+```groovy
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+```
+
+O bloco `dependencyManagement` é adicionado ao `build.gradle`, importando o BOM (Bill of Materials) do Spring Cloud através da variável `springCloudVersion` definida anteriormente. Esse bloco garante que todas as dependências do Spring Cloud usadas no projeto fiquem com versões compatíveis entre si.
+
+#### Fechando a configuração de dependências
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h25m08s357.jpg" alt="" width="840">
+</p>
+
+```groovy
+implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+```
+
+Com a variável de versão e o bloco `dependencyManagement` configurados, a dependência do OpenFeign no `build.gradle` fica pronta para ser resolvida corretamente pelo Gradle, trazendo todas as classes necessárias para criar os REST clients.
+
+#### Habilitando os Feign Clients na aplicação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h26m01s371.jpg" alt="" width="840">
+</p>
+
+```java
+@SpringBootApplication
+@EnableMapRepositories
+@EnableFeignClients
+public class ComplianceApplication {
+
+    public static void main(String[] args) { SpringApplication.run(ComplianceApplication.class, args); }
+
+}
+```
+
+A primeira alteração necessária após adicionar a dependência é anotar a classe principal da aplicação com `@EnableFeignClients`. Essa anotação diz ao Spring que ele deve escanear e resolver as interfaces anotadas como Feign clients, construindo automaticamente as implementações REST correspondentes.
+
+#### Criando o pacote rest.client
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h27m00s079.jpg" alt="" width="840">
+</p>
+
+Dentro da camada de infraestrutura (`infrastructure`), é criado um novo pacote chamado `rest`, que vai concentrar tudo relacionado a chamadas HTTP para fora da aplicação.
+
+#### Criando o subpacote client
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h27m48s971.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `rest`, é criado o subpacote `client`, formando `dio.compliance.infrastructure.rest.client`. Quando uma aplicação faz requisições para uma API externa, o componente responsável costuma ser chamado de *REST client* — esse é o padrão de nomenclatura adotado aqui para deixar essa responsabilidade explícita na estrutura do projeto.
+
+#### Criando a interface SanctionClient
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h30m38s935.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `client`, é criada a primeira interface Feign client do projeto: `SanctionClient`, responsável por consumir a API mocada de sanções (KYC) criada anteriormente no Mockoon.
+
+#### Anotando o SanctionClient com @FeignClient
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h32m44s918.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.compliance.infrastructure.rest.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name = "sanction-client", url = "http://192.168.64.1:3001")
+public interface SanctionClient {
+}
+```
+
+A interface é anotada com `@FeignClient`, informando um `name` (identificador do client, `sanction-client`) e a `url` base do serviço — nesse caso, o endereço e a porta 3001 onde o mock KYC está rodando no Mockoon. Só com essa anotação, o Open Feign já traz toda a configuração básica de comunicação, podendo inclusive ser complementada com uma classe de configuração própria, se necessário.
+
+#### Implementando o método getCompanyRisk
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h33m09s533.jpg" alt="" width="840">
+</p>
+
+```java
+@FeignClient(name = "sanction-client", url = "http://192.168.64.1:3001")
+public interface SanctionClient {
+
+    @GetMapping("/sanctions/companies/{registrationNumber}")
+    void getCompanyRisk(@PathVariable String registrationNumber);
+}
+```
+
+O método `getCompanyRisk` é declarado na interface, anotado com `@GetMapping`, apontando para a rota `/sanctions/companies/{registrationNumber}` — exatamente a mesma rota configurada no mock. O parâmetro é vinculado com `@PathVariable`, da mesma forma que seria feito em um controller REST comum. Basta essa assinatura de método para que o Open Feign monte toda a chamada HTTP correspondente, sem necessidade de implementação manual.
+
+#### Injetando o SanctionClient no use case
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h34m02s142.jpg" alt="" width="840">
+</p>
+
+```java
+import dio.compliance.domain.Company;
+import dio.compliance.infrastructure.rest.client.SanctionClient;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnalyzeCompanyRiskUseCase {
+    private final SanctionClient sanctionClient;
+
+    public AnalyzeCompanyRiskUseCase(SanctionClient sanctionClient) {
+        this.sanctionClient = sanctionClient;
+    }
+
+    public void execute(Company domain) {
+
+        // KYC -> San
+        // AML
+
+    }
+}
+```
+
+O `SanctionClient` é injetado no `AnalyzeCompanyRiskUseCase` através do construtor, seguindo o mesmo padrão de injeção de dependência já usado no `CompanyEventHandler`. Vale notar que, nesse cenário de teste, uma classe de infraestrutura está sendo injetada diretamente no use case — o que não é o ideal em uma arquitetura limpa, mas é aceitável para validar a integração neste momento da aula.
+
+#### Chamando o SanctionClient dentro do execute
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h42m10s238.jpg" alt="" width="840">
+</p>
+
+```java
+public void execute(Company domain) {
+    sanctionClient.getCompanyRisk(domain.getRegistrationNumber());
+
+    // KYC -> San
+    // AML
+
+}
+```
+
+Dentro do método `execute`, o `sanctionClient.getCompanyRisk(...)` é chamado passando o número de registro da empresa (`domain.getRegistrationNumber()`). A partir desse ponto, ao rodar a aplicação, já é possível verificar se a requisição está de fato chegando até a API mocada.
+
+#### Aplicação no ar, pronta para receber o evento
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h44m27s883.jpg" alt="" width="840">
+</p>
+
+```java
+package dio.compliance.application;
+
+import dio.compliance.domain.Company;
+import dio.compliance.infrastructure.rest.client.SanctionClient;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnalyzeCompanyRiskUseCase {
+    private final SanctionClient sanctionClient;
+
+    public AnalyzeCompanyRiskUseCase(SanctionClient sanctionClient) {
+        this.sanctionClient = sanctionClient;
+    }
+
+    public void execute(Company domain) {
+        sanctionClient.getCompanyRisk(domain.getRegistrationNumber());
+
+        // KYC -> San
+        // AML
+
+    }
+}
+```
+
+Com a aplicação Compliance rodando, os logs no console confirmam que ela subiu corretamente. O Mockoon (API mocada) também é reaberto, com os logs limpos, para acompanhar em tempo real se a requisição feita pelo `SanctionClient` chega até o mock quando o fluxo for disparado.
+
+#### Disparando o evento com uma nova empresa
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h45m04s825.jpg" alt="" width="840">
+</p>
+
+```http
+POST http://localhost:8080/companies
+Accept: application/json
+
+{
+  "name": "Logistics",
+  "registrationNumber": "REG-1234"
+}
+```
+
+Uma requisição POST é enviada para a aplicação, criando uma nova empresa chamada "Logistics" com o número de registro "REG-1234". Essa criação dispara o evento `handleAfterCreateEvent`, que por sua vez aciona o `AnalyzeCompanyRiskUseCase` e, consequentemente, a chamada ao `SanctionClient`.
+
+#### Confirmando a requisição no log do Mockoon
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-14h45m27s540.jpg" alt="" width="840">
+</p>
+
+Nos logs do Mockoon, aparece o registro da requisição `GET /sanctions/companies/REG-1234`, capturada pela rota `/sanctions/companies/:registrationNumber` e respondida com status 200 — exatamente o número de registro da empresa criada no passo anterior. Isso confirma que a primeira integração via Spring Cloud OpenFeign está funcionando de ponta a ponta: da criação da empresa até a chamada real ao serviço externo mocado.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+      
+
 ### 🟩 Vídeo 05 - Monitorando Requisições e Respostas
 
 <video width="60%" controls>
