@@ -1315,7 +1315,7 @@ Nos logs do Mockoon, aparece o registro da requisição `GET /sanctions/companie
 
 #### Material de Apoio Até Esta Etapa
 
-- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video04.zip)
+- Arquivos do projeto nesta etapa: [000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video04.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video04.zip)
 - [002-Tutorial_Compliance_OpenFeign_Videos03a04.md](./002-Tutorial_Compliance_OpenFeign_Videos03a04.md)
 
 ### 🟩 Vídeo 05 - Monitorando Requisições e Respostas
