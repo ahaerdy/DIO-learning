@@ -1327,6 +1327,11 @@ Nos logs do Mockoon, aparece o registro da requisição `GET /sanctions/companie
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/d8b71ec3-0d63-44ad-a6a9-dbc2bf06e0fb?autoplay=1
 
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 06 - Configurando Cenários de Exceção
 
 <video width="60%" controls>
