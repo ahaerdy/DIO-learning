@@ -561,7 +561,6 @@ public record RiskAssessment(int score, RiskLevel level, RiskAssessmentStatus st
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video02.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video02.zip)
 - [001-Tutorial_Compliance_OpenFeign_Videos01a02.md](./001-Tutorial_Compliance_OpenFeign_Videos01a02.md)
-      
 
 
 ### 🟩 Vídeo 03 - Modelando Empresas com Spring Data
@@ -572,6 +571,222 @@ public record RiskAssessment(int score, RiskLevel level, RiskAssessmentStatus st
 </video>
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/e480f1e5-fcaa-4a50-9e9b-0cf3f301b652?autoplay=1
+
+### Anotações
+
+#### Abertura da aula
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h18m29s302.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da Jornada Tech, apresentando o tema "Consumindo APIs Externas com o Spring Cloud OpenFeign" e o roteiro da aula em oito tópicos. O item 03, "Modelando Empresas com Spring Data", está destacado, indicando que é essa a etapa que será trabalhada a partir daqui: dar sequência à estrutura de classes criada anteriormente (Company, CompanyRepository, RiskAssessment, ComplianceScreening) avançando agora para a camada de persistência.
+
+#### Criando o pacote de persistência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h19m52s436.jpg" alt="" width="840">
+</p>
+
+No IntelliJ IDEA, é criado o novo pacote `dio.compliance.infrastructure.persistence` dentro do projeto `compliance`. Esse pacote vai concentrar tudo relacionado à persistência de dados, mantendo essa responsabilidade separada da camada de domínio (`domain`), onde já estão as regras de negócio.
+
+#### Criando o subpacote entity
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h23m38s710.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote de persistência recém-criado, é adicionado o subpacote `dio.compliance.infrastructure.persistence.entity`, que vai abrigar as classes de entidade — ou seja, as representações dos dados que efetivamente serão persistidas, separadas das classes de domínio.
+
+#### Criando o subpacote repository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h24m21s831.jpg" alt="" width="840">
+</p>
+
+Em seguida é criado também o subpacote `repository`, irmão do `entity`, dentro de `infrastructure.persistence`. A ideia é isolar em pacotes distintos as entidades de persistência e os repositórios responsáveis por acessá-las.
+
+#### Definindo a CompanyEntity
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h29m20s907.jpg" alt="" width="840">
+</p>
+
+É criada a classe `CompanyEntity` no pacote `entity`. Ela é anotada com `@KeySpace("companies")` — anotação específica do Spring Data Key/Value usada para persistência em memória, definindo o nome da chave que será utilizada — além das anotações do Lombok `@Data`, `@NoArgsConstructor` e `@AllArgsConstructor`, que geram getters, setters, `toString` e os construtores necessários para o Spring Data instanciar a classe. Os atributos definidos são `id` (UUID), `name`, `registrationNumber` (Strings) e `riskAssessment` (reaproveitando diretamente a classe `RiskAssessment` do domínio). Fica explicado que essa é uma escolha possível por se tratar de persistência em memória: caso fosse usado JPA com um banco relacional de verdade, essa relação provavelmente seria modelada em uma tabela separada — ou, alternativamente, como um objeto embutido (`@Embedded`).
+
+#### Mapeando o domínio para a entidade (from)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h31m27s742.jpg" alt="" width="840">
+</p>
+
+É adicionado à `CompanyEntity` um método estático `from(Company company)`, responsável por converter a classe de domínio `Company` na entidade de persistência. Ele repassa `id`, `name` e `registrationNumber`, e, como `getRiskAssessment()` no domínio retorna um `Optional`, usa `.orElse(null)` para obter o valor (ou `null`, caso não exista) a ser armazenado na entidade.
+
+#### Mapeando a entidade para o domínio (toDomain)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h32m22s686.jpg" alt="" width="840">
+</p>
+
+Agora é criado o caminho inverso: o método `toDomain()`, que transforma a `CompanyEntity` de volta em um objeto `Company` de domínio. Ele monta um novo `CompanyId` a partir do `id` da entidade, repassa `name` e `registrationNumber`, e envolve o `riskAssessment` em `Optional.ofNullable(...)`, já que na entidade esse campo pode vir nulo. Com isso ficam prontos os dois métodos de mapeamento entre entidade e domínio, que serão úteis principalmente nas operações de salvamento.
+
+#### Criando o CompanyEntityRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h33m07s136.jpg" alt="" width="840">
+</p>
+
+É criada uma nova interface chamada `CompanyEntityRepository`, dentro do pacote `repository`, que será o repositório responsável por operações de persistência sobre a `CompanyEntity`.
+
+#### Expondo o repositório via Spring Data REST
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h36m28s785.jpg" alt="" width="840">
+</p>
+
+A interface `CompanyEntityRepository` passa a estender `CrudRepository<CompanyEntity, UUID>`, interface do Spring Data que já traz implementações prontas de `save`, `findAll`, `findById`, `exists`, `count` e `delete`, além de permitir a criação de consultas customizadas (como um `findByName`) sem necessidade de implementação manual. Também é adicionada a anotação `@RepositoryRestResource(path = "companies")`, do Spring Data REST, que expõe automaticamente esse repositório como uma API REST completa. Com a aplicação já em execução (visível no console de debug), basta essa anotação para disponibilizar os endpoints de criação, listagem e consulta, com o mapeamento feito automaticamente pelo framework.
+
+#### Testando o endpoint raiz da API
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h37m43s773.jpg" alt="" width="840">
+</p>
+
+Usando o cliente HTTP embutido do IntelliJ, é montada uma requisição `GET` para `http://localhost:8080`, a raiz da aplicação, para verificar o que a API expõe automaticamente após a anotação `@RepositoryRestResource`.
+
+#### Explorando o HATEOAS na resposta raiz
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h40m45s498.jpg" alt="" width="840">
+</p>
+
+A requisição é executada e retorna um JSON contendo `_links`, com referências para `companyEntities` (apontando para `/companies`) e para `profile`. Esse comportamento é o padrão HATEOAS: a API retorna, junto com os dados, links relacionados que permitem a descoberta de outros recursos disponíveis — nesse caso, indicando que existe o recurso de companhias e como acessá-lo.
+
+#### Consultando a lista de empresas (vazia)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h42m18s357.jpg" alt="" width="840">
+</p>
+
+Seguindo os links descobertos, é feita uma requisição `GET` para `http://localhost:8080/companies`. Como ainda não há nenhuma empresa cadastrada, a resposta traz `_embedded.companyEntities` como um array vazio, além dos links `self` e `profile` relativos a esse recurso — reforçando o padrão de navegação HATEOAS também no nível da coleção.
+
+#### Criando uma empresa via POST
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h44m22s734.jpg" alt="" width="840">
+</p>
+
+É montada uma requisição `POST` para `http://localhost:8080/companies`, com um corpo JSON contendo os campos existentes na entidade: `"name": "Logistics"` e `"registrationNumber": "REG-1234"`.
+
+#### Empresa criada com sucesso (201)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h45m38s052.jpg" alt="" width="840">
+</p>
+
+A requisição é enviada e retorna status `201`, confirmando que a empresa foi criada. O corpo da resposta traz os links `self` e `companyEntity` (ambos apontando para a URL do recurso recém-criado, com seu identificador), além dos dados `name` e `registrationNumber` persistidos — tudo isso disponível sem que nenhuma linha de código de controller tenha sido escrita manualmente.
+
+#### Consultando a lista de empresas atualizada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h45m55s662.jpg" alt="" width="840">
+</p>
+
+Uma nova consulta `GET` a `/companies` é feita para confirmar a criação. Agora `_embedded.companyEntities` já traz a empresa "Logistics" cadastrada, com seus links de navegação, `name`, `registrationNumber` e `riskAssessment` (ainda `null`, já que não foi definido).
+
+#### Consultando uma empresa pelo ID
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h47m02s079.jpg" alt="" width="840">
+</p>
+
+Por fim, é feita uma requisição `GET` diretamente para a URL específica da empresa, passando o seu ID (`/companies/{id}`). A resposta traz as mesmas informações da empresa individual: `name`, `registrationNumber` e `riskAssessment`. Isso demonstra que, apenas com a anotação de Spring Data REST, já está disponível um CRUD completo exposto via API — bastante útil para cenários sem muita regra de negócio envolvida.
+
+#### Criando o InMemoryCompanyRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h48m53s478.jpg" alt="" width="840">
+</p>
+
+Voltando ao código, é exibida a interface `CompanyRepository` do domínio, que declara o método `void save(Company company)`. A partir dela, é criada uma nova classe, `InMemoryCompanyRepository`, que será a implementação concreta dessa interface, permitindo executar operações de salvamento a partir das regras de negócio.
+
+#### Estrutura inicial do InMemoryCompanyRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h50m02s055.jpg" alt="" width="840">
+</p>
+
+A classe `InMemoryCompanyRepository` é criada implementando `CompanyRepository`, com uma dependência final do tipo `CompanyEntityRepository` injetada via construtor. O método `save(Company company)` é sobrescrito, porém ainda vazio, pronto para receber a implementação.
+
+#### Implementando o método save
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h51m26s006.jpg" alt="" width="840">
+</p>
+
+O método `save` é implementado: primeiro a `Company` de domínio é convertida em `CompanyEntity` usando o método `CompanyEntity.from(company)` criado anteriormente, e em seguida essa entidade é persistida chamando `repository.save(entity)` — reaproveitando o `CrudRepository` que já possui o `save` pronto.
+
+#### Anotando o repositório com @Repository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h55m12s019.jpg" alt="" width="840">
+</p>
+
+A classe `InMemoryCompanyRepository` recebe a anotação `@Repository`, uma das anotações que o Spring disponibiliza (junto com `@Service` e `@Component`) para habilitar a injeção de dependência. Dessa forma, quando futuramente for criada uma classe de `ApplicationService` ou `UseCase` que dependa da interface `CompanyRepository`, o Spring já saberá qual implementação injetar automaticamente — o que caracteriza a inversão de controle.
+
+#### Criando o CompanyEventHandler
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-09h58m27s023.jpg" alt="" width="840">
+</p>
+
+É criado um novo pacote `event` e, dentro dele, a classe `CompanyEventHandler`, ainda vazia. A ideia é aproveitar os eventos disponibilizados pelo Spring Data: ao criar uma `Company`, é possível disparar um evento de "após a criação" (`afterCreate`), que servirá como gatilho para a regra de validação de compliance, sem a necessidade de criar um endpoint específico para isso.
+
+#### Implementando o handler de afterCreate
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-10h12m35s979.jpg" alt="" width="840">
+</p>
+
+A classe `CompanyEventHandler` é anotada com `@Component` e `@RepositoryEventHandler`, o que dá acesso aos métodos de tratamento de eventos do Spring Data. É implementado o método `handleAfterCreateEvent(CompanyEntity entity)`, anotado com `@HandleAfterCreate` — importante notar que o parâmetro recebido é a `CompanyEntity`, e não a classe de domínio `Company`, já que esses eventos pertencem à camada de persistência do Spring Data. Um `Logger` estático é adicionado para registrar, via `LOG.info`, a execução do evento.
+
+#### Reiniciando a aplicação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-10h13m02s865.jpg" alt="" width="840">
+</p>
+
+A aplicação é reiniciada — já que a persistência é feita em memória, todos os dados criados anteriormente são perdidos a cada restart. O console de debug confirma que a aplicação subiu corretamente na porta 8080.
+
+#### Enviando nova requisição de criação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-10h13m08s400.jpg" alt="" width="840">
+</p>
+
+Com a aplicação novamente de pé, é preparada e enviada uma nova requisição `POST` para `/companies`, reutilizando o mesmo corpo com `name: "Logistics"` e `registrationNumber: "REG-1234"`, agora com o objetivo de verificar se o `CompanyEventHandler` será acionado após a criação.
+
+#### Confirmando a criação da empresa
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-10h13m20s444.jpg" alt="" width="840">
+</p>
+
+A requisição retorna novamente status `201`, confirmando que a empresa foi cadastrada com sucesso, com um novo identificador gerado para esse novo registro.
+
+#### Validando o evento afterCreate nos logs
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-30-10h13m40s706.jpg" alt="" width="840">
+</p>
+
+No console da aplicação aparece a linha de log gerada pelo `handleAfterCreateEvent`, confirmando que o evento `afterCreate` foi disparado corretamente logo após a persistência da `CompanyEntity`. É esse gatilho que, a partir daqui, vai dar início à execução da lógica de verificação de compliance — conteúdo que fica para o próximo vídeo.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+
 
 ### 🟩 Vídeo 04 - Estruturando Use Cases
 
