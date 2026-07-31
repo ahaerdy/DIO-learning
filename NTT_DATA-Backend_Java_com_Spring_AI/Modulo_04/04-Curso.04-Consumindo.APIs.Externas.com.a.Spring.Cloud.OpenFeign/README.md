@@ -1532,7 +1532,7 @@ De volta ao Mockoon, a aba **Logs** confirma o resultado: a requisição `GET /s
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video05.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video05.zip)
-- [yyyyyyyyyyyy](./xxxxxxxxxxxxxxxxx)
+- [003-Tutorial_Compliance_OpenFeign_Video05.md](./003-Tutorial_Compliance_OpenFeign_Video05.md)
 
 
 ### 🟩 Vídeo 06 - Configurando Cenários de Exceção
@@ -1862,7 +1862,7 @@ A coleção `matches` é inspecionada na IDE em formato de tabela, deixando aind
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video06.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video06.zip)
-- [003-Tutorial_Compliance_OpenFeign_Video05.md](./003-Tutorial_Compliance_OpenFeign_Video05.md)
+
 
 
 ### 🟩 Vídeo 07 - Consumindo Dados Complexos
