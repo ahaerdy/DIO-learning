@@ -263,9 +263,98 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/intro
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h56m55s578.jpg" alt="" width="840">
+</p>
 
+A imagem mostra a documentação oficial da AWS (Amazon Corretto 21 User Guide), na seção **"Install Amazon Corretto 21 on Debian-Based Linux"**, usada como referência para a instalação do JDK em sistemas baseados em Debian, como o Ubuntu utilizado na máquina virtual da aula. A página apresenta os comandos necessários para adicionar o repositório do Corretto via `apt` e, em seguida, instalar o pacote correspondente.
 
+```bash
+wget -O - https://apt.corretto.aws/corretto.key | sudo gpg --dearmor -o /usr/share/keyrings/corretto-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/corretto-keyring.gpg] https://apt.corretto.aws stable main" | sudo tee /etc/apt/sources.list.d/corretto.list
+
+sudo apt-get update; sudo apt-get install -y java-21-amazon-corretto-jdk
+```
+
+O primeiro comando baixa a chave pública do repositório da Amazon e a registra no keyring do sistema; o segundo adiciona o repositório do Corretto à lista de fontes do `apt`. Por fim, o `apt-get update` atualiza a lista de pacotes e o `apt-get install` instala o JDK 21 da Amazon Corretto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h57m08s714.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o terminal da máquina virtual Ubuntu, já com a fonte aumentada para melhor visualização, com o comando de instalação copiado da documentação da AWS colado e pronto para ser executado:
+
+```bash
+wget -O - https://apt.corretto.aws/corretto.key | sudo gpg --dearmor -o /usr/share/keyrings/corretto-keyring.gpg && \
+echo "deb [signed-by=/usr/share/keyrings/corretto-keyring.gpg] https://apt.corretto.aws stable main" | sudo tee /etc/apt/sources.list.d/corretto.list
+```
+
+Esse comando faz o download da chave de assinatura do repositório da Amazon Corretto e a converte para o formato usado pelo `apt` (`gpg --dearmor`), salvando-a em `/usr/share/keyrings/corretto-keyring.gpg`. Em seguida, adiciona a linha do repositório ao arquivo `/etc/apt/sources.list.d/corretto.list`, para que o sistema passe a reconhecer essa fonte de pacotes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h57m14s614.jpg" alt="" width="840">
+</p>
+
+Após pressionar Enter, o terminal exibe o resultado da execução do comando anterior: o `wget` resolve o endereço `apt.corretto.aws`, conecta-se via HTTPS e baixa a chave do repositório, que é então processada pelo `gpg` e registrada no keyring do sistema. Na última linha, o `echo` confirma que a entrada do repositório foi corretamente escrita.
+
+```bash
+--2024-02-07 15:19:17--  https://apt.corretto.aws/corretto.key
+Resolving apt.corretto.aws (apt.corretto.aws)... 13.227.97.77, 13.227.97.64, 13.227.97.128, ...
+Connecting to apt.corretto.aws (apt.corretto.aws)|13.227.97.77|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1695 (1.7K) [binary/octet-stream]
+Saving to: 'STDOUT'
+
+100%[===================================>] 1.66K  --.-KB/s   in 0s
+
+2024-02-07 15:19:17 (1.72 GB/s) - written to stdout [1695/1695]
+
+deb [signed-by=/usr/share/keyrings/corretto-keyring.gpg] https://apt.corretto.aws stable main
+```
+
+Com o repositório devidamente adicionado, o ambiente já está pronto para a atualização dos pacotes e a instalação do JDK.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h57m58s022.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a saída final do comando `apt-get install -y java-21-amazon-corretto-jdk`, já rodado após a atualização dos pacotes com `apt-get update`. O sistema configura os *alternatives* do Java (como `jstatd` e `serialver`), processa os triggers de documentação (`man-db`) e informa que nenhum serviço, container ou processo precisa ser reiniciado — sinal de que a instalação foi concluída sem intercorrências.
+
+```bash
+update-alternatives: using /usr/lib/jvm/java-21-amazon-corretto/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-21-amazon-corretto/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+Processing triggers for man-db (2.10.2-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h58m07s174.jpg" alt="" width="840">
+</p>
+
+Com a instalação concluída, o comando `java -version` é executado para confirmar que o JDK foi instalado corretamente. A saída confirma a versão 21 do OpenJDK, na distribuição Amazon Corretto, validando que o ambiente está pronto para o desenvolvimento em Java no curso.
+
+```bash
+$ java -version
+openjdk version "21.0.2" 2024-01-16 LTS
+OpenJDK Runtime Environment Corretto-21.0.2.13.1 (build 21.0.2+13-LTS)
+OpenJDK 64-Bit Server VM Corretto-21.0.2.13.1 (build 21.0.2+13-LTS, mixed mode, sharing)
+```
+
+     
 ### 🟩 Vídeo 05 - Opção 3: Instalando o JDK pelo gerenciador de versões SDKMAN! no Linux
 
 <video width="60%" controls>
