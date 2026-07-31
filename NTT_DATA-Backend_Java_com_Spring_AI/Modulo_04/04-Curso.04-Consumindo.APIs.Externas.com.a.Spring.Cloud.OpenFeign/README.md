@@ -1542,7 +1542,328 @@ De volta ao Mockoon, a aba **Logs** confirma o resultado: a requisição `GET /s
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/2b0e3ba3-80e3-4e05-83bc-2fb09891a83f?autoplay=1
+
+### Anotações
+
+#### Abertura: Consumindo APIs Externas com o Spring Cloud OpenFeign
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-12h54m48s571.jpg" alt="" width="840">
+</p>
+
+O slide de abertura apresenta o tema da aula — o consumo de APIs externas utilizando o Spring Cloud OpenFeign — dentro do projeto Compliance. A agenda lista as oito etapas do módulo, com destaque para o item 06, "Configurando Cenários de Exceção", que é o assunto tratado a partir deste ponto: como a aplicação deve reagir quando a API consumida retorna um erro.
+
+
+#### Ajustando os logs de infraestrutura no application.properties
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-12h55m11s480.jpg" alt="" width="840">
+</p>
+
+Antes de simular um erro, o `application.properties` é ampliado com uma nova linha de configuração que eleva o nível de log do pacote de infraestrutura para `DEBUG`. Isso permite acompanhar, no console, detalhes das requisições feitas pelo Feign Client — URL chamada, cabeçalhos enviados e corpo da resposta — facilitando o diagnóstico de problemas.
+
+```properties
+spring.application.name=compliance
+
+spring.cloud.openfeign.client.config.sanction-client.url=http://192.168.64.1:3001
+spring.cloud.openfeign.client.config.sanction-client.logger-level=full
+spring.cloud.openfeign.client.config.sanction-client.default-request-headers.x-api-key=kyc-secret-123
+
+logging.level.dio.compliance.infrastructure.rest=DEBUG
+```
+
+
+#### Simulando uma falha na API mockada com o Mockoon
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h09m07s578.jpg" alt="" width="840">
+</p>
+
+No Mockoon, é criada uma segunda resposta para a rota `GET /sanctions/companies/:registrationNumber`, desta vez retornando um status 500 (Internal Server Error) com um corpo simples informando o erro. O objetivo é reproduzir, de forma controlada, uma falha na API externa de sanções para validar como a aplicação reage a esse cenário.
+
+```json
+{
+  "error": "Internal Server Error"
+}
+```
+
+
+#### Escolhendo qual resposta será a padrão da rota
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h09m29s176.jpg" alt="" width="840">
+</p>
+
+Com duas respostas cadastradas para a mesma rota — uma de sucesso ("Empresa sem Riscos", 200) e outra de erro (500) — o Mockoon permite marcar, através de uma flag, qual delas será usada como padrão a cada chamada. Também é possível configurar respostas aleatórias entre as opções cadastradas.
+
+
+#### Disparando a requisição e recebendo o erro 500
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h12m06s108.jpg" alt="" width="840">
+</p>
+
+Uma nova empresa é cadastrada na aplicação através do arquivo `.http`, o que dispara internamente a chamada do Feign Client para a API mockada. Como a resposta padrão do Mockoon está configurada para 500, o painel de Services do IntelliJ confirma o retorno de erro (POST com status 500 em 366 ms), evidenciando que a falha se propagou para dentro da aplicação.
+
+
+#### Investigando o erro nos logs da aplicação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h13m14s579.jpg" alt="" width="840">
+</p>
+
+Olhando o console de debug, é possível identificar o momento em que o `SanctionClient` recebe o erro da API externa e o repassa até o `DispatcherServlet`, que também registra a falha ao processar a requisição. Os logs confirmam que o erro 500 vindo da API mockada está sendo propagado como uma exceção dentro da aplicação Compliance.
+
+
+#### Detalhes da chamada HTTP nos logs de debug
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h14m35s957.jpg" alt="" width="840">
+</p>
+
+Com o nível de log em `DEBUG` habilitado anteriormente, o Feign Client passa a exibir informações detalhadas de cada chamada: o método e a URL utilizados (`GET .../sanctions/companies/REG-1234`), o cabeçalho `x-api-key` enviado, o tempo de resposta e o status retornado. Esse nível de detalhe é bastante útil durante o desenvolvimento para entender rapidamente o que está acontecendo em cada requisição.
+
+
+#### Criando a classe de Fallback no Feign Client
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h22m22s460.jpg" alt="" width="840">
+</p>
+
+Para tratar o erro 500 de forma controlada, é criada uma classe interna `Fallback` dentro da interface `SanctionClient`, referenciada pelo atributo `fallback` da anotação `@FeignClient`. Essa classe implementa o mesmo método da interface e, em caso de falha na chamada, retorna um objeto `SanctionResult` padrão contendo uma lista vazia de sanções, em vez de deixar a exceção subir para o restante da aplicação.
+
+```java
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
+
+@FeignClient(name = "sanction-client", fallback = SanctionClient.Fallback.class)
+public interface SanctionClient {
+
+    @GetMapping("/sanctions/companies/{registrationNumber}")
+    SanctionResult getCompanyRisk(@PathVariable String registrationNumber);
+
+    @Component
+    class Fallback implements SanctionClient {
+        SanctionResult getCompanyRisk(String registrationNumber) {
+            return new SanctionResult(List.of());
+        }
+    }
+}
+```
+
+
+#### Corrigindo a implementação e reiniciando a aplicação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h24m12s472.jpg" alt="" width="840">
+</p>
+
+Após ajustar a visibilidade do método — adicionando o modificador `public`, exigido pela implementação da interface — o método `getCompanyRisk` da classe `Fallback` fica corretamente configurado para retornar um `SanctionResult` com lista vazia sempre que a chamada original falhar. A aplicação é então reiniciada para que a correção entre em vigor.
+
+
+#### Habilitando o Circuit Breaker do OpenFeign
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h33m11s723.jpg" alt="" width="840">
+</p>
+
+Mesmo com o fallback implementado, o erro 500 continua sendo lançado, pois o suporte a circuit breaker do OpenFeign vem desabilitado por padrão no Spring Cloud. Para que o fallback seja de fato acionado, é necessário habilitar explicitamente essa propriedade no `application.properties`.
+
+```properties
+spring.application.name=compliance
+
+spring.cloud.openfeign.client.config.sanction-client.url=http://192.168.64.1:3001
+spring.cloud.openfeign.client.config.sanction-client.logger-level=full
+spring.cloud.openfeign.client.config.sanction-client.default-request-headers.x-api-key=kyc-secret-123
+spring.cloud.openfeign.circuitbreaker.enabled=true
+
+logging.level.dio.compliance.infrastructure.rest=DEBUG
+```
+
+
+#### Adicionando a dependência do Resilience4j
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h34m23s045.jpg" alt="" width="840">
+</p>
+
+Além de habilitar a propriedade do circuit breaker, é preciso incluir no projeto uma implementação concreta de circuit breaker para o Spring Boot. Para isso, a dependência `spring-cloud-starter-circuitbreaker-resilience4j` é adicionada ao `build.gradle`. O Resilience4j é uma biblioteca de tolerância a falhas que, além de circuit breaker, oferece recursos como rate limiter, time limiter e retry — muito útil em cenários críticos onde falhas de comunicação precisam ser tratadas com cuidado.
+
+```gradle
+dependencies {
+    implementation 'org.springframework.data:spring-data-keyvalue'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'
+
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+```
+
+
+#### Preparando o mock para o próximo teste
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h42m08s918.jpg" alt="" width="840">
+</p>
+
+De volta ao Mockoon, a rota de sanções ainda está configurada com a resposta de erro (500) como padrão. Antes de seguir com o desenvolvimento do fluxo de análise de risco, é hora de ajustar essa resposta padrão, já que a API mockada ainda não possui um corpo de sucesso definido.
+
+
+#### Validando o fluxo a partir do arquivo de requisições
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h42m52s062.jpg" alt="" width="840">
+</p>
+
+Com o fallback funcionando corretamente, o desenvolvimento segue a partir do caso de uso `AnalyzeCompanyRiskUseCase`. O arquivo `rest-api_1.http`, já com um histórico de execuções anteriores, é utilizado para disparar novamente o cadastro de uma empresa e observar o comportamento da aplicação de ponta a ponta.
+
+
+#### Confirmando a lista vazia retornada pelo fallback
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h45m28s969.jpg" alt="" width="840">
+</p>
+
+Um breakpoint é adicionado logo após a chamada ao `SanctionClient` dentro do `AnalyzeCompanyRiskUseCase`. Ao pausar a execução, o painel de variáveis confirma que o objeto `sanctions` é um `SanctionResult` cuja lista `matches` está vazia — resultado esperado quando a API externa falha e o fallback é acionado.
+
+
+#### Criando uma terceira resposta no Mockoon
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h45m52s810.jpg" alt="" width="840">
+</p>
+
+Uma nova resposta (200) é adicionada à rota de sanções no Mockoon, ainda com o corpo vazio. Essa resposta será usada em seguida para simular o cenário de uma empresa efetivamente sancionada, retornando os dados de correspondência encontrados.
+
+
+#### Reiniciando a aplicação para o próximo teste
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h48m27s213.jpg" alt="" width="840">
+</p>
+
+Com as alterações no mock e no código já aplicadas, a aplicação Compliance é reiniciada e fica novamente disponível na porta 8080, pronta para receber uma nova requisição através do arquivo `rest-api_1.http`.
+
+
+#### Fallback validado com sucesso após o reinício
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h49m39s884.jpg" alt="" width="840">
+</p>
+
+Ao reenviar a requisição, mesmo recebendo o internal server error da API mockada, a aplicação consegue dar sequência ao processamento graças ao fallback configurado — confirmando que, desta vez, o circuit breaker e o tratamento de erro estão funcionando como esperado.
+
+
+#### Adicionando um breakpoint no método de Fallback
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h49m52s024.jpg" alt="" width="840">
+</p>
+
+Para tornar ainda mais claro o momento em que o fallback é acionado, um breakpoint é posicionado diretamente na linha que retorna o `SanctionResult` com a lista vazia, dentro da classe `Fallback`.
+
+
+#### Execução pausada dentro do Fallback
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h53m58s678.jpg" alt="" width="840">
+</p>
+
+A execução é interrompida exatamente no ponto do breakpoint, comprovando que, diante do erro da API externa, o fluxo realmente cai dentro do método `getCompanyRisk` da classe `Fallback`, recebendo o `registrationNumber` da chamada original (`"REG-1234"`).
+
+
+#### Seguindo o fluxo com a lista vazia
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h54m28s930.jpg" alt="" width="840">
+</p>
+
+Após retomar a execução a partir do breakpoint, o fallback devolve o `SanctionResult` com a lista de sanções vazia, permitindo que a aplicação continue seu processamento normalmente. Essa é uma das estratégias possíveis de tratamento de erro ao consumir um serviço externo com Feign Client.
+
+
+#### Voltando ao AnalyzeCompanyRiskUseCase para validar o valor retornado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h55m59s415.jpg" alt="" width="840">
+</p>
+
+Com o tratamento de erro validado, a atenção volta para o `AnalyzeCompanyRiskUseCase`, onde um breakpoint é mantido logo após a chamada ao `SanctionClient`. O projeto é recompilado para garantir que as últimas alterações sejam consideradas na próxima execução.
+
+
+#### Trocando a resposta padrão do mock para 200 com lista vazia
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h56m42s746.jpg" alt="" width="840">
+</p>
+
+De volta ao Mockoon, a resposta padrão da rota de sanções é alterada da opção de erro (500) para a resposta de sucesso (200), já que o objetivo agora é validar o cenário em que a API responde normalmente, porém sem nenhuma sanção associada à empresa consultada.
+
+
+#### Confirmando o cenário de sucesso sem sanções
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-13h58m09s224.jpg" alt="" width="840">
+</p>
+
+Com o mock agora respondendo 200, a execução é pausada novamente no breakpoint do `AnalyzeCompanyRiskUseCase`. Desta vez a lista `matches` segue vazia não por causa de um erro, mas porque a API respondeu com sucesso informando que a empresa não possui sanções.
+
+
+#### Configurando a resposta de uma empresa sancionada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-14h00m15s077.jpg" alt="" width="840">
+</p>
+
+Uma nova resposta é preparada no Mockoon para representar o cenário de uma empresa efetivamente sancionada. O corpo da resposta traz uma lista `matches` com uma ocorrência, usando a variável de template `{{urlParam 'registrationNumber'}}` para refletir o número de registro informado na própria requisição, além dos campos `list`, `reason` e `confidenceScore`.
+
+```json
+{
+  "matches": [
+    {
+      "entity": "{{urlParam 'registrationNumber'}}",
+      "list": "OFAC SDN List",
+      "reason": "Financing of Prohibited Entities",
+      "confidenceScore": 0.98
+    }
+  ]
+}
+```
+
+
+#### Recebendo o objeto com o mapeamento das sanções
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-14h03m35s243.jpg" alt="" width="840">
+</p>
+
+Com essa nova resposta ativa, a requisição é enviada novamente e a execução para no breakpoint do `AnalyzeCompanyRiskUseCase`. Desta vez, o objeto `sanctions` chega preenchido com um `SanctionMatch` contendo os dados da entidade `REG-1234`, a lista `OFAC SDN List` e o motivo da sanção — prova de que o OpenFeign converteu corretamente o JSON da resposta para os objetos Java.
+
+
+#### Visualizando o resultado mapeado em formato de tabela
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-14h03m41s127.jpg" alt="" width="840">
+</p>
+
+A coleção `matches` é inspecionada na IDE em formato de tabela, deixando ainda mais claro que o Feign Client realizou automaticamente o parsing do JSON retornado pela API mockada para o objeto `SanctionResult`, sem que fosse necessária nenhuma conversão manual — um dos principais benefícios de usar o Spring Cloud OpenFeign no consumo de APIs externas.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video06.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video06.zip)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+
 
 ### 🟩 Vídeo 07 - Consumindo Dados Complexos
 
@@ -1551,7 +1872,8 @@ link do vídeo:
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/312976e9-de5b-4bb8-8fc9-0d449b1f4eaa?autoplay=1
+
 
 ### 🟩 Vídeo 08 - Estratégias de Tolerância a Falhas
 
@@ -1560,7 +1882,7 @@ link do vídeo:
   Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/e0870369-54dd-4a42-9cd4-6e1063b45b31?autoplay=1
 
 ##  Materiais de Apoio
 
