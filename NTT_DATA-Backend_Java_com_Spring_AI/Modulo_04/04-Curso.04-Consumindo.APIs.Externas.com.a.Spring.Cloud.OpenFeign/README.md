@@ -1862,7 +1862,7 @@ A coleção `matches` é inspecionada na IDE em formato de tabela, deixando aind
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video06.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video06.zip)
-
+- [004-Tutorial_Compliance_OpenFeign_Video06.md](./004-Tutorial_Compliance_OpenFeign_Video06.md)
 
 
 ### 🟩 Vídeo 07 - Consumindo Dados Complexos
