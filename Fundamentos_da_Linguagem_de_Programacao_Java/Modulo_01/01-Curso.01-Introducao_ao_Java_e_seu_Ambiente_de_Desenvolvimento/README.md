@@ -181,7 +181,76 @@ Slide final com as referências utilizadas na construção da apresentação, in
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/3dd15fa1-dded-4902-8269-289cd47971ca?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h44m45s812.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página inicial do Java no site da Oracle (`oracle.com/br/java`), com a apresentação da linguagem e o botão **"Faça o download do Java"** em destaque. É o ponto de partida indicado para obter o instalador oficial, antes de escolher a versão e o sistema operacional desejados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h45m03s052.jpg" alt="" width="840">
+</p>
+
+Aqui já estamos na página de downloads do Java, com as abas **JDK 23**, **JDK 21**, **GraalVM for JDK 23** e **GraalVM for JDK 21**. A tela exibe as opções de sistema operacional (Linux, macOS e Windows), sendo necessário selecionar a versão estável (JDK 21) e o sistema operacional correspondente para prosseguir com o download.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h45m12s373.jpg" alt="" width="840">
+</p>
+
+Com a aba **Windows** selecionada, a tabela apresenta as opções de instalador disponíveis para o JDK 21: **x64 Compressed Archive**, **x64 Installer** e **x64 MSI Installer**, cada uma com seu respectivo tamanho de arquivo e link de download. O instalador (`.exe`) é a opção utilizada para seguir com a instalação guiada no Windows.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h45m19s163.jpg" alt="" width="840">
+</p>
+
+A tela mostra o assistente de instalação do **Java(TM) SE Development Kit 21.0.6 (64-bit)**, na etapa de definição da pasta de destino. O instalador indica que a instalação ocupará 420 MB e será feita no caminho `C:\Program Files\Java\jdk-21\`, caminho esse que precisa ser lembrado para a configuração posterior das variáveis de ambiente. O próximo passo é clicar em **Next** para dar continuidade ao processo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h45m27s925.jpg" alt="" width="840">
+</p>
+
+Após a instalação, o Prompt de Comando confirma que o Java já está reconhecido pelo sistema. O comando `java --version` retorna a versão instalada, e o comando `javac` (compilador Java) também é reconhecido, exibindo suas opções de uso:
+
+```bash
+C:\Users\junior>java --version
+java 21.0.6 2025-01-21 LTS
+Java(TM) SE Runtime Environment (build 21.0.6+8-LTS-188)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.6+8-LTS-188, mixed mode, sharing)
+
+C:\Users\junior>javac
+Usage: javac <options> <source files>
+where possible options include:
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h45m33s935.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a janela **Variáveis de Ambiente** do Windows, acessada através de **Propriedades do Sistema > Avançado > Variáveis de Ambiente**. São exibidas as variáveis de usuário existentes (como `OneDrive`, `Path`, `TEMP` e `TMP`) e as variáveis de sistema (como `ComSpec`, `NUMBER_OF_PROCESSORS` e `OS`). É nessa tela que uma nova variável de usuário será criada para configurar o Java.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h45m39s812.jpg" alt="" width="840">
+</p>
+
+Na janela **Nova Variável de Usuário**, é criada a variável `JAVA_HOME`, apontando para o caminho onde o JDK foi instalado: `C:\Program Files\Java\jdk-21`. Essa variável servirá de referência para que o sistema localize a instalação do Java, sendo posteriormente também referenciada dentro da variável `Path` (usando `%JAVA_HOME%\bin`) para permitir a execução dos comandos Java a partir de qualquer diretório do terminal.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-19h45m44s976.jpg" alt="" width="840">
+</p>
+
+Por fim, o Prompt de Comando confirma que a variável `JAVA_HOME` foi configurada corretamente, exibindo o caminho da instalação ao ser consultada:
+
+```bash
+C:\Users\junior>echo %JAVA_HOME%
+C:\Program Files\Java\jdk-21
+```
+
+Esse resultado valida que a configuração das variáveis de ambiente foi concluída com sucesso, permitindo o uso dos comandos do Java a partir de qualquer diretório no terminal do Windows.
+
 
 ### 🟩 Vídeo 04 - Opção 2: Instalando o JDK Amazon Corretto pelo terminal no Linux
 
@@ -190,7 +259,12 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/8d0f4a5b-c7dc-4d65-b25f-176921e55246?autoplay=1
+
+### Anotações
+
+      
+
 
 ### 🟩 Vídeo 05 - Opção 3: Instalando o JDK pelo gerenciador de versões SDKMAN! no Linux
 
