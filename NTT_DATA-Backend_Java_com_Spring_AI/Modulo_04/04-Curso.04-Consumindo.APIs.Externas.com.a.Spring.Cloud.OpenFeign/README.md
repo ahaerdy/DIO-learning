@@ -1329,7 +1329,210 @@ link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/c
 
 ### Anotações
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-09h01m14s973.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da aula "Consumindo APIs Externas com o Spring Cloud OpenFeign", parte da Jornada Tech. O sumário lista oito tópicos do módulo (introdução ao consumo de APIs externas, setup do projeto Compliance, modelagem de empresas, estruturação de use cases, monitoramento de requisições e respostas, cenários de exceção, consumo de dados complexos e estratégias de tolerância a falhas), com o item **05 – Monitorando Requisições e Respostas** destacado em roxo, indicando que esse é o tópico tratado a partir deste ponto da aula.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-09h20m02s194.jpg" alt="" width="840">
+</p>
+
+O arquivo `application.properties` do projeto Compliance é editado para externalizar a configuração do Feign Client `sanction-client`: a URL do serviço mocado e o nível de log (`full`) deixam de estar fixos no código Java e passam a ser propriedades configuráveis, podendo ser sobrescritas por variáveis de ambiente sem necessidade de rebuild da aplicação.
+
+```properties
+spring.application.name=compliance
+
+spring.cloud.openfeign.client.config.sanction-client.url=http://192.168.64.1:3001
+spring.cloud.openfeign.client.config.sanction-client.logger-level=full
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-09h40m42s823.jpg" alt="" width="840">
+</p>
+
+Com a interface `SanctionClient` já declarada (Feign Client `sanction-client`, expondo o método `getCompanyRisk`), um novo pacote `dio.compliance.infrastructure.rest.dto` é criado no IntelliJ para abrigar os DTOs responsáveis por representar o retorno da API de sanções.
+
+```java
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@FeignClient(name = "sanction-client")
+public interface SanctionClient {
+
+    @GetMapping("/sanctions/companies/{registrationNumber}")
+    void getCompanyRisk(@PathVariable String registrationNumber);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-09h41m19s264.jpg" alt="" width="840">
+</p>
+
+Dentro do novo pacote `dto`, o menu de criação de classe do IntelliJ é aberto para definir o tipo do novo elemento (Class, Interface, Record, Enum, Annotation, Exception ou Compact source file). O DTO que receberá o resultado da consulta de sanções é nomeado `SanctionResult`, seguindo a convenção de Data Transfer Object.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-09h42m39s121.jpg" alt="" width="840">
+</p>
+
+O record `SanctionResult` é criado vazio no pacote `dio.compliance.infrastructure.rest.dto`. Um comentário de bloco documenta o formato de resposta planejado para a futura API mocada de sanções, servindo de referência para o mapeamento dos campos: entidade, lista, motivo e score de confiança.
+
+```java
+package dio.compliance.infrastructure.rest.dto;
+
+public record SanctionResult() {
+}
+
+/*
+{
+  "matches": [
+    {
+      "entity": "{{urlParam 'registrationNumber'}}",
+      "list": "OFAC SDN List",
+      "reason": "Financing of Prohibited Entities",
+      "confidenceScore": 0.98
+    }
+  ]
+}
+*/
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-09h43m38s281.jpg" alt="" width="840">
+</p>
+
+O record `SanctionResult` é completado com uma lista de `SanctionMatch`, e o record aninhado `SanctionMatch` é definido com os quatro campos previstos no comentário anterior: `entity`, `list`, `reason` e `confidenceScore`.
+
+```java
+import java.util.List;
+
+public record SanctionResult(List<SanctionMatch> matches) {
+    public record SanctionMatch(
+            String entity,
+            String list,
+            String reason,
+            Double confidenceScore
+    ) {}
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-09h46m33s183.jpg" alt="" width="840">
+</p>
+
+Com o DTO pronto, um método `toDomain()` é adicionado ao `SanctionResult` para converter a lista de `SanctionMatch` recebida da API em uma lista de `SanctionIdentity`, tipo usado pelo `ComplianceScreening` do domínio. O método percorre os matches com `stream().map(...)`, tratando o caso de lista nula e aplicando um valor padrão quando o score de confiança não é informado.
+
+```java
+public List<ComplianceScreening.SanctionIdentity> toDomain() {
+    if (matches() == null) {
+        return List.of();
+    }
+
+    return matches().stream()
+            .map(match -> new ComplianceScreening.SanctionIdentity(
+                    match.entity(),
+                    match.list(),
+                    match.reason(),
+                    match.confidenceScore() != null ? match.confidenceScore() : 0.0
+            ))
+            .toList();
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-10h15m36s349.jpg" alt="" width="840">
+</p>
+
+No Mockoon (API mocada "KYC", `localhost:3001`), uma rota curinga (`/* `, todos os métodos) é configurada como resposta padrão **401 Unauthorized**. Na aba Rules dessa resposta, é definida uma regra de simulação de autenticação: a requisição só passa dessa rota "guarda" se o header `X-API-KEY` for igual a `kyc-secret-123`; caso contrário, o mock intercepta a chamada e retorna 401 antes mesmo de alcançar a rota real de sanções.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-10h41m57s875.jpg" alt="" width="840">
+</p>
+
+Teste manual da regra de autenticação feito diretamente no arquivo `.http` do IntelliJ: a requisição `GET` para a rota de sanções agora inclui o header `X-API-KEY` com o valor esperado, e a API mocada responde com **200 OK** e uma lista de matches vazia, confirmando que o header enviado deixou a requisição passar pela regra de autorização configurada no Mockoon.
+
+```http
+GET http://192.168.64.1:3001/sanctions/companies/123
+X-API-KEY: kyc-secret-123
+```
+
+```json
+{
+  "matches": []
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-10h42m38s026.jpg" alt="" width="840">
+</p>
+
+Agora testando o fluxo completo pela aplicação Compliance: uma requisição `POST /companies` é enviada para criar uma empresa, mas como o Feign Client ainda não envia o header de autenticação exigido pelo mock, a aplicação falha ao chamar a API de sanções e retorna **500 Internal Server Error** para quem chamou o endpoint.
+
+```http
+POST http://localhost:8080/companies
+Accept: application/json
+
+{
+  "name": "Logistics",
+  "registrationNumber": "REG-1234"
+}
+```
+
+```json
+{
+  "timestamp": "2026-03-31T10:29:25.769Z",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/companies"
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-10h46m01s974.jpg" alt="" width="840">
+</p>
+
+Investigando a causa do erro 500 no console de debug da aplicação: o log mostra que, durante a chamada Feign para a API de sanções, foi lançada uma `feign.FeignException$Unauthorized`, confirmando que a requisição feita pelo `SanctionClient` retornou 401 por falta do header de autenticação exigido pelo mock.
+
+```
+feign.FeignException$Unauthorized: [401 Unauthorized] during [GET] to [http://192.168.64.1:3001/sanctions/companies/REG-1234]
+    at feign.FeignException.clientErrorStatus(FeignException.java:245)
+    at feign.FeignException.errorStatus(FeignException.java:223)
+    at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:103)
+    at feign.InvocationContext.decodeError(...)
+    at feign.ResponseHandler.handleResponse(...)
+    at feign.SynchronousMethodHandler.execute(SynchronousMethodHandler.java:109)
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-10h50m40s910.jpg" alt="" width="840">
+</p>
+
+Após configurar no Feign um header padrão (`X-API-KEY: kyc-secret-123`) enviado em toda requisição e reiniciar a aplicação, a mesma chamada `POST /companies` agora é concluída com sucesso: o corpo de resposta traz o link (`href`) do recurso criado, a entidade da empresa, seus dados (`name`, `registrationNumber`) e o campo `riskAssessment`, ainda nulo nesse momento do fluxo.
+
+```json
+{
+  "href": "http://localhost:8080/companies/0c1b513e-0834-48de-962e-090b12837467",
+  "companyEntity": {
+    "href": "http://localhost:8080/companies/0c1b513e-0834-48de-962e-090b12837467"
+  },
+  "name": "Logistics",
+  "registrationNumber": "REG-1234",
+  "riskAssessment": null
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-07-31-10h50m59s948.jpg" alt="" width="840">
+</p>
+
+De volta ao Mockoon, a aba **Logs** confirma o resultado: a requisição `GET /sanctions/companies/REG-1234` foi capturada com status **200**, "Empresa sem Riscos", e o detalhe da requisição mostra o header `X-API-KEY` chegando corretamente, validando de ponta a ponta que o Feign Client agora está autenticado ao consumir a API mocada de sanções.
       
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video05.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video05.zip)
+- [yyyyyyyyyyyy](./xxxxxxxxxxxxxxxxx)
 
 
 ### 🟩 Vídeo 06 - Configurando Cenários de Exceção
