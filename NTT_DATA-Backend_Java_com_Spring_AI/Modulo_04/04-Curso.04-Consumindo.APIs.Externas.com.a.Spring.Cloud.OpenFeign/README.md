@@ -2332,6 +2332,87 @@ GET http://localhost:8080/companies/f5e85a96-9f9a-471b-9312-447d8dc15995
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/e0870369-54dd-4a42-9cd4-6e1063b45b31?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-11h04m41s750.jpg" alt="" width="840">
+</p>
+
+Este é o slide de abertura do módulo, parte da trilha **Jornada Tech**, referente ao curso *Consumindo APIs Externas com o Spring Cloud OpenFeign*. No índice à direita, o item **08 — Estratégias de Tolerância a Falhas** aparece destacado, indicando que este é o tópico final abordado no vídeo. O slide funciona como marcador de contexto: o curso já percorreu introdução, setup do projeto, modelagem, use cases, monitoramento, tratamento de exceções e consumo de dados complexos, chegando agora ao encerramento com o tema de resiliência.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-11h04m48s445.jpg" alt="" width="840">
+</p>
+
+Esta imagem apresenta o infográfico **"Roadmap do Aluno: O Caminho para a Resiliência em Microserviços"**, que resume visualmente os dois grandes eixos de estudo sugeridos para quem quer evoluir além do básico do OpenFeign. O **Pilar 1 — Tolerância a Falhas** reúne três estratégias centrais: o **Circuit Breaker** (o "disjuntor" que interrompe chamadas a serviços instáveis, alternando entre os estados fechado, aberto e meio-aberto), as **Retries com Exponential Backoff** (retentativas automáticas que aumentam progressivamente o tempo de espera para não sobrecarregar um serviço já debilitado) e o **Rate Limiting** (controle do volume de tráfego para respeitar limites de API e evitar esgotamento de recursos). Já o **Pilar 2 — Evolução e Consistência** aponta para tópicos mais avançados: a migração de comunicação REST/HTTP para **gRPC** (alta performance e baixa latência entre serviços internos), a **observabilidade com tracing** (rastreamento do caminho das requisições entre múltiplos serviços) e as **Durable Executions** (garantia de que processos interrompidos sejam retomados exatamente de onde pararam). Esse mapa visual serve como guia geral para o restante do vídeo, que aprofunda cada um desses pontos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-11h05m02s485.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página inicial do site oficial do **Temporal** (temporal.io), a ferramenta de *durable execution* apresentada como exemplo prático de resiliência para workflows. O destaque "What if your code never failed?" resume a proposta da plataforma: garantir que aplicações não percam estado mesmo diante de falhas. À direita, um trecho de código em Python ilustra um workflow que envia um e-mail a cada 30 dias ao longo de um ano, evidenciando como atividades (`execute_activity`) e esperas de longa duração (`workflow.sleep`) são tratadas de forma nativa pelo framework:
+
+```python
+@workflow.defn
+class SleepForDaysWorkflow:
+    # Send an email every 30 days, for the year
+    @workflow.run
+    async def run(self) -> None:
+        for i in range(12):
+            # Activities have built-in support for ti...
+            await workflow.execute_activity(
+                send_email,
+                start_to_close_timeout=timedelta(secon...
+            )
+
+            # Sleep for 30 days (yes, really)!
+            await workflow.sleep(timedelta(days=30))
+```
+
+*(Observação: as últimas colunas do código aparecem cortadas na captura de tela original, por isso os trechos `for ti...` e `secon...` foram mantidos exatamente como visíveis, sem completar o conteúdo não exibido.)*
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-11h05m21s656.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, a navegação avança para a página de documentação oficial do Temporal ("Temporal Docs"), com a chamada **"Build applications that never fail"**. O texto explica que o Temporal é uma plataforma open source para construção de aplicações confiáveis, garantindo execução à prova de falhas: as aplicações retomam exatamente de onde pararam após quedas, falhas de rede ou indisponibilidades de infraestrutura, mesmo que isso ocorra segundos, dias ou anos depois. A tela também apresenta atalhos para Quickstart, Developer Guide e opções de deploy (self-host ou Temporal Cloud), reforçando o caráter open source e gratuito para começar a testar a ferramenta.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-11h05m26s175.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a seção **"Install the Temporal CLI"** da documentação, especificamente as instruções para macOS. É demonstrado que a CLI do Temporal está disponível para macOS, Windows, Linux ou como imagem Docker, e que a forma mais simples de instalação no macOS é via Homebrew:
+
+```bash
+brew install temporal
+```
+
+Essa CLI inclui um Temporal Service embutido, com persistência em SQLite e a Temporal Web UI, permitindo subir um ambiente de desenvolvimento completo diretamente pela linha de comando, sem depender de infraestrutura externa.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-11h05m30s977.jpg" alt="" width="840">
+</p>
+
+Aqui a documentação avança para a opção de execução via **Docker**, mostrando como subir a imagem oficial do Temporal CLI direto do DockerHub, além do comando para iniciar um servidor de desenvolvimento local:
+
+```bash
+docker run --rm temporalio/temporal --help
+
+docker run --rm -p 7233:7233 -p 8233:8233 temporalio/temporal server start-dev --ip 0.0.0.0
+# UI is now accessible from host at http://localhost:8233/
+
+temporal server start-dev
+```
+
+Esse trecho reforça a facilidade de subir o Temporal Server tanto via linha de comando quanto via contêiner, com acesso imediato à interface visual (Web UI) em `http://localhost:8233`, o que permite acompanhar workflows e atividades sem esforço adicional de configuração.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-11h05m33s697.jpg" alt="" width="840">
+</p>
+
+Por fim, a imagem mostra a seção de **visibilidade** do site do Temporal, com a chamada **"Get full visibility into your running code"**, reforçando que a plataforma elimina a necessidade de vasculhar logs manualmente ao dar acesso ao estado exato de cada execução de workflow. Na captura de tela da interface, aparece um painel com o histórico de eventos de um workflow, incluindo atividades como `activity-retry-on-failure` e `activity-retry-on-timeout`. Essa visão gráfica é o que permite acompanhar quantas vezes uma atividade específica sofreu retentativas, quais falhas ocorreram e ter acesso direto às exceções lançadas, tornando o diagnóstico de problemas em workflows muito mais transparente do que a simples leitura de arquivos de log.
+      
+
 ##  Materiais de Apoio
 
 # Certificado: Consumindo APIs Externas com a Spring Cloud OpenFeign
