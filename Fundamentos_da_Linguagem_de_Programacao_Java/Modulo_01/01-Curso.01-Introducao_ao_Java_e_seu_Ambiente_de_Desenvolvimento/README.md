@@ -362,7 +362,36 @@ OpenJDK 64-Bit Server VM Corretto-21.0.2.13.1 (build 21.0.2+13-LTS, mixed mode, 
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/8d0f4a5b-c7dc-4d65-b25f-176921e55246?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-19h28m32s060.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página inicial do site oficial do **SDKMAN** (sdkman.io), apresentando a ferramenta como "The Software Development Kit Manager". A página descreve o SDKMAN como um gerenciador que facilita o controle de múltiplas versões de SDKs em sistemas Unix, através de uma interface de linha de comando (CLI) simples, inspirada em ferramentas como apt, pip, RVM e Git. Logo abaixo, o site já disponibiliza o comando de instalação a ser copiado e colado no terminal:
+
+```bash
+curl -s "https://get.sdkman.io" | bash
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-19h28m47s219.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, o navegador está na página de **Installation** do site do SDKMAN, exibindo o passo a passo completo do processo de instalação. A página confirma que a instalação funciona em macOS, Linux e Windows (via WSL), sendo compatível com os shells Bash e ZSH. São apresentados os três comandos essenciais do processo:
+
+```bash
+$ curl -s "https://get.sdkman.io" | bash
+
+$ source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+$ sdk version
+```
+
+O primeiro comando realiza o download e a instalação do SDKMAN. O segundo carrega o script de inicialização no terminal atual, apontando para a pasta home do usuário. O terceiro serve para confirmar se a instalação foi concluída com sucesso, exibindo a versão do script e a versão nativa instaladas.
+     
 
 ## Parte 3 - Gerenciadores de Build
 
@@ -373,7 +402,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 07 - Instalando o Gradle
 

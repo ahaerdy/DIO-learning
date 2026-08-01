@@ -317,7 +317,12 @@ Isso corresponde ao momento em que o instrutor executa novamente a aplicação e
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/3e985ba4-23c0-4cd5-b114-da91136e4198?back=/track/ntt-data-2026-ai-java-back-end
+
+### Anotações
+
+     
+
 
 ### 🟩 Vídeo 04 - ChatClient: Fluência e Contexto no Spring AI
 
@@ -326,7 +331,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/af78f4fc-cd36-4230-90cd-8ce61a3d4395
 
 ### 🟩 Vídeo 05 - Tool Calling: Executando Funções Reais com IA
 
@@ -335,7 +340,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/d358b84d-acee-4119-a443-cd2c9327ac70
 
 ### 🟩 Vídeo 06 - Transcription API: Transformando Áudio em Texto
 
