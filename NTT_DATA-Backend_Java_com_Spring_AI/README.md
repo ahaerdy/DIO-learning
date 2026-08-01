@@ -107,7 +107,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_04/02-Curso.02-Conectando.sua.API.com.Banco.de.Dados.Através.do.Spring.Data)
 - [x] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_04/03-Curso.03-Simplificando.a.Segurança.em.APIs.REST.com.Spring.Security/)
 - [x] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_04/04-Curso.04-Consumindo.APIs.Externas.com.a.Spring.Cloud.OpenFeign/)
-- [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
+- [x] Desafio de projeto: [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot](Modulo_04/05-Desafio-Desenvolvendo.sua.API.Inteligente.com.Recrutamento.de.IA.com.Spring.Boot/)
 
 ---
 
