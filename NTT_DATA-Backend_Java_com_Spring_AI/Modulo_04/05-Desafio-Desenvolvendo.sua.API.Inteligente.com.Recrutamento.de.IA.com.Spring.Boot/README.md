@@ -307,8 +307,7 @@ Isso corresponde ao momento em que o instrutor executa novamente a aplicação e
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [budgeting_ate_o_video02.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video02.zip)
-- [yyyyyyyyyyyy](./xxxxxxxxxxxxxxxxx)
-
+- [001-Tutorial_Budgeting_Spring_AI_Videos01a02.md](./001-Tutorial_Budgeting_Spring_AI_Videos01a02.md)
 
 
 ### 🟩 Vídeo 03 - Explorando o ChatModel e Modelos de Linguagem
