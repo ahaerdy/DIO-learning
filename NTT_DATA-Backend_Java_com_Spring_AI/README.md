@@ -155,7 +155,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [Criando sua Primeira API REST com Spring Boot](https://hermes.dio.me/certificates/P2CB0LSX.pdf)
 - [Conectando sua API com Banco de Dados Através do Spring Data](https://hermes.dio.me/certificates/MF0GVYEW.pdf)
 - [Simplificando a Segurança em APIs REST com Spring Security](https://hermes.dio.me/certificates/WC8E96BD.pdf)
-- [Consumindo APIs Externas com a Spring Cloud OpenFeign]
+- [Consumindo APIs Externas com a Spring Cloud OpenFeign](https://hermes.dio.me/certificates/BGWRIKZR.pdf)
 - [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
 - Certificado do Módulo: [Criando Soluções Inteligentes com Spring Boot e Java Moderno]
 
