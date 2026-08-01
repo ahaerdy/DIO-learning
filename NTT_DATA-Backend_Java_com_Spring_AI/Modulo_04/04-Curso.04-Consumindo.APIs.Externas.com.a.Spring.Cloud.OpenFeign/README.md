@@ -1874,6 +1874,454 @@ A coleção `matches` é inspecionada na IDE em formato de tabela, deixando aind
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/consumindo-apis-externas-com-o-spring-cloud-openfeign/learning/312976e9-de5b-4bb8-8fc9-0d449b1f4eaa?autoplay=1
 
+### Anotações
+
+#### Introdução: Consumindo Dados Complexos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h00m26s927.jpg" alt="" width="840">
+</p>
+
+Slide de abertura da Jornada Tech, com o título "Consumindo APIs Externas com o Spring Cloud OpenFeign". O sumário lateral mostra os oito tópicos da trilha, com o item **07 — Consumindo Dados Complexos** destacado, indicando que esta é a etapa da aula dedicada a lidar com uma resposta de API mais elaborada, contendo múltiplos campos aninhados.
+
+---
+
+#### O Mock da API de AML (Anti-Money Laundering)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h22m40s616.jpg" alt="" width="840">
+</p>
+
+No Mockoon, uma nova API simulada foi configurada na porta **3002**, com a rota `GET /aml/v1/screening/:registrationNumber`. O corpo da resposta é gerado dinamicamente por meio de um template com variáveis condicionais: primeiro sorteia-se um `riskLevel` entre `LOW`, `MEDIUM` e `HIGH`; em seguida, o `score` é calculado dentro de uma faixa numérica que depende do nível de risco sorteado; por fim, a flag `isPepUser` é marcada como verdadeira apenas quando o risco é `HIGH`.
+
+```handlebars
+{{!-- riskLevel --}}
+{{setVar 'riskLevel' (oneOf (array 'LOW' 'MEDIUM' 'HIGH'))}}
+{{!-- score --}}
+{{#if (eq (getVar 'riskLevel') 'LOW')}}
+  {{setVar 'score' (faker 'number.int' min=0 max=30)}}
+{{else if (eq (getVar 'riskLevel') 'MEDIUM')}}
+  {{setVar 'score' (faker 'number.int' min=31 max=60)}}
+{{else}}
+  {{setVar 'score' (faker 'number.int' min=61 max=100)}}
+{{/if}}
+{{!-- isPepUser --}}
+{{#if (eq (getVar 'riskLevel') 'HIGH')}}
+  {{setVar 'isPepUser' true}}
+{{/if}}
+```
+
+---
+
+#### Testando o Endpoint de Screening via Cliente HTTP
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h24m02s478.jpg" alt="" width="840">
+</p>
+
+No arquivo `.http` do IntelliJ, uma requisição de teste é montada apontando para o mock de AML, usando autenticação via cabeçalho `Authorization` no esquema `Bearer`.
+
+```http
+GET http://192.168.64.1:3002/aml/v1/screening/:registrationNumber
+Authorization: Bearer xyz123
+```
+
+---
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h24m58s661.jpg" alt="" width="840">
+</p>
+
+A mesma requisição já aparece executada, com dois arquivos de resposta salvos na lista de histórico do cliente HTTP (`2026-03-31T045958.200.json` e `2026-03-31T042907.200.json`), confirmando que o endpoint mocado respondeu com sucesso (status 200) em mais de uma chamada.
+
+---
+
+#### Analisando a Resposta de Alto Risco
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h26m18s779.jpg" alt="" width="840">
+</p>
+
+O corpo da resposta retornada pelo mock mostra um cenário de risco elevado: nível `HIGH`, score `67` e uma lista de flags indicando os motivos do risco, entre elas a flag em destaque `SANCTIONS_MATCH`, sinalizando que a empresa consultada foi encontrada em listas de sanções.
+
+```json
+{
+  "riskLevel": "HIGH",
+  "riskScore": 67,
+  "flags": [
+    "STRUCTURING",
+    "HIGH_RISK_COUNTRY",
+    "PEP_ASSOCIATED",
+    "ADVERSE_MEDIA",
+    "SANCTIONS_MATCH"
+  ]
+}
+```
+
+---
+
+#### Criando o Novo Rest Client
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h28m35s025.jpg" alt="" width="840">
+</p>
+
+Pelo menu de criação de nova classe Java do IntelliJ, um novo cliente é criado com o nome **AntiMoneyLaunderingClient**, seguindo o mesmo padrão de organização já utilizado para o cliente de sanções.
+
+---
+
+#### Definindo a Interface do Cliente e o DTO
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h29m23s610.jpg" alt="" width="840">
+</p>
+
+A interface `AntiMoneyLaunderingClient` é anotada com `@FeignClient("aml-client")` e declara o método `screening`, mapeado para o endpoint de screening via `@GetMapping`, substituindo o `registrationNumber` na URL através de `@PathVariable`.
+
+```java
+package dio.compliance.infrastructure.rest.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@FeignClient("aml-client")
+public interface AntiMoneyLaunderingClient {
+    @GetMapping("/aml/v1/screening/{registrationNumber}")
+    AmlResult screening(@PathVariable String registrationNumber);
+}
+```
+
+Em seguida, um novo DTO chamado **AmlResult** começa a ser criado na pasta `dto`, para representar o formato da resposta vinda da API de AML.
+
+---
+
+#### O DTO AmlResult e sua Conversão para o Domínio
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h36m58s125.jpg" alt="" width="840">
+</p>
+
+O record `AmlResult` espelha a estrutura da resposta JSON da API de AML, com `riskScore`, `flags` e um objeto `pep` aninhado (que por sua vez contém a lista de ocorrências de exposição política). O método `toDomain()` converte esse DTO para `ComplianceScreening.AmlProfile`, mapeando cada ocorrência de PEP para o tipo de domínio correspondente e tratando o caso em que a lista de flags venha nula.
+
+```java
+package dio.compliance.infrastructure.rest.dto;
+
+import dio.compliance.domain.ComplianceScreening;
+import java.util.List;
+
+public record AmlResult(int riskScore, List<String> flags, Pep pep) {
+
+    public record PepOccurrence(String personName, String position) {}
+
+    public record Pep(boolean isPep, List<PepOccurrence> occurrences) {}
+
+    public ComplianceScreening.AmlProfile toDomain() {
+        List<ComplianceScreening.AmlProfile.PoliticalExposure> exposures = pep().occurrences().stream()
+                .map(occ -> new ComplianceScreening.AmlProfile.PoliticalExposure(
+                        occ.personName(),
+                        occ.position()
+                ))
+                .toList();
+
+        return new ComplianceScreening.AmlProfile(
+                riskScore(),
+                flags() != null ? flags() : List.of(),
+                pep().isPep(),
+                exposures
+        );
+    }
+}
+```
+
+---
+
+#### Injetando o Novo Cliente no Use Case
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h46m08s685.jpg" alt="" width="840">
+</p>
+
+No `AnalyzeCompanyRiskUseCase`, o campo `antiMoneyLaunderingClient` já foi declarado, mas o construtor e o corpo do método `execute` ainda utilizam apenas o `sanctionClient`, evidenciado pelos indicadores de aviso no editor.
+
+```java
+import dio.compliance.infrastructure.rest.client.SanctionClient;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnalyzeCompanyRiskUseCase {
+    private final SanctionClient sanctionClient;
+    private final AntiMoneyLaunderingClient antiMoneyLaunderingClient;
+
+    public AnalyzeCompanyRiskUseCase(SanctionClient sanctionClient) {
+        this.sanctionClient = sanctionClient;
+    }
+
+    public void execute(Company domain) {
+        var sanctions = sanctionClient.getCompanyRisk(domain.getRegistrationNumber());
+    }
+}
+```
+
+---
+
+#### Use Case com os Dois Clientes Conectados
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h47m38s925.jpg" alt="" width="840">
+</p>
+
+Aqui o `AnalyzeCompanyRiskUseCase` já recebe os dois clientes pelo construtor — `sanctionClient` e `antiMoneyLaunderingClient` — e o método `execute` dispara uma chamada para cada uma das APIs externas, usando o número de registro da empresa.
+
+```java
+package dio.compliance.appicantion;
+
+import dio.compliance.domain.Company;
+import dio.compliance.infrastructure.rest.client.AntiMoneyLaunderingClient;
+import dio.compliance.infrastructure.rest.client.SanctionClient;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnalyzeCompanyRiskUseCase {
+
+    private final SanctionClient sanctionClient;
+    private final AntiMoneyLaunderingClient antiMoneyLaunderingClient;
+
+    public AnalyzeCompanyRiskUseCase(SanctionClient sanctionClient,
+                                      AntiMoneyLaunderingClient antiMoneyLaunderingClient) {
+        this.sanctionClient = sanctionClient;
+        this.antiMoneyLaunderingClient = antiMoneyLaunderingClient;
+    }
+
+    public void execute(Company domain) {
+        var sanctions = sanctionClient.getCompanyRisk(domain.getRegistrationNumber());
+        var amlProfile = antiMoneyLaunderingClient.screening(domain.getRegistrationNumber());
+    }
+}
+```
+
+---
+
+#### Configurando o Novo Cliente no application.properties
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h51m37s736.jpg" alt="" width="840">
+</p>
+
+O arquivo de propriedades passa a ter a configuração do `aml-client`, com sua própria URL, nível de log e o cabeçalho padrão de autorização no formato `Bearer`. No console de execução aparece um `IllegalStateException` informando que não havia um Feign Client definido para load balancing — erro que motiva a conferência e o ajuste dessas propriedades.
+
+```properties
+spring.application.name=compliance
+
+spring.cloud.openfeign.client.config.sanction-client.url=http://192.168.64.1:3001
+spring.cloud.openfeign.client.config.sanction-client.logger-level=full
+spring.cloud.openfeign.client.config.sanction-client.default-request-headers.x-api-key=kyc-secret-123
+spring.cloud.openfeign.circuitbreaker.enabled=true
+
+spring.cloud.openfeign.client.config.aml-client.url=http://192.168.64.1:3002
+spring.cloud.openfeign.client.config.aml-client.logger-level=full
+spring.cloud.openfeign.client.config.aml-client.default-request-headers.authorization=Bearer xyz123
+
+logging.level.dio.compliance.infrastructure.rest=DEBUG
+```
+
+---
+
+#### Aplicação no Ar
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h54m29s608.jpg" alt="" width="840">
+</p>
+
+Após o ajuste das configurações, o console mostra o Spring Boot (versão 4.0.5) inicializando normalmente, com o Tomcat subindo na porta configurada e a aplicação `compliance` sendo iniciada com sucesso, pronta para receber novas requisições.
+
+---
+
+#### Criando uma Empresa
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h54m39s467.jpg" alt="" width="840">
+</p>
+
+Uma requisição `POST` para cadastro de empresa é executada com sucesso (status 201). A resposta traz os links HATEOAS (`self` e `companyEntity`), o nome e o número de registro da empresa recém-criada, com o campo `riskAssessment` ainda nulo, já que a análise de risco ainda será disparada.
+
+```json
+{
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/companies/657e1877-91c4-47e2-b938-7986654839a1"
+    },
+    "companyEntity": {
+      "href": "http://localhost:8080/companies/657e1877-91c4-47e2-b938-7986654839a1"
+    }
+  },
+  "name": "Logistics",
+  "registrationNumber": "REG-1234",
+  "riskAssessment": null
+}
+```
+
+---
+
+#### Log da Chamada ao Cliente de Sanções
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h54m53s897.jpg" alt="" width="840">
+</p>
+
+O log em nível `DEBUG` do `SanctionClient` mostra o retorno da chamada à API de sanções: a empresa `REG-1234` foi encontrada na lista `OFAC SDN List`, com o motivo "Financing of Prohibited Entities" e um score de confiança de `0.98`.
+
+```json
+"matches": [
+  {
+    "entity": "REG-1234",
+    "list": "OFAC SDN List",
+    "reason": "Financing of Prohibited Entities",
+    "confidenceScore": 0.98
+  }
+]
+```
+
+---
+
+#### Log da Chamada ao Cliente de AML
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-09h55m00s628.jpg" alt="" width="840">
+</p>
+
+Logo em seguida, o log do `AntiMoneyLaunderingClient` mostra a resposta da segunda chamada: risco `MEDIUM`, score `56`, com as flags `SANCTIONS_MATCH`, `ADVERSE_MEDIA` e `HIGH_RISK_COUNTRY`, e nenhuma ocorrência de pessoa politicamente exposta associada a essa empresa.
+
+```json
+{
+  "riskLevel": "MEDIUM",
+  "riskScore": 56,
+  "flags": ["SANCTIONS_MATCH", "ADVERSE_MEDIA", "HIGH_RISK_COUNTRY"],
+  "pep": {
+    "isPep": false,
+    "occurrences": []
+  }
+}
+```
+
+---
+
+#### Montando a Regra de Negócio Completa
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-10h05m26s116.jpg" alt="" width="840">
+</p>
+
+O método `execute` do use case chega à sua versão completa: as respostas dos dois clientes são convertidas para o domínio com `toDomain()`, um `ComplianceScreening` é montado a partir das sanções e do perfil de AML, a política de compliance avalia esse screening gerando um `RiskAssessment`, esse resultado é aplicado à empresa e, por fim, a empresa é persistida pelo repositório.
+
+```java
+public void execute(Company company) {
+    var sanctions = sanctionClient.getCompanyRisk(company.getRegistrationNumber()).toDomain();
+    var amlProfile = antiMoneyLaunderingClient.screening(company.getRegistrationNumber()).toDomain();
+
+    var screening = new ComplianceScreening(sanctions, amlProfile);
+    var riskAssessment = CompliancePolicy.evaluate(screening);
+
+    company.applyRiskAssessment(riskAssessment);
+    companyRepository.save(company);
+}
+```
+
+---
+
+#### Verificando o Estado Inicial da API
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-10h06m11s577.jpg" alt="" width="840">
+</p>
+
+Com a aplicação de pé, uma requisição `GET` em `/companies` é feita antes de qualquer cadastro, retornando uma coleção vazia. Logo abaixo, no mesmo arquivo `.http`, está preparada a requisição `POST` para criação de uma nova empresa.
+
+```http
+POST http://localhost:8080/companies
+Accept: application/json
+
+{
+  "name": "Logistics",
+  "registrationNumber": "REG-1234"
+}
+```
+
+---
+
+#### Persistindo a Empresa
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-10h06m34s458.jpg" alt="" width="840">
+</p>
+
+A requisição `POST` é executada e retorna status `201`, com a resposta salva no arquivo `2026-03-31T050926.201.json`. Nesse momento, a empresa já está persistida, mas o campo `riskAssessment` ainda aparece como `null`, pois a resposta é retornada antes da conclusão da análise assíncrona de risco.
+
+---
+
+#### Identificando a Empresa Criada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-10h06m45s620.jpg" alt="" width="840">
+</p>
+
+Nos links de resposta, o identificador da nova empresa fica em destaque — `f5e85a96-9f9a-471b-9312-447d8dc15995` — tanto no link `self` quanto no link `companyEntity`, confirmando que o cadastro disparou as requisições para as duas APIs externas de compliance.
+
+---
+
+#### Acompanhando os Logs da Execução
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-10h06m57s099.jpg" alt="" width="840">
+</p>
+
+Com o use case já completo, o console de debug mostra o resultado da análise para essa execução: risco `LOW`, score `2`, apenas a flag `SANCTIONS_MATCH` e nenhuma pessoa politicamente exposta identificada.
+
+```json
+{
+  "riskLevel": "LOW",
+  "riskScore": 2,
+  "flags": ["SANCTIONS_MATCH"],
+  "pep": {
+    "isPep": false,
+    "occurrences": []
+  }
+}
+```
+
+---
+
+#### Consultando a Empresa Persistida
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-10h07m20s117.jpg" alt="" width="840">
+</p>
+
+Por fim, uma requisição `GET` pelo identificador da empresa confirma que o `riskAssessment` foi persistido com sucesso, com nível `CRITICAL` e status `REJECTED`, resultado da avaliação combinada das duas APIs de compliance consumidas via OpenFeign.
+
+```http
+GET http://localhost:8080/companies/f5e85a96-9f9a-471b-9312-447d8dc15995
+```
+
+```json
+{
+  "name": "Logistics",
+  "registrationNumber": "REG-1234",
+  "riskAssessment": {
+    "score": 2,
+    "level": "CRITICAL",
+    "status": "REJECTED"
+  }
+}
+```
+      
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video07.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video07.zip)
+- [005-Tutorial_Compliance_OpenFeign_Video07.md](./005-Tutorial_Compliance_OpenFeign_Video07.md)
+
 
 ### 🟩 Vídeo 08 - Estratégias de Tolerância a Falhas
 
