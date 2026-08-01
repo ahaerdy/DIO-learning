@@ -2413,7 +2413,23 @@ Esse trecho reforça a facilidade de subir o Temporal Server tanto via linha de 
 Por fim, a imagem mostra a seção de **visibilidade** do site do Temporal, com a chamada **"Get full visibility into your running code"**, reforçando que a plataforma elimina a necessidade de vasculhar logs manualmente ao dar acesso ao estado exato de cada execução de workflow. Na captura de tela da interface, aparece um painel com o histórico de eventos de um workflow, incluindo atividades como `activity-retry-on-failure` e `activity-retry-on-timeout`. Essa visão gráfica é o que permite acompanhar quantas vezes uma atividade específica sofreu retentativas, quais falhas ocorreram e ter acesso direto às exceções lançadas, tornando o diagnóstico de problemas em workflows muito mais transparente do que a simples leitura de arquivos de log.
       
 
-##  Materiais de Apoio
+### Tutoriais
+
+- [001-Tutorial_Compliance_OpenFeign_Videos01a02.md](./001-Tutorial_Compliance_OpenFeign_Videos01a02.md)
+- [002-Tutorial_Compliance_OpenFeign_Videos03a04.md](./002-Tutorial_Compliance_OpenFeign_Videos03a04.md)
+- [003-Tutorial_Compliance_OpenFeign_Video05.md](./003-Tutorial_Compliance_OpenFeign_Video05.md)
+- [004-Tutorial_Compliance_OpenFeign_Video06.md](./004-Tutorial_Compliance_OpenFeign_Video06.md)
+- [005-Tutorial_Compliance_OpenFeign_Video07.md](./005-Tutorial_Compliance_OpenFeign_Video07.md)
+
+### Arquivos do Projeto
+
+- Até o vídeo 02: [compliance_ate_o_video02.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video02.zip)
+- Até o vídeo 03: [compliance_ate_o_video03.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video03.zip)
+- Até o vídeo 04: [compliance_ate_o_video04.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video04.zip)
+- Até o vídeo 05: [compliance_ate_o_video05.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video05.zip)
+- Até o vídeo 06: [compliance_ate_o_video06.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video06.zip)
+- Até o vídeo 07: [compliance_ate_o_video07.zip](./000-Midia_e_Anexos/etapas_do_codigo/compliance_ate_o_video07.zip)
+
 
 # Certificado: Consumindo APIs Externas com a Spring Cloud OpenFeign
 
