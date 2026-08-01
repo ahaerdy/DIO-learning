@@ -110,6 +110,207 @@ O infográfico **"O Assistente de Budgeting: Transformando Voz em Dados Financei
 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/f6d5285c-3962-41d4-8e19-ca821da8eabf?back=/track/ntt-data-2026-ai-java-back-end
 
+### Anotações
+
+#### Introdução ao Spring AI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h09m25s142.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página de documentação oficial do Spring AI aberta no navegador, na seção "Introduction". O texto exibido explica que o projeto Spring AI busca simplificar o desenvolvimento de aplicações com funcionalidades de inteligência artificial, sem complexidade desnecessária, inspirando-se em projetos Python como LangChain e LlamaIndex. Um destaque em nota explica que o Spring AI resolve o desafio fundamental de conectar dados e APIs corporativas aos modelos de IA, ilustrado pelo diagrama "Your Data / Your APIs → Generative AI" presente na página.
+
+#### Provedores de Modelos Suportados
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h09m43s106.jpg" alt="" width="840">
+</p>
+
+A página segue exibindo a lista de funcionalidades do Spring AI, com destaque para o suporte a diversos provedores de modelos de IA — Anthropic, OpenAI (destacado em azul na imagem), Microsoft, Amazon, Google e Ollama. Também são listados os tipos de modelo suportados: Chat Completion, Embedding, Text to Image, Audio Transcription, Text to Speech e Moderation. Isso corresponde diretamente ao momento em que o instrutor comenta que o Spring AI possui interfaces prontas para se comunicar com diferentes Large Language Models, citando esses mesmos provedores.
+
+#### Demais Recursos do Ecossistema
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h09m48s140.jpg" alt="" width="840">
+</p>
+
+Com a rolagem da página, aparecem outros recursos do Spring AI: Structured Outputs (mapeamento da saída do modelo para POJOs), suporte a diversos bancos de dados vetoriais, Tools/Function Calling, Observability, ingestão de documentos via ETL framework, avaliação de modelos de IA, Spring Boot Auto Configuration, ChatClient API, Advisors API e suporte a memória de conversa e RAG (Retrieval Augmented Generation). Esse trecho ilustra o momento em que o instrutor menciona o ChatClient como uma interface que facilita a comunicação com os modelos, além da integração com bancos de dados de vetor e do tool calling.
+
+#### Conceitos de IA — Modelos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h09m51s971.jpg" alt="" width="840">
+</p>
+
+A navegação avança para a seção "AI Concepts", especificamente para o tópico "Models". A página apresenta uma tabela que categoriza os modelos de IA de acordo com os tipos de entrada (linguagem/código, imagem, áudio) e saída (linguagem/código, imagem, áudio), evidenciando a especialização de cada modelo generativo (como LLMs). Esse conteúdo reforça a fala do instrutor de que o Spring AI disponibiliza uma série de componentes por meio de uma interface comum, permitindo trocar um modelo por outro sem alterar o código da aplicação.
+
+#### Conceitos de IA — Prompts
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h09m57s683.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a seção "Prompts" da documentação, explicando que o prompt é a base da entrada em linguagem natural enviada ao modelo de IA, podendo ser composto por diferentes papéis (como "system" e "user"). O texto também comenta sobre a importância da engenharia de prompt. Isso corresponde à explicação do instrutor de que o prompt é justamente a forma como se comunica ao modelo o que se deseja fazer.
+
+#### Conceitos de IA — Tokens
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h11m45s900.jpg" alt="" width="840">
+</p>
+
+A página avança para a seção "Tokens", explicando que os tokens são as unidades básicas de processamento dos modelos de IA: na entrada, palavras são convertidas em tokens; na saída, tokens são convertidos de volta em palavras. O texto ainda destaca que tokens estão diretamente relacionados ao custo de uso dos modelos hospedados, já que a cobrança é feita com base na quantidade de tokens processados (entrada e saída). Esse trecho corresponde ao momento em que o instrutor esclarece que, diferente do embedding, o token está muito mais relacionado ao custo do uso do modelo de IA.
+
+#### Conceitos de IA — Tool Calling
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h12m16s629.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a seção "Tool Calling" da documentação, acompanhada de um diagrama que ilustra o fluxo entre a aplicação (Chat Request), o Spring AI e a Tool externa, até a geração da Chat Response. O texto explica que os LLMs ficam "congelados" após o treinamento e não conseguem acessar ou modificar dados externos por conta própria, sendo esse o problema que o mecanismo de Tool Calling resolve. Esse conteúdo corresponde exatamente à explicação do instrutor de que o tool calling consiste em informar ao LLM que ele pode acessar dados externos, como dados da própria aplicação, por meio de ferramentas registradas.
+
+#### Criando o Projeto no IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h12m27s137.jpg" alt="" width="840">
+</p>
+
+A tela agora mostra a IDE IntelliJ IDEA aberta na tela de boas-vindas, exibindo uma lista de projetos remotos existentes (via WSL Ubuntu) e o botão "New Project" em destaque. Esse momento corresponde à fala do instrutor informando que utilizará o IntelliJ, por ser a IDE de sua preferência, para criar o novo projeto Spring Boot.
+
+#### Configurando o Novo Projeto Spring Boot
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h12m43s525.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a janela "New Project" do IntelliJ, com o gerador "Spring Boot" selecionado. Os campos exibidos são: Server URL (start.spring.io), Name preenchido como "budgeting", Location apontando para o diretório do usuário via WSL, Language definida como Java, JDK "Eclipse Temurin 25.0.2", Packaging "Jar" e Configuration "Properties". Isso corresponde ao momento em que o instrutor define o nome do projeto como "budgeting" e configura a versão do Java a ser utilizada (25, via SDKMAN).
+
+#### Adicionando o BOM do Spring AI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h15m33s006.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o arquivo `build.gradle` do projeto "budgeting" já criado, com o plugin de gerenciamento de dependências do Spring configurado e a dependência do BOM (Bill of Materials) do Spring AI recém-adicionada:
+
+```groovy
+plugins {
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'dio'
+version = '0.0.1-SNAPSHOT'
+description = 'budgeting'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation platform("org.springframework.ai:spring-ai-bom:2.0.0-M4")
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+```
+
+Isso corresponde ao trecho em que o instrutor explica que o BOM (Bill of Materials) disponibiliza um índice de dependências do Spring AI com as versões corretas já resolvidas, evitando a necessidade de declarar manualmente a versão de cada dependência relacionada.
+
+#### Adicionando o Starter do Modelo OpenAI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h16m52s851.jpg" alt="" width="840">
+</p>
+
+No mesmo arquivo `build.gradle`, uma nova linha é adicionada ao bloco de dependências, referente ao starter do modelo OpenAI do Spring AI (destacada em azul na imagem):
+
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation platform("org.springframework.ai:spring-ai-bom:2.0.0-M4")
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+}
+```
+
+Esse trecho corresponde ao momento em que o instrutor explica que, além do BOM, é necessário adicionar a dependência específica do modelo que será utilizado — nesse caso, o modelo da OpenAI.
+
+#### Configurando a API Key da OpenAI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h33m56s454.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o arquivo `application.properties` configurado com o nome da aplicação e a propriedade da chave da API da OpenAI referenciando uma variável de ambiente:
+
+```properties
+spring.application.name=budgeting
+spring.ai.openai.api-key=${OPENAI_API_KEY}
+```
+
+Abaixo, no console de execução, é exibido um erro anterior, indicando que a chave da API ainda não havia sido configurada:
+
+```
+Caused by: java.lang.IllegalArgumentException: OpenAI API key must be set. Use the connection property: spring.ai.openai.api-key
+```
+
+Esse conteúdo corresponde à explicação do instrutor de que a propriedade `spring.ai.openai.api-key` deve receber o valor da chave, mas, por segurança, em vez de colocar o valor diretamente no arquivo, ele optou por referenciá-lo através de uma variável de ambiente chamada `OPENAI_API_KEY`, evitando expor a chave em um eventual commit do `application.properties`.
+
+#### Configurações de Execução da Aplicação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h34m04s549.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a janela "Run/Debug Configurations" do IntelliJ, referente à configuração "BudgetingApplication", com o menu "Add Run Options" aberto exibindo diversas opções disponíveis, entre elas "Environment variables" (destacada em azul). Isso corresponde ao momento em que o instrutor explica que é possível acessar as opções de configuração da execução (VM) e, entre elas, definir variáveis de ambiente para a aplicação.
+
+#### Cadastrando a Variável de Ambiente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h34m37s896.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a janela "Environment Variables" aberta, com a variável `OPENAI_API_KEY` cadastrada manualmente e seu respectivo valor (a chave secreta, parcialmente oculta na imagem), além da opção "Include system environment variables" marcada. Esse trecho corresponde à explicação do instrutor sobre como cadastrar manualmente a variável de ambiente contendo a chave da API diretamente na configuração de execução da aplicação no IntelliJ, para que ela seja injetada automaticamente sempre que a aplicação for executada.
+
+#### Aplicação Executada com Sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-14h35m45s430.jpg" alt="" width="840">
+</p>
+
+A imagem mostra novamente o `build.gradle` com as dependências do Spring AI (BOM e starter do modelo OpenAI) já configuradas, e o console de execução exibindo o banner padrão do Spring Boot seguido do log de inicialização:
+
+```
+:: Spring Boot ::                (v4.0.5)
+
+INFO 1871 --- [budgeting] [           main] dio.budgeting.BudgetingApplication       : Starting BudgetingApplication
+INFO 1871 --- [budgeting] [           main] dio.budgeting.BudgetingApplication       : No active profile set, fa...
+INFO 1871 --- [budgeting] [           main] dio.budgeting.BudgetingApplication       : Started BudgetingApplicat...
+
+Process finished with exit code 0
+```
+
+Isso corresponde ao momento em que o instrutor executa novamente a aplicação e confirma que, com a variável de ambiente `OPENAI_API_KEY` corretamente configurada, a aplicação sobe sem erros, comprovando que a conexão com a OpenAI está pronta para ser utilizada nos próximos vídeos, quando serão abordados o Chat API, o Tool Calling, a Transcription API e a Speech API do Spring AI.
+      
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [budgeting_ate_o_video02.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video02.zip)
+- [yyyyyyyyyyyy](./xxxxxxxxxxxxxxxxx)
+
+
+
 ### 🟩 Vídeo 03 - Explorando o ChatModel e Modelos de Linguagem
 
 <video width="60%" controls>
