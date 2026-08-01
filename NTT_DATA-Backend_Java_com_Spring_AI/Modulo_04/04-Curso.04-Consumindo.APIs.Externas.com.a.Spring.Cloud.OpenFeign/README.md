@@ -2433,5 +2433,5 @@ Por fim, a imagem mostra a seção de **visibilidade** do site do Temporal, com 
 
 # Certificado: Consumindo APIs Externas com a Spring Cloud OpenFeign
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/BGWRIKZR.pdf
+- Certificado em pdf: [Certificado-Consumindo.APIs.Externas.com.a.Spring.Cloud.OpenFeign.pdf](Modulo_04/04-Curso.04-Consumindo.APIs.Externas.com.a.Spring.Cloud.OpenFeign/000-Midia_e_Anexos/Certificado-Consumindo.APIs.Externas.com.a.Spring.Cloud.OpenFeign.pdf)
