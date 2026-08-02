@@ -402,8 +402,91 @@ O primeiro comando realiza o download e a instalação do SDKMAN. O segundo carr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/4c8ea204-00b4-44ad-ade9-296971010a62?autoplay=1
 
+### Anotações
+
+ <p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-21h14m53s224.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o navegador aberto na página oficial **"Welcome to Apache Maven"** (`https://maven.apache.org`), ponto de partida indicado para realizar a instalação manual do Maven no Windows. A página apresenta as seções de uso, extensão e contribuição do projeto, sendo o link **Download** o próximo passo a ser seguido para obter os arquivos de instalação.
+
+Não há código nesta imagem, apenas a navegação inicial até o site oficial do Maven.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-21h14m57s075.jpg" alt="" width="840">
+</p>
+
+Aqui já estamos na página **"Downloading Apache Maven 3.9.9"**, onde ficam listados os requisitos do sistema (JDK 8 ou superior, sem exigência mínima de memória e cerca de 10 MB de disco para a instalação) e a tabela de arquivos disponíveis para download, incluindo as opções **Binary tar.gz archive** e **Binary zip archive**. É a partir dessa tabela que o arquivo `.zip` do Maven é baixado para ser extraído posteriormente na máquina.
+
+Não há código nesta imagem, apenas a página de download com as opções de arquivos.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-21h15m56s279.jpg" alt="" width="840">
+</p>
+
+Nesta etapa é aberta a janela de **Variáveis de Ambiente** do Windows, e o instrutor cria uma nova variável de usuário chamada `MAVEN_HOME`, apontando para o diretório onde os arquivos do Maven foram extraídos:
+
+```
+Nome da variável: MAVEN_HOME
+Valor da variável: C:\maven\apache-maven-3.9.9
+```
+
+Essa variável será utilizada logo em seguida para compor o caminho executável do Maven na variável `Path`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-21h16m06s862.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a edição da variável **Path**, onde uma nova entrada é adicionada logo abaixo da já existente `%JAVA_HOME%\bin`, seguindo o mesmo padrão usado na configuração do Java:
+
+```
+%JAVA_HOME%\bin
+%MAVEN_HOME%\bin
+```
+
+Com essa entrada adicionada, o sistema operacional passa a reconhecer o comando `mvn` a partir de qualquer diretório do terminal, desde que a variável `MAVEN_HOME` esteja corretamente configurada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-21h16m31s136.jpg" alt="" width="840">
+</p>
+
+Após configurar as variáveis de ambiente, o comando `mvn -version` ainda não era reconhecido corretamente, indicando um problema de permissão na pasta do Maven. Nesta imagem, o instrutor acessa as **Propriedades** da pasta `maven` e confirma a remoção do atributo **somente leitura**, aplicando a alteração à pasta, subpastas e arquivos, na tentativa de resolver a restrição de acesso do Windows.
+
+Não há código nesta imagem, apenas a janela de confirmação de alteração de atributos do sistema.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-21h16m52s414.jpg" alt="" width="840">
+</p>
+
+Como alternativa ao problema de permissão persistente na raiz do `C:\`, o instrutor move a pasta do Maven para dentro do diretório do próprio usuário, evitando restrições de segurança do Windows nesse local. A variável `MAVEN_HOME` é então editada com o novo caminho:
+
+```
+Nome da variável: MAVEN_HOME
+Valor da variável: C:\Users\junior\maven\apache-maven-3.9.9
+```
+
+Essa mudança de local é sugerida como uma forma de contornar o problema de permissão sem precisar sempre executar o terminal como administrador.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-01-21h16m57s617.jpg" alt="" width="840">
+</p>
+
+Com o Maven agora instalado na pasta do usuário e executando o Prompt de Comando como Administrador, o comando `mvn -version` finalmente é reconhecido com sucesso, confirmando a instalação:
+
+```bash
+C:\Windows\System32>mvn -version
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: C:\Users\junior\maven\apache-maven-3.9.9
+Java version: 21.0.6, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-21
+Default locale: pt_BR, platform encoding: UTF-8
+OS name: "windows 11", version: "10.0", arch: "amd64", family: "windows"
+```
+
+Esse retorno confirma que o Maven 3.9.9 está corretamente instalado e integrado ao Java 21 configurado anteriormente, encerrando a demonstração da aula.
+     
+ 
 ### 🟩 Vídeo 07 - Instalando o Gradle
 
 <video width="60%" controls>
