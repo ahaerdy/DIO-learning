@@ -596,9 +596,82 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/intro
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h03m12s051.jpg" alt="" width="840">
+</p>
 
+A imagem mostra o navegador Firefox aberto no site oficial **eclipseide.org**, página inicial do Eclipse IDE. É a partir dela que o processo de instalação da IDE é iniciado, com destaque para o botão de download da versão mais recente disponível no momento.
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h03m21s097.jpg" alt="" width="840">
+</p>
+
+Nesta tela, já na página de downloads do Eclipse Installer, são exibidas as opções de sistema operacional disponíveis: macOS, Windows e Linux, cada uma com suas respectivas arquiteturas (x86_64 e AArch64). É nesse ponto que se escolhe a versão correspondente ao sistema operacional utilizado na máquina.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h03m25s182.jpg" alt="" width="840">
+</p>
+
+Aqui aparece a página de seleção de mirror (espelho de download), com o botão **Download** em destaque e a indicação do servidor de origem do arquivo (mirror do Brasil). É o clique nesse botão que efetivamente inicia o download do instalador do Eclipse.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h03m32s812.jpg" alt="" width="840">
+</p>
+
+A janela de downloads do Firefox mostra o arquivo **eclipse-inst-jre-linux-aarch64.tar.gz**, com aproximadamente 104 MB, já concluído. Esse é o pacote compactado do instalador do Eclipse, que precisa ser extraído antes de ser executado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h04m02s358.jpg" alt="" width="840">
+</p>
+
+Após extrair o arquivo `.tar.gz`, é possível ver a pasta gerada com os arquivos do Eclipse Installer (features, p2, plugins, readme, artifacts.xml e o executável do instalador). Ao executá-lo, abre-se a janela do **Eclipse Installer**, que lista as diferentes distribuições disponíveis, como "Eclipse IDE for Java Developers", "Eclipse IDE for Enterprise Java and Web", "Eclipse IDE for C/C++ Developers", entre outras. A opção voltada para desenvolvimento Java é a selecionada para este ambiente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h04m25s896.jpg" alt="" width="840">
+</p>
+
+Com a opção **Eclipse IDE for Java Developers** já selecionada, o instalador exibe as configurações principais: a versão da JVM a ser utilizada (Java 17+ VM) e a pasta de instalação. Também aparecem marcadas as opções para criar um atalho no menu de aplicativos e na área de trabalho. O botão **INSTALLING** confirma que o processo de instalação está em andamento.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h04m45s103.jpg" alt="" width="840">
+</p>
+
+Concluída a instalação, ao abrir a IDE pela primeira vez surge a janela **Eclipse IDE Launcher**, solicitando a definição do diretório de *workspace* — o local onde o Eclipse armazenará as preferências e os projetos criados. O caminho sugerido por padrão é `/home/ubuntu/eclipse-workspace`, que pode ser mantido e confirmado pelo botão **Launch**.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h04m59s912.jpg" alt="" width="840">
+</p>
+
+Com a IDE já aberta, exibindo o **Package Explorer** com as opções para criar um novo projeto Java, é aberta a janela de **Preferences**, com o campo de busca preenchido com o termo "font". A árvore de categorias mostra o caminho **General > Appearance > Colors and Fonts**, utilizado para localizar as configurações de fonte do editor.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h05m08s710.jpg" alt="" width="840">
+</p>
+
+Dentro de **Colors and Fonts**, com o item "Text Editor Block Selection Font" (referente ao texto do editor Java) selecionado, abre-se a janela de escolha de fonte, listando opções como Monospace Regular, Bold, Italic e Bold Italic, além do campo de tamanho. É nessa tela que a fonte do editor é ajustada para um tamanho maior, facilitando a leitura do código durante a aula.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h05m31s246.jpg" alt="" width="840">
+</p>
+
+Por fim, a imagem mostra a IDE já configurada e em uso, com o **Package Explorer** exibindo o projeto "Hello" e a classe `Main.java` aberta no editor. No painel **Console**, na parte inferior, aparece a saída da execução do programa, confirmando que a instalação e a configuração do Eclipse foram concluídas com sucesso.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Hello world");
+    }
+}
+```
+
+Saída exibida no console após a execução:
+
+```
+Hello world
+```
+ 
+ 
 ### 🟩 Vídeo 09 - Instalando VSCode
 
 <video width="60%" controls>
