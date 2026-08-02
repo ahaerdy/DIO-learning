@@ -671,7 +671,7 @@ Saída exibida no console após a execução:
 Hello world
 ```
  
- 
+
 ### 🟩 Vídeo 09 - Instalando VSCode
 
 <video width="60%" controls>
@@ -680,6 +680,115 @@ Hello world
 </video>
 
 link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/7168f4b3-d421-4d58-b898-0b07cdcfc920?autoplay=1
+
+### Anotações
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h12m46s204.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o navegador Firefox aberto na página oficial do VS Code (code.visualstudio.com). A tela exibe o banner de boas-vindas "Code editing. Redefined." e, logo abaixo, os botões de download para os formatos **.deb** (Debian/Ubuntu) e **.rpm** (Red Hat/Fedora), além de um link para outras plataformas (Web, Insiders, macOS, Windows). Essa é a etapa inicial de acesso ao site para iniciar o processo de instalação do editor.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h13m21s428.jpg" alt="" width="840">
+</p>
+
+O terminal exibe o comando de instalação do pacote `.deb` do VS Code já baixado, sendo executado com sucesso via `dpkg`, mostrando as etapas de desempacotamento e configuração do pacote.
+
+```bash
+sudo dpkg -i code_1.86.0-1706696957_arm64.deb
+```
+
+A saída confirma que o pacote foi selecionado, desempacotado e configurado corretamente, finalizando com o processamento dos triggers do sistema (mailcap, gnome-menus, desktop-file-utils, shared-mime-info).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h13m34s105.jpg" alt="" width="840">
+</p>
+
+Com a instalação concluída, o VS Code é aberto pela primeira vez, exibindo a tela de boas-vindas "Get Started with VS Code". Nessa etapa é apresentada a opção de escolha de tema, com destaque para as variações Dark Modern, Light Modern, Dark High Contrast e Light High Contrast — o tema escuro (Dark Modern) aparece selecionado por padrão.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h13m53s352.jpg" alt="" width="840">
+</p>
+
+A aba de extensões (Extensions Marketplace) está aberta com o termo "java" pesquisado na barra de busca. É possível ver a extensão **Extension Pack for Java**, da Microsoft, em processo de instalação ("Installing"), junto com outras extensões relacionadas listadas abaixo (Debugger for Java, Test Runner for Java, Project Manager for Java, Maven for Java, Spring Initializr, entre outras).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h14m51s883.jpg" alt="" width="840">
+</p>
+
+A aba "Get Started with Java Development" está sendo exibida, orientando sobre a instalação do JDK. No terminal integrado do VS Code, o comando abaixo foi executado para verificar se o Java já está disponível no ambiente:
+
+```bash
+java -version
+```
+
+A saída confirma a presença do OpenJDK 21.0.2 (Corretto), indicando que o runtime já está corretamente instalado e pronto para uso.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h15m25s470.jpg" alt="" width="840">
+</p>
+
+Ainda na tela "Get Started with Java Development", agora é exibida a seção de extensões adicionais para frameworks e ferramentas, com ícones para Gradle for Java, SonarLint, MicroProfile, Spring Boot, Quarkus, Community Server Connectors, além de opções de atalhos de teclado para quem vem do Eclipse (Eclipse Keymap) ou do IntelliJ IDEA (IntelliJ Idea Keybindings).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h16m59s355.jpg" alt="" width="840">
+</p>
+
+O painel do Explorer aparece com a mensagem "No folder opened", exibindo as opções "Open Folder" e "Create Java Project". Essa é a etapa em que se decide como o projeto Java será iniciado, sem ainda ter selecionado nenhuma pasta de trabalho.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h17m16s546.jpg" alt="" width="840">
+</p>
+
+Após clicar em "Create Java Project", é exibido um menu com as opções de ferramenta de build para o novo projeto: **No build tools**, Gradle, Spring Boot, Quarkus, MicroProfile e JavaFX. A opção "No build tools" está destacada, indicando a escolha de um projeto Java simples, sem gerenciador de dependências.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h17m28s264.jpg" alt="" width="840">
+</p>
+
+A janela de seleção de diretório está aberta, com o campo "Folder Name" preenchido com o nome **vscode**, indicando a criação de uma nova pasta para armazenar o projeto que será criado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h17m48s610.jpg" alt="" width="840">
+</p>
+
+A pasta "vscode" já criada é exibida vazia no seletor de diretórios, com o botão "Select the project location" disponível para confirmar essa pasta como o local onde o projeto Java será gerado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h18m30s515.jpg" alt="" width="840">
+</p>
+
+Após confirmar a localização do projeto, o VS Code solicita o nome do novo projeto Java através de uma caixa de input, exibindo o texto **"Hello"** já digitado, com a instrução "Input a Java project name (Press 'Enter' to confirm or 'Escape' to cancel)".
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h19m02s495.jpg" alt="" width="840">
+</p>
+
+O projeto "Hello" foi criado e o arquivo `App.java` está aberto no editor, junto com um arquivo `README.md` gerado automaticamente na raiz do projeto. O código já vem pronto com um exemplo clássico de "Hello World":
+
+```java
+public class App {
+    public static void main(String[] args) throws Exception {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-14h19m22s119.jpg" alt="" width="840">
+</p>
+
+O código do `App.java` é executado através do botão "Run" acima do método `main`, e o terminal integrado exibe o comando gerado automaticamente pela extensão de Java, seguido da saída do programa:
+
+```bash
+/usr/bin/env /home/ubuntu/.sdkman/candidates/java/21.0.2-amzn/bin/java --enable-preview -XX:+ShowCodeDetailsInExceptionMessages -cp /home/ubuntu/vscode/Hello/bin App
+Hello, World!
+```
+
+A saída "Hello, World!" confirma que o ambiente Java está configurado corretamente e o projeto foi executado com sucesso.
+      
 
 ### 🟩 Vídeo 10 - Instalando IntelliJ
 
