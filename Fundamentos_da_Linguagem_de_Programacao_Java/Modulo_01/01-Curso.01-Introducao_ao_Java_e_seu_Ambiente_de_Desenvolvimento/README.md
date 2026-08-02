@@ -494,7 +494,94 @@ Esse retorno confirma que o Maven 3.9.9 está corretamente instalado e integrado
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/aaa8d1d0-338f-4c5c-8130-6e7e91fd6c1f?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-13h48m53s512.jpg" alt="" width="840">
+</p>
+
+A página inicial do site oficial do Gradle (gradle.org) é exibida no navegador. É a partir dela que a instalação manual da ferramenta começa, já que o site disponibiliza tanto o link de download direto ("Install Gradle 8.13") quanto os guias de início rápido ("Get Started Guides").
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-13h49m20s686.jpg" alt="" width="840">
+</p>
+
+Na página de instalação (gradle.org/install), a seção "Installing manually" mostra o **Step 1 – Download the latest Gradle distribution**, indicando que a versão atual é a 8.13 e que o arquivo está disponível em dois formatos: **binary-only** (apenas os binários) e **complete** (com documentação e código-fonte). Para acompanhar todo o conteúdo da distribuição, a versão completa é a escolhida.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-13h49m41s036.jpg" alt="" width="840">
+</p>
+
+A página de releases do Gradle (gradle.org/releases) lista as versões disponíveis para download. A versão **v8.13** (25 de fevereiro de 2025) aparece no topo, com as opções de download **binary-only** ou **complete**, além de links para User Manual, API Javadoc, Groovy DSL Reference e Release Notes. É a partir dessa listagem que a versão completa do Gradle 8.13 é baixada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-13h49m54s842.jpg" alt="" width="840">
+</p>
+
+O Windows Explorer mostra a pasta de Downloads já com o arquivo **gradle-8.13-all** (226.599 KB) baixado, ao lado das pastas de instalação anteriores do **Maven** (apache-maven-3.9.9-bin) e do instalador do **JDK 21**. Esse é o ponto de partida para extrair o conteúdo do Gradle e organizá-lo em uma pasta própria, do mesmo modo como já havia sido feito com o Maven.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-13h51m00s240.jpg" alt="" width="840">
+</p>
+
+Ainda na documentação oficial, a seção "Microsoft Windows users" explica como configurar a variável **Path** apontando para `C:\Gradle\gradle-8.13\bin`, através de **File Explorer > This PC > Properties > Advanced System Settings > Environmental Variables**. Logo abaixo, o **Step 4 – Verify your installation** apresenta o comando `gradle -v`, usado para confirmar que a instalação foi concluída corretamente e exibir a versão instalada (Gradle 8.13):
+
+```bash
+$ gradle -v
+------------------------------------------------------------
+Gradle 8.13
+------------------------------------------------------------
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-13h51m45s280.jpg" alt="" width="840">
+</p>
+
+Na janela de **Variáveis de Ambiente** do Windows, uma nova variável de usuário está sendo criada: **GRADLE_HOME**, com o valor `C:\gradle\gradle-8.13`, apontando para a pasta onde a distribuição do Gradle foi extraída. É possível notar, ao fundo, as demais variáveis já configuradas anteriormente, como `JAVA_HOME` e `MAVEN_HOME`, seguindo o mesmo padrão de organização.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-13h51m55s265.jpg" alt="" width="840">
+</p>
+
+Agora na tela de edição da variável **Path**, uma nova entrada é adicionada: `%GRADLE_HOME%\bin`, seguindo o mesmo padrão já utilizado para `%JAVA_HOME%\bin` e `%MAVEN_HOME%\bin`, visíveis na mesma lista. Essa etapa é o que permite que o comando `gradle` seja reconhecido em qualquer diretório do terminal.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-02-13h52m05s018.jpg" alt="" width="840">
+</p>
+
+No Prompt de Comando executado como administrador, o comando `gradle -v` é executado com sucesso, confirmando que a instalação e a configuração das variáveis de ambiente funcionaram corretamente:
+
+```bash
+C:\Windows\System32>gradle -v
+
+Welcome to Gradle 8.13!
+
+Here are the highlights of this release:
+ - Daemon JVM auto-provisioning
+ - Enhancements for Scala plugin and JUnit testing
+ - Improvements for build authors and plugin developers
+
+For more details see https://docs.gradle.org/8.13/release-notes.html
+
+------------------------------------------------------------
+Gradle 8.13
+------------------------------------------------------------
+
+Build time:   2025-02-25 09:22:14 UTC
+Revision:     073314332697ba45c16c0a0ce1891fa6794179ff
+
+Kotlin:       2.0.21
+Groovy:       3.0.22
+Ant:          Apache Ant(TM) version 1.10.15 compiled on August 25 2024
+Launcher JVM: 21.0.6 (Oracle Corporation 21.0.6+8-LTS-188)
+Daemon JVM:   C:\Program Files\Java\jdk-21 (no JDK specified, using current Java home)
+OS:           Windows 11 10.0 amd64
+```
+
+A saída do comando confirma a versão instalada (**Gradle 8.13**), além de informações complementares como as versões de **Kotlin** e **Groovy** utilizadas internamente pelo Gradle, a versão do **Apache Ant**, a JVM utilizada e o sistema operacional. Com isso, a instalação manual do Gradle é concluída com sucesso.
+
 
 ## Parte 4 - Instalação de IDEs e Execução do seu Primeiro Programa Java
 
@@ -505,7 +592,12 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/7168f4b3-d421-4d58-b898-0b07cdcfc920?autoplay=1
+
+### Anotações
+
+      
+
 
 ### 🟩 Vídeo 09 - Instalando VSCode
 
@@ -514,7 +606,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/7168f4b3-d421-4d58-b898-0b07cdcfc920?autoplay=1
 
 ### 🟩 Vídeo 10 - Instalando IntelliJ
 
@@ -523,7 +615,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/4e9ce159-21a3-4030-a209-076a4cd7e743?autoplay=1
 
 ### 🟩 Vídeo 11 - Executando primeiro programa no IntelliJ
 
@@ -532,7 +624,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/d99dd277-d48c-4ff4-907b-719626a26cc3?autoplay=1
 
 ### 🟩 Vídeo 12 - Executando primeiro programa no VSCode
 
@@ -541,7 +633,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/0f4307c6-c4f6-4a37-a0aa-ef94b723afc2?autoplay=1
 
 
 
