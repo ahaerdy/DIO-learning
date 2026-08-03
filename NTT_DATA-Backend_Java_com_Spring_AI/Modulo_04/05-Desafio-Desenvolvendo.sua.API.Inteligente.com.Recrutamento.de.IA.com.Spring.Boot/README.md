@@ -321,7 +321,677 @@ link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-rec
 
 ### Anotações
 
-     
+#### Introdução ao Spring AI e ao Chat Model
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h00m32s540.jpg" alt="" width="840">
+</p>
+
+A documentação oficial do Spring AI é o ponto de partida da aula. A página de introdução explica que o projeto tem como objetivo simplificar o desenvolvimento de aplicações que incorporam inteligência artificial, conectando os dados e as APIs da empresa aos modelos de IA. É a partir daqui que a integração já feita anteriormente entre um projeto Spring Boot e a Open AI será aprofundada, começando pelo primeiro serviço a ser estudado em detalhe: o Chat Model.
+
+---
+
+#### A página de referência do Chat Model API
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h01m10s066.jpg" alt="" width="840">
+</p>
+
+Na seção Reference → Models → Chat Models da documentação, o Chat Model API é apresentado como a camada responsável por integrar capacidades de chat com modelos de linguagem pré-treinados. O texto destaca que essa API foi projetada para ser uma interface simples e portátil, permitindo trocar entre diferentes modelos com o mínimo de alteração de código, e que classes auxiliares como `Prompt` e `ChatResponse` cuidam da preparação da requisição e do tratamento da resposta.
+
+---
+
+#### As interfaces `ChatModel` e o início de `StreamingChatModel`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h01m36s604.jpg" alt="" width="840">
+</p>
+
+A documentação mostra a definição da interface `ChatModel`, que possui um método simplificado `call(String message)` para uso rápido e uma versão sobrecarregada que recebe um `Prompt` e devolve um `ChatResponse`, mais utilizada em aplicações reais:
+
+```java
+public interface ChatModel extends Model<Prompt, ChatResponse>, StreamingChatModel {
+
+    default String call(String message) {...}
+
+    @Override
+    ChatResponse call(Prompt prompt);
+}
+```
+
+---
+
+#### A interface `StreamingChatModel`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h02m00s409.jpg" alt="" width="840">
+</p>
+
+Logo abaixo, a documentação apresenta a interface `StreamingChatModel`, usada quando se deseja manter a conexão aberta e receber a resposta aos poucos — um cenário mais próximo de uma conversa de chat em tempo real, no qual o usuário vai enviando e recebendo mensagens continuamente:
+
+```java
+public interface StreamingChatModel extends StreamingModel<Prompt, ChatResponse> {
+
+    default Flux<String> stream(String message) {...}
+
+    @Override
+    Flux<ChatResponse> stream(Prompt prompt);
+}
+```
+
+---
+
+#### A classe `Prompt`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h02m06s241.jpg" alt="" width="840">
+</p>
+
+Em seguida, a documentação detalha a classe `Prompt`, que encapsula uma lista de objetos `Message` e opcionalmente as opções de configuração do modelo (`ChatOptions`). É essa estrutura que representa, de forma completa, o que será enviado ao modelo de linguagem:
+
+```java
+public class Prompt implements ModelRequest<List<Message>> {
+
+    private final List<Message> messages;
+
+    private ChatOptions modelOptions;
+
+    @Override
+    public ChatOptions getOptions() {...}
+
+    @Override
+    public List<Message> getInstructions() {...}
+
+    // constructors and utility methods omitted
+}
+```
+
+---
+
+#### O diagrama da Spring AI Message API
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h02m23s252.jpg" alt="" width="840">
+</p>
+
+O diagrama exibido mostra como as mensagens são estruturadas dentro do Spring AI. A classe `Content` concentra o conteúdo textual principal e metadados; `Message` e `MediaContent` derivam dela; e a partir de `AbstractMessage` surgem os tipos específicos `SystemMessage`, `UserMessage`, `AssistantMessage` e `ToolResponseMessage`, cada um associado a um `MessageType` (SYSTEM, USER, ASSISTANT, TOOL). Esse é o nível mais técnico de como o Spring AI organiza a comunicação entre as partes de uma conversa.
+
+---
+
+#### A documentação do DeepSeek Chat
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h02m40s445.jpg" alt="" width="840">
+</p>
+
+Para reforçar que cada provedor de LLM tem sua própria página de referência dentro da documentação, é aberta a página do DeepSeek Chat. Ali são explicados os pré-requisitos: é necessário criar uma conta e gerar uma chave de API no DeepSeek, que deve ser configurada através da propriedade `spring.ai.deepseek.api-key`.
+
+---
+
+#### Configuração segura da chave via Spring Expression Language
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h02m56s260.jpg" alt="" width="840">
+</p>
+
+A documentação recomenda o uso do Spring Expression Language (SpEL) para referenciar uma variável de ambiente customizada em vez de expor a chave diretamente no arquivo de propriedades, aumentando a segurança no tratamento de informações sensíveis como chaves de API:
+
+```yaml
+# In application.yml
+spring:
+  ai:
+    deepseek:
+      api-key: ${DEEPSEEK_API_KEY}
+```
+
+---
+
+#### Auto-configuração e dependência Maven do DeepSeek
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h03m01s524.jpg" alt="" width="840">
+</p>
+
+A seção de Auto-configuration mostra que o Spring AI fornece auto-configuração do Spring Boot para o modelo de chat do DeepSeek, bastando adicionar a dependência correspondente ao `pom.xml` do projeto Maven:
+
+```xml
+<dependency>
+    <groupId>org.springframework.ai</groupId>
+    <artifactId>spring-ai-starter-model-deepseek</artifactId>
+</dependency>
+```
+
+---
+
+#### A mesma dependência para projetos Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h03m10s086.jpg" alt="" width="840">
+</p>
+
+Para quem utiliza Gradle, a documentação apresenta a forma equivalente de declarar a dependência do starter do DeepSeek, o que evidencia como a integração de cada provedor segue o mesmo padrão de configuração dentro do ecossistema Spring:
+
+```groovy
+dependencies {
+    implementation 'org.springframework.ai:spring-ai-starter-model-deepseek'
+}
+```
+
+---
+
+#### Propriedades de retentativa (retry) do DeepSeek
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h03m22s154.jpg" alt="" width="840">
+</p>
+
+A tabela de propriedades mostra as configurações de retentativa disponíveis com o prefixo `spring.ai.retry`, como número máximo de tentativas, duração inicial do backoff exponencial, multiplicador do intervalo, duração máxima do backoff e se erros de cliente (4xx) devem ou não disparar uma nova tentativa. Essas propriedades evitam que a aplicação sobrecarregue a API do provedor ao tentar novamente sempre no mesmo ritmo.
+
+---
+
+#### Configuração manual das opções de chat do DeepSeek
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h03m39s489.jpg" alt="" width="840">
+</p>
+
+A documentação mostra como sobrescrever, em tempo de execução, o modelo e a temperatura padrão para uma requisição específica, usando `DeepSeekChatOptions` diretamente na chamada ao `Prompt`:
+
+```java
+ChatResponse response = chatModel.call(
+    new Prompt(
+        "Generate the names of 5 famous pirates. Please provide the JSON response without any code ...",
+        DeepSeekChatOptions.builder()
+            .withModel(DeepSeekApi.ChatModel.DEEPSEEK_CHAT.getValue())
+            .withTemperature(0.8f)
+            .build()
+    ));
+```
+
+---
+
+#### A página de documentação do OpenAI Chat
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h03m55s761.jpg" alt="" width="840">
+</p>
+
+Agora a navegação passa para a página de referência do OpenAI Chat, o provedor que será efetivamente utilizado no projeto. A seção de pré-requisitos explica que é necessário criar uma conta na OpenAI e gerar um token na página de API Keys, configurando-o através da propriedade `spring.ai.openai.api-key`.
+
+---
+
+#### Configuração da chave de API da OpenAI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h04m01s623.jpg" alt="" width="840">
+</p>
+
+Esta é exatamente a configuração já realizada no vídeo anterior: a chave da OpenAI é definida na propriedade `spring.ai.openai.api-key`, podendo ser referenciada de forma segura por meio de uma variável de ambiente com Spring Expression Language:
+
+```properties
+spring.ai.openai.api-key=<your-openai-api-key>
+```
+
+```yaml
+# In application.yml
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+```
+
+---
+
+#### Auto-configuração do OpenAI Chat Client
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h04m09s772.jpg" alt="" width="840">
+</p>
+
+A seção de Auto-configuration do OpenAI explica que o Spring AI oferece auto-configuração do Spring Boot para o Chat Client, bastando adicionar a dependência do starter correspondente ao build do projeto:
+
+```groovy
+dependencies {
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+}
+```
+
+---
+
+#### Propriedades de retry específicas do OpenAI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h04m13s804.jpg" alt="" width="840">
+</p>
+
+Assim como visto para o DeepSeek, o OpenAI também possui sua própria tabela de propriedades de retentativa sob o prefixo `spring.ai.retry`, controlando número de tentativas, backoff inicial, multiplicador, backoff máximo e o comportamento diante de erros de cliente — demonstrando que, apesar de cada provedor ter particularidades, o padrão de configuração se repete.
+
+---
+
+#### Propriedades específicas do modelo de chat da OpenAI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h05m08s215.jpg" alt="" width="840">
+</p>
+
+Aqui aparecem as propriedades mais específicas do LLM da OpenAI, como `spring.ai.openai.chat.options.model`, que aceita valores como `gpt-4o`, `gpt-4o-mini`, `gpt-4-turbo` e `gpt-3.5-turbo`, tendo `gpt-4o-mini` como padrão — provavelmente o modelo que será utilizado no projeto — além da propriedade de `temperature`, que controla o quanto a resposta pode variar ou "criar" em relação ao prompt.
+
+---
+
+#### Visão geral da AI Model API do Spring AI
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h05m54s571.jpg" alt="" width="840">
+</p>
+
+Voltando à página geral da Spring AI API, o diagrama recapitula que é através do Chat Model que se interage com a LLM, e que esse mesmo modelo pode ser usado com diferentes tipos de conteúdo: texto, imagem, transcrição de áudio, texto-para-fala, entre outros serviços que a LLM disponibiliza. As classes base `Model` e `StreamingModel` dão origem a `ChatModel`, `EmbeddingModel`, `ImageModel`, `StreamingChatModel` e `StreamingSpeechModel`.
+
+---
+
+#### O panorama completo das implementações de Chat Model
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h06m20s024.jpg" alt="" width="840">
+</p>
+
+O diagrama expandido mostra a árvore completa de implementações de `ChatModel` suportadas pelo Spring AI, com integrações a provedores como OpenAI, Anthropic, Google, Hugging Face, Ollama, Bedrock, Groq, entre muitos outros, todos acessados de forma unificada através do `ChatClient`. Isso encerra a parte de documentação e conceitos antes de o vídeo seguir para a implementação prática no código.
+
+---
+
+#### Abrindo o Run Configuration do projeto no IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h07m17s261.jpg" alt="" width="840">
+</p>
+
+A aula passa para o código do projeto `budgeting` no IntelliJ IDEA. O primeiro passo prático é acessar o menu de execução no canto superior direito e selecionar "Edit Configurations...", pois será necessário ajustar as variáveis de ambiente também para a execução dos testes, e não apenas para a aplicação.
+
+---
+
+#### A tela de Run/Debug Configurations
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h07m21s592.jpg" alt="" width="840">
+</p>
+
+A janela de Run/Debug Configurations é aberta, mostrando a configuração já existente `BudgetingApplication`, com sua variável de ambiente da chave da OpenAI já definida para a aplicação. A variável de ambiente configurada aqui, porém, não é automaticamente herdada pelos testes que ainda serão criados.
+
+---
+
+#### Criando uma nova configuração de execução
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h08m16s434.jpg" alt="" width="840">
+</p>
+
+Ao clicar em "New Configuration", o IntelliJ apresenta uma lista com os diversos tipos de configuração de execução disponíveis (JUnit, Karma, Kotlin, Maven, Mocha, entre outros), incluindo a opção "Spring Boot" já destacada na lista.
+
+---
+
+#### Localizando o tipo de configuração Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h08m44s633.jpg" alt="" width="840">
+</p>
+
+A lista de tipos de configuração é rolada para baixo até a opção "Gradle", que é o tipo escolhido para a execução dos testes do projeto — já que, ao rodar cada teste, o IntelliJ cria automaticamente uma configuração individual desse tipo.
+
+---
+
+#### Voltando à tela principal de configurações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h09m46s596.jpg" alt="" width="840">
+</p>
+
+Como cada execução de teste cria uma nova configuração de Gradle isolada, seria necessário repetir a definição da variável de ambiente toda vez — o que não é prático. A solução apontada é editar diretamente o template de configuração, através do link "Edit configuration templates..." destacado na parte inferior da janela.
+
+---
+
+#### A janela de templates de configuração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h10m02s595.jpg" alt="" width="840">
+</p>
+
+A janela "Run/Debug Configuration Templates" é aberta, listando os diversos templates disponíveis (Database Script, Docker, Gradle, Groovy, JUnit, Maven, entre outros), com o template "Spring Boot" inicialmente selecionado.
+
+---
+
+#### Selecionando o template do Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h10m09s381.jpg" alt="" width="840">
+</p>
+
+Dentro da mesma janela de templates, é selecionado especificamente o template "Gradle" — que é o tipo de configuração usado para executar os testes —, exibindo os campos de tarefas, projeto Gradle e variáveis de ambiente que poderão ser editados para valerem por padrão em todos os novos testes criados a partir dele.
+
+---
+
+#### Definindo a variável de ambiente no template
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h12m23s370.jpg" alt="" width="840">
+</p>
+
+Na janela de edição de variáveis de ambiente do template, é adicionada a variável `OPENAI_API_KEY` com seu valor (mascarado na tela), mantendo também marcada a opção "Include system environment variables", que garante que as demais variáveis do sistema continuem disponíveis.
+
+---
+
+#### Template do Gradle atualizado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h12m47s952.jpg" alt="" width="840">
+</p>
+
+Com a variável de ambiente já aplicada ao campo "Environment variables" do template Gradle, resta clicar em "Apply" para confirmar a alteração. A partir de agora, todo novo teste criado a partir desse template herdará automaticamente a chave da OpenAI como variável de ambiente.
+
+---
+
+#### Criando uma nova classe Java para o teste de integração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h13m56s336.jpg" alt="" width="840">
+</p>
+
+De volta à árvore de arquivos do projeto, é utilizado o menu de contexto (botão direito) sobre o pacote de testes, escolhendo a opção "New" → "Java Class" para criar a primeira classe de teste de integração com o Chat Model da OpenAI.
+
+---
+
+#### Nomeando a classe de teste de integração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h14m58s460.jpg" alt="" width="840">
+</p>
+
+No diálogo de criação de nova classe Java, é digitado o nome `OpenAiChatModelIT`. O sufixo "IT" (Integration Test) é utilizado propositalmente, pois esse padrão de nomenclatura permite maior controle sobre quais testes são executados durante o processo de build da aplicação, diferenciando testes de integração dos testes unitários comuns.
+
+---
+
+#### Estrutura inicial do teste de integração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-08h21m39s301.jpg" alt="" width="840">
+</p>
+
+A classe recém-criada é anotada com `@SpringBootTest` e com `@EnabledIfEnvironmentVariable`, garantindo que o teste só seja executado quando a variável de ambiente da chave da API estiver definida:
+
+```java
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+@EnabledIfEnvironmentVariable(named = "OPENAPI_API_KEY", matches = ".+")
+public class OpenAiChatModelIT {
+
+    @Test
+    void should_receiveResponse_when_chatModelIsCalled() {
+
+    }
+}
+```
+
+---
+
+#### Injetando o `OpenAiApi` via `@Autowired`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-09h41m46s009.jpg" alt="" width="840">
+</p>
+
+Para instanciar o `OpenAiChatModel`, o código utiliza o padrão builder, passando um `OpenAiApi` obtido por injeção de dependência com `@Autowired`. Essa injeção só é possível graças à auto-configuração do Spring Boot, que já monta o `OpenAiApi` com as propriedades definidas no `application.properties`:
+
+```java
+@SpringBootTest
+@EnabledIfEnvironmentVariable(named = "OPENAPI_API_KEY", matches = ".+")
+public class OpenAiChatModelIT {
+
+    @Autowired
+    OpenAiApi openAiApi;
+
+    @Test
+    void should_receiveResponse_when_chatModelIsCalled() {
+        var chatModel = OpenAiChatModel.builder()
+                .openAiApi(openAiApi)
+                .build();
+    }
+}
+```
+
+---
+
+#### Primeira tentativa de configurar as opções do chat model
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-09h45m18s425.jpg" alt="" width="840">
+</p>
+
+Nesse momento intermediário do código, é criada uma variável `options`, ainda em construção, e mantido o método `defaultOptions()` sem parâmetro no builder do chat model — um passo de transição antes de definir corretamente as opções do chat na sequência:
+
+```java
+@Test
+void should_receiveResponse_when_chatModelIsCalled() {
+    var options = OpenAiChatModel.builder().build();
+
+    var chatModel = OpenAiChatModel.builder()
+            .openAiApi(openAiApi)
+            .defaultOptions()
+            .build();
+}
+```
+
+---
+
+#### Configurando `OpenAiChatOptions` com modelo, temperatura e formato de resposta
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-09h54m13s234.jpg" alt="" width="840">
+</p>
+
+Agora a variável `options` é corretamente construída a partir de `OpenAiChatOptions.builder()`, definindo o modelo `gpt-4o-mini`, a temperatura `0.8` e o formato de resposta como texto simples. Em seguida, essas opções são passadas para o builder do `OpenAiChatModel` através de `defaultOptions(options)`:
+
+```java
+var options = OpenAiChatOptions.builder()
+        .model("gpt-4o-mini")
+        .temperature(0.8)
+        .responseFormat(ResponseFormat.builder().type(ResponseFormat.Type.TEXT).build())
+        .build();
+
+var chatModel = OpenAiChatModel.builder()
+        .openAiApi(openAiApi)
+        .defaultOptions(options)
+        .build();
+```
+
+---
+
+#### As mesmas configurações definidas via `application.properties`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h02m19s644.jpg" alt="" width="840">
+</p>
+
+Como alternativa à configuração manual feita em código, as mesmas opções podem ser definidas diretamente no arquivo de propriedades da aplicação, deixando a instanciação do chat model totalmente a cargo da auto-configuração do Spring Boot:
+
+```properties
+spring.application.name=budgeting
+spring.ai.openai.api-key=${OPENAI_API_KEY}
+spring.ai.openai.chat.options.model=gpt-4o-mini
+spring.ai.openai.chat.options.temperature=0.8
+spring.ai.openai.chat.options.response-format.type=TEXT
+```
+
+---
+
+#### Injetando o `OpenAiChatModel` já configurado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h02m51s862.jpg" alt="" width="840">
+</p>
+
+Com as propriedades definidas no `application.properties`, um novo campo `chatModel`, do tipo `OpenAiChatModel`, é adicionado à classe de teste e injetado via `@Autowired`, demonstrando que o Spring Boot já é capaz de montar o chat model completo automaticamente, sem a necessidade de construí-lo manualmente:
+
+```java
+@Autowired
+OpenAiApi openAiApi;
+
+@Autowired
+OpenAiChatModel chatModel;
+```
+
+---
+
+#### Comentando a construção manual do chat model
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h03m16s707.jpg" alt="" width="840">
+</p>
+
+Como agora o chat model já chega pronto por injeção de dependência a partir das propriedades da aplicação, todo o trecho de código que construía manualmente as `options` e o `chatModel` é comentado, evidenciando que essa etapa deixou de ser necessária:
+
+```java
+public class OpenAiChatModelIT {
+
+    @Test
+    void should_receiveResponse_when_chatModelIsCalled() {
+//        var options = OpenAiChatOptions.builder()
+//                .model("gpt-4o-mini")
+//                .temperature(0.8)
+//                .responseFormat(ResponseFormat.builder().type(ResponseFormat.Type.TEXT).build())
+//                .build();
+//
+//        var chatModel = OpenAiChatModel.builder()
+//                .openAiApi(openAiApi)
+//                .defaultOptions(options)
+//                .build();
+    }
+}
+```
+
+---
+
+#### Chamando o chat model e validando a resposta
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h08m17s781.jpg" alt="" width="840">
+</p>
+
+Com o chat model já injetado, o teste chama o método `call`, passando como prompt o pedido para gerar um registro de gasto (descrição, valor em reais e local). A resposta é validada com uma asserção simples de que não está vazia, e impressa no console apenas para conferência do resultado gerado pela LLM:
+
+```java
+var chatModel = OpenAiChatModel.builder()
+        .openAiApi(openAiApi)
+        .defaultOptions(options)
+        .build();
+
+var response = chatModel.call("Gere um registro de budgeting, com descrição de gasto, valor em reais e local");
+
+assertThat(response).isNotEmpty();
+System.out.println(response);
+```
+
+---
+
+#### O teste passa e a resposta gerada pela LLM é exibida
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h09m49s151.jpg" alt="" width="840">
+</p>
+
+A execução do teste é bem-sucedida, confirmando que a integração com a OpenAI está funcionando corretamente. No console de resultados, é possível ver a resposta gerada pela LLM: um registro de budgeting em formato de tabela, contendo itens como almoço com amigos, compra de supermercado, combustível, cinema, roupas, conta de luz e internet, cada um com sua respectiva descrição, valor e local.
+
+---
+
+#### Adicionando o starter web ao projeto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h10m59s628.jpg" alt="" width="840">
+</p>
+
+Para avançar e expor o chat model através de um endpoint HTTP, é necessário adicionar a dependência `spring-boot-starter-web` ao `build.gradle` do projeto, complementando as dependências já existentes do Spring Boot e do Spring AI:
+
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation platform("org.springframework.ai:spring-ai-bom:2.0.0-M4")
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+```
+
+---
+
+#### Criando o `ChatModelController`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h13m26s942.jpg" alt="" width="840">
+</p>
+
+Com a dependência web já disponível, é criada uma nova classe Java chamada `ChatModelController`, responsável por expor o chat model através de um endpoint REST, permitindo interagir com a LLM diretamente por requisições HTTP.
+
+---
+
+#### Implementação do endpoint que consome o chat model
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h18m11s523.jpg" alt="" width="840">
+</p>
+
+O controller é anotado com `@RestController` e `@RequestMapping("/api")`, recebendo o `OpenAiChatModel` por injeção de dependência via construtor — o mesmo princípio de injeção usado no teste, agora aplicado à camada web. O método `chat`, mapeado em `@GetMapping("/chat-model")`, recebe um parâmetro `prompt` e simplesmente repassa essa string para o `call` do chat model, devolvendo a resposta da LLM:
+
+```java
+@RestController
+@RequestMapping("/api")
+public class ChatModelController {
+
+    private final OpenAiChatModel openAiChatModel;
+
+    public ChatModelController(OpenAiChatModel openAiChatModel) {
+        this.openAiChatModel = openAiChatModel;
+    }
+
+    @GetMapping("/chat-model")
+    String chat(String prompt) {
+        return this.openAiChatModel.call(prompt);
+    }
+}
+```
+
+---
+
+#### Executando a aplicação com o novo endpoint
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h23m15s534.jpg" alt="" width="840">
+</p>
+
+Antes de testar o endpoint, é selecionada a configuração de execução `BudgetingApplication` no menu superior, e a aplicação é iniciada. O console confirma que o servidor Tomcat foi inicializado e que a aplicação Spring Boot está de pé, pronta para receber requisições.
+
+---
+
+#### Testando o endpoint `/api/chat-model` via HTTP Client
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-10h27m41s135.jpg" alt="" width="840">
+</p>
+
+Usando a ferramenta de Endpoints do IntelliJ, que identifica automaticamente o endpoint criado no controller, é enviada uma requisição de teste com o prompt "Oi":
+
+```http
+GET http://localhost:8080/api/chat-model?prompt=Oi
+```
+
+A aplicação responde com sucesso (código 200), retornando a mensagem gerada pela LLM: "Oi! Como posso ajudar você hoje?". Isso confirma, de ponta a ponta, o fluxo completo: a requisição chega ao controller, é repassada ao chat model via injeção de dependência, o chat model se comunica com a API da OpenAI usando as propriedades definidas por auto-configuração, e a resposta retorna até o cliente HTTP.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [budgeting_ate_o_video03.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video03.zip)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
 
 
 ### 🟩 Vídeo 04 - ChatClient: Fluência e Contexto no Spring AI
