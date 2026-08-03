@@ -799,6 +799,49 @@ A saída "Hello, World!" confirma que o ambiente Java está configurado corretam
 
 link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/4e9ce159-21a3-4030-a209-076a4cd7e743?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-18h53m39s106.jpg" alt="" width="840">
+</p>
+
+Esta é a página oficial do IntelliJ IDEA no site da JetBrains (jetbrains.com/pt-br/idea), o ponto de partida para obter a IDE. A página de apresentação destaca o IntelliJ IDEA como a principal IDE para Java e Kotlin, com foco em produtividade. É a partir dela que o processo de download é iniciado, clicando na opção "Baixar" no menu superior.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-18h53m55s861.jpg" alt="" width="840">
+</p>
+
+Aqui já estamos na página específica de download, onde a JetBrains apresenta duas opções: a versão paga **IntelliJ IDEA Ultimate** e, logo abaixo, a versão gratuita **IntelliJ IDEA Community Edition**, indicada para quem está começando com Java. É essa versão Community que deve ser baixada, selecionando o formato `.tar.gz` (adequado para instalação manual no Linux) e clicando no botão "Baixar".
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-18h55m58s276.jpg" alt="" width="840">
+</p>
+
+Esta tela mostra a janela de boas-vindas do IntelliJ IDEA ("Welcome to IntelliJ IDEA") sendo aberta com sucesso pelo atalho criado durante a instalação. Esse momento representa a resolução do problema de variável de ambiente `JAVA_HOME`, contornado ao apontar o script de inicialização do IntelliJ para o diretório `current` do SDKMAN, que sempre referencia a versão de Java em uso. A partir dessa tela é possível criar um novo projeto, abrir um projeto existente ou obtê-lo via controle de versão (VCS).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-18h56m03s928.jpg" alt="" width="840">
+</p>
+
+Nesta tela é exibida a janela de criação de um novo projeto ("New Project"), com o nome definido como **Hello** e localização em `~/idea`. A linguagem selecionada é **Java**, o sistema de build escolhido é o próprio **IntelliJ** (sem uso de Maven ou Gradle), e o JDK já aparece detectado automaticamente pela IDE. As opções "Add sample code" e "Generate code with onboarding tips" também estão disponíveis, mas o código de exemplo não é utilizado, optando-se por configurar a classe manualmente em seguida.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-18h56m20s858.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra o projeto **Hello** já criado e a classe **Main** configurada dentro do diretório `src`, contendo o método `main` (criado com o atalho `psvm`) e uma instrução de impressão. O painel inferior exibe a execução do programa, com a saída "Hello World." e a mensagem `Process finished with exit code 0`, confirmando que a configuração do IntelliJ foi concluída com sucesso.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World.");
+    }
+
+}
+```
+      
+
 ### 🟩 Vídeo 11 - Executando primeiro programa no IntelliJ
 
 <video width="60%" controls>
@@ -807,6 +850,111 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/intro
 </video>
 
 link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/d99dd277-d48c-4ff4-907b-719626a26cc3?autoplay=1
+
+### Anotações
+
+#### IDEs online: uma alternativa para testar código
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h04m19s533.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o JDoodle, um compilador Java online, com um código de exemplo já carregado que declara duas variáveis inteiras, soma seus valores e imprime o resultado no console. É uma opção útil para testar pequenos trechos de código rapidamente, sem precisar configurar um ambiente local, mas não substitui uma IDE completa para desenvolver projetos, já que recursos como autocomplete tendem a ser mais limitados nessas ferramentas online.
+
+```java
+public class MyClass {
+    public static void main(String args[]) {
+        int x=10;
+        int y=25;
+        int z=x+y;
+
+        System.out.println("Sum of x+y = " + z);
+    }
+}
+```
+
+#### Compilando o código com javac
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h05m48s798.jpg" alt="" width="840">
+</p>
+
+Aqui a IDE IntelliJ está sendo usada para compilar manualmente o arquivo `Main.java` pelo terminal, com o comando `javac`. Esse comando gera o arquivo `.class` correspondente, que é o resultado da compilação da classe e o que efetivamente será executado pela JVM.
+
+```bash
+javac src/Main.java
+```
+
+#### Executando o programa pelo terminal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h06m08s002.jpg" alt="" width="840">
+</p>
+
+Depois de compilado, o programa é executado pelo terminal com o comando `java`, apontando para o arquivo compilado. O console exibe o resultado do `System.out.println`, imprimindo a mensagem "Hello world." definida no código.
+
+```bash
+java src/Main.java
+```
+
+#### Executando pela IDE (botão Run)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h06m21s670.jpg" alt="" width="840">
+</p>
+
+Aqui o mesmo programa é executado agora pelo botão Run da própria IDE, em vez de pelo terminal. O painel de execução mostra a saída "Hello world." e a informação "Process finished with exit code 0", indicando que o programa terminou sem erros. Ao rodar dessa forma, o IntelliJ organiza os arquivos compilados em uma estrutura própria (pasta de output), em vez de deixá-los soltos junto ao código-fonte.
+
+#### Trabalhando com argumentos de linha de comando (args)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h07m35s632.jpg" alt="" width="840">
+</p>
+
+O código foi alterado para imprimir os valores recebidos em `args[0]` e `args[1]`, o parâmetro `String[] args` do método `main` que armazena os argumentos passados na linha de comando. No terminal, ao compilar e executar passando "Java" e "JDK" como argumentos separados por espaço, o console exibe "Hello world.", "argumento 1:Java" e "argumento 2:JDK", confirmando que cada valor foi corretamente acessado pela posição correspondente no array.
+
+```java
+public static void main(String[] args) {
+    System.out.println("Hello world.");
+    System.out.println("argumento 1:" + args[0]);
+    System.out.println("argumento 2:" + args[1]);
+}
+```
+
+#### Configurando argumentos de programa na IDE
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h07m52s447.jpg" alt="" width="840">
+</p>
+
+Esta é a janela de Run/Debug Configurations do IntelliJ, aberta em Run > Edit Configurations. Nela é possível definir qual JDK usar, a classe principal, o working directory, variáveis de ambiente e, principalmente, o campo "Program arguments" — preenchido aqui com "Java JDK" — que permite passar argumentos para o programa diretamente pela IDE, sem precisar digitá-los no terminal.
+
+
+#### Debug: parando em um breakpoint
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h08m18s121.jpg" alt="" width="840">
+</p>
+
+Com um breakpoint definido na primeira linha do método `main`, a execução em modo Debug para exatamente naquele ponto, sem executar a linha marcada. O painel de Debug exibe as variáveis disponíveis no contexto atual, incluindo o array `args` com os valores "Java" e "JDK", permitindo inspecionar o estado do programa antes de prosseguir.
+
+```java
+public static void main(String[] args) {
+    System.out.println("Hello world.");
+    String msg = "Programando em";
+    System.out.println(msg + args[0]);
+    System.out.println("Precisamos de uma" + args[1]);
+}
+```
+
+#### Finalizando a execução em modo Debug
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h09m11s646.jpg" alt="" width="840">
+</p>
+
+Após liberar a execução do restante do código no debugger (Step Out), o console mostra a saída completa do programa: "Hello world.", "Programando em :Java" e "Precisamos de uma JDK", seguidas da mensagem de desconexão da VM de destino e "Process finished with exit code 0", indicando que a sessão de debug terminou normalmente após percorrer todas as linhas do método `main`.
+ 
 
 ### 🟩 Vídeo 12 - Executando primeiro programa no VSCode
 
@@ -817,6 +965,9 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/intro
 
 link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/introducao-ao-java-e-seu-ambiente-de-desenvolvimento/learning/0f4307c6-c4f6-4a37-a0aa-ef94b723afc2?autoplay=1
 
+### Anotações
+
+      
 
 
 ##  Materiais de Apoio
