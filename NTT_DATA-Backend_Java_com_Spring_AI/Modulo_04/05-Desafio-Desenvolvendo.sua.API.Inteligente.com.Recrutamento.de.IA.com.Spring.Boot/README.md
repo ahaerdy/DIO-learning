@@ -991,7 +991,7 @@ A aplicação responde com sucesso (código 200), retornando a mensagem gerada p
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [budgeting_ate_o_video03.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video03.zip)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [002-Tutorial_Budgeting_Spring_AI_Video03.md](./002-Tutorial_Budgeting_Spring_AI_Video03.md)
 
 
 ### 🟩 Vídeo 04 - ChatClient: Fluência e Contexto no Spring AI
