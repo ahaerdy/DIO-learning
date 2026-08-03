@@ -65,7 +65,7 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 
 ### Módulo 1: Conceitos Básicos para Começar a Programar em Java
 
-- [x] ✓ Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_01/01-Curso.01-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
+- [x] ✅ Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_01/01-Curso.01-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
 - [x] ✓ Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_01/02-Curso.02-Fundamentos_da_Sintaxe_da_Linguagem_Java)
 - [x] ✓ Curso: [Estruturas de Controle em Java](Modulo_01/03-Curso.03-Estruturas_de_Controle_em_Java)
 - [x] ✅ Desafio de código: [Fundamentos da Linguagem de Programação Java](Modulo_01/04-Desafio-Fundamentos_da_Linguagem_de_Programacao_Java/)
@@ -107,7 +107,7 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 
 ### Módulo 1
 
-- [Introdução ao Java e seu Ambiente de Desenvolvimento]
+- [Introdução ao Java e seu Ambiente de Desenvolvimento](https://hermes.dio.me/certificates/YUJLSOAA.pdf)
 - [Fundamentos da Sintaxe da Linguagem Java]
 - [Estruturas de Controle em Java](https://hermes.dio.me/certificates/NOBWDXSU.pdf)
 - [Fundamentos da Linguagem de Programação Java] *(desafio de código pendente)*
