@@ -1069,4 +1069,4 @@ Nesta última imagem, dois breakpoints estão marcados nas linhas 3 e 5 do `App.
 # Certificado: Introdução ao Java e seu Ambiente de Desenvolvimento
 
 - Link na plataforma: https://hermes.dio.me/certificates/YUJLSOAA.pdf
-- Certificado em pdf: [Certificado-Introdução ao Java e seu Ambiente de Desenvolvimento.pdf](000-Midia_e_Anexos/Certificado-Introdução ao Java e seu Ambiente de Desenvolvimento.pdf)
+- Certificado em pdf: [Certificado-Introdução ao Java e seu Ambiente de Desenvolvimento.pdf](./000-Midia_e_Anexos/Certificado-Introdução.ao.Java.e.seu.Ambiente.de.Desenvolvimento.pdf)
