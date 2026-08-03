@@ -967,12 +967,106 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/intro
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h25m00s318.jpg" alt="" width="840">
+</p>
 
+Nesta primeira imagem, o VS Code está com o projeto **Hello** aberto, exibindo o arquivo `App.java` com o código mais simples possível:
 
-##  Materiais de Apoio
+```java
+public class App {
+    public static void main(String[] args) throws Exception {
+        System.out.println("Hello, World!");
+    }
+}
+```
 
-# Certificado: 
+No terminal, na parte inferior, é possível ver que o programa acabou de ser executado através do botão **Run** (que aparece logo acima da declaração do método `main`). A saída confirma a execução bem-sucedida com o texto `Hello, World!` impresso no console, junto com o comando completo que o VS Code montou por trás dos panos, chamando o `java` a partir do JDK configurado e apontando para a pasta `bin` do projeto.
 
-- Link na plataforma: 
-- Certificado em pdf:
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h25m43s916.jpg" alt="" width="840">
+</p>
+
+O código do `App.java` foi expandido com duas novas linhas que utilizam o array `args` recebido pelo método `main`:
+
+```java
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+        System.out.println("Configurando a JDK na versão " + args[0]);
+        System.out.println("Programando em " + args[1]);
+    }
+}
+```
+
+Essas linhas leem, respectivamente, a posição `0` e a posição `1` do array de argumentos. No painel lateral esquerdo, a aba **Run and Debug** está aberta, mostrando o botão **Run and Debug** e o link **create a launch.json file**, que é justamente o recurso usado para configurar como o programa deve ser executado — inclusive para poder passar argumentos de linha de comando para ele, já que apenas rodar com o botão padrão não permite fornecer esses valores.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h26m11s419.jpg" alt="" width="840">
+</p>
+
+Aqui já foi gerado o arquivo `launch.json`, dentro da pasta `.vscode`, responsável por definir as configurações de execução e depuração do projeto Java no VS Code:
+
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "args": "21 Java"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Hello_f382dd63"
+        }
+    ]
+}
+```
+
+O ponto de destaque é a chave `"args"`, adicionada manualmente à primeira configuração (`"Current File"`). É nela que ficam os valores que serão recebidos pelo array `args` do método `main`: a string `"21"` cai na posição `args[0]` e `"Java"` cai na posição `args[1]`, exatamente as posições lidas no código mostrado na imagem anterior.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h26m26s414.jpg" alt="" width="840">
+</p>
+
+Com o `launch.json` configurado, o seletor de configuração no topo do painel **Run and Debug** agora exibe **Current File** como opção ativa. Ao executar essa configuração, o terminal mostra a saída completa do programa:
+
+```
+Hello, World!
+Configurando a JDK na versão 21
+Programando em Java
+```
+
+Isso confirma que os argumentos definidos no `launch.json` (`21` e `Java`) foram corretamente recebidos pelo array `args` dentro do `App.java`, preenchendo as mensagens que dependiam de `args[0]` e `args[1]`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h27m31s152.jpg" alt="" width="840">
+</p>
+
+O programa agora está em modo de **depuração (debug)**, pausado em um breakpoint (marcado pelo ponto vermelho ao lado do número da linha). No painel **Variables**, à esquerda, é possível inspecionar o conteúdo do array `args` em tempo real:
+
+```
+args: String[2]@8
+  0: "17"
+  1: "Java"
+```
+
+O painel **Watch** também está sendo usado para acompanhar especificamente o valor de `args[0]`. Na parte inferior, o **Call Stack** mostra a thread `main` pausada na execução (`PAUSED ON STEP`), enquanto na barra de ferramentas superior ficam disponíveis os botões de navegação da depuração — como o **Step Into** (atalho `F11`), usado para entrar dentro de uma chamada de método, e o **Step Out** (atalho `Shift+F11`), usado para sair de um método e retornar ao ponto de chamada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-03-19h27m57s056.jpg" alt="" width="840">
+</p>
+
+Nesta última imagem, dois breakpoints estão marcados nas linhas 3 e 5 do `App.java` (pontos vermelhos), mas a execução não está mais pausada em nenhum deles — o painel **Watch** exibe `args[0]: not available`, indicando que o processo de debug já foi finalizado ou está fora de um ponto de parada ativo. No terminal, o histórico mostra duas execuções: uma com a JDK configurada como versão **17** e a saída `Programando em Java`. Esse comportamento é consistente com o uso de **breakpoints condicionais**, em que o programa só interrompe a execução quando uma expressão booleana definida pelo desenvolvedor é satisfeita — caso contrário, a execução simplesmente continua sem parar naquele ponto.
+   
+
+# Certificado: Introdução ao Java e seu Ambiente de Desenvolvimento
+
+- Link na plataforma: https://hermes.dio.me/certificates/YUJLSOAA.pdf
+- Certificado em pdf: [Certificado-Introdução ao Java e seu Ambiente de Desenvolvimento.pdf](000-Midia_e_Anexos/Certificado-Introdução ao Java e seu Ambiente de Desenvolvimento.pdf)
