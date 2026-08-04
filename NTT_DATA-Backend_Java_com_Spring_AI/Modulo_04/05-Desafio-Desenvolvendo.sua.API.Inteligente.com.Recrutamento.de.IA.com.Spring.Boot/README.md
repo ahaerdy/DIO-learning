@@ -1005,15 +1005,11 @@ link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-rec
 
 ### Anotações
 
-#### 
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-08h36m54s703.jpg" alt="" width="840">
 </p>
 
 A imagem mostra a documentação oficial do Spring AI (docs.spring.io), na página referente à **Chat Client API**. O texto da página explica que o `ChatClient` oferece uma API fluente para se comunicar com um modelo de IA, com suporte tanto ao modelo síncrono quanto ao modelo reativo (streaming). É destacado que o modelo de IA processa dois tipos principais de mensagens: mensagens de usuário, que são entradas diretas do usuário, e mensagens de sistema, geradas para orientar o comportamento da conversa — essa é justamente a separação entre prompt de sistema e prompt de usuário que caracteriza o `ChatClient` como uma API mais completa que o `ChatModel`.
-
-#### 
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-08h37m43s782.jpg" alt="" width="840">
@@ -1021,15 +1017,11 @@ A imagem mostra a documentação oficial do Spring AI (docs.spring.io), na pági
 
 Aqui a página de documentação está rolada um pouco mais para baixo, mostrando a seção "Creating a ChatClient". O trecho destaca que o `ChatClient` é criado a partir de um objeto `ChatClient.Builder`, podendo ser obtido de forma autoconfigurada pelo Spring Boot ou criado programaticamente. Isso confirma que o `ChatClient` disponibiliza um builder próprio e reaproveita toda a autoconfiguração de `ChatModel` já existente na aplicação.
 
-#### 
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-08h38m49s955.jpg" alt="" width="840">
 </p>
 
 A imagem mostra a IDE (IntelliJ IDEA) com a janela de criação de uma nova classe Java. O nome digitado é `OpenAiChatClientIT`, criada dentro do pacote de testes do projeto `budgeting`, ao lado da classe `OpenAiChatModelIT` já existente. Essa nova classe será usada para testar o `ChatClient` de forma equivalente ao teste de integração já feito anteriormente para o `ChatModel`.
-
-#### 
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h16m44s961.jpg" alt="" width="840">
@@ -1061,15 +1053,11 @@ public class OpenAiChatClientIT {
 }
 ```
 
-#### 
-
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h19m14s590.jpg" alt="" width="840">
 </p>
 
 A imagem mostra o mesmo arquivo de teste, agora com um ícone de sugestão (lâmpada) ao lado da linha do `System.out.println`, indicando uma dica da IDE sobre aquela instrução. O código permanece o mesmo já apresentado na imagem anterior, pronto para ser executado.
-
-#### 
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h19m51s142.jpg" alt="" width="840">
@@ -1077,7 +1065,6 @@ A imagem mostra o mesmo arquivo de teste, agora com um ícone de sugestão (lâm
 
 A imagem mostra o painel de resultados de testes da IDE, indicando que o teste `should_executeSum_when_prompted` passou com sucesso ("1 test passed"). No console é possível ver a saída impressa pelo `System.out.println`, mostrando que a resposta do modelo foi "O resultado final é 0", confirmando que a asserção com `contains("0")` foi bem-sucedida — uma escolha mais flexível do que `equals`, já que o modelo pode retornar texto adicional além do número puro.
 
-#### 
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h35m30s840.jpg" alt="" width="840">
@@ -1085,7 +1072,6 @@ A imagem mostra o painel de resultados de testes da IDE, indicando que o teste `
 
 A imagem mostra a janela "Copy Class" da IDE, usada para duplicar a classe `ChatModelController` já existente no projeto. O novo nome definido é `ChatClientController`, mantendo o mesmo pacote `dio.budgeting`. Essa cópia servirá de ponto de partida para criar um controller equivalente ao anterior, mas utilizando o `ChatClient` em vez do `ChatModel`.
 
-#### 
 
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h38m32s227.jpg" alt="" width="840">
@@ -1118,7 +1104,7 @@ public class ChatClientController {
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [budgeting_ate_o_video04.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video04.zip)
-- [yyyyyyyyyyyy](xxxxxxxxxxxxxxxxx)
+- [003-Tutorial_Budgeting_Spring_AI_Video04.md](./003-Tutorial_Budgeting_Spring_AI_Video04.md)
 
 
 ### 🟩 Vídeo 05 - Tool Calling: Executando Funções Reais com IA
