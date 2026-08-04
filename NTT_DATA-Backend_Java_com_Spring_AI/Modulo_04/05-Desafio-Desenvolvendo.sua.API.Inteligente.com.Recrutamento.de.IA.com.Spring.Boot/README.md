@@ -1115,6 +1115,11 @@ public class ChatClientController {
 }
 ```
       
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [budgeting_ate_o_video04.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video04.zip)
+- [yyyyyyyyyyyy](xxxxxxxxxxxxxxxxx)
+
 
 ### 🟩 Vídeo 05 - Tool Calling: Executando Funções Reais com IA
 
@@ -1124,6 +1129,165 @@ public class ChatClientController {
 </video>
 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/d358b84d-acee-4119-a443-cd2c9327ac70
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h15m13s883.jpg" alt="" width="840">
+</p>
+
+Esta tela mostra a página oficial da documentação do Spring AI dedicada a Tool Calling. O texto define o conceito como um padrão comum em aplicações de IA, também conhecido como Function Calling, que permite a um modelo interagir com um conjunto de APIs ou ferramentas para ampliar suas capacidades. A página destaca dois usos principais para as tools: **Information Retrieval** (buscar informações em fontes externas, como bancos de dados, serviços web ou motores de busca, para complementar o conhecimento do modelo) e **Taking Action** (executar ações em um sistema, como enviar um e-mail, criar um registro ou disparar um fluxo de trabalho). Essa introdução marca o início do assunto do dia, que dá sequência ao projeto de API inteligente com reconhecimento de fala, apresentando o Tool Calling como uma forma de trazer mais contexto ao Chat Client em vez de depender apenas da LLM.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h16m24s035.jpg" alt="" width="840">
+</p>
+
+A documentação exibe um exemplo prático de implementação de uma tool para obter a data e hora atuais no fuso horário do usuário, usando a classe `DateTimeTools`. O método é anotado com `@Tool`, cuja `description` explica ao modelo o propósito da ferramenta, permitindo que ele decida quando chamá-la.
+
+```java
+class DateTimeTools {
+
+    @Tool(description = "Get the current date and time in the user's timezone")
+    String getCurrentDateTime() {
+        return LocalDateTime.now().atZone(LocaleContextHolder.getTimeZone().toZoneId()).toString();
+    }
+
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h18m07s703.jpg" alt="" width="840">
+</p>
+
+Na sequência da documentação, é mostrado como disponibilizar a tool para o modelo através do `ChatClient`, passando uma instância de `DateTimeTools` pelo método `.tools()`. Quando o modelo precisa saber a data atual, ele solicita a chamada da ferramenta e usa o resultado para gerar a resposta final ao prompt original.
+
+```java
+ChatModel chatModel = ...
+
+String response = ChatClient.create(chatModel)
+        .prompt("What day is tomorrow?")
+        .tools(new DateTimeTools())
+        .call()
+        .content();
+
+System.out.println(response);
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h20m33s878.jpg" alt="" width="840">
+</p>
+
+A tela agora muda para a IDE, mostrando a caixa de diálogo "Copy Class" sendo usada para duplicar a classe de teste `OpenAiChatClientIT`, criando uma nova classe chamada `ToolCallingIT` dentro do mesmo pacote `dio.budgeting`. Essa é a etapa inicial de criação do teste de integração dedicado a demonstrar o Tool Calling, reaproveitando a estrutura do teste de Chat Client já existente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h23m54s799.jpg" alt="" width="840">
+</p>
+
+Com a nova classe já criada, o código mostra o teste `ToolCallingIT`, praticamente idêntico ao teste de Chat Client anterior: o `ChatClient` é configurado com um `defaultSystem` instruindo o modelo a se comportar como um matemático, e o prompt pede para somar 10 mais 20 e depois subtrair 30 do resultado anterior.
+
+```java
+package dio.budgeting;
+
+import ...
+
+@SpringBootTest
+@EnabledIfEnvironmentVariable(named = "OPENAI_API_KEY", matches = ".+")
+public class ToolCallingIT {
+
+    @Autowired
+    OpenAiChatModel openAiChatModel;
+
+    @Test
+    void should_executeSum_when_prompted() {
+        var chatClient = ChatClient.builder(openAiChatModel).defaultSystem("Você é um matemático").build();
+
+        var response = chatClient.prompt("Some 10 mais 20. Depois subtraia 30 do resultado...")
+                .call().content();
+
+        assertThat(response).contains("0");
+        System.out.println(response);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h25m36s005.jpg" alt="" width="840">
+</p>
+
+Dentro da classe de teste, é criada a classe `MathTools`, com dois métodos anotados com `@Tool`: `sum`, que soma dois números inteiros, e `diff`, que subtrai um do outro. Cada anotação recebe uma `description` explicando o que o método faz, informação usada pelo modelo para decidir qual ferramenta chamar de acordo com o prompt recebido.
+
+```java
+static class MathTools {
+    @Tool(description = "soma dois números inteiros, a e b")
+    public int sum(int a, int b) {
+        return a + b;
+    }
+
+    @Tool(description = "subtrai dois números inteiros, a e b")
+    public int diff(int a, int b) {
+        return a - b;
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h32m35s942.jpg" alt="" width="840">
+</p>
+
+O painel de debug mostra um erro de execução: `MathTools.Did you mean to pass a ToolCallback or ToolCallbackProvider? No annotated methods found in class...`. O erro ocorreu porque a tool estava sendo passada no método `.tools()` durante a execução do prompt, e não na configuração do `ChatClient`. A correção é usar `.defaultTools(new MathTools())` já na construção do `ChatClient`, garantindo que o modelo reconheça a ferramenta corretamente.
+
+```java
+var chatClient = ChatClient.builder(openAiChatModel)
+        .defaultSystem("Você é um matemático")
+        .defaultTools(new MathTools())
+        .build();
+
+var response = chatClient.prompt("Some 10 mais 20. Depois subtraia 30 do resultado anterior. Exiba apenas o resu...")
+        .call().content();
+
+assertThat(response).contains("0");
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h38m27s752.jpg" alt="" width="840">
+</p>
+
+Com a configuração corrigida, o debug é executado novamente, desta vez parando em um breakpoint dentro do método `sum`. O painel de variáveis confirma que os valores `a = 10` e `b = 20` foram interpretados corretamente a partir do prompt "Some 10 mais 20", mostrando que o modelo conseguiu identificar a tool certa e extrair os argumentos numéricos corretos para a chamada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h38m56s941.jpg" alt="" width="840">
+</p>
+
+O painel de resultados de teste mostra "1 test passed", confirmando que a asserção `assertThat(response).contains("0")` foi satisfeita. Diferente da execução anterior via apenas a LLM (que respondia incorretamente), agora o resultado calculado pelas tools de soma e subtração é retornado diretamente na resposta.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h40m16s120.jpg" alt="" width="840">
+</p>
+
+O arquivo `application.properties` é editado para adicionar uma configuração extra de logging, elevando o nível de log do pacote `org.springframework.ai` para `DEBUG`. Essa mudança permite visualizar nos logs, com mais clareza, o momento em que a execução passa pelas chamadas de tool calling.
+
+```properties
+spring.application.name=budgeting
+spring.ai.openai.api-key=${OPENAI_API_KEY}
+
+spring.ai.openai.chat.options.model=gpt-4o-mini
+spring.ai.openai.chat.options.response-format.type=TEXT
+
+logging.level.org.springframework.ai=DEBUG
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-12h42m10s376.jpg" alt="" width="840">
+</p>
+
+Com o novo nível de log ativado, o teste é executado novamente e o painel de resultados mostra "1 test passed" acompanhado de um log detalhado do Spring AI: são registradas as chamadas ao `DefaultToolCallingManager` e ao `MethodToolCallback`, evidenciando a execução das tools `sum` e `diff` (esta chamada uma segunda vez) e a conversão dos resultados para JSON antes de retornarem ao modelo. Isso confirma visualmente que, desta vez, o resultado foi resolvido pelos métodos Java criados, e não diretamente pela LLM.
+     
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [budgeting_ate_o_video05.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video05.zip)
+- [yyyyyyyyyyyy](./xxxxxxxxxxxxxxxxx.md)
+
 
 ### 🟩 Vídeo 06 - Transcription API: Transformando Áudio em Texto
 
