@@ -1003,6 +1003,119 @@ A aplicação responde com sucesso (código 200), retornando a mensagem gerada p
 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/af78f4fc-cd36-4230-90cd-8ce61a3d4395
 
+### Anotações
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-08h36m54s703.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a documentação oficial do Spring AI (docs.spring.io), na página referente à **Chat Client API**. O texto da página explica que o `ChatClient` oferece uma API fluente para se comunicar com um modelo de IA, com suporte tanto ao modelo síncrono quanto ao modelo reativo (streaming). É destacado que o modelo de IA processa dois tipos principais de mensagens: mensagens de usuário, que são entradas diretas do usuário, e mensagens de sistema, geradas para orientar o comportamento da conversa — essa é justamente a separação entre prompt de sistema e prompt de usuário que caracteriza o `ChatClient` como uma API mais completa que o `ChatModel`.
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-08h37m43s782.jpg" alt="" width="840">
+</p>
+
+Aqui a página de documentação está rolada um pouco mais para baixo, mostrando a seção "Creating a ChatClient". O trecho destaca que o `ChatClient` é criado a partir de um objeto `ChatClient.Builder`, podendo ser obtido de forma autoconfigurada pelo Spring Boot ou criado programaticamente. Isso confirma que o `ChatClient` disponibiliza um builder próprio e reaproveita toda a autoconfiguração de `ChatModel` já existente na aplicação.
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-08h38m49s955.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a IDE (IntelliJ IDEA) com a janela de criação de uma nova classe Java. O nome digitado é `OpenAiChatClientIT`, criada dentro do pacote de testes do projeto `budgeting`, ao lado da classe `OpenAiChatModelIT` já existente. Essa nova classe será usada para testar o `ChatClient` de forma equivalente ao teste de integração já feito anteriormente para o `ChatModel`.
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h16m44s961.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o código já escrito na classe `OpenAiChatClientIT`. A classe está anotada com `@SpringBootTest` e `@EnabledIfEnvironmentVariable`, garantindo que o teste só rode quando a variável de ambiente `OPENAI_API_KEY` estiver definida. O `OpenAiChatModel` é injetado via `@Autowired`, e a partir dele o `ChatClient` é construído usando o builder, com um prompt de sistema definindo o papel do modelo como "matemático". Em seguida, um prompt de usuário pede uma operação aritmética, e a resposta é validada com `assertThat(response).contains("0")`, além de ser impressa no console com `System.out.println`.
+
+```java
+@SpringBootTest
+@EnabledIfEnvironmentVariable(named = "OPENAI_API_KEY", matches = ".+")
+public class OpenAiChatClientIT {
+
+    @Autowired
+    OpenAiChatModel openAiChatModel;
+
+    @Test
+    void should_executeSum_when_prompted() {
+        var chatClient = ChatClient.builder(openAiChatModel)
+                .defaultSystem("Você é um matemático")
+                .build();
+
+        var response = chatClient.prompt("Some 10 mais 20. Depois subtraia 30 do resultado anterior. Exiba apenas o resultado final sem explicações.")
+                .call()
+                .content();
+
+        assertThat(response).contains("0");
+        System.out.println(response);
+    }
+}
+```
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h19m14s590.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o mesmo arquivo de teste, agora com um ícone de sugestão (lâmpada) ao lado da linha do `System.out.println`, indicando uma dica da IDE sobre aquela instrução. O código permanece o mesmo já apresentado na imagem anterior, pronto para ser executado.
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h19m51s142.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o painel de resultados de testes da IDE, indicando que o teste `should_executeSum_when_prompted` passou com sucesso ("1 test passed"). No console é possível ver a saída impressa pelo `System.out.println`, mostrando que a resposta do modelo foi "O resultado final é 0", confirmando que a asserção com `contains("0")` foi bem-sucedida — uma escolha mais flexível do que `equals`, já que o modelo pode retornar texto adicional além do número puro.
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h35m30s840.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a janela "Copy Class" da IDE, usada para duplicar a classe `ChatModelController` já existente no projeto. O novo nome definido é `ChatClientController`, mantendo o mesmo pacote `dio.budgeting`. Essa cópia servirá de ponto de partida para criar um controller equivalente ao anterior, mas utilizando o `ChatClient` em vez do `ChatModel`.
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-04-09h38m32s227.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o resultado final: o código da classe `ChatClientController`, anotada com `@RestController` e `@RequestMapping("/api")`, injetando um `ChatClient` construído a partir de um `ChatClient.Builder` recebido no construtor. O endpoint `/chat`, mapeado com `@GetMapping`, recebe um prompt de usuário e retorna o conteúdo da resposta obtida via `this.chatClient.prompt().user(prompt).call().content()`. Ao lado, o painel de Endpoints da IDE mostra uma requisição de teste para `GET /api/chat?prompt=Bom dia`, cuja resposta retornada pelo modelo foi "Bom dia! Como posso ajudar você hoje?", confirmando que o controller está funcionando corretamente.
+
+```java
+package dio.budgeting;
+
+import ...
+
+@RestController
+@RequestMapping("/api")
+public class ChatClientController {
+
+    private final ChatClient chatClient;
+
+    public ChatClientController(ChatClient.Builder builder) {
+        this.chatClient = builder.build();
+    }
+
+    @GetMapping("/chat")
+    String chat(String prompt) {
+        return this.chatClient.prompt().user(prompt).call().content();
+    }
+}
+```
+      
+
 ### 🟩 Vídeo 05 - Tool Calling: Executando Funções Reais com IA
 
 <video width="60%" controls>
