@@ -63,7 +63,8 @@ A ideia é manter um registro transparente e atualizado do meu desenvolvimento, 
 
 ---
 
-## **Projetos** 
+## **Portfolio** 
+Projetos elaborados durante os cursos:
 - <img src="000-Midia_e_Anexos/2026-06-29-13-35-13.png?raw=true" height="18"/><img src="000-Midia_e_Anexos/2026-06-29-13-35-30.png?raw=true" height="18"/> HTML5/CSS3:
   - [Landing page com menu hamburguer e morphing menu (css)](https://github.com/ahaerdy/DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css)
 - <img src="000-Midia_e_Anexos/2026-06-29-13-38-27.png?raw=true" height="18"/> Javascript (HTML5, CSS3)
