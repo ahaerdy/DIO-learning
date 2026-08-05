@@ -1282,7 +1282,7 @@ Com o novo nível de log ativado, o teste é executado novamente e o painel de r
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/68270c44-f264-4073-b102-a7eb9d2c3284?back=/track/ntt-data-2026-ai-java-back-end
 
 ### 🟩 Vídeo 07 - Speech API: Sintetizando Voz com Text-to-Speech
 
@@ -1291,7 +1291,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/ad624205-af61-4e2c-be7e-1bdc188a8f26?back=/track/ntt-data-2026-ai-java-back-end
 
 ### 🟩 Vídeo 08 - Integração do Assistente: Orquestrando o Fluxo de Budget
 
@@ -1300,7 +1300,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/afaf83bb-585f-4293-a3f8-09adf880e0af?back=/track/ntt-data-2026-ai-java-back-end
 
 ### 🟩 Vídeo 09 - Persistência e Infraestrutura: Configurando o Banco com Docker
 
@@ -1309,7 +1309,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/b7250107-c95a-4bb9-b62b-2dca8d0c29b7?back=/track/ntt-data-2026-ai-java-back-end
 
 ### 🟩 Vídeo 10 - Exposição REST: Implementando o TransactionController
 
@@ -1318,7 +1318,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/2aee74d9-9d18-4af8-bd20-53fa862394a6?back=/track/ntt-data-2026-ai-java-back-end
 
 ### 🟩 Vídeo 11 - Endpoint de Transcrição: Integrando Áudio ao Controller
 
@@ -1327,7 +1327,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/cffe330b-6114-43cf-8b7d-f79869400c6c?back=/track/ntt-data-2026-ai-java-back-end
 
 ### 🟩 Vídeo 12 - Roadmap e Auditoria: Evoluindo a API Inteligente
 
@@ -1336,18 +1336,115 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/c494eb75-1917-43ac-8251-42553137870a?back=/track/ntt-data-2026-ai-java-back-end
 
-### 🟩 Vídeo 13 - Entendendo o Desafio
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.04-curso.05-video_13.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+## Entendendo o Desafio
 
-link do vídeo:
+Agora é a sua hora de praticar, aprender fazendo e evoluir um projeto completo com **Spring Boot + Inteligência Artificial**. Neste desafio, você vai trabalhar com uma **API inteligente** desenvolvida com **Spring AI**. O projeto mostra como integrar recursos de IA a uma aplicação Java, mantendo uma arquitetura organizada e pronta para evoluir. Antes de começar, acesse os repositórios do projeto:
 
-##  Materiais de Apoio
+**Repositório Com Todos Os Conteúdos Sobre Spring:**
+
+[https://github.com/digitalinnovationone/dio-spring-boot-learning-track](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/digitalinnovationone/dio-spring-boot-learning-track)
+
+**Pasta Com Detalhes Sobre O Projeto Final:**
+
+[https://github.com/digitalinnovationone/dio-spring-boot-learning-track/blob/main/06-spring-ai/README.md](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/digitalinnovationone/dio-spring-boot-learning-track/blob/main/06-spring-ai/README.md)
+
+Nas aulas, o expert Puanã construiu os principais pontos junto com você. Por isso, use o projeto como base, revise os conteúdos sempre que precisar e depois evolua a solução com as suas próprias ideias.
+
+---
+
+### O Que Criar
+
+O objetivo é evoluir uma API de orçamento que usa IA para processar comandos de voz relacionados a transações financeiras. Na prática, o fluxo principal é:
+
+* Receber um arquivo de áudio enviado pelo cliente;
+* Transformar o áudio em texto;
+* Usar IA para entender a intenção do comando;
+* Executar uma função real da aplicação;
+* Criar ou consultar transações financeiras;
+* Gerar uma resposta final para a pessoa usuária.
+
+O foco não é apenas usar IA. O mais importante é entender como conectar IA com uma aplicação real, respeitando as responsabilidades do código e a organização do projeto.
+
+### Como Fazer
+
+Siga o caminho apresentado nas aulas e no repositório. O projeto passa por temas importantes, como:
+
+* Configuração do Spring AI;
+* Integração com modelos de linguagem;
+* Uso do ChatClient;
+* Tool Calling para executar funções reais;
+* Transcrição de áudio em texto;
+* Geração de voz a partir de texto;
+* Persistência de dados;
+* Exposição de endpoints REST;
+* Evolução e auditoria da API.
+
+Se você ainda está começando, tudo bem. Primeiro, tente executar o projeto como foi apresentado. Depois, escolha uma melhoria simples para implementar.
+
+### Ideias Para Evoluir
+
+Depois de entender o projeto base, você pode evoluir a API de diferentes formas:
+
+* Adicionar novos tipos de consulta financeira;
+* Melhorar as respostas geradas pela IA;
+* Criar novas ferramentas para o Tool Calling;
+* Adicionar validações antes de salvar uma transação;
+* Melhorar os endpoints REST;
+* Criar testes para os principais fluxos;
+* Documentar melhor como usar a API;
+* Propor uma nova ideia de assistente usando a mesma base técnica.
+
+Escolha uma evolução compatível com o seu momento. Uma melhoria pequena, bem explicada e funcionando, vale muito mais do que uma ideia grande incompleta.
+
+### Use o DIO Agent Como Apoio
+
+Durante o desafio, você também pode usar o **DIO Agent** como um parceiro de estudos. Ele pode te ajudar a entender o desafio, revisar conceitos de Spring, organizar o raciocínio, melhorar sua documentação e destravar dúvidas sem entregar tudo pronto. Você pode começar com um prompt simples como este:
+
+```text
+Repositório da trilha:
+https://github.com/digitalinnovationone/dio-spring-boot-learning-track
+
+Pasta do projeto final:
+https://github.com/digitalinnovationone/dio-spring-boot-learning-track/blob/main/06-spring-ai/README.md
+
+Quero evoluir o projeto com uma melhoria simples.
+
+Me ajude a entender:
+- O objetivo do projeto;
+- O fluxo principal da API;
+- Onde posso fazer uma melhoria;
+- Quais arquivos preciso revisar;
+- Como explicar minha entrega no README.
+
+Importante: não quero uma resposta pronta para copiar. Quero entender o processo e construir minha própria solução.
+
+```
+
+Use o **DIO Agent** como apoio, mas lembre-se: a entrega final deve refletir suas escolhas, seus testes e seu aprendizado.
+
+### O Que Entregar
+
+Dê um Fork no repositório do expert ou crie seu próprio repositório no GitHub com a sua versão do projeto. No `README.md`, explique de forma simples:
+
+* O que o projeto faz;
+* Como executar a aplicação;
+* Qual melhoria você implementou;
+* Quais tecnologias foram usadas;
+* Como testar o fluxo principal;
+* O que você aprendeu durante o desafio.
+
+Se você fez prints, exemplos de requisições, testes ou anotações, inclua também. Isso ajuda a mostrar seu processo de aprendizagem.
+
+### Resultado Esperado
+
+Ao final, você terá um projeto público mostrando como usar **Spring Boot + Spring AI** para criar uma API inteligente com recursos de texto, áudio e execução de funções reais.
+
+Comece pelo projeto base, avance com calma e evolua um passo de cada vez. O importante é entender o fluxo, testar a solução e mostrar claramente o que você construiu.
+
+Bons estudos e bom projeto! 🚀
 
 # Certificado: 
 
