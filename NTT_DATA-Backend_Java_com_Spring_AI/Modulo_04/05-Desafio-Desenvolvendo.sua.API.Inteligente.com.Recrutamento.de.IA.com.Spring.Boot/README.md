@@ -1286,8 +1286,338 @@ link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-rec
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-08h53m08s844.jpg" alt="" width="840">
+</p>
 
+A página exibida é a documentação oficial do Spring AI, na seção **Models → Audio Models → Transcription API**. Ela apresenta a `TranscriptionModel`, interface responsável por unificar o acesso a serviços de conversão de fala em texto (*speech-to-text*), permitindo escrever código portável entre diferentes provedores. Logo abaixo, a seção **Supported Providers** lista os dois provedores atualmente suportados: **OpenAI's Whisper API** e **Azure OpenAI Whisper API**.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h11m17s243.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o repositório oficial do **Whisper** no GitHub (`github.com/openai/whisper`), o modelo de reconhecimento de fala de propósito geral desenvolvido pela OpenAI, que dá suporte ao provedor citado anteriormente. O README destaca que se trata de um modelo *multitasking*, capaz de realizar transcrição multilíngue, tradução de fala e identificação de idioma, além de exibir um diagrama de sua arquitetura (*Sequence-to-sequence learning*).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h12m03s048.jpg" alt="" width="840">
+</p>
+
+Voltando à documentação do Spring AI, a seção **Common Interface** apresenta o contrato da `TranscriptionModel`. Ele define o método `call`, que recebe um `AudioTranscriptionPrompt` e devolve um `AudioTranscriptionResponse`, além de um método de conveniência `transcribe`, que recebe diretamente um `Resource` e já retorna o texto transcrito como `String`.
+
+```java
+public interface TranscriptionModel extends Model<AudioTranscriptionPrompt, AudioTranscriptionResponse> {
+
+    /**
+     * Transcribes the audio from the given prompt.
+     */
+    AudioTranscriptionResponse call(AudioTranscriptionPrompt transcriptionPrompt);
+
+    /**
+     * A convenience method for transcribing an audio resource.
+     */
+    default String transcribe(Resource resource) {
+        AudioTranscriptionPrompt prompt = new AudioTranscriptionPrompt(resource);
+        return this.call(prompt).getResult().getOutput();
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h12m24s828.jpg" alt="" width="840">
+</p>
+
+Ainda na documentação, agora nas seções **AudioTranscriptionPrompt** e **AudioTranscriptionResponse**, é mostrado como o áudio de entrada é encapsulado (junto de suas `options`) e como a resposta expõe o texto transcrito e os metadados associados.
+
+```java
+Resource audioFile = new FileSystemResource("/path/to/audio.mp3");
+AudioTranscriptionPrompt prompt = new AudioTranscriptionPrompt(
+    audioFile,
+    options
+);
+```
+
+```java
+AudioTranscriptionResponse response = model.call(prompt);
+String transcribedText = response.getResult().getOutput();
+AudioTranscriptionResponseMetadata metadata = response.getMetadata();
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h12m53s599.jpg" alt="" width="840">
+</p>
+
+A seção **Writing Provider-Agnostic Code → Basic Service Example** traz um exemplo completo de serviço Spring que injeta a interface `TranscriptionModel` via construtor, reforçando que o mesmo código funciona independentemente do provedor configurado (OpenAI, Azure OpenAI, etc.).
+
+```java
+@Service
+public class TranscriptionService {
+
+    private final TranscriptionModel transcriptionModel;
+
+    public TranscriptionService(TranscriptionModel transcriptionModel) {
+        this.transcriptionModel = transcriptionModel;
+    }
+
+    public String transcribeAudio(Resource audioFile) {
+        return transcriptionModel.transcribe(audioFile);
+    }
+
+    public String transcribeWithOptions(Resource audioFile, AudioTranscriptionOptions options) {
+        AudioTranscriptionPrompt prompt = new AudioTranscriptionPrompt(audioFile, options);
+        AudioTranscriptionResponse response = transcriptionModel.call(prompt);
+        return response.getResult().getOutput();
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h14m18s072.jpg" alt="" width="840">
+</p>
+
+Aqui a documentação passa para a página específica do provedor **OpenAI** (`openai-transcriptions.html`), detalhando as propriedades de configuração disponíveis via `application.properties`. Destacam-se `response-format` (json, text, srt, verbose_json ou vtt), `prompt` (texto opcional para guiar o estilo do modelo), `language` — que deve seguir o formato **ISO-639-1** para melhorar precisão e latência — e `temperature`, cujo valor `0` torna a saída mais determinística e menos "criativa".
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h14m29s518.jpg" alt="" width="840">
+</p>
+
+Uma pesquisa complementar no Google pelo termo "ISO-639-1" é feita para confirmar o significado desse padrão: trata-se de um padrão internacional de códigos de idioma, formado por códigos alfa-2 de duas letras (por exemplo, "en" para inglês, "fr" para francês, "zh" para chinês), usado para representar nomes de idiomas em sistemas computacionais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h29m04s657.jpg" alt="" width="840">
+</p>
+
+No IntelliJ, dentro do projeto `budgeting`, é criado um novo pacote chamado `resources.audio` na pasta de testes. Esse pacote servirá para organizar os arquivos de áudio que serão usados nos testes de integração, mantendo a estrutura do projeto organizada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h29m13s182.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o explorador de arquivos do sistema operacional, na pasta **Sound Recordings**, com seis arquivos de áudio (`recording-1` a `recording-6`) selecionados. Esses são os áudios previamente gerados com frases sobre gastos financeiros do dia a dia, que serão copiados para dentro do projeto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h33m52s137.jpg" alt="" width="840">
+</p>
+
+De volta ao IntelliJ, os arquivos de áudio já aparecem organizados dentro da pasta `resources/audio` do módulo de testes. Estando nesse local padrão de *resources*, o Spring consegue reconhecê-los corretamente como um `Resource` (via `ClassPathResource`), permitindo que sejam carregados pelos testes de integração.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h36m55s488.jpg" alt="" width="840">
+</p>
+
+É criada a classe de teste `OpenAiTranscriptionModelIT`, ainda vazia, no pacote `dio.budgeting`. Ela servirá como ponto de partida para o teste de integração que validará o comportamento do modelo de transcrição da OpenAI.
+
+```java
+package dio.budgeting;
+
+public class OpenAiTranscriptionModelIT {
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h50m31s476.jpg" alt="" width="840">
+</p>
+
+No arquivo `application.properties`, são definidas as opções do modelo de transcrição: o modelo **Whisper 1**, a linguagem `pt` (português), a `temperature` em `0` e o formato de resposta como `text`. Também é configurado um `prompt` que contextualiza o modelo, informando que o áudio está em português brasileiro, contém descrições de gastos financeiros e que as frases costumam trazer um valor em reais, uma ação e um local ou estabelecimento.
+
+```properties
+spring.application.name=budgeting
+spring.ai.openai.api-key=${OPENAI_API_KEY}
+
+spring.ai.openai.chat.options.model=gpt-4o-mini
+spring.ai.openai.chat.options.response-format.type=TEXT
+
+spring.ai.openai.audio.transcription.options.model=whisper-1
+spring.ai.openai.audio.transcription.options.language=pt
+spring.ai.openai.audio.transcription.options.temperature=0
+spring.ai.openai.audio.transcription.options.response-format=text
+spring.ai.openai.audio.transcription.options.prompt=Áudio em português brasileiro.\
+  Áudio contém descrição de gastos financeiros. \
+  As frases geralmente contêm: \
+  - um valor em reais (número + "reais"); \
+  - uma ação (gastei, paguei, comprei); \
+  - um local ou estabelecimento (mercado, farmácia, restaurante, loja, etc.).
+
+logging.level.org.springframework.ai=DEBUG
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-09h58m30s211.jpg" alt="" width="840">
+</p>
+
+A classe de teste é preenchida por completo. Nela, o `OpenAiAudioTranscriptionModel` é injetado via `@Autowired`, aproveitando a autoconfiguração do Spring Boot. O método de teste usa `@ParameterizedTest` com `@CsvSource`, percorrendo os seis arquivos de áudio e suas palavras-chave esperadas, chamando o modelo para cada arquivo e validando, com `assertThat(...).contains(...)`, se o texto retornado contém o valor esperado.
+
+```java
+import org.junit.jupiter.params.provider.CsvSource;
+import org.springframework.ai.openai.OpenAiAudioTranscriptionModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+@SpringBootTest
+@EnabledIfEnvironmentVariable(named = "OPENAI_API_KEY", matches = ".+")
+public class OpenAiTranscriptionModelIT {
+
+    @Autowired
+    OpenAiAudioTranscriptionModel openAiTranscriptionModel;
+
+    @ParameterizedTest
+    @CsvSource({
+            "recording-1.m4a, 80 reais",
+            "recording-2.m4a, 40 reais",
+            "recording-3.m4a, 120 reais",
+            "recording-4.m4a, 90 reais",
+            "recording-5.m4a, 200 reais",
+            "recording-6.m4a, 60 reais",
+    })
+    public void should_containExpectedKeywords_when_audioFilesAreProcessed(String fileName, String expectedKeyword) {
+        var recording = new ClassPathResource("audio/" + fileName);
+
+        var response = openAiTranscriptionModel.call(recording);
+
+        assertThat(response).contains(expectedKeyword);
+        System.out.println(response);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-10h20m50s982.jpg" alt="" width="840">
+</p>
+
+O teste parametrizado é executado. O painel de resultados mostra **2 testes falhando e 4 passando**, de um total de 6. Um dos casos exibidos retorna o texto "Fui no cinema com o combo de pipoca e gastei 90 reais sozinho.", confirmando que o modelo consegue transcrever corretamente boa parte dos áudios, mas alguns casos ainda precisam ser investigados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-10h21m10s750.jpg" alt="" width="840">
+</p>
+
+O detalhe de uma das falhas é exibido: o áudio "Sai para jantar ontem e a conta ficou em duzentos reais por pessoa." foi transcrito corretamente em termos de conteúdo, mas o modelo escreveu o valor por extenso ("duzentos reais") em vez de numérico ("200 reais"), o que faz a asserção `contains("200 reais")` falhar. Esse comportamento evidencia que o Whisper pode converter números para a forma escrita, exigindo validações mais flexíveis nos testes.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-10h22m24s719.jpg" alt="" width="840">
+</p>
+
+Com o modelo validado, o próximo passo é expor a funcionalidade via API REST. É criada a classe `TranscriptionController`, ainda vazia, no pacote principal da aplicação (`dio.budgeting`), que servirá de base para o novo endpoint.
+
+```java
+package dio.budgeting;
+
+public class TranscriptionController {
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-12h41m24s419.jpg" alt="" width="840">
+</p>
+
+O `application.properties` é ajustado com a propriedade `spring.ai.model.audio.transcription=openai`, deixando explícito qual provedor de transcrição deve ser usado pela autoconfiguração do Spring AI, além de manter as demais opções de modelo, idioma, temperatura, formato de resposta e prompt já configuradas anteriormente.
+
+```properties
+spring.ai.model.audio.transcription=openai
+
+spring.ai.openai.audio.transcription.options.model=whisper-1
+spring.ai.openai.audio.transcription.options.language=pt
+spring.ai.openai.audio.transcription.options.temperature=0
+spring.ai.openai.audio.transcription.options.response-format=text
+spring.ai.openai.audio.transcription.options.prompt=Áudio em português brasileiro.\
+  Áudio contém descrição de gastos financeiros. \
+  As frases geralmente contêm: \
+  - um valor em reais (número + "reais"); \
+  - uma ação (gastei, paguei, comprei); \
+  - um local ou estabelecimento (mercado, farmácia, restaurante, loja, etc.).
+
+logging.level.org.springframework.ai=DEBUG
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-12h43m48s764.jpg" alt="" width="840">
+</p>
+
+O `TranscriptionController` começa a ser implementado: é anotado com `@RestController`, recebe o mapeamento base `/api` e passa a depender da interface `TranscriptionModel` (e não de uma implementação específica), injetada via construtor. Isso garante flexibilidade caso o provedor de transcrição mude no futuro.
+
+```java
+package dio.budgeting;
+
+import org.springframework.ai.audio.transcription.TranscriptionModel;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api")
+public class TranscriptionController {
+
+    private final TranscriptionModel transcriptionModel;
+
+    public TranscriptionController(TranscriptionModel transcriptionModel) {
+        this.transcriptionModel = transcriptionModel;
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-12h45m26s546.jpg" alt="" width="840">
+</p>
+
+O endpoint é finalizado: um método `transcribe`, anotado com `@PostMapping(value = "/transcribe", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)`, recebe o arquivo de áudio como `MultipartFile` via `@RequestParam("file")`, converte-o em `Resource` através de `file.getResource()` e delega a transcrição ao `transcriptionModel`, retornando diretamente uma `String` com o texto reconhecido.
+
+```java
+package dio.budgeting;
+
+import org.springframework.ai.audio.transcription.TranscriptionModel;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
+
+@RestController
+@RequestMapping("/api")
+public class TranscriptionController {
+
+    private final TranscriptionModel transcriptionModel;
+
+    public TranscriptionController(TranscriptionModel transcriptionModel) {
+        this.transcriptionModel = transcriptionModel;
+    }
+
+    @PostMapping(value = "/transcribe", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    String transcribe(@RequestParam("file") MultipartFile file) {
+        var resource = file.getResource();
+        return transcriptionModel.transcribe(resource);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-12h59m02s535.jpg" alt="" width="840">
+</p>
+
+A aplicação `BudgetingApplication` é iniciada com sucesso, como indicam os logs no console ("Started BudgetingApplication") e o painel de **Endpoints** do IntelliJ, confirmando que o Tomcat embutido subiu corretamente e que o novo endpoint de transcrição está disponível para ser testado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-05-13h01m36s324.jpg" alt="" width="840">
+</p>
+
+Usando o cliente HTTP do IntelliJ, é enviada uma requisição `POST` para `http://localhost:8080/api/transcribe`, com o corpo `multipart/form-data` contendo o arquivo `recording-1.m4a`. A resposta retorna `HTTP/1.1 200`, com o corpo "Gastei na farmácia rapidinho e deixei 80 reais em três itens.", confirmando que o endpoint está funcionando corretamente de ponta a ponta.
+
+```http
+POST http://localhost:8080/api/transcribe HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="recording-1.m4a"
+
+< ./src/test/resources/audio/recording-1.m4a
+--boundary
+```
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [budgeting_ate_o_video06.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video06.zip)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+  
 
 ### 🟩 Vídeo 07 - Speech API: Sintetizando Voz com Text-to-Speech
 
