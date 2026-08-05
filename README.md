@@ -99,8 +99,9 @@ Se você é um estudante da DIO, programador ou entusiasta da área, fique à vo
 
 ## Contato
 
-- LinkedIn: [in/arthur-haerdy-jr](https://www.linkedin.com/in/arthur-haerdy-jr/)
-- DIO: [arthur_haerdy](https://web.dio.me/users/arthur_haerdy?tab=achievements)
+- LinkedIn: [linkedin.com/in/arthur-haerdy-jr](https://www.linkedin.com/in/arthur-haerdy-jr/)
+- DIO: [web.dio.me/users/arthur_haerdy](https://web.dio.me/users/arthur_haerdy?tab=achievements)
+- GitHUb: [@ahaerdy](https://github.com/ahaerdy)
 
 ---
 
