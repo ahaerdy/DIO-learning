@@ -51,11 +51,12 @@ A plataforma DIO tem sido um parceiro fundamental nesse percurso, oferecendo con
 
 Este repositório está estruturado para acompanhar meu progresso nas formações e bootcamps da DIO, incluindo, mas não se limitando a:
 
+- [Fundamentos da Linguagem de Programação Java](https://github.com/ahaerdy/DIO-learning/tree/main/Fundamentos_da_Linguagem_de_Programacao_Java)
+- [Bootcamp NTT DATA: Backend Java com Spring AI](https://github.com/ahaerdy/DIO-learning/tree/main/NTT_DATA-Backend_Java_com_Spring_AI)
 - [Bootcamp Suzano Python Developer](https://github.com/ahaerdy/dio-learning/tree/main/Suzano%20-%20Python%20Developer)
 - [Bootcamp NTT DATA - Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python#-reposit%C3%B3rio-de-estudos--bootcamp-ntt-data-engenharia-de-dados-com-python)
 - [Bootcamp TQI Fullstack Developer](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer)
-- [Bootcamp NTT DATA: Backend Java com Spring AI](https://github.com/ahaerdy/DIO-learning/tree/main/NTT_DATA-Backend_Java_com_Spring_AI)
- 
+
 Cada curso ou formação possui sua própria pasta, onde organizo anotações, códigos-fonte, desafios, projetos e demais arquivos que auxiliam no aprendizado.
 
 A ideia é manter um registro transparente e atualizado do meu desenvolvimento, servindo tanto como fonte de consulta pessoal quanto para compartilhar experiências e conhecimentos com a comunidade.

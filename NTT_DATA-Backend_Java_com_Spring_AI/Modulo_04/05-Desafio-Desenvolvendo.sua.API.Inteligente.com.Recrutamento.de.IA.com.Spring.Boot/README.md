@@ -1284,6 +1284,11 @@ Com o novo nível de log ativado, o teste é executado novamente e o painel de r
 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/68270c44-f264-4073-b102-a7eb9d2c3284?back=/track/ntt-data-2026-ai-java-back-end
 
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 07 - Speech API: Sintetizando Voz com Text-to-Speech
 
 <video width="60%" controls>
@@ -1418,7 +1423,6 @@ Me ajude a entender:
 - Como explicar minha entrega no README.
 
 Importante: não quero uma resposta pronta para copiar. Quero entender o processo e construir minha própria solução.
-
 ```
 
 Use o **DIO Agent** como apoio, mas lembre-se: a entrega final deve refletir suas escolhas, seus testes e seu aprendizado.
@@ -1444,7 +1448,7 @@ Comece pelo projeto base, avance com calma e evolua um passo de cada vez. O impo
 
 Bons estudos e bom projeto! 🚀
 
-# Certificado: 
+# Certificado: Desafio de projeto - Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot
 
 - Link na plataforma: 
 - Certificado em pdf:
