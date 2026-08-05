@@ -108,7 +108,3 @@ Se você é um estudante da DIO, programador ou entusiasta da área, fique à vo
 > “O aprendizado contínuo é a chave para o sucesso na carreira tecnológica.”
 
 ---
-
-Agradeço sua visita e espero que este repositório possa inspirar e ajudar quem está na mesma jornada de evolução profissional.
-    
----
