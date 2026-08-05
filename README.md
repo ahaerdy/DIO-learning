@@ -104,7 +104,3 @@ Se você é um estudante da DIO, programador ou entusiasta da área, fique à vo
 - GitHUb: [@ahaerdy](https://github.com/ahaerdy)
 
 ---
-
-> “O aprendizado contínuo é a chave para o sucesso na carreira tecnológica.”
-
----
