@@ -64,7 +64,7 @@ A ideia é manter um registro transparente e atualizado do meu desenvolvimento, 
 ---
 
 ## **Portfolio** 
-Abaixo estão listados os projetos práticos e desafios de código desenvolvidos ao longo das formações, categorizados pela tecnologia principal:
+Abaixo estão listados os projetos práticos e desafios de código desenvolvidos ao longo das formações:
 - <img src="000-Midia_e_Anexos/2026-06-29-13-35-13.png?raw=true" height="18"/><img src="000-Midia_e_Anexos/2026-06-29-13-35-30.png?raw=true" height="18"/> HTML5/CSS3:
   - [Landing page com menu hamburguer e morphing menu (css)](https://github.com/ahaerdy/DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css)
 - <img src="000-Midia_e_Anexos/2026-06-29-13-38-27.png?raw=true" height="18"/> Javascript (HTML5, CSS3)
