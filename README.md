@@ -63,31 +63,37 @@ A ideia é manter um registro transparente e atualizado do meu desenvolvimento, 
 
 ---
 
-## **Projetos** 
-- <img src="000-Midia_e_Anexos/2026-06-29-13-35-13.png?raw=true" height="18"/><img src="000-Midia_e_Anexos/2026-06-29-13-35-30.png?raw=true" height="18"/> HTML5/CSS3:
-  - [Landing page com menu hamburguer e morphing menu (css)](https://github.com/ahaerdy/DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css)
-  - <img src="000-Midia_e_Anexos/2026-06-29-13-38-27.png?raw=true" height="18"/> Javascript (HTML5, CSS3)
-      - [DIO-jogo-da-memoria-html-css-javascript](https://github.com/ahaerdy/DIO-jogo-da-memoria-html-css-javascript)
-  - <img src="000-Midia_e_Anexos/2026-06-29-12-52-17.png" alt="" height="18">ReactJS:
-      - [GitHub Profile Viewer](https://github.com/ahaerdy/DIO-github-profile-viewer-tqi-fullstack)
-  - ☕ Java:
-    - [Banco Digital - Projeto Java POO](https://github.com/ahaerdy/lab-java-banco-digital)
-    - Spring Framework
-      - [Explorando Padrões de Projeto na Prática com Java](https://github.com/ahaerdy/dio-design-patterns-java)
-      - [Beer Stock API - Gerenciamento de Estoque de Cerveja](https://github.com/ahaerdy/dio-beer-stock-api-testes-unitarios)
-  - <img src="000-Midia_e_Anexos/2026-06-29-13-33-35.png?raw=true" height="18"/> Python:
-    - [Pacote Python para Processamento de Imagens](https://github.com/ahaerdy/processamento-imagens-ahaerdy)
-    - [Modelando o Sistema Bancário em POO com Python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python/tree/main#)
-    - [Otimizando o Sistema Bancário com Funções Python](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-com-funcoes-python)
-    - [Sistema Bancário com Python](https://github.com/ahaerdy/dio-sistema-bancario-python)
-  - <img src="000-Midia_e_Anexos/2026-06-29-12-40-12.png" alt="" height="18">Power BI:
-    - [Relatório de Vendas e Lucros com Data Analytics com Power BI](https://github.com/ahaerdy/dio-relatorio-vendas-lucros-power-bi)
-    - [Dashboard Gerencial Financeiro com Power BI](https://github.com/ahaerdy/dio-powerbi-financial-dashboard)
-    - [Modelagem e Transformação de Dados com DAX no Power BI](https://github.com/ahaerdy/dio-powerbi-financials-star_schema)
-    - [Construção de Star Schema para Cenários Universitários](https://github.com/ahaerdy/dio-powerbi-star-schema-universidade)
-    - [Azure Company Dashboard](https://github.com/ahaerdy/azure-company-dashboard)
-    - [Relatório Estratégico de Performance com Power BI](https://github.com/ahaerdy/DIO-powerbi-financial-analysis)
-    - [Relatório de Vendas e Lucro com Power BI](https://github.com/ahaerdy/DIO-projeto-powerbi-financials)
+### Projetos Práticos Desenvolvidos
+
+#### ☕ Backend (Java & Spring Framework)
+* **[Banco Digital - POO Java](https://github.com/ahaerdy/lab-java-banco-digital)**: Aplicação dos pilares de Programação Orientada a Objetos em um cenário bancário real.
+* **[Padrões de Projeto em Java](https://github.com/ahaerdy/dio-design-patterns-java)**: Implementação prática dos padrões *Singleton*, *Strategy* e *Facade* utilizando Spring Framework.
+* **[Beer Stock API](https://github.com/ahaerdy/dio-beer-stock-api-testes-unitarios)**: API REST para gerenciamento de estoque de cervejas com cobertura de testes unitários.
+
+#### 🐍 Python & Engenharia de Dados
+* **[Sistema Bancário Completo (POO & Otimizado)](https://github.com/ahaerdy/DIO-projeto-sistema-bancario-em-poo-com-python)**: Evolução de um sistema bancário CLI utilizando rotinas modularizadas e conceitos avançados de POO.
+* **[Pacote Python de Processamento de Imagens](https://github.com/ahaerdy/processamento-imagens-ahaerdy)**: Biblioteca Python para processamento de imagens distribuída para estudo.
+
+#### 📊 Power BI & Data Analytics
+* **[Dashboard Gerencial Financeiro](https://github.com/ahaerdy/dio-powerbi-financial-dashboard)**: Dashboard dinâmico com métricas DRE, margens operacionais e navegação interativa.
+* **[Star Schema para Cenários Universitários](https://github.com/ahaerdy/dio-powerbi-star-schema-universidade)**: Modelagem dimensional conectando disciplinas, professores e departamentos.
+* **[Relatório Estratégico de Vendas e Lucros](https://github.com/ahaerdy/dio-relatorio-vendas-lucros-power-bi)**: Análise de performance comercial com utilização de funções DAX.
+* **[Azure Company Dashboard](https://github.com/ahaerdy/azure-company-dashboard)**: Modelagem e integração de dados corporativos na nuvem Azure.
+
+#### 🌐 Frontend & Web Development
+* **[GitHub Profile Viewer](https://github.com/ahaerdy/DIO-github-profile-viewer-tqi-fullstack)**: Aplicação ReactJS para consulta dinâmica de perfis da API do GitHub.
+* **[Landing Page com Morphing Menu](https://github.com/ahaerdy/DIO-landing-page-com-menu-hamburguer-e-morphing-menu-css)**: Interface responsiva avançada utilizando HTML5 e animações CSS3.
+* **[Jogo da Memória](https://github.com/ahaerdy/DIO-jogo-da-memoria-html-css-javascript)**: Aplicação interativa em JavaScript Vanilla.
+
+---
+
+## 🤝 Contato
+
+- **LinkedIn:** [linkedin.com/in/arthur-haerdy-jr](https://www.linkedin.com/in/arthur-haerdy-jr/)
+- **DIO Profile:** [web.dio.me/users/arthur_haerdy](https://web.dio.me/users/arthur_haerdy?tab=achievements)
+- **GitHub:** [@ahaerdy](https://github.com/ahaerdy)
+
+---
 
 ---
 
