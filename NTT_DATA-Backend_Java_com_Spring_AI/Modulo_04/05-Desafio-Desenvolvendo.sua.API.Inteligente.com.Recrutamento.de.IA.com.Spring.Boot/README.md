@@ -1351,9 +1351,7 @@ Agora é a sua hora de praticar, aprender fazendo e evoluir um projeto completo 
 
 [https://github.com/digitalinnovationone/dio-spring-boot-learning-track/blob/main/06-spring-ai/README.md](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/digitalinnovationone/dio-spring-boot-learning-track/blob/main/06-spring-ai/README.md)
 
-Nas aulas, o expert Puanã construiu os principais pontos junto com você. Por isso, use o projeto como base, revise os conteúdos sempre que precisar e depois evolua a solução com as suas próprias ideias.
-
----
+Nas aulas, o expert Poiani construiu os principais pontos junto com você. Por isso, use o projeto como base, revise os conteúdos sempre que precisar e depois evolua a solução com as suas próprias ideias.
 
 ### O Que Criar
 
