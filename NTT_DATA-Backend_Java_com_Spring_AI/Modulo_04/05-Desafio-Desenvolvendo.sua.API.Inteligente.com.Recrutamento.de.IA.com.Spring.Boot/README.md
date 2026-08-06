@@ -2139,7 +2139,7 @@ O arquivo `audio.mp3` gerado pela requisição é aberto automaticamente no nave
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [budgeting_ate_o_video07.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video07.zip)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [006-Tutorial_Budgeting_Spring_AI_Video07.md](./006-Tutorial_Budgeting_Spring_AI_Video07.md)
 
 
 ### 🟩 Vídeo 08 - Integração do Assistente: Orquestrando o Fluxo de Budget
