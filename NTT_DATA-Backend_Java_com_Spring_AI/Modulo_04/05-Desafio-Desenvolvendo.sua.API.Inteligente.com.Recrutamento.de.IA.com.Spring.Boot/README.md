@@ -2583,7 +2583,456 @@ link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-rec
 
 ### Anotações
 
-      
+#### Criando o arquivo compose.yml
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-12h30m59s289.jpg" alt="" width="840">
+</p>
+
+No IntelliJ, um novo arquivo chamado `compose.yml` está sendo criado na raiz do projeto, através do diálogo **New File**. Esse arquivo vai concentrar a definição do ambiente de banco de dados usado durante o desenvolvimento.
+
+#### Definindo o serviço de banco de dados no compose.yml
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-12h33m08s031.jpg" alt="" width="840">
+</p>
+
+O `compose.yml` já está preenchido com o serviço `database`, usando a imagem `mysql:9.6`. As variáveis de ambiente definem o banco (`transaction`), o usuário (`app`) e as senhas de root e da aplicação. A porta local `3307` é mapeada para a porta padrão do MySQL (`3306`) dentro do contêiner, evitando conflito com uma instância de MySQL que já possa existir na máquina. Também há um volume (`transaction_data`) para persistir os dados fora do contêiner e uma configuração de `healthcheck` para validar se o banco está de fato pronto para uso.
+
+```yaml
+services:
+  database:
+    image: mysql:9.6
+    environment:
+      MYSQL_DATABASE: transaction
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: app
+      MYSQL_PASSWORD: app
+    ports:
+      - "3307:3306"
+    volumes:
+      - transaction_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uapp", "-papp" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  transaction_data:
+```
+
+#### Adicionando a dependência do Spring Boot Docker Compose
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-12h35m38s634.jpg" alt="" width="840">
+</p>
+
+No `build.gradle`, a dependência `spring-boot-docker-compose` é adicionada como `developmentOnly`. Ela é responsável por integrar o Spring Boot ao arquivo `compose.yml`, permitindo que os serviços definidos ali sejam gerenciados automaticamente durante o ciclo de vida da aplicação.
+
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation platform("org.springframework.ai:spring-ai-bom:2.0.0-M4")
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+}
+```
+
+#### Subindo o contêiner automaticamente ao iniciar a aplicação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-12h41m35s398.jpg" alt="" width="840">
+</p>
+
+Com a aplicação em execução, o console mostra o Spring Boot orquestrando o Docker: criação de rede (`Network`), volumes e contêineres a partir do `compose.yml`. Essa é a integração citada anteriormente — ao iniciar a aplicação, o próprio Spring Boot sobe o contêiner do MySQL, sem exigir configuração manual de porta, usuário, URL ou banco.
+
+
+#### Visualizando o contêiner na aba Services do IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-12h49m02s547.jpg" alt="" width="840">
+</p>
+
+Na aba **Services**, é possível visualizar a árvore do Docker Compose do projeto, mostrando o contêiner `budgeting-database-1` com status **healthy**. Isso confirma que o healthcheck configurado no `compose.yml` está passando e que o banco está pronto para receber conexões.
+
+
+#### Adicionando o Spring Data JPA
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-12h58m59s950.jpg" alt="" width="840">
+</p>
+
+A dependência `spring-boot-starter-data-jpa` é adicionada ao `build.gradle`, junto com o `runtimeOnly 'com.mysql:mysql-connector-j'`. No console, os logs mostram o Spring Data inicializando os repositórios e o HikariCP (pool de conexões) se conectando ao banco, confirmando que a integração entre JPA e o contêiner MySQL já está funcionando.
+
+```groovy
+implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+runtimeOnly 'com.mysql:mysql-connector-j'
+```
+
+#### Criando o pacote persistence
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h01m48s619.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `infrastructure`, é criado o novo pacote `persistence` (`dio.budgeting.infrastructure.persistence`), que vai concentrar tudo relacionado à forma como a aplicação manipula o banco de dados.
+
+#### Criando o subpacote entity
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h03m19s094.jpg" alt="" width="840">
+</p>
+
+Dentro de `persistence`, é criado o subpacote `entity` (`dio.budgeting.infrastructure.persistence.entity`), onde ficarão as classes anotadas com JPA que representam as tabelas do banco.
+
+#### Criando o subpacote repository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h04m13s799.jpg" alt="" width="840">
+</p>
+
+Ainda dentro de `persistence`, é criado o subpacote `repository` (`dio.budgeting.infrastructure.persistence.repository`), que vai concentrar as interfaces e implementações responsáveis pelo acesso aos dados.
+
+#### Criando a classe TransactionEntity
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h04m48s534.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `entity`, é criada a primeira entidade JPA da aplicação: `TransactionEntity`, através do diálogo **New Java Class**.
+
+#### Anotando a entidade com @Entity
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h05m37s925.jpg" alt="" width="840">
+</p>
+
+A classe `TransactionEntity` recebe a anotação `@Entity`, do pacote `jakarta.persistence`, indicando que ela representa uma tabela no banco de dados.
+
+```java
+package dio.budgeting.infrastructure.persistence.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class TransactionEntity {
+}
+```
+
+#### Adicionando os campos e as anotações do Lombok
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h07m00s925.jpg" alt="" width="840">
+</p>
+
+A entidade recebe as anotações `@Data` e `@NoArgsConstructor`, do Lombok. O `@Data` já gera automaticamente getters, setters, `toString`, `equals` e o construtor com os argumentos obrigatórios; o `@NoArgsConstructor` garante um construtor sem argumentos, exigido pelo JPA em alguns cenários. Os campos definidos são: `id` (UUID), `description` (String), `amount` (tipo `long`, para representar valores em centavos) e `category` (do tipo `Category`, um enum que será persistido).
+
+```java
+package dio.budgeting.infrastructure.persistence.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.UUID;
+
+@Entity
+@Data
+@NoArgsConstructor
+public class TransactionEntity {
+    @Id
+    private UUID id;
+
+    private String description;
+    private long amount;
+    private Category category;
+}
+```
+
+#### Criando a interface TransactionEntityRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h07m36s339.jpg" alt="" width="840">
+</p>
+
+No pacote `repository`, é criada uma interface chamada `TransactionEntityRepository`, que vai representar o repositório JPA responsável por manipular a entidade `TransactionEntity`.
+
+#### Estendendo CrudRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h08m57s276.jpg" alt="" width="840">
+</p>
+
+A interface `TransactionEntityRepository` passa a estender `CrudRepository`, disponibilizado pelo Spring Data. Os dois parâmetros genéricos definem, respectivamente, o tipo da entidade manipulada (`TransactionEntity`) e o tipo da chave primária (`UUID`). Com isso, o repositório já ganha automaticamente uma série de métodos prontos de CRUD.
+
+```java
+package dio.budgeting.infrastructure.persistence.repository;
+
+import dio.budgeting.infrastructure.persistence.entity.TransactionEntity;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.UUID;
+
+public interface TransactionEntityRepository extends CrudRepository<TransactionEntity, UUID> {
+}
+```
+
+#### Criando a classe JpaTransactionRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h34m06s671.jpg" alt="" width="840">
+</p>
+
+Uma nova classe é criada: `JpaTransactionRepository`. Ela será a implementação concreta da interface `TransactionRepository` definida no domínio da aplicação, fazendo a ponte entre o domínio e o repositório JPA criado anteriormente.
+
+#### Estruturando os métodos save e findAllByCategory
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h37m09s095.jpg" alt="" width="840">
+</p>
+
+A classe `JpaTransactionRepository` passa a implementar `TransactionRepository`, com um campo `transactionEntityRepository` do tipo `TransactionEntityRepository`. Os métodos `save` e `findAllByCategory` são criados como esqueleto (retornando `null` e `List.of()`, respectivamente), prontos para receber a implementação real.
+
+```java
+public class JpaTransactionRepository implements TransactionRepository {
+    private final TransactionEntityRepository transactionEntityRepository;
+
+    @Override
+    public Transaction save(Transaction transaction) {
+        return null;
+    }
+
+    @Override
+    public List<Transaction> findAllByCategory(Category category) {
+        return List.of();
+    }
+}
+```
+
+#### Criando o construtor com injeção de dependência
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h37m52s229.jpg" alt="" width="840">
+</p>
+
+O construtor de `JpaTransactionRepository` é gerado, recebendo `TransactionEntityRepository` como parâmetro e atribuindo-o ao campo da classe. Essa injeção é o que vai permitir que a classe utilize o repositório JPA internamente.
+
+```java
+public JpaTransactionRepository(TransactionEntityRepository transactionEntityRepository) {
+    this.transactionEntityRepository = transactionEntityRepository;
+}
+```
+
+#### Iniciando o mapper: de Transaction para TransactionEntity
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h40m25s807.jpg" alt="" width="840">
+</p>
+
+Na classe `TransactionEntity`, começa a ser escrito um método estático `from(Transaction transaction)`, que vai converter um objeto de domínio `Transaction` em uma `TransactionEntity`. Nesse momento, o construtor está recebendo o id, a description e o amount da transação de origem.
+
+#### Completando os parâmetros do mapper com a category
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h41m30s128.jpg" alt="" width="840">
+</p>
+
+A construção do `TransactionEntity` dentro do método `from` é completada com o parâmetro `transaction.getCategory()`, além do id, description e amount já adicionados anteriormente.
+
+#### Finalizando o retorno do método from
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h41m49s015.jpg" alt="" width="840">
+</p>
+
+O método `from` passa a ter um `return new TransactionEntity(...)` explícito, montando a nova entidade a partir dos dados da transação de domínio.
+
+#### Simplificando o construtor com @AllArgsConstructor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h54m12s736.jpg" alt="" width="840">
+</p>
+
+Em vez de escrever manualmente o construtor completo, a entidade `TransactionEntity` é anotada com `@AllArgsConstructor` (do Lombok), que gera automaticamente um construtor com todas as propriedades, complementando o `@NoArgsConstructor` já existente (necessário para o JPA). Com isso, o método `from` fica completo, representando o mapeamento de `Transaction` para `TransactionEntity` — um padrão comumente chamado de **mapper**.
+
+```java
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class TransactionEntity {
+    @Id
+    private UUID id;
+
+    private String description;
+    private long amount;
+    private Category category;
+
+    public static TransactionEntity from(Transaction transaction) {
+        return new TransactionEntity(
+                transaction.getId().uuid(),
+                transaction.getDescription(),
+                transaction.getAmount(),
+                transaction.getCategory());
+    }
+}
+```
+
+#### Implementando o método save do repositório
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h55m43s752.jpg" alt="" width="840">
+</p>
+
+O método `save` de `JpaTransactionRepository` é implementado: a `Transaction` recebida é convertida em `TransactionEntity` através do mapper `from`, persistida via `transactionEntityRepository.save(entity)`, e o resultado é convertido de volta para `Transaction` através de uma chamada a `.toDomain()` — método que ainda precisa ser criado na entidade.
+
+```java
+@Override
+public Transaction save(Transaction transaction) {
+    var entity = TransactionEntity.from(transaction);
+    return transactionEntityRepository.save(entity).toDomain();
+}
+```
+
+#### Criando o mapper reverso: toDomain
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h57m01s255.jpg" alt="" width="840">
+</p>
+
+Na classe `TransactionEntity`, é criado o método `toDomain()`, responsável pelo caminho inverso do mapper: converter a entidade de volta para o objeto de domínio `Transaction`. O primeiro campo tratado é o `id`, convertido para um novo `TransactionId` a partir do `this.id` da entidade.
+
+```java
+public Transaction toDomain() {
+    return new Transaction(
+            new TransactionId(this.id),
+            ...
+    );
+}
+```
+
+#### Ajustando o construtor da classe de domínio Transaction
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-13h57m43s734.jpg" alt="" width="840">
+</p>
+
+Como a classe de domínio `Transaction` não possui um construtor que aceite diretamente o `id`, ela é anotada com `@AllArgsConstructor`, complementando o construtor manual já existente que gera um novo `TransactionId()`. Isso permite que o `toDomain()` da entidade instancie uma `Transaction` completa, incluindo o id vindo do banco.
+
+```java
+@Getter
+@AllArgsConstructor
+public class Transaction {
+    private TransactionId id;
+    private String description;
+    private long amount;
+    private Category category;
+
+    public Transaction(String description, long amount, Category category) {
+        this.id = new TransactionId();
+        this.description = description;
+        this.amount = amount;
+        this.category = category;
+    }
+}
+```
+
+#### Iniciando a implementação de findAllByCategory
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-14h06m00s871.jpg" alt="" width="840">
+</p>
+
+Com o método `save` finalizado, a implementação avança para `findAllByCategory`. Como o `CrudRepository` padrão não expõe um método de busca por categoria, a variável `iterable` começa a ser atribuída a partir de uma chamada a `transactionEntityRepository.findAllByCategory`, método que ainda precisa ser declarado na interface do repositório JPA.
+
+#### Declarando findAllByCategory na interface do repositório
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-14h07m39s698.jpg" alt="" width="840">
+</p>
+
+Na interface `TransactionEntityRepository`, é adicionado o método `findAllByCategory(Category category)`, retornando `List<TransactionEntity>`. Por seguir a convenção de nomenclatura de query methods do Spring Data, o Hibernate consegue implementar essa consulta automaticamente, sem necessidade de escrever a query manualmente.
+
+```java
+public interface TransactionEntityRepository extends CrudRepository<TransactionEntity, UUID> {
+    List<TransactionEntity> findAllByCategory(Category category);
+}
+```
+
+#### Convertendo a lista de entidades para o domínio
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-14h10m41s447.jpg" alt="" width="840">
+</p>
+
+O método `findAllByCategory` de `JpaTransactionRepository` é finalizado: a lista de `TransactionEntity` retornada pelo repositório JPA é transformada em uma `Stream`, cada item é convertido para `Transaction` através de `TransactionEntity::toDomain`, e o resultado é coletado de volta em uma lista com `.toList()`.
+
+```java
+@Override
+public List<Transaction> findAllByCategory(Category category) {
+    return transactionEntityRepository.findAllByCategory(category)
+            .stream()
+            .map(TransactionEntity::toDomain)
+            .toList();
+}
+```
+
+#### Anotando o repositório com @Repository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-14h11m30s578.jpg" alt="" width="840">
+</p>
+
+A classe `JpaTransactionRepository` recebe a anotação `@Repository`, do Spring. Isso permite que o Spring identifique essa classe como candidata à injeção de dependência sempre que a interface `TransactionRepository` (do domínio) for requisitada em outro ponto da aplicação, como no `PersistTransactionUseCase`.
+
+```java
+@Repository
+public class JpaTransactionRepository implements TransactionRepository {
+    private final TransactionEntityRepository transactionEntityRepository;
+    ...
+}
+```
+
+#### Configurando a criação automática do schema
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-14h19m54s480.jpg" alt="" width="840">
+</p>
+
+No `application.properties`, as propriedades `spring.jpa.hibernate.ddl-auto=create` e `spring.jpa.show-sql=true` são adicionadas. Com isso, ao subir a aplicação, o Hibernate recria as tabelas a partir das entidades mapeadas e exibe no console o SQL executado. O painel de banco de dados do IntelliJ confirma a criação da tabela `transaction_entity`, com as colunas `amount`, `id`, `description` e `category` (esta última mapeada como enum).
+
+```properties
+spring.application.name=budgeting
+
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+```
+
+#### Alterando ddl-auto para update
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-14h22m43s153.jpg" alt="" width="840">
+</p>
+
+Após confirmar que a tabela foi criada corretamente, a propriedade `spring.jpa.hibernate.ddl-auto` é alterada de `create` para `update`. Dessa forma, o Hibernate passa a preservar os dados já persistidos entre as execuções, em vez de recriar o banco do zero a cada subida da aplicação — o que seria o comportamento do modo `create`.
+
+```properties
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+```
+ 
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [budgeting_ate_o_video09.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video09.zip)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
 
 
 ### 🟩 Vídeo 10 - Exposição REST: Implementando o TransactionController
