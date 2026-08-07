@@ -3032,7 +3032,7 @@ spring.jpa.show-sql=true
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [budgeting_ate_o_video09.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video09.zip)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [008-Tutorial_Budgeting_Spring_AI_Video09.md](./008-Tutorial_Budgeting_Spring_AI_Video09.md)
 
 
 ### 🟩 Vídeo 10 - Exposição REST: Implementando o TransactionController
