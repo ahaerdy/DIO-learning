@@ -2569,7 +2569,7 @@ public record TransactionOutput(String id, String description, String category, 
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [budgeting_ate_o_video08.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video08.zip)
-- [yyy-yyyyyyyyyyyy](./)
+- [007-Tutorial_Budgeting_Spring_AI_Video08.md](./007-Tutorial_Budgeting_Spring_AI_Video08.md)
 
 
 ### 🟩 Vídeo 09 - Persistência e Infraestrutura: Configurando o Banco com Docker
@@ -2580,6 +2580,11 @@ public record TransactionOutput(String id, String description, String category, 
 </video>
 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/b7250107-c95a-4bb9-b62b-2dca8d0c29b7?back=/track/ntt-data-2026-ai-java-back-end
+
+### Anotações
+
+      
+
 
 ### 🟩 Vídeo 10 - Exposição REST: Implementando o TransactionController
 
