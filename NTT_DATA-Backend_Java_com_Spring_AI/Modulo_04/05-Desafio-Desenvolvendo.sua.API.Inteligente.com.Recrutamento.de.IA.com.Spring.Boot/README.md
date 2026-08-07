@@ -2151,6 +2151,427 @@ O arquivo `audio.mp3` gerado pela requisição é aberto automaticamente no nave
 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/afaf83bb-585f-4293-a3f8-09adf880e0af?back=/track/ntt-data-2026-ai-java-back-end
 
+### Anotações
+
+#### Visão geral: o Assistente de Budgeting
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h09m05s620.jpg" alt="" width="840">
+</p>
+
+O diagrama resume o fluxo completo do assistente: o usuário fala algo como "Gastei 50 reais no Starbucks agora", e essa fala é convertida em texto pelo modelo de transcrição do Spring AI. Em seguida, o texto passa por uma etapa de interpretação, em que a IA extrai entidades como valor, local e data/hora, categorizando automaticamente o gasto (por exemplo, associando "Starbucks" a "Alimentação/Café") sem qualquer intervenção manual. O resultado final é um conjunto de dados estruturados, prontos para serem persistidos.
+
+#### Criando o pacote de domínio
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h11m03s854.jpg" alt="" width="840">
+</p>
+
+No IntelliJ IDEA, é criado o primeiro pacote do projeto, `dio.budgeting.domain`, que vai concentrar as regras e entidades centrais da aplicação, separando essa camada do restante do código.
+
+#### Criando o pacote de application
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h11m31s595.jpg" alt="" width="840">
+</p>
+
+Na sequência, é criado o pacote `dio.budgeting.application`, responsável por orquestrar os casos de uso da aplicação, mantendo essa camada isolada da camada de domínio.
+
+#### Criando o pacote de infrastructure
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h12m47s938.jpg" alt="" width="840">
+</p>
+
+Por fim, é criado o pacote `dio.budgeting.infrastructure`, que futuramente concentrará as implementações técnicas (como acesso a banco de dados), completando a separação inicial dos três pacotes principais do projeto.
+
+#### A classe Transaction e o campo id
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h15m30s238.jpg" alt="" width="840">
+</p>
+
+É criada a classe `Transaction` dentro do pacote de domínio, com um primeiro campo público do tipo `TransactionId`, que ainda será definido.
+
+```java
+package dio.budgeting.domain;
+
+public class Transaction {
+    public TransactionId id;
+}
+```
+
+#### TransactionId como identificador fortemente tipado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h16m56s425.jpg" alt="" width="840">
+</p>
+
+O identificador da transação é modelado como um `record` chamado `TransactionId`, que recebe um `UUID` em seu construtor. Essa escolha evita o uso de uma `String` genérica como identificador, reduzindo erros acidentais e tornando os métodos mais expressivos, além de permitir reaproveitar esse tipo em outros módulos.
+
+```java
+package dio.budgeting.domain;
+
+import java.util.UUID;
+
+public record TransactionId(UUID uuid) {
+}
+```
+
+#### Campos privados da classe Transaction
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h19m04s183.jpg" alt="" width="840">
+</p>
+
+Os atributos da classe `Transaction` são declarados como privados, para manter o encapsulamento: o identificador (`TransactionId id`), a descrição do gasto (`String description`), o valor em centavos (`long amount`) e a categoria (`Category category`).
+
+```java
+package dio.budgeting.domain;
+
+public class Transaction {
+    private TransactionId id;
+    private String description;
+    private long amount;
+    private Category category;
+}
+```
+
+#### O enum Category
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h21m35s220.jpg" alt="" width="840">
+</p>
+
+A categoria do gasto é modelada como um `enum` chamado `Category`, contendo por enquanto três valores: `GROCERIES` (compras de mercado), `PHARMA` (farmácia) e `AUTO`, suficientes para o estágio atual de desenvolvimento.
+
+```java
+package dio.budgeting.domain;
+
+public enum Category {
+    GROCERIES,
+    PHARMA,
+    AUTO,
+}
+```
+
+#### Construtor inicial de Transaction
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h22m39s648.jpg" alt="" width="840">
+</p>
+
+É adicionado um construtor à classe `Transaction`, recebendo `description`, `amount` e `category`. Dentro dele, o campo `id` é atribuído chamando `new TransactionId()`, ainda sem parâmetros — o que exigirá a criação de um construtor adicional no record `TransactionId`.
+
+```java
+public Transaction(String description, long amount, Category category) {
+    this.id = new TransactionId();
+}
+```
+
+#### Construtor auxiliar de TransactionId
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h23m56s075.jpg" alt="" width="840">
+</p>
+
+Para permitir a instanciação de `TransactionId` sem informar um UUID manualmente, é adicionado um construtor auxiliar que delega para o construtor principal do record, gerando automaticamente um novo UUID aleatório.
+
+```java
+public record TransactionId(UUID uuid) {
+    public TransactionId() {
+        this(UUID.randomUUID());
+    }
+}
+```
+
+#### Construtor completo de Transaction
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h25m11s350.jpg" alt="" width="840">
+</p>
+
+O construtor de `Transaction` é completado, atribuindo todos os campos recebidos: `id` (gerado automaticamente), `description`, `amount` e `category`. Assim, toda nova transação já nasce com um identificador único.
+
+```java
+public Transaction(String description, long amount, Category category) {
+    this.id = new TransactionId();
+    this.description = description;
+    this.amount = amount;
+    this.category = category;
+}
+```
+
+#### Criando a interface TransactionRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h25m35s713.jpg" alt="" width="840">
+</p>
+
+Ainda no pacote de domínio, é criada a interface `TransactionRepository`, seguindo os princípios de Domain-Driven Design: o domínio expõe apenas o contrato dos métodos, deixando a implementação concreta para a camada de infraestrutura.
+
+#### Métodos expostos pelo TransactionRepository
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h27m01s608.jpg" alt="" width="840">
+</p>
+
+A interface define dois métodos: `save`, para persistir uma transação, e `findAllByCategory`, para buscar transações filtradas por categoria. Esses dois métodos serão consumidos pelos casos de uso da camada de aplicação, seguindo um padrão inspirado no Clean Architecture.
+
+```java
+package dio.budgeting.domain;
+
+import java.util.List;
+
+public interface TransactionRepository {
+    Transaction save(Transaction transaction);
+    List<Transaction> findAllByCategory(Category category);
+}
+```
+
+#### Criando o PersistTransactionUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h27m51s029.jpg" alt="" width="840">
+</p>
+
+No pacote de aplicação, é criada a classe `PersistTransactionUseCase`. Em vez de um serviço genérico com muitos métodos, a opção é criar um caso de uso dedicado, com responsabilidade única de tratar a persistência de uma transação.
+
+#### Estrutura inicial do PersistTransactionUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h30m22s327.jpg" alt="" width="840">
+</p>
+
+O caso de uso recebe, via injeção de dependência, uma instância de `TransactionRepository`. Seguindo o padrão de use case, é definido um único método público chamado `execute`, que por enquanto recebe `description`, `amount` e `category` diretamente como parâmetros para instanciar uma nova `Transaction`.
+
+```java
+package dio.budgeting.application;
+
+import dio.budgeting.domain.Category;
+import dio.budgeting.domain.Transaction;
+import dio.budgeting.domain.TransactionRepository;
+
+public class PersistTransactionUseCase {
+    private final TransactionRepository transactionRepository;
+
+    public PersistTransactionUseCase(TransactionRepository transactionRepository) {
+        this.transactionRepository = transactionRepository;
+    }
+
+    public void execute(String description, long amount, Category category) {
+        var transaction = new Transaction(description, amount, category);
+    }
+}
+```
+
+#### Criando o pacote input
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h30m50s121.jpg" alt="" width="840">
+</p>
+
+Em vez de manter vários parâmetros soltos no método `execute`, opta-se por agrupar os dados de entrada em uma classe dedicada. Para isso, é criado o pacote `dio.budgeting.application.input`.
+
+#### Criando a classe PersistTransactionInput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h31m40s893.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `input`, é criada a classe `PersistTransactionInput`, que vai atuar como um objeto de transferência de dados (DTO) para o caso de uso de persistência.
+
+#### O record PersistTransactionInput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h33m18s484.jpg" alt="" width="840">
+</p>
+
+`PersistTransactionInput` é definido como um `record`, agrupando `description`, `amount` e `category`. Esse DTO simplifica a comunicação entre camadas, concentrando em um único parâmetro as informações que antes seriam passadas separadamente para o `execute`.
+
+```java
+package dio.budgeting.application.input;
+
+import dio.budgeting.domain.Category;
+
+public record PersistTransactionInput(String description, long amount, Category category) {
+}
+```
+
+#### Use case consumindo o Input e retornando a transação persistida
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h37m34s429.jpg" alt="" width="840">
+</p>
+
+O método `execute` passa a receber um único parâmetro, `PersistTransactionInput input`, extraindo dele a descrição, o valor e a categoria para montar a `Transaction`. Em seguida, a transação é enviada ao repositório para ser salva, e o resultado é retornado ao chamador.
+
+```java
+package dio.budgeting.application;
+
+import dio.budgeting.application.input.PersistTransactionInput;
+import dio.budgeting.domain.Transaction;
+import dio.budgeting.domain.TransactionRepository;
+
+public class PersistTransactionUseCase {
+    private final TransactionRepository transactionRepository;
+
+    public PersistTransactionUseCase(TransactionRepository transactionRepository) {
+        this.transactionRepository = transactionRepository;
+    }
+
+    public void execute(PersistTransactionInput input) {
+        var transaction = new Transaction(input.description(), input.amount(), input.category());
+        return transactionRepository.save(transaction);
+    }
+}
+```
+
+#### Ajustando o tipo de retorno do execute
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h38m11s488.jpg" alt="" width="840">
+</p>
+
+O tipo de retorno do método `execute` é alterado de `void` para `Transaction`, permitindo que o caso de uso devolva a transação recém-persistida para quem o chamou.
+
+#### Criando o pacote output
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h39m10s794.jpg" alt="" width="840">
+</p>
+
+Assim como foi feito para a entrada, também será criado um objeto de saída dedicado. Para isso, é criado o pacote `dio.budgeting.application.output`.
+
+#### Primeira versão de TransactionOutput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h42m44s737.jpg" alt="" width="840">
+</p>
+
+É criado o `record TransactionOutput`, com um método estático `from`, responsável por converter uma `Transaction` do domínio em um objeto de saída. Nesta primeira versão, o record ainda contém apenas `description`, `category` e `value`.
+
+```java
+package dio.budgeting.application.output;
+
+import dio.budgeting.domain.Transaction;
+
+public record TransactionOutput(String description, String category, double value) {
+    public static TransactionOutput from(Transaction transaction) {
+        return new TransactionOutput(transaction);
+    }
+}
+```
+
+#### Consultando o Project Lombok
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h44m01s184.jpg" alt="" width="840">
+</p>
+
+Como os campos de `Transaction` são privados, não existem getters automáticos gerados pela linguagem. Em vez de gerá-los manualmente pela IDE, opta-se por usar o Project Lombok, uma biblioteca que gera automaticamente métodos como getters, setters e outros recursos por meio de anotações, o que reduz a quantidade de código repetitivo.
+
+#### Configurando o Lombok no Gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h44m19s669.jpg" alt="" width="840">
+</p>
+
+Na documentação oficial, é consultada a página de configuração do Lombok para projetos Gradle, que recomenda o uso do plugin oficial do Gradle para facilitar a integração, em vez de configurar as dependências manualmente.
+
+#### O plugin io.freefair.lombok
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h44m36s387.jpg" alt="" width="840">
+</p>
+
+É localizado o plugin `io.freefair.lombok` no repositório de plugins do Gradle, com o trecho de configuração necessário para adicioná-lo ao projeto através do bloco `plugins`.
+
+#### Adicionando o plugin ao build.gradle
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h44m47s132.jpg" alt="" width="840">
+</p>
+
+O plugin `io.freefair.lombok`, na versão `9.2.0`, é adicionado ao bloco `plugins` do arquivo `build.gradle` do projeto, juntamente com os plugins já existentes (`java`, `org.springframework.boot` e `io.spring.dependency-management`).
+
+```gradle
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '4.0.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id("io.freefair.lombok") version "9.2.0"
+}
+```
+
+#### Usando @Getter em Transaction
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h46m02s369.jpg" alt="" width="840">
+</p>
+
+Com o Lombok configurado, a anotação `@Getter` é adicionada à classe `Transaction`. Isso faz com que os métodos `getId`, `getDescription`, `getAmount` e `getCategory` sejam gerados automaticamente, sem a necessidade de escrevê-los manualmente.
+
+```java
+package dio.budgeting.domain;
+
+@Getter
+public class Transaction {
+    private TransactionId id;
+    private String description;
+    private long amount;
+    private Category category;
+
+    public Transaction(String description, long amount, Category category) {
+        this.id = new TransactionId();
+        this.description = description;
+        this.amount = amount;
+        this.category = category;
+    }
+}
+```
+
+#### Incluindo o id no TransactionOutput
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h47m02s614.jpg" alt="" width="840">
+</p>
+
+O `record TransactionOutput` é ajustado para incluir também o campo `id`, do tipo `String`, já que o identificador da transação precisa ser exposto como texto na resposta, e não como o tipo fortemente tipado `TransactionId` usado internamente no domínio.
+
+#### Versão final do método from, com conversão do amount
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-07-08h48m10s207.jpg" alt="" width="840">
+</p>
+
+O método estático `from` é completado: o `id` da transação é convertido para `String` a partir do UUID, a descrição é copiada diretamente, a categoria é convertida para `String` usando `name()`, e o valor em centavos (`long`) é convertido para um `double` com duas casas decimais de precisão, usando `BigDecimal` com `setScale(2, RoundingMode.HALF_UP)`.
+
+```java
+package dio.budgeting.application.output;
+
+import dio.budgeting.domain.Transaction;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+public record TransactionOutput(String id, String description, String category, double value) {
+    public static TransactionOutput from(Transaction transaction) {
+        return new TransactionOutput(
+                transaction.getId().uuid().toString(),
+                transaction.getDescription(),
+                transaction.getCategory().name(),
+                BigDecimal.valueOf(transaction.getAmount()).setScale(2, RoundingMode.HALF_UP).doubleValue());
+    }
+}
+```
+      
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [budgeting_ate_o_video08.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video08.zip)
+- [yyy-yyyyyyyyyyyy](./)
+
+
 ### 🟩 Vídeo 09 - Persistência e Infraestrutura: Configurando o Banco com Docker
 
 <video width="60%" controls>
