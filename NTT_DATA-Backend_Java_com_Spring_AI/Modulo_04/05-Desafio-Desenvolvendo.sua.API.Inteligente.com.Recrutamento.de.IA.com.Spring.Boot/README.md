@@ -3379,7 +3379,7 @@ Ao repetir o teste utilizando a categoria `GROCERIES`, a API retorna a lista con
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [budgeting_ate_o_video10.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video10.zip)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [009-Tutorial_Budgeting_Spring_AI_Video10.md](./009-Tutorial_Budgeting_Spring_AI_Video10.md)
 
 
 ### 🟩 Vídeo 11 - Endpoint de Transcrição: Integrando Áudio ao Controller

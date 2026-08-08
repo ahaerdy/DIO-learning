@@ -1,14 +1,14 @@
 Anexo os arquivos:
 1. README.md do curso — atualizado, contendo agora as anotações até o
-   Vídeo 09 (as etapas anteriores, já cobertas no tutorial que você tem
+   Vídeo 10 (as etapas anteriores, já cobertas no tutorial que você tem
    no histórico desta conversa ou que vou reanexar, permanecem
-   inalteradas nele; o conteúdo novo está a partir da seção do Vídeo 09).
+   inalteradas nele; o conteúdo novo está a partir da seção do Vídeo 10).
 2. Um .zip com a estrutura completa do projeto Java (budgeting) no
-   estado atual, correspondente ao que foi desenvolvido até o Vídeo 09.
-3. A transcrição do vídeo 09.
+   estado atual, correspondente ao que foi desenvolvido até o Vídeo 10.
+3. A transcrição do vídeo 10.
 
 Quero que você dê continuidade ao tutorial em markdown que já construímos
-juntos (anexo os tutoriais até o Vídeo 08) agora cobrindo o Vídeo 09
+juntos (anexo os tutoriais até o Vídeo 09) agora cobrindo o Vídeo 10
 até onde o README e o código enviados chegarem.
 
 Regras a seguir, mantendo o mesmo padrão já usado:
