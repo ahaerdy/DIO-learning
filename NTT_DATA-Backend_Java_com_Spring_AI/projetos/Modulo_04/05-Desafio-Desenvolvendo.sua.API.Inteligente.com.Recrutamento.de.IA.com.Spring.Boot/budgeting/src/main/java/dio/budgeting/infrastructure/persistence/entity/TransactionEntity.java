@@ -21,7 +21,7 @@ public class TransactionEntity {
     @Id
     private UUID id;
     private String description;
-    private long amount;
+    private double amount;
 
     @Enumerated(EnumType.STRING)
     private Category category;

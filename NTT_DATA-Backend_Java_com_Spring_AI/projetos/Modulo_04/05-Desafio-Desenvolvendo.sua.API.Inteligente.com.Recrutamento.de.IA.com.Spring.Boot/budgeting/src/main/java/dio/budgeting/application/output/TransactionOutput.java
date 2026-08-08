@@ -1,3 +1,4 @@
+package dio.budgeting.application.output;
 import dio.budgeting.domain.Transaction;
 
 import java.math.BigDecimal;

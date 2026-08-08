@@ -3044,6 +3044,344 @@ spring.jpa.show-sql=true
 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/2aee74d9-9d18-4af8-bd20-53fa862394a6?back=/track/ntt-data-2026-ai-java-back-end
 
+### Anotações
+
+#### Criando o pacote HTTP
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-10h10m59s495.jpg" alt="" width="840">
+</p>
+
+O ponto de partida é organizar a camada de infraestrutura web separadamente da persistência. Dentro de `infrastructure`, é criado o pacote `dio.budgeting.infrastructure.http`, que vai concentrar os controllers responsáveis por expor os endpoints da API.
+
+#### Criando a classe TransactionController
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-10h12m17s732.jpg" alt="" width="840">
+</p>
+
+Dentro do novo pacote `http`, é criada a classe `TransactionController`, que será o ponto de entrada HTTP para as operações de transação.
+
+#### Anotando o controller e injetando o use case
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-10h13m11s853.jpg" alt="" width="840">
+</p>
+
+A classe é anotada com `@RestController` e `@RequestMapping("/transactions")`, definindo a URL base do recurso. Em seguida, o `PersistTransactionUseCase` criado anteriormente é declarado como dependência final e injetado via construtor.
+
+```java
+@RestController
+@RequestMapping("/transactions")
+public class TransactionController {
+    private final PersistTransactionUseCase persistTransactionUseCase;
+
+    public TransactionController(PersistTransactionUseCase persistTransactionUseCase) {
+        this.persistTransactionUseCase = persistTransactionUseCase;
+    }
+}
+```
+
+#### Criando o endpoint POST e o pacote de requests
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-10h21m10s141.jpg" alt="" width="840">
+</p>
+
+É criado o método `createTransaction`, mapeado com `@PostMapping` na raiz do recurso. Ele recebe um `@RequestBody` do tipo `TransactionRequest`, que ainda não existe. Para evitar acoplar o controller diretamente ao objeto de entrada do use case, é criado um novo pacote `request`, destinado a abrigar os DTOs de entrada da camada HTTP.
+
+```java
+@PostMapping
+public void createTransaction(@RequestBody TransactionRequest request) {
+
+}
+```
+
+#### Criando o TransactionRequest como record
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h34m30s884.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `request`, é criada a classe `TransactionRequest`, optando-se pelo tipo `Record`, adequado para representar um objeto de transferência de dados (DTO) imutável.
+
+#### Definindo os campos do TransactionRequest
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h35m51s673.jpg" alt="" width="840">
+</p>
+
+O record `TransactionRequest` é definido com os campos `description`, `category` (já mapeado diretamente para o enum `Category`) e `amount`, este último representado em centavos. É observado que, nesse ponto, também seria possível adicionar validações aos campos.
+
+```java
+public record TransactionRequest(String description, Category category, long amount) {
+
+}
+```
+
+#### Chamando o use case a partir do request
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h36m53s660.jpg" alt="" width="840">
+</p>
+
+De volta ao controller, o `request` recebido é convertido para o input esperado pelo use case através de uma chamada a `request.toInput()`, método que ainda será implementado. Essa transferência de dados entre camadas por meio de objetos próprios de cada camada é uma prática de DDD que evita que mudanças no formato de entrada impactem a regra de negócio.
+
+```java
+@PostMapping
+public void createTransaction(@RequestBody TransactionRequest request) {
+    persistTransactionUseCase.execute(request.toInput());
+}
+```
+
+#### Implementando o método toInput()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h40m11s585.jpg" alt="" width="840">
+</p>
+
+O método `toInput()` é implementado dentro do próprio `TransactionRequest`, retornando um `PersistTransactionInput` construído a partir de `description`, `amount` e `category`.
+
+```java
+public PersistTransactionInput toInput() {
+    return new PersistTransactionInput(description, amount, category);
+}
+```
+
+#### Guardando o resultado da execução
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h42m47s813.jpg" alt="" width="840">
+</p>
+
+O retorno da execução do use case é guardado na variável `transaction`. A partir daqui, a ideia é que o controller também responda a requisição utilizando uma outra classe, dedicada à resposta, em vez de expor diretamente o objeto de domínio.
+
+```java
+var transaction = persistTransactionUseCase.execute(request.toInput());
+```
+
+#### Criando o pacote de responses
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h44m17s493.jpg" alt="" width="840">
+</p>
+
+Assim como foi feito para a entrada, é criado um novo pacote, `response`, para abrigar os DTOs de saída da camada HTTP.
+
+#### Criando o TransactionResponse
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h45m09s943.jpg" alt="" width="840">
+</p>
+
+Dentro do pacote `response`, é criada a classe `TransactionResponse`, que representará os dados devolvidos ao cliente da API.
+
+#### TransactionResponse como record
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h45m55s823.jpg" alt="" width="840">
+</p>
+
+Novamente é escolhido o tipo `Record` para o `TransactionResponse`, já que records fazem mais sentido para representar DTOs.
+
+```java
+public record TransactionResponse() {
+
+}
+```
+
+#### Convertendo a transação para TransactionResponse
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h46m28s382.jpg" alt="" width="840">
+</p>
+
+No controller, o método passa a retornar `TransactionResponse.from(transaction)`. Como esse método `from` ainda não existe na classe `TransactionResponse`, a IDE sugere criá-lo automaticamente a partir do uso.
+
+```java
+return TransactionResponse.from(transaction);
+```
+
+#### Implementando o método from()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h56m57s817.jpg" alt="" width="840">
+</p>
+
+O `TransactionResponse` é definido com os campos `id`, `category`, `description` (todos como `String`) e `amount` como `double`. O método estático `from` recebe um `TransactionOutput` e monta o response a partir de `id()`, `category()`, `description()` e do valor da transação.
+
+```java
+public record TransactionResponse(String id, String category, String description, double amount) {
+    public static TransactionResponse from(TransactionOutput output) {
+        return new TransactionResponse(output.id(), output.category(), output.description(), output.value());
+    }
+}
+```
+
+#### Retornando o response com status 201
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-13h59m10s170.jpg" alt="" width="840">
+</p>
+
+O método `createTransaction` passa a retornar o `TransactionResponse` gerado. Como se trata da criação de um novo recurso, é adicionada a anotação `@ResponseStatus(HttpStatus.CREATED)`, retornando um código HTTP 201 em vez do 200 padrão.
+
+```java
+@PostMapping
+@ResponseStatus(HttpStatus.CREATED)
+public TransactionResponse createTransaction(@RequestBody TransactionRequest request) {
+    var transaction = persistTransactionUseCase.execute(request.toInput());
+    return TransactionResponse.from(transaction);
+}
+```
+
+#### Subindo a aplicação para testar
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h14m18s576.jpg" alt="" width="840">
+</p>
+
+Com o endpoint implementado, a aplicação Spring Boot é reiniciada. Como não houve nenhuma alteração no schema do banco de dados, a subida ocorre sem migrações adicionais.
+
+#### Testando o endpoint de criação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h14m41s837.jpg" alt="" width="840">
+</p>
+
+No painel de Endpoints da IDE, é localizado o endpoint `POST /transactions`, que já vem com um corpo de requisição de exemplo pronto para ser preenchido, contendo `description`, `category` e `amount`.
+
+#### Verificando a resposta da requisição
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h25m03s181.jpg" alt="" width="840">
+</p>
+
+Após preencher a requisição com uma descrição, a categoria `GROCERIES` e o valor de 12533 centavos, o request é enviado. A resposta retorna os dados persistidos, porém o campo `amount` volta como `12533.0`, evidenciando que a conversão de centavos para valor monetário ainda não está correta — um ajuste a ser feito posteriormente.
+
+#### Confirmando a persistência no banco de dados
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h25m29s265.jpg" alt="" width="840">
+</p>
+
+Para validar que a transação foi realmente salva, é feita uma consulta na tabela `transaction_entity`, confirmando o registro com o `amount`, o `id` em UUID, a `description` e a `category` correspondentes ao que foi enviado na requisição.
+
+#### Criando o ListTransactionsByCategoryUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h37m37s167.jpg" alt="" width="840">
+</p>
+
+Avançando para a listagem de transações, é criado um novo use case, `ListTransactionsByCategoryUseCase`, seguindo o mesmo padrão dos use cases anteriores.
+
+#### Implementando a listagem por categoria
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h41m10s866.jpg" alt="" width="840">
+</p>
+
+O novo use case é anotado com `@Service` e recebe o `TransactionRepository` por injeção de construtor. O método `execute`, seguindo o padrão adotado para use cases, recebe uma `Category` e retorna uma lista de `TransactionOutput`, obtida ao buscar todas as transações da categoria no repositório, convertê-las através do método `from` e transformá-las em lista.
+
+```java
+@Service
+public class ListTransactionsByCategoryUseCase {
+    private final TransactionRepository transactionRepository;
+
+    public ListTransactionsByCategoryUseCase(TransactionRepository transactionRepository) {
+        this.transactionRepository = transactionRepository;
+    }
+
+    public List<TransactionOutput> execute(Category category) {
+        return transactionRepository.findAllByCategory(category).stream()
+                .map(TransactionOutput::from)
+                .toList();
+    }
+}
+```
+
+#### Preparando o controller para a listagem
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h45m23s239.jpg" alt="" width="840">
+</p>
+
+De volta ao `TransactionController`, a IDE já sugere automaticamente a assinatura de um novo endpoint de leitura, com `@GetMapping` e um parâmetro `categoryId`, que serve de ponto de partida para o próximo ajuste.
+
+```java
+@GetMapping
+@ResponseStatus(HttpStatus.OK)
+public List<TransactionResponse> readTransactions(@RequestParam Integer categoryId) {
+
+}
+```
+
+#### Injetando o ListTransactionsByCategoryUseCase
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h46m51s853.jpg" alt="" width="840">
+</p>
+
+O `ListTransactionsByCategoryUseCase` é declarado como novo campo `final` no controller e passa a ser injetado no construtor, ao lado do `PersistTransactionUseCase` já existente.
+
+```java
+private final PersistTransactionUseCase persistTransactionUseCase;
+private final ListTransactionsByCategoryUseCase listTransactionsByCategoryUseCase;
+
+public TransactionController(PersistTransactionUseCase persistTransactionUseCase,
+                              ListTransactionsByCategoryUseCase listTransactionsByCategoryUseCase) {
+    this.persistTransactionUseCase = persistTransactionUseCase;
+    this.listTransactionsByCategoryUseCase = listTransactionsByCategoryUseCase;
+}
+```
+
+#### Definindo o endpoint por categoria via path variable
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h49m55s272.jpg" alt="" width="840">
+</p>
+
+O endpoint é ajustado para receber a categoria diretamente na URL, através de `@GetMapping("/{category}")` e `@PathVariable Category category`. O Spring Boot converte automaticamente o valor recebido na URL para a entidade `Category`. Dentro do método, o use case é executado e o resultado é convertido em stream para ser mapeado para `TransactionResponse`.
+
+```java
+@GetMapping("/{category}")
+public List<TransactionResponse> readTransactions(@PathVariable Category category) {
+    return listTransactionsByCategoryUseCase.execute(category).stream()
+            .map(TransactionResponse::from)
+            .toList();
+}
+```
+
+#### Subindo a aplicação novamente para testar a listagem
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h55m45s078.jpg" alt="" width="840">
+</p>
+
+Com o novo endpoint pronto, a aplicação é reiniciada para que o endpoint de listagem por categoria fique disponível para teste.
+
+#### Testando a listagem com categoria inexistente
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h56m16s413.jpg" alt="" width="840">
+</p>
+
+No painel de Endpoints, é localizado o novo endpoint `GET /transactions/{category}`. No primeiro teste, utilizando um valor de categoria que não corresponde a nenhuma transação salva, a resposta retorna um array vazio, confirmando que o filtro está funcionando.
+
+#### Testando a listagem com a categoria GROCERIES
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-08-14h56m28s383.jpg" alt="" width="840">
+</p>
+
+Ao repetir o teste utilizando a categoria `GROCERIES`, a API retorna a lista contendo a transação criada anteriormente, confirmando que tanto a criação quanto a listagem de transações por categoria estão funcionando corretamente.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [budgeting_ate_o_video10.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video10.zip)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+
+
 ### 🟩 Vídeo 11 - Endpoint de Transcrição: Integrando Áudio ao Controller
 
 <video width="60%" controls>
