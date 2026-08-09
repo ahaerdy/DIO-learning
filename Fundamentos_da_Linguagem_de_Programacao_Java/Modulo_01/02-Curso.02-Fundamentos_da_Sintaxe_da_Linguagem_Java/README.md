@@ -16,7 +16,6 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/funda
 
 ### Anotações
 
-      
 
 
 ### 🟩 Vídeo 02 - Keywords e tipos primitivos
@@ -27,6 +26,46 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/funda
 </video>
 
 link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/fundamentos-da-linguagem-de-programacao-java/learning/ee66a618-86b7-4ee6-9b7b-8567960ad746?autoplay=1
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h20m37s868.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a página **"Java Reserved Keywords"** do site W3Schools, aberta no navegador Opera. A tabela lista as palavras reservadas (keywords) da linguagem Java — como `abstract` e `assert`, visíveis no topo da tabela — junto de uma breve descrição de cada uma. Essas palavras não podem ser usadas como nome de variáveis, métodos, classes ou qualquer outro identificador no código.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h21m02s719.jpg" alt="" width="840">
+</p>
+
+Aqui a página aberta é o artigo **"Java - Tipos Primitivos"** do site da DIO (dio.me/articles/java-tipos-primitivos). O texto explica que a linguagem Java não é totalmente orientada a objetos justamente por causa dos tipos primitivos, que representam valores básicos e não classes. Em seguida, o artigo lista os oito tipos primitivos existentes em Java:
+
+- byte
+- short
+- int
+- long
+- boolean
+- char
+- float
+- double
+
+O texto complementa dizendo que os tipos numéricos se dividem entre **integrais** (byte, short, int, long, char) e de **ponto flutuante** (float e double), além do tipo **boolean**, que aceita apenas `true` ou `false`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h21m06s550.jpg" alt="" width="840">
+</p>
+
+Ainda no mesmo artigo da DIO, agora é exibida a tabela com os detalhes técnicos de cada tipo primitivo: valor mínimo, valor máximo, valor padrão, tamanho em bits e um exemplo de declaração. Entre os dados apresentados:
+
+| Categoria | Tipo | Mínimo | Máximo | Tamanho | Exemplo |
+|---|---|---|---|---|---|
+| Inteiro | byte | -128 | 127 | 8 bits | `byte ex1 = (byte)1;` |
+| Inteiro | short | -32768 | 32767 | 16 bits | `short ex2 = (short)1;` |
+| Inteiro | int | -2.147.483.648 | 2.147.483.647 | 32 bits | `int ex3 = 1;` |
+| Inteiro | long | -9.223.372.036.854.770.000 | 9.223.372.036.854.770.000 | 64 bits | `long ex4 = 1l;` |
+| Ponto Flutuante | float      
+
 
 ### 🟩 Vídeo 03 - Trabalhando com Operadores de Atribuição e Lógicos
 
