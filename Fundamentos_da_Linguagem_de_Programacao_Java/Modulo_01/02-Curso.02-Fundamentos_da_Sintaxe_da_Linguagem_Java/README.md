@@ -16,6 +16,140 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/funda
 
 ### Anotações
 
+#### Declarando o Scanner (variável ainda não inicializada)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h05m11s182.jpg" alt="" width="840">
+</p>
+
+Nesta tela do IntelliJ IDEA, a classe `Main` já possui o `import java.util.Scanner;` no topo do arquivo e, dentro do método `main`, a linha `Scanner scanner;` foi declarada. O ícone de alerta vermelho ao lado da linha indica que a IDE está reclamando: a variável foi apenas declarada, reservando espaço de memória, mas ainda não foi inicializada com um objeto. Como `Scanner` é uma classe (e não um tipo primitivo), essa variável precisa receber uma instância antes de ser usada, caso contrário o código lançaria erro ao tentar utilizá-la.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner;
+
+    }
+
+}
+```
+
+#### Explorando a classe Scanner do JDK
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h05m14s291.jpg" alt="" width="840">
+</p>
+
+Aqui a IDE abriu o arquivo-fonte `Scanner.java`, que faz parte do próprio JDK. É possível ver a assinatura da classe (`public final class Scanner implements Iterator<String>, Closeable`) e alguns de seus atributos internos, como o buffer de caracteres, o tamanho do buffer e o `Matcher`/`Pattern` usados para localizar delimitadores. Essa navegação até o código-fonte serve para mostrar que `Scanner` é, de fato, uma classe pronta do Java, localizada dentro do pacote `java.util`, e não algo criado pelo próprio desenvolvedor.
+
+```java
+public final class Scanner implements Iterator<String>, Closeable {
+
+    // Internal buffer used to hold input
+    private CharBuffer buf;
+
+    // Size of internal character buffer
+    private static final int BUFFER_SIZE = 1024; // change to 1024;
+
+    // The index into the buffer currently held by the Scanner
+    private int position;
+
+    // Internal matcher used for finding delimiters
+    private Matcher matcher;
+
+    // Pattern used to delimit tokens
+    private Pattern delimPattern;
+```
+
+#### Configurando o limite de imports com asterisco no IntelliJ
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h06m45s238.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra a tela de configurações do IntelliJ IDEA, especificamente em **Editor > Code Style > Java > Imports**. Os campos "Class count to use import with '*'" e "Names count to use static import with '*'" estão ajustados para 9999. Esse ajuste é usado para evitar que a IDE substitua automaticamente vários imports individuais por um único import com asterisco (`import java.util.*;`) quando a quantidade de classes importadas de um mesmo pacote ultrapassa um determinado número — aumentando esse número para um valor bem alto, praticamente se garante que isso nunca vai acontecer automaticamente.
+
+*Conteúdo não identificado com segurança a partir do material disponível além do que já foi descrito na tela de configurações.*
+
+#### Capturando nome e idade com Scanner e exibindo com printf
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h08m07s476.jpg" alt="" width="840">
+</p>
+
+Agora o `Scanner` já está devidamente inicializado com `new Scanner(System.in)`. O programa imprime uma mensagem pedindo o nome, captura o texto digitado com `scanner.next()` em uma variável `String name`, depois pede a idade e captura um número inteiro com `scanner.nextInt()` em uma variável `int age`. Por fim, os valores são exibidos com `System.out.printf`, usando `%s` como marcador de posição para substituir pelos valores de `name` e `age`. No painel de execução, abaixo do código, é possível ver o resultado do programa rodando: ele pergunta o nome, recebe "Junior", pergunta a idade, recebe "33", e imprime "Olá Junior sua idade é 33".
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Olá, informe o seu nome");
+        String name = scanner.next();
+        System.out.println("informe sua idade");
+        int age = scanner.nextInt();
+        System.out.printf("Olá %s sua idade é %s \n", name, age);
+    }
+
+}
+```
+
+#### Usando a palavra-chave var para inferência de tipo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h08m45s282.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, a declaração `Scanner scanner = new Scanner(System.in);` foi reescrita usando `var scanner = new Scanner(System.in);`. A palavra-chave `var` informa ao compilador que uma variável está sendo declarada, mas quem define o tipo é o valor atribuído do lado direito — nesse caso, a própria instância de `Scanner`. O restante do código (captura do nome, da idade e impressão com `printf`) permanece igual ao exemplo anterior.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        System.out.println("Olá, informe o seu nome");
+        String name = scanner.next();
+        System.out.println("informe sua idade");
+        int age = scanner.nextInt();
+        System.out.printf("Olá %s sua idade é %s \n", name, age);
+    }
+
+}
+```
+
+#### Declarando constantes com WELCOME_MESSAGE
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h10m04s334.jpg" alt="" width="840">
+</p>
+
+Aqui foi criada uma constante de escopo global da classe: `private final static String WELCOME_MESSAGE = "Olá, informe o seu nome";`. O uso de `final` indica que o valor não pode ser alterado depois de atribuído, `static` faz a constante pertencer à classe (e não a uma instância específica), e o nome está todo em maiúsculas com underline separando as palavras — o padrão convencional para constantes em Java. No corpo do método `main`, as demais variáveis (`scanner`, `name`, `age`) continuam declaradas com `var`, e a mensagem de boas-vindas agora é referenciada pela constante `WELCOME_MESSAGE` em vez do texto literal.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    private final static String WELCOME_MESSAGE = "Olá, informe o seu nome";
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        System.out.println(WELCOME_MESSAGE);
+        var name = scanner.next();
+        System.out.println("informe sua idade");
+        var age = scanner.nextInt();
+        System.out.printf("Olá %s sua idade é %s \n", name, age);
+    }
+
+}
+```
 
 
 ### 🟩 Vídeo 02 - Keywords e tipos primitivos
