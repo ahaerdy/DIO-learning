@@ -3391,6 +3391,11 @@ Ao repetir o teste utilizando a categoria `GROCERIES`, a API retorna a lista con
 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/cffe330b-6114-43cf-8b7d-f79869400c6c?back=/track/ntt-data-2026-ai-java-back-end
 
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 12 - Roadmap e Auditoria: Evoluindo a API Inteligente
 
 <video width="60%" controls>
