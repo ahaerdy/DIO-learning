@@ -30,7 +30,7 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/funda
 ### Anotações
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h20m37s868.jpg" alt="" width="840">
+  <img src="./000-Midia_e_Anexos/vlcsnap-2026-08-09-18h20m37s868.jpg" alt="" width="840">
 </p>
 
 A imagem mostra a página **"Java Reserved Keywords"** do site W3Schools, aberta no navegador Opera. A tabela lista as palavras reservadas (keywords) da linguagem Java — como `abstract` e `assert`, visíveis no topo da tabela — junto de uma breve descrição de cada uma. Essas palavras não podem ser usadas como nome de variáveis, métodos, classes ou qualquer outro identificador no código.
@@ -64,7 +64,47 @@ Ainda no mesmo artigo da DIO, agora é exibida a tabela com os detalhes técnico
 | Inteiro | short | -32768 | 32767 | 16 bits | `short ex2 = (short)1;` |
 | Inteiro | int | -2.147.483.648 | 2.147.483.647 | 32 bits | `int ex3 = 1;` |
 | Inteiro | long | -9.223.372.036.854.770.000 | 9.223.372.036.854.770.000 | 64 bits | `long ex4 = 1l;` |
-| Ponto Flutuante | float      
+| Ponto Flutuante | float | -1,4024E-37 | 3.40282347E+38 | 32 bits | `float ex5 = 5.50f;` |
+| Ponto Flutuante | double | -4,94E-307 | 1.79769313486231570E+308 | 64 bits | `double ex6 = 10.20d;` ou `double ex6 = 10.20;` |
+| Caractere | char | 0 | 65535 | 16 bits | `char ex7 = 194;` ou `char ex8 = 'a';` |
+
+Essa tabela reforça a diferença entre os sufixos usados na declaração (como `L` para long, `f` para float e `d` para double) e o intervalo de valores que cada tipo é capaz de armazenar.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h21m44s986.jpg" alt="" width="840">
+</p>
+
+Agora a tela mostra o IntelliJ IDEA com uma variável declarada usando `var`, recebendo o valor `false`:
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var character = false;
+    }
+
+}
+```
+
+Como o valor atribuído é `false`, o compilador infere automaticamente que o tipo da variável é `boolean`, mesmo sem essa palavra aparecer explicitamente na declaração.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-09-18h21m50s145.jpg" alt="" width="840">
+</p>
+
+Por fim, a mesma variável aparece agora com o tipo explícito no lugar de `var`:
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        boolean bool = false;
+    }
+
+}
+```
+
+O IDE sinaliza um aviso ("Variable 'bool' is never used") apenas porque a variável foi declarada mas não é utilizada em nenhum outro ponto do código — isso não impede a compilação, é apenas um alerta de boas práticas do IntelliJ.
 
 
 ### 🟩 Vídeo 03 - Trabalhando com Operadores de Atribuição e Lógicos
