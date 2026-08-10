@@ -5,7 +5,10 @@ import dio.budgeting.application.output.TransactionOutput;
 import dio.budgeting.domain.Category;
 import dio.budgeting.domain.Transaction;
 import dio.budgeting.domain.TransactionRepository;
+import org.springframework.ai.tool.annotation.Tool;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PersistTransactionUseCase {
     private final TransactionRepository transactionRepository;
 
@@ -13,9 +16,13 @@ public class PersistTransactionUseCase {
         this.transactionRepository = transactionRepository;
     }
 
+    @Tool(name = "persistTransaction", description = "Persiste uma nova transação financeira")
     public TransactionOutput execute(PersistTransactionInput input) {
-        var transaction = new Transaction(input.description(), input.amount(), input.category());
-        var savedTransaction = transactionRepository.save(transaction);
-        return TransactionOutput.from(savedTransaction);
+        var amountInReais = input.amount() / 100.0;
+
+        var transaction = transactionRepository.save(
+                new Transaction(input.description(), amountInReais, input.category()));
+
+        return TransactionOutput.from(transaction);
     }
 }

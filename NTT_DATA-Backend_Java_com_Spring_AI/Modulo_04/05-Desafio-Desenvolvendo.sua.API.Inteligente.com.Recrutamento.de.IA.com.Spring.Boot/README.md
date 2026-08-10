@@ -3393,7 +3393,400 @@ link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-rec
 
 ### Anotações
 
-      
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-07h44m02s350.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** dentro do `TransactionController`, é criado um novo endpoint `/transcribe`, reaproveitando a mesma lógica já usada no `TranscriptionController` para agilizar o desenvolvimento. O método recebe um arquivo via `multipart/form-data` e delega a transcrição ao `transcriptionModel`.
+
+```java
+@PostMapping(value = "/transcribe", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+String transcribe(@RequestParam("file") MultipartFile file) {
+    var resource = file.getResource();
+    return transcriptionModel.transcribe(resource);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-07h44m53s522.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o `TransactionController` passa a declarar a dependência `TranscriptionModel`, que será injetada via construtor, da mesma forma como já era feita no controller de transcrição usado como base.
+
+```java
+private final TranscriptionModel transcriptionModel;
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-07h49m04s754.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o endpoint é renomeado de `/transcribe` para `/ai` e o texto retornado pela transcrição do áudio é atribuído a uma variável (`prompt`), representando o resultado do passo "áudio para texto" do fluxo.
+
+```java
+@PostMapping(value = "/ai", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+String transcribe(@RequestParam("file") MultipartFile file) {
+    var resource = file.getResource();
+    var prompt = transcriptionModel.transcribe(resource);
+    return prompt;
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-07h54m27s790.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o método `execute` de `ListTransactionsByCategoryUseCase` é anotado com `@Tool`, transformando esse use case em uma ferramenta que poderá ser chamada pelo modelo de IA, com uma descrição explicando sua finalidade.
+
+```java
+@Tool(description = "Lista transasões financeiras por categoria")
+public List<TransactionOutput> execute(Category category) {
+    return transactionRepository.findAllByCategory(category).stream().map(TransactionOutput::from).toList();
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-07h57m06s586.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o parâmetro do método também recebe uma anotação `@ToolParam` com uma descrição própria, dando mais contexto ao modelo sobre o significado de cada argumento da ferramenta — recurso especialmente útil quando os parâmetros são objetos mais complexos.
+
+```java
+public List<TransactionOutput> execute(@ToolParam(description = "Categoria de uma transação") Category category) {
+    ...
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h02m35s737.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o record `PersistTransactionInput`, usado como entrada da ferramenta de persistência, recebe anotações `@ToolParam` em cada um de seus campos, descrevendo a descrição do gasto, o valor em centavos e a categoria da transação.
+
+```java
+public record PersistTransactionInput(
+    @ToolParam(description = "Descrição do gasto") String description,
+    @ToolParam(description = "Valor do gasto (em centavos)") long amount,
+    @ToolParam(description = "Categoria de uma transação") Category category) {
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h03m21s306.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** um novo campo `ChatClient chatClient` é declarado no `TransactionController`. Ele será responsável por orquestrar a chamada ao modelo de linguagem, usando as ferramentas já anotadas anteriormente.
+
+```java
+private final ChatClient chatClient;
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h04m41s158.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** a assinatura do construtor do `TransactionController` é alterada para receber um `ChatClient.Builder`, mecanismo usado para configurar e, em seguida, instanciar o `ChatClient`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h11m16s811.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** no corpo do construtor, o `chatClient` é montado a partir do builder, registrando as ferramentas disponíveis (`PersistTransactionUseCase` e `ListTransactionsByCategoryUseCase`) através de `defaultTools`.
+
+```java
+this.chatClient = chatClientBuilder
+        .defaultTools(PersistTransactionUseCase.class, ListTransactionsByCategoryUseCase.class)
+        .build();
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h14m59s539.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** a mesma configuração do `chatClient` é revisada, com o arquivo `PersistTransactionUseCase` aberto na árvore do projeto para conferir a ferramenta que acabou de ser registrada.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h16m11s066.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** é criada uma nova pasta de recursos chamada `prompts`, dentro de `resources`, destinada a armazenar o texto do system prompt que dará contexto ao modelo de IA.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h16m41s125.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** dentro da pasta `prompts`, é criado o arquivo `system.st`, usando a extensão do StringTemplate (ST), uma forma de trabalhar com templates de texto/contexto.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h18m05s899.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o conteúdo do system prompt é escrito no arquivo, definindo o papel do assistente como um assistente financeiro, responsável por extrair dados de transações e usar as ferramentas disponíveis, escolhendo a categoria mais adequada ao contexto.
+
+```
+Você é um assistente financeiro.
+Sua tarefa é extrair dados de transações e usar as ferramentas disponíveis para manipular transações.
+Ao registrar uma transação, escolha a categoria que melhor se adapta ao contexto.
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h20m16s153.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o `TransactionController` passa a carregar esse arquivo como um `Resource`, usando a anotação `@Value("classpath:/prompts/system.st")` para injetar o conteúdo do prompt em um campo `systemPrompt`.
+
+```java
+@Value("classpath:/prompts/system.st")
+private Resource systemPrompt;
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h22m30s441.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o arquivo é renomeado de `system.st` para `system-message.st`, deixando mais explícito que seu conteúdo representa uma mensagem de sistema (system message) usada pelo chat.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h24m29s666.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** a anotação `@Value` é atualizada para refletir o novo nome do arquivo, apontando agora para `classpath:/prompts/system-message.st`.
+
+```java
+@Value("classpath:/prompts/system-message.st")
+private Resource systemPrompt;
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h24m43s718.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o `systemPrompt` é passado ao builder do `ChatClient` por meio do método `defaultSystem`, complementando a configuração já existente das ferramentas (`defaultTools`).
+
+```java
+this.chatClient = chatClientBuilder
+        .defaultSystem(systemPrompt)
+        .defaultTools(PersistTransactionUseCase.class, ListTransactionsByCategoryUseCase.class)
+        .build();
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h30m05s356.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** dentro do método `transcribe`, o texto obtido pela transcrição do áudio é usado como mensagem do usuário (`user message`) enviada ao `chatClient`, e o conteúdo da resposta do modelo é devolvido como resultado do endpoint.
+
+```java
+var userMessage = transcriptionModel.transcribe(resource);
+var result = chatClient.prompt().user(userMessage).call().content();
+return result;
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h42m07s299.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** uma requisição HTTP de teste (arquivo `.http` do IntelliJ) é usada para enviar um arquivo de áudio via `multipart/form-data` ao endpoint recém-criado, permitindo validar o fluxo de ponta a ponta.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h43m01s830.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** ao executar a aplicação e disparar a requisição, ocorre um erro indicando que o valor do `systemPrompt` está nulo no momento em que é passado ao `defaultSystem`. Isso acontece porque a injeção via `@Value` em campo ocorre depois da execução do construtor, e o `chatClient` está sendo montado justamente dentro dele.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h44m36s084.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** a correção do problema é feita movendo a injeção do `systemPrompt` para o construtor, passando-o como parâmetro anotado com `@Value`. Dessa forma, o valor já estará disponível no momento em que o `ChatClient` é construído.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h48m39s064.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** ajustes finais no construtor — o `Resource` do `systemPrompt` é convertido para `String` (via `getContentAsString`) antes de ser passado ao `defaultSystem`, e o `defaultTools` passa a receber as instâncias já injetadas (`persistTransactionUseCase`, `listTransactionsByCategoryUseCase`) em vez das classes, o que é necessário para que o construtor possa lançar `IOException`.
+
+```java
+this.chatClient = chatClientBuilder
+        .defaultSystem(systemPrompt.getContentAsString(Charset.defaultCharset()))
+        .defaultTools(persistTransactionUseCase, listTransactionsByCategoryUseCase)
+        .build();
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h50m29s521.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** a ferramenta de persistência recebe um nome explícito através do atributo `name` da anotação `@Tool` (`"persist-transaction"`), necessário porque, por padrão, o nome da ferramenta seria o nome do método (`execute`), que é o mesmo em mais de uma classe.
+
+```java
+@Tool(name = "persist-transaction", description = "Persiste uma nova transação financeira")
+public TransactionOutput execute(PersistTransactionInput input) { ... }
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h53m27s779.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o mesmo ajuste é aplicado à ferramenta de listagem, que recebe o nome `"list-transactions-by-category"`, evitando o conflito de nomes entre as ferramentas que compartilhavam o método `execute`.
+
+```java
+@Tool(name = "list-transactions-by-category", description = "Lista transações financeiras p...")
+public List<TransactionOutput> execute(@ToolParam(...) Category category) { ... }
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h54m08s105.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** um breakpoint é adicionado na linha de retorno do método `execute` de `ListTransactionsByCategoryUseCase`, para permitir acompanhar sua execução durante o teste da aplicação.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-08h54m17s298.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** outro breakpoint é adicionado no método `execute` de `PersistTransactionUseCase`, no ponto em que a transação é persistida no repositório, com a aplicação já em execução (modo debug).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h35m05s960.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** reprodução do áudio de teste usado na primeira chamada da aplicação, no qual é dito: "Passei na farmácia rapidinho e deixei R$ 80 em três itens." Esse será o áudio enviado para validar o fluxo completo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h35m15s656.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** a requisição HTTP contendo esse áudio é disparada para o endpoint `/transactions/ai`, iniciando o processamento de ponta a ponta: transcrição, interpretação pelo modelo e chamada da ferramenta correspondente.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h35m34s065.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** durante a execução, os breakpoints colocados no método `transcribe` do controller são atingidos, permitindo inspecionar o fluxo antes da chamada ao modelo de IA.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h35m52s276.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** no breakpoint de `PersistTransactionUseCase`, é possível confirmar que a transcrição foi realizada e que a ferramenta de persistência foi de fato chamada, recebendo um objeto `PersistTransactionInput` já preenchido pelo modelo com os dados extraídos do áudio.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h36m27s028.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** ao expandir a variável `input` no painel de debug, é possível ver os valores extraídos pelo modelo a partir da fala: descrição "Compra de três itens na farmácia", valor `8000` centavos (equivalente a R$ 80) e categoria `PHARMA`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h37m29s715.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** de volta ao `TransactionController`, o painel de variáveis confirma o conteúdo de `userMessage`, ou seja, o texto exatamente como foi transcrito a partir do áudio enviado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h38m04s203.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** após a chamada ao `chatClient`, a variável `result` já contém a resposta final gerada pelo modelo — uma mensagem mais amigável confirmando o registro da transação, montada a partir do objeto retornado pela ferramenta.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h39m51s584.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** consulta à tabela `transaction_entity` no banco de dados, confirmando que a nova transação (categoria `PHARMA`) foi persistida com sucesso, somando-se aos registros anteriores já existentes na tabela.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h41m45s985.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** um novo campo, `TextToSpeechModel textToSpeechModel`, é declarado no `TransactionController` (ainda sem uso), como preparação para a próxima etapa: converter a resposta textual do modelo em áudio.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h42m26s854.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** a assinatura do construtor é alterada novamente para receber essa nova dependência, `TextToSpeechModel textToSpeechModel`, seguindo o mesmo padrão de injeção via construtor usado para as demais dependências.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h44m40s157.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o campo `textToSpeechModel` é atribuído no corpo do construtor, completando sua injeção e disponibilizando o recurso para ser usado no método do endpoint.
+
+```java
+this.textToSpeechModel = textToSpeechModel;
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h45m26s247.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** no método `transcribe`, a resposta textual (`result`) é convertida em áudio por meio de `textToSpeechModel.call(result)`, gerando um array de bytes que é encapsulado em um `ByteArrayResource` e devolvido como corpo de uma resposta HTTP com cabeçalho de anexo.
+
+```java
+byte[] audio = textToSpeechModel.call(result);
+var resource = new ByteArrayResource(audio);
+
+return ResponseEntity.ok()
+        .header(HttpHeaders.CONTENT_DISPOSITION,
+                ContentDisposition.attachment()
+                        .filename("audio.mp3")
+                        .build()
+                        .toString())
+        .body(resource);
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h53m29s656.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o mesmo trecho de código de montagem da resposta em áudio é conferido a partir do `TextToSpeechController`, usado como referência para reaproveitar essa configuração de resposta no `TransactionController`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h56m20s159.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o código do método `transcribe` é simplificado, eliminando variáveis intermediárias desnecessárias (como o `resource` do arquivo recebido), deixando o fluxo mais direto entre a transcrição, a chamada ao chat e a geração do áudio de resposta.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-14h57m19s717.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** o mapeamento do endpoint é ajustado para declarar `produces = "audio/mp3"`, e o tipo de retorno do método passa a ser `ResponseEntity<Resource>`, deixando explícito para o cliente da API que a resposta será um arquivo de áudio.
+
+```java
+@PostMapping(value = "/ai", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = "audio/mp3")
+ResponseEntity<Resource> transcribe(@RequestParam("file") MultipartFile file) { ... }
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-15h07m30s550.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** uma nova requisição de teste é preparada, desta vez enviando o áudio `recording-6.m4a` ao endpoint `/transactions/ai`, para validar o fluxo completo com um novo caso de uso.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-15h08m13s056.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** após a execução dessa nova requisição, o banco de dados exibe uma nova entrada na tabela de transações, referente a um gasto com estacionamento, classificado na categoria `AUTO`.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-15h08m55s022.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** reprodução do áudio de entrada usado nesse teste, no qual é dito: "Paguei R$ 60 de estacionamento hoje, um absurdo." Esse é o conteúdo que o modelo precisará transcrever e interpretar.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-10-15h09m31s086.jpg" alt="" width="840">
+</p>
+
+**O que a imagem mostra:** reprodução do áudio de resposta gerado pela aplicação, confirmando de forma sintetizada o registro da transação: "Registrei sua transação de R$ 60 para estacionamento na categoria auto." Esse é o resultado do fluxo completo — do áudio de entrada até a resposta falada — funcionando de ponta a ponta.
+
+#### Material de Apoio Até Esta Etapa
+
+- Arquivos do projeto nesta etapa: [./000-Midia_e_Anexos/xxxxxxxxxxxxxxxxx](./000-Midia_e_Anexos/etapas_do_codigo/xxxxxxxxxxxxxxxxx)
+- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
 
 
 ### 🟩 Vídeo 12 - Roadmap e Auditoria: Evoluindo a API Inteligente

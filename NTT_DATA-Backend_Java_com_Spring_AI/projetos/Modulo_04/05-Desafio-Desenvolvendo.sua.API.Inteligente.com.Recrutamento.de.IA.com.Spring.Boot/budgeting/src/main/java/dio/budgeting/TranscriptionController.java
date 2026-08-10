@@ -4,16 +4,20 @@ import dio.budgeting.application.ListTransactionsByCategoryUseCase;
 import dio.budgeting.application.PersistTransactionUseCase;
 import dio.budgeting.domain.Category;
 import dio.budgeting.infrastructure.http.response.TransactionResponse;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.content.Media;
 import org.springframework.ai.google.genai.GoogleGenAiChatModel;
-import org.springframework.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @RestController
@@ -29,6 +33,7 @@ public class TranscriptionController {
     private final GoogleGenAiChatModel chatModel;
     private final PersistTransactionUseCase persistTransactionUseCase;
     private final ListTransactionsByCategoryUseCase listTransactionsByCategoryUseCase;
+    private final ChatClient chatClient;
 
     // O Gemini (Google GenAI) não expõe um TranscriptionModel dedicado (isso é
     // exclusivo do starter da OpenAI/Whisper). Em vez disso, o áudio é enviado
@@ -36,10 +41,16 @@ public class TranscriptionController {
     // validado em GeminiTranscriptionModelIT.
     public TranscriptionController(GoogleGenAiChatModel chatModel,
                                    PersistTransactionUseCase persistTransactionUseCase,
-                                   ListTransactionsByCategoryUseCase listTransactionsByCategoryUseCase) {
+                                   ListTransactionsByCategoryUseCase listTransactionsByCategoryUseCase,
+                                   ChatClient.Builder chatClientBuilder,
+                                   @Value("classpath:/prompts/system-message.st") Resource systemPrompt) throws IOException {
         this.chatModel = chatModel;
         this.persistTransactionUseCase = persistTransactionUseCase;
         this.listTransactionsByCategoryUseCase = listTransactionsByCategoryUseCase;
+        this.chatClient = chatClientBuilder
+                .defaultSystem(systemPrompt.getContentAsString(StandardCharsets.UTF_8))
+                .defaultTools(persistTransactionUseCase, listTransactionsByCategoryUseCase)
+                .build();
     }
 
     @PostMapping(value = "/transcribe", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -62,4 +73,12 @@ public class TranscriptionController {
     public List<TransactionResponse> readTransactions(@PathVariable Category category) {
         return listTransactionsByCategoryUseCase.execute(category).stream().map(TransactionResponse::from).toList();
     }
+
+    @PostMapping(value = "/ai", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    String processAudio(@RequestParam("file") MultipartFile file) {
+        var transcript = transcribe(file);
+
+        return chatClient.prompt().user(transcript).call().content();
+    }
+
 }
