@@ -10,8 +10,12 @@ import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.content.Media;
 import org.springframework.ai.google.genai.GoogleGenAiChatModel;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
+import org.springframework.http.ContentDisposition;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.util.MimeTypeUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -34,16 +38,22 @@ public class TranscriptionController {
     private final PersistTransactionUseCase persistTransactionUseCase;
     private final ListTransactionsByCategoryUseCase listTransactionsByCategoryUseCase;
     private final ChatClient chatClient;
+    private final TextToSpeechService textToSpeechService;
 
     // O Gemini (Google GenAI) não expõe um TranscriptionModel dedicado (isso é
     // exclusivo do starter da OpenAI/Whisper). Em vez disso, o áudio é enviado
     // como mídia multimodal para o GoogleGenAiChatModel, no mesmo caminho já
     // validado em GeminiTranscriptionModelIT.
+    //
+    // O Spring AI também não tem uma implementação de TextToSpeechModel para o
+    // Google GenAI (só existe para OpenAI/ElevenLabs). Por isso a síntese de voz
+    // usa o TextToSpeechService, que fala direto com o cliente do Gemini.
     public TranscriptionController(GoogleGenAiChatModel chatModel,
                                    PersistTransactionUseCase persistTransactionUseCase,
                                    ListTransactionsByCategoryUseCase listTransactionsByCategoryUseCase,
                                    ChatClient.Builder chatClientBuilder,
-                                   @Value("classpath:/prompts/system-message.st") Resource systemPrompt) throws IOException {
+                                   @Value("classpath:/prompts/system-message.st") Resource systemPrompt,
+                                   TextToSpeechService textToSpeechService) throws IOException {
         this.chatModel = chatModel;
         this.persistTransactionUseCase = persistTransactionUseCase;
         this.listTransactionsByCategoryUseCase = listTransactionsByCategoryUseCase;
@@ -51,6 +61,7 @@ public class TranscriptionController {
                 .defaultSystem(systemPrompt.getContentAsString(StandardCharsets.UTF_8))
                 .defaultTools(persistTransactionUseCase, listTransactionsByCategoryUseCase)
                 .build();
+        this.textToSpeechService = textToSpeechService;
     }
 
     @PostMapping(value = "/transcribe", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
@@ -74,11 +85,21 @@ public class TranscriptionController {
         return listTransactionsByCategoryUseCase.execute(category).stream().map(TransactionResponse::from).toList();
     }
 
-    @PostMapping(value = "/ai", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    String processAudio(@RequestParam("file") MultipartFile file) {
+    @PostMapping(value = "/ai", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = "audio/wav")
+    ResponseEntity<Resource> processAudio(@RequestParam("file") MultipartFile file) throws IOException {
         var transcript = transcribe(file);
+        var answer = chatClient.prompt().user(transcript).call().content();
 
-        return chatClient.prompt().user(transcript).call().content();
+        byte[] wavAudio = textToSpeechService.synthesize(answer);
+        var resource = new ByteArrayResource(wavAudio);
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION,
+                        ContentDisposition.attachment()
+                                .filename("audio.wav")
+                                .build()
+                                .toString())
+                .body(resource);
     }
 
 }
