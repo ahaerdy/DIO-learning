@@ -3799,6 +3799,22 @@ ResponseEntity<Resource> transcribe(@RequestParam("file") MultipartFile file) { 
 link do vídeo: https://web.dio.me/lab/desenvolvendo-sua-api-inteligente-com-reconhecimento-de-fala-e-spring-boot-1/learning/c494eb75-1917-43ac-8251-42553137870a?back=/track/ntt-data-2026-ai-java-back-end
 
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-11-12h09m51s716.jpg" alt="" width="840">
+</p>
+
+O slide apresenta um roadmap intitulado **"Da Prova de Conceito à Escala Real"**, organizando em quatro frentes as evoluções sugeridas para a API construída ao longo do desafio:
+
+- **Fortalecendo o Núcleo (Resiliência e Segurança)** — engloba a **Persistência e Integração Real** (migração para Spring Data JPA ou MongoDB, permitindo suportar maiores volumes de dados e adicionar informações de auditoria, como horário, autor e origem de cada registro), a **Segurança com Spring Security e JWT** (proteção de endpoints e gestão de identidade para múltiplos usuários) e a **Conectividade Externa (Feign)**, que trata da integração com serviços externos, como antifraude e conversão de moeda, via Spring OpenFeign.
+- **Arquitetura Distribuída e Independência**, com o **Desacoplamento com MCP Server**: a lógica de negócio (Use Cases) passa a ser isolada e exposta através de um Model Context Protocol Server, permitindo que a "tool" de IA seja consumida por qualquer API, independentemente da linguagem em que ela foi construída.
+- **Microserviços de Áudio Especializados**, delegando as etapas de Transcrição e de Text-to-Speech (TTS) para serviços isolados, por exemplo implementados em Python, comunicando-se via HTTP/JSON.
+- **Domínio Puro e Independência**, reforçando a ideia de que a lógica de negócio deve ficar livre de frameworks e bibliotecas específicas, podendo ser reaproveitada em diferentes contextos.
+
+Em conjunto, esses quatro blocos resumem visualmente o caminho sugerido para transformar a prova de conceito construída no desafio em uma solução mais robusta, seguindo princípios de segurança, desacoplamento e escalabilidade.
+
+
 ## Entendendo o Desafio
 
 Agora é a sua hora de praticar, aprender fazendo e evoluir um projeto completo com **Spring Boot + Inteligência Artificial**. Neste desafio, você vai trabalhar com uma **API inteligente** desenvolvida com **Spring AI**. O projeto mostra como integrar recursos de IA a uma aplicação Java, mantendo uma arquitetura organizada e pronta para evoluir. Antes de começar, acesse os repositórios do projeto:
