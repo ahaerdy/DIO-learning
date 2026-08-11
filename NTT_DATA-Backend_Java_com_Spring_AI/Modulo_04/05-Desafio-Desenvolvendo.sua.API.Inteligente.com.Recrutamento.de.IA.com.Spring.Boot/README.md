@@ -3786,7 +3786,7 @@ ResponseEntity<Resource> transcribe(@RequestParam("file") MultipartFile file) { 
 #### Material de Apoio Até Esta Etapa
 
 - Arquivos do projeto nesta etapa: [budgeting_ate_o_video11.zip](./000-Midia_e_Anexos/etapas_do_codigo/budgeting_ate_o_video11.zip)
-- [yyy-yyyyyyyyyyyy](./yyy-xxxxxxxxxxxxxxxxx.md)
+- [010-Tutorial_Budgeting_Spring_AI_Video11.md](./010-Tutorial_Budgeting_Spring_AI_Video11.md)
 
 
 ### 🟩 Vídeo 12 - Roadmap e Auditoria: Evoluindo a API Inteligente
