@@ -61,10 +61,6 @@ Cada curso ou formação possui sua própria pasta, onde organizo anotações, c
 
 A ideia é manter um registro transparente e atualizado do meu desenvolvimento, servindo tanto como fonte de consulta pessoal quanto para compartilhar experiências e conhecimentos com a comunidade.
 
-### Cursos isolados
-
-- [DIO Agent](https://github.com/ahaerdy/DIO-learning/tree/main/Cursos/Dio.Agent-Nunca.Mais.Estude.Sozinho)
-
 ---
 
 ## **Portfolio** 
