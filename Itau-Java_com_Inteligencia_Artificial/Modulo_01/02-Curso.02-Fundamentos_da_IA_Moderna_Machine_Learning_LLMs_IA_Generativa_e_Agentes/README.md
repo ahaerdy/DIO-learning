@@ -1,0 +1,206 @@
+## Instrutor
+
+- Felipe Aguiar (DIO - Tech Educator)
+- Contato Linkedin: / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/)
+
+## Introdução a Inteligência Artificial
+
+### 🟩 Vídeo 01 - Como a Inteligência Artificial Nasceu
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.02-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/93b09cec-f92f-4810-ad1e-ff916216f022?autoplay=1
+
+ O vídeo apresenta a evolução histórica dos chatbots e da Inteligência Artificial, revelando como passamos de simples regras de substituição de palavras para modelos matemáticos complexos que simulam a linguagem humana com precisão surpreendente.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h41m13s602.jpg" alt="" width="840">
+</p>
+
+Alan Turing, matemático e cientista da computação, propôs em 1950 o famoso Teste de Turing, também conhecido como Jogo da Imitação. Esse teste investiga a capacidade de uma máquina de exibir comportamento inteligente equivalente ao de um ser humano, dando origem ao campo da inteligência artificial.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h41m17s464.jpg" alt="" width="840">
+</p>
+
+A pergunta central do Teste de Turing: "Quando os computadores serão capazes de imitar os seres humanos de maneira tão precisa que se torne impossível distinguir entre ambos?" Esse questionamento desafiou a visão de que computadores apenas executam instruções pré-programadas e inspirou décadas de pesquisa em inteligência artificial.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h41m28s562.jpg" alt="" width="840">
+</p>
+
+John McCarthy, cientista da computação, foi responsável por cunhar o termo "Inteligência Artificial" em 1956, durante a Conferência de Dartmouth. Ele propôs que, para simular o comportamento humano de forma computacional, seria necessário criar uma inteligência não biológica, mas artificial — capaz de processar perguntas e respostas a partir de um banco de conhecimento, de maneira mais flexível do que simples regras pré-programadas.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h42m29s650.jpg" alt="" width="840">
+</p>
+
+Joseph Weizenbaum, cientista do MIT, criou em 1966 o primeiro chatbot da história, chamado ELIZA. Inspirado no Teste de Turing, ELIZA simulava uma conversa usando padrões de substituição de palavras, imitando um psicoterapeuta. Essa inovação deu origem ao campo do Processamento de Linguagem Natural (PLN), permitindo que computadores se comunicassem em linguagem humana.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h42m42s020.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o terminal com o programa ELIZA carregado e em execução. Conforme explicado na aula, o ELIZA funcionava como um psicoterapeuta virtual: ele identificava palavras‑chave nas frases do usuário e aplicava regras de substituição para gerar respostas genéricas, como “Por que você está triste hoje?” ou “Me fale um pouco mais sobre a sua mãe”. Esse mecanismo simulava uma conversa natural sem que o computador realmente entendesse o significado. A cada interação, o ELIZA também enriquecia seu vocabulário — um princípio inicial do aprendizado de máquina. O próprio Weizenbaum ficou surpreso ao perceber que as pessoas atribuíam emoções e humanidade ao programa, antecipando discussões éticas que continuam atuais com assistentes como o ChatGPT.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h43m16s134.jpg" alt="" width="840">
+</p>
+
+A IBM impulsionou a popularização desses modelos em 2010 com o lançamento do IBM Watson. Focado em responder perguntas complexas através de processamento de linguagem natural massivo, o Watson ganhou fama mundial em 2011 ao derrotar competidores humanos no programa Jeopardy!, provando a eficácia da IA em processar e recuperar informações de grandes bases de dados.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-10-16h43m20s627.jpg" alt="" width="840">
+</p>
+
+O Processamento de Linguagem Natural (PLN) define a maneira como humanos e computadores trocam informações. Longe de ser um processo "mágico", ele se baseia em modelos matemáticos que calculam a probabilidade de sequências de palavras. Ao armazenar volumes gigantescos de dados, as máquinas realizam uma substituição de padrões em alta escala para criar diálogos coerentes e naturais. 
+
+
+### 🟩 Vídeo 02 - Como uma Inteligência Artificial é treinada e o que são LLMs
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.02-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/ad7cc7c5-c657-4f2c-92e9-651b71c60375?autoplay=1
+
+O vídeo desxreve o processo prático de treinamento de uma Inteligência Artificial, utilizando a analogia de reconhecimento de maçãs para explicar como máquinas "aprendem" a identificar padrões, lidar com variações e expandir seu vocabulário através de parâmetros e tokens.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-11-13-28-02.png" alt="" width="840">
+</p>
+
+#### 1. O Ponto de Partida: O Modelo Zero
+Toda IA começa como um "modelo zero", sem conhecimento prévio. Para que ela funcione, é necessário fornecer um **contexto**. No exemplo do vídeo, o contexto é "reconhecer maçãs". Sem dados e instruções, a IA é incapaz de distinguir qualquer objeto.
+
+#### 2. Tokens e Parâmetros: A "Linguagem" da IA
+A IA não armazena imagens como nós; ela armazena **padrões**. Esses padrões são traduzidos em **tokens** e **parâmetros**.
+*   **Exemplos de parâmetros para uma maçã:** Formato esférico, presença de caule, tons de vermelho/amarelo, fenda superior.
+*   **Insight:** A computação de IA é, essencialmente, sobre reconhecimento de padrões e estatística.
+
+#### 3. Reforço Positivo e Refinamento
+Quando a IA encontra algo que foge do padrão inicial (ex: uma maçã com o caule de lado), ela fica em dúvida (probabilidade de 50%). É aqui que entra o **Reforço Positivo**:
+*   O humano confirma: "Sim, isso é uma maçã".
+*   A IA atualiza sua base: "O caule e a fenda podem estar em qualquer direção".
+*   Esse processo de "tentativa, erro e correção" é o que torna a IA mais inteligente.
+
+#### 4. Generalização e Probabilidade
+A IA aprende a lidar com o novo baseando-se no que já conhece. 
+*   **Maçã cortada:** Mesmo nunca tendo visto uma maçã aberta, a IA analisa os tokens existentes (formato, cor, caule) e conclui que, por **probabilidade**, aquilo ainda é uma maçã.
+*   **Diferenciação:** Ao ver uma pera, a IA compara os tokens. Como o formato e a cor não batem com a maioria dos parâmetros de "maçã", ela conclui que não é o objeto em questão.
+
+#### 5. LLMs vs. SLMs: A Escala do Conhecimento
+O vídeo diferencia os dois principais tipos de modelos baseados em sua "bagagem":
+*   **LLM (Large Language Model):** Modelos gigantescos (como o ChatGPT) com bilhões de parâmetros. Eles parecem mais inteligentes porque têm um "vocabulário" de padrões vasto sobre quase tudo.
+*   **SLM (Small Language Model):** Modelos menores e especializados. São eficientes para tarefas específicas (ex: reconhecer apenas objetos de madeira) e não exigem tanto processamento.
+
+### 🟩 Vídeo 03 - Entendendo Deep Learning
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.02-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/66b70f5b-904c-4759-bcc6-78dd43d8c23e?autoplay=1
+
+O vídeo aborda o conceito de Deep Learning (Aprendizado Profundo), detalhando como essa tecnologia tenta mimetizar as conexões neurais humanas para criar uma inteligência artificial mais intuitiva, capaz de realizar inferências e compreender contextos complexos.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-13h34m55s576.jpg" alt="" width="840">
+</p>
+
+O slide apresenta a definição de inferência aplicada ao contexto de inteligência artificial. O conceito é introduzido como a capacidade de chegar a conclusões a partir de premissas, observações ou padrões previamente conhecidos.
+
+No contexto da aula, essa ideia é utilizada para explicar por que seres humanos conseguem associar uma informação simples a lembranças, emoções ou outros conhecimentos conectados. A inferência é apresentada como um dos elementos centrais do deep learning, já que modelos modernos de IA não apenas identificam dados de forma literal, mas também estabelecem relações entre informações.
+
+O professor relaciona esse conceito ao funcionamento das conexões neurais humanas: ao receber um estímulo simples, como uma revista, uma música ou uma imagem, o cérebro automaticamente ativa associações indiretas. O deep learning tenta reproduzir esse comportamento através de redes neurais artificiais capazes de reconhecer padrões e realizar associações contextuais.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-13h35m01s709.jpg" alt="" width="840">
+</p>
+
+O slide organiza visualmente a relação hierárquica entre três conceitos fundamentais apresentados na aula:
+
+* Inteligência Artificial
+* Machine Learning
+* Deep Learning
+
+A estrutura mostra que deep learning é uma técnica contida dentro do machine learning, enquanto machine learning faz parte do campo mais amplo da inteligência artificial.
+
+A explicação enfatiza que a inteligência artificial representa o conceito geral de simular comportamentos inteligentes. Dentro dela, o machine learning surge como o mecanismo de aprendizado baseado em dados, probabilidades e reconhecimento de padrões. Já o deep learning adiciona camadas mais profundas de processamento através de redes neurais artificiais.
+
+O professor utiliza essa hierarquia para demonstrar a evolução das IAs modernas: inicialmente sistemas simples de resposta, depois modelos capazes de aprender padrões e, por fim, arquiteturas profundas capazes de inferir relações complexas, contexto, nuances emocionais e conexões indiretas entre informações.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-05-11-13h35m13s893.jpg" alt="" width="840">
+</p>
+
+O slide mostra uma demonstração prática utilizando o ChatGPT para exemplificar como modelos modernos de IA realizam inferências através de deep learning.
+
+O prompt apresentado solicita sugestões de filmes semelhantes ao filme “Robô Selvagem”. A resposta da IA não se limita a identificar elementos superficiais como “robôs” ou “animação”. Em vez disso, o sistema interpreta características mais profundas do filme, como emoções, vínculos afetivos, conexões humanas e mensagens filosóficas.
+
+Os filmes sugeridos, como WALL-E e O Gigante de Ferro, compartilham temas relacionados a laços emocionais, empatia, aprendizado e relacionamento entre humanos e máquinas. A explicação da aula destaca justamente esse comportamento inferencial: a IA consegue associar conceitos que não foram explicitamente descritos no prompt.
+
+Esse exemplo é utilizado para mostrar como o deep learning permite que sistemas modernos trabalhem com contexto e associações indiretas. Em vez de responder apenas com base em palavras-chave literais, o modelo reconhece padrões semânticos e conexões entre temas, comportamentos e estilos narrativos. 
+
+### 🟩 Vídeo 04 - A Era das IAs Generativas
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.01-curso.02-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/era-da-ia-machine-learning-llms-ia-generativa-e-agentes/learning/ac73b928-c152-43a8-9d2e-d9be15d348fa?autoplay=1
+
+O vídeo apresenta o conceito de IA Generativa (GenAI), diferenciando-a das tecnologias anteriores e discutindo seu impacto nas profissões, na ética e no cotidiano.
+
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-05-11-14-16-48.png" alt="" width="840">
+</p>
+
+#### 1. O que é IA Generativa?
+Diferente das IAs tradicionais que focam em **reconhecer padrões** (como identificar se uma foto é de uma maçã), a IA Generativa tem a capacidade de **criar algo novo**. 
+*   **Analogia Biológica:** Assim como as células do corpo são regenerativas (repõem o que morreu), a IA Generativa "gera" conteúdo inédito a partir de uma base de conhecimento.
+*   **Mudança de Paradigma:** Saímos da era da interpretação estatística para a era da produção criativa.
+
+#### 2. Multimodalidade: A IA em Diversas Formas
+A IA Generativa não se limita a texto. Ela é **multimodal**, atuando em diferentes frentes:
+*   **Imagens:** Criação de artes realistas ou estilizadas (ex: Canva, que passou de editor para criador de imagens).
+*   **Áudio e Música:** Geração de trilhas e vozes sintéticas.
+*   **Vídeo:** Produção de cenas completas a partir de comandos.
+*   **Código:** Desenvolvimento de softwares e aplicações através de "Vibe Coding".
+
+#### 3. Novas Profissões e o Mercado de Trabalho
+O surgimento da GenAI está criando nichos que não existiam há dois anos:
+*   **Engenheiro de Prompt (Prompt Engineer):** Especialista em formular comandos precisos para extrair o melhor resultado da IA.
+*   **Recuperador de "Lost Media":** Uso de IA para reconstruir frames e áudios perdidos de mídias antigas ou danificadas.
+*   **Cibersegurança com IA:** Profissionais focados em detectar padrões de conteúdos gerados por IA para evitar fraudes.
+*   **Escrita Colaborativa:** Termos como "Vibe Writing" definem a criação de livros e roteiros em parceria com a máquina.
+
+#### 4. O Desafio do Realismo e a Ética
+A tecnologia evoluiu a ponto de ser difícil distinguir o real do artificial.
+*   **Fake News:** O risco de desinformação aumenta com imagens e vídeos hiper-realistas.
+*   **História e Verdade:** Questiona-se como garantiremos a autenticidade de registros históricos e comunicações pessoais (como áudios de WhatsApp).
+
+#### 5. A IA no Cotidiano: Invisível e Onipresente
+Muitas vezes já usamos IA sem perceber:
+*   **Teclados Preditivos:** Sugestões de palavras em smartphones.
+*   **Buscas Inteligentes:** Resumos gerados por IA em motores de busca como o Google.
+*   **Ferramentas de Design:** Automatização de processos repetitivos.
+   
+# Certificado: 
+
+- Link na plataforma: https://hermes.dio.me/certificates/GRMBVTUI.pdf
+- Certificado em pdf: [Certificado-A_Era_da_IA_Machine_Learning,_LLMs,_IA_Generativa_e_Agentes.pdf](000-Midia_e_Anexos/Certificado-A_Era_da_IA_Machine_Learning,_LLMs,_IA_Generativa_e_Agentes.pdf)
