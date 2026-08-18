@@ -179,4 +179,6 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ## 💬 Mentorias e Networking
 
+- / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
+
 <!-- Preencher conforme for progredindo no bootcamp -->
