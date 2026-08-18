@@ -67,15 +67,12 @@ Durante o Bootcamp, os principais conhecimentos praticados são:
 
 O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de código e mentorias. Abaixo está a estrutura geral dos módulos, conforme acompanhamento da minha trilha de estudos:
 
-> **Meta de estudo:** 5 dias por semana, durante 3 horas por dia
-> **Início:** 17/09/2026 · **Estimativa de conclusão:** 22/11/2026
-
 ---
 
 ### Módulo 1: Potencializando Sua Jornada com Inteligência Artificial e Agentes
 
 - [x] Curso: [Boas Vindas ao Bootcamp Itaú - Java com Inteligência Artificial](Modulo_01/01-Curso.01-Boas_Vindas_ao_Bootcamp_Itau_Java_com_Inteligencia_Artificial)
-- [x] Curso: [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-Fundamentos_da_IA_Moderna_Machine_Learning_LLMs_IA_Generativa_e_Agentes)
+- [ ] Curso: [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-Fundamentos_da_IA_Moderna_Machine_Learning_LLMs_IA_Generativa_e_Agentes)
 - [ ] Curso: [Potencializando seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)](Modulo_01/03-Curso.03-Potencializando_seus_Estudos_e_Carreira_com_IA_Chatbots_Copilotos_e_Agentes)
 - [ ] Curso: [Introdução à Engenharia de Prompts](Modulo_01/04-Curso.04-Introducao_a_Engenharia_de_Prompts)
 - [ ] Curso: [DIO Agent: Nunca Mais Estude Sozinho](Modulo_01/05-Curso.05-DIO_Agent_Nunca_Mais_Estude_Sozinho)
@@ -85,20 +82,20 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 2: Fundamentos para Começar a Programar em Java
 
-- [x] Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_02/01-Curso.01-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
-- [x] Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_02/02-Curso.02-Fundamentos_da_Sintaxe_da_Linguagem_Java)
-- [x] Curso: [Estruturas de Controle em Java](Modulo_02/03-Curso.03-Estruturas_de_Controle_em_Java)
+- [ ] Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_02/01-Curso.01-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
+- [ ] Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_02/02-Curso.02-Fundamentos_da_Sintaxe_da_Linguagem_Java)
+- [ ] Curso: [Estruturas de Controle em Java](Modulo_02/03-Curso.03-Estruturas_de_Controle_em_Java)
 - [ ] Desafio de código: [Desafios de Código sobre Fundamentos de Java no Setor Bancário](Modulo_02/04-Desafio-Desafios_de_Codigo_sobre_Fundamentos_de_Java_no_Setor_Bancario)
 
 ---
 
 ### Módulo 3: Programando o Mundo Real com Orientação a Objetos em Java
 
-- [x] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_03/01-Curso.01-Java_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento)
-- [x] Curso: [Herança e Polimorfismo em Java](Modulo_03/02-Curso.02-Heranca_e_Polimorfismo_em_Java)
-- [x] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_03/03-Curso.03-Dominando_Interfaces_e_Lambdas_em_Java)
-- [x] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/04-Curso.04-Jornada_Pratica_com_Collections_e_Outras_Classes_Uteis_de_Java)
-- [x] Curso: [Debugging e o Tratamento de Exceções em Java](Modulo_03/05-Curso.05-Debugging_e_o_Tratamento_de_Excecoes_em_Java)
+- [ ] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_03/01-Curso.01-Java_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento)
+- [ ] Curso: [Herança e Polimorfismo em Java](Modulo_03/02-Curso.02-Heranca_e_Polimorfismo_em_Java)
+- [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_03/03-Curso.03-Dominando_Interfaces_e_Lambdas_em_Java)
+- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/04-Curso.04-Jornada_Pratica_com_Collections_e_Outras_Classes_Uteis_de_Java)
+- [ ] Curso: [Debugging e o Tratamento de Exceções em Java](Modulo_03/05-Curso.05-Debugging_e_o_Tratamento_de_Excecoes_em_Java)
 - [ ] Desafio de código: [Desafios de Código sobre POO e Exceções no Setor Bancário](Modulo_03/06-Desafio-Desafios_de_Codigo_sobre_POO_e_Excecoes_no_Setor_Bancario)
 
 ---
@@ -108,9 +105,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [ ] Curso: [Como a Web Funciona?](Modulo_04/01-Curso.01-Como_a_Web_Funciona)
 - [ ] Curso: [Como Funciona o HTTP Protocol](Modulo_04/02-Curso.02-Como_Funciona_o_HTTP_Protocol)
 - [ ] Curso: [Introdução ao Desenvolvimento de API](Modulo_04/03-Curso.03-Introducao_ao_Desenvolvimento_de_API)
-- [x] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_04/04-Curso.04-Anotacoes_em_Java_Marcando_o_Seu_Codigo_de_Maneira_Inteligente)
-- [x] Curso: [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade](Modulo_04/05-Curso.05-SOLID_e_Clean_Code_em_Java_Escrevendo_Codigo_de_Alta_Qualidade)
-- [x] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](Modulo_04/06-Desafio-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework)
+- [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_04/04-Curso.04-Anotacoes_em_Java_Marcando_o_Seu_Codigo_de_Maneira_Inteligente)
+- [ ] Curso: [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade](Modulo_04/05-Curso.05-SOLID_e_Clean_Code_em_Java_Escrevendo_Codigo_de_Alta_Qualidade)
+- [ ] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](Modulo_04/06-Desafio-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework)
    - **Repositório**: _(adicionar link do repositório quando criado)_
    - **Descrição**: _(preencher com a descrição do projeto após a resolução do desafio)_
 
@@ -118,15 +115,11 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 5: Criando APIs Modernas no Ecossistema Spring: Boot, Data, Security, Cloud e AI
 
-- [x] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_05/01-Curso.01-Criando_sua_Primeira_API_REST_com_Spring_Boot)
-- [x] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_05/02-Curso.02-Conectando_sua_API_com_Banco_de_Dados_Atraves_do_Spring_Data)
-- [x] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_05/03-Curso.03-Simplificando_a_Seguranca_em_APIs_REST_com_Spring_Security)
-- [x] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_05/04-Curso.04-Consumindo_APIs_Externas_com_a_Spring_Cloud_OpenFeign)
+- [ ] Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_05/01-Curso.01-Criando_sua_Primeira_API_REST_com_Spring_Boot)
+- [ ] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_05/02-Curso.02-Conectando_sua_API_com_Banco_de_Dados_Atraves_do_Spring_Data)
+- [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_05/03-Curso.03-Simplificando_a_Seguranca_em_APIs_REST_com_Spring_Security)
+- [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_05/04-Curso.04-Consumindo_APIs_Externas_com_a_Spring_Cloud_OpenFeign)
 - [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot](Modulo_05/05-Desafio-Desenvolvendo_sua_API_Inteligente_com_Reconhecimento_de_Fala_e_Spring_Boot)
-
----
-
-> ⚠️ **Nota:** a trilha do bootcamp indica um total de 37 atividades, mas a captura de tela fornecida mostra apenas os 5 módulos e 27 atividades acima (a página parece ter sido cortada antes do fim). Se houver módulo(s) adicionais (por exemplo, sobre publicação/deploy ou uma etapa final de projeto), me envie o restante da captura para eu completar a estrutura e os certificados abaixo.
 
 ---
 
@@ -134,53 +127,53 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 1
 
-- [Boas Vindas ao Bootcamp Itaú - Java com Inteligência Artificial](#)
-- [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](#)
-- [Potencializando seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)]
-- [Introdução à Engenharia de Prompts]
-- [DIO Agent: Nunca Mais Estude Sozinho]
-- Certificado do Módulo: [Potencializando Sua Jornada com Inteligência Artificial e Agentes]
+- [Boas Vindas ao Bootcamp Itaú - Java com Inteligência Artificial]()
+- [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes]()
+- [Potencializando seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)]()
+- [Introdução à Engenharia de Prompts]()
+- [DIO Agent: Nunca Mais Estude Sozinho]()
+- Certificado do Módulo: [Potencializando Sua Jornada com Inteligência Artificial e Agentes]()
 
 ### Módulo 2
 
-- [Introdução ao Java e seu Ambiente de Desenvolvimento](#)
-- [Fundamentos da Sintaxe da Linguagem Java](#)
-- [Estruturas de Controle em Java](#)
-- [Desafios de Código sobre Fundamentos de Java no Setor Bancário]
-- Certificado do Módulo: [Fundamentos para Começar a Programar em Java]
+- [Introdução ao Java e seu Ambiente de Desenvolvimento]()
+- [Fundamentos da Sintaxe da Linguagem Java]()
+- [Estruturas de Controle em Java]()
+- [Desafios de Código sobre Fundamentos de Java no Setor Bancário]()
+- Certificado do Módulo: [Fundamentos para Começar a Programar em Java]()
 
 ### Módulo 3
 
-- [Java e a Arte da Abstração com Classes e Encapsulamento](#)
-- [Herança e Polimorfismo em Java](#)
-- [Dominando Interfaces e Lambdas em Java](#)
-- [Jornada Prática com Collections e Outras Classes Úteis de Java](#)
-- [Debugging e o Tratamento de Exceções em Java](#)
-- [Desafios de Código sobre POO e Exceções no Setor Bancário]
-- Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java]
+- [Java e a Arte da Abstração com Classes e Encapsulamento]()
+- [Herança e Polimorfismo em Java]()
+- [Dominando Interfaces e Lambdas em Java]()
+- [Jornada Prática com Collections e Outras Classes Úteis de Java]()
+- [Debugging e o Tratamento de Exceções em Java]()
+- [Desafios de Código sobre POO e Exceções no Setor Bancário]()
+- Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java]()
 
 ### Módulo 4
 
-- [Como a Web Funciona?]
-- [Como Funciona o HTTP Protocol]
-- [Introdução ao Desenvolvimento de API]
-- [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](#)
-- [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade](#)
-- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](#)
-- Certificado do Módulo: [Fundamentos da Web e Boas Práticas de Desenvolvimento com Java]
+- [Como a Web Funciona?]()
+- [Como Funciona o HTTP Protocol]()
+- [Introdução ao Desenvolvimento de API]()
+- [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]()
+- [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade]()
+- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]()
+- Certificado do Módulo: [Fundamentos da Web e Boas Práticas de Desenvolvimento com Java]()
 
 ### Módulo 5
 
-- [Criando sua Primeira API REST com Spring Boot](#)
-- [Conectando sua API com Banco de Dados Através do Spring Data](#)
-- [Simplificando a Segurança em APIs REST com Spring Security](#)
-- [Consumindo APIs Externas com a Spring Cloud OpenFeign](#)
-- [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot]
-- Certificado do Módulo: [Criando APIs Modernas no Ecossistema Spring: Boot, Data, Security, Cloud e AI]
+- [Criando sua Primeira API REST com Spring Boot]()
+- [Conectando sua API com Banco de Dados Através do Spring Data]()
+- [Simplificando a Segurança em APIs REST com Spring Security]()
+- [Consumindo APIs Externas com a Spring Cloud OpenFeign]()
+- [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot]()
+- Certificado do Módulo: [Criando APIs Modernas no Ecossistema Spring: Boot, Data, Security, Cloud e AI]()
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [Itaú: Java com Inteligência Artificial]
+- 🎓 Certificado de conclusão do Bootcamp: [Itaú: Java com Inteligência Artificial]()
 
 ---
 
