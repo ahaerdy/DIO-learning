@@ -71,7 +71,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 1: Potencializando Sua Jornada com Inteligência Artificial e Agentes
 
-- [x] Curso: [Boas Vindas ao Bootcamp Itaú - Java com Inteligência Artificial](Modulo_01/01-Curso.01-Boas_Vindas_ao_Bootcamp_Itau_Java_com_Inteligencia_Artificial)
+- [x] ✅ Curso: [Boas Vindas ao Bootcamp Itaú - Java com Inteligência Artificial](Modulo_01/01-Curso.01-Boas_Vindas_ao_Bootcamp_Itau_Java_com_Inteligencia_Artificial)
 - [ ] Curso: [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-Fundamentos_da_IA_Moderna_Machine_Learning_LLMs_IA_Generativa_e_Agentes)
 - [ ] Curso: [Potencializando seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)](Modulo_01/03-Curso.03-Potencializando_seus_Estudos_e_Carreira_com_IA_Chatbots_Copilotos_e_Agentes)
 - [ ] Curso: [Introdução à Engenharia de Prompts](Modulo_01/04-Curso.04-Introducao_a_Engenharia_de_Prompts)
