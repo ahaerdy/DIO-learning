@@ -94,8 +94,6 @@ link do vídeo:
 
 link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/introducao-a-engenharia-de-prompts/learning/f52258c9-6f1f-44a4-b8aa-0aeed9563b84?autoplay=1
 
-##  Materiais de Apoio
-
 # Certificado: Introdução à Engenharia de Prompts
 
 - Link na plataforma: https://hermes.dio.me/certificates/CALJH6NR.pdf
