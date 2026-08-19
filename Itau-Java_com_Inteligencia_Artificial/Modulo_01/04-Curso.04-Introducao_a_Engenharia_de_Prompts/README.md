@@ -52,7 +52,7 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/introducao-a-engenharia-de-prompts/learning/7357014d-57ef-4ea7-b45d-695c5e1b28ed?autoplay=1
 
 ### 🟩 Vídeo 06 - Elementos Essenciais de um Bom Prompt
 
@@ -61,7 +61,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/introducao-a-engenharia-de-prompts/learning/15292609-4158-4ff7-acfb-40587249f2a1?autoplay=1
 
 ## Parte 3 - Aplicações Práticas da Engenharia de Prompts
 
@@ -72,7 +72,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/introducao-a-engenharia-de-prompts/learning/e9bf7ae2-1982-4fcf-8f4f-d3242a696373?autoplay=1
 
 ### 🟩 Vídeo 08 - Cuidados na Aplicação de Prompts
 
@@ -81,7 +81,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ## Parte 4 - Leve seus Prompts ao Próximo Nível
 
@@ -92,11 +92,11 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/introducao-a-engenharia-de-prompts/learning/f52258c9-6f1f-44a4-b8aa-0aeed9563b84?autoplay=1
 
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Introdução à Engenharia de Prompts
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/CALJH6NR.pdf
+- Certificado em pdf: [Certificado-Introdução.a.Engenharia.de.Prompts.pdf](000-Midia_e_Anexos/Certificado-Introdução.a.Engenharia.de.Prompts.pdf)
