@@ -127,53 +127,53 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 1
 
-- [Boas Vindas ao Bootcamp Itaú - Java com Inteligência Artificial]()
-- [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes]()
-- [Potencializando seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)]()
-- [Introdução à Engenharia de Prompts]()
-- [DIO Agent: Nunca Mais Estude Sozinho]()
-- Certificado do Módulo: [Potencializando Sua Jornada com Inteligência Artificial e Agentes]()
+- [Boas Vindas ao Bootcamp Itaú - Java com Inteligência Artificial](https://hermes.dio.me/certificates/WV9X5LTS.pdf)
+- [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](https://hermes.dio.me/certificates/GRMBVTUI.pdf)
+- [Potencializando seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)]https://hermes.dio.me/certificates/AXVO0TCY.pdf)
+- [Introdução à Engenharia de Prompts](https://hermes.dio.me/certificates/CALJH6NR.pdf)
+- [DIO Agent: Nunca Mais Estude Sozinho](https://hermes.dio.me/certificates/1XEA4VTW.pdf)
+- Certificado do Módulo: [Potencializando Sua Jornada com Inteligência Artificial e Agentes]
 
 ### Módulo 2
 
-- [Introdução ao Java e seu Ambiente de Desenvolvimento]()
-- [Fundamentos da Sintaxe da Linguagem Java]()
-- [Estruturas de Controle em Java]()
-- [Desafios de Código sobre Fundamentos de Java no Setor Bancário]()
-- Certificado do Módulo: [Fundamentos para Começar a Programar em Java]()
+- [Introdução ao Java e seu Ambiente de Desenvolvimento]
+- [Fundamentos da Sintaxe da Linguagem Java]
+- [Estruturas de Controle em Java]
+- [Desafios de Código sobre Fundamentos de Java no Setor Bancário]
+- Certificado do Módulo: [Fundamentos para Começar a Programar em Java]
 
 ### Módulo 3
 
-- [Java e a Arte da Abstração com Classes e Encapsulamento]()
-- [Herança e Polimorfismo em Java]()
-- [Dominando Interfaces e Lambdas em Java]()
-- [Jornada Prática com Collections e Outras Classes Úteis de Java]()
-- [Debugging e o Tratamento de Exceções em Java]()
-- [Desafios de Código sobre POO e Exceções no Setor Bancário]()
-- Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java]()
+- [Java e a Arte da Abstração com Classes e Encapsulamento]
+- [Herança e Polimorfismo em Java]
+- [Dominando Interfaces e Lambdas em Java]
+- [Jornada Prática com Collections e Outras Classes Úteis de Java]
+- [Debugging e o Tratamento de Exceções em Java]
+- [Desafios de Código sobre POO e Exceções no Setor Bancário]
+- Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java]
 
 ### Módulo 4
 
-- [Como a Web Funciona?]()
-- [Como Funciona o HTTP Protocol]()
-- [Introdução ao Desenvolvimento de API]()
-- [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]()
-- [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade]()
-- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]()
-- Certificado do Módulo: [Fundamentos da Web e Boas Práticas de Desenvolvimento com Java]()
+- [Como a Web Funciona?]
+- [Como Funciona o HTTP Protocol]
+- [Introdução ao Desenvolvimento de API]
+- [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
+- [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade]
+- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]
+- Certificado do Módulo: [Fundamentos da Web e Boas Práticas de Desenvolvimento com Java]
 
 ### Módulo 5
 
-- [Criando sua Primeira API REST com Spring Boot]()
-- [Conectando sua API com Banco de Dados Através do Spring Data]()
-- [Simplificando a Segurança em APIs REST com Spring Security]()
-- [Consumindo APIs Externas com a Spring Cloud OpenFeign]()
-- [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot]()
-- Certificado do Módulo: [Criando APIs Modernas no Ecossistema Spring: Boot, Data, Security, Cloud e AI]()
+- [Criando sua Primeira API REST com Spring Boot]
+- [Conectando sua API com Banco de Dados Através do Spring Data]
+- [Simplificando a Segurança em APIs REST com Spring Security]
+- [Consumindo APIs Externas com a Spring Cloud OpenFeign]
+- [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot]
+- Certificado do Módulo: [Criando APIs Modernas no Ecossistema Spring: Boot, Data, Security, Cloud e AI]
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [Itaú: Java com Inteligência Artificial]()
+- 🎓 Certificado de conclusão do Bootcamp: [Itaú: Java com Inteligência Artificial]
 
 ---
 
