@@ -1,7 +1,7 @@
 ## Instrutor
 
-- Venilton Falvo Jr (Doutor em Engenharia de Software, Education Tech Lead na DIO)
-- Contato Linkedin: / [falvojr](https://www.linkedin.com/in/falvojr/)
+- Instrutor: Elidiana Andrade (Tech Education Analyst at DIO)
+- Contato Linkedin: https://www.linkedin.com/in/elidiana/
 
 ## Parte 1 - Introdução
 
