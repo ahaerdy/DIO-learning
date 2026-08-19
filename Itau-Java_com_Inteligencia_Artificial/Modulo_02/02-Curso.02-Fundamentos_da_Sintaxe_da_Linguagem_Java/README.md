@@ -491,7 +491,6 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/funda
 
 link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/fundamentos-da-linguagem-de-programacao-java/learning/87146644-a0b3-4835-8d52-a6dd986cbcf0?autoplay=1
 
-##  Materiais de Apoio
 
 # Certificado: Fundamentos da Sintaxe da Linguagem Java
 
