@@ -493,7 +493,7 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/funda
 
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Fundamentos da Sintaxe da Linguagem Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/28HP0OEI.pdf
+- Certificado em pdf: [Certificado-Fundamentos.da.Sintaxe.da.Linguagem.Java.pdf](000-Midia_e_Anexos/Certificado-Fundamentos.da.Sintaxe.da.Linguagem.Java.pdf)
