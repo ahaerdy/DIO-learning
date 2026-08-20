@@ -178,6 +178,11 @@ O programa é executado novamente com nome "Juca", idade 18 e resposta "s" para 
 
 link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/estruturas-de-controle-em-java/learning/1de01157-7e03-4b2b-968f-7effb2c0333b?autoplay=1
 
+### Anotações
+
+      
+
+
 ### 🟩 Vídeo 03 - Estrutura de Repetição for
 
 <video width="60%" controls>
