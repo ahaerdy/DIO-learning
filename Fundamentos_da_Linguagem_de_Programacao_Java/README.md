@@ -103,8 +103,6 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 
 ## 🏆 Certificados Obtidos
 
-> Os links abaixo serão preenchidos conforme os certificados forem emitidos e baixados na plataforma DIO.
-
 ### Módulo 1
 
 - [Introdução ao Java e seu Ambiente de Desenvolvimento](https://hermes.dio.me/certificates/YUJLSOAA.pdf)
