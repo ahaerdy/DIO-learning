@@ -690,7 +690,7 @@ public class Main {
 }
 ```
 
-      
+
 ### 🟩 Vídeo 05 - Exercícios
 
 <video width="60%" controls>
@@ -700,6 +700,108 @@ public class Main {
 
 link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/estruturas-de-controle-em-java/learning/ea315c43-9a84-4e2c-9e64-2c7ad2950abf?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-16h08m53s432.jpg" alt="" width="840">
+</p>
+
+A imagem mostra a listagem completa dos exercícios propostos para a prática dos conceitos de estruturas de controle em Java, exibida no repositório do GitHub (`exercicios-java-basico`). São quatro exercícios no total:
+
+1. Gerar a tabuada de 1 a 10 de um número informado pelo usuário.
+2. Calcular o IMC (Índice de Massa Corporal) a partir do peso e da altura informados, exibindo uma mensagem de acordo com a faixa de resultado.
+3. Trabalhar com um intervalo de números par/ímpar, decrescente, a partir de dois números informados pelo usuário.
+4. Ler um número inicial e, em seguida, outros números, interrompendo a execução quando um número dividido pelo primeiro tiver resto diferente de zero, ignorando números menores que o primeiro.
+
+Essa visão geral serve como ponto de partida para a resolução guiada, que se concentrará com mais detalhe no quarto exercício.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-16h09m38s257.jpg" alt="" width="840">
+</p>
+
+Aqui o quarto exercício é destacado (em vermelho) na página do GitHub, já com o enunciado corrigido: o usuário informa um número inicial e, posteriormente, informa outros N números; a execução do código deve continuar até que o número informado, dividido pelo primeiro número, tenha resto diferente de zero na divisão. Números menores que o primeiro número devem ser ignorados. Esse é o exercício escolhido para ser resolvido em conjunto, servindo de base para a implementação apresentada nas imagens seguintes.
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-16h11m23s536.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, a IDE (IntelliJ) mostra a implementação em **Java** da solução para o quarto exercício. O código utiliza um `Scanner` para capturar o número inicial e, dentro de um laço `while`, captura repetidamente novos números para verificação. Se o número digitado for menor que o número inicial, uma mensagem pede um número maior e o laço avança para a próxima iteração com `continue`. Caso contrário, é calculado o resto da divisão (`toVerify % number`), e o resultado desse cálculo define se o laço deve continuar (`keepVerify = result == 0`).
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe um número");
+        var number = scanner.nextInt();
+        var keepVerify = true;
+        while (keepVerify){
+            System.out.println("Informe o número para verificação");
+            var toVerify = scanner.nextInt();
+            if (toVerify < number){
+                System.out.printf("Infome um número maior que %s", number);
+                continue;
+            }
+            var result = toVerify % number;
+            keepVerify = result == 0;
+            System.out.printf("%s %% %s = %s", toVerify, number, result);
+        }
+    }
+}
+```
+
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-16h12m26s614.jpg" alt="" width="840">
+</p>
+
+Nesta imagem o código é executado para validar o comportamento esperado. As mensagens de saída (`printf`) foram ajustadas com quebras de linha (`\n`) para melhorar a legibilidade do console. No teste exibido, o número inicial informado é `2`; ao informar `8`, o resto da divisão é `0` (`8 % 2 = 0`) e o laço continua pedindo novos números; ao informar `9`, o resto é `1` (`9 % 2 = 1`), condição que faz `keepVerify` receber `false` e encerra a execução do laço, exatamente como pedia o enunciado do exercício.
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe um número");
+        var number = scanner.nextInt();
+        var keepVerify = true;
+        while (keepVerify){
+            System.out.println("Informe o número para verificação");
+            var toVerify = scanner.nextInt();
+            if (toVerify < number){
+                System.out.printf("Infome um número maior que %s \n", number);
+                continue;
+            }
+            var result = toVerify % number;
+            keepVerify = result == 0;
+            System.out.printf("%s %% %s = %s \n", toVerify, number, result);
+        }
+    }
+}
+```
+
+Saída do console:
+
+```
+Informe um número
+2
+Informe o número para verificação
+8
+8 % 2 = 0
+Informe o número para verificação
+9
+9 % 2 = 1
+
+Process finished with exit code 0
+```
+     
+
 ### 🟩 Vídeo 06 - Bônus: Configurando Git e GitHub
 
 <video width="60%" controls>
@@ -708,6 +810,9 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
 </video>
 
 link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/estruturas-de-controle-em-java/learning/55c4ebb0-e605-4bce-99f2-1d0972aaf32b?autoplay=1
+
+### Anotações      
+
 
 
 # Certificado: Estruturas de Controle em Java
