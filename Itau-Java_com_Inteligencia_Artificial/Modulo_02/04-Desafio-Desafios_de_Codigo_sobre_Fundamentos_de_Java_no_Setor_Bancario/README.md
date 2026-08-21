@@ -44,21 +44,74 @@ public class Main {
 }
 ```
 
-
 ## Solução
 
+```java
+import java.util.Scanner;
 
-# Desafio 02 - Trabalhando com Operadores
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String operacao = scanner.nextLine();
+
+        // A validacao deve ser exata, respeitando maiusculas e minusculas.
+        // Compare a entrada com os tres codigos permitidos.
+        boolean operacaoValida = false;
+
+        if (operacao.matches("DEPOSITO|SAQUE|TRANSFERENCIA")) {operacaoValida =true; }
+        else operacaoValida = false;
+
+        System.out.println(operacaoValida ? "VALID" : "INVALID");
+
+        scanner.close();
+    }
+}
+```
+
+
+# Desafio 02 - Validacao de Código Bancario em Java
+
+Em um banco digital, a equipe de atendimento esta treinando novos desenvolvedores para automatizar verificacoes simples antes de liberar operacoes no sistema interno. Uma das primeiras tarefas e validar se um codigo de agencia foi digitado corretamente pelos operadores. Como o treinamento e voltado para fundamentos de Java, o objetivo e praticar leitura de entrada, comparacao de strings e decisoes condicionais.
+
+Voce deve criar um programa que leia dois textos: o codigo informado pelo operador e o codigo esperado pelo sistema. Se os dois textos forem exatamente iguais, o programa deve indicar que a validacao foi aprovada. Caso contrario, deve informar que houve erro de digitacao. A comparacao deve considerar todos os caracteres exatamente como foram recebidos, incluindo letras maiusculas, minusculas, numeros e simbolos. Nao ha necessidade de tratar espacos extras fora do que for lido como entrada. O problema possui um unico objetivo: decidir se os dois codigos sao identicos ou nao.
 
 ## Entrada
 
+A entrada contem duas linhas. A primeira linha possui o codigo informado pelo operador. A segunda linha possui o codigo esperado pelo sistema. Cada linha deve ser tratada como uma string completa.
 
 ## Saída
 
+Exiba uma unica linha. Se os codigos forem exatamente iguais, imprima `ACESSO LIBERADO`. Caso contrario, imprima `ACESSO NEGADO`.
+
 ## Exemplos
 
+A tabela abaixo apresenta exemplos de entrada e saída:
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-08-21-18-02-01.png" alt="" width="480">
+</p>
 
 ## Código Exemplo
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String codigoInformado = scanner.nextLine();
+        String codigoEsperado = scanner.nextLine();
+
+        // Compare os dois textos exatamente como foram lidos.
+        // Se forem identicos, exiba "ACESSO LIBERADO"; caso contrario, "ACESSO NEGADO".
+        // TODO: imprima o resultado da validacao em uma unica linha.
+
+        scanner.close();
+    }
+}
+```
 
 
 ## Solução
