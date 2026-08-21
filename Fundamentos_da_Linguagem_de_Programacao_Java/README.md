@@ -108,16 +108,13 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 - [Introdução ao Java e seu Ambiente de Desenvolvimento](https://hermes.dio.me/certificates/YUJLSOAA.pdf)
 - [Fundamentos da Sintaxe da Linguagem Java](https://hermes.dio.me/certificates/28HP0OEI.pdf)
 - [Estruturas de Controle em Java](https://hermes.dio.me/certificates/NOBWDXSU.pdf)
-- [Fundamentos da Linguagem de Programação Java] *(desafio de código pendente)*
 
 ### Módulo 2
 
-- [Java e a Arte da Abstração com Classes e Encapsulamento]
-- [Herança e Polimorfismo em Java]
-- [Dominando Interfaces e Lambda em Java]
-- [Imersão Prática com Collections e Outras Classes Úteis do Java]
-- [Criando um Jogo do Sudoku em Java] *(desafio de projeto pendente)*
-- [Estruturas de Controle em Java] *(desafio de código pendente)*
+- [Java e a Arte da Abstração com Classes e Encapsulamento](https://hermes.dio.me/certificates/YTACYY7E.pdf)
+- [Herança e Polimorfismo em Java](https://hermes.dio.me/certificates/8TYKBD1O.pdf)
+- [Dominando Interfaces e Lambda em Java](https://hermes.dio.me/certificates/E4G0QGRT.pdf)
+- [Imersão Prática com Collections e Outras Classes Úteis do Java](https://hermes.dio.me/certificates/7MBZSWH9.pdf)
 
 ### Módulo 3
 
