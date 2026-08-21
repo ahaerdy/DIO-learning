@@ -821,5 +821,5 @@ Nesta aula prática o instrutor detalha o processo de configuração do Git em a
 
 # Certificado: Estruturas de Controle em Java
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/NO8W0X5U.pdf
+- Certificado em pdf: [Certificado-Estruturas.de.Controle.em.Java.pdf](000-Midia_e_Anexos/Certificado-Estruturas.de.Controle.em.Java.pdf)
