@@ -180,7 +180,301 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
 
 ### Anotações
 
-      
+#### Switch sem `break`: o problema do fall-through
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h43m56s143.jpg" alt="" width="840">
+</p>
+
+O código exibido implementa um `switch (option)` com sete `case` (1 a 7), cada um imprimindo o nome de um dia da semana, mas **sem nenhuma instrução `break`** ao final dos blocos. Ao rodar o programa com a entrada `5`, o console mostra a saída:
+
+```
+5
+Quinta
+Sexta
+Domingo
+```
+
+Isso demonstra o comportamento de **fall-through**: como não há `break`, a execução não para no `case 5`, ela "cai" para os `case` seguintes (6 e 7) e os executa também. Depois do `case 7`, como não há mais nenhum `case` abaixo, a execução simplesmente termina — por isso "Domingo" aparece por último, mesmo sem fazer sentido lógico (é o `case 1`, que está fora de sequência na saída porque o fluxo já tinha "vazado" para o final do bloco `switch`).
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h44m01s203.jpg" alt="" width="840">
+</p>
+
+Mesmo código do bloco anterior, rodado novamente. Desta vez, a saída para a entrada `5` é:
+
+```
+5
+Quinta
+Sexta
+Sábado
+```
+
+Aqui fica mais evidente o efeito do fall-through: a partir do `case 5` (Quinta), a execução continua sequencialmente por `case 6` (Sexta) e `case 7` (Sábado), e só para porque `case 7` é o último bloco do `switch`. Isso reforça que, sem `break`, o `switch` executa **todos os casos a partir do ponto de entrada até o fim da estrutura**, e não apenas o caso correspondente ao valor testado.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h44m29s803.jpg" alt="" width="840">
+</p>
+
+Novo teste do mesmo código, agora com a entrada `1`. A saída no console é:
+
+```
+1
+Domingo
+Segunda
+Terça
+Quarta
+```
+
+Confirma-se o mesmo padrão: a partir do `case 1` (Domingo), a execução continua em cascata por `case 2`, `case 3` e `case 4`, imprimindo todos os dias até onde a captura de tela permite visualizar. Isso evidencia que o problema do fall-through se manifesta a partir de **qualquer** ponto de entrada do `switch`, não apenas nos últimos casos.
+
+#### Código-fonte completo da versão inicial (sem `break`)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h44m40s695.jpg" alt="" width="840">
+</p>
+
+Esta imagem mostra o arquivo `Main.java` completo até este ponto:
+
+```java
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe um número de 1 até 7");
+        var option = scanner.nextInt();
+        switch (option){
+            case 1:
+                System.out.println("Domingo");
+            case 2:
+                System.out.println("Segunda");
+            case 3:
+                System.out.println("Terça");
+            case 4:
+                // continuação do switch não visível nesta captura
+        }
+    }
+}
+```
+
+Aqui se vê claramente a estrutura completa que gerou o comportamento de fall-through das imagens anteriores: um `Scanner` captura um número inteiro (`nextInt()`), que é testado em um `switch` cujos blocos `case` não possuem `break`.
+
+#### Adicionando `break` para interromper o fall-through
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h45m08s410.jpg" alt="" width="840">
+</p>
+
+O código foi alterado: agora cada bloco `case` termina com a instrução `break;`, visível a partir do `case 3` (Terça) até o `case 7` (Sábado):
+
+```java
+case 3:
+    System.out.println("Terça");
+    break;
+case 4:
+    System.out.println("Quarta");
+    break;
+case 5:
+    System.out.println("Quinta");
+    break;
+case 6:
+    System.out.println("Sexta");
+    break;
+case 7:
+    System.out.println("Sábado");
+    break;
+```
+
+O `break` interrompe a execução do `switch` assim que o bloco correspondente termina, evitando que o fluxo "vaze" para os casos seguintes — corrigindo o problema demonstrado nas três primeiras imagens.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h45m15s761.jpg" alt="" width="840">
+</p>
+
+Com o `break` já presente em todos os casos, o programa é executado novamente com a entrada `1`. Desta vez a saída é:
+
+```
+1
+Domingo
+```
+
+Apenas o dia correspondente ao `case 1` é impresso, comprovando que o `break` resolveu o problema de fall-through: a execução agora para exatamente no `case` correspondente ao valor informado.
+
+#### Tratando entradas inválidas com `default`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h45m50s782.jpg" alt="" width="840">
+</p>
+
+Um novo bloco foi adicionado ao final do `switch`, após o `case 7`:
+
+```java
+case 7:
+    System.out.println("Sábado");
+    break;
+default:
+    System.out.println("Opção inválida");
+```
+
+O console mostra a execução com uma entrada que não corresponde a nenhum `case` (1 a 7), resultando na saída `Opção inválida`. Isso demonstra o papel do `default`: ele funciona como uma cláusula de captura para qualquer valor que não bata com nenhum dos `case` declarados, garantindo que o programa sempre produza uma resposta, mesmo diante de entradas fora do intervalo esperado.
+
+#### Comparando `String` no switch e agrupando casos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h47m14s171.jpg" alt="" width="840">
+</p>
+
+O tipo da variável testada no `switch` mudou: em vez de comparar números inteiros, os `case` agora comparam valores do tipo `String` (`case "1":`, `case "2":` etc). Além disso, o `case "1":` e o `case "7":` foram agrupados sem `break` entre eles, compartilhando o mesmo bloco de execução:
+
+```java
+switch (option){
+    case "1":
+    case "7":
+        System.out.println("Fim de semana uhuu \\o/");
+        break;
+    case "2":
+        System.out.println("Segunda");
+        break;
+    case "3":
+        System.out.println("Terça");
+        break;
+    case "4":
+        System.out.println("Quarta");
+        // continuação não visível nesta captura
+}
+```
+
+O console mostra a execução com a entrada `5`, retornando `Quinta`. O agrupamento de `case "1":` e `case "7":` (sem `break` entre os dois rótulos) é uma aplicação **intencional** do fall-through: como ambos os dias são fim de semana, eles compartilham a mesma mensagem de saída.
+
+#### Verificando o Language Level do projeto (nível 6)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h47m44s014.jpg" alt="" width="840">
+</p>
+
+A tela mostra a janela **Project Structure** do IntelliJ IDEA, na aba **Project**, com o SDK configurado como `corretto-21` (Amazon Corretto 21.0.1), mas o **Language level** definido como `6 - @Override in interfaces`. Essa configuração limita quais recursos mais recentes da linguagem Java podem ser usados no projeto, independentemente da versão do SDK instalada.
+
+#### Erro de tipo incompatível ao usar `String` no switch
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h48m02s156.jpg" alt="" width="840">
+</p>
+
+Ao declarar a variável como `String option = scanner.next();` e utilizá-la no `switch (option)`, o IntelliJ IDEA aponta o erro:
+
+```
+Incompatible types. Found: 'java.lang.String', required: 'byte, char, short or int'
+```
+
+O editor sugere a correção **"Set language level to 7 – Diamonds, ARM, multi-catch etc."**. Isso mostra que o `switch` com `String` só é suportado a partir de determinadas versões da linguagem Java, e o **Language level 6**, configurado na imagem anterior, é insuficiente para esse recurso.
+
+#### Atualizando o Language Level para 21
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h48m27s717.jpg" alt="" width="840">
+</p>
+
+Na mesma janela **Project Structure**, o **Language level** foi alterado para `21 - Record patterns, pattern matching for switch`. Essa mudança habilita, no projeto, os recursos mais modernos do Java 21, incluindo os novos formatos de `switch` (como expressão e com padrões), que serão usados nas próximas etapas do código.
+
+#### A nova sintaxe de seta (`->`) no switch
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h49m47s898.jpg" alt="" width="840">
+</p>
+
+O `switch` foi reescrito utilizando a sintaxe de seta (`->`), sem `break`:
+
+```java
+switch (option){
+    case 1 -> System.out.println("Domingo");
+    case 2 -> System.out.println("Segunda");
+    case 3 -> System.out.println("Terça");
+    case 4 -> System.out.println("Quarta");
+    case 5 -> System.out.println("Quinta");
+    case 6 -> System.out.println("Sexta");
+    case 7 -> System.out.println("Sábado");
+}
+```
+
+O console mostra a execução com entrada `5`, retornando `Quinta`. Nessa sintaxe, cada `case` executa apenas a instrução associada à sua seta, sem necessidade de `break` — o fall-through automático deixa de existir por padrão.
+
+#### 
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h49m52s573.jpg" alt="" width="840">
+</p>
+
+Mesmo código com sintaxe de seta, agora executado com a entrada `7`. A saída é `Sábado`, confirmando que cada `case` na sintaxe `->` é isolado e executa exatamente o bloco correspondente ao valor testado, sem interferência dos demais casos.
+
+#### Adicionando `default` à sintaxe de seta
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h50m16s323.jpg" alt="" width="840">
+</p>
+
+Um `default` foi acrescentado ao `switch` com sintaxe de seta:
+
+```java
+default -> System.out.println("Opção inválida");
+```
+
+O console mostra a execução com a entrada `-1`, um valor fora do intervalo de 1 a 7, resultando na saída `Opção inválida`. Isso confirma que o `default` continua funcionando da mesma forma na sintaxe de seta: captura qualquer valor não coberto pelos `case` explícitos.
+
+#### Agrupando múltiplos valores em um único `case`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h50m41s649.jpg" alt="" width="840">
+</p>
+
+O primeiro `case` agora agrupa dois valores na mesma linha, separados por vírgula:
+
+```java
+case 1, 7 -> System.out.println("Fim de semana uhuuu \\o/");
+```
+
+O console mostra a execução com entrada `1`, retornando `Fim de semana uhuuu \o/`. Diferente do agrupamento por fall-through visto anteriormente (sem `break` entre `case "1":` e `case "7":`), a sintaxe de seta permite combinar múltiplos valores em um único rótulo `case`, de forma mais direta e sem risco de fall-through acidental para os demais casos.
+
+#### Switch como expressão: atribuindo o resultado a uma variável
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h52m27s355.jpg" alt="" width="840">
+</p>
+
+O `switch` deixou de ser apenas um comando e passou a ser usado como **expressão**, atribuindo seu resultado diretamente a uma variável:
+
+```java
+var message = switch (option){
+    case 1, 7 -> "Fim de semana uhuuu \\o/";
+    case 2 -> "Segunda";
+    case 3 -> "Terça";
+    case 4 -> "Quarta";
+    case 5 -> "Quinta";
+    case 6 -> "Sexta";
+    default -> "Opção inválida";
+};
+System.out.println(message);
+```
+
+Nesse formato, cada ramo do `switch` retorna diretamente um valor (uma `String`), em vez de executar uma instrução `System.out.println`. O console mostra a execução com entrada `2`, retornando `Segunda`, confirmando que o valor retornado pelo `switch` foi corretamente atribuído à variável `message` e depois impresso.
+
+#### Usando `yield` para blocos de código dentro do switch-expressão
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-20-08h56m16s630.jpg" alt="" width="840">
+</p>
+
+O `case 1, 7` foi expandido para um bloco de código entre chaves, contendo lógica adicional antes de retornar o valor, usando a palavra-chave `yield`:
+
+```java
+case 1, 7 -> {
+    var day = option == 1 ? "Domingo" : "Sábado";
+    yield String.format("Hoje é %s, fim de semana uhuuu \\o/", day);
+}
+```
+
+Aqui, quando `option` é `1` ou `7`, o bloco calcula qual é o dia específico (usando o operador ternário `? :`) e usa `yield` para devolver esse valor formatado como resultado do `switch`-expressão — diferente do `->` direto, que só permite uma única expressão. O console mostra a execução com entrada `1`, retornando `Hoje é Domingo, fim de semana uhuuu \o/`, confirmando que o bloco com `yield` funciona corretamente dentro da expressão `switch`.
 
 
 ### 🟩 Vídeo 03 - Estrutura de Repetição for
