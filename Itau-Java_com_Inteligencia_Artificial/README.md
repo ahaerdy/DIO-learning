@@ -91,10 +91,10 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 3: Programando o Mundo Real com Orientação a Objetos em Java
 
-- [ ] Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_03/01-Curso.01-Java_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento)
-- [ ] Curso: [Herança e Polimorfismo em Java](Modulo_03/02-Curso.02-Heranca_e_Polimorfismo_em_Java)
-- [ ] Curso: [Dominando Interfaces e Lambdas em Java](Modulo_03/03-Curso.03-Dominando_Interfaces_e_Lambdas_em_Java)
-- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/04-Curso.04-Jornada_Pratica_com_Collections_e_Outras_Classes_Uteis_de_Java)
+- [x] ✅ Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_03/01-Curso.01-Java_e_a_Arte_da_Abstracao_com_Classes_e_Encapsulamento)
+- [x] ✅ Curso: [Herança e Polimorfismo em Java](Modulo_03/02-Curso.02-Heranca_e_Polimorfismo_em_Java)
+- [x] ✅ Curso: [Dominando Interfaces e Lambdas em Java](Modulo_03/03-Curso.03-Dominando_Interfaces_e_Lambdas_em_Java)
+- [x] ✅ Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/04-Curso.04-Jornada_Pratica_com_Collections_e_Outras_Classes_Uteis_de_Java)
 - [ ] Curso: [Debugging e o Tratamento de Exceções em Java](Modulo_03/05-Curso.05-Debugging_e_o_Tratamento_de_Excecoes_em_Java)
 - [ ] Desafio de código: [Desafios de Código sobre POO e Exceções no Setor Bancário](Modulo_03/06-Desafio-Desafios_de_Codigo_sobre_POO_e_Excecoes_no_Setor_Bancario)
 
