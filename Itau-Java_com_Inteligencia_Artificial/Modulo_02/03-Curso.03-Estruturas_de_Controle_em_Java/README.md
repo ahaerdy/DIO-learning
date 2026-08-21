@@ -596,6 +596,101 @@ for (var i = 0; i < args.length; i++) {
 
 link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/estruturas-de-controle-em-java/learning/9b547d62-9926-4e00-bce1-74e820892a16?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-15h51m22s355.jpg" alt="" width="840">
+</p>
+
+Nesta primeira construção, a estrutura `while` é utilizada para repetir a leitura de um nome até que o usuário digite "exit". A condição do laço é avaliada **antes** de cada execução do bloco: enquanto `name` for diferente de `"exit"`, o programa continua pedindo um novo nome.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        var name = "";
+        while (!name.equals("exit")){
+            System.out.println("Informe um nome");
+            name = scanner.next();
+            System.out.println(name);
+        }
+    }
+}
+```
+
+No console de execução, é possível observar o comportamento: a cada nome informado ele é impresso na sequência, e ao digitar "exit" a condição do `while` deixa de ser verdadeira e o laço é encerrado, finalizando o processo.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-15h52m35s901.jpg" alt="" width="840">
+</p>
+
+Aqui o código foi reescrito utilizando `while (true)`, fazendo com que o laço rode indefinidamente. Para controlar a saída, foi adicionada uma verificação interna com `if`, usando `equalsIgnoreCase` para comparar o nome digitado com "exit" sem diferenciar maiúsculas de minúsculas. Quando essa condição é atendida, o comando `break` interrompe a execução do laço.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        var name = "";
+        while (true){
+            System.out.println("Informe um nome");
+            name = scanner.next();
+            System.out.println(name);
+
+            if (name.equalsIgnoreCase("exit")) break;
+        }
+    }
+}
+```
+
+Essa abordagem permite reunir todas as condições de parada dentro do próprio bloco, sendo útil quando existem múltiplas verificações que podem encerrar o laço.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-15h53m21s922.jpg" alt="" width="840">
+</p>
+
+Nesta variação, a estrutura foi convertida para `do { } while (true);`. A diferença fundamental do `do while` em relação ao `while` é que o bloco de código é executado **primeiro**, e só depois a condição é verificada — garantindo que o conteúdo do laço rode ao menos uma vez, independentemente de qualquer condição. Assim como no exemplo anterior, o `break` dentro do `if` continua sendo responsável por encerrar a repetição quando o nome informado for "exit".
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        var name = "";
+        do {
+            System.out.println("Informe um nome");
+            name = scanner.next();
+            System.out.println(name);
+
+            if (name.equalsIgnoreCase("exit")) break;
+        } while (true);
+    }
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-15h54m11s381.jpg" alt="" width="840">
+</p>
+
+Por fim, o código é ajustado para a forma mais comum do `do while`: em vez de usar `while (true)` com um `break` interno, a condição de parada é movida diretamente para a cláusula final do laço, negando a comparação com `equalsIgnoreCase`. O bloco continua sendo executado pelo menos uma vez antes de a condição `!name.equalsIgnoreCase("exit")` ser avaliada, mantendo a característica principal do `do while`.
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+        var name = "";
+        do {
+            System.out.println("Informe um nome");
+            name = scanner.next();
+            System.out.println(name);
+        } while (!name.equalsIgnoreCase("exit"));
+    }
+}
+```
+
+      
 ### 🟩 Vídeo 05 - Exercícios
 
 <video width="60%" controls>
