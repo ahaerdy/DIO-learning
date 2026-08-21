@@ -108,7 +108,7 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 ### Módulo 1
 
 - [Introdução ao Java e seu Ambiente de Desenvolvimento](https://hermes.dio.me/certificates/YUJLSOAA.pdf)
-- [Fundamentos da Sintaxe da Linguagem Java]
+- [Fundamentos da Sintaxe da Linguagem Java](https://hermes.dio.me/certificates/28HP0OEI.pdf)
 - [Estruturas de Controle em Java](https://hermes.dio.me/certificates/NOBWDXSU.pdf)
 - [Fundamentos da Linguagem de Programação Java] *(desafio de código pendente)*
 
