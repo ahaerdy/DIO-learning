@@ -486,6 +486,107 @@ Aqui, quando `option` é `1` ou `7`, o bloco calcula qual é o dia específico (
 
 link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/estruturas-de-controle-em-java/learning/94aa45c1-ee65-40a8-9284-2008a5f36b3c?autoplay=1
 
+### Anotações
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-07h58m02s841.jpg" alt="" width="840">
+</p>
+
+Nesta imagem, o editor mostra a estrutura `for (;;) { ... }`, ou seja, um `for` sem as três cláusulas preenchidas (inicialização, condição e incremento), o que faz o laço rodar indefinidamente. Dentro do laço, um `Scanner` é usado para ler um nome digitado pelo usuário (`scanner.next()`), e a condição `if (name.equalsIgnoreCase("exit")) break;` é responsável por interromper esse loop infinito quando o usuário digitar "exit", independentemente de estar em maiúsculas ou minúsculas — por isso o uso do `equalsIgnoreCase` em vez de `equals` ou do operador `==`, que não deve ser usado para comparar strings em Java. No console de execução, é possível ver o teste funcionando: o programa imprime os nomes digitados ("Leo", "Leo") e, ao receber "EXIT", encerra a execução.
+
+```java
+var scanner = new Scanner(System.in);
+for (;;) {
+    System.out.println("Digite um nome:");
+    var name = scanner.next();
+
+    if (name.equalsIgnoreCase("exit")) break;
+
+    System.out.println(name);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-08h04m34s015.jpg" alt="" width="840">
+</p>
+
+Aqui o código foi reescrito na forma mais comum de se utilizar o `for`, com uma variável de controle exclusiva do laço: `var i = 1` na inicialização, `i <= 100` como condição de parada e `i++` como incremento a cada volta. O corpo do laço apenas imprime o valor de `i` a cada iteração. No console, o resultado mostra os últimos números impressos (97, 98, 99, 100), confirmando que o laço percorreu de 1 até 100, já que a condição usada foi "menor ou igual".
+
+```java
+for (var i = 1; i <= 100; i++) {
+    System.out.println(i);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-08h05m29s289.jpg" alt="" width="840">
+</p>
+
+Nesta imagem foi adicionada uma condição extra dentro do `for`: `if (i == 90) break;`. Isso demonstra o uso da palavra-chave `break` para interromper o fluxo do laço antes que ele chegue à sua condição de parada natural. No console, o resultado mostra que a contagem foi impressa apenas até o número 89, confirmando que, ao atingir `i == 90`, o `break` foi executado e o laço foi encerrado imediatamente, sem imprimir o valor 90.
+
+```java
+for (var i = 1; i <= 100; i++) {
+    if (i == 90) break;
+
+    System.out.println(i);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-08h06m04s360.jpg" alt="" width="840">
+</p>
+
+Aqui a variável de controle passa a iniciar em `2` e o incremento é alterado para `i += 2`, ou seja, o laço avança de dois em dois. Essa é uma forma de imprimir apenas os números pares até 100, sem precisar de uma condição adicional para filtrar os valores. No console, o resultado confirma isso: a saída mostra a sequência 2, 4, 6, 8, 10, 12..., todos números pares.
+
+```java
+for (var i = 2; i <= 100; i += 2) {
+    System.out.println(i);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-08h06m28s020.jpg" alt="" width="840">
+</p>
+
+Nesta imagem o `for` foi reconfigurado para contar em ordem decrescente: a variável inicia em `200`, a condição de parada é `i >= 0` e o incremento foi trocado por `i--`, decrementando o valor a cada iteração. No console, o final da execução mostra a sequência descendo até 3, 2, 1 e 0, confirmando que o laço percorre os valores de 200 até 0 em ordem decrescente.
+
+```java
+for (var i = 200; i >= 0; i--) {
+    System.out.println(i);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-08h08m06s311.jpg" alt="" width="840">
+</p>
+
+Esta imagem não mostra código-fonte, e sim a janela de configuração de execução do IntelliJ IDEA ("Run/Debug Configurations"). Nela, o campo de argumentos de linha de comando (CLI arguments) foi preenchido com os valores "banana uva maçã pera Jaca Melão Melancia". Essa configuração é o que permite que esses valores sejam recebidos pelo parâmetro `args` do método `main`, para serem posteriormente percorridos por uma estrutura de repetição.
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-08h08m13s538.jpg" alt="" width="840">
+</p>
+
+Com os argumentos já configurados, o código foi alterado para percorrer o array `args` usando `args.length` como condição de parada do `for`, em vez de um valor fixo como 100. A cada iteração, o valor de `args[i]` é impresso. No console é possível ver parte da saída, com os valores "pera", "Jaca", "Melão" e "Melancia" sendo exibidos, resultado da leitura dos argumentos passados na configuração de execução.
+
+```java
+for (var i = 0; i < args.length; i++) {
+    System.out.println(args[i]);
+}
+```
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-08-21-08h10m07s223.jpg" alt="" width="840">
+</p>
+
+Nesta última imagem, a linha de impressão foi ajustada para `System.out.println(i + " - " + args[i]);`, concatenando o índice atual junto com o valor correspondente do array. Isso evidencia uma vantagem do `for` tradicional em relação a formas mais enxutas de iteração: por manter o controle explícito do índice `i`, é possível exibir tanto a posição quanto o valor de cada elemento. No console, o resultado mostra exatamente esse formato: "0 - banana", "1 - uva", "2 - maçã", "3 - pera", "4 - Jaca", "5 - Melão", entre outros.
+
+```java
+for (var i = 0; i < args.length; i++) {
+    System.out.println(i + " - " + args[i]);
+}
+```
+
+
 ### 🟩 Vídeo 04 - Estruturas de repetição while e do while
 
 <video width="60%" controls>
