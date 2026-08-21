@@ -813,7 +813,11 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
 
 ### Anotações      
 
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-08-21-16-48-11.png" alt="" width="480">
+</p>
 
+Nesta aula prática o instrutor detalha o processo de configuração do Git em ambiente Linux para integração com o GitHub. O instrutor demonstra desde a instalação do software via terminal até a criação de chaves SSH para garantir uma comunicação segura entre a máquina local e o servidor remoto. Além disso, o tutorial ensina a criar um repositório online, realizar os primeiros comandos de versionamento, como commit e push, e organizar o histórico de alterações. Por fim, destaca-se a importância de manter um portfólio atualizado e bem documentado através de arquivos README atrativos para valorizar o trabalho do desenvolvedor no mercado.
 
 # Certificado: Estruturas de Controle em Java
 
