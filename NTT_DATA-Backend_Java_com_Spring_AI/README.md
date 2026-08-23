@@ -113,7 +113,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 5: Publicando, Operando e Monitorando Soluções de Back-end no Azure
 
-- [ ] Curso: [Configurando Planos de Serviço de Aplicativos do Azure]
+- [x] ✓ Curso: [Configurando Planos de Serviço de Aplicativos do Azure]
 - [ ] Curso: [Configurando os Serviços de Aplicativos do Azure]
 - [ ] Curso: [Configurando Contas de Armazenamento]
 - [ ] Curso: [Configurando o Azure Monitor]

@@ -143,10 +143,10 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 3
 
-- [Java e a Arte da Abstração com Classes e Encapsulamento]
-- [Herança e Polimorfismo em Java]
-- [Dominando Interfaces e Lambdas em Java]
-- [Jornada Prática com Collections e Outras Classes Úteis de Java]
+- [Java e a Arte da Abstração com Classes e Encapsulamento](https://hermes.dio.me/certificates/YTACYY7E.pdf)
+- [Herança e Polimorfismo em Java](https://hermes.dio.me/certificates/8TYKBD1O.pdf)
+- [Dominando Interfaces e Lambdas em Java](https://hermes.dio.me/certificates/E4G0QGRT.pdf)
+- [Jornada Prática com Collections e Outras Classes Úteis de Java](https://hermes.dio.me/certificates/7MBZSWH9.pdf)
 - [Debugging e o Tratamento de Exceções em Java]
 - [Desafios de Código sobre POO e Exceções no Setor Bancário]
 - Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java]
