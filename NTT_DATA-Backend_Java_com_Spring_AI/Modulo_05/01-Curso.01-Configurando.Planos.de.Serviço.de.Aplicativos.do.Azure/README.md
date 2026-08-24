@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Instrutor: Valéria Baptista (Head of Cloud and Cybersecurity | Professora e Mentora em Tecnologia)
+- Contato Linkedin: / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/) 
 
 ## Parte 1 - Configurando Planos do Serviço de Aplicativo do Azure
 
