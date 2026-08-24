@@ -70,8 +70,6 @@ link do vídeo:
 
 link do vídeo: https://web.dio.me/track/ntt-data-2026-ai-java-back-end/course/configurando-planos-do-servico-de-aplicativo-do-azure/learning/cf30c644-dc6d-49b6-b5b2-bc47edadd368?autoplay=1
 
-##  Materiais de Apoio
-
 # Certificado: Configurando Planos de Serviço de Aplicativos do Azure
 
 - Link na plataforma: https://hermes.dio.me/certificates/C47K1KPN.pdf

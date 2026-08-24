@@ -113,8 +113,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 5: Publicando, Operando e Monitorando Soluções de Back-end no Azure
 
-- [x] ✓ Curso: [Configurando Planos de Serviço de Aplicativos do Azure]
-- [ ] Curso: [Configurando os Serviços de Aplicativos do Azure]
+- [x] ✓ Curso: [Configurando Planos de Serviço de Aplicativos do Azure](Modulo_05/01-Curso.01-Configurando.Planos.de.Serviço.de.Aplicativos.do.Azure)
+- [x] ✓ Curso: [Configurando os Serviços de Aplicativos do Azure](Modulo_05/02-Curso.02-Configurando.os.Serviços.de.Aplicativos.do.Azure)
 - [ ] Curso: [Configurando Contas de Armazenamento]
 - [ ] Curso: [Configurando o Azure Monitor]
 - [ ] Curso: [Configurando Métricas do Azure]
@@ -161,8 +161,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 5
 
-- [Configurando Planos de Serviço de Aplicativos do Azure]
-- [Configurando os Serviços de Aplicativos do Azure]
+- [Configurando Planos de Serviço de Aplicativos do Azure](https://hermes.dio.me/certificates/C47K1KPN.pdf)
+- [Configurando os Serviços de Aplicativos do Azure](https://hermes.dio.me/certificates/7C5C3MTO.pdf)
 - [Configurando Contas de Armazenamento]
 - [Configurando o Azure Monitor]
 - [Configurando Métricas do Azure]
