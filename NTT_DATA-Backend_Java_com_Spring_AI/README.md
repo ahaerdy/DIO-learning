@@ -182,5 +182,6 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst)
 - / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/) (José Luiz Abreu Cardoso Junior / Engenheiro de software sênior))
 - / [thpoiani](https://www.linkedin.com/in/thpoiani/)(Thiago Poiani / Principal Engineer at Skip  )
+- / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/) (Valéria Baptista / Head of Cloud and Cybersecurity, Professora e Mentora em Tecnologia)
 
 <!-- Preencher conforme for progredindo no bootcamp -->
