@@ -117,7 +117,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] ✓ Curso: [Configurando os Serviços de Aplicativos do Azure](Modulo_05/02-Curso.02-Configurando.os.Serviços.de.Aplicativos.do.Azure)
 - [x] ✓ Curso: [Configurando Contas de Armazenamento](Modulo_05/03-Curso.03-Configurando.Contas.de.Armazenamento)
 - [x] ✓ Curso: [Configurando o Azure Monitor](Modulo_05/04-Curso.04-Configurando.o.Azure.Monitor)
-- [ ] Curso: [Configurando Métricas do Azure](Modulo_05/05-Curso.05-Configurando.Métricas.do.Azure)
+- [x] ✓ Curso: [Configurando Métricas do Azure](Modulo_05/05-Curso.05-Configurando.Métricas.do.Azure)
 - [ ] Curso: [Configurando a Análise de Logs]
 
 ---
