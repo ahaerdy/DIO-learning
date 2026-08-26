@@ -167,7 +167,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [Configurando o Azure Monitor](https://hermes.dio.me/certificates/TVLGUYVC.pdf)
 - [Configurando Métricas do Azure](https://hermes.dio.me/certificates/BGWRIKZR.pdf)
 - [Configurando a Análise de Logs](https://hermes.dio.me/certificates/BOC7BOJB.pdf)
-- Certificado do Módulo: [Publicando, Operando e Monitorando Soluções de Back-end no Azure]
+- Certificado do Módulo: [Publicando, Operando e Monitorando Soluções de Back-end no Azure](https://hermes.dio.me/certificates/HYCV4FRQ.pdf)
 
 ### Conclusão:
 
