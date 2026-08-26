@@ -118,7 +118,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] ✓ Curso: [Configurando Contas de Armazenamento](Modulo_05/03-Curso.03-Configurando.Contas.de.Armazenamento)
 - [x] ✓ Curso: [Configurando o Azure Monitor](Modulo_05/04-Curso.04-Configurando.o.Azure.Monitor)
 - [x] ✓ Curso: [Configurando Métricas do Azure](Modulo_05/05-Curso.05-Configurando.Métricas.do.Azure)
-- [ ] Curso: [Configurando a Análise de Logs]
+- [x] ✓ Curso: [Configurando a Análise de Logs](Modulo_05/06-Curso.06-Configurando.a.Análise.de.Logs)
 
 ---
 
@@ -163,10 +163,10 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - [Configurando Planos de Serviço de Aplicativos do Azure](https://hermes.dio.me/certificates/C47K1KPN.pdf)
 - [Configurando os Serviços de Aplicativos do Azure](https://hermes.dio.me/certificates/7C5C3MTO.pdf)
-- [Configurando Contas de Armazenamento]
-- [Configurando o Azure Monitor]
-- [Configurando Métricas do Azure]
-- [Configurando a Análise de Logs]
+- [Configurando Contas de Armazenamento](https://hermes.dio.me/certificates/EJEKCARP.pdf)
+- [Configurando o Azure Monitor](https://hermes.dio.me/certificates/TVLGUYVC.pdf)
+- [Configurando Métricas do Azure](https://hermes.dio.me/certificates/BGWRIKZR.pdf)
+- [Configurando a Análise de Logs](https://hermes.dio.me/certificates/BOC7BOJB.pdf)
 - Certificado do Módulo: [Publicando, Operando e Monitorando Soluções de Back-end no Azure]
 
 ### Conclusão:
