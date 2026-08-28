@@ -156,8 +156,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [Conectando sua API com Banco de Dados Através do Spring Data](https://hermes.dio.me/certificates/MF0GVYEW.pdf)
 - [Simplificando a Segurança em APIs REST com Spring Security](https://hermes.dio.me/certificates/WC8E96BD.pdf)
 - [Consumindo APIs Externas com a Spring Cloud OpenFeign](https://hermes.dio.me/certificates/BGWRIKZR.pdf)
-- [Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot]
-- Certificado do Módulo: [Criando Soluções Inteligentes com Spring Boot e Java Moderno]
+- Certificado do Módulo: [Criando Soluções Inteligentes com Spring Boot e Java Moderno](https://hermes.dio.me/certificates/41YQO20J.pdf)
 
 ### Módulo 5
 
@@ -171,7 +170,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [NTT DATA: Backend Java com Spring AI](https://hermes.dio.me/certificates/UQAEAXQT.pdf)
+- 🎓 Certificado de conclusão do Bootcamp: [NTT DATA: Backend Java com Spring AI](https://hermes.dio.me/certificates/MULOTYO3.pdf)
 
 ---
 
