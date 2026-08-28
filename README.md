@@ -73,7 +73,7 @@ Abaixo estão listados os projetos práticos e desafios de código desenvolvidos
     - [GitHub Profile Viewer](https://github.com/ahaerdy/DIO-github-profile-viewer-tqi-fullstack)
 - ☕ Java:
   - [Banco Digital - Projeto Java POO](https://github.com/ahaerdy/lab-java-banco-digital)
-  - 🌱 Java + Spring
+  - 🌱 Ecossistema Spring
     - [VoiceBudget - Assistente Financeiro por Voz com IA](https://github.com/ahaerdy/budgeting-spring-ai-gemini)
     - [Explorando Padrões de Projeto na Prática com Java](https://github.com/ahaerdy/dio-design-patterns-java)
     - [Beer Stock API - Gerenciamento de Estoque de Cerveja](https://github.com/ahaerdy/dio-beer-stock-api-testes-unitarios)
