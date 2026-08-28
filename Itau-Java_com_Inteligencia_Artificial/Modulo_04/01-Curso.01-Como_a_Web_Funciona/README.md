@@ -41,7 +41,7 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/7ed1b686-dc70-422e-b4a8-09b160b6d26e?autoplay=1
 
 ### 🟩 Vídeo 05 - Backend E Frontend
 
@@ -50,7 +50,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/8bc898e7-5d6e-407a-9709-5c9a496fdc89?autoplay=1
 
 ## Parte 3 - Principais Termos de Aplicações Web
 
@@ -61,7 +61,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/46f0176d-ab46-4c4e-ba3b-738e0debccb8?autoplay=1
 
 ### 🟩 Vídeo 07 - Momentos De Uma Aplicação
 
@@ -70,7 +70,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/a52dd4a1-aaa6-4838-8f05-7c63a1e30175?autoplay=1
 
 ### 🟩 Vídeo 08 - Microsserviços X Monolitos
 
@@ -79,7 +79,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/bce7b2f0-9473-40e9-9be6-387d8733c3e8?autoplay=1
 
 ### 🟩 Vídeo 09 - Frameworks E Bibliotecas
 
@@ -88,7 +88,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/8b0d267a-c67a-44a8-be33-eb0c7bd7ea6e?autoplay=1
 
 ### 🟩 Vídeo 10 - Repositórios
 
@@ -97,7 +97,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/d55a6bb6-9a5a-43ad-a1e0-aa0c8640aa32?autoplay=1
 
 ### 🟩 Vídeo 11 - Monorepo
 

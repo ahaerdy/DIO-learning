@@ -171,7 +171,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [NTT DATA: Backend Java com Spring AI]
+- 🎓 Certificado de conclusão do Bootcamp: [NTT DATA: Backend Java com Spring AI](https://hermes.dio.me/certificates/UQAEAXQT.pdf)
 
 ---
 
