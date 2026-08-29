@@ -19,7 +19,7 @@ link para o vídeo: https://web.dio.me/lives/live-de-abertura-da-experiencia-ita
 **Participantes:**
 * **Iglá** (Fundador da DIO)
 * **Priscila** (Superintendente de Tecnologia - Banco Itaú)
-* **Artur** (Atração de Talentos & Marca Empregadora - Banco Itaú)
+* **Arthur** (Atração de Talentos & Marca Empregadora - Banco Itaú)
 * **Caio** (Especialista em Tech - Banco Itaú)
 
 ### 1. Visão Geral do Bootcamp & Parceria
