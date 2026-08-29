@@ -22,8 +22,6 @@ link para o vídeo: https://web.dio.me/lives/live-de-abertura-da-experiencia-ita
 * **Artur** (Atração de Talentos & Marca Empregadora - Banco Itaú)
 * **Caio** (Especialista em Tech - Banco Itaú)
 
----
-
 ### 1. Visão Geral do Bootcamp & Parceria
 
 A live oficializou o lançamento do **Bootcamp Itaú - Java com Inteligência Artificial**, uma iniciativa conjunta entre o **Banco Itaú** e a **DIO** com o objetivo de formar e capacitar talentos na principal linguagem utilizada nos sistemas críticos do banco, integrada às tecnologias de Computação em Nuvem e Inteligência Artificial.
@@ -32,8 +30,6 @@ A live oficializou o lançamento do **Bootcamp Itaú - Java com Inteligência Ar
 * **15.000 Bolsas Gratuitas:** Oportunidade 100% gratuita aberta a profissionais e estudantes do Brasil e do exterior.
 * **Acesso Direto ao Mercado:** Graduados têm prioridade de visibilidade no *Talent Match* da DIO, conectando-se diretamente ao Itaú e a mais de 130 empresas parceiras.
 * **Programa de Entrada & Aceleração:** Estruturado tanto para iniciantes (com conceitos básicos de Java e lógica) quanto para quem busca transição de carreira ou aceleração profissional.
-
----
 
 ### 2. Estrutura do Conteúdo Técnico (45 Horas)
 
@@ -46,8 +42,6 @@ O programa abrange uma jornada completa de aprendizado *hands-on* e prático, pr
 | **Ecossistema Spring** | Spring Boot, Spring Data, Spring Security e Spring Cloud para construção de APIs robustas e escaláveis. |
 | **Cloud Computing** | Conceitos fundamentais e integração com serviços da **AWS (Amazon Web Services)**. |
 
----
-
 ### 3. O Papel da Tecnologia e da IA no Banco Itaú
 
 A liderança do Itaú destacou como a tecnologia deixou de ser apenas uma área de suporte e tornou-se o centro estratégico dos negócios da instituição:
@@ -56,8 +50,6 @@ A liderança do Itaú destacou como a tecnologia deixou de ser apenas uma área 
 * **A Tríade/Quarteto de Produto:** As decisões de desenvolvimento são tomadas de forma integrada por equipes compostas por Negócios, Tecnologia, Design, Dados e Produto.
 * **IA como Extensão da Inteligência Humana:** A IA não substitui o desenvolvedor; ela atua como um acelerador. A capacidade crítica, os fundamentos da engenharia de software e a validação do código continuam sendo responsabilidade do profissional humano.
 * **Resolução de Problemas Reais:** A tecnologia não é adotada por "moda". A pergunta central no banco é sempre: *"Qual problema real do cliente ou do negócio estamos resolvendo?"*
-
----
 
 ### 4. Dicas de Carreira e Processo Seletivo no Itaú
 
@@ -74,8 +66,6 @@ Os executivos e especialistas compartilharam direcionamentos essenciais para que
 * **Habilidades Transferíveis (Transição & +40):** Profissionais em transição de carreira ou com mais de 40 anos devem valorizar suas bagagens anteriores. Soft skills (comunicação, maturidade, resolução de problemas complexos) são diferenciais valiosos e transferíveis.
 * **Constância nos Estudos:** A tecnologia muda constantemente; focar em fundamentos sólidos permite aprender novas ferramentas rapidamente. Evite tentar aprender tudo ao mesmo tempo — estabeleça um foco claro.
 * **Presença em Comunidades:** Participe ativamente de comunidades técnicas (ex.: Sisterstech, comunidades de Java, Cloud, etc.). O networking e o compartilhamento de aprendizados geram indicações e oportunidades reais.
-
----
 
 ### 5. Conclusão e Próximos Passos
 
