@@ -132,7 +132,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [Potencializando seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)](https://hermes.dio.me/certificates/AXVO0TCY.pdf)
 - [Introdução à Engenharia de Prompts](https://hermes.dio.me/certificates/CALJH6NR.pdf)
 - [DIO Agent: Nunca Mais Estude Sozinho](https://hermes.dio.me/certificates/1XEA4VTW.pdf)
-- Certificado do Módulo: [Potencializando Sua Jornada com Inteligência Artificial e Agentes]
+- Certificado do Módulo: [Potencializando Sua Jornada com Inteligência Artificial e Agentes](https://hermes.dio.me/certificates/AMLZTRK2.pdf)
 
 ### Módulo 2
 
