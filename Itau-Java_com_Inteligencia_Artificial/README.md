@@ -76,7 +76,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] ✓ Curso: [Potencializando seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)](Modulo_01/03-Curso.03-Potencializando_seus_Estudos_e_Carreira_com_IA_Chatbots_Copilotos_e_Agentes)
 - [x] ✓ Curso: [Introdução à Engenharia de Prompts](Modulo_01/04-Curso.04-Introducao_a_Engenharia_de_Prompts)
 - [x] ✅ Curso: [DIO Agent: Nunca Mais Estude Sozinho](Modulo_01/05-Curso.05-DIO_Agent_Nunca_Mais_Estude_Sozinho)
-- [ ] Mentoria (Live): [Live de Abertura da Experiência Itaú](Modulo_01/06-Mentoria-Live_de_Abertura_da_Experiencia_Itau) 👉 <mark style='background:yellow'><font color='#000000'><strong>Evento agendado para 27/08 às 19h00</strong></font></mark>.
+- [x] ✅ Mentoria (Live): [Live de Abertura da Experiência Itaú](Modulo_01/06-Mentoria-Live_de_Abertura_da_Experiencia_Itau) .
 
 ---
 
