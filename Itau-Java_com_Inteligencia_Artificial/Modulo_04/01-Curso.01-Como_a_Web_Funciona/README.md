@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Felipe Aguiar (DIO - Tech Educator)
+- Contato Linkedin: / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/)
 
 ## Parte 1 - Introdução
 
@@ -106,7 +106,7 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/24459a6b-a82a-48cf-b378-60041ff2b755?autoplay=1
 
 ### 🟩 Vídeo 12 - CI & CD
 
@@ -115,7 +115,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/c2f02f10-5236-4899-9aea-9017026e3ab9?autoplay=1
 
 ### 🟩 Vídeo 13 - Domínio De Aplicação
 
@@ -124,7 +124,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/4726f159-358d-4eb0-bcb3-00254051a3ad?autoplay=1
 
 ### 🟩 Vídeo 14 - Aonde Verei Esses Termos
 
@@ -133,7 +133,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/5d342691-fade-49b5-81c1-c826328e544e?autoplay=1
 
 ## Parte 4 - Materiais de Apoio e Questionário - Como a Web Funciona
 
@@ -144,9 +144,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-a-web-funciona/learning/a4e00c0e-d4f6-4bc5-b790-8224f4337a4d?autoplay=1
 
-# Certificado: 
+# Certificado: Como a Web Funciona
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/IHGYMM17.pdf
+- Certificado em pdf: [Certificado-Como.a.Web.Funciona.pdf](Modulo_04/01-Curso.01-Como_a_Web_Funciona/000-Midia_e_Anexos/Certificado-Como.a.Web.Funciona.pdf)

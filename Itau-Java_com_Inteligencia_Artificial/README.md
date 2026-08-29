@@ -102,7 +102,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 4: Fundamentos da Web e Boas Práticas de Desenvolvimento com Java
 
-- [ ] Curso: [Como a Web Funciona?](Modulo_04/01-Curso.01-Como_a_Web_Funciona)
+- [x] ✓ Curso: [Como a Web Funciona?](Modulo_04/01-Curso.01-Como_a_Web_Funciona)
 - [ ] Curso: [Como Funciona o HTTP Protocol](Modulo_04/02-Curso.02-Como_Funciona_o_HTTP_Protocol)
 - [ ] Curso: [Introdução ao Desenvolvimento de API](Modulo_04/03-Curso.03-Introducao_ao_Desenvolvimento_de_API)
 - [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_04/04-Curso.04-Anotacoes_em_Java_Marcando_o_Seu_Codigo_de_Maneira_Inteligente)
@@ -153,7 +153,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 4
 
-- [Como a Web Funciona?]
+- [Como a Web Funciona?](https://hermes.dio.me/certificates/IHGYMM17.pdf)
 - [Como Funciona o HTTP Protocol]
 - [Introdução ao Desenvolvimento de API]
 - [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
@@ -181,5 +181,6 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
 - / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton Falvo Jr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst)
+- / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
 
 <!-- Preencher conforme for progredindo no bootcamp -->
