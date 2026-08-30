@@ -21,7 +21,7 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-funciona-http-protocol/learning/3e8a7df2-a1ce-4f00-ad89-fe224dcc5bf3?autoplay=1
 
 ### 🟩 Vídeo 03 - Qual Problema Isso Solve
 
@@ -31,7 +31,7 @@ link do vídeo:
 </video>
 
 link do vídeo:
-
+ 
 ## Parte 2 - Teoria Sobre Protocolo HTTP
 
 ### 🟩 Vídeo 04 - Request & Response
@@ -41,7 +41,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-funciona-http-protocol/learning/8542dfd1-6fa2-44c0-ac8a-7d000d4e66d0?autoplay=1
 
 ### 🟩 Vídeo 05 - Header & Content
 
@@ -50,7 +50,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 06 - Request Methods
 
