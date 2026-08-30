@@ -50,7 +50,7 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-funciona-http-protocol/learning/1ba96563-a8bf-4f4e-b4b9-b7422d53ece8?autoplay=1
 
 ### 🟩 Vídeo 06 - Request Methods
 
@@ -59,7 +59,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-funciona-http-protocol/learning/46a1609f-5d91-4458-8c78-420f627a0a34?autoplay=1
 
 ### 🟩 Vídeo 07 - Status Code
 
@@ -68,7 +68,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-funciona-http-protocol/learning/c02a835f-fe7c-4865-b443-50398a4ef463?autoplay=1
 
 ### 🟩 Vídeo 08 - Principais Status Code
 
@@ -77,7 +77,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-funciona-http-protocol/learning/c9139b78-1996-4a70-8576-46d82b7290ca?autoplay=1
 
 ### 🟩 Vídeo 09 - Content
 
@@ -86,7 +86,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-funciona-http-protocol/learning/2d32b649-2cd2-41ec-b370-6dd518c622fa?autoplay=1
 
 ### 🟩 Vídeo 10 - Resumão Do Felipão
 
@@ -95,11 +95,10 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/como-funciona-http-protocol/learning/6bbce1fc-b255-4046-b154-7d2dfa52dfd8?autoplay=1
 
-##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Como Funciona o HTTP Protocol
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/NZQ1V8JC.pdf
+- Certificado em pdf: [Certificado-Como.Funciona.o.HTTP.Protocol.pdf](Modulo_04/02-Curso.02-Como_Funciona_o_HTTP_Protocol/000-Midia_e_Anexos/Certificado-Como.Funciona.o.HTTP.Protocol.pdf)
