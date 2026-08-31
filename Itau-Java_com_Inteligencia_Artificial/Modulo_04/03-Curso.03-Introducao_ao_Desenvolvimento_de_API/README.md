@@ -41,7 +41,7 @@ link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/o-que-e-uma-api/learning/e3c3fe08-d5c8-4a90-987f-879c6e589698?autoplay=1
 
 ### 🟩 Vídeo 05 - O Sentido Semântico de API
 
@@ -50,7 +50,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/o-que-e-uma-api/learning/8565d8f6-0cb8-416e-85d4-e6e8c051ffc1?autoplay=1
 
 ### 🟩 Vídeo 06 - Características de uma API
 
@@ -59,7 +59,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/o-que-e-uma-api/learning/05a14245-3163-40c9-b973-71d7965b266a?autoplay=1
 
 ### 🟩 Vídeo 07 - REST
 
@@ -68,7 +68,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/o-que-e-uma-api/learning/6a974ec7-7072-447a-8308-0fae8e8faafe?autoplay=1
 
 ### 🟩 Vídeo 08 - RESTful Características
 
@@ -77,7 +77,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/o-que-e-uma-api/learning/8cef4dc2-c1b6-47f3-8ded-f484c8fbe71e?autoplay=1
 
 ### 🟩 Vídeo 09 - REST X RESTful
 
@@ -86,7 +86,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/o-que-e-uma-api/learning/0d5067c7-5f56-4a42-b7ea-17d9540fbe25?autoplay=1
 
 ### 🟩 Vídeo 10 - Resumão do Felipão
 
@@ -95,7 +95,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/o-que-e-uma-api/learning/17fb3a99-c122-40bf-b1cd-bb5acf6d8a00?autoplay=1
 
 ## Parte 3 - Bônus
 
@@ -106,11 +106,11 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/itau-java-com-inteligencia-artificial/course/o-que-e-uma-api/learning/594bb55c-a6d2-4ac4-8a6f-b979fcf92041?autoplay=1
 
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Introdução ao Desenvolvimento de API
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/8G0SCR60.pdf
+- Certificado em pdf: [Certificado-Introdução.ao.Desenvolvimento.de.API.pdf](000-Midia_e_Anexos/Certificado-Introdução.ao.Desenvolvimento.de.API.pdf)

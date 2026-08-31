@@ -155,11 +155,11 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - [Como a Web Funciona?](https://hermes.dio.me/certificates/IHGYMM17.pdf)
 - [Como Funciona o HTTP Protocol](https://hermes.dio.me/certificates/NZQ1V8JC.pdf)
-- [Introdução ao Desenvolvimento de API]
+- [Introdução ao Desenvolvimento de API](https://hermes.dio.me/certificates/8G0SCR60.pdf)
 - [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
 - [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade]
 - [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]
-- Certificado do Módulo: [Fundamentos da Web e Boas Práticas de Desenvolvimento com Java]
+- Certificado do Módulo: [Fundamentos da Web e Boas Práticas de Desenvolvimento com Java](https://hermes.dio.me/certificates/FB3IVVAK.pdf)
 
 ### Módulo 5
 
@@ -172,7 +172,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [Itaú: Java com Inteligência Artificial]
+- 🎓 Certificado de conclusão do Bootcamp: [Itaú: Java com Inteligência Artificial](https://hermes.dio.me/certificates/CIPZFLR3.pdf)
 
 ---
 

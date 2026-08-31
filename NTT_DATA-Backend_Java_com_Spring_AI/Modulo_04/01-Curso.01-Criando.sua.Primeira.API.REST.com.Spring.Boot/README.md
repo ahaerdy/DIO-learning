@@ -100,6 +100,9 @@ Essa comparação evidencia por que o JSON se tornou mais leve, deixando o pacot
 
 > 💡**Nota de Ajuste Conceitual**: Embora o termo "padrão" seja frequentemente usado no mercado de forma coloquial, tecnicamente o REST (Representational State Transfer) não é um padrão formalizado por comitês (como o SOAP é), mas sim um **ESTILO** Arquitetural. Ele foi definido originalmente na tese de doutorado de Roy Fielding (ano 2000) como um conjunto de restrições e boas práticas (como statelessness e interface uniforme). O protocolo HTTP é a ferramenta que escolhemos para implementar esse estilo, utilizando seus métodos nativos (GET, POST, PUT, DELETE) para dar semântica às operações.<br>tags: #rest #restful #arquitetura
 
+- Referência: [O que é uma API REST (não é um padrão)](https://dio.me/articles/o-que-e-uma-api-rest-e-por-que-ela-nao-e-um-padrao-6966c2c8aba4\
+)
+
 <p align="center">
   <img src="000-Midia_e_Anexos/vlcsnap-2026-07-08-08h05m15s317.jpg" alt="" width="840">
 </p>
