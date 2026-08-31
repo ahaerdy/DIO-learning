@@ -53,7 +53,7 @@ Este repositório está estruturado para acompanhar meu progresso nas formaçõe
 
 - [Fundamentos da Linguagem de Programação Java](https://github.com/ahaerdy/DIO-learning/tree/main/Fundamentos_da_Linguagem_de_Programacao_Java)
 - [Bootcamp NTT DATA: Backend Java com Spring AI](https://github.com/ahaerdy/DIO-learning/tree/main/NTT_DATA-Backend_Java_com_Spring_AI)
-- [https://github.com/ahaerdy/DIO-learning/tree/main/Itau-Java_com_Inteligencia_Artificial](https://github.com/ahaerdy/DIO-learning/tree/main/Itau-Java_com_Inteligencia_Artificial)
+- [Bootcamp Itaú: Java com Inteligência Artificial](https://github.com/ahaerdy/DIO-learning/tree/main/Itau-Java_com_Inteligencia_Artificial)
 - [Bootcamp Suzano Python Developer](https://github.com/ahaerdy/dio-learning/tree/main/Suzano%20-%20Python%20Developer)
 - [Bootcamp NTT DATA - Engenharia de Dados com Python](https://github.com/ahaerdy/DIO-learning/tree/main/NTT%20DATA-Engenharia%20de%20Dados%20com%20Python#-reposit%C3%B3rio-de-estudos--bootcamp-ntt-data-engenharia-de-dados-com-python)
 - [Bootcamp TQI Fullstack Developer](https://github.com/ahaerdy/DIO-learning/tree/main/TQI%20Fullstack%20Developer)
