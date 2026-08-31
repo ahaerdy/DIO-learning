@@ -104,7 +104,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - [x] ✓ Curso: [Como a Web Funciona?](Modulo_04/01-Curso.01-Como_a_Web_Funciona)
 - [x] ✓ Curso: [Como Funciona o HTTP Protocol](Modulo_04/02-Curso.02-Como_Funciona_o_HTTP_Protocol)
-- [ ] Curso: [Introdução ao Desenvolvimento de API](Modulo_04/03-Curso.03-Introducao_ao_Desenvolvimento_de_API)
+- [x] ✓ Curso: [Introdução ao Desenvolvimento de API](Modulo_04/03-Curso.03-Introducao_ao_Desenvolvimento_de_API)
 - [ ] Curso: [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_04/04-Curso.04-Anotacoes_em_Java_Marcando_o_Seu_Codigo_de_Maneira_Inteligente)
 - [ ] Curso: [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade](Modulo_04/05-Curso.05-SOLID_e_Clean_Code_em_Java_Escrevendo_Codigo_de_Alta_Qualidade)
 - [ ] Desafio de projeto: [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](Modulo_04/06-Desafio-Design_Patterns_com_Java_Dos_Classicos_GoF_ao_Spring_Framework)
