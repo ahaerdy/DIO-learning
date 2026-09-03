@@ -203,7 +203,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ## 💬 Mentorias e Networking
 
-- Rodrigo Gaião (CI&T)
-- Liliane Andrade (CI&T)
+- / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
+- / [pablonuneslopes](https://www.linkedin.com/in/pablonuneslopes/) (Serving a community of millions with .NET | cloud | ai |dotnet @ MSFT | teaching AI + WebDev @ Alura | devrel + SWE + mentor | speaker @ lots of events)
 
 <!-- Preencher conforme for progredindo no bootcamp -->

@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Pablo Nunes Lopes (Serving a community of millions with .NET / cloud/ai/dotnet @ MSFT / teaching AI + WebDev @ Alura / devrel + SWE + mentor / speaker @ lots of events)
+- Contato Linkedin: / [pablonuneslopes](https://www.linkedin.com/in/pablonuneslopes/)
 
 ## Parte 1 - O que é o GitHub Copilot?
 
