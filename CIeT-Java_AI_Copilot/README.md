@@ -72,7 +72,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 1: Potencializando Sua Jornada com Inteligência Artificial e Agentes
 
-- [ ] Curso: [Boas Vindas ao Bootcamp CI&T - Java AI Copilot](Modulo_01/01-Curso.01-Boas_Vindas_ao_Bootcamp_CIT_Java_AI_Copilot)
+- [x] ✅ Curso: [Boas Vindas ao Bootcamp CI&T - Java AI Copilot](Modulo_01/01-Curso.01-Boas_Vindas_ao_Bootcamp_CIT_Java_AI_Copilot)
 - [ ] Curso: [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_01/02-Curso.02-Fundamentos_da_IA_Moderna_Machine_Learning_LLMs_IA_Generativa_e_Agentes)
 - [ ] Curso: [Potencializando Seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)](Modulo_01/03-Curso.03-Potencializando_Seus_Estudos_e_Carreira_com_IA_Chatbots_Copilotos_e_Agentes)
 - [ ] Curso: [Introdução à Engenharia de Prompts](Modulo_01/04-Curso.04-Introducao_a_Engenharia_de_Prompts)
@@ -140,7 +140,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Módulo 1
 
-- [Boas Vindas ao Bootcamp CI&T - Java AI Copilot]
+- [Boas Vindas ao Bootcamp CI&T - Java AI Copilot](https://hermes.dio.me/certificates/M9H35TWN.pdf)
 - [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes]
 - [Potencializando Seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)]
 - [Introdução à Engenharia de Prompts]
