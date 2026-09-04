@@ -48,5 +48,5 @@ link do vídeo: https://web.dio.me/course/configurando-e-usando-o-github-copilot
 
 # Certificado: GitHub Copilot-Primeiros Passos e Configuração do Ambiente
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/VHBBY1DV.pdf
+- Certificado em pdf: [Certificado-GitHub.Copilot.Primeiros.Passos.e.Configuração.do.Ambiente.pdf](Modulo_04/02-Curso.02-GitHub_Copilot_Primeiros_Passos_e_Configuracao_do_Ambiente/000-Midia_e_Anexos/Certificado-GitHub.Copilot.Primeiros.Passos.e.Configuração.do.Ambiente.pdf)
