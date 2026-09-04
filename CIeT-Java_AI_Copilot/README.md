@@ -77,7 +77,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [ ] Curso: [Potencializando Seus Estudos e Carreira com IA (Chatbots, Copilotos e Agentes)](Modulo_01/03-Curso.03-Potencializando_Seus_Estudos_e_Carreira_com_IA_Chatbots_Copilotos_e_Agentes)
 - [ ] Curso: [Introdução à Engenharia de Prompts](Modulo_01/04-Curso.04-Introducao_a_Engenharia_de_Prompts)
 - [ ] Curso: [DIO Agent: Nunca Mais Estude Sozinho](Modulo_01/05-Curso.05-DIO_Agent_Nunca_Mais_Estude_Sozinho)
-- [ ] Mentoria (Live): [Live de Lançamento da Experiência CI&T](Modulo_01/06-Mentoria-Live_de_Lancamento_da_Experiencia_CIT)
+- [x] ✅ Mentoria (Live): [Live de Lançamento da Experiência CI&T](Modulo_01/06-Mentoria-Live_de_Lancamento_da_Experiencia_CIT)
 
 ---
 
