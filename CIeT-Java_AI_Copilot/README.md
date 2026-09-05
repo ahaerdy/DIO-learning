@@ -169,7 +169,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 - [O que é o GitHub Copilot?](https://hermes.dio.me/certificates/NXDJJSM7.pdf)
 - [GitHub Copilot: Primeiros Passos e Configuração do Ambiente](https://hermes.dio.me/certificates/VHBBY1DV.pdf)
-- [Prompt Engineering Aplicado a GitHub Copilot]
+- [Prompt Engineering Aplicado a GitHub Copilot](https://hermes.dio.me/certificates/TR7C6JXB.pdf)
 - [Trabalhando com Copilot Chat]
 - [Utilizando GitHub Copilot CLI]
 - Certificado do Módulo: [Programando com Copilotos de IA]
