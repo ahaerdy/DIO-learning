@@ -21,7 +21,7 @@ link do vídeo: https://web.dio.me/track/ci-t-java-ai-copilot/course/bases-de-pr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ci-t-java-ai-copilot/course/bases-de-prompt-engineering-para-o-github-copilot/learning/d593d0cf-ed39-429d-a09a-b32280db889f?autoplay=1
 
 ### 🟩 Vídeo 03 - Learning Shots
 
@@ -30,7 +30,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ci-t-java-ai-copilot/course/bases-de-prompt-engineering-para-o-github-copilot/learning/a5c06db9-c960-48ce-a736-ae6ab62ec29e?autoplay=1
 
 ### 🟩 Vídeo 04 - Aplicando Prompt Engineering
 
@@ -39,7 +39,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ci-t-java-ai-copilot/course/bases-de-prompt-engineering-para-o-github-copilot/learning/637627a7-194e-4307-a17e-6d3916170a71?autoplay=1
 
 ### 🟩 Vídeo 05 - Copilot Inline: Transforme código já existente!
 
