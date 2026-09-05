@@ -48,7 +48,7 @@ link do vídeo: https://web.dio.me/track/ci-t-java-ai-copilot/course/bases-de-pr
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ci-t-java-ai-copilot/course/bases-de-prompt-engineering-para-o-github-copilot/learning/9dd30c85-521c-4642-a102-3873aa05a642?autoplay=1
 
 ## Parte 2 - Compreendendo Prompt Engineering e Mudando a Geração
 
@@ -59,7 +59,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ci-t-java-ai-copilot/course/bases-de-prompt-engineering-para-o-github-copilot/learning/4f283da5-75f5-469e-ac6d-89d37902380b?autoplay=1
 
 ### 🟩 Vídeo 07 - Hora de Controlar essas Gerações
 
@@ -68,12 +68,10 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/ci-t-java-ai-copilot/course/bases-de-prompt-engineering-para-o-github-copilot/learning/42bbed62-684d-4392-b197-2b061e5372bb?autoplay=1
 
 
-##  Materiais de Apoio
+# Certificado: Prompt Engineering Aplicado a GitHub Copilot
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/TR7C6JXB.pdf
+- Certificado em pdf: [Certificado-Prompt.Engineering.Aplicado.a.GitHub.Copilot.pdf](Modulo_04/03-Curso.03-Prompt_Engineering_Aplicado_a_GitHub_Copilot/000-Midia_e_Anexos/Certificado-Prompt.Engineering.Aplicado.a.GitHub.Copilot.pdf)
