@@ -163,7 +163,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [Imersão Prática com Collections e Outras Classes Úteis do Java]
 - [Debugging e o Tratamento de Exceções em Java]
 - [Desafios de Código sobre Collections e Tratamento de Exceções com Java]
-- Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java]
+- Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java](https://hermes.dio.me/certificates/LRTVKUP3.pdf)
 
 ### Módulo 4
 
@@ -195,7 +195,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [CI&T: Java AI Copilot]
+- 🎓 Certificado de conclusão do Bootcamp: [CI&T: Java AI Copilot](https://hermes.dio.me/certificates/FRILPD97.pdf)
 
 <!-- Preencher os links dos certificados conforme forem emitidos pela plataforma DIO -->
 
