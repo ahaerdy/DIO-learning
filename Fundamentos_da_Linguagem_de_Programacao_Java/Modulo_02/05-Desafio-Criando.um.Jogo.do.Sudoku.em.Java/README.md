@@ -135,8 +135,6 @@ link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/7655c3
 
 A imagem mostra o enunciado visual do exercício: um tabuleiro de Sudoku 9x9, com algumas células já preenchidas (as dicas fixas do jogo) e outras em branco, que deverão ser completadas pelo jogador. As linhas mais grossas delimitam visualmente os nove blocos de 3x3 células, cada um devendo conter os números de 1 a 9 sem repetição — assim como cada linha e cada coluna do tabuleiro completo. É esse tabuleiro que serve de ponto de partida para pensar em como representar o jogo em código: quantas "posições" existem, quais delas já vêm preenchidas e quais precisam ser validadas.
 
-Não há código nesta imagem — trata-se apenas da representação do problema a ser resolvido.
-
 #### Rascunho inicial das classes Board e Space
 
 <p align="center">
@@ -144,8 +142,6 @@ Não há código nesta imagem — trata-se apenas da representação do problema
 </p>
 
 Aqui aparece o primeiro esboço, feito no draw.io, das duas entidades identificadas a partir do enunciado: a classe **Board** (o tabuleiro) e a classe **Space** (cada espaço individual do tabuleiro). Nesse momento os atributos ainda são apenas placeholders genéricos ("field: type"), já que o objetivo é somente mapear quais entidades existem antes de decidir os tipos e nomes definitivos de cada propriedade. É um exercício de esboço, não a versão final do modelo.
-
-Não há código Java propriamente dito nesta imagem — é um diagrama de classes simplificado.
 
 #### Propriedades definidas: Space e a lista bidimensional do Board
 
@@ -157,7 +153,7 @@ O diagrama evolui e agora mostra as propriedades já definidas para cada classe.
 
 Essa escolha por `List` não foi arbitrária: antes de chegar a ela, outras estruturas de dados foram avaliadas e descartadas. Um `Map` foi considerado, mas rejeitado porque exigiria montar chaves artificiais (como uma string combinando os índices de linha e coluna) para localizar cada espaço, o que tornaria o acesso mais complicado do que o necessário. Um `Set` também foi cogitado, mas descartado porque não oferece acesso por índice — e o enunciado do jogo exige justamente informar o índice horizontal e o índice vertical ao posicionar um número, além de ser necessário manter a ordem dos elementos para representar linhas e colunas de forma consistente. A `List`, por sua vez, garante tanto a ordenação quanto o acesso direto por índice, o que se encaixa perfeitamente na necessidade de localizar qualquer espaço do tabuleiro a partir de suas coordenadas.
 
-Não há trecho de código-fonte nesta imagem — é a continuação do mesmo diagrama de classes.
+> **Nota complementar (fora da transcrição original):** o vídeo não discute a alternativa de usar um `Array` (`Space[][]`), mas vale registrar por que a `List` costuma ser preferida nesse tipo de cenário: um array tem tamanho fixo desde a criação, enquanto uma `List` pode crescer ou encolher, o que dá mais flexibilidade caso o tabuleiro precise suportar tamanhos diferentes de 9x9 (o próprio professor comenta a existência de sudokus com 12 espaços). Além disso, `List` oferece uma API mais rica (`add`, `remove`, `contains`, `stream()`, entre outros), enquanto um array bruto exigiria código manual para operações equivalentes. Há também questões técnicas de Java: arrays multidimensionais combinados com generics têm limitações e podem gerar avisos de "unchecked", e a covariância de arrays pode causar `ArrayStoreException` em tempo de execução — problemas que `List<List<Space>>` evita.
 
 #### Exemplo genérico de lista de listas em Java
 
@@ -171,7 +167,31 @@ Antes de aplicar o conceito diretamente ao Board e ao Space, a imagem traz um ex
 var names = new ArrayList<List<String>>();
 ```
 
-A ideia é mostrar que, para acessar um valor dentro dessa estrutura, primeiro se acessa a lista externa por índice (por exemplo, `names.get(0)`) para obter uma das listas internas, e depois se acessa um elemento dentro dela por outro índice (por exemplo, `.get(1)`). Esse mesmo padrão de acesso em duas etapas é o que será usado depois para navegar pela lista bidimensional de `Space` dentro do `Board`.     
+A ideia é mostrar que, para acessar um valor dentro dessa estrutura, primeiro se acessa a lista externa por índice (por exemplo, `names.get(0)`) para obter uma das listas internas, e depois se acessa um elemento dentro dela por outro índice (por exemplo, `.get(1)`). Esse mesmo padrão de acesso em duas etapas é o que será usado depois para navegar pela lista bidimensional de `Space` dentro do `Board`.
+
+Na prática, para popular essa estrutura seguindo o exemplo do diagrama (linha 0 = nomes masculinos, linha 1 = nomes femininos), o código ficaria assim:
+
+```java
+var names = new ArrayList<List<String>>();
+
+names.add(new ArrayList<>()); // cria a linha 0
+names.add(new ArrayList<>()); // cria a linha 1
+
+// linha 0 (índice de "linha"): nomes masculinos
+names.get(0).add("Lucas");   // linha 0, coluna 0
+names.get(0).add("Juca");    // linha 0, coluna 1
+names.get(0).add("Mario");   // linha 0, coluna 2
+
+// linha 1 (índice de "linha"): nomes femininos
+names.get(1).add("Maria");   // linha 1, coluna 0
+names.get(1).add("Luiza");   // linha 1, coluna 1
+names.get(1).add("Luana");   // linha 1, coluna 2
+
+// para ler um valor específico, basta combinar linha e coluna:
+String valor = names.get(1).get(2); // "Luana" (linha 1, coluna 2)
+```
+
+Note que `names.get(linha)` devolve a lista interna correspondente àquela linha, e um segundo `.get(coluna)` nessa lista devolve o valor específico. É exatamente esse raciocínio de "linha primeiro, coluna depois" que será reaproveitado mais adiante para acessar e definir um `Space` dentro do `Board`, só que usando índices numéricos de 0 a 8 em vez de nomes.
 
 
 ### 🟩 Vídeo 03 - Preparando o Ambiente do Projeto
