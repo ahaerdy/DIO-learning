@@ -153,7 +153,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [Fundamentos da Sintaxe da Linguagem Java]
 - [Estruturas de Controle em Java]
 - [Desafios de Código sobre Condicionais e Laços com Java]
-- Certificado do Módulo: [Fundamentos para Começar a Programar em Java]
+- Certificado do Módulo: [Fundamentos para Começar a Programar em Java](https://hermes.dio.me/certificates/EYODSAGJ.pdf)
 
 ### Módulo 3
 
