@@ -107,7 +107,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] ✓ Curso: [GitHub Copilot: Primeiros Passos e Configuração do Ambiente](Modulo_04/02-Curso.02-GitHub_Copilot_Primeiros_Passos_e_Configuracao_do_Ambiente)
 - [x] ✓ Curso: [Prompt Engineering Aplicado a GitHub Copilot](Modulo_04/03-Curso.03-Prompt_Engineering_Aplicado_a_GitHub_Copilot)
 - [x] ✓ Curso: [Trabalhando com Copilot Chat](Modulo_04/04-Curso.04-Trabalhando_com_Copilot_Chat)
-- [ ] Curso: [Utilizando GitHub Copilot CLI](Modulo_04/05-Curso.05-Utilizando_GitHub_Copilot_CLI)
+- [x] ✓ Curso: [Utilizando GitHub Copilot CLI](Modulo_04/05-Curso.05-Utilizando_GitHub_Copilot_CLI)
 
 ---
 
@@ -171,7 +171,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [GitHub Copilot: Primeiros Passos e Configuração do Ambiente](https://hermes.dio.me/certificates/VHBBY1DV.pdf)
 - [Prompt Engineering Aplicado a GitHub Copilot](https://hermes.dio.me/certificates/TR7C6JXB.pdf)
 - [Trabalhando com Copilot Chat](https://hermes.dio.me/certificates/LUKYZATX.pdf)
-- [Utilizando GitHub Copilot CLI]
+- [Utilizando GitHub Copilot CLI](https://hermes.dio.me/certificates/ITXRFZAQ.pdf)
 - Certificado do Módulo: [Programando com Copilotos de IA]
 
 ### Módulo 5
