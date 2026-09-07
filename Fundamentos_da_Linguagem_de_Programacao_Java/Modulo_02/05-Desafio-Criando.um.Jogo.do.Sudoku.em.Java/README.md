@@ -125,6 +125,8 @@ Estes requisitos são para quem deseja se aprofundar e aprimorar seus conhecimen
 
 link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/7655c3f1-dc23-4628-a217-4b4e5721aae7
 
+### Anotações
+
 #### O desafio: o tabuleiro de Sudoku
 
 <p align="center">
