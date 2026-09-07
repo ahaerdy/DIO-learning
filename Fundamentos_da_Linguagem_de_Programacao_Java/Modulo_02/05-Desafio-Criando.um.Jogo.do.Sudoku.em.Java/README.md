@@ -135,6 +135,8 @@ link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/7655c3
 
 A imagem mostra o enunciado visual do exercício: um tabuleiro de Sudoku 9x9, com algumas células já preenchidas (as dicas fixas do jogo) e outras em branco, que deverão ser completadas pelo jogador. As linhas mais grossas delimitam visualmente os nove blocos de 3x3 células, cada um devendo conter os números de 1 a 9 sem repetição — assim como cada linha e cada coluna do tabuleiro completo. É esse tabuleiro que serve de ponto de partida para pensar em como representar o jogo em código: quantas "posições" existem, quais delas já vêm preenchidas e quais precisam ser validadas.
 
+Não há código nesta imagem — trata-se apenas da representação do problema a ser resolvido.
+
 #### Rascunho inicial das classes Board e Space
 
 <p align="center">
