@@ -155,6 +155,8 @@ Não há código Java propriamente dito nesta imagem — é um diagrama de class
 
 O diagrama evolui e agora mostra as propriedades já definidas para cada classe. A classe **Space** ganhou três atributos: `fixed: boolean`, que indica se aquele espaço já vem preenchido de fábrica e não pode ser alterado pelo jogador; `actual: Integer`, o valor atualmente preenchido naquele espaço (usado como objeto para poder aceitar nulo, já que a posição pode estar vazia); e `expected: int`, o valor correto esperado para aquele espaço, usado como tipo primitivo por sempre ter um valor definido. Já a classe **Board** foi simplificada para uma única propriedade, `spaces: List<List<Space>>` — uma lista de listas de Space, escolhida justamente para representar as nove linhas e nove colunas do tabuleiro em uma estrutura bidimensional.
 
+Essa escolha por `List` não foi arbitrária: antes de chegar a ela, outras estruturas de dados foram avaliadas e descartadas. Um `Map` foi considerado, mas rejeitado porque exigiria montar chaves artificiais (como uma string combinando os índices de linha e coluna) para localizar cada espaço, o que tornaria o acesso mais complicado do que o necessário. Um `Set` também foi cogitado, mas descartado porque não oferece acesso por índice — e o enunciado do jogo exige justamente informar o índice horizontal e o índice vertical ao posicionar um número, além de ser necessário manter a ordem dos elementos para representar linhas e colunas de forma consistente. A `List`, por sua vez, garante tanto a ordenação quanto o acesso direto por índice, o que se encaixa perfeitamente na necessidade de localizar qualquer espaço do tabuleiro a partir de suas coordenadas.
+
 Não há trecho de código-fonte nesta imagem — é a continuação do mesmo diagrama de classes.
 
 #### Exemplo genérico de lista de listas em Java
@@ -169,7 +171,7 @@ Antes de aplicar o conceito diretamente ao Board e ao Space, a imagem traz um ex
 var names = new ArrayList<List<String>>();
 ```
 
-A ideia é mostrar que, para acessar um valor dentro dessa estrutura, primeiro se acessa a lista externa por índice (por exemplo, `names.get(0)`) para obter uma das listas internas, e depois se acessa um elemento dentro dela por outro índice (por exemplo, `.get(1)`). Esse mesmo padrão de acesso em duas etapas é o que será usado depois para navegar pela lista bidimensional de `Space` dentro do `Board`.
+A ideia é mostrar que, para acessar um valor dentro dessa estrutura, primeiro se acessa a lista externa por índice (por exemplo, `names.get(0)`) para obter uma das listas internas, e depois se acessa um elemento dentro dela por outro índice (por exemplo, `.get(1)`). Esse mesmo padrão de acesso em duas etapas é o que será usado depois para navegar pela lista bidimensional de `Space` dentro do `Board`.     
 
 
 ### 🟩 Vídeo 03 - Preparando o Ambiente do Projeto
