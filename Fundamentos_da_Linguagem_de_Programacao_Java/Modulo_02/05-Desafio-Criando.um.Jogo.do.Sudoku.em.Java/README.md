@@ -193,6 +193,28 @@ String valor = names.get(1).get(2); // "Luana" (linha 1, coluna 2)
 
 Note que `names.get(linha)` devolve a lista interna correspondente àquela linha, e um segundo `.get(coluna)` nessa lista devolve o valor específico. É exatamente esse raciocínio de "linha primeiro, coluna depois" que será reaproveitado mais adiante para acessar e definir um `Space` dentro do `Board`, só que usando índices numéricos de 0 a 8 em vez de nomes.
 
+Aplicando essa mesma lógica ao tabuleiro real de 9x9, popular o `Board` significa criar 9 linhas, e em cada linha criar 9 objetos `Space`:
+
+```java
+List<List<Space>> spaces = new ArrayList<>();
+
+for (int linha = 0; linha < 9; linha++) {
+    List<Space> colunas = new ArrayList<>();
+    for (int coluna = 0; coluna < 9; coluna++) {
+        Space space = new Space();
+        // aqui entrariam as regras para definir fixed, actual e expected
+        colunas.add(space);
+    }
+    spaces.add(colunas); // adiciona a linha completa (9 colunas) ao tabuleiro
+}
+
+// para acessar ou alterar um espaço específico, combina-se linha e coluna:
+Space espaco = spaces.get(3).get(5); // linha 3, coluna 5
+espaco.setActual(7); // usuário preenche o número 7 nessa posição
+```
+
+O laço externo percorre as 9 linhas e o laço interno percorre as 9 colunas de cada linha, criando um `Space` para cada uma das 81 posições do tabuleiro. Assim como no exemplo dos nomes, `spaces.get(linha)` retorna a lista de `Space` daquela linha, e `.get(coluna)` dentro dela retorna o espaço exato — permitindo tanto ler quanto atualizar o valor de qualquer posição do Sudoku a partir dos seus índices horizontal e vertical.
+
 
 ### 🟩 Vídeo 03 - Preparando o Ambiente do Projeto
 
