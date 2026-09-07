@@ -135,8 +135,6 @@ link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/7655c3
 
 A imagem mostra o enunciado visual do exercício: um tabuleiro de Sudoku 9x9, com algumas células já preenchidas (as dicas fixas do jogo) e outras em branco, que deverão ser completadas pelo jogador. As linhas mais grossas delimitam visualmente os nove blocos de 3x3 células, cada um devendo conter os números de 1 a 9 sem repetição — assim como cada linha e cada coluna do tabuleiro completo. É esse tabuleiro que serve de ponto de partida para pensar em como representar o jogo em código: quantas "posições" existem, quais delas já vêm preenchidas e quais precisam ser validadas.
 
-Não há código nesta imagem — trata-se apenas da representação do problema a ser resolvido.
-
 #### Rascunho inicial das classes Board e Space
 
 <p align="center">
@@ -216,6 +214,20 @@ espaco.setActual(7); // usuário preenche o número 7 nessa posição
 ```
 
 O laço externo percorre as 9 linhas e o laço interno percorre as 9 colunas de cada linha, criando um `Space` para cada uma das 81 posições do tabuleiro. Assim como no exemplo dos nomes, `spaces.get(linha)` retorna a lista de `Space` daquela linha, e `.get(coluna)` dentro dela retorna o espaço exato — permitindo tanto ler quanto atualizar o valor de qualquer posição do Sudoku a partir dos seus índices horizontal e vertical.
+
+**Entendendo o código passo a passo:**
+
+A variável `spaces` representa o **tabuleiro inteiro** — é a mesma coisa que a propriedade `spaces: List<List<Space>>` da classe `Board` no diagrama. `spaces` é uma lista de listas: cada elemento dela (`spaces.get(0)`, `spaces.get(1)`, ..., `spaces.get(8)`) é **uma linha** do tabuleiro, e cada linha é, por sua vez, uma `List<Space>` com 9 objetos `Space` dentro (as colunas daquela linha) — totalizando 9 × 9 = 81 espaços.
+
+- `List<List<Space>> spaces = new ArrayList<>();` cria a lista externa (o tabuleiro), ainda vazia.
+- O `for` externo (`linha`) repete 9 vezes, uma para cada linha do tabuleiro (0 a 8).
+- `List<Space> colunas = new ArrayList<>();` cria, a cada volta do laço externo, uma nova lista vazia que vai representar aquela linha específica.
+- O `for` interno (`coluna`) repete 9 vezes dentro de cada linha, criando um novo `Space` e adicionando-o à lista `colunas`.
+- `spaces.add(colunas);` adiciona a linha já completa (com seus 9 `Space`) à lista externa `spaces`, tornando-se `spaces.get(0)` na primeira volta, `spaces.get(1)` na segunda, e assim por diante.
+- `spaces.get(3).get(5)` acessa a linha 3 e, dentro dela, a coluna 5 — obtendo o `Space` que ocupa exatamente essa posição do tabuleiro.
+- `espaco.setActual(7);` altera o valor atual desse espaço específico para 7, simulando o jogador preenchendo aquela célula.
+
+Ou seja, `spaces` é o tabuleiro completo como estrutura de dados; cada `Space` dentro dele é uma célula individual, e a combinação `spaces.get(linha).get(coluna)` é como se "aponta" para uma célula específica do Sudoku a partir de suas coordenadas.
 
 
 ### 🟩 Vídeo 03 - Preparando o Ambiente do Projeto
