@@ -116,7 +116,6 @@ Estes requisitos são para quem deseja se aprofundar e aprimorar seus conhecimen
 *   Em caso de dúvidas, o instrutor está disponível para ajudar, e a pesquisa em fóruns e documentações é sempre encorajada.
 *   Boa sorte no desafio!
 
-
 ### 🟩 Vídeo 02 - Esboçando a Solução
 
 <video width="60%" controls>
@@ -125,6 +124,51 @@ Estes requisitos são para quem deseja se aprofundar e aprimorar seus conhecimen
 </video>
 
 link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/7655c3f1-dc23-4628-a217-4b4e5721aae7
+
+#### O desafio: o tabuleiro de Sudoku
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-07-14h45m31s917.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o enunciado visual do exercício: um tabuleiro de Sudoku 9x9, com algumas células já preenchidas (as dicas fixas do jogo) e outras em branco, que deverão ser completadas pelo jogador. As linhas mais grossas delimitam visualmente os nove blocos de 3x3 células, cada um devendo conter os números de 1 a 9 sem repetição — assim como cada linha e cada coluna do tabuleiro completo. É esse tabuleiro que serve de ponto de partida para pensar em como representar o jogo em código: quantas "posições" existem, quais delas já vêm preenchidas e quais precisam ser validadas.
+
+Não há código nesta imagem — trata-se apenas da representação do problema a ser resolvido.
+
+#### Rascunho inicial das classes Board e Space
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-07-15h34m37s624.jpg" alt="" width="840">
+</p>
+
+Aqui aparece o primeiro esboço, feito no draw.io, das duas entidades identificadas a partir do enunciado: a classe **Board** (o tabuleiro) e a classe **Space** (cada espaço individual do tabuleiro). Nesse momento os atributos ainda são apenas placeholders genéricos ("field: type"), já que o objetivo é somente mapear quais entidades existem antes de decidir os tipos e nomes definitivos de cada propriedade. É um exercício de esboço, não a versão final do modelo.
+
+Não há código Java propriamente dito nesta imagem — é um diagrama de classes simplificado.
+
+#### Propriedades definidas: Space e a lista bidimensional do Board
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-07-15h38m15s924.jpg" alt="" width="840">
+</p>
+
+O diagrama evolui e agora mostra as propriedades já definidas para cada classe. A classe **Space** ganhou três atributos: `fixed: boolean`, que indica se aquele espaço já vem preenchido de fábrica e não pode ser alterado pelo jogador; `actual: Integer`, o valor atualmente preenchido naquele espaço (usado como objeto para poder aceitar nulo, já que a posição pode estar vazia); e `expected: int`, o valor correto esperado para aquele espaço, usado como tipo primitivo por sempre ter um valor definido. Já a classe **Board** foi simplificada para uma única propriedade, `spaces: List<List<Space>>` — uma lista de listas de Space, escolhida justamente para representar as nove linhas e nove colunas do tabuleiro em uma estrutura bidimensional.
+
+Não há trecho de código-fonte nesta imagem — é a continuação do mesmo diagrama de classes.
+
+#### Exemplo genérico de lista de listas em Java
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-07-15h39m13s172.jpg" alt="" width="840">
+</p>
+
+Antes de aplicar o conceito diretamente ao Board e ao Space, a imagem traz um exemplo didático à parte, montado no mesmo diagrama, para ilustrar o que é uma "lista de listas" em Java. São mostradas duas listas internas de `String`: a de índice 0 contendo os nomes Lucas, Juca e Mario, e a de índice 1 contendo Maria, Luiza e Luana — todas dentro de uma lista externa do tipo `List<List<String>>`. Abaixo do diagrama aparece a declaração em código dessa estrutura:
+
+```java
+var names = new ArrayList<List<String>>();
+```
+
+A ideia é mostrar que, para acessar um valor dentro dessa estrutura, primeiro se acessa a lista externa por índice (por exemplo, `names.get(0)`) para obter uma das listas internas, e depois se acessa um elemento dentro dela por outro índice (por exemplo, `.get(1)`). Esse mesmo padrão de acesso em duas etapas é o que será usado depois para navegar pela lista bidimensional de `Space` dentro do `Board`.
+
 
 ### 🟩 Vídeo 03 - Preparando o Ambiente do Projeto
 
