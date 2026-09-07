@@ -76,8 +76,6 @@ link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/3f11da
 
 link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/cd1bd689-76ab-4ef4-8c77-48112bb950fd
 
-### 🟩 Vídeo 09 - Entendendo o Desafio
-
 # Entendendo o Desafio
 
 **Agora é a sua hora de brilhar e construir um perfil de destaque na DIO! Explore todos os conceitos explorados até aqui e replique (ou melhor, porque não?) este projeto prático. Para isso, crie seu próprio repositório e aumente ainda mais seu portfólio de projetos no GitHub, o qual pode fazer toda diferença em suas entrevistas técnicas 😎**
