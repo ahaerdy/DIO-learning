@@ -86,7 +86,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [ ] Curso: [Introdução ao Java e seu Ambiente de Desenvolvimento](Modulo_02/01-Curso.01-Introducao_ao_Java_e_seu_Ambiente_de_Desenvolvimento)
 - [ ] Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_02/02-Curso.02-Fundamentos_da_Sintaxe_da_Linguagem_Java)
 - [ ] Curso: [Estruturas de Controle em Java](Modulo_02/03-Curso.03-Estruturas_de_Controle_em_Java)
-- [ ] Desafio de código: [Desafios de Código sobre Condicionais e Laços com Java](Modulo_02/04-Desafio-Desafios_de_Codigo_sobre_Condicionais_e_Lacos_com_Java)
+- [x] ✅ Desafio de código: [Desafios de Código sobre Condicionais e Laços com Java](Modulo_02/04-Desafio-Desafios_de_Codigo_sobre_Condicionais_e_Lacos_com_Java)
 
 ---
 
