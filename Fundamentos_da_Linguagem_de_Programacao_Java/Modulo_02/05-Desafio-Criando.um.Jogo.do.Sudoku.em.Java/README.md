@@ -619,12 +619,23 @@ public class Main {
 
 Agora o `Stream` criado a partir de `args` é convertido em um `Map<String, String>` através de `collect(toMap(...))`. Esse é o momento em que a lista de textos recebida pela linha de comando deixa de ser apenas uma sequência de `String` e passa a virar uma estrutura de dados que o restante do programa vai conseguir consultar por chave. Vale detalhar cada instrução desse trecho separadamente:
 
-- `final var positions = ...` — declara a variável `positions`, que vai armazenar o resultado final da transformação. Ela é `final` porque, uma vez montada, essa configuração inicial não deve ser reatribuída durante a execução do programa. O tipo inferido pelo `var` é `Map<String, String>`, ou seja, um mapa onde tanto a chave quanto o valor são textos.
+- `final var positions: Map<String, String> = ...` — declara a variável `positions`, que vai armazenar o resultado final da transformação. Ela é `final` porque, uma vez montada, essa configuração inicial não deve ser reatribuída durante a execução do programa. O tipo inferido pelo `var` é `Map<String, String>`, ou seja, um mapa onde tanto a chave quanto o valor são textos.
 - `Stream.of(args)` — pega o array `args` (os argumentos recebidos pelo `main`) e o transforma em um `Stream<String>`, permitindo aplicar operações funcionais (como `collect`) sobre cada elemento, um de cada vez, sem precisar de um laço `for` explícito.
 - `.collect(toMap(...))` — é a operação terminal do `Stream`: ela consome todos os elementos e os agrupa em uma coleção, nesse caso um `Map`. O método `toMap` exige duas funções: uma para definir como extrair a **chave** de cada elemento e outra para extrair o **valor** correspondente.
 - `k -> k.split(regex: ";")[0]` — essa é a função responsável por gerar a **chave** do mapa. Para cada item `k` do stream (uma `String` como `"0,0;4,false"`), é aplicado `split(";")`, que quebra o texto em um array usando o `;` como separador. O resultado, nesse exemplo, seria `["0,0", "4,false"]`. Ao acessar a posição `[0]`, é extraído `"0,0"`, isto é, a dupla coluna/linha da posição no tabuleiro — essa parte vira a chave usada para localizar cada célula depois.
 - `v -> v.split(regex: ";")[1]` — essa segunda função gera o **valor** associado a cada chave. Recebe o mesmo item do stream (aqui chamado de `v`), faz o mesmo `split(";")` e pega a posição `[1]`, ou seja, `"4,false"` no exemplo — o número esperado naquela posição junto com a informação de se ela é fixa ou não.
 - O resultado final é que, para o argumento `"0,0;4,false"`, o mapa passa a ter a entrada `"0,0" -> "4,false"`, e assim por diante para cada posição informada nos argumentos do programa.
+
+**Um ponto importante sobre `k` e `v`: eles nunca são alterados.** É comum imaginar que, depois de `k.split(";")[0]`, a variável `k` "passa a valer" apenas a chave extraída — mas isso não acontece. Em Java, objetos do tipo `String` são **imutáveis**: nenhum método da classe `String` (como `split`, `replace`, `substring` ou `toLowerCase`) modifica a string original ou a variável que a referencia. Todo método desse tipo apenas **lê** o conteúdo existente e **devolve um novo objeto**, deixando a variável de origem intocada.
+
+No caso específico de `k -> k.split(";")[0]`, o fluxo real é o seguinte:
+
+1. A variável `k` recebe a `String` original vinda do stream — por exemplo, `k = "0,0;4,false"`.
+2. `k.split(";")` é executado: ele **lê** o conteúdo de `k`, cria um **novo array** na memória, `["0,0", "4,false"]`, mas não toca em `k`. Depois dessa linha, `k` continua sendo exatamente `"0,0;4,false"`.
+3. `[0]` acessa a primeira posição desse array recém-criado, obtendo a `String` `"0,0"`.
+4. Essa `String` `"0,0"` (e não `k`) é o valor **retornado** pela expressão lambda e enviado para o `toMap`, que a usa como chave do mapa.
+
+Ou seja, a expressão `k -> k.split(";")[0]` é equivalente a dizer "retorne a primeira parte do split de `k`", e não "modifique `k` para valer a primeira parte do split". Para que `k` de fato mudasse de valor, seria necessário escrever algo como `k = k.split(";")[0]; return k;` — uma atribuição explícita que não existe nesse trecho. O mesmo raciocínio vale integralmente para `v -> v.split(";")[1]`: `v` permanece com a string completa (`"0,0;4,false"`) durante toda a execução da lambda; apenas o valor retornado (a posição `[1]` do array) é diferente.
 
 Logo abaixo, começa a ser criada a variável `option`, inicializada em `-1`, e um laço `while (true)` que dará origem ao menu do jogo. O erro de compilação ainda aparece porque o corpo do `while` está vazio.
 
@@ -805,6 +816,7 @@ private static void removeNumber() {
 
 }
 ```
+      
 
 
 ### 🟩 Vídeo 05 - Construindo o CurrentGame
