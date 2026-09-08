@@ -239,6 +239,269 @@ Ou seja, `spaces` é o tabuleiro completo como estrutura de dados; cada `Space` 
 
 link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/971cd2c4-cd35-4425-9e77-2662b180184d
 
+### Anotações
+
+#### BoardTemplate — constantes de índice para visualização do tabuleiro
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-07h32m52s805.jpg" alt="" width="840">
+</p>
+
+
+A imagem mostra a classe `BoardTemplate`, criada dentro do pacote `br.com.dio.util`. A classe é declarada como `final` para impedir herança, e possui um construtor privado, já que ela não deve ser instanciada — serve apenas como utilitário para armazenar o template de exibição do tabuleiro.
+
+O campo `BOARD_TEMPLATE` é uma `String` estática e final, contendo um template em formato de texto com placeholders `%s` (para os valores das posições) e números de `0` a `8` posicionados nas laterais, representando os índices de cada linha e coluna. Isso facilita a leitura do tabuleiro quando o jogo for executado pelo terminal.
+
+```java
+package br.com.dio.util;
+
+public final class BoardTemplate {
+
+    private BoardTemplate() {}
+
+    public final static String BOARD_TEMPLATE = """
+***********************************************************************
+*---0---||---1---||---2---|*---3---||---4---||---5---|*---6---||---7---||---8---|*
+*|       ||       ||       |*       ||       ||       |*       ||       ||       |*
+0|  %s   ||  %s   ||  %s   |*  %s   ||  %s   ||  %s   |*  %s   ||  %s   ||  %s   |0
+*|       ||       ||       |*       ||       ||       |*       ||       ||       |*
+*|-------||-------||-------|*-------||-------||-------|*-------||-------||-------|*
+*|       ||       ||       |*       ||       ||       |*       ||       ||       |*
+1|  %s   ||  %s   ||  %s   |*  %s   ||  %s   ||  %s   |*  %s   ||  %s   ||  %s   |1
+*|       ||       ||       |*       ||       ||       |*       ||       ||       |*
+*|-------||-------||-------|*-------||-------||-------|*-------||-------||-------|*
+*|       ||       ||       |*       ||       ||       |*       ||       ||       |*
+2|  %s   ||  %s   ||  %s   |*  %s   ||  %s   ||  %s   |*  %s   ||  %s   ||  %s   |2
+*|       ||       ||       |*       ||       ||       |*       ||       ||       |*
+*|-------||-------||-------|*-------||-------||-------|*-------||-------||-------|*
+***********************************************************************
+""";
+}
+```
+
+
+#### Space — regra de posição fixa e limpeza do valor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-07h41m12s237.jpg" alt="" width="840">
+</p>
+
+
+Aqui está a classe `Space`, criada no pacote `br.com.dio.model`, que representa uma posição individual do tabuleiro. Ela possui três campos: `actual` (o valor inserido pelo usuário), `expected` (o valor correto esperado para aquela posição, definido como `final`) e `fixed` (um booleano que indica se a posição pode ou não ser alterada).
+
+No construtor, se a posição for `fixed`, o campo `actual` já recebe o valor de `expected` imediatamente. O método `setActual` respeita essa regra: se a posição for fixa, ele simplesmente retorna sem alterar nada. Também é apresentado o método `clearSpace()`, que limpa o valor atual chamando `setActual(null)` — como essa chamada passa pela verificação de `fixed`, uma posição fixa nunca é apagada por engano.
+
+```java
+package br.com.dio.model;
+
+public class Space {
+
+    private Integer actual;
+    private final int expected;
+    private final boolean fixed;
+
+    public Space(final int expected, final boolean fixed) {
+        this.expected = expected;
+        this.fixed = fixed;
+        if (fixed) {
+            actual = expected;
+        }
+    }
+
+    public Integer getActual() {
+        return actual;
+    }
+
+    public void setActual(final Integer actual) {
+        if (fixed) return;
+        this.actual = actual;
+    }
+
+    public void clearSpace() {
+        setActual(null);
+    }
+
+    public int getExpected() {
+        return expected;
+    }
+
+    public boolean isFixed() {
+        return fixed;
+    }
+}
+```
+
+
+#### Board — estrutura de dados como lista de listas de Space
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-07h46m33s435.jpg" alt="" width="840">
+</p>
+
+
+A imagem mostra o início da classe `Board`, também no pacote `br.com.dio.model`. O tabuleiro é representado por uma `List<List<Space>>`, ou seja, uma lista externa contendo listas internas de objetos `Space`. Essa estrutura foi escolhida para representar colunas (lista externa) e linhas (lista interna) do Sudoku.
+
+O construtor recebe essa lista de listas já pronta e o método `getSpaces()` expõe apenas a leitura dela — a edição dos valores será feita por métodos específicos da própria classe `Board`, e não pelo acesso direto à lista.
+
+```java
+package br.com.dio.model;
+
+import java.util.List;
+
+public class Board {
+
+    private final List<List<Space>> spaces;
+
+    public Board(final List<List<Space>> spaces) {
+        this.spaces = spaces;
+    }
+
+    public List<List<Space>> getSpaces() {
+        return spaces;
+    }
+
+}
+```
+
+
+#### GameStatusEnum — os três estados possíveis do jogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-07h47m22s216.jpg" alt="" width="840">
+</p>
+
+
+Esta imagem mostra o `enum GameStatusEnum`, criado para representar o status atual do jogo. Ele possui três valores: `NON_STARTED` (não iniciado), `INCOMPLETE` (incompleto) e `COMPLETE` (completo). Esse status é independente de o jogo conter erros ou não — um jogo incompleto ou completo pode ou não ter erros, enquanto um jogo não iniciado nunca tem erros.
+
+```java
+package br.com.dio.model;
+
+public enum GameStatusEnum {
+
+    NON_STARTED,
+    INCOMPLETE,
+    COMPLETE
+
+}
+```
+
+
+#### Board — método getStatus(), determinando o status do jogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-07h52m22s267.jpg" alt="" width="840">
+</p>
+
+
+Aqui a classe `Board` já conta com o método `getStatus()`, que retorna um `GameStatusEnum`. A lógica funciona em duas etapas, usando `spaces.stream().flatMap(Collection::stream)` para percorrer todos os `Space` da estrutura (transformando a lista de listas em uma única stream):
+
+Primeiro, verifica-se com `noneMatch` se não existe nenhuma posição não fixa (`!s.isFixed()`) que já tenha um valor preenchido (`nonNull(s.getActual())`). Se essa condição for verdadeira, significa que nenhuma posição editável foi preenchida ainda, então o status retornado é `NON_STARTED`.
+
+Caso contrário, uma segunda verificação usa `anyMatch` para checar se existe pelo menos uma posição com `actual` nulo (`isNull(s.getActual())`). Se existir, o jogo está `INCOMPLETE`; caso todas as posições estejam preenchidas, o status é `COMPLETE`.
+
+```java
+package br.com.dio.model;
+
+import java.util.Collection;
+import java.util.List;
+
+import static br.com.dio.model.GameStatusEnum.COMPLETE;
+import static br.com.dio.model.GameStatusEnum.INCOMPLETE;
+import static br.com.dio.model.GameStatusEnum.NON_STARTED;
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+
+public class Board {
+
+    private final List<List<Space>> spaces;
+
+    public Board(final List<List<Space>> spaces) {
+        this.spaces = spaces;
+    }
+
+    public List<List<Space>> getSpaces() {
+        return spaces;
+    }
+
+    public GameStatusEnum getStatus() {
+        if (spaces.stream().flatMap(Collection::stream).noneMatch(s -> !s.isFixed() && nonNull(s.getActual()))) {
+            return NON_STARTED;
+        }
+
+        return spaces.stream().flatMap(Collection::stream).anyMatch(s -> isNull(s.getActual())) ? INCOMPLETE : COMPLETE;
+    }
+
+}
+```
+
+
+#### Board — hasErrors(), changeValue() e clearValue()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-07h58m17s877.jpg" alt="" width="840">
+</p>
+
+
+Nesta imagem, a classe `Board` ganha três novos métodos. O `hasErrors()` primeiro retorna `false` caso o status seja `NON_STARTED` (já que um jogo não iniciado nunca tem erros); caso contrário, ele percorre todos os espaços com `flatMap` e usa `anyMatch` para verificar se existe alguma posição com valor preenchido (`nonNull(s.getActual())`) cujo valor seja diferente do esperado (`!s.getActual().equals(s.getExpected())`). Basta uma ocorrência para o jogo ser considerado com erro.
+
+O método `changeValue(col, row, value)` acessa a posição pela coluna e linha (`spaces.get(col).get(row)`), verifica se ela é fixa — se for, retorna `false` e bloqueia a edição — e, caso contrário, atualiza o valor com `setActual(value)` e retorna `true`.
+
+Já o `clearValue(col, row)` segue a mesma lógica de acesso e verificação de posição fixa, mas em vez de definir um novo valor, chama `space.clearSpace()` para apagar o valor daquela posição.
+
+```java
+public boolean hasErrors() {
+    if (getStatus() == NON_STARTED) {
+        return false;
+    }
+
+    return spaces.stream().flatMap(Collection::stream)
+            .anyMatch(s -> nonNull(s.getActual()) && !s.getActual().equals(s.getExpected()));
+}
+
+public boolean changeValue(final int col, final int row, final Integer value) {
+    var space = spaces.get(col).get(row);
+    if (space.isFixed()) {
+        return false;
+    }
+
+    space.setActual(value);
+    return true;
+}
+
+public boolean clearValue(final int col, final int row) {
+    var space = spaces.get(col).get(row);
+    if (space.isFixed()) {
+        return false;
+    }
+
+    space.clearSpace();
+    return true;
+}
+```
+
+
+#### Board — reset() e gameIsFinished()
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-08h00m22s582.jpg" alt="" width="840">
+</p>
+
+
+Para fechar a classe `Board`, a imagem mostra os métodos `reset()` e `gameIsFinished()`. O `reset()` percorre a lista externa com `forEach` e, para cada lista interna de colunas, chama `forEach(Space::clearSpace)` usando referência de método. Como a limpeza é feita por meio de `clearSpace()`, que internamente respeita a regra de posição fixa, o reset não altera as posições fixas do tabuleiro.
+
+O `gameIsFinished()` retorna `true` somente se o jogo não tiver erros (`!hasErrors()`) e o status for igual a `COMPLETE` (comparado aqui com `.equals()`, embora `==` também funcionasse por se tratar de um enum). Esse método é o que permite verificar, de forma consolidada, se o Sudoku foi resolvido corretamente.
+
+```java
+public void reset() {
+    spaces.forEach(c -> c.forEach(Space::clearSpace));
+}
+
+public boolean gameIsFinished() {
+    return !hasErrors() && getStatus().equals(COMPLETE);
+}
+```
+
+
 ### 🟩 Vídeo 04 - Consumindo o Projeto
 
 <video width="60%" controls>
