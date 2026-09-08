@@ -818,7 +818,6 @@ private static void removeNumber() {
 ```
       
 
-
 ### 🟩 Vídeo 05 - Construindo o CurrentGame
 
 <video width="60%" controls>
@@ -827,6 +826,359 @@ private static void removeNumber() {
 </video>
 
 link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/6bea0b7b-93ce-4c68-b504-f9c17d22b1d2?back=/track/formacao-java-fundamentals
+
+### Anotações
+
+#### Exibindo o tabuleiro atual — `showCurrentGame()`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h50m44s585.jpg" alt="" width="840">
+</p>
+
+```java
+private static void showCurrentGame() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+
+    var args = new Object[81];
+    var argPos = 0;
+    for (int i = 0; i < BOARD_LIMIT; i++) {
+        for (var col: board.getSpaces()){
+            args[argPos ++] = " " + (isNull(col.get(i).getActual())) ? " " : col.get(i).getActual();
+        }
+    }
+    System.out.println("Seu jogo se encontra da seguinte forma");
+    System.out.printf((BOARD_TEMPLATE) + "\n", args);
+}
+```
+
+O método `showCurrentGame()` é responsável por montar e imprimir o tabuleiro do Sudoku no console. Como a lista de espaços do tabuleiro está organizada por coluna (cada coluna contendo suas linhas), não é possível simplesmente percorrê-la na ordem em que ela foi criada, pois isso imprimiria o jogo de forma invertida. Para resolver isso, é criado um array `args` com exatamente 81 posições (9x9), e a iteração é feita primeiro pelo índice da linha (`BOARD_LIMIT`) e, dentro dele, por cada coluna, garantindo que os valores sejam armazenados na ordem correta para exibição linha a linha. Cada posição vazia recebe um espaço em branco no lugar do valor, para não distorcer o layout impresso. Por fim, o array é usado junto com o template fixo do tabuleiro (`BOARD_TEMPLATE`) para montar a impressão formatada.
+
+---
+
+#### Aplicando a validação de jogo iniciado nos demais métodos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h52m43s236.jpg" alt="" width="840">
+</p>
+
+```java
+private static void showGameStatus() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+}
+
+private static void clearGame() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+}
+
+private static void finishGame() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+}
+```
+
+Antes de implementar a lógica interna de cada funcionalidade, a mesma verificação usada em `showCurrentGame()` é replicada nos métodos `showGameStatus()`, `clearGame()` e `finishGame()`. Essa checagem impede que o usuário tente visualizar o status, limpar ou finalizar um jogo que ainda não foi iniciado, exibindo a mensagem "O jogo ainda não foi iniciado" e interrompendo a execução do método com `return`. Com essa base pronta em todos os métodos, o próximo passo é preencher a lógica específica de cada um deles.
+
+---
+
+#### Criando labels amigáveis para o status do jogo — `GameStatusEnum`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h53m14s188.jpg" alt="" width="840">
+</p>
+
+```java
+package br.com.dio.model;
+
+public enum GameStatusEnum {
+
+    NON_STARTED(label: "não iniciado"),
+    INCOMPLETE(label: "incompleto"),
+    COMPLETE(label: "completo");
+
+    private String label;
+
+    GameStatusEnum(final String label){
+        this.label = label;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+}
+```
+
+Para que o status do jogo seja exibido de forma amigável ao usuário (em vez do nome bruto do enum, como `NON_STARTED`), é adicionado um campo `label` ao `GameStatusEnum`. Um construtor recebe essa label e a associa a cada valor do enum (`"não iniciado"`, `"incompleto"` e `"completo"`), e um método `getLabel()` é criado para permitir que essa descrição seja recuperada e exibida ao usuário sempre que o status do jogo precisar ser mostrado na tela.
+
+---
+
+#### Exibindo o status atual do jogo com a label formatada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h53m23s306.jpg" alt="" width="840">
+</p>
+
+```java
+private static void showGameStatus() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+
+    System.out.printf("O jogo atualmente se encontra no status %s\n", board.getStatus().getLabel());
+}
+```
+
+Com a label criada no enum, o método `showGameStatus()` agora consegue exibir uma mensagem legível para o usuário, informando em qual status o jogo se encontra no momento (não iniciado, incompleto ou completo), usando `board.getStatus().getLabel()` dentro de um `printf` formatado.
+
+---
+
+#### Informando ao usuário se o jogo contém erros
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h53m55s669.jpg" alt="" width="840">
+</p>
+
+```java
+private static void showGameStatus() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+
+    System.out.printf("O jogo atualmente se encontra no status %s\n", board.getStatus().getLabel());
+    if(board.hasErrors()){
+        System.out.println("O jogo contém erros");
+    } else {
+        System.out.println("O jogo não contém erros");
+    }
+}
+```
+
+Além de exibir o status do jogo, `showGameStatus()` é complementado com uma verificação de `board.hasErrors()`. Se o tabuleiro tiver algum valor incorreto preenchido, a mensagem "O jogo contém erros" é exibida; caso contrário, o usuário é informado de que o jogo não contém erros. Com isso, o método de verificação de status do jogo fica concluído.
+
+---
+
+#### Implementando a confirmação antes de limpar o jogo — `clearGame()`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h55m53s512.jpg" alt="" width="840">
+</p>
+
+```java
+private static void clearGame() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+
+    System.out.println("Tem certeza que deseja limpar seu jogo e perder todo seu progresso?");
+    var confirm = scanner.next();
+    while (!confirm.equalsIgnoreCase("sim") && !confirm.equalsIgnoreCase("não")){
+        System.out.println("Informe 'sim' ou 'não'");
+        confirm = scanner.next();
+    }
+
+    if(confirm.equalsIgnoreCase("sim")){
+        board.reset();
+    }
+}
+```
+
+Para evitar que o usuário limpe o progresso do jogo por engano, `clearGame()` passa a exigir uma confirmação. É exibida uma mensagem perguntando se o usuário realmente deseja limpar o jogo, e a resposta é validada em um laço `while`: enquanto o texto digitado for diferente de "sim" e diferente de "não", o programa continua pedindo uma resposta válida. Somente quando o usuário confirma digitando "sim" é que `board.reset()` é chamado, reiniciando o tabuleiro.
+
+---
+
+#### Finalizando o jogo e tratando os três cenários possíveis — `finishGame()`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h56m21s300.jpg" alt="" width="840">
+</p>
+
+```java
+private static void finishGame() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+
+    if (board.gameIsFinished()){
+        System.out.println("Parabéns você concluiu o jogo");
+        showCurrentGame();
+        board = null;
+    } else if (board.hasErrors()) {
+        System.out.println("Seu jogo contém erros, verifique seu board e ajuste-o");
+    } else {
+        System.out.println("Você ainda precisa preencher algum espaço");
+    }
+}
+```
+
+O método `finishGame()` trata três cenários possíveis para o encerramento do jogo. Se `board.gameIsFinished()` retornar verdadeiro, o jogo foi concluído com sucesso: uma mensagem de parabéns é exibida, o tabuleiro final é mostrado através de `showCurrentGame()` e a referência do `board` é zerada (`null`), encerrando a partida. Caso o jogo não esteja finalizado mas contenha erros, o usuário é avisado para revisar e ajustar o tabuleiro. Se não houver erros, mas o jogo também não estiver completo, isso significa que ainda existem espaços em branco a preencher, e essa mensagem é exibida ao usuário. Com isso, toda a lógica principal do programa é concluída e o código está pronto para os primeiros testes.
+
+---
+
+#### Rodando o programa em modo debug e exibindo o menu principal
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h56m45s059.jpg" alt="" width="840">
+</p>
+
+Com toda a lógica implementada, o programa é executado em modo debug para permitir a inspeção de pontos específicos do código durante os testes. Ao rodar a aplicação, o menu principal do Sudoku é exibido no console, apresentando as oito opções disponíveis ao usuário: iniciar um novo jogo, colocar um novo número, remover um número, visualizar o jogo atual, verificar o status do jogo, limpar o jogo, finalizar o jogo e sair.
+
+---
+
+#### Solicitando o número em uma posição e visualizando o tabuleiro preenchido
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h57m15s684.jpg" alt="" width="840">
+</p>
+
+```java
+private static void inputNumber() {
+    System.out.printf("Informe o número que vai entrar na posição [%s,%s]\n", col, row);
+    var value = runUntilGetValidNumber(1, 9);
+    if (!board.changeValue(col, row, value)){
+        System.out.printf("A posição [%s,%s] tem um valor fixo\n", col, row);
+    }
+}
+```
+
+Ao selecionar a opção de visualizar o jogo atual, o tabuleiro é exibido corretamente formatado no console, com os números fixos já preenchidos no início do jogo e os espaços em branco representados de forma organizada dentro da grade do Sudoku, confirmando que a lógica de montagem e impressão do tabuleiro (`showCurrentGame()`) está funcionando como esperado.
+
+---
+
+#### Inserindo um novo número no tabuleiro para teste
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h59m52s264.jpg" alt="" width="840">
+</p>
+
+```java
+public final class BoardTemplate {
+    public final static String BOARD_TEMPLATE = ...;
+}
+```
+
+Para testar a inserção de números, é escolhida a posição da coluna 6 e da linha 2. Nessa posição específica, o valor correto do Sudoku utilizado como referência seria o número 7, mas, propositalmente, é informado o número 4 para demonstrar em seguida como o sistema reage a um valor incorreto inserido no tabuleiro.
+
+---
+
+#### Verificando a posição preenchida no tabuleiro
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-14h59m59s493.jpg" alt="" width="840">
+</p>
+
+Ao solicitar novamente a visualização do jogo atual, o número 4 aparece corretamente inserido na posição [6,2] do tabuleiro, confirmando que o método `changeValue()` alterou o valor daquele espaço e que a exibição do tabuleiro reflete a atualização feita pelo usuário.
+
+---
+
+#### Verificando o status após inserir um número incorreto
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-15h00m23s745.jpg" alt="" width="840">
+</p>
+
+Ao verificar o status do jogo após a inserção do número incorreto, o console informa que o jogo está no status "incompleto" e que "o jogo contém erros", já que o valor 4 informado na posição [6,2] não corresponde à solução válida do tabuleiro utilizado como referência.
+
+---
+
+#### Implementando a remoção de um número — `removeNumber()`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-15h02m25s925.jpg" alt="" width="840">
+</p>
+
+```java
+private static void removeNumber() {
+    if (isNull(board)){
+        System.out.println("O jogo ainda não foi iniciado");
+        return;
+    }
+
+    System.out.println("Informe a coluna que em que o número será inserido");
+    var col = runUntilGetValidNumber(0, 8);
+    System.out.println("Informe a linha que em que o número será inserido");
+    var row = runUntilGetValidNumber(0, 8);
+    if (!board.clearValue(col, row)){
+        System.out.printf("A posição [%s,%s] tem um valor fixo\n", col, row);
+    }
+}
+```
+
+O método `removeNumber()` segue a mesma estrutura de `inputNumber()`, solicitando ao usuário a coluna e a linha da posição que deseja limpar. Em seguida, chama `board.clearValue(col, row)`, que remove o valor preenchido naquela posição, a menos que se trate de uma posição fixa do jogo, situação em que o usuário é avisado de que não é possível alterá-la. Após corrigir a mensagem duplicada que havia sido copiada por engano do método anterior, o valor incorreto é corrigido informando novamente a posição [6,2], desta vez com o número correto, 7.
+
+---
+
+#### Confirmando a correção do valor no tabuleiro
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-15h02m29s200.jpg" alt="" width="840">
+</p>
+
+Ao visualizar novamente o tabuleiro, a posição corrigida agora exibe o número 7 no lugar do valor incorreto inserido anteriormente, evidenciando que a alteração foi aplicada corretamente sobre o mesmo espaço do Sudoku.
+
+---
+
+#### Status do jogo após a correção do valor
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-15h02m37s668.jpg" alt="" width="840">
+</p>
+
+Ao verificar o status do jogo novamente, o console agora informa que o jogo continua "incompleto" (pois ainda existem espaços vazios a preencher), porém já não contém erros, confirmando que a correção do valor da posição [6,2] resolveu a inconsistência identificada anteriormente.
+
+---
+
+#### Preenchendo o tabuleiro por completo para o teste final
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-15h06m23s252.jpg" alt="" width="840">
+</p>
+
+Para testar a finalização do jogo sem prolongar a demonstração, todas as posições restantes do tabuleiro são preenchidas com os valores corretos do Sudoku de referência. Ao visualizar o jogo atual novamente, é possível ver as primeiras linhas do tabuleiro já totalmente preenchidas com números válidos.
+
+---
+
+#### Tabuleiro completo exibido linha a linha
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-15h06m26s699.jpg" alt="" width="840">
+</p>
+
+A visualização do tabuleiro continua exibindo as demais linhas, agora todas preenchidas, mostrando que a formatação em grade do Sudoku se mantém consistente independentemente de quantas posições estejam preenchidas, com todos os números devidamente alinhados dentro de cada célula.
+
+---
+
+#### Verificando o status do jogo totalmente preenchido
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-15h06m45s579.jpg" alt="" width="840">
+</p>
+
+Com o tabuleiro completamente preenchido, a opção de verificar o status do jogo é selecionada novamente. Desta vez, o console informa que o jogo está no status "completo" e que não contém erros, indicando que todas as posições foram preenchidas corretamente de acordo com as regras do Sudoku.
+
+---
+
+#### Finalizando o jogo com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-15h06m57s582.jpg" alt="" width="840">
+</p>
+
+Ao selecionar a opção de finalizar o jogo, o método `finishGame()` identifica que `board.gameIsFinished()` é verdadeiro e exibe a mensagem "Parabéns você concluiu o jogo", seguida da exibição final do tabuleiro completo e devidamente preenchido, encerrando com sucesso o fluxo do jogo de Sudoku desenvolvido ao longo da aula.
+     
 
 ### 🟩 Vídeo 06 - Adicionando Requisitos Adicionais e Explorando a Interface Gráfica
 
