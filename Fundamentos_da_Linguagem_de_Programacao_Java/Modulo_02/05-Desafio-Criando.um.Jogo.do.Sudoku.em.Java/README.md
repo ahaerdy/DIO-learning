@@ -599,17 +599,6 @@ Com o campo de argumentos expandido, é possível visualizar cada posição do t
   <img src="000-Midia_e_Anexos/vlcsnap-2026-09-08-08h44m33s704.jpg" alt="" width="840">
 </p>
 
-Agora o `Stream` criado a partir de `args` é convertido em um `Map<String, String>` através de `collect(toMap(...))`. Esse é o momento em que a lista de textos recebida pela linha de comando deixa de ser apenas uma sequência de `String` e passa a virar uma estrutura de dados que o restante do programa vai conseguir consultar por chave. Vale detalhar cada instrução desse trecho separadamente:
-
-- `final var positions: Map<String, String> = ...` — declara a variável `positions`, que vai armazenar o resultado final da transformação. Ela é `final` porque, uma vez montada, essa configuração inicial não deve ser reatribuída durante a execução do programa. O tipo inferido pelo `var` é `Map<String, String>`, ou seja, um mapa onde tanto a chave quanto o valor são textos.
-- `Stream.of(args)` — pega o array `args` (os argumentos recebidos pelo `main`) e o transforma em um `Stream<String>`, permitindo aplicar operações funcionais (como `collect`) sobre cada elemento, um de cada vez, sem precisar de um laço `for` explícito.
-- `.collect(toMap(...))` — é a operação terminal do `Stream`: ela consome todos os elementos e os agrupa em uma coleção, nesse caso um `Map`. O método `toMap` exige duas funções: uma para definir como extrair a **chave** de cada elemento e outra para extrair o **valor** correspondente.
-- `k -> k.split(regex: ";")[0]` — essa é a função responsável por gerar a **chave** do mapa. Para cada item `k` do stream (uma `String` como `"0,0;4,false"`), é aplicado `split(";")`, que quebra o texto em um array usando o `;` como separador. O resultado, nesse exemplo, seria `["0,0", "4,false"]`. Ao acessar a posição `[0]`, é extraído `"0,0"`, isto é, a dupla coluna/linha da posição no tabuleiro — essa parte vira a chave usada para localizar cada célula depois.
-- `v -> v.split(regex: ";")[1]` — essa segunda função gera o **valor** associado a cada chave. Recebe o mesmo item do stream (aqui chamado de `v`), faz o mesmo `split(";")` e pega a posição `[1]`, ou seja, `"4,false"` no exemplo — o número esperado naquela posição junto com a informação de se ela é fixa ou não.
-- O resultado final é que, para o argumento `"0,0;4,false"`, o mapa passa a ter a entrada `"0,0" -> "4,false"`, e assim por diante para cada posição informada nos argumentos do programa.
-
-Logo abaixo, começa a ser criada a variável `option`, inicializada em `-1`, e um laço `while (true)` que dará origem ao menu do jogo. O erro de compilação ainda aparece porque o corpo do `while` está vazio.
-
 ```java
 public class Main {
 
@@ -627,6 +616,18 @@ public class Main {
 
 }
 ```
+
+Agora o `Stream` criado a partir de `args` é convertido em um `Map<String, String>` através de `collect(toMap(...))`. Esse é o momento em que a lista de textos recebida pela linha de comando deixa de ser apenas uma sequência de `String` e passa a virar uma estrutura de dados que o restante do programa vai conseguir consultar por chave. Vale detalhar cada instrução desse trecho separadamente:
+
+- `final var positions: Map<String, String> = ...` — declara a variável `positions`, que vai armazenar o resultado final da transformação. Ela é `final` porque, uma vez montada, essa configuração inicial não deve ser reatribuída durante a execução do programa. O tipo inferido pelo `var` é `Map<String, String>`, ou seja, um mapa onde tanto a chave quanto o valor são textos.
+- `Stream.of(args)` — pega o array `args` (os argumentos recebidos pelo `main`) e o transforma em um `Stream<String>`, permitindo aplicar operações funcionais (como `collect`) sobre cada elemento, um de cada vez, sem precisar de um laço `for` explícito.
+- `.collect(toMap(...))` — é a operação terminal do `Stream`: ela consome todos os elementos e os agrupa em uma coleção, nesse caso um `Map`. O método `toMap` exige duas funções: uma para definir como extrair a **chave** de cada elemento e outra para extrair o **valor** correspondente.
+- `k -> k.split(regex: ";")[0]` — essa é a função responsável por gerar a **chave** do mapa. Para cada item `k` do stream (uma `String` como `"0,0;4,false"`), é aplicado `split(";")`, que quebra o texto em um array usando o `;` como separador. O resultado, nesse exemplo, seria `["0,0", "4,false"]`. Ao acessar a posição `[0]`, é extraído `"0,0"`, isto é, a dupla coluna/linha da posição no tabuleiro — essa parte vira a chave usada para localizar cada célula depois.
+- `v -> v.split(regex: ";")[1]` — essa segunda função gera o **valor** associado a cada chave. Recebe o mesmo item do stream (aqui chamado de `v`), faz o mesmo `split(";")` e pega a posição `[1]`, ou seja, `"4,false"` no exemplo — o número esperado naquela posição junto com a informação de se ela é fixa ou não.
+- O resultado final é que, para o argumento `"0,0;4,false"`, o mapa passa a ter a entrada `"0,0" -> "4,false"`, e assim por diante para cada posição informada nos argumentos do programa.
+
+Logo abaixo, começa a ser criada a variável `option`, inicializada em `-1`, e um laço `while (true)` que dará origem ao menu do jogo. O erro de compilação ainda aparece porque o corpo do `while` está vazio.
+
 
 #### Montando as opções do menu
 
