@@ -1479,6 +1479,309 @@ Ao executar a classe `UIMain`, a aplicação já exibe uma janela gráfica real,
 
 link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/3f11da5b-b61a-402b-9c46-42e59304a684
 
+### Anotações
+
+#### Restringindo a entrada de texto a números (`NumberTextLimit`)
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h44m43s604.jpg" alt="" width="840">
+</p>
+
+`NumberTextLimit` estende `PlainDocument` para controlar o que pode ser digitado em um `JTextField`. A constante `NUMBERS` guarda os caracteres permitidos ("1" a "9"). No método `insertString`, sobrescrito de `PlainDocument`, duas verificações são feitas antes de aceitar o caractere digitado:
+
+1. Se o texto for nulo ou não estiver na lista de números permitidos, o método simplesmente retorna, descartando a digitação.
+2. Se passar na primeira verificação, checa-se o tamanho atual do campo somado ao novo caractere: só é permitido inserir texto se o resultado não ultrapassar 1 caractere, garantindo que cada célula receba apenas um único dígito.
+
+```java
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.PlainDocument;
+import java.util.List;
+
+import static java.util.Objects.isNull;
+
+public class NumberTextLimit extends PlainDocument {
+
+    private final List<String> NUMBERS = List.of("1", "2", "3", "4", "5", "6", "7", "8", "9");
+
+    @Override
+    public void insertString(final int offs, final String str, final AttributeSet a) throws BadLocationException {
+        if (isNull(str) || (!NUMBERS.contains(str))) return;
+
+        if (getLength() + str.length() <= 1){
+            super.insertString(offs, str, a);
+        }
+    }
+}
+```
+
+#### Criando o campo de entrada `NumberText` e adicionando o `DocumentListener`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h48m03s156.jpg" alt="" width="840">
+</p>
+
+Aqui a classe `NumberText`, que estende `JTextField`, já está com boa parte da configuração pronta: a fonte, o alinhamento centralizado, o documento customizado (`NumberTextLimit`) e a definição de habilitado/desabilitado conforme a posição ser fixa ou não. O próximo passo mostrado é a adição de um `DocumentListener` ao documento do campo, para reagir a mudanças de texto. Os três métodos exigidos pela interface (`insertUpdate`, `removeUpdate` e `changedUpdate`) foram criados, porém ainda vazios — eles serão preenchidos em seguida.
+
+```java
+public class NumberText extends JTextField {
+
+    public NumberText(final Space space) {
+        ...
+        this.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(final DocumentEvent e) {
+
+            }
+
+            @Override
+            public void removeUpdate(final DocumentEvent e) {
+
+            }
+
+            @Override
+            public void changedUpdate(final DocumentEvent e) {
+
+            }
+        });
+    }
+}
+```
+
+#### Implementando o método `changeSpace()`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h49m05s542.jpg" alt="" width="840">
+</p>
+
+O método `changedUpdate` agora chama um novo método privado, `changeSpace()`, responsável por propagar o valor digitado no campo para o objeto `Space` associado. A lógica é simples: se o texto do campo estiver vazio (usuário apagou o conteúdo), o espaço é limpo com `clearSpace()` e o método retorna. Caso contrário, o valor digitado é convertido para inteiro com `Integer.parseInt` e atribuído ao espaço com `setActual`. Como o `NumberTextLimit` já garante que só dígitos válidos chegam até aqui, essa conversão pode ser feita com segurança, sem validações adicionais.
+
+```java
+public class NumberText extends JTextField {
+
+    public NumberText(final Space space) {
+        this.getDocument().addDocumentListener(new DocumentListener() {
+
+            @Override
+            public void changedUpdate(final DocumentEvent e) {
+                changeSpace();
+            }
+
+            private void changeSpace(){
+                if (getText().isEmpty()){
+                    space.clearSpace();
+                    return;
+                }
+                space.setActual(Integer.parseInt(getText()));
+            }
+
+        });
+    }
+}
+```
+
+#### Criando a classe `MainScreen`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h51m58s600.jpg" alt="" width="840">
+</p>
+
+Uma nova classe, `MainScreen`, é criada para concentrar a composição da tela principal do jogo. Ela define uma dimensão fixa de 600x600 para a janela, mantém uma referência ao `BoardService` (responsável pela lógica do tabuleiro) e declara três botões que farão parte da interface: `finishGameButton`, `checkGameStatusButton` e `resetButton`. O construtor recebe um `Map<String, String>` chamado `gameConfig` — a configuração do jogo vinda dos argumentos da aplicação — e o utiliza para instanciar o `BoardService`.
+
+```java
+public class MainScreen {
+
+    private final static Dimension dimension = new Dimension(600, 600);
+
+    private final BoardService boardService;
+
+    private JButton finishGameButton;
+    private JButton checkGameStatusButton;
+    private JButton resetButton;
+
+    public MainScreen(final Map<String, String> gameConfig) {
+        this.boardService = new BoardService(gameConfig);
+    }
+}
+```
+
+#### Montando o esqueleto do método `buildMainScreen()`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h52m34s740.jpg" alt="" width="840">
+</p>
+
+O método `buildMainScreen()` começa a tomar forma: ele cria o `mainPanel` (um `MainPanel`) e o `mainFrame` (um `MainFrame`), ambos recebendo a dimensão definida na classe. Em seguida, chama três métodos que ainda serão implementados para adicionar os botões ao painel, e finaliza chamando `revalidate()` e `repaint()` no frame, para garantir que todos os componentes sejam devidamente renderizados. Um dos métodos auxiliares, para adicionar o botão de finalizar o jogo, já aparece criado (ainda vazio).
+
+```java
+public class MainScreen {
+
+    public void buildMainScreen(){
+        JPanel mainPanel = new MainPanel(dimension);
+        JFrame mainFrame = new MainFrame(dimension, mainPanel);
+        addResetButton(mainPanel);
+        addShowGameStatusButton(mainPanel);
+        addFinishgameButton(mainPanel);
+        mainFrame.revalidate();
+        mainFrame.repaint();
+    }
+
+    private void addFinishgameButton(final JPanel mainPanel) {
+    }
+}
+```
+
+#### Criando os três métodos de adição de botões
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h52m47s131.jpg" alt="" width="840">
+</p>
+
+Os três métodos responsáveis por adicionar os botões ao painel principal já foram criados (com os nomes corrigidos): `addFinishGameButton`, `addShowGameStatusButton` e `addResetButton`. Por enquanto, todos permanecem com o corpo vazio — o preenchimento da lógica de cada botão será feito nos próximos passos, começando pelo botão de reiniciar o jogo.
+
+```java
+public class MainScreen {
+
+    public void buildMainScreen(){
+        JFrame mainFrame = new MainFrame(dimension, mainPanel);
+        addResetButton(mainPanel);
+        addShowGameStatusButton(mainPanel);
+        addFinishGameButton(mainPanel);
+        mainFrame.revalidate();
+        mainFrame.repaint();
+    }
+
+    private void addFinishGameButton(final JPanel mainPanel) {
+    }
+
+    private void addShowGameStatusButton(final JPanel mainPanel) {
+    }
+
+    private void addResetButton(final JPanel mainPanel) {
+    }
+}
+```
+
+#### Instanciando e adicionando o `resetButton` ao painel
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h54m00s604.jpg" alt="" width="840">
+</p>
+
+O método `addResetButton` recebe sua primeira implementação: o botão é instanciado como `new ResetButton()` e adicionado ao `mainPanel` com `mainPanel.add(resetButton)`. Os outros dois métodos (`addFinishGameButton` e `addCheckGameStatusButton`) já aparecem preenchidos com a chamada de `mainPanel.add(...)` para seus respectivos botões, também vindos como campos da classe.
+
+```java
+public class MainScreen {
+
+    private void addFinishGameButton(final JPanel mainPanel) {
+        mainPanel.add(finishGameButton);
+    }
+
+    private void addCheckGameStatusButton(final JPanel mainPanel) {
+        mainPanel.add(checkGameStatusButton);
+    }
+
+    private void addResetButton(final JPanel mainPanel) {
+        resetButton = new ResetButton();
+        mainPanel.add(resetButton);
+    }
+}
+```
+
+#### Adicionando a ação de confirmação ao botão de reiniciar
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h55m31s739.jpg" alt="" width="840">
+</p>
+
+Agora o `resetButton` recebe seu comportamento (`ActionListener`) através de uma expressão lambda. Antes de resetar o jogo, é exibido um `JOptionPane.showConfirmDialog`, pedindo a confirmação do usuário com a mensagem "Deseja realmente reiniciar o jogo?" e o título "Limpar o jogo". O diálogo é configurado para exibir apenas as opções "Sim" e "Não" (`YES_NO_OPTION`) com um ícone de pergunta (`QUESTION_MESSAGE`). O retorno do diálogo é armazenado em `dialogResult`: quando o valor é `0` (equivalente ao "Sim"), o método `boardService.reset()` é chamado, efetivamente reiniciando o jogo.
+
+```java
+private void addResetButton(final JPanel mainPanel) {
+    JButton resetButton = new ResetButton(e -> {
+        var dialogResult = JOptionPane.showConfirmDialog(
+                null,
+                "Deseja realmente reiniciar o jogo?",
+                "Limpar o jogo",
+                YES_NO_OPTION,
+                QUESTION_MESSAGE
+        );
+        if (dialogResult == 0) {
+            boardService.reset();
+        }
+    });
+    mainPanel.add(resetButton);
+}
+```
+
+#### Implementando a ação do botão de finalizar o jogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h58m03s066.jpg" alt="" width="840">
+</p>
+
+O botão `finishGameButton` recebe sua lógica: ao ser clicado, verifica se `boardService.gameIsFinished()` retorna verdadeiro. Se sim, exibe uma mensagem de parabéns ("Parabéns você concluiu o jogo") e desabilita os três botões da tela (`resetButton`, `checkGameStatusButton` e `finishGameButton`), forçando o usuário a encerrar o jogo. Caso contrário, é exibida uma mensagem informando que o jogo tem alguma inconsistência e pedindo para o usuário ajustar e tentar novamente. Logo abaixo, o método `addCheckGameStatusButton` começa a ser esboçado, coletando informações do serviço como possíveis erros (`hasErrors`) e o status atual do jogo (`gameStatus`).
+
+```java
+private void addFinishGameButton(final JPanel mainPanel) {
+    finishGameButton = new FinishGameButton(e -> {
+        if (boardService.gameIsFinished()){
+            JOptionPane.showMessageDialog(null, "Parabéns você concluiu o jogo");
+            resetButton.setEnabled(false);
+            checkGameStatusButton.setEnabled(false);
+            finishGameButton.setEnabled(false);
+        } else {
+            var message = "Seu jogo tem alguma inconsistência, ajuste e tente novamente";
+            JOptionPane.showMessageDialog(null, message);
+        }
+    });
+    mainPanel.add(finishGameButton);
+}
+
+private void addCheckGameStatusButton(final JPanel mainPanel) {
+    checkGameStatusButton = new FinishGameButton(e -> {
+        var hasErrors = boardService.hasErrors();
+        var gameStatus = boardService.getStatus();
+        // ...
+    });
+}
+```
+
+#### Primeira execução: erro de `NullPointerException`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h58m48s528.jpg" alt="" width="840">
+</p>
+
+Na classe `UIMain`, o método `main` monta o `gameConfig` a partir dos argumentos da aplicação, separando cada argumento pelo caractere `;` para formar pares de chave e valor, e em seguida instancia e constrói a `MainScreen`. Ao tentar rodar essa configuração, ocorre uma `NullPointerException`, indicando que não é possível invocar `String.split(String)` porque a variável está nula — ou seja, a aplicação foi executada sem que os argumentos de configuração do tabuleiro fossem informados na *run configuration*.
+
+```java
+public static void main(String[] args) {
+    final var gameConfig = Stream.of(args)
+            .collect(toMap(k -> k.split(";")[0], v -> v.split(";")[1]));
+    var mainsScreen = new MainScreen(gameConfig);
+    mainsScreen.buildMainScreen();
+}
+```
+
+```
+Exception in thread "main" java.lang.NullPointerException:
+Cannot invoke "String.split(String)" because "positionConfig" is null
+    at br.com.dio.service.BoardService.initBoard(BoardService.java:47)
+    at br.com.dio.service.BoardService.<init>(BoardService.java:18)
+    at br.com.dio.ui.custom.screen.MainScreen.<init>(MainScreen.java:30)
+    at br.com.dio.UIMain.main(UIMain.java:14)
+```
+
+#### Tela renderizada após corrigir a configuração de execução
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-16h58m53s799.jpg" alt="" width="840">
+</p>
+
+Depois de ajustar os argumentos na *run configuration* do IntelliJ e executar novamente a aplicação, a janela do jogo é finalmente exibida, já com os botões criados até aqui: "Reiniciar jogo" e dois botões de "Concluir" (um deles duplicado, resquício de uma cópia feita anteriormente e que ainda precisa ser corrigido). O tabuleiro do Sudoku em si ainda não foi composto — essa etapa fica para a continuação da aula.
+      
+
 ### 🟩 Vídeo 08 - Ajustando Detalhes Finais e Concluindo o Projeto
 
 <video width="60%" controls>
