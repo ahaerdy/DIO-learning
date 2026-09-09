@@ -1189,6 +1189,287 @@ Ao selecionar a opção de finalizar o jogo, o método `finishGame()` identifica
 
 link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/7b136afd-94fa-4f95-9a43-40e0214a17e0
 
+### Anotações
+
+#### Construindo o `BoardService` e o método `initBoard`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-14h00m03s407.jpg" alt="" width="840">
+</p>
+
+Aqui é criada a classe `BoardService`, responsável por isolar as regras do jogo em uma camada de serviço, separada da interface. O construtor recebe um `Map<String, String> gameConfig` e já monta o tabuleiro chamando `initBoard(gameConfig)`.
+
+Dentro do método `initBoard`, o código percorre as posições do tabuleiro com dois laços `for` (baseados em `BOARD_LIMIT`) e, para cada posição, busca a configuração correspondente com `positions.get("%s,%s".formatted(i, j))`. Esse valor é dividido em duas partes com `split(",")`: a primeira vira o número esperado (`Integer.parseInt`) e a segunda indica se a posição é fixa (`Boolean.parseBoolean`). Com esses dados é criado um `Space` e adicionado à lista de espaços da linha atual.
+
+Nesse momento o código ainda está em uma versão intermediária: ele usa o nome antigo da variável (`positions`) e, ao final do método, atribui o resultado diretamente ao campo `board` (`board = new Board(spaces);`) em vez de retornar a lista — um resquício do código que havia sido copiado do fluxo original de início de jogo.
+
+```java
+private List<List<Space>> initBoard(final Map<String, String> gameConfig) {
+    List<List<Space>> spaces = new ArrayList<>();
+    for (int i = 0; i < BOARD_LIMIT; i++) {
+        spaces.add(new ArrayList<>());
+        for (int j = 0; j < BOARD_LIMIT; j++) {
+            var positionConfig = positions.get("%s,%s".formatted(i, j));
+            var expected = Integer.parseInt(positionConfig.split(",")[0]);
+            var fixed = Boolean.parseBoolean(positionConfig.split(",")[1]);
+            var currentSpace = new Space(expected, fixed);
+            spaces.get(i).add(currentSpace);
+        }
+    }
+    board = new Board(spaces);
+}
+```
+
+#### Ajustando o nome do parâmetro e o retorno do método
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-14h00m29s464.jpg" alt="" width="840">
+</p>
+
+Aqui o método `initBoard` é corrigido: a variável `positions` é substituída por `gameConfig`, que é o nome definido para o parâmetro recebido pelo construtor do `BoardService`. O IntelliJ passa a exibir também uma dica inline com o nome do parâmetro do método `split` (`regex`), mas o código em si continua chamando `split(",")` normalmente.
+
+A principal correção, porém, está no final do método: em vez de atribuir o resultado ao campo `board`, o método agora executa `return spaces;`, devolvendo a lista de listas de `Space` para quem o chamou — nesse caso, o próprio construtor, que envolve o retorno em `new Board(...)`.
+
+```java
+private List<List<Space>> initBoard(final Map<String, String> gameConfig) {
+    List<List<Space>> spaces = new ArrayList<>();
+    for (int i = 0; i < BOARD_LIMIT; i++) {
+        spaces.add(new ArrayList<>());
+        for (int j = 0; j < BOARD_LIMIT; j++) {
+            var positionConfig = gameConfig.get("%s,%s".formatted(i, j));
+            var expected = Integer.parseInt(positionConfig.split(",")[0]);
+            var fixed = Boolean.parseBoolean(positionConfig.split(",")[1]);
+            var currentSpace = new Space(expected, fixed);
+            spaces.get(i).add(currentSpace);
+        }
+    }
+    return spaces;
+}
+```
+
+#### Repassando as funcionalidades do `Board` pelo serviço
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-14h03m10s627.jpg" alt="" width="840">
+</p>
+
+Com o `initBoard` já funcionando, começam a ser criados os métodos públicos do `BoardService` que apenas repassam chamadas para o objeto `board` interno. São adicionados `getSpaces()`, que retorna `this.board.getSpaces()`; `reset()`, que chama `this.board.reset()`; e `hasErrors()`, que retorna `this.board.hasErrors()`.
+
+A ideia, como explicado na aula, é que o serviço funcione como uma camada intermediária entre a lógica do jogo (`Board`) e qualquer tipo de interface que venha a consumi-la — gráfica, via terminal ou até uma futura API.
+
+```java
+public List<List<Space>> getSpaces(){
+    return this.board.getSpaces();
+}
+
+public void reset(){
+    this.board.reset();
+}
+
+public boolean hasErrors(){
+    return this.board.hasErrors();
+}
+```
+
+#### Completando o serviço com status e finalização do jogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-14h04m19s107.jpg" alt="" width="840">
+</p>
+
+O método `hasErrors()` perde o prefixo `this.`, deixando o código um pouco mais enxuto (uma escolha de estilo mencionada na aula). Em seguida são adicionados mais dois métodos ao `BoardService`: `getStatus()`, que retorna um `GameStatusEnum` obtido de `board.getStatus()`, e `gameIsFinished()`, que retorna um `boolean` vindo de `board.gameIsFinished()`.
+
+Com esses métodos, o `BoardService` passa a expor tudo o que é necessário para que uma interface externa consiga iniciar, consultar, verificar e reiniciar o jogo sem precisar acessar diretamente a classe `Board`.
+
+```java
+public boolean hasErrors(){
+    return board.hasErrors();
+}
+
+public GameStatusEnum getStatus(){
+    return board.getStatus();
+}
+
+public boolean gameIsFinished(){
+    return board.gameIsFinished();
+}
+```
+
+#### Criando o botão "Verificar jogo"
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-14h07m48s358.jpg" alt="" width="840">
+</p>
+
+Inicia-se a criação dos componentes gráficos, começando pelos botões customizados no pacote `br.com.dio.ui.custom.button`. A classe `CheckGameStatusButton` estende `JButton`, a classe padrão do Java Swing usada para representar um botão na tela.
+
+No construtor, o texto do botão é definido com `this.setText("Verificar jogo")` e o comportamento de clique é associado por meio de `this.addActionListener(actionListener)`, onde o `ActionListener` é recebido como parâmetro do construtor. Dessa forma, ao instanciar o botão já se define o texto e a ação, evitando repetir essas linhas em todo lugar em que o botão for usado.
+
+```java
+package br.com.dio.ui.custom.button;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+
+public class CheckGameStatusButton extends JButton {
+
+    public CheckGameStatusButton(final ActionListener actionListener){
+        this.setText("Verificar jogo");
+        this.addActionListener(actionListener);
+    }
+
+}
+```
+
+#### Criando o botão "Concluir"
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-14h08m23s003.jpg" alt="" width="840">
+</p>
+
+Seguindo o mesmo padrão do botão anterior, é criada a classe `FinishGameButton`, também estendendo `JButton`. A estrutura do construtor é praticamente idêntica à do `CheckGameStatusButton`, mudando apenas o texto exibido, definido como `"Concluir"`.
+
+```java
+package br.com.dio.ui.custom.button;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+
+public class FinishGameButton extends JButton {
+
+    public FinishGameButton(final ActionListener actionListener){
+        this.setText("Concluir");
+        this.addActionListener(actionListener);
+    }
+
+}
+```
+
+#### Criando o botão de reiniciar o jogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-14h09m17s812.jpg" alt="" width="840">
+</p>
+
+Por fim, entre os botões customizados, é criada a classe `ResetButton`, seguindo exatamente a mesma estrutura das anteriores: estende `JButton`, recebe um `ActionListener` no construtor e define o texto do botão, nesse caso `"Reiniciar jogo"`. Com essa classe, os três botões principais da interface do Sudoku já estão prontos.
+
+```java
+package br.com.dio.ui.custom.button;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+
+public class ResetButton extends JButton {
+
+    public ResetButton(final ActionListener actionListener){
+        this.setText("Reiniciar jogo");
+        this.addActionListener(actionListener);
+    }
+
+}
+```
+
+#### Criando o `MainPanel`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-15h09m31s453.jpg" alt="" width="840">
+</p>
+
+Após os botões, o foco passa para os painéis. É criada a classe `MainPanel`, no pacote `br.com.dio.ui.custom.panel`, estendendo `JPanel`. Esse painel principal é o responsável por reunir e organizar todos os demais componentes da tela.
+
+O construtor recebe um objeto `Dimension` e aplica esse tamanho ao painel com `this.setSize(dimension)` e `this.setPreferredSize(dimension)`. Como mencionado na aula, os dois métodos têm propósitos ligeiramente diferentes: `setSize` redimensiona o componente diretamente, enquanto `setPreferredSize` influencia como o gerenciador de layout calcula o tamanho ideal do componente — por isso ambos são definidos para garantir o comportamento esperado.
+
+```java
+package br.com.dio.ui.custom.panel;
+
+import javax.swing.JPanel;
+import java.awt.Dimension;
+
+public class MainPanel extends JPanel {
+
+    public MainPanel(final Dimension dimension){
+        this.setSize(dimension);
+        this.setPreferredSize(dimension);
+    }
+
+}
+```
+
+#### Criando o `MainFrame`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-15h13m31s018.jpg" alt="" width="840">
+</p>
+
+Agora é criada a classe `MainFrame`, no pacote `br.com.dio.ui.custom.frame`, estendendo `JFrame` — a classe que representa a própria janela da aplicação. O construtor recebe a `Dimension` da tela e o `JPanel` principal (recebido como `JPanel` genérico, e não como `MainPanel`, para trabalhar com herança).
+
+Dentro do construtor, `super("Sudoku")` define o título da janela — o IntelliJ exibe uma dica inline com o nome do parâmetro (`title:`), mas a chamada real é apenas `super("Sudoku")`. Em seguida são configurados o tamanho (`setSize` e `setPreferredSize`), o comportamento ao fechar a janela (`setDefaultCloseOperation(EXIT_ON_CLOSE)`, que encerra a aplicação), a visibilidade (`setVisible(true)`), o posicionamento centralizado na tela (`setLocationRelativeTo(null)`) e o bloqueio de redimensionamento (`setResizable(false)`). Por fim, o painel principal recebido por parâmetro é adicionado à janela com `this.add(mainPanel)`.
+
+```java
+package br.com.dio.ui.custom.frame;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Dimension;
+
+public class MainFrame extends JFrame {
+
+    public MainFrame(final Dimension dimension, final JPanel mainPanel){
+        super("Sudoku");
+        this.setSize(dimension);
+        this.setPreferredSize(dimension);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+        this.add(mainPanel);
+    }
+
+}
+```
+
+#### Montando a classe `UIMain` para testar a interface
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-15h13m55s101.jpg" alt="" width="840">
+</p>
+
+Para visualizar o resultado do trabalho até aqui, é criada uma classe auxiliar `UIMain`, com um método `main`, apenas para testar a interface gráfica montada até o momento (a intenção é substituí-la futuramente pela `Main` definitiva do projeto).
+
+No método, é criada uma `Dimension` de 600 por 600 pixels (`new Dimension(600, 600)`; o IntelliJ apenas exibe os nomes dos parâmetros `width:` e `height:` como dica inline), um `MainPanel` usando essa dimensão e um `MainFrame` recebendo a dimensão e o painel principal. Por fim, são chamados `mainFrame.revalidate()` e `mainFrame.repaint()`, que forçam a janela a recalcular o layout e redesenhar seus componentes — útil para garantir que a interface seja atualizada corretamente conforme novos componentes forem adicionados.
+
+```java
+package br.com.dio;
+
+import br.com.dio.ui.custom.frame.MainFrame;
+import br.com.dio.ui.custom.panel.MainPanel;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.Dimension;
+
+public class UIMain {
+
+    public static void main(String[] args) {
+        var dimension = new Dimension(600, 600);
+        JPanel mainPanel = new MainPanel(dimension);
+        JFrame mainFrame = new MainFrame(dimension, mainPanel);
+        mainFrame.revalidate();
+        mainFrame.repaint();
+    }
+
+}
+```
+
+#### Primeira execução da interface gráfica
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-15h14m01s288.jpg" alt="" width="840">
+</p>
+
+Ao executar a classe `UIMain`, a aplicação já exibe uma janela gráfica real, com o título "Sudoku" centralizado na barra superior e a janela posicionada no centro da tela, como configurado no `MainFrame`. O conteúdo interno ainda está vazio, já que nenhum componente foi adicionado ao `MainPanel` além de sua própria dimensão, mas essa primeira execução confirma que o `JFrame`, o `JPanel` e as configurações de tamanho e centralização definidas até aqui estão funcionando corretamente.
+
+
 ### 🟩 Vídeo 07 - Construindo os Componentes do Projeto
 
 <video width="60%" controls>
