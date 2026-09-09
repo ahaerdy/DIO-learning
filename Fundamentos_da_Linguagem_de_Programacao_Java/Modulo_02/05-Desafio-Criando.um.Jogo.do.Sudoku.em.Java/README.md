@@ -1791,6 +1791,225 @@ Depois de ajustar os argumentos na *run configuration* do IntelliJ e executar no
 
 link do vídeo: https://web.dio.me/lab/criando-um-jogo-do-sudoku/learning/cd1bd689-76ab-4ef4-8c77-48112bb950fd
 
+### Anotações
+
+#### Retomando o projeto: botão de finalização já implementado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h14m01s525.jpg" alt="" width="840">
+</p>
+
+A tela mostra a classe `MainScreen.java`, dentro do método `addFinishGameButton`, já concluído na aula anterior. Esse método cria o botão de finalizar o jogo: ao ser clicado, verifica `boardService.gameIsFinished()`; se verdadeiro, exibe a mensagem "Parabéns você concluiu o jogo" e desabilita os botões `resetButton`, `checkGameStatusButton` e `finishGameButton`; caso contrário, mostra a mensagem "Seu jogo tem alguma inconsistência, ajuste e tente novamente". É esse o ponto exato em que a aula é retomada, com a tela e os botões já prontos.
+
+#### Montando os dois `for` aninhados para percorrer os setores
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h14m13s631.jpg" alt="" width="840">
+</p>
+
+No método `buildMainScreen()`, são criados dois laços `for` aninhados: o externo controla `r` (linhas) e o interno controla `c` (colunas), ambos indo de 0 até menor que 9, avançando de três em três (`r += 3` e `c += 3`). Dentro de cada laço é declarada uma variável auxiliar (`endRow = r + 2`, depois `endCol = c + 2`) que marcará o limite de cada bloco 3x3. A chamada `mainPanel.add()` ainda aparece vazia, sem argumento, pois o componente do setor ainda será construído nos próximos passos.
+
+#### Criando o método `generateSection` para montar cada setor visual
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h14m34s939.jpg" alt="" width="840">
+</p>
+
+É criado o método `private JPanel generateSection(final List<Space> spaces)`, responsável por transformar uma lista de `Space` em um painel visual. Dentro dele, a lista `List<NumberText> fields` é inicializada com `new ArrayList<>(spaces.stream().map(NumberText::new).toList())`, usando `stream()` e referência de método (`NumberText::new`) para instanciar um campo de texto para cada espaço recebido. O método ainda está incompleto nesse momento, faltando o retorno do painel.
+
+#### Esboçando o método `getSpacesFromSector`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h16m33s725.jpg" alt="" width="840">
+</p>
+
+É criado o método `private List<Space> getSpacesFromSector`, que receberá a lista de listas de espaços (`List<List<Space>> spaces`) e os limites de coluna e linha (`initCol`, `endCol`, `initRow`, `endRow`) como parâmetros `final`. Dentro do método, apenas a lista de retorno é inicializada até este ponto: `List<Space> spaceSector = new ArrayList<>();`. A grande quantidade de parâmetros é comentada como um incômodo, mas necessária para isolar essa lógica em um método próprio.
+
+#### Conectando os métodos na construção da tela
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h17m05s568.jpg" alt="" width="840">
+</p>
+
+No método `buildMainScreen()`, dentro dos laços `for`, a lista de espaços do setor é obtida com `var spaces = getSpacesFromSector(boardService.getSpaces(), c, endCol, r, endRow)`. Em seguida, o painel do setor é gerado com `JPanel sector = generateSection(spaces)` e adicionado ao painel principal com `mainPanel.add(sector)`. É assim que os dois métodos criados anteriormente passam a ser efetivamente utilizados para montar a tela do Sudoku.
+
+#### Primeira execução da tela: números faltando
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h17m10s327.jpg" alt="" width="840">
+</p>
+
+A aplicação Sudoku é executada pela primeira vez com a lógica de montagem dos setores já implementada. O tabuleiro aparece na tela, porém alguns números esperados não estão sendo exibidos em todas as posições — um comportamento inesperado que motivará uma sessão de depuração para identificar o problema no preenchimento dos espaços.
+
+#### Corrigindo o preenchimento dos espaços com depuração
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h17m40s112.jpg" alt="" width="840">
+</p>
+
+Após depurar a execução, o corpo do método `getSpacesFromSector` é corrigido: os laços `for` percorrem `r` de `initRow` até `endRow` (inclusive, com `r <= endRow`) e `c` de `initCol` até `endCol` (inclusive, com `c <= endCol`), adicionando `spaces.get(c).get(r)` a `spaceSector`, finalizando com `return spaceSector;`. A troca da condição de `<` para `<=` foi o ajuste necessário para que todas as posições do setor fossem corretamente capturadas.
+
+#### Testando a validação do jogo: inconsistência detectada
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h18m20s580.jpg" alt="" width="840">
+</p>
+
+Ao clicar no botão "Concluir" com o tabuleiro ainda sem preenchimento correto, a aplicação exibe a mensagem "Seu jogo tem alguma inconsistência, ajuste e tente novamente", confirmando que a lógica de verificação de finalização do jogo está funcionando conforme esperado.
+
+#### Verificando o status de um jogo ainda não iniciado
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h19m28s741.jpg" alt="" width="840">
+</p>
+
+Ao clicar em "Verificar jogo" com o tabuleiro totalmente vazio, a aplicação retorna a mensagem "O jogo não foi iniciado e não contém erros", demonstrando a checagem correta do status do jogo quando nenhum espaço foi preenchido.
+
+#### Verificando o status de um jogo parcialmente preenchido
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h19m43s252.jpg" alt="" width="840">
+</p>
+
+Com apenas um valor preenchido no tabuleiro, o botão "Verificar jogo" é acionado novamente, e a mensagem exibida é "O jogo está incompleto e não contém erros", validando que a lógica de status diferencia corretamente um jogo iniciado, mas ainda incompleto.
+
+#### Confirmando o reinício do jogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h19m54s187.jpg" alt="" width="840">
+</p>
+
+Ao clicar no botão "Reiniciar jogo", é exibida uma caixa de diálogo de confirmação, "Deseja realmente reiniciar o jogo?", com as opções "Não" e "Sim". Essa confirmação antecede a chamada de limpeza do tabuleiro, evitando que o jogador perca o progresso por engano.
+
+#### Criando a interface `EventListener` para o padrão Notifier
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h20m38s525.jpg" alt="" width="840">
+</p>
+
+No diálogo "New Java Class", a opção "Interface" é selecionada para a criação da interface `EventListener`, dentro do pacote de serviços (`br.com.dio.service`). Esse é o passo inicial da implementação do padrão de projeto *Notifier*, necessário para propagar a limpeza de um espaço até o componente visual correspondente.
+
+#### Implementando o `NotifierService`: mapa de listeners e inscrição
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h21m23s864.jpg" alt="" width="840">
+</p>
+
+A classe `NotifierService` é construída com um campo `private final Map<EventEnum, List<EventListener>> listeners`, inicializado com `new HashMap<>(){{ put(CLEAR_SPACE, new ArrayList<>()); }}` — um `ArrayList` mutável, já que uma lista imutável não permitiria adicionar novos inscritos depois. O método `subscribe(final EventEnum eventType, EventListener listener)` recupera a lista de listeners associada ao evento (`var selectedListeners = listeners.get(eventType)`) e adiciona o novo `listener` a ela. O método `notify(final EventEnum eventType)` percorre os listeners inscritos naquele evento e chama `l.update(eventType)` em cada um.
+
+#### Definindo o contrato da interface `EventListener`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h22m01s821.jpg" alt="" width="840">
+</p>
+
+A interface `EventListener` é finalizada com um único método: `void update(final EventEnum eventType)`. Qualquer classe que precisar reagir a um evento disparado pelo `NotifierService` deverá implementar essa interface e fornecer sua própria lógica dentro de `update`.
+
+#### Fazendo `NumberText` implementar `EventListener`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h22m23s741.jpg" alt="" width="840">
+</p>
+
+A declaração da classe é alterada para `public class NumberText extends JTextField implements EventListener`, tornando cada campo de número do Sudoku um possível "ouvinte" de eventos do `NotifierService`. O restante do construtor, já existente, continua configurando tamanho, fonte, alinhamento e o limite de dígitos do campo.
+
+#### Implementando `update` para limpar o campo ao receber `CLEAR_SPACE`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h22m51s293.jpg" alt="" width="840">
+</p>
+
+Dentro de `NumberText`, os métodos `removedUpdate` e `changedUpdate` do `DocumentListener` chamam `changeSpace()`, que atualiza o valor do `Space` associado ao texto digitado. Logo abaixo, é implementado o método da interface: `@Override public void update(final EventEnum eventType) { if (eventType.equals(CLEAR_SPACE) && (this.isEnabled())) { this.setText(""); } }`. Ou seja, ao receber o evento `CLEAR_SPACE`, o campo só é limpo se estiver habilitado (não for uma posição fixa do tabuleiro).
+
+#### Adicionando o `NotifierService` à `MainScreen`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h24m08s258.jpg" alt="" width="840">
+</p>
+
+A classe `MainScreen` recebe um novo campo `private final NotifierService notifierService`, instanciado no construtor com `this.notifierService = new NotifierService();`, ao lado do já existente `boardService`. Essa instância será usada para disparar o evento `CLEAR_SPACE` sempre que o tabuleiro precisar ser limpo.
+
+#### Disparando o evento `CLEAR_SPACE` ao reiniciar o jogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h24m31s972.jpg" alt="" width="840">
+</p>
+
+No método `addResetButton`, após o usuário confirmar o reinício (`dialogResult == 0`) na caixa de diálogo "Deseja realmente reiniciar o jogo?", o código executa `boardService.reset()` para limpar os dados do tabuleiro e, em seguida, `notifierService.notify(CLEAR_SPACE)` para propagar essa mudança de estado a todos os componentes visuais inscritos no evento.
+
+#### Montando as mensagens de status do jogo
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h25m05s330.jpg" alt="" width="840">
+</p>
+
+No método `addCheckGameStatusButton`, um `switch` sobre `gameStatus` define a mensagem base: "O jogo não foi iniciado" para `NON_STARTED`, "O jogo está incompleto" para `INCOMPLETE` e "O jogo está completo" para `COMPLETE`. Em seguida, a mensagem é complementada de acordo com `hasErrors`, adicionando "e contém erros" ou "e não contém erros", antes de ser exibida com `showMessageDialog`.
+
+#### Inscrevendo os campos de número no evento `CLEAR_SPACE`
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h25m23s156.jpg" alt="" width="840">
+</p>
+
+No método `generateSection`, após criar a lista `fields`, é adicionada a linha `fields.forEach(t -> notifierService.subscribe(CLEAR_SPACE, t));`, inscrevendo cada `NumberText` como ouvinte do evento `CLEAR_SPACE` junto ao `NotifierService`. Assim, todo campo de número do tabuleiro passa a ser notificado quando o jogo for reiniciado.
+
+#### Testando a verificação de status com valores inválidos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h25m40s919.jpg" alt="" width="840">
+</p>
+
+Com o tabuleiro preenchido propositalmente com valores repetidos (números 6 e 7 em várias posições), o botão "Verificar jogo" é clicado, e a aplicação responde com "O jogo está completo e contém erros", confirmando que a verificação identifica corretamente tanto o preenchimento total quanto a existência de inconsistências.
+
+#### Testando a conclusão do jogo com inconsistências
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h25m49s033.jpg" alt="" width="840">
+</p>
+
+Sobre o mesmo tabuleiro preenchido com valores inválidos, o botão "Concluir" é acionado, e a mensagem "Seu jogo tem alguma inconsistência, ajuste e tente novamente" é exibida, mostrando que o jogo não pode ser finalizado enquanto houver erros nos espaços preenchidos.
+
+#### Confirmando o reinício com o tabuleiro preenchido
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h25m53s470.jpg" alt="" width="840">
+</p>
+
+Ainda com o tabuleiro cheio de valores inválidos, o botão "Reiniciar jogo" é clicado, exibindo novamente a confirmação "Deseja realmente reiniciar o jogo?". Esse teste antecede a verificação de que, agora com o `NotifierService` conectado, a limpeza visual dos campos funcionará corretamente após a confirmação.
+
+#### Depurando o fluxo de reinício e notificação
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h27m19s496.jpg" alt="" width="840">
+</p>
+
+Um ponto de parada (breakpoint) é atingido dentro do método `addResetButton`, na linha `boardService.reset();`. O painel "Threads & Variables" exibe o estado da execução: `dialogResult = 0` (confirmando que o usuário escolheu "Sim"), além das referências para `notifierService`, `boardService` e `resetButton`. Essa depuração serve para confirmar, passo a passo, que a sequência de reset seguida do disparo do evento `CLEAR_SPACE` está sendo executada corretamente.
+
+#### Tabuleiro limpo após o reinício com o Notifier funcionando
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h27m29s057.jpg" alt="" width="840">
+</p>
+
+Após a confirmação do reinício, a aplicação em execução mostra o tabuleiro do Sudoku completamente vazio, com todos os campos de número limpos. Isso confirma que o padrão *Notifier* implementado resolveu o problema anterior: agora, ao reiniciar o jogo, cada componente visual é corretamente avisado e atualizado.
+
+#### Preenchendo manualmente um Sudoku válido
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h27m36s831.jpg" alt="" width="840">
+</p>
+
+O tabuleiro é preenchido manualmente, célula por célula, com os valores de um Sudoku válido, aproveitando a ordem de tabulação (tab order) já configurada entre os campos para facilitar a digitação sequencial dos números.
+
+#### Jogo concluído com sucesso
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-09-18h27m53s128.jpg" alt="" width="840">
+</p>
+
+Ao clicar em "Concluir" com o tabuleiro totalmente e corretamente preenchido, a aplicação exibe a mensagem "Parabéns você concluiu o jogo", confirmando a finalização bem-sucedida do Sudoku e o funcionamento completo da interface gráfica construída ao longo da aula.
+
+
 # Entendendo o Desafio
 
 **Agora é a sua hora de brilhar e construir um perfil de destaque na DIO! Explore todos os conceitos explorados até aqui e replique (ou melhor, porque não?) este projeto prático. Para isso, crie seu próprio repositório e aumente ainda mais seu portfólio de projetos no GitHub, o qual pode fazer toda diferença em suas entrevistas técnicas 😎**
