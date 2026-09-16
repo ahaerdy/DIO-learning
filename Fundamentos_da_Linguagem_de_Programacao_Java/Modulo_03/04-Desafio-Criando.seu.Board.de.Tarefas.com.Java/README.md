@@ -12,7 +12,7 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/project/proejto-board-de-tarefas/learning/20a6039c-3f63-43c8-9812-ef7aa35bc2f3?back=/track/formacao-java-fundamentals&tab=undefined&moduleId=undefined
 
 ### 🟩 Vídeo 02 - Criando o Diagrama da Solução
 
@@ -21,7 +21,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/1ce64722-b139-44e1-a47f-bab07ae017ed
 
 ### 🟩 Vídeo 03 - Setup Inicial de Projeto
 
@@ -30,7 +30,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 04 - Criando Migrations
 
