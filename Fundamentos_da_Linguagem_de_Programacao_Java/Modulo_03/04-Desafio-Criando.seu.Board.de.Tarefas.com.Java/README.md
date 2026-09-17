@@ -30,7 +30,7 @@ link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/1ce6472
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/6d233a05-be1e-4f44-99d8-045d2941390d
 
 ### 🟩 Vídeo 04 - Criando Migrations
 
@@ -39,7 +39,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/29f9bfa7-e012-4687-9954-033c3281c47f
 
 ### 🟩 Vídeo 05 - Entidades e Acessos a Dados
 
