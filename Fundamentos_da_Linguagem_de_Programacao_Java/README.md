@@ -78,7 +78,9 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 - [x] ✅ Curso: [Herança e Polimorfismo em Java](Modulo_02/02-Curso.02-Heranca.e.Polimorfismo.em.Java)
 - [x] ✅ Curso: [Dominando Interfaces e Lambda em Java](Modulo_02/03-Curso.03-Dominando.Interfaces.e.Lambda.em.Java)
 - [x] ✅ Curso: [Imersão Prática com Collections e Outras Classes Úteis do Java](Modulo_02/04-Curso.04-Imersao.Pratica.com.Collections.e.Outras.Classes.Uteis.do.Java)
-- [ ] Desafio de projeto: [Criando um Jogo do Sudoku em Java](Modulo_02/05-Desafio-Criando.um.Jogo.do.Sudoku.em.Java)
+- [x] ✅ Desafio de projeto: [Criando um Jogo do Sudoku em Java](Modulo_02/05-Desafio-Criando.um.Jogo.do.Sudoku.em.Java)
+  - **Repositório**: [sudoku-java-swing](https://github.com/ahaerdy/sudoku-java-swing)
+  - **Descrição**: Jogo de Sudoku em Java/Swing com tabuleiro configurável via arquivo externo, desenvolvido como estudo de caso de Design Emergente, com LOG de desenvolvimento completo.
 - [ ] Desafio de código: [Estruturas de Controle em Java](Modulo_02/06-Desafio-Estruturas.de.Controle.em.Java/)
 
 ---

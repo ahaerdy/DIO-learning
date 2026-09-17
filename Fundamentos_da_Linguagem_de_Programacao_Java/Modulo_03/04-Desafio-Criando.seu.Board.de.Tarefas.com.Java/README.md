@@ -48,7 +48,7 @@ link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/29f9bfa
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/0c5685c3-a629-4f2d-895a-a5ffa3f78d5b
 
 ### 🟩 Vídeo 06 - Camada de Acesso a Dados
 
@@ -57,7 +57,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/97cac612-a550-40e6-a219-f5f21241da86
 
 ### 🟩 Vídeo 07 - Trabalhando na Camada de UI
 
