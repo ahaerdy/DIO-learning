@@ -66,7 +66,7 @@ link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/97cac61
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/2d649f25-8ec8-471c-9f6f-2fbe13ab9885
 
 ### 🟩 Vídeo 08 - Integrando sua UI com Acesso aos Dados
 
@@ -75,7 +75,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/1f266226-d48c-4fde-9aa8-e3222105e715
 
 ### 🟩 Vídeo 09 - Integrando Camada Services e Camada de Dados
 
@@ -84,7 +84,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/7b3429e4-adee-495e-b7d1-b7691c783ed0
 
 ### 🟩 Vídeo 10 - Refinado a camada de DAO
 
@@ -93,7 +93,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/b3b47d4f-c100-4430-8e37-0df77383f697
 
 ### 🟩 Vídeo 11 - Refinando Consultas
 
@@ -102,7 +102,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/e7a1d08f-224d-4025-b03d-88b213bcaead
 
 ### 🟩 Vídeo 12 - Trazendo resultado de consultas na camada de UI
 
@@ -111,7 +111,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/0e2fdedc-7857-4c65-af28-a36d08649f4d
 
 ### 🟩 Vídeo 13 - Fazendo Tratamentos de Erros
 
@@ -120,7 +120,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/0e2fdedc-7857-4c65-af28-a36d08649f4d?back=/track/formacao-java-fundamentals
 
 ### 🟩 Vídeo 14 - Camada de DTO
 
@@ -129,7 +129,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/bc96302e-96d3-4185-b52b-5fe49268d2bd
 
 ### 🟩 Vídeo 15 - Boas Práticas na camada de Persistência
 
@@ -138,7 +138,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 16 - Criando Blocos de Update
 
