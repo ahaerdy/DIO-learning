@@ -17,7 +17,7 @@ link do vídeo: https://web.dio.me/project/proejto-board-de-tarefas/learning/20a
 ### Anotações
 
 <p align="center">
-  <img src="000-Midias_e_Anexos/vlcsnap-2026-09-18-14h58m44s274.jpg" alt="" width="840">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-18-14h58m44s274.jpg" alt="" width="840">
 </p>
 
 A imagem mostra o enunciado do último projeto do curso, um **board customizável para gerenciamento de tarefas**, exibido no GitHub (repositório `exercicios-java-basico`, arquivo *4 - Técnicas Avançadas, Padrões e Persistência*). O texto de abertura do projeto pede a escrita de um código que crie um board customizável para acompanhamento de tarefas.
