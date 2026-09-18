@@ -138,7 +138,7 @@ link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/bc96302
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/006f9160-c28c-420b-8704-99bf5563ce94?back=/track/formacao-java-fundamentals
 
 ### 🟩 Vídeo 16 - Criando Blocos de Update
 
@@ -147,13 +147,16 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/36a0bcbb-e6d2-42d3-9109-1c4c3ce34df0?back=/track/formacao-java-fundamentals
 
-### 🟩 Vídeo 17 - Entendendo o Desafio
+## Entendendo o Desafio
 
-<video width="60%" controls>
-  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.03-curso.04-video_17.webm" type="video/webm">
-    Seu navegador não suporta vídeo HTML5.
-</video>
+Agora é a sua hora de brilhar e construir um perfil de destaque na DIO! Explore todos os conceitos explorados até aqui e replique (ou melhore, porque não?) este projeto prático. Para isso, crie seu próprio repositório e aumente ainda mais seu portfólio de projetos no GitHub, o qual pode fazer toda diferença em suas entrevistas técnicas 😎
 
-link do vídeo:
+**Repositório Git**
+
+O Git é um conceito essencial no mercado de trabalho atualmente, por isso sempre reforçamos sua importância em nossa metodologia educacional. Por isso, todo código-fonte desenvolvido durante este conteúdo foi versionado no seguinte endereço para que você possa consultá-lo a qualquer momento:
+
+* **Repositório no GitHub:** https://github.com/digitalinnovationone/board
+
+Bons estudos 😉
