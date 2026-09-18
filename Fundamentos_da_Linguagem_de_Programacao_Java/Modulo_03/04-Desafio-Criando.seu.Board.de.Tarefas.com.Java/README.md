@@ -59,6 +59,41 @@ Escreva um código que irá criar um board customizável para acompanhamento de 
 
 link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/1ce64722-b139-44e1-a47f-bab07ae017ed
 
+### Anotações
+
+#### Diagrama de classes do Board: entidades e relacionamentos
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/vlcsnap-2026-09-18-15h25m39s561.jpg" alt="" width="840">
+</p>
+
+A imagem mostra o esboço da estrutura de dados do projeto **Board**, montado no Draw.io (app.diagrams.net) com as formas de UML. Ele reúne quatro classes e os relacionamentos entre elas. Cada classe também é pensada como uma futura entidade do banco de dados MySQL. O diagrama não segue a notação UML à risca: a intenção é apenas ter uma visão geral da estrutura antes de começar a codificar.
+
+**As quatro classes**
+
+| Classe | Atributos | Papel |
+|---|---|---|
+| `Board` | `id: long`, `name: string` | O quadro em si: um identificador e um nome. |
+| `BoardColumn` | `id: long`, `name: string`, `kind: string`, `order: int` | Uma coluna do quadro. `kind` indica o tipo da coluna (inicial, pendente, final ou cancelamento) e `order` indica sua posição no board. |
+| `Card` | `id: long`, `title: string`, `description: string`, `createdAt: OffsetDateTime` | A tarefa que percorre as colunas: título, descrição e data de criação. |
+| `Block` | `id: long`, `blockCause: string`, `blockIn: OffsetDateTime`, `unblockCause: string`, `unblockIn: OffsetDateTime` | O registro de um bloqueio de card: motivo e data do bloqueio, motivo e data do desbloqueio. |
+
+O nome `BoardColumn` foi escolhido no lugar de `Column` para evitar conflito com a palavra reservada `column`, comum em bancos de dados.
+
+**Relacionamentos (as multiplicidades aparecem sobre as linhas)**
+
+- **Board → BoardColumn (1 - \*)**: um board possui várias colunas, e cada coluna pertence a um único board.
+- **BoardColumn → Card (1 - \*)**: uma coluna pode conter zero ou vários cards, e um card está em uma única coluna por vez.
+- **Card → Block (1 - n)**: um card pode ter vários bloqueios ao longo do tempo, e cada bloqueio pertence a um único card. Na imagem, o rótulo dessa ligação ainda está sendo editado (o cursor está sobre ele).
+
+**Decisões de modelagem que o diagrama já reflete**
+
+- O `Card` não tem um atributo booleano do tipo "está bloqueado". Como cada bloqueio exige seus próprios dados (motivo e data de bloqueio, motivo e data de desbloqueio), ele ganhou uma classe própria, `Block`. Assim, ao desbloquear, o registro não é apagado: os campos de desbloqueio são preenchidos, e o histórico de bloqueios do card se mantém.
+- Os campos `blockIn` e `unblockIn` são datas, o que permite verificar o estado de um bloqueio com mais segurança do que olhando apenas para textos.
+- Em `BoardColumn`, o atributo `kind` aparece como `string`. Como os tipos possíveis são fixos (inicial, pendente, final e cancelamento), um `enum` é uma alternativa natural na hora de implementar. O atributo `order` é um `int`.
+- Ao implementar `BoardColumn`, será preciso validar que cada board tenha uma única coluna inicial, uma final e uma de cancelamento, e quantas pendentes forem necessárias. A inicial deve ser a primeira, a final a penúltima e a de cancelamento a última. O diagrama guarda apenas os atributos; essas restrições ficam para o código.
+
+
 ### 🟩 Vídeo 03 - Setup Inicial de Projeto
 
 <video width="60%" controls>
