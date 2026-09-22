@@ -680,6 +680,8 @@ Na aba **Dados** da `DATABASECHANGELOG`, há um único registro, correspondente 
 
 link do vídeo: https://web.dio.me/lab/proejto-board-de-tarefas/learning/29f9bfa7-e012-4687-9954-033c3281c47f
 
+
+
 ### 🟩 Vídeo 05 - Entidades e Acessos a Dados
 
 <video width="60%" controls>
