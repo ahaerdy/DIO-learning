@@ -41,7 +41,7 @@ link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/c2e4b9ca-43b8-4f96-b09a-a91af3695b14?autoplay=1
 
 ### 🟩 Vídeo 05 - Buscando dados com Select
 
@@ -50,7 +50,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/41789351-3aef-4853-8584-37826cba5cd0?autoplay=1
 
 ### 🟩 Vídeo 06 - Atualizando e Excluindo registros
 
@@ -59,7 +59,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/d5ec6af3-38c5-46f5-9313-28efe778723f?autoplay=1
 
 ## Parte 3 - Recursos Avançados do Banco de Dados
 
@@ -70,7 +70,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/90c3d816-3972-4301-9671-97d7f98a25e2?autoplay=1
 
 ### 🟩 Vídeo 08 - Buscando dados usando Views
 
@@ -79,7 +79,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/9edb5dc4-fea7-4844-ada1-f848b43d8821?autoplay=1
 
 ### 🟩 Vídeo 09 - Parametrizando comandos SQL e chamando Procedures
 
@@ -88,7 +88,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/b104cf21-2fb7-465d-979f-b51f8f851302?autoplay=1
 
 ## Parte 4 - Operações Avançadas
 
@@ -99,7 +99,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/b104cf21-2fb7-465d-979f-b51f8f851302?autoplay=1
 
 ## Parte 5 - Trabalhando com Relacionamentos
 
@@ -110,7 +110,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/b2b50016-6afc-4a8d-adbf-b27150d6d530?autoplay=1
 
 ### 🟩 Vídeo 12 - Integridade Referencial
 
@@ -119,7 +119,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/4c6a82ec-0ea0-475d-bc80-2583db174451?autoplay=1
 
 ### 🟩 Vídeo 13 - Relacionamento 1 para N
 
@@ -128,7 +128,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/ff267b5d-2f61-456a-84ec-fd3965e665bb?autoplay=1
 
 ### 🟩 Vídeo 14 - Relacionamento N para N
 
@@ -137,7 +137,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/94652c60-bc56-4ed7-a136-652674e4876d?autoplay=1
 
 ### 🟩 Vídeo 15 - Select com N para N e entendendo N para N composto
 
@@ -146,11 +146,9 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/formacao-java-fundamentals/course/jdbc-explorando-persistencia-de-dados-com-java/learning/430b6bc3-0fe8-43cc-93ed-3c04b41ffc63?autoplay=1
 
-##  Materiais de Apoio
+# Certificado: JDBC: Explorando Persistência de Dados com Java
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/A5KVOVGJ.pdf
+- Certificado em pdf: [Certificado-JDBC-Explorando.Persistência.de.Dados.com.Java.pdf](000-Midias_e_Anexos/Certificado-JDBC-Explorando.Persistência.de.Dados.com.Java.pdf)

@@ -98,7 +98,7 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 
 - [x] Curso: [Annotations em Java: Marcando o Seu Código de Maneira Inteligente](Modulo_04/01-Curso.01-Annotations.em.Java.Marcando.o.Seu.Codigo.de.Maneira.Inteligente)
 - [x] Curso: [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade](Modulo_04/02-Curso.02-SOLID.e.Clean.Code.em.Java.Escrevendo.Codigo.de.Alta.Qualidade)
-- [ ] Curso: [JDBC: Explorando Persistência de Dados com Java](Modulo_04/03-Curso.03-JDBC.Explorando.Persistencia.de.Dados.com.Java)
+- [x] ✓ Curso: [JDBC: Explorando Persistência de Dados com Java](Modulo_04/03-Curso.03-JDBC.Explorando.Persistencia.de.Dados.com.Java)
 - [ ] Curso: [Avalie a Formação Java Fundamentals](Modulo_04/04-Curso.04-Avalie.a.Formacao.Java.Fundamentals)
 
 ---
@@ -129,20 +129,10 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 
 - [Annotations em Java: Marcando o Seu Código de Maneira Inteligente]
 - [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade]
-- [JDBC: Explorando Persistência de Dados com Java] *(pendente)*
+- [JDBC: Explorando Persistência de Dados com Java](https://hermes.dio.me/certificates/A5KVOVGJ.pdf)
 - [Avalie a Formação Java Fundamentals] *(pendente)*
 
 ### Conclusão
 
 - 🎓 Certificado de conclusão da Formação: [Fundamentos da Linguagem de Programação Java] *(pendente — 12/18 atividades concluídas, 67% completo)*
 
----
-
-## 📈 Progresso Atual
-
-- **Atividades concluídas:** 12/18 (67%)
-- **Meta de estudo:** 5 dias por semana, 1 hora por dia
-- **Início:** 21/07/2026
-- **Estimativa de conclusão:** 13/08/2026
-
-<!-- Preencher conforme for progredindo na formação -->
