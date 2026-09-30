@@ -93,7 +93,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Java e a Arte da Abstração com Classes e Encapsulamento](Modulo_03/01-Curso.01-Java.e.a.Arte.da.Abstracao.com.Classes.e.Encapsulamento/)
 - [x] ✅ Curso: [Herança e Polimorfismo em Java](Modulo_03/02-Curso.02-Heranca.e.Polimorfismo.em.Java/)
 - [x] ✅ Curso: [Dominando Interfaces e Lambdas em Java](Modulo_03/03-Curso.03-Dominando.Interfaces.e.Lambdas.em.Java/)
-- [ ] Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/)
+- [x] ✅ Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/04-Jornada.Prática.com.Collections.e.Outras.Classes.Úteis.de.Java/)
 - [ ] Desafio de projeto: [Criando um Jogo do Tabuleiro em Java](Modulo_03/)
 
 ---
