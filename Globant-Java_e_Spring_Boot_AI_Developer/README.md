@@ -94,7 +94,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Herança e Polimorfismo em Java](Modulo_03/02-Curso.02-Heranca.e.Polimorfismo.em.Java/)
 - [x] ✅ Curso: [Dominando Interfaces e Lambdas em Java](Modulo_03/03-Curso.03-Dominando.Interfaces.e.Lambdas.em.Java/)
 - [x] ✅ Curso: [Jornada Prática com Collections e Outras Classes Úteis de Java](Modulo_03/04-Jornada.Prática.com.Collections.e.Outras.Classes.Úteis.de.Java/)
-- [ ] Desafio de projeto: [Criando um Jogo do Tabuleiro em Java](Modulo_03/)
+- [x] ✅ Desafio de projeto: [Criando um Jogo do Tabuleiro em Java](Modulo_03/05-Desafio-Criando.um.Jogo.do.Sudoku.em.Java/)
+  - **Repositório**: [Kanban-java-angular](https://github.com/ahaerdy/Kanban-java-angular)
+  - **Descrição**: **KBoard** é um quadro Kanban com múltiplos painéis, desenvolvido com **Angular** (frontend) e **Spring Boot** (backend), com persistência em **MySQL** via **Docker**. O projeto permite criar, renomear e excluir painéis nomeados, cada um com três colunas fixas (*A Fazer*, *Em Andamento*, *Concluído*) e cards com título, descrição e etiqueta de cor livre, além de suportar arrastar-e-soltar entre colunas e reordenação dentro de uma mesma coluna, com a posição persistida no banco. Foi construído de forma incremental ao longo de 24 etapas documentadas, cada uma registrando objetivo, implementação e, quando aplicável, o processo de diagnóstico de bugs reais encontrados no caminho — reforçando, na prática, conceitos de Spring Data JPA (consultas derivadas, transações), arquitetura de estado no Angular (serviços com `BehaviorSubject`) e decisões de design simples aplicadas a cada nova funcionalidade.
 
 ---
 
