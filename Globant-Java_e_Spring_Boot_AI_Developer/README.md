@@ -25,7 +25,7 @@ O conteúdo percorre desde a configuração do ambiente de desenvolvimento com J
 
 ## 👨‍💻 Sobre Mim
 
-Sou **Arthur Haerdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Linux, com sólida experiência em desenvolvimento de software, automação, infraestrutura e análise de dados. Minha trajetória profissional inclui empresas como Volkswagen do Brasil, Intelig Telecomunicações, instituições acadêmicas e projetos autônomos em web e sistemas embarcados.
+Sou **Arthur Haerdocs: adiciona curso de versionamento com Git e GitHubdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Linux, com sólida experiência em desenvolvimento de software, automação, infraestrutura e análise de dados. Minha trajetória profissional inclui empresas como Volkswagen do Brasil, Intelig Telecomunicações, instituições acadêmicas e projetos autônomos em web e sistemas embarcados.
 
 Este repositório complementa meu currículo técnico e reflete meu compromisso com a prática constante e a evolução profissional em tecnologias modernas de desenvolvimento back-end com Java, Spring Boot e Inteligência Artificial.
 
@@ -80,7 +80,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 2: Fundamentos do Desenvolvimento Java
 
-- [ ] Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_02/)
+- [x] ✅ Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_02/01-Curso.01-Fundamentos_da_Sintaxe_da_Linguagem_Java/)
 - [ ] Curso: [Estruturas de Controle em Java](Modulo_02/)
 - [ ] Curso: [Logging e Tratamento de Exceções em Java](Modulo_02/)
 - [ ] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_02/)
