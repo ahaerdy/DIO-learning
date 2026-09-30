@@ -81,7 +81,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 ### Módulo 2: Fundamentos do Desenvolvimento Java
 
 - [x] ✅ Curso: [Fundamentos da Sintaxe da Linguagem Java](Modulo_02/01-Curso.01-Fundamentos_da_Sintaxe_da_Linguagem_Java/)
-- [ ] Curso: [Estruturas de Controle em Java](Modulo_02/)
+- [x] ✅ Curso: [Estruturas de Controle em Java](Modulo_02/02-Curso.02-Estruturas_de_Controle_em_Java/)
 - [ ] Curso: [Logging e Tratamento de Exceções em Java](Modulo_02/)
 - [ ] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_02/)
 - [ ] Desafio de código: [Simulando e Corrigindo em Java](Modulo_02/)
