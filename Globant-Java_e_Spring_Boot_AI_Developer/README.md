@@ -105,8 +105,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_04/01-Curso.01-Fundamentos_da_IA_Moderna_Machine_Learning_LLMs_IA_Generativa_e_Agentes/)
 - [ ] Curso: [Utilizando Copilots no Desenvolvimento de Software](Modulo_04/)
 - [x] ✅ Curso: [Introdução à Engenharia de Prompts](Modulo_04/03-Curso.03-Introducao_a_Engenharia_de_Prompts/)
-- [ ] Curso: [Explorando a Engenharia de Prompts na Prática](Modulo_04/)
-- [ ] Desafio de projeto: [Guia de Como Usar Copilots para Criar Novas Features no Seu Projeto](Modulo_04/)
+- [ ] Desafio de projeto: [Usando IA Como Copiloto para Criar Novas Features no Seu Projeto](Modulo_04/)
 
 ---
 
@@ -119,7 +118,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 6: Ecossistema Spring para Desenvolvimento de APIs
 
-- [ ] Curso: [Principais Protocolos de Comunicação da Internet](Modulo_06/)
+- [x]✅ Curso: [Principais Protocolos de Comunicação da Internet](Modulo_06/01-Curso.01-Principais_Protocolos_de_Comunicacao_da_Internet/)
 - [ ] Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/)
 - [ ] Curso: [Construindo uma API REST Documentada com Spring Web e Swagger](Modulo_06/)
 - [ ] Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/)
