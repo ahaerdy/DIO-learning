@@ -60,6 +60,9 @@
 - Pablo Nunes Lopes (Serving a community of millions with .NET / cloud/ai/dotnet @ MSFT / teaching AI + WebDev @ Alura / devrel + SWE + mentor / speaker @ lots of events)
 - Contato Linkedin: / [pablonuneslopes](https://www.linkedin.com/in/pablonuneslopes/)
 
+- Pâmela Apolinario (Software Development Engineer)
+- Contato Linkedin: / [pamelaapborges](https://www.linkedin.com/in/pamelaapborges/)
+
 - Renan Oliveira (26 Year in Technology | CTO at Hypetech Games | M.Sc. in Software Engineering. at ITA | Specialist in IA and Automations | Leadership & Management Expert | Postgraduate Professor)
 - Contato Linkedin: / [renan-a](https://www.linkedin.com/in/renan-a/)
 

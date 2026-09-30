@@ -1,0 +1,165 @@
+## Instrutor
+
+- Pâmela Apolinario (Software Development Engineer)
+- Contato Linkedin: / [pamelaapborges](https://www.linkedin.com/in/pamelaapborges/)
+
+## Parte 1 - Introdução aos Bancos de Dados Relacionais
+
+### 🟩 Vídeo 01 - Apresentação Pessoal
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_01.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 02 - Apresentação do Curso
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_02.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 03 - Conceitos Básicos e Estrutura do Banco de Dados Relacional
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_03.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 04 - Introdução e Conceitos Básicos de SQL
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_04.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 05 - MER e DER: Modelagem de Bancos de Dados
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_05.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 06 - Configuração do Ambiente
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_06.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+## Parte 2 - Modelagem de Dados Relacionais
+
+### 🟩 Vídeo 07 - Tabelas, Colunas e Registros
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_07.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 08 - Operações CRUD: Insert e SELECT
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_08.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 09 - Operações CRUD: Update e Delete
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_09.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 10 - Alterando e Excluindo Tabelas
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_10.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 11 - Chaves Primárias e Estrangeiras
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_11.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+## Parte 3 - Normalização de Dados
+
+### 🟩 Vídeo 12 - Normalização de Dados
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_12.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+## Parte 4 - Consultas Avançadas
+
+### 🟩 Vídeo 13 - Consultas com junções e subconsultas
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_13.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 14 - Funções agregadas e agrupamento de resultados
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_14.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+### 🟩 Vídeo 15 - Índices
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_15.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+## Parte 5 - Mapa Mental dos Tópicos do Curso e Revisão
+
+### 🟩 Vídeo 16 - Encerramento
+
+<video width="60%" controls>
+  <source src="000-Midia_e_Anexos/bootcamp_ntt_data_java_spring_ai-modulo.05-curso.01-video_16.webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+link do vídeo:
+
+##  Materiais de Apoio
+
+# Certificado: 
+
+- Link na plataforma: 
+- Certificado em pdf:
