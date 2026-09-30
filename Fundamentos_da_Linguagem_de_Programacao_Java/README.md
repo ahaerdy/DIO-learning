@@ -135,5 +135,4 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 
 ### Conclusão
 
-- 🎓 Certificado de conclusão da Formação: [Fundamentos da Linguagem de Programação Java] *(pendente — 12/18 atividades concluídas, 67% completo)*
-
+- 🎓 Certificado de conclusão da Formação: [Fundamentos da Linguagem de Programação Java](https://hermes.dio.me/certificates/FPTBLRYF.pdf)
