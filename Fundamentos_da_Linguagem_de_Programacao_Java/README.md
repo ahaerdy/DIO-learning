@@ -90,8 +90,9 @@ A Formação é dividida em 4 módulos, totalizando 14 cursos, 2 desafios de pro
 - [x] Curso: [Debugging e o Tratamento de Exceções em Java](Modulo_03/01-Curso.01-Debugging.e.o.Tratamento.de.Excecoes.em.Java)
 - [x] Curso: [Simplificando I/O de Arquivos e Diretórios com Java](Modulo_03/02-Curso.02-Simplificando.IO.de.Arquivos.e.Diretorios.com.Java)
 - [x] Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_03/03-Curso.03-Gerenciando.Dependencias.com.Maven.e.Gradle)
-- [ ] Desafio de projeto: [Criando seu Board de Tarefas com Java](Modulo_03/04-Desafio-Criando.seu.Board.de.Tarefas.com.Java)
-
+- [x] Desafio de projeto: [Criando seu Board de Tarefas com Java](Modulo_03/04-Desafio-Criando.seu.Board.de.Tarefas.com.Java)
+  - **Repositório**: [Kanban-java-angular](https://github.com/ahaerdy/Kanban-java-angular)
+  - **Descrição**: **KBoard** é um quadro Kanban com múltiplos painéis, desenvolvido com **Angular** (frontend) e **Spring Boot** (backend), com persistência em **MySQL** via **Docker**. O projeto permite criar, renomear e excluir painéis nomeados, cada um com três colunas fixas (*A Fazer*, *Em Andamento*, *Concluído*) e cards com título, descrição e etiqueta de cor livre, além de suportar arrastar-e-soltar entre colunas e reordenação dentro de uma mesma coluna, com a posição persistida no banco. Foi construído de forma incremental ao longo de 24 etapas documentadas, cada uma registrando objetivo, implementação e, quando aplicável, o processo de diagnóstico de bugs reais encontrados no caminho — reforçando, na prática, conceitos de Spring Data JPA (consultas derivadas, transações), arquitetura de estado no Angular (serviços com `BehaviorSubject`) e decisões de design simples aplicadas a cada nova funcionalidade.
 ---
 
 ### Módulo 4: Técnicas Avançadas, Padrões e Persistências
