@@ -21,7 +21,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/utilizando-copilotos-de-desenvolvimento-de-software/learning/bd245eb2-85fb-409b-ad99-73e613d067f8?autoplay=1
 
 ### 🟩 Vídeo 03 - Opções de Copilotos
 
@@ -30,7 +30,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/utilizando-copilotos-de-desenvolvimento-de-software/learning/56d1124e-3b03-4a5c-bbc1-e7c4597674f0?autoplay=1
 
 ### 🟩 Vídeo 04 - Considerações finais
 
@@ -39,11 +39,11 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/utilizando-copilotos-de-desenvolvimento-de-software/learning/f31557c8-6f8c-4812-a82f-2cb7a4689b7e?autoplay=1
 
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Utilizando Copilotos no Desenvolvimento de Software
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/QFGASC1H.pdf
+- Certificado em pdf: [Certificado-Utilizando.Copilotos.no.Desenvolvimento.de.Software.pdf](Modulo_04/02-Curso.02-Utilizando.Copilotos.no.Desenvolvimento.de.Software/000-Midia_e_Anexos/Certificado-Utilizando.Copilotos.no.Desenvolvimento.de.Software.pdf)
