@@ -76,6 +76,7 @@ Abaixo estão listados os projetos práticos e desafios de código desenvolvidos
   - [Banco Digital - Projeto Java POO](https://github.com/ahaerdy/lab-java-banco-digital)
   - [Sudoku (Java + Swing)](https://github.com/ahaerdy/sudoku-java-swing)
   - 🌱 Ecossistema Spring
+    - [KBoard - Quadro Kanban Full-Stack (Java/Spring + Angular)](https://github.com/ahaerdy/Kanban-java-angular)
     - [VoiceBudget - Assistente Financeiro por Voz com IA](https://github.com/ahaerdy/budgeting-spring-ai-gemini)
     - [Explorando Padrões de Projeto na Prática com Java](https://github.com/ahaerdy/dio-design-patterns-java)
     - [Beer Stock API - Gerenciamento de Estoque de Cerveja](https://github.com/ahaerdy/dio-beer-stock-api-testes-unitarios)
