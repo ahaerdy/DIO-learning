@@ -122,7 +122,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/02-Curso.02-Introducao_a_Spring_Framework_com_Spring_Boot/)
 - [ ] Curso: [Construindo uma API REST Documentada com Spring Web e Swagger](Modulo_06/)
 - [x] ✅ Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/04-Curso.04-Adicionando_Seguranca_a_uma_API_REST_com_Spring_Security/)
-- [ ] Desafio de código: [A Melhor Maneira de Desenvolver APIs com Spring Boot](Modulo_06/)
+- [ ] Desafio de código: [Aprendendo a Construir APIs com Spring Boot](Modulo_06/)
 
 ---
 
@@ -130,7 +130,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 - [ ] Curso: [Boas Práticas Para APIs RESTful](Modulo_07/)
 - [ ] Curso: [Introdução a Clean Code](Modulo_07/)
-- [ ] Curso: [Clean Code em Java: Governando Código de Alta Qualidade](Modulo_07/)
+- [x] ✅ Curso: [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade](Modulo_07/03-Curso.03-SOLID.e.Clean.Code.em.Java.Governando.Código.de.Alta.Qualidade/)
 - [ ] Curso: [Trabalhando com Design Patterns de Aplicações Java](Modulo_07/)
 
 ---
