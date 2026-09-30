@@ -111,7 +111,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 5: Persistência de Dados com Core
 
-- [ ] 🔖 Curso: [Introdução e Noções de Banco de Dados Relacionais](Modulo_05/)
+- [ ] 🔖 Curso: [Introdução e Noções de Banco de Dados Relacionais](Modulo_05/01-Curso.01-Introdução.e.Noções.de.Banco.de.Dados.Relacionais/)
 - [ ] Curso: [Criando suas Primeiras Consultas SQL](Modulo_05/)
 
 ---
