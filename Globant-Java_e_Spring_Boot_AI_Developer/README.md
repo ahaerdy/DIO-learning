@@ -118,8 +118,8 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 6: Ecossistema Spring para Desenvolvimento de APIs
 
-- [x ]✅ Curso: [Principais Protocolos de Comunicação da Internet](Modulo_06/01-Curso.01-Principais_Protocolos_de_Comunicacao_da_Internet/)
-- [ ] Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/)
+- [x] ✅ Curso: [Principais Protocolos de Comunicação da Internet](Modulo_06/01-Curso.01-Principais_Protocolos_de_Comunicacao_da_Internet/)
+- [x] ✅ Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/02-Curso.02-Introducao_a_Spring_Framework_com_Spring_Boot/)
 - [ ] Curso: [Construindo uma API REST Documentada com Spring Web e Swagger](Modulo_06/)
 - [ ] Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/)
 - [ ] Desafio de código: [A Melhor Maneira de Desenvolver APIs com Spring Boot](Modulo_06/)
