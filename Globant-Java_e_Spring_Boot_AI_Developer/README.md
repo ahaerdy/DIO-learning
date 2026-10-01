@@ -225,4 +225,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ## 💬 Mentorias e Networking
 
-- / [pamelaapborges](https://www.linkedin.com/in/pamelaapborges/) (Pâmela Apolinario | Software Development Engineer)
+- / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
+- / [glysns](https://www.linkedin.com/in/glysns/) (Gleyson Sampaio / Analista Desenvolvedor Java)
+- / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/) (José Luiz Abreu Cardoso Junior / Engenheiro de software sênior))
+- / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton Falvo Jr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
+- / [willyancaetanodev](https://www.linkedin.com/in/willyancaetanodev/) (Willyan Guimarães Caetano / Senior Software Engineer, Tech Lead, Java, Backend)
+- / [pamelaapborges](https://www.linkedin.com/in/pamelaapborges/) (Pâmela Apolinario / Software Development Engineer)

@@ -39,7 +39,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/708f29f8-4630-4c87-b79a-e15ef95d0ff0?autoplay=1
 
 ### 🟩 Vídeo 05 - MER e DER: Modelagem de Bancos de Dados
 
