@@ -225,4 +225,4 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ## 💬 Mentorias e Networking
 
-<!-- Preencher conforme for progredindo no bootcamp -->
+- / [pamelaapborges](https://www.linkedin.com/in/pamelaapborges/) (Pâmela Apolinario | Software Development Engineer)

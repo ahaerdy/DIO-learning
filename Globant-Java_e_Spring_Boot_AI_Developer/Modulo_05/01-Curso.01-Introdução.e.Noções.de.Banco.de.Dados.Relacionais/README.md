@@ -12,7 +12,7 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/bdaaa5d8-2d86-49e6-b166-ae890d0112b0?autoplay=1
 
 ### 🟩 Vídeo 02 - Apresentação do Curso
 
@@ -21,7 +21,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/fa8e0d73-f257-499d-a1d3-f80bb285f116?autoplay=1
 
 ### 🟩 Vídeo 03 - Conceitos Básicos e Estrutura do Banco de Dados Relacional
 
@@ -30,7 +30,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/60efefef-8e0b-4932-a120-7d43ee89bcf0?autoplay=1
 
 ### 🟩 Vídeo 04 - Introdução e Conceitos Básicos de SQL
 
@@ -39,7 +39,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 05 - MER e DER: Modelagem de Bancos de Dados
 
