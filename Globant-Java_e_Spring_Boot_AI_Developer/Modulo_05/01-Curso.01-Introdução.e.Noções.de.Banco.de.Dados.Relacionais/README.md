@@ -48,7 +48,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 06 - Configuração do Ambiente
 
