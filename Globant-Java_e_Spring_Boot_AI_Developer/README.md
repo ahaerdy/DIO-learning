@@ -25,7 +25,7 @@ O conteúdo percorre desde a configuração do ambiente de desenvolvimento com J
 
 ## 👨‍💻 Sobre Mim
 
-Sou **Arthur Haerdocs: adiciona curso de versionamento com Git e GitHubdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Linux, com sólida experiência em desenvolvimento de software, automação, infraestrutura e análise de dados. Minha trajetória profissional inclui empresas como Volkswagen do Brasil, Intelig Telecomunicações, instituições acadêmicas e projetos autônomos em web e sistemas embarcados.
+Sou **Arthur Haerdy Jr.**, Engenheiro Eletrônico e Administrador de Sistemas Linux, com sólida experiência em desenvolvimento de software, automação, infraestrutura e análise de dados. Minha trajetória profissional inclui empresas como Volkswagen do Brasil, Intelig Telecomunicações, instituições acadêmicas e projetos autônomos em web e sistemas embarcados.
 
 Este repositório complementa meu currículo técnico e reflete meu compromisso com a prática constante e a evolução profissional em tecnologias modernas de desenvolvimento back-end com Java, Spring Boot e Inteligência Artificial.
 

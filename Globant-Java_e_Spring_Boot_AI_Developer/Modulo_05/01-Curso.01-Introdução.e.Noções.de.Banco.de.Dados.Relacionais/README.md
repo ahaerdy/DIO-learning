@@ -48,7 +48,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/76707840-ab11-47dd-9776-e7fa407b9b62?autoplay=1
 
 ### 🟩 Vídeo 06 - Configuração do Ambiente
 
@@ -57,7 +57,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/5e407a8c-9d57-4a20-965c-90d5208fb751?autoplay=1
 
 ## Parte 2 - Modelagem de Dados Relacionais
 
@@ -68,7 +68,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/4ffb17ee-5c82-43f9-a0d1-ac0ecc4824f0?autoplay=1
 
 ### 🟩 Vídeo 08 - Operações CRUD: Insert e SELECT
 
