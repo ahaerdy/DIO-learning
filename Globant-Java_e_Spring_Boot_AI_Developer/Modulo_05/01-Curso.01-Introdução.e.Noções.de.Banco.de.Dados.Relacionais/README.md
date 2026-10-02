@@ -77,7 +77,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/205a779f-984e-4bfe-91aa-c119eaf5b9d9?autoplay=1
 
 ### 🟩 Vídeo 09 - Operações CRUD: Update e Delete
 

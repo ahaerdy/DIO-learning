@@ -103,7 +103,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 ### Módulo 4: Inteligência Artificial Aplicada ao Desenvolvimento de Software
 
 - [x] ✅ Curso: [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_04/01-Curso.01-Fundamentos.da.IA.Moderna.Machine.Learning.LLMs.IA.Generativa.e.Agentes/)
-- [ ] ✓ Curso: [Utilizando Copilotos no Desenvolvimento de Software](Modulo_04/02-Curso.02-Utilizando.Copilotos.no.Desenvolvimento.de.Software/)
+- [x] ✓ Curso: [Utilizando Copilotos no Desenvolvimento de Software](Modulo_04/02-Curso.02-Utilizando.Copilotos.no.Desenvolvimento.de.Software/)
 - [x] ✅ Curso: [Introdução à Engenharia de Prompts](Modulo_04/03-Curso.03-Introducao.a.Engenharia.de.Prompts/)
 - [ ] Desafio de projeto: [Usando IA Como Copiloto para Criar Novas Features no Seu Projeto](Modulo_04/)
 
