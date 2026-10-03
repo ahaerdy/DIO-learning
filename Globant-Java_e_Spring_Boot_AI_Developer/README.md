@@ -153,36 +153,36 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 1
 
-- [Introdução ao Java e seu Ambiente de Desenvolvimento]()
-- [Git e GitHub: Primeiros Passos e Configuração do Ambiente]()
-- [Dominando IDEs Java]()
-- Certificado do Módulo: [Configuração do Ambiente de Desenvolvimento]()
+- [Introdução ao Java e seu Ambiente de Desenvolvimento]
+- [Git e GitHub: Primeiros Passos e Configuração do Ambiente]
+- [Dominando IDEs Java]
+- Certificado do Módulo: [Configuração do Ambiente de Desenvolvimento]
 
 ### Módulo 2
 
-- [Fundamentos da Sintaxe da Linguagem Java]()
-- [Estruturas de Controle em Java]()
-- [Logging e Tratamento de Exceções em Java]()
-- [Gerenciando Dependências com Maven e Gradle]()
-- Certificado do Módulo: [Fundamentos do Desenvolvimento Java]()
+- [Fundamentos da Sintaxe da Linguagem Java]
+- [Estruturas de Controle em Java]
+- [Logging e Tratamento de Exceções em Java]
+- [Gerenciando Dependências com Maven e Gradle]
+- Certificado do Módulo: [Fundamentos do Desenvolvimento Java]
 
 ### Módulo 3
 
-- [Java e a Arte da Abstração com Classes e Encapsulamento]()
-- [Herança e Polimorfismo em Java]()
-- [Dominando Interfaces e Lambdas em Java]()
-- [Jornada Prática com Collections e Outras Classes Úteis de Java]()
-- [Criando um Jogo do Tabuleiro em Java]()
-- Certificado do Módulo: [Programação Orientada a Objetos Com Java]()
+- [Java e a Arte da Abstração com Classes e Encapsulamento]
+- [Herança e Polimorfismo em Java]
+- [Dominando Interfaces e Lambdas em Java]
+- [Jornada Prática com Collections e Outras Classes Úteis de Java]
+- [Criando um Jogo do Tabuleiro em Java]
+- Certificado do Módulo: [Programação Orientada a Objetos Com Java]
 
 ### Módulo 4
 
-- [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes]()
+- [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes]
 - [Utilizando Copilots no Desenvolvimento de Software](https://hermes.dio.me/certificates/QFGASC1H.pdf)
-- [Introdução à Engenharia de Prompts]()
-- [Explorando a Engenharia de Prompts na Prática]()
-- [Guia de Como Usar Copilots para Criar Novas Features no Seu Projeto]()
-- Certificado do Módulo: [Inteligência Artificial Aplicada ao Desenvolvimento de Software]()
+- [Introdução à Engenharia de Prompts]
+- [Explorando a Engenharia de Prompts na Prática]
+- [Guia de Como Usar Copilots para Criar Novas Features no Seu Projeto]
+- Certificado do Módulo: [Inteligência Artificial Aplicada ao Desenvolvimento de Software]
 
 ### Módulo 5
 
@@ -192,34 +192,34 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 6
 
-- [Principais Protocolos de Comunicação da Internet]()
-- [Introdução ao Spring Framework com Spring Boot]()
-- [Construindo uma API REST Documentada com Spring Web e Swagger]()
-- [Adicionando Segurança em APIs REST com Spring Security]()
-- Certificado do Módulo: [Ecossistema Spring para Desenvolvimento de APIs]()
+- [Principais Protocolos de Comunicação da Internet]
+- [Introdução ao Spring Framework com Spring Boot]
+- [Construindo uma API REST Documentada com Spring Web e Swagger]
+- [Adicionando Segurança em APIs REST com Spring Security]
+- Certificado do Módulo: [Ecossistema Spring para Desenvolvimento de APIs]
 
 ### Módulo 7
 
-- [Boas Práticas Para APIs RESTful]()
-- [Introdução a Clean Code]()
-- [Clean Code em Java: Governando Código de Alta Qualidade]()
-- [Trabalhando com Design Patterns de Aplicações Java]()
-- Certificado do Módulo: [Boas Práticas de Desenvolvimento de Aplicações Java]()
+- [Boas Práticas Para APIs RESTful]
+- [Introdução a Clean Code]
+- [Clean Code em Java: Governando Código de Alta Qualidade]
+- [Trabalhando com Design Patterns de Aplicações Java]
+- Certificado do Módulo: [Boas Práticas de Desenvolvimento de Aplicações Java]
 
 ### Módulo 8
 
-- [Introdução a Testes de Software]()
-- [Introdução ao JUnit 5]()
-- Certificado do Módulo: [Testes Unitários no Seu Código Java]()
+- [Introdução a Testes de Software]
+- [Introdução ao JUnit 5]
+- Certificado do Módulo: [Testes Unitários no Seu Código Java]
 
 ### Módulo 9
 
-- [Implementando sua API Inteligente com Recrutamento de IA no Seu Projeto]()
-- Certificado do Módulo: [Projeto Final: Assistente Inteligente por IA]()
+- [Implementando sua API Inteligente com Recrutamento de IA no Seu Projeto]
+- Certificado do Módulo: [Projeto Final: Assistente Inteligente por IA]
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [Globant: Java & Spring Boot AI Developer]()
+- 🎓 Certificado de conclusão do Bootcamp: [Globant: Java & Spring Boot AI Developer]
 
 ---
 
