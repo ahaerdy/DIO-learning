@@ -135,7 +135,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/29c96516-32f9-48c0-8748-e3c40e3326c9?autoplay=1
 
 ### 🟩 Vídeo 15 - Índices
 
@@ -144,7 +144,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/e4f2e56d-b140-47b5-96e9-5c58710f4a20?autoplay=1
 
 ## Parte 5 - Mapa Mental dos Tópicos do Curso e Revisão
 
@@ -155,7 +155,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/d246628a-4bb4-4557-a32d-96854c6c2649?autoplay=1
 
 ##  Materiais de Apoio
 
