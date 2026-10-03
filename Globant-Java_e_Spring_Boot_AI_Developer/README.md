@@ -111,7 +111,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 5: Persistência de Dados com Java
 
-- [ ] 🔖⭐️Curso: [Introdução e Noções de Banco de Dados Relacionais](Modulo_05/01-Curso.01-Introdução.e.Noções.de.Banco.de.Dados.Relacionais/)
+- [x] ✓⭐️Curso: [Introdução e Noções de Banco de Dados Relacionais](Modulo_05/01-Curso.01-Introdução.e.Noções.de.Banco.de.Dados.Relacionais/)
 - [ ] Curso: [Criando suas Primeiras Consultas SQL](Modulo_05/)
 
 ---
@@ -186,9 +186,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 5
 
-- [Introdução e Noções de Banco de Dados Relacionais]()
-- [Criando suas Primeiras Consultas SQL]()
-- Certificado do Módulo: [Persistência de Dados com Core]()
+- [Introdução e Noções de Banco de Dados Relacionais](https://hermes.dio.me/certificates/FN9OTQWM.pdf)
+- [Criando suas Primeiras Consultas SQL]
+- Certificado do Módulo: [Persistência de Dados com Core]
 
 ### Módulo 6
 
