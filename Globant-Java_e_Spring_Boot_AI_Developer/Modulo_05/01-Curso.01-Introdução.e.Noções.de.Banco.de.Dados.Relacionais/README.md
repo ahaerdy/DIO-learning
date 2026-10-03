@@ -86,7 +86,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/b9ff239a-0f92-4a90-bbca-3553e1872d17?autoplay=1
 
 ### 🟩 Vídeo 10 - Alterando e Excluindo Tabelas
 
@@ -95,7 +95,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/8a4b65af-467c-4c2c-be69-cdcba66d0733?autoplay=1
 
 ### 🟩 Vídeo 11 - Chaves Primárias e Estrangeiras
 
@@ -104,7 +104,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/7a5f1142-8df8-4621-b568-2d635effd723?autoplay=1
 
 ## Parte 3 - Normalização de Dados
 
@@ -115,7 +115,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/87ff8266-40f1-4845-9fd3-c71522dc82b9?autoplay=1
 
 ## Parte 4 - Consultas Avançadas
 
@@ -126,7 +126,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/15b4aae1-4491-4654-baf9-35fd579924b2?autoplay=1
 
 ### 🟩 Vídeo 14 - Funções agregadas e agrupamento de resultados
 
@@ -135,7 +135,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: 
 
 ### 🟩 Vídeo 15 - Índices
 
