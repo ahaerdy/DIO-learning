@@ -157,9 +157,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
 
 link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-a-banco-de-dados-relacionais-sql/learning/d246628a-4bb4-4557-a32d-96854c6c2649?autoplay=1
 
-##  Materiais de Apoio
+# Certificado:  Introdução e Noções de Banco de Dados Relacionais
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/FN9OTQWM.pdf
+- Certificado em pdf: [Certificado-Introdução.e.Noções.de.Banco.de.Dados.Relacionais.pdf](000-Midia_e_Anexos/Certificado-Introdução.e.Noções.de.Banco.de.Dados.Relacionais.pdf)
