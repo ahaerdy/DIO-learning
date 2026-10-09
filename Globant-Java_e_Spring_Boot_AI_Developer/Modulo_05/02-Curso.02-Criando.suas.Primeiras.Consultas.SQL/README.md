@@ -32,7 +32,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/fundamentos-de-sql-primeiros-passos/learning/3a6d4e4b-1244-496e-aa7b-89a0cb894a7b?autoplay=1
 
 ## Parte 3 - Comandos Básicos de SQL
 

@@ -115,7 +115,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ### Módulo 5: Criando APIs Modernas no Ecossistema Spring: Boot, Data, Security, Cloud e AI
 
 - [x] ✅ Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_05/01-Curso.01-Criando_sua_Primeira_API_REST_com_Spring_Boot)
-- [ ] Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_05/02-Curso.02-Conectando_sua_API_com_Banco_de_Dados_Atraves_do_Spring_Data)
+- [x] ✅ Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_05/02-Curso.02-Conectando_sua_API_com_Banco_de_Dados_Atraves_do_Spring_Data)
 - [ ] Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_05/03-Curso.03-Simplificando_a_Seguranca_em_APIs_REST_com_Spring_Security)
 - [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_05/04-Curso.04-Consumindo_APIs_Externas_com_a_Spring_Cloud_OpenFeign)
 - [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot](Modulo_05/05-Desafio-Desenvolvendo_sua_API_Inteligente_com_Reconhecimento_de_Fala_e_Spring_Boot)
