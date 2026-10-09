@@ -43,7 +43,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/fundamentos-de-sql-primeiros-passos/learning/ebbfc4fc-354d-4602-87ef-ccf6154d4e0b?autoplay=1
 
 ### 🟩 Vídeo 05 - Projeto Prático: Manipulação de Dados com Comandos SQL
 
@@ -52,7 +52,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/fundamentos-de-sql-primeiros-passos/learning/374188ff-1a07-4c13-bd03-b2ad3ccf44c7?autoplay=1
 
 ## Parte 4 - Implementação de Consultas Simples
 
@@ -63,7 +63,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/fundamentos-de-sql-primeiros-passos/learning/2b84b358-2e15-496f-809f-4f0fa2a06ce2?autoplay=1
 
 ### 🟩 Vídeo 07 - Projeto Prático: Implementação de Consultas Simples em SQL
 
@@ -72,7 +72,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/fundamentos-de-sql-primeiros-passos/learning/2b84b358-2e15-496f-809f-4f0fa2a06ce2?autoplay=1
 
 ## Parte 5 - Criação das Primeiras Consultas em SQL
 
@@ -83,7 +83,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/fundamentos-de-sql-primeiros-passos/learning/c988f6ef-12cc-4b07-b223-db82892179c0?autoplay=1
 
 ### 🟩 Vídeo 09 - Projeto Prático: Criação Completa de Consultas em SQL
 
@@ -92,7 +92,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/fundamentos-de-sql-primeiros-passos/learning/f6987e8e-0736-4db0-9325-0b3347042f59?autoplay=1
 
 ##  Materiais de Apoio
 
