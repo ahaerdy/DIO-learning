@@ -179,6 +179,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 ## 💬 Mentorias e Networking
 
 - / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
+- / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton Falvo Jr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - / [devgvieira](https://www.linkedin.com/in/devgvieira/) (Gabriel Vieira / CTO, US @ Ubivis, Industrial AI & Digital Twins for Manufacturing, Industry 4.0)
 - / [elidiana](https://www.linkedin.com/in/elidiana/) (Elidiana Andrade / DIO - Tech Education Analyst)
 - / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/) (José Luiz Abreu Cardoso Junior / Engenheiro de software sênior))

@@ -3,11 +3,14 @@
 - Felipe Aguiar (DIO - Tech Educator)
 - Contato Linkedin: / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/)
 
+- Gabriel Vieira (CTO, US @ Ubivis / Industrial AI & Digital Twins for Manufacturing / Industry 4.0)
+- Contato Linkedin: / [devgvieira](https://www.linkedin.com/in/devgvieira/)
+
+- Instrutor: Valéria Baptista (Head of Cloud and Cybersecurity | Professora e Mentora em Tecnologia)
+- Contato Linkedin: / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/)
+
 - José Luiz Abreu Cardoso Junior (Engenheiro de software sênior)
 - Contato Linkedin: / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/)
-
-- Stephany Nusch (Software Engineer at Microsoft)
-- Contato Linkedin: / [stephanynusch](https://www.linkedin.com/in/stephanynusch/)
 
 - Thiago Poiani (Principal Engineer at Skip)
 - Contato Linkedin: / [thpoiani](https://www.linkedin.com/in/thpoiani/)
@@ -21,10 +24,8 @@
 
 - / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/) (Felipe Aguiar / DIO - Tech Educator)
 
-- / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/) (José Luiz Abreu Cardoso Junior / Engenheiro de software sênior)
-
-- / [stephanynusch](https://www.linkedin.com/in/stephanynusch/) (Stephany Nusch / Software Engineer at Microsoft)
+- / [devgvieira](https://www.linkedin.com/in/devgvieira/) (Gabriel Vieira / CTO, US @ Ubivis, Industrial AI & Digital Twins for Manufacturing, Industry 4.0)
 
 - / [thpoiani](https://www.linkedin.com/in/thpoiani/) (Thiago Poiani / Principal Engineer at Skip)
 
-- / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton Falvo Jr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
+- / [valeriabaptista](https://www.linkedin.com/in/valeriabaptista/) (Valéria Baptista / Head of Cloud and Cybersecurity, Professora e Mentora em Tecnologia)
