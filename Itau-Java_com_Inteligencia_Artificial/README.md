@@ -117,8 +117,10 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [x] ✅ Curso: [Criando sua Primeira API REST com Spring Boot](Modulo_05/01-Curso.01-Criando_sua_Primeira_API_REST_com_Spring_Boot)
 - [x] ✅ Curso: [Conectando sua API com Banco de Dados Através do Spring Data](Modulo_05/02-Curso.02-Conectando_sua_API_com_Banco_de_Dados_Atraves_do_Spring_Data)
 - [x] ✅ Curso: [Simplificando a Segurança em APIs REST com Spring Security](Modulo_05/03-Curso.03-Simplificando_a_Seguranca_em_APIs_REST_com_Spring_Security)
-- [ ] Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_05/04-Curso.04-Consumindo_APIs_Externas_com_a_Spring_Cloud_OpenFeign)
-- [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot](Modulo_05/05-Desafio-Desenvolvendo_sua_API_Inteligente_com_Reconhecimento_de_Fala_e_Spring_Boot)
+- [x] ✅ Curso: [Consumindo APIs Externas com a Spring Cloud OpenFeign](Modulo_05/04-Curso.04-Consumindo_APIs_Externas_com_a_Spring_Cloud_OpenFeign)
+- [x] ✅ Desafio de projeto: [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot](Modulo_05/05-Desafio-Desenvolvendo_sua_API_Inteligente_com_Reconhecimento_de_Fala_e_Spring_Boot)
+  - **Repositório**: [budgeting-spring-ai-gemini](https://github.com/ahaerdy/budgeting-spring-ai-gemini)
+  - **Descrição**: O `voicebudget-spring-ai-gemini` é uma API de controle financeiro por voz construída em Spring Boot e Spring AI, com o Google Gemini como provedor de IA. A aplicação recebe um áudio, transcreve a fala em texto (Speech-to-Text multimodal), interpreta a intenção do usuário e, via Tool Calling, decide entre registrar uma nova transação ou consultar transações já existentes — executando de fato a operação de negócio, com persistência real em MySQL orquestrado por Docker Compose — e responde de volta em áudio (Text-to-Speech via SDK nativo do Google GenAI), fechando um ciclo completo de voz para voz. O projeto segue princípios de Domain-Driven Design e Clean Architecture (camadas de domínio, aplicação e infraestrutura desacopladas), expõe também uma API REST convencional para criação e listagem de transações independente da camada de IA, e foi desenvolvido como adaptação integral da stack original do curso (Spring Boot + Spring AI + OpenAI) para uma implementação 100% nativa em Google Gemini, incluindo os dois pontos sem equivalente direto no Spring AI para esse provedor (transcrição e síntese de voz), resolvidos com o SDK Java oficial do Google GenAI.
 
 ---
 
