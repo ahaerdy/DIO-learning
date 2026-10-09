@@ -190,7 +190,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 - [Introdução e Noções de Banco de Dados Relacionais](https://hermes.dio.me/certificates/FN9OTQWM.pdf)
 - [Criando suas Primeiras Consultas SQL](https://hermes.dio.me/certificates/GXVLYIOG.pdf)
-- Certificado do Módulo: [Persistência de Dados com Java](https://hermes.dio.me/certificates/GQ2NE2AH.pdf
+- Certificado do Módulo: [Persistência de Dados com Java](https://hermes.dio.me/certificates/GQ2NE2AH.pdf)
 
 ### Módulo 6
 
