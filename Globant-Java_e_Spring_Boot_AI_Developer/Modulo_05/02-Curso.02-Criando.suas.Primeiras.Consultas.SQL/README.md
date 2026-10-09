@@ -94,9 +94,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
 
 link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/fundamentos-de-sql-primeiros-passos/learning/f6987e8e-0736-4db0-9325-0b3347042f59?autoplay=1
 
-##  Materiais de Apoio
+# Certificado: Criando suas Primeiras Consultas SQL
 
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/GXVLYIOG.pdf
+- Certificado em pdf: [Certificado-Criando.suas.Primeiras.Consultas.SQL.pdf](000-Midia_e_Anexos/Certificado-Criando.suas.Primeiras.Consultas.SQL.pdf)
