@@ -131,6 +131,8 @@
 
 - / [pablonuneslopes](https://www.linkedin.com/in/pablonuneslopes/) (Serving a community of millions with .NET | cloud | ai |dotnet @ MSFT | teaching AI + WebDev @ Alura | devrel + SWE + mentor | speaker @ lots of events)
 
+- / [pamelaapborges](https://www.linkedin.com/in/pamelaapborges/) (Pâmela Apolinario / Software Development Engineer)
+
 - / [renatoromao](https://www.linkedin.com/in/renatoromao) (Renato Romão de Souza / Microsoft MVP, MCT, Especialista em Copilot & IA)
 
 - / [roberto-andrade-mansur](https://www.linkedin.com/in/roberto-andrade-mansur/) (Roberto Andrade Mansur / Suzano - Executive Manager of Data, Engineering, Analytics, and AI)
