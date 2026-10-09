@@ -148,27 +148,26 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto, desafios de 
 - [Herança e Polimorfismo em Java](https://hermes.dio.me/certificates/8TYKBD1O.pdf)
 - [Dominando Interfaces e Lambdas em Java](https://hermes.dio.me/certificates/E4G0QGRT.pdf)
 - [Jornada Prática com Collections e Outras Classes Úteis de Java](https://hermes.dio.me/certificates/7MBZSWH9.pdf)
-- [Debugging e o Tratamento de Exceções em Java]
-- [Desafios de Código sobre POO e Exceções no Setor Bancário]
-- Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java]
+- [Debugging e o Tratamento de Exceções em Java](https://hermes.dio.me/certificates/CZUQLEHO.pdf)
+- Certificado do Módulo: [Programando o Mundo Real com Orientação a Objetos em Java](https://hermes.dio.me/certificates/U19VTP3E.pdf)
 
 ### Módulo 4
 
 - [Como a Web Funciona?](https://hermes.dio.me/certificates/IHGYMM17.pdf)
 - [Como Funciona o HTTP Protocol](https://hermes.dio.me/certificates/NZQ1V8JC.pdf)
 - [Introdução ao Desenvolvimento de API](https://hermes.dio.me/certificates/8G0SCR60.pdf)
-- [Anotações em Java: Marcando o Seu Código de Maneira Inteligente]
-- [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade]
-- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework]
+- [Anotações em Java: Marcando o Seu Código de Maneira Inteligente](https://hermes.dio.me/certificates/SAW1GP6Q.pdf)
+- [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade](https://hermes.dio.me/certificates/ZEHASZQA.pdf)
+- [Design Patterns com Java: Dos Clássicos (GoF) ao Spring Framework](https://hermes.dio.me/certificates/EVFM2OQR.pdf)
 - Certificado do Módulo: [Fundamentos da Web e Boas Práticas de Desenvolvimento com Java](https://hermes.dio.me/certificates/FB3IVVAK.pdf)
 
 ### Módulo 5
 
-- [Criando sua Primeira API REST com Spring Boot]
-- [Conectando sua API com Banco de Dados Através do Spring Data]
-- [Simplificando a Segurança em APIs REST com Spring Security]
-- [Consumindo APIs Externas com a Spring Cloud OpenFeign]
-- [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot]
+- [Criando sua Primeira API REST com Spring Boot](https://hermes.dio.me/certificates/P2CB0LSX.pdf)
+- [Conectando sua API com Banco de Dados Através do Spring Data](https://hermes.dio.me/certificates/MF0GVYEW.pdf)
+- [Simplificando a Segurança em APIs REST com Spring Security](https://hermes.dio.me/certificates/WC8E96BD.pdf)
+- [Consumindo APIs Externas com a Spring Cloud OpenFeign](https://hermes.dio.me/certificates/BGWRIKZR.pdf)
+- [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot](https://hermes.dio.me/certificates/SPU34BQJ.pdf)
 - Certificado do Módulo: [Criando APIs Modernas no Ecossistema Spring: Boot, Data, Security, Cloud e AI]
 
 ### Conclusão:
