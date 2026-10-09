@@ -1,0 +1,472 @@
+## Instrutor
+
+- Stephany Nusch (Software Engineer at Microsoft)
+- Contato Linkedin: / [stephanynusch](https://www.linkedin.com/in/stephanynusch/)
+
+# Parte 1 - Tipos de erros
+
+## 🟩 Vídeo 01 - Apresentação do curso
+
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_01.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/abb903e7-981e-4c41-939e-9d9ae5a2fe29?autoplay=1
+
+A instrutora, Stephanie, apresenta sua trajetória profissional como engenheira de software e define os pilares do aprendizado, que abrangem desde a identificação de falhas até o desenvolvimento de mensagens customizadas. O conteúdo está estruturado em aulas teóricas e atividades práticas para consolidar a escrita de códigos mais robustos e seguros. Além do material didático, os estudantes são incentivados a utilizar fóruns e comunidades digitais para solucionar dúvidas e trocar conhecimentos técnicos. O objetivo central é capacitar o aluno a dominar o fluxo de tratamento de dados de maneira eficiente e profissional.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h21m00s743.jpg" alt="" width="840">
+</p>
+
+Nesta aula introdutória sobre Tratamento de Erros no JavaScript, a instrutora Stephany Nusch, engenheira de software no QuintoAndar, apresenta os fundamentos necessários para lidar com exceções no desenvolvimento de software. O curso foca em ensinar como gerenciar falhas de forma eficiente e como criar erros personalizados para atender às necessidades específicas de uma aplicação.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h21m34s050.jpg" alt="" width="840">
+</p>
+
+A instrutora compartilha sua trajetória profissional e acadêmica:
+
+* Formação: Graduada em Análise e Desenvolvimento de Sistemas (ADS).
+* Experiência: Atua como programadora há aproximadamente 4 anos.
+* Engajamento: Participa ativamente de frentes voltadas à igualdade de gênero e à disseminação de conhecimento na área de tecnologia.
+* Interesses: Além da programação, possui interesse em música, livros e jogos.
+
+Para contatos profissionais e acompanhamento de seus projetos, ela disponibiliza seu LinkedIn (Stephany Nusch) e seu GitHub (stebsnusch).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h21m45s304.jpg" alt="" width="840">
+</p>
+
+Os objetivos principais deste curso estão divididos em dois pilares fundamentais:
+
+1. Lidar com erros e exceções: Compreender como o JavaScript identifica e reporta falhas durante a execução do código.
+2. Criar erros personalizados: Desenvolver a habilidade de definir exceções próprias, facilitando a depuração e a manutenção do sistema.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h21m50s640.jpg" alt="" width="840">
+</p>
+
+O percurso do curso é estruturado em três etapas objetivas:
+
+* Aula 1 - Tipos de erros: Uma visão geral sobre as diferentes categorias de erros existentes na linguagem.
+* Aula 2 - Tratando erros: Abordagem prática com foco em implementação de código para captura e tratamento de exceções.
+* Aula 3 - Criando erros: Atividade prática dedicada à criação de erros customizados e sua integração nas estruturas de tratamento.
+
+
+## 🟩 Vídeo 02 - ECMAScript Error e DOMException
+
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_02.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/be209ab1-55cd-4030-b9f2-2334239b5bce?autoplay=1
+
+Esta fonte explica as distinções fundamentais entre dois tipos principais de falhas que ocorrem no desenvolvimento com JavaScript. O texto detalha o objeto Error do ECMAScript, que surge durante a execução do código devido a falhas de sintaxe, variáveis não declaradas ou erros na pilha de chamadas. Em contraste, a DOM Exception é apresentada como uma exceção específica para o contexto de páginas web, ocorrendo quando há manipulações inválidas na estrutura de elementos do navegador. O conteúdo enfatiza que esses problemas possuem naturezas distintas, variando conforme o ambiente e a interação do script com o documento. Ao compreender essas diferenças, desenvolvedores conseguem identificar se um problema reside na lógica interna da linguagem ou na comunicação com a árvore de elementos da interface. Por fim, o autor reforça que o domínio desses conceitos é essencial para a resolução eficiente de problemas em sistemas modernos.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h31m32s204.jpg" alt="" width="840">
+</p>
+
+Esta aula introduz o tema de Tratamento de erros, focando especificamente na identificação e diferenciação dos tipos de erros que podem surgir durante o desenvolvimento em JavaScript. O objetivo principal é compreender como o sistema lida com falhas em diferentes contextos de execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h31m38s803.jpg" alt="" width="840">
+</p>
+
+A apresentação está estruturada em dois objetivos principais:
+
+1. Apresentar o objeto Error do ECMAScript: Compreender a estrutura padrão de erros da linguagem.
+2. Apresentar a DOMException: Entender as exceções específicas que ocorrem na interação com a interface da web.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h31m41s828.jpg" alt="" width="840">
+</p>
+
+### ECMAScript Error
+
+Na primeira etapa, exploramos o erro do ECMAScript, que é o tipo de erro padrão da linguagem. Ele se manifesta em tempo de execução, ou seja, enquanto o código está sendo processado pelo motor JavaScript.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h31m46s608.jpg" alt="" width="840">
+</p>
+
+Os erros do ECMAScript ocorrem quando o código tenta realizar uma operação inválida, como utilizar uma variável que não foi declarada. Um objeto de erro é composto por quatro elementos fundamentais: Mensagem, Nome, Linha e o Call Stack (pilha de chamadas).
+
+```javascript
+let sum = a + 2
+// Uncaught ReferenceError: a is not defined
+// at <anonymous>:1:11
+
+```
+
+Essas notificações podem aparecer tanto no console do navegador quanto em alertas do sistema operacional, indicando exatamente onde a falha ocorreu na estrutura de execução.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h32m45s445.jpg" alt="" width="840">
+</p>
+
+### DOMException
+
+Na segunda etapa, abordamos a DOMException. Diferente do erro básico de script, esta exceção está estritamente ligada ao contexto da página web e à forma como o JavaScript interage com os elementos do documento (DOM).
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h33m09s707.jpg" alt="" width="840">
+</p>
+
+A DOMException ocorre quando há falhas na manipulação da árvore de elementos de uma página. Exemplos comuns incluem tentar inserir um nó (elemento) em um local inválido da hierarquia ou utilizar caracteres não permitidos em strings processadas pelo DOM.
+
+```bash
+DOMException: String contains an invalid character
+DOMException: "Node cannot be inserted at the specified point in the hierarchy"
+
+```
+
+Esses erros são fundamentais para identificar problemas na estrutura da página e na forma como os dados estão sendo consumidos pelo navegador.      
+
+# Parte 2 - Tratando Erros
+
+## 🟩 Vídeo 03 - Throw, Try/Catch e Finally
+
+
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_02.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/d98f9b27-bd6c-4f33-bc22-82bee03e5591?autoplay=1 
+
+O vídeo explica as técnicas fundamentais para o gerenciamento de erros em JavaScript, destacando as diferenças cruciais entre os comandos return e throw. Enquanto o primeiro apenas envia uma string comum, o segundo sinaliza uma exceção real que interrompe o fluxo para indicar uma falha no sistema. O conteúdo detalha a estrutura try...catch, demonstrando como capturar e manipular esses problemas de forma organizada e personalizada. Além disso, é introduzido o bloco finally, que garante a execução de um código específico independentemente de ter ocorrido um erro ou não. Através do exemplo de uma função que verifica palíndromos, o material ilustra como essas ferramentas tornam o desenvolvimento de software mais robusto e profissional.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h59m26s313.jpg" alt="" width="840">
+</p>
+
+Esta imagem introduz o tema da aula focado no tratamento de erros em JavaScript, destacando os três pilares fundamentais que serão abordados: Throw, Try...Catch e Finally. O objetivo é compreender como lidar com exceções e fluxos de erro de maneira eficiente no desenvolvimento de software.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-08h59m50s666.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta os objetivos principais desta etapa do aprendizado:
+
+1. Explicar a diferença entre `throw` e `return`: entender como o `throw` interrompe o fluxo normal para sinalizar um erro, ao contrário do `return`, que apenas entrega um valor de saída.
+2. Apresentar a implementação da declaração `try...catch`: demonstrar a sintaxe e a lógica necessária para capturar e tratar erros que possam ocorrer durante a execução do código.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h00m01s101.jpg" alt="" width="840">
+</p>
+
+Nesta etapa, o foco inicial é a instrução Throw. Trata-se do mecanismo utilizado para "lançar" erros personalizados. Quando o interpretador encontra um `throw`, a execução da função atual é interrompida e o controle é passado para o primeiro bloco `catch` na pilha de chamadas.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h00m05s993.jpg" alt="" width="840">
+</p>
+
+A imagem demonstra a diferença prática entre o uso de `return` e `throw` dentro de uma função que verifica palíndromos. Enquanto o `return` apenas devolve uma string informativa, o `throw` gera uma exceção que interrompe o fluxo, resultando em uma mensagem de erro no console ("Uncaught String inválida").
+
+```javascript
+function verificaPalindromo(string) {
+  if (!string) throw "String inválida";
+
+  return string === string.split('').reverse().join('');
+}
+
+verificaPalindromo('');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h02m04s411.jpg" alt="" width="840">
+</p>
+
+Esta etapa introduz a estrutura Try...catch. O bloco `try` contém o código que será monitorado quanto a possíveis erros, enquanto o bloco `catch` define como o sistema deve reagir caso uma exceção seja lançada durante a execução do `try`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h02m27s306.jpg" alt="" width="840">
+</p>
+
+Aqui, vemos a implementação prática de uma função que encapsula a verificação de palíndromo dentro de um bloco `try...catch`. Ao ocorrer um erro na função `verificaPalindromo`, o fluxo é desviado para o `catch`, onde a variável `e` (que armazena o erro lançado) é exibida no console de forma controlada através de um `console.log(e)`.
+
+```javascript
+function verificaPalindromo(string) {
+  if (!string) throw "String inválida";
+  return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+  try {
+    verificaPalindromo(string)
+  }
+  catch(e) {
+    console.log(e)
+  }
+}
+
+tryCatchExemplo('');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h04m06s026.jpg" alt="" width="840">
+</p>
+
+Neste exemplo, o tratamento de erro dentro do bloco `catch` é modificado para utilizar novamente a instrução `throw`. Isso faz com que o erro capturado seja "relançado", permitindo que o navegador registre a falha formalmente com o ícone vermelho de alerta no console, em vez de apenas imprimir uma mensagem comum.
+
+```javascript
+function verificaPalindromo(string) {
+  if (!string) throw "String inválida";
+  return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+  try {
+    verificaPalindromo(string)
+  }
+  catch(e) {
+    throw e;
+  }
+}
+
+tryCatchExemplo('');
+
+```
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h04m33s466.jpg" alt="" width="840">
+</p>
+
+A imagem apresenta a terceira etapa do tratamento de erros: o bloco Finally. Esta instrução é opcional e compõe a estrutura junto ao `try` e ao `catch`, servindo para executar ações que devem ocorrer independentemente do sucesso ou falha das operações anteriores.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-09h05m34s197.jpg" alt="" width="840">
+</p>
+
+A imagem ilustra a aplicação completa da estrutura `try...catch...finally`. O bloco `finally` executa um `console.log` informando qual string foi processada. Note que, mesmo quando a função retorna com sucesso (como no caso da string "ala"), o código dentro do `finally` é executado obrigatoriamente antes da conclusão do processo.
+
+```javascript
+function verificaPalindromo(string) {
+  if (!string) throw "String inválida";
+  return string === string.split('').reverse().join('');
+}
+
+function tryCatchExemplo(string) {
+  try {
+    return verificaPalindromo(string)
+  }
+  catch(e) {
+    throw e;
+  }
+  finally {
+    console.log('A string enviada foi: ' + string);
+  }
+}
+
+tryCatchExemplo('ala');
+
+```      
+
+# Parte 3 - Criando erros
+
+## 🟩 Vídeo 04 - O objeto Error
+
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_04.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo:  https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/345e4ebc-9020-49f6-9c56-c199c27ff60b?autoplay=1
+
+O vídeo consiste em uma transcrição de aula sobre a **criação e manipulação de erros personalizados** utilizando a linguagem de programação **JavaScript**. O conteúdo detalha a **anatomia do objeto Error**, explicando como desenvolvedores podem configurar propriedades fundamentais como **mensagem, nome e a pilha de chamadas (stack)**. O instrutor demonstra o processo de **instanciar um novo erro** e a importância de consultar a documentação externa para verificar a compatibilidade de parâmetros opcionais entre diferentes navegadores. Além disso, o texto aborda como o comando **throw** é utilizado para disparar essas exceções customizadas durante a execução do código. Ao final, a lição incentiva o uso de **fóruns e comunidades online** para sanar dúvidas sobre a implementação prática desses conceitos técnicos.
+
+### Anotações
+
+#### Criando erros personalizados
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h20m56s641.jpg" alt="" width="840">
+</p>
+
+Nesta aula, o foco é aprender a colocar a mão na massa para criar erros personalizados no JavaScript. O objetivo central é entender como manipular o objeto `Error`, que é nativo da linguagem, explorando suas propriedades e métodos para realizar um tratamento de erros mais eficiente e específico para as necessidades da aplicação.
+
+#### Objetivos
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h21m20s462.jpg" alt="" width="840">
+</p>
+
+O objetivo principal desta etapa é explicar a manipulação do objeto `Error`. Serão abordados os parâmetros que este objeto aceita, como a mensagem, o nome do arquivo e o número da linha, além de discutir a compatibilidade desses parâmetros entre diferentes navegadores.
+
+#### Etapa 1: O objeto Error
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h21m40s959.jpg" alt="" width="840">
+</p>
+
+Iniciamos a análise da anatomia do objeto `Error`. Por padrão, ele aceita três parâmetros: `message`, `fileName` e `lineNumber`. É importante notar que todos esses parâmetros são opcionais. No entanto, propriedades como `fileName` e `lineNumber` podem não funcionar em todos os browsers, sendo recomendado o uso prioritário da mensagem para garantir maior compatibilidade.
+
+#### Anatomia e Instanciação
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h21m46s033.jpg" alt="" width="840">
+</p>
+
+Para declarar um novo erro, cria-se uma constante e instancia-se o objeto utilizando o operador `new Error()`. Ao lançar esse erro com o comando `throw`, o sistema exibe a mensagem definida e o rastreamento da linha onde o erro ocorreu.
+
+```javascript
+// todos os parâmetros são opcionais
+new Error(message, fileName, lineNumber)
+
+const MeuErro = new Error('Mensagem Inválida');
+throw MeuErro;
+
+```
+
+**Resultado no console:**
+`Uncaught Error: Mensagem Inválida at <anonymous>:1:17`
+
+#### Personalizando o Nome do Erro
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h22m38s369.jpg" alt="" width="840">
+</p>
+
+Além da mensagem, é possível customizar a propriedade `.name` do objeto. Ao atribuir um valor a essa propriedade, o erro lançado passará a exibir o nome personalizado seguido da mensagem, facilitando a identificação do tipo de falha que ocorreu no código.
+
+```javascript
+const MeuErro = new Error('Mensagem Inválida');
+MeuErro.name = 'InvalidMessage';
+
+throw MeuErro;
+
+```
+
+**Resultado no console:**
+`Uncaught InvalidMessage: Mensagem Inválida at <anonymous>:3:17`
+
+#### Propriedades Name e Stack
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-10h22m40s645.jpg" alt="" width="840">
+</p>
+
+Ao inspecionar o objeto de erro no console, podemos acessar propriedades específicas:
+
+* **name**: Retorna o nome atribuído ao erro (ex: "InvalidMessage").
+* **stack**: Retorna a "pilha" de execução, indicando exatamente o que foi executado e em qual linha/coluna o erro foi encontrado.
+* **Objeto completo**: Ao exibir apenas o objeto, o JavaScript formata as informações apresentando o nome, a mensagem e a stack de forma organizada.
+
+```javascript
+> MeuErro.name
+< "InvalidMessage"
+
+> MeuErro.stack
+< "InvalidMessage: Mensagem Inválida\n at <anonymous>:3:17"
+
+> MeuErro
+< InvalidMessage: Mensagem Inválida
+  at <anonymous>:3:17
+
+```      
+
+
+## 🟩 Vídeo 05 - Atividade prática
+
+
+<video width="60%" controls>
+    <source src="000-Midia_e_Anexos/bootcamp_tqi_fullstack-modulo_03-Curso.07-Video_05.webm" type="video/webm" type="video/webm">
+    Seu navegador não suporta vídeo HTML5.
+</video>
+
+Link do vídeo: https://web.dio.me/track/tqi-fullstack-developer/course/debugging-e-error-handling-com-javascript/learning/61732474-2428-45c9-be5d-885f777e9e31?autoplay=1
+
+O vídeo consiste em uma **aula prática sobre tratamento de erros em JavaScript**, orientando o aluno a criar uma função de validação de arrays. A instrutora explica como utilizar a estrutura **try...catch** para gerenciar falhas e o operador **instanceof** para identificar tipos específicos de erros, como **ReferenceError**, **TypeError** e **RangeError**. O código demonstrado verifica a existência de parâmetros, o tipo dos dados inseridos e a correspondência entre o tamanho da lista e um valor numérico. Além da codificação ao vivo, o conteúdo destaca a importância de consultar a documentação oficial e utilizar repositórios do **GitHub** como apoio aos estudos. Ao final, o exemplo prático mostra como retornar o próprio objeto em casos de sucesso ou capturar e exibir mensagens detalhadas quando exceções são lançadas.
+
+### Anotações
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-13h02m49s031.jpg" alt="" width="840">
+</p>
+
+A atividade prática consiste na criação de uma função para validação de erros baseada em tipos de dados e tamanhos de arrays. O objetivo central é que a função receba um array e um número, retornando o array apenas se o seu comprimento (`length`) corresponder ao número enviado; do contrário, erros específicos devem ser lançados.
+
+As validações exigidas para a função são:
+
+* **ReferenceError**: Caso os parâmetros não sejam enviados.
+
+
+* **TypeError**: Caso o array não seja do tipo `object`.
+
+
+* **TypeError**: Caso o número enviado não seja do tipo `number`.
+
+
+* **RangeError**: Caso o tamanho do array seja diferente do número especificado.
+
+
+
+Além disso, a implementação deve utilizar a estrutura `try...catch` e filtrar as exceções capturadas por meio do operador `instanceof`.
+
+<p align="center">
+<img src="000-Midia_e_Anexos/vlcsnap-2025-12-31-13h03m17s624.jpg" alt="" width="840">
+</p>
+
+Para auxiliar na resolução, a documentação do MDN (Mozilla Developer Network) detalha os diversos tipos de erros nativos do JavaScript. Cada construtor de erro possui um propósito específico para representar diferentes problemas que podem ocorrer durante a execução do código.
+
+Dentre os principais erros citados para esta atividade estão:
+
+* **RangeError**: Indica quando um valor numérico está fora dos limites válidos.
+* **ReferenceError**: Ocorre ao tentar referenciar uma variável ou referência inválida.
+* **TypeError**: Lançado quando um valor não é do tipo esperado.
+
+
+O uso desses objetos permite criar erros mais semânticos e fáceis de tratar dentro de um bloco `catch`.
+
+#### ▶️ código em JavaScript ()
+```javascript
+function validaArrays(arr, num) {
+	try {
+		if (!arr && !num) throw new ReferenceError('Envie os parâmetros!');
+
+		if (typeof arr !== 'object')
+			throw new TypeError('Envie um elemento do tipo Array!');
+
+		if (typeof num !== 'number')
+			throw new TypeError('Envie um elemento do tipo Number!');
+
+		if (arr.length !== num) throw new RangeError('Tamanho do array inválido!');
+
+		return arr;
+	} catch (e) {
+		if (e instanceof RangeError) {
+			console.log('RangeError!');
+			console.log(e.stack);
+		} else if (e instanceof ReferenceError) {
+			console.log('ReferenceError!');
+			console.log(e.stack);
+		} else {
+			console.log('Outro tipo de erro!');
+			console.log(e.stack);
+		}
+	}
+}
+
+console.log(validaArrays([1, 2, 3], 0));
+```
+
+A implementação final utiliza a estrutura try...catch para encapsular as validações e o retorno do array. No bloco catch, o operador instanceof é empregado para identificar qual tipo de erro foi lançado, permitindo um tratamento personalizado para cada caso, como a exibição da mensagem e do stack (pilha de execução) do erro.    
+
+O código acima demonstra a lógica de filtragem, onde, se os parâmetros estiverem incorretos ou o tipo de dado for divergente, o erro é interceptado e descrito conforme sua categoria.
+
+# Certificado: Debugging e Error Handling com JavaScript
+
+- Link na plataforma: https://hermes.dio.me/certificates/CZUQLEHO.pdf
+- Certificado em pdf: [Certificado-Debugging.e.Error.Handling.com.JavaScript](000-Midia_e_Anexos/Certificado-Debugging.e.Error.Handling.com.JavaScript.pdf)
