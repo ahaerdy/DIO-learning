@@ -112,7 +112,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 ### Módulo 5: Persistência de Dados com Java
 
 - [x] ✓⭐️Curso: [Introdução e Noções de Banco de Dados Relacionais](Modulo_05/01-Curso.01-Introdução.e.Noções.de.Banco.de.Dados.Relacionais/)
-- [ ] Curso: [Criando suas Primeiras Consultas SQL](Modulo_05/)
+- [ ] 🔖Curso: [Criando suas Primeiras Consultas SQL](Modulo_05/)
 
 ---
 
@@ -145,7 +145,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 9: Projeto Final: Assistente Inteligente por IA
 
-- [ ] Desafio de projeto: [Implementando sua API Inteligente com Recrutamento de IA no Seu Projeto](Modulo_09/)
+- [ ] Desafio de projeto: [Desenvolvendo sua API Inteligente com Reconhecimento de Fala e Spring Boot](Modulo_09/)
 
 ---
 
