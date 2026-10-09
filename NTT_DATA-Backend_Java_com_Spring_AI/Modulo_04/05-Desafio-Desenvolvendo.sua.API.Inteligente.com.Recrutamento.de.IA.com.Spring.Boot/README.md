@@ -3919,7 +3919,7 @@ Comece pelo projeto base, avance com calma e evolua um passo de cada vez. O impo
 
 Bons estudos e bom projeto! 🚀
 
-# Certificado: Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot
+# Certificado: Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot ***
 
 - Link na plataforma: https://hermes.dio.me/certificates/SPU34BQJ.pdf
 - Certificado em pdf: [Certificado-Desenvolvendo sua API Inteligente com Recrutamento de IA com Spring Boot.pdf](000-Midia_e_Anexos/Certificado-Desenvolvendo.sua.API.Inteligente.com.Recrutamento.de.IA.com.Spring.Boot.pdf)
