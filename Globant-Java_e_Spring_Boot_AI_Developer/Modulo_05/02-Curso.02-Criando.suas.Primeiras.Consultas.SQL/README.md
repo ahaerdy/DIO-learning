@@ -1,7 +1,7 @@
 ## Instrutor
 
-- Pâmela Apolinario (Software Development Engineer)
-- Contato Linkedin: / [pamelaapborges](https://www.linkedin.com/in/pamelaapborges/)
+- Felipe Aguiar (DIO - Tech Educator)
+- Contato Linkedin: / [felipeaguiar-exe](https://www.linkedin.com/in/felipeaguiar-exe/)
 
 ## Parte 1 - Introdução aos Fundamentos de SQL
 
