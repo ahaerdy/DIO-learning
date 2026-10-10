@@ -120,7 +120,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 - [x] ✅ Curso: [Principais Protocolos de Comunicação da Internet](Modulo_06/01-Curso.01-Principais_Protocolos_de_Comunicacao_da_Internet/)
 - [x] ✅ Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/02-Curso.02-Introducao_a_Spring_Framework_com_Spring_Boot/)
-- [ ] 🔖Curso: [Criando uma API REST Documentada com Spring Web e Swagger](Modulo_06/03-Curso.03-Criando.uma.API.REST.Documentada.com.Spring.Web.e.Swagger/)
+- [ ] 🔖Curso: [Criando uma API REST Documentada com Spring Web e Swagger](Modulo_06/03-Curso.03-Criando.uma.API.REST.Documentada.com.Spring.Web.e.Swagger//)
 - [x] ✅ Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/04-Curso.04-Adicionando_Seguranca_a_uma_API_REST_com_Spring_Security/)
 - [ ] Desafio de código: [Aprendendo a Construir APIs com Spring Boot](Modulo_06/)
 
