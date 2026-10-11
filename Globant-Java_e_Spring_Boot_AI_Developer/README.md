@@ -128,7 +128,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 7: Boas Práticas de Desenvolvimento de Aplicações Java
 
-- [ ] Curso: [Boas Práticas Para APIs RESTful](Modulo_07/)
+- [ ] 🔖 Curso: [Boas Práticas Para APIs RESTful](Modulo_07/01-Curso.01-Boas.Práticas.Para.APIs.RESTful/)
 - [ ] Curso: [Introdução a Clean Code](Modulo_07/)
 - [x] ✅ Curso: [SOLID e Clean Code em Java: Escrevendo Código de Alta Qualidade](Modulo_07/03-Curso.03-SOLID.e.Clean.Code.em.Java.Governando.Código.de.Alta.Qualidade/)
 - [ ] Curso: [Trabalhando com Design Patterns de Aplicações Java](Modulo_07/)
