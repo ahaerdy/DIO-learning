@@ -1,5 +1,8 @@
 # Instrutores
 
+- Aline Antunes (Tech Education Analist-DIO)
+- Contato Linkedin: / [allineantunnes](https://www.linkedin.com/in/allineantunnes/)
+
 - Bruno Carneiro (Planning & Business Performance Director na Magazine Luiza)
 - Contato Linkedin: / [brunohvcarneiro](https://www.linkedin.com/in/brunohvcarneiro/)
 
@@ -114,6 +117,8 @@
 - / [glysns](https://www.linkedin.com/in/glysns/) (Gleyson Sampaio / Analista Desenvolvedor Java)
 
 - / [decarvalhogui](https://www.linkedin.com/in/decarvalhogui/) (Guilherme Arthur de Carvalho / DIO - Python Consultant, Systems Analyst)
+
+- / [juniorjrjl](https://www.linkedin.com/in/juniorjrjl/) (José Luiz Abreu Cardoso Junior / Engenheiro de software sênior)
 
 - / [joao-ricardo-dutra](https://www.linkedin.com/in/joao-ricardo-dutra/) (João Dutra / Analista de Sistemas no Bradesco)
 

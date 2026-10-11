@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Aline Antunes (Tech Education Analist-DIO)
+- Contato Linkedin: / [allineantunnes](https://www.linkedin.com/in/allineantunnes/)
 
 ## Parte 1 - Introdução ao Curso
 
@@ -21,7 +21,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/bc906306-052b-450c-9813-f5984132738f?autoplay=1
 
 ### 🟩 Vídeo 03 - Onboarding do Material de Apoio
 
@@ -30,7 +30,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/13953d59-4871-400c-a7ea-0edb5d178deb?autoplay=1
 
 ## Parte 2 - Contextualizando as APIs RESTful
 

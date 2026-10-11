@@ -233,3 +233,4 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - / [falvojr](https://www.linkedin.com/in/falvojr/) (Venilton Falvo Jr / DIO - Doutor em Engenharia de Software, Education Tech Lead na DIO)
 - / [willyancaetanodev](https://www.linkedin.com/in/willyancaetanodev/) (Willyan Guimarães Caetano / Senior Software Engineer, Tech Lead, Java, Backend)
 - / [pamelaapborges](https://www.linkedin.com/in/pamelaapborges/) (Pâmela Apolinario / Software Development Engineer)
+- / [allineantunnes](https://www.linkedin.com/in/allineantunnes/) (Aline Antunnes / DIO - Tech Education Analist)
