@@ -41,7 +41,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/cb4b9b23-5896-46e7-b4e0-3906b930ef55?autoplay=1
 
 ### 🟩 Vídeo 05 - Por que seguir boas práticas
 
