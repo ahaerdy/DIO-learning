@@ -50,7 +50,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/4c30d008-7761-4139-9e17-7f0785153ebc?autoplay=1
 
 ## Parte 3 - As 7 Melhores Boas Práticas para APIs RESTful
 
