@@ -61,7 +61,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/5bd0b4e9-98d5-42f6-9197-e82750ec37d3?autoplay=1
 
 ### 🟩 Vídeo 07 - Utilização de Métodos HTTP
 
