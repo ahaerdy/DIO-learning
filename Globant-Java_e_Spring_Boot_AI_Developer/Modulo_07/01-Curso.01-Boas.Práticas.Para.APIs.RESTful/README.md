@@ -70,7 +70,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/a5f18aaf-7f5c-409a-ada6-b6372a35304f?autoplay=1
 
 ### 🟩 Vídeo 08 - Hierarquia e Aninhamento em Rotas
 
@@ -79,7 +79,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/8a79df72-c2d5-49f8-bd72-abdb4add1e10?autoplay=1
 
 ### 🟩 Vídeo 09 - Nome de Ações
 
@@ -88,7 +88,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/d9bfffcf-fc8d-4208-896d-6a4c566d37d8?autoplay=1
 
 ### 🟩 Vídeo 10 - Versionamento de Rotas
 
@@ -97,7 +97,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/ae3e32fd-8737-4a22-b29e-1f37cac8565a?autoplay=1
 
 ### 🟩 Vídeo 11 - Parâmetros de Consulta
 
@@ -106,7 +106,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/af82849f-811f-4a6d-8c97-8fed39b19dd6?autoplay=1
 
 ### 🟩 Vídeo 12 - Tratamento de Erros
 
@@ -115,7 +115,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/7938647a-5f00-4258-a6cb-f74c11a3eece?autoplay=1
 
 ### 🟩 Vídeo 13 - Exemplo Completo de Estrutura de Rotas RESTful
 
@@ -124,7 +124,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/cf957abf-1396-4280-b5b7-f833cce81ee7?autoplay=1
 
 ## Parte 4 - Encerramento do Curso
 
@@ -135,11 +135,11 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/boas-praticas-para-apis-restful-1/learning/b2c4bc69-b252-4a51-93e6-924e7a52469b?autoplay=1
 
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Boas Práticas Para APIs RESTful
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/Y6CLETKG.pdf
+- Certificado em pdf: [Certificado-Boas.Praticas.Para.APIs.RESTful.pdf](000-Midia_e_Anexos/Certificado-Boas.Praticas.Para.APIs.RESTful.pdf)
