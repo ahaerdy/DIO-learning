@@ -119,4 +119,4 @@ Pesquise na Web: pode parecer óbvio, mas é importante frisar a importância da
 # Certificado: Introdução a Clean Code
 
 - Link na plataforma: https://hermes.dio.me/certificates/6907XNVF.pdf
-- Certificado em pdf: [Certificado-Introdução.a.Clean.Code.pdf](000-Midia_e_Anexos/Certificado-Boas.Praticas.Para.APIs.RESTful.pdf)
+- Certificado em pdf: [Certificado-Introdução.a.Clean.Code.pdf](000-Midia_e_Anexos/Certificado-Introdução.a.Clean.Code.pdf)
