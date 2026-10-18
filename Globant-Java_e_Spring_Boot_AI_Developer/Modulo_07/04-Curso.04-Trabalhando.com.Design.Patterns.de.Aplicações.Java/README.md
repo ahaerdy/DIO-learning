@@ -14,11 +14,7 @@
 
 link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/trabalhando-com-design-patterns-em-aplicacoes-java/learning/da972e0a-35fd-4ee3-83fa-5f6cf62a8224?autoplay=1
 
-##  Materiais de Apoio
+# Certificado: Trabalhando com Design Patterns de Aplicações Java
 
-
-
-# Certificado: 
-
-- Link na plataforma: 
-- Certificado em pdf: 
+- Link na plataforma: https://hermes.dio.me/certificates/VSYUP36V.pdf
+- Certificado em pdf: [Certificado-Trabalhando.com.Design.Patterns.de.Aplicações.Java.pdf](000-Midia_e_Anexos/Certificado-Trabalhando.com.Design.Patterns.de.Aplicações.Java.pdf)

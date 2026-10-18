@@ -205,7 +205,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [Boas Práticas Para APIs RESTful](https://hermes.dio.me/certificates/Y6CLETKG.pdf)
 - [Introdução a Clean Code](https://hermes.dio.me/certificates/6907XNVF.pdf)
 - [Clean Code em Java: Governando Código de Alta Qualidade]
-- [Trabalhando com Design Patterns de Aplicações Java]
+- [Trabalhando com Design Patterns de Aplicações Java](https://hermes.dio.me/certificates/VSYUP36V.pdf)
 - Certificado do Módulo: [Boas Práticas de Desenvolvimento de Aplicações Java]
 
 ### Módulo 8
