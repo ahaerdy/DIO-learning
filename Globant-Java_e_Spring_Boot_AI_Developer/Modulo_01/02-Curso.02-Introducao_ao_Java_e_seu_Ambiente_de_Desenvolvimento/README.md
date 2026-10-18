@@ -259,7 +259,7 @@ link do vídeo:
 
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Introdução ao Java e seu Ambiente de Desenvolvimento
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/YUJLSOAA.pdf
+- Certificado em pdf: [text](000-Midia_e_Anexos/Certificado-Introdução.ao.Java.e.seu.Ambiente.de.Desenvolvimento.pdf)

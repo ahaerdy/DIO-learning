@@ -155,7 +155,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 1
 
-- [Introdução ao Java e seu Ambiente de Desenvolvimento]
+- [Introdução ao Java e seu Ambiente de Desenvolvimento](https://hermes.dio.me/certificates/YUJLSOAA.pdf)
 - [Git e GitHub: Primeiros Passos e Configuração do Ambiente]
 - [Dominando IDEs Java]
 - Certificado do Módulo: [Configuração do Ambiente de Desenvolvimento]
