@@ -72,6 +72,9 @@
 - Rodrigo D'Agostini Peleias (Tech Lead | Staff Software Engineer | Senior Software Engineer | Backend | Java | Spring Boot | 3x AWS Certified)
 - Contato Linkedin: / [rodrigopeleias](https://www.linkedin.com/in/rodrigopeleias/)
 
+- Rui Rodrigues (Intelligent testing na NTT DATA Europe & LATAM)
+- Contato Linkedin: / [rui-ml-rodrigues](https://www.linkedin.com/in/rui-ml-rodrigues/)
+
 - Stephany Nusch (Software Engineer at Microsoft)
 - Contato Linkedin: / [stephanynusch](https://www.linkedin.com/in/stephanynusch/)
 

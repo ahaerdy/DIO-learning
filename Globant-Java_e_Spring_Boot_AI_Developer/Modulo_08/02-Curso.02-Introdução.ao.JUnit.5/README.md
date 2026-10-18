@@ -1,7 +1,7 @@
 ## Instrutor
 
-- xxxxxxxxxxxxxxxxx (xxxxxxxxxxxxxxxxxxxxxx)
-- Contato Linkedin: / [xxxxxxxx](https://www.linkedin.com/in/xxxxxxxxxxxxxx/)
+- Rui Rodrigues (Intelligent testing na NTT DATA Europe & LATAM)
+- Contato Linkedin: / [rui-ml-rodrigues](https://www.linkedin.com/in/rui-ml-rodrigues/)
 
 ## Parte 1 - Entendendo o papel do Junit na prática
 
@@ -12,7 +12,7 @@
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/e5809516-a68e-478a-a4ed-afd4427e1c3e?autoplay=1
 
 ### 🟩 Vídeo 02 - Objetivos e requisitos básicos do curso
 
@@ -97,7 +97,7 @@ link do vídeo:
 
 ##  Materiais de Apoio
 
-# Certificado: 
+# Certificado: Introdução ao JUnit 5
 
 - Link na plataforma: 
 - Certificado em pdf:
