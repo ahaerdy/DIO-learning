@@ -21,7 +21,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/26988240-ea55-4151-86a5-113656bbd7fa?autoplay=1
 
 ### 🟩 Vídeo 03 - O que é um framework de testes?
 
@@ -30,7 +30,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/b60c9a9e-e24d-4922-813d-d851cbc55617?autoplay=1
 
 ### 🟩 Vídeo 04 - Um teste unitário ingênuo
 
@@ -39,7 +39,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/e47867c7-7b16-49b0-872a-7fa98360ccca?autoplay=1
 
 ### 🟩 Vídeo 05 - Um teste unitário "menos" ingênuo - Parte 1
 
@@ -48,7 +48,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/83990f1d-b7d7-456e-93a1-37dae9b97af1?autoplay=1
 
 ### 🟩 Vídeo 06 - Um teste unitário "menos" ingênuo - Parte 2
 
