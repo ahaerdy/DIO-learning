@@ -138,7 +138,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 ### Módulo 8: Testes Unitários no Seu Código Java
 
 - [x] ✅ Curso: [Introdução a Testes de Software](Modulo_08/)
-- [ ] 🔖 Curso: [Introdução ao JUnit 5](Modulo_08/)
+- [ ] 🔖 Curso: [Introdução ao JUnit 5](Modulo_08/02-Curso.02-Introdução.ao.JUnit.5/)
 - [x] ✅ Curso: [Testes Unitários com JUnit](Modulo_08/03-Curso.03-Testes_Unitarios_Com_JUnit/)
 
 ---
