@@ -206,7 +206,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [Introdução a Clean Code](https://hermes.dio.me/certificates/6907XNVF.pdf)
 - [Clean Code em Java: Governando Código de Alta Qualidade]
 - [Trabalhando com Design Patterns de Aplicações Java](https://hermes.dio.me/certificates/VSYUP36V.pdf)
-- Certificado do Módulo: [Boas Práticas de Desenvolvimento de Aplicações Java]
+- Certificado do Módulo: [Boas Práticas de Desenvolvimento de Aplicações Java](https://hermes.dio.me/certificates/T2BSJRZ6.pdf)
 
 ### Módulo 8
 
