@@ -17,7 +17,7 @@ Uma única linha contendo a descrição resumida do método HTTP informado, conf
 A tabela abaixo apresenta exemplos de entrada e saída:
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-10-19-15-21-57.png" alt="" width="1024">
+  <img src="000-Midia_e_Anexos/2026-10-19-15-21-57.png" alt="" width="480">
 </p>
 
 ## Código Exemplo
