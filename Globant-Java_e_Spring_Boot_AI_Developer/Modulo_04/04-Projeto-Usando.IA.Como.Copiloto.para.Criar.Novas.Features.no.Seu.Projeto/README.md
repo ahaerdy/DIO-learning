@@ -85,7 +85,8 @@ O Git é um conceito essencial no mercado de trabalho atualmente, por isso sempr
  
 https://github.com/digitalinnovationone/my-first-copilot
  
-# Certificado: Usando IA Como Copiloto para Criar Novas Features no Seu Projeto 
+# Certificado: Usando IA Como Copiloto para Criar Novas Features no Seu Projeto
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/PZHNF0AS.pdf
+- Certificado em pdf:[Certificado-Usando.IA.Como.Copiloto.para.Criar.Novas.Features.no.Seu.Projeto.pdf](000-Midia_e_Anexos/Certificado-Usando.IA.Como.Copiloto.para.Criar.Novas.Features.no.Seu.Projeto.pdf)
+
