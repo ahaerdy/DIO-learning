@@ -71,7 +71,7 @@ public class Main {
 }
 ``` 
 
-HTTP na Biblioteca: Aprenda REST com Analogias Simples
+# Desafio 02 - HTTP na Biblioteca: Aprenda REST com Analogias Simples
 
 Imagine que você é um(a) jovem desenvolvedor(a) chamado(a) Ana, que está aprendendo sobre APIs REST para criar um sistema de biblioteca digital. Seu mentor, o Sr. HTTPson, propõe um desafio: entender a semântica dos métodos HTTP usando analogias do cotidiano. Cada método HTTP (GET, POST, PUT, DELETE) pode ser comparado a uma ação comum em uma biblioteca. Sua tarefa é identificar, a partir de uma descrição simples da ação, qual método HTTP seria o mais adequado para representar essa operação no contexto REST.
 
