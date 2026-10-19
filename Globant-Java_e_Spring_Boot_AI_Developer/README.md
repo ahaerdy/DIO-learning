@@ -105,7 +105,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_04/01-Curso.01-Fundamentos.da.IA.Moderna.Machine.Learning.LLMs.IA.Generativa.e.Agentes/)
 - [x] ✓ Curso: [Utilizando Copilotos no Desenvolvimento de Software](Modulo_04/02-Curso.02-Utilizando.Copilotos.no.Desenvolvimento.de.Software/)
 - [x] ✅ Curso: [Introdução à Engenharia de Prompts](Modulo_04/03-Curso.03-Introducao.a.Engenharia.de.Prompts/)
-- [ ] Desafio de projeto: [Usando IA Como Copiloto para Criar Novas Features no Seu Projeto](Modulo_04/)
+- [ ] 🔖 Desafio de projeto: [Usando IA Como Copiloto para Criar Novas Features no Seu Projeto](Modulo_04/)
 
 ---
 
@@ -138,7 +138,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 ### Módulo 8: Testes Unitários no Seu Código Java
 
 - [x] ✅ Curso: [Introdução a Testes de Software](Modulo_08/)
-- [ ] 🔖 Curso: [Introdução ao JUnit 5](Modulo_08/02-Curso.02-Introdução.ao.JUnit.5/)
+- [x] ✓ Curso: [Introdução ao JUnit 5](Modulo_08/02-Curso.02-Introdução.ao.JUnit.5/)
 - [x] ✅ Curso: [Testes Unitários com JUnit](Modulo_08/03-Curso.03-Testes_Unitarios_Com_JUnit/)
 
 ---
@@ -211,7 +211,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 ### Módulo 8
 
 - [Introdução a Testes de Software]
-- [Introdução ao JUnit 5]
+- [Introdução ao JUnit 5](https://hermes.dio.me/certificates/LIN0JMXA.pdf)
 - Certificado do Módulo: [Testes Unitários no Seu Código Java]
 
 ### Módulo 9

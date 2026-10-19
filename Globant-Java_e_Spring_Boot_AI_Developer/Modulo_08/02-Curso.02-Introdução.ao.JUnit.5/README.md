@@ -57,7 +57,7 @@ link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/c
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/4128d02b-030a-4b8e-9a78-c0c79a72a994?autoplay=1
 
 ### 🟩 Vídeo 07 - Dúvidas e comentários - Parte 1
 
@@ -66,7 +66,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo:[ ](https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/b133ee24-3ce3-499b-9b86-fa489ffb23c3?autoplay=1)
 
 ### 🟩 Vídeo 08 - Anotações de testes com parâmetros
 
@@ -75,7 +75,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/e2a11dfa-3005-49e2-ae25-56d884a387eb?autoplay=1
 
 ### 🟩 Vídeo 09 - Dúvidas e comentários - Parte 2
 
@@ -84,7 +84,7 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo: 
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/f3c1737e-11aa-4524-9272-eb8e3921e51d?autoplay=1
 
 ### 🟩 Vídeo 10 - Entendendo o papel do Junit na prática
 
@@ -93,11 +93,21 @@ link do vídeo:
     Seu navegador não suporta vídeo HTML5.
 </video>
 
-link do vídeo:
+link do vídeo: https://web.dio.me/track/globant-java-spring-boot-ai-developer/course/introducao-ao-junit-5/learning/dd454656-a4fb-4aff-9ed5-ba0e8542b10c?autoplay=1
 
 ##  Materiais de Apoio
 
+Materiais Complementares
+ 
+Nossos materiais complementares e de apoio têm como objetivo apresentar informações para facilitar e enriquecer a sua jornada de aprendizado. Para isso, links úteis (como slides, repositórios e páginas oficiais) serão disponibilizados, além de dicas sobre como se destacar na DIO e no mercado de trabalho 😉
+ 
+Repositório Git
+ 
+O Git é um conceito essencial no mercado de trabalho atualmente, por isso sempre reforçamos sua importância em nossa metodologia educacional. Por isso, todo código-fonte desenvolvido durante este conteúdo foi versionado no seguinte endereço para que você possa consultá-lo a qualquer momento:
+ 
+https://github.com/ruirodri/introJUnit
+ 
 # Certificado: Introdução ao JUnit 5
 
-- Link na plataforma: 
-- Certificado em pdf:
+- Link na plataforma: https://hermes.dio.me/certificates/LIN0JMXA.pdf
+- Certificado em pdf: [Certificado-#.Certificado.Introdução.ao.JUnit.5.pdf](000-Midia_e_Anexos/Certificado-#.Certificado.Introdução.ao.JUnit.5.pdf)
