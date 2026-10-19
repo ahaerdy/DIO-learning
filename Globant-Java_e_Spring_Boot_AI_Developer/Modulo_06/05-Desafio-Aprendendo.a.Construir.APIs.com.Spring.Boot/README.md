@@ -117,6 +117,80 @@ public class Main {
 ## Solução
 
 ```java
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String acao = scanner.nextLine().trim();
+
+        switch (acao) {
+            case "buscar livro":
+                System.out.println("GET");
+                break;
+            case "adicionar livro":
+                System.out.println("POST");
+                break;
+            case "atualizar livro":
+                System.out.println("PUT");
+                break;
+            case "remover livro":
+                System.out.println("DELETE");
+                break;
+            default:
+                System.out.println("acao invalida");
+                break;
+        }
+
+        scanner.close();
+    }
+}
 ``` 
 
+# Desafio 03 - Interprete Métodos HTTP com Analogias de Lanchonete
+
+Imagine que você é um(a) jovem desenvolvedor(a) chamado(a) Ana, que está aprendendo sobre APIs REST para criar um sistema de pedidos em uma lanchonete digital. Seu mentor propõe um desafio: interpretar comandos HTTP recebidos como strings e responder com a ação correspondente, usando analogias simples para cada método HTTP. Por exemplo, um "GET" seria como "consultar o cardápio", enquanto um "POST" seria "fazer um novo pedido". Sua tarefa é criar um programa que, ao receber o nome de um método HTTP (em letras maiúsculas), retorne a descrição da ação correspondente, conforme a tabela fornecida. Se o método não for reconhecido, retorne "Metodo desconhecido".
+
+Implemente um programa que leia uma string representando um método HTTP e imprima a descrição da ação correspondente, conforme as regras abaixo. Não utilize bibliotecas externas, apenas recursos padrão da linguagem. Considere apenas os métodos: GET, POST, PUT, DELETE. Para qualquer outro valor, retorne a mensagem de erro especificada.
+
+## Entrada
+
+Uma única linha contendo uma string em letras maiúsculas representando o método HTTP a ser interpretado.
+
+## Saída
+
+Uma única linha contendo a descrição da ação correspondente ao método HTTP, conforme a tabela abaixo. Se o método não for reconhecido, imprima "Metodo desconhecido".
+
+## Exemplos
+
+A tabela abaixo apresenta exemplos de entrada e saída:
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-10-19-15-37-19.png" alt="" width="480">
+</p>
+
+## Código Exemplo
+
+```java
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String metodo = scanner.nextLine().trim();
+
+        // TODO: Imprima a ação correspondente ao método HTTP informado.
+        // Dica: Use switch/case para mapear cada método (GET, POST, PUT, DELETE) à sua descrição.
+        // Para métodos não reconhecidos, imprima "Metodo desconhecido".
+
+        scanner.close();
+    }
+}
+```
+
+## Solução
+
+```java
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+``` 
