@@ -192,5 +192,32 @@ public class Main {
 ## Solução
 
 ```java
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String metodo = scanner.nextLine().trim();
+
+        switch (metodo) {
+            case "GET":
+                System.out.println("Consultar cardapio");
+                break;
+            case "POST":
+                System.out.println("Fazer novo pedido");
+                break;
+            case "PUT":
+                System.out.println("Atualizar pedido");
+                break;
+            case "DELETE":
+                System.out.println("Cancelar pedido");
+                break;
+            default:
+                System.out.println("Metodo desconhecido");
+                break;
+        }
+
+        scanner.close();
+    }
+}
 ``` 

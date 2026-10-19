@@ -84,7 +84,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Estruturas de Controle em Java](Modulo_02/02-Curso.02-Estruturas_de_Controle_em_Java/)
 - [x] ✅ Curso: [Logging e Tratamento de Exceções em Java](Modulo_02/03-Curso.03-Logging.e.Tratamento.de.Exceções.em.Java/)
 - [x] ✅ Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_02/04-Curso.04-Gerenciando.Dependências.com.Maven.e.Gradle/)
-- [ ] Desafio de código: [Simulando e Corrigindo em Java](Modulo_02/)
+- [ ] 🔖 Desafio de código: [Simulando e Corrigindo em Java](Modulo_02/)
 
 ---
 
@@ -124,7 +124,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/02-Curso.02-Introducao_a_Spring_Framework_com_Spring_Boot/)
 - [x] ✓ Curso: [Criando uma API REST Documentada com Spring Web e Swagger](Modulo_06/03-Curso.03-Criando.uma.API.REST.Documentada.com.Spring.Web.e.Swagger/)
 - [x] ✅ Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/04-Curso.04-Adicionando_Seguranca_a_uma_API_REST_com_Spring_Security/)
-- [ ] 🔖 Desafio de código: [Aprendendo a Construir APIs com Spring Boot](Modulo_06/05-Desafio-Aprendendo.a.Construir.APIs.com.Spring.Boot/)
+- [x] ✓ Desafio de código: [Aprendendo a Construir APIs com Spring Boot](Modulo_06/05-Desafio-Aprendendo.a.Construir.APIs.com.Spring.Boot/)
 
 ---
 
