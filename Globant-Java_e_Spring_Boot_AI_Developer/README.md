@@ -181,12 +181,11 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Módulo 4
 
-- [A Era da IA: Machine Learning, LLMs, IA Generativa e Agentes]
-- [Utilizando Copilots no Desenvolvimento de Software](https://hermes.dio.me/certificates/QFGASC1H.pdf)
+- [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes]
+- [Utilizando Copilotos no Desenvolvimento de Software]
 - [Introdução à Engenharia de Prompts]
-- [Explorando a Engenharia de Prompts na Prática]
-- [Guia de Como Usar Copilots para Criar Novas Features no Seu Projeto]
-- Certificado do Módulo: [Inteligência Artificial Aplicada ao Desenvolvimento de Software]
+- [Usando IA Como Copiloto para Criar Novas Features no Seu Projeto](https://hermes.dio.me/certificates/PZHNF0AS.pdf)
+- Certificado do Módulo: [Inteligência Artificial Aplicada ao Desenvolvimento de Software](https://hermes.dio.me/certificates/IVLMKEJU.pdf)
 
 ### Módulo 5
 
