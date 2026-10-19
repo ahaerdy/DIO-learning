@@ -107,7 +107,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Introdução à Engenharia de Prompts](Modulo_04/03-Curso.03-Introducao.a.Engenharia.de.Prompts/)
 - [x] ✓ Desafio de projeto: [Usando IA Como Copiloto para Criar Novas Features no Seu Projeto](Modulo_04/04-Projeto-Usando.IA.Como.Copiloto.para.Criar.Novas.Features.no.Seu.Projeto/)
 - **Repositório**: [java-copilot-prompt-modes](https://github.com/ahaerdy/java-copilot-prompt-modes)
-- **Descrição**: Este repositório reúne um conjunto de prompts (instruções) para usar IA como copiloto no desenvolvimento de novas features em projetos `Java`, com foco em backend `Spring Boot` e, quando o projeto pedir, frontend em `React` ou `Angular`. O Copiloto oferece diferentes modos de interação: desde tirar dúvidas sem mexer no código, até editar trechos específicos, planejar mudanças maiores ou delegar tarefas mais complexas a um modo mais autônomo. A ideia é escolher o modo que combina com o objetivo do momento e ganhar velocidade sem perder o controle.
+- **Descrição**: Este repositório reúne um conjunto de prompts (instruções) para usar IA como copiloto no desenvolvimento de novas features em projetos `Java`, com foco em backend `Spring Boot` e, quando o projeto pedir, frontend em `React` ou `Angular`. O Copiloto oferece diferentes modos de interação: desde tirar dúvidas sem mexer no código, até editar trechos específicos, planejar mudanças maiores ou delegar tarefas mais complexas a um modo mais autônomo. A ideia é escolher o modo que combina com o objetivo do momento e ganhar velocidade sem perda de controle.
 
 ---
 
