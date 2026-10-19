@@ -105,7 +105,9 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Fundamentos da IA Moderna: Machine Learning, LLMs, IA Generativa e Agentes](Modulo_04/01-Curso.01-Fundamentos.da.IA.Moderna.Machine.Learning.LLMs.IA.Generativa.e.Agentes/)
 - [x] ✓ Curso: [Utilizando Copilotos no Desenvolvimento de Software](Modulo_04/02-Curso.02-Utilizando.Copilotos.no.Desenvolvimento.de.Software/)
 - [x] ✅ Curso: [Introdução à Engenharia de Prompts](Modulo_04/03-Curso.03-Introducao.a.Engenharia.de.Prompts/)
-- [ ] 🔖 Desafio de projeto: [Usando IA Como Copiloto para Criar Novas Features no Seu Projeto](Modulo_04/04-Desafio-Usando.IA.Como.Copiloto.para.Criar.Novas.Features.no.Seu.Projeto/)
+- [x] ✓ Desafio de projeto: [Usando IA Como Copiloto para Criar Novas Features no Seu Projeto](Modulo_04/04-Desafio-Usando.IA.Como.Copiloto.para.Criar.Novas.Features.no.Seu.Projeto/)
+- **Repositório**: [java-copilot-prompt-modes](https://github.com/ahaerdy/java-copilot-prompt-modes)
+- **Descrição**: Este repositório reúne um conjunto de prompts (instruções) para usar IA como copiloto no desenvolvimento de novas features em projetos `Java`, com foco em backend `Spring Boot` e, quando o projeto pedir, frontend em `React` ou `Angular`. O Copiloto oferece diferentes modos de interação: desde tirar dúvidas sem mexer no código, até editar trechos específicos, planejar mudanças maiores ou delegar tarefas mais complexas a um modo mais autônomo. A ideia é escolher o modo que combina com o objetivo do momento e ganhar velocidade sem perder o controle.
 
 ---
 
@@ -122,7 +124,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/02-Curso.02-Introducao_a_Spring_Framework_com_Spring_Boot/)
 - [x] ✓ Curso: [Criando uma API REST Documentada com Spring Web e Swagger](Modulo_06/03-Curso.03-Criando.uma.API.REST.Documentada.com.Spring.Web.e.Swagger/)
 - [x] ✅ Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/04-Curso.04-Adicionando_Seguranca_a_uma_API_REST_com_Spring_Security/)
-- [ ] Desafio de código: [Aprendendo a Construir APIs com Spring Boot](Modulo_06/)
+- [ ] 🔖 Desafio de código: [Aprendendo a Construir APIs com Spring Boot](Modulo_06/)
 
 ---
 
