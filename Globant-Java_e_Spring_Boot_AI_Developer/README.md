@@ -124,7 +124,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Introdução ao Spring Framework com Spring Boot](Modulo_06/02-Curso.02-Introducao_a_Spring_Framework_com_Spring_Boot/)
 - [x] ✓ Curso: [Criando uma API REST Documentada com Spring Web e Swagger](Modulo_06/03-Curso.03-Criando.uma.API.REST.Documentada.com.Spring.Web.e.Swagger/)
 - [x] ✅ Curso: [Adicionando Segurança em APIs REST com Spring Security](Modulo_06/04-Curso.04-Adicionando_Seguranca_a_uma_API_REST_com_Spring_Security/)
-- [x] ✓ Desafio de código: [Aprendendo a Construir APIs com Spring Boot](Modulo_06/05-Desafio-Aprendendo.a.Construir.APIs.com.Spring.Boot/)
+- [x] ✅ Desafio de código: [Aprendendo a Construir APIs com Spring Boot](Modulo_06/05-Desafio-Aprendendo.a.Construir.APIs.com.Spring.Boot/)
 
 ---
 
@@ -199,7 +199,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [Introdução ao Spring Framework com Spring Boot]
 - [Criando uma API REST Documentada com Spring Web e Swagger](https://hermes.dio.me/certificates/IW6DBYKR.pdf)
 - [Adicionando Segurança em APIs REST com Spring Security]
-- Certificado do Módulo: [Ecossistema Spring para Desenvolvimento de APIs]
+- Certificado do Módulo: [Ecossistema Spring para Desenvolvimento de APIs](https://hermes.dio.me/certificates/RPZXAUFQ.pdf)
 
 ### Módulo 7
 
