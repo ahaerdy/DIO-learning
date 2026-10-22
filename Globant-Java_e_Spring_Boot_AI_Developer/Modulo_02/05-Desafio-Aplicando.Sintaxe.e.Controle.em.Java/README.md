@@ -127,5 +127,76 @@ public class Main {
 ## Solução
 
 ```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Lê a linha de códigos de tarefas e separa em um array
+        String[] codigos = scanner.nextLine().split(" ");
+
+        // Lê o código de tarefa a ser buscado
+        String codigoBuscado = scanner.nextLine();
+
+        int contador = 0;
+
+        // Percorre o array 'codigos' e incrementa 'contador' sempre que encontrar 'codigoBuscado'
+        for (String codigo : codigos) {
+            if (codigo.equals(codigoBuscado)) {
+                contador++;
+            }
+        }
+
+        // Imprime o resultado
+        System.out.println(contador);
+
+        scanner.close();
+    }
+}
+``` 
+
+# Desafio 03 - Validação de Comandos Críticos em Java
+
+Você faz parte de uma equipe de consultoria de tecnologia responsável por entregar uma aplicação crítica para um grande cliente. Durante a fase de testes, foram identificadas falhas em um dos módulos responsáveis por processar comandos enviados pelo usuário. O sistema deveria reconhecer comandos válidos e rejeitar comandos inválidos, mas está aceitando entradas incorretas, o que pode causar sérios problemas no funcionamento do sistema. Sua missão é corrigir esse módulo para garantir que apenas comandos válidos sejam processados, evitando riscos ao cliente e à reputação da consultoria.
+
+Implemente um programa que leia uma linha contendo um comando e verifique se ele é exatamente igual a "START", "STOP" ou "RESTART" (todos em letras maiúsculas). Se o comando for válido, imprima "Command accepted". Caso contrário, imprima "Command rejected". Não utilize bibliotecas externas, apenas recursos padrão da linguagem.
+
+## Entrada
+
+Uma única linha contendo uma string representando o comando enviado pelo usuário. O comando pode conter letras maiúsculas, minúsculas, números ou outros caracteres.
+
+## Saída
+
+Imprima uma única linha: "Command accepted" se o comando for exatamente "START", "STOP" ou "RESTART". Caso contrário, imprima "Command rejected".
+
+## Exemplos
+
+A tabela abaixo apresenta exemplos de entrada e saída:
+
+<p align="center">
+  <img src="000-Midia_e_Anexos/2026-10-22-16-23-17.png" alt="" width="480">
+</p>
+
+## Código Exemplo
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String comando = scanner.nextLine();
+
+        // TODO: Verifique se o comando é exatamente "START", "STOP" ou "RESTART" e imprima a resposta apropriada
+
+        scanner.close();
+    }
+}
+```
+
+## Solução
+
+```java
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ``` 
