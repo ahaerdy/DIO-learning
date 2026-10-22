@@ -19,7 +19,7 @@ Imprima "Cadastro aprovado" se o nome não estiver vazio e a idade for maior ou 
 A tabela abaixo apresenta exemplos de entrada e saída:
 
 <p align="center">
-  <img src="000-Midia_e_Anexos/2026-10-22-16-13-37.png" alt="" width="1024">
+  <img src="000-Midia_e_Anexos/2026-10-22-16-13-37.png" alt="" width="480">
 </p>
 
 ## Código Exemplo
