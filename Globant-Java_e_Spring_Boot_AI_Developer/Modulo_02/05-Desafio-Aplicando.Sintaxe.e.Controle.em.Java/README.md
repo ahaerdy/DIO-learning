@@ -198,5 +198,21 @@ public class Main {
 ## Solução
 
 ```java
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String command = scanner.nextLine();
+
+        // Verifique se o comando é exatamente "START", "STOP" ou "RESTART" e imprima a resposta apropriada
+        if (command.equals("START") || command.equals("STOP") || command.equals("RESTART")) {
+            System.out.println("Command accepted");
+        } else {
+            System.out.println("Command rejected");
+        }
+
+        scanner.close();
+    }
+}
 ``` 

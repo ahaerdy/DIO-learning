@@ -84,7 +84,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [x] ✅ Curso: [Estruturas de Controle em Java](Modulo_02/02-Curso.02-Estruturas_de_Controle_em_Java/)
 - [x] ✅ Curso: [Logging e Tratamento de Exceções em Java](Modulo_02/03-Curso.03-Logging.e.Tratamento.de.Exceções.em.Java/)
 - [x] ✅ Curso: [Gerenciando Dependências com Maven e Gradle](Modulo_02/04-Curso.04-Gerenciando.Dependências.com.Maven.e.Gradle/)
-- [ ] 🔖 Desafio de código: [Aplicando Sintaxe e Controle em Java](Modulo_02/05-Desafio-Aplicando.Sintaxe.e.Controle.em.Java/)
+- [x] ✅ Desafio de código: [Aplicando Sintaxe e Controle em Java](Modulo_02/05-Desafio-Aplicando.Sintaxe.e.Controle.em.Java/)
 
 ---
 
@@ -168,7 +168,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 - [Estruturas de Controle em Java]
 - [Logging e Tratamento de Exceções em Java]
 - [Gerenciando Dependências com Maven e Gradle]
-- Certificado do Módulo: [Fundamentos do Desenvolvimento Java]
+- Certificado do Módulo: [Fundamentos do Desenvolvimento Java](https://hermes.dio.me/certificates/WSIIVLHM.pdf)
 
 ### Módulo 3
 
@@ -222,7 +222,7 @@ O Bootcamp é dividido em módulos com cursos, desafios de projeto e desafios de
 
 ### Conclusão:
 
-- 🎓 Certificado de conclusão do Bootcamp: [Globant: Java & Spring Boot AI Developer]
+- 🎓 Certificado de conclusão do Bootcamp: [Globant: Java & Spring Boot AI Developer](https://hermes.dio.me/certificates/GN4KZVCO.pdf)
 
 ---
 
